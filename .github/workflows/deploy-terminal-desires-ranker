@@ -1,0 +1,47 @@
+name: Deploy Terminal Desires Ranker App
+
+on:
+  push:
+    paths:
+      - 'terminal-desires-ranker/**'  // Only trigger when files in terminal-desires-ranker directory change
+    branches:
+      - main
+  workflow_dispatch:  // Allows manual trigger
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'terminal-desires-ranker/package-lock.json'
+
+      - name: Install Dependencies
+        working-directory: terminal-desires-ranker
+        run: npm ci
+
+      - name: Build
+        working-directory: terminal-desires-ranker
+        run: npm run build
+
+      - name: Deploy to subdirectory
+        run: |
+          // Remove old files from target directory (but keep directory)
+          rm -rf terminal-desires-ranker/
+          // Copy new build files
+          cp -r terminal-desires-ranker/dist/ terminal-desires-ranker/
+          
+          // Configure Git
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          
+          // Commit and push if there are changes
+          git add terminal-desires-ranker
+          git commit -m "Deploy Terminal Desires Ranker app to GitHub Pages" || echo "No changes to commit"
+          git push

@@ -24,24 +24,31 @@ jobs:
 
       - name: Install Dependencies
         working-directory: terminal-desires-ranker
-        run: npm ci
+        run: npm install
 
       - name: Build
         working-directory: terminal-desires-ranker
         run: npm run build
 
-      - name: Deploy to subdirectory
+      - name: Checkout gh-pages
         run: |
-          # Remove old files from target directory (but keep directory)
-          rm -rf terminal-desires-ranker/*
-          # Copy new build files
-          cp -r terminal-desires-ranker/dist/* terminal-desires-ranker/
+          # Save built files
+          mv terminal-desires-ranker/dist ./dist-temp
           
-          # Configure Git
+          # Fetch and checkout gh-pages
+          git fetch origin gh-pages
+          git checkout gh-pages
+          
+          # Clean and copy new build
+          rm -rf terminal-desires-ranker
+          mkdir -p terminal-desires-ranker
+          cp -r dist-temp/* terminal-desires-ranker/
+          rm -rf dist-temp
+          
+          # Configure Git and commit
           git config user.name github-actions
           git config user.email github-actions@github.com
           
-          # Commit and push if there are changes
-          git add terminal-desires-ranker
+          git add -f terminal-desires-ranker
           git commit -m "Deploy Terminal Desires Ranker app to GitHub Pages" || echo "No changes to commit"
-          git push
+          git push origin gh-pages

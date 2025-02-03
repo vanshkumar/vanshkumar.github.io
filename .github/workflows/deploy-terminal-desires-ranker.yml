@@ -24,16 +24,17 @@ jobs:
 
       - name: Install Dependencies
         working-directory: terminal-desires-ranker
-        run: npm install
+        run: npm ci
 
       - name: Build
         working-directory: terminal-desires-ranker
-        run: |
-          npm run build
+        run: npm run build
 
       - name: Deploy to subdirectory
         run: |
-          # Copy build files
+          # Remove old files from target directory (but keep directory)
+          rm -rf terminal-desires-ranker/*
+          # Copy new build files
           cp -r terminal-desires-ranker/dist/* terminal-desires-ranker/
           
           # Configure Git

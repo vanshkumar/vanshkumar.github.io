@@ -33,7 +33,7 @@ jobs:
       - name: Deploy to subdirectory
         run: |
           # Remove old files from target directory (but keep directory)
-          rm -rf terminal-desires-ranker/#
+          rm -rf terminal-desires-ranker/*
           # Copy new build files
           cp -r terminal-desires-ranker/dist/* terminal-desires-ranker/
           

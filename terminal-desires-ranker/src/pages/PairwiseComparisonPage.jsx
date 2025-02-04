@@ -7,74 +7,57 @@ function PairwiseComparisonPage() {
   const location = useLocation();
   const navigate = useNavigate();
   const [items, setItems] = useState([]);
-  const [currentPair, setCurrentPair] = useState([0, 1]);
-  const [comparedPairs, setComparedPairs] = useState(new Set());
-  
+  const [pairs, setPairs] = useState([]); // Store all unique pairs
+  const [currentPairIndex, setCurrentPairIndex] = useState(0); // Index of the current pair
+  const [scores, setScores] = useState([]); // Store scores for each item
+
   useEffect(() => {
     if (!location.state?.items) {
       navigate('/');
       return;
     }
     setItems(location.state.items);
+    setScores(new Array(location.state.items.length).fill(0)); // Initialize scores
   }, [location.state, navigate]);
 
-  // Helper to get a consistent pair key regardless of order
-  const getPairKey = (id1, id2) => {
-    // Always put smaller ID first to ensure consistency
-    return [id1, id2].sort().join('-');
-  };
-
   // Generate all possible unique pairs
-  const generateUniquePair = () => {
+  const generateUniquePairs = () => {
+    const uniquePairs = [];
     const n = items.length;
-    
+
     for (let i = 0; i < n - 1; i++) {
       for (let j = i + 1; j < n; j++) {
-        const pairKey = getPairKey(items[i].id, items[j].id);
-        if (!comparedPairs.has(pairKey)) {
-          return [i, j];
-        }
+        uniquePairs.push([i, j]);
       }
     }
-    return null;
+    return uniquePairs;
   };
 
   useEffect(() => {
     if (items.length < 2) return;
-    const nextPair = generateUniquePair();
-    if (nextPair) {
-      setCurrentPair(nextPair);
-    } else {
-      // All pairs have been compared, navigate to results
-      navigate('/results', { state: { items } });
-    }
-  }, [items, comparedPairs]); // Add comparedPairs as dependency
+    const allPairs = generateUniquePairs();
+    // Shuffle pairs
+    const shuffledPairs = allPairs.sort(() => Math.random() - 0.5);
+    setPairs(shuffledPairs);
+  }, [items]);
 
   const handleChoice = (chosenIndex) => {
-    const [leftIndex, rightIndex] = currentPair;
-    const leftItem = items[leftIndex];
-    const rightItem = items[rightIndex];
+    const [leftIndex, rightIndex] = pairs[currentPairIndex];
+    const result = chosenIndex === rightIndex ? rightIndex : leftIndex;
 
-    const pairKey = getPairKey(leftItem.id, rightItem.id);
-    
-    // Record this comparison
-    setComparedPairs(prev => {
-      const newSet = new Set([...prev, pairKey]);
-      return newSet;
+    // Update scores for the winner
+    setScores(prevScores => {
+      const newScores = [...prevScores];
+      newScores[result] += 1; // Increment score for the winner
+      return newScores;
     });
-    
-    if (chosenIndex === rightIndex) {
-      const newItems = [...items];
-      [newItems[leftIndex], newItems[rightIndex]] = [newItems[rightIndex], newItems[leftIndex]];
-      setItems(newItems);
-    }
 
-    // Generate next pair
-    const nextPair = generateUniquePair();
-    if (nextPair) {
-      setCurrentPair(nextPair);
+    // Move to the next pair
+    if (currentPairIndex + 1 < pairs.length) {
+      setCurrentPairIndex(currentPairIndex + 1);
     } else {
-      navigate('/results', { state: { items } });
+      // All pairs have been compared, navigate to results
+      navigate('/results', { state: { items, scores } });
     }
   };
 
@@ -86,26 +69,27 @@ function PairwiseComparisonPage() {
     navigate('/results', { 
       state: { 
         items,
+        scores,
         isPartialRanking: true
       } 
     });
   };
 
-  if (items.length < 2) return null;
+  if (items.length < 2 || pairs.length === 0) return null;
 
-  const [leftIndex, rightIndex] = currentPair;
+  const [leftIndex, rightIndex] = pairs[currentPairIndex];
   const leftItem = items[leftIndex];
   const rightItem = items[rightIndex];
 
   // Calculate progress
-  const totalPairs = (items.length * (items.length - 1)) / 2;
-  const progress = Math.round((comparedPairs.size / totalPairs) * 100);
+  const totalPairs = pairs.length;
+  const progress = Math.round(((currentPairIndex + 1) / totalPairs) * 100);
 
   return (
     <div className="comparison-page">
       <h1>Which matters more to you?</h1>
       <h2>Pay attention to how you feel.</h2>
-      
+
       <div className="progress-bar">
         <div 
           className="progress-fill" 

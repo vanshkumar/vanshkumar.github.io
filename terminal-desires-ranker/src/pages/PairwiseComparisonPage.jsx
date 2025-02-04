@@ -8,9 +8,8 @@ function PairwiseComparisonPage() {
   const navigate = useNavigate();
   const [items, setItems] = useState([]);
   const [currentPair, setCurrentPair] = useState([0, 1]);
-  const [pairsInPass, setPairsInPass] = useState([]);
-  const [hasSwappedInPass, setHasSwappedInPass] = useState(false);
-
+  const [comparedPairs, setComparedPairs] = useState(new Set());
+  
   useEffect(() => {
     if (!location.state?.items) {
       navigate('/');
@@ -19,47 +18,63 @@ function PairwiseComparisonPage() {
     setItems(location.state.items);
   }, [location.state, navigate]);
 
+  // Helper to get a consistent pair key regardless of order
+  const getPairKey = (id1, id2) => {
+    // Always put smaller ID first to ensure consistency
+    return [id1, id2].sort().join('-');
+  };
+
+  // Generate all possible unique pairs
+  const generateUniquePair = () => {
+    const n = items.length;
+    
+    for (let i = 0; i < n - 1; i++) {
+      for (let j = i + 1; j < n; j++) {
+        const pairKey = getPairKey(items[i].id, items[j].id);
+        if (!comparedPairs.has(pairKey)) {
+          return [i, j];
+        }
+      }
+    }
+    return null;
+  };
+
   useEffect(() => {
     if (items.length < 2) return;
-    
-    setHasSwappedInPass(false);
-    const pairs = [];
-    for (let i = 0; i < items.length - 1; i++) {
-      pairs.push([i, i + 1]);
+    const nextPair = generateUniquePair();
+    if (nextPair) {
+      setCurrentPair(nextPair);
+    } else {
+      // All pairs have been compared, navigate to results
+      navigate('/results', { state: { items } });
     }
-    setPairsInPass(pairs);
-    setCurrentPair(pairs[0]);
-  }, [items]);
+  }, [items, comparedPairs]); // Add comparedPairs as dependency
 
   const handleChoice = (chosenIndex) => {
     const [leftIndex, rightIndex] = currentPair;
-    let itemsToUse = items;
+    const leftItem = items[leftIndex];
+    const rightItem = items[rightIndex];
+
+    const pairKey = getPairKey(leftItem.id, rightItem.id);
+    
+    // Record this comparison
+    setComparedPairs(prev => {
+      const newSet = new Set([...prev, pairKey]);
+      return newSet;
+    });
     
     if (chosenIndex === rightIndex) {
       const newItems = [...items];
       [newItems[leftIndex], newItems[rightIndex]] = [newItems[rightIndex], newItems[leftIndex]];
       setItems(newItems);
-      setHasSwappedInPass(true);
-      itemsToUse = newItems;
     }
 
-    const currentPairIndex = pairsInPass.findIndex(
-      pair => pair[0] === leftIndex && pair[1] === rightIndex
-    );
-
-    if (currentPairIndex === pairsInPass.length - 1) {
-      if (!hasSwappedInPass || items.length === 2) {
-        navigate('/results', { state: { items: itemsToUse } });
-      } else {
-        const newPairs = [];
-        for (let i = 0; i < itemsToUse.length - 1; i++) {
-          newPairs.push([i, i + 1]);
-        }
-        setPairsInPass(newPairs);
-        setCurrentPair(newPairs[0]);
-      }
+    // Generate next pair
+    const nextPair = generateUniquePair();
+    if (nextPair) {
+      setCurrentPair(nextPair);
     } else {
-      setCurrentPair(pairsInPass[currentPairIndex + 1]);
+      navigate('/results', { state: { items } });
     }
   };
 
@@ -71,7 +86,7 @@ function PairwiseComparisonPage() {
     navigate('/results', { 
       state: { 
         items,
-        isPartialRanking: true // Always true when ending early
+        isPartialRanking: true
       } 
     });
   };
@@ -82,11 +97,22 @@ function PairwiseComparisonPage() {
   const leftItem = items[leftIndex];
   const rightItem = items[rightIndex];
 
+  // Calculate progress
+  const totalPairs = (items.length * (items.length - 1)) / 2;
+  const progress = Math.round((comparedPairs.size / totalPairs) * 100);
+
   return (
     <div className="comparison-page">
       <h1>Which matters more to you?</h1>
-
       <h2>Pay attention to how you feel.</h2>
+      
+      <div className="progress-bar">
+        <div 
+          className="progress-fill" 
+          style={{ width: `${progress}%` }}
+        ></div>
+        <span className="progress-text">{progress}% Complete</span>
+      </div>
 
       <div className="comparison-cards">
         <div 

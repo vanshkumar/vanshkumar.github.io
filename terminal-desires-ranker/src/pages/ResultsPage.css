@@ -5,12 +5,14 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
+  background-color: #000;
 }
 
 .results-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .result-item {
@@ -52,8 +54,14 @@
   color: black;
   font-size: 1.2em;
   padding: 1rem 2rem;
-  margin: 2rem auto 0;
-  display: block;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 .partial-warning {
@@ -65,4 +73,29 @@
   border: 1px solid rgba(234, 179, 8, 0.2);
   margin: 0 auto;
   max-width: 600px;
+}
+
+.copy-button,
+.screenshot-button {
+  background: #4CAF50; /* Green background */
+  color: white; /* White text */
+  font-size: 1.2em; /* Font size */
+  padding: 1rem 2rem; /* Padding */
+  margin: 1rem auto; /* Margin for spacing */
+  display: block; /* Block display */
+  border: none; /* No border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background 0.3s; /* Transition for hover effect */
+}
+
+.copy-button:hover,
+.screenshot-button:hover {
+  background: #45a049; /* Darker green on hover */
+}
+
+.button-container {
+  display: flex; /* Use flexbox to arrange buttons horizontally */
+  gap: 0.05rem; /* Further decrease the space between buttons */
+  justify-content: center; /* Center the buttons */
 } 

@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import './ResultsPage.css';
 import Attribution from '../components/Attribution';
+import html2canvas from 'html2canvas';
 
 function ResultsPage() {
   const location = useLocation();
@@ -24,6 +25,32 @@ function ResultsPage() {
     const bIndex = items.indexOf(b);
     return scores[bIndex] - scores[aIndex]; // Sort in descending order
   });
+
+  // Function to copy results to clipboard
+  const copyToClipboard = () => {
+    const resultsText = sortedItems.map((item, index) => 
+      `${index + 1}. ${item.name} - ${item.description}`
+    ).join('\n');
+    
+    navigator.clipboard.writeText(resultsText)
+      .then(() => {
+        alert('Results copied to clipboard!');
+      })
+      .catch(err => {
+        console.error('Failed to copy: ', err);
+      });
+  };
+
+  // Function to take a screenshot
+  const takeScreenshot = () => {
+    const resultsDiv = document.querySelector('.results-list');
+    html2canvas(resultsDiv).then(canvas => {
+      const link = document.createElement('a');
+      link.href = canvas.toDataURL('image/png');
+      link.download = 'results_screenshot.png';
+      link.click();
+    });
+  };
 
   return (
     <div className="results-page">
@@ -51,6 +78,16 @@ function ResultsPage() {
       <button onClick={handleRestart} className="restart-button">
         Restart
       </button>
+      
+      <div className="button-container">
+        <button onClick={copyToClipboard} className="copy-button">
+          Copy Results
+        </button>
+        <button onClick={takeScreenshot} className="screenshot-button">
+          Take Screenshot
+        </button>
+      </div>
+      
       <Attribution />
     </div>
   );

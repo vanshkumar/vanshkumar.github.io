@@ -27,6 +27,8 @@ jobs:
       - name: Commit and push
         run: |
           cd gh-pages
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git add -A
           git commit -m "Sync Jekyll changes from main" || echo "No changes"
           git push 

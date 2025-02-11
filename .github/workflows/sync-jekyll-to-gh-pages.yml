@@ -1,0 +1,32 @@
+name: Sync Jekyll to GH-Pages
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['terminal-desires-ranker/**']
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-repo
+
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Sync files
+        run: |
+          # Copy all files except terminal-desires-ranker
+          rsync -a --delete --exclude='terminal-desires-ranker/' main-repo/ gh-pages/
+
+      - name: Commit and push
+        run: |
+          cd gh-pages
+          git add -A
+          git commit -m "Sync Jekyll changes from main" || echo "No changes"
+          git push 

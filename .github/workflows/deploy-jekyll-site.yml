@@ -52,12 +52,14 @@ jobs:
         with:
           ref: gh-pages
       - name: Download build artifact
-        uses: actions/download-pages-artifact@v4
+        uses: actions/download-artifact@v4
+        with:
+          name: _site
       - name: Commit and push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           touch .nojekyll
           git add .nojekyll _site/*
-          git commit -m "Deploy Terminal Desires Ranker app to GitHub Pages" || echo "No changes to commit"
+          git commit -m "Deploy Jekyll site to GitHub Pages" || echo "No changes"
           git push origin gh-pages

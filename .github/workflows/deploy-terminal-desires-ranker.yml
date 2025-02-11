@@ -46,5 +46,5 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add -f terminal-desires-ranker
-          git commit -m "Deploy Terminal Desires Ranker app to GitHub Pages" || echo "No changes to commit"
+          git commit -m "Deploy Terminal Desires Ranker app to GitHub Pages" || echo "No changes"
           git push origin gh-pages

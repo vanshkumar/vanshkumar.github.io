@@ -45,14 +45,15 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: _site
-          path: ./_site
+          # Download to a temp dir outside the repo checkout to avoid
+          # rsync --delete removing the source during transfer
+          path: /tmp/jekyll_site
       - name: Commit and push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           # Sync built site while preserving the React app folder and the Git metadata
-          rsync -a --delete --exclude ".git" --exclude 'terminal-desires-ranker/' _site/ ./
-          rm -rf _site
+          rsync -a --delete --exclude ".git" --exclude 'terminal-desires-ranker/' /tmp/jekyll_site/ ./
           touch .nojekyll
           # Stage all changes but exclude the React app directory from this commit
           git add -A

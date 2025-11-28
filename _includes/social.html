@@ -1,0 +1,42 @@
+{%- comment -%}
+  Override of Minima's social.html to add Substack.
+  Outputs only <li> items; the surrounding <ul class="social-media-list"> is in the theme footer.
+{%- endcomment -%}
+
+{%- if site.github_username -%}
+  <li>
+    <a rel="me" href="https://github.com/{{ site.github_username | cgi_escape | escape }}" title="GitHub">
+      <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
+      <span class="username">{{ site.github_username | escape }}</span>
+    </a>
+  </li>
+{%- endif -%}
+
+{%- if site.twitter_username -%}
+  <li>
+    <a rel="me" href="https://twitter.com/{{ site.twitter_username | cgi_escape | escape }}" title="Twitter">
+      <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg>
+      <span class="username">{{ site.twitter_username | escape }}</span>
+    </a>
+  </li>
+{%- endif -%}
+
+{%- if site.substack_url -%}
+  <li>
+    <a rel="me" href="{{ site.substack_url | escape }}" title="Substack">
+      {#- Using RSS glyph as a placeholder; swap to a custom icon if desired -#}
+      <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg>
+      <span class="username">Substack</span>
+    </a>
+  </li>
+{%- endif -%}
+
+{%- if site.feed or site.plugins contains 'jekyll-feed' -%}
+  <li>
+    <a href="{{ 'feed.xml' | relative_url }}" title="RSS">
+      <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg>
+      <span class="username">rss</span>
+    </a>
+  </li>
+{%- endif -%}
+

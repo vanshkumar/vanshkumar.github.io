@@ -1,1 +1,200 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://vanshkumar.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vanshkumar.net/" rel="alternate" type="text/html" /><updated>2025-11-28T21:59:32+00:00</updated><id>https://vanshkumar.net/feed.xml</id><title type="html">Vansh Kumar</title><subtitle>Vansh Kumar&apos;s site.</subtitle><entry><title type="html">Hunting gestalts</title><link href="https://vanshkumar.net/test/2025/11/28/hunting-gestalts.html" rel="alternate" type="text/html" title="Hunting gestalts" /><published>2025-11-28T00:00:00+00:00</published><updated>2025-11-28T00:00:00+00:00</updated><id>https://vanshkumar.net/test/2025/11/28/hunting-gestalts</id><content type="html" xml:base="https://vanshkumar.net/test/2025/11/28/hunting-gestalts.html"><![CDATA[<p>chilllinnnnggg</p>]]></content><author><name></name></author><category term="test" /><summary type="html"><![CDATA[chilllinnnnggg]]></summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://vanshkumar.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vanshkumar.net/" rel="alternate" type="text/html" /><updated>2025-12-06T15:15:10+00:00</updated><id>https://vanshkumar.net/feed.xml</id><title type="html">Vansh Kumar</title><subtitle>Vansh Kumar&apos;s site.</subtitle><entry><title type="html">December Aliveline - Day 5</title><link href="https://vanshkumar.net/alivelines/2025/12/06/december-aliveline-4.html" rel="alternate" type="text/html" title="December Aliveline - Day 5" /><published>2025-12-06T00:00:00+00:00</published><updated>2025-12-06T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/06/december-aliveline%204</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/06/december-aliveline-4.html"><![CDATA[<h1 id="day-5-126">Day 5 (12/6)</h1>
+
+<p>Again fairly little time to work on this, for bug fighting reasons. I may combine day 3/4/5 into one day since only summed across all three have I had my usual daily working time of 4 hours. Anyways that can be done later. Into the work.</p>
+
+<p>How does a population of neurons start firing? Is it all simultaneous? Presumably not given there’s synapses that are crossed in some order. So you have to set some neuronal dominoes going to get a particular population level activation?
+	Yes there is an order and the neural state space has some binning/quantization choice to define a time step. People look at explicit spike order for things like rapid sound localization, visual classification, etc., but the spike binning approach is OK for longer timescale tasks.</p>
+
+<p>After the spike quantization is done, you end up with something like a neural state space trajectory. Seems like people do various dimensionality reduction techniques (PCA, more recently nonlinear dimensionality reduction) on that state space to look at the “neural subspace” where interesting stuff is occurring. That’s the space in which this neural population geometry work is happening.</p>
+
+<p>I have a feeling there is something interesting in trying to define Kolmogorov complexity for neural coding. What might a useful KC analog definition look like?</p>
+<ul>
+  <li>Minimum number of neurons that need to be activated to achieve a particular neural state space trajectory?</li>
+</ul>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 5 (12/6)]]></summary></entry><entry><title type="html">December Aliveline - Day 4</title><link href="https://vanshkumar.net/alivelines/2025/12/05/december-aliveline-3.html" rel="alternate" type="text/html" title="December Aliveline - Day 4" /><published>2025-12-05T00:00:00+00:00</published><updated>2025-12-05T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/05/december-aliveline%203</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/05/december-aliveline-3.html"><![CDATA[<h1 id="day-4-125">Day 4 (12/5)</h1>
+
+<p>Slept late &amp; quite poorly again thanks to having to clean for hours due to this pantry moth infestation. Just a little bit of time to work on this. Let’s review lit notes &amp; ask chatgpt/notebooklm what the core assumptions are that each paper makes. That might be a fruitful way forward. I do think I’ve been under-using LLMs as a way to interrogate papers and instead just skimming them myself. Should do both!</p>
+
+<p>OK let’s go through it idea by idea</p>
+
+<h2 id="neural-population-geometry">Neural population geometry</h2>
+
+<p>Is there an analog to Kolmogorov complexity for how neuron populations activate in response to stimuli?
+	One of the difficulties is that these neural state space trajectories seem to be quite dynamical / time dependent</p>
+
+<p>Kolmogorov complexity of an object is the length of the shortest computer program needed to produce that object. So what would the KC of a particular neural state space trajectory be?</p>
+
+<p>How does a population of neurons start firing? Is it all simultaneous? Presumably not given there’s synapses that are crossed in some order. So you have to set some neuronal dominoes going to get a particular population level activation?</p>
+
+<p>What might a useful KC analog definition look like?</p>
+<ul>
+  <li>Minimum number of neurons that need to be activated to achieve a particular neural state space trajectoroy?</li>
+  <li></li>
+</ul>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 4 (12/5)]]></summary></entry><entry><title type="html">December Aliveline - Day 3</title><link href="https://vanshkumar.net/alivelines/2025/12/04/december-aliveline-2.html" rel="alternate" type="text/html" title="December Aliveline - Day 3" /><published>2025-12-04T00:00:00+00:00</published><updated>2025-12-04T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/04/december-aliveline%202</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/04/december-aliveline-2.html"><![CDATA[<h1 id="day-3-124">Day 3 (12/4)</h1>
+
+<p>There is a “minimum description length” principle in ML, which is the idea that you don’t want the weights to have too much information (? I don’t really understand this that well tbh).</p>
+
+<p>Is there a similar principle at play in brains? Do simpler tasks tend to activate a smaller population of neurons?
+	We could answer this directly in C Elegans. But I doubt it’s the case that it’s smaller in direct size, it’s more that the manifold geometry of the activation is simpler. But what does that mean?</p>
+
+<p>The IL-17 cytokine as a neuromodulator paper makes me think that we don’t understand the biology well enough yet to know the full space of things that can affect the brain, even for C Elegans. So it’s unclear how valuable formalizing a hypothesis that more neuromodulators = more representational capacity is right now?</p>
+
+<p>I really want to see a visualization of the dynamics of a connectome as it does a task. Time to download OpenWorm. Welp it took a lil time and it simulated like 10 seconds of the worm? Plus I don’t see a connectome viz, just pictures of potentials/calcium/etc across neurons and muscles. Hmm.</p>
+
+<p>Today is a pretty low energy day, did not sleep well for 2 nights. That’s fine. Remove all pressure to get something done today, it’s all good. This bug infestation fighting has been taking a ton of time and mental energy the last day.</p>
+
+<p>It does seem like a more dynamical systems approach to cognition and how the brain works would be way more fruitful than any static views. In other words, you can’t separate mind from subject (a la Democracy and Education) – cognition is a joint process between the mind, body, and the environment.</p>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 3 (12/4)]]></summary></entry><entry><title type="html">December Aliveline - Day 2</title><link href="https://vanshkumar.net/alivelines/2025/12/03/december-aliveline.html" rel="alternate" type="text/html" title="December Aliveline - Day 2" /><published>2025-12-03T00:00:00+00:00</published><updated>2025-12-03T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/03/december-aliveline</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/03/december-aliveline.html"><![CDATA[<h1 id="day-2-123">Day 2 (12/3)</h1>
+
+<p>Initially I was planning to spend another day on exploration and brainstorming of where I might spend my time. But given the time pressure with this aliveline, I now suspect it might be more fruitful to pick something and see where I can get with it in a day or two. The point of an aliveline is to try to fail in interesting ways, and that can only be accomplished with action not rumination. So the candidate “insight”, which I worked with ChatGPT a bit to pull out from my brainstorming yesterday, is:</p>
+
+<blockquote>
+  <p>The representational capacity of a brain is better thought of as the capacity of the <strong>ensemble of effective circuits it can reconfigure into</strong>, under realistic resource constraints (time, energy, neuromodulatory bandwidth), not just as the capacity of any one static circuit.</p>
+</blockquote>
+
+<p>I suspect this is already suggested by the literature – it doesn’t feel like some fresh new insight (which is fine!). I do wonder if this idea has been analogized across ML and neuroscience though? Specifically, I recall:</p>
+<ul>
+  <li>A Gwern article describing how these big models learn an ensemble of compressed functions to apply to different tasks and how to choose among them during pre-training</li>
+  <li>An Ilya S soundbite (when I was watching a video on why double descent might happen) where he describes something similar about models operating in the space of functions</li>
+</ul>
+
+<p>So perhaps there is a useful analogy here, either from ML to biology, or vice-verse. I don’t want to just write a cute blog post making such an analogy though; I want it to be an actually <strong>useful</strong> analogy.</p>
+
+<p>What are the properties of a truly useful analogy?</p>
+<ul>
+  <li>Makes clear falsifiable claims</li>
+  <li>Explicitly describes new questions that could be answered with further research</li>
+  <li>Sheds light on why a previously not-understood process might work the way it does</li>
+</ul>
+
+<p>OK, so without looking up those Gwern or Ilya references, what might I conjecture on the ML side?</p>
+
+<blockquote>
+  <p>Double descent happens because the model is expanding its representational capacity along the neuromodulatory dimension, rather than reconfiguring into the single static circuit that best fits the training data.</p>
+</blockquote>
+
+<p>Hm this feels similar to the Tishby IB bottleneck compression story? First it learns the training data then it learns how to generalize. Double descent does make it sound like there are two distinct phases, which I think is not confirmed as a general property of DNNs?</p>
+
+<p>Actual hypotheses from the above:</p>
+<ul>
+  <li>Brains
+    <ul>
+      <li>Having more neuromodulator bandwidth = more representational capacity, so animals with ~the same circuit size but different neuromodulator configurations/abilities will have different neural abilities
+        <ul>
+          <li>Species with similar neuron counts but more modulatory systems / receptor diversity should show disproportionately richer behavioral repertoires</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>ML
+    <ul>
+      <li>Double descent is a consequence of an over-parameterized model learning to represent an ensemble of functions rather than the one function which fully fits the training data</li>
+    </ul>
+  </li>
+</ul>
+
+<p>This feels like enough of a hypothesis to start looking into some literature, using ChatGPT to help find it.</p>
+
+<p>OK just spent like an hour or so skimming a ton of literature. Definitely seems like there is some thinking on how neural circuits embed certain behaviors in their latent space and how to quantify that dimensionality. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8688220/">This</a> was the most interesting article on that front.</p>
+
+<p>Notes from lit review:</p>
+<ul>
+  <li>There is obviously a good amount of redundancy in neural circuits. Could neural error-correction naturally emerge from local neuron&lt;&gt;neuron interactions?</li>
+  <li>Seems like older neuro articles use more linear techniques like PCA for lowering the dimensionality of correlated neural activations. Autoencoders and more modern non-linear decomposition techniques could help us see deeper?</li>
+  <li>Enjoyed <a href="https://www.researchgate.net/publication/350484075_Large-scale_neural_recordings_call_for_new_insights_to_link_brain_and_behavior">this article</a> which makes it clear that when we could only record single neurons at a time, theories were very focused on a single neuron modulated view of activity. Now that we can record many neurons simultaneously, the theory is more around population-level activations causing behavior. What’s the natural extension here? What kind of measurement would enable this?
+    <ul>
+      <li>It’s something like recording the whole brain simultaneously. And then eventually recording the whole body+brain combo (and environment). I mean it’s only natural that you see it all as one system eventually?</li>
+    </ul>
+  </li>
+  <li><a href="https://elifesciences.org/articles/96303">This one is cool</a> in that it shows that both excitatory and inhibitory neurons are needed to avoid “runaway” spike patterns</li>
+  <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5503128/">This one</a> is amazing (<a href="https://www.sciencedirect.com/science/article/pii/S0960982217302749">great summary</a>) showing that cytokines in <em>C. Elegans</em>, which are part of the immune system, function as neuromodulators &amp; directly affect neural circuits. So the space of neuromodulators that exist may be massive.</li>
+  <li>Neural population geometry papers (<a href="https://www.sciencedirect.com/science/article/pii/S0959438821001227?utm_source=chatgpt.com">1</a>, <a href="https://journals.aps.org/prx/abstract/10.1103/PhysRevX.8.031003?utm_source=chatgpt.com">2</a>) – didn’t skim, just listened to notebooklm podcast. Seems to say that populations of neurons encode tasks like motor control and even higher cognition as geometric shapes in higher dimensions (manifolds). Also interestingly as things become more predictable (eg while watching a repeating movie or smth), the manifold geometry becomes simpler.
+    <ul>
+      <li>Minimizing prediction error in the brain = trying to simplify its geometrical representation in the latent space. If it has a simpler geometry it’s easier to encode?</li>
+      <li>Another way to say this is that seemingly complex activations of populations of neurons may actually be a simple geometry (and therefore simple information theoretically / perhaps in terms of Kolmogorov complexity) in the manifold space</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 2 (12/3)]]></summary></entry><entry><title type="html">December Aliveline - Kickoff</title><link href="https://vanshkumar.net/alive-lines/2025/12/02/december-aliveline.html" rel="alternate" type="text/html" title="December Aliveline - Kickoff" /><published>2025-12-02T00:00:00+00:00</published><updated>2025-12-02T00:00:00+00:00</updated><id>https://vanshkumar.net/alive-lines/2025/12/02/december-aliveline</id><content type="html" xml:base="https://vanshkumar.net/alive-lines/2025/12/02/december-aliveline.html"><![CDATA[<p>Lately I’ve been feeling lost. Unfortunately that’s a feature not a bug of how I am trying to live my life now. A better way to to put it is that I’ve been feeling low on <em>momentum</em>. But today I feel more energy and more momentum. It’s a great day to start something. Let’s do it.</p>
+
+<p>I enjoy reading about these “month to master” style projects where someone takes on a seemingly insane challenge (eg become a chess grandmaster in a month). They often don’t succeed, but they fail in an interesting way as constraints breed creativity. I like the term “alive-line” in lieu of deadline as a reminder for how the point of constraints is to get you excited about a crazy sounding goal and ultimately make you feel more alive. Time for me to try one of these.</p>
+
+<p>For December I have chosen to try to <strong>have and publish an original insight</strong>. Today is December 2, and I plan to give myself 31 days for this, which brings us to <strong>January 2</strong>.</p>
+
+<p>What I mean by “have and publish an original insight”:</p>
+<ul>
+  <li>I have been reading here and there about intelligence – how we learn, how the brain works, how ML works, etc</li>
+  <li>I want to publish something that is original relative to the current research AND more importantly something that I would consider novel/interesting today</li>
+</ul>
+
+<p>I’ll keep track of how things are going on this blog. Let’s go!</p>
+
+<hr />
+<h1 id="day-1-122">Day 1 (12/2)</h1>
+
+<p>This feels like a daunting task! How might I begin?</p>
+
+<p>I am reminded of the “problem solver” vs “problem creator” framework that Michael Nielsen describes in “Principles of Effective Research”. It’s unlikely that I can develop a level of technical skill in a month to solve some really hard technical problem in physics or something like that. I suspect the “problem creator” approach is a better approach here.</p>
+
+<p>How can I adapt it so that I can actually accomplish something within a month? What kinds of approaches might work? Brainstorming:</p>
+<ul>
+  <li>Probably need a sense of where the frontiers of knowledge even are in the fields I’m interested in
+    <ul>
+      <li>LLMs can bootstrap this pretty easily and then I can pick subareas to go deeper into</li>
+    </ul>
+  </li>
+  <li>Deliberately reading old obscure papers and seeing if they can be applied or connect to existing frontiers of knowledge</li>
+  <li>What are some examples of articles that are in this kind of mode?
+    <ul>
+      <li>First Law of Complexodynamics
+        <ul>
+          <li>Applied resource constraints to ideas like entropy/complexity to get to where they wanted to go. Possibly can pull out the idea of “what if we apply resource constraints?” and apply that elsewhere</li>
+        </ul>
+      </li>
+      <li>Universal Quantum Computer (Deutsch)
+        <ul>
+          <li>Asked the question “what if quantum physics was seen as a computer?”</li>
+        </ul>
+      </li>
+      <li>Some of the early Complexity papers in the series are like this – light on falsifiability, heavy on speculation &amp; questioning (which is fine!). Eg the maximum power principle thing</li>
+    </ul>
+  </li>
+  <li>Could look like a reframing of an existing interesting question, perhaps by connecting two fields
+    <ul>
+      <li>Information theory + the brain seems like a cool obvious one</li>
+      <li>Presumably universality/critical points and phase transitions math is pretty connected to the complexodynamics stuff?</li>
+      <li>Error correction + DNA (quantum?)</li>
+      <li>This almost certainly has to be two fields that people are <em>not</em> already thinking about connecting together, ie something that’s not so obvious as info theory + brain</li>
+    </ul>
+  </li>
+  <li>Early chaos theory was born by deeply studying stuff like the weather, the logistic map, etc. Seemingly simple equations/models that resulted in crazy complexity. I guess that’s another approach? Deeply study something that is accepted and seen as ‘simple’ today? What might that be?</li>
+  <li>On the other hand, where are the scientific messes? Mess = opportunity</li>
+</ul>
+
+<p>Broadly it’s hard to find unifying ideas in things like evolution/learning/the brain because they are so environment/niche driven IMO. Evolution means organisms are adapting to whatever specific environment they are presented with and environments are super diverse and complex. So the solutions evolution ends up at will also end up be like that. They will reflect the diversity and complexity of the real world. So does that mean if we understand the real world in a more unified way, we will subsequently perhaps understand common principles across different evolutionary strategies better too? Ya prolly</p>
+
+<p>Random questions:</p>
+<ul>
+  <li>What if you see evolution as resource-bounded computation?</li>
+  <li>Does evolution have a view on if physics is teleological?</li>
+  <li>What is the appropriate measure of ‘complexity’ or ‘representational capacity’ for a brain, given that neuronal pathways can change over time etc?</li>
+</ul>
+
+<p>Spent like 20-30m looking into how the whole connectome of <em>C. Elegans</em> has been mapped. It has 302 neurons and we know the connections between them all. There is a long-standing <a href="https://openworm.org/">OpenWorm</a> project that aims to fully simulate a worm. Further mapping of its connectome has showed that neuromodularity allows the worm to have dynamic behavior and represent peristent internal states by changing the functional connection between neurons despite having a static connectome. Wild! <a href="https://arxiv.org/abs/2402.14102">Some ppl did</a> some factorization + trained a generative model to understand the adaptability better, which indicates that functional circuits are task-, state-, and individual-dependent, rather than a single fixed wiring diagram</p>
+
+<p>Hm I should try the stupidest possible thing, which is if ChatGPT can just do this for me. Let’s see what it says. It suggests:</p>
+<ul>
+  <li>For something based on my notes above
+    <ul>
+      <li>The representational capacity of a brain is better thought of as the capacity of the <strong>ensemble of effective circuits it can reconfigure into</strong>, under realistic resource constraints (time, energy, neuromodulatory bandwidth), not just as the capacity of any one static circuit.</li>
+    </ul>
+  </li>
+  <li>For its “own” insight
+    <ul>
+      <li><strong>The real object of intelligence isn’t a policy (state → action), it’s an <em>attentional σ-algebra</em>: the particular way an agent <em>coarsens the world into distinctions it bothers to notice</em>. Actions are almost a side-effect of that.</strong>
+        <ul>
+          <li>We usually describe an agent by its <strong>policy</strong>:  “In state sss, it takes action aaa.”</li>
+          <li>But in anything complicated (brains, institutions, ML systems), what actually makes it smart or dumb is <strong>which differences in the world it <em>treats as the same</em></strong> versus <strong>which differences it insists on separating</strong>.</li>
+          <li>That pattern of “we lump these together / we distinguish these” <em>is</em> the intelligence. The action mapping is downstream.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name></name></author><category term="alive-lines" /><summary type="html"><![CDATA[Lately I’ve been feeling lost. Unfortunately that’s a feature not a bug of how I am trying to live my life now. A better way to to put it is that I’ve been feeling low on momentum. But today I feel more energy and more momentum. It’s a great day to start something. Let’s do it.]]></summary></entry></feed>

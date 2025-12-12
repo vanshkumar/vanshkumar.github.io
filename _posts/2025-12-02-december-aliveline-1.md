@@ -6,7 +6,7 @@ categories: alive-lines
 ---
 Lately I've been feeling lost. Unfortunately that's a feature not a bug of how I am trying to live my life now. A better way to to put it is that I've been feeling low on *momentum*. But today I feel more energy and more momentum. It's a great day to start something. Let's do it.
 
-I enjoy reading about these "month to master" style projects where someone takes on a seemingly insane challenge (eg become a chess grandmaster in a month). They often don't succeed, but they fail in an interesting way as constraints breed creativity. I like the term "alive-line" in lieu of deadline as a reminder for how the point of constraints is to get you excited about a crazy sounding goal and ultimately make you feel more alive. Time for me to try one of these.
+I enjoy reading about these "month to master" style projects where someone takes on a seemingly insane challenge (eg become a chess grandmaster in a month). They often don't succeed, but they fail in an interesting way as constraints breed creativity. I like the term "alivline" in lieu of deadline as a reminder for how the point of constraints is to get you excited about a crazy sounding goal and ultimately make you feel more alive. Time for me to try one of these.
 
 For December I have chosen to try to **have and publish an original insight**. Today is December 2, and I plan to give myself 31 days for this, which brings us to **January 2**.
 

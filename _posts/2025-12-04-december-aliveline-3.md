@@ -19,4 +19,3 @@ Today is a pretty low energy day, did not sleep well for 2 nights. That's fine. 
 
 
 It does seem like a more dynamical systems approach to cognition and how the brain works would be way more fruitful than any static views. In other words, you can't separate mind from subject (a la Democracy and Education) – cognition is a joint process between the mind, body, and the environment.
-

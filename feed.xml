@@ -1,6 +1,100 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://vanshkumar.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vanshkumar.net/" rel="alternate" type="text/html" /><updated>2025-12-06T15:15:10+00:00</updated><id>https://vanshkumar.net/feed.xml</id><title type="html">Vansh Kumar</title><subtitle>Vansh Kumar&apos;s site.</subtitle><entry><title type="html">December Aliveline - Day 5</title><link href="https://vanshkumar.net/alivelines/2025/12/06/december-aliveline-4.html" rel="alternate" type="text/html" title="December Aliveline - Day 5" /><published>2025-12-06T00:00:00+00:00</published><updated>2025-12-06T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/06/december-aliveline%204</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/06/december-aliveline-4.html"><![CDATA[<h1 id="day-5-126">Day 5 (12/6)</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://vanshkumar.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vanshkumar.net/" rel="alternate" type="text/html" /><updated>2025-12-12T04:09:54+00:00</updated><id>https://vanshkumar.net/feed.xml</id><title type="html">Vansh Kumar</title><subtitle>Vansh Kumar&apos;s site.</subtitle><entry><title type="html">December Aliveline - Day 10</title><link href="https://vanshkumar.net/alivelines/2025/12/11/december-aliveline-10.html" rel="alternate" type="text/html" title="December Aliveline - Day 10" /><published>2025-12-11T00:00:00+00:00</published><updated>2025-12-11T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/11/december-aliveline-10</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/11/december-aliveline-10.html"><![CDATA[<h1 id="day-10">Day 10</h1>
 
-<p>Again fairly little time to work on this, for bug fighting reasons. I may combine day 3/4/5 into one day since only summed across all three have I had my usual daily working time of 4 hours. Anyways that can be done later. Into the work.</p>
+<p>The stakes for this experiment have been starting to feel unnecessarily high lately. Part of that is self-pressure to have an insight that’s both original and big/important, which is not actually part of my success criteria here. So let’s drop it. The main ideas I’ve played with over the last 10 days:</p>
+<ol>
+  <li>Kolmogorov complexity as measure of representational capacity for brains (minimal program to generate the low-D manifold that encodes a behavior)?</li>
+  <li>Can we treat developmental / genetic parameters as the small-scale couplings, and macroscopic neural manifolds as fixed points or order parameters of an RG-like flow?</li>
+  <li>Can we show a phase transition in covariance between neurons before vs after an organism understands a rule? Tracy-Widom-esque universality class</li>
+</ol>
+
+<p>I think (3) is the most tractable wrt what datasets are currently available today. There appears to be some mouse data and some worm data. Let’s try it.</p>
+
+<hr />
+
+<p>Reading this relevant <a href="https://elifesciences.org/articles/46814">work</a> more deeply, it’s pretty incredible. Some highlights:</p>
+
+<blockquote>
+  <p>These inter-individual differences in neuronal activation is the primary reason why principal component analysis performed on neuronal activity in each individual successfully reveals cycles in neuronal dynamics (Kato et al., 2015) but attempts at projecting data from all individuals onto a common set of principal components fails to reveal any meaningful structure (Figure 1—video 1).</p>
+</blockquote>
+
+<blockquote>
+  <p>Note that the simulations reproduce not just the time scale of individual behaviors (forward and backward locomotion) but also sequences of behaviors that we refer to as backing bouts. This is remarkable because the model of the dynamics was constructed by estimating probability of transition between two states on the time scale of one time step dictated by data acquisition and GCAMP kinetics (~ 1/3 of a second). Yet, the simulation reproduces the dynamics on the time scale longer than 100 s</p>
+</blockquote>
+
+<blockquote>
+  <p>Knowing the initial conditions is sufficient to predict the expected time of transitions between different modes of locomotion 30 s before they are experimentally observed (Figure 3). Remarkably, these predictions are valid across individuals observed years apart. Therefore, neuronal dynamics model can be applied universally across individuals despite significant inter-individual differences in neuronal activation and undersampling of neuronal activity. Although it is likely that the simulation-based predictions could be improved with addition of more neurons, the fact that the animals in the validation dataset shared as few as eight neurons with the original data suggests that using our methodology one can uncover macroscopic dynamics even when only a small subset of the nervous system can be recorded and unequivocally identified.</p>
+</blockquote>
+
+<blockquote>
+  <p>Thus, at least in the simple nervous system of C. elegans a predictive model can be constructed on the basis of a single experimentally observed neuron as long as activation of this neuron is tightly coupled to the network that mediates the observed behaviors</p>
+</blockquote>
+
+<blockquote>
+  <p>The structure of the manifold constructed on the basis of 15 neurons across individuals is nearly identical to the manifold constructed on the basis of 107 neurons in a single animal (Figure 4A). Position in phase space (theta; a) preserves behavioral information across animals. As a result, the assigned behavioral state can be correctly decoded 83% of the time solely on the basis of position along the manifold in Figure 4B.</p>
+</blockquote>
+
+<blockquote>
+  <p>We hypothesize that the nontrivial degeneracy between microscopic biophysical processes and circuit-level dynamics arises because evolutionary selection operates at the macroscopic level of organismal behavior (La ¨ssig and Valleriani, 2008) embodied by the global dynamics of the brain. Thus, there is no explicit selective pressure for each individual to produce identical neuronal activation during behavior.</p>
+</blockquote>
+
+<p>Note that they used data based on immobilized worms, not freely moving worms, which might affect the neuronal dynamics.</p>
+
+<p>Their Asymmetric Diffusion Map Method – a method for modeling nonlinear dynamical systems like the neuronal dynamics – is interesting and possibly applicable to other worm datasets? From <a href="https://chatgpt.com/c/693ad5ab-7d50-832e-9152-a0dd5a1a4854">convo w chatgpt</a> about their nonlinear dynamics method, seems like there are two main approaches to nonlinear neuronal dynamics ppl use:</p>
+<ul>
+  <li>Geometry first models, which are looking at spatial relationships in activity space. Good for finding main modes, clusters, curved low-D embeddings</li>
+  <li>Dynamics first models, which explicitly bake in time and try to learn a transition operator. Good for finding attractors, limit cycles, transition rates, phase</li>
+</ul>
+
+<p>Part of me wants to deeply internalize (eg using Anki for support) the brain of C. Elegans. It’s just 302 neurons and some similarly small number of muscles etc. I wonder what would happen if I “got inside” the brain of this worm to an insane degree, by internalizing datasets of it doing different behaviors etc.</p>
+
+<hr />
+
+<p>Note to self – things I need to study:</p>
+<ul>
+  <li>Probability/stats (Math Academy)</li>
+  <li>Linear algebra (Math Academy)</li>
+  <li>Nonlinear dynamics (Strogatz)</li>
+</ul>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 10]]></summary></entry><entry><title type="html">December Aliveline - Day 9</title><link href="https://vanshkumar.net/alivelines/2025/12/10/december-aliveline-9.html" rel="alternate" type="text/html" title="December Aliveline - Day 9" /><published>2025-12-10T00:00:00+00:00</published><updated>2025-12-10T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/10/december-aliveline-9</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/10/december-aliveline-9.html"><![CDATA[<h1 id="day-9">Day 9</h1>
+
+<p>Alright first day I feel normal, no melatonin / weird sleep!</p>
+
+<p>If we accept the universality picture – “macroscopic universality, microscopic degeneracy” – the implication is that DNA is encoding something that across brains can do various different things at the microscopic level but end up doing the same thing at the macroscopic/statistical level. That is the realm of complex systems. Or more specifically, it’s like specifying local rules that are constraining enough that different ‘coordinate systems’ can emerge at the local level while still having the same macro behavior. How might you actually do that? What systems do we now of today that exhibit such properties?</p>
+
+<p>I guess in some sense even the concept of an ideal gas being made up of tons of microscopic unobservable degenerate gas particles which end up in a particular macro state is similar? Pretty vague analogy.</p>
+
+<p>Now that there are large-scale brain recordings, I did sense some tension between the top-down populations of neurons view vs the bottom-up single neurons approach in computational neuroscience. It seems like the top-down view is much more powerful and popular nowadays, of course only enabled due to advances in recording technology. If you look at it from a DNA lens, it’s likely that DNA can’t be encoding what every single neuron does – that’s a very inefficient way to achieve the macro level behavior that matters, and doesn’t match recent work. Also natural selection acts on the macro behavior level, so that must be the level DNA works at. But it does <em>somehow</em> have to bridge the micro to the macro level. How does it do that??</p>
+
+<p>I wonder if the evolutionary history of <em>C. Elegans</em> can shed some light on this? Or if you grow a single, say cortical, neuron in culture what does it do?</p>
+
+<p><a href="https://chatgpt.com/c/69398281-c4ec-832d-8d79-8b3ce713c0a2">Convo with ChatGPT</a> on the above ended with this idea:</p>
+<blockquote>
+  <p>Can we treat developmental / genetic parameters as the small-scale couplings, and macroscopic neural manifolds as fixed points or order parameters of an RG-like flow?</p>
+</blockquote>
+
+<p><a href="https://chatgpt.com/c/69383cba-c7a8-832b-964d-b2dd706fa472">Convo with ChatGPT</a> where I was wondering if I could use <em>C. Elegans</em> data to show a phase transition in the populations of neurons that fire when the organism understands a rule, and which datasets could help show this.</p>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 9]]></summary></entry><entry><title type="html">December Aliveline - Day 8</title><link href="https://vanshkumar.net/alivelines/2025/12/09/december-aliveline-8.html" rel="alternate" type="text/html" title="December Aliveline - Day 8" /><published>2025-12-09T00:00:00+00:00</published><updated>2025-12-09T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/09/december-aliveline-8</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/09/december-aliveline-8.html"><![CDATA[<h1 id="day-8">Day 8</h1>
+
+<p>It’s been a week since I started this aliveline. And I feel like I’ve done nothing! Amazing. This timeline is so insanely compressed - I am starting to feel a bit of pressure which is kind of against the point of this. Have to keep reminding myself that failure is expected &amp; the goal is to try to fail in interesting ways. How can I fail more interestingly? What are super weird out of the box creative ways to approach this insane goal I’ve set?</p>
+
+<p>The way a particular brain represents something is in a unique coordinate system, though it is likely related to how other brains choose to represent the same thing via some kind of linear transformation. So if you’re given a particular brain’s neural population activations.. can you reconstruct what the person is seeing/thinking/whatever? If you have some alphabet of neural population manifolds, I suppose you could compare against those, up to a linear transformation (rotation, translation)? Is there a “hash” you could take that preserves what matters so you can quickly compare against some library of manifolds? Shazam-ing a brain.</p>
+
+<p>There is explicitly <a href="https://elifesciences.org/articles/46814">work</a> (<a href="https://arxiv.org/abs/1711.08533">older preprint</a>) that shows the above more or less for <em>C. Elegans</em>. Different worms conserve the same low dimensional manifold for motor activity, despite individual neuron activations being distinct. They call it “macroscopic universality, microscopic degeneracy” and they make a lot of analogies to statistical physics. Universality classes are definitely relevant here.</p>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 8]]></summary></entry><entry><title type="html">December Aliveline - Day 7</title><link href="https://vanshkumar.net/alivelines/2025/12/08/december-aliveline-7.html" rel="alternate" type="text/html" title="December Aliveline - Day 7" /><published>2025-12-08T00:00:00+00:00</published><updated>2025-12-08T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/08/december-aliveline-7</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/08/december-aliveline-7.html"><![CDATA[<h1 id="day-7">Day 7</h1>
+
+<p>Sigh slept+woke up late due to a very busy day yesterday &amp; writing IRL much later in the day than usual. Sad! My sleep timing has been fluctuating quite a lot the last 5 days or so which has caused me to be much more tired in the mornings. Oh well, it will be better moving forward. Let’s hop to it.</p>
+
+<p>Couple thoughts this morning:</p>
+<ul>
+  <li>Trying to ask and answer simple interesting questions seems like the right approach here
+    <ul>
+      <li>How might we measure the complexity of a brain?</li>
+      <li></li>
+    </ul>
+  </li>
+  <li>More indirectly – what is my current mental model for how people have and publish original insights?</li>
+</ul>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 7]]></summary></entry><entry><title type="html">December Aliveline - Day 6</title><link href="https://vanshkumar.net/alivelines/2025/12/07/december-aliveline-6.html" rel="alternate" type="text/html" title="December Aliveline - Day 6" /><published>2025-12-07T00:00:00+00:00</published><updated>2025-12-07T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/07/december-aliveline-6</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/07/december-aliveline-6.html"><![CDATA[<h1 id="day-6">Day 6</h1>
+
+<p>Took the day off today pretty much, like I usually do on Sundays (just do some thinking about longer-term visions &amp; my weekly review). <a href="https://chatgpt.com/c/693478fe-ea38-832f-8e15-b9b8c39947b8">Light discussions with ChatGPT</a> on how we might use an existing dataset to show the “universality class describes neuron populations learning a rule”</p>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 6]]></summary></entry><entry><title type="html">December Aliveline - Day 5</title><link href="https://vanshkumar.net/alivelines/2025/12/06/december-aliveline-5.html" rel="alternate" type="text/html" title="December Aliveline - Day 5" /><published>2025-12-06T00:00:00+00:00</published><updated>2025-12-06T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/06/december-aliveline-5</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/06/december-aliveline-5.html"><![CDATA[<h1 id="day-5-126">Day 5 (12/6)</h1>
+
+<p>Again fairly little time to work on this, for bug fighting reasons. I may combine day 3/4/5/6 into one day since only summed across all three have I had my usual daily working time of 4 hours. Anyways that can be done later. Into the work.</p>
 
 <p>How does a population of neurons start firing? Is it all simultaneous? Presumably not given there’s synapses that are crossed in some order. So you have to set some neuronal dominoes going to get a particular population level activation?
 	Yes there is an order and the neural state space has some binning/quantization choice to define a time step. People look at explicit spike order for things like rapid sound localization, visual classification, etc., but the spike binning approach is OK for longer timescale tasks.</p>
@@ -10,7 +104,11 @@
 <p>I have a feeling there is something interesting in trying to define Kolmogorov complexity for neural coding. What might a useful KC analog definition look like?</p>
 <ul>
   <li>Minimum number of neurons that need to be activated to achieve a particular neural state space trajectory?</li>
-</ul>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 5 (12/6)]]></summary></entry><entry><title type="html">December Aliveline - Day 4</title><link href="https://vanshkumar.net/alivelines/2025/12/05/december-aliveline-3.html" rel="alternate" type="text/html" title="December Aliveline - Day 4" /><published>2025-12-05T00:00:00+00:00</published><updated>2025-12-05T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/05/december-aliveline%203</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/05/december-aliveline-3.html"><![CDATA[<h1 id="day-4-125">Day 4 (12/5)</h1>
+</ul>
+
+<p><a href="https://chatgpt.com/c/6932ff2c-5a40-8331-8bb2-a7301b9b2c12">Convo with ChatGPT</a> on the KC idea for brains</p>
+
+<p>Another interesting angle is if the Tracy-Widom distribution, which describes phase transitions from weak coupling to strong coupling, could describe the transition of populations of neurons that spike when a pattern is not understood vs when the underlying rule ‘clicks’?</p>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 5 (12/6)]]></summary></entry><entry><title type="html">December Aliveline - Day 4</title><link href="https://vanshkumar.net/alivelines/2025/12/05/december-aliveline-4.html" rel="alternate" type="text/html" title="December Aliveline - Day 4" /><published>2025-12-05T00:00:00+00:00</published><updated>2025-12-05T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/05/december-aliveline-4</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/05/december-aliveline-4.html"><![CDATA[<h1 id="day-4-125">Day 4 (12/5)</h1>
 
 <p>Slept late &amp; quite poorly again thanks to having to clean for hours due to this pantry moth infestation. Just a little bit of time to work on this. Let’s review lit notes &amp; ask chatgpt/notebooklm what the core assumptions are that each paper makes. That might be a fruitful way forward. I do think I’ve been under-using LLMs as a way to interrogate papers and instead just skimming them myself. Should do both!</p>
 
@@ -29,7 +127,7 @@
 <ul>
   <li>Minimum number of neurons that need to be activated to achieve a particular neural state space trajectoroy?</li>
   <li></li>
-</ul>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 4 (12/5)]]></summary></entry><entry><title type="html">December Aliveline - Day 3</title><link href="https://vanshkumar.net/alivelines/2025/12/04/december-aliveline-2.html" rel="alternate" type="text/html" title="December Aliveline - Day 3" /><published>2025-12-04T00:00:00+00:00</published><updated>2025-12-04T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/04/december-aliveline%202</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/04/december-aliveline-2.html"><![CDATA[<h1 id="day-3-124">Day 3 (12/4)</h1>
+</ul>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 4 (12/5)]]></summary></entry><entry><title type="html">December Aliveline - Day 3</title><link href="https://vanshkumar.net/alivelines/2025/12/04/december-aliveline-3.html" rel="alternate" type="text/html" title="December Aliveline - Day 3" /><published>2025-12-04T00:00:00+00:00</published><updated>2025-12-04T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/04/december-aliveline-3</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/04/december-aliveline-3.html"><![CDATA[<h1 id="day-3-124">Day 3 (12/4)</h1>
 
 <p>There is a “minimum description length” principle in ML, which is the idea that you don’t want the weights to have too much information (? I don’t really understand this that well tbh).</p>
 
@@ -42,7 +140,7 @@
 
 <p>Today is a pretty low energy day, did not sleep well for 2 nights. That’s fine. Remove all pressure to get something done today, it’s all good. This bug infestation fighting has been taking a ton of time and mental energy the last day.</p>
 
-<p>It does seem like a more dynamical systems approach to cognition and how the brain works would be way more fruitful than any static views. In other words, you can’t separate mind from subject (a la Democracy and Education) – cognition is a joint process between the mind, body, and the environment.</p>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 3 (12/4)]]></summary></entry><entry><title type="html">December Aliveline - Day 2</title><link href="https://vanshkumar.net/alivelines/2025/12/03/december-aliveline.html" rel="alternate" type="text/html" title="December Aliveline - Day 2" /><published>2025-12-03T00:00:00+00:00</published><updated>2025-12-03T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/03/december-aliveline</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/03/december-aliveline.html"><![CDATA[<h1 id="day-2-123">Day 2 (12/3)</h1>
+<p>It does seem like a more dynamical systems approach to cognition and how the brain works would be way more fruitful than any static views. In other words, you can’t separate mind from subject (a la Democracy and Education) – cognition is a joint process between the mind, body, and the environment.</p>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 3 (12/4)]]></summary></entry><entry><title type="html">December Aliveline - Day 2</title><link href="https://vanshkumar.net/alivelines/2025/12/03/december-aliveline-2.html" rel="alternate" type="text/html" title="December Aliveline - Day 2" /><published>2025-12-03T00:00:00+00:00</published><updated>2025-12-03T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/03/december-aliveline-2</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/03/december-aliveline-2.html"><![CDATA[<h1 id="day-2-123">Day 2 (12/3)</h1>
 
 <p>Initially I was planning to spend another day on exploration and brainstorming of where I might spend my time. But given the time pressure with this aliveline, I now suspect it might be more fruitful to pick something and see where I can get with it in a day or two. The point of an aliveline is to try to fail in interesting ways, and that can only be accomplished with action not rumination. So the candidate “insight”, which I worked with ChatGPT a bit to pull out from my brainstorming yesterday, is:</p>
 
@@ -112,9 +210,9 @@
       <li>Another way to say this is that seemingly complex activations of populations of neurons may actually be a simple geometry (and therefore simple information theoretically / perhaps in terms of Kolmogorov complexity) in the manifold space</li>
     </ul>
   </li>
-</ul>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 2 (12/3)]]></summary></entry><entry><title type="html">December Aliveline - Kickoff</title><link href="https://vanshkumar.net/alive-lines/2025/12/02/december-aliveline.html" rel="alternate" type="text/html" title="December Aliveline - Kickoff" /><published>2025-12-02T00:00:00+00:00</published><updated>2025-12-02T00:00:00+00:00</updated><id>https://vanshkumar.net/alive-lines/2025/12/02/december-aliveline</id><content type="html" xml:base="https://vanshkumar.net/alive-lines/2025/12/02/december-aliveline.html"><![CDATA[<p>Lately I’ve been feeling lost. Unfortunately that’s a feature not a bug of how I am trying to live my life now. A better way to to put it is that I’ve been feeling low on <em>momentum</em>. But today I feel more energy and more momentum. It’s a great day to start something. Let’s do it.</p>
+</ul>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 2 (12/3)]]></summary></entry><entry><title type="html">December Aliveline - Kickoff</title><link href="https://vanshkumar.net/alive-lines/2025/12/02/december-aliveline-1.html" rel="alternate" type="text/html" title="December Aliveline - Kickoff" /><published>2025-12-02T00:00:00+00:00</published><updated>2025-12-02T00:00:00+00:00</updated><id>https://vanshkumar.net/alive-lines/2025/12/02/december-aliveline-1</id><content type="html" xml:base="https://vanshkumar.net/alive-lines/2025/12/02/december-aliveline-1.html"><![CDATA[<p>Lately I’ve been feeling lost. Unfortunately that’s a feature not a bug of how I am trying to live my life now. A better way to to put it is that I’ve been feeling low on <em>momentum</em>. But today I feel more energy and more momentum. It’s a great day to start something. Let’s do it.</p>
 
-<p>I enjoy reading about these “month to master” style projects where someone takes on a seemingly insane challenge (eg become a chess grandmaster in a month). They often don’t succeed, but they fail in an interesting way as constraints breed creativity. I like the term “alive-line” in lieu of deadline as a reminder for how the point of constraints is to get you excited about a crazy sounding goal and ultimately make you feel more alive. Time for me to try one of these.</p>
+<p>I enjoy reading about these “month to master” style projects where someone takes on a seemingly insane challenge (eg become a chess grandmaster in a month). They often don’t succeed, but they fail in an interesting way as constraints breed creativity. I like the term “alivline” in lieu of deadline as a reminder for how the point of constraints is to get you excited about a crazy sounding goal and ultimately make you feel more alive. Time for me to try one of these.</p>
 
 <p>For December I have chosen to try to <strong>have and publish an original insight</strong>. Today is December 2, and I plan to give myself 31 days for this, which brings us to <strong>January 2</strong>.</p>
 

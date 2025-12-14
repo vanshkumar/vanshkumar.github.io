@@ -35,13 +35,10 @@ Their Asymmetric Diffusion Map Method – a method for modeling nonlinear dynam
 - Geometry first models, which are looking at spatial relationships in activity space. Good for finding main modes, clusters, curved low-D embeddings
 - Dynamics first models, which explicitly bake in time and try to learn a transition operator. Good for finding attractors, limit cycles, transition rates, phase
 
+The dynamics approach is more appropriate for the kinds of questions I'm interested in. I also tend to believe that cognition *is* a nonlinear dynamical system.
+
+
 Part of me wants to deeply internalize (eg using Anki for support) the brain of C. Elegans. It's just 302 neurons and some similarly small number of muscles etc. I wonder what would happen if I "got inside" the brain of this worm to an insane degree, by internalizing datasets of it doing different behaviors etc.
-
----
-
-
-
-
 
 
 Note to self – things I need to study:

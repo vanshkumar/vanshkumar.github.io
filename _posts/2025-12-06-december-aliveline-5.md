@@ -6,7 +6,7 @@ categories: alivelines
 ---
 # Day 5 (12/6)
 
-Again fairly little time to work on this, for bug fighting reasons. I may combine day 3/4/5/6 into one day since only summed across all three have I had my usual daily working time of 4 hours. Anyways that can be done later. Into the work.
+Again fairly little time to work on this, for bug fighting reasons. I may combine day 3/4/5/6 into one day since only summed across all four have I had my usual daily working time of 4 hours. Anyways that can be done later. Into the work.
 
 How does a population of neurons start firing? Is it all simultaneous? Presumably not given there's synapses that are crossed in some order. So you have to set some neuronal dominoes going to get a particular population level activation?
 	Yes there is an order and the neural state space has some binning/quantization choice to define a time step. People look at explicit spike order for things like rapid sound localization, visual classification, etc., but the spike binning approach is OK for longer timescale tasks.

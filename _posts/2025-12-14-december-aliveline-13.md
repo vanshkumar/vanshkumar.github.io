@@ -13,4 +13,3 @@ Reflecting on the Kevin Kelly advice, which was partially a trigger for this ali
 
 Another KK bit of advice that was a trigger for this as well (paraphrased):
 >Steady production teaches you a spirit of abundance, which lets you let go of good work to reach the great stuff.
-

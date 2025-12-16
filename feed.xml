@@ -1,4 +1,126 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://vanshkumar.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vanshkumar.net/" rel="alternate" type="text/html" /><updated>2025-12-16T04:06:18+00:00</updated><id>https://vanshkumar.net/feed.xml</id><title type="html">Vansh Kumar</title><subtitle>Vansh Kumar&apos;s site.</subtitle><entry><title type="html">December Aliveline - Day 14</title><link href="https://vanshkumar.net/alivelines/2025/12/15/december-aliveline-14.html" rel="alternate" type="text/html" title="December Aliveline - Day 14" /><published>2025-12-15T00:00:00+00:00</published><updated>2025-12-15T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/15/december-aliveline-14</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/15/december-aliveline-14.html"><![CDATA[<h1 id="day-14">Day 14</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://vanshkumar.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vanshkumar.net/" rel="alternate" type="text/html" /><updated>2025-12-16T20:33:07+00:00</updated><id>https://vanshkumar.net/feed.xml</id><title type="html">Vansh Kumar</title><subtitle>Vansh Kumar&apos;s site.</subtitle><entry><title type="html">December Aliveline - Day 15</title><link href="https://vanshkumar.net/alivelines/2025/12/16/december-aliveline-15.html" rel="alternate" type="text/html" title="December Aliveline - Day 15" /><published>2025-12-16T00:00:00+00:00</published><updated>2025-12-16T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/16/december-aliveline-15</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/16/december-aliveline-15.html"><![CDATA[<h1 id="day-15">Day 15</h1>
+
+<p>Reading <a href="https://www.biorxiv.org/content/10.1101/2025.10.31.685731v1">Aversive Learning Induces Context-Gated Global Reorganization of Neural Dynamics in Caenorhabditis elegans</a></p>
+
+<p>Very cool. Notes/summary:</p>
+<ul>
+  <li>PA14 is a well known bacterium that C Elegans naturally prefers but is virulent, and that it learns to avoid after 4-6h of exposure</li>
+  <li>Setup
+    <ul>
+      <li>Naive worms vs trained worms (previously trained for 4-6h that PA14 is harmful)</li>
+      <li>Main experiments
+        <ul>
+          <li>PA14 in the presence of OP5O (food context) – discrimination task</li>
+          <li>PA14 in the presence of buffer (no-food context) – detection task</li>
+        </ul>
+      </li>
+      <li>Controls
+        <ul>
+          <li>PA14-gac (less virulent version) in the presence of OP50</li>
+          <li>OP50 in the presence of buffer</li>
+          <li>Buffer only</li>
+        </ul>
+      </li>
+      <li>Imaged ~78% of the brain during these tasks</li>
+    </ul>
+  </li>
+  <li>PA14 being present causes <em>brain-wide</em> activity, it’s not just localized to sensory neurons
+    <ul>
+      <li>Brain-wide activity is low dimensional (top 3 SVD components explain 90% of variance)</li>
+    </ul>
+  </li>
+  <li>High correlation between top 3 SVD components of brain-wide activity &amp; top 3 PCA components of turning behavior of worms
+    <ul>
+      <li>Indicates the brain-wide activity may be encoding the behavioral preferences as worm movements (ie move away from PA14, towards OP50)</li>
+      <li>Tho top 3 components of turning behavior only explain 44% of turning variance
+        <blockquote>
+          <ul>
+            <li>Together, our results show that aversive training with PA14 modulates the activity of the nervous system in a manner that is both context-gated and task-specific. As a result, trained worms reduce their preference for PA14 in the discrimination task between PA14 and OP50, but preserve their ability in odorant detection task and continue to exhibit the preference for food over a non-food stimulus (Buffer), even if the food, PA14, is harmful.</li>
+          </ul>
+        </blockquote>
+      </li>
+      <li>Much less changes in neurons in the detection task vs the discrimination task</li>
+      <li>Context is encoded in the brain! This allows the worm to learn things like “prefer food (OP50) to PA14” but continue to “prefer PA14 to no food”</li>
+      <li>Brain is learning new stuff without altering existing functions</li>
+      <li>“For C. elegans to survive in the wild, it is adaptive for the learning to be context-specific, with changes only relevant to the task at hand and not for all interactions with the environment”</li>
+    </ul>
+  </li>
+  <li>Learning is encoded as brain-wide network changes, not just local changes, and happens in the same low-dimensional realm
+    <ul>
+      <li>Changes observed across sensory, inter, and motor neurons</li>
+    </ul>
+  </li>
+  <li>Rotations and contractions in the low-D realm as a result of learning
+    <ul>
+      <li>Sensory neurons mostly rotated, interneurons mostly contracted</li>
+      <li>Notably these changes were specific to discrimination task with pathogenic PA14</li>
+    </ul>
+  </li>
+  <li>Fit linear dynamical system &amp; found that learning changed fixed points of various neural populations’ activity,  depending on stimulus + context
+    <ul>
+      <li>So learning =&gt; brain predisposed to specific states based on stimulus + context</li>
+      <li>Another way to say this is that learning <em>collapses</em> the set of possible neural state trajectories (at least for a given stimulus + context); network was more plastic &amp; flexible before</li>
+    </ul>
+  </li>
+  <li>Discussion
+    <ul>
+      <li>Encoding context along with stimulus (1) preserves original behaviors and (2) increases information encoding capacity</li>
+      <li>Authors have shown that context-gating is a systems strategy for encoding learned info, rather than something that affects specific synapses during learning etc</li>
+      <li>C. Elegans has very few neurons and very little redundancy (1-4 neurons per cell type); propose that context-gating along with reuse of neural representations can prevent catastrophic forgetting in tiny nervous systems</li>
+    </ul>
+  </li>
+</ul>
+
+<p>There is a very interesting through-line across these 3 papers:</p>
+<ul>
+  <li><a href="https://elifesciences.org/articles/46814">A quantitative model of conserved macroscopic dynamics predicts future motor commands</a> - 2019
+    <ul>
+      <li>Low-dimensional manifold represents locomotion across worms</li>
+    </ul>
+  </li>
+  <li><a href="https://www.nature.com/articles/s41467-023-40286-x">Locomotion modulates olfactory learning through proprioception in <em>C. elegans</em></a> - 2023
+    <ul>
+      <li>Locomotion itself affects learning (higher speed = higher learning) via proprioception</li>
+    </ul>
+  </li>
+  <li><a href="https://www.biorxiv.org/content/10.1101/2025.10.31.685731v1">Aversive Learning Induces Context-Gated Global Reorganization of Neural Dynamics in Caenorhabditis elegans</a> - 2025
+    <ul>
+      <li>Learning is context-gated &amp; at the system/global level</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a href="https://chatgpt.com/g/g-p-6940510567788191a1a4cfdd32b77a9c-c-elegans-locomotion-neuronal-manifolds-learning/c/694058f3-02b8-832e-96d3-ecf9fc40e260">Discussion with ChatGPT</a> on these 3 papers, the story they tell, testable claims bridging them, and countervailing papers/evidence. Seems there are some caveats to this view:</p>
+<ul>
+  <li>Immobilization can change the correlation structure, so the locomotion manifold may not be universal / depends on setting</li>
+  <li>Motor-program phase can gate sensory processing (a confound <em>and</em> an alternative mechanism to ‘learning changes the manifold’). what does this mean? per chat:
+    <ul>
+      <li>the same sensory input can mean different things depending on what the motor system is currently doing (forward run vs turn vs reversal), because the motor circuit feeds back and changes how sensory signals propagate</li>
+      <li>if sensory→neural→behavior mapping depends on motor phase, then:
+        <ul>
+          <li>If training changes how often the animal is in <em>forward vs turning</em> (or changes speed/gait), the dataset becomes a different mixture of motor phases.</li>
+          <li>Averaging across that mixture can easily look like a rotation / contraction / fixed-point shift in low-D space even if <em>within each motor phase</em> nothing fundamental changed</li>
+        </ul>
+      </li>
+      <li>an “apparent learning-induced geometry change” could be explained by:
+        <ul>
+          <li>No intrinsic re-wiring of the sensory representation, plus</li>
+          <li>Learning alters state occupancy (more/less turning, different gait), and</li>
+          <li>Because motor state gates sensory processing, the evoked trajectories look different</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>In a freely moving worm / natural context, <em>nearly everything is doing something</em> and it’s not obviously collapsible to one locomotor manifold</li>
+</ul>
+
+<p>Hm I don’t think I subscribed to the view that there is one supreme location manifold that the whole brain is organized around anyways? I would suppose it is context-dependent, emerges differently based on how an individual worm develops, etc. My hypothesis would be something more like:</p>
+<ul>
+  <li>There exists a locomotion-related population subspace</li>
+  <li>The exact manifold that shows up in that space is specific to the worm, context, task, etc and changes over time due to learning etc</li>
+</ul>
+
+<p>More to think through here…</p>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 15]]></summary></entry><entry><title type="html">December Aliveline - Day 14</title><link href="https://vanshkumar.net/alivelines/2025/12/15/december-aliveline-14.html" rel="alternate" type="text/html" title="December Aliveline - Day 14" /><published>2025-12-15T00:00:00+00:00</published><updated>2025-12-15T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/15/december-aliveline-14</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/15/december-aliveline-14.html"><![CDATA[<h1 id="day-14">Day 14</h1>
 
 <p>OK roughly halfway through the aliveline. I want to try regressing out stimulus category, choice, reward, movement, and see if there is a spike around the rule learning. Re-reading the paper and methods to make sure I understand what I’m doing.</p>
 
@@ -261,20 +383,4 @@
   <li>More indirectly – what is my current mental model for how people have and publish original insights?</li>
 </ul>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 7]]></summary></entry><entry><title type="html">December Aliveline - Day 6</title><link href="https://vanshkumar.net/alivelines/2025/12/07/december-aliveline-6.html" rel="alternate" type="text/html" title="December Aliveline - Day 6" /><published>2025-12-07T00:00:00+00:00</published><updated>2025-12-07T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/07/december-aliveline-6</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/07/december-aliveline-6.html"><![CDATA[<h1 id="day-6">Day 6</h1>
 
-<p>Took the day off today pretty much, like I usually do on Sundays (just do some thinking about longer-term visions &amp; my weekly review). <a href="https://chatgpt.com/c/693478fe-ea38-832f-8e15-b9b8c39947b8">Light discussions with ChatGPT</a> on how we might use an existing dataset to show the “universality class describes neuron populations learning a rule”</p>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 6]]></summary></entry><entry><title type="html">December Aliveline - Day 5</title><link href="https://vanshkumar.net/alivelines/2025/12/06/december-aliveline-5.html" rel="alternate" type="text/html" title="December Aliveline - Day 5" /><published>2025-12-06T00:00:00+00:00</published><updated>2025-12-06T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/06/december-aliveline-5</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/06/december-aliveline-5.html"><![CDATA[<h1 id="day-5-126">Day 5 (12/6)</h1>
-
-<p>Again fairly little time to work on this, for bug fighting reasons. I may combine day 3/4/5/6 into one day since only summed across all four have I had my usual daily working time of 4 hours. Anyways that can be done later. Into the work.</p>
-
-<p>How does a population of neurons start firing? Is it all simultaneous? Presumably not given there’s synapses that are crossed in some order. So you have to set some neuronal dominoes going to get a particular population level activation?
-	Yes there is an order and the neural state space has some binning/quantization choice to define a time step. People look at explicit spike order for things like rapid sound localization, visual classification, etc., but the spike binning approach is OK for longer timescale tasks.</p>
-
-<p>After the spike quantization is done, you end up with something like a neural state space trajectory. Seems like people do various dimensionality reduction techniques (PCA, more recently nonlinear dimensionality reduction) on that state space to look at the “neural subspace” where interesting stuff is occurring. That’s the space in which this neural population geometry work is happening.</p>
-
-<p>I have a feeling there is something interesting in trying to define Kolmogorov complexity for neural coding. What might a useful KC analog definition look like?</p>
-<ul>
-  <li>Minimum number of neurons that need to be activated to achieve a particular neural state space trajectory?</li>
-</ul>
-
-<p><a href="https://chatgpt.com/c/6932ff2c-5a40-8331-8bb2-a7301b9b2c12">Convo with ChatGPT</a> on the KC idea for brains</p>
-
-<p>Another interesting angle is if the Tracy-Widom distribution, which describes phase transitions from weak coupling to strong coupling, could describe the transition of populations of neurons that spike when a pattern is not understood vs when the underlying rule ‘clicks’?</p>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 5 (12/6)]]></summary></entry></feed>
+<p>Took the day off today pretty much, like I usually do on Sundays (just do some thinking about longer-term visions &amp; my weekly review). <a href="https://chatgpt.com/c/693478fe-ea38-832f-8e15-b9b8c39947b8">Light discussions with ChatGPT</a> on how we might use an existing dataset to show the “universality class describes neuron populations learning a rule”</p>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 6]]></summary></entry></feed>

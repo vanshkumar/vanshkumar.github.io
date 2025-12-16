@@ -76,5 +76,10 @@ Where to go from here? Some options from the above:
 - Can we find phase transitions in *C. Elegans* neuron populations when a rule is learned?
 - Keep going with mice data – regress out the various confounds and see if we can isolate the sparse representation of the category rule
 - Do something entirely different
+	- I want to do this "get inside the brain of a worm" thing for sure. Perhaps after this aliveline is over?
 
-My sense is I should take some 'do nothing' time and see how I feel.
+My sense is I should take some 'do nothing' meditation time and see how I feel
+
+---
+
+Let's look at locomotion manifolds in *C. Elegans*

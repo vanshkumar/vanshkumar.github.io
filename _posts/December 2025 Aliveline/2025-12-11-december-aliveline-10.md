@@ -44,4 +44,5 @@ Part of me wants to deeply internalize (eg using Anki for support) the brain of 
 Note to self – things I need to study:
 - Probability/stats (Math Academy)
 - Linear algebra (Math Academy)
-- Nonlinear dynamics (Strogatz)
+- Nonlinear dynamics (Strogatz course+textbook)
+- Neuroscience (https://neuronaldynamics.epfl.ch/online/index.html)

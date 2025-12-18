@@ -17,10 +17,11 @@ Very cool. Notes/summary:
 		- PA14 in the presence of buffer (no-food context) – detection task
 	- Controls
 		- PA14-gac (less virulent version) in the presence of OP50
+			- With PA14-gac trained worms
 		- OP50 in the presence of buffer
 		- Buffer only
 	- Imaged ~78% of the brain during these tasks
-- PA14 being present causes *brain-wide* activity, it's not just localized to sensory neurons
+- PA14 being present causes *brain-wide* activity in the trained worms, it's not just localized to sensory neurons
 	- Brain-wide activity is low dimensional (top 3 SVD components explain 90% of variance)
 - High correlation between top 3 SVD components of brain-wide activity & top 3 PCA components of turning behavior of worms
 	- Indicates the brain-wide activity may be encoding the behavioral preferences as worm movements (ie move away from PA14, towards OP50)

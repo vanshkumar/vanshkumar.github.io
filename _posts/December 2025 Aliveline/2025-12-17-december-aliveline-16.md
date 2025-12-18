@@ -23,4 +23,3 @@ What do I hypothesize/believe about the *C. Elegans* brain **right now**?
 The brain is tiny (302 neurons). As per the Liang paper it has 1-4 neurons per cell type, so little to no neuron redundancy. How might it do error correction / avoid catastrophic forgetting?
 - Their proposal is "context-gating", ie encode something about the context+stimulus combo rather than changing the global neuronal response for a stimulus
 	- I think all brains obviously do this?
-

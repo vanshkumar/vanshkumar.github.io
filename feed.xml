@@ -1,4 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://vanshkumar.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vanshkumar.net/" rel="alternate" type="text/html" /><updated>2025-12-17T20:26:54+00:00</updated><id>https://vanshkumar.net/feed.xml</id><title type="html">Vansh Kumar</title><subtitle>Vansh Kumar&apos;s site.</subtitle><entry><title type="html">December Aliveline - Day 16</title><link href="https://vanshkumar.net/alivelines/2025/12/17/december-aliveline-16.html" rel="alternate" type="text/html" title="December Aliveline - Day 16" /><published>2025-12-17T00:00:00+00:00</published><updated>2025-12-17T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/17/december-aliveline-16</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/17/december-aliveline-16.html"><![CDATA[<h1 id="day-16">Day 16</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://vanshkumar.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vanshkumar.net/" rel="alternate" type="text/html" /><updated>2025-12-18T20:56:10+00:00</updated><id>https://vanshkumar.net/feed.xml</id><title type="html">Vansh Kumar</title><subtitle>Vansh Kumar&apos;s site.</subtitle><entry><title type="html">December Aliveline - Day 17</title><link href="https://vanshkumar.net/alivelines/2025/12/18/december-aliveline-17.html" rel="alternate" type="text/html" title="December Aliveline - Day 17" /><published>2025-12-18T00:00:00+00:00</published><updated>2025-12-18T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/18/december-aliveline-17</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/18/december-aliveline-17.html"><![CDATA[<h1 id="day-17">Day 17</h1>
+
+<p>More questions/thoughts:</p>
+<ul>
+  <li>Tracy-Widom style phase transition hypothesis = some set of neurons that were previously weakly/not coupled, become strongly coupled after learning a rule
+    <ul>
+      <li>Coupling of neurons is how rules are implemented</li>
+    </ul>
+  </li>
+  <li>If you have only a few neurons, is it better to implement a key behavior like locomotion in a sparse distributed way or a more concentrated way?
+    <ul>
+      <li>If there is error correction built into the DNA itself… then maybe concentrated is OK?
+        <ul>
+          <li>Is “error correction” a useful framework for thinking about stuff like this? Not sure, it feels more designed than discovered</li>
+        </ul>
+      </li>
+      <li>There is strong selective pressure for worms to be able to move. How might that selection manifest?
+        <ul>
+          <li>Any worms that end up without a fully functional locomotion subspace/manifold are pretty much dead on arrival</li>
+          <li>Why would worms not have a functional locomotion subspace/manifold?
+            <ul>
+              <li>Missing key neurons
+                <ul>
+                  <li>I would think that there is where DNA error correction comes in? Like something in it makes it so that key locomotion neurons definitely develop, even if it means that other kinds of neurons don’t develop</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Have people found a locomotion manifold across many worms (ie in the qsimeon homogenized dataset)? It’s supposedly universal
+    <ul>
+      <li>I could try to do this. Apply the asymmetric diffusion map method to the full qsimeon dataset and see if I can reconstruct a locomotion manifold for all the worms</li>
+    </ul>
+  </li>
+  <li>This context-gating thing makes sense but not fully. To reiterate their results: PA14 trained worms have many more brain-wide differences in the discrimination task vs detection task
+    <ul>
+      <li>Trained worms are averse to PA14 when food is present, but still attracted when not present</li>
+      <li>Naive worms show no difference</li>
+      <li>
+        <p>Implication – the learning from training on PA14 causes brain-wide changes which can result in context and task-specific behavioral differences</p>
+      </li>
+      <li>What kind of mechanism could make this work?
+        <ul>
+          <li>Discrimination task = OP50 for 30s, PA14 for 30s, OP50 for 30s</li>
+          <li>Detection task = buffer for 30s, PA14 for 30s, buffer for 30s</li>
+          <li>This is some kind of short-term memory, no?
+            <ul>
+              <li>Yea I guess it’s like short-term memory in a dynamical systems sense – it’s like a sensory state. So worm is in a “there is food present” vs “there is no food present” state. And then onset of PA14 changes its brain state in differing ways based on if it’s trained or not.</li>
+            </ul>
+          </li>
+          <li>And the authors specifically identify which neurons contribute to this</li>
+        </ul>
+      </li>
+      <li>Are trained worms <em>less</em> attracted to PA14 relative to buffer vs naive worms?
+        <ul>
+          <li>This would argue for some kind of “global downweighting” of PA14 as a result of training, perhaps a multiplicative downweighting, rather than actual context-dependent behavior</li>
+        </ul>
+      </li>
+      <li><a href="https://chatgpt.com/g/g-p-6940510567788191a1a4cfdd32b77a9c-c-elegans-locomotion-neuronal-manifolds-learning/c/69441a63-7294-832c-ad8d-cd51afce86c8">Further discussion</a> on a number of points in this paper with ChatGPT</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The aliveline is “have and publish an original insight”. But does it have to be me who does it? What if instead I am able to connect authors of a couple papers whose ideas are part of a similar story but haven’t been previously connected, and that <em>leads to an original insight being published</em>? I would define that as success. That’s a way more tractable problem to do in a month as well.</p>
+
+<p>Makes me wonder about how important such social-style bottlenecks are in science/research? There is an implicit narrative about science being bottlenecked by individual genius… but if you believe the scenius/technium-style thinking, the bit that’s lacking is more coordination/social infra?</p>
+
+<p>Ultimately, my primary advantage in all of this is that I <strong><em>do not</em></strong> need to optimize for metrics like citation/paper count. I am doing this for the love of the game, for a desire to learn, to push science forward, etc. That <strong>needs</strong> to be my starting point here. And besides, an approach where I learn and work on things that are interesting, both inside and outside of formal science, is wayyy more fun.</p>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 17]]></summary></entry><entry><title type="html">December Aliveline - Day 16</title><link href="https://vanshkumar.net/alivelines/2025/12/17/december-aliveline-16.html" rel="alternate" type="text/html" title="December Aliveline - Day 16" /><published>2025-12-17T00:00:00+00:00</published><updated>2025-12-17T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/17/december-aliveline-16</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/17/december-aliveline-16.html"><![CDATA[<h1 id="day-16">Day 16</h1>
 
 <p>What do I hypothesize/believe about the <em>C. Elegans</em> brain <strong>right now</strong>?</p>
 <ul>
@@ -59,7 +129,11 @@
       </li>
       <li>Controls
         <ul>
-          <li>PA14-gac (less virulent version) in the presence of OP50</li>
+          <li>PA14-gac (less virulent version) in the presence of OP50
+            <ul>
+              <li>With PA14-gac trained worms</li>
+            </ul>
+          </li>
           <li>OP50 in the presence of buffer</li>
           <li>Buffer only</li>
         </ul>
@@ -67,7 +141,7 @@
       <li>Imaged ~78% of the brain during these tasks</li>
     </ul>
   </li>
-  <li>PA14 being present causes <em>brain-wide</em> activity, it’s not just localized to sensory neurons
+  <li>PA14 being present causes <em>brain-wide</em> activity in the trained worms, it’s not just localized to sensory neurons
     <ul>
       <li>Brain-wide activity is low dimensional (top 3 SVD components explain 90% of variance)</li>
     </ul>
@@ -412,17 +486,4 @@
 
 <p>The way a particular brain represents something is in a unique coordinate system, though it is likely related to how other brains choose to represent the same thing via some kind of linear transformation. So if you’re given a particular brain’s neural population activations.. can you reconstruct what the person is seeing/thinking/whatever? If you have some alphabet of neural population manifolds, I suppose you could compare against those, up to a linear transformation (rotation, translation)? Is there a “hash” you could take that preserves what matters so you can quickly compare against some library of manifolds? Shazam-ing a brain.</p>
 
-<p>There is explicitly <a href="https://elifesciences.org/articles/46814">work</a> (<a href="https://arxiv.org/abs/1711.08533">older preprint</a>) that shows the above more or less for <em>C. Elegans</em>. Different worms conserve the same low dimensional manifold for motor activity, despite individual neuron activations being distinct. They call it “macroscopic universality, microscopic degeneracy” and they make a lot of analogies to statistical physics. Universality classes are definitely relevant here.</p>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 8]]></summary></entry><entry><title type="html">December Aliveline - Day 7</title><link href="https://vanshkumar.net/alivelines/2025/12/08/december-aliveline-7.html" rel="alternate" type="text/html" title="December Aliveline - Day 7" /><published>2025-12-08T00:00:00+00:00</published><updated>2025-12-08T00:00:00+00:00</updated><id>https://vanshkumar.net/alivelines/2025/12/08/december-aliveline-7</id><content type="html" xml:base="https://vanshkumar.net/alivelines/2025/12/08/december-aliveline-7.html"><![CDATA[<h1 id="day-7">Day 7</h1>
-
-<p>Sigh slept+woke up late due to a very busy day yesterday &amp; writing IRL much later in the day than usual. Sad! My sleep timing has been fluctuating quite a lot the last 5 days or so which has caused me to be much more tired in the mornings. Oh well, it will be better moving forward. Let’s hop to it.</p>
-
-<p>Couple thoughts this morning:</p>
-<ul>
-  <li>Trying to ask and answer simple interesting questions seems like the right approach here
-    <ul>
-      <li>How might we measure the complexity of a brain?</li>
-      <li></li>
-    </ul>
-  </li>
-  <li>More indirectly – what is my current mental model for how people have and publish original insights?</li>
-</ul>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 7]]></summary></entry></feed>
+<p>There is explicitly <a href="https://elifesciences.org/articles/46814">work</a> (<a href="https://arxiv.org/abs/1711.08533">older preprint</a>) that shows the above more or less for <em>C. Elegans</em>. Different worms conserve the same low dimensional manifold for motor activity, despite individual neuron activations being distinct. They call it “macroscopic universality, microscopic degeneracy” and they make a lot of analogies to statistical physics. Universality classes are definitely relevant here.</p>]]></content><author><name></name></author><category term="alivelines" /><summary type="html"><![CDATA[Day 8]]></summary></entry></feed>

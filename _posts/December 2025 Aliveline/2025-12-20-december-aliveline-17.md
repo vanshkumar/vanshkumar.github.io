@@ -1,6 +1,6 @@
 ---
 layout: post
-title: December Aliveline - Day 19
+title: December Aliveline - Day 17
 date: 2025-12-20
 categories: alivelines
 ---

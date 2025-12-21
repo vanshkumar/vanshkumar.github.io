@@ -1,10 +1,10 @@
 ---
 layout: post
-title: December Aliveline - Day 8
+title: December Aliveline - Day 7
 date: 2025-12-09
 categories: alivelines
 ---
-# Day 8
+# Day 7
 
 It's been a week since I started this aliveline. And I feel like I've done nothing! Amazing. This timeline is so insanely compressed - I am starting to feel a bit of pressure which is kind of against the point of this. Have to keep reminding myself that failure is expected & the goal is to try to fail in interesting ways. How can I fail more interestingly? What are super weird out of the box creative ways to approach this insane goal I've set?
 

@@ -2,7 +2,7 @@
 layout: post
 title: December Aliveline - Kickoff
 date: 2025-12-02
-categories: alive-lines
+categories: alivelines
 ---
 Lately I've been feeling lost. Unfortunately that's a feature not a bug of how I am trying to live my life now. A better way to to put it is that I've been feeling low on *momentum*. But today I feel more energy and more momentum. It's a great day to start something. Let's do it.
 

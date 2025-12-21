@@ -1,10 +1,10 @@
 ---
 layout: post
-title: December Aliveline - Day 10
+title: December Aliveline - Day 9
 date: 2025-12-11
 categories: alivelines
 ---
-# Day 10
+# Day 9
 
 The stakes for this experiment have been starting to feel unnecessarily high lately. Part of that is self-pressure to have an insight that's both original and big/important, which is not actually part of my success criteria here. So let's drop it. The main ideas I've played with over the last 10 days:
 1. Kolmogorov complexity as measure of representational capacity for brains (minimal program to generate the low-D manifold that encodes a behavior)?

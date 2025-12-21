@@ -1,10 +1,10 @@
 ---
 layout: post
-title: December Aliveline - Day 15
+title: December Aliveline - Day 13
 date: 2025-12-16
 categories: alivelines
 ---
-# Day 15
+# Day 13
 
 Reading [Aversive Learning Induces Context-Gated Global Reorganization of Neural Dynamics in Caenorhabditis elegans](https://www.biorxiv.org/content/10.1101/2025.10.31.685731v1)
 

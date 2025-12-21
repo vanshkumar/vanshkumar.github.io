@@ -1,10 +1,10 @@
 ---
 layout: post
-title: December Aliveline - Day 9
+title: December Aliveline - Day 8
 date: 2025-12-10
 categories: alivelines
 ---
-# Day 9
+# Day 8
 
 Alright first day I feel normal, no melatonin / weird sleep!
 

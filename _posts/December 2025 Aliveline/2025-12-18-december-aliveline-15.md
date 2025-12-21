@@ -1,10 +1,10 @@
 ---
 layout: post
-title: December Aliveline - Day 17
+title: December Aliveline - Day 15
 date: 2025-12-18
 categories: alivelines
 ---
-# Day 17
+# Day 15
 
 More questions/thoughts:
 - Tracy-Widom style phase transition hypothesis = some set of neurons that were previously weakly/not coupled, become strongly coupled after learning a rule

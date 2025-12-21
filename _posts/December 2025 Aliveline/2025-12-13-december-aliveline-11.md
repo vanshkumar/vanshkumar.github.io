@@ -1,10 +1,10 @@
 ---
 layout: post
-title: December Aliveline - Day 12
+title: December Aliveline - Day 11
 date: 2025-12-13
 categories: alivelines
 ---
-# Day 12
+# Day 11
 
 Continuing data work with mouse pre-frontal cortex today. Integrated Codex into the Matlab workflow as well.
 

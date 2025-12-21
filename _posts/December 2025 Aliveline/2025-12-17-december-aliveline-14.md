@@ -1,10 +1,10 @@
 ---
 layout: post
-title: December Aliveline - Day 16
+title: December Aliveline - Day 14
 date: 2025-12-17
 categories: alivelines
 ---
-# Day 16
+# Day 14
 
 What do I hypothesize/believe about the *C. Elegans* brain **right now**?
 - Each individual's brain has its own coordinate system to implement the same behaviors

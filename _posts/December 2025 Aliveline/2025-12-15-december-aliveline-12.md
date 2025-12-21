@@ -1,10 +1,10 @@
 ---
 layout: post
-title: December Aliveline - Day 14
+title: December Aliveline - Day 12
 date: 2025-12-15
 categories: alivelines
 ---
-# Day 14
+# Day 12
 
 OK roughly halfway through the aliveline. I want to try regressing out stimulus category, choice, reward, movement, and see if there is a spike around the rule learning. Re-reading the paper and methods to make sure I understand what I'm doing.
 

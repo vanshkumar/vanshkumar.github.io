@@ -1,10 +1,10 @@
 ---
 layout: post
-title: December Aliveline - Day 7
+title: December Aliveline - Day 6
 date: 2025-12-08
 categories: alivelines
 ---
-# Day 7
+# Day 6
 
 Sigh slept+woke up late due to a very busy day yesterday & writing IRL much later in the day than usual. Sad! My sleep timing has been fluctuating quite a lot the last 5 days or so which has caused me to be much more tired in the mornings. Oh well, it will be better moving forward. Let's hop to it.
 

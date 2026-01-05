@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vansh Kumar</title>
+  <style>
+    :root {
+      --bg: #f9f9f8;
+      --text: #1a1a1a;
+      --muted: #5f5f5f;
+      --accent: #0f766e;
+      --border: #e5e5e0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    h1 {
+      font-size: 32px;
+      margin: 0;
+      letter-spacing: -0.5px;
+    }
+    p.lead {
+      margin: 0;
+      color: var(--muted);
+      max-width: 620px;
+    }
+    nav {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+    nav a {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 12px;
+    }
+    section {
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+      margin-top: 20px;
+    }
+    h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      letter-spacing: -0.25px;
+    }
+    ul { padding-left: 18px; margin: 8px 0 0; }
+    li + li { margin-top: 6px; }
+    .muted { color: var(--muted); }
+    .pill {
+      display: inline-block;
+      border-radius: 999px;
+      background: white;
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      font-size: 13px;
+      margin-left: 6px;
+      color: var(--muted);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin: 8px 0 0;
+    }
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      height: 100%;
+    }
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+      letter-spacing: -0.2px;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 32px;
+      padding-top: 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Vansh Kumar</h1>
+      <p class="lead">I’m keeping a simple log of what I’m working on, exploring, and enjoying. This page will grow with projects, essays, and lists as they ship.</p>
+      <nav>
+        <a href="#now">Now</a>
+        <a href="#projects">Projects</a>
+        <a href="#writing">Essays &amp; notes</a>
+        <a href="#lists">Lists</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="now">
+      <h2>Now <span class="pill">early 2025</span></h2>
+      <ul>
+        <li>Building small web tools and cleaning up ideas into repeatable systems.</li>
+        <li>Sketching essays before publishing them here.</li>
+        <li>Reading broadly and trimming distractions.</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Personal site</h3>
+          <p class="muted">This minimalist single-page build; more sections and experiments to come.</p>
+        </div>
+        <div class="card">
+          <h3>Small tools &amp; experiments</h3>
+          <p class="muted">Utility scripts, prototypes, and ideas that are being polished for sharing.</p>
+        </div>
+        <div class="card">
+          <h3>Writing pipeline</h3>
+          <p class="muted">Notes-to-drafts workflow for essays and book highlights.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="writing">
+      <h2>Essays &amp; notes</h2>
+      <ul>
+        <li>Longer essays will live here once they’re ready.</li>
+        <li>Newsletter-style updates stay at <a href="https://vanshkumar.substack.com">Substack</a> for now.</li>
+      </ul>
+    </section>
+
+    <section id="lists">
+      <h2>Lists</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Books on deck</h3>
+          <ul>
+            <li><span class="muted">Practicing focus &amp; depth</span></li>
+            <li><span class="muted">Systems thinking &amp; creativity</span></li>
+            <li><span class="muted">Short story collections</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Things I like</h3>
+          <ul>
+            <li>Quiet morning runs.</li>
+            <li>Longform conversations over coffee.</li>
+            <li>Tiny, opinionated tools that stay out of the way.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:vanshkumar95@gmail.com">vanshkumar95@gmail.com</a></p>
+      <p class="muted">If you want updates, check back here or subscribe on Substack—this site will stay lightweight.</p>
+    </section>
+
+    <footer>
+      <span>Last updated: 2025.</span>
+    </footer>
+  </div>
+</body>
+</html>

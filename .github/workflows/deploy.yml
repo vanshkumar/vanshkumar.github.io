@@ -1,9 +1,8 @@
-name: Deploy Static Site
+name: Deploy Site
 
 on:
   push:
     branches: [main]
-    paths-ignore: ['terminal-desires-ranker/**']
 
 permissions:
   contents: read
@@ -21,6 +20,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: terminal-desires-ranker/package-lock.json
+
+      - name: Install dependencies
+        working-directory: terminal-desires-ranker
+        run: npm ci
+
+      - name: Build Terminal Desires Ranker
+        working-directory: terminal-desires-ranker
+        run: npm run build
+
       - name: Prepare site artifact
         run: |
           mkdir -p site
@@ -31,7 +45,10 @@ jobs:
             --exclude "node_modules/" \
             --exclude ".gitignore" \
             ./ site/
+          mkdir -p site/terminal-desires-ranker
+          rsync -a terminal-desires-ranker/dist/ site/terminal-desires-ranker/
           touch site/.nojekyll
+          if [ -f CNAME ]; then cp CNAME site/CNAME; fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

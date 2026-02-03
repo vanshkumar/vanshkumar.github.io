@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import ContentLayout from '../../../layouts/ContentLayout.astro';
+import { getBacklinksForEntry } from '../../../lib/wiki';
 
 export async function getStaticPaths() {
   const entries = await getCollection('logs');
@@ -18,9 +19,10 @@ const { Content } = await entry.render();
 const formattedDate = new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(entry.data.date);
 const title = entry.data.title ?? entry.data.day ?? formattedDate;
 const parentHref = `/attractors/${entry.data.parent}`;
+const backlinks = await getBacklinksForEntry('logs', entry.slug);
 ---
 
-<ContentLayout title={title} date={entry.data.date}>
+<ContentLayout title={title} date={entry.data.date} backlinks={backlinks}>
   <p class="meta">
     <a href={parentHref}>Back to {entry.data.parent}</a>
   </p>

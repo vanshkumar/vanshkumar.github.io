@@ -1,11 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { titleFromSlug } from '../lib/content';
 
 const fixedPoints = await getCollection('fixed-points');
 const attractors = await getCollection('attractors');
 
-const sortByTitle = (a, b) => a.data.title.localeCompare(b.data.title);
+const displayTitle = (entry) => entry.data.title ?? titleFromSlug(entry.slug);
+const sortByTitle = (a, b) => displayTitle(a).localeCompare(displayTitle(b));
 const orderedFixedPoints = [...fixedPoints].sort(sortByTitle);
 const orderedAttractors = [...attractors].sort(sortByTitle);
 ---
@@ -27,7 +29,7 @@ const orderedAttractors = [...attractors].sort(sortByTitle);
       <ul class="list">
         {orderedFixedPoints.map((entry) => (
           <li>
-            <a href={`/fixed-points/${entry.slug}`}>{entry.data.title}</a>
+            <a href={`/fixed-points/${entry.slug}`}>{displayTitle(entry)}</a>
           </li>
         ))}
       </ul>
@@ -42,7 +44,7 @@ const orderedAttractors = [...attractors].sort(sortByTitle);
       <ul class="list">
         {orderedAttractors.map((entry) => (
           <li>
-            <a href={`/attractors/${entry.slug}`}>{entry.data.title}</a>
+            <a href={`/attractors/${entry.slug}`}>{displayTitle(entry)}</a>
           </li>
         ))}
       </ul>

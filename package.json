@@ -4,11 +4,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
+    "clean-lock": "node scripts/clean-lock.mjs",
+    "dev": "npm run sync-assets && astro dev",
+    "build": "npm run sync-assets && astro build",
+    "postinstall": "npm run clean-lock",
+    "preview": "astro preview",
+    "sync-assets": "node scripts/sync-assets.mjs"
   },
   "dependencies": {
-    "astro": "^5.0.0"
+    "@flowershow/remark-wiki-link": "^2.0.0",
+    "astro": "^5.0.0",
+    "gray-matter": "^4.0.3"
   }
 }

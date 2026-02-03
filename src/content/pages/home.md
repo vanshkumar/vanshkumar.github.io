@@ -1,8 +1,8 @@
 ---
-title: Home
-description: A quiet home base for notes, projects, and living experiments.
+title: Obeying the inscrutable exhortations of my soul
+description: This is where those exhortations materialize
+lastmod:
+  - 2026-02-03
 ---
-
-# Vansh Kumar obeys the inscrutable exhortations of his soul.
 
 ![[Pasted image 20260203101338.png]]

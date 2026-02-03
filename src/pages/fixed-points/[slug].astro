@@ -1,6 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import ContentLayout from '../../layouts/ContentLayout.astro';
+import { getBacklinksForEntry } from '../../lib/wiki';
+import { titleFromSlug } from '../../lib/content';
 
 export async function getStaticPaths() {
   const entries = await getCollection('fixed-points');
@@ -12,12 +14,15 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+const backlinks = await getBacklinksForEntry('fixed-points', entry.slug);
+const title = entry.data.title ?? titleFromSlug(entry.slug);
 ---
 
 <ContentLayout
-  title={entry.data.title}
+  title={title}
   description={entry.data.description}
   date={entry.data.date}
+  backlinks={backlinks}
 >
   <Content />
 </ContentLayout>

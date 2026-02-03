@@ -3,7 +3,7 @@ import { defineCollection, z } from 'astro:content';
 const fixedPoints = defineCollection({
   type: 'content',
   schema: z.object({
-    title: z.string(),
+    title: z.string().optional(),
     description: z.string().optional(),
     date: z.coerce.date().optional(),
     tags: z.array(z.string()).optional(),
@@ -14,7 +14,7 @@ const fixedPoints = defineCollection({
 const attractors = defineCollection({
   type: 'content',
   schema: z.object({
-    title: z.string(),
+    title: z.string().optional(),
     description: z.string().optional(),
     date: z.coerce.date().optional(),
     kind: z.enum(['project', 'essay']),
@@ -37,8 +37,9 @@ const logs = defineCollection({
 const pages = defineCollection({
   type: 'content',
   schema: z.object({
-    title: z.string(),
-    description: z.string().optional()
+    title: z.string().optional(),
+    description: z.string().optional(),
+    aliases: z.array(z.string()).optional()
   })
 });
 

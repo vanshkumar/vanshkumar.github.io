@@ -1,6 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import ContentLayout from '../../layouts/ContentLayout.astro';
+import { getBacklinksForEntry } from '../../lib/wiki';
+import { titleFromSlug } from '../../lib/content';
 
 export async function getStaticPaths() {
   const entries = await getCollection('attractors');
@@ -16,16 +18,19 @@ const allLogs = await getCollection('logs');
 const logs = allLogs
   .filter((log) => log.data.parent === entry.slug)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const backlinks = await getBacklinksForEntry('attractors', entry.slug);
+const title = entry.data.title ?? titleFromSlug(entry.slug);
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(date);
 ---
 
 <ContentLayout
-  title={entry.data.title}
+  title={title}
   description={entry.data.description}
   date={entry.data.date}
   kind={entry.data.kind}
+  backlinks={backlinks}
 >
   <Content />
 

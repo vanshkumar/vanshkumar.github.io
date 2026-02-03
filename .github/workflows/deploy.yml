@@ -31,8 +31,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Install Astro dependencies
-        run: |
-          npm install || { cat /home/runner/.npm/_logs/*-debug-0.log; exit 1; }
+        run: npm install
 
       - name: Build Astro site
         run: npm run build

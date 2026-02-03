@@ -3,10 +3,6 @@ title: Home
 description: A quiet home base for notes, projects, and living experiments.
 ---
 
-Welcome. This site grows out of a public knowledge graph made of fixed points, attractors, and logs.
+# Vansh Kumar obeys the inscrutable exhortations of his soul.
 
-## Start here
-
-- [Terrain](/terrain) for the map of notes and projects
-- [Now](/now) for the current focus
-- [Shelf](/shelf) for what is on deck
+![[Pasted image 20260203101338.png]]

@@ -1,6 +1,4 @@
 ---
 title: Shelf
-description: A short list of books, papers, tools, and artifacts I am returning to.
+description: A list of books, papers, articles, etc I have read and recommend.
 ---
-
-This page will collect references, highlights, and works in flight.

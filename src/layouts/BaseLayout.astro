@@ -1,0 +1,39 @@
+---
+import '../styles/global.css';
+
+const { title } = Astro.props;
+const pageTitle = title ? `${title} | Vansh Kumar` : 'Vansh Kumar';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="brand">
+          <a href="/">Vansh Kumar</a>
+          <span class="brand-subtitle">Notes, projects, and quiet experiments.</span>
+        </div>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="/about">About</a>
+          <a href="/now">Now</a>
+          <a href="/shelf">Shelf</a>
+          <a href="/terrain">Terrain</a>
+        </nav>
+      </header>
+
+      <main class="content">
+        <slot />
+      </main>
+
+      <footer class="site-footer">
+        <span>Built with Astro on GitHub Pages.</span>
+      </footer>
+    </div>
+  </body>
+</html>

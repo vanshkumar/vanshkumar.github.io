@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const fixedPoints = await getCollection('fixed-points');
+const attractors = await getCollection('attractors');
+
+const sortByTitle = (a, b) => a.data.title.localeCompare(b.data.title);
+const orderedFixedPoints = [...fixedPoints].sort(sortByTitle);
+const orderedAttractors = [...attractors].sort(sortByTitle);
+---
+
+<BaseLayout title="Terrain">
+  <section class="section">
+    <h1>Terrain</h1>
+    <p>
+      A map of public notes and projects. Logs stay attached to their parent
+      attractor and are not listed here.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Fixed Points</h2>
+    {orderedFixedPoints.length === 0 ? (
+      <p class="meta">No fixed points yet.</p>
+    ) : (
+      <ul class="list">
+        {orderedFixedPoints.map((entry) => (
+          <li>
+            <a href={`/fixed-points/${entry.slug}`}>{entry.data.title}</a>
+          </li>
+        ))}
+      </ul>
+    )}
+  </section>
+
+  <section class="section">
+    <h2>Attractors</h2>
+    {orderedAttractors.length === 0 ? (
+      <p class="meta">No attractors yet.</p>
+    ) : (
+      <ul class="list">
+        {orderedAttractors.map((entry) => (
+          <li>
+            <a href={`/attractors/${entry.slug}`}>{entry.data.title}</a>
+          </li>
+        ))}
+      </ul>
+    )}
+  </section>
+</BaseLayout>

@@ -1,0 +1,67 @@
+name: Deploy Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Install Astro dependencies
+        run: npm install
+
+      - name: Build Astro site
+        run: npm run build
+
+      - name: Install ranker dependencies
+        run: npm ci
+        working-directory: terminal-desires-ranker
+
+      - name: Build ranker
+        run: npm run build
+        working-directory: terminal-desires-ranker
+
+      - name: Assemble site artifact
+        run: |
+          rm -rf site
+          mkdir -p site
+          cp -a dist/. site/
+          mkdir -p site/terminal-desires-ranker
+          cp -a terminal-desires-ranker/dist/. site/terminal-desires-ranker/
+          touch site/.nojekyll
+          if [ -f CNAME ]; then cp CNAME site/CNAME; fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4

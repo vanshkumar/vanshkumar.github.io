@@ -1,0 +1,14 @@
+---
+import { getEntry } from 'astro:content';
+import ContentLayout from '../layouts/ContentLayout.astro';
+
+const entry = await getEntry('pages', 'now');
+if (!entry) {
+  throw new Error('Missing content entry: pages/now');
+}
+const { Content } = await entry.render();
+---
+
+<ContentLayout title={entry.data.title} description={entry.data.description}>
+  <Content />
+</ContentLayout>

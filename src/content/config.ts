@@ -1,0 +1,50 @@
+import { defineCollection, z } from 'astro:content';
+
+const fixedPoints = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    date: z.coerce.date().optional(),
+    tags: z.array(z.string()).optional(),
+    aliases: z.array(z.string()).optional()
+  })
+});
+
+const attractors = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    date: z.coerce.date().optional(),
+    kind: z.enum(['project', 'essay']),
+    tags: z.array(z.string()).optional(),
+    coverImage: z.string().optional(),
+    aliases: z.array(z.string()).optional()
+  })
+});
+
+const logs = defineCollection({
+  type: 'content',
+  schema: z.object({
+    date: z.coerce.date(),
+    parent: z.string(),
+    day: z.string().optional(),
+    title: z.string().optional()
+  })
+});
+
+const pages = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional()
+  })
+});
+
+export const collections = {
+  pages,
+  'fixed-points': fixedPoints,
+  attractors,
+  logs
+};

@@ -20,9 +20,13 @@ const logs = allLogs
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 const backlinks = await getBacklinksForEntry('attractors', entry.slug);
 const title = entry.data.title ?? titleFromSlug(entry.slug);
+const lastUpdated = entry.data.lastmod ?? entry.data.date ?? null;
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(date);
+const subtype = entry.data.kind
+  ? entry.data.kind[0].toUpperCase() + entry.data.kind.slice(1)
+  : 'Essay';
 ---
 
 <ContentLayout
@@ -30,6 +34,11 @@ const formatDate = (date) =>
   description={entry.data.description}
   date={entry.data.date}
   kind={entry.data.kind}
+  typeLabel="Attractor"
+  subtype={subtype}
+  typeIcon="/terrain/icons/attractor.png"
+  typeKey="attractor"
+  lastUpdated={lastUpdated}
   backlinks={backlinks}
 >
   <Content />

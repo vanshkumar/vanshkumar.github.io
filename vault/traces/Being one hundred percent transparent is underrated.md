@@ -1,0 +1,3 @@
+Most people, including myself, subscribe to “honesty is the best policy” but are OK with small white lies and even medium white lies. Like bailing on an event by saying you’re sick, or lying to your parents about not actually being sick so they don’t worry.
+
+It’s simply easier to be honest 100% of the time. It makes you feel lighter as you go through life, as you don’t have to decide when to be honest vs not. If you are radically honest & also set strong boundaries, you can’t lose.

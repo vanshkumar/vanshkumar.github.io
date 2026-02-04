@@ -1,0 +1,4 @@
+---
+lastmod: 2025-12-01
+---
+One key thing that the Primer in Diamond Age lets people see is the "meta" about the tribe they're in (the neo-Victorians). They say that pretty explicitly at the part I'm at – kids see how the older progenitors of the tribe saw the lack of morality of previous society & built the neo-Victorians as a reaction, and how current kids don't really understand it because they're only indoctrinated rather than seeing the previous society firsthand. Kids who use the Primer understand this history and understand how the neo-Victorians work at a more meta level, and it does this thru firsthand adventures the kids go on inside it. I do like such a history focused lens, and perhaps it's a key piece of knowledge for learning the 'subversion' that the Equity Lord guy wants.

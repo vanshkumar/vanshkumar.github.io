@@ -16,12 +16,18 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 const backlinks = await getBacklinksForEntry('traces', entry.slug);
 const title = entry.data.title ?? titleFromSlug(entry.slug);
+const lastUpdated = entry.data.lastmod ?? entry.data.date ?? null;
 ---
 
 <ContentLayout
   title={title}
   description={entry.data.description}
   date={entry.data.date}
+  typeLabel="Trace"
+  subtype="Note"
+  typeIcon="/terrain/icons/trace.png"
+  typeKey="trace"
+  lastUpdated={lastUpdated}
   backlinks={backlinks}
 >
   <Content />

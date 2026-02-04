@@ -1,16 +1,46 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 
-const { title, description, date, kind, backlinks = [] } = Astro.props;
+const {
+  title,
+  description,
+  date,
+  kind,
+  backlinks = [],
+  typeLabel,
+  subtype,
+  typeIcon,
+  typeKey,
+  lastUpdated
+} = Astro.props;
 const formattedDate = date
   ? new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(date)
   : null;
 const meta = [formattedDate, kind].filter(Boolean).join(' | ');
+const formattedLastUpdated = lastUpdated
+  ? new Intl.DateTimeFormat('en-CA', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    }).format(lastUpdated)
+  : null;
 ---
 
 <BaseLayout title={title}>
   <article class="article">
     <header class="article-header">
+      {typeLabel ? (
+        <div class="content-type" data-type={typeKey}>
+          {typeIcon ? <img src={typeIcon} alt="" loading="lazy" /> : null}
+          <span>{typeLabel}</span>
+          {subtype ? (
+            <>
+              <span class="content-type-divider">|</span>
+              <span>{subtype}</span>
+            </>
+          ) : null}
+        </div>
+      ) : null}
       <h1>{title}</h1>
       {description ? <p class="lede">{description}</p> : null}
       {meta ? <p class="meta">{meta}</p> : null}
@@ -30,6 +60,10 @@ const meta = [formattedDate, kind].filter(Boolean).join(' | ');
           ))}
         </ul>
       </section>
+    ) : null}
+
+    {formattedLastUpdated ? (
+      <div class="content-updated">Last updated {formattedLastUpdated}</div>
     ) : null}
   </article>
 </BaseLayout>

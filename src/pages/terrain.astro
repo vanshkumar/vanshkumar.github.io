@@ -11,7 +11,6 @@ const { Content } = await entry.render();
 
 const probes = await getCollection('probes');
 const attractors = await getCollection('attractors');
-const logs = await getCollection('logs');
 
 const displayTitle = (entry) => entry.data.title ?? titleFromSlug(entry.slug);
 const stripMarkdown = (value) =>
@@ -50,18 +49,6 @@ const formatLastUpdated = (date) =>
       }).format(date)
     : null;
 
-const formatLogDate = (date) =>
-  new Intl.DateTimeFormat('en-GB', {
-    day: '2-digit',
-    month: 'short',
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: false
-  })
-    .format(date)
-    .replace(',', ' —')
-    .toUpperCase();
-
 const toCard = (entry, type) => {
   const isProbe = type === 'probe';
   const lastUpdated = entry.data.lastmod ?? entry.data.date ?? null;
@@ -70,7 +57,7 @@ const toCard = (entry, type) => {
     type,
     typeLabel: isProbe ? 'Probe' : 'Attractor',
     subtype: isProbe
-      ? 'Note'
+      ? 'Question'
       : entry.data.kind
         ? entry.data.kind[0].toUpperCase() + entry.data.kind.slice(1)
         : 'Essay',
@@ -95,22 +82,6 @@ const cards = [
   return bTime - aTime;
 });
 
-const attractorLookup = new Map(
-  attractors.map((entry) => [entry.slug, displayTitle(entry)])
-);
-
-const logItems = logs
-  .slice()
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .map((entry) => ({
-    key: entry.slug,
-    date: entry.data.date,
-    dateLabel: formatLogDate(entry.data.date),
-    content: excerpt(entry.body ?? '', 240) || displayTitle(entry),
-    parentSlug: entry.data.parent,
-    parentTitle: attractorLookup.get(entry.data.parent) ?? titleFromSlug(entry.data.parent),
-    parentHref: `/attractors/${entry.data.parent}`
-  }));
 ---
 
 <BaseLayout title="Terrain">
@@ -193,28 +164,6 @@ const logItems = logs
                 Last updated {card.lastUpdatedLabel}
               </div>
             ) : null}
-          </article>
-        ))}
-      </div>
-    )}
-  </section>
-
-  <section class="terrain-logs">
-    <h2>Growth Logs</h2>
-    {logItems.length === 0 ? (
-      <p class="meta">No logs yet.</p>
-    ) : (
-      <div class="terrain-log-list">
-        {logItems.map((log) => (
-          <article class="terrain-log-item" key={log.key}>
-            <span class="terrain-log-dot" aria-hidden="true"></span>
-            <div class="terrain-log-content">
-              <span class="terrain-log-date">{log.dateLabel}</span>
-              <p>{log.content}</p>
-              <span class="terrain-log-added">
-                — Added to <a href={log.parentHref}>{log.parentTitle}</a>
-              </span>
-            </div>
           </article>
         ))}
       </div>

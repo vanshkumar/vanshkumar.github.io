@@ -4,8 +4,11 @@
   --bg: #fdfbf7;
   --text: #261f14;
   --muted: #6b5e51;
-  --accent: #3d5c1f;
-  --accent-dark: #2d4517;
+  --accent: #2f4b1a;
+  --accent-dark: #233914;
+  --probe: #7b2231;
+  --attractor: #2b5aa8;
+  --trace: #2f5b3a;
   --border: #e5e1d5;
   --card: #fcfcf9;
   --card-border: #e8e6dc;
@@ -32,6 +35,17 @@ a {
 
 a:hover {
   color: var(--accent-dark);
+}
+
+.prose a {
+  color: var(--accent);
+  background-color: rgba(47, 75, 26, 0.06);
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.prose a:hover {
+  color: var(--accent-dark);
+  background-color: rgba(47, 75, 26, 0.12);
 }
 
 h1,
@@ -280,6 +294,14 @@ h3 {
   color: #d7d7d7;
 }
 
+.terrain-card[data-type='probe'] .terrain-card-divider {
+  color: var(--probe);
+}
+
+.terrain-card[data-type='attractor'] .terrain-card-divider {
+  color: var(--attractor);
+}
+
 .terrain-card-link {
   color: #b4b4b4;
   transition: color 0.2s ease;
@@ -355,66 +377,6 @@ h3 {
   text-transform: uppercase;
 }
 
-.terrain-logs {
-  padding: 2.5rem 0 2rem;
-}
-
-.terrain-logs h2 {
-  font-size: 2.2rem;
-  margin-bottom: 2.5rem;
-}
-
-.terrain-log-list {
-  position: relative;
-  border-left: 1px solid rgba(61, 92, 31, 0.3);
-  margin-left: 0.5rem;
-  display: grid;
-  gap: 2.5rem;
-}
-
-.terrain-log-item {
-  position: relative;
-  padding-left: 2rem;
-}
-
-.terrain-log-dot {
-  position: absolute;
-  left: -0.35rem;
-  top: 0.25rem;
-  width: 0.6rem;
-  height: 0.6rem;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 6px var(--bg);
-}
-
-.terrain-log-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.terrain-log-date {
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.6rem;
-  font-weight: 700;
-  color: var(--accent);
-}
-
-.terrain-log-content p {
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: var(--text);
-  max-width: 700px;
-}
-
-.terrain-log-added {
-  font-size: 0.85rem;
-  color: #8a857e;
-  font-style: italic;
-}
-
 .section {
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
@@ -457,6 +419,48 @@ h3 {
 
 .article-header {
   padding-bottom: 1rem;
+}
+
+.content-type {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #9aa0ab;
+  margin-bottom: 0.8rem;
+}
+
+.content-type img {
+  height: 24px;
+  width: auto;
+  max-width: 36px;
+}
+
+.content-type-divider {
+  color: #d7d7d7;
+}
+
+.content-type[data-type='probe'] .content-type-divider {
+  color: var(--probe);
+}
+
+.content-type[data-type='attractor'] .content-type-divider {
+  color: var(--attractor);
+}
+
+.content-type[data-type='trace'] .content-type-divider {
+  color: var(--trace);
+}
+
+.content-updated {
+  margin-top: 1.5rem;
+  color: #a5a1a1;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .prose {

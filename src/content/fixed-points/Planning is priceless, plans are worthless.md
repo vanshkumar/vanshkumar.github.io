@@ -1,7 +1,5 @@
 ---
-lastmod:
-  - 2025-11-06
-  - 2026-02-03
+lastmod: 2026-02-03
 ---
 >Anecdote about those ppl who storyboard heavily but then do whatever feels interesting
 

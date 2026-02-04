@@ -1,7 +1,5 @@
 ---
-lastmod:
-  - 2025-10-23
-  - 2026-02-03
+lastmod: 2026-02-03
 ---
 A more thematic version of [[Concretely describe your utopia]].
 

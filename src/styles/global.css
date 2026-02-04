@@ -460,13 +460,44 @@ h3 {
 }
 
 .prose {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  display: block;
 }
 
-.prose p {
+.prose > * {
   margin: 0;
+}
+
+.prose > * + * {
+  margin-top: 1rem;
+}
+
+.prose h2,
+.prose h3 {
+  margin-top: 1.6rem;
+}
+
+.prose h2 + *,
+.prose h3 + * {
+  margin-top: 0.6rem;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.prose li + li {
+  margin-top: 0.35rem;
+}
+
+.prose hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background: var(--border);
+  opacity: 0.9;
+  margin: 1.5rem 0;
 }
 
 .list {
@@ -568,6 +599,11 @@ h3 {
 @media (max-width: 640px) {
   .brand-subtitle {
     display: none;
+  }
+
+  .site-footer-icon img {
+    width: 56px;
+    height: 56px;
   }
 
   .terrain-card-grid {

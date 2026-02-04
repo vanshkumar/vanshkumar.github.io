@@ -1,8 +1,7 @@
 ---
-lastmod: 2026-02-03
+lastmod: 2026-02-04
 ---
-A more thematic version of [[Concretely describe your utopia]].
-
+The primary themes from [[Concretely describe your utopia]]:
 - Friends/family THRIVING
 	- Joy, emotional openness, authenticity, creativity, a feeling of doing your best work and being your best self
 - More parks, walkability, beauty
@@ -12,7 +11,6 @@ A more thematic version of [[Concretely describe your utopia]].
 	- Wonder, curiosity, and not-knowing as high status
 - Aligned chats/connections ('community')
 	- A place for everyone, and everyone in their place
-
 
 
 

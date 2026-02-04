@@ -4,17 +4,20 @@ import { titleFromSlug } from './content';
 const WIKILINK_RE =
   /!?\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]/g;
 
-const collectionOrder = ['fixed-points', 'attractors', 'logs', 'pages'];
+const collectionOrder = ['probes', 'attractors', 'traces', 'logs', 'pages'];
 
 const urlFor = (collection: string, slug: string) => {
   if (collection === 'pages') {
     return slug === 'home' ? '/' : `/${slug}`;
   }
-  if (collection === 'fixed-points') {
-    return `/fixed-points/${slug}`;
+  if (collection === 'probes') {
+    return `/probes/${slug}`;
   }
   if (collection === 'attractors') {
     return `/attractors/${slug}`;
+  }
+  if (collection === 'traces') {
+    return `/traces/${slug}`;
   }
   return `/logs/${slug}`;
 };
@@ -65,9 +68,10 @@ const extractTargets = (body: string) => {
 };
 
 const buildEntries = async () => {
-  const [fixedPoints, attractors, logs, pages] = await Promise.all([
-    getCollection('fixed-points'),
+  const [probes, attractors, traces, logs, pages] = await Promise.all([
+    getCollection('probes'),
     getCollection('attractors'),
+    getCollection('traces'),
     getCollection('logs'),
     getCollection('pages')
   ]);
@@ -87,8 +91,9 @@ const buildEntries = async () => {
     });
   };
 
-  pushEntries('fixed-points', fixedPoints);
+  pushEntries('probes', probes);
   pushEntries('attractors', attractors);
+  pushEntries('traces', traces);
   pushEntries('logs', logs);
   pushEntries('pages', pages);
 

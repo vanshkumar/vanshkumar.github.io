@@ -6,8 +6,11 @@ import matter from 'gray-matter';
 import wikiLinkPlugin from '@flowershow/remark-wiki-link';
 
 const CONTENT_ROOT = fileURLToPath(new URL('./src/content', import.meta.url));
-const COLLECTIONS = ['fixed-points', 'attractors', 'logs', 'pages'];
-const ASSETS_DIR = path.join(CONTENT_ROOT, 'assets');
+const VAULT_ROOT = fileURLToPath(new URL('./vault', import.meta.url));
+const COLLECTIONS = ['probes', 'attractors', 'traces', 'logs', 'pages'];
+const ASSETS_DIR = fs.existsSync(path.join(VAULT_ROOT, 'assets'))
+  ? path.join(VAULT_ROOT, 'assets')
+  : path.join(CONTENT_ROOT, 'assets');
 
 const normalizeTarget = (value) => {
   const trimmed = value.trim().replace(/\.md$/i, '').replace(/\\/g, '/');
@@ -31,11 +34,14 @@ const urlFor = (collection, slug) => {
   if (collection === 'pages') {
     return slug === 'home' ? '/' : `/${slug}`;
   }
-  if (collection === 'fixed-points') {
-    return `/fixed-points/${slug}`;
+  if (collection === 'probes') {
+    return `/probes/${slug}`;
   }
   if (collection === 'attractors') {
     return `/attractors/${slug}`;
+  }
+  if (collection === 'traces') {
+    return `/traces/${slug}`;
   }
   return `/logs/${slug}`;
 };

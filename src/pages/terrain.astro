@@ -9,7 +9,7 @@ if (!entry) {
 }
 const { Content } = await entry.render();
 
-const fixedPoints = await getCollection('fixed-points');
+const probes = await getCollection('probes');
 const attractors = await getCollection('attractors');
 const logs = await getCollection('logs');
 
@@ -63,31 +63,31 @@ const formatLogDate = (date) =>
     .toUpperCase();
 
 const toCard = (entry, type) => {
-  const isFixed = type === 'fixed-point';
+  const isProbe = type === 'probe';
   const lastUpdated = entry.data.lastmod ?? entry.data.date ?? null;
   return {
     key: `${type}:${entry.slug}`,
     type,
-    typeLabel: isFixed ? 'Fixed Point' : 'Attractor',
-    subtype: isFixed
+    typeLabel: isProbe ? 'Probe' : 'Attractor',
+    subtype: isProbe
       ? 'Note'
       : entry.data.kind
         ? entry.data.kind[0].toUpperCase() + entry.data.kind.slice(1)
         : 'Essay',
-    icon: isFixed ? '/terrain/icons/fixed-point.png' : '/terrain/icons/attractor.png',
+    icon: isProbe ? '/terrain/icons/probe.png' : '/terrain/icons/attractor.png',
     title: displayTitle(entry),
     description: entry.data.description ?? excerpt(entry.body ?? ''),
     date: entry.data.date ?? null,
     dateLabel: formatCardDate(entry.data.date),
     lastUpdated,
     lastUpdatedLabel: formatLastUpdated(lastUpdated),
-    href: isFixed ? `/fixed-points/${entry.slug}` : `/attractors/${entry.slug}`,
+    href: isProbe ? `/probes/${entry.slug}` : `/attractors/${entry.slug}`,
     coverImage: entry.data.coverImage ?? null
   };
 };
 
 const cards = [
-  ...fixedPoints.map((entry) => toCard(entry, 'fixed-point')),
+  ...probes.map((entry) => toCard(entry, 'probe')),
   ...attractors.map((entry) => toCard(entry, 'attractor'))
 ].sort((a, b) => {
   const aTime = a.lastUpdated ? a.lastUpdated.getTime() : 0;
@@ -135,8 +135,8 @@ const logItems = logs
         <button class="terrain-filter is-active" data-filter="all" role="tab">
           All Elements
         </button>
-        <button class="terrain-filter" data-filter="fixed-point" role="tab">
-          Fixed Points
+        <button class="terrain-filter" data-filter="probe" role="tab">
+          Probes
         </button>
         <button class="terrain-filter" data-filter="attractor" role="tab">
           Attractors

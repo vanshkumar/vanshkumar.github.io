@@ -10,7 +10,7 @@ Counteracting it:
 Turning it to your advantage:
 - [[Focus on what you want to see more of]]
 - [[Concretely describe your utopia]]
-- [[What I want to see in the world]]
+- [[What do I want to see in the world?]]
 - [[Design your environment as scaffolding towards creating the world you want to see]]
 
 

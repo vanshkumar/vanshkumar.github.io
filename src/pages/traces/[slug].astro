@@ -5,7 +5,7 @@ import { getBacklinksForEntry } from '../../lib/wiki';
 import { titleFromSlug } from '../../lib/content';
 
 export async function getStaticPaths() {
-  const entries = await getCollection('fixed-points');
+  const entries = await getCollection('traces');
   return entries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry }
@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const backlinks = await getBacklinksForEntry('fixed-points', entry.slug);
+const backlinks = await getBacklinksForEntry('traces', entry.slug);
 const title = entry.data.title ?? titleFromSlug(entry.slug);
 ---
 

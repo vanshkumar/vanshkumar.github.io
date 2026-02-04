@@ -1,6 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 
-const fixedPoints = defineCollection({
+const probes = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string().optional(),
@@ -36,6 +36,18 @@ const logs = defineCollection({
   })
 });
 
+const traces = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string().optional(),
+    description: z.string().optional(),
+    date: z.coerce.date().optional(),
+    lastmod: z.coerce.date().optional(),
+    tags: z.array(z.string()).optional(),
+    aliases: z.array(z.string()).optional()
+  })
+});
+
 const pages = defineCollection({
   type: 'content',
   schema: z.object({
@@ -48,8 +60,9 @@ const pages = defineCollection({
 });
 
 export const collections = {
-  pages,
-  'fixed-points': fixedPoints,
+  probes,
   attractors,
-  logs
+  logs,
+  traces,
+  pages
 };

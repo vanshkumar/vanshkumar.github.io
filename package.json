@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "clean-lock": "node scripts/clean-lock.mjs",
-    "dev": "npm run sync-assets && astro dev",
-    "build": "npm run sync-assets && astro build",
+    "dev": "npm run sync-content && npm run sync-assets && astro dev",
+    "build": "npm run sync-content && npm run sync-assets && astro build",
     "postinstall": "npm run clean-lock",
     "preview": "astro preview",
+    "sync-content": "node scripts/sync-content.mjs",
     "sync-assets": "node scripts/sync-assets.mjs"
   },
   "dependencies": {

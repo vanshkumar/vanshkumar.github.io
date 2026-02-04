@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.dirname(fileURLToPath(new URL(import.meta.url)));
 const repoRoot = path.resolve(root, '..');
-const source = path.join(repoRoot, 'src', 'content', 'assets');
+const source = path.join(repoRoot, 'vault', 'assets');
 const destination = path.join(repoRoot, 'public', 'assets');
 
 if (!fs.existsSync(source)) {

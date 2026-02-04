@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import { getBacklinksForEntry } from '../../lib/wiki';
+import { titleFromSlug } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('probes');
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry }
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const backlinks = await getBacklinksForEntry('probes', entry.slug);
+const title = entry.data.title ?? titleFromSlug(entry.slug);
+---
+
+<ContentLayout
+  title={title}
+  description={entry.data.description}
+  date={entry.data.date}
+  backlinks={backlinks}
+>
+  <Content />
+</ContentLayout>

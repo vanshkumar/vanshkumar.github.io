@@ -1,53 +1,246 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
 import { titleFromSlug } from '../lib/content';
+
+const entry = await getEntry('pages', 'terrain');
+if (!entry) {
+  throw new Error('Missing content entry: pages/terrain');
+}
+const { Content } = await entry.render();
 
 const fixedPoints = await getCollection('fixed-points');
 const attractors = await getCollection('attractors');
+const logs = await getCollection('logs');
 
 const displayTitle = (entry) => entry.data.title ?? titleFromSlug(entry.slug);
-const sortByTitle = (a, b) => displayTitle(a).localeCompare(displayTitle(b));
-const orderedFixedPoints = [...fixedPoints].sort(sortByTitle);
-const orderedAttractors = [...attractors].sort(sortByTitle);
+const stripMarkdown = (value) =>
+  value
+    .replace(/!\[[^\]]*\]\([^)]+\)/g, '')
+    .replace(/\[[^\]]+\]\([^)]+\)/g, '')
+    .replace(/\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/g, '$1')
+    .replace(/[`*_>#-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+const excerpt = (value, maxLength = 180) => {
+  const text = stripMarkdown(value);
+  if (text.length <= maxLength) return text;
+  return `${text.slice(0, maxLength).trim()}…`;
+};
+
+const formatCardDate = (date) =>
+  date
+    ? new Intl.DateTimeFormat('en-US', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric'
+      })
+        .format(date)
+        .replace(/,/g, '')
+        .toUpperCase()
+    : null;
+
+const formatLastUpdated = (date) =>
+  date
+    ? new Intl.DateTimeFormat('en-CA', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      }).format(date)
+    : null;
+
+const formatLogDate = (date) =>
+  new Intl.DateTimeFormat('en-GB', {
+    day: '2-digit',
+    month: 'short',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false
+  })
+    .format(date)
+    .replace(',', ' —')
+    .toUpperCase();
+
+const toCard = (entry, type) => {
+  const isFixed = type === 'fixed-point';
+  const lastUpdated = entry.data.lastmod ?? entry.data.date ?? null;
+  return {
+    key: `${type}:${entry.slug}`,
+    type,
+    typeLabel: isFixed ? 'Fixed Point' : 'Attractor',
+    subtype: isFixed
+      ? 'Note'
+      : entry.data.kind
+        ? entry.data.kind[0].toUpperCase() + entry.data.kind.slice(1)
+        : 'Essay',
+    icon: isFixed ? '/terrain/icons/fixed-point.png' : '/terrain/icons/attractor.png',
+    title: displayTitle(entry),
+    description: entry.data.description ?? excerpt(entry.body ?? ''),
+    date: entry.data.date ?? null,
+    dateLabel: formatCardDate(entry.data.date),
+    lastUpdated,
+    lastUpdatedLabel: formatLastUpdated(lastUpdated),
+    href: isFixed ? `/fixed-points/${entry.slug}` : `/attractors/${entry.slug}`,
+    coverImage: entry.data.coverImage ?? null
+  };
+};
+
+const cards = [
+  ...fixedPoints.map((entry) => toCard(entry, 'fixed-point')),
+  ...attractors.map((entry) => toCard(entry, 'attractor'))
+].sort((a, b) => {
+  const aTime = a.lastUpdated ? a.lastUpdated.getTime() : 0;
+  const bTime = b.lastUpdated ? b.lastUpdated.getTime() : 0;
+  return bTime - aTime;
+});
+
+const attractorLookup = new Map(
+  attractors.map((entry) => [entry.slug, displayTitle(entry)])
+);
+
+const logItems = logs
+  .slice()
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .map((entry) => ({
+    key: entry.slug,
+    date: entry.data.date,
+    dateLabel: formatLogDate(entry.data.date),
+    content: excerpt(entry.body ?? '', 240) || displayTitle(entry),
+    parentSlug: entry.data.parent,
+    parentTitle: attractorLookup.get(entry.data.parent) ?? titleFromSlug(entry.data.parent),
+    parentHref: `/attractors/${entry.data.parent}`
+  }));
 ---
 
 <BaseLayout title="Terrain">
-  <section class="section">
-    <h1>Terrain</h1>
-    <p>
-      A map of public notes and projects. Logs stay attached to their parent
-      attractor and are not listed here.
-    </p>
+  <section class="terrain-hero">
+    <div class="terrain-hero-content">
+      <h1 class="terrain-hero-title">
+        <span>{entry.data.heroTitle ?? entry.data.title ?? 'Terrain'}</span>
+        {entry.data.heroAccent ? (
+          <span class="terrain-hero-accent">{entry.data.heroAccent}</span>
+        ) : null}
+      </h1>
+      <div class="terrain-hero-subtitle">
+        <Content />
+      </div>
+    </div>
   </section>
 
-  <section class="section">
-    <h2>Fixed Points</h2>
-    {orderedFixedPoints.length === 0 ? (
-      <p class="meta">No fixed points yet.</p>
+  <section class="terrain-map" id="terrain">
+    <div class="terrain-map-header">
+      <h2>Terrain Map</h2>
+      <div class="terrain-filters" role="tablist" aria-label="Terrain filters">
+        <button class="terrain-filter is-active" data-filter="all" role="tab">
+          All Elements
+        </button>
+        <button class="terrain-filter" data-filter="fixed-point" role="tab">
+          Fixed Points
+        </button>
+        <button class="terrain-filter" data-filter="attractor" role="tab">
+          Attractors
+        </button>
+      </div>
+    </div>
+
+    {cards.length === 0 ? (
+      <p class="meta">No elements yet.</p>
     ) : (
-      <ul class="list">
-        {orderedFixedPoints.map((entry) => (
-          <li>
-            <a href={`/fixed-points/${entry.slug}`}>{displayTitle(entry)}</a>
-          </li>
+      <div class="terrain-card-grid">
+        {cards.map((card) => (
+          <article class="terrain-card" data-type={card.type} key={card.key}>
+            <div class="terrain-card-meta">
+              <div class="terrain-card-type">
+                <img src={card.icon} alt={card.typeLabel} />
+                <span>{card.typeLabel}</span>
+                <span class="terrain-card-divider">|</span>
+                <span>{card.subtype}</span>
+              </div>
+              <a class="terrain-card-link" href={card.href} aria-label={card.title}>
+                <svg viewBox="0 0 16 16" aria-hidden="true">
+                  <path
+                    d="M5 11L11 5M6 5h5v5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            {card.coverImage ? (
+              <div class="terrain-card-image">
+                <img src={card.coverImage} alt="" loading="lazy" />
+              </div>
+            ) : null}
+
+            <h3 class="terrain-card-title">
+              <a href={card.href}>{card.title}</a>
+            </h3>
+            <p class="terrain-card-description">{card.description}</p>
+
+            <div class="terrain-card-footer">
+              {card.dateLabel ? <span>{card.dateLabel}</span> : <span>&nbsp;</span>}
+              <span class="terrain-card-arrow" aria-hidden="true">
+                ↗
+              </span>
+            </div>
+            {card.lastUpdatedLabel ? (
+              <div class="terrain-card-updated">
+                Last updated {card.lastUpdatedLabel}
+              </div>
+            ) : null}
+          </article>
         ))}
-      </ul>
+      </div>
     )}
   </section>
 
-  <section class="section">
-    <h2>Attractors</h2>
-    {orderedAttractors.length === 0 ? (
-      <p class="meta">No attractors yet.</p>
+  <section class="terrain-logs">
+    <h2>Growth Logs</h2>
+    {logItems.length === 0 ? (
+      <p class="meta">No logs yet.</p>
     ) : (
-      <ul class="list">
-        {orderedAttractors.map((entry) => (
-          <li>
-            <a href={`/attractors/${entry.slug}`}>{displayTitle(entry)}</a>
-          </li>
+      <div class="terrain-log-list">
+        {logItems.map((log) => (
+          <article class="terrain-log-item" key={log.key}>
+            <span class="terrain-log-dot" aria-hidden="true"></span>
+            <div class="terrain-log-content">
+              <span class="terrain-log-date">{log.dateLabel}</span>
+              <p>{log.content}</p>
+              <span class="terrain-log-added">
+                — Added to <a href={log.parentHref}>{log.parentTitle}</a>
+              </span>
+            </div>
+          </article>
         ))}
-      </ul>
+      </div>
     )}
   </section>
+
+  <script>
+    {`
+      const buttons = document.querySelectorAll('.terrain-filter');
+      const cards = document.querySelectorAll('.terrain-card');
+      const setFilter = (value) => {
+        buttons.forEach((btn) => {
+          btn.classList.toggle('is-active', btn.dataset.filter === value);
+        });
+        cards.forEach((card) => {
+          if (value === 'all') {
+            card.classList.remove('is-hidden');
+            return;
+          }
+          const match = card.dataset.type === value;
+          card.classList.toggle('is-hidden', !match);
+        });
+      };
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => setFilter(btn.dataset.filter));
+      });
+    `}
+  </script>
 </BaseLayout>

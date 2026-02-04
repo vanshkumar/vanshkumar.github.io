@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Work+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
-  --bg: #f6f3ee;
-  --bg-accent: #fffdf7;
-  --text: #1f1b16;
-  --muted: #6b6258;
-  --accent: #0f766e;
-  --border: #e6dfd5;
-  --max-width: 860px;
+  --bg: #fdfbf7;
+  --text: #261f14;
+  --muted: #6b5e51;
+  --accent: #3d5c1f;
+  --accent-dark: #2d4517;
+  --border: #e5e1d5;
+  --card: #fcfcf9;
+  --card-border: #e8e6dc;
+  --max-width: 1200px;
 }
 
 * {
@@ -17,9 +19,9 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: radial-gradient(circle at 20% 0%, var(--bg-accent), var(--bg));
+  background: var(--bg);
   color: var(--text);
-  font-family: "Work Sans", "Helvetica", sans-serif;
+  font-family: "Inter", "Helvetica", sans-serif;
   line-height: 1.6;
 }
 
@@ -29,31 +31,56 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  color: var(--accent-dark);
 }
 
 h1,
 h2,
 h3 {
-  font-family: "Fraunces", "Iowan Old Style", serif;
+  font-family: "Playfair Display", "Iowan Old Style", serif;
   letter-spacing: -0.02em;
   margin: 0 0 0.6rem;
+}
+
+.topographic-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+}
+
+.topographic-lines {
+  width: 100%;
+  height: 100%;
+  stroke: #d4cbb8;
+  stroke-width: 1;
+  fill: none;
 }
 
 .page {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 3.5rem;
+  padding: 2.5rem 2rem 4rem;
+  position: relative;
+  z-index: 1;
 }
 
 .site-header {
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem 2rem;
+  background: transparent;
+}
+
+.site-header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--border);
+  gap: 2rem;
 }
 
 .brand {
@@ -63,33 +90,329 @@ h3 {
 }
 
 .brand a {
-  font-family: "Fraunces", "Iowan Old Style", serif;
-  font-size: 1.6rem;
+  font-family: "Playfair Display", "Iowan Old Style", serif;
+  font-size: 1.4rem;
   color: var(--text);
 }
 
 .brand-subtitle {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 }
 
 .site-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  font-size: 0.95rem;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  align-items: center;
 }
 
-.site-nav a {
-  padding: 0.35rem 0.85rem;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: #fff;
+.nav-link {
   color: var(--text);
+  transition: opacity 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.nav-link:not(.is-active):hover {
+  opacity: 0.75;
+  color: var(--text);
+}
+
+.nav-link.is-active {
+  color: var(--accent);
+}
+
+.nav-pill {
+  background: var(--accent);
+  color: #ffffff;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.nav-pill.is-active {
+  color: #ffffff;
+}
+
+.nav-pill:hover {
+  background: var(--accent-dark);
+  opacity: 1;
+}
+
+.nav-icon {
+  font-size: 0.75rem;
 }
 
 .content {
   padding-top: 2rem;
+}
+
+.terrain-hero {
+  padding: 4.5rem 0 3rem;
+}
+
+.terrain-hero-content {
+  max-width: 850px;
+}
+
+.terrain-hero-title {
+  font-size: clamp(2.8rem, 6vw, 5.4rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.terrain-hero-title span {
+  display: block;
+}
+
+.terrain-hero-accent {
+  color: #5c0a25;
+  font-style: italic;
+  margin-top: 0.4rem;
+}
+
+.terrain-hero-subtitle {
+  margin-top: 2.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid #d9d5cc;
+  max-width: 520px;
+  color: var(--muted);
+  font-style: italic;
+  font-size: 1.05rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.terrain-hero-subtitle p {
+  margin: 0;
+}
+
+.terrain-map {
+  padding: 1.5rem 0 3rem;
+}
+
+.terrain-map-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.terrain-map-header h2 {
+  font-size: 2.2rem;
+  color: var(--text);
+}
+
+.terrain-filters {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.terrain-filter {
+  border: none;
+  background: none;
+  padding: 0 0 0.6rem;
+  font: inherit;
+  color: #9aa0ab;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.terrain-filter.is-active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.terrain-card-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.terrain-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  padding: 1.6rem;
+  box-shadow: 0 6px 20px rgba(30, 22, 14, 0.08);
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+}
+
+.terrain-card.is-hidden {
+  display: none;
+}
+
+.terrain-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+  color: #9aa0ab;
+}
+
+.terrain-card-type {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+.terrain-card-type img {
+  height: 24px;
+  width: auto;
+  max-width: 36px;
+}
+
+.terrain-card-divider {
+  color: #d7d7d7;
+}
+
+.terrain-card-link {
+  color: #b4b4b4;
+  transition: color 0.2s ease;
+}
+
+.terrain-card-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+.terrain-card-link:hover {
+  color: var(--accent);
+}
+
+.terrain-card-image {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 140px;
+  margin-bottom: 1.2rem;
+}
+
+.terrain-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  opacity: 0.8;
+}
+
+.terrain-card-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.terrain-card-title a {
+  color: var(--text);
+}
+
+.terrain-card-title a:hover {
+  color: var(--accent);
+}
+
+.terrain-card-description {
+  color: #5f5a54;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.terrain-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f0eee6;
+  padding-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.55rem;
+  color: #a5a1a1;
+}
+
+.terrain-card-arrow {
+  font-size: 0.9rem;
+  color: #b7b7b7;
+}
+
+.terrain-card-updated {
+  margin-top: 0.6rem;
+  color: #a5a1a1;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.terrain-logs {
+  padding: 2.5rem 0 2rem;
+}
+
+.terrain-logs h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.terrain-log-list {
+  position: relative;
+  border-left: 1px solid rgba(61, 92, 31, 0.3);
+  margin-left: 0.5rem;
+  display: grid;
+  gap: 2.5rem;
+}
+
+.terrain-log-item {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.terrain-log-dot {
+  position: absolute;
+  left: -0.35rem;
+  top: 0.25rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 6px var(--bg);
+}
+
+.terrain-log-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.terrain-log-date {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.terrain-log-content p {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text);
+  max-width: 700px;
+}
+
+.terrain-log-added {
+  font-size: 0.85rem;
+  color: #8a857e;
+  font-style: italic;
 }
 
 .section {
@@ -107,8 +430,8 @@ h3 {
 .card {
   padding: 1rem 1.1rem;
   border-radius: 14px;
-  border: 1px solid var(--border);
-  background: #fff;
+  border: 1px solid var(--card-border);
+  background: var(--card);
 }
 
 .card h3 {
@@ -153,8 +476,101 @@ h3 {
 
 .site-footer {
   margin-top: 3rem;
-  padding-top: 1.5rem;
+  padding: 2.5rem 0 3rem;
   border-top: 1px solid var(--border);
-  color: var(--muted);
-  font-size: 0.9rem;
+  color: #3a2d26;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  background: rgba(252, 249, 242, 0.8);
+  backdrop-filter: blur(6px);
+}
+
+.site-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.site-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-weight: 700;
+}
+
+.site-footer-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-footer-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.site-footer-links {
+  display: flex;
+  gap: 1.8rem;
+  font-weight: 700;
+  color: #9b948d;
+}
+
+.site-footer-links a {
+  color: inherit;
+}
+
+.site-footer-links a:hover {
+  color: #d08f70;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .site-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    gap: 1rem;
+  }
+
+  .page {
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  .terrain-map-header {
+    align-items: flex-start;
+  }
+
+  .terrain-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-footer-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 640px) {
+  .brand-subtitle {
+    display: none;
+  }
+
+  .terrain-card-grid {
+    grid-template-columns: 1fr;
+  }
 }

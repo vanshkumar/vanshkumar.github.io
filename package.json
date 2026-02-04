@@ -12,6 +12,7 @@
     "sync-assets": "node scripts/sync-assets.mjs"
   },
   "dependencies": {
+    "@astrojs/rss": "^4.0.0",
     "@flowershow/remark-wiki-link": "^2.0.0",
     "astro": "^5.0.0",
     "gray-matter": "^4.0.3"

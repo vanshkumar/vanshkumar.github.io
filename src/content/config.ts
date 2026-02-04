@@ -6,6 +6,7 @@ const fixedPoints = defineCollection({
     title: z.string().optional(),
     description: z.string().optional(),
     date: z.coerce.date().optional(),
+    lastmod: z.coerce.date().optional(),
     tags: z.array(z.string()).optional(),
     aliases: z.array(z.string()).optional()
   })
@@ -17,6 +18,7 @@ const attractors = defineCollection({
     title: z.string().optional(),
     description: z.string().optional(),
     date: z.coerce.date().optional(),
+    lastmod: z.coerce.date().optional(),
     kind: z.enum(['project', 'essay']),
     tags: z.array(z.string()).optional(),
     coverImage: z.string().optional(),
@@ -39,7 +41,9 @@ const pages = defineCollection({
   schema: z.object({
     title: z.string().optional(),
     description: z.string().optional(),
-    aliases: z.array(z.string()).optional()
+    aliases: z.array(z.string()).optional(),
+    heroTitle: z.string().optional(),
+    heroAccent: z.string().optional()
   })
 });
 

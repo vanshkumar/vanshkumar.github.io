@@ -139,6 +139,7 @@ const urlResolver = (name) => {
 };
 
 export default defineConfig({
+  site: 'https://vanshkumar.net',
   output: 'static',
   trailingSlash: 'never',
   markdown: {

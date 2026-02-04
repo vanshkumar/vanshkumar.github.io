@@ -3,6 +3,8 @@ import '../styles/global.css';
 
 const { title } = Astro.props;
 const pageTitle = title ? `${title} | Vansh Kumar` : 'Vansh Kumar';
+const pathname = Astro.url.pathname;
+const isTerrain = pathname === '/terrain';
 ---
 
 <!doctype html>
@@ -13,26 +15,73 @@ const pageTitle = title ? `${title} | Vansh Kumar` : 'Vansh Kumar';
     <title>{pageTitle}</title>
   </head>
   <body>
-    <div class="page">
-      <header class="site-header">
+    <div class="topographic-bg" aria-hidden="true">
+      <svg
+        class="topographic-lines"
+        viewBox="0 0 1000 1000"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M-100,200 Q200,100 400,300 T900,200" />
+        <path d="M-100,220 Q200,120 400,320 T900,220" />
+        <path d="M-100,240 Q200,140 400,340 T900,240" />
+        <path d="M-100,260 Q200,160 400,360 T900,260" />
+        <path d="M-100,280 Q200,180 400,380 T900,280" />
+        <path d="M-100,760 Q300,660 600,860 T1100,760" />
+        <path d="M-100,780 Q300,680 600,880 T1100,780" />
+        <path d="M-100,800 Q300,700 600,900 T1100,800" />
+        <path d="M-100,820 Q300,720 600,920 T1100,820" />
+        <path d="M800,0 Q700,300 900,600" />
+        <path d="M820,0 Q720,300 920,600" />
+        <path d="M840,0 Q740,300 940,600" />
+        <circle cx="200" cy="800" r="100" />
+        <circle cx="200" cy="800" r="120" />
+        <circle cx="200" cy="800" r="140" />
+        <circle cx="800" cy="200" r="80" />
+        <circle cx="800" cy="200" r="100" />
+      </svg>
+    </div>
+
+    <header class="site-header">
+      <div class="site-header-inner">
         <div class="brand">
           <a href="/">Vansh Kumar</a>
           <span class="brand-subtitle">Notes, projects, and quiet experiments.</span>
         </div>
         <nav class="site-nav" aria-label="Primary">
-          <a href="/about">About</a>
-          <a href="/now">Now</a>
-          <a href="/shelf">Shelf</a>
-          <a href="/terrain">Terrain</a>
+          <a href="/about" class:list={['nav-link', pathname === '/about' && 'is-active']}>About</a>
+          <a href="/now" class:list={['nav-link', pathname === '/now' && 'is-active']}>Now</a>
+          <a href="/shelf" class:list={['nav-link', pathname === '/shelf' && 'is-active']}>Shelf</a>
+          <a
+            href="/terrain"
+            class:list={['nav-link', 'nav-pill', isTerrain && 'is-active']}
+          >
+            <span class="nav-icon" aria-hidden="true">🌱</span>
+            Terrain
+          </a>
         </nav>
-      </header>
+      </div>
+    </header>
 
+    <div class="page">
       <main class="content">
         <slot />
       </main>
 
       <footer class="site-footer">
-        <span>Built with Astro on GitHub Pages.</span>
+        <div class="site-footer-inner">
+          <div class="site-footer-brand">
+            <span class="site-footer-icon" aria-hidden="true">
+              <img src="/brand/vk_logo.png" alt="VK logo" />
+            </span>
+          </div>
+          <nav class="site-footer-links" aria-label="Footer">
+            <a href="#">Quests</a>
+            <a href="https://x.com/lunchwithav" rel="me">Twitter</a>
+            <a href="https://vanshkumar.substack.com/">Substack</a>
+            <a href="/rss.xml">RSS</a>
+          </nav>
+        </div>
       </footer>
     </div>
   </body>

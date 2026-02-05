@@ -1,5 +1,5 @@
 ---
-lastmod: 2025-11-10
+lastmod: 2026-02-04
 ---
 A lot of my notes so far fall into cultural/psychological belief territory. They are certainly subject to confirmation bias as [[Confirmation bias is the one to watch for]]. How do I apply the scientific method and [[Counteract confirmation bias]] in these instances?
 
@@ -11,7 +11,6 @@ Ways to do this:
 - Ask yourself what exactly you mean in detail
 - Think about concrete messy examples from your life or friends' lives
 - Talk through it with a critical minded friend
-- 
 
 
 

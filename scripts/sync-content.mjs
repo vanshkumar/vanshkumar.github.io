@@ -25,25 +25,6 @@ const titleFromFilename = (filename) => {
   return base || 'Untitled';
 };
 
-const normalizeKey = (value) =>
-  value
-    .trim()
-    .toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/[^a-z0-9-_]/g, '')
-    .replace(/-+/g, '-')
-    .replace(/^-|-$/g, '');
-
-const titleIndex = new Map();
-
-const registerTitle = (title, collection, rel) => {
-  if (!title) return;
-  const key = normalizeKey(title);
-  if (!key) return;
-  const existing = titleIndex.get(key) ?? [];
-  existing.push({ title, collection, rel });
-  titleIndex.set(key, existing);
-};
 
 const walkMarkdownFiles = (dir) => {
   if (!fs.existsSync(dir)) return [];
@@ -104,10 +85,6 @@ const syncCollection = (collection) => {
     if (!data.title) {
       data.title = title;
     }
-    if (collection !== 'pages') {
-      registerTitle(title, collection, rel);
-    }
-
     const output = matter.stringify(parsed.content, data);
     const targetPath = path.join(targetDir, `${cleanRel}.md`);
     ensureDir(path.dirname(targetPath));
@@ -120,17 +97,3 @@ if (!fs.existsSync(vaultRoot)) {
 }
 
 collections.forEach(syncCollection);
-
-const collisions = [...titleIndex.entries()].filter(([, list]) => list.length > 1);
-if (collisions.length) {
-  const lines = collisions.map(([, list]) =>
-    `- "${list[0].title}": ${list
-      .map((entry) => `${entry.collection}/${entry.rel}`)
-      .join(', ')}`
-  );
-  throw new Error(
-    `Duplicate titles detected across collections. Rename to keep titles unique.\n${lines.join(
-      '\n'
-    )}`
-  );
-}

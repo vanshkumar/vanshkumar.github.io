@@ -1,13 +1,6 @@
 ---
 lastmod: 2026-02-04
 ---
-One of my two quests.
-
-I want to advance & improve education as a cultural technology.
-
----
-
-A high quality education requires two factors:
 ## A positive context
 A social environment & positive cultural context that prizes educational values such as growth, curiosity, learning, wonder.
 

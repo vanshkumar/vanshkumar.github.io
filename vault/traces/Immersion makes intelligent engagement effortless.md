@@ -8,7 +8,7 @@ Some examples:
 - [[Techniques to scale an opinionated educational culture]] in some sense immerse you in an environment where certain norms are elevated
 - A good book, movie, etc
 - A homogenous culture and social environment is immersive
-- [[How Might We Learn?]] vision
+- [[What makes for a high quality education?]] vision
 
 And immersion usually requires *narrative*
 

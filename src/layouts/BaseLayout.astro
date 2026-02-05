@@ -2,7 +2,7 @@
 import '../styles/global.css';
 
 const { title } = Astro.props;
-const pageTitle = title ? `${title} | Vansh Kumar` : 'Vansh Kumar';
+const pageTitle = title ? `Vansh Kumar | ${title}` : 'Vansh Kumar';
 const pathname = Astro.url.pathname;
 const isTerrain = pathname === '/terrain';
 ---
@@ -77,8 +77,8 @@ const isTerrain = pathname === '/terrain';
           </div>
           <nav class="site-footer-links" aria-label="Footer">
             <a href="#">Quests</a>
-            <a href="https://x.com/lunchwithav" rel="me">Twitter</a>
-            <a href="https://vanshkumar.substack.com/">Substack</a>
+            <a href="https://x.com/lunchwithav" rel="me noopener noreferrer" target="_blank" class="external-link">Twitter</a>
+            <a href="https://vanshkumar.substack.com/" rel="noopener noreferrer" target="_blank" class="external-link">Substack</a>
             <a href="/rss.xml">RSS</a>
           </nav>
         </div>

@@ -48,6 +48,27 @@ a:hover {
   background-color: rgba(47, 75, 26, 0.12);
 }
 
+.external-link {
+  position: relative;
+}
+
+.external-link:hover::after {
+  content: attr(href);
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  transform: translateY(-0.35rem);
+  background: #f7f3ea;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  z-index: 5;
+}
+
 h1,
 h2,
 h3 {

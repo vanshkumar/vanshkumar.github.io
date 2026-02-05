@@ -81,6 +81,16 @@ const syncCollection = (collection) => {
     const parsed = matter(raw);
     const data = { ...parsed.data };
 
+    if (collection === 'logs' && !data.parent) {
+      const parentSlug = cleanSegments[0];
+      if (!parentSlug) {
+        throw new Error(
+          `Log entry is missing parent and is not inside a folder: ${rel}`
+        );
+      }
+      data.parent = parentSlug;
+    }
+
     const title = data.title ?? titleFromFilename(filename);
     if (!data.title) {
       data.title = title;

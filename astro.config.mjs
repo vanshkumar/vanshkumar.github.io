@@ -4,6 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
 import wikiLinkPlugin from '@flowershow/remark-wiki-link';
+import rehypeExternalLinks from 'rehype-external-links';
 
 const CONTENT_ROOT = fileURLToPath(new URL('./src/content', import.meta.url));
 const VAULT_ROOT = fileURLToPath(new URL('./vault', import.meta.url));
@@ -156,6 +157,16 @@ export default defineConfig({
           urlResolver,
           permalinks: wikiIndex.permalinks,
           newClassName: 'wikilink-missing'
+        }
+      ]
+    ],
+    rehypePlugins: [
+      [
+        rehypeExternalLinks,
+        {
+          target: '_blank',
+          rel: ['noopener', 'noreferrer'],
+          properties: { className: ['external-link'] }
         }
       ]
     ]

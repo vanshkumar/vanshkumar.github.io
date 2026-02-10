@@ -27,9 +27,10 @@ I ended up working on the neural dynamics of *C. elegans* — tiny worms with ~3
 My result confirmed what the field already suspected — not nothing for a first attempt, but not exactly an original insight. And it wasn't a particularly insightful *question* either by my standards. It is certainly something that I would have considered novel/interesting at the beginning of December, though.
 
 # But I feel kinda successful?
-Having an absurd objective like this was *extremely* motivating. It forced me to take a research-first/question-first approach to learning things, which was way more fun and got me ramped up in the field very quickly. LLMs helped massively on that front, along with the coding front.
+Having an absurd objective like this was *extremely* motivating. It forced me to take a research-first/question-first approach to learning things, which was way more fun and got me ramped up in the field very quickly. LLMs helped massively on that front, along with the coding front. Perhaps unsurprisingly, I spent most of my time (~75%) just getting to a hypothesis grounded in the literature that I was excited to test:
+>Genes work at the neuron level, but need to encode behavior (eg locomotion) as a top-down computational constraint on the network. They accomplish this via modifying neurons' nonlinear feedback control algorithms. This results in certain structures (eg 2D loops for locomotion in C Elegans) appearing with very high probability, despite each overall brain's neural coordinate system being unique.
 
-And while the final experiment didn't end up with unambiguously positive results and I had *a lot* of hiccups along the way, I still feel proud that I was able to go from vague ideas to a real hypothesis & run a real experiment with real results to test one part of it in just two months. And more importantly, it was fun! I am excited to continue my quest of understanding the brain and also extremely interested in using LLMs to accelerate science more broadly.
+And while the final experiment didn't end up with unambiguously positive results and I had *a lot* of hiccups along the way, I still feel proud that I was able to go from vague ideas to a real hypothesis & run a real experiment with real results to test one small part of it in just two months. And more importantly, it was fun! I am excited to continue my quest of understanding the brain and also extremely interested in using LLMs to accelerate science more broadly.
 
 That said...
 
@@ -72,10 +73,6 @@ You can get a sense with the arc below, or you can read through my daily working
 - Read "The neuron as a direct data-driven controller" (Moore et al.)
 - Integrated it into a multi-level hypothesis: genes -> feedback control laws -> computational scaffolds -> behavior
 - Produced the detailed experiment taxonomy with falsification criteria
-
-The hypothesis that I landed on & attempted to test with the LOOPER experiment:
->Genes work at the neuron level, but need to encode behavior (eg locomotion) as a top-down computational constraint on the network. They accomplish this via modifying neurons' nonlinear feedback control algorithms. This results in certain structures (eg 2D loops for locomotion in C Elegans) appearing with very high probability, despite each overall brain's neural coordinate system being unique.
-
 #### Phase 5: Execution and negative results (Days 24-31)
 - Applied LOOPER to Kato (positive control) and Atanas (target) datasets
 - Discovered: fidelity passes for both, but stationarity fails for both

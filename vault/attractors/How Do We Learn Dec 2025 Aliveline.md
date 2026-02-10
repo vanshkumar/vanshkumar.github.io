@@ -9,7 +9,7 @@ I also believe that [[Ambitious goals are useful as they illuminate a path that 
 
 I had zero neuroscience background, but it was time to jump start progress on one of my two main [quests](/about) – **understanding how we learn.**
 
-So for December I chose to try to **have and publish an original insight**. I began the aliveline on December 2 and was intending to give myself until January 2, but decided to take a holiday break in the middle & wrapped it up on January 31. I actively worked on it ~3h a day on average (I have a baby at home), so I spent ~90h on this in total.
+So for December I chose to try to **have and publish an original insight**. I began the aliveline on December 2 and was intending to give myself until January 2, but decided to take a holiday break in the middle & wrapped it up on January 31. I actively worked on this ~3-4h a day (I have a baby at home), so I spent ~100h on this in total.
 
 A more detailed definition of my goal, from the first day:
 >What I mean by "have and publish an original insight":

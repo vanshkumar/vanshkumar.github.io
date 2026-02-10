@@ -1,8 +1,8 @@
 ---
 date: 2025-12-06
+lastmod: 2026-02-10
 ---
 # Day 5 (12/6)
-
 Again fairly little time to work on this, for bug fighting reasons. I may combine day 3/4/5/6 into one day since only summed across all four have I had my usual daily working time of 4 hours. Anyways that can be done later. Into the work.
 
 How does a population of neurons start firing? Is it all simultaneous? Presumably not given there's synapses that are crossed in some order. So you have to set some neuronal dominoes going to get a particular population level activation?

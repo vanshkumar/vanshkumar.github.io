@@ -11,11 +11,13 @@ if (!entry) {
 const { Content } = await entry.render();
 const backlinks = await getBacklinksForEntry('pages', entry.slug);
 const title = entry.data.title ?? titleFromSlug(entry.slug);
+const lastUpdated = entry.data.lastmod;
 ---
 
 <ContentLayout
   title={title}
   description={entry.data.description}
+  lastUpdated={lastUpdated}
   backlinks={backlinks}
 >
   <Content />

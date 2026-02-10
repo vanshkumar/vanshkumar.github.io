@@ -24,6 +24,7 @@ const title = entry.data.title ?? entry.data.day ?? formattedDate;
 const parentTitle = titleFromSlug(entry.data.parent);
 const parentHref = `/attractors/${entry.data.parent}`;
 const backlinks = await getBacklinksForEntry('logs', entry.slug);
+const lastUpdated = entry.data.lastmod;
 
 const allLogs = await getCollection('logs');
 const siblings = allLogs
@@ -44,7 +45,12 @@ const logTitle = (log) =>
   log.data.title ?? log.data.day ?? formatDate(log.data.date);
 ---
 
-<ContentLayout title={title} date={entry.data.date} backlinks={backlinks}>
+<ContentLayout
+  title={title}
+  date={entry.data.date}
+  lastUpdated={lastUpdated}
+  backlinks={backlinks}
+>
   <p class="meta">
     <a href={parentHref}>Back to {parentTitle}</a>
   </p>

@@ -1,9 +1,8 @@
 ---
 date: 2026-01-09
-lastmod: 2026-01-10
+lastmod: 2026-02-10
 ---
 # Day 18 (12/22)
-
 Energy was not there today, so I skipped. Did a bunch of end of year admin stuff instead. Meh I think I am going to take Christmas/New Years "off". That's where the energy is naturally going anyways.
 
 12/21 – 1/1 will be completely off. I will do an annual review over 2-3 days in that time period, but that's it in terms of anything work-shaped.

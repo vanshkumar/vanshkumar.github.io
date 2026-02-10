@@ -8,6 +8,7 @@ if (!entry) {
   throw new Error('Missing content entry: pages/terrain');
 }
 const { Content } = await entry.render();
+const pageLastUpdated = entry.data.lastmod;
 
 const probes = await getCollection('probes');
 const attractors = await getCollection('attractors');
@@ -103,13 +104,13 @@ const cards = [
     <div class="terrain-map-header">
       <div class="terrain-filters" role="tablist" aria-label="Terrain filters">
         <button class="terrain-filter is-active" data-filter="all" role="tab">
-          All Elements
-        </button>
-        <button class="terrain-filter" data-filter="probe" role="tab">
-          Probes
+          All
         </button>
         <button class="terrain-filter" data-filter="attractor" role="tab">
           Attractors
+        </button>
+        <button class="terrain-filter" data-filter="probe" role="tab">
+          Probes
         </button>
       </div>
     </div>
@@ -169,10 +170,16 @@ const cards = [
     )}
   </section>
 
-  <script>
-    {`
+  {pageLastUpdated ? (
+    <div class="content-updated">Last updated {formatLastUpdated(pageLastUpdated)}</div>
+  ) : null}
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
       const buttons = document.querySelectorAll('.terrain-filter');
       const cards = document.querySelectorAll('.terrain-card');
+      if (!buttons.length || !cards.length) return;
+
       const setFilter = (value) => {
         buttons.forEach((btn) => {
           btn.classList.toggle('is-active', btn.dataset.filter === value);
@@ -186,9 +193,10 @@ const cards = [
           card.classList.toggle('is-hidden', !match);
         });
       };
+
       buttons.forEach((btn) => {
         btn.addEventListener('click', () => setFilter(btn.dataset.filter));
       });
-    `}
+    });
   </script>
 </BaseLayout>

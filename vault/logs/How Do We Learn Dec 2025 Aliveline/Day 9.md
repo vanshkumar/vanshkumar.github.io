@@ -1,8 +1,8 @@
 ---
 date: 2025-12-11
+lastmod: 2026-02-10
 ---
 # Day 9
-
 The stakes for this experiment have been starting to feel unnecessarily high lately. Part of that is self-pressure to have an insight that's both original and big/important, which is not actually part of my success criteria here. So let's drop it. The main ideas I've played with over the last 10 days:
 1. Kolmogorov complexity as measure of representational capacity for brains (minimal program to generate the low-D manifold that encodes a behavior)?
 2. Can we treat developmental / genetic parameters as the small-scale couplings, and macroscopic neural manifolds as fixed points or order parameters of an RG-like flow?

@@ -1,8 +1,8 @@
 ---
 date: 2025-12-20
+lastmod: 2026-02-10
 ---
 # Day 17
-
 I felt some enthusiasm for trying to apply the asymmetric diffusion map method to a bunch of different worms in the qsimeon dataset. Let's try it.
 
 Lol just getting the test system in the ADMM repo to work is taking a while due to Matlab dependencies, and the fact that it's from 2019. If I can get some interesting results extending this to other worms, might be worth a Python port/update.

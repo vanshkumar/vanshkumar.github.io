@@ -1,8 +1,8 @@
 ---
 date: 2025-12-03
+lastmod: 2026-02-10
 ---
 # Day 2 (12/3)
-
 Initially I was planning to spend another day on exploration and brainstorming of where I might spend my time. But given the time pressure with this aliveline, I now suspect it might be more fruitful to pick something and see where I can get with it in a day or two. The point of an aliveline is to try to fail in interesting ways, and that can only be accomplished with action not rumination. So the candidate "insight", which I worked with ChatGPT a bit to pull out from my brainstorming yesterday, is:
 
 >The representational capacity of a brain is better thought of as the capacity of the **ensemble of effective circuits it can reconfigure into**, under realistic resource constraints (time, energy, neuromodulatory bandwidth), not just as the capacity of any one static circuit.

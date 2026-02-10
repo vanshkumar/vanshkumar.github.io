@@ -32,6 +32,7 @@ const logs = defineCollection({
   type: 'content',
   schema: z.object({
     date: z.coerce.date(),
+    lastmod: z.coerce.date().optional(),
     parent: z.string(),
     day: z.string().optional(),
     title: z.string().optional()
@@ -55,6 +56,7 @@ const pages = defineCollection({
   schema: z.object({
     title: optionalText,
     description: optionalText,
+    lastmod: z.coerce.date().optional(),
     aliases: z.array(z.string()).optional(),
     heroTitle: z.string().optional(),
     heroAccent: z.string().optional(),

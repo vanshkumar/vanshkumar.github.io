@@ -1,8 +1,8 @@
 ---
 date: 2025-12-16
+lastmod: 2026-02-10
 ---
 # Day 13
-
 Reading [Aversive Learning Induces Context-Gated Global Reorganization of Neural Dynamics in Caenorhabditis elegans](https://www.biorxiv.org/content/10.1101/2025.10.31.685731v1)
 
 Very cool. Notes/summary:

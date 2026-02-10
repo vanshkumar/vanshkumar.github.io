@@ -39,13 +39,15 @@ a:hover {
 
 .prose a {
   color: var(--accent);
-  background-color: rgba(47, 75, 26, 0.08);
+  background: rgba(198, 214, 182, 0.55);
+  padding: 0 0.12em;
+  border-radius: 0.12em;
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .prose a:hover {
   color: var(--accent-dark);
-  background-color: rgba(47, 75, 26, 0.2);
+  background: rgba(185, 203, 170, 0.7);
 }
 
 .external-link {
@@ -439,13 +441,13 @@ h3 {
 .article {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.1rem;
   max-width: 80%;
   margin: 0 auto;
 }
 
 .article-header {
-  padding-bottom: 1rem;
+  padding-bottom: 0.4rem;
 }
 
 .content-type {

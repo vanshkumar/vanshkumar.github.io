@@ -1,8 +1,8 @@
 ---
 date: 2025-12-04
+lastmod: 2026-02-10
 ---
 # Day 3 (12/4)
-
 There is a "minimum description length" principle in ML, which is the idea that you don't want the weights to have too much information (? I don't really understand this that well tbh).
 
 Is there a similar principle at play in brains? Do simpler tasks tend to activate a smaller population of neurons?

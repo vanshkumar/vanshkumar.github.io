@@ -4,9 +4,9 @@ import ContentLayout from '../layouts/ContentLayout.astro';
 import { getBacklinksForEntry } from '../lib/wiki';
 import { titleFromSlug } from '../lib/content';
 
-const entry = await getEntry('pages', 'home');
+const entry = await getEntry('pages', 'contact');
 if (!entry) {
-  throw new Error('Missing content entry: pages/home');
+  throw new Error('Missing content entry: pages/contact');
 }
 const { Content } = await entry.render();
 const backlinks = await getBacklinksForEntry('pages', entry.slug);

@@ -1,8 +1,8 @@
 ---
 date: 2025-12-15
+lastmod: 2026-02-10
 ---
 # Day 12
-
 OK roughly halfway through the aliveline. I want to try regressing out stimulus category, choice, reward, movement, and see if there is a spike around the rule learning. Re-reading the paper and methods to make sure I understand what I'm doing.
 
 >To convert an internal category representation into a motor decision, it would be sufficient for cells in the mPFC to show selectivity for only one category. However, we observed two types of neuron—one that represented rewarded stimuli (Go preferring: 73% of all category-selective cells at T5 and 65% at T8) and the other non-rewarded stimuli (NoGo preferring: 27% at T5 and 35% at T8).

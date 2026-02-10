@@ -70,12 +70,13 @@ You can get a sense with the arc below, or you can read through my daily working
 #### Phase 4: The DD-DC breakthrough (Days 21-23)
 - Read "The neuron as a direct data-driven controller" (Moore et al.)
 - Integrated it into a multi-level hypothesis: genes -> feedback control laws -> computational scaffolds -> behavior
-- Produced the detailed experiment taxonomy (Day 21) with falsification criteria
+- Produced the detailed experiment taxonomy with falsification criteria
+
+The hypothesis that I landed on & attempted to test with the LOOPER experiment:
+>Genes work at the neuron level, but need to encode behavior (eg locomotion) as a top-down computational constraint on the network. They accomplish this via modifying neurons' nonlinear feedback control algorithms. This results in certain structures (eg 2D loops for locomotion in C Elegans) appearing with very high probability, despite each overall brain's neural coordinate system being unique.
+
 #### Phase 5: Execution and negative results (Days 24-31)
 - Applied LOOPER to Kato (positive control) and Atanas (target) datasets
 - Discovered: fidelity passes for both, but stationarity fails for both
 - Put heat-pulse experiments on hold
 - Wrote email with precise questions to LOOPER author
-
-The hypothesis that I landed on & attempted to test with the LOOPER experiment:
->Genes work at the neuron level, but need to encode behavior (eg locomotion) as a top-down computational constraint on the network. They accomplish this via modifying neurons' nonlinear feedback control algorithms. This results in certain structures (eg 2D loops for locomotion in C Elegans) appearing with very high probability, despite each overall brain's neural coordinate system being unique.

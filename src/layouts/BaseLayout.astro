@@ -9,6 +9,8 @@ const isTerrain = pathname === '/terrain';
 const siteEntry = await getEntry('pages', 'site');
 const brandSubtitle =
   siteEntry?.data?.brandSubtitle ?? 'Notes, projects, and quiet experiments.';
+const siteUrl = 'https://vanshkumar.net';
+const ogImage = `${siteUrl}/og.png`;
 ---
 
 <!doctype html>
@@ -17,6 +19,19 @@ const brandSubtitle =
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
+    <meta name="description" content={brandSubtitle} />
+    <meta property="og:site_name" content="Vansh Kumar" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={brandSubtitle} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={`${siteUrl}${pathname}`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={brandSubtitle} />
+    <meta name="twitter:image" content={ogImage} />
+    <link rel="icon" href="/brand/vk_logo.png" />
+    <link rel="apple-touch-icon" href="/brand/vk_logo.png" />
   </head>
   <body>
     <div class="topographic-bg" aria-hidden="true">

@@ -7,9 +7,10 @@ Early December 2025 I was feeling a bit lost. Or more specifically, I was feelin
 
 I also believe that [[Ambitious goals are useful as they illuminate a path that maximizes learning and enjoyment, not as ends in themselves]], and starting an aliveline was a way to directly test that belief.
 
+I had zero neuroscience background, but it was time to jump start progress on one of my two main [quests](/about) – **understanding how we learn.**
+
 So for December I chose to try to **have and publish an original insight**. I began the aliveline on December 2 and was intending to give myself until January 2, but decided to take a holiday break in the middle & wrapped it up on January 31.
 
-I had zero neuroscience background, so it was time to jump start progress on one of my two main [quests](/about) – **understanding how we learn.**
 
 A more detailed definition of my goal, from the first day:
 >What I mean by "have and publish an original insight":

@@ -48,6 +48,7 @@ const formattedLastUpdated = lastUpdated
     <div class="prose">
       <slot />
     </div>
+    <slot name="after-content" />
 
     {backlinks.length ? (
       <section class="section">

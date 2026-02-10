@@ -10,7 +10,7 @@ Leaving the original question unsettled and making sure you [[Build systems to r
 In the history of computation, the question of "how can machines augment human memory?" has been wildly generative
 - Examples from augment long term memory essay
 
-This has a similar flavor to [[Ambitious goals are valuable to direct present activity, not as final ends in themselves]]
+This has a similar flavor to [[Ambitious goals are useful as they illuminate a path that maximizes learning and enjoyment, not as ends in themselves]]
 
 
 ---

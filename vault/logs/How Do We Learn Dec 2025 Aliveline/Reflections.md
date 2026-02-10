@@ -1,6 +1,6 @@
 ---
 date: 2026-02-03
-lastmod: 2026-02-04
+lastmod: 2026-02-09
 ---
 - LLMs are insanely useful and code correctness is not as bad as it used to be
 	- AI-assisted science is a very cool field that I may want to work in
@@ -27,6 +27,7 @@ lastmod: 2026-02-04
 		- Learning a new field & doing this question-first / hypothesis generation approach
 			- Ideal output would be.. idk?
 		- Higher level how can I make you more autonomous overall?
+			- What skills should I create?
 - Also ask LLM to read thru this Aliveline folder and pull out any reflections I've had
 - I can feel that this whole thing would've gone much faster & been more interesting had I asked for help/advice more and/or had a mentor person to chat with. But at the same time there is a lot of value in doing this question-first approach to learning a new field myself in that I can develop my own taste. Blending the two, which an optimal PhD program would do, is of course ideal.
 	- I do think I should have reached out to the LOOPER author sooner than I did. Step 1 after reading any paper should be emailing the author with (good) questions tbh. Person-first approach to learning!
@@ -41,7 +42,7 @@ lastmod: 2026-02-04
 - [[2026-01-31]]
 - One major takeaway is to spend way more time formulating questions precisely. Solving problems is 90% about understanding them.
 - A question I need a detailed answer to for myself is: what does it mean to understand the brain? what does it mean to understand how we learn?
-- Another question from [[2025-12-18-december-aliveline-15]] which is interesting:
+- Another question from [[Day 15]] which is interesting:
 >	- The aliveline is "have and publish an original insight". But does it have to be me who does it? What if instead I am able to connect authors of a couple papers whose ideas are part of a similar story but haven't been previously connected, and that *leads to an original insight being published*? I would define that as success. That's a way more tractable problem to do in a month as well.
 >	- Makes me wonder about how important such social-style bottlenecks are in science/research? There is an implicit narrative about science being bottlenecked by individual genius... but if you believe the scenius/technium-style thinking, the bit that's lacking is more coordination/social infra?
 >	- Ultimately, my primary advantage in all of this is that I ***do not*** need to optimize for metrics like citation/paper count. I am doing this for the love of the game, for a desire to learn, to push science forward, etc. That **needs** to be my starting point here. And besides, an approach where I learn and work on things that are interesting, both inside and outside of formal science, is wayyy more fun.
@@ -55,4 +56,8 @@ lastmod: 2026-02-04
 obvious quick wins:
 - add some pdf reading skill to codex.. ideally one that can read figures too
 - use gpt-5.2 (not gpt-5.2-codex) in CLI for qs requiring more 'intelligence'
--
+- create skills to modularize things
+- cleaner and more separated scratchpads for llms as they work, esp as parallelism goes up
+- moving forward make sure all documentation (chats, codex sessions, markdown notes) is in a single easy to access place, with timestamps, so llms can read and directly reflect on it to improve iteratively
+	- for the chats + codex sessions, an automated pipeline might be worth investing in to make them as easy as possible for an llm to use
+- claude code as harness for codex, as it's a much better manager / big picture thinker but codex is much better at nontrivial coding tasks

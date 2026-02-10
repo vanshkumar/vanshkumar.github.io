@@ -1,10 +1,10 @@
 ---
 date: 2026-01-24
-lastmod: 2026-01-25
+lastmod: 2026-02-09
 ---
 # Day 26
 
-More progress on extending LOOPER to freely moving worms & heat pulse (Atanas data). Sent an [[Email to Connor Brennan]] and had some correspondence regarding LOOPER theoretically and also asked him about a strange detrending line in the OSF LOOPER code.
+More progress on extending LOOPER to freely moving worms & heat pulse (Atanas data). Sent an email to Connor Brennan and had some correspondence regarding LOOPER theoretically and also asked him about a strange detrending line in the OSF LOOPER code.
 
 Just 5ish days left in this aliveline. What can I realistically end up with, and post, here?
 - Results of LOOPER on Atanas data

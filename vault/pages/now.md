@@ -1,6 +1,5 @@
 ---
 title: Now
 description: A snapshot of what I am focused on in the current season.
+lastmod: 2026-02-09
 ---
-
-This page is a simple status update and changes as priorities shift.

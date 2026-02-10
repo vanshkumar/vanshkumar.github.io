@@ -1,5 +1,6 @@
 ---
 lastmod: 2026-01-30
+tags: [neuroscience, how-do-we-learn]
 ---
 There is a very natural connection between nonlinear dynamics and random matrix theory
 

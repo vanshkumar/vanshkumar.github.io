@@ -1,6 +1,6 @@
 ---
 date: 2026-01-30
-lastmod: 2026-01-30
+lastmod: 2026-02-09
 ---
 # Day 31
 
@@ -14,6 +14,6 @@ Wrote down some reflections on this whole process, will write more today & revie
 
 I'll email Connor Brennan to get his thoughts on my overall hypothesis/approach here... ChatGPT has given me some ideas but this is a good point to chat with him as I have a clear hypothesis question.
 
-Sent an email, see [[Email to Connor Brennan]] followup section. This was an extremely useful exercise in thinking through wtf I'm actually doing. I need to do more of this more often.
+Sent an email, see email to Connor Brennan followup section. This was an extremely useful exercise in thinking through wtf I'm actually doing. I need to do more of this more often.
 
 Is the ultimate result of this month of work... a single email? Ha.

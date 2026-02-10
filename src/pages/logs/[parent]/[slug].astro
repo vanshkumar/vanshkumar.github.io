@@ -17,11 +17,31 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const formattedDate = new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(entry.data.date);
+const formatDate = (value) =>
+  new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(value);
+const formattedDate = formatDate(entry.data.date);
 const title = entry.data.title ?? entry.data.day ?? formattedDate;
 const parentTitle = titleFromSlug(entry.data.parent);
 const parentHref = `/attractors/${entry.data.parent}`;
 const backlinks = await getBacklinksForEntry('logs', entry.slug);
+
+const allLogs = await getCollection('logs');
+const siblings = allLogs
+  .filter((log) => log.data.parent === entry.data.parent)
+  .sort((a, b) => new Date(a.data.date) - new Date(b.data.date));
+const currentIndex = siblings.findIndex((log) => log.slug === entry.slug);
+const prevEntry = currentIndex > 0 ? siblings[currentIndex - 1] : null;
+const nextEntry =
+  currentIndex >= 0 && currentIndex < siblings.length - 1
+    ? siblings[currentIndex + 1]
+    : null;
+const logHref = (log) => {
+  if (!log) return null;
+  const [parent, slug] = log.slug.split('/');
+  return `/logs/${parent}/${slug}`;
+};
+const logTitle = (log) =>
+  log.data.title ?? log.data.day ?? formatDate(log.data.date);
 ---
 
 <ContentLayout title={title} date={entry.data.date} backlinks={backlinks}>
@@ -29,4 +49,26 @@ const backlinks = await getBacklinksForEntry('logs', entry.slug);
     <a href={parentHref}>Back to {parentTitle}</a>
   </p>
   <Content />
+  {prevEntry || nextEntry ? (
+    <nav class="log-nav" aria-label="Log navigation" slot="after-content">
+      {prevEntry ? (
+        <a class="log-nav-link" href={logHref(prevEntry)}>
+          <span class="log-nav-label">Previous</span>
+          <span class="log-nav-title">{logTitle(prevEntry)}</span>
+          <span class="log-nav-date">{formatDate(prevEntry.data.date)}</span>
+        </a>
+      ) : (
+        <span></span>
+      )}
+      {nextEntry ? (
+        <a class="log-nav-link log-nav-link-next" href={logHref(nextEntry)}>
+          <span class="log-nav-label">Next</span>
+          <span class="log-nav-title">{logTitle(nextEntry)}</span>
+          <span class="log-nav-date">{formatDate(nextEntry.data.date)}</span>
+        </a>
+      ) : (
+        <span></span>
+      )}
+    </nav>
+  ) : null}
 </ContentLayout>

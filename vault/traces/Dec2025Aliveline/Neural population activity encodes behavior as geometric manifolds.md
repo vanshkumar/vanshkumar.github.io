@@ -1,5 +1,6 @@
 ---
 lastmod: 2026-01-29
+tags: [neuroscience, how-do-we-learn]
 ---
 As things become more predictable, tangling decreases (manifold geometry becomes simpler)
 

@@ -13,7 +13,7 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies to `src/con
 - **logs** → `vault/logs/<parent>/` → `/logs/<parent>/<slug>`
   - `date` (required) `parent` (inferred) `day?` `title?`
 - **pages** → `vault/pages/` → `/`, `/about`, `/now`, `/shelf`, `/terrain`
-  - `title?` `description?` `aliases?[]` `heroTitle?` `heroAccent?`
+  - `title?` `description?` `aliases?[]` `heroTitle?` `heroAccent?` `brandSubtitle?`
 
 ## Sync Rules
 

@@ -1,10 +1,14 @@
 ---
+import { getEntry } from 'astro:content';
 import '../styles/global.css';
 
 const { title } = Astro.props;
 const pageTitle = title ? `Vansh Kumar | ${title}` : 'Vansh Kumar';
 const pathname = Astro.url.pathname;
 const isTerrain = pathname === '/terrain';
+const siteEntry = await getEntry('pages', 'site');
+const brandSubtitle =
+  siteEntry?.data?.brandSubtitle ?? 'Notes, projects, and quiet experiments.';
 ---
 
 <!doctype html>
@@ -46,7 +50,7 @@ const isTerrain = pathname === '/terrain';
       <div class="site-header-inner">
         <div class="brand">
           <a href="/">Vansh Kumar</a>
-          <span class="brand-subtitle">Notes, projects, and quiet experiments.</span>
+          <span class="brand-subtitle">{brandSubtitle}</span>
         </div>
         <nav class="site-nav" aria-label="Primary">
           <a href="/about" class:list={['nav-link', pathname === '/about' && 'is-active']}>About</a>

@@ -1,5 +1,6 @@
 ---
 lastmod: 2026-01-30
+tags: [neuroscience, how-do-we-learn]
 ---
 Hypothesis: perhaps local neuronal rules are in the language of feedback control laws? If you go with [[Neurons are direct data-driven controllers]].
 

@@ -1,5 +1,6 @@
 ---
 lastmod: 2026-01-30
+tags: [neuroscience, how-do-we-learn]
 ---
 What is the appropriate measure of 'complexity' or 'representational capacity' for a brain?
 

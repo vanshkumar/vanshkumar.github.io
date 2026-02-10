@@ -1,10 +1,12 @@
 import { defineCollection, z } from 'astro:content';
 
+const optionalText = z.string().optional().nullable();
+
 const probes = defineCollection({
   type: 'content',
   schema: z.object({
-    title: z.string().optional(),
-    description: z.string().optional(),
+    title: optionalText,
+    description: optionalText,
     date: z.coerce.date().optional(),
     lastmod: z.coerce.date().optional(),
     tags: z.array(z.string()).optional(),
@@ -15,8 +17,8 @@ const probes = defineCollection({
 const attractors = defineCollection({
   type: 'content',
   schema: z.object({
-    title: z.string().optional(),
-    description: z.string().optional(),
+    title: optionalText,
+    description: optionalText,
     date: z.coerce.date().optional(),
     lastmod: z.coerce.date().optional(),
     kind: z.enum(['project', 'essay']),
@@ -39,8 +41,8 @@ const logs = defineCollection({
 const traces = defineCollection({
   type: 'content',
   schema: z.object({
-    title: z.string().optional(),
-    description: z.string().optional(),
+    title: optionalText,
+    description: optionalText,
     date: z.coerce.date().optional(),
     lastmod: z.coerce.date().optional(),
     tags: z.array(z.string()).optional(),
@@ -51,11 +53,12 @@ const traces = defineCollection({
 const pages = defineCollection({
   type: 'content',
   schema: z.object({
-    title: z.string().optional(),
-    description: z.string().optional(),
+    title: optionalText,
+    description: optionalText,
     aliases: z.array(z.string()).optional(),
     heroTitle: z.string().optional(),
-    heroAccent: z.string().optional()
+    heroAccent: z.string().optional(),
+    brandSubtitle: z.string().optional()
   })
 });
 

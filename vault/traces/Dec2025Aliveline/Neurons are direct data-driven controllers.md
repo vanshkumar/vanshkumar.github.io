@@ -1,5 +1,6 @@
 ---
 lastmod: 2026-01-29
+tags: [neuroscience, how-do-we-learn]
 ---
 Can you test this by seeing what happens if you perturb a single neuron and see if it behaves like a feedback controller?
 

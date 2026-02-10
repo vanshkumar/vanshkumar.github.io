@@ -1,5 +1,6 @@
 ---
 lastmod: 2026-01-29
+tags: [neuroscience, how-do-we-learn]
 ---
 Hypothesis: because [[Neurons are direct data-driven controllers]], speed increases quality & quantity of feedback
 

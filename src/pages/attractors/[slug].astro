@@ -33,7 +33,6 @@ const subtype = entry.data.kind
   title={title}
   description={entry.data.description}
   date={entry.data.date}
-  kind={entry.data.kind}
   typeLabel="Attractor"
   subtype={subtype}
   typeIcon="/terrain/icons/attractor.png"
@@ -43,18 +42,4 @@ const subtype = entry.data.kind
 >
   <Content />
 
-  <section class="section">
-    <h2>Trajectory / Logs</h2>
-    {logs.length === 0 ? (
-      <p class="meta">No logs yet.</p>
-    ) : (
-      <ul class="list">
-        {logs.map((log) => (
-          <li>
-            <a href={`/logs/${log.slug}`}>{log.data.title ?? log.data.day ?? formatDate(log.data.date)}</a>
-          </li>
-        ))}
-      </ul>
-    )}
-  </section>
 </ContentLayout>

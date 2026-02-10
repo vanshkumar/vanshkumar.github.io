@@ -29,7 +29,7 @@ What am I thinking for Evergreen Questions? Why do I need a separate format beyo
 - I also like the idea of practicing the skill of converting questions into falsifiable / testable hypotheses and actual experiments. Each Evergreen Question is in a good state once I am able to sharply define an associated hypothesis/experiment (ideally just a single one to make sure questions are atomic)
 - Probably I should just try it out and see what happens. Let's do that
 
-From [[2026-01-14-december-aliveline-23]] is my rough list of Evergreen Questions from this aliveline:
+From [[Day 23]] is my rough list of Evergreen Questions from this aliveline:
 - Each neuron is a DD-DC
 	- Can't you test this by seeing what happens if you perturb a single neuron and see if it behaves like a feedback controller?
 - Moving faster allows enables/strengthens learning through proprioception

@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-02-04
+lastmod: 2026-02-25
 ---
 ## A positive context
 A social environment & positive cultural context that prizes educational values such as growth, curiosity, learning, wonder.
@@ -13,4 +13,5 @@ See [[Techniques to scale an opinionated educational culture]] for ways to build
 ## Personalization
 A teacher/mentor/guide that champions the culture while paying an insane amount of attention to each child, personalizing their education & overall development as a human being.
 
-Such a teacher will make sure to [[Design your environment as scaffolding towards creating the world you want to see]]
+Such a teacher will make sure to [[Design your environment as scaffolding towards creating the world you want to see]].
+

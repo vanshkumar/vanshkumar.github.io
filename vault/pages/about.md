@@ -1,10 +1,27 @@
 ---
 title: About
-lastmod: 2026-02-10
+lastmod: 2026-02-25
 ---
-This site is a living workspace for Vansh Kumar's experiments, writing, and shared notes. Inspired heavily by the concept of [digital gardens](https://maggieappleton.com/garden-history), it evolves as the graph fills in.
+## This site
+is a living workspace for Vansh Kumar's experiments, writing, and shared notes. Inspired heavily by the concept of [digital gardens](https://maggieappleton.com/garden-history), it evolves as the graph fills in.
 
 The [terrain](/terrain) page is where all the good stuff lives. The terminology is inspired by dynamical systems and the content is organized into:
-- **Attractors** – larger projects/essays
-- **Probes** – guiding questions
+- **Probes** – key guiding questions
+- **Attractors** – projects/essays
 - **Traces** – atomic building blocks for attractors/probes (not indexed)
+
+## I
+am Vansh Kumar and the one who sculpts the terrain of this site. I live in Pasadena, CA. I am a dad & aspiring independent researcher. I want to understand intelligence and am pursuing two [quest(ion)s](https://vanshkumar.net/now). I was a tech lead/manager at Google/Verily in my past life.
+
+Some of my other interests:
+- Watching tennis
+- Playing all racket sports – tennis, paddle/pop tennis, ping pong, you name it
+- Playing Rocket League
+- Staring at trees
+
+## Inspo
+- Andy Matuschak
+- Michael Nielsen
+- A Thread Of Order
+- Escaping Flatland
+- Ping Pong The Animation

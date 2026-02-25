@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-02-10
+lastmod: 2026-02-25
 kind: project
 ---
 # What is an "Aliveline"?
@@ -7,7 +7,7 @@ Early December 2025 I was feeling a bit lost. Or more specifically, I was feelin
 
 I also believe that [[Ambitious goals are useful as they illuminate a path that maximizes learning and enjoyment, not as ends in themselves]], and starting an aliveline was a way to directly test that belief.
 
-I had zero neuroscience background, but it was time to jump start progress on one of my two main [quests](/about) – **understanding how we learn.**
+I had zero neuroscience background, but it was time to jump start progress on one of my two main [quest(ion)s](/about) – **understanding how we learn.**
 
 So for December I chose to try to **have and publish an original insight**. I began the aliveline on December 2 and was intending to give myself until January 2, but decided to take a holiday break in the middle & wrapped it up on January 31. I actively worked on this ~3-4h a day (I have a baby at home), so I spent ~100h on this in total.
 

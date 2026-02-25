@@ -11,13 +11,19 @@ The [terrain](/terrain) page is where all the good stuff lives. The terminology 
 - **Traces** – atomic building blocks for attractors/probes (not indexed)
 
 ## I
-am Vansh Kumar and the one who sculpts the terrain of this site. I live in Pasadena, CA. I am a dad & aspiring independent researcher. I want to understand intelligence and am pursuing two [quest(ion)s](https://vanshkumar.net/now). I was a tech lead/manager at Google/Verily in my past life.
+am Vansh Kumar and the one who sculpts the terrain of this site. I live in Pasadena, CA.
+
+![[DSCF0096.jpg]]
+
+I am a dad & an aspiring independent researcher. I want to understand intelligence and am pursuing two [quest(ion)s](/now). I was a tech lead/manager at Alphabet in a past life.
 
 Some of my other interests:
 - Watching tennis
 - Playing all racket sports – tennis, paddle/pop tennis, ping pong, you name it
 - Playing Rocket League
 - Staring at trees
+- Reading scifi
+- Poetry
 
 ## Inspo
 - Andy Matuschak

@@ -1,6 +1,6 @@
 ---
 title: Now
-lastmod: 2026-02-25
+lastmod: 2026-02-26
 ---
 I have two primary quest(ion)s these days:
 

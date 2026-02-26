@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-02-25
+lastmod: 2026-02-26
 ---
-The most concrete & inspiring vision I have seen in this area is [this talk by Andy Matuschak](https://andymatuschak.org/hmwl/). My goal is to build a local-only version of something like this for my kids & their classmates at my microschool to use.
+The most concrete & inspiring vision I have seen in this area is [this talk by Andy Matuschak](https://andymatuschak.org/hmwl/). My goal is to build a local-only version of something like this for my kids & their classmates to use at my future microschool.
 
 
 My guess is that the reason LLMs (or any tutor) can't easily scaffold a curriculum for you that allows you to make progress on a project you care about while not making you jump into the deep end concept wise, is that they can't look inside your head and see exactly your knowledge gaps.

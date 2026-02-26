@@ -1,8 +1,8 @@
 ---
 title: Now
-lastmod: 2026-02-10
+lastmod: 2026-02-25
 ---
-I am on two quests these days:
+I am have two primary quest(ion)s these days:
 
 ## How Do We Learn?
 What are the local learning rules that give rise to the incredible plasticity of the brain, while still reliably producing important behavior?

@@ -12,9 +12,9 @@ This is all relative to my current situation, which is fairly unusual and could 
 
 Influences on my thinking here:
 - [[How can I allow my thinking to accrete over time?]]
-- Free the PhD article (substack)
-- Reimagining the PhD article (nadia)
-- Flounder mode (kevin kelly)
+- [Free the PhD](https://substack.com/home/post/p-189423961)
+- [Reimagining the PhD](https://nadia.xyz/phd)
+- [Flounder mode](https://colossus.com/article/flounder-mode/)
 - [[What makes for a high quality education?]]
 
 My chosen topic of study is intelligence. My two primary [quest(ions)](/now):

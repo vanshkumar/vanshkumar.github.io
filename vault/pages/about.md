@@ -28,8 +28,10 @@ Some of my other interests:
 - Poetry
 
 ## Inspo
-- Andy Matuschak
-- Michael Nielsen
-- A Thread Of Order
-- Escaping Flatland
-- Ping Pong The Animation
+- [Andy Matuschak](https://andymatuschak.org/)
+- [Michael Nielsen](https://michaelnotebook.com/)
+- [Nadia Eghbal](https://nadia.xyz/)
+- [A Thread Of Order](https://hughclarke.substack.com/)
+- [Escaping Flatland](https://www.henrikkarlsson.xyz/)
+- [Ping Pong The Animation](https://www.crunchyroll.com/series/GRJQV0N3Y/ping-pong-the-animation)
+- [Coherence](https://www.imdb.com/title/tt2866360/)

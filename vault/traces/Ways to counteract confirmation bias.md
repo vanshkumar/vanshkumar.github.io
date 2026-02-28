@@ -1,5 +1,5 @@
 ---
-lastmod: 2025-10-23
+lastmod: 2026-02-28
 ---
 Because [[Confirmation bias is the one to watch for]], it is especially useful to think through ways to counteract it or even turn it to your advantage.
 
@@ -15,5 +15,5 @@ Turning it to your advantage:
 
 
 ---
-Sources/further reading:
+References:
 - [Unconsciously directing your attention](https://vanshkumar.substack.com/p/unconsciously-directing-your-attention)

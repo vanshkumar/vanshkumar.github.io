@@ -1,13 +1,9 @@
 ---
-lastmod: 2025-11-08
+lastmod: 2026-02-28
 ---
 Spend your energy on how you want the world to be, not criticizing how you don’t want it to be.
 
 [[Concretely describe your utopia]] and focus on bringing about the parts of it.
-
----
-
-Spend your energy on how you want the world to be, not criticizing how you don't want it to be.
 
 What you resist, persists. Resisting something is focusing on it -> it amplifies.
 

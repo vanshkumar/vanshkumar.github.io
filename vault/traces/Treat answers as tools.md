@@ -1,5 +1,5 @@
 ---
-lastmod: 2025-11-02
+lastmod: 2026-02-28
 ---
 An open attentional approach to questions is akin to an unhurried curiosity. It means not rushing to find _the_ answer to an interesting question; counteracting the default mode where [[People are extremely ready to generate beliefs about the world]].
 
@@ -14,7 +14,7 @@ This has a similar flavor to [[Ambitious goals are useful as they illuminate a p
 
 
 ---
-Sources/further reading:
+References:
 - [Unconsciously directing your attention](https://vanshkumar.substack.com/p/unconsciously-directing-your-attention)
-- [A day at the park](https://kiriakakis.net/comics/mused/a-day-at-the-park)
-- [Questions are not just for asking](https://www.ribbonfarm.com/2017/08/10/questions-are-not-just-for-asking/)
+	- [A day at the park](https://kiriakakis.net/comics/mused/a-day-at-the-park)
+	- [Questions are not just for asking](https://www.ribbonfarm.com/2017/08/10/questions-are-not-just-for-asking/)

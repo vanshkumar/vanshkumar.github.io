@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-02-04
+lastmod: 2026-02-28
 ---
 These techniques are used by Jesuit & Montessori schools to maintain and scale an extremely opinionated educational culture (though perhaps at the cost of less adaptability over time):
 
@@ -10,5 +10,5 @@ These techniques are used by Jesuit & Montessori schools to maintain and scale a
 
 ---
 
-Sources/further reading:
+References:
 - [Culture Studies](https://asteriskmag.com/issues/07/culture-studies)

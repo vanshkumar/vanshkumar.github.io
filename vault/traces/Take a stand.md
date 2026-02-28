@@ -1,5 +1,5 @@
 ---
-lastmod: 2025-10-29
+lastmod: 2026-02-28
 ---
 Make positive claims. [[Develop short feedback loops with reality]], and within that [[Treat answers as tools]].
 
@@ -12,7 +12,6 @@ Of course this must be coupled with a willingness to be wrong and change your vi
 [[Consider the opposite]] is a useful technique that flexes both of the above muscles.
 
 ---
-Sources/further reading:
+References:
 - Andy Matuschak notes on making positive claims
-- 
 - [Learning by writing](https://www.cold-takes.com/learning-by-writing/)

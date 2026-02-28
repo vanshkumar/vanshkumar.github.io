@@ -1,7 +1,7 @@
 ---
-lastmod: 2025-11-06
+lastmod: 2026-02-28
 ---
->Anecdote about those ppl who storyboard heavily but then do whatever feels interesting
+>Anecdote about those film-makers who storyboard heavily but then do whatever feels interesting
 
 In some ways this is [[Design your environment as scaffolding towards creating the world you want to see]], except for your subconscious.
 

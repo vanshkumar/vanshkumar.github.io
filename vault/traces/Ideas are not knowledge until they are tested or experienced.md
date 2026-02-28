@@ -1,7 +1,7 @@
 ---
 lastmod: 2026-02-04
 ---
-A lot of my notes so far fall into cultural/psychological belief territory. They are certainly subject to confirmation bias as [[Confirmation bias is the one to watch for]]. How do I apply the scientific method and [[Counteract confirmation bias]] in these instances?
+A lot of my notes so far fall into cultural/psychological belief territory. They are certainly subject to confirmation bias as [[Confirmation bias is the one to watch for]]. How do I apply the scientific method and [[Ways to counteract confirmation bias]] in these instances?
 
 I want it to be the case that if I say or write something, I have **tested** it in some way. I don't necessarily have to experience it myself to test it, it's more about gathering data points from reality.
 

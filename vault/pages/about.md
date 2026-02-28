@@ -1,6 +1,6 @@
 ---
 title: About
-lastmod: 2026-02-25
+lastmod: 2026-02-28
 ---
 ## This site
 is a living workspace for Vansh Kumar's experiments, writing, and shared notes. Inspired heavily by the concept of [digital gardens](https://maggieappleton.com/garden-history), it evolves as the graph fills in.
@@ -15,10 +15,12 @@ am Vansh Kumar and the one who sculpts the terrain of this site. I live in Pasad
 
 ![[DSCF0096.jpg]]
 
-I am a dad & an aspiring independent researcher. I want to understand intelligence and am pursuing two [quest(ion)s](/now). I was a tech lead/manager at Alphabet in a past life.
+I am a dad & an independent researcher. I want to understand intelligence and am pursuing two [quest(ion)s](/now).
+
+I was a tech lead & manager at Alphabet in a past life.
 
 Some of my other interests:
-- Watching tennis
+- Watching a lot of tennis
 - Playing all racket sports – tennis, paddle/pop tennis, ping pong, you name it
 - Playing Rocket League
 - Staring at trees

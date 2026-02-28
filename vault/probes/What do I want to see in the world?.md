@@ -1,16 +1,19 @@
 ---
-lastmod: 2026-02-04
+lastmod: 2026-02-28
 ---
-The primary themes from [[Concretely describe your utopia]]:
-- Friends/family THRIVING
-	- Joy, emotional openness, authenticity, creativity, a feeling of doing your best work and being your best self
-- More parks, walkability, beauty
-	- Take a corner of the world you find beautiful and make it more so
-	- More easy-to-get-to green spaces and trees; beauty that invites you to stroll
-- (school) Cultures that love learning
-	- Wonder, curiosity, and not-knowing as high status
-- Aligned chats/connections ('community')
-	- A place for everyone, and everyone in their place
+Based on:
+- Themes from [[Concretely describe your utopia]]
+- My answer to [[If after death, a deity tells you you didn’t fulfill your life’s purpose that it put you on earth to fulfill, what would that have been?]]
+
+# I want to see
+
+**Friends/family THRIVING:** Joy, emotional openness, authenticity, creativity, a feeling of doing your best work and being your best self
+
+**More parks, walkability, beauty:** More easy-to-get-to green spaces and trees; beauty that invites you to stroll
+
+**(school) Cultures that love learning:** Wonder, curiosity, and not-knowing as high status
+
+**Aligned chats/connections ('community'):** A place for everyone, and everyone in their place
 
 
 

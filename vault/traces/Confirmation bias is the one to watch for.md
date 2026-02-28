@@ -1,5 +1,5 @@
 ---
-lastmod: 2025-10-30
+lastmod: 2026-02-28
 ---
 Confirmation bias is the most pernicious and prevalent cognitive bias. It appears to be a default aspect of how humans see the world.
 
@@ -16,9 +16,9 @@ Confirmation bias in a self-reinforcing feedback loop is especially powerful. It
 
 Because of this process, "I make correct assessments" can be considered a kind of "*g* factor" of biases. It can supercharge biases as it is often the starting point for belief consistent information processing.
 
-It is important to think through how to [[Counteract confirmation bias]] for topics where you care about the truth.
+It is important to think through [[Ways to counteract confirmation bias]] for topics where you care about the truth.
 
 --- 
-Sources/further reading:
-- [Toward Parsimony in Bias Research: A Proposed Common Framework of Belief-Consistent Information Processing for a Set of Biases](https://journals.sagepub.com/doi/10.1177/17456916221148147)
-- [My post on the above paper](https://vanshkumar.substack.com/p/rules-everything-around-me)
+References:
+- [My post](https://vanshkumar.substack.com/p/rules-everything-around-me) on this paper: [Toward Parsimony in Bias Research: A Proposed Common Framework of Belief-Consistent Information Processing for a Set of Biases](https://journals.sagepub.com/doi/10.1177/17456916221148147)
+- 

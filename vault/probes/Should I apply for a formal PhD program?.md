@@ -6,6 +6,7 @@ I have been playing with the idea of doing a PhD for a looong time. This note ce
 Another way to think about this question: would applying [[What makes for a high quality education?]] to myself look "formal PhD program"-shaped?
 
 # Lay of the land
+## Current situation
 The answer to this question is relative to my current situation, which is fairly unusual and could be described as "self-funded independent researcher." Some specifics worth calling out:
 - I have full control over my time, outside of parenting/family responsibilities
 	- I currently work ~4-6h for 6 days, so ~30h/week
@@ -18,6 +19,7 @@ The answer to this question is relative to my current situation, which is fairly
 - No interest in working in academia long-term
 - Unclear if I would get past the PhD application gate now given my distance from academia & research
 
+## Topic of study
 My chosen topic of study is intelligence. My two primary [quest(ions)](/now):
 1. How Do We Learn?
 	- Current formulation: what are the learning rules that give rise to the incredible plasticity of the brain, while still reliably producing important behavior?
@@ -67,5 +69,5 @@ Influences on my thinking here:
 - [Reimagining the PhD](https://nadia.xyz/phd)
 - [Flounder mode](https://colossus.com/article/flounder-mode/)
 - [Cultivating a state of mind where new ideas are born](https://www.henrikkarlsson.xyz/p/good-ideas)
-- How the book A Brief History Of Intelligence was written – following curiosity, emailing academics, etc
-- Many conversations with friends
+- How the book A Brief History Of Intelligence was written – following curiosity, emailing academics
+- Ongoing conversations with friends

@@ -48,10 +48,10 @@ This boil downs to external pressures to not be able to pursue the kind of quest
 
 On the former, this seems like a real possibility but probably is strongly dominated by your choice of advisor.
 
-On the latter, I am pointing at the notion that [[New ideas require thinking through things yourself before learning what others think]]. I also wonder if this exerts a homogenizing effect on the problems PhD students choose to work on? This is too speculative/premature to really take into account much though.
+On the latter, I am pointing at the notion that [[New ideas require thinking through things yourself before learning what others think]]. I also wonder if there is a homogenizing effect on the problems PhD students choose to work on? This is too speculative/premature to really take into account much though.
 
 # Conclusion
-Continue doing independent research.
+Continue doing independent research for now.
 
 Prioritize reaching out to PhD students/postdocs/profs more as I work through my own questions. See if natural collaborations emerge from these discussions & if I want to work more closely with a specific lab. Evaluate how I am feeling about my social environment & feedback structures in 6 months or so, and revisit the broader question at that time.
 

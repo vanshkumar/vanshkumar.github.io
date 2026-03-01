@@ -1,7 +1,7 @@
 ---
 lastmod: 2026-02-28
 ---
-Stolen from scyy.fi (link)
+Question stolen from [here](https://scyy.fi/questions)
 
 Immediate thoughts:
 - Teaching my/friends kids

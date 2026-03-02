@@ -73,4 +73,4 @@ Influences on my thinking here:
 - Ongoing conversations with friends
 
 
-[^1] The reason this bullet doesn't make the whole question moot is that I would do things differently if I did want to apply & get past the application gate (prioritize picking a specific lab to collaborate with, etc)
+[^1]: The reason this bullet doesn't make the whole question moot is that I would do things differently if I did want to apply & get past the application gate (prioritize picking a specific lab to collaborate with, etc)

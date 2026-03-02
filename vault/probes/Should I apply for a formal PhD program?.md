@@ -17,7 +17,7 @@ The answer to this question is relative to my current situation, which is fairly
 - Studied applied math/CS in undergrad, strong industry software experience
 - Pro open science & publishing in non-traditional venues
 - No interest in working in academia long-term
-- Unclear if I would get past the PhD application gate now given my distance from academia & research
+- Unclear if I would get past the PhD application gate now given my distance from academia & the current funding climate[^1]
 
 ## Topic of study
 My chosen topic of study is intelligence. My two primary [quest(ions)](/now):
@@ -71,3 +71,6 @@ Influences on my thinking here:
 - [Cultivating a state of mind where new ideas are born](https://www.henrikkarlsson.xyz/p/good-ideas)
 - How the book A Brief History Of Intelligence was written – following curiosity, emailing academics
 - Ongoing conversations with friends
+
+
+[^1] The reason this bullet doesn't make the whole question moot is that I would do things differently if I did want to apply & get past the application gate (prioritize picking a specific lab to collaborate with, etc)

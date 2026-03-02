@@ -5,3 +5,6 @@
 
 ## Friction Log
 - 2026-02-26: No build/test/code friction encountered while mapping repo structure.
+- 2026-03-02: One-off markdown parser check failed with `ERR_MODULE_NOT_FOUND` for `remark` because `remark` is not a direct dependency in this repo.
+  - Root cause: attempted to run a standalone `remark` script outside Astro's internal markdown pipeline.
+  - Fix: verified footnote support via Astro config defaults/types (`markdown.gfm` default true) instead of direct `remark` scripting.

@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-03-01
+lastmod: 2026-03-02
 ---
 An approach like this is significantly more inefficient at collecting knowledge, but strictly necessary for developing research skill & taste.
 
@@ -12,7 +12,7 @@ This is expressed well [here](https://www.henrikkarlsson.xyz/p/good-ideas):
 
 Techniques to do this
 - **Moratorium periods**: for core questions, spend extended time (month+) thinking without reading, building only your own ideas. Then engage literature with your own framework as the anchor
-	- The Ashwin method: alternate weeks of pure thinking & reading literature
+	- The Ashwin method: alternate weeks of thinking & reading literature
 - **Feynman's method of reading papers**: read the abstract and try to guess the experiments/methods/etc. If you're right you can skip the rest of the paper & if you're wrong you can learn something interesting
 - **Think first, read to challenge**: form your own views on a question before reading literature. Write down predictions so you can't unconsciously revise them. Read to stress-test, not to absorb
 - **LLMs as librarians only**: fact retrieval, technical lookup, interrogating you, not idea generation or thinking partnership

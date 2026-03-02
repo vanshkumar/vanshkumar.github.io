@@ -1,9 +1,11 @@
 ---
-lastmod: 2026-03-01
+lastmod: 2026-03-02
 ---
 This is an obvious fact – we celebrate children learning to walk, read, etc.
 
 But we sometimes forget to apply it to ourselves.
+
+It is a natural pair to the notion that [[Ideas are not knowledge until they are tested or experienced]].
 
 ---
 

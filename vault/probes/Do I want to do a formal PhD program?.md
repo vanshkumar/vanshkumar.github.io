@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-03-01
+lastmod: 2026-03-09
 ---
 I have been playing with the idea of doing a PhD for a looong time. This note centralizes my thoughts on the topic.
 
@@ -26,7 +26,7 @@ My chosen topic of study is intelligence. My two primary [quest(ions)](/now):
 2. How Might We Learn?
 	- Current formulation: how can we advance & improve education as a cultural technology?
 
-My approach to (1) so far has been through more theoretical/computational lenses. I don't think there is a selective benefit to being in a PhD program for this kind of approach (the story would be very different if I wanted to do eg experimental neuroscience).
+My approach to (1) so far has been through more theoretical/computational lenses. I don't think there is a selective benefit to being in a PhD program for this kind of approach (the story would be very different if I wanted to do eg experimental neuroscience). Though there is a practical constraint: a *novel* analytical framework for the brain will likely need bespoke experiments to test, not just reanalysis of existing datasets. This is a strong argument for collaboration with an experimentalist, if not a formal program. Can't sponsor data collection alone.
 
 My approach to (2) so far has mostly been reading, thinking, and discussing with others. I don't think I would pursue a PhD in education in any scenario. My plan is to start a microschool for my/friends' kids in the future, so I am not as actively focused on this question at the moment.
 

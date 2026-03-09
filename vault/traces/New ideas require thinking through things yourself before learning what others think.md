@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-03-02
+lastmod: 2026-03-09
 ---
 An approach like this is significantly more inefficient at collecting knowledge, but strictly necessary for developing research skill & taste.
 
@@ -16,3 +16,8 @@ Techniques to do this
 - **Feynman's method of reading papers**: read the abstract and try to guess the experiments/methods/etc. If you're right you can skip the rest of the paper & if you're wrong you can learn something interesting
 - **Think first, read to challenge**: form your own views on a question before reading literature. Write down predictions so you can't unconsciously revise them. Read to stress-test, not to absorb
 - **LLMs as librarians only**: fact retrieval, technical lookup, interrogating you, not idea generation or thinking partnership
+
+---
+
+- **Tried (2026-03-09): "No literature" week** — Deep study of fundamentals and questioning them + open space to think. No literature.
+- 

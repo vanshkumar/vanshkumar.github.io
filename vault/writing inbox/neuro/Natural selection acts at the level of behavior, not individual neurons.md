@@ -10,4 +10,3 @@ But at the same time, it is ultimately scale & specific wiring that distinguishe
 
 Related:
 - [[How does DNA bridge the micro (local neuronal rules) to the macro (evolutionarily relevant behavior)?]]
-- [[Behavior is a top-down computational constraint on a neuronal network]]

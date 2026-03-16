@@ -174,7 +174,9 @@ ${transcript}
    - **APPEND** to [[folder/Note title]]: quote the section where it fits, and explain why.
    - **CREATE** [[folder/Note title]]: draft content with wikilinks to related existing notes.
    - **REVISE** [[folder/Note title]]: when the memo contradicts, supersedes, or significantly refines something already in the vault. Quote the specific passage that's in tension with the new idea and explain the conflict. Do NOT draft the rewrite — just flag the tension clearly so I can decide how to resolve it.
-4. Always reference target notes as Obsidian wikilinks with the full path from the vault root, e.g. [[probes/Do I want to do a formal PhD program?]] or [[writing inbox/neuro/Some new idea]]. Do NOT use backtick code paths. This way the link is clickable in Obsidian and will create the file in the right folder if it doesn't exist.
+4. Always reference notes as Obsidian wikilinks. Do NOT use backtick code paths.
+   - For **existing** notes, use just the note name: [[Do I want to do a formal PhD program?]]. Obsidian resolves unique names automatically.
+   - For **new** notes (CREATE), include the full path so Obsidian creates the file in the right folder: [[writing inbox/neuro/Some new idea]].
 5. Quote the relevant part of the transcript for each suggestion.
 6. If an idea connects multiple existing notes, say so and explain the connection.
 

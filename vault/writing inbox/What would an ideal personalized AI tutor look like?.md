@@ -1,6 +1,8 @@
 ---
-lastmod: 2026-02-26
+lastmod: 2026-03-18
 ---
+concrete ex: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6423358
+
 The most concrete & inspiring vision I have seen in this area is [this talk by Andy Matuschak](https://andymatuschak.org/hmwl/). My goal is to build a local-only version of something like this for my kids & their classmates to use at my future microschool.
 
 

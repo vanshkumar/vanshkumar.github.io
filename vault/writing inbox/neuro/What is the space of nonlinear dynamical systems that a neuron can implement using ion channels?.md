@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-03-16
+lastmod: 2026-03-22
 ---
 In the Hodgkin-Huxley model, ion channels mold the firing shape/behavior of a neuron, and these ion channels appear to be genetically modifiable. This could be one of the mechanistic ways that answers [[How does DNA bridge the micro (local neuronal rules) to the macro (evolutionarily relevant behavior)?]]
 
@@ -48,3 +48,7 @@ So a more complete description is
 	Input: $I(t)$, initial state
 	Output: $u(t)$, spike train
 
+
+Clearly from chatting with Claude about intuition behind HH model I need to study nonlinear dynamics & chaos to be able to answer this question properly.
+
+[Apparently](https://claude.ai/chat/9fdee5b3-7409-4548-88a3-c1f3a7a91a1e) the stationary/target values of each ion channel $x_0(u)$ are always monotonic sigmoids in the HH model. This is super constraining for the dynamics it can generate. Though there do seem to be empirical exceptions, as with everything in biology, eg U-type inactivation.

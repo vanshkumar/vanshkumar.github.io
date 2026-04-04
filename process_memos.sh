@@ -4,7 +4,7 @@ set -euo pipefail
 # ── Configuration ──────────────────────────────────────────────
 VAULT_DIR="$(cd "$(dirname "$0")" && pwd)/vault"
 MEMOS_DIR="$HOME/Library/Group Containers/group.com.apple.VoiceMemos.shared/Recordings"
-VOICE_INBOX="${VAULT_DIR}/voice inbox"
+VOICE_INBOX="${VAULT_DIR}/_voice_inbox"
 LEDGER="${VOICE_INBOX}/.processed"
 
 # ── Helpers ────────────────────────────────────────────────────
@@ -81,7 +81,7 @@ wait_for_clear_inbox() {
 
 build_vault_index() {
   # Lightweight index: path | title | wikilinks | first ~200 chars
-  find "$VAULT_DIR" -name '*.md' ! -path '*/voice inbox/*' | sort | while read -r f; do
+  find "$VAULT_DIR" -name '*.md' ! -path '*/_voice_inbox/*' | sort | while read -r f; do
     local rel="${f#$VAULT_DIR/}"
     local title
     title=$(head -5 "$f" | grep -m1 '^#' | sed 's/^#* *//' || basename "$f" .md)

@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-03-09
+lastmod: 2026-04-03
 ---
 The microprocessor analogy clarifies what "understanding" means here: if you knew the circuit architecture of a microprocessor before analyzing its activity data, interpretation becomes tractable. What I want is the equivalent for the brain — a theory of hierarchical information flow that tells you what to look for in neural data. Without this analytical framework, we're doing pattern-matching on activity data without knowing what patterns *mean*.
 
@@ -17,14 +17,15 @@ What are the tools we have today?
 	- Electrophysiology – local field potentials
 	- Crucially, no way to read off synaptic weights or see what's happening _inside_ a neuron (eg dendritic tree)
 - Methods
+	- Connectomics
 	- Lesioning
 	- Granger causality
 	- Dimensionality reduction
-		- Linear (eg nonnegative matrix factorization)
+		- Linear (eg nonnegative matrix factorization, PCA)
 		- Nonlinear (eg ADM/LOOPER)
 	- Computational modeling
 		- PaN-type very minimal networks
-		- Learning models fit on 
+		- DNNs trained on neural activity
 
 ---
 

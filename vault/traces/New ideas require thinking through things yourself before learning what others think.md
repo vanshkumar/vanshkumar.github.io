@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-03-09
+lastmod: 2026-03-17
 ---
-An approach like this is significantly more inefficient at collecting knowledge, but strictly necessary for developing research skill & taste.
+ An approach like this is significantly more inefficient at collecting knowledge, but strictly necessary for developing research skill & taste.
 
 Reinvention of what is already known is very likely, but [[Discovery of something the rest of the world already knows is still a valuable discovery]]. Independently arriving at known results gives deeper understanding.
 

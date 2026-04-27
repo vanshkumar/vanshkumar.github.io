@@ -1,5 +1,5 @@
 ---
-lastmod: 2025-12-01
+lastmod: 2026-04-07
 ---
 Montessori prepared environment:
 - Curated toys/educational items

@@ -6,9 +6,6 @@
   --muted: #6b5e51;
   --accent: #2f4b1a;
   --accent-dark: #233914;
-  --probe: #7b2231;
-  --attractor: #2b5aa8;
-  --trace: #2f5b3a;
   --border: #e5e1d5;
   --card: #fcfcf9;
   --card-border: #e8e6dc;
@@ -251,27 +248,6 @@ h3 {
   color: var(--text);
 }
 
-.terrain-filters {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.terrain-filter {
-  border: none;
-  background: none;
-  padding: 0 0 0.6rem;
-  font: inherit;
-  color: #9aa0ab;
-  cursor: pointer;
-  border-bottom: 2px solid transparent;
-}
-
-.terrain-filter.is-active {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-}
-
 .terrain-card-grid {
   display: grid;
   gap: 1.5rem;
@@ -289,44 +265,12 @@ h3 {
   min-height: 320px;
 }
 
-.terrain-card.is-hidden {
-  display: none;
-}
-
 .terrain-card-meta {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 1.2rem;
   color: #9aa0ab;
-}
-
-.terrain-card-type {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.6rem;
-  font-weight: 600;
-}
-
-.terrain-card-type img {
-  height: 24px;
-  width: auto;
-  max-width: 36px;
-}
-
-.terrain-card-divider {
-  color: #d7d7d7;
-}
-
-.terrain-card[data-type='probe'] .terrain-card-divider {
-  color: var(--probe);
-}
-
-.terrain-card[data-type='attractor'] .terrain-card-divider {
-  color: var(--attractor);
 }
 
 .terrain-card-link {
@@ -396,14 +340,6 @@ h3 {
   color: #b7b7b7;
 }
 
-.terrain-card-updated {
-  margin-top: 0.6rem;
-  color: #a5a1a1;
-  font-size: 0.6rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
 .section {
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
@@ -448,40 +384,6 @@ h3 {
 
 .article-header {
   padding-bottom: 0.4rem;
-}
-
-.content-type {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.6rem;
-  font-weight: 600;
-  color: #9aa0ab;
-  margin-bottom: 0.8rem;
-}
-
-.content-type img {
-  height: 24px;
-  width: auto;
-  max-width: 36px;
-}
-
-.content-type-divider {
-  color: #d7d7d7;
-}
-
-.content-type[data-type='probe'] .content-type-divider {
-  color: var(--probe);
-}
-
-.content-type[data-type='attractor'] .content-type-divider {
-  color: var(--attractor);
-}
-
-.content-type[data-type='trace'] .content-type-divider {
-  color: var(--trace);
 }
 
 .content-updated {

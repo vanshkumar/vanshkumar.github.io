@@ -4,13 +4,13 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies to `src/con
 
 ## Collections
 
-- **probes** → `vault/probes/` → `/probes/<slug>`
-  - `title?` `description?` `date?` `lastmod?` `tags?[]` `aliases?[]`
-- **attractors** → `vault/attractors/` → `/attractors/<slug>`
+- **projects** → `vault/projects/` → `/projects/<slug>`
   - `title?` `description?` `date?` `lastmod?` `kind` (`project|essay`) `tags?[]` `coverImage?` `aliases?[]`
-- **traces** → `vault/traces/` → `/traces/<slug>`
+- **questions** → `vault/questions/` → `/questions/<slug>`
   - `title?` `description?` `date?` `lastmod?` `tags?[]` `aliases?[]`
-- **logs** → `vault/logs/<parent>/` → `/logs/<parent>/<slug>`
+- **notes** → `vault/notes/` → `/notes/<slug>`
+  - `title?` `description?` `date?` `lastmod?` `tags?[]` `aliases?[]`
+- **logs** → `vault/logs/<project>/` → `/projects/<project>/logs/<slug>`
   - `date` (required) `lastmod?` `parent` (inferred) `day?` `title?`
 - **pages** → `vault/pages/` → `/`, `/about`, `/now`, `/contact`, `/shelf`, `/terrain`
   - `title?` `description?` `aliases?[]` `heroTitle?` `heroAccent?` `brandSubtitle?`
@@ -22,5 +22,5 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies to `src/con
 
 ## Wikilinks + Backlinks
 
-- Resolve by slug, then `aliases`, then collection path (e.g. `[[traces/foo]]`).
-- Folder paths supported; backlinks include probes/attractors/traces/logs/pages.
+- Resolve by slug, then `aliases`, then collection path (e.g. `[[notes/foo]]`).
+- Folder paths supported; backlinks include projects/questions/notes/logs/pages.

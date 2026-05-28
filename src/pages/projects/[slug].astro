@@ -5,7 +5,7 @@ import { getBacklinksForEntry } from '../../lib/wiki';
 import { titleFromSlug } from '../../lib/content';
 
 export async function getStaticPaths() {
-  const entries = await getCollection('attractors');
+  const entries = await getCollection('projects');
   return entries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry }
@@ -18,7 +18,7 @@ const allLogs = await getCollection('logs');
 const logs = allLogs
   .filter((log) => log.data.parent === entry.slug)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
-const backlinks = await getBacklinksForEntry('attractors', entry.slug);
+const backlinks = await getBacklinksForEntry('projects', entry.slug);
 const title = entry.data.title ?? titleFromSlug(entry.slug);
 const lastUpdated = entry.data.lastmod ?? entry.data.date ?? null;
 
@@ -27,19 +27,33 @@ const formatDate = (date) =>
 const subtype = entry.data.kind
   ? entry.data.kind[0].toUpperCase() + entry.data.kind.slice(1)
   : 'Essay';
+const logHref = (log) => {
+  const [, slug] = log.slug.split('/');
+  return `/projects/${entry.slug}/logs/${slug}`;
+};
+const logTitle = (log) => log.data.title ?? log.data.day ?? formatDate(log.data.date);
 ---
 
 <ContentLayout
   title={title}
   description={entry.data.description}
   date={entry.data.date}
-  typeLabel="Attractor"
-  subtype={subtype}
-  typeIcon="/terrain/icons/attractor.png"
-  typeKey="attractor"
+  kind={subtype}
   lastUpdated={lastUpdated}
   backlinks={backlinks}
 >
   <Content />
-
+  {logs.length ? (
+    <section class="section" slot="after-content">
+      <h2>Logs</h2>
+      <ul class="list">
+        {logs.map((log) => (
+          <li>
+            <a href={logHref(log)}>{logTitle(log)}</a>
+            <span class="meta"> {formatDate(log.data.date)}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ) : null}
 </ContentLayout>

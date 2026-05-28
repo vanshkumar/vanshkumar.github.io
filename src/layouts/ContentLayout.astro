@@ -7,10 +7,6 @@ const {
   date,
   kind,
   backlinks = [],
-  typeLabel,
-  subtype,
-  typeIcon,
-  typeKey,
   lastUpdated
 } = Astro.props;
 const formattedDate = date
@@ -29,18 +25,6 @@ const formattedLastUpdated = lastUpdated
 <BaseLayout title={title}>
   <article class="article">
     <header class="article-header">
-      {typeLabel ? (
-        <div class="content-type" data-type={typeKey}>
-          {typeIcon ? <img src={typeIcon} alt="" loading="lazy" /> : null}
-          <span>{typeLabel}</span>
-          {subtype ? (
-            <>
-              <span class="content-type-divider">|</span>
-              <span>{subtype}</span>
-            </>
-          ) : null}
-        </div>
-      ) : null}
       <h1>{title}</h1>
       {description ? <p class="lede">{description}</p> : null}
       {meta ? <p class="meta">{meta}</p> : null}

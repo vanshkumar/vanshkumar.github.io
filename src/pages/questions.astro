@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Questions">
+  <p class="meta">
+    Questions now live in <a href="/terrain#questions">Terrain</a>.
+  </p>
+  <script is:inline>
+    window.location.replace('/terrain#questions');
+  </script>
+</BaseLayout>

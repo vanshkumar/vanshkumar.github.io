@@ -146,17 +146,17 @@ The vault is at: ${VAULT_DIR}
 === VAULT TAXONOMY ===
 The vault is organized into these categories:
 
-- **traces/** — Atomic notes. Declarative-statement titles (e.g. 'Learning is brain-wide network reorganization, not local rewiring'). 100-400 words, densely wikilinked to other traces. Building blocks of thinking. Not published on the site.
-- **probes/** — Evergreen questions. Titles are open questions (e.g. 'What does it mean to understand the brain?'). 400-1500 words, synthesize multiple traces. Living documents that grow over time.
-- **writing inbox/** — Rough drafts, stubs, partially developed ideas. Staging area before something becomes a trace or probe. Has subdirectories by topic (e.g. \`neuro/\`, \`ml/\`). New raw ideas usually start here.
-- **attractors/** — Polished projects and essays with narrative arc. The 'publications'. Rarely the right target for raw memo content.
-- **logs/** — Day-by-day working journals tied to specific attractors. Only route here if the content is directly about progress on an ongoing attractor project.
+- **notes/** — Atomic notes. Declarative-statement titles (e.g. 'Learning is brain-wide network reorganization, not local rewiring'). 100-400 words, densely wikilinked to other notes. Building blocks of thinking.
+- **questions/** — Evergreen questions. Titles are open questions (e.g. 'What does it mean to understand the brain?'). 400-1500 words, synthesize multiple notes. Living documents that grow over time.
+- **writing inbox/** — Rough drafts, stubs, partially developed ideas. Staging area before something becomes a note or question. Has subdirectories by topic (e.g. \`neuro/\`, \`ml/\`). New raw ideas usually start here.
+- **projects/** — Polished projects and essays with narrative arc. The 'publications'. Rarely the right target for raw memo content.
+- **logs/** — Day-by-day working journals tied to specific projects. Only route here if the content is directly about progress on an ongoing project.
 - **pages/** — Site infrastructure (about, now, etc.). Do not route here.
 
 Routing heuristic:
-- A crisp atomic insight → \`writing inbox/<topic>/\` (it needs development before becoming a trace)
-- An open question or research direction → \`probes/\`
-- Progress notes on an active attractor project → \`logs/\` (check attractors/ first to confirm the project exists)
+- A crisp atomic insight → \`writing inbox/<topic>/\` (it needs development before becoming a note)
+- An open question or research direction → \`questions/\`
+- Progress notes on an active project → \`logs/\` (check projects/ first to confirm the project exists)
 - If the idea clearly fits an existing note → APPEND to that note
 
 === VAULT INDEX ===

@@ -8,7 +8,7 @@ const repoRoot = path.resolve(root, '..');
 const vaultRoot = path.join(repoRoot, 'vault');
 const contentRoot = path.join(repoRoot, 'src', 'content');
 
-const collections = ['probes', 'attractors', 'traces', 'logs', 'pages'];
+const collections = ['projects', 'questions', 'notes', 'logs', 'pages'];
 
 const slugify = (value) =>
   value

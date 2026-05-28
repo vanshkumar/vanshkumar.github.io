@@ -7,7 +7,7 @@ A mantra that helps: take your interest seriously enough to keep moving. You can
 
 This is different from "grit" or "persistence" — it's specifically about not letting comparison and imposter syndrome stop you from doing the work. The work itself is the antidote to the insecurity; the insecurity only wins when it stops you from working.
 
-The framing of "greatness" itself is counterproductive — it activates comparison and insecurity rather than curiosity. Better to frame ambition as deep interest and let [[traces/Ambitious goals are useful as they illuminate a path that maximizes learning and enjoyment, not as ends in themselves|goals illuminate the path]] rather than define the destination.
+The framing of "greatness" itself is counterproductive — it activates comparison and insecurity rather than curiosity. Better to frame ambition as deep interest and let [[notes/Ambitious goals are useful as they illuminate a path that maximizes learning and enjoyment, not as ends in themselves|goals illuminate the path]] rather than define the destination.
 
 Related:
 - [[Develop short feedback loops with reality]]

@@ -1,14 +1,11 @@
 ---
 title: About
-lastmod: 2026-02-28
+lastmod: 2026-05-28
 ---
 ## This site
 is a living workspace for Vansh Kumar's experiments, writing, and shared notes. Inspired heavily by the concept of [digital gardens](https://maggieappleton.com/garden-history), it evolves as the graph fills in.
 
-The [terrain](/terrain) page is where all the good stuff lives. The terminology is inspired by dynamical systems and the content is organized into:
-- **Probes** – key guiding questions
-- **Attractors** – projects/essays
-- **Traces** – atomic building blocks for attractors/probes (not indexed)
+The [terrain](/terrain) page is where the garden is easiest to browse: projects, essays, questions, and connected notes as they accrete over time.
 
 ## I
 am Vansh Kumar and the one who sculpts the terrain of this site. I live in Pasadena, CA.

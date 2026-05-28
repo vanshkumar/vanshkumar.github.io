@@ -10,8 +10,8 @@ if (!entry) {
 const { Content } = await entry.render();
 const pageLastUpdated = entry.data.lastmod;
 
-const probes = await getCollection('probes');
-const attractors = await getCollection('attractors');
+const projects = await getCollection('projects');
+const questions = await getCollection('questions');
 
 const displayTitle = (entry) => entry.data.title ?? titleFromSlug(entry.slug);
 const stripMarkdown = (value) =>
@@ -50,39 +50,29 @@ const formatLastUpdated = (date) =>
       }).format(date)
     : null;
 
-const toCard = (entry, type) => {
-  const isProbe = type === 'probe';
+const sortByUpdated = (a, b) => {
+  const aTime = a.lastUpdated ? a.lastUpdated.getTime() : 0;
+  const bTime = b.lastUpdated ? b.lastUpdated.getTime() : 0;
+  return bTime - aTime;
+};
+
+const toCard = (entry, collection) => {
   const lastUpdated = entry.data.lastmod ?? entry.data.date ?? null;
   return {
-    key: `${type}:${entry.slug}`,
-    type,
-    typeLabel: isProbe ? 'Probe' : 'Attractor',
-    subtype: isProbe
-      ? 'Question'
-      : entry.data.kind
-        ? entry.data.kind[0].toUpperCase() + entry.data.kind.slice(1)
-        : 'Essay',
-    icon: isProbe ? '/terrain/icons/probe.png' : '/terrain/icons/attractor.png',
+    key: `${collection}:${entry.slug}`,
     title: displayTitle(entry),
     description: entry.data.description ?? excerpt(entry.body ?? ''),
     date: entry.data.date ?? null,
     dateLabel: formatCardDate(entry.data.date),
     lastUpdated,
     lastUpdatedLabel: formatLastUpdated(lastUpdated),
-    href: isProbe ? `/probes/${entry.slug}` : `/attractors/${entry.slug}`,
+    href: `/${collection}/${entry.slug}`,
     coverImage: entry.data.coverImage ?? null
   };
 };
 
-const cards = [
-  ...probes.map((entry) => toCard(entry, 'probe')),
-  ...attractors.map((entry) => toCard(entry, 'attractor'))
-].sort((a, b) => {
-  const aTime = a.lastUpdated ? a.lastUpdated.getTime() : 0;
-  const bTime = b.lastUpdated ? b.lastUpdated.getTime() : 0;
-  return bTime - aTime;
-});
-
+const projectCards = projects.map((entry) => toCard(entry, 'projects')).sort(sortByUpdated);
+const questionCards = questions.map((entry) => toCard(entry, 'questions')).sort(sortByUpdated);
 ---
 
 <BaseLayout title="Terrain">
@@ -100,34 +90,19 @@ const cards = [
     </div>
   </section>
 
-  <section class="terrain-map" id="terrain">
+  <section class="terrain-map" id="projects">
     <div class="terrain-map-header">
-      <div class="terrain-filters" role="tablist" aria-label="Terrain filters">
-        <button class="terrain-filter is-active" data-filter="all" role="tab">
-          All
-        </button>
-        <button class="terrain-filter" data-filter="attractor" role="tab">
-          Attractors
-        </button>
-        <button class="terrain-filter" data-filter="probe" role="tab">
-          Probes
-        </button>
-      </div>
+      <h2>Projects & essays</h2>
     </div>
 
-    {cards.length === 0 ? (
-      <p class="meta">No elements yet.</p>
+    {projectCards.length === 0 ? (
+      <p class="meta">No projects yet.</p>
     ) : (
       <div class="terrain-card-grid">
-        {cards.map((card) => (
-          <article class="terrain-card" data-type={card.type} key={card.key}>
+        {projectCards.map((card) => (
+          <article class="terrain-card" key={card.key}>
             <div class="terrain-card-meta">
-              <div class="terrain-card-type">
-                <img src={card.icon} alt={card.typeLabel} />
-                <span>{card.typeLabel}</span>
-                <span class="terrain-card-divider">|</span>
-                <span>{card.subtype}</span>
-              </div>
+              {card.dateLabel ? <span>{card.dateLabel}</span> : <span>&nbsp;</span>}
               <a class="terrain-card-link" href={card.href} aria-label={card.title}>
                 <svg viewBox="0 0 16 16" aria-hidden="true">
                   <path
@@ -154,16 +129,55 @@ const cards = [
             <p class="terrain-card-description">{card.description}</p>
 
             <div class="terrain-card-footer">
-              {card.dateLabel ? <span>{card.dateLabel}</span> : <span>&nbsp;</span>}
+              <span>{card.lastUpdatedLabel ? `Updated ${card.lastUpdatedLabel}` : ''}</span>
               <span class="terrain-card-arrow" aria-hidden="true">
                 ↗
               </span>
             </div>
-            {card.lastUpdatedLabel ? (
-              <div class="terrain-card-updated">
-                Last updated {card.lastUpdatedLabel}
-              </div>
-            ) : null}
+          </article>
+        ))}
+      </div>
+    )}
+  </section>
+
+  <section class="terrain-map" id="questions">
+    <div class="terrain-map-header">
+      <h2>Questions</h2>
+    </div>
+
+    {questionCards.length === 0 ? (
+      <p class="meta">No questions yet.</p>
+    ) : (
+      <div class="terrain-card-grid">
+        {questionCards.map((card) => (
+          <article class="terrain-card" key={card.key}>
+            <div class="terrain-card-meta">
+              {card.dateLabel ? <span>{card.dateLabel}</span> : <span>&nbsp;</span>}
+              <a class="terrain-card-link" href={card.href} aria-label={card.title}>
+                <svg viewBox="0 0 16 16" aria-hidden="true">
+                  <path
+                    d="M5 11L11 5M6 5h5v5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <h3 class="terrain-card-title">
+              <a href={card.href}>{card.title}</a>
+            </h3>
+            <p class="terrain-card-description">{card.description}</p>
+
+            <div class="terrain-card-footer">
+              <span>{card.lastUpdatedLabel ? `Updated ${card.lastUpdatedLabel}` : ''}</span>
+              <span class="terrain-card-arrow" aria-hidden="true">
+                ↗
+              </span>
+            </div>
           </article>
         ))}
       </div>
@@ -173,30 +187,4 @@ const cards = [
   {pageLastUpdated ? (
     <div class="content-updated">Last updated {formatLastUpdated(pageLastUpdated)}</div>
   ) : null}
-
-  <script is:inline>
-    document.addEventListener('DOMContentLoaded', () => {
-      const buttons = document.querySelectorAll('.terrain-filter');
-      const cards = document.querySelectorAll('.terrain-card');
-      if (!buttons.length || !cards.length) return;
-
-      const setFilter = (value) => {
-        buttons.forEach((btn) => {
-          btn.classList.toggle('is-active', btn.dataset.filter === value);
-        });
-        cards.forEach((card) => {
-          if (value === 'all') {
-            card.classList.remove('is-hidden');
-            return;
-          }
-          const match = card.dataset.type === value;
-          card.classList.toggle('is-hidden', !match);
-        });
-      };
-
-      buttons.forEach((btn) => {
-        btn.addEventListener('click', () => setFilter(btn.dataset.filter));
-      });
-    });
-  </script>
 </BaseLayout>

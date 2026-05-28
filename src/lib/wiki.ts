@@ -4,22 +4,23 @@ import { titleFromSlug } from './content';
 const WIKILINK_RE =
   /!?\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]/g;
 
-const collectionOrder = ['probes', 'attractors', 'traces', 'logs', 'pages'];
+const collectionOrder = ['projects', 'questions', 'notes', 'logs', 'pages'];
 
 const urlFor = (collection: string, slug: string) => {
   if (collection === 'pages') {
     return slug === 'home' ? '/' : `/${slug}`;
   }
-  if (collection === 'probes') {
-    return `/probes/${slug}`;
+  if (collection === 'projects') {
+    return `/projects/${slug}`;
   }
-  if (collection === 'attractors') {
-    return `/attractors/${slug}`;
+  if (collection === 'questions') {
+    return `/questions/${slug}`;
   }
-  if (collection === 'traces') {
-    return `/traces/${slug}`;
+  if (collection === 'notes') {
+    return `/notes/${slug}`;
   }
-  return `/logs/${slug}`;
+  const [project, ...rest] = slug.split('/');
+  return `/projects/${project}/logs/${rest.join('/')}`;
 };
 
 const normalizeTarget = (value: string) => {
@@ -68,10 +69,10 @@ const extractTargets = (body: string) => {
 };
 
 const buildEntries = async () => {
-  const [probes, attractors, traces, logs, pages] = await Promise.all([
-    getCollection('probes'),
-    getCollection('attractors'),
-    getCollection('traces'),
+  const [projects, questions, notes, logs, pages] = await Promise.all([
+    getCollection('projects'),
+    getCollection('questions'),
+    getCollection('notes'),
     getCollection('logs'),
     getCollection('pages')
   ]);
@@ -91,9 +92,9 @@ const buildEntries = async () => {
     });
   };
 
-  pushEntries('probes', probes);
-  pushEntries('attractors', attractors);
-  pushEntries('traces', traces);
+  pushEntries('projects', projects);
+  pushEntries('questions', questions);
+  pushEntries('notes', notes);
   pushEntries('logs', logs);
   pushEntries('pages', pages);
 
@@ -125,6 +126,12 @@ const buildLookup = (entries: WikiEntry[]) => {
   orderedEntries.forEach((entry) => {
     const slugKey = normalizeTarget(entry.slug);
     addIfMissing(slugKey, entry);
+    if (entry.collection === 'logs') {
+      const basename = entry.slug.split('/').filter(Boolean).pop();
+      if (basename) {
+        addIfMissing(normalizeTarget(basename), entry);
+      }
+    }
     if (entry.collection !== 'pages') {
       addIfMissing(normalizeTarget(`${entry.collection}/${entry.slug}`), entry);
     }

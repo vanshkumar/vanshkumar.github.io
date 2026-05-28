@@ -1,7 +1,7 @@
 # Tech Stack (Minimal)
 
 - Astro (static site)
-- Markdown content collections (probes, attractors, traces, logs, pages)
+- Markdown content collections (projects, questions, notes, logs, pages)
 - Obsidian-style wikilinks + backlinks (remark-wiki-link + build-time indexing)
 - Vanilla CSS (no UI framework)
 - RSS feed via @astrojs/rss

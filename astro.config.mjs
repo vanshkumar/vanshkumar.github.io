@@ -8,7 +8,7 @@ import rehypeExternalLinks from 'rehype-external-links';
 
 const CONTENT_ROOT = fileURLToPath(new URL('./src/content', import.meta.url));
 const VAULT_ROOT = fileURLToPath(new URL('./vault', import.meta.url));
-const COLLECTIONS = ['probes', 'attractors', 'traces', 'logs', 'pages'];
+const COLLECTIONS = ['projects', 'questions', 'notes', 'logs', 'pages'];
 const ASSETS_DIR = fs.existsSync(path.join(VAULT_ROOT, 'assets'))
   ? path.join(VAULT_ROOT, 'assets')
   : path.join(CONTENT_ROOT, 'assets');
@@ -35,16 +35,17 @@ const urlFor = (collection, slug) => {
   if (collection === 'pages') {
     return slug === 'home' ? '/' : `/${slug}`;
   }
-  if (collection === 'probes') {
-    return `/probes/${slug}`;
+  if (collection === 'projects') {
+    return `/projects/${slug}`;
   }
-  if (collection === 'attractors') {
-    return `/attractors/${slug}`;
+  if (collection === 'questions') {
+    return `/questions/${slug}`;
   }
-  if (collection === 'traces') {
-    return `/traces/${slug}`;
+  if (collection === 'notes') {
+    return `/notes/${slug}`;
   }
-  return `/logs/${slug}`;
+  const [project, ...rest] = slug.split('/');
+  return `/projects/${project}/logs/${rest.join('/')}`;
 };
 
 const walkMarkdownFiles = (dir) => {
@@ -100,6 +101,9 @@ const buildWikiIndex = () => {
       const url = urlFor(collection, slug);
       permalinks.add(url);
       addIfMissing(normalizeTarget(slug), url);
+      if (collection === 'logs') {
+        addIfMissing(normalizeTarget(path.basename(slug)), url);
+      }
       if (collection !== 'pages') {
         addIfMissing(normalizeTarget(`${collection}/${slug}`), url);
       }

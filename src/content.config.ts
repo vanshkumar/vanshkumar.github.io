@@ -2,7 +2,7 @@ import { defineCollection, z } from 'astro:content';
 
 const optionalText = z.string().optional().nullable();
 
-const probes = defineCollection({
+const questions = defineCollection({
   type: 'content',
   schema: z.object({
     title: optionalText,
@@ -14,7 +14,7 @@ const probes = defineCollection({
   })
 });
 
-const attractors = defineCollection({
+const projects = defineCollection({
   type: 'content',
   schema: z.object({
     title: optionalText,
@@ -39,7 +39,7 @@ const logs = defineCollection({
   })
 });
 
-const traces = defineCollection({
+const notes = defineCollection({
   type: 'content',
   schema: z.object({
     title: optionalText,
@@ -65,9 +65,9 @@ const pages = defineCollection({
 });
 
 export const collections = {
-  probes,
-  attractors,
+  questions,
+  projects,
   logs,
-  traces,
+  notes,
   pages
 };

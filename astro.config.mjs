@@ -31,6 +31,13 @@ const normalizeHeading = (value) => normalizeTarget(value).replace(/\//g, '-');
 const isAsset = (value) =>
   /\.(png|jpe?g|gif|svg|webp|bmp|ico|apng|pdf)$/i.test(value);
 
+const legacyCollectionFor = (collection) =>
+  ({
+    projects: 'attractors',
+    questions: 'probes',
+    notes: 'traces'
+  })[collection];
+
 const urlFor = (collection, slug) => {
   if (collection === 'pages') {
     return slug === 'home' ? '/' : `/${slug}`;
@@ -106,6 +113,10 @@ const buildWikiIndex = () => {
       }
       if (collection !== 'pages') {
         addIfMissing(normalizeTarget(`${collection}/${slug}`), url);
+        const legacyCollection = legacyCollectionFor(collection);
+        if (legacyCollection) {
+          addIfMissing(normalizeTarget(`${legacyCollection}/${slug}`), url);
+        }
       }
 
       const file = fs.readFileSync(filePath, 'utf8');

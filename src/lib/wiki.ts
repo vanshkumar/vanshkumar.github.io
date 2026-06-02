@@ -6,6 +6,13 @@ const WIKILINK_RE =
 
 const collectionOrder = ['projects', 'questions', 'notes', 'logs', 'pages'];
 
+const legacyCollectionFor = (collection: string) =>
+  ({
+    projects: 'attractors',
+    questions: 'probes',
+    notes: 'traces'
+  })[collection];
+
 const urlFor = (collection: string, slug: string) => {
   if (collection === 'pages') {
     return slug === 'home' ? '/' : `/${slug}`;
@@ -134,6 +141,10 @@ const buildLookup = (entries: WikiEntry[]) => {
     }
     if (entry.collection !== 'pages') {
       addIfMissing(normalizeTarget(`${entry.collection}/${entry.slug}`), entry);
+      const legacyCollection = legacyCollectionFor(entry.collection);
+      if (legacyCollection) {
+        addIfMissing(normalizeTarget(`${legacyCollection}/${entry.slug}`), entry);
+      }
     }
     entry.aliases.forEach((alias) => {
       addIfMissing(normalizeTarget(alias), entry);

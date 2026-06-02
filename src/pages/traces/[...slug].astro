@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import { titleFromSlug } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('notes');
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: {
+      title: entry.data.title ?? titleFromSlug(entry.slug),
+      target: `/notes/${entry.slug}`
+    }
+  }));
+}
+
+const { title, target } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href={target} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <p>This note moved to <a href={target}>{target}</a>.</p>
+  </body>
+</html>

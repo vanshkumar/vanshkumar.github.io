@@ -478,6 +478,7 @@ h3 {
 }
 
 .comic-reader {
+  --comic-page-max-height: 80dvh;
   --comic-reader-width: min(calc(100vw - 1rem), 1400px);
   width: var(--comic-reader-width);
   margin: 2.5rem calc(50% - var(--comic-reader-width) / 2);
@@ -517,6 +518,7 @@ h3 {
   justify-content: center;
   justify-self: center;
   min-width: 0;
+  max-width: 100%;
   background: #f4efe5;
   box-shadow: 0 1.1rem 2.6rem rgba(0, 0, 0, 0.38);
 }
@@ -527,8 +529,9 @@ h3 {
 
 .comic-reader-page {
   display: block;
-  width: 100%;
+  width: auto;
   max-width: 100%;
+  max-height: var(--comic-page-max-height);
   height: auto;
 }
 

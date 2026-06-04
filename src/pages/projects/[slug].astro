@@ -130,6 +130,27 @@ const comicReader = comic
           root.append(stage, controls);
           mount.replaceChildren(root);
 
+          const resizeComicReader = () => {
+            const viewportHeight =
+              window.visualViewport?.height ?? window.innerHeight;
+            const rootStyles = window.getComputedStyle(root);
+            const verticalPadding =
+              parseFloat(rootStyles.paddingTop) +
+              parseFloat(rootStyles.paddingBottom);
+            const controlsHeight = controls.getBoundingClientRect().height;
+            const breathingRoom = 24;
+            const availableHeight =
+              viewportHeight -
+              controlsHeight -
+              verticalPadding -
+              breathingRoom;
+
+            root.style.setProperty(
+              '--comic-page-max-height',
+              `${Math.max(120, Math.floor(availableHeight))}px`
+            );
+          };
+
           const pagesForView = (index) => {
             if (index === 0) return [reader.pages[0]];
             const start = 1 + (index - 1) * 2;
@@ -183,6 +204,7 @@ const comicReader = comic
             previousButton.disabled = viewIndex === 0;
             nextButton.disabled = viewIndex === totalViews - 1;
 
+            requestAnimationFrame(resizeComicReader);
             preloadView(viewIndex + 1);
           };
 
@@ -203,6 +225,11 @@ const comicReader = comic
           document.addEventListener('keydown', (event) => {
             if (event.key === 'ArrowLeft') goTo(viewIndex - 1);
             if (event.key === 'ArrowRight') goTo(viewIndex + 1);
+          });
+          window.addEventListener('resize', resizeComicReader);
+          window.visualViewport?.addEventListener('resize', resizeComicReader);
+          window.addEventListener('orientationchange', () => {
+            requestAnimationFrame(resizeComicReader);
           });
 
           render();

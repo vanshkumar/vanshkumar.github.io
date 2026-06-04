@@ -1,6 +1,6 @@
 ---
 title: Partition Summer
-description: A family memory from Qadian, 1947, based on stories my grandfather told me
+description: A comic memoir of the 1947 Partition of India, through my grandfather’s childhood memories
 date: 2026-06-03T12:00:00-04:00
 lastmod: 2026-06-03T12:00:00-04:00
 kind: project

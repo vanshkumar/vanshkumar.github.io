@@ -10,7 +10,7 @@ comic:
   width: 1064
   height: 1500
 ---
-_Partition Summer_ is a short comic based on stories my grandfather told me about living through the [Partition of India](https://en.wikipedia.org/wiki/Partition_of_India) in 1947. He was six years old at the time.
+_Partition Summer_ is a short comic I created based on stories my grandfather told me about living through the [Partition of India](https://en.wikipedia.org/wiki/Partition_of_India) in 1947. He was six years old at the time.
 
 <div data-comic-reader="partition-summer"></div>
 

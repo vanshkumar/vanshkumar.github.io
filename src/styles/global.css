@@ -477,6 +477,104 @@ h3 {
   display: block;
 }
 
+.comic-reader {
+  --comic-reader-width: min(calc(100vw - 1rem), 1400px);
+  width: var(--comic-reader-width);
+  margin: 2.5rem calc(50% - var(--comic-reader-width) / 2);
+  padding: 0.45rem;
+  border: 1px solid #2f2b25;
+  border-radius: 8px;
+  background: #1f1d1a;
+  color: #f7f3ea;
+  cursor: pointer;
+}
+
+.prose .comic-reader a {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
+.comic-reader-stage {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 0.28rem;
+  min-height: 16rem;
+}
+
+.comic-reader-stage.is-single {
+  grid-template-columns: minmax(0, min(100%, 680px));
+}
+
+.comic-reader-stage.is-spread {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.comic-reader-page-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  min-width: 0;
+  background: #f4efe5;
+  box-shadow: 0 1.1rem 2.6rem rgba(0, 0, 0, 0.38);
+}
+
+.comic-reader-page-link:hover {
+  color: inherit;
+}
+
+.comic-reader-page {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.comic-reader-controls {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 0.45rem;
+}
+
+.comic-reader-button {
+  width: fit-content;
+  border: 1px solid #6d675e;
+  border-radius: 999px;
+  background: #f7f3ea;
+  color: #261f14;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.42rem 0.9rem;
+}
+
+.comic-reader-button:last-child {
+  justify-self: end;
+}
+
+.comic-reader-button:hover:not(:disabled) {
+  background: #ffffff;
+}
+
+.comic-reader-button:disabled {
+  cursor: default;
+  opacity: 0.38;
+}
+
+.comic-reader-status {
+  margin: 0;
+  color: #d8d0c3;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .list {
   margin: 0;
   padding-left: 1.1rem;
@@ -575,6 +673,11 @@ h3 {
   .article {
     max-width: 100%;
   }
+
+  .comic-reader {
+    --comic-reader-width: min(100%, calc(100vw - 0.75rem));
+    padding: 0.35rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -589,5 +692,23 @@ h3 {
 
   .terrain-card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .comic-reader-stage {
+    gap: 0.2rem;
+    min-height: 12rem;
+  }
+
+  .comic-reader-controls {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .comic-reader-status {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .comic-reader-button {
+    grid-row: 2;
   }
 }

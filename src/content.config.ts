@@ -24,7 +24,15 @@ const projects = defineCollection({
     kind: z.enum(['project', 'essay']),
     tags: z.array(z.string()).optional(),
     coverImage: z.string().optional(),
-    aliases: z.array(z.string()).optional()
+    aliases: z.array(z.string()).optional(),
+    comic: z
+      .object({
+        assetDir: z.string(),
+        pageCount: z.number().int().positive(),
+        width: z.number().int().positive(),
+        height: z.number().int().positive()
+      })
+      .optional()
   })
 });
 

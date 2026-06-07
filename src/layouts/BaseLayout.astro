@@ -2,13 +2,14 @@
 import { getEntry } from 'astro:content';
 import '../styles/global.css';
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 const pageTitle = title ? `Vansh Kumar | ${title}` : 'Vansh Kumar';
 const pathname = Astro.url.pathname;
 const isTerrain = pathname === '/terrain';
 const siteEntry = await getEntry('pages', 'site');
 const brandSubtitle =
   siteEntry?.data?.brandSubtitle ?? 'Notes, projects, and quiet experiments.';
+const pageDescription = description?.trim() || brandSubtitle;
 const siteUrl = 'https://vanshkumar.net';
 const ogImage = `${siteUrl}/og.png`;
 ---
@@ -19,16 +20,16 @@ const ogImage = `${siteUrl}/og.png`;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
-    <meta name="description" content={brandSubtitle} />
+    <meta name="description" content={pageDescription} />
     <meta property="og:site_name" content="Vansh Kumar" />
     <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={brandSubtitle} />
+    <meta property="og:description" content={pageDescription} />
     <meta property="og:type" content="website" />
     <meta property="og:image" content={ogImage} />
     <meta property="og:url" content={`${siteUrl}${pathname}`} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
-    <meta name="twitter:description" content={brandSubtitle} />
+    <meta name="twitter:description" content={pageDescription} />
     <meta name="twitter:image" content={ogImage} />
     <link rel="icon" href="/brand/vk_logo.png" />
     <link rel="apple-touch-icon" href="/brand/vk_logo.png" />

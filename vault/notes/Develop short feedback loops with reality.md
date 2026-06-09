@@ -1,4 +1,6 @@
 ---
+slug: develop-short-feedback-loops-with-reality
+title: "Develop short feedback loops with reality"
 lastmod: 2025-10-23
 ---
 This is the best way to learn and grow.

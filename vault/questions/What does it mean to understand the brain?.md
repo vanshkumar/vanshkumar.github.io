@@ -1,5 +1,8 @@
 ---
-lastmod: 2026-04-03
+slug: what-does-it-mean-to-understand-the-brain
+title: "What does it mean to understand the brain?"
+lastmod: 2026-06-09
+date: 2026-05-27
 ---
 The microprocessor analogy clarifies what "understanding" means here: if you knew the circuit architecture of a microprocessor before analyzing its activity data, interpretation becomes tractable. What I want is the equivalent for the brain — a theory of hierarchical information flow that tells you what to look for in neural data. Without this analytical framework, we're doing pattern-matching on activity data without knowing what patterns *mean*.
 

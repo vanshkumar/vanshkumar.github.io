@@ -1,4 +1,6 @@
 ---
+slug: techniques-to-scale-an-opinionated-educational-culture
+title: "Techniques to scale an opinionated educational culture"
 lastmod: 2026-02-28
 ---
 These techniques are used by Jesuit & Montessori schools to maintain and scale an extremely opinionated educational culture (though perhaps at the cost of less adaptability over time):

@@ -1,4 +1,6 @@
 ---
+slug: planning-is-priceless-plans-are-worthless
+title: "Planning is priceless, plans are worthless"
 lastmod: 2026-03-02
 ---
 > Anecdote about those film-makers who storyboard heavily but then do whatever feels interesting

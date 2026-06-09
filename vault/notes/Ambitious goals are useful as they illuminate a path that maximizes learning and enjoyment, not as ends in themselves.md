@@ -1,4 +1,6 @@
 ---
+slug: ambitious-goals-are-useful-as-they-illuminate-a-path-that-maximizes-learning-and-enjoyment-not-as-ends-in-themselves
+title: "Ambitious goals are useful as they illuminate a path that maximizes learning and enjoyment, not as ends in themselves"
 lastmod: 2026-02-25
 ---
 If you adopt this view it also makes it easier to be more flexible in changing the goal if something more interesting pops up. You don't care as much about the actual end state; you care about what produces the most interesting path.

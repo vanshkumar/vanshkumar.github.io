@@ -1,4 +1,6 @@
 ---
+slug: unpredictable-upsides-of-cognitive-offloading
+title: "Unpredictable upsides of cognitive offloading"
 lastmod: 2026-03-17
 ---
 Inspired by [this essay](https://carlolc.substack.com/p/the-invisible-upside-of-cognitive), collecting examples of cognitive offloading to LLMs resulting in (ideally unpredictable) upside:

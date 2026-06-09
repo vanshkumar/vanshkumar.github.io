@@ -1,4 +1,6 @@
 ---
+slug: if-after-death-a-deity-tells-you-you-didnt-fulfill-your-lifes-purpose-that-it-put-you-on-earth-to-fulfill-what-would-that-have-been
+title: "If after death, a deity tells you you didn’t fulfill your life’s purpose that it put you on earth to fulfill, what would that have been?"
 lastmod: 2026-02-28
 ---
 Question stolen from [here](https://scyy.fi/questions)

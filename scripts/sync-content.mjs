@@ -9,6 +9,7 @@ const vaultRoot = path.join(repoRoot, 'vault');
 const contentRoot = path.join(repoRoot, 'src', 'content');
 
 const collections = ['projects', 'questions', 'notes', 'logs', 'pages'];
+const customSlugCollections = new Set(['projects', 'questions', 'notes']);
 
 const slugify = (value) =>
   value
@@ -19,6 +20,13 @@ const slugify = (value) =>
     .replace(/[^a-z0-9-_]/g, '')
     .replace(/-+/g, '-')
     .replace(/^-|-$/g, '');
+
+const slugifyPath = (value) =>
+  value
+    .split('/')
+    .map(slugify)
+    .filter(Boolean)
+    .join('/');
 
 const titleFromFilename = (filename) => {
   const base = filename.replace(/\.md$/i, '').trim();
@@ -69,17 +77,17 @@ const syncCollection = (collection) => {
     const cleanName = slugify(filename);
     if (!cleanName) return;
 
-    const cleanRel = [...cleanSegments, cleanName].join('/');
-    if (used.has(cleanRel)) {
-      throw new Error(
-        `Duplicate slug after sanitizing: ${cleanRel} (from ${rel})`
-      );
-    }
-    used.add(cleanRel);
-
     const raw = fs.readFileSync(filePath, 'utf8');
     const parsed = matter(raw);
     const data = { ...parsed.data };
+    const customSlug =
+      customSlugCollections.has(collection) && typeof data.slug === 'string'
+        ? slugifyPath(data.slug)
+        : '';
+    if (data.slug != null && !customSlug) {
+      throw new Error(`Invalid slug frontmatter in ${rel}: ${data.slug}`);
+    }
+    delete data.slug;
 
     if (collection === 'logs' && !data.parent) {
       const parentSlug = cleanSegments[0];
@@ -95,6 +103,14 @@ const syncCollection = (collection) => {
     if (!data.title) {
       data.title = title;
     }
+    const cleanRel = customSlug || [...cleanSegments, cleanName].join('/');
+    if (used.has(cleanRel)) {
+      throw new Error(
+        `Duplicate slug after sanitizing: ${cleanRel} (from ${rel})`
+      );
+    }
+    used.add(cleanRel);
+
     const output = matter.stringify(parsed.content, data);
     const targetPath = path.join(targetDir, `${cleanRel}.md`);
     ensureDir(path.dirname(targetPath));

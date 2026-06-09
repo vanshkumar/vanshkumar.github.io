@@ -1,4 +1,6 @@
 ---
+slug: humans-preferentially-learn-from-those-we-consider-high-status
+title: "Humans preferentially learn from those we consider high status"
 lastmod: 2025-11-08
 ---
 People naturally imitate and learn from those we consider high status. High status usually means competent, successful, or prestigious. The exact definitions of those terms can vary based on the culture you are in.

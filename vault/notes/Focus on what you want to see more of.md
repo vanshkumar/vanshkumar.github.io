@@ -1,4 +1,6 @@
 ---
+slug: focus-on-what-you-want-to-see-more-of
+title: "Focus on what you want to see more of"
 lastmod: 2026-02-28
 ---
 Spend your energy on how you want the world to be, not criticizing how you don’t want it to be.

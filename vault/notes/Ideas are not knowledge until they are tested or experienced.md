@@ -1,4 +1,6 @@
 ---
+slug: ideas-are-not-knowledge-until-they-are-tested-or-experienced
+title: "Ideas are not knowledge until they are tested or experienced"
 lastmod: 2026-03-02
 ---
 A lot of my notes so far fall into cultural/psychological belief territory. They are certainly subject to confirmation bias as [[Confirmation bias is the one to watch for]]. How do I apply the scientific method and [[Ways to counteract confirmation bias]] in these instances?

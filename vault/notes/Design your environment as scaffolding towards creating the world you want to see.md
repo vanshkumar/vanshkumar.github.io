@@ -1,4 +1,6 @@
 ---
+slug: design-your-environment-as-scaffolding-towards-creating-the-world-you-want-to-see
+title: "Design your environment as scaffolding towards creating the world you want to see"
 lastmod: 2025-10-29
 ---
 Montessori-style scaffolding is applicable EVERYWHERE in life where you’re trying to get into a flow state / achieve mastery. Repeated challenges just beyond your reach are the most motivating as they result in continual momentum of success/progress

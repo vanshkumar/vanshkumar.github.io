@@ -1,5 +1,8 @@
 ---
-lastmod: 2026-03-09
+slug: do-i-want-to-do-a-phd
+title: "Do I want to do a PhD?"
+lastmod: 2026-06-09
+date: 2026-05-27
 ---
 I have been playing with the idea of doing a PhD for a looong time. This note centralizes my thoughts on the topic.
 

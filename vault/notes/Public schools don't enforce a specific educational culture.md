@@ -1,4 +1,6 @@
 ---
+slug: public-schools-dont-enforce-a-specific-educational-culture
+title: "Public schools don't enforce a specific educational culture"
 lastmod: 2026-03-02
 ---
 Public schools accept a wide variety of folks & are committed to the liberal ideal of not enforcing a particular view on kids. They don't make use of [[Techniques to scale an opinionated educational culture]], except perhaps certain teachers within their specific classrooms.

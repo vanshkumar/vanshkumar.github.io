@@ -1,4 +1,6 @@
 ---
+slug: take-a-stand
+title: "Take a stand"
 lastmod: 2026-02-28
 ---
 Make positive claims. [[Develop short feedback loops with reality]], and within that [[Treat answers as tools]].

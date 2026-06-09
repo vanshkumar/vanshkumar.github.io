@@ -1,4 +1,6 @@
 ---
+slug: people-are-extremely-ready-to-generate-beliefs-about-the-world
+title: "People are extremely ready to generate beliefs about the world"
 lastmod: 2026-02-28
 ---
 Beliefs are an essential part of human cognition. People by default have a strong desire for cognitive closure (a made-up mind). Keeping an open mind is difficult, but 

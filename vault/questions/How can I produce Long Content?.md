@@ -1,3 +1,9 @@
+---
+slug: how-can-i-produce-long-content
+title: How can I produce Long Content?
+lastmod: 2026-06-09
+date: 2026-06-09
+---
 I have been thinking about applying the idea of the [Long Now](https://en.wikipedia.org/wiki/Long_Now_Foundation), inspired by the [About page of gwern.net](https://gwern.net/about#long-content):
 
 > Knowing your site _will_ survive for decades to come gives you the mental wherewithal to tackle long-term tasks like gathering information for years, and such persistence can be useful–if one holds onto every glimmer of genius for years, then even the dullest person may look a bit like a genius himself⁠.

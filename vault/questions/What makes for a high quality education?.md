@@ -1,5 +1,8 @@
 ---
-lastmod: 2026-03-18
+slug: what-makes-for-a-high-quality-education
+title: "What makes for a high quality education?"
+lastmod: 2026-06-09
+date: 2026-05-27
 ---
 ## A positive context
 A social environment & positive cultural context that prizes educational values such as growth, curiosity, learning, wonder.

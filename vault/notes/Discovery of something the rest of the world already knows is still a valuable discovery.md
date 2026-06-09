@@ -1,4 +1,6 @@
 ---
+slug: discovery-of-something-the-rest-of-the-world-already-knows-is-still-a-valuable-discovery
+title: "Discovery of something the rest of the world already knows is still a valuable discovery"
 lastmod: 2026-03-02
 ---
 This is an obvious fact – we celebrate children learning to walk, read, etc.

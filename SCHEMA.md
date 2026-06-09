@@ -5,11 +5,11 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies to `src/con
 ## Collections
 
 - **projects** → `vault/projects/` → `/projects/<slug>`
-  - `title?` `description?` `date?` `lastmod?` `kind` (`project|essay`) `tags?[]` `coverImage?` `aliases?[]`
+  - `slug` `title` `description?` `date?` `lastmod?` `kind` (`project|essay`) `tags?[]` `coverImage?` `aliases?[]`
 - **questions** → `vault/questions/` → `/questions/<slug>`
-  - `title?` `description?` `date?` `lastmod?` `tags?[]` `aliases?[]`
+  - `slug` `title` `description?` `date?` `lastmod?` `tags?[]` `aliases?[]`
 - **notes** → `vault/notes/` → `/notes/<slug>`
-  - `title?` `description?` `date?` `lastmod?` `tags?[]` `aliases?[]`
+  - `slug` `title` `description?` `date?` `lastmod?` `tags?[]` `aliases?[]`
 - **logs** → `vault/logs/<project>/` → `/projects/<project>/logs/<slug>`
   - `date` (required) `lastmod?` `parent` (inferred) `day?` `title?`
 - **pages** → `vault/pages/` → `/`, `/about`, `/now`, `/contact`, `/shelf`, `/terrain`
@@ -17,7 +17,13 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies to `src/con
 
 ## Sync Rules
 
-- `scripts/sync-content.mjs`: copy + slugify filenames; fill missing `title`; infer log `parent`.
+- For published projects/questions/notes, keep all three names with separate jobs:
+  - vault filename: local Obsidian/workspace ergonomics
+  - `slug`: stable public URL identity
+  - `title`: living display name
+- Change `title` freely without changing the public URL. Once published, avoid changing `slug` unless you also add a redirect.
+- `slug` is source-only frontmatter for projects/questions/notes. Sync consumes it to choose the generated content path, then omits it from generated Astro content.
+- `scripts/sync-content.mjs`: copy + slugify filenames or `slug`; fill missing `title`; infer log `parent`; omit source-only `slug` from generated content.
 - `scripts/sync-assets.mjs`: `vault/assets/` → `public/assets/`.
 
 ## Wikilinks + Backlinks

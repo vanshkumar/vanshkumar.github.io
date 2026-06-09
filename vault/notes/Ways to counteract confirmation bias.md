@@ -1,4 +1,6 @@
 ---
+slug: ways-to-counteract-confirmation-bias
+title: "Ways to counteract confirmation bias"
 lastmod: 2026-02-28
 ---
 Because [[Confirmation bias is the one to watch for]], it is especially useful to think through ways to counteract it or even turn it to your advantage.

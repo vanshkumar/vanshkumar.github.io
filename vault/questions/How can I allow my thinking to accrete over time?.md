@@ -1,5 +1,8 @@
 ---
-lastmod: 2026-03-16
+slug: how-can-i-allow-my-thinking-to-accrete-over-time
+title: "How can I allow my thinking to accrete over time?"
+lastmod: 2026-06-09
+date: 2026-05-27
 ---
 I am a big fan of the concept of [Evergreen notes](https://notes.andymatuschak.org/z5E5QawiXCMbtNtupvxeoEX) from Andy Matuschak. I very much believe in [[Build systems to revisit ideas]] over time – the unit of knowledge work should be non-transient, accrete over time, actively sharpen your thinking, and allow connections between ideas to emerge organically.
 

@@ -1,4 +1,6 @@
 ---
+slug: confirmation-bias-is-the-one-to-watch-for
+title: "Confirmation bias is the one to watch for"
 lastmod: 2026-02-28
 ---
 Confirmation bias is the most pernicious and prevalent cognitive bias. It appears to be a default aspect of how humans see the world.

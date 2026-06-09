@@ -1,4 +1,6 @@
 ---
+slug: consider-the-opposite
+title: "Consider the opposite"
 lastmod: 2026-02-28
 ---
 This is a tool and one of the [[Ways to counteract confirmation bias]].

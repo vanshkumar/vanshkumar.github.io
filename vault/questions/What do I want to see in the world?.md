@@ -1,5 +1,8 @@
 ---
-lastmod: 2026-02-28
+slug: what-do-i-want-to-see-in-the-world
+title: "What do I want to see in the world?"
+lastmod: 2026-06-09
+date: 2026-05-27
 ---
 Based on:
 - Themes from [[Concretely describe your utopia]]

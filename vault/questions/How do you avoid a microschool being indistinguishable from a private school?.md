@@ -1,5 +1,8 @@
 ---
-lastmod: 2026-03-02
+slug: how-do-you-avoid-a-microschool-being-indistinguishable-from-a-private-school
+title: "How do you avoid a microschool being indistinguishable from a private school?"
+lastmod: 2026-06-09
+date: 2026-05-27
 ---
 One of the reasons I am interested in starting a microschool is that the public schools in my area are not very good but I don't want to send my kids to a private school. Not only are private schools overly expensive, I don't love the idea of surrounding my kids with only rich peers & the culture that tends to exist around that.
 

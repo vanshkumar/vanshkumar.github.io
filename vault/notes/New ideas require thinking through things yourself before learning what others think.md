@@ -1,4 +1,6 @@
 ---
+slug: new-ideas-require-thinking-through-things-yourself-before-learning-what-others-think
+title: "New ideas require thinking through things yourself before learning what others think"
 lastmod: 2026-04-11
 ---
 An approach like this is significantly more inefficient at collecting knowledge, but strictly necessary for developing research skill & taste.

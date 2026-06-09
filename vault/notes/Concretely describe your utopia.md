@@ -1,4 +1,6 @@
 ---
+slug: concretely-describe-your-utopia
+title: "Concretely describe your utopia"
 lastmod: 2026-02-04
 ---
 In other words, [[Focus on what you want to see more of]] and describe it in detail a la [[Planning is priceless, plans are worthless]]. This process can help mold your attention towards bringing it about.

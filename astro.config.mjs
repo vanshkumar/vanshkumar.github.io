@@ -160,12 +160,51 @@ const urlResolver = (name) => {
   return `${resolved}#${normalizeHeading(hash)}`;
 };
 
+const remarkObsidianCallouts = () => (tree) => {
+  const visit = (node) => {
+    if (!node || typeof node !== 'object') return;
+
+    if (node.type === 'blockquote') {
+      const firstChild = node.children?.[0];
+      const firstText = firstChild?.children?.[0];
+      const match =
+        firstChild?.type === 'paragraph' &&
+        firstText?.type === 'text' &&
+        firstText.value.match(/^\[!([A-Za-z][\w-]*)\][\t ]*/);
+
+      if (match) {
+        const calloutType = match[1].toLowerCase();
+        firstText.value = firstText.value.slice(match[0].length);
+        node.data = {
+          ...node.data,
+          hProperties: {
+            ...node.data?.hProperties,
+            className: ['callout', `callout-${calloutType}`],
+            'data-callout': calloutType
+          }
+        };
+
+        if (firstText.value === '' && firstChild.children.length === 1) {
+          node.children.shift();
+        }
+      }
+    }
+
+    if (Array.isArray(node.children)) {
+      node.children.forEach(visit);
+    }
+  };
+
+  visit(tree);
+};
+
 export default defineConfig({
   site: 'https://vanshkumar.net',
   output: 'static',
   trailingSlash: 'never',
   markdown: {
     remarkPlugins: [
+      remarkObsidianCallouts,
       [
         wikiLinkPlugin,
         {

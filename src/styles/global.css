@@ -466,7 +466,8 @@ h3 {
   margin-top: 0.45rem;
 }
 
-.prose blockquote {
+.prose blockquote,
+.prose details.callout {
   margin: 1.6rem 0;
   padding: 0.9rem 1.2rem;
   border-left: 3px solid #d6d0c2;
@@ -474,13 +475,95 @@ h3 {
   background: rgba(252, 249, 242, 0.85);
 }
 
-.prose blockquote > * {
+.prose blockquote > *,
+.prose details.callout > * {
   margin: 0;
 }
 
 .prose blockquote ul,
-.prose blockquote ol {
+.prose blockquote ol,
+.prose details.callout ul,
+.prose details.callout ol {
   margin-top: 0.4rem;
+}
+
+.prose .callout {
+  --callout-rgb: 107, 94, 81;
+  --callout-border-rgb: var(--callout-rgb);
+  border-left-color: rgb(var(--callout-border-rgb));
+  background: rgba(var(--callout-rgb), 0.08);
+}
+
+.prose .callout-title {
+  color: #3d352d;
+  font-weight: 600;
+}
+
+.prose .callout-title + * {
+  margin-top: 0.65rem;
+}
+
+.prose details.callout > summary.callout-title {
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 1.3rem;
+}
+
+.prose details.callout > summary.callout-title::-webkit-details-marker {
+  display: none;
+}
+
+.prose details.callout > summary.callout-title::after {
+  content: "▸";
+  position: absolute;
+  right: 0;
+  color: rgba(var(--callout-rgb), 0.8);
+}
+
+.prose details.callout[open] > summary.callout-title::after {
+  content: "▾";
+}
+
+.prose .callout .callout {
+  margin: 0.85rem 0;
+}
+
+.prose .callout-note,
+.prose .callout-info,
+.prose .callout-todo {
+  --callout-rgb: 72, 113, 172;
+}
+
+.prose .callout-abstract {
+  --callout-rgb: 72, 138, 150;
+}
+
+.prose .callout-tip,
+.prose .callout-success {
+  --callout-rgb: 69, 132, 83;
+}
+
+.prose .callout-question {
+  --callout-rgb: 145, 108, 43;
+}
+
+.prose .callout-warning {
+  --callout-rgb: 178, 116, 34;
+}
+
+.prose .callout-failure,
+.prose .callout-danger,
+.prose .callout-bug {
+  --callout-rgb: 162, 73, 60;
+}
+
+.prose .callout-example {
+  --callout-rgb: 111, 90, 160;
+}
+
+.prose .callout-quote {
+  --callout-rgb: 107, 94, 81;
 }
 
 .prose hr {

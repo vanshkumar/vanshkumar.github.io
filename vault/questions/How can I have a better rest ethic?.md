@@ -31,9 +31,9 @@ The book provides ideas on how to practice resting & releasing tension:
 
 > As we get better and better at releasing tension and coming back with a full tank of gas in our everyday activities, both physical and mental, we will gain confidence in our abilities to move back and forth between concentration, adrenaline flow, physical exertion (any kind of stress), and relaxation. **I can’t tell you how liberating it is to know that relaxation is just a blink away from full awareness**. Besides adding to your psychological and physical resilience, this opens up some wonderful and surprising new possibilities. For one thing, now that your conscious mind is free to take little breaks, you’ll be delighted by the surges of creativity that will emerge out of your unconscious. You’ll become more attuned to your intuition and will slowly become more and more true to yourself stylistically. The unconscious mind is a powerful tool, and learning how to relax under pressure is a key first step to tapping into its potential.
 
-Seen in this light, the useful part of a technique like Pomodoro may be that it forces you to take a break, rather than the focus periods.
+Seen in this light, the useful part of a technique like Pomodoro may be that it forces you to take a break, rather than the focus periods themselves.
 
-A list of ways I might practice the rhythm of stress & recovery in daily life:
+Some ways I might practice the rhythm of stress & recovery in daily life:
 - Interval training
 - Pomodoro
 - Do Nothing meditation

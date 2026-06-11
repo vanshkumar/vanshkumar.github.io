@@ -1,7 +1,7 @@
 ---
 slug: how-can-i-produce-long-content
 title: How can I produce Long Content?
-lastmod: 2026-06-09
+lastmod: 2026-06-11
 date: 2026-06-09
 ---
 I have been thinking about applying the idea of the [Long Now](https://en.wikipedia.org/wiki/Long_Now_Foundation), inspired by the [About page of gwern.net](https://gwern.net/about#long-content):
@@ -24,11 +24,15 @@ Notably none of the above are improved *by* time (#3 in KK's advice). They are a
 
 So how might normally static pieces of content become Long Content instead?
 
-One answer that comes to mind is using AI agents + protocols to interact with the world to improve something over time. The most banal version of this amounts to "query the corpus of human knowledge continuously and see if anything relevant has been added". The piece of content accumulates relevant information from the world as it becomes available.
+One answer that comes to mind is using AI agents + protocols to interact with the world to improve something over time. The basic version of this amounts to "query the corpus of human knowledge continuously and see if anything relevant has been added". The piece of content accumulates new relevant information from the world as it becomes available.
 
-A concrete example is research papers. From [this article](https://hunchbox.substack.com/p/science-is-still-persuasion):
+A concrete example might be research papers. From [this article](https://hunchbox.substack.com/p/science-is-still-persuasion):
 > But this will evolve to a [demand-side system](https://hunchbox.substack.com/p/the-new-era-of-science) where “papers” are accompanied by a platform of all the tools used in the process, and the reader will ask their AI their “what if we did X instead of Y, does that change the estimate?” Like if I were reading an experimental chemistry paper, and it came with a pre-set lab with all the ingredients, a lab director and assistants, and I could ask them as I read the paper, “what if we tweaked the proportions by X?” and they did it right there in front of me and together we saw the outcome.
+
+If research papers are instead a suite of tools and data, as people ask their own questions of the same data, the "paper" can be updated with the new results.
 
 ---
 
-Note: this thread is a more general case of [[How can I allow my thinking to accrete over time?]]
+Misc notes/thoughts:
+- jun 2026: this thread is a more general case of [[How can I allow my thinking to accrete over time?]]
+- jun 2026: One of the big shifts from working to not, over the last couple years, has been an extension of the length of my Now. Before it was more like a week, now it is closer to a month/year. Shifting it to decades appears to be the next natural step I am moving toward.

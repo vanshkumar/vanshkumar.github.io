@@ -1,0 +1,23 @@
+#!/bin/sh
+set -e
+
+if command -v node >/dev/null 2>&1; then
+  node_bin="$(command -v node)"
+elif [ -x "$HOME/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node" ]; then
+  node_bin="$HOME/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node"
+elif [ -x "/Applications/Codex.app/Contents/Resources/node" ]; then
+  node_bin="/Applications/Codex.app/Contents/Resources/node"
+else
+  echo "Could not find node to normalize content metadata." >&2
+  exit 1
+fi
+
+changed_files="$("$node_bin" scripts/normalize-content.mjs)"
+
+if [ -n "$changed_files" ]; then
+  echo "$changed_files" | while IFS= read -r file; do
+    [ -n "$file" ] && git add "$file"
+  done
+  echo "Added missing content slug/title metadata:"
+  echo "$changed_files" | sed 's/^/  /'
+fi

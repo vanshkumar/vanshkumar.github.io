@@ -1,4 +1,6 @@
 ---
+slug: how-can-i-have-a-better-rest-ethic
+title: How can I have a better rest ethic?
 lastmod: 2026-06-11
 date: 2026-06-11
 ---

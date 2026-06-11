@@ -23,6 +23,7 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies to `src/con
   - `title`: living display name
 - Change `title` freely without changing the public URL. Once published, avoid changing `slug` unless you also add a redirect.
 - `slug` is source-only frontmatter for projects/questions/notes. Sync consumes it to choose the generated content path, then omits it from generated Astro content.
+- `.githooks/pre-commit` and `.githooks/pre-merge-commit` run `scripts/normalize-content.mjs` locally before commits/merge commits, filling missing `slug` and `title` and staging those additions.
 - `scripts/sync-content.mjs`: copy + slugify filenames or `slug`; fill missing `title`; infer log `parent`; omit source-only `slug` from generated content.
 - `scripts/sync-assets.mjs`: `vault/assets/` → `public/assets/`.
 

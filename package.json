@@ -7,6 +7,7 @@
     "clean-lock": "node scripts/clean-lock.mjs",
     "dev": "npm run sync-content && npm run sync-assets && astro dev",
     "build": "npm run sync-content && npm run sync-assets && astro build",
+    "normalize-content": "node scripts/normalize-content.mjs",
     "postinstall": "npm run clean-lock",
     "preview": "astro preview",
     "sync-content": "node scripts/sync-content.mjs",

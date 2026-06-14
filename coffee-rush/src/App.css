@@ -1,0 +1,624 @@
+.setup-page,
+.results-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    linear-gradient(90deg, rgba(39, 96, 90, 0.08), transparent 28%),
+    linear-gradient(180deg, #f7f1e6, #e9ded1);
+}
+
+.setup-main,
+.results-panel {
+  width: min(720px, 100%);
+  display: grid;
+  gap: 18px;
+}
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.brand-mark {
+  width: 72px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 3px solid #27605a;
+  background: #d96c3a;
+  color: #fffaf2;
+  font-size: 1.45rem;
+  font-weight: 900;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.3rem, 7vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.setup-controls,
+.resume-strip,
+.action-panel,
+.player-panel,
+.results-panel {
+  border: 1px solid #d7c7af;
+  background: rgba(255, 250, 242, 0.9);
+  padding: 16px;
+}
+
+.resume-strip,
+.button-row,
+.game-header,
+.player-header,
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.header-actions {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.setup-controls {
+  display: grid;
+  gap: 14px;
+}
+
+.setup-controls label,
+.phase-tools label {
+  display: grid;
+  gap: 6px;
+  font-weight: 750;
+}
+
+.name-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+input,
+select {
+  min-height: 42px;
+  border: 1px solid #c7b7a0;
+  background: #fffaf2;
+  padding: 8px 10px;
+}
+
+.game-page {
+  min-height: 100vh;
+  padding: 16px;
+  background: #f4f0e8;
+}
+
+.game-header {
+  margin: 0 auto 12px;
+  max-width: 1440px;
+}
+
+.game-header h1 {
+  font-size: clamp(2rem, 5vw, 3.6rem);
+}
+
+.deck-counter,
+.rush-tracker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  border: 1px solid #c7b7a0;
+  background: #fffaf2;
+  padding: 6px 10px;
+  font-weight: 800;
+}
+
+.message-banner,
+.error-banner {
+  max-width: 1440px;
+  margin: 0 auto 10px;
+  padding: 10px 12px;
+  border: 1px solid #d7c7af;
+  background: #fffaf2;
+}
+
+.error-banner {
+  border-color: #b83f34;
+  color: #8d241b;
+}
+
+.game-layout {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(420px, 1fr) minmax(360px, 520px);
+  gap: 16px;
+  align-items: start;
+}
+
+.play-surface {
+  display: grid;
+  gap: 12px;
+}
+
+.board-shell {
+  width: min(100%, 720px);
+  margin: 0 auto;
+}
+
+.ingredient-board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(72px, 1fr));
+  gap: 8px;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.board-cell {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  border: 2px solid #7f6e58;
+  background: #fffaf2;
+  cursor: pointer;
+}
+
+.legal-cell {
+  border-color: #27605a;
+}
+
+.path-cell {
+  box-shadow: inset 0 0 0 5px rgba(217, 108, 58, 0.36);
+}
+
+.cell-flags {
+  position: absolute;
+  left: 5px;
+  bottom: 4px;
+  display: grid;
+  gap: 2px;
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  color: #77634e;
+}
+
+.meeple-stack {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  gap: 4px;
+}
+
+.meeple {
+  width: 28px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 2px solid #2b211b;
+  color: white;
+  font-weight: 900;
+  font-size: 0.8rem;
+}
+
+.meeple-rose {
+  background: #c84c5e;
+}
+
+.meeple-blue {
+  background: #2d75a6;
+}
+
+.meeple-green {
+  background: #43834a;
+}
+
+.meeple-gold {
+  background: #d59626;
+}
+
+.meeple-selected {
+  outline: 3px solid #fff;
+}
+
+.phase-tools {
+  display: grid;
+  gap: 12px;
+}
+
+.setup-placement-tools {
+  color: #4b3711;
+}
+
+.meeple-picker,
+.hand-row,
+.ingredient-key,
+.recipe-list,
+.cup-ingredients,
+.upgrade-tray {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.selected-tool {
+  border-color: #27605a;
+  background: #d7ebe5;
+}
+
+.path-readout {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  color: #6e5e4a;
+}
+
+.players-column {
+  display: grid;
+  gap: 12px;
+}
+
+.player-panel {
+  display: grid;
+  gap: 12px;
+  border-left-width: 8px;
+}
+
+.active-panel {
+  box-shadow: 0 0 0 3px rgba(39, 96, 90, 0.16);
+}
+
+.panel-rose {
+  border-left-color: #c84c5e;
+}
+
+.panel-blue {
+  border-left-color: #2d75a6;
+}
+
+.panel-green {
+  border-left-color: #43834a;
+}
+
+.panel-gold {
+  border-left-color: #d59626;
+}
+
+.player-header h2 {
+  font-size: 1.25rem;
+}
+
+.rush-token {
+  width: 28px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #f0c23b;
+  border: 1px solid #9a7620;
+  color: #4b3711;
+  font-weight: 900;
+}
+
+.upgrade-tile {
+  min-height: 48px;
+  display: grid;
+  gap: 2px;
+  text-align: left;
+  padding: 8px;
+  flex: 1 1 120px;
+}
+
+.upgrade-active {
+  background: #d7ebe5;
+  border-color: #27605a;
+}
+
+.cups-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.cup {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 34px;
+  gap: 4px;
+}
+
+.cup-body {
+  min-height: 70px;
+  display: grid;
+  gap: 6px;
+  padding: 8px;
+}
+
+.cup-selected .cup-body {
+  border-color: #27605a;
+  background: #d7ebe5;
+}
+
+.cup-label,
+.tab-label {
+  font-size: 0.72rem;
+  color: #6e5e4a;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.dump-button {
+  min-height: 70px;
+}
+
+.empty-cup,
+.empty-tab {
+  color: #8f7d67;
+  font-size: 0.8rem;
+}
+
+.tabs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.order-tab {
+  min-width: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.tab-orders {
+  display: grid;
+  gap: 6px;
+}
+
+.order-card {
+  position: relative;
+  min-height: 92px;
+  display: grid;
+  gap: 8px;
+  align-content: space-between;
+  padding: 8px;
+  text-align: left;
+  background: #fff8ea;
+}
+
+.order-card:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+.order-card-compact {
+  min-height: 76px;
+}
+
+.order-selected {
+  border-color: #27605a;
+  background: #d7ebe5;
+}
+
+.order-name {
+  font-weight: 850;
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+}
+
+.specialty-ribbon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #f0c23b;
+  color: #4b3711;
+  font-size: 0.65rem;
+  font-weight: 900;
+  padding: 2px 5px;
+}
+
+.ingredient-icon {
+  --ingredient-color: #aaa;
+  width: 44px;
+  aspect-ratio: 1;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 2px solid rgba(43, 33, 27, 0.2);
+  background: color-mix(in srgb, var(--ingredient-color), white 78%);
+}
+
+.ingredient-small {
+  width: 26px;
+  border-width: 1px;
+}
+
+.ingredient-coffee {
+  --ingredient-color: #5b3524;
+}
+
+.ingredient-steam {
+  --ingredient-color: #d8d3cd;
+}
+
+.ingredient-milk {
+  --ingredient-color: #f4efe5;
+}
+
+.ingredient-water {
+  --ingredient-color: #60a8d8;
+}
+
+.ingredient-ice {
+  --ingredient-color: #9bd1e8;
+}
+
+.ingredient-chocolate {
+  --ingredient-color: #6b3f2c;
+}
+
+.ingredient-caramel {
+  --ingredient-color: #cf7f31;
+}
+
+.ingredient-tea {
+  --ingredient-color: #4f8a46;
+}
+
+.ingredient-shape {
+  width: 52%;
+  aspect-ratio: 1;
+  display: block;
+  background: var(--ingredient-color);
+}
+
+.shape-bean {
+  border-radius: 48% 52% 48% 52%;
+  transform: rotate(-28deg);
+}
+
+.shape-steam {
+  width: 38%;
+  height: 65%;
+  border-radius: 999px;
+  background: transparent;
+  border-left: 5px solid var(--ingredient-color);
+  border-right: 5px solid transparent;
+}
+
+.shape-drop {
+  border-radius: 60% 60% 60% 0;
+  transform: rotate(-45deg);
+}
+
+.shape-cube,
+.shape-square {
+  border-radius: 5px;
+}
+
+.shape-leaf {
+  border-radius: 2px 80% 2px 80%;
+  transform: rotate(35deg);
+}
+
+.hand-token {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.hand-token button {
+  min-height: 36px;
+}
+
+.ingredient-key {
+  max-width: 1440px;
+  margin: 12px auto 0;
+  color: #6e5e4a;
+  font-size: 0.82rem;
+}
+
+.ingredient-key span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(43, 33, 27, 0.45);
+  padding: 20px;
+}
+
+.pass-modal {
+  width: min(420px, 100%);
+  display: grid;
+  gap: 14px;
+  padding: 22px;
+  background: #fffaf2;
+  border: 1px solid #c7b7a0;
+  text-align: center;
+}
+
+.score-table {
+  display: grid;
+  gap: 8px;
+}
+
+.score-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 12px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #d7c7af;
+  background: #fffaf2;
+}
+
+.score-row small {
+  grid-column: 1 / -1;
+  color: #6e5e4a;
+}
+
+.winner-row {
+  border-color: #27605a;
+  background: #d7ebe5;
+}
+
+@media (max-width: 980px) {
+  .game-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .players-column {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .game-page,
+  .setup-page,
+  .results-page {
+    padding: 10px;
+  }
+
+  .game-header,
+  .resume-strip {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ingredient-board {
+    gap: 5px;
+  }
+
+  .board-cell {
+    border-width: 1px;
+  }
+
+  .cell-flags {
+    display: none;
+  }
+
+  .cups-row,
+  .tabs-grid {
+    grid-template-columns: 1fr;
+  }
+}

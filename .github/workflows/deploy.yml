@@ -44,6 +44,14 @@ jobs:
         run: npm run build
         working-directory: terminal-desires-ranker
 
+      - name: Install coffee-rush dependencies
+        run: npm ci
+        working-directory: coffee-rush
+
+      - name: Build coffee-rush
+        run: npm run build
+        working-directory: coffee-rush
+
       - name: Assemble site artifact
         run: |
           rm -rf site
@@ -51,6 +59,8 @@ jobs:
           cp -a dist/. site/
           mkdir -p site/terminal-desires-ranker
           cp -a terminal-desires-ranker/dist/. site/terminal-desires-ranker/
+          mkdir -p site/coffee-rush
+          cp -a coffee-rush/dist/. site/coffee-rush/
           touch site/.nojekyll
           if [ -f CNAME ]; then cp CNAME site/CNAME; fi
 

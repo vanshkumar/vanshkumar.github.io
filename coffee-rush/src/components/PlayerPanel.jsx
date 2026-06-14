@@ -12,6 +12,7 @@ export default function PlayerPanel({
   onSelectCup,
   onDumpCup,
   onSelectOrder,
+  onFulfillOrder,
   phase,
   onActivateUpgrade,
 }) {
@@ -58,16 +59,32 @@ export default function PlayerPanel({
             <div className="tab-orders">
               {tab.length === 0 && <span className="empty-tab">clear</span>}
               {tab.map((order) => {
-                const canComplete =
-                  isActive && completable.some((match) => match.order.id === order.id);
+                const completionMatch = isActive
+                  ? completable.find((match) => match.order.id === order.id)
+                  : null;
+                const canComplete = Boolean(completionMatch);
                 return (
-                  <OrderCard
+                  <div
                     key={order.id}
-                    order={order}
-                    compact
-                    selected={selectedOrderRef === order.id}
-                    onClick={canComplete ? () => onSelectOrder(order.id) : undefined}
-                  />
+                    className={`order-slot ${canComplete ? 'order-slot-ready' : ''}`}
+                  >
+                    <OrderCard
+                      order={order}
+                      compact
+                      ready={canComplete}
+                      selected={selectedOrderRef === order.id}
+                      onClick={canComplete ? () => onSelectOrder(order.id) : undefined}
+                    />
+                    {canComplete && (
+                      <button
+                        className="serve-order-button"
+                        type="button"
+                        onClick={() => onFulfillOrder(completionMatch.cupIdx, order.id)}
+                      >
+                        Serve Cup {completionMatch.cupIdx + 1}
+                      </button>
+                    )}
+                  </div>
                 );
               })}
             </div>

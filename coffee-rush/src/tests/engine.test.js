@@ -37,6 +37,7 @@ function finishSetup(state) {
       playerId: placement.playerId,
       meepleId: placement.meepleId,
       cellId: SETUP_CELL_BY_MEEPLE[placement.meepleId],
+      cupIdx: 0,
     }).state;
   }
 
@@ -89,6 +90,7 @@ describe('Coffee Rush engine', () => {
       playerId: placement.playerId,
       meepleId: placement.meepleId,
       cellId: 23,
+      cupIdx: 0,
     }).state;
 
     expect(state.players[1].meeples[0].cellId).toBe(23);
@@ -97,6 +99,20 @@ describe('Coffee Rush engine', () => {
     state = finishSetup(state);
     expect(state.phase).toBe('upgrade');
     expect(state.activePlayerId).toBe('p1');
+  });
+
+  it('requires an explicit cup for starting ingredients', () => {
+    const state = setup(2);
+    const placement = state.setupPlacementQueue[0];
+    const result = applyAction(state, {
+      type: 'PLACE_STARTING_MEEPLE',
+      playerId: placement.playerId,
+      meepleId: placement.meepleId,
+      cellId: 23,
+    });
+
+    expect(result.error).toMatch(/Choose a cup/);
+    expect(state.players[1].cups).toEqual([[], [], []]);
   });
 
   it('supports a chosen starting player and cup choice during setup', () => {

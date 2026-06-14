@@ -72,8 +72,12 @@ function placeStartingMeeple(state, action) {
     return { error: 'Starting baristas need open spaces.' };
   }
 
-  const cupIdx = Number(action.cupIdx ?? 0);
-  if (!player.cups[cupIdx]) {
+  if (action.cupIdx === undefined || action.cupIdx === null || action.cupIdx === '') {
+    return { error: 'Choose a cup for the starting ingredient.' };
+  }
+
+  const cupIdx = Number(action.cupIdx);
+  if (!Number.isInteger(cupIdx) || !player.cups[cupIdx]) {
     return { error: 'Choose a valid cup for the starting ingredient.' };
   }
 

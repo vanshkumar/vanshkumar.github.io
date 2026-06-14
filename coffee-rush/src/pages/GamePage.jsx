@@ -33,7 +33,7 @@ export default function GamePage() {
   const [selectedMeepleId, setSelectedMeepleId] = useState('');
   const [path, setPath] = useState([]);
   const [rushSpent, setRushSpent] = useState(0);
-  const [selectedCup, setSelectedCup] = useState(0);
+  const [selectedCup, setSelectedCup] = useState(null);
   const [selectedOrderRef, setSelectedOrderRef] = useState('');
   const [passTo, setPassTo] = useState('');
 
@@ -97,9 +97,18 @@ export default function GamePage() {
       }
     }
 
-    if (['PLACE_STARTING_MEEPLE', 'MOVE', 'END_TURN'].includes(action.type)) {
+    const resetsTurnControls = ['PLACE_STARTING_MEEPLE', 'MOVE', 'END_TURN'].includes(
+      action.type,
+    );
+
+    if (resetsTurnControls) {
       setPath([]);
       setRushSpent(0);
+      setSelectedOrderRef('');
+      setSelectedCup(null);
+    }
+
+    if (action.type === 'FULFILL_ORDER') {
       setSelectedOrderRef('');
     }
   }
@@ -107,8 +116,14 @@ export default function GamePage() {
   function resetActionUi() {
     setPath([]);
     setRushSpent(0);
+    setSelectedCup(null);
     setSelectedOrderRef('');
     setPassTo('');
+  }
+
+  function selectCup(cupIdx) {
+    setSelectedCup(cupIdx);
+    setError('');
   }
 
   function undoLastAction() {
@@ -178,6 +193,11 @@ export default function GamePage() {
 
   function handleCellClick(cellId) {
     if (setupPlacement) {
+      if (selectedCup === null) {
+        setError('Choose a cup for this starting ingredient first.');
+        return;
+      }
+
       dispatch({
         type: 'PLACE_STARTING_MEEPLE',
         playerId: setupPlacement.playerId,
@@ -203,6 +223,11 @@ export default function GamePage() {
   }
 
   function pourIngredient(ingredient) {
+    if (selectedCup === null) {
+      setError('Choose a cup before pouring.');
+      return;
+    }
+
     dispatch({
       type: 'POUR',
       playerId: activePlayer.id,
@@ -223,11 +248,15 @@ export default function GamePage() {
     const match = completableOrders.find((candidate) => candidate.order.id === selectedOrderRef);
     if (!match) return;
 
+    fulfillOrder(match.cupIdx, selectedOrderRef);
+  }
+
+  function fulfillOrder(cupIdx, orderRef) {
     dispatch({
       type: 'FULFILL_ORDER',
       playerId: activePlayer.id,
-      cupIdx: match.cupIdx,
-      orderRef: selectedOrderRef,
+      cupIdx,
+      orderRef,
     });
   }
 
@@ -282,9 +311,21 @@ export default function GamePage() {
               <div className="phase-tools setup-placement-tools">
                 <strong>{setupPlacement.player.name}, place a barista.</strong>
                 <span>
-                  Select a cup, then pick any open board space. Its ingredient goes into that cup before
-                  the first turn.
+                  Choose where this starting ingredient goes, then pick any open board
+                  space.
                 </span>
+                <div className="cup-picker" aria-label="Starting ingredient cup">
+                  {setupPlacement.player.cups.map((_, index) => (
+                    <button
+                      key={index}
+                      className={selectedCup === index ? 'selected-tool' : ''}
+                      type="button"
+                      onClick={() => selectCup(index)}
+                    >
+                      Cup {index + 1}
+                    </button>
+                  ))}
+                </div>
               </div>
             )}
 
@@ -350,11 +391,27 @@ export default function GamePage() {
 
             {state.phase === PHASES.POUR && (
               <div className="phase-tools">
+                <div className="cup-picker" aria-label="Pour target cup">
+                  {activePlayer.cups.map((_, index) => (
+                    <button
+                      key={index}
+                      className={selectedCup === index ? 'selected-tool' : ''}
+                      type="button"
+                      onClick={() => selectCup(index)}
+                    >
+                      Cup {index + 1}
+                    </button>
+                  ))}
+                </div>
                 <div className="hand-row">
                   {activePlayer.hand.length === 0 && <span>No ingredients in hand</span>}
                   {activePlayer.hand.map((ingredient, index) => (
                     <div className="hand-token" key={`${ingredient}-${index}`}>
-                      <button type="button" onClick={() => pourIngredient(ingredient)}>
+                      <button
+                        type="button"
+                        onClick={() => pourIngredient(ingredient)}
+                        disabled={selectedCup === null}
+                      >
                         <IngredientIcon ingredient={ingredient} small />
                       </button>
                       <button type="button" onClick={() => discardIngredient(ingredient)}>
@@ -369,7 +426,7 @@ export default function GamePage() {
                     onClick={fulfillSelectedOrder}
                     disabled={!selectedOrderRef}
                   >
-                    Fulfill selected
+                    Serve selected
                   </button>
                   <button
                     className="primary-button"
@@ -393,11 +450,12 @@ export default function GamePage() {
               isActive={player.id === activePlayer.id}
               selectedCup={selectedCup}
               selectedOrderRef={selectedOrderRef}
-              onSelectCup={setSelectedCup}
+              onSelectCup={selectCup}
               onDumpCup={(cupIdx) =>
                 dispatch({ type: 'DUMP_CUP', playerId: activePlayer.id, cupIdx })
               }
               onSelectOrder={setSelectedOrderRef}
+              onFulfillOrder={fulfillOrder}
               phase={state.phase}
               onActivateUpgrade={(tileId) =>
                 dispatch({ type: 'ACTIVATE_UPGRADE', playerId: activePlayer.id, tileId })

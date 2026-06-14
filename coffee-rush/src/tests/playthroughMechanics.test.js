@@ -44,6 +44,7 @@ function finishSetup(state) {
       playerId: placement.playerId,
       meepleId: placement.meepleId,
       cellId: SETUP_CELL_BY_MEEPLE[placement.meepleId],
+      cupIdx: 0,
     });
   }
 

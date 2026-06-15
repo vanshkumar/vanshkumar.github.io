@@ -1,7 +1,7 @@
 ---
 slug: how-can-i-produce-long-content
 title: How can I produce Long Content?
-lastmod: 2026-06-11
+lastmod: 2026-06-14
 date: 2026-06-09
 ---
 I have been thinking about applying the idea of the [Long Now](https://en.wikipedia.org/wiki/Long_Now_Foundation), inspired by the [About page of gwern.net](https://gwern.net/about#long-content):
@@ -33,6 +33,26 @@ If research papers are instead a suite of tools and data, as people ask their ow
 
 ---
 
-Misc notes/thoughts:
-- jun 2026: this thread is a more general case of [[How can I allow my thinking to accrete over time?]]
-- jun 2026: One of the big shifts from working to not, over the last couple years, has been an extension of the length of my Now. Before it was more like a week, now it is closer to a month/year. Shifting it to decades appears to be the next natural step I am moving toward.
+Misc notes:
+## jun 2026
+
+this thread is a more general case of [[How can I allow my thinking to accrete over time?]]
+
+
+One of the big shifts from working to not, over the last couple years, has been an extension of the length of my Now. Before it was more like a week, now it is closer to a month/year. Shifting it to decades appears to be the next natural step I am moving toward.
+
+
+What are things in my life/around me that WILL survive for decades & therefore small improvements compound, I can take a Long Now view, etc?
+- Marriage
+- Kids
+- My brain/my thinking (externalized via this site)
+- CPV garden
+	- Clear area where I could think of a project that actually gets better with time, is improved *by* time – I’m sure I can think of something if I take an ecological lens
+	- I will talk to Stephen about this
+- Pasadena Central Park
+- Investments
+- Friendships
+- Parents
+- My body
+- The city of Pasadena
+- Caltech Y

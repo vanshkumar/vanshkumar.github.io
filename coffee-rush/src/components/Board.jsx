@@ -52,22 +52,40 @@ export default function Board({
                 {cell.isSpecialty && <span>special</span>}
               </span>
               <span className="meeple-stack">
-                {cell.meeples.map((meeple) => (
-                  <button
-                    key={meeple.id}
-                    className={`meeple meeple-${meeple.color} ${
-                      selectedMeepleId === meeple.id ? 'meeple-selected' : ''
-                    }`}
-                    type="button"
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      onSelectMeeple(meeple.id);
-                    }}
-                    title={`${meeple.playerName} meeple`}
-                  >
-                    {meeple.playerName.slice(0, 1)}
-                  </button>
-                ))}
+                {cell.meeples.map((meeple) => {
+                  const className = `meeple meeple-${meeple.color} ${
+                    selectedMeepleId === meeple.id ? 'meeple-selected' : ''
+                  }`;
+                  const isSelectable =
+                    state.phase !== PHASES.MOVE || meeple.playerId === state.activePlayerId;
+
+                  if (!isSelectable) {
+                    return (
+                      <span
+                        key={meeple.id}
+                        className={`${className} meeple-static`}
+                        title={`${meeple.playerName} meeple`}
+                      >
+                        {meeple.playerName.slice(0, 1)}
+                      </span>
+                    );
+                  }
+
+                  return (
+                    <button
+                      key={meeple.id}
+                      className={className}
+                      type="button"
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        onSelectMeeple(meeple.id);
+                      }}
+                      title={`${meeple.playerName} meeple`}
+                    >
+                      {meeple.playerName.slice(0, 1)}
+                    </button>
+                  );
+                })}
               </span>
             </div>
           );

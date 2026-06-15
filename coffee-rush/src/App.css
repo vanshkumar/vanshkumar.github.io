@@ -236,6 +236,11 @@ select {
   outline: 3px solid #fff;
 }
 
+.meeple-static {
+  pointer-events: none;
+  cursor: default;
+}
+
 .phase-tools {
   display: grid;
   gap: 12px;

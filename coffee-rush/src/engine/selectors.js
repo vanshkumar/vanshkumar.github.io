@@ -1,6 +1,6 @@
 import { BOARD_CELLS } from '../data/boardLayout';
 import { UPGRADE_TILES } from '../data/upgradeTiles';
-import { getNeighbors, isOccupied } from './board';
+import { areAdjacent, getNeighbors, isOccupied } from './board';
 import { cupMatchesOrder } from './orders';
 import { PHASES } from './types';
 
@@ -56,6 +56,25 @@ export function getLegalDestinations(state, meepleId, rushSpent = 0) {
   }
 
   return Array.from(destinations).sort((a, b) => a - b);
+}
+
+export function getMeepleForFirstMoveStep(state, selectedMeepleId, firstCellId) {
+  const player = getActivePlayer(state);
+
+  if (!player) {
+    return selectedMeepleId;
+  }
+
+  const allowDiagonal = player.upgrades.diagonal_movement;
+  const candidates = player.meeples.filter((meeple) =>
+    areAdjacent(meeple.cellId, firstCellId, allowDiagonal),
+  );
+
+  if (candidates.some((meeple) => meeple.id === selectedMeepleId)) {
+    return selectedMeepleId;
+  }
+
+  return candidates.length === 1 ? candidates[0].id : selectedMeepleId;
 }
 
 export function getSetupPlacement(state) {

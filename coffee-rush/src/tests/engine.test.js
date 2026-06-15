@@ -1,7 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import { createInitialState } from '../engine/initialState';
 import { applyAction } from '../engine/reducers';
-import { getLegalDestinations, getScores } from '../engine/selectors';
+import {
+  getLegalDestinations,
+  getMeepleForFirstMoveStep,
+  getScores,
+} from '../engine/selectors';
 
 function setup(playerCount = 3) {
   return createInitialState({
@@ -166,6 +170,64 @@ describe('Coffee Rush engine', () => {
       rushSpent: 0,
     });
     expect(occupiedEnd.error).toMatch(/occupied/);
+  });
+
+  it('allows moving through occupied cells when the final cell is open', () => {
+    let state = finishSetup(setup(2));
+    state = applyAction(state, { type: 'SKIP_UPGRADES', playerId: 'p1' }).state;
+
+    const result = applyAction(state, {
+      type: 'MOVE',
+      playerId: 'p1',
+      meepleId: 'p1-m1',
+      path: [23, 33, 43],
+      rushSpent: 0,
+    });
+
+    expect(result.error).toBeUndefined();
+    expect(result.state.players[0].meeples[0].cellId).toBe(43);
+    expect(result.state.players[0].hand).toHaveLength(3);
+  });
+
+  it('infers the active meeple from the first clicked movement step', () => {
+    let state = finishSetup(setup(2));
+    state = {
+      ...state,
+      phase: 'move',
+      activePlayerId: 'p2',
+      players: state.players.map((player) =>
+        player.id === 'p1'
+          ? {
+              ...player,
+              meeples: [
+                { ...player.meeples[0], cellId: 34 },
+                { ...player.meeples[1], cellId: 33 },
+              ],
+            }
+          : {
+              ...player,
+              meeples: [
+                { ...player.meeples[0], cellId: 22 },
+                { ...player.meeples[1], cellId: 44 },
+              ],
+            },
+      ),
+    };
+
+    expect(getMeepleForFirstMoveStep(state, 'p2-m1', 34)).toBe('p2-m2');
+    expect(getMeepleForFirstMoveStep(state, 'p2-m2', 34)).toBe('p2-m2');
+    expect(getMeepleForFirstMoveStep(state, 'p2-m1', 23)).toBe('p2-m1');
+
+    const result = applyAction(state, {
+      type: 'MOVE',
+      playerId: 'p2',
+      meepleId: 'p2-m2',
+      path: [34, 33, 43],
+      rushSpent: 0,
+    });
+
+    expect(result.error).toBeUndefined();
+    expect(result.state.players[1].meeples[1].cellId).toBe(43);
   });
 
   it('pours ingredients into cups and dumps cups', () => {

@@ -9,6 +9,7 @@ import { applyAction } from '../engine/reducers';
 import {
   getActivePlayer,
   getCompletableOrders,
+  getMeepleForFirstMoveStep,
   getPlayer,
   getSetupPlacement,
 } from '../engine/selectors';
@@ -126,6 +127,12 @@ export default function GamePage() {
     setError('');
   }
 
+  function selectMeeple(meepleId) {
+    setSelectedMeepleId(meepleId);
+    setPath([]);
+    setError('');
+  }
+
   function undoLastAction() {
     if (undoStack.length === 0) return;
 
@@ -209,6 +216,18 @@ export default function GamePage() {
     }
 
     if (state.phase !== 'move' || !selectedMeepleId) return;
+    if (path.length === 0) {
+      const inferredMeepleId = getMeepleForFirstMoveStep(
+        state,
+        selectedMeepleId,
+        cellId,
+      );
+      if (inferredMeepleId !== selectedMeepleId) {
+        setSelectedMeepleId(inferredMeepleId);
+      }
+    }
+
+    setError('');
     setPath((current) => [...current, cellId]);
   }
 
@@ -302,7 +321,7 @@ export default function GamePage() {
             selectedMeepleId={selectedMeepleId}
             path={path}
             rushSpent={rushSpent}
-            onSelectMeeple={setSelectedMeepleId}
+            onSelectMeeple={selectMeeple}
             onCellClick={handleCellClick}
           />
 
@@ -351,10 +370,7 @@ export default function GamePage() {
                       key={meeple.id}
                       className={selectedMeepleId === meeple.id ? 'selected-tool' : ''}
                       type="button"
-                      onClick={() => {
-                        setSelectedMeepleId(meeple.id);
-                        setPath([]);
-                      }}
+                      onClick={() => selectMeeple(meeple.id)}
                     >
                       {meeple.id.split('-')[1].toUpperCase()}
                     </button>

@@ -1,3 +1,4 @@
+import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getScores, getWinnerIds } from '../engine/selectors';
 import {
@@ -7,10 +8,21 @@ import {
   saveGame,
 } from '../persistence/localStorage';
 import { createInitialState } from '../engine/initialState';
-import { formatGameExport, gameExportFilename } from '../utils/gameExport';
+import {
+  downloadElementScreenshot,
+  downloadTextFile,
+} from '../utils/downloads';
+import {
+  formatGameExport,
+  gameExportFilename,
+  gameScreenshotFilename,
+} from '../utils/gameExport';
 
 export default function ResultsPage() {
   const navigate = useNavigate();
+  const pageRef = useRef(null);
+  const [exportStatus, setExportStatus] = useState('');
+  const [isExporting, setIsExporting] = useState(false);
   const state = loadGame();
   const undoStack = loadUndoStack();
 
@@ -45,22 +57,33 @@ export default function ResultsPage() {
     navigate('/');
   }
 
-  function downloadExport() {
-    const blob = new Blob([formatGameExport(state, undoStack)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = gameExportFilename(state);
-    document.body.append(link);
-    link.click();
-    link.remove();
-    URL.revokeObjectURL(url);
+  async function downloadExport() {
+    if (isExporting) return;
+
+    setIsExporting(true);
+    const exportedAt = new Date();
+    downloadTextFile(
+      formatGameExport(state, undoStack),
+      gameExportFilename(state, exportedAt),
+      'application/json',
+    );
+
+    try {
+      await downloadElementScreenshot(pageRef.current, gameScreenshotFilename(state, exportedAt));
+      setExportStatus('Game log and screenshot downloaded.');
+    } catch (screenshotError) {
+      console.error(screenshotError);
+      setExportStatus('Game log downloaded. Screenshot failed.');
+    } finally {
+      setIsExporting(false);
+    }
   }
 
   return (
-    <main className="results-page">
+    <main className="results-page" ref={pageRef}>
       <section className="results-panel">
         <h1>{winners.length > 1 ? 'Shared win' : `${scores[0].name} wins`}</h1>
+        {exportStatus && <div className="message-banner">{exportStatus}</div>}
         <div className="score-table">
           {scores.map((score) => (
             <div
@@ -80,8 +103,8 @@ export default function ResultsPage() {
           <button className="primary-button" type="button" onClick={rematch}>
             Rematch
           </button>
-          <button type="button" onClick={downloadExport}>
-            Download log
+          <button type="button" onClick={downloadExport} disabled={isExporting}>
+            {isExporting ? 'Downloading...' : 'Download log + screenshot'}
           </button>
           <button type="button" onClick={newGame}>
             Setup

@@ -23,7 +23,15 @@ export function formatGameExport(state, undoStack = []) {
   return JSON.stringify(createGameExport(state, undoStack), null, 2);
 }
 
-export function gameExportFilename(state, now = new Date()) {
+export function gameExportBasename(state, now = new Date()) {
   const stamp = now.toISOString().replace(/[:.]/g, '-');
-  return `coffee-rush-turn-${state.turn}-${state.phase}-${stamp}.json`;
+  return `coffee-rush-turn-${state.turn}-${state.phase}-${stamp}`;
+}
+
+export function gameExportFilename(state, now = new Date()) {
+  return `${gameExportBasename(state, now)}.json`;
+}
+
+export function gameScreenshotFilename(state, now = new Date()) {
+  return `${gameExportBasename(state, now)}.png`;
 }

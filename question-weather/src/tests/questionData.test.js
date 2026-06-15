@@ -6,8 +6,10 @@ import {
   activityWeightForAge,
   buildActivity,
   buildQuestionData,
+  createQuestionNote,
   excerptFromMarkdown,
   extractWikilinks,
+  questionFilenameFromTitle,
   slugifyPath
 } from '../../scripts/question-data.mjs';
 
@@ -144,5 +146,57 @@ Related back to [[Custom title]].
       Number((activityWeightForAge(0) + activityWeightForAge(1)).toFixed(4))
     );
     expect(activity.events).toEqual(['2026-06-15', '2026-06-14']);
+  });
+
+  it('creates a new question note with frontmatter and an Obsidian URL', () => {
+    const { root, questionsDir } = makeTempVault();
+    const created = createQuestionNote({
+      questionsDir,
+      projectRoot: root,
+      title: 'How do I choose?',
+      now: new Date('2026-06-15T12:00:00Z')
+    });
+    const filePath = path.join(questionsDir, 'How do I choose?.md');
+
+    expect(created).toMatchObject({
+      title: 'How do I choose?',
+      slug: 'how-do-i-choose',
+      filename: 'How do I choose?.md',
+      vaultPath: 'questions/How do I choose?.md',
+      repoPath: 'vault/questions/How do I choose?.md'
+    });
+    expect(created.obsidianUrl).toBe(
+      `obsidian://open?path=${encodeURIComponent(filePath)}`
+    );
+    expect(fs.readFileSync(filePath, 'utf8')).toBe(
+      `---\ntitle: "How do I choose?"\ndate: 2026-06-15\nlastmod: 2026-06-15\n---\n\n`
+    );
+  });
+
+  it('sanitizes generated filenames and rejects duplicate question slugs', () => {
+    const { root, questionsDir } = makeTempVault();
+    writeQuestion(
+      questionsDir,
+      'Existing.md',
+      `---
+slug: duplicate-question
+title: Existing
+---
+`
+    );
+
+    expect(questionFilenameFromTitle('One/two: three.md')).toBe(
+      'One-two - three.md'
+    );
+    expect(() =>
+      createQuestionNote({ questionsDir, projectRoot: root, title: 'Existing' })
+    ).toThrow('A question with that title already exists');
+    expect(() =>
+      createQuestionNote({
+        questionsDir,
+        projectRoot: root,
+        title: 'Duplicate Question'
+      })
+    ).toThrow('A question with that slug already exists');
   });
 });

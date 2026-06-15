@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Board from '../components/Board';
 import IngredientIcon from '../components/IngredientIcon';
@@ -21,16 +21,26 @@ import {
   saveGame,
   saveUndoStack,
 } from '../persistence/localStorage';
-import { formatGameExport, gameExportFilename } from '../utils/gameExport';
+import {
+  downloadElementScreenshot,
+  downloadTextFile,
+} from '../utils/downloads';
+import {
+  formatGameExport,
+  gameExportFilename,
+  gameScreenshotFilename,
+} from '../utils/gameExport';
 
 const MAX_UNDO_STATES = 25;
 
 export default function GamePage() {
   const navigate = useNavigate();
+  const pageRef = useRef(null);
   const [state, setState] = useState(() => loadGame());
   const [undoStack, setUndoStack] = useState(() => loadUndoStack());
   const [error, setError] = useState('');
   const [exportStatus, setExportStatus] = useState('');
+  const [isExporting, setIsExporting] = useState(false);
   const [selectedMeepleId, setSelectedMeepleId] = useState('');
   const [path, setPath] = useState([]);
   const [rushSpent, setRushSpent] = useState(0);
@@ -185,17 +195,22 @@ export default function GamePage() {
     }
   }
 
-  function downloadExport() {
-    const blob = new Blob([getExportText()], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = gameExportFilename(state);
-    document.body.append(link);
-    link.click();
-    link.remove();
-    URL.revokeObjectURL(url);
-    setExportStatus('Game log downloaded.');
+  async function downloadExport() {
+    if (isExporting) return;
+
+    setIsExporting(true);
+    const exportedAt = new Date();
+    downloadTextFile(getExportText(), gameExportFilename(state, exportedAt), 'application/json');
+
+    try {
+      await downloadElementScreenshot(pageRef.current, gameScreenshotFilename(state, exportedAt));
+      setExportStatus('Game log and screenshot downloaded.');
+    } catch (screenshotError) {
+      console.error(screenshotError);
+      setExportStatus('Game log downloaded. Screenshot failed.');
+    } finally {
+      setIsExporting(false);
+    }
   }
 
   function handleCellClick(cellId) {
@@ -285,7 +300,7 @@ export default function GamePage() {
   }
 
   return (
-    <main className="game-page">
+    <main className="game-page" ref={pageRef}>
       <header className="game-header">
         <div>
           <h1>Coffee Rush</h1>
@@ -301,8 +316,8 @@ export default function GamePage() {
           <button type="button" onClick={copyExport}>
             Copy log
           </button>
-          <button type="button" onClick={downloadExport}>
-            Download log
+          <button type="button" onClick={downloadExport} disabled={isExporting}>
+            {isExporting ? 'Downloading...' : 'Download log + screenshot'}
           </button>
           <button type="button" onClick={newGame}>
             New

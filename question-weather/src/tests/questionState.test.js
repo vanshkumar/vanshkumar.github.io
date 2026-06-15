@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import {
   activityTone,
   filterQuestions,
+  getQuestionUpdatedDate,
   sortQuestions
 } from '../lib/questionState';
 
@@ -42,6 +43,16 @@ const questions = [
 ];
 
 describe('question weather helpers', () => {
+  it('uses Obsidian lastmod as the updated date', () => {
+    expect(
+      getQuestionUpdatedDate({
+        date: '2026-06-01',
+        lastmod: '2026-06-10',
+        activity: { lastActivity: '2026-06-15' }
+      })
+    ).toBe('2026-06-10');
+  });
+
   it('sorts by computed weather activity by default', () => {
     expect(sortQuestions(questions).map((question) => question.slug)).toEqual([
       'beta',

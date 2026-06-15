@@ -129,8 +129,113 @@ const listMarkdownFiles = (dir) => {
     .sort((a, b) => a.localeCompare(b));
 };
 
-const buildObsidianUrl = (absolutePath) =>
+export const buildObsidianUrl = (absolutePath) =>
   `obsidian://open?path=${encodeURIComponent(absolutePath)}`;
+
+export class QuestionCreateError extends Error {
+  constructor(message, statusCode = 400) {
+    super(message);
+    this.name = 'QuestionCreateError';
+    this.statusCode = statusCode;
+  }
+}
+
+export const normalizeQuestionTitle = (value) =>
+  String(value ?? '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/\.md$/i, '')
+    .trim();
+
+const withoutControlCharacters = (value) =>
+  Array.from(value)
+    .filter((character) => character.charCodeAt(0) >= 32)
+    .join('');
+
+export const questionFilenameFromTitle = (value) => {
+  const title = normalizeQuestionTitle(value);
+  const filenameBase = withoutControlCharacters(title)
+    .replace(/[\\/]/g, '-')
+    .replace(/:/g, ' -')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/^\.+/, '')
+    .trim();
+
+  return filenameBase ? `${filenameBase}.md` : null;
+};
+
+const yamlString = (value) => JSON.stringify(String(value));
+
+const existingQuestionSlugs = (questionsDir) =>
+  new Set(
+    listMarkdownFiles(questionsDir).map((filePath) => {
+      const raw = fs.readFileSync(filePath, 'utf8');
+      const parsed = matter(raw);
+      const filename = path.basename(filePath);
+      return parsed.data.slug ? slugifyPath(parsed.data.slug) : slugify(filename);
+    })
+  );
+
+export const createQuestionNote = ({
+  title,
+  questionsDir = defaultQuestionsDir,
+  projectRoot = repoRoot,
+  now = new Date()
+} = {}) => {
+  const cleanTitle = normalizeQuestionTitle(title);
+  if (!cleanTitle) {
+    throw new QuestionCreateError('Question title is required');
+  }
+
+  const filename = questionFilenameFromTitle(cleanTitle);
+  if (!filename) {
+    throw new QuestionCreateError('Question title must include letters or numbers');
+  }
+
+  const slug = slugify(filename);
+  if (!slug) {
+    throw new QuestionCreateError('Question title must include letters or numbers');
+  }
+
+  const filePath = path.join(questionsDir, filename);
+  const relativeToQuestions = path.relative(questionsDir, filePath);
+  if (relativeToQuestions.startsWith('..') || path.isAbsolute(relativeToQuestions)) {
+    throw new QuestionCreateError('Question title cannot create paths');
+  }
+
+  if (fs.existsSync(filePath)) {
+    throw new QuestionCreateError('A question with that title already exists', 409);
+  }
+
+  if (existingQuestionSlugs(questionsDir).has(slug)) {
+    throw new QuestionCreateError('A question with that slug already exists', 409);
+  }
+
+  const date = dateToIsoDate(now) ?? dateToIsoDate(new Date());
+  const markdown = [
+    '---',
+    `title: ${yamlString(cleanTitle)}`,
+    `date: ${date}`,
+    `lastmod: ${date}`,
+    '---',
+    '',
+    ''
+  ].join('\n');
+
+  fs.mkdirSync(questionsDir, { recursive: true });
+  fs.writeFileSync(filePath, markdown, 'utf8');
+
+  return {
+    title: cleanTitle,
+    slug,
+    filename,
+    vaultPath: toUnixPath(path.relative(path.join(projectRoot, 'vault'), filePath)),
+    repoPath: toUnixPath(path.relative(projectRoot, filePath)),
+    absolutePath: filePath,
+    obsidianUrl: buildObsidianUrl(filePath)
+  };
+};
 
 const uniqueIsoDates = (dates) =>
   Array.from(

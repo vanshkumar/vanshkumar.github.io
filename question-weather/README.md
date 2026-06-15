@@ -12,7 +12,7 @@ A local-only Vite app for browsing questions from `../vault/questions`, seeing c
 
 `npm run dev` and `npm run build` regenerate `src/data/questions.generated.json` before starting. That file is ignored because the vault is the source of truth.
 
-When the dev server is running, use the in-app Refresh button to regenerate from `../vault/questions` and reload the page.
+When the dev server is running, use the in-app Refresh button to regenerate from `../vault/questions` and reload the page. Use the plus button to create a new note in `../vault/questions` from a title and open it in Obsidian.
 
 ## Salience
 

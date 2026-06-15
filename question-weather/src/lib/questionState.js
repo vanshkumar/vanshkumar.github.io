@@ -1,5 +1,5 @@
 export const getQuestionUpdatedDate = (question) =>
-  question.activity?.lastActivity ?? question.lastmod ?? question.date ?? null;
+  question.lastmod ?? question.date ?? question.activity?.lastActivity ?? null;
 
 const compareDatesDesc = (a, b) => {
   const aTime = a ? new Date(a).getTime() : 0;

@@ -72,7 +72,14 @@ a {
   font-size: 0.86rem;
 }
 
-.refresh-button {
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.action-button {
   min-height: 34px;
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -90,17 +97,23 @@ a {
   transition: border-color 140ms ease, background 140ms ease;
 }
 
-.refresh-button:hover {
+.icon-button {
+  width: 36px;
+  justify-content: center;
+  padding: 0;
+}
+
+.action-button:hover {
   border-color: var(--green);
   background: var(--surface-cool);
 }
 
-.refresh-button:disabled {
+.action-button:disabled {
   cursor: wait;
   opacity: 0.7;
 }
 
-.refresh-error {
+.status-error {
   margin: -6px 0 12px;
   color: #7a3f32;
   font-size: 0.84rem;
@@ -205,6 +218,10 @@ a {
 
   .app-header {
     flex-direction: column;
+  }
+
+  .header-actions {
+    align-self: flex-start;
   }
 
   .question-stack {

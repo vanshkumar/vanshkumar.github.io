@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { RefreshCw } from 'lucide-react';
+import { Plus, RefreshCw } from 'lucide-react';
 import { generatedAt, questions } from './data/questions';
 import {
   activityTone,
@@ -39,12 +39,46 @@ function QuestionCard({ question }) {
 }
 
 export default function App() {
+  const [createState, setCreateState] = useState('idle');
+  const [createError, setCreateError] = useState('');
   const [refreshState, setRefreshState] = useState('idle');
   const visibleQuestions = useMemo(() => sortQuestions(questions), []);
 
   const activeCount = questions.filter(
     (question) => (question.activity?.recentUpdateCount ?? 0) > 0
   ).length;
+
+  const createQuestion = async () => {
+    const title = window.prompt('New question');
+    if (title === null) return;
+
+    const trimmedTitle = title.trim();
+    if (!trimmedTitle) return;
+
+    setCreateState('creating');
+    setCreateError('');
+    try {
+      const response = await fetch('/__question-weather-create', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify({ title: trimmedTitle })
+      });
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok || !payload.question?.obsidianUrl) {
+        throw new Error(payload.error ?? 'Could not create question');
+      }
+
+      window.location.href = payload.question.obsidianUrl;
+      window.setTimeout(() => window.location.reload(), 800);
+    } catch (error) {
+      setCreateState('error');
+      setCreateError(
+        error instanceof Error ? error.message : 'Could not create question'
+      );
+    }
+  };
 
   const refreshQuestions = async () => {
     setRefreshState('refreshing');
@@ -71,20 +105,35 @@ export default function App() {
             {questions.length} questions · {activeCount} active in the last 30 days · generated {formatDate(generatedAt)}
           </p>
         </div>
-        <button
-          className="refresh-button"
-          type="button"
-          onClick={refreshQuestions}
-          disabled={refreshState === 'refreshing'}
-          title="Refresh questions from vault"
-          aria-label="Refresh questions from vault"
-        >
-          <RefreshCw aria-hidden="true" size={16} />
-          <span>{refreshState === 'refreshing' ? 'Refreshing' : 'Refresh'}</span>
-        </button>
+        <div className="header-actions">
+          <button
+            className="action-button icon-button"
+            type="button"
+            onClick={createQuestion}
+            disabled={createState === 'creating'}
+            title="Add question"
+            aria-label="Add question"
+          >
+            <Plus aria-hidden="true" size={18} />
+          </button>
+          <button
+            className="action-button refresh-button"
+            type="button"
+            onClick={refreshQuestions}
+            disabled={refreshState === 'refreshing'}
+            title="Refresh questions from vault"
+            aria-label="Refresh questions from vault"
+          >
+            <RefreshCw aria-hidden="true" size={16} />
+            <span>{refreshState === 'refreshing' ? 'Refreshing' : 'Refresh'}</span>
+          </button>
+        </div>
       </header>
+      {createState === 'error' ? (
+        <p className="status-error">{createError}</p>
+      ) : null}
       {refreshState === 'error' ? (
-        <p className="refresh-error">Refresh is only available from the local dev server.</p>
+        <p className="status-error">Refresh is only available from the local dev server.</p>
       ) : null}
 
       <section className="question-list" aria-label="Questions">

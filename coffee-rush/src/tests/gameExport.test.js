@@ -3,7 +3,9 @@ import { createInitialState } from '../engine/initialState';
 import {
   createGameExport,
   formatGameExport,
+  gameExportBasename,
   gameExportFilename,
+  gameScreenshotFilename,
 } from '../utils/gameExport';
 
 describe('game export', () => {
@@ -30,8 +32,14 @@ describe('game export', () => {
     expect(exported.actionLog).toEqual(state.log);
     expect(exported.undoStack).toBe(undoStack);
     expect(formatGameExport(state, undoStack)).toContain('"actionLog"');
+    expect(gameExportBasename(state, new Date('2026-06-14T12:00:00Z'))).toBe(
+      'coffee-rush-turn-1-setupPlacement-2026-06-14T12-00-00-000Z',
+    );
     expect(gameExportFilename(state, new Date('2026-06-14T12:00:00Z'))).toBe(
       'coffee-rush-turn-1-setupPlacement-2026-06-14T12-00-00-000Z.json',
+    );
+    expect(gameScreenshotFilename(state, new Date('2026-06-14T12:00:00Z'))).toBe(
+      'coffee-rush-turn-1-setupPlacement-2026-06-14T12-00-00-000Z.png',
     );
   });
 });

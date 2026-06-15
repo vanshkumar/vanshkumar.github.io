@@ -2,6 +2,7 @@
 lastmod: 2026-06-15
 date: 2026-06-15
 rating: 5
+coverImage: /assets/shelf/the-clock-of-the-long-now.webp
 ---
 What if you thought of right Now as extending 10000 years in the past, the dawn of agriculture, to 10000 years in the future?
 

@@ -9,7 +9,7 @@ import { rehypeObsidianCallouts } from './src/lib/callouts.mjs';
 
 const CONTENT_ROOT = fileURLToPath(new URL('./src/content', import.meta.url));
 const VAULT_ROOT = fileURLToPath(new URL('./vault', import.meta.url));
-const COLLECTIONS = ['projects', 'questions', 'notes', 'logs', 'pages'];
+const COLLECTIONS = ['projects', 'questions', 'notes', 'logs', 'pages', 'shelf'];
 const ASSETS_DIR = fs.existsSync(path.join(VAULT_ROOT, 'assets'))
   ? path.join(VAULT_ROOT, 'assets')
   : path.join(CONTENT_ROOT, 'assets');
@@ -51,6 +51,9 @@ const urlFor = (collection, slug) => {
   }
   if (collection === 'notes') {
     return `/notes/${slug}`;
+  }
+  if (collection === 'shelf') {
+    return `/shelf/${slug}`;
   }
   const [project, ...rest] = slug.split('/');
   return `/projects/${project}/logs/${rest.join('/')}`;

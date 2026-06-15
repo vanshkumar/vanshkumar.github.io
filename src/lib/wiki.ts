@@ -4,7 +4,7 @@ import { titleFromSlug } from './content';
 const WIKILINK_RE =
   /!?\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]/g;
 
-const collectionOrder = ['projects', 'questions', 'notes', 'logs', 'pages'];
+const collectionOrder = ['projects', 'questions', 'notes', 'shelf', 'logs', 'pages'];
 
 const legacyCollectionFor = (collection: string) =>
   ({
@@ -25,6 +25,9 @@ const urlFor = (collection: string, slug: string) => {
   }
   if (collection === 'notes') {
     return `/notes/${slug}`;
+  }
+  if (collection === 'shelf') {
+    return `/shelf/${slug}`;
   }
   const [project, ...rest] = slug.split('/');
   return `/projects/${project}/logs/${rest.join('/')}`;
@@ -76,10 +79,11 @@ const extractTargets = (body: string) => {
 };
 
 const buildEntries = async () => {
-  const [projects, questions, notes, logs, pages] = await Promise.all([
+  const [projects, questions, notes, shelf, logs, pages] = await Promise.all([
     getCollection('projects'),
     getCollection('questions'),
     getCollection('notes'),
+    getCollection('shelf'),
     getCollection('logs'),
     getCollection('pages')
   ]);
@@ -102,6 +106,7 @@ const buildEntries = async () => {
   pushEntries('projects', projects);
   pushEntries('questions', questions);
   pushEntries('notes', notes);
+  pushEntries('shelf', shelf);
   pushEntries('logs', logs);
   pushEntries('pages', pages);
 

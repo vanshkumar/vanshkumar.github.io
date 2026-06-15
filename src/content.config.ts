@@ -59,6 +59,19 @@ const notes = defineCollection({
   })
 });
 
+const shelf = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: optionalText,
+    description: optionalText,
+    date: z.coerce.date().optional(),
+    lastmod: z.coerce.date().optional(),
+    rating: z.number().int().min(0).max(5),
+    coverImage: z.string().startsWith('/assets/').optional(),
+    aliases: z.array(z.string()).optional()
+  })
+});
+
 const pages = defineCollection({
   type: 'content',
   schema: z.object({
@@ -77,5 +90,6 @@ export const collections = {
   projects,
   logs,
   notes,
+  shelf,
   pages
 };

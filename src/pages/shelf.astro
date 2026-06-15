@@ -1,24 +1,56 @@
 ---
-import { getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 import ContentLayout from '../layouts/ContentLayout.astro';
-import { getBacklinksForEntry } from '../lib/wiki';
 import { titleFromSlug } from '../lib/content';
 
-const entry = await getEntry('pages', 'shelf');
-if (!entry) {
-  throw new Error('Missing content entry: pages/shelf');
-}
-const { Content } = await entry.render();
-const backlinks = await getBacklinksForEntry('pages', entry.slug);
-const title = entry.data.title ?? titleFromSlug(entry.slug);
-const lastUpdated = entry.data.lastmod;
+const title = 'Shelf';
+const reviews = (await getCollection('shelf')).sort((a, b) => {
+  const aDate = a.data.date ?? a.data.lastmod ?? new Date(0);
+  const bDate = b.data.date ?? b.data.lastmod ?? new Date(0);
+  return bDate.getTime() - aDate.getTime();
+});
+
+const starsForRating = (rating) => '★'.repeat(rating) + '☆'.repeat(5 - rating);
+const reviewTitle = (review) => review.data.title ?? titleFromSlug(review.slug);
 ---
 
 <ContentLayout
   title={title}
-  description={entry.data.description}
-  lastUpdated={lastUpdated}
-  backlinks={backlinks}
 >
-  <Content />
+  {reviews.length ? (
+    <div class="shelf-grid" aria-label="Book reviews">
+      {reviews.map((review) => {
+        const displayTitle = reviewTitle(review);
+        const ratingLabel = `${review.data.rating} out of 5 stars`;
+        return (
+          <a
+            class="shelf-book"
+            href={`/shelf/${review.slug}`}
+            aria-label={`${displayTitle}, ${ratingLabel}`}
+          >
+            <span
+              class:list={[
+                'shelf-cover',
+                !review.data.coverImage && 'shelf-cover-placeholder'
+              ]}
+            >
+              {review.data.coverImage ? (
+                <img
+                  src={review.data.coverImage}
+                  alt={`${displayTitle} cover`}
+                  loading="lazy"
+                  decoding="async"
+                />
+              ) : (
+                <span class="shelf-cover-title">{displayTitle}</span>
+              )}
+            </span>
+            <span class="shelf-rating" aria-label={ratingLabel}>
+              <span aria-hidden="true">{starsForRating(review.data.rating)}</span>
+            </span>
+          </a>
+        );
+      })}
+    </div>
+  ) : null}
 </ContentLayout>

@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import { getBacklinksForEntry } from '../../lib/wiki';
+import { titleFromSlug } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('shelf');
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry }
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const backlinks = await getBacklinksForEntry('shelf', entry.slug);
+const title = entry.data.title ?? titleFromSlug(entry.slug);
+const lastUpdated = entry.data.lastmod ?? entry.data.date ?? null;
+const ratingMeta = `${entry.data.rating}/5 stars`;
+---
+
+<ContentLayout
+  title={title}
+  description={entry.data.description}
+  date={entry.data.date}
+  kind={ratingMeta}
+  lastUpdated={lastUpdated}
+  backlinks={backlinks}
+>
+  <Content />
+</ContentLayout>

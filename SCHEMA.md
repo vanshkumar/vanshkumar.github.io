@@ -10,9 +10,11 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies to `src/con
   - `slug` `title` `description?` `date?` `lastmod?` `tags?[]` `aliases?[]`
 - **notes** → `vault/notes/` → `/notes/<slug>`
   - `slug` `title` `description?` `date?` `lastmod?` `tags?[]` `aliases?[]`
+- **shelf** → `vault/shelf/` → `/shelf/<slug>`
+  - `title?` `description?` `date?` `lastmod?` `rating` (`0`-`5`) `coverImage?` `aliases?[]`
 - **logs** → `vault/logs/<project>/` → `/projects/<project>/logs/<slug>`
   - `date` (required) `lastmod?` `parent` (inferred) `day?` `title?`
-- **pages** → `vault/pages/` → `/`, `/about`, `/now`, `/contact`, `/shelf`, `/terrain`
+- **pages** → `vault/pages/` → `/`, `/about`, `/now`, `/contact`, `/terrain`
   - `title?` `description?` `aliases?[]` `heroTitle?` `heroAccent?` `brandSubtitle?`
 
 ## Sync Rules

@@ -372,6 +372,80 @@ h3 {
   padding-bottom: 0.4rem;
 }
 
+.shelf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(118px, 1fr));
+  gap: 1.45rem 1.15rem;
+  align-items: start;
+  margin-top: 0.6rem;
+}
+
+.prose .shelf-book {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  color: var(--text);
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.shelf-cover {
+  aspect-ratio: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  background: #f6f2e9;
+  box-shadow: 0 0.45rem 1.2rem rgba(38, 31, 20, 0.1);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.shelf-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shelf-cover-placeholder {
+  padding: 0.85rem;
+  color: #51483f;
+}
+
+.shelf-cover-title {
+  font-family: "Playfair Display", "Iowan Old Style", serif;
+  font-size: 0.92rem;
+  line-height: 1.16;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.shelf-rating {
+  display: block;
+  color: #9f6a20;
+  font-size: 0.86rem;
+  line-height: 1;
+  letter-spacing: 0.06em;
+}
+
+.shelf-book:hover .shelf-cover,
+.shelf-book:focus-visible .shelf-cover {
+  border-color: #d2c6ad;
+  box-shadow: 0 0.6rem 1.4rem rgba(38, 31, 20, 0.14);
+  transform: translateY(-2px);
+}
+
+.shelf-book:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 0.35rem;
+}
+
 .content-updated {
   margin-top: 1.5rem;
   color: #a5a1a1;

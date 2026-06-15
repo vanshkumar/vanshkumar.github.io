@@ -1,4 +1,5 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
+import { RefreshCw } from 'lucide-react';
 import { generatedAt, questions } from './data/questions';
 import {
   activityTone,
@@ -38,11 +39,27 @@ function QuestionCard({ question }) {
 }
 
 export default function App() {
+  const [refreshState, setRefreshState] = useState('idle');
   const visibleQuestions = useMemo(() => sortQuestions(questions), []);
 
   const activeCount = questions.filter(
     (question) => (question.activity?.recentUpdateCount ?? 0) > 0
   ).length;
+
+  const refreshQuestions = async () => {
+    setRefreshState('refreshing');
+    try {
+      const response = await fetch('/__question-weather-refresh', {
+        method: 'POST'
+      });
+      if (!response.ok) {
+        throw new Error('Refresh failed');
+      }
+      window.location.reload();
+    } catch {
+      setRefreshState('error');
+    }
+  };
 
   return (
     <main className="question-weather-app">
@@ -54,7 +71,21 @@ export default function App() {
             {questions.length} questions · {activeCount} active in the last 30 days · generated {formatDate(generatedAt)}
           </p>
         </div>
+        <button
+          className="refresh-button"
+          type="button"
+          onClick={refreshQuestions}
+          disabled={refreshState === 'refreshing'}
+          title="Refresh questions from vault"
+          aria-label="Refresh questions from vault"
+        >
+          <RefreshCw aria-hidden="true" size={16} />
+          <span>{refreshState === 'refreshing' ? 'Refreshing' : 'Refresh'}</span>
+        </button>
       </header>
+      {refreshState === 'error' ? (
+        <p className="refresh-error">Refresh is only available from the local dev server.</p>
+      ) : null}
 
       <section className="question-list" aria-label="Questions">
         <div className="question-stack">

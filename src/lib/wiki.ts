@@ -1,52 +1,14 @@
 import { getCollection } from 'astro:content';
 import { titleFromSlug } from './content';
+import {
+  WIKI_LOOKUP_ORDER,
+  legacyCollectionFor,
+  normalizeWikiTarget,
+  urlForEntry
+} from './wiki-routing.mjs';
 
 const WIKILINK_RE =
   /!?\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]/g;
-
-const collectionOrder = ['projects', 'questions', 'notes', 'shelf', 'logs', 'pages'];
-
-const legacyCollectionFor = (collection: string) =>
-  ({
-    projects: 'attractors',
-    questions: 'probes',
-    notes: 'traces'
-  })[collection];
-
-const urlFor = (collection: string, slug: string) => {
-  if (collection === 'pages') {
-    return slug === 'home' ? '/' : `/${slug}`;
-  }
-  if (collection === 'projects') {
-    return `/projects/${slug}`;
-  }
-  if (collection === 'questions') {
-    return `/questions/${slug}`;
-  }
-  if (collection === 'notes') {
-    return `/notes/${slug}`;
-  }
-  if (collection === 'shelf') {
-    return `/shelf/${slug}`;
-  }
-  const [project, ...rest] = slug.split('/');
-  return `/projects/${project}/logs/${rest.join('/')}`;
-};
-
-const normalizeTarget = (value: string) => {
-  const trimmed = value.trim().replace(/\.md$/i, '').replace(/\\/g, '/');
-  const segments = trimmed.split('/').filter(Boolean);
-  const normalized = segments
-    .map((segment) =>
-      segment
-        .trim()
-        .toLowerCase()
-        .replace(/[\s]+/g, '-')
-        .replace(/[^a-z0-9-_]/g, '')
-    )
-    .join('/');
-  return normalized;
-};
 
 type WikiEntry = {
   key: string;
@@ -96,7 +58,7 @@ const buildEntries = async () => {
         collection,
         slug: entry.slug,
         title: entryTitle(collection, entry),
-        url: urlFor(collection, entry.slug),
+        url: urlForEntry(collection, entry.slug),
         aliases: Array.isArray(entry.data.aliases) ? entry.data.aliases : [],
         body: entry.body ?? ''
       });
@@ -132,27 +94,27 @@ const buildLookup = (entries: WikiEntry[]) => {
   };
 
   const orderedEntries = [...entries].sort(
-    (a, b) => collectionOrder.indexOf(a.collection) - collectionOrder.indexOf(b.collection)
+    (a, b) => WIKI_LOOKUP_ORDER.indexOf(a.collection) - WIKI_LOOKUP_ORDER.indexOf(b.collection)
   );
 
   orderedEntries.forEach((entry) => {
-    const slugKey = normalizeTarget(entry.slug);
+    const slugKey = normalizeWikiTarget(entry.slug);
     addIfMissing(slugKey, entry);
     if (entry.collection === 'logs') {
       const basename = entry.slug.split('/').filter(Boolean).pop();
       if (basename) {
-        addIfMissing(normalizeTarget(basename), entry);
+        addIfMissing(normalizeWikiTarget(basename), entry);
       }
     }
     if (entry.collection !== 'pages') {
-      addIfMissing(normalizeTarget(`${entry.collection}/${entry.slug}`), entry);
+      addIfMissing(normalizeWikiTarget(`${entry.collection}/${entry.slug}`), entry);
       const legacyCollection = legacyCollectionFor(entry.collection);
       if (legacyCollection) {
-        addIfMissing(normalizeTarget(`${legacyCollection}/${entry.slug}`), entry);
+        addIfMissing(normalizeWikiTarget(`${legacyCollection}/${entry.slug}`), entry);
       }
     }
     entry.aliases.forEach((alias) => {
-      addIfMissing(normalizeTarget(alias), entry);
+      addIfMissing(normalizeWikiTarget(alias), entry);
     });
   });
 
@@ -168,7 +130,7 @@ const buildBacklinks = async () => {
   entries.forEach((entry) => {
     const targets = extractTargets(entry.body);
     targets.forEach((target) => {
-      const resolved = lookup.get(normalizeTarget(target));
+      const resolved = lookup.get(normalizeWikiTarget(target));
       if (!resolved || resolved.key === entry.key) return;
       const list = backlinks.get(resolved.key) ?? [];
       list.push(entry);

@@ -4,6 +4,9 @@
 - 2026-02-26: This repo requires maintaining `.codex/LEARNINGS.md` in every Codex session.
 
 ## Friction Log
+- 2026-06-16: Shared wiki routing helpers between Astro config and backlink
+  code. `npm` was not on PATH in this shell, so build verification used the
+  bundled Node runtime to run sync scripts and `astro build` directly.
 - 2026-06-16: Minimal docs orientation pass added a root README and refreshed
   project READMEs; no build/test/code friction encountered because changes were
   documentation-only.

@@ -6,58 +6,20 @@ import matter from 'gray-matter';
 import wikiLinkPlugin from '@flowershow/remark-wiki-link';
 import rehypeExternalLinks from 'rehype-external-links';
 import { rehypeObsidianCallouts } from './src/lib/callouts.mjs';
+import {
+  WIKI_INDEX_COLLECTIONS,
+  isWikiAssetTarget,
+  legacyCollectionFor,
+  normalizeWikiHeading,
+  normalizeWikiTarget,
+  urlForEntry
+} from './src/lib/wiki-routing.mjs';
 
 const CONTENT_ROOT = fileURLToPath(new URL('./src/content', import.meta.url));
 const VAULT_ROOT = fileURLToPath(new URL('./vault', import.meta.url));
-const COLLECTIONS = ['projects', 'questions', 'notes', 'logs', 'pages', 'shelf'];
 const ASSETS_DIR = fs.existsSync(path.join(VAULT_ROOT, 'assets'))
   ? path.join(VAULT_ROOT, 'assets')
   : path.join(CONTENT_ROOT, 'assets');
-
-const normalizeTarget = (value) => {
-  const trimmed = value.trim().replace(/\.md$/i, '').replace(/\\/g, '/');
-  const segments = trimmed.split('/').filter(Boolean);
-  return segments
-    .map((segment) =>
-      segment
-        .trim()
-        .toLowerCase()
-        .replace(/[\s]+/g, '-')
-        .replace(/[^a-z0-9-_]/g, '')
-    )
-    .join('/');
-};
-
-const normalizeHeading = (value) => normalizeTarget(value).replace(/\//g, '-');
-const isAsset = (value) =>
-  /\.(png|jpe?g|gif|svg|webp|bmp|ico|apng|pdf)$/i.test(value);
-
-const legacyCollectionFor = (collection) =>
-  ({
-    projects: 'attractors',
-    questions: 'probes',
-    notes: 'traces'
-  })[collection];
-
-const urlFor = (collection, slug) => {
-  if (collection === 'pages') {
-    return slug === 'home' ? '/' : `/${slug}`;
-  }
-  if (collection === 'projects') {
-    return `/projects/${slug}`;
-  }
-  if (collection === 'questions') {
-    return `/questions/${slug}`;
-  }
-  if (collection === 'notes') {
-    return `/notes/${slug}`;
-  }
-  if (collection === 'shelf') {
-    return `/shelf/${slug}`;
-  }
-  const [project, ...rest] = slug.split('/');
-  return `/projects/${project}/logs/${rest.join('/')}`;
-};
 
 const walkMarkdownFiles = (dir) => {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
@@ -99,7 +61,7 @@ const buildWikiIndex = () => {
     }
   };
 
-  COLLECTIONS.forEach((collection) => {
+  WIKI_INDEX_COLLECTIONS.forEach((collection) => {
     const collectionDir = path.join(CONTENT_ROOT, collection);
     if (!fs.existsSync(collectionDir)) return;
     const files = walkMarkdownFiles(collectionDir);
@@ -109,17 +71,17 @@ const buildWikiIndex = () => {
         .replace(/\\/g, '/')
         .replace(/\.md$/, '');
       const slug = rel;
-      const url = urlFor(collection, slug);
+      const url = urlForEntry(collection, slug);
       permalinks.add(url);
-      addIfMissing(normalizeTarget(slug), url);
+      addIfMissing(normalizeWikiTarget(slug), url);
       if (collection === 'logs') {
-        addIfMissing(normalizeTarget(path.basename(slug)), url);
+        addIfMissing(normalizeWikiTarget(path.basename(slug)), url);
       }
       if (collection !== 'pages') {
-        addIfMissing(normalizeTarget(`${collection}/${slug}`), url);
+        addIfMissing(normalizeWikiTarget(`${collection}/${slug}`), url);
         const legacyCollection = legacyCollectionFor(collection);
         if (legacyCollection) {
-          addIfMissing(normalizeTarget(`${legacyCollection}/${slug}`), url);
+          addIfMissing(normalizeWikiTarget(`${legacyCollection}/${slug}`), url);
         }
       }
 
@@ -131,7 +93,7 @@ const buildWikiIndex = () => {
           ? [data.aliases]
           : [];
       aliases.forEach((alias) => {
-        addIfMissing(normalizeTarget(String(alias)), url);
+        addIfMissing(normalizeWikiTarget(String(alias)), url);
       });
     });
   });
@@ -154,14 +116,14 @@ const buildWikiIndex = () => {
 const wikiIndex = buildWikiIndex();
 const urlResolver = (name) => {
   const [raw, hash] = String(name).split('#');
-  const normalized = normalizeTarget(raw);
-  if (isAsset(raw)) {
+  const normalized = normalizeWikiTarget(raw);
+  if (isWikiAssetTarget(raw)) {
     const cleaned = raw.replace(/^assets\//i, '');
     return `/assets/${cleaned}`;
   }
   const resolved = wikiIndex.lookup.get(normalized) ?? normalized;
   if (!hash) return resolved;
-  return `${resolved}#${normalizeHeading(hash)}`;
+  return `${resolved}#${normalizeWikiHeading(hash)}`;
 };
 
 export default defineConfig({

@@ -1,8 +1,24 @@
-# React + Vite
+# Terminal Desires Ranker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Client-only React/Vite app for comparing terminal desires and viewing a ranked
+result list. It is deployed as a sibling app at `/terminal-desires-ranker/`.
 
-Currently, two official plugins are available:
+## Commands
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+npm run dev
+npm run test
+npm run build
+npm run preview
+```
+
+## Where Things Live
+
+- `src/App.jsx` sets up the hash-routed list, compare, and results pages.
+- `src/data/seedDesires.js` contains the default desire set.
+- `src/pages/` contains the three page-level views and their CSS.
+- The current comparison flow shuffles all unique pairs, records wins as
+  scores, and sorts results from highest score to lowest.
+- `product_reqs.md` and `technical_reqs.md` are historical implementation
+  references; check the current code before assuming they are exact.

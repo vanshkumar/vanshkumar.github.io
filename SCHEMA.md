@@ -5,7 +5,7 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies to `src/con
 ## Collections
 
 - **projects** → `vault/projects/` → `/projects/<slug>`
-  - `slug` `title` `description?` `date?` `lastmod?` `kind` (`project|essay`) `tags?[]` `coverImage?` `aliases?[]`
+  - `slug` `title` `description?` `date?` `lastmod?` `kind` (`project|essay`) `tags?[]` `coverImage?` `aliases?[]` `comic?` (`assetDir`, `pageCount`, `width`, `height`)
 - **questions** → `vault/questions/` → `/questions/<slug>`
   - `slug` `title` `description?` `date?` `lastmod?` `tags?[]` `aliases?[]`
 - **notes** → `vault/notes/` → `/notes/<slug>`
@@ -15,7 +15,7 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies to `src/con
 - **logs** → `vault/logs/<project>/` → `/projects/<project>/logs/<slug>`
   - `date` (required) `lastmod?` `parent` (inferred) `day?` `title?`
 - **pages** → `vault/pages/` → `/`, `/about`, `/now`, `/contact`, `/terrain`
-  - `title?` `description?` `aliases?[]` `heroTitle?` `heroAccent?` `brandSubtitle?`
+  - `title?` `description?` `lastmod?` `aliases?[]` `heroTitle?` `heroAccent?` `brandSubtitle?`
 
 ## Sync Rules
 
@@ -27,7 +27,8 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies to `src/con
 - `slug` is source-only frontmatter for projects/questions/notes. Sync consumes it to choose the generated content path, then omits it from generated Astro content.
 - `.githooks/pre-commit` and `.githooks/pre-merge-commit` run `scripts/normalize-content.mjs` locally before commits/merge commits, filling missing `slug` and `title` and staging those additions.
 - `scripts/sync-content.mjs`: copy + slugify filenames or `slug`; fill missing `title`; infer log `parent`; omit source-only `slug` from generated content.
-- `scripts/sync-assets.mjs`: `vault/assets/` → `public/assets/`.
+- `scripts/sync-assets.mjs`: `vault/assets/` → `public/assets/`. Numeric
+  PNG sequences in an asset subfolder also get optimized copies under `web/`.
 
 ## Wikilinks + Backlinks
 

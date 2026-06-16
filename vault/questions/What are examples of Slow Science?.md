@@ -2,9 +2,9 @@
 slug: what-are-examples-of-slow-science
 title: What are examples of Slow Science?
 date: 2026-06-15
-lastmod: 2026-06-15
+lastmod: 2026-06-16
 ---
-*[The Clock Of The Long Now](https://www.amazon.com/Clock-Long-Now-Time-Responsibility/dp/0465007805)* has a section on Slow Science – extremely long term scientific studies whose datasets tend to gain in value over time rather than diminish. I find this idea very intriguing.
+*[[The Clock Of The Long Now]]* has a section on Slow Science – extremely long term scientific studies whose datasets tend to gain in value over time rather than diminish. I find this idea very intriguing.
 
 Examples of Slow Science (10+ year studies):
 - Mauna Loa CO2 records, which show the effects of global warming (and thus prove it)

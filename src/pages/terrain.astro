@@ -105,7 +105,11 @@ const questionCards = questions.map((entry) => toCard(entry, 'questions')).sort(
         {projectCards.map((card) => (
           <article class="terrain-card" key={card.key}>
             <div class="terrain-card-meta">
-              {card.dateLabel ? <span>{card.dateLabel}</span> : <span>&nbsp;</span>}
+              {card.dateLabel ? (
+                <span class="terrain-card-date">{card.dateLabel}</span>
+              ) : (
+                <span class="terrain-card-date">&nbsp;</span>
+              )}
               <a class="terrain-card-link" href={card.href} aria-label={card.title}>
                 <svg viewBox="0 0 16 16" aria-hidden="true">
                   <path
@@ -133,9 +137,6 @@ const questionCards = questions.map((entry) => toCard(entry, 'questions')).sort(
 
             <div class="terrain-card-footer">
               <span>{card.lastUpdatedLabel ? `Updated ${card.lastUpdatedLabel}` : ''}</span>
-              <span class="terrain-card-arrow" aria-hidden="true">
-                ↗
-              </span>
             </div>
           </article>
         ))}
@@ -155,7 +156,11 @@ const questionCards = questions.map((entry) => toCard(entry, 'questions')).sort(
         {questionCards.map((card) => (
           <article class="terrain-card" key={card.key}>
             <div class="terrain-card-meta">
-              {card.dateLabel ? <span>{card.dateLabel}</span> : <span>&nbsp;</span>}
+              {card.dateLabel ? (
+                <span class="terrain-card-date">{card.dateLabel}</span>
+              ) : (
+                <span class="terrain-card-date">&nbsp;</span>
+              )}
               <a class="terrain-card-link" href={card.href} aria-label={card.title}>
                 <svg viewBox="0 0 16 16" aria-hidden="true">
                   <path
@@ -173,13 +178,9 @@ const questionCards = questions.map((entry) => toCard(entry, 'questions')).sort(
             <h3 class="terrain-card-title">
               <a href={card.href}>{card.title}</a>
             </h3>
-            <p class="terrain-card-description">{card.description}</p>
 
             <div class="terrain-card-footer">
               <span>{card.lastUpdatedLabel ? `Updated ${card.lastUpdatedLabel}` : ''}</span>
-              <span class="terrain-card-arrow" aria-hidden="true">
-                ↗
-              </span>
             </div>
           </article>
         ))}

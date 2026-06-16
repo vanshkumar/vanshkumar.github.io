@@ -154,7 +154,7 @@ const questionCards = questions.map((entry) => toCard(entry, 'questions')).sort(
     ) : (
       <div class="terrain-card-grid">
         {questionCards.map((card) => (
-          <article class="terrain-card" key={card.key}>
+          <article class="terrain-card terrain-card-question" key={card.key}>
             <div class="terrain-card-meta">
               {card.dateLabel ? (
                 <span class="terrain-card-date">{card.dateLabel}</span>

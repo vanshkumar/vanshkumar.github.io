@@ -250,6 +250,10 @@ h3 {
   min-height: 320px;
 }
 
+.terrain-card-question {
+  min-height: 300px;
+}
+
 .terrain-card-meta {
   display: flex;
   justify-content: space-between;
@@ -296,6 +300,10 @@ h3 {
   margin-bottom: 0.8rem;
 }
 
+.terrain-card-question .terrain-card-title {
+  line-height: 1.35;
+}
+
 .terrain-card-title a {
   color: var(--text);
 }
@@ -322,6 +330,10 @@ h3 {
   letter-spacing: 0.2em;
   font-size: 0.55rem;
   color: #a5a1a1;
+}
+
+.terrain-card-question .terrain-card-footer {
+  margin-top: auto;
 }
 
 .section {

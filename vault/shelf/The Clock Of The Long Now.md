@@ -4,7 +4,7 @@ date: 2026-06-15
 rating: 5
 coverImage: /assets/shelf/the-clock-of-the-long-now.webp
 ---
-What if you thought of right Now as extending 10000 years in the past, the dawn of agriculture, to 10000 years in the future?
+Most of us think of Now as the current moment, hour, day, week, or maybe month. What if you thought of right Now as extending to include 10000 years in the past to 10000 years in the future? From the dawn of agriculture to the distant unimaginable future?
 
 How does taking *such* a long-term view change what you choose to work on, how you take responsibility, how you relate to what's around you?
 
@@ -12,7 +12,7 @@ I enjoyed this work quite a lot. It directly inspired multiple questions for me,
 
 I suspect the Long Now will be an extremely valuable ongoing lens for me.
 
-Most interesting ideas from the book:
+Some interesting ideas from the book:
 - Six pace layers of civilization, from fastest to slowest
 	- Fashion, Commerce, Infrastructure, Governance, Culture, Nature
 - The longer a view you take, the more selfishness and altruism merge

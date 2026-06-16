@@ -13,6 +13,8 @@ Examples of Slow Science (10+ year studies):
 - Agricultural research at the Rothamsted estate
 - US Census data (instituted in 1790)
 
+
+
 ---
 
 According to the book Slow Science is rare because long-term scientific studies:

@@ -6,6 +6,7 @@ import matter from 'gray-matter';
 import wikiLinkPlugin from '@flowershow/remark-wiki-link';
 import rehypeExternalLinks from 'rehype-external-links';
 import { rehypeObsidianCallouts } from './src/lib/callouts.mjs';
+import { remarkImageCaptions } from './src/lib/image-captions.mjs';
 import {
   WIKI_INDEX_COLLECTIONS,
   isWikiAssetTarget,
@@ -139,7 +140,8 @@ export default defineConfig({
           permalinks: wikiIndex.permalinks,
           newClassName: 'wikilink-missing'
         }
-      ]
+      ],
+      remarkImageCaptions
     ],
     rehypePlugins: [
       rehypeObsidianCallouts,

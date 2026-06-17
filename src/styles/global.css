@@ -667,6 +667,22 @@ h3 {
   display: block;
 }
 
+.prose figure.captioned-figure {
+  margin: 1.6rem 0;
+}
+
+.prose figure.captioned-figure img {
+  margin: 0 auto;
+}
+
+.prose figure.captioned-figure figcaption {
+  margin-top: 0.55rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
 .comic-reader {
   --comic-page-max-height: 80dvh;
   --comic-reader-width: min(calc(100vw - 1rem), 1400px);

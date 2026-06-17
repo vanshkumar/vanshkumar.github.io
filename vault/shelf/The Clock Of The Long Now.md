@@ -13,7 +13,7 @@ I enjoyed this work quite a lot. It directly inspired multiple questions for me,
 I suspect the Long Now will be an extremely valuable ongoing lens for me.
 
 A particularly useful framework from the book: there are six "pace layers" of civilization.
-![[Pasted image 20260617075603.png|https://sketchplanations.com/pace-layers]]
+![[Pasted image 20260617075603.png|Source: https://sketchplanations.com/pace-layers]]
 
 Many problems in the world can be understood as allowing one pace layer to dictate something that belongs to another layer – Nature being forced to move at the pace of Commerce often leads to environmental catastrophe & ecological collapse.
 

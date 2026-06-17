@@ -11,8 +11,9 @@ dist-ssr
 *.local
 pnpm-workspace.yaml
 
-# Generated from ../vault/questions by scripts/generate-questions.mjs
+# Generated from ../vault by scripts/generate-questions.mjs
 src/data/questions.generated.json
+src/data/shelf.generated.json
 
 # Editor directories and files
 .vscode/*

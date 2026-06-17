@@ -8,14 +8,23 @@ const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 
 export const appRoot = path.resolve(scriptDir, '..');
 export const repoRoot = path.resolve(appRoot, '..');
-export const defaultQuestionsDir = path.join(repoRoot, 'vault', 'questions');
+export const defaultVaultDir = path.join(repoRoot, 'vault');
+export const defaultQuestionsDir = path.join(defaultVaultDir, 'questions');
+export const defaultShelfDir = path.join(defaultVaultDir, 'shelf');
 export const defaultOutputPath = path.join(
   appRoot,
   'src',
   'data',
   'questions.generated.json'
 );
+export const defaultShelfOutputPath = path.join(
+  appRoot,
+  'src',
+  'data',
+  'shelf.generated.json'
+);
 export const ACTIVITY_WINDOW_DAYS = 30;
+export const vaultAssetUrlPrefix = '/__vault-weather-asset/';
 
 export const slugify = (value) =>
   String(value)
@@ -140,20 +149,30 @@ export class QuestionCreateError extends Error {
   }
 }
 
-export const normalizeQuestionTitle = (value) =>
+export class ShelfCreateError extends Error {
+  constructor(message, statusCode = 400) {
+    super(message);
+    this.name = 'ShelfCreateError';
+    this.statusCode = statusCode;
+  }
+}
+
+export const normalizeNoteTitle = (value) =>
   String(value ?? '')
     .replace(/\s+/g, ' ')
     .trim()
     .replace(/\.md$/i, '')
     .trim();
 
+export const normalizeQuestionTitle = normalizeNoteTitle;
+
 const withoutControlCharacters = (value) =>
   Array.from(value)
     .filter((character) => character.charCodeAt(0) >= 32)
     .join('');
 
-export const questionFilenameFromTitle = (value) => {
-  const title = normalizeQuestionTitle(value);
+export const noteFilenameFromTitle = (value) => {
+  const title = normalizeNoteTitle(value);
   const filenameBase = withoutControlCharacters(title)
     .replace(/[\\/]/g, '-')
     .replace(/:/g, ' -')
@@ -165,11 +184,29 @@ export const questionFilenameFromTitle = (value) => {
   return filenameBase ? `${filenameBase}.md` : null;
 };
 
-const yamlString = (value) => JSON.stringify(String(value));
+export const questionFilenameFromTitle = noteFilenameFromTitle;
 
-const existingQuestionSlugs = (questionsDir) =>
+const defaultFrontmatterFields = ({ date }) => [
+  ['date', date],
+  ['lastmod', date]
+];
+
+const normalizeRating = (value, ErrorClass) => {
+  if (value === null || value === undefined || String(value).trim() === '') {
+    throw new ErrorClass('Shelf rating is required');
+  }
+
+  const rating = Number(value);
+  if (!Number.isInteger(rating) || rating < 0 || rating > 5) {
+    throw new ErrorClass('Shelf rating must be an integer from 0 to 5');
+  }
+
+  return rating;
+};
+
+const existingNoteSlugs = (notesDir) =>
   new Set(
-    listMarkdownFiles(questionsDir).map((filePath) => {
+    listMarkdownFiles(notesDir).map((filePath) => {
       const raw = fs.readFileSync(filePath, 'utf8');
       const parsed = matter(raw);
       const filename = path.basename(filePath);
@@ -177,53 +214,56 @@ const existingQuestionSlugs = (questionsDir) =>
     })
   );
 
-export const createQuestionNote = ({
+const createMarkdownNote = ({
   title,
-  questionsDir = defaultQuestionsDir,
-  projectRoot = repoRoot,
-  now = new Date()
-} = {}) => {
-  const cleanTitle = normalizeQuestionTitle(title);
+  notesDir,
+  projectRoot,
+  now,
+  ErrorClass,
+  titleLabel,
+  itemLabel,
+  frontmatterFields = defaultFrontmatterFields
+}) => {
+  const cleanTitle = normalizeNoteTitle(title);
   if (!cleanTitle) {
-    throw new QuestionCreateError('Question title is required');
+    throw new ErrorClass(`${titleLabel} is required`);
   }
 
-  const filename = questionFilenameFromTitle(cleanTitle);
+  const filename = noteFilenameFromTitle(cleanTitle);
   if (!filename) {
-    throw new QuestionCreateError('Question title must include letters or numbers');
+    throw new ErrorClass(`${titleLabel} must include letters or numbers`);
   }
 
   const slug = slugify(filename);
   if (!slug) {
-    throw new QuestionCreateError('Question title must include letters or numbers');
+    throw new ErrorClass(`${titleLabel} must include letters or numbers`);
   }
 
-  const filePath = path.join(questionsDir, filename);
-  const relativeToQuestions = path.relative(questionsDir, filePath);
-  if (relativeToQuestions.startsWith('..') || path.isAbsolute(relativeToQuestions)) {
-    throw new QuestionCreateError('Question title cannot create paths');
+  const filePath = path.join(notesDir, filename);
+  const relativeToNotes = path.relative(notesDir, filePath);
+  if (relativeToNotes.startsWith('..') || path.isAbsolute(relativeToNotes)) {
+    throw new ErrorClass(`${titleLabel} cannot create paths`);
   }
 
   if (fs.existsSync(filePath)) {
-    throw new QuestionCreateError('A question with that title already exists', 409);
+    throw new ErrorClass(`A ${itemLabel} with that title already exists`, 409);
   }
 
-  if (existingQuestionSlugs(questionsDir).has(slug)) {
-    throw new QuestionCreateError('A question with that slug already exists', 409);
+  if (existingNoteSlugs(notesDir).has(slug)) {
+    throw new ErrorClass(`A ${itemLabel} with that slug already exists`, 409);
   }
 
   const date = dateToIsoDate(now) ?? dateToIsoDate(new Date());
+  const fields = frontmatterFields({ cleanTitle, slug, date });
   const markdown = [
     '---',
-    `title: ${yamlString(cleanTitle)}`,
-    `date: ${date}`,
-    `lastmod: ${date}`,
+    ...fields.map(([key, value]) => `${key}: ${value}`),
     '---',
     '',
     ''
   ].join('\n');
 
-  fs.mkdirSync(questionsDir, { recursive: true });
+  fs.mkdirSync(notesDir, { recursive: true });
   fs.writeFileSync(filePath, markdown, 'utf8');
 
   return {
@@ -235,6 +275,46 @@ export const createQuestionNote = ({
     absolutePath: filePath,
     obsidianUrl: buildObsidianUrl(filePath)
   };
+};
+
+export const createQuestionNote = ({
+  title,
+  questionsDir = defaultQuestionsDir,
+  projectRoot = repoRoot,
+  now = new Date()
+} = {}) => {
+  return createMarkdownNote({
+    title,
+    notesDir: questionsDir,
+    projectRoot,
+    now,
+    ErrorClass: QuestionCreateError,
+    titleLabel: 'Question title',
+    itemLabel: 'question'
+  });
+};
+
+export const createShelfNote = ({
+  title,
+  rating,
+  shelfDir = defaultShelfDir,
+  projectRoot = repoRoot,
+  now = new Date()
+} = {}) => {
+  return createMarkdownNote({
+    title,
+    notesDir: shelfDir,
+    projectRoot,
+    now,
+    ErrorClass: ShelfCreateError,
+    titleLabel: 'Shelf title',
+    itemLabel: 'shelf item',
+    frontmatterFields: ({ date }) => [
+      ['date', date],
+      ['lastmod', date],
+      ['rating', normalizeRating(rating, ShelfCreateError)]
+    ]
+  });
 };
 
 const uniqueIsoDates = (dates) =>
@@ -319,6 +399,72 @@ const buildQuestionIndex = (questions) => {
   return index;
 };
 
+const assignActivityLevels = (items) => {
+  const maxScore = Math.max(...items.map((item) => item.activity.score), 0);
+  items.forEach((item) => {
+    const normalized = maxScore > 0 ? item.activity.score / maxScore : 0;
+    item.activity.normalized = Number(normalized.toFixed(4));
+    item.activity.level = normalized > 0 ? Math.max(1, Math.ceil(normalized * 5)) : 0;
+  });
+};
+
+export const normalizeVaultAssetPath = (value) => {
+  if (typeof value !== 'string') return null;
+
+  const trimmed = value.trim();
+  if (!trimmed || /^[a-z][a-z0-9+.-]*:/i.test(trimmed)) return null;
+
+  const withoutLeadingSlash = trimmed.replace(/^\/+/, '');
+  const normalized = path.posix.normalize(withoutLeadingSlash);
+  if (
+    !normalized ||
+    normalized === '.' ||
+    normalized.startsWith('../') ||
+    normalized.includes('/../')
+  ) {
+    return null;
+  }
+
+  return normalized;
+};
+
+export const resolveVaultAsset = ({
+  assetPath,
+  vaultDir = defaultVaultDir
+} = {}) => {
+  const normalizedPath = normalizeVaultAssetPath(assetPath);
+  if (!normalizedPath) return null;
+
+  const absolutePath = path.resolve(vaultDir, normalizedPath);
+  const relativeToVault = path.relative(vaultDir, absolutePath);
+  if (relativeToVault.startsWith('..') || path.isAbsolute(relativeToVault)) {
+    return null;
+  }
+
+  try {
+    const vaultRealPath = fs.realpathSync(vaultDir);
+    const assetRealPath = fs.realpathSync(absolutePath);
+    const realRelativeToVault = path.relative(vaultRealPath, assetRealPath);
+    const stats = fs.statSync(assetRealPath);
+    if (
+      realRelativeToVault.startsWith('..') ||
+      path.isAbsolute(realRelativeToVault) ||
+      !stats.isFile()
+    ) {
+      return null;
+    }
+
+    return {
+      original: assetPath,
+      vaultPath: toUnixPath(normalizedPath),
+      absolutePath: assetRealPath,
+      url: `${vaultAssetUrlPrefix}${encodeURIComponent(toUnixPath(normalizedPath))}`
+    };
+  } catch {
+    return null;
+  }
+};
+
 export const buildQuestionData = ({
   questionsDir = defaultQuestionsDir,
   projectRoot = repoRoot,
@@ -364,12 +510,7 @@ export const buildQuestionData = ({
     };
   });
 
-  const maxScore = Math.max(...questions.map((question) => question.activity.score), 0);
-  questions.forEach((question) => {
-    const normalized = maxScore > 0 ? question.activity.score / maxScore : 0;
-    question.activity.normalized = Number(normalized.toFixed(4));
-    question.activity.level = normalized > 0 ? Math.max(1, Math.ceil(normalized * 5)) : 0;
-  });
+  assignActivityLevels(questions);
 
   const questionIndex = buildQuestionIndex(questions);
   questions.forEach((question) => {
@@ -387,6 +528,71 @@ export const buildQuestionData = ({
   };
 };
 
+export const buildShelfData = ({
+  shelfDir = defaultShelfDir,
+  projectRoot = repoRoot,
+  now = new Date(),
+  activityEventsByPath = null
+} = {}) => {
+  const vaultDir = path.join(projectRoot, 'vault');
+  const files = listMarkdownFiles(shelfDir);
+  const items = files.map((filePath) => {
+    const raw = fs.readFileSync(filePath, 'utf8');
+    const parsed = matter(raw);
+    const filename = path.basename(filePath);
+    const slug = parsed.data.slug ? slugifyPath(parsed.data.slug) : slugify(filename);
+    const title = parsed.data.title ?? titleFromFilename(filename);
+    const content = parsed.content.trim();
+    const relativeVaultPath = toUnixPath(path.relative(vaultDir, filePath));
+    const relativeRepoPath = toUnixPath(path.relative(projectRoot, filePath));
+    const activityEvents =
+      activityEventsByPath?.[relativeRepoPath] ??
+      activityEventsByPath?.[relativeVaultPath] ??
+      readGitActivityEvents({
+        projectRoot,
+        repoPath: relativeRepoPath,
+        now
+      });
+    const cover = resolveVaultAsset({
+      assetPath: parsed.data.coverImage,
+      vaultDir
+    });
+
+    return {
+      slug,
+      title,
+      coverImage:
+        typeof parsed.data.coverImage === 'string' && parsed.data.coverImage.trim()
+          ? parsed.data.coverImage.trim()
+          : null,
+      coverUrl: cover?.url ?? null,
+      date: dateToIsoDate(parsed.data.date),
+      lastmod: dateToIsoDate(parsed.data.lastmod),
+      tags: Array.isArray(parsed.data.tags) ? parsed.data.tags.map(String) : [],
+      rating: parsed.data.rating ?? null,
+      excerpt: parsed.data.description ?? excerptFromMarkdown(content),
+      body: content,
+      headings: extractHeadings(content),
+      wikilinks: extractWikilinks(content),
+      wordCount: wordCount(content),
+      vaultPath: relativeVaultPath,
+      repoPath: relativeRepoPath,
+      obsidianUrl: buildObsidianUrl(filePath),
+      sitePath: `/shelf/${slug}`,
+      activity: buildActivity({ events: activityEvents, now })
+    };
+  });
+
+  assignActivityLevels(items);
+
+  return {
+    generatedAt: new Date().toISOString(),
+    source: toUnixPath(path.relative(projectRoot, shelfDir)),
+    count: items.length,
+    items
+  };
+};
+
 export const writeQuestionData = ({
   questionsDir = defaultQuestionsDir,
   outputPath = defaultOutputPath,
@@ -397,3 +603,33 @@ export const writeQuestionData = ({
   fs.writeFileSync(outputPath, `${JSON.stringify(data, null, 2)}\n`);
   return data;
 };
+
+export const writeShelfData = ({
+  shelfDir = defaultShelfDir,
+  outputPath = defaultShelfOutputPath,
+  projectRoot = repoRoot
+} = {}) => {
+  const data = buildShelfData({ shelfDir, projectRoot });
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFileSync(outputPath, `${JSON.stringify(data, null, 2)}\n`);
+  return data;
+};
+
+export const writeVaultWeatherData = ({
+  questionsDir = defaultQuestionsDir,
+  shelfDir = defaultShelfDir,
+  questionOutputPath = defaultOutputPath,
+  shelfOutputPath = defaultShelfOutputPath,
+  projectRoot = repoRoot
+} = {}) => ({
+  questions: writeQuestionData({
+    questionsDir,
+    outputPath: questionOutputPath,
+    projectRoot
+  }),
+  shelf: writeShelfData({
+    shelfDir,
+    outputPath: shelfOutputPath,
+    projectRoot
+  })
+});

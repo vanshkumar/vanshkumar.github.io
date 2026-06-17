@@ -1,7 +1,7 @@
 ---
 slug: how-can-montessori-principles-be-used-to-scaffold-kids-introduction-to-technology
 title: How can Montessori principles be used to scaffold kids' introduction to technology?
-lastmod: 2026-06-14
+lastmod: 2026-06-17
 date: 2026-06-13
 ---
 What are Montessori principles? From [here](https://blueprintforagoldenage.substack.com/p/montessoris-most-important-discovery):
@@ -10,13 +10,35 @@ What are Montessori principles? From [here](https://blueprintforagoldenage.subst
 3. Concentrated work is the fundamental tool
 
 
+Rough notes
+
+
+**Health is always earned**: From the linked essay, this means that educating children well requires thought, innovation, and scientific inquiry. Not super relevant; this is motivation for me asking the question in the first place.
+
+**The child cannot be replaced**: The child's own efforts are key. They must do the thinking themselves.
+
+From *Democracy And Education*:
+>The phrase "think for one's self" is a pleonasm. Unless one does it for one's self, it isn't thinking. Only by a pupil's own observations, reflections, framing and testing of suggestions can what he already knows be amplified and rectified. Thinking is as much an individual matter as is the digestion of food.
+
+This is the crux of the question. Technology is a tool to make humans' lives easier, and it can too easily make it *too* easy.
+
+The example that springs to mind is jumping to look something up rather than sitting and thinking about it for even 5 minutes. Is this a good example? I am of two minds. On the one hand, taking the time to think through something is valuable in building up your own strong edifice of knowledge that you can then test things against, etc. There is some cost in rediscovering things others know, but it's essential in building up your own point of view. At the same time, for *most* things looking it up is the right answer. I guess the deciding factor is if what you're doing is instrumental or an end in itself. And maybe the easiest way to test that is seeing if you enjoy thinking through it yourself for 5 minutes.
+
+**Concentrated work is the fundamental tool**: Self-explanatory, and quite clear. The immediate (obvious) thought is to not give kids unrestricted access to technology. It should be heavily curated, appropriate to their developmental level, etc.
+
+What might this look like? A Linux box or old Mac with:
+- No internet access
+- Terminal
+- Anki
+- Duolingo
+- Local LLM tutor (should this selectively have internet access?)
 
 
 ---
 
 Somewhat adjacent but...
 
-The "prepared environment" appears to run counter to the idea of the "hacker mindset" ([gwern.net/unseeing](https://gwern.net/unseeing)).
+The Montessori "prepared environment" appears to run counter to the idea of the "hacker mindset" ([gwern.net/unseeing](https://gwern.net/unseeing)).
 
 The prepared environment is heavily curated with items that have a _correct_ mode of usage & give the child immediate feedback if they're using them correctly or not, whereas the hacker mindset encourages seeing through abstractions to the building blocks of reality & treating everything as malleable/hackable. There is no "correct" way to use an item, there is only what you can and can't do.
 

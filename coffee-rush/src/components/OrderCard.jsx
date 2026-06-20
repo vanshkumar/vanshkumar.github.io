@@ -19,7 +19,7 @@ export default function OrderCard({
       title={ready ? `${order.name} is ready to serve` : order.name}
     >
       <span className="order-name">{order.name}</span>
-      {order.isSpecialty && <span className="specialty-ribbon">Rush</span>}
+      {order.isSpecialty && <span className="specialty-ribbon" title="Rush">R</span>}
       <span className="recipe-list">
         {INGREDIENTS.flatMap((ingredient) =>
           Array.from({ length: order.recipe[ingredient] ?? 0 }, (_, index) => (

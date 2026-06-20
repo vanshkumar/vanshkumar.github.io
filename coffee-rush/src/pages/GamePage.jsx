@@ -4,6 +4,7 @@ import Board from '../components/Board';
 import IngredientIcon from '../components/IngredientIcon';
 import PassDeviceModal from '../components/PassDeviceModal';
 import PlayerPanel from '../components/PlayerPanel';
+import { IconButton, UiIcon } from '../components/UiIcon';
 import { INGREDIENTS, ingredientLabel } from '../data/ingredients';
 import { getCell } from '../engine/board';
 import { applyAction } from '../engine/reducers';
@@ -365,19 +366,24 @@ export default function GamePage() {
           </p>
         </div>
         <div className="header-actions">
-          <span className="deck-counter">{state.deck.length} orders</span>
-          <button type="button" onClick={undoLastAction} disabled={undoStack.length === 0}>
-            Undo
-          </button>
-          <button type="button" onClick={copyExport}>
-            Copy log
-          </button>
-          <button type="button" onClick={downloadExport} disabled={isExporting}>
-            {isExporting ? 'Downloading...' : 'Download log + screenshot'}
-          </button>
-          <button type="button" onClick={newGame}>
-            New
-          </button>
+          <span className="deck-counter" title={`${state.deck.length} orders in deck`}>
+            <UiIcon name="orders" />
+            <strong>{state.deck.length}</strong>
+          </span>
+          <IconButton
+            icon="undo"
+            label="Undo"
+            onClick={undoLastAction}
+            disabled={undoStack.length === 0}
+          />
+          <IconButton icon="copy" label="Copy log" onClick={copyExport} />
+          <IconButton
+            icon="download"
+            label={isExporting ? 'Downloading log and screenshot' : 'Download log + screenshot'}
+            onClick={downloadExport}
+            disabled={isExporting}
+          />
+          <IconButton icon="new" label="New game" onClick={newGame} />
         </div>
       </header>
 
@@ -439,8 +445,14 @@ export default function GamePage() {
                   </p>
                 </div>
                 <div className="turn-facts">
-                  <span>{activePlayer.completed.length} completed orders</span>
-                  <span>{activePlayer.rushTokens} Rush</span>
+                  <span title="Completed orders">
+                    <UiIcon name="orders" />
+                    <strong>{activePlayer.completed.length}</strong>
+                  </span>
+                  <span title="Rush tokens">
+                    <span className="rush-token rush-token-inline">R</span>
+                    <strong>{activePlayer.rushTokens}</strong>
+                  </span>
                 </div>
                 <button
                   className="primary-button"

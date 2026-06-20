@@ -1,4 +1,5 @@
 import IngredientIcon from './IngredientIcon';
+import { UiIcon } from './UiIcon';
 
 export default function Cup({
   cup,
@@ -18,9 +19,9 @@ export default function Cup({
         disabled={disabled}
         aria-label={`Cup ${index + 1}${cup.length === 0 ? ', empty' : ''}`}
       >
-        <span className="cup-label">Cup {index + 1}</span>
+        <span className="cup-label">C{index + 1}</span>
         <span className="cup-ingredients">
-          {cup.length === 0 && <span className="empty-cup">empty</span>}
+          {cup.length === 0 && <span className="empty-cup">--</span>}
           {cup.map((ingredient, ingredientIndex) => (
             <IngredientIcon
               key={`${ingredient}-${ingredientIndex}`}
@@ -38,7 +39,7 @@ export default function Cup({
         aria-label={`Dump Cup ${index + 1}`}
         disabled={dumpDisabled}
       >
-        x
+        <UiIcon name="trash" />
       </button>
     </div>
   );

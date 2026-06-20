@@ -17,6 +17,21 @@
 - Action: Preserve active-player-first ordering for the game sidebar and avoid assumptions that table seat order must match visual panel order.
 - Confidence: high
 
+**[2026-06-20] — Compact game UI**
+- Observation: The player panel height is dominated by repeated upgrade, cup, order, and Rush labels rather than unique gameplay information.
+- Action: Prefer compact game codes and badges in repeated panel surfaces, e.g. `2M`, `Diag`, `C1`, and `R`, while keeping order tabs two-column on phone-width layouts.
+- Confidence: high
+
+**[2026-06-20] — Ingredient icon UI**
+- Observation: CSS-only ingredient shapes become too abstract once reused at recipe-card and cup-token sizes.
+- Action: Render ingredients as inline SVG glyphs inside the existing circular token frame, and keep the SVG artwork scaled up for small variants.
+- Confidence: high
+
+**[2026-06-20] — Board readability**
+- Observation: Board ingredients and meeples need their own larger sizing than cup/order tokens; sharing the base token size makes the board feel too empty.
+- Action: Size board ingredient tokens and meeple markers with board-specific CSS, with smaller mobile overrides to avoid crowding.
+- Confidence: high
+
 ## Patterns and Preferences
 
 **[2026-06-19] — Turn action UX**

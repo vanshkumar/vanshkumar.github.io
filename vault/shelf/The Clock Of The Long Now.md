@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-06-17
+lastmod: 2026-06-18
 date: 2026-06-15
 rating: 5
 coverImage: /assets/shelf/the-clock-of-the-long-now.webp
@@ -21,11 +21,11 @@ Many problems in the world can be understood as allowing one pace layer to dicta
 
 Other interesting ideas from the book:
 - The longer a view you take, the more selfishness and altruism merge. If a company plans to be around for the truly long term, it's in their best interest to educate the workers in their local community, preserve their local ecology, etc
-- The Big Here as a natural adjunct to the Long Now – expanding where you feel part of, from your house/neighborhood, to your region/country, to the world
+- The "Big Here" as a natural adjunct to the Long Now – expanding where you feel part of, from your house/neighborhood, to your region/country, to the world
 - [[What are examples of Slow Science?|Slow Science]]
 - Applied History – Winston Churchill was a deep historian who applied the past in order to make decisions about & create the future
 - Permanence *is* constant renewal. The outer part of [Ise Shrine](https://en.wikipedia.org/wiki/Ise_Shrine) is ceremonially rebuilt every 20 years, for the last ~2000 years
-- Physically written down words are more permanent than digital artifacts. Digital media can physically degrade ([disc rot](https://en.wikipedia.org/wiki/Disc_rot)), software is often brittle & quickly obsoleted
+- Physically written down words can be more permanent than digital artifacts. Digital media can physically degrade ([disc rot](https://en.wikipedia.org/wiki/Disc_rot)), software is often brittle & quickly obsoleted
 - It's very difficult to know what future generations will value from today's civilization. Example from book: monks spending 1000 years preserving Buddhist texts when carefully preserved feces would have been more informative
 - Almost all environmentalists fought against the space program, arguing we need to solve Earth's problems before exploring space. Unanticipated effect of space program: pictures of Earth from space kicked off the environmental movement
 - "You can always improve things as long as you're prepared to wait"

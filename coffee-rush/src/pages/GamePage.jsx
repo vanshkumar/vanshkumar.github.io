@@ -4,12 +4,14 @@ import Board from '../components/Board';
 import IngredientIcon from '../components/IngredientIcon';
 import PassDeviceModal from '../components/PassDeviceModal';
 import PlayerPanel from '../components/PlayerPanel';
-import { INGREDIENTS } from '../data/ingredients';
+import { INGREDIENTS, ingredientLabel } from '../data/ingredients';
+import { getCell } from '../engine/board';
 import { applyAction } from '../engine/reducers';
 import {
   getActivePlayer,
   getCompletableOrders,
   getMeepleForFirstMoveStep,
+  getMovePathPreview,
   getPlayer,
   getSetupPlacement,
 } from '../engine/selectors';
@@ -33,6 +35,20 @@ import {
 
 const MAX_UNDO_STATES = 25;
 
+function meepleLabel(meeple) {
+  return meeple.id.split('-')[1].toUpperCase();
+}
+
+function cellLabel(cellId) {
+  const cell = getCell(cellId);
+  return cell ? `Cell ${cell.id} · ${ingredientLabel(cell.ingredient)}` : 'Unplaced';
+}
+
+function ingredientListLabel(ingredients) {
+  if (!ingredients || ingredients.length === 0) return 'none yet';
+  return ingredients.map((ingredient) => ingredientLabel(ingredient)).join(', ');
+}
+
 export default function GamePage() {
   const navigate = useNavigate();
   const pageRef = useRef(null);
@@ -45,14 +61,36 @@ export default function GamePage() {
   const [path, setPath] = useState([]);
   const [rushSpent, setRushSpent] = useState(0);
   const [selectedCup, setSelectedCup] = useState(null);
-  const [selectedOrderRef, setSelectedOrderRef] = useState('');
   const [passTo, setPassTo] = useState('');
 
   const activePlayer = state ? getActivePlayer(state) : null;
   const setupPlacement = state ? getSetupPlacement(state) : null;
   const completableOrders = useMemo(
-    () => (activePlayer ? getCompletableOrders(activePlayer) : []),
-    [activePlayer],
+    () =>
+      activePlayer && state?.phase === PHASES.POUR
+        ? getCompletableOrders(activePlayer)
+        : [],
+    [activePlayer, state?.phase],
+  );
+  const selectedMeeple = activePlayer?.meeples.find(
+    (meeple) => meeple.id === selectedMeepleId,
+  );
+  const movePreview = useMemo(
+    () =>
+      state?.phase === PHASES.MOVE && selectedMeepleId
+        ? getMovePathPreview(state, selectedMeepleId, path, rushSpent)
+        : null,
+    [path, rushSpent, selectedMeepleId, state],
+  );
+  const orderedPlayers = useMemo(
+    () =>
+      state && activePlayer
+        ? [
+            activePlayer,
+            ...state.players.filter((player) => player.id !== activePlayer.id),
+          ]
+        : [],
+    [activePlayer, state],
   );
 
   useEffect(() => {
@@ -115,12 +153,7 @@ export default function GamePage() {
     if (resetsTurnControls) {
       setPath([]);
       setRushSpent(0);
-      setSelectedOrderRef('');
       setSelectedCup(null);
-    }
-
-    if (action.type === 'FULFILL_ORDER') {
-      setSelectedOrderRef('');
     }
   }
 
@@ -128,7 +161,6 @@ export default function GamePage() {
     setPath([]);
     setRushSpent(0);
     setSelectedCup(null);
-    setSelectedOrderRef('');
     setPassTo('');
   }
 
@@ -231,15 +263,32 @@ export default function GamePage() {
     }
 
     if (state.phase !== 'move' || !selectedMeepleId) return;
+    let moveMeepleId = selectedMeepleId;
+
     if (path.length === 0) {
       const inferredMeepleId = getMeepleForFirstMoveStep(
         state,
         selectedMeepleId,
         cellId,
       );
+      moveMeepleId = inferredMeepleId;
       if (inferredMeepleId !== selectedMeepleId) {
         setSelectedMeepleId(inferredMeepleId);
       }
+    }
+
+    const preview = getMovePathPreview(state, moveMeepleId, path, rushSpent);
+    const nextCell = preview.nextCells.find(
+      (candidate) => Number(candidate.cellId) === Number(cellId),
+    );
+
+    if (!nextCell) {
+      setError(
+        preview.remainingSteps === 0
+          ? 'Confirm this move or clear the path before choosing another cell.'
+          : 'Choose a highlighted adjacent cell for the next movement step.',
+      );
+      return;
     }
 
     setError('');
@@ -254,6 +303,14 @@ export default function GamePage() {
       path,
       rushSpent,
     });
+  }
+
+  function updateRushSpent(nextRushSpent) {
+    const clamped = Math.min(
+      activePlayer.rushTokens,
+      Math.max(0, Number(nextRushSpent) || 0),
+    );
+    setRushSpent(clamped);
   }
 
   function pourIngredient(ingredient) {
@@ -278,13 +335,6 @@ export default function GamePage() {
     });
   }
 
-  function fulfillSelectedOrder() {
-    const match = completableOrders.find((candidate) => candidate.order.id === selectedOrderRef);
-    if (!match) return;
-
-    fulfillOrder(match.cupIdx, selectedOrderRef);
-  }
-
   function fulfillOrder(cupIdx, orderRef) {
     dispatch({
       type: 'FULFILL_ORDER',
@@ -298,6 +348,12 @@ export default function GamePage() {
     clearGame();
     navigate('/');
   }
+
+  const visibleLastMessage =
+    state.lastMessage?.startsWith('Pass to ') && !passTo ? '' : state.lastMessage;
+  const selectedCupContents =
+    selectedCup === null ? null : activePlayer.cups[selectedCup] ?? null;
+  const canActivateUpgrade = activePlayer.completed.length >= 3;
 
   return (
     <main className="game-page" ref={pageRef}>
@@ -327,7 +383,7 @@ export default function GamePage() {
 
       {error && <div className="error-banner">{error}</div>}
       {exportStatus && <div className="message-banner">{exportStatus}</div>}
-      {state.lastMessage && <div className="message-banner">{state.lastMessage}</div>}
+      {visibleLastMessage && <div className="message-banner">{visibleLastMessage}</div>}
 
       <div className="game-layout">
         <div className="play-surface">
@@ -338,25 +394,33 @@ export default function GamePage() {
             rushSpent={rushSpent}
             onSelectMeeple={selectMeeple}
             onCellClick={handleCellClick}
+            movePreview={movePreview}
           />
 
-          <section className="action-panel">
+          <section className="action-panel" aria-label={`${activePlayer.name} turn controls`}>
             {state.phase === PHASES.SETUP_PLACEMENT && setupPlacement && (
               <div className="phase-tools setup-placement-tools">
-                <strong>{setupPlacement.player.name}, place a barista.</strong>
-                <span>
-                  Choose where this starting ingredient goes, then pick any open board
-                  space.
-                </span>
-                <div className="cup-picker" aria-label="Starting ingredient cup">
-                  {setupPlacement.player.cups.map((_, index) => (
+                <div className="phase-summary">
+                  <span className="phase-kicker">Setup placement</span>
+                  <h2>
+                    {setupPlacement.player.name}, place{' '}
+                    {setupPlacement.meepleId.split('-')[1].toUpperCase()}
+                  </h2>
+                  <p>
+                    Choose the cup that will receive the space ingredient, then pick
+                    any open board space.
+                  </p>
+                </div>
+                <div className="cup-picker detailed-picker" aria-label="Starting ingredient cup">
+                  {setupPlacement.player.cups.map((cup, index) => (
                     <button
                       key={index}
                       className={selectedCup === index ? 'selected-tool' : ''}
                       type="button"
                       onClick={() => selectCup(index)}
                     >
-                      Cup {index + 1}
+                      <span>Cup {index + 1}</span>
+                      <small>{ingredientListLabel(cup)}</small>
                     </button>
                   ))}
                 </div>
@@ -365,6 +429,19 @@ export default function GamePage() {
 
             {state.phase === PHASES.UPGRADE && (
               <div className="phase-tools">
+                <div className="phase-summary">
+                  <span className="phase-kicker">Start of turn</span>
+                  <h2>{activePlayer.name}, choose an upgrade or move</h2>
+                  <p>
+                    {canActivateUpgrade
+                      ? 'You may activate one upgrade for 3 completed orders, or skip straight to movement.'
+                      : 'No upgrade is available until you have 3 completed orders.'}
+                  </p>
+                </div>
+                <div className="turn-facts">
+                  <span>{activePlayer.completed.length} completed orders</span>
+                  <span>{activePlayer.rushTokens} Rush</span>
+                </div>
                 <button
                   className="primary-button"
                   type="button"
@@ -379,7 +456,18 @@ export default function GamePage() {
 
             {state.phase === PHASES.MOVE && (
               <div className="phase-tools">
-                <div className="meeple-picker">
+                <div className="phase-summary">
+                  <span className="phase-kicker">Move</span>
+                  <h2>Plan a route for {activePlayer.name}</h2>
+                  <p>
+                    {selectedMeeple
+                      ? `${meepleLabel(selectedMeeple)} starts on ${cellLabel(
+                          selectedMeeple.cellId,
+                        )}. Pick adjacent highlighted cells.`
+                      : 'Choose one of your baristas before selecting a path.'}
+                  </p>
+                </div>
+                <div className="meeple-picker detailed-picker" aria-label="Barista picker">
                   {activePlayer.meeples.map((meeple) => (
                     <button
                       key={meeple.id}
@@ -387,22 +475,63 @@ export default function GamePage() {
                       type="button"
                       onClick={() => selectMeeple(meeple.id)}
                     >
-                      {meeple.id.split('-')[1].toUpperCase()}
+                      <span>{meepleLabel(meeple)}</span>
+                      <small>{cellLabel(meeple.cellId)}</small>
                     </button>
                   ))}
                 </div>
-                <label>
-                  Rush
-                  <input
-                    type="number"
-                    min="0"
-                    max={activePlayer.rushTokens}
-                    value={rushSpent}
-                    onChange={(event) => setRushSpent(Number(event.target.value))}
-                  />
-                </label>
+                <div className="rush-stepper" aria-label="Rush spent">
+                  <span>Rush</span>
+                  <button
+                    type="button"
+                    onClick={() => updateRushSpent(rushSpent - 1)}
+                    disabled={rushSpent <= 0}
+                    aria-label="Spend one fewer Rush token"
+                  >
+                    -
+                  </button>
+                  <strong>{rushSpent}</strong>
+                  <button
+                    type="button"
+                    onClick={() => updateRushSpent(rushSpent + 1)}
+                    disabled={rushSpent >= activePlayer.rushTokens}
+                    aria-label="Spend one more Rush token"
+                  >
+                    +
+                  </button>
+                  <small>{activePlayer.rushTokens} available</small>
+                </div>
+                <div className="move-status-grid">
+                  <span>
+                    Steps {movePreview?.stepsUsed ?? 0} / {movePreview?.maxSteps ?? 3}
+                  </span>
+                  <span>{movePreview?.remainingSteps ?? 3} remaining</span>
+                  <span>
+                    Collecting{' '}
+                    <span className="inline-icons">
+                      {(movePreview?.gainedIngredients ?? []).length === 0
+                        ? 'none yet'
+                        : movePreview.gainedIngredients.map((ingredient, index) => (
+                            <IngredientIcon
+                              key={`${ingredient}-${index}`}
+                              ingredient={ingredient}
+                              small
+                            />
+                          ))}
+                    </span>
+                  </span>
+                </div>
+                {movePreview?.error && (
+                  <div className="inline-warning">
+                    {movePreview.remainingSteps > 0
+                      ? `${movePreview.error} Continue to an open cell or clear the path.`
+                      : movePreview.error}
+                  </div>
+                )}
                 <span className="path-readout">
-                  {path.length === 0 ? 'Pick cells' : path.join(' -> ')}
+                  {path.length === 0
+                    ? 'Tap a highlighted cell to add the first step.'
+                    : path.map((cellId) => cellLabel(cellId)).join(' -> ')}
                 </span>
                 <div className="button-row">
                   <button type="button" onClick={() => setPath([])}>
@@ -412,7 +541,7 @@ export default function GamePage() {
                     className="primary-button"
                     type="button"
                     onClick={confirmMove}
-                    disabled={path.length === 0}
+                    disabled={!movePreview?.canConfirm}
                   >
                     Confirm move
                   </button>
@@ -422,43 +551,88 @@ export default function GamePage() {
 
             {state.phase === PHASES.POUR && (
               <div className="phase-tools">
-                <div className="cup-picker" aria-label="Pour target cup">
-                  {activePlayer.cups.map((_, index) => (
+                <div className="phase-summary">
+                  <span className="phase-kicker">Pour and serve</span>
+                  <h2>Resolve cups for {activePlayer.name}</h2>
+                  <p>
+                    {activePlayer.hand.length > 0
+                      ? 'Pour or discard every collected ingredient. Serve any exact cup matches when ready.'
+                      : completableOrders.length > 0
+                        ? 'Serve ready orders, then end the turn.'
+                        : 'No ingredients remain in hand. End the turn when ready.'}
+                  </p>
+                </div>
+                <div className="cup-picker detailed-picker" aria-label="Pour target cup">
+                  {activePlayer.cups.map((cup, index) => (
                     <button
                       key={index}
                       className={selectedCup === index ? 'selected-tool' : ''}
                       type="button"
                       onClick={() => selectCup(index)}
                     >
-                      Cup {index + 1}
+                      <span>Cup {index + 1}</span>
+                      <small>
+                        {ingredientListLabel(cup)} · {cup.length}/4
+                      </small>
                     </button>
                   ))}
                 </div>
-                <div className="hand-row">
+                {selectedCup !== null && (
+                  <div className="selected-cup-summary">
+                    Target: Cup {selectedCup + 1} ({ingredientListLabel(selectedCupContents)})
+                  </div>
+                )}
+                <div className="hand-row" aria-label="Collected ingredients">
                   {activePlayer.hand.length === 0 && <span>No ingredients in hand</span>}
                   {activePlayer.hand.map((ingredient, index) => (
-                    <div className="hand-token" key={`${ingredient}-${index}`}>
+                    <div
+                      className="hand-token"
+                      key={`${ingredient}-${index}`}
+                      aria-label={`Collected ${ingredientLabel(ingredient)}`}
+                    >
+                      <span className="hand-token-label">
+                        <IngredientIcon ingredient={ingredient} small />
+                        {ingredientLabel(ingredient)}
+                      </span>
                       <button
+                        className="pour-button"
                         type="button"
                         onClick={() => pourIngredient(ingredient)}
                         disabled={selectedCup === null}
+                        aria-label={
+                          selectedCup === null
+                            ? `Choose a cup before pouring ${ingredientLabel(ingredient)}`
+                            : `Pour ${ingredientLabel(ingredient)} into Cup ${selectedCup + 1}`
+                        }
                       >
-                        <IngredientIcon ingredient={ingredient} small />
+                        Pour
                       </button>
-                      <button type="button" onClick={() => discardIngredient(ingredient)}>
-                        discard
+                      <button
+                        type="button"
+                        onClick={() => discardIngredient(ingredient)}
+                        aria-label={`Discard ${ingredientLabel(ingredient)}`}
+                      >
+                        Discard
                       </button>
                     </div>
                   ))}
                 </div>
+                {completableOrders.length > 0 && (
+                  <div className="ready-orders" aria-label="Ready orders">
+                    <strong>Ready to serve</strong>
+                    {completableOrders.map((match) => (
+                      <button
+                        key={`${match.order.id}-${match.cupIdx}`}
+                        className="serve-order-button"
+                        type="button"
+                        onClick={() => fulfillOrder(match.cupIdx, match.order.id)}
+                      >
+                        Serve {match.order.name} with Cup {match.cupIdx + 1}
+                      </button>
+                    ))}
+                  </div>
+                )}
                 <div className="button-row">
-                  <button
-                    type="button"
-                    onClick={fulfillSelectedOrder}
-                    disabled={!selectedOrderRef}
-                  >
-                    Serve selected
-                  </button>
                   <button
                     className="primary-button"
                     type="button"
@@ -474,19 +648,16 @@ export default function GamePage() {
         </div>
 
         <aside className="players-column">
-          {state.players.map((player) => (
+          {orderedPlayers.map((player) => (
             <PlayerPanel
               key={player.id}
               player={player}
               isActive={player.id === activePlayer.id}
               selectedCup={selectedCup}
-              selectedOrderRef={selectedOrderRef}
               onSelectCup={selectCup}
               onDumpCup={(cupIdx) =>
                 dispatch({ type: 'DUMP_CUP', playerId: activePlayer.id, cupIdx })
               }
-              onSelectOrder={setSelectedOrderRef}
-              onFulfillOrder={fulfillOrder}
               phase={state.phase}
               onActivateUpgrade={(tileId) =>
                 dispatch({ type: 'ACTIVATE_UPGRADE', playerId: activePlayer.id, tileId })

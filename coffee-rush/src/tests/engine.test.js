@@ -4,6 +4,7 @@ import { applyAction } from '../engine/reducers';
 import {
   getLegalDestinations,
   getMeepleForFirstMoveStep,
+  getMovePathPreview,
   getScores,
 } from '../engine/selectors';
 
@@ -170,6 +171,64 @@ describe('Coffee Rush engine', () => {
       rushSpent: 0,
     });
     expect(occupiedEnd.error).toMatch(/occupied/);
+  });
+
+  it('previews movement steps, ingredients, and occupied pass-through cells', () => {
+    let state = finishSetup(setup(2));
+    const active = state.players[0];
+    state = applyAction(state, { type: 'SKIP_UPGRADES', playerId: active.id }).state;
+
+    const emptyPreview = getMovePathPreview(state, 'p1-m1', [], 0);
+    expect(emptyPreview.stepsUsed).toBe(0);
+    expect(emptyPreview.remainingSteps).toBe(3);
+    expect(emptyPreview.canConfirm).toBe(false);
+    expect(emptyPreview.nextCells).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ cellId: 12, ingredient: 'caramel', canEnd: true }),
+        expect.objectContaining({ cellId: 23, ingredient: 'ice', canEnd: false }),
+      ]),
+    );
+
+    const occupiedFinalPreview = getMovePathPreview(state, 'p1-m1', [23], 0);
+    expect(occupiedFinalPreview.gainedIngredients).toEqual(['ice']);
+    expect(occupiedFinalPreview.canConfirm).toBe(false);
+    expect(occupiedFinalPreview.error).toMatch(/occupied/);
+    expect(occupiedFinalPreview.nextCells).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ cellId: 33, ingredient: 'milk', canEnd: false }),
+      ]),
+    );
+
+    const validPreview = getMovePathPreview(state, 'p1-m1', [23, 33, 43], 0);
+    expect(validPreview.gainedIngredients).toEqual(['ice', 'milk', 'chocolate']);
+    expect(validPreview.remainingSteps).toBe(0);
+    expect(validPreview.canConfirm).toBe(true);
+  });
+
+  it('previews invalid movement paths and rush extensions', () => {
+    let state = finishSetup(setup(2));
+    state = applyAction(state, { type: 'SKIP_UPGRADES', playerId: 'p1' }).state;
+
+    const invalidPreview = getMovePathPreview(state, 'p1-m1', [44], 0);
+    expect(invalidPreview.canConfirm).toBe(false);
+    expect(invalidPreview.error).toMatch(/adjacent/);
+    expect(invalidPreview.nextCells).toEqual([]);
+
+    const tooLongPreview = getMovePathPreview(state, 'p1-m1', [21, 11, 12, 13], 0);
+    expect(tooLongPreview.canConfirm).toBe(false);
+    expect(tooLongPreview.error).toMatch(/too many/);
+
+    state = {
+      ...state,
+      players: state.players.map((player) =>
+        player.id === 'p1' ? { ...player, rushTokens: 1 } : player,
+      ),
+    };
+
+    const rushPreview = getMovePathPreview(state, 'p1-m1', [21, 11, 12, 13], 1);
+    expect(rushPreview.maxSteps).toBe(4);
+    expect(rushPreview.remainingSteps).toBe(0);
+    expect(rushPreview.canConfirm).toBe(true);
   });
 
   it('allows moving through occupied cells when the final cell is open', () => {

@@ -11,7 +11,13 @@ export default function Cup({
 }) {
   return (
     <div className={`cup ${selected ? 'cup-selected' : ''}`}>
-      <button className="cup-body" type="button" onClick={onSelect} disabled={disabled}>
+      <button
+        className="cup-body"
+        type="button"
+        onClick={onSelect}
+        disabled={disabled}
+        aria-label={`Cup ${index + 1}${cup.length === 0 ? ', empty' : ''}`}
+      >
         <span className="cup-label">Cup {index + 1}</span>
         <span className="cup-ingredients">
           {cup.length === 0 && <span className="empty-cup">empty</span>}
@@ -28,7 +34,8 @@ export default function Cup({
         className="icon-button dump-button"
         type="button"
         onClick={onDump}
-        title="Dump cup"
+        title={`Dump Cup ${index + 1}`}
+        aria-label={`Dump Cup ${index + 1}`}
         disabled={dumpDisabled}
       >
         x

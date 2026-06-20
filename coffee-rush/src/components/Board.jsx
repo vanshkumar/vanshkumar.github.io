@@ -1,9 +1,10 @@
 import {
   getBoardView,
-  getLegalDestinations,
   getLegalSetupCells,
+  getMovePathPreview,
 } from '../engine/selectors';
 import { PHASES } from '../engine/types';
+import { ingredientLabel } from '../data/ingredients';
 import IngredientIcon from './IngredientIcon';
 
 export default function Board({
@@ -13,13 +14,22 @@ export default function Board({
   rushSpent,
   onSelectMeeple,
   onCellClick,
+  movePreview,
 }) {
   const cells = getBoardView(state);
+  const preview =
+    movePreview ??
+    (state.phase === PHASES.MOVE && selectedMeepleId
+      ? getMovePathPreview(state, selectedMeepleId, path, rushSpent)
+      : null);
+  const nextCellById = new Map(
+    (preview?.nextCells ?? []).map((cell) => [Number(cell.cellId), cell]),
+  );
   const legalDestinations =
     state.phase === PHASES.SETUP_PLACEMENT
       ? getLegalSetupCells(state)
-      : selectedMeepleId
-        ? getLegalDestinations(state, selectedMeepleId, rushSpent)
+      : state.phase === PHASES.MOVE && preview
+        ? preview.nextCells.map((cell) => cell.cellId)
         : [];
 
   return (
@@ -27,18 +37,34 @@ export default function Board({
       <div className="ingredient-board">
         {cells.map((cell) => {
           const isInPath = path.includes(cell.id);
+          const pathStep = path.findIndex((cellId) => Number(cellId) === cell.id) + 1;
           const isLegal = legalDestinations.includes(cell.id);
+          const nextCell = nextCellById.get(cell.id);
+          const isCurrentMoveCell =
+            state.phase === PHASES.MOVE && preview?.currentCellId === cell.id;
+          const legalCellNote =
+            state.phase === PHASES.SETUP_PLACEMENT ? 'open setup space' : 'next step';
+          const cellNotes = [
+            isLegal ? legalCellNote : '',
+            nextCell && !nextCell.canEnd ? 'pass through only' : '',
+            isInPath ? `path step ${pathStep}` : '',
+            isCurrentMoveCell ? 'current position' : '',
+          ].filter(Boolean);
 
           return (
             <div
               key={cell.id}
               className={`board-cell ${isLegal ? 'legal-cell' : ''} ${
-                isInPath ? 'path-cell' : ''
+                nextCell && !nextCell.canEnd ? 'pass-only-cell' : ''
+              } ${isInPath ? 'path-cell' : ''} ${
+                isCurrentMoveCell ? 'current-cell' : ''
               }`}
               role="button"
               tabIndex={0}
               data-testid={`cell-${cell.id}`}
-              aria-label={`Cell ${cell.id}, ${cell.ingredient}`}
+              aria-label={`Cell ${cell.id}, ${ingredientLabel(cell.ingredient)}${
+                cellNotes.length ? `, ${cellNotes.join(', ')}` : ''
+              }`}
               onClick={() => onCellClick(cell.id)}
               onKeyDown={(event) => {
                 if (event.key === 'Enter' || event.key === ' ') {
@@ -47,6 +73,7 @@ export default function Board({
               }}
             >
               <IngredientIcon ingredient={cell.ingredient} />
+              {isInPath && <span className="path-step-marker">{pathStep}</span>}
               <span className="cell-flags">
                 {cell.isCorner && <span>corner</span>}
                 {cell.isSpecialty && <span>special</span>}

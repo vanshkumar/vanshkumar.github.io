@@ -1,6 +1,13 @@
 import { BOARD_CELLS } from '../data/boardLayout';
 import { UPGRADE_TILES } from '../data/upgradeTiles';
-import { areAdjacent, getNeighbors, isOccupied } from './board';
+import {
+  areAdjacent,
+  getCell,
+  getNeighbors,
+  ingredientGainForCell,
+  isOccupied,
+  validateMovePath,
+} from './board';
 import { cupMatchesOrder } from './orders';
 import { PHASES } from './types';
 
@@ -56,6 +63,67 @@ export function getLegalDestinations(state, meepleId, rushSpent = 0) {
   }
 
   return Array.from(destinations).sort((a, b) => a - b);
+}
+
+export function getMovePathPreview(state, meepleId, path = [], rushSpent = 0) {
+  const player = getActivePlayer(state);
+  const meeple = player?.meeples.find((candidate) => candidate.id === meepleId);
+  const normalizedPath = Array.isArray(path) ? path.map(Number) : [];
+  const spentRush = Number(rushSpent ?? 0);
+  const maxSteps = 3 + Math.max(0, spentRush);
+
+  if (!player || !meeple) {
+    return {
+      canConfirm: false,
+      currentCellId: null,
+      error: 'Choose one of your baristas.',
+      gainedIngredients: [],
+      maxSteps,
+      nextCells: [],
+      remainingSteps: maxSteps,
+      stepsUsed: normalizedPath.length,
+    };
+  }
+
+  const previewError = validateMovePath(state, player, meeple, normalizedPath, spentRush);
+  const canConfirm = normalizedPath.length > 0 && !previewError;
+  const allowDiagonal = player.upgrades.diagonal_movement;
+  const pathSoFarIsAdjacent = normalizedPath.every((cellId, index) => {
+    const previousCellId = index === 0 ? meeple.cellId : normalizedPath[index - 1];
+    return Boolean(getCell(cellId)) && areAdjacent(previousCellId, cellId, allowDiagonal);
+  });
+  const currentCellId =
+    normalizedPath.length > 0 && pathSoFarIsAdjacent
+      ? normalizedPath[normalizedPath.length - 1]
+      : meeple.cellId;
+  const remainingSteps = Math.max(0, maxSteps - normalizedPath.length);
+  const nextCells =
+    remainingSteps > 0 && pathSoFarIsAdjacent
+      ? getNeighbors(currentCellId, allowDiagonal).map((cell) => ({
+          cellId: cell.id,
+          canEnd: !isOccupied(state, cell.id, meeple.id),
+          ingredient: cell.ingredient,
+        }))
+      : [];
+
+  return {
+    canConfirm,
+    currentCellId,
+    error: normalizedPath.length > 0 ? previewError : null,
+    gainedIngredients: normalizedPath.flatMap((cellId) =>
+      getCell(cellId) ? ingredientGainForCell(state, player, meeple, cellId) : [],
+    ),
+    maxSteps,
+    nextCells,
+    remainingSteps,
+    stepsUsed: normalizedPath.length,
+  };
+}
+
+export function getLegalNextMoveCells(state, meepleId, path = [], rushSpent = 0) {
+  return getMovePathPreview(state, meepleId, path, rushSpent).nextCells.map(
+    (cell) => cell.cellId,
+  );
 }
 
 export function getMeepleForFirstMoveStep(state, selectedMeepleId, firstCellId) {

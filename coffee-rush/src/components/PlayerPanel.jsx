@@ -8,15 +8,12 @@ export default function PlayerPanel({
   player,
   isActive,
   selectedCup,
-  selectedOrderRef,
   onSelectCup,
   onDumpCup,
-  onSelectOrder,
-  onFulfillOrder,
   phase,
   onActivateUpgrade,
 }) {
-  const completable = getCompletableOrders(player);
+  const completable = isActive && phase === 'pour' ? getCompletableOrders(player) : [];
   const canSelectCups = isActive && ['pour', 'setupPlacement'].includes(phase);
   const canDumpCups = isActive && phase === 'pour';
 
@@ -45,7 +42,7 @@ export default function PlayerPanel({
             index={index}
             selected={isActive && selectedCup === index}
             disabled={!canSelectCups}
-            dumpDisabled={!canDumpCups}
+            dumpDisabled={!canDumpCups || cup.length === 0}
             onSelect={() => onSelectCup(index)}
             onDump={() => onDumpCup(index)}
           />
@@ -72,18 +69,8 @@ export default function PlayerPanel({
                       order={order}
                       compact
                       ready={canComplete}
-                      selected={selectedOrderRef === order.id}
-                      onClick={canComplete ? () => onSelectOrder(order.id) : undefined}
+                      selected={false}
                     />
-                    {canComplete && (
-                      <button
-                        className="serve-order-button"
-                        type="button"
-                        onClick={() => onFulfillOrder(completionMatch.cupIdx, order.id)}
-                      >
-                        Serve Cup {completionMatch.cupIdx + 1}
-                      </button>
-                    )}
                   </div>
                 );
               })}

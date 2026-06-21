@@ -1,9 +1,11 @@
 ---
 slug: is-montessori-more-effective-than-traditional-schooling
-title: "Is Montessori more effective than traditional schooling?"
+title: Is Montessori more effective than traditional schooling?
 date: 2026-06-18
-lastmod: 2026-06-18
+lastmod: 2026-06-21
 ---
+
+
 This is a [learning by writing](https://www.cold-takes.com/learning-by-writing/) process
 
 Claim: Montessori is more effective than traditional schooling

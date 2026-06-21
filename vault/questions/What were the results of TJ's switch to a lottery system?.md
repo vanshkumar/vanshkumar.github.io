@@ -2,7 +2,7 @@
 slug: what-were-the-results-of-tjs-switch-to-a-lottery-system
 title: What were the results of TJ's switch to a lottery system?
 date: 2026-06-18
-lastmod: 2026-06-19
+lastmod: 2026-06-20
 ---
 I suppose the "culture" is what was lost when TJ switched to a lottery system rather than an admissions test?
 
@@ -15,7 +15,7 @@ Also ugh this line of thinking directly leads you to an annoying aristocratic cl
 What's the alternative? It has to be [[How might we scale high quality education?]]. Expanding the supply rather than moderating the incoming demand. Perhaps that social consensus committed minority thing can also be useful here. You only need a small committed minority to have larger effects on educational culture in a community? Kind of like education sleeper cells? Lol
 
 
-...more broadly are there other cases of magnet/charter schools suddenly becoming lottery based? it's a sick natural experiment. i think the covid confound makes TJ a tough one. i think nyc school system had smth like this?
+...more broadly are there other cases of magnet/charter schools suddenly becoming lottery based? it's a sick natural experiment. there is a big COVID confound though...
 
 
 ---
@@ -128,3 +128,7 @@ Remember that NSMF has a fixed # of seats within VA, and the score cutoff was ~t
 Let's get the raw data sorted out and then go from there. A heatmap of NSMF (normalized for class size / test takers) per TJ pathway over time would be a cool lil visualization to start with
 
 Urgh finding enrollment data for each school is quite hard, so it's hard to norm
+
+---
+
+Getting codex to do this and making good progress on the descriptive claim here. It does appear like 2026 recovered most of the 2025. So perhaps class of 2025 is just a big outlier.

@@ -1,7 +1,7 @@
 ---
 slug: why-am-i-interested-in-alt-ed
 title: Why am I interested in alt-ed?
-lastmod: 2026-06-18
+lastmod: 2026-06-20
 date: 2026-06-13
 ---
 In my view opinions & disagreements about education often boil down to differences in values. Even if we had RCT evidence for one approach being better, those would be population-level effects by definition and it's less clear how relevant they are to the idiosyncratic process of raising a _particular_ child.
@@ -39,7 +39,9 @@ I most interested in Montessori (through elementary) because I believe it aligns
 
 ---
 
-See [[Seeding an educational culture]]
+More rough thoughts:
+
+See [seeding an educational culture](https://vanshkumar.substack.com/p/seeding-an-educational-culture) as well.
 
 The traditional public school system is designed to educate all kinds of children, at scale. This tends to sacrifice efficiency and personalization. Public school is not optimized for maximizing individual learning – neither efficiency nor quantity.
 

@@ -2,34 +2,21 @@
 slug: what-were-the-results-of-tjs-switch-to-a-lottery-system
 title: What were the results of TJ's switch to a lottery system?
 date: 2026-06-18
-lastmod: 2026-06-22
+lastmod: 2026-06-23
 ---
 A descriptive analysis scoped to NMSF semifinalist counts:
-![[Pasted image 20260622224411.png|https://chatgpt.com/g/g-p-6a32fdaac3d48191b3fbb257d771ca93-tj-psat/project]]
+![[Pasted image 20260623102341.png|https://github.com/vanshkumar/tj-psat-analysis]]
 
-Source repo: https://github.com/vanshkumar/tj-psat-analysis
+Worth highlighting limitations, as this is only descriptive/suggestive:
+- Move to digital PSAT (fall 2023, aligns with class 2025)
+- COVID effects
+- Possible changes in how many kids took PSAT (not captured by enrollment)
+
+But the gap is large enough that I suspect causality.
 
 Below are my initial thoughts that led to doing this analysis in the first place.
 
 ---
-
-I suppose the "culture" is what was lost when TJ switched to a lottery system rather than an admissions test?
-
-Since [[Public schools don't enforce a specific educational culture]], it shifted towards that?
-
-Can we identify the minimum threshold of new entrants to existing great cultures where the overall culture is not diluted? Perhaps that social consensus committed minority paper can shed some light here.
-
-Also ugh this line of thinking directly leads you to an annoying aristocratic class division type thing where only a few less privileged ppl can be let in every year to the place that will help them succeed. Similar to India Reservation system?
-
-What's the alternative? It has to be [[How might we scale high quality education?]]. Expanding the supply rather than moderating the incoming demand. Perhaps that social consensus committed minority thing can also be useful here. You only need a small committed minority to have larger effects on educational culture in a community? Kind of like education sleeper cells? Lol
-
-
-...more broadly are there other cases of magnet/charter schools suddenly becoming lottery based? it's a sick natural experiment. there is a big COVID confound though...
-
-
----
-
-OK let's do this as a [learning by writing](https://www.cold-takes.com/learning-by-writing/) claim for fun
 
 **Hypothesis:** TJ switching to a lottery system from an admissions test was a regression to the mean:
 - Kids that would have done better academically (if the lottery was not implemented & the culture was kept more homogeneous) did worse
@@ -140,4 +127,4 @@ Urgh finding enrollment data for each school is quite hard, so it's hard to norm
 
 ---
 
-Getting codex to do this and making good progress on the descriptive claim here. It does appear like 2026 recovered most of the 2025. So perhaps class of 2025 is just a big outlier.
+Getting codex to do this now

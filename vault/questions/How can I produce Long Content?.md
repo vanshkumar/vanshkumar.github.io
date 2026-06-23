@@ -1,7 +1,7 @@
 ---
 slug: how-can-i-produce-long-content
 title: How can I produce Long Content?
-lastmod: 2026-06-15
+lastmod: 2026-06-22
 date: 2026-06-09
 ---
 I have been thinking about applying the idea of the [Long Now](https://en.wikipedia.org/wiki/Long_Now_Foundation), inspired by the [About page of gwern.net](https://gwern.net/about#long-content):
@@ -48,7 +48,6 @@ What are things in my life/around me that WILL survive for decades & therefore s
 - My brain/my thinking (externalized via this site)
 - CPV garden
 	- Clear area where I could think of a project that actually gets better with time, is improved *by* time; I’m sure I can think of something if I take an ecological lens
-	- I will talk to Stephen about this
 - Pasadena Central Park
 - Investments
 - Friendships

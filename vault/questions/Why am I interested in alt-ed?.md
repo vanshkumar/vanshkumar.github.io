@@ -1,7 +1,7 @@
 ---
 slug: why-am-i-interested-in-alt-ed
 title: Why am I interested in alt-ed?
-lastmod: 2026-06-20
+lastmod: 2026-06-22
 date: 2026-06-13
 ---
 In my view opinions & disagreements about education often boil down to differences in values. Even if we had RCT evidence for one approach being better, those would be population-level effects by definition and it's less clear how relevant they are to the idiosyncratic process of raising a _particular_ child.
@@ -34,14 +34,15 @@ Mastery based individualized learning respects kids’ time in both cases.
 
 Self-explanatory – kids can do much more than is commonly assumed. Eg this post argues a cause of teen angst/suffering is still treating them as children rather than capable young adults [petergray.substack.com/…](https://petergray.substack.com/p/110-extended-childhood-disorder-an).
 
-I most interested in Montessori (through elementary) because I believe it aligns best with the values described above.
+I am most interested in Montessori (through elementary) because I believe it aligns best with the values described above.
 
 
 ---
 
-More rough thoughts:
+Earlier rough notes:
 
-See [seeding an educational culture](https://vanshkumar.substack.com/p/seeding-an-educational-culture) as well.
+
+See [seeding an educational culture](https://vanshkumar.substack.com/p/seeding-an-educational-culture) and [this post](https://vanshkumar.substack.com/p/some-possibly-controversial-opinions).
 
 The traditional public school system is designed to educate all kinds of children, at scale. This tends to sacrifice efficiency and personalization. Public school is not optimized for maximizing individual learning – neither efficiency nor quantity.
 

@@ -2,9 +2,11 @@
 slug: is-montessori-more-effective-than-traditional-schooling
 title: Is Montessori more effective than traditional schooling?
 date: 2026-06-18
-lastmod: 2026-06-21
+lastmod: 2026-06-22
 ---
+Trying to decide what to do with this, if this satisfies my criteria for [[What projects make sense to work on if you believe AGI is coming in <5 years?]]. Perhaps will give it to an LLM, with the guidance to follow the learning by writing process, and see what it comes up with.
 
+---
 
 This is a [learning by writing](https://www.cold-takes.com/learning-by-writing/) process
 
@@ -179,4 +181,4 @@ I mean if you believe Judith Harris Nurture Assumption & [Henrik essay](https://
 So another objection to my hypothesis could be – it's all about [culture](https://asteriskmag.com/issues/07/culture-studies) and it doesn't matter if it's Montessori or a Jesuit school or a magnet school or whatever.
 
 
-Another objection to my hypothesis is just that... education pedagogy research simply does not replicate & because there's basically no randomized controlled trials it's all kind of a waste of time and vibes based. Is that true? If so I should just ***learn something else***. I mean that is kind of believable?
+Another objection to my hypothesis is just that... education pedagogy research simply does not replicate & because there's basically no randomized controlled trials it's all kind of a waste of time and vibes based. Is that true? If so I should just ***learn something else***.

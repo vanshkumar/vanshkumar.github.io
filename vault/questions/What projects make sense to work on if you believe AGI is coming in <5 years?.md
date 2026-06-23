@@ -1,8 +1,8 @@
 ---
 slug: what-projects-make-sense-to-work-on-if-you-believe-agi-is-coming-in-5-years
-title: "What projects make sense to work on if you believe AGI is coming in <5 years?"
+title: What projects make sense to work on if you believe AGI is coming in <5 years?
 date: 2026-06-21
-lastmod: 2026-06-21
+lastmod: 2026-06-22
 ---
 Triggered by listening to [this podcast](https://www.dwarkesh.com/p/gwern-branwen). This is a thought experiment, not necessarily something I believe. There is an implicit assumption in the premise that any AGI will both be available to me and steerable by me.
 
@@ -14,7 +14,7 @@ Gwern suggests the following rubric in the podcast:
 > 
 > Or is this writing down something that is unwritten and thus helping the future AI versions of me?
 
-Thinking through them one by one, and adding a couple of my own:
+Thinking through them one by one, and adding one my own:
 
 ## Things I enjoy
 
@@ -41,13 +41,13 @@ This points to what Gwern suggests here, things like:
 - Thinking carefully and sketching out a clear proposal – what you want, why it would be good, and how to do it. Don't implement unless there's a really good reason to do it *now*
 - Focusing on asking precise interesting questions rather than necessarily figuring out the answer. This is what "research taste" and good science already is
 
-I do have a bunch of projects on my list where I suspect writing up proposals rather than implementing is the most valuable use of my time.
+I do have a bunch of projects on my list where I suspect writing up proposals rather than implementing is the more valuable use of my time.
 
 But I can think of a couple counterpoints to this view too:
-1. For many projects I learn what I want through the process of working on the project. In fact this may be the definition of what makes a project interesting in the first place – it's unpredictable where it will end up
+1. For many projects I learn what I want through the process of working on the project. In fact this may be the definition of what makes a project interesting in the first place – it's unpredictable how it will change through working on it
 2. Not really a counter, but IMO this should be superseded by the previous point of doing things because you enjoy. Sometimes I just wanna implement something cause it's fun to do so (or at least fun to steer an LLM to bring a vision to life)
 
-So perhaps a reasonable takeaway here is – **spend more time on upfront thinking before jumping into implementation, and only implement if it's urgent or fun**
+So perhaps a reasonable takeaway here is – **spend more time on upfront thinking; only implement if it's urgent, fun, or the project will grow creatively *through* implementation**.
 
 This is good advice regardless of AI.
 
@@ -59,10 +59,10 @@ This is good advice regardless of AI.
 > 
 > But yes, you are also creating a sort of immortality for yourself personally. You aren't just creating a persona, you are creating your future self too. What self are you showing the LLMs, and how will they treat you in the future?
 
-This one was kind of new to me. The notion that expressing otherwise unwritten preferences could help future AI versions of you is interesting. I'm not sure I completely buy it, but regardless I already (privately) journal a lot, so how I feel at a particular time should be quite available to any AI system in the future if I choose to share it.
+This one was kind of new to me. The notion that expressing otherwise unwritten preferences could help future AI versions of you is interesting. I'm not sure I completely buy the idea that you can meaningfully steer the AI in this way, but regardless I already (privately) journal, so a lot of this will be available to any AI system in the future should I choose to share it. 
 
 ## ~Anything relational
 
 Hanging out with friends/family, throwing parties, making friends
 
-This is obvious but I still don't do enough of it
+This is obvious but I can certainly do more of this

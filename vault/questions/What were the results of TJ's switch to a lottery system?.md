@@ -2,8 +2,17 @@
 slug: what-were-the-results-of-tjs-switch-to-a-lottery-system
 title: What were the results of TJ's switch to a lottery system?
 date: 2026-06-18
-lastmod: 2026-06-20
+lastmod: 2026-06-22
 ---
+A descriptive analysis scoped to NMSF semifinalist counts:
+![[Pasted image 20260622224411.png|https://chatgpt.com/g/g-p-6a32fdaac3d48191b3fbb257d771ca93-tj-psat/project]]
+
+Source repo: https://github.com/vanshkumar/tj-psat-analysis
+
+Below are my initial thoughts that led to doing this analysis in the first place.
+
+---
+
 I suppose the "culture" is what was lost when TJ switched to a lottery system rather than an admissions test?
 
 Since [[Public schools don't enforce a specific educational culture]], it shifted towards that?

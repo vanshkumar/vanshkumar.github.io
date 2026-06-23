@@ -1,6 +1,6 @@
 ---
 date: 2026-06-17
-lastmod: 2026-06-20
+lastmod: 2026-06-21
 rating: 5
 coverImage: /assets/shelf/a-brief-history-of-intelligence.jpg
 ---
@@ -28,6 +28,6 @@ Things I was struck by in the book:
 
 
 
-Provenance: Forget exactly where I first heard about this book, but possibly from this podcast episode which I really like: https://www.dwarkesh.com/p/adam-marblestone
+Provenance: Forget exactly where I first heard about this book, but possibly from [this podcast episode](https://www.dwarkesh.com/p/adam-marblestone) which I really enjoyed
 
 [^1]: I don't actually think there is a meaningful distinction between hardware & software in the brain (which this point kind of proves), but it's a useful abstraction/analogy

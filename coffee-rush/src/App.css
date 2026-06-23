@@ -126,26 +126,12 @@ select {
   font-weight: 800;
 }
 
-.deck-counter {
-  min-width: 74px;
-}
-
-.icon-action,
 .icon-button {
   min-width: 34px;
   min-height: 34px;
   display: inline-grid;
   place-items: center;
   padding: 0;
-}
-
-.icon-action {
-  width: 34px;
-  aspect-ratio: 1;
-}
-
-.icon-action-text {
-  display: none;
 }
 
 .ui-icon {
@@ -1017,19 +1003,13 @@ select {
 
   .header-actions {
     width: 100%;
-    display: grid;
-    grid-template-columns: 74px repeat(4, 40px);
+    display: flex;
     justify-content: end;
     gap: 6px;
   }
 
-  .deck-counter,
-  .icon-action {
+  .deck-counter {
     min-height: 38px;
-  }
-
-  .icon-action {
-    width: 40px;
   }
 
   .ingredient-board {

@@ -4,7 +4,7 @@ import Board from '../components/Board';
 import IngredientIcon from '../components/IngredientIcon';
 import PassDeviceModal from '../components/PassDeviceModal';
 import PlayerPanel from '../components/PlayerPanel';
-import { IconButton, UiIcon } from '../components/UiIcon';
+import { UiIcon } from '../components/UiIcon';
 import { INGREDIENTS, ingredientLabel } from '../data/ingredients';
 import { getCell } from '../engine/board';
 import { applyAction } from '../engine/reducers';
@@ -366,24 +366,19 @@ export default function GamePage() {
           </p>
         </div>
         <div className="header-actions">
-          <span className="deck-counter" title={`${state.deck.length} orders in deck`}>
-            <UiIcon name="orders" />
-            <strong>{state.deck.length}</strong>
-          </span>
-          <IconButton
-            icon="undo"
-            label="Undo"
-            onClick={undoLastAction}
-            disabled={undoStack.length === 0}
-          />
-          <IconButton icon="copy" label="Copy log" onClick={copyExport} />
-          <IconButton
-            icon="download"
-            label={isExporting ? 'Downloading log and screenshot' : 'Download log + screenshot'}
-            onClick={downloadExport}
-            disabled={isExporting}
-          />
-          <IconButton icon="new" label="New game" onClick={newGame} />
+          <span className="deck-counter">{state.deck.length} orders</span>
+          <button type="button" onClick={undoLastAction} disabled={undoStack.length === 0}>
+            Undo
+          </button>
+          <button type="button" onClick={copyExport}>
+            Copy log
+          </button>
+          <button type="button" onClick={downloadExport} disabled={isExporting}>
+            {isExporting ? 'Downloading...' : 'Download log + screenshot'}
+          </button>
+          <button type="button" onClick={newGame}>
+            New
+          </button>
         </div>
       </header>
 

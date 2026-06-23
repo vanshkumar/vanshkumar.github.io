@@ -34,6 +34,11 @@
 
 ## Patterns and Preferences
 
+**[2026-06-23] — Header utility UI**
+- Observation: The top-right game utility controls are low-frequency/debug-style actions, so icon-only buttons make them harder to scan than useful.
+- Action: Keep header utility actions as explicit text buttons, especially `Undo`, `Copy log`, `Download log + screenshot`, and `New`.
+- Confidence: high
+
 **[2026-06-19] — Turn action UX**
 - Observation: Ready order controls are misleading outside the pour phase because the reducer rejects `FULFILL_ORDER` unless `state.phase === 'pour'`.
 - Action: Gate ready-order highlights and serve buttons to the pour phase, and keep serving in one explicit action surface.

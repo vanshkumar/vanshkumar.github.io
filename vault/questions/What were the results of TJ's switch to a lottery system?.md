@@ -4,15 +4,13 @@ title: What were the results of TJ's switch to a lottery system?
 date: 2026-06-18
 lastmod: 2026-06-23
 ---
-A descriptive analysis scoped to NMSF semifinalist counts:
-![[Pasted image 20260623102341.png|https://github.com/vanshkumar/tj-psat-analysis]]
+A descriptive analysis of the number of National Merit Semifinalists, a measure of extreme right-tail PSAT scores:
 
-Worth highlighting limitations, as this is only descriptive/suggestive:
-- Move to digital PSAT (fall 2023, aligns with class 2025)
-- COVID effects
-- Possible changes in how many kids took PSAT (not captured by enrollment)
+![[Pasted image 20260623194101.png|https://github.com/vanshkumar/tj-psat-analysis]]
 
-But the gap is large enough that I suspect causality.
+No idea why class of 2025 is such an outlier for the whole region! Perhaps the move to a digital PSAT (happened in fall 2023, which is when class of 2025 would have taken it)? COVID effects? Changes in how many kids chose to take the PSAT (not captured by enrollment)?
+
+But it does seem that the effect of this policy was a redistribution of right-tail outcomes rather than any net loss at the region-level. Class of 2027 and 2028 numbers will provide more evidence either way.
 
 Below are my initial thoughts that led to doing this analysis in the first place.
 

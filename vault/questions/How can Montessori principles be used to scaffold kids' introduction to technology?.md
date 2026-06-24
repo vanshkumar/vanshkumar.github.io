@@ -1,7 +1,7 @@
 ---
 slug: how-can-montessori-principles-be-used-to-scaffold-kids-introduction-to-technology
 title: How can Montessori principles be used to scaffold kids' introduction to technology?
-lastmod: 2026-06-17
+lastmod: 2026-06-24
 date: 2026-06-13
 ---
 What are Montessori principles? From [here](https://blueprintforagoldenage.substack.com/p/montessoris-most-important-discovery):
@@ -13,7 +13,7 @@ What are Montessori principles? From [here](https://blueprintforagoldenage.subst
 Rough notes
 
 
-**Health is always earned**: From the linked essay, this means that educating children well requires thought, innovation, and scientific inquiry. Not super relevant; this is motivation for me asking the question in the first place.
+**Health is always earned**: From the linked essay, this means that educating children well requires thought, innovation, and scientific inquiry. Not super relevant; this is motivation for asking this question in the first place.
 
 **The child cannot be replaced**: The child's own efforts are key. They must do the thinking themselves.
 
@@ -26,12 +26,24 @@ The example that springs to mind is jumping to look something up rather than sit
 
 **Concentrated work is the fundamental tool**: Self-explanatory, and quite clear. The immediate (obvious) thought is to not give kids unrestricted access to technology. It should be heavily curated, appropriate to their developmental level, etc.
 
-What might this look like? A Linux box or old Mac with:
+---
+
+So what might this look like?
+
+A Linux box or old Mac with:
 - No internet access
 - Terminal
 - Anki
 - Duolingo
 - Local LLM tutor (should this selectively have internet access?)
+
+In this setup, the burden is fully on the child to figure out how things work and what's possible on a computer, albeit in a quite constrained environment. I'm not sure this is valuable until kids are reasonably older though.. this is more like a hackbox for older kids to play with than a real scaffolding for a younger child.
+
+---
+
+Other books/papers to read on this:
+- Children's Machine by Seymour Papert
+- Alan Kay's work
 
 
 ---

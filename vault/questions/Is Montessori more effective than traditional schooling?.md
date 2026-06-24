@@ -2,9 +2,11 @@
 slug: is-montessori-more-effective-than-traditional-schooling
 title: Is Montessori more effective than traditional schooling?
 date: 2026-06-18
-lastmod: 2026-06-22
+lastmod: 2026-06-24
 ---
-Trying to decide what to do with this, if this satisfies my criteria for [[What projects make sense to work on if you believe AGI is coming in <5 years?]]. Perhaps will give it to an LLM, with the guidance to follow the learning by writing process, and see what it comes up with.
+Trying to decide what to do with this because
+- I increasingly believe questions of what kinds of education are "better" boil down to differences in values & may not be settle-able by the kind of review I was trying to do here. See [[Why am I interested in alt-ed?]]
+- Not sure if this satisfies my criteria for [[What projects make sense to work on if you believe AGI is coming in <5 years?]]. Perhaps will give this to chatgpt pro deep research, with the guidance to follow the learning by writing process, and see what it comes up with
 
 ---
 

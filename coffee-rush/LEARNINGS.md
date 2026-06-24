@@ -47,6 +47,11 @@
 - Action: Size board ingredient tokens and meeple markers with board-specific CSS, with smaller mobile overrides to avoid crowding.
 - Confidence: high
 
+**[2026-06-24] — Mobile cup memory**
+- Observation: On phone-width layouts, the active player panel sits below the board and action panel, so players must remember cup contents while planning movement and pouring.
+- Action: Surface compact active-cup state inside the turn action panel during move and pour phases instead of relying only on the player panel.
+- Confidence: high
+
 ## Patterns and Preferences
 
 **[2026-06-24] — Upgrade control UX**

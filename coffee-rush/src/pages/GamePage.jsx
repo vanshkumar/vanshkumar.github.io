@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Board from '../components/Board';
+import CupMemoryStrip from '../components/CupMemoryStrip';
 import IngredientIcon from '../components/IngredientIcon';
 import PassDeviceModal from '../components/PassDeviceModal';
 import PlayerPanel from '../components/PlayerPanel';
@@ -76,6 +77,10 @@ export default function GamePage() {
         ? getCompletableOrders(activePlayer)
         : [],
     [activePlayer, state?.phase],
+  );
+  const readyCupIndexes = useMemo(
+    () => Array.from(new Set(completableOrders.map((match) => match.cupIdx))),
+    [completableOrders],
   );
   const selectedMeeple = activePlayer?.meeples.find(
     (meeple) => meeple.id === selectedMeepleId,
@@ -395,8 +400,6 @@ export default function GamePage() {
 
   const visibleLastMessage =
     state.lastMessage?.startsWith('Pass to ') && !passTo ? '' : state.lastMessage;
-  const selectedCupContents =
-    selectedCup === null ? null : activePlayer.cups[selectedCup] ?? null;
   const canActivateUpgrade = activePlayer.completed.length >= 3;
   const hasInactiveUpgrades = Object.values(activePlayer.upgrades).some(
     (active) => !active,
@@ -590,6 +593,10 @@ export default function GamePage() {
                     </span>
                   </span>
                 </div>
+                <CupMemoryStrip
+                  cups={activePlayer.cups}
+                  label={`${activePlayer.name} current cups`}
+                />
                 {movePreview?.error && (
                   <div className="inline-warning">
                     {movePreview.remainingSteps > 0
@@ -631,26 +638,13 @@ export default function GamePage() {
                         : 'No ingredients remain in hand. End the turn when ready.'}
                   </p>
                 </div>
-                <div className="cup-picker detailed-picker" aria-label="Pour target cup">
-                  {activePlayer.cups.map((cup, index) => (
-                    <button
-                      key={index}
-                      className={selectedCup === index ? 'selected-tool' : ''}
-                      type="button"
-                      onClick={() => selectCup(index)}
-                    >
-                      <span>Cup {index + 1}</span>
-                      <small>
-                        {ingredientListLabel(cup)} · {cup.length}/4
-                      </small>
-                    </button>
-                  ))}
-                </div>
-                {selectedCup !== null && (
-                  <div className="selected-cup-summary">
-                    Target: Cup {selectedCup + 1} ({ingredientListLabel(selectedCupContents)})
-                  </div>
-                )}
+                <CupMemoryStrip
+                  cups={activePlayer.cups}
+                  selectedCup={selectedCup}
+                  onSelectCup={selectCup}
+                  readyCupIndexes={readyCupIndexes}
+                  label="Pour target cup"
+                />
                 <div className="hand-row" aria-label="Collected ingredients">
                   {activePlayer.hand.length === 0 && <span>No ingredients in hand</span>}
                   {activePlayer.hand.map((ingredient, index) => (

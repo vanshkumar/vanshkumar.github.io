@@ -430,7 +430,6 @@ select {
 }
 
 .phase-kicker,
-.selected-cup-summary,
 .turn-facts,
 .move-status-grid {
   color: #6e5e4a;
@@ -511,8 +510,7 @@ select {
 }
 
 .turn-facts > span,
-.move-status-grid > span,
-.selected-cup-summary {
+.move-status-grid > span {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -578,6 +576,86 @@ select {
   min-height: 38px;
   padding: 7px 12px;
   font-weight: 800;
+}
+
+.cup-memory-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.cup-memory-tile {
+  min-width: 0;
+  min-height: 62px;
+  display: grid;
+  gap: 6px;
+  align-content: space-between;
+  padding: 7px;
+  border: 1px solid #c7b7a0;
+  background: #fffaf2;
+  text-align: left;
+}
+
+button.cup-memory-tile {
+  font-weight: 800;
+}
+
+.cup-memory-tile-selected {
+  border-color: #27605a;
+  background: #d7ebe5;
+}
+
+.cup-memory-tile-ready {
+  border-color: #27605a;
+  box-shadow: inset 0 0 0 2px rgba(39, 96, 90, 0.14);
+}
+
+.cup-memory-topline {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+}
+
+.cup-memory-label {
+  min-width: 26px;
+  padding: 2px 4px;
+  border: 1px solid #d7c7af;
+  background: rgba(255, 250, 242, 0.72);
+  color: #6e5e4a;
+  font-size: 0.72rem;
+  font-weight: 850;
+  line-height: 1;
+  text-align: center;
+}
+
+.cup-memory-capacity {
+  color: #6e5e4a;
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.cup-ready-badge {
+  margin-left: auto;
+  border: 1px solid #27605a;
+  background: #27605a;
+  color: #fffaf2;
+  padding: 2px 4px;
+  font-size: 0.62rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.cup-memory-icons {
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
 .players-column {
@@ -1190,6 +1268,17 @@ select {
   .meeple-picker,
   .cup-picker {
     align-items: stretch;
+  }
+
+  .cup-memory-tile {
+    min-height: 58px;
+    padding: 6px;
+  }
+
+  .cup-ready-badge {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
   }
 
   .tabs-grid {

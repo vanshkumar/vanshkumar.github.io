@@ -4,6 +4,7 @@ import Board from '../components/Board';
 import IngredientIcon from '../components/IngredientIcon';
 import PassDeviceModal from '../components/PassDeviceModal';
 import PlayerPanel from '../components/PlayerPanel';
+import UpgradeMenu from '../components/UpgradeMenu';
 import { UiIcon } from '../components/UiIcon';
 import { INGREDIENTS, ingredientLabel } from '../data/ingredients';
 import { getCell } from '../engine/board';
@@ -65,6 +66,7 @@ export default function GamePage() {
   const [rushSpent, setRushSpent] = useState(0);
   const [selectedCup, setSelectedCup] = useState(null);
   const [passTo, setPassTo] = useState('');
+  const [isUpgradeMenuOpen, setIsUpgradeMenuOpen] = useState(false);
 
   const activePlayer = state ? getActivePlayer(state) : null;
   const setupPlacement = state ? getSetupPlacement(state) : null;
@@ -124,6 +126,12 @@ export default function GamePage() {
     }
   }, [activePlayer, selectedMeepleId, setupPlacement]);
 
+  useEffect(() => {
+    if (state?.phase !== PHASES.UPGRADE) {
+      setIsUpgradeMenuOpen(false);
+    }
+  }, [state?.phase]);
+
   if (!state || !activePlayer) {
     return null;
   }
@@ -134,7 +142,7 @@ export default function GamePage() {
 
     if (result.error) {
       setError(result.error);
-      return;
+      return result;
     }
 
     setError('');
@@ -158,6 +166,8 @@ export default function GamePage() {
       setRushSpent(0);
       setSelectedCup(null);
     }
+
+    return result;
   }
 
   function resetActionUi() {
@@ -165,6 +175,7 @@ export default function GamePage() {
     setRushSpent(0);
     setSelectedCup(null);
     setPassTo('');
+    setIsUpgradeMenuOpen(false);
   }
 
   function selectCup(cupIdx) {
@@ -365,6 +376,18 @@ export default function GamePage() {
     });
   }
 
+  function activateUpgrade(tileId) {
+    const result = dispatch({
+      type: 'ACTIVATE_UPGRADE',
+      playerId: activePlayer.id,
+      tileId,
+    });
+
+    if (!result?.error) {
+      setIsUpgradeMenuOpen(false);
+    }
+  }
+
   function newGame() {
     clearGame();
     navigate('/');
@@ -375,6 +398,15 @@ export default function GamePage() {
   const selectedCupContents =
     selectedCup === null ? null : activePlayer.cups[selectedCup] ?? null;
   const canActivateUpgrade = activePlayer.completed.length >= 3;
+  const hasInactiveUpgrades = Object.values(activePlayer.upgrades).some(
+    (active) => !active,
+  );
+  const upgradeActionLabel = hasInactiveUpgrades ? 'Activate upgrade' : 'View upgrades';
+  const upgradeActionMeta = hasInactiveUpgrades
+    ? canActivateUpgrade
+      ? '3 orders'
+      : `${activePlayer.completed.length}/3 orders`
+    : 'All active';
 
   return (
     <main className="game-page" ref={pageRef}>
@@ -469,15 +501,25 @@ export default function GamePage() {
                     <strong>{activePlayer.rushTokens}</strong>
                   </span>
                 </div>
-                <button
-                  className="primary-button"
-                  type="button"
-                  onClick={() =>
-                    dispatch({ type: 'SKIP_UPGRADES', playerId: activePlayer.id })
-                  }
-                >
-                  Move
-                </button>
+                <div className="upgrade-action-row">
+                  <button
+                    className="upgrade-open-button"
+                    type="button"
+                    onClick={() => setIsUpgradeMenuOpen(true)}
+                  >
+                    <span>{upgradeActionLabel}</span>
+                    <small>{upgradeActionMeta}</small>
+                  </button>
+                  <button
+                    className="primary-button"
+                    type="button"
+                    onClick={() =>
+                      dispatch({ type: 'SKIP_UPGRADES', playerId: activePlayer.id })
+                    }
+                  >
+                    Move
+                  </button>
+                </div>
               </div>
             )}
 
@@ -686,9 +728,6 @@ export default function GamePage() {
                 dispatch({ type: 'DUMP_CUP', playerId: activePlayer.id, cupIdx })
               }
               phase={state.phase}
-              onActivateUpgrade={(tileId) =>
-                dispatch({ type: 'ACTIVATE_UPGRADE', playerId: activePlayer.id, tileId })
-              }
             />
           ))}
         </aside>
@@ -703,6 +742,13 @@ export default function GamePage() {
         ))}
       </footer>
 
+      <UpgradeMenu
+        player={activePlayer}
+        canActivate={canActivateUpgrade}
+        isOpen={isUpgradeMenuOpen}
+        onActivate={activateUpgrade}
+        onClose={() => setIsUpgradeMenuOpen(false)}
+      />
       <PassDeviceModal nextPlayerName={passTo} onContinue={() => setPassTo('')} />
     </main>
   );

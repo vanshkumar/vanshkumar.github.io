@@ -480,6 +480,36 @@ select {
   gap: 8px;
 }
 
+.upgrade-action-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.upgrade-action-row .primary-button {
+  min-height: 48px;
+  padding: 8px 16px;
+}
+
+.upgrade-open-button {
+  min-height: 48px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  text-align: left;
+  font-weight: 850;
+}
+
+.upgrade-open-button small {
+  color: #6e5e4a;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .turn-facts > span,
 .move-status-grid > span,
 .selected-cup-summary {
@@ -614,6 +644,8 @@ select {
   align-items: center;
   justify-content: center;
   gap: 5px;
+  border: 1px solid #c7b7a0;
+  background: #fffaf2;
   text-align: center;
   padding: 6px;
   flex: unset;
@@ -636,6 +668,103 @@ select {
 .upgrade-active {
   background: #d7ebe5;
   border-color: #27605a;
+}
+
+.upgrade-menu-backdrop {
+  z-index: 20;
+}
+
+.upgrade-menu {
+  width: min(560px, 100%);
+  max-height: min(680px, calc(100vh - 40px));
+  display: grid;
+  gap: 14px;
+  overflow: auto;
+  padding: 18px;
+  border: 1px solid #c7b7a0;
+  background: #fffaf2;
+}
+
+.upgrade-menu-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.upgrade-menu-header h2 {
+  font-size: 1.35rem;
+  line-height: 1.1;
+}
+
+.upgrade-options {
+  display: grid;
+  gap: 8px;
+}
+
+.upgrade-option {
+  min-height: 82px;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  text-align: left;
+}
+
+.upgrade-option:disabled {
+  opacity: 0.62;
+}
+
+.upgrade-option-active:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.upgrade-option-active {
+  border-color: #27605a;
+  background: #d7ebe5;
+}
+
+.upgrade-option-code {
+  width: 52px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 1px solid #c7b7a0;
+  background: #f4f0e8;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.upgrade-option-copy {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.upgrade-option-copy strong {
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+.upgrade-option-copy small {
+  color: #5d4d3d;
+  font-size: 0.82rem;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.upgrade-option-state {
+  min-width: 64px;
+  border: 1px solid #d7c7af;
+  background: rgba(255, 250, 242, 0.78);
+  padding: 5px 7px;
+  text-align: center;
+  color: #6e5e4a;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .cups-row {
@@ -1045,6 +1174,10 @@ select {
     grid-template-columns: 1fr;
   }
 
+  .upgrade-action-row {
+    grid-template-columns: minmax(0, 1fr) minmax(92px, auto);
+  }
+
   .hand-token {
     width: 100%;
   }
@@ -1074,5 +1207,34 @@ select {
   .cup-body,
   .dump-button {
     min-height: 46px;
+  }
+
+  .upgrade-menu-backdrop {
+    place-items: end stretch;
+    padding: 10px 0 0;
+  }
+
+  .upgrade-menu {
+    width: 100%;
+    max-height: min(82vh, 640px);
+    padding: 14px 12px 16px;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+  }
+
+  .upgrade-option {
+    min-height: 92px;
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .upgrade-option-code {
+    width: 48px;
+  }
+
+  .upgrade-option-state {
+    grid-column: 2;
+    justify-self: start;
   }
 }

@@ -11,7 +11,6 @@ export default function PlayerPanel({
   onSelectCup,
   onDumpCup,
   phase,
-  onActivateUpgrade,
 }) {
   const completable = isActive && phase === 'pour' ? getCompletableOrders(player) : [];
   const canSelectCups = isActive && ['pour', 'setupPlacement'].includes(phase);
@@ -27,12 +26,7 @@ export default function PlayerPanel({
         <RushTokenTracker count={player.rushTokens} />
       </header>
 
-      <UpgradeTray
-        player={player}
-        isActive={isActive}
-        phase={phase}
-        onActivate={onActivateUpgrade}
-      />
+      <UpgradeTray player={player} />
 
       <div className="cups-row">
         {player.cups.map((cup, index) => (

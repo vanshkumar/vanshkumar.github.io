@@ -17,6 +17,11 @@
 - Action: Use the bundled Node runtime to invoke local tools directly, e.g. `node_modules/vitest/vitest.mjs`, `node_modules/eslint/bin/eslint.js`, and `node_modules/vite/bin/vite.js`.
 - Confidence: high
 
+**[2026-06-24] — UI verification**
+- Observation: In this environment, the Node-backed verifier can run ESLint and esbuild, but Vite/Rollup cannot load its native addon because macOS library validation rejects the Rollup `.node` binary.
+- Action: For visual checks when shell `node` is unavailable, build a temp esbuild bundle with CSV imports loaded as text, then serve it from `/private/tmp` with Python under localhost escalation.
+- Confidence: medium
+
 **[2026-06-19] — Git commit workflow**
 - Observation: The repo commit hook can add missing metadata to unrelated untracked `vault/questions` files and stage them into a commit.
 - Action: After committing from a mixed worktree, inspect `git show --name-status HEAD`; if unrelated vault files were added, remove them from the index and amend with hooks skipped.
@@ -43,6 +48,11 @@
 - Confidence: high
 
 ## Patterns and Preferences
+
+**[2026-06-24] — Upgrade control UX**
+- Observation: `UpgradeTray` currently uses compact coded buttons in every player panel, while `GamePage` already has a dedicated start-of-turn upgrade phase action surface.
+- Action: Keep player-panel upgrades as compact status indicators, and put upgrade purchasing descriptions/actions in the active player's upgrade-phase menu or modal.
+- Confidence: medium
 
 **[2026-06-23] — Header utility UI**
 - Observation: The top-right game utility controls are low-frequency/debug-style actions, so icon-only buttons make them harder to scan than useful.

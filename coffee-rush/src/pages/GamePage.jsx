@@ -13,6 +13,7 @@ import { applyAction } from '../engine/reducers';
 import {
   getActivePlayer,
   getCompletableOrders,
+  getLegalSetupCells,
   getMeepleForFirstMoveStep,
   getMovePathPreview,
   getPlayer,
@@ -66,6 +67,7 @@ export default function GamePage() {
   const [path, setPath] = useState([]);
   const [rushSpent, setRushSpent] = useState(0);
   const [selectedCup, setSelectedCup] = useState(null);
+  const [selectedSetupCellId, setSelectedSetupCellId] = useState(null);
   const [passTo, setPassTo] = useState('');
   const [isUpgradeMenuOpen, setIsUpgradeMenuOpen] = useState(false);
 
@@ -85,6 +87,8 @@ export default function GamePage() {
   const selectedMeeple = activePlayer?.meeples.find(
     (meeple) => meeple.id === selectedMeepleId,
   );
+  const selectedSetupCell =
+    selectedSetupCellId === null ? null : getCell(selectedSetupCellId);
   const movePreview = useMemo(
     () =>
       state?.phase === PHASES.MOVE && selectedMeepleId
@@ -170,6 +174,7 @@ export default function GamePage() {
       setPath([]);
       setRushSpent(0);
       setSelectedCup(null);
+      setSelectedSetupCellId(null);
     }
 
     return result;
@@ -179,6 +184,7 @@ export default function GamePage() {
     setPath([]);
     setRushSpent(0);
     setSelectedCup(null);
+    setSelectedSetupCellId(null);
     setPassTo('');
     setIsUpgradeMenuOpen(false);
   }
@@ -284,18 +290,16 @@ export default function GamePage() {
 
   function handleCellClick(cellId) {
     if (setupPlacement) {
-      if (selectedCup === null) {
-        setError('Choose a cup for this starting ingredient first.');
+      const cell = getCell(cellId);
+
+      if (!cell || !getLegalSetupCells(state).includes(cell.id)) {
+        setError('Choose an open board space.');
         return;
       }
 
-      dispatch({
-        type: 'PLACE_STARTING_MEEPLE',
-        playerId: setupPlacement.playerId,
-        meepleId: setupPlacement.meepleId,
-        cellId,
-        cupIdx: selectedCup,
-      });
+      setSelectedSetupCellId(cell.id);
+      setSelectedCup(null);
+      setError('');
       return;
     }
 
@@ -330,6 +334,23 @@ export default function GamePage() {
 
     setError('');
     setPath((current) => [...current, cellId]);
+  }
+
+  function placeStartingIngredient(cupIdx) {
+    if (!setupPlacement) return;
+
+    if (selectedSetupCellId === null) {
+      setError('Choose a board space before choosing a cup.');
+      return;
+    }
+
+    dispatch({
+      type: 'PLACE_STARTING_MEEPLE',
+      playerId: setupPlacement.playerId,
+      meepleId: setupPlacement.meepleId,
+      cellId: selectedSetupCellId,
+      cupIdx,
+    });
   }
 
   function confirmMove() {
@@ -451,6 +472,7 @@ export default function GamePage() {
             onSelectMeeple={selectMeeple}
             onCellClick={handleCellClick}
             movePreview={movePreview}
+            selectedSetupCellId={selectedSetupCellId}
           />
 
           <section className="action-panel" aria-label={`${activePlayer.name} turn controls`}>
@@ -463,8 +485,11 @@ export default function GamePage() {
                     {setupPlacement.meepleId.split('-')[1].toUpperCase()}
                   </h2>
                   <p>
-                    Choose the cup that will receive the space ingredient, then pick
-                    any open board space.
+                    {selectedSetupCell
+                      ? `${ingredientLabel(
+                          selectedSetupCell.ingredient,
+                        )} selected from Cell ${selectedSetupCell.id}. Choose a cup for it.`
+                      : 'Pick any open board space to collect its starting ingredient, then choose a cup.'}
                   </p>
                 </div>
                 <div className="cup-picker detailed-picker" aria-label="Starting ingredient cup">
@@ -473,7 +498,8 @@ export default function GamePage() {
                       key={index}
                       className={selectedCup === index ? 'selected-tool' : ''}
                       type="button"
-                      onClick={() => selectCup(index)}
+                      onClick={() => placeStartingIngredient(index)}
+                      disabled={!selectedSetupCell}
                     >
                       <span>Cup {index + 1}</span>
                       <small>{ingredientListLabel(cup)}</small>

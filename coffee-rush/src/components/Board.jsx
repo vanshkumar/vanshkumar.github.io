@@ -15,6 +15,7 @@ export default function Board({
   onSelectMeeple,
   onCellClick,
   movePreview,
+  selectedSetupCellId,
 }) {
   const cells = getBoardView(state);
   const preview =
@@ -42,6 +43,9 @@ export default function Board({
           const nextCell = nextCellById.get(cell.id);
           const isCurrentMoveCell =
             state.phase === PHASES.MOVE && preview?.currentCellId === cell.id;
+          const isSelectedSetupCell =
+            state.phase === PHASES.SETUP_PLACEMENT &&
+            Number(selectedSetupCellId) === cell.id;
           const legalCellNote =
             state.phase === PHASES.SETUP_PLACEMENT ? 'open setup space' : 'next step';
           const cellNotes = [
@@ -49,6 +53,7 @@ export default function Board({
             nextCell && !nextCell.canEnd ? 'pass through only' : '',
             isInPath ? `path step ${pathStep}` : '',
             isCurrentMoveCell ? 'current position' : '',
+            isSelectedSetupCell ? 'selected setup space' : '',
           ].filter(Boolean);
 
           return (
@@ -58,6 +63,8 @@ export default function Board({
                 nextCell && !nextCell.canEnd ? 'pass-only-cell' : ''
               } ${isInPath ? 'path-cell' : ''} ${
                 isCurrentMoveCell ? 'current-cell' : ''
+              } ${
+                isSelectedSetupCell ? 'setup-selected-cell' : ''
               }`}
               role="button"
               tabIndex={0}

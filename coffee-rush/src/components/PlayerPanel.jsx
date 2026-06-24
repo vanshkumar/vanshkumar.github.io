@@ -13,7 +13,7 @@ export default function PlayerPanel({
   phase,
 }) {
   const completable = isActive && phase === 'pour' ? getCompletableOrders(player) : [];
-  const canSelectCups = isActive && ['pour', 'setupPlacement'].includes(phase);
+  const canSelectCups = isActive && phase === 'pour';
   const canDumpCups = isActive && phase === 'pour';
 
   return (

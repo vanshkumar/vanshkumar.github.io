@@ -54,6 +54,11 @@
 
 ## Patterns and Preferences
 
+**[2026-06-24] — Setup placement UX**
+- Observation: `PLACE_STARTING_MEEPLE` is an atomic reducer action that needs both `cellId` and `cupIdx`, but the setup UI can still match normal turns by staging the selected board cell locally before submitting the cup choice.
+- Action: Keep setup cup selection in the setup action panel and leave player-panel cups disabled during setup so players pick a board space first.
+- Confidence: high
+
 **[2026-06-24] — Upgrade control UX**
 - Observation: `UpgradeTray` currently uses compact coded buttons in every player panel, while `GamePage` already has a dedicated start-of-turn upgrade phase action surface.
 - Action: Keep player-panel upgrades as compact status indicators, and put upgrade purchasing descriptions/actions in the active player's upgrade-phase menu or modal.

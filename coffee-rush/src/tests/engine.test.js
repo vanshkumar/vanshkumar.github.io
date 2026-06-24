@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { createInitialState } from '../engine/initialState';
 import { applyAction } from '../engine/reducers';
 import {
+  getCompletableOrders,
   getLegalDestinations,
   getMeepleForFirstMoveStep,
   getMovePathPreview,
@@ -342,6 +343,37 @@ describe('Coffee Rush engine', () => {
 
     expect(state.players[1].tabs[0]).toHaveLength(beforeP2 + 1);
     expect(state.players[2].tabs[0]).toHaveLength(beforeP3 + 1);
+  });
+
+  it('collapses duplicate ready-order actions for the same cup and recipe', () => {
+    const firstOrder = {
+      id: 'order_004',
+      name: 'Espresso Doppio',
+      isSpecialty: false,
+      recipe: { coffee: 2, steam: 1 },
+    };
+    const duplicateOrder = {
+      id: 'order_014',
+      name: 'Espresso Doppio',
+      isSpecialty: false,
+      recipe: { coffee: 2, steam: 1 },
+    };
+    const player = {
+      cups: [
+        ['coffee', 'coffee', 'steam'],
+        ['coffee', 'coffee', 'steam'],
+        [],
+      ],
+      tabs: [[firstOrder, duplicateOrder], [], [], []],
+    };
+
+    const matches = getCompletableOrders(player);
+
+    expect(matches).toHaveLength(2);
+    expect(matches.map((match) => [match.cupIdx, match.order.id])).toEqual([
+      [0, firstOrder.id],
+      [1, firstOrder.id],
+    ]);
   });
 
   it('slides tab four cards into penalties and grants rush tokens', () => {

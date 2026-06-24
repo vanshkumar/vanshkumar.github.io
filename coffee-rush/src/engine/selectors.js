@@ -167,11 +167,18 @@ export function getLegalSetupCells(state) {
 
 export function getCompletableOrders(player) {
   const matches = [];
+  const seen = new Set();
 
   player.cups.forEach((cup, cupIdx) => {
     player.tabs.forEach((tab, tabIdx) => {
       tab.forEach((order) => {
         if (cupMatchesOrder(cup, order)) {
+          const key = completableOrderKey(cupIdx, order);
+          if (seen.has(key)) {
+            return;
+          }
+
+          seen.add(key);
           matches.push({ cupIdx, tabIdx, order });
         }
       });
@@ -179,6 +186,15 @@ export function getCompletableOrders(player) {
   });
 
   return matches;
+}
+
+function completableOrderKey(cupIdx, order) {
+  const recipeKey = Object.entries(order.recipe)
+    .sort(([ingredientA], [ingredientB]) => ingredientA.localeCompare(ingredientB))
+    .map(([ingredient, count]) => `${ingredient}:${count}`)
+    .join('|');
+
+  return [cupIdx, order.name, order.isSpecialty ? 'specialty' : 'regular', recipeKey].join('::');
 }
 
 export function getScores(state) {

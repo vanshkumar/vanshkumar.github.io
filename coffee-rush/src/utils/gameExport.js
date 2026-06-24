@@ -35,3 +35,7 @@ export function gameExportFilename(state, now = new Date()) {
 export function gameScreenshotFilename(state, now = new Date()) {
   return `${gameExportBasename(state, now)}.png`;
 }
+
+export function gameExportArchiveFilename(state, now = new Date()) {
+  return `${gameExportBasename(state, now)}.zip`;
+}

@@ -1,5 +1,8 @@
 const PNG_MIME_TYPE = 'image/png';
+const ZIP_MIME_TYPE = 'application/zip';
 const TRANSPARENT_COLORS = new Set(['transparent', 'rgba(0, 0, 0, 0)', 'rgb(0 0 0 / 0)']);
+const ZIP_ENCODER = new TextEncoder();
+let crc32Table = null;
 
 export function downloadBlob(blob, filename) {
   const url = URL.createObjectURL(blob);
@@ -16,12 +19,17 @@ export function downloadTextFile(text, filename, type = 'text/plain') {
   downloadBlob(new Blob([text], { type }), filename);
 }
 
+export async function downloadFilesArchive(files, filename) {
+  const blob = await createZipBlob(files);
+  downloadBlob(blob, filename);
+}
+
 export async function downloadElementScreenshot(element, filename) {
   const blob = await createElementScreenshotBlob(element);
   downloadBlob(blob, filename);
 }
 
-async function createElementScreenshotBlob(element) {
+export async function createElementScreenshotBlob(element) {
   if (!element) {
     throw new Error('Screenshot target was not found.');
   }
@@ -42,6 +50,173 @@ async function createElementScreenshotBlob(element) {
   context.fillRect(0, 0, width, height);
   renderElement(context, element, element.getBoundingClientRect());
   return await canvasToBlob(canvas);
+}
+
+export async function createZipBlob(files) {
+  if (!Array.isArray(files) || files.length === 0) {
+    throw new Error('Choose at least one file to archive.');
+  }
+
+  if (files.length > 0xffff) {
+    throw new Error('Too many files for a ZIP archive.');
+  }
+
+  const fileParts = [];
+  const centralDirectoryParts = [];
+  let localOffset = 0;
+  let centralDirectorySize = 0;
+
+  for (const file of files) {
+    const fileName = normalizeArchiveFilename(file.name);
+    const nameBytes = ZIP_ENCODER.encode(fileName);
+    const data = new Uint8Array(await file.blob.arrayBuffer());
+
+    if (data.length > 0xffffffff || localOffset > 0xffffffff) {
+      throw new Error('ZIP archive is too large.');
+    }
+
+    const crc = crc32(data);
+    const timestamp = getDosTimestamp(file.lastModified ? new Date(file.lastModified) : new Date());
+    const localHeader = createZipLocalHeader(nameBytes, data.length, crc, timestamp);
+    const centralDirectoryHeader = createZipCentralDirectoryHeader(
+      nameBytes,
+      data.length,
+      crc,
+      timestamp,
+      localOffset,
+    );
+
+    fileParts.push(localHeader, data);
+    centralDirectoryParts.push(centralDirectoryHeader);
+    localOffset += localHeader.length + data.length;
+    centralDirectorySize += centralDirectoryHeader.length;
+  }
+
+  if (centralDirectorySize > 0xffffffff || localOffset > 0xffffffff) {
+    throw new Error('ZIP archive is too large.');
+  }
+
+  const endRecord = createZipEndRecord(files.length, centralDirectorySize, localOffset);
+  return new Blob([...fileParts, ...centralDirectoryParts, endRecord], {
+    type: ZIP_MIME_TYPE,
+  });
+}
+
+function normalizeArchiveFilename(filename) {
+  const normalized = String(filename ?? '')
+    .replace(/\\/g, '/')
+    .split('/')
+    .filter((part) => part && part !== '.' && part !== '..')
+    .join('/');
+
+  return normalized || 'download';
+}
+
+function createZipLocalHeader(nameBytes, dataSize, crc, timestamp) {
+  const header = new Uint8Array(30 + nameBytes.length);
+  const view = new DataView(header.buffer);
+
+  view.setUint32(0, 0x04034b50, true);
+  view.setUint16(4, 20, true);
+  view.setUint16(6, 0, true);
+  view.setUint16(8, 0, true);
+  view.setUint16(10, timestamp.time, true);
+  view.setUint16(12, timestamp.date, true);
+  view.setUint32(14, crc, true);
+  view.setUint32(18, dataSize, true);
+  view.setUint32(22, dataSize, true);
+  view.setUint16(26, nameBytes.length, true);
+  view.setUint16(28, 0, true);
+  header.set(nameBytes, 30);
+
+  return header;
+}
+
+function createZipCentralDirectoryHeader(nameBytes, dataSize, crc, timestamp, localOffset) {
+  const header = new Uint8Array(46 + nameBytes.length);
+  const view = new DataView(header.buffer);
+
+  view.setUint32(0, 0x02014b50, true);
+  view.setUint16(4, 20, true);
+  view.setUint16(6, 20, true);
+  view.setUint16(8, 0, true);
+  view.setUint16(10, 0, true);
+  view.setUint16(12, timestamp.time, true);
+  view.setUint16(14, timestamp.date, true);
+  view.setUint32(16, crc, true);
+  view.setUint32(20, dataSize, true);
+  view.setUint32(24, dataSize, true);
+  view.setUint16(28, nameBytes.length, true);
+  view.setUint16(30, 0, true);
+  view.setUint16(32, 0, true);
+  view.setUint16(34, 0, true);
+  view.setUint16(36, 0, true);
+  view.setUint32(38, 0, true);
+  view.setUint32(42, localOffset, true);
+  header.set(nameBytes, 46);
+
+  return header;
+}
+
+function createZipEndRecord(fileCount, centralDirectorySize, centralDirectoryOffset) {
+  const record = new Uint8Array(22);
+  const view = new DataView(record.buffer);
+
+  view.setUint32(0, 0x06054b50, true);
+  view.setUint16(4, 0, true);
+  view.setUint16(6, 0, true);
+  view.setUint16(8, fileCount, true);
+  view.setUint16(10, fileCount, true);
+  view.setUint32(12, centralDirectorySize, true);
+  view.setUint32(16, centralDirectoryOffset, true);
+  view.setUint16(20, 0, true);
+
+  return record;
+}
+
+function getDosTimestamp(date) {
+  const safeDate = Number.isNaN(date.getTime()) ? new Date() : date;
+  const year = Math.min(Math.max(safeDate.getFullYear(), 1980), 2107);
+  const time =
+    (safeDate.getHours() << 11) |
+    (safeDate.getMinutes() << 5) |
+    Math.floor(safeDate.getSeconds() / 2);
+  const day = safeDate.getDate();
+  const month = safeDate.getMonth() + 1;
+
+  return {
+    date: ((year - 1980) << 9) | (month << 5) | day,
+    time,
+  };
+}
+
+function crc32(bytes) {
+  const table = getCrc32Table();
+  let crc = 0xffffffff;
+
+  for (const byte of bytes) {
+    crc = (crc >>> 8) ^ table[(crc ^ byte) & 0xff];
+  }
+
+  return (crc ^ 0xffffffff) >>> 0;
+}
+
+function getCrc32Table() {
+  if (crc32Table) {
+    return crc32Table;
+  }
+
+  crc32Table = Array.from({ length: 256 }, (_, index) => {
+    let value = index;
+
+    for (let bit = 0; bit < 8; bit += 1) {
+      value = value & 1 ? 0xedb88320 ^ (value >>> 1) : value >>> 1;
+    }
+
+    return value >>> 0;
+  });
+
+  return crc32Table;
 }
 
 function getElementSize(element) {

@@ -2,6 +2,16 @@
 
 ## What Has Worked
 
+**[2026-06-24] — Ready-order controls**
+- Observation: The order deck contains separate card instances with identical names and recipes; listing every matching card creates duplicate serve buttons for a single cup.
+- Action: Deduplicate ready-order actions by cup, order name, specialty flag, and recipe while preserving separate actions for separate matching cups.
+- Confidence: high
+
+**[2026-06-24] — Mobile export downloads**
+- Observation: Mobile browsers can suppress one of multiple programmatic downloads triggered by the same header action.
+- Action: Package multi-file exports into one ZIP via `downloadFilesArchive` instead of clicking separate JSON and PNG downloads.
+- Confidence: high
+
 **[2026-06-19] — UX implementation**
 - Observation: The Codex shell for this repo may not expose `npm`, even when `node_modules` is already installed.
 - Action: Use the bundled Node runtime to invoke local tools directly, e.g. `node_modules/vitest/vitest.mjs`, `node_modules/eslint/bin/eslint.js`, and `node_modules/vite/bin/vite.js`.

@@ -25,11 +25,13 @@ import {
   saveUndoStack,
 } from '../persistence/localStorage';
 import {
-  downloadElementScreenshot,
+  createElementScreenshotBlob,
+  downloadFilesArchive,
   downloadTextFile,
 } from '../utils/downloads';
 import {
   formatGameExport,
+  gameExportArchiveFilename,
   gameExportFilename,
   gameScreenshotFilename,
 } from '../utils/gameExport';
@@ -233,13 +235,31 @@ export default function GamePage() {
 
     setIsExporting(true);
     const exportedAt = new Date();
-    downloadTextFile(getExportText(), gameExportFilename(state, exportedAt), 'application/json');
+    const exportText = getExportText();
+    const exportFilename = gameExportFilename(state, exportedAt);
+    const screenshotFilename = gameScreenshotFilename(state, exportedAt);
 
     try {
-      await downloadElementScreenshot(pageRef.current, gameScreenshotFilename(state, exportedAt));
+      const screenshotBlob = await createElementScreenshotBlob(pageRef.current);
+      await downloadFilesArchive(
+        [
+          {
+            name: exportFilename,
+            blob: new Blob([exportText], { type: 'application/json' }),
+            lastModified: exportedAt.getTime(),
+          },
+          {
+            name: screenshotFilename,
+            blob: screenshotBlob,
+            lastModified: exportedAt.getTime(),
+          },
+        ],
+        gameExportArchiveFilename(state, exportedAt),
+      );
       setExportStatus('Game log and screenshot downloaded.');
     } catch (screenshotError) {
       console.error(screenshotError);
+      downloadTextFile(exportText, exportFilename, 'application/json');
       setExportStatus('Game log downloaded. Screenshot failed.');
     } finally {
       setIsExporting(false);
@@ -634,7 +654,7 @@ export default function GamePage() {
                         type="button"
                         onClick={() => fulfillOrder(match.cupIdx, match.order.id)}
                       >
-                        Serve {match.order.name} with Cup {match.cupIdx + 1}
+                        {`Serve ${match.order.name} with Cup ${match.cupIdx + 1}`}
                       </button>
                     ))}
                   </div>

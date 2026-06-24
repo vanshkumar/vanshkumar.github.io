@@ -3,6 +3,7 @@ import { createInitialState } from '../engine/initialState';
 import {
   createGameExport,
   formatGameExport,
+  gameExportArchiveFilename,
   gameExportBasename,
   gameExportFilename,
   gameScreenshotFilename,
@@ -40,6 +41,9 @@ describe('game export', () => {
     );
     expect(gameScreenshotFilename(state, new Date('2026-06-14T12:00:00Z'))).toBe(
       'coffee-rush-turn-1-setupPlacement-2026-06-14T12-00-00-000Z.png',
+    );
+    expect(gameExportArchiveFilename(state, new Date('2026-06-14T12:00:00Z'))).toBe(
+      'coffee-rush-turn-1-setupPlacement-2026-06-14T12-00-00-000Z.zip',
     );
   });
 });

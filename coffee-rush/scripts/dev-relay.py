@@ -106,6 +106,7 @@ async def leave(client_id):
 async def join_room(room_id, client_id, writer):
   room = ROOMS.setdefault(room_id, {})
   CLIENTS[client_id] = {'roomId': room_id, 'writer': writer}
+  await send_json(writer, {'type': 'JOIN_ACK', 'clientId': client_id, 'peerIds': list(room.keys())})
 
   for peer_id, peer in list(room.items()):
     await send_json(writer, {'type': 'PEER_JOIN', 'peerId': peer_id})
@@ -138,6 +139,22 @@ async def route_room_message(sender_id, message):
       await send_json(peer['writer'], payload)
 
 
+async def close_room(sender_id):
+  sender = CLIENTS.get(sender_id)
+  if not sender:
+    return
+
+  room_id = sender['roomId']
+  room = ROOMS.get(room_id, {})
+  for peer_id, peer in list(room.items()):
+    if peer_id != sender_id:
+      await send_json(peer['writer'], {'type': 'PEER_LEAVE', 'peerId': sender_id})
+      peer['writer'].close()
+  for peer_id in list(room.keys()):
+    CLIENTS.pop(peer_id, None)
+  ROOMS.pop(room_id, None)
+
+
 async def handle_client(reader, writer):
   client_id = None
 
@@ -156,6 +173,9 @@ async def handle_client(reader, writer):
         await join_room(message['roomId'], client_id, writer)
       elif message.get('type') == 'ROOM_MESSAGE' and client_id:
         await route_room_message(client_id, message)
+      elif message.get('type') == 'CLOSE_ROOM' and client_id:
+        await close_room(client_id)
+        break
   except (asyncio.IncompleteReadError, ConnectionError, json.JSONDecodeError, KeyError):
     pass
   finally:

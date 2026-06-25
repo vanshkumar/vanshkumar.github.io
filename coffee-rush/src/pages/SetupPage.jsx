@@ -5,21 +5,33 @@ import { clearGame, loadGame, saveGame } from '../persistence/localStorage';
 import {
   REMOTE_MODES,
   clearRemoteSession,
+  createGameKey,
+  createHostAuth,
   createRemoteSession,
+  createRelayAuth,
   createRoomCode,
-  getRoomCodeFromLocation,
-  normalizeRoomCode,
+  formatInviteToken,
+  getInviteFromLocation,
+  parseInviteInput,
   saveRemoteSession,
 } from '../persistence/remoteSession';
 
 export default function SetupPage() {
   const navigate = useNavigate();
   const savedGame = loadGame();
-  const initialRoomCode = getRoomCodeFromLocation();
+  const initialInvite = getInviteFromLocation();
   const [playerCount, setPlayerCount] = useState(2);
   const [startingPlayerIndex, setStartingPlayerIndex] = useState(0);
   const [names, setNames] = useState(['Ada', 'Ben', 'Cleo', 'Dev']);
-  const [joinRoomCode, setJoinRoomCode] = useState(initialRoomCode);
+  const [joinRoomCode, setJoinRoomCode] = useState(
+    initialInvite.relayAuth && initialInvite.gameKey
+      ? formatInviteToken(
+          initialInvite.roomId,
+          initialInvite.relayAuth,
+          initialInvite.gameKey,
+        )
+      : initialInvite.roomId,
+  );
   const [remoteError, setRemoteError] = useState('');
 
   function updateName(index, value) {
@@ -51,26 +63,49 @@ export default function SetupPage() {
 
   function hostOnlineGame() {
     const roomId = createRoomCode();
+    const relayAuth = createRelayAuth();
+    const hostAuth = createHostAuth();
+    const gameKey = createGameKey();
     const state = createSetupState(`coffee-rush-${roomId}`);
 
     clearGame();
     clearRemoteSession();
     saveGame(state);
-    saveRemoteSession(createRemoteSession({ mode: REMOTE_MODES.HOST, roomId }));
+    saveRemoteSession(
+      createRemoteSession({
+        mode: REMOTE_MODES.HOST,
+        roomId,
+        relayAuth,
+        hostAuth,
+        gameKey,
+      }),
+    );
     navigate('/game');
   }
 
   function joinOnlineGame() {
-    const roomId = normalizeRoomCode(joinRoomCode);
+    const invite = parseInviteInput(joinRoomCode);
 
-    if (roomId.length !== 6) {
-      setRemoteError('Enter the 6-character room code from the host.');
+    if (invite.roomId.length !== 6) {
+      setRemoteError('Paste the invite link or room token from the host.');
+      return;
+    }
+
+    if (!invite.relayAuth || !invite.gameKey) {
+      setRemoteError('That invite is missing its private room key.');
       return;
     }
 
     clearGame();
     clearRemoteSession();
-    saveRemoteSession(createRemoteSession({ mode: REMOTE_MODES.PEER, roomId }));
+    saveRemoteSession(
+      createRemoteSession({
+        mode: REMOTE_MODES.PEER,
+        roomId: invite.roomId,
+        relayAuth: invite.relayAuth,
+        gameKey: invite.gameKey,
+      }),
+    );
     navigate('/game');
   }
 
@@ -169,16 +204,17 @@ export default function SetupPage() {
           </div>
           <div className="join-room-row">
             <label>
-              Room code
+              Invite link
               <input
                 value={joinRoomCode}
                 onChange={(event) => {
-                  setJoinRoomCode(normalizeRoomCode(event.target.value));
+                  setJoinRoomCode(event.target.value.trim());
                   setRemoteError('');
                 }}
-                placeholder="ABC123"
+                placeholder="Paste invite link or ABC123.auth.key"
                 inputMode="text"
-                autoCapitalize="characters"
+                autoCapitalize="none"
+                spellCheck={false}
               />
             </label>
             <button type="button" onClick={joinOnlineGame}>

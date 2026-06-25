@@ -51,6 +51,8 @@ jobs:
       - name: Build coffee-rush
         run: npm run build
         working-directory: coffee-rush
+        env:
+          VITE_COFFEE_RUSH_RELAY_URL: ${{ vars.COFFEE_RUSH_RELAY_URL }}
 
       - name: Assemble site artifact
         run: |

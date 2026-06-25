@@ -3,10 +3,15 @@ import {
   REMOTE_MESSAGE_TYPES,
   createAcceptedAction,
   createActionRequest,
+  createInviteLink,
+  createRelaySocketUrl,
   createStateSnapshot,
   getRelayUrl,
 } from '../network/roomSync';
 import { createInitialState } from '../engine/initialState';
+
+const RELAY_AUTH = 'relay_auth_token';
+const GAME_KEY = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
 
 describe('room sync messages', () => {
   afterEach(() => {
@@ -62,5 +67,25 @@ describe('room sync messages', () => {
         new URL('https://example.test/coffee-rush/?relay=ws://127.0.0.1:8787#/'),
       ),
     ).toBe('ws://127.0.0.1:8787');
+  });
+
+  it('builds room-scoped relay sockets and secret-bearing invite links', () => {
+    expect(
+      createRelaySocketUrl(
+        'wss://relay.example.test/room?debug=1',
+        'ab12cd',
+        new URL('https://example.test/coffee-rush/#/'),
+      ),
+    ).toBe('wss://relay.example.test/room?debug=1&room=AB12CD');
+
+    expect(
+      createInviteLink({
+        roomId: 'ab12cd',
+        relayAuth: RELAY_AUTH,
+        gameKey: GAME_KEY,
+      }, new URL('https://example.test/coffee-rush/#/game')),
+    ).toBe(
+      `https://example.test/coffee-rush/?room=AB12CD#/?auth=${RELAY_AUTH}&key=${GAME_KEY}`,
+    );
   });
 });

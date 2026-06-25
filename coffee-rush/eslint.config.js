@@ -5,7 +5,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
-  { ignores: ['dist'] },
+  { ignores: ['dist', 'relay/.wrangler', 'relay/dist'] },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -37,6 +37,24 @@ export default [
   },
   {
     files: ['src/engine/**/*.js', 'src/data/**/*.js', 'src/tests/**/*.js'],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.vitest,
+      },
+    },
+  },
+  {
+    files: ['relay/src/**/*.js'],
+    languageOptions: {
+      globals: {
+        ...globals.serviceworker,
+        WebSocketPair: 'readonly',
+      },
+    },
+  },
+  {
+    files: ['relay/src/**/*.test.js'],
     languageOptions: {
       globals: {
         ...globals.node,

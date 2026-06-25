@@ -1,4 +1,8 @@
-import { buildInviteUrl } from '../persistence/remoteSession';
+import {
+  buildInviteUrl,
+  normalizeRoomCode,
+} from '../persistence/remoteSession';
+import { createRoomCipher } from './roomCrypto';
 
 const TRYSTERO_MODULE_URL = 'https://esm.run/@trystero-p2p/mqtt@0.24.0';
 const APP_ID = 'coffee-rush';
@@ -46,12 +50,16 @@ export function createStateSnapshot(state, undoStack = []) {
   };
 }
 
-export function createInviteLink(roomId) {
-  return buildInviteUrl(roomId);
+export function createInviteLink(session, location = window.location) {
+  return buildInviteUrl(session, location);
 }
 
 export async function connectRoom({
   roomId,
+  relayAuth = '',
+  hostAuth = '',
+  gameKey = '',
+  role = 'peer',
   onMessage,
   onPeerJoin,
   onPeerLeave,
@@ -63,6 +71,10 @@ export async function connectRoom({
   if (relayUrl) {
     return connectWebSocketRoom({
       roomId,
+      relayAuth,
+      hostAuth,
+      gameKey,
+      role,
       relayUrl,
       onMessage,
       onPeerJoin,
@@ -74,6 +86,7 @@ export async function connectRoom({
 
   return connectTrysteroRoom({
     roomId,
+    gameKey,
     onMessage,
     onPeerJoin,
     onPeerLeave,
@@ -95,14 +108,24 @@ export function getRelayUrl(location = window.location) {
   }
 }
 
+export function createRelaySocketUrl(relayUrl, roomId, location = window.location) {
+  const url = new URL(relayUrl, location.href);
+  url.searchParams.set('room', normalizeRoomCode(roomId));
+  return url.toString();
+}
+
 function createClientId() {
   const bytes = new Uint8Array(10);
   crypto.getRandomValues(bytes);
   return Array.from(bytes, (byte) => byte.toString(36).padStart(2, '0')).join('');
 }
 
-function connectWebSocketRoom({
+async function connectWebSocketRoom({
   roomId,
+  relayAuth,
+  hostAuth,
+  gameKey,
+  role,
   relayUrl,
   onMessage,
   onPeerJoin,
@@ -111,37 +134,87 @@ function connectWebSocketRoom({
   onError,
 }) {
   onStatus?.('connecting');
+  const cipher = gameKey ? await createRoomCipher(gameKey) : null;
 
   return new Promise((resolve, reject) => {
     const selfId = createClientId();
-    const socket = new WebSocket(relayUrl);
+    const socketUrl = createRelaySocketUrl(relayUrl, roomId);
+    const socket = new WebSocket(socketUrl);
     let settled = false;
+    let closeHandled = false;
+    const pendingMessages = [];
 
     function sendRelayMessage(message) {
       socket.send(JSON.stringify(message));
     }
 
-    socket.addEventListener('open', () => {
+    function failConnection(message) {
+      const error = new Error(message);
+      onStatus?.('error');
+      onError?.(error);
+
+      if (!settled) {
+        settled = true;
+        reject(error);
+      }
+    }
+
+    async function sendRoomData(data, target) {
+      const encryptedData = cipher ? await cipher.encrypt(data) : data;
       sendRelayMessage({
-        type: 'JOIN',
+        type: 'ROOM_MESSAGE',
         roomId,
-        clientId: selfId,
+        target,
+        data: encryptedData,
       });
-      onStatus?.('connected');
+    }
+
+    async function handleRoomMessage(message) {
+      try {
+        const data = cipher ? await cipher.decrypt(message.data) : message.data;
+        onMessage?.(data, message.from);
+      } catch {
+        onError?.(new Error('Received a room message that could not be decrypted.'));
+      }
+    }
+
+    function resolveConnection(message) {
+      if (settled) return;
+
       settled = true;
+      onStatus?.('connected');
       resolve({
-        selfId,
+        selfId: message.clientId || selfId,
         send(data, target) {
+          return sendRoomData(data, target);
+        },
+        closeRoom() {
           sendRelayMessage({
-            type: 'ROOM_MESSAGE',
+            type: 'CLOSE_ROOM',
             roomId,
-            target,
-            data,
           });
         },
         leave() {
           socket.close();
         },
+      });
+
+      pendingMessages.splice(0).forEach((pendingMessage) => {
+        if (pendingMessage.type === 'ROOM_MESSAGE') {
+          void handleRoomMessage(pendingMessage);
+        }
+      });
+    }
+
+    socket.addEventListener('open', () => {
+      sendRelayMessage({
+        type: 'JOIN',
+        protocol: 1,
+        roomId,
+        roomAuth: relayAuth,
+        hostAuth,
+        clientId: selfId,
+        role,
       });
     });
 
@@ -151,6 +224,17 @@ function connectWebSocketRoom({
       try {
         message = JSON.parse(event.data);
       } catch {
+        return;
+      }
+
+      if (message.type === 'JOIN_ACK') {
+        resolveConnection(message);
+        return;
+      }
+
+      if (message.type === 'ERROR') {
+        failConnection(message.message ?? 'The relay rejected the room connection.');
+        socket.close();
         return;
       }
 
@@ -165,16 +249,27 @@ function connectWebSocketRoom({
       }
 
       if (message.type === 'ROOM_MESSAGE') {
-        onMessage?.(message.data, message.from);
+        if (!settled) {
+          pendingMessages.push(message);
+          return;
+        }
+
+        void handleRoomMessage(message);
       }
     });
 
     socket.addEventListener('close', () => {
+      if (closeHandled) return;
+      closeHandled = true;
       onStatus?.('offline');
+
+      if (!settled) {
+        reject(new Error(`Could not connect to relay ${socketUrl}.`));
+      }
     });
 
     socket.addEventListener('error', () => {
-      const error = new Error(`Could not connect to relay ${relayUrl}.`);
+      const error = new Error(`Could not connect to relay ${socketUrl}.`);
       onStatus?.('error');
       onError?.(error);
 
@@ -187,6 +282,7 @@ function connectWebSocketRoom({
 
 async function connectTrysteroRoom({
   roomId,
+  gameKey,
   onMessage,
   onPeerJoin,
   onPeerLeave,
@@ -196,6 +292,7 @@ async function connectTrysteroRoom({
   onStatus?.('connecting');
 
   try {
+    const cipher = gameKey ? await createRoomCipher(gameKey) : null;
     const { joinRoom, selfId } = await import(
       /* @vite-ignore */ TRYSTERO_MODULE_URL
     );
@@ -212,19 +309,31 @@ async function connectTrysteroRoom({
     };
 
     message.onMessage = (data, meta) => {
-      onMessage?.(data, meta?.peerId);
+      if (!cipher) {
+        onMessage?.(data, meta?.peerId);
+        return;
+      }
+
+      void cipher
+        .decrypt(data)
+        .then((decrypted) => onMessage?.(decrypted, meta?.peerId))
+        .catch(() => {
+          onError?.(new Error('Received a room message that could not be decrypted.'));
+        });
     };
 
     onStatus?.('connected');
 
     return {
       selfId,
-      send(data, target) {
+      async send(data, target) {
+        const outboundData = cipher ? await cipher.encrypt(data) : data;
+
         if (target) {
-          return message.send(data, { target });
+          return message.send(outboundData, { target });
         }
 
-        return message.send(data);
+        return message.send(outboundData);
       },
       leave() {
         room.leave();

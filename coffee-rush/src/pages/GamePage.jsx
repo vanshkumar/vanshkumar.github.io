@@ -120,7 +120,7 @@ export default function GamePage() {
   const isRemotePeer = remoteSession?.mode === REMOTE_MODES.PEER;
   const isRemoteGame = Boolean(remoteSession);
   const remoteRoomKey = remoteSession
-    ? `${remoteSession.mode}:${remoteSession.roomId}`
+    ? `${remoteSession.mode}:${remoteSession.roomId}:${remoteSession.relayAuth}:${remoteSession.hostAuth}:${remoteSession.gameKey}`
     : '';
   remoteSessionRef.current = remoteSession;
   remoteHandlersRef.current = {
@@ -223,6 +223,10 @@ export default function GamePage() {
 
     connectRoom({
       roomId: session.roomId,
+      relayAuth: session.relayAuth,
+      hostAuth: session.hostAuth,
+      gameKey: session.gameKey,
+      role: session.mode,
       onStatus: (connection) => {
         if (!disposed) {
           setRemoteStatus((current) => ({
@@ -281,11 +285,18 @@ export default function GamePage() {
         }));
 
         if (session.mode === REMOTE_MODES.PEER) {
-          client.send({
-            type: REMOTE_MESSAGE_TYPES.HELLO,
-            clientId: client.selfId,
-            knownActionIndex: stateRef.current?.log?.length ?? 0,
-          });
+          client
+            .send({
+              type: REMOTE_MESSAGE_TYPES.HELLO,
+              clientId: client.selfId,
+              knownActionIndex: stateRef.current?.log?.length ?? 0,
+            })
+            .catch(() => {
+              setRemoteStatus((current) => ({
+                ...current,
+                error: 'Could not ask the host for the room snapshot.',
+              }));
+            });
         }
       })
       .catch(() => {});
@@ -390,14 +401,11 @@ export default function GamePage() {
       setError('');
       setExportStatus('Waiting for the host to confirm that action.');
 
-      try {
-        client.send(request);
-      } catch {
+      client.send(request).catch(() => {
         clearPendingActionId(request.clientActionId);
         setExportStatus('');
         setError('Could not send that action to the host.');
-        return { error: 'Could not send that action to the host.' };
-      }
+      });
 
       return { pending: true };
     }
@@ -405,9 +413,9 @@ export default function GamePage() {
     const result = applyAcceptedGameAction(action);
 
     if (!result.error && isRemoteHost) {
-      remoteClientRef.current?.send(
-        createAcceptedAction(action, result.state.log.length),
-      );
+      remoteClientRef.current
+        ?.send(createAcceptedAction(action, result.state.log.length))
+        .catch(() => {});
     }
 
     return result;
@@ -419,14 +427,16 @@ export default function GamePage() {
 
     if (!currentState || !client) return;
 
-    client.send(createStateSnapshot(currentState, undoStackRef.current), peerId);
+    client.send(createStateSnapshot(currentState, undoStackRef.current), peerId).catch(() => {});
   }
 
   function requestRemoteResync() {
-    remoteClientRef.current?.send({
-      type: REMOTE_MESSAGE_TYPES.RESYNC_REQUEST,
-      knownActionIndex: stateRef.current?.log?.length ?? 0,
-    });
+    remoteClientRef.current
+      ?.send({
+        type: REMOTE_MESSAGE_TYPES.RESYNC_REQUEST,
+        knownActionIndex: stateRef.current?.log?.length ?? 0,
+      })
+      .catch(() => {});
   }
 
   function replaceFromRemoteSnapshot(message) {
@@ -461,24 +471,28 @@ export default function GamePage() {
         const result = applyAcceptedGameAction(message.action, { showErrors: false });
 
         if (result.error) {
-          remoteClientRef.current?.send(
-            {
-              type: REMOTE_MESSAGE_TYPES.ACTION_REJECTED,
-              clientActionId: message.clientActionId,
-              error: result.error,
-            },
-            peerId,
-          );
+          remoteClientRef.current
+            ?.send(
+              {
+                type: REMOTE_MESSAGE_TYPES.ACTION_REJECTED,
+                clientActionId: message.clientActionId,
+                error: result.error,
+              },
+              peerId,
+            )
+            .catch(() => {});
           return;
         }
 
-        remoteClientRef.current?.send(
-          createAcceptedAction(
-            message.action,
-            result.state.log.length,
-            message.clientActionId,
-          ),
-        );
+        remoteClientRef.current
+          ?.send(
+            createAcceptedAction(
+              message.action,
+              result.state.log.length,
+              message.clientActionId,
+            ),
+          )
+          .catch(() => {});
         return;
       }
     }
@@ -598,7 +612,9 @@ export default function GamePage() {
     resetActionUi();
 
     if (isRemoteHost) {
-      remoteClientRef.current?.send(createStateSnapshot(previousState, nextUndoStack));
+      remoteClientRef.current
+        ?.send(createStateSnapshot(previousState, nextUndoStack))
+        .catch(() => {});
     }
   }
 
@@ -682,7 +698,7 @@ export default function GamePage() {
   async function copyInviteLink() {
     if (!remoteSession) return;
 
-    const inviteLink = createInviteLink(remoteSession.roomId);
+    const inviteLink = createInviteLink(remoteSession);
 
     try {
       if (navigator.clipboard?.writeText) {
@@ -696,7 +712,7 @@ export default function GamePage() {
         copyTextFallback(inviteLink);
         setExportStatus('Invite link copied.');
       } catch {
-        setExportStatus(`Room code: ${remoteSession.roomId}`);
+        setExportStatus('Could not copy the private invite link.');
       }
     }
   }
@@ -836,6 +852,7 @@ export default function GamePage() {
     if (isRemoteHost) {
       try {
         await remoteClientRef.current?.send({ type: REMOTE_MESSAGE_TYPES.ROOM_CLOSED });
+        remoteClientRef.current?.closeRoom?.();
       } catch {
         // Leaving the room is still the correct local action if the final send fails.
       }

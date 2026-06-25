@@ -72,6 +72,41 @@
 - Action: Mirror the pending peer action id in a ref and clear it only on matching host accept/reject messages or a host snapshot.
 - Confidence: high
 
+**[2026-06-25] — Cloudflare relay routing**
+- Observation: A one-room-per-Durable-Object relay needs the room code before WebSocket upgrade routing, but the current relay client only sends `roomId` inside the post-open `JOIN` message.
+- Action: Build Cloudflare relay socket URLs with a normalized `room` query parameter before `new WebSocket(...)`, while keeping the existing `JOIN` envelope so `scripts/dev-relay.py` remains compatible.
+- Confidence: high
+
+**[2026-06-25] — GitHub Pages relay env**
+- Observation: The deployed Coffee Rush bundle is built by the parent `../.github/workflows/deploy.yml` `Build coffee-rush` step, not by the root Astro build step.
+- Action: Wire `VITE_COFFEE_RUSH_RELAY_URL` on the `Build coffee-rush` step from a public repository variable such as `COFFEE_RUSH_RELAY_URL`; do not place room secrets in `VITE_*` values.
+- Confidence: high
+
+**[2026-06-25] — Blind relay invite secrets**
+- Observation: Cloudflare relay invites need shared browser secrets for admission/encryption, but relay host controls should not be granted by the shared invite token.
+- Action: Keep `relayAuth` and `gameKey` in the invite hash fragment, keep `hostAuth` only in the host's saved remote session, and treat room messages as async encrypted payloads.
+- Confidence: high
+
+**[2026-06-25] — Cloudflare account setup**
+- Observation: `wrangler deploy --dry-run` can pass while the real deploy fails with Cloudflare API code `10034` if the account email is not verified.
+- Action: Verify the Cloudflare account email before retrying `coffee-rush/relay` deploys; after verification, rerun `wrangler deploy` with the local relay Wrangler binary.
+- Confidence: high
+
+**[2026-06-25] — Cloudflare Workers subdomain**
+- Observation: A verified Cloudflare account can still fail `coffee-rush/relay` deploys with API code `10063` until the account has a public `workers.dev` subdomain.
+- Action: Initialize the Workers dashboard once or explicitly register a chosen account-wide `workers.dev` subdomain before deploying the relay Worker.
+- Confidence: high
+
+**[2026-06-25] — Production relay verification**
+- Observation: The dashboard-initialized account subdomain is `vanshkumar95.workers.dev`, so the deployed Coffee Rush relay lives at `coffee-rush-relay.vanshkumar95.workers.dev`.
+- Action: Set GitHub repo variable `COFFEE_RUSH_RELAY_URL` to `wss://coffee-rush-relay.vanshkumar95.workers.dev/room`, and include an allowed `Origin` header when smoke-testing the live WebSocket relay from Node.
+- Confidence: high
+
+**[2026-06-25] — Local multiplayer smoke tests**
+- Observation: Host and peer tabs on the same browser origin share Coffee Rush localStorage, which masks real multi-device behavior during online-room testing.
+- Action: Use isolated browser contexts, such as a headless Chrome DevTools smoke harness, when verifying host/peer online flows; assert join, snapshot sync, peer-originated actions, host-originated actions, and matching saved game state.
+- Confidence: high
+
 ## Patterns and Preferences
 
 **[2026-06-24] — Setup placement UX**

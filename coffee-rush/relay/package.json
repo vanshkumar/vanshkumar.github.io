@@ -1,0 +1,15 @@
+{
+  "name": "coffee-rush-relay",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --port 8788",
+    "deploy": "wrangler deploy",
+    "test": "vitest run src"
+  },
+  "devDependencies": {
+    "vitest": "^1.6.1",
+    "wrangler": "^4.0.0"
+  }
+}

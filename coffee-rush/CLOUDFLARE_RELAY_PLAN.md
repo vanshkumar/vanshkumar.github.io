@@ -9,6 +9,37 @@ relay for Coffee Rush app payloads. The relay validates room admission and
 encrypted envelope shape, but game actions and snapshots are encrypted in the
 browser with AES-GCM before they are placed in `ROOM_MESSAGE.data`.
 
+## Current Implementation Status
+
+As of 2026-06-25, newly hosted Coffee Rush online rooms use protocol v2 async
+storage, not the host-authoritative protocol v1 flow described in the original
+relay plan below.
+
+Current relay behavior:
+
+- `GET /room?room=ABC123` remains the protocol v1 hibernating WebSocket route
+  for older saved sessions and local compatibility.
+- `POST /room/create?room=ABC123`, `POST /room/head?room=ABC123`,
+  `POST /room/commits?room=ABC123`, `POST /room/snapshot?room=ABC123`, and
+  `POST /room/close?room=ABC123` are the protocol v2 async endpoints.
+- Cloudflare stores encrypted canonical snapshots, encrypted completed-turn
+  commits, sequence hashes, auth hashes, and timing metadata only.
+- Cloudflare must not store plaintext player names, active player id, phase,
+  turn details, reducer actions, order deck, or game state.
+- Async room expiry is 14 days after the last accepted commit. Reads, joins, and
+  sync checks do not extend the expiry.
+- Online undo is local-only for uncommitted draft actions. Once an `END_TURN`
+  commit is accepted, there is no global rewind/delete operation.
+
+Current client behavior:
+
+- `SetupPage` creates a protocol v2 room before navigating to `/game`.
+- `GamePage` treats every protocol v2 participant as an async peer: it syncs the
+  encrypted canonical head, drafts actions locally, commits setup placements or
+  completed turns, and handles stale-head conflicts by resyncing.
+- Protocol v1 WebSocket host/peer code remains in place for compatibility, but
+  it is not the default path for newly hosted rooms.
+
 ## 1. Architecture and Protocol
 
 Recommended shape: one Cloudflare Worker front door and one Durable Object per

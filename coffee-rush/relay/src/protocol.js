@@ -1,10 +1,15 @@
 export const PROTOCOL_VERSION = 1;
+export const ASYNC_PROTOCOL_VERSION = 2;
 export const ROOM_CODE_LENGTH = 6;
 export const MAX_RELAY_ENVELOPE_BYTES = 256 * 1024;
+export const MAX_HTTP_BODY_BYTES = 512 * 1024;
+export const MAX_ENCRYPTED_COMMIT_BYTES = 256 * 1024;
+export const MAX_ENCRYPTED_SNAPSHOT_BYTES = 512 * 1024;
 export const MAX_ROOM_SOCKETS = 5;
 export const JOIN_TIMEOUT_MS = 5_000;
 export const ROOM_IDLE_TTL_MS = 30 * 60 * 1000;
 export const ROOM_HARD_TTL_MS = 6 * 60 * 60 * 1000;
+export const ASYNC_ROOM_TTL_MS = 14 * 24 * 60 * 60 * 1000;
 export const TOKEN_BUCKET_CAPACITY = 20;
 export const TOKEN_BUCKET_REFILL_PER_SECOND = 10;
 
@@ -12,8 +17,10 @@ const ROOM_CODE_PATTERN = /^[A-Z0-9]{6}$/;
 const CLIENT_ID_PATTERN = /^[A-Za-z0-9_-]{8,80}$/;
 const SECRET_PATTERN = /^[A-Za-z0-9_-]{16,128}$/;
 const BASE64_URL_PATTERN = /^[A-Za-z0-9_-]+$/;
+const HASH_PATTERN = /^[A-Za-z0-9_-]{32,96}$/;
 const CLOSE_POLICY_VIOLATION = 1008;
 const CLOSE_TOO_LARGE = 1009;
+const TEXT_ENCODER = new TextEncoder();
 
 export const CLOSE_CODES = {
   POLICY_VIOLATION: CLOSE_POLICY_VIOLATION,
@@ -40,6 +47,10 @@ export function isValidSecret(value) {
   return SECRET_PATTERN.test(String(value ?? ''));
 }
 
+export function isValidHash(value) {
+  return HASH_PATTERN.test(String(value ?? ''));
+}
+
 function isValidBase64UrlValue(value, minLength, maxLength) {
   const text = String(value ?? '');
   return (
@@ -50,11 +61,15 @@ function isValidBase64UrlValue(value, minLength, maxLength) {
 }
 
 export function isValidEncryptedEnvelope(value) {
+  return isValidEncryptedEnvelopeWithMax(value, MAX_RELAY_ENVELOPE_BYTES);
+}
+
+export function isValidEncryptedEnvelopeWithMax(value, maxCiphertextLength) {
   return (
     value?.v === 1 &&
     value?.alg === 'A256GCM' &&
     isValidBase64UrlValue(value?.iv, 16, 24) &&
-    isValidBase64UrlValue(value?.ciphertext, 16, MAX_RELAY_ENVELOPE_BYTES)
+    isValidBase64UrlValue(value?.ciphertext, 16, maxCiphertextLength)
   );
 }
 
@@ -106,6 +121,129 @@ export function validateJoinEnvelope(message, expectedRoomId) {
   return '';
 }
 
+export function validateCreateRoomRequest(message) {
+  if (message?.protocol !== ASYNC_PROTOCOL_VERSION) {
+    return 'Unsupported async protocol.';
+  }
+
+  if (!isValidSecret(message.roomAuth)) {
+    return 'Invalid room auth.';
+  }
+
+  if (message.hostAuth !== undefined && message.hostAuth !== '' && !isValidSecret(message.hostAuth)) {
+    return 'Invalid host auth.';
+  }
+
+  if (!isValidEncryptedEnvelopeWithMax(message.initialSnapshot, MAX_ENCRYPTED_SNAPSHOT_BYTES)) {
+    return 'Invalid encrypted snapshot.';
+  }
+
+  if (!isValidHash(message.headHash)) {
+    return 'Invalid head hash.';
+  }
+
+  return '';
+}
+
+export function validateHeadRequest(message) {
+  if (message?.protocol !== ASYNC_PROTOCOL_VERSION) {
+    return 'Unsupported async protocol.';
+  }
+
+  if (!isValidSecret(message.roomAuth)) {
+    return 'Invalid room auth.';
+  }
+
+  if (
+    message.knownHeadIndex !== undefined &&
+    (!Number.isInteger(message.knownHeadIndex) || message.knownHeadIndex < 0)
+  ) {
+    return 'Invalid known head index.';
+  }
+
+  if (
+    message.knownHeadHash !== undefined &&
+    message.knownHeadHash !== '' &&
+    !isValidHash(message.knownHeadHash)
+  ) {
+    return 'Invalid known head hash.';
+  }
+
+  return '';
+}
+
+export function validateCommitRequest(message) {
+  if (message?.protocol !== ASYNC_PROTOCOL_VERSION) {
+    return 'Unsupported async protocol.';
+  }
+
+  if (!isValidSecret(message.roomAuth)) {
+    return 'Invalid room auth.';
+  }
+
+  if (!Number.isInteger(message.expectedHeadIndex) || message.expectedHeadIndex < 0) {
+    return 'Invalid expected head index.';
+  }
+
+  if (!isValidHash(message.prevHeadHash)) {
+    return 'Invalid previous head hash.';
+  }
+
+  if (!isValidHash(message.commitHash)) {
+    return 'Invalid commit hash.';
+  }
+
+  if (!isValidEncryptedEnvelopeWithMax(message.encryptedCommit, MAX_ENCRYPTED_COMMIT_BYTES)) {
+    return 'Invalid encrypted commit.';
+  }
+
+  if (!isValidEncryptedEnvelopeWithMax(message.encryptedSnapshot, MAX_ENCRYPTED_SNAPSHOT_BYTES)) {
+    return 'Invalid encrypted snapshot.';
+  }
+
+  return '';
+}
+
+export function validateSnapshotRequest(message) {
+  if (message?.protocol !== ASYNC_PROTOCOL_VERSION) {
+    return 'Unsupported async protocol.';
+  }
+
+  if (!isValidSecret(message.roomAuth)) {
+    return 'Invalid room auth.';
+  }
+
+  if (!Number.isInteger(message.headIndex) || message.headIndex < 0) {
+    return 'Invalid head index.';
+  }
+
+  if (!isValidHash(message.headHash)) {
+    return 'Invalid head hash.';
+  }
+
+  if (!isValidEncryptedEnvelopeWithMax(message.encryptedSnapshot, MAX_ENCRYPTED_SNAPSHOT_BYTES)) {
+    return 'Invalid encrypted snapshot.';
+  }
+
+  return '';
+}
+
+export function validateCloseRoomRequest(message) {
+  if (message?.protocol !== ASYNC_PROTOCOL_VERSION) {
+    return 'Unsupported async protocol.';
+  }
+
+  if (!isValidSecret(message.roomAuth)) {
+    return 'Invalid room auth.';
+  }
+
+  if (!isValidSecret(message.hostAuth)) {
+    return 'Invalid host auth.';
+  }
+
+  return '';
+}
+
 export function validateRoomMessageEnvelope(message, expectedRoomId) {
   if (message?.type !== 'ROOM_MESSAGE') {
     return 'Unsupported room envelope.';
@@ -128,6 +266,60 @@ export function validateRoomMessageEnvelope(message, expectedRoomId) {
   }
 
   return '';
+}
+
+function canonicalize(value) {
+  if (value === null || typeof value !== 'object') {
+    return value;
+  }
+
+  if (Array.isArray(value)) {
+    return value.map(canonicalize);
+  }
+
+  return Object.keys(value)
+    .sort()
+    .reduce((result, key) => {
+      if (value[key] !== undefined) {
+        result[key] = canonicalize(value[key]);
+      }
+      return result;
+    }, {});
+}
+
+export function canonicalJson(value) {
+  return JSON.stringify(canonicalize(value));
+}
+
+function bytesToBase64Url(bytes) {
+  let binary = '';
+  bytes.forEach((byte) => {
+    binary += String.fromCharCode(byte);
+  });
+
+  return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/u, '');
+}
+
+export async function sha256Base64Url(value) {
+  const digest = await crypto.subtle.digest('SHA-256', TEXT_ENCODER.encode(String(value)));
+  return bytesToBase64Url(new Uint8Array(digest));
+}
+
+export async function hashCommitEnvelope({
+  roomId,
+  commitIndex,
+  prevHeadHash,
+  encryptedCommit,
+}) {
+  return sha256Base64Url(
+    [
+      'coffee-rush:v2',
+      normalizeRoomCode(roomId),
+      Number(commitIndex),
+      String(prevHeadHash ?? ''),
+      canonicalJson(encryptedCommit),
+    ].join(':'),
+  );
 }
 
 export function createTokenBucket(now = Date.now()) {

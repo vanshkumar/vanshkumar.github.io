@@ -107,6 +107,21 @@
 - Action: Use isolated browser contexts, such as a headless Chrome DevTools smoke harness, when verifying host/peer online flows; assert join, snapshot sync, peer-originated actions, host-originated actions, and matching saved game state.
 - Confidence: high
 
+**[2026-06-25] — Production-build smoke tests**
+- Observation: The Vite production bundle uses the deployed `/coffee-rush/` base path, so serving `dist/` directly at localhost root leaves built JS/CSS assets under missing `/coffee-rush/assets/...` URLs.
+- Action: For local browser smoke tests of `vite build` output, serve a parent directory that mounts `dist` at `/coffee-rush`, or use a preview server that preserves the configured base path.
+- Confidence: high
+
+**[2026-06-25] — Async online play model**
+- Observation: True async play can avoid leaking turn/player metadata to Cloudflare if the server stores only encrypted snapshots/turn commits plus sequence hashes, and each browser validates turn ownership from decrypted local state.
+- Action: Prefer protocol v2 rooms with shared invite secrets, encrypted completed-turn commits, stale-head rejection, and local-only draft undo; avoid plaintext server-side active-player enforcement unless cheating by invite holders becomes in scope.
+- Confidence: high
+
+**[2026-06-25] — Relay documentation**
+- Observation: `CLOUDFLARE_RELAY_PLAN.md` started as the protocol v1 WebSocket relay plan, so after async v2 landed it can read stale unless the current implementation status is stated before the original plan.
+- Action: Keep a front-loaded status section in relay docs when protocol defaults change, and point readers to v2 HTTP endpoints before the historical v1 architecture details.
+- Confidence: high
+
 **[2026-06-25] — Relay allowed origins**
 - Observation: The published Coffee Rush app can run from `https://vanshkumar.net` after GitHub Pages redirects from `vanshkumar.github.io`, so allowing only the GitHub Pages origin makes the Cloudflare relay reject production WebSockets.
 - Action: Keep the relay `ALLOWED_ORIGINS` list in `relay/wrangler.toml` aligned with every production hostname plus active local smoke-test ports.

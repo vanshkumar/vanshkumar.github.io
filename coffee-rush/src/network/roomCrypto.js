@@ -6,7 +6,7 @@ const NONCE_BYTES = 12;
 const TEXT_ENCODER = new TextEncoder();
 const TEXT_DECODER = new TextDecoder();
 
-function base64UrlToBytes(value) {
+export function base64UrlToBytes(value) {
   const padded = String(value ?? '')
     .replace(/-/g, '+')
     .replace(/_/g, '/')
@@ -19,6 +19,42 @@ function base64UrlToBytes(value) {
   }
 
   return bytes;
+}
+
+function canonicalize(value) {
+  if (value === null || typeof value !== 'object') {
+    return value;
+  }
+
+  if (Array.isArray(value)) {
+    return value.map(canonicalize);
+  }
+
+  return Object.keys(value)
+    .sort()
+    .reduce((result, key) => {
+      if (value[key] !== undefined) {
+        result[key] = canonicalize(value[key]);
+      }
+      return result;
+    }, {});
+}
+
+export function canonicalJson(value) {
+  return JSON.stringify(canonicalize(value));
+}
+
+export async function sha256Base64Url(value) {
+  const digest = await crypto.subtle.digest(
+    'SHA-256',
+    TEXT_ENCODER.encode(String(value)),
+  );
+
+  return bytesToBase64Url(new Uint8Array(digest));
+}
+
+export async function hashJson(value, label = 'coffee-rush:json') {
+  return sha256Base64Url(`${label}:${canonicalJson(value)}`);
 }
 
 async function importAesKey(gameKey) {
@@ -37,7 +73,7 @@ function createNonce() {
   return nonce;
 }
 
-function isEncryptedEnvelope(value) {
+export function isEncryptedEnvelope(value) {
   return (
     value?.v === 1 &&
     value?.alg === ENCRYPTION_LABEL &&
@@ -46,15 +82,71 @@ function isEncryptedEnvelope(value) {
   );
 }
 
+function createEncryptionParams(iv, aad) {
+  const params = { name: ENCRYPTION_ALGORITHM, iv };
+
+  if (aad !== undefined) {
+    params.additionalData = TEXT_ENCODER.encode(canonicalJson(aad));
+  }
+
+  return params;
+}
+
+export function createCommitAad({ roomId, index, prevHeadHash }) {
+  return {
+    roomId,
+    protocol: 2,
+    kind: 'commit',
+    index,
+    prevHeadHash,
+  };
+}
+
+export function createSnapshotAad({ roomId, index, headHash }) {
+  return {
+    roomId,
+    protocol: 2,
+    kind: 'snapshot',
+    index,
+    headHash,
+  };
+}
+
+export async function hashInitialRoomHead({ roomId, state }) {
+  const stateHash = await hashJson(state, 'coffee-rush:state');
+  return sha256Base64Url(`coffee-rush:v2:initial:${roomId}:0:${stateHash}`);
+}
+
+export async function hashState(state) {
+  return hashJson(state, 'coffee-rush:state');
+}
+
+export async function hashCommitEnvelope({
+  roomId,
+  commitIndex,
+  prevHeadHash,
+  encryptedCommit,
+}) {
+  return sha256Base64Url(
+    [
+      'coffee-rush:v2',
+      roomId,
+      Number(commitIndex),
+      String(prevHeadHash ?? ''),
+      canonicalJson(encryptedCommit),
+    ].join(':'),
+  );
+}
+
 export async function createRoomCipher(gameKey) {
   const key = await importAesKey(gameKey);
 
   return {
-    async encrypt(payload) {
+    async encrypt(payload, { aad } = {}) {
       const iv = createNonce();
       const plaintext = TEXT_ENCODER.encode(JSON.stringify(payload));
       const ciphertext = await crypto.subtle.encrypt(
-        { name: ENCRYPTION_ALGORITHM, iv },
+        createEncryptionParams(iv, aad),
         key,
         plaintext,
       );
@@ -67,16 +159,13 @@ export async function createRoomCipher(gameKey) {
       };
     },
 
-    async decrypt(envelope) {
+    async decrypt(envelope, { aad } = {}) {
       if (!isEncryptedEnvelope(envelope)) {
         throw new Error('The room message is not encrypted.');
       }
 
       const plaintext = await crypto.subtle.decrypt(
-        {
-          name: ENCRYPTION_ALGORITHM,
-          iv: base64UrlToBytes(envelope.iv),
-        },
+        createEncryptionParams(base64UrlToBytes(envelope.iv), aad),
         key,
         base64UrlToBytes(envelope.ciphertext),
       );

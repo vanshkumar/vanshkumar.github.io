@@ -1,6 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import {
   REMOTE_MODES,
+  REMOTE_PROTOCOLS,
   buildInviteUrl,
   clearRemoteSession,
   createGameKey,
@@ -98,6 +99,9 @@ describe('remote session persistence', () => {
       hostAuth: HOST_AUTH,
       gameKey: GAME_KEY,
       clientId: 'self',
+      protocol: REMOTE_PROTOCOLS.ASYNC,
+      headIndex: 3,
+      headHash: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
     });
 
     saveRemoteSession(session);
@@ -108,6 +112,9 @@ describe('remote session persistence', () => {
       hostAuth: HOST_AUTH,
       gameKey: GAME_KEY,
       clientId: 'self',
+      protocol: REMOTE_PROTOCOLS.ASYNC,
+      headIndex: 3,
+      headHash: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
     });
 
     clearRemoteSession();

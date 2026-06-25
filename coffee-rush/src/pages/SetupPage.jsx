@@ -1,9 +1,16 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createInitialState } from '../engine/initialState';
-import { clearGame, loadGame, saveGame } from '../persistence/localStorage';
+import {
+  clearGame,
+  loadGame,
+  saveAsyncRoomState,
+  saveGame,
+} from '../persistence/localStorage';
+import { createAsyncRoom } from '../network/asyncRoom';
 import {
   REMOTE_MODES,
+  REMOTE_PROTOCOLS,
   clearRemoteSession,
   createGameKey,
   createHostAuth,
@@ -33,6 +40,7 @@ export default function SetupPage() {
       : initialInvite.roomId,
   );
   const [remoteError, setRemoteError] = useState('');
+  const [isHostingOnline, setIsHostingOnline] = useState(false);
 
   function updateName(index, value) {
     setNames((current) =>
@@ -61,26 +69,48 @@ export default function SetupPage() {
     navigate('/game');
   }
 
-  function hostOnlineGame() {
+  async function hostOnlineGame() {
+    if (isHostingOnline) return;
+
+    setIsHostingOnline(true);
+    setRemoteError('');
+
     const roomId = createRoomCode();
     const relayAuth = createRelayAuth();
     const hostAuth = createHostAuth();
     const gameKey = createGameKey();
     const state = createSetupState(`coffee-rush-${roomId}`);
+    const session = createRemoteSession({
+      mode: REMOTE_MODES.HOST,
+      protocol: REMOTE_PROTOCOLS.ASYNC,
+      roomId,
+      relayAuth,
+      hostAuth,
+      gameKey,
+    });
 
-    clearGame();
-    clearRemoteSession();
-    saveGame(state);
-    saveRemoteSession(
-      createRemoteSession({
-        mode: REMOTE_MODES.HOST,
+    try {
+      const acceptedSession = await createAsyncRoom(session, state);
+
+      clearGame();
+      clearRemoteSession();
+      saveGame(state);
+      saveAsyncRoomState({
         roomId,
-        relayAuth,
-        hostAuth,
-        gameKey,
-      }),
-    );
-    navigate('/game');
+        headIndex: acceptedSession.headIndex,
+        headHash: acceptedSession.headHash,
+        state,
+      });
+      saveRemoteSession(acceptedSession);
+      navigate('/game');
+    } catch (error) {
+      setRemoteError(
+        error?.message ??
+          'Could not create the async online room. Check the relay URL and try again.',
+      );
+    } finally {
+      setIsHostingOnline(false);
+    }
   }
 
   function joinOnlineGame() {
@@ -101,6 +131,7 @@ export default function SetupPage() {
     saveRemoteSession(
       createRemoteSession({
         mode: REMOTE_MODES.PEER,
+        protocol: REMOTE_PROTOCOLS.ASYNC,
         roomId: invite.roomId,
         relayAuth: invite.relayAuth,
         gameKey: invite.gameKey,
@@ -198,8 +229,8 @@ export default function SetupPage() {
             <button className="primary-button" type="button" onClick={startGame}>
               Start local game
             </button>
-            <button type="button" onClick={hostOnlineGame}>
-              Host online game
+            <button type="button" onClick={hostOnlineGame} disabled={isHostingOnline}>
+              {isHostingOnline ? 'Creating room...' : 'Host online game'}
             </button>
           </div>
           <div className="join-room-row">

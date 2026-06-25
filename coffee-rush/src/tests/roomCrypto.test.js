@@ -31,4 +31,32 @@ describe('room message encryption', () => {
 
     await expect(otherCipher.decrypt(encrypted)).rejects.toThrow();
   });
+
+  it('binds encrypted payloads to AES-GCM additional authenticated data', async () => {
+    const cipher = await createRoomCipher(bytesToBase64Url(new Uint8Array(32).fill(9)));
+    const encrypted = await cipher.encrypt(
+      { type: 'TURN_COMMIT', actions: [] },
+      {
+        aad: {
+          roomId: 'ABC123',
+          protocol: 2,
+          kind: 'commit',
+          index: 1,
+          prevHeadHash: 'head_one',
+        },
+      },
+    );
+
+    await expect(
+      cipher.decrypt(encrypted, {
+        aad: {
+          roomId: 'ABC123',
+          protocol: 2,
+          kind: 'commit',
+          index: 2,
+          prevHeadHash: 'head_one',
+        },
+      }),
+    ).rejects.toThrow();
+  });
 });

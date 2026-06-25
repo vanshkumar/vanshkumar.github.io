@@ -1,11 +1,16 @@
 import { describe, expect, it } from 'vitest';
 import {
+  ASYNC_PROTOCOL_VERSION,
   CLOSE_CODES,
   createTokenBucket,
   consumeToken,
+  hashCommitEnvelope,
   isValidEncryptedEnvelope,
   normalizeRoomCode,
   safeParseRelayEnvelope,
+  validateCommitRequest,
+  validateCreateRoomRequest,
+  validateHeadRequest,
   validateJoinEnvelope,
   validateRoomMessageEnvelope,
 } from './protocol.js';
@@ -95,5 +100,71 @@ describe('relay protocol validation', () => {
 
     expect(consumeToken(bucket, 0).allowed).toBe(false);
     expect(consumeToken(bucket, 1_000).allowed).toBe(true);
+  });
+
+  it('validates async v2 create, head, and commit requests', () => {
+    const hash = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
+
+    expect(
+      validateCreateRoomRequest({
+        protocol: ASYNC_PROTOCOL_VERSION,
+        roomAuth: 'shared_room_auth',
+        hostAuth: 'private_host_auth',
+        initialSnapshot: encryptedPayload,
+        headHash: hash,
+      }),
+    ).toBe('');
+    expect(
+      validateHeadRequest({
+        protocol: ASYNC_PROTOCOL_VERSION,
+        roomAuth: 'shared_room_auth',
+        knownHeadIndex: 0,
+        knownHeadHash: hash,
+      }),
+    ).toBe('');
+    expect(
+      validateCommitRequest({
+        protocol: ASYNC_PROTOCOL_VERSION,
+        roomAuth: 'shared_room_auth',
+        expectedHeadIndex: 0,
+        prevHeadHash: hash,
+        commitHash: hash,
+        encryptedCommit: encryptedPayload,
+        encryptedSnapshot: encryptedPayload,
+      }),
+    ).toBe('');
+    expect(
+      validateCommitRequest({
+        protocol: ASYNC_PROTOCOL_VERSION,
+        roomAuth: 'shared_room_auth',
+        expectedHeadIndex: 0,
+        prevHeadHash: hash,
+        commitHash: hash,
+        encryptedCommit: { type: 'TURN_COMMIT' },
+        encryptedSnapshot: encryptedPayload,
+      }),
+    ).toBe('Invalid encrypted commit.');
+  });
+
+  it('hashes encrypted commits deterministically for the visible sequence chain', async () => {
+    const commit = {
+      roomId: 'ab12cd',
+      commitIndex: 1,
+      prevHeadHash: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+      encryptedCommit: encryptedPayload,
+    };
+
+    await expect(hashCommitEnvelope(commit)).resolves.toBe(
+      await hashCommitEnvelope({
+        ...commit,
+        roomId: 'AB12CD',
+      }),
+    );
+    await expect(
+      hashCommitEnvelope({
+        ...commit,
+        commitIndex: 2,
+      }),
+    ).resolves.not.toBe(await hashCommitEnvelope(commit));
   });
 });

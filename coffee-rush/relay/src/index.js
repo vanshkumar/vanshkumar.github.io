@@ -1,20 +1,63 @@
 import { DurableObject } from 'cloudflare:workers';
 import {
+  ASYNC_PROTOCOL_VERSION,
+  ASYNC_ROOM_TTL_MS,
   CLOSE_CODES,
   JOIN_TIMEOUT_MS,
+  MAX_HTTP_BODY_BYTES,
   MAX_ROOM_SOCKETS,
   ROOM_HARD_TTL_MS,
   ROOM_IDLE_TTL_MS,
+  hashCommitEnvelope,
   createTokenBucket,
   consumeToken,
   normalizeRoomCode,
   safeParseRelayEnvelope,
+  validateCloseRoomRequest,
+  validateCommitRequest,
+  validateCreateRoomRequest,
+  validateHeadRequest,
   validateJoinEnvelope,
   validateRoomMessageEnvelope,
+  validateSnapshotRequest,
 } from './protocol.js';
 
 const ROOM_STORAGE_KEY = 'room';
 const TEXT_ENCODER = new TextEncoder();
+const ASYNC_ROOM_PATH_PREFIX = '/room/';
+
+const SQL_SCHEMA = `
+  CREATE TABLE IF NOT EXISTS room_meta (
+    room_id TEXT PRIMARY KEY,
+    protocol INTEGER NOT NULL,
+    room_auth_hash TEXT NOT NULL,
+    host_auth_hash TEXT,
+    created_at INTEGER NOT NULL,
+    last_move_at INTEGER NOT NULL,
+    expires_at INTEGER NOT NULL,
+    closed_at INTEGER NOT NULL DEFAULT 0,
+    head_index INTEGER NOT NULL DEFAULT 0,
+    head_hash TEXT NOT NULL,
+    latest_snapshot_index INTEGER NOT NULL DEFAULT 0
+  );
+  CREATE TABLE IF NOT EXISTS commits (
+    room_id TEXT NOT NULL,
+    commit_index INTEGER NOT NULL,
+    prev_hash TEXT NOT NULL,
+    commit_hash TEXT NOT NULL,
+    encrypted_commit TEXT NOT NULL,
+    created_at INTEGER NOT NULL,
+    PRIMARY KEY (room_id, commit_index)
+  );
+  CREATE TABLE IF NOT EXISTS snapshots (
+    room_id TEXT NOT NULL,
+    snapshot_index INTEGER NOT NULL,
+    head_hash TEXT NOT NULL,
+    encrypted_snapshot TEXT NOT NULL,
+    created_at INTEGER NOT NULL,
+    PRIMARY KEY (room_id, snapshot_index)
+  );
+`;
 
 function bytesToBase64Url(bytes) {
   let binary = '';
@@ -30,11 +73,27 @@ async function hashSecret(secret) {
   return bytesToBase64Url(new Uint8Array(digest));
 }
 
-function jsonResponse(body, status = 200) {
+function timingSafeEqualText(left, right) {
+  const leftBytes = TEXT_ENCODER.encode(String(left ?? ''));
+  const rightBytes = TEXT_ENCODER.encode(String(right ?? ''));
+  const safeLeft = leftBytes.length > 0 ? leftBytes : new Uint8Array([0]);
+  const safeRight = rightBytes.length > 0 ? rightBytes : new Uint8Array([0]);
+  const maxLength = Math.max(safeLeft.length, safeRight.length, 1);
+  let diff = leftBytes.length ^ rightBytes.length;
+
+  for (let index = 0; index < maxLength; index += 1) {
+    diff |= safeLeft[index % safeLeft.length] ^ safeRight[index % safeRight.length];
+  }
+
+  return diff === 0;
+}
+
+function jsonResponse(body, status = 200, headers = {}) {
   return new Response(JSON.stringify(body), {
     status,
     headers: {
       'content-type': 'application/json; charset=utf-8',
+      ...headers,
     },
   });
 }
@@ -70,17 +129,106 @@ function isOriginAllowed(request, env) {
   return allowedOrigins.includes(origin);
 }
 
+function createCorsHeaders(request, env) {
+  const origin = request.headers.get('origin') ?? '';
+  const allowedOrigins = parseAllowedOrigins(env);
+
+  if (allowedOrigins.length > 0 && !allowedOrigins.includes(origin)) {
+    return {};
+  }
+
+  return {
+    'access-control-allow-origin': origin || '*',
+    'access-control-allow-methods': 'POST, OPTIONS',
+    'access-control-allow-headers': 'content-type',
+    'access-control-max-age': '86400',
+  };
+}
+
+function addCors(response, request, env) {
+  const headers = new Headers(response.headers);
+  Object.entries(createCorsHeaders(request, env)).forEach(([key, value]) => {
+    headers.set(key, value);
+  });
+
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
+
+async function readJsonBody(request) {
+  const contentLength = Number(request.headers.get('content-length') ?? 0);
+  if (contentLength > MAX_HTTP_BODY_BYTES) {
+    return { error: 'Request body is too large.', status: 413 };
+  }
+
+  const raw = await request.text();
+  if (TEXT_ENCODER.encode(raw).length > MAX_HTTP_BODY_BYTES) {
+    return { error: 'Request body is too large.', status: 413 };
+  }
+
+  try {
+    return { value: JSON.parse(raw) };
+  } catch {
+    return { error: 'Request body is not valid JSON.', status: 400 };
+  }
+}
+
+function firstRow(cursor) {
+  const result = cursor.next();
+  return result.done ? null : result.value;
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const roomId = normalizeRoomCode(url.searchParams.get('room'));
 
-    if (request.method !== 'GET') {
-      return jsonResponse({ error: 'Method not allowed.' }, 405);
+    if (url.pathname.startsWith(ASYNC_ROOM_PATH_PREFIX)) {
+      if (!isOriginAllowed(request, env)) {
+        return jsonResponse(
+          { error: 'Origin not allowed.' },
+          403,
+          createCorsHeaders(request, env),
+        );
+      }
+
+      if (request.method === 'OPTIONS') {
+        return new Response(null, {
+          status: 204,
+          headers: createCorsHeaders(request, env),
+        });
+      }
+
+      if (request.method !== 'POST') {
+        return jsonResponse(
+          { error: 'Method not allowed.' },
+          405,
+          createCorsHeaders(request, env),
+        );
+      }
+
+      if (roomId.length !== 6) {
+        return jsonResponse(
+          { error: 'Invalid room.' },
+          400,
+          createCorsHeaders(request, env),
+        );
+      }
+
+      const roomObjectId = env.COFFEE_RUSH_ROOMS.idFromName(roomId);
+      const response = await env.COFFEE_RUSH_ROOMS.get(roomObjectId).fetch(request);
+      return addCors(response, request, env);
     }
 
     if (url.pathname !== '/room') {
       return jsonResponse({ error: 'Not found.' }, 404);
+    }
+
+    if (request.method !== 'GET') {
+      return jsonResponse({ error: 'Method not allowed.' }, 405);
     }
 
     if (request.headers.get('upgrade')?.toLowerCase() !== 'websocket') {
@@ -104,11 +252,22 @@ export class CoffeeRushRoom extends DurableObject {
   constructor(ctx, env) {
     super(ctx, env);
     this.ctx = ctx;
+    this.ctx.blockConcurrencyWhile(async () => {
+      this.ensureSqlSchema();
+    });
+  }
+
+  ensureSqlSchema() {
+    this.ctx.storage.sql.exec(SQL_SCHEMA);
   }
 
   async fetch(request) {
     const url = new URL(request.url);
     const roomId = normalizeRoomCode(url.searchParams.get('room'));
+
+    if (url.pathname.startsWith(ASYNC_ROOM_PATH_PREFIX)) {
+      return this.handleAsyncRequest(request, url, roomId);
+    }
 
     if (request.headers.get('upgrade')?.toLowerCase() !== 'websocket') {
       return jsonResponse({ error: 'Expected a WebSocket upgrade.' }, 426);
@@ -132,6 +291,436 @@ export class CoffeeRushRoom extends DurableObject {
       status: 101,
       webSocket: client,
     });
+  }
+
+  async handleAsyncRequest(request, url, roomId) {
+    this.ensureSqlSchema();
+
+    if (roomId.length !== 6) {
+      return jsonResponse({ error: 'Invalid room.' }, 400);
+    }
+
+    const action = url.pathname.slice(ASYNC_ROOM_PATH_PREFIX.length);
+    const parsed = await readJsonBody(request);
+    if (parsed.error) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: parsed.error }, parsed.status);
+    }
+
+    switch (action) {
+      case 'create':
+        return this.handleAsyncCreate(roomId, parsed.value);
+      case 'head':
+        return this.handleAsyncHead(roomId, parsed.value);
+      case 'commits':
+        return this.handleAsyncCommit(roomId, parsed.value);
+      case 'snapshot':
+        return this.handleAsyncSnapshot(roomId, parsed.value);
+      case 'close':
+        return this.handleAsyncClose(roomId, parsed.value);
+      default:
+        return jsonResponse(
+          { protocol: ASYNC_PROTOCOL_VERSION, error: 'Not found.' },
+          404,
+        );
+    }
+  }
+
+  getAsyncMeta(roomId) {
+    return firstRow(
+      this.ctx.storage.sql.exec(
+        `SELECT
+          room_id AS roomId,
+          protocol,
+          room_auth_hash AS roomAuthHash,
+          host_auth_hash AS hostAuthHash,
+          created_at AS createdAt,
+          last_move_at AS lastMoveAt,
+          expires_at AS expiresAt,
+          closed_at AS closedAt,
+          head_index AS headIndex,
+          head_hash AS headHash,
+          latest_snapshot_index AS latestSnapshotIndex
+        FROM room_meta
+        WHERE room_id = ?`,
+        roomId,
+      ),
+    );
+  }
+
+  async deleteRoomStorage() {
+    await this.ctx.storage.deleteAlarm();
+    await this.ctx.storage.deleteAll();
+  }
+
+  async deleteIfExpired(meta, now = Date.now()) {
+    if (!meta) return true;
+
+    if (meta.closedAt || now >= meta.expiresAt) {
+      await this.deleteRoomStorage();
+      return true;
+    }
+
+    return false;
+  }
+
+  async verifyRoomAuth(meta, roomAuth) {
+    const roomAuthHash = await hashSecret(roomAuth);
+    return timingSafeEqualText(meta.roomAuthHash, roomAuthHash);
+  }
+
+  async verifyHostAuth(meta, hostAuth) {
+    const hostAuthHash = await hashSecret(hostAuth);
+    return Boolean(meta.hostAuthHash) && timingSafeEqualText(meta.hostAuthHash, hostAuthHash);
+  }
+
+  async handleAsyncCreate(roomId, body) {
+    const validationError = validateCreateRoomRequest(body);
+    if (validationError) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: validationError }, 400);
+    }
+
+    const now = Date.now();
+    const existingMeta = this.getAsyncMeta(roomId);
+    if (existingMeta) {
+      if (!(await this.deleteIfExpired(existingMeta, now))) {
+        return jsonResponse(
+          { protocol: ASYNC_PROTOCOL_VERSION, error: 'ROOM_EXISTS' },
+          409,
+        );
+      }
+
+      this.ensureSqlSchema();
+    }
+
+    const expiresAt = now + ASYNC_ROOM_TTL_MS;
+    const roomAuthHash = await hashSecret(body.roomAuth);
+    const hostAuthHash = body.hostAuth ? await hashSecret(body.hostAuth) : '';
+    const snapshotText = JSON.stringify(body.initialSnapshot);
+
+    this.ctx.storage.sql.exec(
+      `INSERT INTO room_meta (
+        room_id,
+        protocol,
+        room_auth_hash,
+        host_auth_hash,
+        created_at,
+        last_move_at,
+        expires_at,
+        closed_at,
+        head_index,
+        head_hash,
+        latest_snapshot_index
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, 0, 0, ?, 0)`,
+      roomId,
+      ASYNC_PROTOCOL_VERSION,
+      roomAuthHash,
+      hostAuthHash,
+      now,
+      now,
+      expiresAt,
+      body.headHash,
+    );
+    this.ctx.storage.sql.exec(
+      `INSERT INTO snapshots (
+        room_id,
+        snapshot_index,
+        head_hash,
+        encrypted_snapshot,
+        created_at
+      ) VALUES (?, 0, ?, ?, ?)`,
+      roomId,
+      body.headHash,
+      snapshotText,
+      now,
+    );
+    await this.ctx.storage.setAlarm(expiresAt);
+
+    return jsonResponse({
+      protocol: ASYNC_PROTOCOL_VERSION,
+      accepted: true,
+      headIndex: 0,
+      headHash: body.headHash,
+      latestSnapshotIndex: 0,
+      expiresAt,
+    });
+  }
+
+  async handleAsyncHead(roomId, body) {
+    const validationError = validateHeadRequest(body);
+    if (validationError) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: validationError }, 400);
+    }
+
+    const meta = this.getAsyncMeta(roomId);
+    if (await this.deleteIfExpired(meta)) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: 'ROOM_NOT_FOUND' }, 404);
+    }
+
+    if (!(await this.verifyRoomAuth(meta, body.roomAuth))) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: 'BAD_AUTH' }, 403);
+    }
+
+    const knownHeadIndex = Number.isInteger(body.knownHeadIndex)
+      ? body.knownHeadIndex
+      : -1;
+    const knownHeadHash = String(body.knownHeadHash ?? '');
+    const response = {
+      protocol: ASYNC_PROTOCOL_VERSION,
+      headIndex: meta.headIndex,
+      headHash: meta.headHash,
+      latestSnapshotIndex: meta.latestSnapshotIndex,
+      expiresAt: meta.expiresAt,
+      commits: [],
+    };
+
+    if (
+      knownHeadIndex === meta.headIndex &&
+      (!knownHeadHash || knownHeadHash === meta.headHash)
+    ) {
+      return jsonResponse(response);
+    }
+
+    if (knownHeadIndex >= meta.latestSnapshotIndex && knownHeadIndex < meta.headIndex) {
+      response.commits = this.getCommitsAfter(roomId, knownHeadIndex);
+      return jsonResponse(response);
+    }
+
+    const snapshot = this.getSnapshot(roomId, meta.latestSnapshotIndex);
+    response.latestSnapshot = snapshot?.encryptedSnapshot ?? null;
+    response.latestSnapshotHeadHash = snapshot?.headHash ?? '';
+    response.commits = this.getCommitsAfter(roomId, meta.latestSnapshotIndex);
+    return jsonResponse(response);
+  }
+
+  async handleAsyncCommit(roomId, body) {
+    const validationError = validateCommitRequest(body);
+    if (validationError) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: validationError }, 400);
+    }
+
+    const expectedCommitHash = await hashCommitEnvelope({
+      roomId,
+      commitIndex: body.expectedHeadIndex + 1,
+      prevHeadHash: body.prevHeadHash,
+      encryptedCommit: body.encryptedCommit,
+    });
+
+    if (!timingSafeEqualText(expectedCommitHash, body.commitHash)) {
+      return jsonResponse(
+        { protocol: ASYNC_PROTOCOL_VERSION, error: 'BAD_COMMIT_HASH' },
+        400,
+      );
+    }
+
+    const meta = this.getAsyncMeta(roomId);
+    if (await this.deleteIfExpired(meta)) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: 'ROOM_NOT_FOUND' }, 404);
+    }
+
+    if (!(await this.verifyRoomAuth(meta, body.roomAuth))) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: 'BAD_AUTH' }, 403);
+    }
+
+    if (
+      body.expectedHeadIndex !== meta.headIndex ||
+      body.prevHeadHash !== meta.headHash
+    ) {
+      return jsonResponse({
+        protocol: ASYNC_PROTOCOL_VERSION,
+        accepted: false,
+        error: 'STALE_HEAD',
+        headIndex: meta.headIndex,
+        headHash: meta.headHash,
+      }, 409);
+    }
+
+    const now = Date.now();
+    const commitIndex = meta.headIndex + 1;
+    const expiresAt = now + ASYNC_ROOM_TTL_MS;
+
+    this.ctx.storage.sql.exec(
+      `INSERT INTO commits (
+        room_id,
+        commit_index,
+        prev_hash,
+        commit_hash,
+        encrypted_commit,
+        created_at
+      ) VALUES (?, ?, ?, ?, ?, ?)`,
+      roomId,
+      commitIndex,
+      meta.headHash,
+      body.commitHash,
+      JSON.stringify(body.encryptedCommit),
+      now,
+    );
+    this.ctx.storage.sql.exec(
+      `INSERT INTO snapshots (
+        room_id,
+        snapshot_index,
+        head_hash,
+        encrypted_snapshot,
+        created_at
+      ) VALUES (?, ?, ?, ?, ?)`,
+      roomId,
+      commitIndex,
+      body.commitHash,
+      JSON.stringify(body.encryptedSnapshot),
+      now,
+    );
+    this.ctx.storage.sql.exec(
+      `UPDATE room_meta
+      SET last_move_at = ?,
+        expires_at = ?,
+        head_index = ?,
+        head_hash = ?,
+        latest_snapshot_index = ?
+      WHERE room_id = ?`,
+      now,
+      expiresAt,
+      commitIndex,
+      body.commitHash,
+      commitIndex,
+      roomId,
+    );
+    await this.ctx.storage.setAlarm(expiresAt);
+
+    return jsonResponse({
+      protocol: ASYNC_PROTOCOL_VERSION,
+      accepted: true,
+      headIndex: commitIndex,
+      headHash: body.commitHash,
+      latestSnapshotIndex: commitIndex,
+      expiresAt,
+    });
+  }
+
+  async handleAsyncSnapshot(roomId, body) {
+    const validationError = validateSnapshotRequest(body);
+    if (validationError) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: validationError }, 400);
+    }
+
+    const meta = this.getAsyncMeta(roomId);
+    if (await this.deleteIfExpired(meta)) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: 'ROOM_NOT_FOUND' }, 404);
+    }
+
+    if (!(await this.verifyRoomAuth(meta, body.roomAuth))) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: 'BAD_AUTH' }, 403);
+    }
+
+    if (body.headIndex !== meta.headIndex || body.headHash !== meta.headHash) {
+      return jsonResponse({
+        protocol: ASYNC_PROTOCOL_VERSION,
+        accepted: false,
+        error: 'STALE_HEAD',
+        headIndex: meta.headIndex,
+        headHash: meta.headHash,
+      }, 409);
+    }
+
+    const now = Date.now();
+    this.ctx.storage.sql.exec(
+      `INSERT OR REPLACE INTO snapshots (
+        room_id,
+        snapshot_index,
+        head_hash,
+        encrypted_snapshot,
+        created_at
+      ) VALUES (?, ?, ?, ?, ?)`,
+      roomId,
+      body.headIndex,
+      body.headHash,
+      JSON.stringify(body.encryptedSnapshot),
+      now,
+    );
+    this.ctx.storage.sql.exec(
+      `UPDATE room_meta
+      SET latest_snapshot_index = ?
+      WHERE room_id = ?`,
+      body.headIndex,
+      roomId,
+    );
+
+    return jsonResponse({
+      protocol: ASYNC_PROTOCOL_VERSION,
+      accepted: true,
+      headIndex: meta.headIndex,
+      headHash: meta.headHash,
+      latestSnapshotIndex: body.headIndex,
+    });
+  }
+
+  async handleAsyncClose(roomId, body) {
+    const validationError = validateCloseRoomRequest(body);
+    if (validationError) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: validationError }, 400);
+    }
+
+    const meta = this.getAsyncMeta(roomId);
+    if (await this.deleteIfExpired(meta)) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: 'ROOM_NOT_FOUND' }, 404);
+    }
+
+    if (!(await this.verifyRoomAuth(meta, body.roomAuth))) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: 'BAD_AUTH' }, 403);
+    }
+
+    if (!(await this.verifyHostAuth(meta, body.hostAuth))) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: 'BAD_HOST_AUTH' }, 403);
+    }
+
+    await this.deleteRoomStorage();
+
+    return jsonResponse({
+      protocol: ASYNC_PROTOCOL_VERSION,
+      accepted: true,
+    });
+  }
+
+  getSnapshot(roomId, snapshotIndex) {
+    const row = firstRow(
+      this.ctx.storage.sql.exec(
+        `SELECT
+          snapshot_index AS snapshotIndex,
+          head_hash AS headHash,
+          encrypted_snapshot AS encryptedSnapshot
+        FROM snapshots
+        WHERE room_id = ? AND snapshot_index = ?`,
+        roomId,
+        snapshotIndex,
+      ),
+    );
+
+    if (!row) return null;
+
+    return {
+      ...row,
+      encryptedSnapshot: JSON.parse(row.encryptedSnapshot),
+    };
+  }
+
+  getCommitsAfter(roomId, headIndex) {
+    return this.ctx.storage.sql
+      .exec(
+        `SELECT
+          commit_index AS commitIndex,
+          prev_hash AS prevHash,
+          commit_hash AS commitHash,
+          encrypted_commit AS encryptedCommit,
+          created_at AS createdAt
+        FROM commits
+        WHERE room_id = ? AND commit_index > ?
+        ORDER BY commit_index ASC`,
+        roomId,
+        headIndex,
+      )
+      .toArray()
+      .map((row) => ({
+        ...row,
+        encryptedCommit: JSON.parse(row.encryptedCommit),
+      }));
   }
 
   async webSocketMessage(socket, rawMessage) {
@@ -192,6 +781,22 @@ export class CoffeeRushRoom extends DurableObject {
   }
 
   async alarm() {
+    const asyncMeta = firstRow(
+      this.ctx.storage.sql.exec(
+        `SELECT
+          room_id AS roomId,
+          expires_at AS expiresAt,
+          closed_at AS closedAt
+        FROM room_meta
+        LIMIT 1`,
+      ),
+    );
+
+    if (asyncMeta) {
+      await this.deleteIfExpired(asyncMeta);
+      return;
+    }
+
     await this.deleteIfIdle();
   }
 
@@ -352,7 +957,7 @@ export class CoffeeRushRoom extends DurableObject {
     this.getJoinedSockets().forEach((joinedSocket) => {
       joinedSocket.close(1000, 'ROOM_CLOSED');
     });
-    await this.ctx.storage.deleteAll();
+    await this.deleteRoomStorage();
   }
 
   getJoinedSockets() {
@@ -391,7 +996,7 @@ export class CoffeeRushRoom extends DurableObject {
 
     const meta = await this.ctx.storage.get(ROOM_STORAGE_KEY);
     if (!meta || Date.now() - meta.lastActiveAt >= ROOM_IDLE_TTL_MS) {
-      await this.ctx.storage.deleteAll();
+      await this.deleteRoomStorage();
       return;
     }
 

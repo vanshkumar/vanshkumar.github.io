@@ -22,6 +22,15 @@ import {
 } from '../engine/selectors';
 import { PHASES } from '../engine/types';
 import {
+  closeAsyncRoom,
+  decryptCommit,
+  decryptSnapshot,
+  fetchAsyncRoomHead,
+  isValidAsyncAction,
+  submitTurnCommit,
+} from '../network/asyncRoom';
+import { hashState } from '../network/roomCrypto';
+import {
   REMOTE_MESSAGE_TYPES,
   connectRoom,
   createAcceptedAction,
@@ -31,13 +40,19 @@ import {
 } from '../network/roomSync';
 import {
   clearGame,
+  clearAsyncDraft,
   loadGame,
+  loadAsyncDraft,
+  loadAsyncRoomState,
   loadUndoStack,
+  saveAsyncDraft,
+  saveAsyncRoomState,
   saveGame,
   saveUndoStack,
 } from '../persistence/localStorage';
 import {
   REMOTE_MODES,
+  REMOTE_PROTOCOLS,
   clearRemoteSession,
   loadRemoteSession,
   saveRemoteSession,
@@ -96,9 +111,14 @@ export default function GamePage() {
   const pendingActionIdRef = useRef('');
   const remoteSessionRef = useRef(null);
   const remoteHandlersRef = useRef({});
+  const asyncSyncRef = useRef(null);
+  const asyncCanonicalRef = useRef(null);
+  const asyncDraftRef = useRef(null);
+  const asyncSyncInFlightRef = useRef(false);
   const [state, setState] = useState(() => loadGame());
   const [undoStack, setUndoStack] = useState(() => loadUndoStack());
   const [remoteSession, setRemoteSession] = useState(() => loadRemoteSession());
+  const [asyncDraftActionCount, setAsyncDraftActionCount] = useState(0);
   const [remoteStatus, setRemoteStatus] = useState(() => ({
     connection: loadRemoteSession() ? 'connecting' : 'offline',
     selfId: '',
@@ -119,14 +139,19 @@ export default function GamePage() {
   const isRemoteHost = remoteSession?.mode === REMOTE_MODES.HOST;
   const isRemotePeer = remoteSession?.mode === REMOTE_MODES.PEER;
   const isRemoteGame = Boolean(remoteSession);
+  const isAsyncRemoteGame = remoteSession?.protocol === REMOTE_PROTOCOLS.ASYNC;
+  const isLiveRemoteGame = isRemoteGame && !isAsyncRemoteGame;
+  const isLiveRemoteHost = isRemoteHost && isLiveRemoteGame;
+  const isLiveRemotePeer = isRemotePeer && isLiveRemoteGame;
   const remoteRoomKey = remoteSession
-    ? `${remoteSession.mode}:${remoteSession.roomId}:${remoteSession.relayAuth}:${remoteSession.hostAuth}:${remoteSession.gameKey}`
+    ? `${remoteSession.protocol}:${remoteSession.mode}:${remoteSession.roomId}:${remoteSession.relayAuth}:${remoteSession.hostAuth}:${remoteSession.gameKey}`
     : '';
   remoteSessionRef.current = remoteSession;
   remoteHandlersRef.current = {
     handleRemoteMessage,
     sendHostSnapshot,
   };
+  asyncSyncRef.current = syncAsyncRoom;
 
   const activePlayer = state ? getActivePlayer(state) : null;
   const setupPlacement = state ? getSetupPlacement(state) : null;
@@ -171,7 +196,7 @@ export default function GamePage() {
 
   useEffect(() => {
     if (!state) {
-      if (!isRemotePeer) {
+      if (!isRemoteGame) {
         navigate('/');
       }
       return;
@@ -182,7 +207,7 @@ export default function GamePage() {
     if (state.phase === 'gameOver') {
       navigate('/results');
     }
-  }, [isRemotePeer, navigate, state]);
+  }, [isRemoteGame, navigate, state]);
 
   useEffect(() => {
     saveUndoStack(undoStack);
@@ -208,7 +233,7 @@ export default function GamePage() {
   useEffect(() => {
     const session = remoteSessionRef.current;
 
-    if (!session) return undefined;
+    if (!session || session.protocol === REMOTE_PROTOCOLS.ASYNC) return undefined;
 
     let disposed = false;
 
@@ -309,15 +334,67 @@ export default function GamePage() {
     };
   }, [remoteRoomKey]);
 
+  useEffect(() => {
+    const session = remoteSessionRef.current;
+
+    if (!session || session.protocol !== REMOTE_PROTOCOLS.ASYNC) return undefined;
+
+    let disposed = false;
+    const cached = loadAsyncRoomState(session.roomId);
+    if (cached?.state) {
+      asyncCanonicalRef.current = {
+        headIndex: cached.headIndex,
+        headHash: cached.headHash,
+        state: cached.state,
+      };
+
+      if (!stateRef.current) {
+        stateRef.current = cached.state;
+        setState(cached.state);
+      }
+    }
+
+    setRemoteStatus((current) => ({
+      ...current,
+      connection: 'syncing',
+      error: '',
+      peerIds: [],
+      pendingActionId: '',
+    }));
+
+    asyncSyncRef.current?.({ restoreDraft: true, silent: true, isDisposed: () => disposed });
+
+    const intervalId = window.setInterval(() => {
+      asyncSyncRef.current?.({ silent: true, isDisposed: () => disposed });
+    }, 15_000);
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        asyncSyncRef.current?.({ silent: true, isDisposed: () => disposed });
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      disposed = true;
+      window.clearInterval(intervalId);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      asyncCanonicalRef.current = null;
+      asyncDraftRef.current = null;
+      setAsyncDraftActionCount(0);
+    };
+  }, [remoteRoomKey]);
+
   if (!state || !activePlayer) {
-    if (isRemotePeer) {
+    if (isRemoteGame) {
       return (
         <main className="game-page">
           <section className="remote-waiting-panel">
             <h1>Coffee Rush</h1>
             <p>
-              Joining room {remoteSession.roomId}. Keep this screen open while the host
-              sends the current game.
+              {isAsyncRemoteGame
+                ? `Syncing encrypted room ${remoteSession.roomId}.`
+                : `Joining room ${remoteSession.roomId}. Keep this screen open while the host sends the current game.`}
             </p>
             {remoteStatus.error && <div className="error-banner">{remoteStatus.error}</div>}
             <div className="button-row">
@@ -338,7 +415,10 @@ export default function GamePage() {
     return null;
   }
 
-  function applyAcceptedGameAction(action, { showErrors = true } = {}) {
+  function applyAcceptedGameAction(
+    action,
+    { showErrors = true, recordUndo = true } = {},
+  ) {
     const currentState = stateRef.current;
 
     if (!currentState) {
@@ -358,11 +438,13 @@ export default function GamePage() {
     setError('');
     setExportStatus('');
     stateRef.current = result.state;
-    setUndoStack((current) => {
-      const next = [...current.slice(-(MAX_UNDO_STATES - 1)), currentState];
-      undoStackRef.current = next;
-      return next;
-    });
+    if (recordUndo) {
+      setUndoStack((current) => {
+        const next = [...current.slice(-(MAX_UNDO_STATES - 1)), currentState];
+        undoStackRef.current = next;
+        return next;
+      });
+    }
     setState(result.state);
 
     if (action.type === 'END_TURN' && result.state.phase !== 'gameOver') {
@@ -382,8 +464,342 @@ export default function GamePage() {
     return result;
   }
 
+  function updateAsyncSessionHead(headIndex, headHash) {
+    const session = remoteSessionRef.current;
+    if (!session) return;
+
+    const nextSession = {
+      ...session,
+      protocol: REMOTE_PROTOCOLS.ASYNC,
+      headIndex,
+      headHash,
+    };
+    remoteSessionRef.current = nextSession;
+    saveRemoteSession(nextSession);
+    setRemoteSession(nextSession);
+  }
+
+  function setAsyncCanonicalState({ headIndex, headHash, state: canonicalState }) {
+    asyncCanonicalRef.current = {
+      headIndex,
+      headHash,
+      state: canonicalState,
+    };
+    stateRef.current = canonicalState;
+    saveAsyncRoomState({
+      roomId: remoteSessionRef.current?.roomId,
+      headIndex,
+      headHash,
+      state: canonicalState,
+    });
+    updateAsyncSessionHead(headIndex, headHash);
+  }
+
+  function setAsyncDraftState(baseHead, actions, draftState) {
+    const nextDraft =
+      actions.length > 0
+        ? {
+            baseHeadIndex: baseHead.headIndex,
+            baseHeadHash: baseHead.headHash,
+            actions,
+            state: draftState,
+          }
+        : null;
+
+    asyncDraftRef.current = nextDraft;
+    setAsyncDraftActionCount(actions.length);
+
+    if (nextDraft) {
+      saveAsyncDraft({
+        roomId: remoteSessionRef.current?.roomId,
+        baseHeadIndex: nextDraft.baseHeadIndex,
+        baseHeadHash: nextDraft.baseHeadHash,
+        actions,
+        state: draftState,
+        undoStack: undoStackRef.current,
+      });
+    } else if (remoteSessionRef.current?.roomId) {
+      clearAsyncDraft(remoteSessionRef.current.roomId);
+    }
+  }
+
+  function clearAsyncDraftState() {
+    asyncDraftRef.current = null;
+    setAsyncDraftActionCount(0);
+    if (remoteSessionRef.current?.roomId) {
+      clearAsyncDraft(remoteSessionRef.current.roomId);
+    }
+  }
+
+  async function applyAsyncCommits(baseState, baseHead, commits) {
+    const session = remoteSessionRef.current;
+    if (!session) {
+      throw new Error('No async room session is loaded.');
+    }
+
+    let nextState = baseState;
+    let headIndex = baseHead.headIndex;
+    let headHash = baseHead.headHash;
+
+    for (const commit of commits) {
+      if (commit.commitIndex !== headIndex + 1 || commit.prevHash !== headHash) {
+        throw new Error('The room commit chain is out of order.');
+      }
+
+      const payload = await decryptCommit(session, commit);
+      for (const action of payload.actions) {
+        if (!isValidAsyncAction(action)) {
+          throw new Error('The room commit contains an invalid action.');
+        }
+
+        const result = applyAction(nextState, action);
+        if (result.error) {
+          throw new Error(result.error);
+        }
+        nextState = result.state;
+      }
+
+      const resultStateHash = await hashState(nextState);
+      if (resultStateHash !== payload.resultStateHash) {
+        throw new Error('The room commit result hash did not validate.');
+      }
+
+      headIndex = commit.commitIndex;
+      headHash = commit.commitHash;
+    }
+
+    return {
+      headIndex,
+      headHash,
+      state: nextState,
+    };
+  }
+
+  async function syncAsyncRoom({
+    restoreDraft = false,
+    silent = false,
+    discardDraft = false,
+    isDisposed = () => false,
+  } = {}) {
+    const session = remoteSessionRef.current;
+    if (!session || session.protocol !== REMOTE_PROTOCOLS.ASYNC) return;
+    if (asyncSyncInFlightRef.current) return;
+
+    asyncSyncInFlightRef.current = true;
+    if (!silent) {
+      setRemoteStatus((current) => ({ ...current, connection: 'syncing', error: '' }));
+    }
+
+    try {
+      const cached = asyncCanonicalRef.current ?? loadAsyncRoomState(session.roomId);
+      const knownHead = cached
+        ? { headIndex: cached.headIndex, headHash: cached.headHash }
+        : session.headHash
+          ? { headIndex: session.headIndex, headHash: session.headHash }
+          : {};
+      const head = await fetchAsyncRoomHead(session, knownHead);
+      if (isDisposed()) return;
+
+      let canonical = cached;
+
+      if (head.latestSnapshot) {
+        const snapshotHeadHash =
+          head.latestSnapshotHeadHash ||
+          (head.latestSnapshotIndex === head.headIndex ? head.headHash : '');
+        const snapshot = await decryptSnapshot(
+          session,
+          head.latestSnapshot,
+          head.latestSnapshotIndex,
+          snapshotHeadHash,
+        );
+        canonical = {
+          headIndex: snapshot.headIndex,
+          headHash: snapshot.headHash,
+          state: snapshot.state,
+        };
+      }
+
+      if (!canonical?.state) {
+        throw new Error('The room did not include a state snapshot.');
+      }
+
+      if (head.commits.length > 0) {
+        canonical = await applyAsyncCommits(canonical.state, canonical, head.commits);
+      }
+
+      if (canonical.headIndex !== head.headIndex || canonical.headHash !== head.headHash) {
+        throw new Error('The room head did not match the decrypted state.');
+      }
+
+      setAsyncCanonicalState(canonical);
+
+      const savedDraft = restoreDraft ? loadAsyncDraft(session.roomId) : null;
+      const currentDraft = discardDraft ? null : asyncDraftRef.current ?? savedDraft;
+      const canRestoreDraft =
+        currentDraft?.baseHeadIndex === canonical.headIndex &&
+        currentDraft?.baseHeadHash === canonical.headHash &&
+        currentDraft?.state &&
+        currentDraft.actions.every(isValidAsyncAction);
+
+      if (canRestoreDraft) {
+        asyncDraftRef.current = currentDraft;
+        setAsyncDraftActionCount(currentDraft.actions.length);
+        stateRef.current = currentDraft.state;
+        undoStackRef.current = currentDraft.undoStack ?? [];
+        setState(currentDraft.state);
+        setUndoStack(undoStackRef.current);
+      } else {
+        if (currentDraft?.actions?.length) {
+          setError('The room advanced before this draft was committed. Replay the turn from the latest state.');
+        }
+        clearAsyncDraftState();
+        undoStackRef.current = [];
+        setUndoStack([]);
+        stateRef.current = canonical.state;
+        setState(canonical.state);
+      }
+
+      setRemoteStatus((current) => ({
+        ...current,
+        connection: 'connected',
+        selfId: 'async',
+        error: '',
+        pendingActionId: pendingActionIdRef.current,
+      }));
+    } catch (syncError) {
+      if (
+        syncError?.code === 'ROOM_NOT_FOUND' &&
+        session.mode === REMOTE_MODES.PEER &&
+        !asyncCanonicalRef.current &&
+        !stateRef.current
+      ) {
+        const liveSession = {
+          ...session,
+          protocol: REMOTE_PROTOCOLS.LIVE,
+        };
+        remoteSessionRef.current = liveSession;
+        saveRemoteSession(liveSession);
+        setRemoteSession(liveSession);
+        setRemoteStatus((current) => ({ ...current, connection: 'connecting' }));
+        return;
+      }
+
+      setRemoteStatus((current) => ({
+        ...current,
+        connection: 'error',
+        error: syncError?.message ?? 'Could not sync the async room.',
+      }));
+      if (!silent) {
+        setError(syncError?.message ?? 'Could not sync the async room.');
+      }
+    } finally {
+      asyncSyncInFlightRef.current = false;
+    }
+  }
+
+  async function commitAsyncActions(actions, resultState, baseHead) {
+    const session = remoteSessionRef.current;
+    if (!session) {
+      return { error: 'No async room session is loaded.' };
+    }
+
+    const pendingId = `async-${Date.now()}`;
+    setPendingActionId(pendingId);
+    setExportStatus(
+      actions.some((action) => action.type === 'END_TURN')
+        ? 'Committing turn.'
+        : 'Committing setup.',
+    );
+
+    try {
+      const response = await submitTurnCommit(session, baseHead, actions, resultState);
+
+      if (response?.accepted === false && response.error === 'STALE_HEAD') {
+        clearPendingActionId(pendingId);
+        clearAsyncDraftState();
+        undoStackRef.current = [];
+        setUndoStack([]);
+        await syncAsyncRoom({ discardDraft: true });
+        setExportStatus('');
+        setError('Another device committed first. Synced the latest room state.');
+        return { error: 'STALE_HEAD' };
+      }
+
+      setAsyncCanonicalState({
+        headIndex: response.headIndex,
+        headHash: response.headHash,
+        state: resultState,
+      });
+      clearAsyncDraftState();
+      undoStackRef.current = [];
+      setUndoStack([]);
+      clearPendingActionId(pendingId);
+      setExportStatus(
+        actions.some((action) => action.type === 'END_TURN')
+          ? 'Turn committed.'
+          : 'Setup synced.',
+      );
+      setRemoteStatus((current) => ({
+        ...current,
+        connection: 'connected',
+        error: '',
+      }));
+      return { state: resultState };
+    } catch (commitError) {
+      setAsyncDraftState(baseHead, actions, resultState);
+      clearPendingActionId(pendingId);
+      setExportStatus('');
+      setError(commitError?.message ?? 'Could not commit the async turn.');
+      return { error: commitError?.message ?? 'Could not commit the async turn.' };
+    }
+  }
+
+  function dispatchAsyncAction(action) {
+    if (pendingActionIdRef.current) {
+      setError('Waiting for the room to accept the previous commit.');
+      return { error: 'Waiting for the room to accept the previous commit.' };
+    }
+
+    const canonical = asyncCanonicalRef.current;
+    if (!canonical?.headHash) {
+      setError('Still syncing the room.');
+      return { error: 'Still syncing the room.' };
+    }
+
+    const currentDraft = asyncDraftRef.current;
+    const baseHead = currentDraft
+      ? {
+          headIndex: currentDraft.baseHeadIndex,
+          headHash: currentDraft.baseHeadHash,
+        }
+      : {
+          headIndex: canonical.headIndex,
+          headHash: canonical.headHash,
+        };
+    const draftActions = currentDraft?.actions ?? [];
+    const result = applyAcceptedGameAction(action);
+    if (result.error) return result;
+
+    const nextActions = [...draftActions, action];
+    const shouldCommitNow =
+      action.type === 'PLACE_STARTING_MEEPLE' || action.type === 'END_TURN';
+
+    if (shouldCommitNow) {
+      commitAsyncActions(nextActions, result.state, baseHead);
+      return { pending: true, state: result.state };
+    }
+
+    setAsyncDraftState(baseHead, nextActions, result.state);
+    setExportStatus('Draft saved on this device. End turn to sync.');
+    return result;
+  }
+
   function dispatch(action) {
-    if (isRemotePeer) {
+    if (isAsyncRemoteGame) {
+      return dispatchAsyncAction(action);
+    }
+
+    if (isLiveRemotePeer) {
       const client = remoteClientRef.current;
 
       if (!client) {
@@ -412,7 +828,7 @@ export default function GamePage() {
 
     const result = applyAcceptedGameAction(action);
 
-    if (!result.error && isRemoteHost) {
+    if (!result.error && isLiveRemoteHost) {
       remoteClientRef.current
         ?.send(createAcceptedAction(action, result.state.log.length))
         .catch(() => {});
@@ -458,7 +874,7 @@ export default function GamePage() {
   function handleRemoteMessage(message, peerId) {
     if (!message?.type) return;
 
-    if (isRemoteHost) {
+    if (isLiveRemoteHost) {
       if (
         message.type === REMOTE_MESSAGE_TYPES.HELLO ||
         message.type === REMOTE_MESSAGE_TYPES.RESYNC_REQUEST
@@ -497,7 +913,7 @@ export default function GamePage() {
       }
     }
 
-    if (isRemotePeer) {
+    if (isLiveRemotePeer) {
       if (message.type === REMOTE_MESSAGE_TYPES.STATE_SNAPSHOT) {
         replaceFromRemoteSnapshot(message);
         return;
@@ -594,8 +1010,13 @@ export default function GamePage() {
   }
 
   function undoLastAction() {
-    if (isRemotePeer) {
+    if (isLiveRemotePeer) {
       setError('Only the host can undo in an online room.');
+      return;
+    }
+
+    if (isAsyncRemoteGame && asyncDraftActionCount === 0) {
+      setError('Online undo is only available for uncommitted draft actions.');
       return;
     }
 
@@ -611,7 +1032,23 @@ export default function GamePage() {
     setExportStatus('');
     resetActionUi();
 
-    if (isRemoteHost) {
+    if (isAsyncRemoteGame) {
+      const draft = asyncDraftRef.current;
+      if (draft) {
+        const nextActions = draft.actions.slice(0, -1);
+        setAsyncDraftState(
+          {
+            headIndex: draft.baseHeadIndex,
+            headHash: draft.baseHeadHash,
+          },
+          nextActions,
+          previousState,
+        );
+      }
+      return;
+    }
+
+    if (isLiveRemoteHost) {
       remoteClientRef.current
         ?.send(createStateSnapshot(previousState, nextUndoStack))
         .catch(() => {});
@@ -844,12 +1281,26 @@ export default function GamePage() {
   }
 
   async function newGame() {
-    if (isRemotePeer) {
+    if (isAsyncRemoteGame) {
+      if (isRemoteHost) {
+        try {
+          await closeAsyncRoom(remoteSessionRef.current);
+        } catch {
+          // The local reset should still happen if the close request fails.
+        }
+      }
+      clearGame();
+      clearRemoteSession();
+      navigate('/');
+      return;
+    }
+
+    if (isLiveRemotePeer) {
       leaveRemoteGame();
       return;
     }
 
-    if (isRemoteHost) {
+    if (isLiveRemoteHost) {
       try {
         await remoteClientRef.current?.send({ type: REMOTE_MESSAGE_TYPES.ROOM_CLOSED });
         remoteClientRef.current?.closeRoom?.();
@@ -885,13 +1336,27 @@ export default function GamePage() {
       : `${activePlayer.completed.length}/3 orders`
     : 'All active';
   const phaseLabel = phaseDisplayLabel(state.phase);
-  const remoteModeLabel = isRemoteHost ? 'Host' : 'Peer';
+  const remoteModeLabel = isAsyncRemoteGame
+    ? isRemoteHost
+      ? 'Async host'
+      : 'Async'
+    : isRemoteHost
+      ? 'Host'
+      : 'Peer';
   const remoteStatusLabel =
     remoteStatus.connection === 'connected'
-      ? isRemoteHost
+      ? isAsyncRemoteGame
+        ? asyncDraftActionCount > 0
+          ? `${asyncDraftActionCount} draft`
+          : 'synced'
+        : isRemoteHost
         ? `${remoteStatus.peerIds.length} connected`
         : 'connected'
       : remoteStatus.connection;
+  const undoDisabled =
+    undoStack.length === 0 ||
+    isLiveRemotePeer ||
+    (isAsyncRemoteGame && (asyncDraftActionCount === 0 || Boolean(remoteStatus.pendingActionId)));
 
   return (
     <main className="game-page" ref={pageRef}>
@@ -920,7 +1385,7 @@ export default function GamePage() {
           <button
             type="button"
             onClick={undoLastAction}
-            disabled={undoStack.length === 0 || isRemotePeer}
+            disabled={undoDisabled}
           >
             Undo
           </button>
@@ -938,7 +1403,7 @@ export default function GamePage() {
           <button
             type="button"
             onClick={undoLastAction}
-            disabled={undoStack.length === 0 || isRemotePeer}
+            disabled={undoDisabled}
           >
             Undo
           </button>

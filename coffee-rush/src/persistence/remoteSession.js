@@ -1,4 +1,5 @@
-const REMOTE_SESSION_KEY = 'coffee-rush:remote-session:v2';
+const REMOTE_SESSION_KEY = 'coffee-rush:remote-session:v3';
+const ASYNC_REMOTE_SESSION_KEY = 'coffee-rush:remote-session:v2';
 const LEGACY_REMOTE_SESSION_KEY = 'coffee-rush:remote-session:v1';
 const ROOM_CODE_LENGTH = 6;
 const RELAY_AUTH_BYTES = 16;
@@ -7,11 +8,17 @@ const SECRET_PATTERN = /^[A-Za-z0-9_-]+$/;
 const AUTH_SECRET_MIN_LENGTH = 16;
 const SECRET_MAX_LENGTH = 128;
 const AES_KEY_TEXT_LENGTHS = new Set([22, 32, 43]);
+const HASH_PATTERN = /^[A-Za-z0-9_-]{32,96}$/;
 
 export const REMOTE_MODES = {
   LOCAL: 'local',
   HOST: 'host',
   PEER: 'peer',
+};
+
+export const REMOTE_PROTOCOLS = {
+  LIVE: 1,
+  ASYNC: 2,
 };
 
 export function normalizeRoomCode(value) {
@@ -87,6 +94,22 @@ export function normalizeGameKey(value) {
   return secret;
 }
 
+export function normalizeHeadHash(value) {
+  const hash = String(value ?? '').trim();
+  return hash === '' || HASH_PATTERN.test(hash) ? hash : '';
+}
+
+function normalizeProtocol(value, fallback = REMOTE_PROTOCOLS.ASYNC) {
+  if (Number(value) === REMOTE_PROTOCOLS.LIVE) return REMOTE_PROTOCOLS.LIVE;
+  if (Number(value) === REMOTE_PROTOCOLS.ASYNC) return REMOTE_PROTOCOLS.ASYNC;
+  return fallback;
+}
+
+function normalizeHeadIndex(value) {
+  const index = Number(value ?? 0);
+  return Number.isInteger(index) && index >= 0 ? index : 0;
+}
+
 export function createRemoteSession({
   mode,
   roomId,
@@ -94,6 +117,10 @@ export function createRemoteSession({
   hostAuth = '',
   gameKey,
   clientId = '',
+  protocol = REMOTE_PROTOCOLS.ASYNC,
+  headIndex = 0,
+  headHash = '',
+  roomCreatedAt = '',
 }) {
   const normalizedRoomId = normalizeRoomCode(roomId);
   const normalizedRelayAuth = normalizeInviteSecret(relayAuth, {
@@ -121,13 +148,17 @@ export function createRemoteSession({
   }
 
   return {
-    version: 2,
+    version: 3,
+    protocol: normalizeProtocol(protocol),
     mode,
     roomId: normalizedRoomId,
     relayAuth: normalizedRelayAuth,
     hostAuth: normalizedHostAuth,
     gameKey: normalizedGameKey,
     clientId,
+    headIndex: normalizeHeadIndex(headIndex),
+    headHash: normalizeHeadHash(headHash),
+    roomCreatedAt,
     createdAt: new Date().toISOString(),
   };
 }
@@ -137,11 +168,19 @@ export function saveRemoteSession(session) {
 }
 
 export function loadRemoteSession() {
-  const raw = window.localStorage.getItem(REMOTE_SESSION_KEY);
+  const key = [REMOTE_SESSION_KEY, ASYNC_REMOTE_SESSION_KEY, LEGACY_REMOTE_SESSION_KEY].find(
+    (candidate) => window.localStorage.getItem(candidate),
+  );
+  const raw = key ? window.localStorage.getItem(key) : null;
   if (!raw) return null;
 
   try {
     const parsed = JSON.parse(raw);
+    const fallbackProtocol =
+      parsed?.version && Number(parsed.version) >= 3
+        ? REMOTE_PROTOCOLS.ASYNC
+        : REMOTE_PROTOCOLS.LIVE;
+    const protocol = normalizeProtocol(parsed?.protocol, fallbackProtocol);
     const mode = parsed?.mode;
     const roomId = normalizeRoomCode(parsed?.roomId);
     const relayAuth = normalizeInviteSecret(parsed?.relayAuth, {
@@ -170,11 +209,15 @@ export function loadRemoteSession() {
 
     return {
       ...parsed,
+      protocol,
       roomId,
       relayAuth,
       hostAuth,
       gameKey,
       clientId: parsed.clientId ?? '',
+      headIndex: normalizeHeadIndex(parsed.headIndex),
+      headHash: normalizeHeadHash(parsed.headHash),
+      roomCreatedAt: parsed.roomCreatedAt ?? '',
     };
   } catch {
     return null;
@@ -183,6 +226,7 @@ export function loadRemoteSession() {
 
 export function clearRemoteSession() {
   window.localStorage.removeItem(REMOTE_SESSION_KEY);
+  window.localStorage.removeItem(ASYNC_REMOTE_SESSION_KEY);
   window.localStorage.removeItem(LEGACY_REMOTE_SESSION_KEY);
 }
 

@@ -107,6 +107,11 @@
 - Action: Use isolated browser contexts, such as a headless Chrome DevTools smoke harness, when verifying host/peer online flows; assert join, snapshot sync, peer-originated actions, host-originated actions, and matching saved game state.
 - Confidence: high
 
+**[2026-06-25] — Relay allowed origins**
+- Observation: The published Coffee Rush app can run from `https://vanshkumar.net` after GitHub Pages redirects from `vanshkumar.github.io`, so allowing only the GitHub Pages origin makes the Cloudflare relay reject production WebSockets.
+- Action: Keep the relay `ALLOWED_ORIGINS` list in `relay/wrangler.toml` aligned with every production hostname plus active local smoke-test ports.
+- Confidence: high
+
 ## Patterns and Preferences
 
 **[2026-06-24] — Setup placement UX**

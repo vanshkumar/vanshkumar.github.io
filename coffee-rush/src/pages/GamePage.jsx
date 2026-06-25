@@ -22,12 +22,26 @@ import {
 } from '../engine/selectors';
 import { PHASES } from '../engine/types';
 import {
+  REMOTE_MESSAGE_TYPES,
+  connectRoom,
+  createAcceptedAction,
+  createActionRequest,
+  createInviteLink,
+  createStateSnapshot,
+} from '../network/roomSync';
+import {
   clearGame,
   loadGame,
   loadUndoStack,
   saveGame,
   saveUndoStack,
 } from '../persistence/localStorage';
+import {
+  REMOTE_MODES,
+  clearRemoteSession,
+  loadRemoteSession,
+  saveRemoteSession,
+} from '../persistence/remoteSession';
 import {
   createElementScreenshotBlob,
   downloadFilesArchive,
@@ -41,6 +55,7 @@ import {
 } from '../utils/gameExport';
 
 const MAX_UNDO_STATES = 25;
+const RESET_ACTION_UI_TYPES = ['PLACE_STARTING_MEEPLE', 'MOVE', 'END_TURN'];
 
 function meepleLabel(meeple) {
   return meeple.id.split('-')[1].toUpperCase();
@@ -74,8 +89,23 @@ function ingredientListLabel(ingredients) {
 export default function GamePage() {
   const navigate = useNavigate();
   const pageRef = useRef(null);
+  const stateRef = useRef(null);
+  const undoStackRef = useRef([]);
+  const remoteClientRef = useRef(null);
+  const peerIdsRef = useRef([]);
+  const pendingActionIdRef = useRef('');
+  const remoteSessionRef = useRef(null);
+  const remoteHandlersRef = useRef({});
   const [state, setState] = useState(() => loadGame());
   const [undoStack, setUndoStack] = useState(() => loadUndoStack());
+  const [remoteSession, setRemoteSession] = useState(() => loadRemoteSession());
+  const [remoteStatus, setRemoteStatus] = useState(() => ({
+    connection: loadRemoteSession() ? 'connecting' : 'offline',
+    selfId: '',
+    peerIds: [],
+    error: '',
+    pendingActionId: '',
+  }));
   const [error, setError] = useState('');
   const [exportStatus, setExportStatus] = useState('');
   const [isExporting, setIsExporting] = useState(false);
@@ -86,6 +116,17 @@ export default function GamePage() {
   const [selectedSetupCellId, setSelectedSetupCellId] = useState(null);
   const [passTo, setPassTo] = useState('');
   const [isUpgradeMenuOpen, setIsUpgradeMenuOpen] = useState(false);
+  const isRemoteHost = remoteSession?.mode === REMOTE_MODES.HOST;
+  const isRemotePeer = remoteSession?.mode === REMOTE_MODES.PEER;
+  const isRemoteGame = Boolean(remoteSession);
+  const remoteRoomKey = remoteSession
+    ? `${remoteSession.mode}:${remoteSession.roomId}`
+    : '';
+  remoteSessionRef.current = remoteSession;
+  remoteHandlersRef.current = {
+    handleRemoteMessage,
+    sendHostSnapshot,
+  };
 
   const activePlayer = state ? getActivePlayer(state) : null;
   const setupPlacement = state ? getSetupPlacement(state) : null;
@@ -121,8 +162,18 @@ export default function GamePage() {
   );
 
   useEffect(() => {
+    stateRef.current = state;
+  }, [state]);
+
+  useEffect(() => {
+    undoStackRef.current = undoStack;
+  }, [undoStack]);
+
+  useEffect(() => {
     if (!state) {
-      navigate('/');
+      if (!isRemotePeer) {
+        navigate('/');
+      }
       return;
     }
 
@@ -131,7 +182,7 @@ export default function GamePage() {
     if (state.phase === 'gameOver') {
       navigate('/results');
     }
-  }, [navigate, state]);
+  }, [isRemotePeer, navigate, state]);
 
   useEffect(() => {
     saveUndoStack(undoStack);
@@ -154,22 +205,153 @@ export default function GamePage() {
     }
   }, [state?.phase]);
 
+  useEffect(() => {
+    const session = remoteSessionRef.current;
+
+    if (!session) return undefined;
+
+    let disposed = false;
+
+    setRemoteStatus((current) => ({
+      ...current,
+      connection: 'connecting',
+      error: '',
+      peerIds: [],
+      pendingActionId: '',
+    }));
+    pendingActionIdRef.current = '';
+
+    connectRoom({
+      roomId: session.roomId,
+      onStatus: (connection) => {
+        if (!disposed) {
+          setRemoteStatus((current) => ({
+            ...current,
+            connection,
+            error: connection === 'connected' ? '' : current.error,
+          }));
+        }
+      },
+      onError: (connectionError) => {
+        if (!disposed) {
+          setRemoteStatus((current) => ({
+            ...current,
+            connection: 'error',
+            error: connectionError?.message ?? 'Could not connect to the room.',
+          }));
+        }
+      },
+      onPeerJoin: (peerId) => {
+        peerIdsRef.current = Array.from(new Set([...peerIdsRef.current, peerId]));
+        setRemoteStatus((current) => ({
+          ...current,
+          peerIds: peerIdsRef.current,
+        }));
+
+        if (session.mode === REMOTE_MODES.HOST) {
+          window.setTimeout(() => remoteHandlersRef.current.sendHostSnapshot(peerId), 0);
+        }
+      },
+      onPeerLeave: (peerId) => {
+        peerIdsRef.current = peerIdsRef.current.filter((candidate) => candidate !== peerId);
+        setRemoteStatus((current) => ({
+          ...current,
+          peerIds: peerIdsRef.current,
+        }));
+      },
+      onMessage: (message, peerId) => {
+        remoteHandlersRef.current.handleRemoteMessage(message, peerId);
+      },
+    })
+      .then((client) => {
+        if (disposed) {
+          client.leave();
+          return;
+        }
+
+        remoteClientRef.current = client;
+        saveRemoteSession({ ...session, clientId: client.selfId });
+        setRemoteSession((current) =>
+          current ? { ...current, clientId: client.selfId } : current,
+        );
+        setRemoteStatus((current) => ({
+          ...current,
+          connection: 'connected',
+          selfId: client.selfId,
+        }));
+
+        if (session.mode === REMOTE_MODES.PEER) {
+          client.send({
+            type: REMOTE_MESSAGE_TYPES.HELLO,
+            clientId: client.selfId,
+            knownActionIndex: stateRef.current?.log?.length ?? 0,
+          });
+        }
+      })
+      .catch(() => {});
+
+    return () => {
+      disposed = true;
+      remoteClientRef.current?.leave();
+      remoteClientRef.current = null;
+      peerIdsRef.current = [];
+    };
+  }, [remoteRoomKey]);
+
   if (!state || !activePlayer) {
+    if (isRemotePeer) {
+      return (
+        <main className="game-page">
+          <section className="remote-waiting-panel">
+            <h1>Coffee Rush</h1>
+            <p>
+              Joining room {remoteSession.roomId}. Keep this screen open while the host
+              sends the current game.
+            </p>
+            {remoteStatus.error && <div className="error-banner">{remoteStatus.error}</div>}
+            <div className="button-row">
+              <span className="remote-status-pill">
+                {remoteStatus.connection === 'error'
+                  ? 'Connection error'
+                  : remoteStatus.connection}
+              </span>
+              <button type="button" onClick={leaveRemoteGame}>
+                Leave
+              </button>
+            </div>
+          </section>
+        </main>
+      );
+    }
+
     return null;
   }
 
-  function dispatch(action) {
-    const beforePlayerId = state.activePlayerId;
-    const result = applyAction(state, action);
+  function applyAcceptedGameAction(action, { showErrors = true } = {}) {
+    const currentState = stateRef.current;
+
+    if (!currentState) {
+      return { error: 'No active game state is loaded.' };
+    }
+
+    const beforePlayerId = currentState.activePlayerId;
+    const result = applyAction(currentState, action);
 
     if (result.error) {
-      setError(result.error);
+      if (showErrors) {
+        setError(result.error);
+      }
       return result;
     }
 
     setError('');
     setExportStatus('');
-    setUndoStack((current) => [...current.slice(-(MAX_UNDO_STATES - 1)), state]);
+    stateRef.current = result.state;
+    setUndoStack((current) => {
+      const next = [...current.slice(-(MAX_UNDO_STATES - 1)), currentState];
+      undoStackRef.current = next;
+      return next;
+    });
     setState(result.state);
 
     if (action.type === 'END_TURN' && result.state.phase !== 'gameOver') {
@@ -179,11 +361,7 @@ export default function GamePage() {
       }
     }
 
-    const resetsTurnControls = ['PLACE_STARTING_MEEPLE', 'MOVE', 'END_TURN'].includes(
-      action.type,
-    );
-
-    if (resetsTurnControls) {
+    if (RESET_ACTION_UI_TYPES.includes(action.type)) {
       setPath([]);
       setRushSpent(0);
       setSelectedCup(null);
@@ -193,6 +371,169 @@ export default function GamePage() {
     return result;
   }
 
+  function dispatch(action) {
+    if (isRemotePeer) {
+      const client = remoteClientRef.current;
+
+      if (!client) {
+        setError('Still connecting to the room.');
+        return { error: 'Still connecting to the room.' };
+      }
+
+      if (pendingActionIdRef.current) {
+        setError('Waiting for the host to confirm the previous action.');
+        return { error: 'Waiting for the host to confirm the previous action.' };
+      }
+
+      const request = createActionRequest(action, client.selfId || remoteStatus.selfId || 'peer');
+      setPendingActionId(request.clientActionId);
+      setError('');
+      setExportStatus('Waiting for the host to confirm that action.');
+
+      try {
+        client.send(request);
+      } catch {
+        clearPendingActionId(request.clientActionId);
+        setExportStatus('');
+        setError('Could not send that action to the host.');
+        return { error: 'Could not send that action to the host.' };
+      }
+
+      return { pending: true };
+    }
+
+    const result = applyAcceptedGameAction(action);
+
+    if (!result.error && isRemoteHost) {
+      remoteClientRef.current?.send(
+        createAcceptedAction(action, result.state.log.length),
+      );
+    }
+
+    return result;
+  }
+
+  function sendHostSnapshot(peerId) {
+    const currentState = stateRef.current;
+    const client = remoteClientRef.current;
+
+    if (!currentState || !client) return;
+
+    client.send(createStateSnapshot(currentState, undoStackRef.current), peerId);
+  }
+
+  function requestRemoteResync() {
+    remoteClientRef.current?.send({
+      type: REMOTE_MESSAGE_TYPES.RESYNC_REQUEST,
+      knownActionIndex: stateRef.current?.log?.length ?? 0,
+    });
+  }
+
+  function replaceFromRemoteSnapshot(message) {
+    if (!message?.state) {
+      setError('The host sent an unreadable room snapshot.');
+      return;
+    }
+
+    stateRef.current = message.state;
+    undoStackRef.current = Array.isArray(message.undoStack) ? message.undoStack : [];
+    setState(message.state);
+    setUndoStack(undoStackRef.current);
+    setError('');
+    setExportStatus('Synced with host.');
+    clearPendingActionId();
+    resetActionUi();
+  }
+
+  function handleRemoteMessage(message, peerId) {
+    if (!message?.type) return;
+
+    if (isRemoteHost) {
+      if (
+        message.type === REMOTE_MESSAGE_TYPES.HELLO ||
+        message.type === REMOTE_MESSAGE_TYPES.RESYNC_REQUEST
+      ) {
+        sendHostSnapshot(peerId);
+        return;
+      }
+
+      if (message.type === REMOTE_MESSAGE_TYPES.ACTION_REQUEST) {
+        const result = applyAcceptedGameAction(message.action, { showErrors: false });
+
+        if (result.error) {
+          remoteClientRef.current?.send(
+            {
+              type: REMOTE_MESSAGE_TYPES.ACTION_REJECTED,
+              clientActionId: message.clientActionId,
+              error: result.error,
+            },
+            peerId,
+          );
+          return;
+        }
+
+        remoteClientRef.current?.send(
+          createAcceptedAction(
+            message.action,
+            result.state.log.length,
+            message.clientActionId,
+          ),
+        );
+        return;
+      }
+    }
+
+    if (isRemotePeer) {
+      if (message.type === REMOTE_MESSAGE_TYPES.STATE_SNAPSHOT) {
+        replaceFromRemoteSnapshot(message);
+        return;
+      }
+
+      if (message.type === REMOTE_MESSAGE_TYPES.ACTION_ACCEPTED) {
+        const currentActionIndex = stateRef.current?.log?.length ?? 0;
+
+        if (!stateRef.current || message.actionIndex > currentActionIndex + 1) {
+          requestRemoteResync();
+          return;
+        }
+
+        if (message.actionIndex <= currentActionIndex) {
+          if (message.clientActionId) {
+            clearPendingActionId(message.clientActionId);
+          }
+          return;
+        }
+
+        const result = applyAcceptedGameAction(message.action);
+        if (result.error) {
+          requestRemoteResync();
+          return;
+        }
+
+        if (message.clientActionId) {
+          clearPendingActionId(message.clientActionId);
+        }
+        setExportStatus('');
+        return;
+      }
+
+      if (message.type === REMOTE_MESSAGE_TYPES.ACTION_REJECTED) {
+        if (message.clientActionId) {
+          clearPendingActionId(message.clientActionId);
+        }
+        setExportStatus('');
+        setError(message.error ?? 'The host rejected that action.');
+        return;
+      }
+
+      if (message.type === REMOTE_MESSAGE_TYPES.ROOM_CLOSED) {
+        clearGame();
+        clearRemoteSession();
+        navigate('/');
+      }
+    }
+  }
+
   function resetActionUi() {
     setPath([]);
     setRushSpent(0);
@@ -200,6 +541,31 @@ export default function GamePage() {
     setSelectedSetupCellId(null);
     setPassTo('');
     setIsUpgradeMenuOpen(false);
+  }
+
+  function setPendingActionId(clientActionId) {
+    pendingActionIdRef.current = clientActionId;
+    setRemoteStatus((current) => ({
+      ...current,
+      pendingActionId: clientActionId,
+    }));
+  }
+
+  function clearPendingActionId(clientActionId = '') {
+    if (!clientActionId || pendingActionIdRef.current === clientActionId) {
+      pendingActionIdRef.current = '';
+    }
+
+    setRemoteStatus((current) => {
+      if (clientActionId && current.pendingActionId !== clientActionId) {
+        return current;
+      }
+
+      return {
+        ...current,
+        pendingActionId: '',
+      };
+    });
   }
 
   function selectCup(cupIdx) {
@@ -214,14 +580,26 @@ export default function GamePage() {
   }
 
   function undoLastAction() {
+    if (isRemotePeer) {
+      setError('Only the host can undo in an online room.');
+      return;
+    }
+
     if (undoStack.length === 0) return;
 
     const previousState = undoStack[undoStack.length - 1];
-    setUndoStack((current) => current.slice(0, -1));
+    const nextUndoStack = undoStack.slice(0, -1);
+    undoStackRef.current = nextUndoStack;
+    stateRef.current = previousState;
+    setUndoStack(nextUndoStack);
     setState(previousState);
     setError('');
     setExportStatus('');
     resetActionUi();
+
+    if (isRemoteHost) {
+      remoteClientRef.current?.send(createStateSnapshot(previousState, nextUndoStack));
+    }
   }
 
   function getExportText() {
@@ -298,6 +676,28 @@ export default function GamePage() {
       setExportStatus('Game log downloaded. Screenshot failed.');
     } finally {
       setIsExporting(false);
+    }
+  }
+
+  async function copyInviteLink() {
+    if (!remoteSession) return;
+
+    const inviteLink = createInviteLink(remoteSession.roomId);
+
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(inviteLink);
+      } else {
+        copyTextFallback(inviteLink);
+      }
+      setExportStatus('Invite link copied.');
+    } catch {
+      try {
+        copyTextFallback(inviteLink);
+        setExportStatus('Invite link copied.');
+      } catch {
+        setExportStatus(`Room code: ${remoteSession.roomId}`);
+      }
     }
   }
 
@@ -427,8 +827,31 @@ export default function GamePage() {
     }
   }
 
-  function newGame() {
+  async function newGame() {
+    if (isRemotePeer) {
+      leaveRemoteGame();
+      return;
+    }
+
+    if (isRemoteHost) {
+      try {
+        await remoteClientRef.current?.send({ type: REMOTE_MESSAGE_TYPES.ROOM_CLOSED });
+      } catch {
+        // Leaving the room is still the correct local action if the final send fails.
+      }
+    }
+
     clearGame();
+    clearRemoteSession();
+    navigate('/');
+  }
+
+  function leaveRemoteGame() {
+    remoteClientRef.current?.leave();
+    remoteClientRef.current = null;
+    clearGame();
+    clearRemoteSession();
+    setRemoteSession(null);
     navigate('/');
   }
 
@@ -445,6 +868,13 @@ export default function GamePage() {
       : `${activePlayer.completed.length}/3 orders`
     : 'All active';
   const phaseLabel = phaseDisplayLabel(state.phase);
+  const remoteModeLabel = isRemoteHost ? 'Host' : 'Peer';
+  const remoteStatusLabel =
+    remoteStatus.connection === 'connected'
+      ? isRemoteHost
+        ? `${remoteStatus.peerIds.length} connected`
+        : 'connected'
+      : remoteStatus.connection;
 
   return (
     <main className="game-page" ref={pageRef}>
@@ -459,8 +889,22 @@ export default function GamePage() {
           </p>
         </div>
         <div className="header-actions header-actions-desktop">
+          {isRemoteGame && (
+            <>
+              <span className="remote-status-pill">
+                {remoteModeLabel} {remoteSession.roomId} · {remoteStatusLabel}
+              </span>
+              <button type="button" onClick={copyInviteLink}>
+                Copy invite
+              </button>
+            </>
+          )}
           <span className="deck-counter">{state.deck.length} orders</span>
-          <button type="button" onClick={undoLastAction} disabled={undoStack.length === 0}>
+          <button
+            type="button"
+            onClick={undoLastAction}
+            disabled={undoStack.length === 0 || isRemotePeer}
+          >
             Undo
           </button>
           <button type="button" onClick={copyExport}>
@@ -474,12 +918,26 @@ export default function GamePage() {
           </button>
         </div>
         <div className="header-actions-mobile">
-          <button type="button" onClick={undoLastAction} disabled={undoStack.length === 0}>
+          <button
+            type="button"
+            onClick={undoLastAction}
+            disabled={undoStack.length === 0 || isRemotePeer}
+          >
             Undo
           </button>
           <details className="mobile-utility-menu">
             <summary>Tools</summary>
             <div className="mobile-utility-panel">
+              {isRemoteGame && (
+                <>
+                  <span className="remote-status-pill">
+                    {remoteModeLabel} {remoteSession.roomId} · {remoteStatusLabel}
+                  </span>
+                  <button type="button" onClick={copyInviteLink}>
+                    Copy invite
+                  </button>
+                </>
+              )}
               <span className="deck-counter">{state.deck.length} orders</span>
               <button type="button" onClick={copyExport}>
                 Copy log
@@ -496,6 +954,7 @@ export default function GamePage() {
       </header>
 
       {error && <div className="error-banner">{error}</div>}
+      {remoteStatus.error && <div className="error-banner">{remoteStatus.error}</div>}
       {exportStatus && <div className="message-banner">{exportStatus}</div>}
       {visibleLastMessage && <div className="message-banner">{visibleLastMessage}</div>}
 

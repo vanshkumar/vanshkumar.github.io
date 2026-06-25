@@ -57,6 +57,21 @@
 - Action: Keep mobile game-layout children orderable by phase, and treat lower player panels as detail surfaces rather than the primary turn-planning surface.
 - Confidence: high
 
+**[2026-06-25] — Remote play sync**
+- Observation: The pure reducer/state contract supports online play at the `GamePage` dispatch boundary, but async peer callbacks need current state and undo refs to avoid stale React closures.
+- Action: Keep networking outside `src/engine/`, validate actions on the host with `applyAction`, broadcast accepted actions, and use host snapshots for join, resync, and undo.
+- Confidence: medium
+
+**[2026-06-25] — Remote relay verification**
+- Observation: Public Trystero peer discovery did not connect two real local Chrome contexts in this sandboxed network, while a tiny WebSocket relay synced initial snapshots and bidirectional setup actions deterministically.
+- Action: Use the `?relay=ws://HOST:PORT` room URL and `scripts/dev-relay.py` for reliable local remote-play tests; treat public P2P fallback as opportunistic until verified on the target network.
+- Confidence: high
+
+**[2026-06-25] — Remote peer action flow**
+- Observation: Peer action confirmation state is both networking state and fast-click UI state, so React render state can lag a second tap before the host replies.
+- Action: Mirror the pending peer action id in a ref and clear it only on matching host accept/reject messages or a host snapshot.
+- Confidence: high
+
 ## Patterns and Preferences
 
 **[2026-06-24] — Setup placement UX**

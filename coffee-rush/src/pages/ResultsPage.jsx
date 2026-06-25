@@ -7,6 +7,7 @@ import {
   loadUndoStack,
   saveGame,
 } from '../persistence/localStorage';
+import { clearRemoteSession } from '../persistence/remoteSession';
 import { createInitialState } from '../engine/initialState';
 import {
   createElementScreenshotBlob,
@@ -50,12 +51,14 @@ export default function ResultsPage() {
       seed: `coffee-rush-${Date.now()}`,
     });
     clearGame();
+    clearRemoteSession();
     saveGame(next);
     navigate('/game');
   }
 
   function newGame() {
     clearGame();
+    clearRemoteSession();
     navigate('/');
   }
 

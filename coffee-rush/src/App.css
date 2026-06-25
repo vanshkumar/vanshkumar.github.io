@@ -48,6 +48,7 @@ h1 {
 
 .setup-controls,
 .resume-strip,
+.remote-play-panel,
 .action-panel,
 .player-panel,
 .results-panel {
@@ -75,6 +76,49 @@ h1 {
 .setup-controls {
   display: grid;
   gap: 14px;
+}
+
+.remote-play-panel,
+.remote-waiting-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.remote-play-panel h2,
+.remote-waiting-panel h1 {
+  font-size: 1.35rem;
+  line-height: 1.1;
+}
+
+.remote-play-panel p,
+.remote-waiting-panel p {
+  color: #5d4d3d;
+  line-height: 1.35;
+}
+
+.remote-play-actions,
+.join-room-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  align-items: end;
+}
+
+.remote-play-actions button,
+.join-room-row button {
+  min-height: 42px;
+}
+
+.remote-play-panel .error-banner {
+  margin: 0;
+}
+
+.remote-waiting-panel {
+  width: min(520px, 100%);
+  margin: 15vh auto 0;
+  border: 1px solid #d7c7af;
+  background: rgba(255, 250, 242, 0.94);
+  padding: 18px;
 }
 
 .setup-controls label,
@@ -119,6 +163,7 @@ select {
 }
 
 .deck-counter,
+.remote-status-pill,
 .rush-tracker {
   display: inline-flex;
   align-items: center;
@@ -129,6 +174,12 @@ select {
   background: #fffaf2;
   padding: 5px 9px;
   font-weight: 800;
+}
+
+.remote-status-pill {
+  border-color: #8aa8a3;
+  background: #edf7f4;
+  color: #244f49;
 }
 
 .icon-button {
@@ -1388,6 +1439,16 @@ button.cup-memory-tile {
     flex-direction: column;
   }
 
+  .remote-play-actions,
+  .join-room-row {
+    grid-template-columns: 1fr;
+  }
+
+  .remote-waiting-panel {
+    margin-top: 8vh;
+    padding: 12px;
+  }
+
   .game-header {
     align-items: center;
     gap: 8px;
@@ -1458,7 +1519,8 @@ button.cup-memory-tile {
   }
 
   .mobile-utility-panel button,
-  .mobile-utility-panel .deck-counter {
+  .mobile-utility-panel .deck-counter,
+  .mobile-utility-panel .remote-status-pill {
     width: 100%;
     justify-content: center;
   }

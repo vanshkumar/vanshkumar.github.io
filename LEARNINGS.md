@@ -17,6 +17,11 @@
 - Action: Treat absolute vault links to `/terminal-desires-ranker` as valid for deployed Pages, but include the sibling app build/copy step when doing local full-site verification.
 - Confidence: high
 
+**[2026-06-25] — Terrain card UI verification**
+- Observation: The package `build` script runs vault/content and asset sync before Astro, while direct Astro verification can run with the bundled Node binary via `node node_modules/astro/astro.js build`.
+- Action: For source-only UI changes when the worktree has unrelated vault edits, verify with direct Astro first so generated content/assets are not rewritten from unrelated changes.
+- Confidence: high
+
 ## Patterns and Preferences
 
 ## What Has Failed

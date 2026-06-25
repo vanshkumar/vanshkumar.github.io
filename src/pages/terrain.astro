@@ -104,25 +104,11 @@ const questionCards = questions.map((entry) => toCard(entry, 'questions')).sort(
       <div class="terrain-card-grid">
         {projectCards.map((card) => (
           <article class="terrain-card" key={card.key}>
-            <div class="terrain-card-meta">
-              {card.dateLabel ? (
+            {card.dateLabel ? (
+              <div class="terrain-card-meta">
                 <span class="terrain-card-date">{card.dateLabel}</span>
-              ) : (
-                <span class="terrain-card-date">&nbsp;</span>
-              )}
-              <a class="terrain-card-link" href={card.href} aria-label={card.title}>
-                <svg viewBox="0 0 16 16" aria-hidden="true">
-                  <path
-                    d="M5 11L11 5M6 5h5v5"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.4"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-            </div>
+              </div>
+            ) : null}
 
             {card.coverImage ? (
               <div class="terrain-card-image">
@@ -155,26 +141,6 @@ const questionCards = questions.map((entry) => toCard(entry, 'questions')).sort(
       <div class="terrain-card-grid">
         {questionCards.map((card) => (
           <article class="terrain-card terrain-card-question" key={card.key}>
-            <div class="terrain-card-meta">
-              {card.dateLabel ? (
-                <span class="terrain-card-date">{card.dateLabel}</span>
-              ) : (
-                <span class="terrain-card-date">&nbsp;</span>
-              )}
-              <a class="terrain-card-link" href={card.href} aria-label={card.title}>
-                <svg viewBox="0 0 16 16" aria-hidden="true">
-                  <path
-                    d="M5 11L11 5M6 5h5v5"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.4"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-            </div>
-
             <h3 class="terrain-card-title">
               <a href={card.href}>{card.title}</a>
             </h3>

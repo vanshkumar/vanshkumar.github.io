@@ -52,6 +52,11 @@
 - Action: Surface compact active-cup state inside the turn action panel during move and pour phases instead of relying only on the player panel.
 - Confidence: high
 
+**[2026-06-25] — Mobile phase ordering**
+- Observation: Phone-width turns need different first-screen priorities by phase; move needs cups/orders and meeple controls before the board, while pour/upgrade need action controls before board detail.
+- Action: Keep mobile game-layout children orderable by phase, and treat lower player panels as detail surfaces rather than the primary turn-planning surface.
+- Confidence: high
+
 ## Patterns and Preferences
 
 **[2026-06-24] — Setup placement UX**

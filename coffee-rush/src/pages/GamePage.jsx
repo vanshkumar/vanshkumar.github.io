@@ -5,6 +5,7 @@ import CupMemoryStrip from '../components/CupMemoryStrip';
 import IngredientIcon from '../components/IngredientIcon';
 import PassDeviceModal from '../components/PassDeviceModal';
 import PlayerPanel from '../components/PlayerPanel';
+import TurnBrief from '../components/TurnBrief';
 import UpgradeMenu from '../components/UpgradeMenu';
 import { UiIcon } from '../components/UiIcon';
 import { INGREDIENTS, ingredientLabel } from '../data/ingredients';
@@ -50,6 +51,21 @@ function cellLabel(cellId) {
   return cell ? `Cell ${cell.id} · ${ingredientLabel(cell.ingredient)}` : 'Unplaced';
 }
 
+function phaseDisplayLabel(phase) {
+  switch (phase) {
+    case PHASES.SETUP_PLACEMENT:
+      return 'Setup';
+    case PHASES.UPGRADE:
+      return 'Upgrade';
+    case PHASES.MOVE:
+      return 'Move';
+    case PHASES.POUR:
+      return 'Pour';
+    default:
+      return phase;
+  }
+}
+
 function ingredientListLabel(ingredients) {
   if (!ingredients || ingredients.length === 0) return 'none yet';
   return ingredients.map((ingredient) => ingredientLabel(ingredient)).join(', ');
@@ -83,9 +99,6 @@ export default function GamePage() {
   const readyCupIndexes = useMemo(
     () => Array.from(new Set(completableOrders.map((match) => match.cupIdx))),
     [completableOrders],
-  );
-  const selectedMeeple = activePlayer?.meeples.find(
-    (meeple) => meeple.id === selectedMeepleId,
   );
   const selectedSetupCell =
     selectedSetupCellId === null ? null : getCell(selectedSetupCellId);
@@ -431,17 +444,21 @@ export default function GamePage() {
       ? '3 orders'
       : `${activePlayer.completed.length}/3 orders`
     : 'All active';
+  const phaseLabel = phaseDisplayLabel(state.phase);
 
   return (
     <main className="game-page" ref={pageRef}>
       <header className="game-header">
-        <div>
+        <div className="header-title">
           <h1>Coffee Rush</h1>
-          <p>
+          <p className="desktop-turn-label">
             Turn {state.turn} / {activePlayer.name} / {state.phase}
           </p>
+          <p className="mobile-turn-label">
+            T{state.turn} · {activePlayer.name} · {phaseLabel}
+          </p>
         </div>
-        <div className="header-actions">
+        <div className="header-actions header-actions-desktop">
           <span className="deck-counter">{state.deck.length} orders</span>
           <button type="button" onClick={undoLastAction} disabled={undoStack.length === 0}>
             Undo
@@ -456,25 +473,124 @@ export default function GamePage() {
             New
           </button>
         </div>
+        <div className="header-actions-mobile">
+          <button type="button" onClick={undoLastAction} disabled={undoStack.length === 0}>
+            Undo
+          </button>
+          <details className="mobile-utility-menu">
+            <summary>Tools</summary>
+            <div className="mobile-utility-panel">
+              <span className="deck-counter">{state.deck.length} orders</span>
+              <button type="button" onClick={copyExport}>
+                Copy log
+              </button>
+              <button type="button" onClick={downloadExport} disabled={isExporting}>
+                {isExporting ? 'Downloading...' : 'Download log + screenshot'}
+              </button>
+              <button type="button" onClick={newGame}>
+                New
+              </button>
+            </div>
+          </details>
+        </div>
       </header>
 
       {error && <div className="error-banner">{error}</div>}
       {exportStatus && <div className="message-banner">{exportStatus}</div>}
       {visibleLastMessage && <div className="message-banner">{visibleLastMessage}</div>}
 
-      <div className="game-layout">
-        <div className="play-surface">
-          <Board
-            state={state}
-            selectedMeepleId={selectedMeepleId}
-            path={path}
-            rushSpent={rushSpent}
-            onSelectMeeple={selectMeeple}
-            onCellClick={handleCellClick}
-            movePreview={movePreview}
-            selectedSetupCellId={selectedSetupCellId}
+      <div className={`game-layout phase-${state.phase}`}>
+        {state.phase !== PHASES.SETUP_PLACEMENT && (
+          <TurnBrief
+            player={activePlayer}
+            phase={state.phase}
+            completableOrders={completableOrders}
           />
+        )}
 
+        {state.phase === PHASES.MOVE && (
+          <section
+            className="action-panel move-control-panel"
+            aria-label={`${activePlayer.name} move controls`}
+          >
+            <div className="phase-tools move-tools">
+              <div className="meeple-picker compact-meeple-picker" aria-label="Barista picker">
+                {activePlayer.meeples.map((meeple) => (
+                  <button
+                    key={meeple.id}
+                    className={[
+                      'meeple-choice',
+                      selectedMeepleId === meeple.id ? 'selected-tool' : '',
+                      selectedMeepleId === meeple.id ? `selected-tool-${activePlayer.color}` : '',
+                    ]
+                      .filter(Boolean)
+                      .join(' ')}
+                    type="button"
+                    onClick={() => selectMeeple(meeple.id)}
+                  >
+                    {meepleLabel(meeple)}
+                  </button>
+                ))}
+              </div>
+              {activePlayer.rushTokens > 0 && (
+                <div className="rush-stepper" aria-label="Rush spent">
+                  <span>Rush</span>
+                  <button
+                    type="button"
+                    onClick={() => updateRushSpent(rushSpent - 1)}
+                    disabled={rushSpent <= 0}
+                    aria-label="Spend one fewer Rush token"
+                  >
+                    -
+                  </button>
+                  <strong>{rushSpent}</strong>
+                  <button
+                    type="button"
+                    onClick={() => updateRushSpent(rushSpent + 1)}
+                    disabled={rushSpent >= activePlayer.rushTokens}
+                    aria-label="Spend one more Rush token"
+                  >
+                    +
+                  </button>
+                  <small>{activePlayer.rushTokens} available</small>
+                </div>
+              )}
+              <div className="move-status-line">
+                <span>
+                  {movePreview?.stepsUsed ?? 0}/{movePreview?.maxSteps ?? 3} steps
+                </span>
+                <span aria-hidden="true">·</span>
+                <span>
+                  Collecting:{' '}
+                  <span className="inline-icons">
+                    {(movePreview?.gainedIngredients ?? []).length === 0
+                      ? 'none'
+                      : movePreview.gainedIngredients.map((ingredient, index) => (
+                          <IngredientIcon
+                            key={`${ingredient}-${index}`}
+                            ingredient={ingredient}
+                            small
+                          />
+                        ))}
+                  </span>
+                </span>
+              </div>
+            </div>
+          </section>
+        )}
+
+        <Board
+          state={state}
+          selectedMeepleId={selectedMeepleId}
+          path={path}
+          rushSpent={rushSpent}
+          onSelectMeeple={selectMeeple}
+          onCellClick={handleCellClick}
+          movePreview={movePreview}
+          selectedSetupCellId={selectedSetupCellId}
+        />
+
+        {state.phase !== PHASES.MOVE && (
           <section className="action-panel" aria-label={`${activePlayer.name} turn controls`}>
             {state.phase === PHASES.SETUP_PLACEMENT && setupPlacement && (
               <div className="phase-tools setup-placement-tools">
@@ -552,105 +668,6 @@ export default function GamePage() {
               </div>
             )}
 
-            {state.phase === PHASES.MOVE && (
-              <div className="phase-tools">
-                <div className="phase-summary">
-                  <span className="phase-kicker">Move</span>
-                  <h2>Plan a route for {activePlayer.name}</h2>
-                  <p>
-                    {selectedMeeple
-                      ? `${meepleLabel(selectedMeeple)} starts on ${cellLabel(
-                          selectedMeeple.cellId,
-                        )}. Pick adjacent highlighted cells.`
-                      : 'Choose one of your baristas before selecting a path.'}
-                  </p>
-                </div>
-                <div className="meeple-picker detailed-picker" aria-label="Barista picker">
-                  {activePlayer.meeples.map((meeple) => (
-                    <button
-                      key={meeple.id}
-                      className={selectedMeepleId === meeple.id ? 'selected-tool' : ''}
-                      type="button"
-                      onClick={() => selectMeeple(meeple.id)}
-                    >
-                      <span>{meepleLabel(meeple)}</span>
-                      <small>{cellLabel(meeple.cellId)}</small>
-                    </button>
-                  ))}
-                </div>
-                <div className="rush-stepper" aria-label="Rush spent">
-                  <span>Rush</span>
-                  <button
-                    type="button"
-                    onClick={() => updateRushSpent(rushSpent - 1)}
-                    disabled={rushSpent <= 0}
-                    aria-label="Spend one fewer Rush token"
-                  >
-                    -
-                  </button>
-                  <strong>{rushSpent}</strong>
-                  <button
-                    type="button"
-                    onClick={() => updateRushSpent(rushSpent + 1)}
-                    disabled={rushSpent >= activePlayer.rushTokens}
-                    aria-label="Spend one more Rush token"
-                  >
-                    +
-                  </button>
-                  <small>{activePlayer.rushTokens} available</small>
-                </div>
-                <div className="move-status-grid">
-                  <span>
-                    Steps {movePreview?.stepsUsed ?? 0} / {movePreview?.maxSteps ?? 3}
-                  </span>
-                  <span>{movePreview?.remainingSteps ?? 3} remaining</span>
-                  <span>
-                    Collecting{' '}
-                    <span className="inline-icons">
-                      {(movePreview?.gainedIngredients ?? []).length === 0
-                        ? 'none yet'
-                        : movePreview.gainedIngredients.map((ingredient, index) => (
-                            <IngredientIcon
-                              key={`${ingredient}-${index}`}
-                              ingredient={ingredient}
-                              small
-                            />
-                          ))}
-                    </span>
-                  </span>
-                </div>
-                <CupMemoryStrip
-                  cups={activePlayer.cups}
-                  label={`${activePlayer.name} current cups`}
-                />
-                {movePreview?.error && (
-                  <div className="inline-warning">
-                    {movePreview.remainingSteps > 0
-                      ? `${movePreview.error} Continue to an open cell or clear the path.`
-                      : movePreview.error}
-                  </div>
-                )}
-                <span className="path-readout">
-                  {path.length === 0
-                    ? 'Tap a highlighted cell to add the first step.'
-                    : path.map((cellId) => cellLabel(cellId)).join(' -> ')}
-                </span>
-                <div className="button-row">
-                  <button type="button" onClick={() => setPath([])}>
-                    Clear
-                  </button>
-                  <button
-                    className="primary-button"
-                    type="button"
-                    onClick={confirmMove}
-                    disabled={!movePreview?.canConfirm}
-                  >
-                    Confirm move
-                  </button>
-                </div>
-              </div>
-            )}
-
             {state.phase === PHASES.POUR && (
               <div className="phase-tools">
                 <div className="phase-summary">
@@ -716,7 +733,7 @@ export default function GamePage() {
                         type="button"
                         onClick={() => fulfillOrder(match.cupIdx, match.order.id)}
                       >
-                        {`Serve ${match.order.name} with Cup ${match.cupIdx + 1}`}
+                        {`Serve C${match.cupIdx + 1}: ${match.order.name}`}
                       </button>
                     ))}
                   </div>
@@ -734,7 +751,42 @@ export default function GamePage() {
               </div>
             )}
           </section>
-        </div>
+        )}
+
+        {state.phase === PHASES.MOVE && (
+          <section
+            className="action-panel move-confirm-panel"
+            aria-label={`${activePlayer.name} move confirmation`}
+          >
+            <div className="phase-tools move-confirm-tools">
+              {movePreview?.error && (
+                <div className="inline-warning">
+                  {movePreview.remainingSteps > 0
+                    ? `${movePreview.error} Continue to an open cell or clear the path.`
+                    : movePreview.error}
+                </div>
+              )}
+              {path.length > 0 && (
+                <span className="path-readout">
+                  {path.map((cellId) => cellLabel(cellId)).join(' -> ')}
+                </span>
+              )}
+              <div className="button-row">
+                <button type="button" onClick={() => setPath([])} disabled={path.length === 0}>
+                  Clear
+                </button>
+                <button
+                  className="primary-button"
+                  type="button"
+                  onClick={confirmMove}
+                  disabled={!movePreview?.canConfirm}
+                >
+                  Confirm move
+                </button>
+              </div>
+            </div>
+          </section>
+        )}
 
         <aside className="players-column">
           {orderedPlayers.map((player) => (

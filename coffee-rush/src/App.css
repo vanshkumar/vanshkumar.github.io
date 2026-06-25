@@ -113,6 +113,11 @@ select {
   font-size: clamp(2rem, 5vw, 3.6rem);
 }
 
+.mobile-turn-label,
+.header-actions-mobile {
+  display: none;
+}
+
 .deck-counter,
 .rush-tracker {
   display: inline-flex;
@@ -281,9 +286,27 @@ select {
   align-items: start;
 }
 
-.play-surface {
-  display: grid;
-  gap: 12px;
+.game-layout > .board-shell,
+.game-layout > .action-panel,
+.game-layout > .turn-brief {
+  grid-column: 1;
+}
+
+.game-layout > .board-shell {
+  grid-row: 1;
+}
+
+.game-layout > .action-panel {
+  grid-row: 2;
+}
+
+.game-layout > .move-confirm-panel {
+  grid-row: 3;
+}
+
+.game-layout > .players-column {
+  grid-column: 2;
+  grid-row: 1 / span 3;
 }
 
 .board-shell {
@@ -403,7 +426,38 @@ select {
 }
 
 .meeple-selected {
-  outline: 3px solid #fff;
+  outline: 0;
+  box-shadow:
+    0 0 0 3px #2b211b,
+    0 0 0 6px rgba(43, 33, 27, 0.18);
+}
+
+.meeple-selected.meeple-rose {
+  border-color: #7f1f31;
+  box-shadow:
+    0 0 0 3px #7f1f31,
+    0 0 0 6px rgba(127, 31, 49, 0.24);
+}
+
+.meeple-selected.meeple-blue {
+  border-color: #174a73;
+  box-shadow:
+    0 0 0 3px #174a73,
+    0 0 0 6px rgba(23, 74, 115, 0.24);
+}
+
+.meeple-selected.meeple-green {
+  border-color: #24562c;
+  box-shadow:
+    0 0 0 3px #24562c,
+    0 0 0 6px rgba(36, 86, 44, 0.24);
+}
+
+.meeple-selected.meeple-gold {
+  border-color: #7b5112;
+  box-shadow:
+    0 0 0 3px #7b5112,
+    0 0 0 6px rgba(123, 81, 18, 0.24);
 }
 
 .meeple-static {
@@ -479,6 +533,26 @@ select {
   background: #d7ebe5;
 }
 
+.selected-tool-rose {
+  border-color: #7f1f31;
+  background: rgba(200, 76, 94, 0.14);
+}
+
+.selected-tool-blue {
+  border-color: #174a73;
+  background: rgba(45, 117, 166, 0.14);
+}
+
+.selected-tool-green {
+  border-color: #24562c;
+  background: rgba(67, 131, 74, 0.14);
+}
+
+.selected-tool-gold {
+  border-color: #7b5112;
+  background: rgba(213, 150, 38, 0.16);
+}
+
 .turn-facts {
   display: flex;
   flex-wrap: wrap;
@@ -552,6 +626,32 @@ select {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
+}
+
+.move-tools {
+  gap: 10px;
+}
+
+.compact-meeple-picker {
+  align-items: stretch;
+}
+
+.meeple-choice {
+  min-width: 58px;
+  min-height: 42px;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  font-weight: 950;
+}
+
+.move-status-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  color: #6e5e4a;
+  font-size: 0.86rem;
+  font-weight: 850;
 }
 
 .inline-icons {
@@ -662,6 +762,77 @@ button.cup-memory-tile {
   align-items: center;
   flex-wrap: wrap;
   gap: 4px;
+}
+
+.turn-brief {
+  display: none;
+}
+
+.order-goal-strip {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  scrollbar-width: thin;
+}
+
+.order-goal-card {
+  min-width: 132px;
+  display: grid;
+  gap: 5px;
+  align-content: space-between;
+  border: 1px solid #d7c7af;
+  background: #fff8ea;
+  padding: 7px;
+}
+
+.order-goal-ready {
+  border-color: #27605a;
+  box-shadow: inset 0 0 0 2px rgba(39, 96, 90, 0.14);
+}
+
+.order-goal-meta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #6e5e4a;
+  font-size: 0.68rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.order-goal-rush {
+  width: 18px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 1px solid #9a7620;
+  border-radius: 50%;
+  background: #f0c23b;
+  color: #4b3711;
+  font-size: 0.62rem;
+}
+
+.order-goal-name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 0.78rem;
+  font-weight: 850;
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+}
+
+.order-goal-recipe {
+  gap: 3px;
+}
+
+.order-goal-empty {
+  color: #6e5e4a;
+  font-size: 0.8rem;
+  font-weight: 800;
 }
 
 .players-column {
@@ -1192,6 +1363,14 @@ button.cup-memory-tile {
     grid-template-columns: 1fr;
   }
 
+  .game-layout > .board-shell,
+  .game-layout > .action-panel,
+  .game-layout > .turn-brief,
+  .game-layout > .players-column {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
   .players-column {
     grid-template-columns: 1fr;
   }
@@ -1204,25 +1383,180 @@ button.cup-memory-tile {
     padding: 10px;
   }
 
-  .game-header,
   .resume-strip {
     align-items: flex-start;
     flex-direction: column;
   }
 
   .game-header {
+    align-items: center;
     gap: 8px;
+    margin-bottom: 8px;
   }
 
-  .header-actions {
-    width: 100%;
+  .header-title {
+    min-width: 0;
+  }
+
+  .game-header h1,
+  .desktop-turn-label,
+  .header-actions-desktop {
+    display: none;
+  }
+
+  .mobile-turn-label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 950;
+    line-height: 1.15;
+  }
+
+  .header-actions-mobile {
     display: flex;
-    justify-content: end;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: auto;
     gap: 6px;
+  }
+
+  .header-actions-mobile > button,
+  .mobile-utility-menu > summary {
+    min-height: 34px;
+    padding: 6px 10px;
+    font-weight: 850;
+  }
+
+  .mobile-utility-menu {
+    position: relative;
+  }
+
+  .mobile-utility-menu > summary {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #c7b7a0;
+    background: #fffaf2;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .mobile-utility-menu > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-utility-panel {
+    position: absolute;
+    z-index: 12;
+    top: calc(100% + 6px);
+    right: 0;
+    width: min(260px, calc(100vw - 20px));
+    display: grid;
+    gap: 6px;
+    padding: 8px;
+    border: 1px solid #c7b7af;
+    background: #fffaf2;
+    box-shadow: 0 10px 24px rgba(43, 33, 27, 0.16);
+  }
+
+  .mobile-utility-panel button,
+  .mobile-utility-panel .deck-counter {
+    width: 100%;
+    justify-content: center;
   }
 
   .deck-counter {
     min-height: 38px;
+  }
+
+  .game-layout {
+    gap: 8px;
+  }
+
+  .turn-brief {
+    display: grid;
+    gap: 7px;
+    min-width: 0;
+  }
+
+  .phase-move .turn-brief {
+    order: 1;
+  }
+
+  .phase-move .move-control-panel {
+    order: 2;
+  }
+
+  .phase-move .board-shell {
+    order: 3;
+  }
+
+  .phase-move .move-confirm-panel {
+    order: 4;
+  }
+
+  .phase-move .players-column {
+    order: 5;
+  }
+
+  .phase-pour .action-panel {
+    order: 1;
+  }
+
+  .phase-pour .turn-brief {
+    order: 2;
+  }
+
+  .phase-pour .players-column {
+    order: 3;
+  }
+
+  .phase-pour .board-shell {
+    order: 4;
+  }
+
+  .phase-upgrade .action-panel {
+    order: 1;
+  }
+
+  .phase-upgrade .turn-brief {
+    order: 2;
+  }
+
+  .phase-upgrade .board-shell {
+    order: 3;
+  }
+
+  .phase-upgrade .players-column {
+    order: 4;
+  }
+
+  .phase-setupPlacement .board-shell {
+    order: 1;
+  }
+
+  .phase-setupPlacement .action-panel {
+    order: 2;
+  }
+
+  .phase-setupPlacement .players-column {
+    order: 3;
+  }
+
+  .action-panel,
+  .player-panel,
+  .results-panel {
+    padding: 10px;
+  }
+
+  .phase-summary {
+    gap: 3px;
+  }
+
+  .phase-summary h2 {
+    font-size: 1.05rem;
+  }
+
+  .phase-summary p {
+    display: none;
   }
 
   .ingredient-board {
@@ -1256,6 +1590,52 @@ button.cup-memory-tile {
 
   .move-status-grid {
     grid-template-columns: 1fr;
+  }
+
+  .move-control-panel,
+  .move-confirm-panel {
+    padding: 8px;
+  }
+
+  .move-tools,
+  .move-confirm-tools {
+    gap: 7px;
+  }
+
+  .compact-meeple-picker {
+    gap: 6px;
+  }
+
+  .meeple-choice {
+    flex: 1 1 58px;
+    min-height: 38px;
+    padding: 6px 12px;
+  }
+
+  .move-status-line {
+    font-size: 0.82rem;
+  }
+
+  .path-readout {
+    min-height: 0;
+    font-size: 0.82rem;
+  }
+
+  .turn-brief .cup-memory-tile {
+    min-height: 50px;
+  }
+
+  .order-goal-card {
+    min-width: 116px;
+    padding: 6px;
+  }
+
+  .order-goal-name {
+    font-size: 0.72rem;
+  }
+
+  .order-goal-card .ingredient-small {
+    width: 19px;
   }
 
   .upgrade-action-row {

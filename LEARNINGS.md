@@ -22,6 +22,11 @@
 - Action: For source-only UI changes when the worktree has unrelated vault edits, verify with direct Astro first so generated content/assets are not rewritten from unrelated changes.
 - Confidence: high
 
+**[2026-06-25] — Terrain question card spacing**
+- Observation: Question cards inherit the full `.terrain-card` top padding even after their meta row is removed, so the title can still look like it is leaving space for the old date/arrow row.
+- Action: Override spacing on `.terrain-card-question` in `src/styles/global.css` when question-specific card chrome changes, instead of changing the shared project/essay card padding.
+- Confidence: high
+
 ## Patterns and Preferences
 
 ## What Has Failed

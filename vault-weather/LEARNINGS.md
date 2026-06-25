@@ -29,4 +29,14 @@
 - Action: Keep fresh note frontmatter minimal; write date fields, require an explicit shelf rating, and do not stamp `slug` or `title` from the weather app.
 - Confidence: high
 
+**2026-06-25 — Activity weighting investigation**
+- Observation: Question Weather and Shelf Weather both use `buildActivity` for raw edit scores, then call `assignActivityLevels` separately on each collection.
+- Action: Change shared weighting in `scripts/question-data.mjs`; remember that visual activity levels are relative within each surface, not globally comparable across questions and shelf items.
+- Confidence: high
+
+**2026-06-25 — Frontmatter activity source**
+- Observation: Question Weather and Shelf Weather now treat `lastmod`/`lastMod` frontmatter as the single activity event for each note, instead of reading git history.
+- Action: When changing salience, update `buildActivity` and the frontmatter extraction path; do not reintroduce git-log based activity unless explicitly requested.
+- Confidence: high
+
 ## What Has Failed

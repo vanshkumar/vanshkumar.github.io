@@ -30,4 +30,4 @@ When the dev server is running, use the in-app Refresh button to regenerate the 
 
 ## Salience
 
-Salience is generated, not manually saved. The generator reads git history for each note over the last 30 days and sums recent edits with a quadratic recency discount: an edit today contributes much more than an edit several weeks ago. An uncommitted local edit is counted as activity today.
+Salience is generated from each note's `lastmod`/`lastMod` frontmatter. The generator treats that value as one recent edit, keeps it if it falls within the last 30 days, and applies a quadratic recency discount: an update today contributes much more than one several weeks ago.

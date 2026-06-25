@@ -75,13 +75,7 @@ Related back to [[Custom title]].
     const data = buildQuestionData({
       questionsDir,
       projectRoot: root,
-      now: new Date('2026-06-15T12:00:00Z'),
-      activityEventsByPath: {
-        'vault/questions/A Question.md': [
-          '2026-06-15T12:00:00Z',
-          '2026-06-10T12:00:00Z'
-        ]
-      }
+      now: new Date('2026-06-15T12:00:00Z')
     });
     const first = data.questions.find((question) => question.slug === 'custom-question');
 
@@ -102,10 +96,39 @@ Related back to [[Custom title]].
     expect(first.obsidianUrl).toContain('obsidian://open?path=');
     expect(first.activity).toMatchObject({
       windowDays: 30,
-      recentUpdateCount: 2,
-      lastActivity: '2026-06-15',
+      recentUpdateCount: 1,
+      score: activityWeightForAge(1),
+      lastActivity: '2026-06-14',
       level: 5,
       normalized: 1
+    });
+  });
+
+  it('accepts Obsidian lastMod casing for activity', () => {
+    const { root, questionsDir } = makeTempVault();
+    writeQuestion(
+      questionsDir,
+      'Cased Field.md',
+      `---
+title: Cased Field
+lastMod: 2026-06-15
+---
+`
+    );
+
+    const data = buildQuestionData({
+      questionsDir,
+      projectRoot: root,
+      now: new Date('2026-06-15T12:00:00Z')
+    });
+    const item = data.questions[0];
+
+    expect(item.lastmod).toBe('2026-06-15');
+    expect(item.activity).toMatchObject({
+      recentUpdateCount: 1,
+      score: 1,
+      lastActivity: '2026-06-15',
+      level: 5
     });
   });
 
@@ -138,13 +161,13 @@ Related back to [[Custom title]].
     expect(slugifyPath('Questions/Some Question.md')).toBe('questions/some-question');
   });
 
-  it('computes quadratic activity weights inside the recency window', () => {
+  it('computes quadratic activity weights by calendar day inside the recency window', () => {
     const activity = buildActivity({
-      now: new Date('2026-06-15T00:00:00Z'),
+      now: new Date('2026-06-15T12:00:00Z'),
       events: [
-        '2026-06-15T00:00:00Z',
-        '2026-06-14T00:00:00Z',
-        '2026-05-01T00:00:00Z'
+        '2026-06-15',
+        '2026-06-14',
+        '2026-05-01'
       ]
     });
 
@@ -229,10 +252,7 @@ Body with [[A Question]].
     const data = buildShelfData({
       shelfDir,
       projectRoot: root,
-      now: new Date('2026-06-17T12:00:00Z'),
-      activityEventsByPath: {
-        'vault/shelf/Book Review.md': ['2026-06-17T12:00:00Z']
-      }
+      now: new Date('2026-06-17T12:00:00Z')
     });
     const item = data.items[0];
 
@@ -279,8 +299,7 @@ coverImage: ../outside.webp
     const data = buildShelfData({
       shelfDir,
       projectRoot: root,
-      now: new Date('2026-06-17T12:00:00Z'),
-      activityEventsByPath: {}
+      now: new Date('2026-06-17T12:00:00Z')
     });
 
     expect(normalizeVaultAssetPath('/assets/shelf/book.webp')).toBe(

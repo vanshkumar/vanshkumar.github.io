@@ -1,7 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { execFileSync } from 'node:child_process';
 import matter from 'gray-matter';
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
@@ -55,8 +54,13 @@ const dateToIsoDate = (value) => {
   return date.toISOString().slice(0, 10);
 };
 
-const daysBetween = (later, earlier) =>
-  Math.max(0, (later.getTime() - earlier.getTime()) / 86_400_000);
+const daysBetweenIsoDates = (laterDate, earlierDate) =>
+  Math.max(
+    0,
+    (new Date(`${laterDate}T00:00:00.000Z`).getTime() -
+      new Date(`${earlierDate}T00:00:00.000Z`).getTime()) /
+      86_400_000
+  );
 
 export const activityWeightForAge = (ageInDays) =>
   1 / (Math.max(0, ageInDays) + 1) ** 2;
@@ -317,61 +321,30 @@ export const createShelfNote = ({
   });
 };
 
+const frontmatterLastmod = (data) => dateToIsoDate(data.lastmod ?? data.lastMod);
+
 const uniqueIsoDates = (dates) =>
   Array.from(
     new Set(
       dates
-        .map((value) => new Date(value))
-        .filter((date) => !Number.isNaN(date.getTime()))
-        .map((date) => date.toISOString())
+        .map(dateToIsoDate)
+        .filter(Boolean)
     )
   ).sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
 
-const gitOutput = (projectRoot, args) =>
-  execFileSync('git', ['-C', projectRoot, ...args], {
-    encoding: 'utf8',
-    stdio: ['ignore', 'pipe', 'ignore']
-  }).trim();
-
-export const readGitActivityEvents = ({
-  projectRoot,
-  repoPath,
-  now = new Date(),
-  windowDays = ACTIVITY_WINDOW_DAYS
-}) => {
-  const since = new Date(now.getTime() - windowDays * 86_400_000).toISOString();
-  try {
-    const log = gitOutput(projectRoot, [
-      'log',
-      '--follow',
-      '--format=%cI',
-      `--since=${since}`,
-      '--',
-      repoPath
-    ]);
-    const events = log ? log.split('\n') : [];
-    const status = gitOutput(projectRoot, ['status', '--porcelain', '--', repoPath]);
-    if (status) {
-      events.unshift(now.toISOString());
-    }
-    return uniqueIsoDates(events);
-  } catch {
-    return [];
-  }
-};
-
 export const buildActivity = ({
-  events,
+  events = [],
   now = new Date(),
   windowDays = ACTIVITY_WINDOW_DAYS,
   level = 0
 }) => {
+  const today = dateToIsoDate(now);
   const updateEvents = uniqueIsoDates(events).filter((value) => {
-    const ageInDays = daysBetween(now, new Date(value));
+    const ageInDays = daysBetweenIsoDates(today, value);
     return ageInDays <= windowDays;
   });
   const score = updateEvents.reduce((total, value) => {
-    const ageInDays = daysBetween(now, new Date(value));
+    const ageInDays = daysBetweenIsoDates(today, value);
     if (ageInDays > windowDays) return total;
     return total + activityWeightForAge(ageInDays);
   }, 0);
@@ -381,8 +354,8 @@ export const buildActivity = ({
     recentUpdateCount: updateEvents.length,
     score: Number(score.toFixed(4)),
     level,
-    lastActivity: updateEvents[0]?.slice(0, 10) ?? null,
-    events: updateEvents.map((value) => value.slice(0, 10))
+    lastActivity: updateEvents[0] ?? null,
+    events: updateEvents
   };
 };
 
@@ -468,8 +441,7 @@ export const resolveVaultAsset = ({
 export const buildQuestionData = ({
   questionsDir = defaultQuestionsDir,
   projectRoot = repoRoot,
-  now = new Date(),
-  activityEventsByPath = null
+  now = new Date()
 } = {}) => {
   const files = listMarkdownFiles(questionsDir);
   const questions = files.map((filePath) => {
@@ -481,20 +453,13 @@ export const buildQuestionData = ({
     const content = parsed.content.trim();
     const relativeVaultPath = toUnixPath(path.relative(path.join(projectRoot, 'vault'), filePath));
     const relativeRepoPath = toUnixPath(path.relative(projectRoot, filePath));
-    const activityEvents =
-      activityEventsByPath?.[relativeRepoPath] ??
-      activityEventsByPath?.[relativeVaultPath] ??
-      readGitActivityEvents({
-        projectRoot,
-        repoPath: relativeRepoPath,
-        now
-      });
+    const lastmod = frontmatterLastmod(parsed.data);
 
     return {
       slug,
       title,
       date: dateToIsoDate(parsed.data.date),
-      lastmod: dateToIsoDate(parsed.data.lastmod),
+      lastmod,
       tags: Array.isArray(parsed.data.tags) ? parsed.data.tags.map(String) : [],
       aliases: Array.isArray(parsed.data.aliases) ? parsed.data.aliases.map(String) : [],
       excerpt: parsed.data.description ?? excerptFromMarkdown(content),
@@ -506,7 +471,7 @@ export const buildQuestionData = ({
       repoPath: relativeRepoPath,
       obsidianUrl: buildObsidianUrl(filePath),
       sitePath: `/questions/${slug}`,
-      activity: buildActivity({ events: activityEvents, now })
+      activity: buildActivity({ events: [lastmod], now })
     };
   });
 
@@ -531,8 +496,7 @@ export const buildQuestionData = ({
 export const buildShelfData = ({
   shelfDir = defaultShelfDir,
   projectRoot = repoRoot,
-  now = new Date(),
-  activityEventsByPath = null
+  now = new Date()
 } = {}) => {
   const vaultDir = path.join(projectRoot, 'vault');
   const files = listMarkdownFiles(shelfDir);
@@ -545,14 +509,7 @@ export const buildShelfData = ({
     const content = parsed.content.trim();
     const relativeVaultPath = toUnixPath(path.relative(vaultDir, filePath));
     const relativeRepoPath = toUnixPath(path.relative(projectRoot, filePath));
-    const activityEvents =
-      activityEventsByPath?.[relativeRepoPath] ??
-      activityEventsByPath?.[relativeVaultPath] ??
-      readGitActivityEvents({
-        projectRoot,
-        repoPath: relativeRepoPath,
-        now
-      });
+    const lastmod = frontmatterLastmod(parsed.data);
     const cover = resolveVaultAsset({
       assetPath: parsed.data.coverImage,
       vaultDir
@@ -567,7 +524,7 @@ export const buildShelfData = ({
           : null,
       coverUrl: cover?.url ?? null,
       date: dateToIsoDate(parsed.data.date),
-      lastmod: dateToIsoDate(parsed.data.lastmod),
+      lastmod,
       tags: Array.isArray(parsed.data.tags) ? parsed.data.tags.map(String) : [],
       rating: parsed.data.rating ?? null,
       excerpt: parsed.data.description ?? excerptFromMarkdown(content),
@@ -579,7 +536,7 @@ export const buildShelfData = ({
       repoPath: relativeRepoPath,
       obsidianUrl: buildObsidianUrl(filePath),
       sitePath: `/shelf/${slug}`,
-      activity: buildActivity({ events: activityEvents, now })
+      activity: buildActivity({ events: [lastmod], now })
     };
   });
 

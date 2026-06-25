@@ -27,11 +27,11 @@
 - Action: Override spacing on `.terrain-card-question` in `src/styles/global.css` when question-specific card chrome changes, instead of changing the shared project/essay card padding.
 - Confidence: high
 
-**[2026-06-25] — Terrain question card balance**
-- Observation: `.terrain-card-question .terrain-card-footer` using `margin-top: auto` plus a fixed question-card min-height pins the updated date to the bottom, creating a large title-to-date void after the meta row is removed.
-- Action: For question-only terrain cards, let the card height be content-driven and set explicit title/footer spacing so the top title gap can match the title-to-updated-date gap.
-- Confidence: high
-
 ## Patterns and Preferences
 
 ## What Has Failed
+
+**[2026-06-25] — Terrain question card vertical balance**
+- Observation: Moving the updated date into normal flow to match the top title gap made question cards feel wrong; the preferred layout keeps the updated date locked to the card bottom.
+- Action: Do not remove `margin-top: auto` from `.terrain-card-question .terrain-card-footer` to chase equal top/title-to-date spacing.
+- Confidence: high

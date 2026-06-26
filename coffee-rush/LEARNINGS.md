@@ -47,6 +47,11 @@
 - Action: Keep reducer/storage tab indexes unchanged, and render order lanes through a shared urgency-first display order with compact pressure markers instead of visible tab numbers.
 - Confidence: high
 
+**[2026-06-26] — Order lane alignment**
+- Observation: CSS Grid stretches the pressure lane tracks to the tallest lane, so marker rows can appear vertically centered unless the lane grid content is explicitly pinned.
+- Action: Keep `.order-tab` grid content top-aligned with `align-content: start` whenever pressure lanes have mixed empty and filled order columns.
+- Confidence: high
+
 **[2026-06-20] — Ingredient icon UI**
 - Observation: CSS-only ingredient shapes become too abstract once reused at recipe-card and cup-token sizes.
 - Action: Render ingredients as inline SVG glyphs inside the existing circular token frame, and keep the SVG artwork scaled up for small variants.

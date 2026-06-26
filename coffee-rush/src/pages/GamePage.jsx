@@ -446,11 +446,12 @@ export default function GamePage() {
     setExportStatus('');
     stateRef.current = result.state;
     if (recordUndo) {
-      setUndoStack((current) => {
-        const next = [...current.slice(-(MAX_UNDO_STATES - 1)), currentState];
-        undoStackRef.current = next;
-        return next;
-      });
+      const nextUndoStack = [
+        ...undoStackRef.current.slice(-(MAX_UNDO_STATES - 1)),
+        currentState,
+      ];
+      undoStackRef.current = nextUndoStack;
+      setUndoStack(nextUndoStack);
     }
     setState(result.state);
 

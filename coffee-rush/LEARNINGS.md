@@ -133,8 +133,8 @@
 - Confidence: high
 
 **[2026-06-26] — Async offline draft restore**
-- Observation: `loadGame()` can restore the visible async draft state on reload before `/room/head` succeeds, while the draft action count and undo stack stay unset unless the saved async draft is hydrated separately.
-- Action: On `restoreDraft` sync failures, rehydrate saved async draft actions, visible state, undo stack, and cached base head together, and test status label, draft count, phase, active player, and undo depth as one assertion group.
+- Observation: `loadGame()` can restore the visible async draft state on reload before `/room/head` succeeds, while the draft action count can stay unset and async draft saves can read a stale undo ref if undo state is only advanced through a React state updater.
+- Action: Update `undoStackRef` synchronously before async draft persistence, rehydrate saved async draft actions, visible state, undo stack, and cached base head together on `restoreDraft` sync failures, and test status label, draft count, phase, active player, and undo depth as one assertion group.
 - Confidence: high
 
 **[2026-06-25] — Relay documentation**

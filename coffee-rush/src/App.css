@@ -1020,20 +1020,20 @@ button.cup-memory-tile {
   gap: 4px;
 }
 
-.cup-empty-actions {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 6px;
+.selected-cup-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .empty-cup-button {
-  min-width: 0;
-  min-height: 38px;
+  min-height: 34px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 7px 8px;
+  padding: 6px 10px;
+  color: #6e2e25;
   font-weight: 850;
 }
 

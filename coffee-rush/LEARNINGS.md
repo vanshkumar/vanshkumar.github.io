@@ -77,6 +77,11 @@
 - Action: Expose cup-emptying actions in the pour action panel near `CupMemoryStrip`; route them through `DUMP_CUP` instead of adding a separate mutation path.
 - Confidence: high
 
+**[2026-06-26] — Contextual empty-cup UI**
+- Observation: At 390px mobile width, a permanent three-button empty-cup row duplicates the cup strip and pushes the primary pour/end-turn actions down.
+- Action: Keep destructive cup-emptying contextual to the selected non-empty cup in the pour action panel; avoid rendering per-cup empty buttons there unless every button is a primary task.
+- Confidence: high
+
 **[2026-06-25] — Mobile phase ordering**
 - Observation: Phone-width turns need different first-screen priorities by phase; move needs cups/orders and meeple controls before the board, while pour/upgrade need action controls before board detail.
 - Action: Keep mobile game-layout children orderable by phase, and treat lower player panels as detail surfaces rather than the primary turn-planning surface.

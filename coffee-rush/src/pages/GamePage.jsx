@@ -2719,22 +2719,19 @@ export default function GamePage() {
                   readyCupIndexes={readyCupIndexes}
                   label="Pour target cup"
                 />
-                {activePlayer.cups.some((cup) => cup.length > 0) && (
-                  <div className="cup-empty-actions" aria-label="Empty cups">
-                    {activePlayer.cups.map((cup, index) => (
-                      <button
-                        key={index}
-                        className="empty-cup-button"
-                        type="button"
-                        onClick={() => emptyCup(index)}
-                        disabled={cup.length === 0 || isAsyncActionBlocked}
-                        aria-label={`Empty Cup ${index + 1}`}
-                        title={`Empty Cup ${index + 1}`}
-                      >
-                        <UiIcon name="trash" />
-                        <span>Empty C{index + 1}</span>
-                      </button>
-                    ))}
+                {selectedCup !== null && activePlayer.cups[selectedCup]?.length > 0 && (
+                  <div className="selected-cup-actions" aria-label="Selected cup actions">
+                    <button
+                      className="empty-cup-button"
+                      type="button"
+                      onClick={() => emptyCup(selectedCup)}
+                      disabled={isAsyncActionBlocked}
+                      aria-label={`Empty Cup ${selectedCup + 1}`}
+                      title={`Empty Cup ${selectedCup + 1}`}
+                    >
+                      <UiIcon name="trash" />
+                      <span>Empty C{selectedCup + 1}</span>
+                    </button>
                   </div>
                 )}
                 <div className="hand-row" aria-label="Collected ingredients">

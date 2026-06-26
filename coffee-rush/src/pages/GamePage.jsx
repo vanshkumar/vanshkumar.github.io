@@ -2017,6 +2017,7 @@ export default function GamePage() {
     isAsyncRemoteGame && isRemoteHost && state
       ? state.players.filter((player) => player.id !== localPlayerId)
       : [];
+  const hasWhatsAppReminderControls = Boolean(isAsyncRemoteGame && rosterForCurrentRoom);
   function renderInviteControls() {
     return invitePlayers.length > 0 ? (
       <div className="invite-actions">
@@ -2038,84 +2039,95 @@ export default function GamePage() {
   }
 
   function renderWhatsAppReminderControls() {
-    if (!isAsyncRemoteGame || !rosterForCurrentRoom) return null;
+    if (!hasWhatsAppReminderControls) return null;
 
     const localSeatName = getPlayer(state, localPlayerId)?.name ?? 'Your seat';
 
     return (
       <section className="notification-control-panel" aria-label="WhatsApp reminders">
-        <details className="notification-details">
-          <summary>WhatsApp reminders</summary>
-          <div className="notification-control-body">
-            <div className="notification-roster-status" aria-label="Reminder status by player">
-              {notificationDisplay.map((item) => (
-                <span
-                  key={item.playerId}
-                  className={`notification-status-chip notification-status-${item.status}`}
-                >
-                  {item.name}: {item.status}
-                </span>
-              ))}
-            </div>
-            <div className="notification-form-row">
-              <label>
-                <span>Country</span>
-                <select
-                  value={notificationCountry}
-                  onChange={(event) => setNotificationCountry(event.target.value)}
-                  disabled={isNotificationSaving}
-                >
-                  {WHATSAPP_COUNTRY_OPTIONS.map((option) => (
-                    <option key={option.country} value={option.country}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label>
-                <span>{localSeatName} number</span>
-                <input
-                  type="tel"
-                  inputMode="tel"
-                  autoComplete="tel"
-                  value={notificationNumber}
-                  onChange={(event) => setNotificationNumber(event.target.value)}
-                  disabled={isNotificationSaving}
-                />
-              </label>
-              <div className="notification-actions">
-                <button
-                  type="button"
-                  className="primary-button"
-                  onClick={saveWhatsAppReminderContact}
-                  disabled={isNotificationSaving}
-                >
-                  Save
-                </button>
-                <button
-                  type="button"
-                  onClick={clearWhatsAppReminderContact}
-                  disabled={isNotificationSaving || !localNotificationContact}
-                >
-                  Clear
-                </button>
-                <button
-                  type="button"
-                  onClick={() => syncNotificationRoster()}
-                  disabled={isNotificationSaving}
-                >
-                  Refresh
-                </button>
-              </div>
-            </div>
-            {(notificationStatus || notificationError) && (
-              <small className={notificationError ? 'notification-error' : 'notification-status'}>
-                {notificationError || notificationStatus}
-              </small>
-            )}
+        <div className="notification-control-heading">WhatsApp reminders</div>
+        <div className="notification-control-body">
+          <div className="notification-roster-status" aria-label="Reminder status by player">
+            {notificationDisplay.map((item) => (
+              <span
+                key={item.playerId}
+                className={`notification-status-chip notification-status-${item.status}`}
+              >
+                {item.name}: {item.status}
+              </span>
+            ))}
           </div>
-        </details>
+          <div className="notification-form-row">
+            <label>
+              <span>Country</span>
+              <select
+                value={notificationCountry}
+                onChange={(event) => setNotificationCountry(event.target.value)}
+                disabled={isNotificationSaving}
+              >
+                {WHATSAPP_COUNTRY_OPTIONS.map((option) => (
+                  <option key={option.country} value={option.country}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              <span>{localSeatName} number</span>
+              <input
+                type="tel"
+                inputMode="tel"
+                autoComplete="tel"
+                value={notificationNumber}
+                onChange={(event) => setNotificationNumber(event.target.value)}
+                disabled={isNotificationSaving}
+              />
+            </label>
+            <div className="notification-actions">
+              <button
+                type="button"
+                className="primary-button"
+                onClick={saveWhatsAppReminderContact}
+                disabled={isNotificationSaving}
+              >
+                Save
+              </button>
+              <button
+                type="button"
+                onClick={clearWhatsAppReminderContact}
+                disabled={isNotificationSaving || !localNotificationContact}
+              >
+                Clear
+              </button>
+              <button
+                type="button"
+                onClick={() => syncNotificationRoster()}
+                disabled={isNotificationSaving}
+              >
+                Refresh
+              </button>
+            </div>
+          </div>
+          {(notificationStatus || notificationError) && (
+            <small className={notificationError ? 'notification-error' : 'notification-status'}>
+              {notificationError || notificationStatus}
+            </small>
+          )}
+        </div>
       </section>
+    );
+  }
+
+  function renderReminderToolsMenu(className = '') {
+    if (!hasWhatsAppReminderControls) return null;
+
+    return (
+      <details className={`utility-tools-menu ${className}`.trim()}>
+        <summary>Tools</summary>
+        <div className="utility-tools-panel">
+          {renderWhatsAppReminderControls()}
+        </div>
+      </details>
     );
   }
 
@@ -2169,6 +2181,7 @@ export default function GamePage() {
             </>
           )}
           <span className="deck-counter">{state.deck.length} orders</span>
+          {renderReminderToolsMenu('desktop-tools-menu')}
           <button
             type="button"
             onClick={undoLastAction}
@@ -2206,6 +2219,7 @@ export default function GamePage() {
                 </>
               )}
               <span className="deck-counter">{state.deck.length} orders</span>
+              {renderWhatsAppReminderControls()}
               <button type="button" onClick={copyExport}>
                 Copy log
               </button>
@@ -2220,7 +2234,6 @@ export default function GamePage() {
         </div>
       </header>
 
-      {renderWhatsAppReminderControls()}
       {renderPendingTurnReminder()}
       {error && <div className="error-banner">{error}</div>}
       {remoteStatus.error && <div className="error-banner">{remoteStatus.error}</div>}

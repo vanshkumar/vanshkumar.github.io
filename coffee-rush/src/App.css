@@ -362,7 +362,6 @@ select {
   flex-wrap: wrap;
 }
 
-.notification-control-panel,
 .turn-reminder-panel {
   max-width: 1440px;
   margin: 0 auto 10px;
@@ -370,19 +369,21 @@ select {
   background: rgba(255, 250, 242, 0.92);
 }
 
-.notification-details > summary {
+.notification-control-panel {
+  display: grid;
+  gap: 10px;
+}
+
+.notification-control-heading {
   min-height: 38px;
   display: flex;
   align-items: center;
-  padding: 8px 12px;
   font-weight: 850;
-  cursor: pointer;
 }
 
 .notification-control-body {
   display: grid;
   gap: 10px;
-  padding: 0 12px 12px;
 }
 
 .notification-roster-status,
@@ -439,6 +440,54 @@ select {
 
 .notification-error {
   color: #8d241b;
+}
+
+.utility-tools-menu {
+  position: relative;
+}
+
+.utility-tools-menu > summary {
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #c7b7a0;
+  background: #fffaf2;
+  padding: 5px 9px;
+  font-weight: 850;
+  cursor: pointer;
+  list-style: none;
+}
+
+.utility-tools-menu > summary::-webkit-details-marker {
+  display: none;
+}
+
+.utility-tools-panel {
+  position: absolute;
+  z-index: 12;
+  top: calc(100% + 6px);
+  right: 0;
+  width: min(420px, calc(100vw - 32px));
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid #c7b7a0;
+  background: #fffaf2;
+  box-shadow: 0 10px 24px rgba(43, 33, 27, 0.16);
+  text-align: left;
+}
+
+.utility-tools-panel .notification-form-row {
+  grid-template-columns: 1fr;
+}
+
+.utility-tools-panel .notification-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.utility-tools-panel .notification-actions button {
+  min-width: 0;
 }
 
 .turn-reminder-panel {
@@ -1730,7 +1779,7 @@ button.cup-memory-tile {
     z-index: 12;
     top: calc(100% + 6px);
     right: 0;
-    width: min(260px, calc(100vw - 20px));
+    width: min(340px, calc(100vw - 20px));
     display: grid;
     gap: 6px;
     padding: 8px;
@@ -1749,6 +1798,22 @@ button.cup-memory-tile {
 
   .mobile-utility-panel .invite-actions {
     display: grid;
+  }
+
+  .mobile-utility-panel .notification-control-panel {
+    border-top: 1px solid #d7c7af;
+    border-bottom: 1px solid #d7c7af;
+    padding: 8px 0;
+  }
+
+  .mobile-utility-panel .notification-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .mobile-utility-panel .notification-actions button {
+    min-width: 0;
+    flex: none;
   }
 
   .deck-counter {

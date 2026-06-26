@@ -279,6 +279,11 @@
 - Action: Keep header utility actions as explicit text buttons, especially `Undo`, `Copy log`, `Download log + screenshot`, and `New`.
 - Confidence: high
 
+**[2026-06-26] — Reminder setup placement**
+- Observation: The WhatsApp reminder setup is an async-room utility, and rendering it as a separate full-width strip competes with turn/status feedback below the header.
+- Action: Keep reminder setup inside the header Tools surfaces with a compact single-column form; leave pending turn-reminder prompts visible because they require immediate action after a committed turn.
+- Confidence: high
+
 **[2026-06-19] — Turn action UX**
 - Observation: Ready order controls are misleading outside the pour phase because the reducer rejects `FULFILL_ORDER` unless `state.phase === 'pour'`.
 - Action: Gate ready-order highlights and serve buttons to the pour phase, and keep serving in one explicit action surface.

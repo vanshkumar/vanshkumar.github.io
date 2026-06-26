@@ -328,6 +328,33 @@ select {
   color: #8d241b;
 }
 
+.async-recovery-panel {
+  max-width: 1440px;
+  margin: 0 auto 12px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  border: 1px solid #b83f34;
+  background: #fff7ed;
+  padding: 14px;
+}
+
+.async-recovery-panel h2 {
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
+
+.async-recovery-panel small {
+  color: #8d241b;
+  font-weight: 750;
+}
+
+.async-recovery-actions {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
 .game-layout {
   max-width: 1440px;
   margin: 0 auto;
@@ -1447,6 +1474,19 @@ button.cup-memory-tile {
   .remote-waiting-panel {
     margin-top: 8vh;
     padding: 12px;
+  }
+
+  .async-recovery-panel {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .async-recovery-actions {
+    justify-content: stretch;
+  }
+
+  .async-recovery-actions button {
+    flex: 1 1 150px;
   }
 
   .game-header {

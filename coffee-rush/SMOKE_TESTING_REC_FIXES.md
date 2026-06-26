@@ -451,6 +451,7 @@
 **3. Add an explicit retry/replay affordance after failed commit**
 
 - Priority: P1.
+- Status: Implemented 2026-06-26 with a failed-commit recovery boundary that preserves the completed action batch, offers `Retry commit`, `Replay from latest`, and `Discard local draft`, and blocks normal async turn actions until the failed commit is resolved.
 - Observation: After `END_TURN` failed with `Failed to fetch`, the local UI advanced to the next player's upgrade phase. There was no explicit `Retry commit` button; the only workable recovery was a clean reload and manual replay from the latest canonical state.
 - Risk: Users may not know whether to Undo, reload, or continue. Continuing could accumulate more local draft actions on top of a bad base.
 - Recommended fix: On commit failure, keep or return the UI to the commit boundary with the same draft action list, and show clear actions such as `Retry commit`, `Replay from latest`, and `Discard local draft`. Disable starting the next turn until the failed commit is resolved.

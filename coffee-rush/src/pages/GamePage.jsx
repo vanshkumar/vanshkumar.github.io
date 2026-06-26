@@ -36,6 +36,13 @@ import {
   createAsyncDraftHydrationUnit,
   formatAsyncDraftConnectionLabel,
 } from '../network/asyncDraftRestore';
+import {
+  ASYNC_COMMIT_RECOVERY_MESSAGE,
+  ASYNC_DISCARD_DRAFT_MESSAGE,
+  ASYNC_REPLAY_FROM_LATEST_MESSAGE,
+  createAsyncCommitRecovery,
+  createAsyncCommitRecoveryFromDraft,
+} from '../network/asyncCommitRecovery';
 import { hashState } from '../network/roomCrypto';
 import {
   REMOTE_MESSAGE_TYPES,
@@ -121,11 +128,13 @@ export default function GamePage() {
   const asyncSyncRef = useRef(null);
   const asyncCanonicalRef = useRef(null);
   const asyncDraftRef = useRef(null);
+  const asyncFailedCommitRef = useRef(null);
   const asyncSyncInFlightRef = useRef(false);
   const [state, setState] = useState(() => loadGame());
   const [undoStack, setUndoStack] = useState(() => loadUndoStack());
   const [remoteSession, setRemoteSession] = useState(() => loadRemoteSession());
   const [asyncDraftActionCount, setAsyncDraftActionCount] = useState(0);
+  const [asyncFailedCommit, setAsyncFailedCommit] = useState(null);
   const [remoteStatus, setRemoteStatus] = useState(() => ({
     connection: loadRemoteSession() ? 'connecting' : 'offline',
     selfId: '',
@@ -236,6 +245,12 @@ export default function GamePage() {
       setIsUpgradeMenuOpen(false);
     }
   }, [state?.phase]);
+
+  useEffect(() => {
+    if (asyncFailedCommit) {
+      setIsUpgradeMenuOpen(false);
+    }
+  }, [asyncFailedCommit]);
 
   useEffect(() => {
     const session = remoteSessionRef.current;
@@ -388,7 +403,9 @@ export default function GamePage() {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
       asyncCanonicalRef.current = null;
       asyncDraftRef.current = null;
+      asyncFailedCommitRef.current = null;
       setAsyncDraftActionCount(0);
+      setAsyncFailedCommit(null);
     };
   }, [remoteRoomKey]);
 
@@ -503,6 +520,21 @@ export default function GamePage() {
     updateAsyncSessionHead(headIndex, headHash);
   }
 
+  function setAsyncFailedCommitState(failedCommit) {
+    asyncFailedCommitRef.current = failedCommit;
+    setAsyncFailedCommit(failedCommit);
+  }
+
+  function clearAsyncFailedCommitState() {
+    setAsyncFailedCommitState(null);
+  }
+
+  function restoreAsyncFailedCommitFromDraft(draft, errorMessage = '') {
+    const failedCommit = createAsyncCommitRecoveryFromDraft(draft, errorMessage);
+    setAsyncFailedCommitState(failedCommit);
+    return failedCommit;
+  }
+
   function setAsyncDraftState(baseHead, actions, draftState) {
     const draftUndoStack = undoStackRef.current.slice();
     const nextDraft =
@@ -529,6 +561,7 @@ export default function GamePage() {
         undoStack: draftUndoStack,
       });
     } else if (remoteSessionRef.current?.roomId) {
+      clearAsyncFailedCommitState();
       clearAsyncDraft(remoteSessionRef.current.roomId);
     }
   }
@@ -541,6 +574,10 @@ export default function GamePage() {
     }
 
     asyncDraftRef.current = hydration.draft;
+    restoreAsyncFailedCommitFromDraft(
+      hydration.draft,
+      asyncFailedCommitRef.current?.error ?? '',
+    );
     setAsyncDraftActionCount(hydration.draftActionCount);
     stateRef.current = hydration.state;
     undoStackRef.current = hydration.undoStack;
@@ -551,6 +588,7 @@ export default function GamePage() {
 
   function clearAsyncDraftState() {
     asyncDraftRef.current = null;
+    clearAsyncFailedCommitState();
     setAsyncDraftActionCount(0);
     if (remoteSessionRef.current?.roomId) {
       clearAsyncDraft(remoteSessionRef.current.roomId);
@@ -829,6 +867,7 @@ export default function GamePage() {
           ? 'Turn committed.'
           : 'Setup synced.',
       );
+      clearAsyncFailedCommitState();
       setRemoteStatus((current) => ({
         ...current,
         connection: 'connected',
@@ -836,15 +875,30 @@ export default function GamePage() {
       }));
       return { state: resultState };
     } catch (commitError) {
+      const errorMessage = commitError?.message ?? 'Could not commit the async turn.';
+      const failedCommit = createAsyncCommitRecovery({
+        baseHead,
+        actions,
+        resultState,
+        error: errorMessage,
+      });
+
       setAsyncDraftState(baseHead, actions, resultState);
+      setAsyncFailedCommitState(failedCommit);
       clearPendingActionId(pendingId);
       setExportStatus('');
-      setError(commitError?.message ?? 'Could not commit the async turn.');
-      return { error: commitError?.message ?? 'Could not commit the async turn.' };
+      setPassTo('');
+      setError(errorMessage);
+      return { error: errorMessage };
     }
   }
 
   function dispatchAsyncAction(action) {
+    if (asyncFailedCommitRef.current) {
+      setError(ASYNC_COMMIT_RECOVERY_MESSAGE);
+      return { error: ASYNC_COMMIT_RECOVERY_MESSAGE };
+    }
+
     if (pendingActionIdRef.current) {
       setError('Waiting for the room to accept the previous commit.');
       return { error: 'Waiting for the room to accept the previous commit.' };
@@ -1089,11 +1143,21 @@ export default function GamePage() {
   }
 
   function selectCup(cupIdx) {
+    if (asyncFailedCommitRef.current) {
+      setError(ASYNC_COMMIT_RECOVERY_MESSAGE);
+      return;
+    }
+
     setSelectedCup(cupIdx);
     setError('');
   }
 
   function selectMeeple(meepleId) {
+    if (asyncFailedCommitRef.current) {
+      setError(ASYNC_COMMIT_RECOVERY_MESSAGE);
+      return;
+    }
+
     setSelectedMeepleId(meepleId);
     setPath([]);
     setError('');
@@ -1143,6 +1207,63 @@ export default function GamePage() {
         ?.send(createStateSnapshot(previousState, nextUndoStack))
         .catch(() => {});
     }
+  }
+
+  async function retryFailedAsyncCommit() {
+    const failedCommit = asyncFailedCommitRef.current;
+    if (!failedCommit || pendingActionIdRef.current) return;
+
+    setError('');
+    setExportStatus('Retrying commit.');
+    const result = await commitAsyncActions(
+      failedCommit.actions,
+      failedCommit.resultState,
+      failedCommit.baseHead,
+    );
+
+    if (!result?.error) {
+      resetActionUi();
+    }
+  }
+
+  async function replayFailedAsyncCommitFromLatest() {
+    const failedCommit = asyncFailedCommitRef.current;
+    if (!failedCommit || pendingActionIdRef.current || asyncSyncInFlightRef.current) return;
+
+    setError('');
+    setExportStatus('Syncing latest room state.');
+    await syncAsyncRoom({ discardDraft: true });
+    setExportStatus('');
+
+    if (asyncFailedCommitRef.current === failedCommit) {
+      setError('Could not sync the latest room state.');
+      return;
+    }
+
+    setError(ASYNC_REPLAY_FROM_LATEST_MESSAGE);
+  }
+
+  function discardFailedAsyncDraft() {
+    if (!asyncFailedCommitRef.current || pendingActionIdRef.current) return;
+
+    const session = remoteSessionRef.current;
+    const canonical = asyncCanonicalRef.current ?? loadAsyncRoomState(session?.roomId);
+
+    clearAsyncDraftState();
+    undoStackRef.current = [];
+    setUndoStack([]);
+    resetActionUi();
+    setPassTo('');
+    setError('');
+    setExportStatus(ASYNC_DISCARD_DRAFT_MESSAGE);
+
+    if (canonical?.state) {
+      setAsyncCanonicalState(canonical);
+      stateRef.current = canonical.state;
+      setState(canonical.state);
+    }
+
+    syncAsyncRoom({ discardDraft: true, silent: true });
   }
 
   function getExportText() {
@@ -1245,6 +1366,11 @@ export default function GamePage() {
   }
 
   function handleCellClick(cellId) {
+    if (asyncFailedCommitRef.current) {
+      setError(ASYNC_COMMIT_RECOVERY_MESSAGE);
+      return;
+    }
+
     if (setupPlacement) {
       const cell = getCell(cellId);
 
@@ -1445,9 +1571,13 @@ export default function GamePage() {
         ? `${remoteStatus.peerIds.length} connected`
         : 'connected'
       : remoteStatus.connection;
+  const isAsyncCommitRecoveryActive = Boolean(asyncFailedCommit);
+  const isAsyncCommitRecoveryBusy =
+    Boolean(remoteStatus.pendingActionId) || remoteStatus.connection === 'syncing';
   const undoDisabled =
     undoStack.length === 0 ||
     isLiveRemotePeer ||
+    isAsyncCommitRecoveryActive ||
     (isAsyncRemoteGame && (asyncDraftActionCount === 0 || Boolean(remoteStatus.pendingActionId)));
 
   return (
@@ -1531,6 +1661,42 @@ export default function GamePage() {
       {remoteStatus.error && <div className="error-banner">{remoteStatus.error}</div>}
       {exportStatus && <div className="message-banner">{exportStatus}</div>}
       {visibleLastMessage && <div className="message-banner">{visibleLastMessage}</div>}
+      {isAsyncCommitRecoveryActive && (
+        <section className="async-recovery-panel" aria-live="assertive">
+          <div className="phase-summary">
+            <span className="phase-kicker">Commit needs attention</span>
+            <h2>Resolve the local draft</h2>
+            <p>{ASYNC_COMMIT_RECOVERY_MESSAGE}</p>
+            {asyncFailedCommit.error && (
+              <small>Last error: {asyncFailedCommit.error}</small>
+            )}
+          </div>
+          <div className="button-row async-recovery-actions">
+            <button
+              className="primary-button"
+              type="button"
+              onClick={retryFailedAsyncCommit}
+              disabled={isAsyncCommitRecoveryBusy}
+            >
+              Retry commit
+            </button>
+            <button
+              type="button"
+              onClick={replayFailedAsyncCommitFromLatest}
+              disabled={isAsyncCommitRecoveryBusy}
+            >
+              Replay from latest
+            </button>
+            <button
+              type="button"
+              onClick={discardFailedAsyncDraft}
+              disabled={isAsyncCommitRecoveryBusy}
+            >
+              Discard local draft
+            </button>
+          </div>
+        </section>
+      )}
 
       <div className={`game-layout phase-${state.phase}`}>
         {state.phase !== PHASES.SETUP_PLACEMENT && (
@@ -1560,6 +1726,7 @@ export default function GamePage() {
                       .join(' ')}
                     type="button"
                     onClick={() => selectMeeple(meeple.id)}
+                    disabled={isAsyncCommitRecoveryActive}
                   >
                     {meepleLabel(meeple)}
                   </button>
@@ -1571,7 +1738,7 @@ export default function GamePage() {
                   <button
                     type="button"
                     onClick={() => updateRushSpent(rushSpent - 1)}
-                    disabled={rushSpent <= 0}
+                    disabled={rushSpent <= 0 || isAsyncCommitRecoveryActive}
                     aria-label="Spend one fewer Rush token"
                   >
                     -
@@ -1580,7 +1747,7 @@ export default function GamePage() {
                   <button
                     type="button"
                     onClick={() => updateRushSpent(rushSpent + 1)}
-                    disabled={rushSpent >= activePlayer.rushTokens}
+                    disabled={rushSpent >= activePlayer.rushTokens || isAsyncCommitRecoveryActive}
                     aria-label="Spend one more Rush token"
                   >
                     +
@@ -1648,7 +1815,7 @@ export default function GamePage() {
                       className={selectedCup === index ? 'selected-tool' : ''}
                       type="button"
                       onClick={() => placeStartingIngredient(index)}
-                      disabled={!selectedSetupCell}
+                      disabled={!selectedSetupCell || isAsyncCommitRecoveryActive}
                     >
                       <span>Cup {index + 1}</span>
                       <small>{ingredientListLabel(cup)}</small>
@@ -1684,6 +1851,7 @@ export default function GamePage() {
                     className="upgrade-open-button"
                     type="button"
                     onClick={() => setIsUpgradeMenuOpen(true)}
+                    disabled={isAsyncCommitRecoveryActive}
                   >
                     <span>{upgradeActionLabel}</span>
                     <small>{upgradeActionMeta}</small>
@@ -1694,6 +1862,7 @@ export default function GamePage() {
                     onClick={() =>
                       dispatch({ type: 'SKIP_UPGRADES', playerId: activePlayer.id })
                     }
+                    disabled={isAsyncCommitRecoveryActive}
                   >
                     Move
                   </button>
@@ -1737,7 +1906,7 @@ export default function GamePage() {
                         className="pour-button"
                         type="button"
                         onClick={() => pourIngredient(ingredient)}
-                        disabled={selectedCup === null}
+                        disabled={selectedCup === null || isAsyncCommitRecoveryActive}
                         aria-label={
                           selectedCup === null
                             ? `Choose a cup before pouring ${ingredientLabel(ingredient)}`
@@ -1749,6 +1918,7 @@ export default function GamePage() {
                       <button
                         type="button"
                         onClick={() => discardIngredient(ingredient)}
+                        disabled={isAsyncCommitRecoveryActive}
                         aria-label={`Discard ${ingredientLabel(ingredient)}`}
                       >
                         Discard
@@ -1765,6 +1935,7 @@ export default function GamePage() {
                         className="serve-order-button"
                         type="button"
                         onClick={() => fulfillOrder(match.cupIdx, match.order.id)}
+                        disabled={isAsyncCommitRecoveryActive}
                       >
                         {`Serve C${match.cupIdx + 1}: ${match.order.name}`}
                       </button>
@@ -1776,7 +1947,7 @@ export default function GamePage() {
                     className="primary-button"
                     type="button"
                     onClick={() => dispatch({ type: 'END_TURN', playerId: activePlayer.id })}
-                    disabled={activePlayer.hand.length > 0}
+                    disabled={activePlayer.hand.length > 0 || isAsyncCommitRecoveryActive}
                   >
                     End turn
                   </button>
@@ -1812,7 +1983,7 @@ export default function GamePage() {
                   className="primary-button"
                   type="button"
                   onClick={confirmMove}
-                  disabled={!movePreview?.canConfirm}
+                  disabled={!movePreview?.canConfirm || isAsyncCommitRecoveryActive}
                 >
                   Confirm move
                 </button>

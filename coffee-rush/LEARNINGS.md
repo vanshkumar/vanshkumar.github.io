@@ -132,6 +132,11 @@
 - Action: Put future async commit-safety checks before `submitTurnCommit`, and cover restored-draft mismatches with real reducer actions plus a `fetch` spy that must remain unused.
 - Confidence: high
 
+**[2026-06-26] — Worktree dependency reuse**
+- Observation: Reusing the original checkout's `node_modules` as a single symlink lets imports resolve, but Vitest and Vite then try to write `.vite` and `.vite-temp` cache files through that symlink into the read-only checkout.
+- Action: For Codex worktrees without local dependencies, create an ignored local `node_modules` directory with per-package symlinks to the original checkout and local `.vite` / `.vite-temp` directories before running Vitest or Vite build.
+- Confidence: high
+
 **[2026-06-26] — Async offline draft restore**
 - Observation: `loadGame()` can restore the visible async draft state on reload before `/room/head` succeeds, while the draft action count can stay unset and async draft saves can read a stale undo ref if undo state is only advanced through a React state updater.
 - Action: Update `undoStackRef` synchronously before async draft persistence, rehydrate saved async draft actions, visible state, undo stack, and cached base head together on `restoreDraft` sync failures, and test status label, draft count, phase, active player, and undo depth as one assertion group.

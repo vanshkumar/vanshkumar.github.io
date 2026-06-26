@@ -27,7 +27,7 @@ A paradigm can find itself in a state of "crisis" when people know that anomalie
 
 The core element of a crisis is the breakdown of the technical puzzle-solving of normal science. There are many other relevant factors (eg social pressure for calendar reform in the case of Copernicus), but that is the primary one.
 
-Oddly, a replacement theory doesn't seem to have to be more accurate, explain things better, or even be simpler. At the time Copernicus' heliocentric theory was not more accurate or much simpler than the Ptolemaic model. He did not do away with the [epicycles](https://en.wikipedia.org/wiki/Deferent_and_epicycle) that littered the Ptolemaic model.
+Oddly, a replacement theory doesn't seem to have to be more accurate, explain things better, or even be simpler. At the time Copernicus' heliocentric theory was not more accurate or much simpler than the Ptolemaic model. He did not do away with the [epicycles](https://en.wikipedia.org/wiki/Deferent_and_epicycle) that littered the Ptolemaic model. All that's needed is recognition that the existing paradigm isn't working and it may be time to build something new.
 
 > Even Copernicus’ more elaborate proposal was neither simpler nor more accurate than Ptolemy’s system. Available observational tests, as we shall see more clearly below, provided no basis for a choice between them. Under those circumstances, one of the factors that led astronomers to Copernicus (and one that could not have led them to Aristarchus) was the recognized crisis that had been responsible for innovation in the first place. Ptolemaic astronomy had failed to solve its problems; the time had come to give a competitor a chance.
 

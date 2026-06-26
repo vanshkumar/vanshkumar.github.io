@@ -224,6 +224,11 @@
 
 ## Patterns and Preferences
 
+**[2026-06-26] — Async notification design**
+- Observation: Turn notifications are desirable, but storing plaintext contact info or turn ownership in the relay would weaken the current encrypted async-room privacy model.
+- Action: Prefer client-side or encrypted-room notification flows: browser-local turn detection, assisted SMS/WhatsApp sharing, or encrypted contact cards that are kept out of relay plaintext and exported game logs.
+- Confidence: medium
+
 **[2026-06-24] — Setup placement UX**
 - Observation: `PLACE_STARTING_MEEPLE` is an atomic reducer action that needs both `cellId` and `cupIdx`, but the setup UI can still match normal turns by staging the selected board cell locally before submitting the cup choice.
 - Action: Keep setup cup selection in the setup action panel and leave player-panel cups disabled during setup so players pick a board space first.

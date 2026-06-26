@@ -44,6 +44,11 @@
 
 ## Patterns and Preferences
 
+**[2026-06-26] — Typography size tuning**
+- Observation: A 20% root font-size increase made the site feel oversized against existing article and terrain content; a 10% increase preserves the readability bump without overwhelming the layout.
+- Action: Prefer `html { font-size: 110%; }` for this site's global readability scale unless a larger type treatment is explicitly requested.
+- Confidence: medium
+
 ## What Has Failed
 
 **[2026-06-25] — Terrain question card vertical balance**

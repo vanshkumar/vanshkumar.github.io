@@ -9,11 +9,15 @@
   --border: #e5e1d5;
   --card: #fcfcf9;
   --card-border: #e8e6dc;
-  --max-width: 1080px;
+  --max-width: 67.5rem;
 }
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 120%;
 }
 
 body {
@@ -62,7 +66,7 @@ a:hover {
   background: #f7f3ea;
   color: var(--muted);
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 0.375rem;
   padding: 0.2rem 0.4rem;
   font-size: 0.65rem;
   letter-spacing: 0.02em;
@@ -78,7 +82,15 @@ h3 {
   margin: 0 0 0.6rem;
 }
 
+.site-shell {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 .page {
+  flex: 1 0 auto;
+  width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 2.5rem 2rem 4rem;
@@ -174,13 +186,13 @@ h3 {
 }
 
 .terrain-hero-content {
-  max-width: 850px;
+  max-width: 53.125rem;
 }
 
 .terrain-hero-title {
   font-size: clamp(2.8rem, 6vw, 5.4rem);
   line-height: 0.9;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   color: var(--text);
 }
 
@@ -202,7 +214,7 @@ h3 {
   margin-top: 2.5rem;
   padding-left: 1rem;
   border-left: 2px solid #d9d5cc;
-  max-width: 520px;
+  max-width: 32.5rem;
   color: var(--muted);
   font-style: italic;
   font-size: 1.05rem;
@@ -242,12 +254,12 @@ h3 {
 .terrain-card {
   background: var(--card);
   border: 1px solid var(--card-border);
-  border-radius: 18px;
+  border-radius: 1.125rem;
   padding: 1.6rem;
-  box-shadow: 0 6px 20px rgba(30, 22, 14, 0.08);
+  box-shadow: 0 0.375rem 1.25rem rgba(30, 22, 14, 0.08);
   display: flex;
   flex-direction: column;
-  min-height: 320px;
+  min-height: 20rem;
 }
 
 .terrain-card-question {
@@ -268,9 +280,9 @@ h3 {
 }
 
 .terrain-card-image {
-  border-radius: 12px;
+  border-radius: 0.75rem;
   overflow: hidden;
-  height: 140px;
+  height: 8.75rem;
   margin-bottom: 1.2rem;
 }
 
@@ -332,13 +344,13 @@ h3 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
   gap: 1rem;
 }
 
 .card {
   padding: 1rem 1.1rem;
-  border-radius: 14px;
+  border-radius: 0.875rem;
   border: 1px solid var(--card-border);
   background: var(--card);
 }
@@ -363,7 +375,7 @@ h3 {
   flex-direction: column;
   gap: 1.1rem;
   width: 100%;
-  max-width: 720px;
+  max-width: 45rem;
   margin: 0 auto;
 }
 
@@ -373,7 +385,7 @@ h3 {
 
 .shelf-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(118px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(7.375rem, 1fr));
   gap: 1.45rem 1.15rem;
   align-items: start;
   margin-top: 0.6rem;
@@ -397,7 +409,7 @@ h3 {
   justify-content: center;
   overflow: hidden;
   border: 1px solid var(--card-border);
-  border-radius: 6px;
+  border-radius: 0.375rem;
   background: #f6f2e9;
   box-shadow: 0 0.45rem 1.2rem rgba(38, 31, 20, 0.1);
   transition:
@@ -438,7 +450,7 @@ h3 {
 .shelf-book:focus-visible .shelf-cover {
   border-color: #d2c6ad;
   box-shadow: 0 0.6rem 1.4rem rgba(38, 31, 20, 0.14);
-  transform: translateY(-2px);
+  transform: translateY(-0.125rem);
 }
 
 .shelf-book:focus-visible {
@@ -673,12 +685,12 @@ h3 {
 
 .comic-reader {
   --comic-page-max-height: 80dvh;
-  --comic-reader-width: min(calc(100vw - 1rem), 1400px);
+  --comic-reader-width: min(calc(100vw - 1rem), 87.5rem);
   width: var(--comic-reader-width);
   margin: 2.5rem calc(50% - var(--comic-reader-width) / 2);
   padding: 0.45rem;
   border: 1px solid #2f2b25;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   background: #1f1d1a;
   color: #f7f3ea;
   cursor: pointer;
@@ -699,7 +711,7 @@ h3 {
 }
 
 .comic-reader-stage.is-single {
-  grid-template-columns: minmax(0, min(100%, 680px));
+  grid-template-columns: minmax(0, min(100%, 42.5rem));
 }
 
 .comic-reader-stage.is-spread {
@@ -778,19 +790,24 @@ h3 {
 }
 
 .site-footer {
-  margin-top: 3rem;
-  padding: 2.5rem 0 3rem;
+  flex: 0 0 auto;
+  width: 100%;
+  margin-top: 0;
+  padding: 2.5rem 2rem 3rem;
   border-top: 1px solid var(--border);
   color: #3a2d26;
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   background: rgba(252, 249, 242, 0.8);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(0.375rem);
 }
 
 .site-footer-inner {
   display: flex;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
@@ -811,8 +828,8 @@ h3 {
 }
 
 .site-footer-icon img {
-  width: 78px;
-  height: 78px;
+  width: 4.875rem;
+  height: 4.875rem;
   object-fit: contain;
 }
 
@@ -849,6 +866,10 @@ h3 {
     padding: 2rem 1.5rem 3rem;
   }
 
+  .site-footer {
+    padding: 2rem 1.5rem 2.75rem;
+  }
+
   .terrain-map-header {
     align-items: flex-start;
   }
@@ -883,8 +904,8 @@ h3 {
   }
 
   .site-footer-icon img {
-    width: 56px;
-    height: 56px;
+    width: 3.5rem;
+    height: 3.5rem;
   }
 
   .terrain-card-grid {

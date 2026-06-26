@@ -27,6 +27,11 @@
 - Action: Override spacing on `.terrain-card-question` in `src/styles/global.css` when question-specific card chrome changes, instead of changing the shared project/essay card padding.
 - Confidence: high
 
+**[2026-06-26] — Site typography scaling**
+- Observation: The shared layout mostly scales through rem units, but placing the footer inside `.page` makes it inherit the page shell instead of behaving like a full-width bottom band.
+- Action: For global type increases, scale the root font size, convert fixed content/card/footer dimensions that frame text to rems, and keep `.site-footer` as a sibling of `.page` with its own centered `.site-footer-inner`.
+- Confidence: high
+
 ## Patterns and Preferences
 
 ## What Has Failed

@@ -35,32 +35,34 @@ const ogImage = `${siteUrl}/og.png`;
     <link rel="apple-touch-icon" href="/brand/vk_logo.png" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <div class="brand">
-          <a href="/">Vansh Kumar</a>
-          <span class="brand-subtitle">{brandSubtitle}</span>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="site-header-inner">
+          <div class="brand">
+            <a href="/">Vansh Kumar</a>
+            <span class="brand-subtitle">{brandSubtitle}</span>
+          </div>
+          <nav class="site-nav" aria-label="Primary">
+            <a href="/about" class:list={['nav-link', pathname === '/about' && 'is-active']}>About</a>
+            <a href="/now" class:list={['nav-link', pathname === '/now' && 'is-active']}>Now</a>
+            <a href="/contact" class:list={['nav-link', pathname === '/contact' && 'is-active']}>Contact</a>
+            <a href="/shelf" class:list={['nav-link', pathname === '/shelf' && 'is-active']}>Shelf</a>
+            <a
+              href="/terrain"
+              class:list={['nav-link', 'nav-pill', isTerrain && 'is-active']}
+            >
+              <span class="nav-icon" aria-hidden="true">🌱</span>
+              Terrain
+            </a>
+          </nav>
         </div>
-        <nav class="site-nav" aria-label="Primary">
-          <a href="/about" class:list={['nav-link', pathname === '/about' && 'is-active']}>About</a>
-          <a href="/now" class:list={['nav-link', pathname === '/now' && 'is-active']}>Now</a>
-          <a href="/contact" class:list={['nav-link', pathname === '/contact' && 'is-active']}>Contact</a>
-          <a href="/shelf" class:list={['nav-link', pathname === '/shelf' && 'is-active']}>Shelf</a>
-          <a
-            href="/terrain"
-            class:list={['nav-link', 'nav-pill', isTerrain && 'is-active']}
-          >
-            <span class="nav-icon" aria-hidden="true">🌱</span>
-            Terrain
-          </a>
-        </nav>
-      </div>
-    </header>
+      </header>
 
-    <div class="page">
-      <main class="content">
-        <slot />
-      </main>
+      <div class="page">
+        <main class="content">
+          <slot />
+        </main>
+      </div>
 
       <footer class="site-footer">
         <div class="site-footer-inner">

@@ -717,18 +717,6 @@ select {
   gap: 10px;
 }
 
-.compact-meeple-picker {
-  align-items: stretch;
-}
-
-.meeple-choice {
-  min-width: 58px;
-  min-height: 42px;
-  padding: 8px 14px;
-  font-size: 0.95rem;
-  font-weight: 950;
-}
-
 .move-status-line {
   display: flex;
   align-items: center;
@@ -1795,16 +1783,6 @@ button.cup-memory-tile {
   .move-tools,
   .move-confirm-tools {
     gap: 7px;
-  }
-
-  .compact-meeple-picker {
-    gap: 6px;
-  }
-
-  .meeple-choice {
-    flex: 1 1 58px;
-    min-height: 38px;
-    padding: 6px 12px;
   }
 
   .move-status-line {

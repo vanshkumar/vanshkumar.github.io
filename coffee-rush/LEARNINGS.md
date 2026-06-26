@@ -239,6 +239,11 @@
 - Action: Remove unnecessary top-row status text at the source that sets it, e.g. clear `lastMessage` for no-op phase transitions and clear `exportStatus` for silent async draft saves.
 - Confidence: high
 
+**[2026-06-26] — Move meeple selection UX**
+- Observation: During the move phase, clickable board meeples already make the meeple choice obvious, so a separate `M1`/`M2` picker row adds redundant text clutter.
+- Action: Keep move-phase meeple selection on the board and avoid restoring separate `M1`/`M2` text controls in the action panel.
+- Confidence: high
+
 ## What Has Failed
 
 **[2026-06-25] — Async draft recovery**

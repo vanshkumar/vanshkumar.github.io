@@ -99,10 +99,6 @@ import {
 const MAX_UNDO_STATES = 25;
 const RESET_ACTION_UI_TYPES = ['PLACE_STARTING_MEEPLE', 'MOVE', 'END_TURN'];
 
-function meepleLabel(meeple) {
-  return meeple.id.split('-')[1].toUpperCase();
-}
-
 function cellLabel(cellId) {
   const cell = getCell(cellId);
   return cell ? `Cell ${cell.id} · ${ingredientLabel(cell.ingredient)}` : 'Unplaced';
@@ -1879,25 +1875,6 @@ export default function GamePage() {
             aria-label={`${activePlayer.name} move controls`}
           >
             <div className="phase-tools move-tools">
-              <div className="meeple-picker compact-meeple-picker" aria-label="Barista picker">
-                {activePlayer.meeples.map((meeple) => (
-                  <button
-                    key={meeple.id}
-                    className={[
-                      'meeple-choice',
-                      selectedMeepleId === meeple.id ? 'selected-tool' : '',
-                      selectedMeepleId === meeple.id ? `selected-tool-${activePlayer.color}` : '',
-                    ]
-                      .filter(Boolean)
-                      .join(' ')}
-                    type="button"
-                    onClick={() => selectMeeple(meeple.id)}
-                    disabled={isAsyncCommitRecoveryActive || !canControlActivePlayer}
-                  >
-                    {meepleLabel(meeple)}
-                  </button>
-                ))}
-              </div>
               {activePlayer.rushTokens > 0 && (
                 <div className="rush-stepper" aria-label="Rush spent">
                   <span>Rush</span>

@@ -104,6 +104,20 @@ describe('async room client', () => {
   it('validates allowlisted reducer action shapes', () => {
     expect(
       isValidAsyncAction({
+        type: 'UPDATE_PLAYER_PROFILE',
+        playerId: 'p2',
+        name: 'Fresh Bean',
+      }),
+    ).toBe(true);
+    expect(
+      isValidAsyncAction({
+        type: 'UPDATE_PLAYER_PROFILE',
+        playerId: 'p2',
+        name: '',
+      }),
+    ).toBe(false);
+    expect(
+      isValidAsyncAction({
         type: 'MOVE',
         playerId: 'p1',
         meepleId: 'p1-m1',

@@ -217,9 +217,19 @@
 - Action: When explaining or testing online hosting, include the post-navigation `Copy invite` step and remember joiners can paste either the full invite URL or compact `ROOM.auth.key` token.
 - Confidence: high
 
+**[2026-06-26] — Online invite seat prefill**
+- Observation: Full async invite URLs can carry `player=pN`, but compacting an opened invite into `ROOM.auth.key` in the setup input drops the seat and falls back to `p2`.
+- Action: Preserve the full invite URL when pre-filling the join input from `window.location`; only compact invites when the player seat is not needed or can be encoded.
+- Confidence: high
+
 **[2026-06-26] — Async seat authority**
 - Observation: A shared async room secret lets browsers decrypt/sync the room but does not identify which player seat the browser owns, so setup and turn controls can be initiated for the wrong player unless the invite carries a local seat.
 - Action: Generate per-player async invite links with `player=pN`, persist `localPlayerId`, and gate both UI controls and local dispatch by `action.playerId` for every async setup/turn phase.
+- Confidence: high
+
+**[2026-06-26] — Online-only entry points**
+- Observation: Local game creation existed in both `SetupPage` and the results `Rematch` action, so removing the setup button alone still left a local-game path.
+- Action: When making Coffee Rush online-only, audit results/rematch/reset flows as well as setup so every new game returns through hosted-room setup.
 - Confidence: high
 
 **[2026-06-26] — Local player station view**

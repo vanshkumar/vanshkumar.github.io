@@ -2,6 +2,7 @@ const STORAGE_KEY = 'coffee-rush:active-game:v2';
 const UNDO_STORAGE_KEY = 'coffee-rush:undo-stack:v1';
 const ASYNC_ROOM_STATE_PREFIX = 'coffee-rush:async-room-state:v1:';
 const ASYNC_DRAFT_PREFIX = 'coffee-rush:async-draft:v1:';
+const PENDING_PLAYER_PROFILE_PREFIX = 'coffee-rush:pending-player-profile:v1:';
 const MAX_UNDO_STATES = 25;
 
 function parseJson(raw, fallback) {
@@ -16,6 +17,10 @@ function parseJson(raw, fallback) {
 
 function roomStorageKey(prefix, roomId) {
   return `${prefix}${String(roomId ?? '').toUpperCase()}`;
+}
+
+function playerRoomStorageKey(prefix, roomId, playerId) {
+  return `${roomStorageKey(prefix, roomId)}:${String(playerId ?? '').toLowerCase()}`;
 }
 
 export function saveGame(state) {
@@ -149,6 +154,60 @@ export function clearAsyncRoomStorage(roomId) {
   clearAsyncRoomState(roomId);
 }
 
+export function savePendingPlayerProfile({
+  roomId,
+  playerId,
+  name,
+  country,
+  nationalNumber,
+}) {
+  if (!roomId || !playerId || !name || !country || !nationalNumber) return;
+
+  window.localStorage.setItem(
+    playerRoomStorageKey(PENDING_PLAYER_PROFILE_PREFIX, roomId, playerId),
+    JSON.stringify({
+      version: 1,
+      roomId,
+      playerId,
+      name,
+      country,
+      nationalNumber,
+      savedAt: new Date().toISOString(),
+    }),
+  );
+}
+
+export function loadPendingPlayerProfile(roomId, playerId) {
+  const parsed = parseJson(
+    window.localStorage.getItem(
+      playerRoomStorageKey(PENDING_PLAYER_PROFILE_PREFIX, roomId, playerId),
+    ),
+    null,
+  );
+
+  if (
+    !parsed ||
+    parsed.version !== 1 ||
+    typeof parsed.name !== 'string' ||
+    typeof parsed.country !== 'string' ||
+    typeof parsed.nationalNumber !== 'string'
+  ) {
+    return null;
+  }
+
+  return {
+    ...parsed,
+    roomId,
+    playerId,
+  };
+}
+
+export function clearPendingPlayerProfile(roomId, playerId) {
+  window.localStorage.removeItem(
+    playerRoomStorageKey(PENDING_PLAYER_PROFILE_PREFIX, roomId, playerId),
+  );
+}
+
 export function clearAllAsyncRoomStorage() {
   const keysToRemove = [];
 
@@ -156,7 +215,8 @@ export function clearAllAsyncRoomStorage() {
     const key = window.localStorage.key(index);
     if (
       key?.startsWith(ASYNC_ROOM_STATE_PREFIX) ||
-      key?.startsWith(ASYNC_DRAFT_PREFIX)
+      key?.startsWith(ASYNC_DRAFT_PREFIX) ||
+      key?.startsWith(PENDING_PLAYER_PROFILE_PREFIX)
     ) {
       keysToRemove.push(key);
     }

@@ -1,4 +1,5 @@
 import { applyAction } from '../engine/reducers';
+import { isValidPlayerName } from '../engine/playerProfile';
 import { normalizeRoomCode } from '../persistence/remoteSession';
 import { getRelayUrl } from './roomSync';
 import {
@@ -20,6 +21,7 @@ export const ASYNC_DRAFT_MISMATCH_MESSAGE =
 
 const HASH_PATTERN = /^[A-Za-z0-9_-]{32,96}$/;
 const ACTION_FIELD_ALLOWLIST = {
+  UPDATE_PLAYER_PROFILE: ['type', 'playerId', 'name'],
   PLACE_STARTING_MEEPLE: ['type', 'playerId', 'meepleId', 'cellId', 'cupIdx'],
   SKIP_UPGRADES: ['type', 'playerId'],
   ACTIVATE_UPGRADE: ['type', 'playerId', 'tileId'],
@@ -84,6 +86,12 @@ export function isValidAsyncAction(action) {
   if (jsonByteLength(action) > 4096 || !isSafeJsonValue(action)) return false;
 
   switch (action.type) {
+    case 'UPDATE_PLAYER_PROFILE':
+      return (
+        typeof action.playerId === 'string' &&
+        typeof action.name === 'string' &&
+        isValidPlayerName(action.name)
+      );
     case 'PLACE_STARTING_MEEPLE':
       return (
         typeof action.playerId === 'string' &&

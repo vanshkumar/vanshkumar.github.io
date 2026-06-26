@@ -2,8 +2,18 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createInitialState } from '../engine/initialState';
 import {
+  MAX_PLAYER_NAME_LENGTH,
+  normalizePlayerName,
+  playerNameError,
+} from '../engine/playerProfile';
+import {
+  WHATSAPP_COUNTRY_OPTIONS,
+  normalizeWhatsAppContact,
+} from '../network/turnNotifications';
+import {
   clearGame,
   loadGame,
+  savePendingPlayerProfile,
   saveAsyncRoomState,
   saveGame,
 } from '../persistence/localStorage';
@@ -17,7 +27,6 @@ import {
   createRemoteSession,
   createRelayAuth,
   createRoomCode,
-  formatInviteToken,
   getInviteFromLocation,
   hasQueryInviteSecrets,
   parseInviteInput,
@@ -33,14 +42,12 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
   const initialInvite = getInviteFromLocation();
   const [playerCount, setPlayerCount] = useState(2);
   const [startingPlayerIndex, setStartingPlayerIndex] = useState(0);
-  const [names, setNames] = useState(['Ada', 'Ben', 'Cleo', 'Dev']);
+  const [profileName, setProfileName] = useState('');
+  const [profileCountry, setProfileCountry] = useState('US');
+  const [profileNumber, setProfileNumber] = useState('');
   const [joinRoomCode, setJoinRoomCode] = useState(
     initialInvite.relayAuth && initialInvite.gameKey
-      ? formatInviteToken(
-          initialInvite.roomId,
-          initialInvite.relayAuth,
-          initialInvite.gameKey,
-        )
+      ? window.location.href
       : initialInvite.roomId,
   );
   const [remoteError, setRemoteError] = useState('');
@@ -50,17 +57,44 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
   const [isHostingOnline, setIsHostingOnline] = useState(false);
   const visibleRemoteError = remoteError || querySecretWarning;
 
-  function updateName(index, value) {
-    setNames((current) =>
-      current.map((name, nameIndex) => (nameIndex === index ? value : name)),
-    );
+  function playerSeatName(index) {
+    if (index === 0) {
+      return normalizePlayerName(profileName) || 'You';
+    }
+
+    return `Player ${index + 1}`;
   }
 
-  function createSetupState(seedPrefix = 'coffee-rush') {
-    const playerNames = names.slice(0, playerCount).map((name, index) => {
-      const trimmed = name.trim();
-      return trimmed || `Player ${index + 1}`;
+  function validateOnlineIdentity() {
+    const nameError = playerNameError(profileName);
+
+    if (nameError) {
+      setQuerySecretWarning('');
+      setRemoteError(nameError);
+      return null;
+    }
+
+    const normalized = normalizeWhatsAppContact({
+      country: profileCountry,
+      nationalNumber: profileNumber,
     });
+
+    if (normalized.error) {
+      setQuerySecretWarning('');
+      setRemoteError(normalized.error);
+      return null;
+    }
+
+    return {
+      name: normalizePlayerName(profileName),
+      contact: normalized.contact,
+    };
+  }
+
+  function createSetupState(hostName, seedPrefix = 'coffee-rush') {
+    const playerNames = Array.from({ length: playerCount }, (_, index) =>
+      index === 0 ? hostName : `Player ${index + 1}`,
+    );
 
     return createInitialState({
       playerNames,
@@ -69,16 +103,11 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
     });
   }
 
-  function startGame() {
-    const state = createSetupState();
-    clearGame();
-    clearRemoteSession();
-    saveGame(state);
-    navigate('/game');
-  }
-
   async function hostOnlineGame() {
     if (isHostingOnline) return;
+
+    const identity = validateOnlineIdentity();
+    if (!identity) return;
 
     setIsHostingOnline(true);
     setRemoteError('');
@@ -88,7 +117,7 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
     const relayAuth = createRelayAuth();
     const hostAuth = createHostAuth();
     const gameKey = createGameKey();
-    const state = createSetupState(`coffee-rush-${roomId}`);
+    const state = createSetupState(identity.name, `coffee-rush-${roomId}`);
     const session = createRemoteSession({
       mode: REMOTE_MODES.HOST,
       protocol: REMOTE_PROTOCOLS.ASYNC,
@@ -113,6 +142,13 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
         state,
       });
       saveRemoteSession(acceptedSession);
+      savePendingPlayerProfile({
+        roomId,
+        playerId: 'p1',
+        name: identity.name,
+        country: identity.contact.country,
+        nationalNumber: identity.contact.nationalNumber,
+      });
       navigate('/game');
     } catch (error) {
       setRemoteError(
@@ -145,6 +181,11 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
       return;
     }
 
+    const identity = validateOnlineIdentity();
+    if (!identity) return;
+
+    const localPlayerId = invite.localPlayerId || 'p2';
+
     clearGame();
     clearRemoteSession();
     saveRemoteSession(
@@ -154,10 +195,17 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
         roomId: invite.roomId,
         relayAuth: invite.relayAuth,
         gameKey: invite.gameKey,
-        localPlayerId: invite.localPlayerId || 'p2',
-        invitePlayerId: invite.localPlayerId || 'p2',
+        localPlayerId,
+        invitePlayerId: localPlayerId,
       }),
     );
+    savePendingPlayerProfile({
+      roomId: invite.roomId,
+      playerId: localPlayerId,
+      name: identity.name,
+      country: identity.contact.country,
+      nationalNumber: identity.contact.nationalNumber,
+    });
     navigate('/game');
   }
 
@@ -219,38 +267,72 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
               value={startingPlayerIndex}
               onChange={(event) => setStartingPlayerIndex(Number(event.target.value))}
             >
-              {names.slice(0, playerCount).map((name, index) => (
+              {Array.from({ length: playerCount }, (_, index) => (
                 <option key={index} value={index}>
-                  {name.trim() || `Player ${index + 1}`}
+                  {playerSeatName(index)}
                 </option>
               ))}
             </select>
           </label>
 
-          <div className="name-grid">
-            {names.slice(0, playerCount).map((name, index) => (
-              <label key={index}>
-                Player {index + 1}
-                <input
-                  value={name}
-                  onChange={(event) => updateName(index, event.target.value)}
-                />
-              </label>
-            ))}
+          <div className="profile-grid">
+            <label>
+              Your name
+              <input
+                value={profileName}
+                onChange={(event) => {
+                  setProfileName(event.target.value);
+                  setRemoteError('');
+                }}
+                maxLength={MAX_PLAYER_NAME_LENGTH}
+                autoComplete="name"
+              />
+            </label>
+            <label>
+              Country
+              <select
+                value={profileCountry}
+                onChange={(event) => {
+                  setProfileCountry(event.target.value);
+                  setRemoteError('');
+                }}
+              >
+                {WHATSAPP_COUNTRY_OPTIONS.map((option) => (
+                  <option key={option.country} value={option.country}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              WhatsApp number
+              <input
+                type="tel"
+                inputMode="tel"
+                autoComplete="tel"
+                value={profileNumber}
+                onChange={(event) => {
+                  setProfileNumber(event.target.value);
+                  setRemoteError('');
+                }}
+              />
+            </label>
           </div>
         </div>
 
         <section className="remote-play-panel" aria-label="Play options">
           <div>
-            <h2>Play mode</h2>
-            <p>Local hot-seat stays on this device. Online rooms sync turns across phones.</p>
+            <h2>Online room</h2>
+            <p>Host a room or join with an invite. Each player uses their own phone.</p>
           </div>
           {visibleRemoteError && <div className="error-banner">{visibleRemoteError}</div>}
           <div className="remote-play-actions">
-            <button className="primary-button" type="button" onClick={startGame}>
-              Start local game
-            </button>
-            <button type="button" onClick={hostOnlineGame} disabled={isHostingOnline}>
+            <button
+              className="primary-button"
+              type="button"
+              onClick={hostOnlineGame}
+              disabled={isHostingOnline}
+            >
               {isHostingOnline ? 'Creating room...' : 'Host online game'}
             </button>
           </div>

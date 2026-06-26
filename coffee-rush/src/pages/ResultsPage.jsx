@@ -5,10 +5,8 @@ import {
   clearGame,
   loadGame,
   loadUndoStack,
-  saveGame,
 } from '../persistence/localStorage';
 import { clearRemoteSession } from '../persistence/remoteSession';
-import { createInitialState } from '../engine/initialState';
 import {
   createElementScreenshotBlob,
   downloadFilesArchive,
@@ -44,17 +42,6 @@ export default function ResultsPage() {
 
   const scores = getScores(state);
   const winners = getWinnerIds(state);
-
-  function rematch() {
-    const next = createInitialState({
-      playerNames: state.players.map((player) => player.name),
-      seed: `coffee-rush-${Date.now()}`,
-    });
-    clearGame();
-    clearRemoteSession();
-    saveGame(next);
-    navigate('/game');
-  }
 
   function newGame() {
     clearGame();
@@ -119,14 +106,11 @@ export default function ResultsPage() {
           ))}
         </div>
         <div className="button-row">
-          <button className="primary-button" type="button" onClick={rematch}>
-            Rematch
+          <button className="primary-button" type="button" onClick={newGame}>
+            New online room
           </button>
           <button type="button" onClick={downloadExport} disabled={isExporting}>
             {isExporting ? 'Downloading...' : 'Download log + screenshot'}
-          </button>
-          <button type="button" onClick={newGame}>
-            Setup
           </button>
         </div>
       </section>

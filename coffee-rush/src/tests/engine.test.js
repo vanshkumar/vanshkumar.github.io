@@ -81,6 +81,31 @@ describe('Coffee Rush engine', () => {
     ]);
   });
 
+  it('updates player profile names as a logged game action', () => {
+    const state = setup(2);
+    const result = applyAction(state, {
+      type: 'UPDATE_PLAYER_PROFILE',
+      playerId: 'p2',
+      name: '  Fresh   Bean  ',
+    });
+
+    expect(result.error).toBeUndefined();
+    expect(result.state.players[1].name).toBe('Fresh Bean');
+    expect(result.state.phase).toBe(state.phase);
+    expect(result.state.log.at(-1)).toEqual({
+      type: 'UPDATE_PLAYER_PROFILE',
+      playerId: 'p2',
+      name: '  Fresh   Bean  ',
+    });
+
+    const invalid = applyAction(state, {
+      type: 'UPDATE_PLAYER_PROFILE',
+      playerId: 'p2',
+      name: '',
+    });
+    expect(invalid.error).toBe('Enter your name.');
+  });
+
   it('places starting meeples in setup and takes their ingredients', () => {
     let state = setup(2);
     expect(state.setupPlacementQueue.map((placement) => placement.playerId)).toEqual([

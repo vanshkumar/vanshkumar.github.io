@@ -103,7 +103,13 @@ h1 {
   line-height: 1.35;
 }
 
-.remote-play-actions,
+.remote-play-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+  align-items: end;
+}
+
 .join-room-row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -135,7 +141,8 @@ h1 {
   font-weight: 750;
 }
 
-.name-grid {
+.name-grid,
+.profile-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 12px;
@@ -335,7 +342,8 @@ select {
   color: #8d241b;
 }
 
-.async-recovery-panel {
+.async-recovery-panel,
+.profile-save-panel {
   max-width: 1440px;
   margin: 0 auto 12px;
   display: grid;
@@ -347,7 +355,13 @@ select {
   padding: 14px;
 }
 
-.async-recovery-panel h2 {
+.profile-save-panel {
+  border-color: #8aa8a3;
+  background: #edf7f4;
+}
+
+.async-recovery-panel h2,
+.profile-save-panel h2 {
   font-size: 1.2rem;
   line-height: 1.1;
 }
@@ -357,7 +371,8 @@ select {
   font-weight: 750;
 }
 
-.async-recovery-actions {
+.async-recovery-actions,
+.profile-save-actions {
   justify-content: flex-end;
   flex-wrap: wrap;
 }
@@ -1692,16 +1707,19 @@ button.cup-memory-tile {
     padding: 12px;
   }
 
-  .async-recovery-panel {
+  .async-recovery-panel,
+  .profile-save-panel {
     grid-template-columns: 1fr;
     align-items: stretch;
   }
 
-  .async-recovery-actions {
+  .async-recovery-actions,
+  .profile-save-actions {
     justify-content: stretch;
   }
 
-  .async-recovery-actions button {
+  .async-recovery-actions button,
+  .profile-save-actions button {
     flex: 1 1 150px;
   }
 

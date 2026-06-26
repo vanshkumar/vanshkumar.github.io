@@ -1,4 +1,5 @@
 import { INGREDIENTS } from '../data/ingredients';
+import { isValidPlayerName, normalizePlayerName } from './playerProfile';
 import { PHASES } from './types';
 import { getCell, ingredientGainForCell, isOccupied, validateMovePath } from './board';
 import { applyFlowOfTime } from './penalties';
@@ -36,6 +37,7 @@ export function applyAction(state, action) {
 }
 
 const ACTIONS = {
+  UPDATE_PLAYER_PROFILE: updatePlayerProfile,
   PLACE_STARTING_MEEPLE: placeStartingMeeple,
   SKIP_UPGRADES: skipUpgrades,
   ACTIVATE_UPGRADE: activateUpgrade,
@@ -46,6 +48,26 @@ const ACTIONS = {
   FULFILL_ORDER: fulfillOrder,
   END_TURN: endTurn,
 };
+
+function updatePlayerProfile(state, action) {
+  const player = getPlayer(state, action.playerId);
+  const name = normalizePlayerName(action.name);
+
+  if (!player) {
+    return { error: 'Choose a valid player.' };
+  }
+
+  if (!isValidPlayerName(name)) {
+    return { error: 'Enter your name.' };
+  }
+
+  return {
+    state: replacePlayer(state, {
+      ...player,
+      name,
+    }),
+  };
+}
 
 function placeStartingMeeple(state, action) {
   if (state.phase !== PHASES.SETUP_PLACEMENT) {

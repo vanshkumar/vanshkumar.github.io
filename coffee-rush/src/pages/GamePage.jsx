@@ -14,6 +14,7 @@ import {
   getLocalViewPlayer,
   orderPlayersForLocalView,
 } from '../engine/playerViews';
+import { normalizePlayerName } from '../engine/playerProfile';
 import { applyAction } from '../engine/reducers';
 import {
   getActivePlayer,
@@ -81,9 +82,11 @@ import {
 import {
   clearGame,
   clearAsyncDraft,
+  clearPendingPlayerProfile,
   loadGame,
   loadAsyncDraft,
   loadAsyncRoomState,
+  loadPendingPlayerProfile,
   loadUndoStack,
   saveAsyncDraft,
   saveAsyncRoomState,
@@ -156,6 +159,9 @@ export default function GamePage() {
   const notificationSyncRef = useRef(null);
   const notificationRosterRef = useRef(null);
   const notificationRosterHashRef = useRef('');
+  const profileSaveInFlightRef = useRef(false);
+  const profileSaveAttemptKeyRef = useRef('');
+  const savePendingOnlineProfileRef = useRef(null);
   const [state, setState] = useState(() => loadGame());
   const [undoStack, setUndoStack] = useState(() => loadUndoStack());
   const [remoteSession, setRemoteSession] = useState(() => loadRemoteSession());
@@ -169,6 +175,10 @@ export default function GamePage() {
   const [notificationStatus, setNotificationStatus] = useState('');
   const [notificationError, setNotificationError] = useState('');
   const [isNotificationSaving, setIsNotificationSaving] = useState(false);
+  const [pendingPlayerProfile, setPendingPlayerProfile] = useState(null);
+  const [profileStatus, setProfileStatus] = useState('');
+  const [profileError, setProfileError] = useState('');
+  const [isProfileSaving, setIsProfileSaving] = useState(false);
   const [pendingTurnReminder, setPendingTurnReminder] = useState(null);
   const [remoteStatus, setRemoteStatus] = useState(() => ({
     connection: loadRemoteSession() ? 'connecting' : 'offline',
@@ -208,10 +218,12 @@ export default function GamePage() {
   };
   asyncSyncRef.current = syncAsyncRoom;
   notificationSyncRef.current = syncNotificationRoster;
+  savePendingOnlineProfileRef.current = savePendingOnlineProfile;
 
   const activePlayer = state ? getActivePlayer(state) : null;
   const setupPlacement = state ? getSetupPlacement(state) : null;
   const localPlayerId = remoteSession?.localPlayerId ?? '';
+  const isOnlineProfilePending = Boolean(isAsyncRemoteGame && pendingPlayerProfile);
   const localViewPlayer = useMemo(
     () => (state ? getLocalViewPlayer(state, localPlayerId) : null),
     [localPlayerId, state],
@@ -519,6 +531,46 @@ export default function GamePage() {
       setPendingTurnReminder(null);
     };
   }, [remoteRoomKey]);
+
+  useEffect(() => {
+    const session = remoteSessionRef.current;
+
+    profileSaveInFlightRef.current = false;
+    profileSaveAttemptKeyRef.current = '';
+    setProfileStatus('');
+    setProfileError('');
+
+    if (!session || session.protocol !== REMOTE_PROTOCOLS.ASYNC || !session.localPlayerId) {
+      setPendingPlayerProfile(null);
+      return;
+    }
+
+    setPendingPlayerProfile(
+      loadPendingPlayerProfile(session.roomId, session.localPlayerId),
+    );
+  }, [remoteRoomKey]);
+
+  useEffect(() => {
+    if (!pendingPlayerProfile || !state || !isAsyncRemoteGame) return;
+
+    const attemptKey = [
+      pendingPlayerProfile.roomId,
+      pendingPlayerProfile.playerId,
+      pendingPlayerProfile.name,
+      pendingPlayerProfile.country,
+      pendingPlayerProfile.nationalNumber,
+    ].join(':');
+
+    if (
+      profileSaveInFlightRef.current ||
+      profileSaveAttemptKeyRef.current === attemptKey
+    ) {
+      return;
+    }
+
+    profileSaveAttemptKeyRef.current = attemptKey;
+    void savePendingOnlineProfileRef.current?.();
+  }, [isAsyncRemoteGame, pendingPlayerProfile, state]);
 
   useEffect(() => {
     if (!isAsyncRemoteGame) return;
@@ -877,6 +929,95 @@ export default function GamePage() {
     }
   }
 
+  async function savePendingOnlineProfile() {
+    const session = remoteSessionRef.current;
+    const profile = pendingPlayerProfile;
+
+    if (!session || session.protocol !== REMOTE_PROTOCOLS.ASYNC || !profile) return;
+
+    const name = normalizePlayerName(profile.name);
+    const normalized = normalizeWhatsAppContact({
+      country: profile.country,
+      nationalNumber: profile.nationalNumber,
+    });
+
+    if (!name || normalized.error) {
+      setProfileStatus('');
+      setProfileError(normalized.error || 'Enter your name.');
+      return;
+    }
+
+    profileSaveInFlightRef.current = true;
+    setIsProfileSaving(true);
+    setProfileStatus('Saving your player profile.');
+    setProfileError('');
+
+    try {
+      const currentState = stateRef.current;
+      const player = currentState ? getPlayer(currentState, session.localPlayerId) : null;
+
+      if (!player) {
+        throw new Error('This browser is not assigned to a player seat.');
+      }
+
+      if (player.name !== name) {
+        const canonical = asyncCanonicalRef.current;
+
+        if (!canonical?.headHash) {
+          throw new Error('Still syncing the room.');
+        }
+
+        const action = {
+          type: 'UPDATE_PLAYER_PROFILE',
+          playerId: session.localPlayerId,
+          name,
+        };
+        const result = applyAcceptedGameAction(action, { recordUndo: false });
+
+        if (result.error) {
+          throw new Error(result.error);
+        }
+
+        const committed = await commitAsyncActions(
+          [action],
+          result.state,
+          {
+            headIndex: canonical.headIndex,
+            headHash: canonical.headHash,
+          },
+          {
+            pendingStatus: 'Saving player profile.',
+            successStatus: '',
+          },
+        );
+
+        if (committed.error) {
+          throw new Error(committed.error);
+        }
+      }
+
+      await updateLocalNotificationRoster((roster) =>
+        upsertNotificationContact(roster, session.localPlayerId, normalized.contact),
+      );
+
+      clearPendingPlayerProfile(session.roomId, session.localPlayerId);
+      setPendingPlayerProfile(null);
+      setProfileError('');
+      setProfileStatus('Player profile saved.');
+    } catch (saveError) {
+      setProfileStatus('');
+      setProfileError(saveError?.message ?? 'Could not save your player profile.');
+    } finally {
+      profileSaveInFlightRef.current = false;
+      setIsProfileSaving(false);
+    }
+  }
+
+  function retryPendingOnlineProfile() {
+    profileSaveAttemptKeyRef.current = '';
+    void savePendingOnlineProfile();
+  }
+
   async function triggerAcceptedTurnReminder({ actions, resultState, commitResponse }) {
     const session = remoteSessionRef.current;
     if (!session || session.protocol !== REMOTE_PROTOCOLS.ASYNC) return;
@@ -1199,7 +1340,7 @@ export default function GamePage() {
     await assertAsyncDraftReplayMatchesResult(canonical.state, actions, resultState);
   }
 
-  async function commitAsyncActions(actions, resultState, baseHead) {
+  async function commitAsyncActions(actions, resultState, baseHead, options = {}) {
     const session = remoteSessionRef.current;
     if (!session) {
       return { error: 'No async room session is loaded.' };
@@ -1213,9 +1354,19 @@ export default function GamePage() {
     }
 
     const isTurnCommit = actions.some((action) => action.type === 'END_TURN');
+    const isProfileCommit = actions.every(
+      (action) => action.type === 'UPDATE_PLAYER_PROFILE',
+    );
     const pendingId = `async-${Date.now()}`;
     setPendingActionId(pendingId);
-    setExportStatus(isTurnCommit ? 'Committing turn.' : 'Committing setup.');
+    setExportStatus(
+      options.pendingStatus ??
+        (isTurnCommit
+          ? 'Committing turn.'
+          : isProfileCommit
+            ? 'Saving player profile.'
+            : 'Committing setup.'),
+    );
 
     try {
       const response = await submitTurnCommit(session, baseHead, actions, resultState);
@@ -1240,7 +1391,10 @@ export default function GamePage() {
       undoStackRef.current = [];
       setUndoStack([]);
       clearPendingActionId(pendingId);
-      setExportStatus(isTurnCommit ? '' : 'Setup synced.');
+      setExportStatus(
+        options.successStatus ??
+          (isTurnCommit ? '' : isProfileCommit ? '' : 'Setup synced.'),
+      );
       clearAsyncFailedCommitState();
       setRemoteStatus((current) => ({
         ...current,
@@ -1272,10 +1426,20 @@ export default function GamePage() {
     }
   }
 
+  function pendingProfileMessage() {
+    return profileError || 'Save your name and WhatsApp number before taking game actions.';
+  }
+
   function dispatchAsyncAction(action) {
     if (asyncFailedCommitRef.current) {
       setError(ASYNC_COMMIT_RECOVERY_MESSAGE);
       return { error: ASYNC_COMMIT_RECOVERY_MESSAGE };
+    }
+
+    if (pendingPlayerProfile && action.type !== 'UPDATE_PLAYER_PROFILE') {
+      const message = pendingProfileMessage();
+      setError(message);
+      return { error: message };
     }
 
     const localActionError = getLocalActionError(
@@ -1316,7 +1480,9 @@ export default function GamePage() {
 
     const nextActions = [...draftActions, action];
     const shouldCommitNow =
-      action.type === 'PLACE_STARTING_MEEPLE' || action.type === 'END_TURN';
+      action.type === 'UPDATE_PLAYER_PROFILE' ||
+      action.type === 'PLACE_STARTING_MEEPLE' ||
+      action.type === 'END_TURN';
 
     if (shouldCommitNow) {
       commitAsyncActions(nextActions, result.state, baseHead);
@@ -1775,6 +1941,11 @@ export default function GamePage() {
   }
 
   function handleCellClick(cellId) {
+    if (isOnlineProfilePending) {
+      setError(pendingProfileMessage());
+      return;
+    }
+
     if (asyncFailedCommitRef.current) {
       setError(ASYNC_COMMIT_RECOVERY_MESSAGE);
       return;
@@ -2006,12 +2177,15 @@ export default function GamePage() {
         : 'connected'
       : remoteStatus.connection;
   const isAsyncCommitRecoveryActive = Boolean(asyncFailedCommit);
+  const isAsyncActionBlocked =
+    isAsyncCommitRecoveryActive || isOnlineProfilePending;
   const isAsyncCommitRecoveryBusy =
     Boolean(remoteStatus.pendingActionId) || remoteStatus.connection === 'syncing';
   const undoDisabled =
     undoStack.length === 0 ||
     isLiveRemotePeer ||
     isAsyncCommitRecoveryActive ||
+    isOnlineProfilePending ||
     (isAsyncRemoteGame && (asyncDraftActionCount === 0 || Boolean(remoteStatus.pendingActionId)));
   const invitePlayers =
     isAsyncRemoteGame && isRemoteHost && state
@@ -2159,6 +2333,32 @@ export default function GamePage() {
     );
   }
 
+  function renderPendingProfileSave() {
+    if (!pendingPlayerProfile) return null;
+
+    return (
+      <section className="profile-save-panel" aria-live="assertive">
+        <div className="phase-summary">
+          <span className="phase-kicker">Player profile</span>
+          <h2>{isProfileSaving ? 'Saving your profile' : 'Finish joining the room'}</h2>
+          <p>{profileError || profileStatus || 'Saving your name and WhatsApp number.'}</p>
+        </div>
+        {profileError && (
+          <div className="button-row profile-save-actions">
+            <button
+              className="primary-button"
+              type="button"
+              onClick={retryPendingOnlineProfile}
+              disabled={isProfileSaving}
+            >
+              Retry
+            </button>
+          </div>
+        )}
+      </section>
+    );
+  }
+
   return (
     <main className="game-page" ref={pageRef}>
       <header className="game-header">
@@ -2235,6 +2435,7 @@ export default function GamePage() {
       </header>
 
       {renderPendingTurnReminder()}
+      {renderPendingProfileSave()}
       {error && <div className="error-banner">{error}</div>}
       {remoteStatus.error && <div className="error-banner">{remoteStatus.error}</div>}
       {exportStatus && <div className="message-banner">{exportStatus}</div>}
@@ -2303,7 +2504,7 @@ export default function GamePage() {
                     <button
                       type="button"
                       onClick={() => updateRushSpent(rushSpent - 1)}
-                      disabled={rushSpent <= 0 || isAsyncCommitRecoveryActive}
+                      disabled={rushSpent <= 0 || isAsyncActionBlocked}
                       aria-label="Spend one fewer Rush token"
                     >
                       -
@@ -2313,7 +2514,7 @@ export default function GamePage() {
                       type="button"
                       onClick={() => updateRushSpent(rushSpent + 1)}
                       disabled={
-                        rushSpent >= activePlayer.rushTokens || isAsyncCommitRecoveryActive
+                        rushSpent >= activePlayer.rushTokens || isAsyncActionBlocked
                       }
                       aria-label="Spend one more Rush token"
                     >
@@ -2356,8 +2557,8 @@ export default function GamePage() {
           onCellClick={handleCellClick}
           movePreview={movePreview}
           selectedSetupCellId={selectedSetupCellId}
-          canSelectSetupCell={canControlSetupPlacement}
-          canSelectMoveCell={canControlActivePlayer}
+          canSelectSetupCell={canControlSetupPlacement && !isOnlineProfilePending}
+          canSelectMoveCell={canControlActivePlayer && !isOnlineProfilePending}
         />
 
         {state.phase !== PHASES.MOVE && (
@@ -2399,7 +2600,7 @@ export default function GamePage() {
                       onClick={() => placeStartingIngredient(index)}
                       disabled={
                         !selectedSetupCell ||
-                        isAsyncCommitRecoveryActive ||
+                        isAsyncActionBlocked ||
                         !canControlSetupPlacement
                       }
                     >
@@ -2437,7 +2638,7 @@ export default function GamePage() {
                     className="upgrade-open-button"
                     type="button"
                     onClick={() => setIsUpgradeMenuOpen(true)}
-                    disabled={isAsyncCommitRecoveryActive}
+                    disabled={isAsyncActionBlocked}
                   >
                     <span>{upgradeActionLabel}</span>
                     <small>{upgradeActionMeta}</small>
@@ -2448,7 +2649,7 @@ export default function GamePage() {
                     onClick={() =>
                       dispatch({ type: 'SKIP_UPGRADES', playerId: activePlayer.id })
                     }
-                    disabled={isAsyncCommitRecoveryActive}
+                    disabled={isAsyncActionBlocked}
                   >
                     Move
                   </button>
@@ -2472,7 +2673,11 @@ export default function GamePage() {
                 <CupMemoryStrip
                   cups={activePlayer.cups}
                   selectedCup={selectedCup}
-                  onSelectCup={canControlActivePlayer ? selectCup : undefined}
+                  onSelectCup={
+                    canControlActivePlayer && !isOnlineProfilePending
+                      ? selectCup
+                      : undefined
+                  }
                   readyCupIndexes={readyCupIndexes}
                   label="Pour target cup"
                 />
@@ -2494,7 +2699,7 @@ export default function GamePage() {
                         onClick={() => pourIngredient(ingredient)}
                         disabled={
                           selectedCup === null ||
-                          isAsyncCommitRecoveryActive
+                          isAsyncActionBlocked
                         }
                         aria-label={
                           selectedCup === null
@@ -2507,7 +2712,7 @@ export default function GamePage() {
                       <button
                         type="button"
                         onClick={() => discardIngredient(ingredient)}
-                        disabled={isAsyncCommitRecoveryActive}
+                        disabled={isAsyncActionBlocked}
                         aria-label={`Discard ${ingredientLabel(ingredient)}`}
                       >
                         Discard
@@ -2524,7 +2729,7 @@ export default function GamePage() {
                         className="serve-order-button"
                         type="button"
                         onClick={() => fulfillOrder(match.cupIdx, match.order.id)}
-                        disabled={isAsyncCommitRecoveryActive}
+                        disabled={isAsyncActionBlocked}
                       >
                         {`Serve C${match.cupIdx + 1}: ${match.order.name}`}
                       </button>
@@ -2536,7 +2741,7 @@ export default function GamePage() {
                     className="primary-button"
                     type="button"
                     onClick={() => dispatch({ type: 'END_TURN', playerId: activePlayer.id })}
-                    disabled={activePlayer.hand.length > 0 || isAsyncCommitRecoveryActive}
+                    disabled={activePlayer.hand.length > 0 || isAsyncActionBlocked}
                   >
                     End turn
                   </button>
@@ -2578,7 +2783,7 @@ export default function GamePage() {
                   onClick={confirmMove}
                   disabled={
                     !movePreview?.canConfirm ||
-                    isAsyncCommitRecoveryActive
+                    isAsyncActionBlocked
                   }
                 >
                   Confirm move
@@ -2600,7 +2805,7 @@ export default function GamePage() {
                 dispatch({ type: 'DUMP_CUP', playerId: activePlayer.id, cupIdx })
               }
               phase={state.phase}
-              canInteract={canControlActivePlayer}
+              canInteract={canControlActivePlayer && !isOnlineProfilePending}
             />
           ))}
         </aside>

@@ -193,6 +193,8 @@ export default function GamePage() {
     !isAsyncRemoteGame || canControlPlayer(localPlayerId, setupPlacement?.playerId);
   const canControlActivePlayer =
     !isAsyncRemoteGame || canControlPlayer(localPlayerId, activePlayer?.id);
+  const isActiveTurnLocked =
+    isAsyncRemoteGame && state?.phase !== PHASES.SETUP_PLACEMENT && !canControlActivePlayer;
   const remoteTurnLockMessage =
     isAsyncRemoteGame && state?.phase === PHASES.SETUP_PLACEMENT && !canControlSetupPlacement
       ? `${setupPlacement?.player?.name ?? 'That player'} is placing now. Wait for their setup placement to sync.`
@@ -1867,59 +1869,59 @@ export default function GamePage() {
             className="action-panel move-control-panel"
             aria-label={`${activePlayer.name} move controls`}
           >
-            <div className="phase-tools move-tools">
-              {activePlayer.rushTokens > 0 && (
-                <div className="rush-stepper" aria-label="Rush spent">
-                  <span>Rush</span>
-                  <button
-                    type="button"
-                    onClick={() => updateRushSpent(rushSpent - 1)}
-                    disabled={
-                      rushSpent <= 0 ||
-                      isAsyncCommitRecoveryActive ||
-                      !canControlActivePlayer
-                    }
-                    aria-label="Spend one fewer Rush token"
-                  >
-                    -
-                  </button>
-                  <strong>{rushSpent}</strong>
-                  <button
-                    type="button"
-                    onClick={() => updateRushSpent(rushSpent + 1)}
-                    disabled={
-                      rushSpent >= activePlayer.rushTokens ||
-                      isAsyncCommitRecoveryActive ||
-                      !canControlActivePlayer
-                    }
-                    aria-label="Spend one more Rush token"
-                  >
-                    +
-                  </button>
-                  <small>{activePlayer.rushTokens} available</small>
-                </div>
-              )}
-              <div className="move-status-line">
-                <span>
-                  {movePreview?.stepsUsed ?? 0}/{movePreview?.maxSteps ?? 3} steps
-                </span>
-                <span aria-hidden="true">·</span>
-                <span>
-                  Collecting:{' '}
-                  <span className="inline-icons">
-                    {(movePreview?.gainedIngredients ?? []).length === 0
-                      ? 'none'
-                      : movePreview.gainedIngredients.map((ingredient, index) => (
-                          <IngredientIcon
-                            key={`${ingredient}-${index}`}
-                            ingredient={ingredient}
-                            small
-                          />
-                        ))}
-                  </span>
-                </span>
+            {isActiveTurnLocked ? (
+              <div className="phase-tools">
+                <div className="inline-warning">{remoteTurnLockMessage}</div>
               </div>
-            </div>
+            ) : (
+              <div className="phase-tools move-tools">
+                {activePlayer.rushTokens > 0 && (
+                  <div className="rush-stepper" aria-label="Rush spent">
+                    <span>Rush</span>
+                    <button
+                      type="button"
+                      onClick={() => updateRushSpent(rushSpent - 1)}
+                      disabled={rushSpent <= 0 || isAsyncCommitRecoveryActive}
+                      aria-label="Spend one fewer Rush token"
+                    >
+                      -
+                    </button>
+                    <strong>{rushSpent}</strong>
+                    <button
+                      type="button"
+                      onClick={() => updateRushSpent(rushSpent + 1)}
+                      disabled={
+                        rushSpent >= activePlayer.rushTokens || isAsyncCommitRecoveryActive
+                      }
+                      aria-label="Spend one more Rush token"
+                    >
+                      +
+                    </button>
+                    <small>{activePlayer.rushTokens} available</small>
+                  </div>
+                )}
+                <div className="move-status-line">
+                  <span>
+                    {movePreview?.stepsUsed ?? 0}/{movePreview?.maxSteps ?? 3} steps
+                  </span>
+                  <span aria-hidden="true">·</span>
+                  <span>
+                    Collecting:{' '}
+                    <span className="inline-icons">
+                      {(movePreview?.gainedIngredients ?? []).length === 0
+                        ? 'none'
+                        : movePreview.gainedIngredients.map((ingredient, index) => (
+                            <IngredientIcon
+                              key={`${ingredient}-${index}`}
+                              ingredient={ingredient}
+                              small
+                            />
+                          ))}
+                    </span>
+                  </span>
+                </div>
+              </div>
+            )}
           </section>
         )}
 
@@ -1938,7 +1940,13 @@ export default function GamePage() {
 
         {state.phase !== PHASES.MOVE && (
           <section className="action-panel" aria-label={`${activePlayer.name} turn controls`}>
-            {state.phase === PHASES.SETUP_PLACEMENT && setupPlacement && (
+            {isActiveTurnLocked && (
+              <div className="phase-tools">
+                <div className="inline-warning">{remoteTurnLockMessage}</div>
+              </div>
+            )}
+
+            {!isActiveTurnLocked && state.phase === PHASES.SETUP_PLACEMENT && setupPlacement && (
               <div className="phase-tools setup-placement-tools">
                 <div className="phase-summary">
                   <span className="phase-kicker">Setup placement</span>
@@ -1981,7 +1989,7 @@ export default function GamePage() {
               </div>
             )}
 
-            {state.phase === PHASES.UPGRADE && (
+            {!isActiveTurnLocked && state.phase === PHASES.UPGRADE && (
               <div className="phase-tools">
                 <div className="phase-summary">
                   <span className="phase-kicker">Start of turn</span>
@@ -2002,15 +2010,12 @@ export default function GamePage() {
                     <strong>{activePlayer.rushTokens}</strong>
                   </span>
                 </div>
-                {!canControlActivePlayer && (
-                  <div className="inline-warning">{remoteTurnLockMessage}</div>
-                )}
                 <div className="upgrade-action-row">
                   <button
                     className="upgrade-open-button"
                     type="button"
                     onClick={() => setIsUpgradeMenuOpen(true)}
-                    disabled={isAsyncCommitRecoveryActive || !canControlActivePlayer}
+                    disabled={isAsyncCommitRecoveryActive}
                   >
                     <span>{upgradeActionLabel}</span>
                     <small>{upgradeActionMeta}</small>
@@ -2021,7 +2026,7 @@ export default function GamePage() {
                     onClick={() =>
                       dispatch({ type: 'SKIP_UPGRADES', playerId: activePlayer.id })
                     }
-                    disabled={isAsyncCommitRecoveryActive || !canControlActivePlayer}
+                    disabled={isAsyncCommitRecoveryActive}
                   >
                     Move
                   </button>
@@ -2029,7 +2034,7 @@ export default function GamePage() {
               </div>
             )}
 
-            {state.phase === PHASES.POUR && (
+            {!isActiveTurnLocked && state.phase === PHASES.POUR && (
               <div className="phase-tools">
                 <div className="phase-summary">
                   <span className="phase-kicker">Pour and serve</span>
@@ -2049,9 +2054,6 @@ export default function GamePage() {
                   readyCupIndexes={readyCupIndexes}
                   label="Pour target cup"
                 />
-                {!canControlActivePlayer && (
-                  <div className="inline-warning">{remoteTurnLockMessage}</div>
-                )}
                 <div className="hand-row" aria-label="Collected ingredients">
                   {activePlayer.hand.length === 0 && <span>No ingredients in hand</span>}
                   {activePlayer.hand.map((ingredient, index) => (
@@ -2070,8 +2072,7 @@ export default function GamePage() {
                         onClick={() => pourIngredient(ingredient)}
                         disabled={
                           selectedCup === null ||
-                          isAsyncCommitRecoveryActive ||
-                          !canControlActivePlayer
+                          isAsyncCommitRecoveryActive
                         }
                         aria-label={
                           selectedCup === null
@@ -2084,7 +2085,7 @@ export default function GamePage() {
                       <button
                         type="button"
                         onClick={() => discardIngredient(ingredient)}
-                        disabled={isAsyncCommitRecoveryActive || !canControlActivePlayer}
+                        disabled={isAsyncCommitRecoveryActive}
                         aria-label={`Discard ${ingredientLabel(ingredient)}`}
                       >
                         Discard
@@ -2101,7 +2102,7 @@ export default function GamePage() {
                         className="serve-order-button"
                         type="button"
                         onClick={() => fulfillOrder(match.cupIdx, match.order.id)}
-                        disabled={isAsyncCommitRecoveryActive || !canControlActivePlayer}
+                        disabled={isAsyncCommitRecoveryActive}
                       >
                         {`Serve C${match.cupIdx + 1}: ${match.order.name}`}
                       </button>
@@ -2113,11 +2114,7 @@ export default function GamePage() {
                     className="primary-button"
                     type="button"
                     onClick={() => dispatch({ type: 'END_TURN', playerId: activePlayer.id })}
-                    disabled={
-                      activePlayer.hand.length > 0 ||
-                      isAsyncCommitRecoveryActive ||
-                      !canControlActivePlayer
-                    }
+                    disabled={activePlayer.hand.length > 0 || isAsyncCommitRecoveryActive}
                   >
                     End turn
                   </button>
@@ -2127,15 +2124,12 @@ export default function GamePage() {
           </section>
         )}
 
-        {state.phase === PHASES.MOVE && (
+        {state.phase === PHASES.MOVE && !isActiveTurnLocked && (
           <section
             className="action-panel move-confirm-panel"
             aria-label={`${activePlayer.name} move confirmation`}
           >
             <div className="phase-tools move-confirm-tools">
-              {!canControlActivePlayer && (
-                <div className="inline-warning">{remoteTurnLockMessage}</div>
-              )}
               {movePreview?.error && (
                 <div className="inline-warning">
                   {movePreview.remainingSteps > 0
@@ -2152,7 +2146,7 @@ export default function GamePage() {
                 <button
                   type="button"
                   onClick={() => setPath([])}
-                  disabled={!canControlActivePlayer || path.length === 0}
+                  disabled={path.length === 0}
                 >
                   Clear
                 </button>
@@ -2162,8 +2156,7 @@ export default function GamePage() {
                   onClick={confirmMove}
                   disabled={
                     !movePreview?.canConfirm ||
-                    isAsyncCommitRecoveryActive ||
-                    !canControlActivePlayer
+                    isAsyncCommitRecoveryActive
                   }
                 >
                   Confirm move

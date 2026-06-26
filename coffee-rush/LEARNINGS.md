@@ -212,6 +212,11 @@
 - Action: Keep turn controls, ready-order actions, and reducer dispatches tied to `activePlayer`, but order station context and player panels from the local view player when a local seat is known.
 - Confidence: high
 
+**[2026-06-26] — Async off-turn action UI**
+- Observation: In async rooms, `GamePage` can render disabled active-player phase controls above the local player's station strip when `remoteSession.localPlayerId` differs from `activePlayer.id`.
+- Action: For non-setup async phases that the local seat cannot control, render only the existing turn-lock banner and keep the local cup/order context in `TurnBrief`.
+- Confidence: high
+
 ## Patterns and Preferences
 
 **[2026-06-24] — Setup placement UX**
@@ -257,6 +262,11 @@
 **[2026-06-26] — Rulebook phase boundaries**
 - Observation: The base rulebook and BGA split Pour Ingredients and Process Order into consecutive steps, so serving while collected ingredients remain unplaced is not rules-accurate even though `FULFILL_ORDER` currently runs during the app's combined pour phase.
 - Action: Treat serving as an after-pour boundary or require an empty hand before `FULFILL_ORDER`; keep upgrade activation limited to the beginning-of-turn upgrade step.
+- Confidence: high
+
+**[2026-06-26] — Penalty endgame threshold**
+- Observation: Reaching 5 total penalties sets `endTriggered` and starts final-turn handling; penalties are not an immediate loss condition and only subtract from final rating.
+- Action: When answering or implementing penalty behavior, distinguish the 5-penalty endgame trigger from final scoring/winner determination.
 - Confidence: high
 
 **[2026-06-26] — Ready-order affordance gating**

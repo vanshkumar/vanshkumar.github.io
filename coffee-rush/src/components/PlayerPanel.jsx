@@ -15,7 +15,10 @@ export default function PlayerPanel({
   phase,
   canInteract = true,
 }) {
-  const completable = isActive && phase === 'pour' ? getCompletableOrders(player) : [];
+  const completable =
+    isActive && phase === 'pour' && player.hand.length === 0
+      ? getCompletableOrders(player)
+      : [];
   const canSelectCups = canInteract && isActive && phase === 'pour';
   const canDumpCups = canInteract && isActive && phase === 'pour';
 

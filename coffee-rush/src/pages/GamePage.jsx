@@ -201,7 +201,7 @@ export default function GamePage() {
         : '';
   const completableOrders = useMemo(
     () =>
-      activePlayer && state?.phase === PHASES.POUR
+      activePlayer && state?.phase === PHASES.POUR && activePlayer.hand.length === 0
         ? getCompletableOrders(activePlayer)
         : [],
     [activePlayer, state?.phase],
@@ -2036,7 +2036,7 @@ export default function GamePage() {
                   <h2>Resolve cups for {activePlayer.name}</h2>
                   <p>
                     {activePlayer.hand.length > 0
-                      ? 'Pour or discard every collected ingredient. Serve any exact cup matches when ready.'
+                      ? 'Pour or discard every collected ingredient before serving.'
                       : completableOrders.length > 0
                         ? 'Serve ready orders, then end the turn.'
                         : 'No ingredients remain in hand. End the turn when ready.'}

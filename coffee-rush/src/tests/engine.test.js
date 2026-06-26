@@ -345,6 +345,34 @@ describe('Coffee Rush engine', () => {
     expect(state.players[2].tabs[0]).toHaveLength(beforeP3 + 1);
   });
 
+  it('does not fulfill an order while collected ingredients remain unplaced', () => {
+    const state = finishSetup(setup(3));
+    const player = state.players[0];
+    const order = player.tabs[0][0];
+    const matchingCup = Object.entries(order.recipe).flatMap(([ingredient, count]) =>
+      Array(count).fill(ingredient),
+    );
+    const pourState = {
+      ...state,
+      phase: 'pour',
+      players: state.players.map((candidate) =>
+        candidate.id === player.id
+          ? { ...candidate, hand: ['water'], cups: [matchingCup, [], []] }
+          : candidate,
+      ),
+    };
+
+    const result = applyAction(pourState, {
+      type: 'FULFILL_ORDER',
+      playerId: player.id,
+      cupIdx: 0,
+      orderRef: order.id,
+    });
+
+    expect(result.error).toBe('Place or discard all collected ingredients before serving orders.');
+    expect(result.state).toBe(pourState);
+  });
+
   it('collapses duplicate ready-order actions for the same cup and recipe', () => {
     const firstOrder = {
       id: 'order_004',

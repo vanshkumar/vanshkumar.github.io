@@ -254,6 +254,16 @@
 - Action: Keep move-phase meeple selection on the board and avoid restoring separate `M1`/`M2` text controls in the action panel.
 - Confidence: high
 
+**[2026-06-26] — Rulebook phase boundaries**
+- Observation: The base rulebook and BGA split Pour Ingredients and Process Order into consecutive steps, so serving while collected ingredients remain unplaced is not rules-accurate even though `FULFILL_ORDER` currently runs during the app's combined pour phase.
+- Action: Treat serving as an after-pour boundary or require an empty hand before `FULFILL_ORDER`; keep upgrade activation limited to the beginning-of-turn upgrade step.
+- Confidence: high
+
+**[2026-06-26] — Ready-order affordance gating**
+- Observation: `GamePage` derives ready serve actions for the main action panel, while `PlayerPanel` independently calls `getCompletableOrders` for order-card ready badges.
+- Action: When changing serve eligibility, gate both derivation paths so the action panel and player/order context stay in sync.
+- Confidence: high
+
 ## What Has Failed
 
 **[2026-06-25] — Async draft recovery**

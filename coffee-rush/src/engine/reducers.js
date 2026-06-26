@@ -314,6 +314,11 @@ function fulfillOrder(state, action) {
   }
 
   const player = playerResult.value;
+
+  if (player.hand.length > 0) {
+    return { error: 'Place or discard all collected ingredients before serving orders.' };
+  }
+
   const cupIdx = Number(action.cupIdx);
   const cup = player.cups[cupIdx];
 

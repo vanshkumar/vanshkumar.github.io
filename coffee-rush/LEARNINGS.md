@@ -42,6 +42,11 @@
 - Action: Prefer compact game codes and badges in repeated panel surfaces, e.g. `2M`, `Diag`, `C1`, and `R`, while keeping order tabs two-column on phone-width layouts.
 - Confidence: high
 
+**[2026-06-26] — Order pressure UI**
+- Observation: Order storage uses `tabs[0]` as newest and `tabs[3]` as nearest penalty, but players scan the visible order area from highest pressure to lowest pressure.
+- Action: Keep reducer/storage tab indexes unchanged, and render order lanes through a shared urgency-first display order with compact pressure markers instead of visible tab numbers.
+- Confidence: high
+
 **[2026-06-20] — Ingredient icon UI**
 - Observation: CSS-only ingredient shapes become too abstract once reused at recipe-card and cup-token sizes.
 - Action: Render ingredients as inline SVG glyphs inside the existing circular token frame, and keep the SVG artwork scaled up for small variants.

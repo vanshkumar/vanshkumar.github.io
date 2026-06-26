@@ -867,19 +867,30 @@ button.cup-memory-tile {
   gap: 5px;
   align-content: space-between;
   border: 1px solid #d7c7af;
+  border-left-width: 4px;
+  border-left-color: transparent;
   background: #fff8ea;
   padding: 7px;
 }
 
+.order-goal-card-critical {
+  border-left-color: #b83f34;
+}
+
 .order-goal-ready {
   border-color: #27605a;
+  border-left-color: #27605a;
   box-shadow: inset 0 0 0 2px rgba(39, 96, 90, 0.14);
+}
+
+.order-goal-card-critical.order-goal-ready {
+  border-left-color: #b83f34;
 }
 
 .order-goal-meta {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
   color: #6e5e4a;
   font-size: 0.68rem;
   font-weight: 900;
@@ -918,6 +929,60 @@ button.cup-memory-tile {
   color: #6e5e4a;
   font-size: 0.8rem;
   font-weight: 800;
+}
+
+.order-pressure-marker {
+  width: 36px;
+  min-height: 20px;
+  display: inline-grid;
+  grid-template-columns: repeat(4, 5px);
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 2px 4px;
+  border: 1px solid #d7c7af;
+  background: rgba(255, 250, 242, 0.84);
+  color: #6e5e4a;
+}
+
+.order-pressure-marker-compact {
+  width: 30px;
+  min-height: 16px;
+  grid-template-columns: repeat(4, 4px);
+  gap: 2px;
+  padding: 2px 3px;
+}
+
+.order-pressure-pip {
+  width: 100%;
+  height: 11px;
+  border-radius: 999px;
+  background: rgba(43, 33, 27, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(43, 33, 27, 0.08);
+}
+
+.order-pressure-marker-compact .order-pressure-pip {
+  height: 9px;
+}
+
+.order-pressure-pip-filled {
+  background: currentColor;
+}
+
+.order-pressure-marker.pressure-1 {
+  color: #6e5e4a;
+}
+
+.order-pressure-marker.pressure-2 {
+  color: #8a7429;
+}
+
+.order-pressure-marker.pressure-3 {
+  color: #b16424;
+}
+
+.order-pressure-marker.pressure-4 {
+  color: #b83f34;
 }
 
 .players-column {
@@ -1170,6 +1235,21 @@ button.cup-memory-tile {
   min-width: 0;
   display: grid;
   gap: 6px;
+}
+
+.order-pressure-lane {
+  border-left: 4px solid transparent;
+  padding-left: 6px;
+}
+
+.order-pressure-lane-critical {
+  border-left-color: #b83f34;
+}
+
+.order-pressure-header {
+  display: flex;
+  align-items: center;
+  min-height: 22px;
 }
 
 .tab-orders {

@@ -1,6 +1,8 @@
 import { getCompletableOrders } from '../engine/selectors';
 import Cup from './Cup';
 import OrderCard from './OrderCard';
+import OrderPressureMarker from './OrderPressureMarker';
+import { getOrderPressureLabel, ORDER_PRESSURE_DISPLAY_ORDER } from './orderPressure';
 import RushTokenTracker from './RushTokenTracker';
 import UpgradeTray from './UpgradeTray';
 
@@ -44,34 +46,47 @@ export default function PlayerPanel({
         ))}
       </div>
 
-      <div className="tabs-grid">
-        {player.tabs.map((tab, tabIndex) => (
-          <div key={tabIndex} className="order-tab">
-            <span className="tab-label">Tab {tabIndex + 1}</span>
-            <div className="tab-orders">
-              {tab.length === 0 && <span className="empty-tab">clear</span>}
-              {tab.map((order) => {
-                const completionMatch = isActive
-                  ? completable.find((match) => match.order.id === order.id)
-                  : null;
-                const canComplete = Boolean(completionMatch);
-                return (
-                  <div
-                    key={order.id}
-                    className={`order-slot ${canComplete ? 'order-slot-ready' : ''}`}
-                  >
-                    <OrderCard
-                      order={order}
-                      compact
-                      ready={canComplete}
-                      selected={false}
-                    />
-                  </div>
-                );
-              })}
+      <div className="tabs-grid" aria-label="Orders by pressure, highest first">
+        {ORDER_PRESSURE_DISPLAY_ORDER.map((tabIndex) => {
+          const tab = player.tabs[tabIndex];
+          const pressure = tabIndex + 1;
+
+          return (
+            <div
+              key={tabIndex}
+              className={`order-tab order-pressure-lane pressure-${pressure} ${
+                tabIndex === 3 ? 'order-pressure-lane-critical' : ''
+              }`}
+              aria-label={getOrderPressureLabel(tabIndex)}
+            >
+              <span className="tab-label order-pressure-header">
+                <OrderPressureMarker tabIndex={tabIndex} labeled={false} />
+              </span>
+              <div className="tab-orders">
+                {tab.length === 0 && <span className="empty-tab">clear</span>}
+                {tab.map((order) => {
+                  const completionMatch = isActive
+                    ? completable.find((match) => match.order.id === order.id)
+                    : null;
+                  const canComplete = Boolean(completionMatch);
+                  return (
+                    <div
+                      key={order.id}
+                      className={`order-slot ${canComplete ? 'order-slot-ready' : ''}`}
+                    >
+                      <OrderCard
+                        order={order}
+                        compact
+                        ready={canComplete}
+                        selected={false}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

@@ -49,6 +49,11 @@
 - Action: Prefer `html { font-size: 110%; }` for this site's global readability scale unless a larger type treatment is explicitly requested.
 - Confidence: medium
 
+**[2026-06-26] — Top-level documentation orientation**
+- Observation: The top-level README, SCHEMA, and TECH_STACK docs are intended as minimal agent orientation; `SCHEMA.md` should describe content collections and vault sync, not every route or redirect.
+- Action: For documentation upkeep, fix factual drift such as app names or deploy status, but avoid expanding `SCHEMA.md` with non-collection route details unless they affect content editing.
+- Confidence: high
+
 ## What Has Failed
 
 **[2026-06-25] — Terrain question card vertical balance**

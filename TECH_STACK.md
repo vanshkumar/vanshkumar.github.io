@@ -10,7 +10,7 @@
 - React 18 + Vite sibling apps:
   - `coffee-rush/` - hot-seat board game app with a pure reducer engine.
   - `terminal-desires-ranker/` - static pairwise ranking app.
-  - `question-weather/` - local-only vault question browser/generator.
+  - `vault-weather/` - local-only vault question browser/generator.
 - Vitest and ESLint inside the Vite apps.
 - GitHub Actions deploys the root Astro build plus deployed sibling app builds
   to GitHub Pages.

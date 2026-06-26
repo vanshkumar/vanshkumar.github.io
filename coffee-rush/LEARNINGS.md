@@ -254,6 +254,11 @@
 - Action: Build reminder URLs from the current app origin/path with `room=ROOM` and `#/game`, and strip `auth`/`key` before encoding WhatsApp text.
 - Confidence: high
 
+**[2026-06-26] — WhatsApp reminder templates**
+- Observation: Country-specific silly reminder copy can use the encrypted roster country locally without exposing turn targets or countries to the relay.
+- Action: Keep reminder templates as static client data keyed by `US`/`UK`, require `{name}` and `{room}` placeholders, and interpolate after the room URL has been scrubbed of invite secrets.
+- Confidence: high
+
 **[2026-06-26] — WhatsApp mobile draft UX**
 - Observation: Opening `wa.me` drafts with `window.open(..., '_blank')` can leave an empty Chrome mobile tab after the WhatsApp app handoff.
 - Action: Navigate the current tab with `location.assign()` for WhatsApp drafts, and keep any `window.open` fallback targeted to `_self`.
@@ -297,6 +302,11 @@
 **[2026-06-26] — Async turn commit UX**
 - Observation: Successful async `END_TURN` commits already advance the visible turn state and may leave reducer pass-state copy available, so an extra `Turn committed.` `exportStatus` banner lingers as stale top-row confirmation text.
 - Action: Keep async commit progress and error statuses, but clear `exportStatus` after accepted `END_TURN` commits; reserve success copy such as `Setup synced.` for setup commits that do not otherwise visibly advance the turn.
+- Confidence: high
+
+**[2026-06-26] — Async commit failure behavior**
+- Observation: A failed async `END_TURN` commit keeps the locally advanced result state as a persisted async draft and creates commit-recovery state, so further actions are blocked until the user retries, replays from latest, or discards the draft.
+- Action: When explaining or changing end-turn networking, distinguish local optimistic advancement from server acceptance; only `accepted: true` with the expected head marks the turn synced.
 - Confidence: high
 
 **[2026-06-26] — Move meeple selection UX**

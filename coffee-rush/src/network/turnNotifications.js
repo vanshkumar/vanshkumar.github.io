@@ -1,3 +1,4 @@
+import turnReminderTemplates from '../data/turnReminderTemplates.json';
 import { normalizeRoomCode } from '../persistence/remoteSession';
 import {
   ASYNC_PROTOCOL_VERSION,
@@ -22,6 +23,8 @@ const PLAYER_ID_PATTERN = /^p[1-4]$/;
 const NATIONAL_DIGITS_PATTERN = /^\d{7,11}$/;
 const WHATSAPP_NUMBER_PATTERN = /^\d{8,15}$/;
 const DEFAULT_ROOM_LINK_URL = 'https://vanshkumar.net/coffee-rush/#/game';
+const DEFAULT_TURN_REMINDER_TEMPLATE =
+  '{name}, it is your turn in Coffee Rush. Open your room here: {room}';
 
 export function getWhatsAppCountryOption(country) {
   const normalizedCountry = String(country ?? '').trim().toUpperCase();
@@ -94,9 +97,65 @@ export function createTurnReminderRoomUrl(roomId, location = globalThis.window?.
   return url.toString();
 }
 
-export function createTurnReminderMessage(roomId, location = globalThis.window?.location) {
-  const roomUrl = createTurnReminderRoomUrl(roomId, location);
-  return `Your turn in Coffee Rush:\n${roomUrl}\nOpen your existing game and sync.`;
+function hasReminderPlaceholders(template) {
+  return (
+    typeof template === 'string' &&
+    template.includes('{name}') &&
+    template.includes('{room}')
+  );
+}
+
+export function getTurnReminderTemplates(country) {
+  const option = getWhatsAppCountryOption(country);
+  const templates = option ? turnReminderTemplates[option.country] : null;
+  return (Array.isArray(templates) ? templates : []).filter(hasReminderPlaceholders);
+}
+
+function pickTurnReminderTemplate(country, random = Math.random) {
+  const templates = getTurnReminderTemplates(country);
+  if (templates.length === 0) return DEFAULT_TURN_REMINDER_TEMPLATE;
+
+  const randomValue = Number(random?.());
+  const normalizedRandom =
+    Number.isFinite(randomValue) && randomValue >= 0 && randomValue < 1 ? randomValue : 0;
+  const index = Math.min(
+    templates.length - 1,
+    Math.floor(normalizedRandom * templates.length),
+  );
+  return templates[index];
+}
+
+function normalizeReminderPlayerName(playerName) {
+  const name = String(playerName ?? '').replace(/\s+/gu, ' ').trim();
+  return name || 'Barista';
+}
+
+function formatTurnReminderTemplate(template, { playerName, roomUrl }) {
+  return template
+    .replaceAll('{name}', normalizeReminderPlayerName(playerName))
+    .replaceAll('{room}', roomUrl);
+}
+
+export function createTurnReminderMessage(
+  options,
+  legacyLocation = globalThis.window?.location,
+) {
+  const normalizedOptions =
+    typeof options === 'object' && options !== null
+      ? options
+      : { roomId: options, location: legacyLocation };
+  const roomUrl = createTurnReminderRoomUrl(
+    normalizedOptions.roomId,
+    normalizedOptions.location ?? legacyLocation,
+  );
+  const template = pickTurnReminderTemplate(
+    normalizedOptions.country,
+    normalizedOptions.random,
+  );
+  return formatTurnReminderTemplate(template, {
+    playerName: normalizedOptions.playerName,
+    roomUrl,
+  });
 }
 
 export function createWhatsAppUrl(whatsappNumber, message) {
@@ -352,6 +411,7 @@ export function createAcceptedTurnReminder({
   resultState,
   commitResponse,
   roster,
+  random,
 }) {
   if (
     commitResponse?.accepted !== true ||
@@ -371,7 +431,12 @@ export function createAcceptedTurnReminder({
     return null;
   }
 
-  const message = createTurnReminderMessage(session.roomId);
+  const message = createTurnReminderMessage({
+    roomId: session.roomId,
+    playerName: nextPlayer.name,
+    country: contact.country,
+    random,
+  });
   const whatsappUrl = createWhatsAppUrl(contact.whatsappNumber, message);
   if (!whatsappUrl) return null;
 

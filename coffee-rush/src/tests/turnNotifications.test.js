@@ -10,6 +10,7 @@ import {
   encryptNotificationRoster,
   getLocalNotificationContact,
   getNotificationRosterDisplay,
+  getTurnReminderTemplates,
   hashNotificationRosterEnvelope,
   loadNotificationRoster,
   normalizeWhatsAppContact,
@@ -92,13 +93,20 @@ describe('turn notification helpers', () => {
     );
 
     const roomUrl = createTurnReminderRoomUrl('ab12cd');
-    const message = createTurnReminderMessage('ab12cd');
+    const message = createTurnReminderMessage({
+      roomId: 'ab12cd',
+      playerName: 'Ada',
+      country: 'US',
+      random: () => 0,
+    });
     const url = createWhatsAppUrl('14155551212', message);
 
     expect(roomUrl).toBe(
       'https://example.test/coffee-rush/?relay=wss%3A%2F%2Frelay.example.test%2Froom&room=AB12CD#/game',
     );
-    expect(message).toBe(`Your turn in Coffee Rush:\n${roomUrl}\nOpen your existing game and sync.`);
+    expect(message).toBe(
+      `Ada, your meeple's been parked in the drive-thru lane for an eternity. Pull forward: ${roomUrl}`,
+    );
     expect(message).not.toContain(RELAY_AUTH);
     expect(message).not.toContain(GAME_KEY);
     expect(message).not.toContain('auth=');
@@ -106,6 +114,36 @@ describe('turn notification helpers', () => {
     expect(url).toBe(
       `https://wa.me/14155551212?text=${encodeURIComponent(message)}`,
     );
+  });
+
+  it('loads country-specific reminder template banks with required placeholders', () => {
+    const usTemplates = getTurnReminderTemplates('US');
+    const ukTemplates = getTurnReminderTemplates('UK');
+
+    expect(usTemplates).toHaveLength(100);
+    expect(ukTemplates).toHaveLength(100);
+    expect(usTemplates.every((template) => template.includes('{name}'))).toBe(true);
+    expect(usTemplates.every((template) => template.includes('{room}'))).toBe(true);
+    expect(ukTemplates.every((template) => template.includes('{name}'))).toBe(true);
+    expect(ukTemplates.every((template) => template.includes('{room}'))).toBe(true);
+
+    const roomUrl = createTurnReminderRoomUrl('ab12cd');
+    expect(
+      createTurnReminderMessage({
+        roomId: 'ab12cd',
+        playerName: 'Ada',
+        country: 'US',
+        random: () => 0,
+      }),
+    ).toBe(usTemplates[0].replaceAll('{name}', 'Ada').replaceAll('{room}', roomUrl));
+    expect(
+      createTurnReminderMessage({
+        roomId: 'ab12cd',
+        playerName: 'Ben',
+        country: 'UK',
+        random: () => 0,
+      }),
+    ).toBe(ukTemplates[0].replaceAll('{name}', 'Ben').replaceAll('{room}', roomUrl));
   });
 
   it('opens WhatsApp drafts in the current tab to avoid blank mobile tabs', () => {
@@ -261,12 +299,15 @@ describe('turn notification helpers', () => {
         resultState,
         commitResponse: { accepted: true },
         roster,
+        random: () => 0,
       }),
     ).toMatchObject({
       playerId: 'p2',
       playerName: 'Ben',
       roomId: 'AB12CD',
-      message: `Your turn in Coffee Rush:\n${roomUrl}\nOpen your existing game and sync.`,
+      message: getTurnReminderTemplates('UK')[0]
+        .replaceAll('{name}', 'Ben')
+        .replaceAll('{room}', roomUrl),
     });
     expect(
       createAcceptedTurnReminder({

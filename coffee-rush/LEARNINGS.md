@@ -249,6 +249,11 @@
 - Action: For the first WhatsApp reminder pass, offer a country dropdown limited to `US (+1)` and `UK (+44)`, then normalize the entered national number before building the WhatsApp link.
 - Confidence: high
 
+**[2026-06-26] — WhatsApp reminder room links**
+- Observation: Turn reminder drafts can include a clickable hash-router room URL without making the message a full secret-bearing invite.
+- Action: Build reminder URLs from the current app origin/path with `room=ROOM` and `#/game`, and strip `auth`/`key` before encoding WhatsApp text.
+- Confidence: high
+
 **[2026-06-24] — Setup placement UX**
 - Observation: `PLACE_STARTING_MEEPLE` is an atomic reducer action that needs both `cellId` and `cupIdx`, but the setup UI can still match normal turns by staging the selected board cell locally before submitting the cup choice.
 - Action: Keep setup cup selection in the setup action panel and leave player-panel cups disabled during setup so players pick a board space first.

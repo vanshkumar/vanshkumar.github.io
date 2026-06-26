@@ -4,6 +4,7 @@ import {
   createAcceptedTurnReminder,
   createEmptyNotificationRoster,
   createTurnReminderMessage,
+  createTurnReminderRoomUrl,
   createWhatsAppUrl,
   decryptNotificationRoster,
   encryptNotificationRoster,
@@ -85,12 +86,22 @@ describe('turn notification helpers', () => {
   });
 
   it('builds WhatsApp URLs without room secrets in the message text', () => {
+    globalThis.window.location = new URL(
+      `https://example.test/coffee-rush/?auth=${RELAY_AUTH}&key=${GAME_KEY}&relay=wss://relay.example.test/room#/game?auth=${RELAY_AUTH}&key=${GAME_KEY}`,
+    );
+
+    const roomUrl = createTurnReminderRoomUrl('ab12cd');
     const message = createTurnReminderMessage('ab12cd');
     const url = createWhatsAppUrl('14155551212', message);
 
-    expect(message).toBe('Your turn in Coffee Rush room AB12CD. Open your existing game and sync.');
+    expect(roomUrl).toBe(
+      'https://example.test/coffee-rush/?relay=wss%3A%2F%2Frelay.example.test%2Froom&room=AB12CD#/game',
+    );
+    expect(message).toBe(`Your turn in Coffee Rush:\n${roomUrl}\nOpen your existing game and sync.`);
     expect(message).not.toContain(RELAY_AUTH);
     expect(message).not.toContain(GAME_KEY);
+    expect(message).not.toContain('auth=');
+    expect(message).not.toContain('key=');
     expect(url).toBe(
       `https://wa.me/14155551212?text=${encodeURIComponent(message)}`,
     );
@@ -219,6 +230,7 @@ describe('turn notification helpers', () => {
       ],
     };
     const actions = [{ type: 'END_TURN', playerId: 'p1' }];
+    const roomUrl = createTurnReminderRoomUrl(session.roomId);
 
     expect(
       createAcceptedTurnReminder({
@@ -232,7 +244,7 @@ describe('turn notification helpers', () => {
       playerId: 'p2',
       playerName: 'Ben',
       roomId: 'AB12CD',
-      message: 'Your turn in Coffee Rush room AB12CD. Open your existing game and sync.',
+      message: `Your turn in Coffee Rush:\n${roomUrl}\nOpen your existing game and sync.`,
     });
     expect(
       createAcceptedTurnReminder({

@@ -21,6 +21,7 @@ const HASH_PATTERN = /^[A-Za-z0-9_-]{32,96}$/;
 const PLAYER_ID_PATTERN = /^p[1-4]$/;
 const NATIONAL_DIGITS_PATTERN = /^\d{7,11}$/;
 const WHATSAPP_NUMBER_PATTERN = /^\d{8,15}$/;
+const DEFAULT_ROOM_LINK_URL = 'https://vanshkumar.net/coffee-rush/#/game';
 
 export function getWhatsAppCountryOption(country) {
   const normalizedCountry = String(country ?? '').trim().toUpperCase();
@@ -77,8 +78,25 @@ export function normalizeWhatsAppContact({
   };
 }
 
-export function createTurnReminderMessage(roomId) {
-  return `Your turn in Coffee Rush room ${normalizeRoomCode(roomId)}. Open your existing game and sync.`;
+export function createTurnReminderRoomUrl(roomId, location = globalThis.window?.location) {
+  let url;
+
+  try {
+    url = new URL(location?.href ?? DEFAULT_ROOM_LINK_URL);
+  } catch {
+    url = new URL(DEFAULT_ROOM_LINK_URL);
+  }
+
+  url.searchParams.set('room', normalizeRoomCode(roomId));
+  url.searchParams.delete('auth');
+  url.searchParams.delete('key');
+  url.hash = '#/game';
+  return url.toString();
+}
+
+export function createTurnReminderMessage(roomId, location = globalThis.window?.location) {
+  const roomUrl = createTurnReminderRoomUrl(roomId, location);
+  return `Your turn in Coffee Rush:\n${roomUrl}\nOpen your existing game and sync.`;
 }
 
 export function createWhatsAppUrl(whatsappNumber, message) {

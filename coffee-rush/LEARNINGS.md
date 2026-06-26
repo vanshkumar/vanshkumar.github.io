@@ -192,6 +192,11 @@
 - Action: In live async smoke harnesses, assert route, phase, room mode, and relay head from `localStorage` state instead of relying on `/coffee-rush/game` path checks or desktop-only visible status text.
 - Confidence: high
 
+**[2026-06-26] — Production Pages propagation**
+- Observation: Immediately after a Coffee Rush push, `vanshkumar.net/coffee-rush` can briefly serve an index/asset pairing where the referenced asset 404s, while the GitHub Pages origin has already moved to the new bundle.
+- Action: For production smoke checks, poll both `vanshkumar.net` and `vanshkumar.github.io` until their indexes reference the same fetchable asset before treating a missing asset as a deployment failure.
+- Confidence: medium
+
 **[2026-06-26] — Production reminder smoke**
 - Observation: The GitHub Pages workflow deploys the Coffee Rush frontend but does not deploy `coffee-rush/relay`, so new async sidecar endpoints remain unavailable until the Worker is deployed separately.
 - Action: Before live WhatsApp reminder smokes, deploy `coffee-rush/relay` with Wrangler, probe the production sidecar endpoint, and use a temporary Chrome remote-debugging profile for isolated host/peer browser contexts when the bundled Playwright browser is unavailable.

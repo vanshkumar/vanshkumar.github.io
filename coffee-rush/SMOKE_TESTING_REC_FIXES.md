@@ -18,7 +18,7 @@
 | P1 | Keep failed commits at a retry/replay boundary | Live Async Network Interruption On Commit / Fix 3 | Users need an explicit recovery path instead of continuing from a bad local base after `END_TURN` fails. |
 | P1 | Restore async draft Undo history correctly | Live Async Reload-During-Draft Pass With Undo Bug / Fix 1 | Reload-plus-Undo can corrupt the local draft by applying an undo state that does not match the saved draft actions. |
 | P1 | Reject or scrub query-string invite secrets | Live Async Bad Invite Pass / Fix 2 | Valid query-string secrets can leak through URLs, logs, history, or referrers; normal generated invites already use safer hash fragments. |
-| P1 | Treat existing-peer `ROOM_NOT_FOUND` as a closed-room terminal state | Live Async Host Close Pass / Fix 1 | After host close, cached board state still renders and can look playable even though the relay room is gone. |
+| P1 | Treat existing-peer `ROOM_NOT_FOUND` as a closed-room terminal state | Live Async Host Close Pass / Fix 1 | Status: Implemented 2026-06-26. After host close, cached board state no longer renders for existing async peers; the UI shows a closed-room panel instead. |
 | P2 | Prevent v2 invite fallback to live protocol after close | Live Async Host Close Pass / Fix 2 | Fresh old invites should show a closed/not-found async room message, not a misleading v1 "not hosted" state. |
 | P2 | Show a wrong-game-key decrypt failure message | Live Async Bad Invite Pass / Fix 1 | The app already fails safely; the UI needs clear recovery guidance and a stable visible assertion for smoke tests. |
 | P2 | Replace raw async network error copy | Live Async Network Interruption On Commit / Fix 4 | Better copy is useful once the recovery path preserves draft state reliably. |
@@ -239,6 +239,7 @@
 **1. Existing peer closed-room state**
 
 - Priority: P1.
+- Status: Implemented 2026-06-26 by treating cached v2 peer `ROOM_NOT_FOUND` responses as a closed-room terminal state, clearing the cached board/async room data, stopping repeat sync, and showing a closed-room panel with a back-to-setup action.
 - Observation: After the host closes the async room, an existing peer reload/sync gets `ROOM_NOT_FOUND` and shows the remote status as `error`, but it continues to render its cached local board and saved game state.
 - Risk: The relay is correctly deleted, so this is not a server-side stale-state leak. It is still confusing UX and can look like the closed room remains playable because the peer's cached `active-game` and `async-room-state` remain visible.
 - Recommended fix: Treat async `ROOM_NOT_FOUND` for an existing v2 session as a terminal closed-room state. Clear async room cache and active-game state for that room, or hide the board behind a closed-room panel with a `Leave` / `Back to setup` action.

@@ -43,6 +43,11 @@ import {
   createAsyncCommitRecovery,
   createAsyncCommitRecoveryFromDraft,
 } from '../network/asyncCommitRecovery';
+import {
+  ASYNC_ROOM_CLOSED_CONNECTION,
+  ASYNC_ROOM_CLOSED_MESSAGE,
+  shouldTreatAsyncRoomNotFoundAsClosed,
+} from '../network/asyncRoomClosure';
 import { hashState } from '../network/roomCrypto';
 import {
   REMOTE_MESSAGE_TYPES,
@@ -129,12 +134,14 @@ export default function GamePage() {
   const asyncCanonicalRef = useRef(null);
   const asyncDraftRef = useRef(null);
   const asyncFailedCommitRef = useRef(null);
+  const asyncClosedRoomRef = useRef(null);
   const asyncSyncInFlightRef = useRef(false);
   const [state, setState] = useState(() => loadGame());
   const [undoStack, setUndoStack] = useState(() => loadUndoStack());
   const [remoteSession, setRemoteSession] = useState(() => loadRemoteSession());
   const [asyncDraftActionCount, setAsyncDraftActionCount] = useState(0);
   const [asyncFailedCommit, setAsyncFailedCommit] = useState(null);
+  const [asyncClosedRoom, setAsyncClosedRoom] = useState(null);
   const [remoteStatus, setRemoteStatus] = useState(() => ({
     connection: loadRemoteSession() ? 'connecting' : 'offline',
     selfId: '',
@@ -162,6 +169,8 @@ export default function GamePage() {
   const remoteRoomKey = remoteSession
     ? `${remoteSession.protocol}:${remoteSession.mode}:${remoteSession.roomId}:${remoteSession.relayAuth}:${remoteSession.hostAuth}:${remoteSession.gameKey}`
     : '';
+  const isCurrentAsyncRoomClosed =
+    isAsyncRemoteGame && asyncClosedRoom?.roomId === remoteSession?.roomId;
   remoteSessionRef.current = remoteSession;
   remoteHandlersRef.current = {
     handleRemoteMessage,
@@ -362,6 +371,8 @@ export default function GamePage() {
     if (!session || session.protocol !== REMOTE_PROTOCOLS.ASYNC) return undefined;
 
     let disposed = false;
+    asyncClosedRoomRef.current = null;
+    setAsyncClosedRoom(null);
     const cached = loadAsyncRoomState(session.roomId);
     if (cached?.state) {
       asyncCanonicalRef.current = {
@@ -404,8 +415,10 @@ export default function GamePage() {
       asyncCanonicalRef.current = null;
       asyncDraftRef.current = null;
       asyncFailedCommitRef.current = null;
+      asyncClosedRoomRef.current = null;
       setAsyncDraftActionCount(0);
       setAsyncFailedCommit(null);
+      setAsyncClosedRoom(null);
     };
   }, [remoteRoomKey]);
 
@@ -416,19 +429,23 @@ export default function GamePage() {
           <section className="remote-waiting-panel">
             <h1>Coffee Rush</h1>
             <p>
-              {isAsyncRemoteGame
+              {isCurrentAsyncRoomClosed
+                ? `Room ${remoteSession.roomId} is closed or no longer exists.`
+                : isAsyncRemoteGame
                 ? `Syncing encrypted room ${remoteSession.roomId}.`
                 : `Joining room ${remoteSession.roomId}. Keep this screen open while the host sends the current game.`}
             </p>
             {remoteStatus.error && <div className="error-banner">{remoteStatus.error}</div>}
             <div className="button-row">
               <span className="remote-status-pill">
-                {remoteStatus.connection === 'error'
+                {isCurrentAsyncRoomClosed
+                  ? 'Room closed'
+                  : remoteStatus.connection === 'error'
                   ? 'Connection error'
                   : remoteStatus.connection}
               </span>
               <button type="button" onClick={leaveRemoteGame}>
-                Leave
+                {isCurrentAsyncRoomClosed ? 'Back to setup' : 'Leave'}
               </button>
             </div>
           </section>
@@ -595,6 +612,34 @@ export default function GamePage() {
     }
   }
 
+  function markAsyncRoomClosed(session) {
+    const closedRoom = { roomId: session.roomId };
+
+    asyncClosedRoomRef.current = closedRoom;
+    setAsyncClosedRoom(closedRoom);
+    asyncCanonicalRef.current = null;
+    asyncDraftRef.current = null;
+    clearAsyncFailedCommitState();
+    pendingActionIdRef.current = '';
+    clearGame();
+    undoStackRef.current = [];
+    stateRef.current = null;
+    setAsyncDraftActionCount(0);
+    setUndoStack([]);
+    setState(null);
+    setExportStatus('');
+    setPassTo('');
+    resetActionUi();
+    setError(ASYNC_ROOM_CLOSED_MESSAGE);
+    setRemoteStatus((current) => ({
+      ...current,
+      connection: ASYNC_ROOM_CLOSED_CONNECTION,
+      selfId: 'async',
+      error: ASYNC_ROOM_CLOSED_MESSAGE,
+      pendingActionId: '',
+    }));
+  }
+
   async function applyAsyncCommits(baseState, baseHead, commits) {
     const session = remoteSessionRef.current;
     if (!session) {
@@ -647,6 +692,16 @@ export default function GamePage() {
   } = {}) {
     const session = remoteSessionRef.current;
     if (!session || session.protocol !== REMOTE_PROTOCOLS.ASYNC) return;
+    if (asyncClosedRoomRef.current?.roomId === session.roomId) {
+      setRemoteStatus((current) => ({
+        ...current,
+        connection: ASYNC_ROOM_CLOSED_CONNECTION,
+        selfId: 'async',
+        error: ASYNC_ROOM_CLOSED_MESSAGE,
+        pendingActionId: '',
+      }));
+      return;
+    }
     if (asyncSyncInFlightRef.current) return;
 
     asyncSyncInFlightRef.current = true;
@@ -726,12 +781,29 @@ export default function GamePage() {
         pendingActionId: pendingActionIdRef.current,
       }));
     } catch (syncError) {
-      const cached = asyncCanonicalRef.current ?? loadAsyncRoomState(session.roomId);
+      const canonical = asyncCanonicalRef.current;
+      const cached = canonical ?? loadAsyncRoomState(session.roomId);
       const savedDraft = restoreDraft ? loadAsyncDraft(session.roomId) : null;
+      const currentDraft = asyncDraftRef.current ?? savedDraft;
+
+      if (
+        shouldTreatAsyncRoomNotFoundAsClosed({
+          syncError,
+          session,
+          canonical,
+          cached,
+          activeState: stateRef.current,
+          draft: currentDraft,
+        })
+      ) {
+        markAsyncRoomClosed(session);
+        return;
+      }
+
       const offlineDraftHydration = discardDraft
         ? null
         : createAsyncDraftHydrationUnit({
-            draft: asyncDraftRef.current ?? savedDraft,
+            draft: currentDraft,
             canonical: cached,
             fallbackUndoStack: undoStackRef.current,
           });

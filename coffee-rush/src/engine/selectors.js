@@ -168,9 +168,12 @@ export function getLegalSetupCells(state) {
 export function getCompletableOrders(player) {
   const matches = [];
   const seen = new Set();
+  const tabIndexesByUrgency = player.tabs.map((_, tabIdx) => tabIdx).reverse();
 
   player.cups.forEach((cup, cupIdx) => {
-    player.tabs.forEach((tab, tabIdx) => {
+    tabIndexesByUrgency.forEach((tabIdx) => {
+      const tab = player.tabs[tabIdx];
+
       tab.forEach((order) => {
         if (cupMatchesOrder(cup, order)) {
           const key = completableOrderKey(cupIdx, order);

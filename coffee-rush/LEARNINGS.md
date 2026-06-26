@@ -7,6 +7,11 @@
 - Action: Deduplicate ready-order actions by cup, order name, specialty flag, and recipe while preserving separate actions for separate matching cups.
 - Confidence: high
 
+**[2026-06-26] — Ready-order urgency**
+- Observation: `getCompletableOrders` keeps the first matching order per dedupe key, so tab traversal order determines which duplicate order a serve button targets.
+- Action: Traverse order tabs from most urgent to newest before deduping ready-order actions so identical matching orders default to the nearest-penalty card.
+- Confidence: high
+
 **[2026-06-24] — Mobile export downloads**
 - Observation: Mobile browsers can suppress one of multiple programmatic downloads triggered by the same header action.
 - Action: Package multi-file exports into one ZIP via `downloadFilesArchive` instead of clicking separate JSON and PNG downloads.

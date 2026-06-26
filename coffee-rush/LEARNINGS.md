@@ -177,6 +177,11 @@
 - Action: In live async smoke harnesses, assert route, phase, room mode, and relay head from `localStorage` state instead of relying on `/coffee-rush/game` path checks or desktop-only visible status text.
 - Confidence: high
 
+**[2026-06-26] — Production closed-room smoke**
+- Observation: Existing-peer closed-room verification does not need clipboard access or setup placement; the host's saved v3 remote session contains enough data to build a hash-fragment invite for an isolated peer, then `New` can close the unadvanced async room.
+- Action: For future closed-room production smokes, use isolated Chrome contexts, build the peer invite from `coffee-rush:remote-session:v3`, and assert the peer clears `coffee-rush:active-game:v2` plus matching async room-state keys after the post-close reload.
+- Confidence: high
+
 **[2026-06-25] — Mobile board automation**
 - Observation: Board cell test IDs mirror row/column-style `boardLayout.csv` IDs such as `cell-11` through `cell-44`, not sequential visual positions like `cell-1`.
 - Action: In browser smoke tests, pick current legal cells from `.board-cell.legal-cell` or `data-testid` values in the DOM instead of hard-coding sequential cell numbers.

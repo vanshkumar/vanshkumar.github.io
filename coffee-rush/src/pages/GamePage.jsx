@@ -31,6 +31,11 @@ import {
   isValidAsyncAction,
   submitTurnCommit,
 } from '../network/asyncRoom';
+import {
+  ASYNC_OFFLINE_DRAFT_CONNECTION,
+  createAsyncDraftHydrationUnit,
+  formatAsyncDraftConnectionLabel,
+} from '../network/asyncDraftRestore';
 import { hashState } from '../network/roomCrypto';
 import {
   REMOTE_MESSAGE_TYPES,
@@ -498,6 +503,7 @@ export default function GamePage() {
   }
 
   function setAsyncDraftState(baseHead, actions, draftState) {
+    const draftUndoStack = undoStackRef.current.slice();
     const nextDraft =
       actions.length > 0
         ? {
@@ -505,6 +511,7 @@ export default function GamePage() {
             baseHeadHash: baseHead.headHash,
             actions,
             state: draftState,
+            undoStack: draftUndoStack,
           }
         : null;
 
@@ -518,11 +525,27 @@ export default function GamePage() {
         baseHeadHash: nextDraft.baseHeadHash,
         actions,
         state: draftState,
-        undoStack: undoStackRef.current,
+        undoStack: draftUndoStack,
       });
     } else if (remoteSessionRef.current?.roomId) {
       clearAsyncDraft(remoteSessionRef.current.roomId);
     }
+  }
+
+  function applyAsyncDraftHydration(hydration) {
+    if (!hydration) return false;
+
+    if (hydration.canonical) {
+      asyncCanonicalRef.current = hydration.canonical;
+    }
+
+    asyncDraftRef.current = hydration.draft;
+    setAsyncDraftActionCount(hydration.draftActionCount);
+    stateRef.current = hydration.state;
+    undoStackRef.current = hydration.undoStack;
+    setState(hydration.state);
+    setUndoStack(hydration.undoStack);
+    return true;
   }
 
   function clearAsyncDraftState() {
@@ -637,19 +660,14 @@ export default function GamePage() {
 
       const savedDraft = restoreDraft ? loadAsyncDraft(session.roomId) : null;
       const currentDraft = discardDraft ? null : asyncDraftRef.current ?? savedDraft;
-      const canRestoreDraft =
-        currentDraft?.baseHeadIndex === canonical.headIndex &&
-        currentDraft?.baseHeadHash === canonical.headHash &&
-        currentDraft?.state &&
-        currentDraft.actions.every(isValidAsyncAction);
+      const draftHydration = createAsyncDraftHydrationUnit({
+        draft: currentDraft,
+        canonical,
+        fallbackUndoStack: undoStackRef.current,
+      });
 
-      if (canRestoreDraft) {
-        asyncDraftRef.current = currentDraft;
-        setAsyncDraftActionCount(currentDraft.actions.length);
-        stateRef.current = currentDraft.state;
-        undoStackRef.current = currentDraft.undoStack ?? [];
-        setState(currentDraft.state);
-        setUndoStack(undoStackRef.current);
+      if (draftHydration) {
+        applyAsyncDraftHydration(draftHydration);
       } else {
         if (currentDraft?.actions?.length) {
           setError('The room advanced before this draft was committed. Replay the turn from the latest state.');
@@ -669,6 +687,30 @@ export default function GamePage() {
         pendingActionId: pendingActionIdRef.current,
       }));
     } catch (syncError) {
+      const cached = asyncCanonicalRef.current ?? loadAsyncRoomState(session.roomId);
+      const savedDraft = restoreDraft ? loadAsyncDraft(session.roomId) : null;
+      const offlineDraftHydration = discardDraft
+        ? null
+        : createAsyncDraftHydrationUnit({
+            draft: asyncDraftRef.current ?? savedDraft,
+            canonical: cached,
+            fallbackUndoStack: undoStackRef.current,
+          });
+      if (offlineDraftHydration) {
+        applyAsyncDraftHydration(offlineDraftHydration);
+        setRemoteStatus((current) => ({
+          ...current,
+          connection: ASYNC_OFFLINE_DRAFT_CONNECTION,
+          selfId: 'async',
+          error: syncError?.message ?? 'Could not sync the async room.',
+          pendingActionId: pendingActionIdRef.current,
+        }));
+        if (!silent) {
+          setError(syncError?.message ?? 'Could not sync the async room.');
+        }
+        return;
+      }
+
       if (
         syncError?.code === 'ROOM_NOT_FOUND' &&
         session.mode === REMOTE_MODES.PEER &&
@@ -1391,7 +1433,9 @@ export default function GamePage() {
       ? 'Host'
       : 'Peer';
   const remoteStatusLabel =
-    remoteStatus.connection === 'connected'
+    isAsyncRemoteGame && remoteStatus.connection === ASYNC_OFFLINE_DRAFT_CONNECTION
+      ? formatAsyncDraftConnectionLabel(remoteStatus.connection, asyncDraftActionCount)
+      : remoteStatus.connection === 'connected'
       ? isAsyncRemoteGame
         ? asyncDraftActionCount > 0
           ? `${asyncDraftActionCount} draft`

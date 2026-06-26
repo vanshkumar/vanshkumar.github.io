@@ -442,6 +442,7 @@
 **2. Hydrate async draft state atomically after failed sync**
 
 - Priority: P0.
+- Status: Implemented 2026-06-26 with offline-draft hydration that restores saved draft actions, visible state, undo stack, and cached base head together when `/room/head` fails.
 - Observation: A bad-relay reload restored the visible game state but not the full draft metadata/count. The UI moved from `3 draft` before reload to `error`, then to `1 draft` after failed `END_TURN`.
 - Risk: Users can see an actionable turn surface while the app does not know the correct draft base/actions. This makes Undo, retry, and commit behavior unreliable.
 - Recommended fix: Treat canonical head, visible draft state, draft action list, and undo stack as one hydrated unit. If `syncAsyncRoom({ restoreDraft: true })` cannot fetch the canonical head, either keep the full saved draft metadata visible as `offline draft` or disable commit controls until canonical sync succeeds.

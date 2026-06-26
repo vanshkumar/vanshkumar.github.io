@@ -132,6 +132,11 @@
 - Action: Put future async commit-safety checks before `submitTurnCommit`, and cover restored-draft mismatches with real reducer actions plus a `fetch` spy that must remain unused.
 - Confidence: high
 
+**[2026-06-26] — Async offline draft restore**
+- Observation: `loadGame()` can restore the visible async draft state on reload before `/room/head` succeeds, while the draft action count and undo stack stay unset unless the saved async draft is hydrated separately.
+- Action: On `restoreDraft` sync failures, rehydrate saved async draft actions, visible state, undo stack, and cached base head together, and test status label, draft count, phase, active player, and undo depth as one assertion group.
+- Confidence: high
+
 **[2026-06-25] — Relay documentation**
 - Observation: `CLOUDFLARE_RELAY_PLAN.md` started as the protocol v1 WebSocket relay plan, so after async v2 landed it can read stale unless the current implementation status is stated before the original plan.
 - Action: Keep a front-loaded status section in relay docs when protocol defaults change, and point readers to v2 HTTP endpoints before the historical v1 architecture details.

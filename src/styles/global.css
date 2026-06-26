@@ -552,6 +552,28 @@ h3 {
   margin-top: 0.45rem;
 }
 
+.prose mjx-container {
+  color: var(--text);
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.02rem 0;
+}
+
+.prose mjx-container[jax="CHTML"][display="true"] {
+  margin: 1.25rem 0;
+  padding: 0.35rem 0;
+}
+
+.prose mjx-container[jax="CHTML"]:not([display="true"]) {
+  line-height: 0;
+}
+
+.prose blockquote mjx-container,
+.prose details.callout mjx-container {
+  color: inherit;
+}
+
 .prose blockquote,
 .prose details.callout {
   margin: 1.6rem 0;

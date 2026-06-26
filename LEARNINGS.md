@@ -32,6 +32,16 @@
 - Action: For global type increases, scale the root font size, convert fixed content/card/footer dimensions that frame text to rems, and keep `.site-footer` as a sibling of `.page` with its own centered `.site-footer-inner`.
 - Confidence: high
 
+**[2026-06-26] — Obsidian math rendering**
+- Observation: Astro emits Obsidian-style `$...$` and `$$...$$` math delimiters as plain prose text unless the shared content layout opts pages into a client-side math renderer.
+- Action: Gate MathJax loading through `BaseLayout` with an `enableMath` prop, enable it from `ContentLayout`, and keep MathJax sizing/overflow rules in the `.prose` CSS block.
+- Confidence: high
+
+**[2026-06-26] — Mixed root and sibling app changes**
+- Observation: Root-site tasks can share a worktree with unrelated sibling app changes such as `coffee-rush/LEARNINGS.md`.
+- Action: When committing root-site fixes, stage explicit root paths instead of broad `git add -A` so sibling app edits stay untouched.
+- Confidence: high
+
 ## Patterns and Preferences
 
 ## What Has Failed

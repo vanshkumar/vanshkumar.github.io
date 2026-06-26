@@ -229,6 +229,11 @@
 - Action: Prefer client-side or encrypted-room notification flows: browser-local turn detection, assisted SMS/WhatsApp sharing, or encrypted contact cards that are kept out of relay plaintext and exported game logs.
 - Confidence: medium
 
+**[2026-06-26] — WhatsApp reminder phone UX**
+- Observation: Requiring players to type country codes makes reminder setup unnecessarily annoying for the first target audience.
+- Action: For the first WhatsApp reminder pass, offer a country dropdown limited to `US (+1)` and `UK (+44)`, then normalize the entered national number before building the WhatsApp link.
+- Confidence: high
+
 **[2026-06-24] — Setup placement UX**
 - Observation: `PLACE_STARTING_MEEPLE` is an atomic reducer action that needs both `cellId` and `cupIdx`, but the setup UI can still match normal turns by staging the selected board cell locally before submitting the cup choice.
 - Action: Keep setup cup selection in the setup action panel and leave player-panel cups disabled during setup so players pick a board space first.

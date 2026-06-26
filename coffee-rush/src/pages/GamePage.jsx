@@ -918,13 +918,10 @@ export default function GamePage() {
       return { error: ASYNC_DRAFT_MISMATCH_MESSAGE };
     }
 
+    const isTurnCommit = actions.some((action) => action.type === 'END_TURN');
     const pendingId = `async-${Date.now()}`;
     setPendingActionId(pendingId);
-    setExportStatus(
-      actions.some((action) => action.type === 'END_TURN')
-        ? 'Committing turn.'
-        : 'Committing setup.',
-    );
+    setExportStatus(isTurnCommit ? 'Committing turn.' : 'Committing setup.');
 
     try {
       const response = await submitTurnCommit(session, baseHead, actions, resultState);
@@ -949,11 +946,7 @@ export default function GamePage() {
       undoStackRef.current = [];
       setUndoStack([]);
       clearPendingActionId(pendingId);
-      setExportStatus(
-        actions.some((action) => action.type === 'END_TURN')
-          ? 'Turn committed.'
-          : 'Setup synced.',
-      );
+      setExportStatus(isTurnCommit ? '' : 'Setup synced.');
       clearAsyncFailedCommitState();
       setRemoteStatus((current) => ({
         ...current,

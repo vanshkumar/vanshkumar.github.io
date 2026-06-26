@@ -224,6 +224,11 @@
 - Action: Keep player-panel upgrades as compact status indicators, and put upgrade purchasing descriptions/actions in the active player's upgrade-phase menu or modal.
 - Confidence: medium
 
+**[2026-06-26] — Upgrade activation banner UX**
+- Observation: Activating an upgrade immediately changes the phase to move and updates the upgrade tray, so reducer `lastMessage` copy like `<player> activated an upgrade.` adds top-row clutter without new gameplay information.
+- Action: Keep successful `ACTIVATE_UPGRADE` silent by clearing `lastMessage`; rely on phase and upgrade state for confirmation while preserving reducer errors.
+- Confidence: high
+
 **[2026-06-23] — Header utility UI**
 - Observation: The top-right game utility controls are low-frequency/debug-style actions, so icon-only buttons make them harder to scan than useful.
 - Action: Keep header utility actions as explicit text buttons, especially `Undo`, `Copy log`, `Download log + screenshot`, and `New`.
@@ -237,6 +242,11 @@
 **[2026-06-26] — Top status banner UX**
 - Observation: The top message banner can be driven by either reducer `lastMessage` or `GamePage` `exportStatus`, so transient turn/draft copy may come from different state sources.
 - Action: Remove unnecessary top-row status text at the source that sets it, e.g. clear `lastMessage` for no-op phase transitions and clear `exportStatus` for silent async draft saves.
+- Confidence: high
+
+**[2026-06-26] — Async turn commit UX**
+- Observation: Successful async `END_TURN` commits already advance the visible turn state and may leave reducer pass-state copy available, so an extra `Turn committed.` `exportStatus` banner lingers as stale top-row confirmation text.
+- Action: Keep async commit progress and error statuses, but clear `exportStatus` after accepted `END_TURN` commits; reserve success copy such as `Setup synced.` for setup commits that do not otherwise visibly advance the turn.
 - Confidence: high
 
 **[2026-06-26] — Move meeple selection UX**

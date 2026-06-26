@@ -163,7 +163,7 @@ function activateUpgrade(state, action) {
     state: {
       ...replacePlayer(state, updatedPlayer),
       phase: PHASES.MOVE,
-      lastMessage: `${player.name} activated an upgrade.`,
+      lastMessage: '',
     },
   };
 }

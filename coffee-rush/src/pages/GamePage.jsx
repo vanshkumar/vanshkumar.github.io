@@ -1036,7 +1036,7 @@ export default function GamePage() {
     }
 
     setAsyncDraftState(baseHead, nextActions, result.state);
-    setExportStatus('Draft saved on this device. End turn to sync.');
+    setExportStatus('');
     return result;
   }
 

@@ -1,7 +1,7 @@
 ---
 slug: how-can-i-produce-long-content
 title: How can I produce Long Content?
-lastmod: 2026-06-22
+lastmod: 2026-06-25
 date: 2026-06-09
 ---
 I have been thinking about applying the idea of the [Long Now](https://en.wikipedia.org/wiki/Long_Now_Foundation), inspired by the [About page of gwern.net](https://gwern.net/about#long-content):
@@ -16,7 +16,7 @@ The above is specific to essays/personal sites. Kevin Kelly [has advice](https:
 I’ve found it difficult to come up with good ideas! Some brainstorming:
 - Having kids is an obvious example; they will not be “complete” within a lifetime
 - My plan to start a microschool & teach my/friends’ kids will have a payoff that is not immediate (though a future “payoff” is not why I am doing it)
-- Building a community (akin to [Fractal](https://fractalnyc.com/fractalu)/[Socratica](https://socratica.info/))
+- Building a learning/creative coworking community akin to [Fractal](https://fractalnyc.com/fractalu)/[Socratica](https://socratica.info/)
 - Starting a [microgrants](https://github.com/nayafia/microgrants) program to fund interesting people/ideas
 - Improving public goods like parks
 

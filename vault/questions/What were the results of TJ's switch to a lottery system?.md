@@ -2,7 +2,7 @@
 slug: what-were-the-results-of-tjs-switch-to-a-lottery-system
 title: What were the results of TJ's switch to a lottery system?
 date: 2026-06-18
-lastmod: 2026-06-23
+lastmod: 2026-06-24
 ---
 A descriptive analysis of the number of National Merit Semifinalists, a measure of extreme right-tail PSAT scores:
 
@@ -10,7 +10,7 @@ A descriptive analysis of the number of National Merit Semifinalists, a measure 
 
 No idea why class of 2025 is such an outlier for the whole region! Perhaps the move to a digital PSAT (happened in fall 2023, which is when class of 2025 would have taken it)? COVID effects? Changes in how many kids chose to take the PSAT (not captured by enrollment)?
 
-But it does seem that the effect of this policy was a redistribution of right-tail outcomes rather than any net loss at the region-level. Class of 2027 and 2028 numbers will provide more evidence either way.
+But it does seem that the effect of this policy was primarily a redistribution of right-tail outcomes rather than any net loss at the region-level, assuming class 2025 was truly an outlier. Class of 2027 and 2028 numbers will provide more evidence either way.
 
 Below are my initial thoughts that led to doing this analysis in the first place.
 

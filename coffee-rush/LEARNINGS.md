@@ -224,6 +224,11 @@
 - Action: Gate ready-order highlights and serve buttons to the pour phase, and keep serving in one explicit action surface.
 - Confidence: high
 
+**[2026-06-26] — Top status banner UX**
+- Observation: The top message banner can be driven by either reducer `lastMessage` or `GamePage` `exportStatus`, so transient turn/draft copy may come from different state sources.
+- Action: Remove unnecessary top-row status text at the source that sets it, e.g. clear `lastMessage` for no-op phase transitions and clear `exportStatus` for silent async draft saves.
+- Confidence: high
+
 ## What Has Failed
 
 **[2026-06-25] — Async draft recovery**

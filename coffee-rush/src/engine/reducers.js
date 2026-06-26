@@ -122,7 +122,7 @@ function skipUpgrades(state, action) {
     state: {
       ...state,
       phase: PHASES.MOVE,
-      lastMessage: `${player.value.name} is ready to move.`,
+      lastMessage: '',
     },
   };
 }

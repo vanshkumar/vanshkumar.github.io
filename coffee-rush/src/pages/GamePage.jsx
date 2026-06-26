@@ -22,6 +22,8 @@ import {
 } from '../engine/selectors';
 import { PHASES } from '../engine/types';
 import {
+  ASYNC_DRAFT_MISMATCH_MESSAGE,
+  assertAsyncDraftReplayMatchesResult,
   closeAsyncRoom,
   decryptCommit,
   decryptSnapshot,
@@ -697,10 +699,55 @@ export default function GamePage() {
     }
   }
 
+  async function forceAsyncCanonicalReplay(message = ASYNC_DRAFT_MISMATCH_MESSAGE) {
+    const canonical = asyncCanonicalRef.current;
+
+    clearAsyncDraftState();
+    undoStackRef.current = [];
+    setUndoStack([]);
+    setExportStatus('');
+    resetActionUi();
+
+    if (canonical?.state) {
+      stateRef.current = canonical.state;
+      setState(canonical.state);
+    }
+
+    await syncAsyncRoom({ discardDraft: true, silent: true });
+
+    setError(message);
+    setRemoteStatus((current) => ({
+      ...current,
+      error: message,
+      pendingActionId: '',
+    }));
+  }
+
+  async function assertAsyncCommitIntegrity(actions, resultState, baseHead) {
+    const canonical = asyncCanonicalRef.current;
+
+    if (
+      !canonical?.state ||
+      canonical.headIndex !== baseHead?.headIndex ||
+      canonical.headHash !== baseHead?.headHash
+    ) {
+      throw new Error(ASYNC_DRAFT_MISMATCH_MESSAGE);
+    }
+
+    await assertAsyncDraftReplayMatchesResult(canonical.state, actions, resultState);
+  }
+
   async function commitAsyncActions(actions, resultState, baseHead) {
     const session = remoteSessionRef.current;
     if (!session) {
       return { error: 'No async room session is loaded.' };
+    }
+
+    try {
+      await assertAsyncCommitIntegrity(actions, resultState, baseHead);
+    } catch {
+      await forceAsyncCanonicalReplay();
+      return { error: ASYNC_DRAFT_MISMATCH_MESSAGE };
     }
 
     const pendingId = `async-${Date.now()}`;

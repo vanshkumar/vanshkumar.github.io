@@ -1,3 +1,4 @@
+import { applyAction } from '../engine/reducers';
 import { normalizeRoomCode } from '../persistence/remoteSession';
 import { getRelayUrl } from './roomSync';
 import {
@@ -14,6 +15,8 @@ export const ASYNC_PROTOCOL_VERSION = 2;
 export const ASYNC_ROOM_TTL_DAYS = 14;
 export const MAX_ASYNC_ACTIONS_PER_COMMIT = 40;
 export const MAX_DECRYPTED_PAYLOAD_BYTES = 512 * 1024;
+export const ASYNC_DRAFT_MISMATCH_MESSAGE =
+  'Your local draft no longer matches the synced room. Replay the turn from the latest state before committing.';
 
 const HASH_PATTERN = /^[A-Za-z0-9_-]{32,96}$/;
 const ACTION_FIELD_ALLOWLIST = {
@@ -276,6 +279,55 @@ export async function fetchAsyncRoomHead(session, knownHead = {}) {
   });
 
   return validateHeadResponse(response);
+}
+
+export async function assertAsyncDraftReplayMatchesResult(baseState, actions, resultState) {
+  if (!isValidGameStateShape(baseState)) {
+    throw new AsyncRoomError('Cannot verify the draft without a synced room state.', {
+      code: 'DRAFT_BASE_MISSING',
+    });
+  }
+
+  if (
+    !Array.isArray(actions) ||
+    actions.length === 0 ||
+    actions.length > MAX_ASYNC_ACTIONS_PER_COMMIT ||
+    !actions.every(isValidAsyncAction)
+  ) {
+    throw new AsyncRoomError('The completed turn has invalid room actions.');
+  }
+
+  if (!isValidGameStateShape(resultState)) {
+    throw new AsyncRoomError('The completed turn produced an invalid game state.');
+  }
+
+  let replayedState = baseState;
+
+  for (const action of actions) {
+    const result = applyAction(replayedState, action);
+    if (result.error) {
+      throw new AsyncRoomError(ASYNC_DRAFT_MISMATCH_MESSAGE, {
+        code: 'DRAFT_STATE_MISMATCH',
+      });
+    }
+    replayedState = result.state;
+  }
+
+  const [replayedStateHash, resultStateHash] = await Promise.all([
+    hashState(replayedState),
+    hashState(resultState),
+  ]);
+
+  if (replayedStateHash !== resultStateHash) {
+    throw new AsyncRoomError(ASYNC_DRAFT_MISMATCH_MESSAGE, {
+      code: 'DRAFT_STATE_MISMATCH',
+    });
+  }
+
+  return {
+    state: replayedState,
+    stateHash: resultStateHash,
+  };
 }
 
 export async function submitTurnCommit(session, baseHead, actions, resultState) {

@@ -1,6 +1,9 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { createInitialState } from '../engine/initialState';
+import { applyAction } from '../engine/reducers';
 import {
+  ASYNC_DRAFT_MISMATCH_MESSAGE,
+  assertAsyncDraftReplayMatchesResult,
   createAsyncEndpointUrl,
   createAsyncRoom,
   isValidAsyncAction,
@@ -14,6 +17,12 @@ import {
 const RELAY_AUTH = 'relay_auth_token';
 const HOST_AUTH = 'host_auth_token1';
 const GAME_KEY = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
+const SETUP_CELL_BY_MEEPLE = {
+  'p1-m1': 22,
+  'p1-m2': 32,
+  'p2-m1': 23,
+  'p2-m2': 33,
+};
 
 function createSession(overrides = {}) {
   return createRemoteSession({
@@ -24,6 +33,29 @@ function createSession(overrides = {}) {
     gameKey: GAME_KEY,
     ...overrides,
   });
+}
+
+function apply(state, action) {
+  const result = applyAction(state, action);
+  expect(result.error).toBeUndefined();
+  return result.state;
+}
+
+function finishSetup(state) {
+  let nextState = state;
+
+  while (nextState.phase === 'setupPlacement') {
+    const placement = nextState.setupPlacementQueue[0];
+    nextState = apply(nextState, {
+      type: 'PLACE_STARTING_MEEPLE',
+      playerId: placement.playerId,
+      meepleId: placement.meepleId,
+      cellId: SETUP_CELL_BY_MEEPLE[placement.meepleId],
+      cupIdx: 0,
+    });
+  }
+
+  return nextState;
 }
 
 describe('async room client', () => {
@@ -153,5 +185,61 @@ describe('async room client', () => {
       accepted: true,
       headIndex: 1,
     });
+  });
+
+  it('rejects restored async drafts whose actions do not replay to the visible commit result', async () => {
+    const canonicalState = finishSetup(
+      createInitialState({
+        playerNames: ['Ada', 'Ben'],
+        seed: 'async-draft-mismatch-test',
+      }),
+    );
+    const activePlayer = canonicalState.players.find(
+      (player) => player.id === canonicalState.activePlayerId,
+    );
+    const draftActions = [
+      { type: 'SKIP_UPGRADES', playerId: activePlayer.id },
+      {
+        type: 'MOVE',
+        playerId: activePlayer.id,
+        meepleId: activePlayer.meeples[0].id,
+        path: [21],
+        rushSpent: 0,
+      },
+    ];
+    const draftMoveState = draftActions.reduce(apply, canonicalState);
+    const discardAction = {
+      type: 'DISCARD_HAND',
+      playerId: activePlayer.id,
+      ingredientFromHand: draftMoveState.players[0].hand[0],
+    };
+    const draftState = apply(draftMoveState, discardAction);
+    const endTurnAction = { type: 'END_TURN', playerId: activePlayer.id };
+    const visibleResultState = apply(draftState, endTurnAction);
+
+    await expect(
+      assertAsyncDraftReplayMatchesResult(
+        canonicalState,
+        [...draftActions, discardAction, endTurnAction],
+        visibleResultState,
+      ),
+    ).resolves.toMatchObject({
+      state: visibleResultState,
+      stateHash: expect.any(String),
+    });
+
+    globalThis.fetch = vi.fn();
+
+    await expect(
+      assertAsyncDraftReplayMatchesResult(
+        canonicalState,
+        [endTurnAction],
+        visibleResultState,
+      ),
+    ).rejects.toMatchObject({
+      code: 'DRAFT_STATE_MISMATCH',
+      message: ASYNC_DRAFT_MISMATCH_MESSAGE,
+    });
+    expect(globalThis.fetch).not.toHaveBeenCalled();
   });
 });

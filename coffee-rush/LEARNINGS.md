@@ -102,9 +102,19 @@
 - Action: Set GitHub repo variable `COFFEE_RUSH_RELAY_URL` to `wss://coffee-rush-relay.vanshkumar95.workers.dev/room`, and include an allowed `Origin` header when smoke-testing the live WebSocket relay from Node.
 - Confidence: high
 
+**[2026-06-25] — Production async relay smoke**
+- Observation: GitHub Pages can serve the async v2 Coffee Rush bundle while the Cloudflare relay Worker is still on stale protocol v1 code; the stale relay returns `405 Method not allowed` without CORS headers for `/room/create?room=...`, blocking `Host online game`.
+- Action: Before full live browser testing, probe `OPTIONS` and an invalid `POST` to `https://coffee-rush-relay.vanshkumar95.workers.dev/room/create?room=ABC123` with `Origin: https://vanshkumar.net`; expect `204` CORS preflight and a protocol-2 validation error before continuing.
+- Confidence: high
+
 **[2026-06-25] — Local multiplayer smoke tests**
 - Observation: Host and peer tabs on the same browser origin share Coffee Rush localStorage, which masks real multi-device behavior during online-room testing.
 - Action: Use isolated browser contexts, such as a headless Chrome DevTools smoke harness, when verifying host/peer online flows; assert join, snapshot sync, peer-originated actions, host-originated actions, and matching saved game state.
+- Confidence: high
+
+**[2026-06-25] — Production async relay soak verification**
+- Observation: DevTools relay captures include CORS preflights and opaque encrypted/auth/hash base64 fields; naive request counts or substring scans can miscount commits and flag random ciphertext as plaintext gameplay.
+- Action: Count only `POST /room/commits` bodies, and scrub encrypted snapshot/commit plus auth/hash fields before scanning unencrypted relay JSON for gameplay keys.
 - Confidence: high
 
 **[2026-06-25] — Production-build smoke tests**
@@ -117,14 +127,39 @@
 - Action: Prefer protocol v2 rooms with shared invite secrets, encrypted completed-turn commits, stale-head rejection, and local-only draft undo; avoid plaintext server-side active-player enforcement unless cheating by invite holders becomes in scope.
 - Confidence: high
 
+**[2026-06-26] — Async commit integrity**
+- Observation: The async commit boundary can be regression-tested without a browser by replaying reducer actions from a saved canonical state and comparing `hashState` output before any relay `fetch` is allowed.
+- Action: Put future async commit-safety checks before `submitTurnCommit`, and cover restored-draft mismatches with real reducer actions plus a `fetch` spy that must remain unused.
+- Confidence: high
+
 **[2026-06-25] — Relay documentation**
 - Observation: `CLOUDFLARE_RELAY_PLAN.md` started as the protocol v1 WebSocket relay plan, so after async v2 landed it can read stale unless the current implementation status is stated before the original plan.
 - Action: Keep a front-loaded status section in relay docs when protocol defaults change, and point readers to v2 HTTP endpoints before the historical v1 architecture details.
 - Confidence: high
 
+**[2026-06-25] — Smoke fix prioritization**
+- Observation: `SMOKE_TESTING_REC_FIXES.md` preserves evidence by smoke pass, but implementation planning needs cross-pass priority ordering because related async draft and room-state issues are split across scenarios.
+- Action: Keep smoke-pass evidence sections intact, and add a front-loaded priority backlog plus per-fix `Priority:` lines when turning smoke recommendations into implementation order.
+- Confidence: high
+
 **[2026-06-25] — Relay allowed origins**
 - Observation: The published Coffee Rush app can run from `https://vanshkumar.net` after GitHub Pages redirects from `vanshkumar.github.io`, so allowing only the GitHub Pages origin makes the Cloudflare relay reject production WebSockets.
 - Action: Keep the relay `ALLOWED_ORIGINS` list in `relay/wrangler.toml` aligned with every production hostname plus active local smoke-test ports.
+- Confidence: high
+
+**[2026-06-25] — Async invite query secrets**
+- Observation: `parseInviteInput` accepts `auth` and `key` from query params, so a manually mutated query-string invite can join but sends room secrets in the initial GitHub Pages request URL instead of keeping them in the hash fragment.
+- Action: Prefer hash-only invite secrets; if query parsing remains for compatibility, scrub or reject query `auth`/`key` after parsing and treat query-secret variants as security smoke cases.
+- Confidence: high
+
+**[2026-06-25] — Production async browser smoke**
+- Observation: The live GitHub Pages app routes the game as `/coffee-rush/#/game`, and mobile-width remote status text can be hidden behind the Tools disclosure.
+- Action: In live async smoke harnesses, assert route, phase, room mode, and relay head from `localStorage` state instead of relying on `/coffee-rush/game` path checks or desktop-only visible status text.
+- Confidence: high
+
+**[2026-06-25] — Mobile board automation**
+- Observation: Board cell test IDs mirror row/column-style `boardLayout.csv` IDs such as `cell-11` through `cell-44`, not sequential visual positions like `cell-1`.
+- Action: In browser smoke tests, pick current legal cells from `.board-cell.legal-cell` or `data-testid` values in the DOM instead of hard-coding sequential cell numbers.
 - Confidence: high
 
 ## Patterns and Preferences
@@ -151,7 +186,27 @@
 
 ## What Has Failed
 
+**[2026-06-25] — Async draft recovery**
+- Observation: Reloading an async room with an uncommitted local draft while the relay URL is unreachable can restore the visible draft state without the full draft action list; after a failed `END_TURN`, restoring the normal relay showed `1 draft` for a state that included earlier local move/discard actions, and Undo briefly showed `synced` while still on an uncommitted pour state.
+- Action: When testing or fixing async recovery, verify the saved draft action list, visible game state, and canonical room head stay aligned across reload, failed sync, failed commit, Undo, and retry; avoid committing from a restored state unless the draft count/actions match the visible state.
+- Confidence: high
+
 **[2026-06-19] — Board affordance state**
 - Observation: Letting `Board` fall back to `getLegalDestinations` whenever a meeple is selected leaks movement highlights into setup/upgrade/pour phases.
 - Action: Derive board highlights by phase: setup cells only during setup placement, next-step cells only during move, and no movement highlights otherwise.
+- Confidence: high
+
+**[2026-06-25] — Async invite failure UX**
+- Observation: Live production wrong-game-key invites fail safely without saving `active-game` or async room state, but WebCrypto decrypt failure can leave `remoteStatus.error` empty so the peer UI only shows `Connection error`.
+- Action: Map async decrypt and validation exceptions to a friendly persistent message such as "Could not decrypt this room. Check the invite link." while keeping the game unloaded.
+- Confidence: high
+
+**[2026-06-25] — Async room close UX**
+- Observation: After the host closes a live async room, an existing peer sync shows `ROOM_NOT_FOUND` but keeps rendering its cached local game state, while a fresh old-invite peer falls back to protocol 1 and shows "Room has not been hosted yet."
+- Action: Treat async `ROOM_NOT_FOUND` after a v2 invite/session as a closed-room terminal state: clear async room cache or hide cached board state, avoid live-protocol fallback for confirmed v2 rooms, and show a room-closed/not-found message.
+- Confidence: high
+
+**[2026-06-25] — Async draft undo after reload**
+- Observation: In live production, a restored async draft with `SKIP_UPGRADES`, `MOVE`, and `DISCARD_HAND` can show Undo as enabled, but clicking it after reload applies the pre-`MOVE` state while the saved draft still contains `SKIP_UPGRADES` and `MOVE`.
+- Action: Keep async draft actions and restored undo history aligned one-to-one, or rebuild draft undo by replaying actions from the canonical head; include a reload-plus-Undo smoke path before declaring async draft restore safe.
 - Confidence: high

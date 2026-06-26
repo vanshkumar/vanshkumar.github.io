@@ -10,6 +10,10 @@ import UpgradeMenu from '../components/UpgradeMenu';
 import { UiIcon } from '../components/UiIcon';
 import { INGREDIENTS, ingredientLabel } from '../data/ingredients';
 import { getCell } from '../engine/board';
+import {
+  getLocalViewPlayer,
+  orderPlayersForLocalView,
+} from '../engine/playerViews';
 import { applyAction } from '../engine/reducers';
 import {
   getActivePlayer,
@@ -185,6 +189,10 @@ export default function GamePage() {
   const activePlayer = state ? getActivePlayer(state) : null;
   const setupPlacement = state ? getSetupPlacement(state) : null;
   const localPlayerId = remoteSession?.localPlayerId ?? '';
+  const localViewPlayer = useMemo(
+    () => (state ? getLocalViewPlayer(state, localPlayerId) : null),
+    [localPlayerId, state],
+  );
   const canControlSetupPlacement =
     !isAsyncRemoteGame || canControlPlayer(localPlayerId, setupPlacement?.playerId);
   const canControlActivePlayer =
@@ -206,6 +214,8 @@ export default function GamePage() {
     () => Array.from(new Set(completableOrders.map((match) => match.cupIdx))),
     [completableOrders],
   );
+  const localViewCompletableOrders =
+    localViewPlayer?.id === activePlayer?.id ? completableOrders : [];
   const selectedSetupCell =
     selectedSetupCellId === null ? null : getCell(selectedSetupCellId);
   const movePreview = useMemo(
@@ -216,14 +226,8 @@ export default function GamePage() {
     [path, rushSpent, selectedMeepleId, state],
   );
   const orderedPlayers = useMemo(
-    () =>
-      state && activePlayer
-        ? [
-            activePlayer,
-            ...state.players.filter((player) => player.id !== activePlayer.id),
-          ]
-        : [],
-    [activePlayer, state],
+    () => (state ? orderPlayersForLocalView(state, localPlayerId) : []),
+    [localPlayerId, state],
   );
 
   useEffect(() => {
@@ -1860,11 +1864,12 @@ export default function GamePage() {
       )}
 
       <div className={`game-layout phase-${state.phase}`}>
-        {state.phase !== PHASES.SETUP_PLACEMENT && (
+        {state.phase !== PHASES.SETUP_PLACEMENT && localViewPlayer && (
           <TurnBrief
-            player={activePlayer}
+            player={localViewPlayer}
             phase={state.phase}
-            completableOrders={completableOrders}
+            completableOrders={localViewCompletableOrders}
+            showCupsInPour={localViewPlayer.id !== activePlayer.id}
           />
         )}
 

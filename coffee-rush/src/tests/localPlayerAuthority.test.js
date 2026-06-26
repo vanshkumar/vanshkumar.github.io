@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { createInitialState } from '../engine/initialState';
 import { applyAction } from '../engine/reducers';
+import { getLegalSetupCells } from '../engine/selectors';
 import {
   canControlPlayer,
   getLocalActionError,
@@ -96,11 +97,12 @@ describe('local async player authority', () => {
 
     while (state.phase === 'setupPlacement') {
       const placement = state.setupPlacementQueue[0];
+      const [cellId] = getLegalSetupCells(state);
       state = apply(state, {
         type: 'PLACE_STARTING_MEEPLE',
         playerId: placement.playerId,
         meepleId: placement.meepleId,
-        cellId: placement.playerId === 'p2' ? 22 : 23,
+        cellId,
         cupIdx: 0,
       });
     }

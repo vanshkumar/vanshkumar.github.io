@@ -123,11 +123,13 @@ describe('remote session persistence', () => {
       roomId: 'AB12CD',
       relayAuth: '',
       gameKey: '',
+      localPlayerId: '',
     });
     expect(parseInviteInput(querySecretInvite.toString())).toEqual({
       roomId: 'AB12CD',
       relayAuth: '',
       gameKey: '',
+      localPlayerId: '',
     });
   });
 

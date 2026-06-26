@@ -197,6 +197,11 @@
 - Action: Generate per-player async invite links with `player=pN`, persist `localPlayerId`, and gate both UI controls and local dispatch by `action.playerId` for every async setup/turn phase.
 - Confidence: high
 
+**[2026-06-26] — Local player station view**
+- Observation: `GamePage` has two separate player concepts in remote games: the active turn player for legal actions, and `remoteSession.localPlayerId` for the browser's pinned cups/orders view.
+- Action: Keep turn controls, ready-order actions, and reducer dispatches tied to `activePlayer`, but order station context and player panels from the local view player when a local seat is known.
+- Confidence: high
+
 ## Patterns and Preferences
 
 **[2026-06-24] — Setup placement UX**

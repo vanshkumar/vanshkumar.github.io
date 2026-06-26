@@ -385,6 +385,23 @@ export function createAcceptedTurnReminder({
 }
 
 export function openWhatsAppDraft(whatsappUrl, windowObject = globalThis.window) {
-  const opened = windowObject.open?.(whatsappUrl, '_blank', 'noopener,noreferrer');
+  const url = String(whatsappUrl ?? '').trim();
+  if (!url || !windowObject) return false;
+
+  try {
+    if (typeof windowObject.location?.assign === 'function') {
+      windowObject.location.assign(url);
+      return true;
+    }
+
+    if (windowObject.location && 'href' in windowObject.location) {
+      windowObject.location.href = url;
+      return true;
+    }
+  } catch {
+    // Fall through to window.open for test doubles or locked-down browsers.
+  }
+
+  const opened = windowObject.open?.(url, '_self');
   return Boolean(opened);
 }

@@ -254,6 +254,11 @@
 - Action: Build reminder URLs from the current app origin/path with `room=ROOM` and `#/game`, and strip `auth`/`key` before encoding WhatsApp text.
 - Confidence: high
 
+**[2026-06-26] — WhatsApp mobile draft UX**
+- Observation: Opening `wa.me` drafts with `window.open(..., '_blank')` can leave an empty Chrome mobile tab after the WhatsApp app handoff.
+- Action: Navigate the current tab with `location.assign()` for WhatsApp drafts, and keep any `window.open` fallback targeted to `_self`.
+- Confidence: high
+
 **[2026-06-24] — Setup placement UX**
 - Observation: `PLACE_STARTING_MEEPLE` is an atomic reducer action that needs both `cellId` and `cupIdx`, but the setup UI can still match normal turns by staging the selected board cell locally before submitting the cup choice.
 - Action: Keep setup cup selection in the setup action panel and leave player-panel cups disabled during setup so players pick a board space first.

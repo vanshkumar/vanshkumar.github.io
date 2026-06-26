@@ -41,6 +41,23 @@ function apply(state, action) {
   return result.state;
 }
 
+function serializePlaintextRelayFields(body) {
+  const scrubbed = { ...body };
+  [
+    'roomAuth',
+    'hostAuth',
+    'headHash',
+    'baseHeadHash',
+    'commitHash',
+    'initialSnapshot',
+    'encryptedCommit',
+    'encryptedSnapshot',
+  ].forEach((key) => {
+    if (key in scrubbed) scrubbed[key] = `[${key}]`;
+  });
+  return JSON.stringify(scrubbed);
+}
+
 function finishSetup(state) {
   let nextState = state;
 
@@ -117,7 +134,7 @@ describe('async room client', () => {
       requests.push({ url, options });
       const body = JSON.parse(options.body);
 
-      expect(JSON.stringify(body)).not.toContain('Ada');
+      expect(serializePlaintextRelayFields(body)).not.toContain('Ada');
       expect(body.initialSnapshot).toMatchObject({ v: 1, alg: 'A256GCM' });
 
       return Response.json({
@@ -153,7 +170,7 @@ describe('async room client', () => {
       const body = JSON.parse(options.body);
 
       expect(url).toContain('/room/commits?room=AB12CD');
-      expect(JSON.stringify(body)).not.toContain('PLACE_STARTING_MEEPLE');
+      expect(serializePlaintextRelayFields(body)).not.toContain('PLACE_STARTING_MEEPLE');
       expect(body.encryptedCommit).toMatchObject({ v: 1, alg: 'A256GCM' });
       expect(body.encryptedSnapshot).toMatchObject({ v: 1, alg: 'A256GCM' });
 

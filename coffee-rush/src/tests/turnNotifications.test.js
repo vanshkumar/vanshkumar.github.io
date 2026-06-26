@@ -13,6 +13,7 @@ import {
   hashNotificationRosterEnvelope,
   loadNotificationRoster,
   normalizeWhatsAppContact,
+  openWhatsAppDraft,
   saveNotificationRoster,
   upsertNotificationContact,
 } from '../network/turnNotifications';
@@ -105,6 +106,27 @@ describe('turn notification helpers', () => {
     expect(url).toBe(
       `https://wa.me/14155551212?text=${encodeURIComponent(message)}`,
     );
+  });
+
+  it('opens WhatsApp drafts in the current tab to avoid blank mobile tabs', () => {
+    const whatsappUrl = 'https://wa.me/14155551212?text=Coffee%20Rush';
+    const assign = vi.fn();
+    const open = vi.fn();
+
+    expect(openWhatsAppDraft(whatsappUrl, { location: { assign }, open })).toBe(true);
+
+    expect(assign).toHaveBeenCalledWith(whatsappUrl);
+    expect(open).not.toHaveBeenCalled();
+  });
+
+  it('falls back to same-tab window.open when location assignment is unavailable', () => {
+    const whatsappUrl = 'https://wa.me/14155551212?text=Coffee%20Rush';
+    const open = vi.fn(() => ({}));
+
+    expect(openWhatsAppDraft(whatsappUrl, { open })).toBe(true);
+
+    expect(open).toHaveBeenCalledWith(whatsappUrl, '_self');
+    expect(openWhatsAppDraft('', { open })).toBe(false);
   });
 
   it('encrypts and decrypts notification rosters without exposing plaintext in envelopes', async () => {

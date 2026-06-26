@@ -69,6 +69,9 @@ function createRestoredDraftFixture() {
 
   return {
     activePlayer,
+    afterSkip,
+    afterMove,
+    draftState,
     canonical: {
       headIndex: 4,
       headHash,
@@ -86,7 +89,8 @@ function createRestoredDraftFixture() {
 
 describe('async draft restore hydration', () => {
   it('keeps status, draft actions, visible state, and undo stack together offline', () => {
-    const { activePlayer, canonical, draft } = createRestoredDraftFixture();
+    const { activePlayer, afterSkip, afterMove, canonical, draft } =
+      createRestoredDraftFixture();
 
     const hydration = createAsyncDraftHydrationUnit({ draft, canonical });
 
@@ -103,6 +107,45 @@ describe('async draft restore hydration', () => {
     expect(hydration.state.phase).toBe(PHASES.POUR);
     expect(hydration.state.activePlayerId).toBe(activePlayer.id);
     expect(hydration.undoStack).toHaveLength(3);
+    expect(hydration.undoStack).toEqual([canonical.state, afterSkip, afterMove]);
+  });
+
+  it('rebuilds reload-plus-Undo history for skip, move, and discard drafts', () => {
+    const { activePlayer, afterSkip, afterMove, canonical, draft, draftState } =
+      createRestoredDraftFixture();
+    const staleDraft = {
+      ...draft,
+      undoStack: [canonical.state, afterSkip],
+    };
+
+    const hydration = createAsyncDraftHydrationUnit({
+      draft: staleDraft,
+      canonical,
+    });
+
+    expect(hydration.state).toEqual(draftState);
+    expect(hydration.draft.actions.map((action) => action.type)).toEqual([
+      'SKIP_UPGRADES',
+      'MOVE',
+      'DISCARD_HAND',
+    ]);
+    expect(hydration.undoStack).toEqual([canonical.state, afterSkip, afterMove]);
+
+    const previousState = hydration.undoStack[hydration.undoStack.length - 1];
+    const nextUndoStack = hydration.undoStack.slice(0, -1);
+    const nextDraftActions = hydration.draft.actions.slice(0, -1);
+    const restoredPlayer = previousState.players.find(
+      (player) => player.id === activePlayer.id,
+    );
+
+    expect(nextDraftActions.map((action) => action.type)).toEqual([
+      'SKIP_UPGRADES',
+      'MOVE',
+    ]);
+    expect(previousState).toEqual(afterMove);
+    expect(previousState.phase).toBe(PHASES.POUR);
+    expect(restoredPlayer.hand).toHaveLength(1);
+    expect(nextUndoStack).toEqual([canonical.state, afterSkip]);
   });
 
   it('rejects a saved draft when the cached canonical head is different', () => {

@@ -331,6 +331,7 @@
 **1. Restored async draft Undo history**
 
 - Priority: P1.
+- Status: Implemented 2026-06-26 with canonical-head replay during draft hydration plus reload-plus-Undo regression coverage for `SKIP_UPGRADES`, `MOVE`, and `DISCARD_HAND`.
 - Observation: In room `TJQT8F`, a restored draft with `SKIP_UPGRADES`, `MOVE`, and `DISCARD_HAND` showed Undo as enabled after reload. Clicking Undo changed the UI to `Turn 1 / Ada / move` with `2 draft`, hand length `0`, and saved draft actions `SKIP_UPGRADES`, `MOVE`. Expected behavior was to undo only `DISCARD_HAND`, leaving the UI in `pour` with the collected ingredient restored and two draft actions.
 - Risk: This can corrupt local uncommitted draft state after reload. It does not appear to leak data or send an unintended relay commit before `END_TURN`, but it can leave the user replaying from a state that no longer matches the visible draft count/actions.
 - Likely cause: `dispatchAsyncAction` applies the reducer action, then `setAsyncDraftState` persists `undoStackRef.current`. Because the undo stack is updated through React state in `applyAcceptedGameAction`, the persisted async draft can lag one undo entry behind the saved draft actions. In the failing probe, the saved draft had three actions but only two restored undo states, so Undo applied the pre-`MOVE` state while removing only the last draft action.

@@ -17,6 +17,11 @@
 - Action: Use the bundled Node runtime to invoke local tools directly, e.g. `node_modules/vitest/vitest.mjs`, `node_modules/eslint/bin/eslint.js`, and `node_modules/vite/bin/vite.js`.
 - Confidence: high
 
+**[2026-06-26] — Fresh worktree verification**
+- Observation: A fresh Coffee Rush Codex worktree can lack `node_modules`; the bundled `pnpm install --lockfile=false` installs enough dependencies for Vitest, ESLint, and Vite build, but can leave an untracked `pnpm-workspace.yaml` with esbuild allow-build metadata.
+- Action: Use the bundled `pnpm` only when dependencies are missing, delete any generated `pnpm-workspace.yaml` before committing, and run project tools through the bundled Node binary.
+- Confidence: medium
+
 **[2026-06-24] — UI verification**
 - Observation: In this environment, the Node-backed verifier can run ESLint and esbuild, but Vite/Rollup cannot load its native addon because macOS library validation rejects the Rollup `.node` binary.
 - Action: For visual checks when shell `node` is unavailable, build a temp esbuild bundle with CSV imports loaded as text, then serve it from `/private/tmp` with Python under localhost escalation.

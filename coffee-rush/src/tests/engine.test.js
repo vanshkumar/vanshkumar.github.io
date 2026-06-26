@@ -338,6 +338,20 @@ describe('Coffee Rush engine', () => {
     expect(state.players[0].cups[1]).toEqual([]);
   });
 
+  it('only dumps cups during the pour phase', () => {
+    const state = finishSetup(setup(2));
+    const player = state.players[0];
+
+    const result = applyAction(state, {
+      type: 'DUMP_CUP',
+      playerId: player.id,
+      cupIdx: 0,
+    });
+
+    expect(result.error).toBe('Cups can only be dumped during pour.');
+    expect(result.state).toBe(state);
+  });
+
   it('fulfills an order and draws catch-up cards at end turn', () => {
     let state = finishSetup(setup(3));
     const player = state.players[0];

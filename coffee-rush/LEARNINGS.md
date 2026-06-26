@@ -72,6 +72,11 @@
 - Action: Surface compact active-cup state inside the turn action panel during move and pour phases instead of relying only on the player panel.
 - Confidence: high
 
+**[2026-06-26] — Empty-cup controls**
+- Observation: `DUMP_CUP` already exists in the reducer and async action whitelist, but the only visible control was the small trash button in `PlayerPanel`, while the pour-phase `GamePage` action panel is the primary cup surface on mobile.
+- Action: Expose cup-emptying actions in the pour action panel near `CupMemoryStrip`; route them through `DUMP_CUP` instead of adding a separate mutation path.
+- Confidence: high
+
 **[2026-06-25] — Mobile phase ordering**
 - Observation: Phone-width turns need different first-screen priorities by phase; move needs cups/orders and meeple controls before the board, while pour/upgrade need action controls before board detail.
 - Action: Keep mobile game-layout children orderable by phase, and treat lower player panels as detail surfaces rather than the primary turn-planning surface.

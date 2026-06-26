@@ -2097,6 +2097,14 @@ export default function GamePage() {
     });
   }
 
+  function emptyCup(cupIdx) {
+    dispatch({
+      type: 'DUMP_CUP',
+      playerId: activePlayer.id,
+      cupIdx,
+    });
+  }
+
   function fulfillOrder(cupIdx, orderRef) {
     dispatch({
       type: 'FULFILL_ORDER',
@@ -2711,6 +2719,24 @@ export default function GamePage() {
                   readyCupIndexes={readyCupIndexes}
                   label="Pour target cup"
                 />
+                {activePlayer.cups.some((cup) => cup.length > 0) && (
+                  <div className="cup-empty-actions" aria-label="Empty cups">
+                    {activePlayer.cups.map((cup, index) => (
+                      <button
+                        key={index}
+                        className="empty-cup-button"
+                        type="button"
+                        onClick={() => emptyCup(index)}
+                        disabled={cup.length === 0 || isAsyncActionBlocked}
+                        aria-label={`Empty Cup ${index + 1}`}
+                        title={`Empty Cup ${index + 1}`}
+                      >
+                        <UiIcon name="trash" />
+                        <span>Empty C{index + 1}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
                 <div className="hand-row" aria-label="Collected ingredients">
                   {activePlayer.hand.length === 0 && <span>No ingredients in hand</span>}
                   {activePlayer.hand.map((ingredient, index) => (

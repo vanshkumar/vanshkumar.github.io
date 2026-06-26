@@ -1,7 +1,7 @@
 ---
 slug: do-i-want-to-do-a-phd
-title: "Do I want to do a PhD?"
-lastmod: 2026-06-09
+title: Do I want to do a PhD?
+lastmod: 2026-06-26
 date: 2026-05-27
 ---
 I have been playing with the idea of doing a PhD for a looong time. This note centralizes my thoughts on the topic.
@@ -51,7 +51,7 @@ This boil downs to external pressures to not be able to pursue the kind of quest
 
 On the former, this seems like a real possibility but probably is strongly dominated by your choice of advisor.
 
-On the latter, I am pointing at the notion that [[New ideas require thinking through things yourself before learning what others think]]. I also wonder if there is a homogenizing effect on the problems PhD students choose to work on? This is too speculative/premature to really take into account much though.
+On the latter, I am pointing at the notion that [[New ideas require thinking through things yourself before learning what others think]]. I also wonder if there is a homogenizing effect on the problems PhD students choose to work on? This would occur from osmosing a specific paradigm, [[The Structure Of Scientific Revolutions|a la Kuhn]]. This is too speculative/premature to really take into account much though.
 
 # Conclusion
 Continue doing independent research for now.

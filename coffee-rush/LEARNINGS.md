@@ -217,6 +217,11 @@
 - Action: For non-setup async phases that the local seat cannot control, render only the existing turn-lock banner and keep the local cup/order context in `TurnBrief`.
 - Confidence: high
 
+**[2026-06-26] — Exported playthrough replay**
+- Observation: Exported logs may include mid-pour order fulfillment actions from older or alternate play flows, while the current reducer/UI require `player.hand.length === 0` before `FULFILL_ORDER`.
+- Action: When auditing historical exports, report strict current-reducer failures separately from tab aging, penalty, and final-state replay checks that intentionally relax only the hand-empty fulfillment guard.
+- Confidence: high
+
 ## Patterns and Preferences
 
 **[2026-06-24] — Setup placement UX**

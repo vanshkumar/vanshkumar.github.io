@@ -16,6 +16,8 @@ export default function Board({
   onCellClick,
   movePreview,
   selectedSetupCellId,
+  canSelectSetupCell = true,
+  canSelectMoveCell = true,
 }) {
   const cells = getBoardView(state);
   const preview =
@@ -27,9 +29,9 @@ export default function Board({
     (preview?.nextCells ?? []).map((cell) => [Number(cell.cellId), cell]),
   );
   const legalDestinations =
-    state.phase === PHASES.SETUP_PLACEMENT
+    state.phase === PHASES.SETUP_PLACEMENT && canSelectSetupCell
       ? getLegalSetupCells(state)
-      : state.phase === PHASES.MOVE && preview
+      : state.phase === PHASES.MOVE && canSelectMoveCell && preview
         ? preview.nextCells.map((cell) => cell.cellId)
         : [];
 
@@ -91,7 +93,8 @@ export default function Board({
                     selectedMeepleId === meeple.id ? 'meeple-selected' : ''
                   }`;
                   const isSelectable =
-                    state.phase !== PHASES.MOVE || meeple.playerId === state.activePlayerId;
+                    state.phase !== PHASES.MOVE ||
+                    (canSelectMoveCell && meeple.playerId === state.activePlayerId);
 
                   if (!isSelectable) {
                     return (

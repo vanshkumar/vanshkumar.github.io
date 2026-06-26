@@ -14,6 +14,7 @@ import {
   getRoomCodeFromLocation,
   hasQueryInviteSecrets,
   loadRemoteSession,
+  normalizePlayerId,
   normalizeRoomCode,
   parseInviteInput,
   saveRemoteSession,
@@ -55,12 +56,19 @@ describe('remote session persistence', () => {
     ).toBe('ZZ9911');
     expect(
       buildInviteUrl(
-        { roomId: 'ab12cd', relayAuth: RELAY_AUTH, gameKey: GAME_KEY },
+        {
+          roomId: 'ab12cd',
+          relayAuth: RELAY_AUTH,
+          gameKey: GAME_KEY,
+          invitePlayerId: 'p2',
+        },
         new URL('https://example.test/coffee-rush/#/game'),
       ),
     ).toBe(
-      `https://example.test/coffee-rush/?room=AB12CD#/?auth=${RELAY_AUTH}&key=${GAME_KEY}`,
+      `https://example.test/coffee-rush/?room=AB12CD#/?auth=${RELAY_AUTH}&key=${GAME_KEY}&player=p2`,
     );
+    expect(normalizePlayerId(' P2 ')).toBe('p2');
+    expect(normalizePlayerId('p5')).toBe('');
   });
 
   it('creates deterministic six-character room codes with injectable randomness', () => {
@@ -75,22 +83,34 @@ describe('remote session persistence', () => {
 
   it('parses full invite URLs and compact invite tokens', () => {
     const inviteUrl = new URL(
-      `https://example.test/coffee-rush/?room=ab12cd#/?auth=${RELAY_AUTH}&key=${GAME_KEY}`,
+      `https://example.test/coffee-rush/?room=ab12cd#/?auth=${RELAY_AUTH}&key=${GAME_KEY}&player=p2`,
     );
 
     expect(getInviteFromLocation(inviteUrl)).toEqual({
       roomId: 'AB12CD',
       relayAuth: RELAY_AUTH,
       gameKey: GAME_KEY,
+      localPlayerId: 'p2',
     });
     expect(parseInviteInput(`ab12cd.${RELAY_AUTH}.${GAME_KEY}`)).toEqual({
       roomId: 'AB12CD',
       relayAuth: RELAY_AUTH,
       gameKey: GAME_KEY,
+      localPlayerId: '',
     });
     expect(formatInviteToken('ab12cd', RELAY_AUTH, GAME_KEY)).toBe(
       `AB12CD.${RELAY_AUTH}.${GAME_KEY}`,
     );
+    expect(
+      parseInviteInput(
+        `https://example.test/coffee-rush/?room=ab12cd#/?auth=${RELAY_AUTH}&key=${GAME_KEY}&player=p4`,
+      ),
+    ).toEqual({
+      roomId: 'AB12CD',
+      relayAuth: RELAY_AUTH,
+      gameKey: GAME_KEY,
+      localPlayerId: 'p4',
+    });
   });
 
   it('rejects invite secrets carried in query strings', () => {
@@ -139,6 +159,8 @@ describe('remote session persistence', () => {
       hostAuth: HOST_AUTH,
       gameKey: GAME_KEY,
       clientId: 'self',
+      localPlayerId: 'p1',
+      invitePlayerId: 'p2',
       protocol: REMOTE_PROTOCOLS.ASYNC,
       headIndex: 3,
       headHash: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
@@ -152,6 +174,8 @@ describe('remote session persistence', () => {
       hostAuth: HOST_AUTH,
       gameKey: GAME_KEY,
       clientId: 'self',
+      localPlayerId: 'p1',
+      invitePlayerId: 'p2',
       protocol: REMOTE_PROTOCOLS.ASYNC,
       headIndex: 3,
       headHash: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',

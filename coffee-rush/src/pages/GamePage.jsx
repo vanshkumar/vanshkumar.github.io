@@ -48,6 +48,10 @@ import {
   ASYNC_ROOM_CLOSED_MESSAGE,
   shouldTreatAsyncRoomNotFoundAsClosed,
 } from '../network/asyncRoomClosure';
+import {
+  canControlPlayer,
+  getLocalActionError,
+} from '../network/localPlayerAuthority';
 import { hashState } from '../network/roomCrypto';
 import {
   REMOTE_MESSAGE_TYPES,
@@ -167,7 +171,7 @@ export default function GamePage() {
   const isLiveRemoteHost = isRemoteHost && isLiveRemoteGame;
   const isLiveRemotePeer = isRemotePeer && isLiveRemoteGame;
   const remoteRoomKey = remoteSession
-    ? `${remoteSession.protocol}:${remoteSession.mode}:${remoteSession.roomId}:${remoteSession.relayAuth}:${remoteSession.hostAuth}:${remoteSession.gameKey}`
+    ? `${remoteSession.protocol}:${remoteSession.mode}:${remoteSession.roomId}:${remoteSession.relayAuth}:${remoteSession.hostAuth}:${remoteSession.gameKey}:${remoteSession.localPlayerId}`
     : '';
   const isCurrentAsyncRoomClosed =
     isAsyncRemoteGame && asyncClosedRoom?.roomId === remoteSession?.roomId;
@@ -180,6 +184,17 @@ export default function GamePage() {
 
   const activePlayer = state ? getActivePlayer(state) : null;
   const setupPlacement = state ? getSetupPlacement(state) : null;
+  const localPlayerId = remoteSession?.localPlayerId ?? '';
+  const canControlSetupPlacement =
+    !isAsyncRemoteGame || canControlPlayer(localPlayerId, setupPlacement?.playerId);
+  const canControlActivePlayer =
+    !isAsyncRemoteGame || canControlPlayer(localPlayerId, activePlayer?.id);
+  const remoteTurnLockMessage =
+    isAsyncRemoteGame && state?.phase === PHASES.SETUP_PLACEMENT && !canControlSetupPlacement
+      ? `${setupPlacement?.player?.name ?? 'That player'} is placing now. Wait for their setup placement to sync.`
+      : isAsyncRemoteGame && state?.phase !== PHASES.SETUP_PLACEMENT && !canControlActivePlayer
+        ? `It is ${activePlayer?.name ?? 'that player'}'s turn. Wait for their turn to sync.`
+        : '';
   const completableOrders = useMemo(
     () =>
       activePlayer && state?.phase === PHASES.POUR
@@ -971,6 +986,17 @@ export default function GamePage() {
       return { error: ASYNC_COMMIT_RECOVERY_MESSAGE };
     }
 
+    const localActionError = getLocalActionError(
+      stateRef.current,
+      remoteSessionRef.current?.localPlayerId,
+      action,
+    );
+
+    if (localActionError) {
+      setError(localActionError);
+      return { error: localActionError };
+    }
+
     if (pendingActionIdRef.current) {
       setError('Waiting for the room to accept the previous commit.');
       return { error: 'Waiting for the room to accept the previous commit.' };
@@ -1220,6 +1246,11 @@ export default function GamePage() {
       return;
     }
 
+    if (isAsyncRemoteGame && !canControlActivePlayer) {
+      setError(remoteTurnLockMessage);
+      return;
+    }
+
     setSelectedCup(cupIdx);
     setError('');
   }
@@ -1227,6 +1258,11 @@ export default function GamePage() {
   function selectMeeple(meepleId) {
     if (asyncFailedCommitRef.current) {
       setError(ASYNC_COMMIT_RECOVERY_MESSAGE);
+      return;
+    }
+
+    if (isAsyncRemoteGame && !canControlActivePlayer) {
+      setError(remoteTurnLockMessage);
       return;
     }
 
@@ -1415,10 +1451,19 @@ export default function GamePage() {
     }
   }
 
-  async function copyInviteLink() {
+  async function copyInviteLink(invitePlayerId = remoteSession?.invitePlayerId) {
     if (!remoteSession) return;
 
-    const inviteLink = createInviteLink(remoteSession);
+    const inviteSession = invitePlayerId
+      ? { ...remoteSession, invitePlayerId }
+      : remoteSession;
+    const inviteLink = createInviteLink(inviteSession);
+    const invitePlayer = stateRef.current
+      ? getPlayer(stateRef.current, invitePlayerId)
+      : null;
+    const copiedMessage = invitePlayer
+      ? `${invitePlayer.name} invite link copied.`
+      : 'Invite link copied.';
 
     try {
       if (navigator.clipboard?.writeText) {
@@ -1426,11 +1471,11 @@ export default function GamePage() {
       } else {
         copyTextFallback(inviteLink);
       }
-      setExportStatus('Invite link copied.');
+      setExportStatus(copiedMessage);
     } catch {
       try {
         copyTextFallback(inviteLink);
-        setExportStatus('Invite link copied.');
+        setExportStatus(copiedMessage);
       } catch {
         setExportStatus('Could not copy the private invite link.');
       }
@@ -1444,6 +1489,11 @@ export default function GamePage() {
     }
 
     if (setupPlacement) {
+      if (!canControlSetupPlacement) {
+        setError(remoteTurnLockMessage);
+        return;
+      }
+
       const cell = getCell(cellId);
 
       if (!cell || !getLegalSetupCells(state).includes(cell.id)) {
@@ -1458,6 +1508,11 @@ export default function GamePage() {
     }
 
     if (state.phase !== 'move' || !selectedMeepleId) return;
+    if (!canControlActivePlayer) {
+      setError(remoteTurnLockMessage);
+      return;
+    }
+
     let moveMeepleId = selectedMeepleId;
 
     if (path.length === 0) {
@@ -1493,6 +1548,11 @@ export default function GamePage() {
   function placeStartingIngredient(cupIdx) {
     if (!setupPlacement) return;
 
+    if (!canControlSetupPlacement) {
+      setError(remoteTurnLockMessage);
+      return;
+    }
+
     if (selectedSetupCellId === null) {
       setError('Choose a board space before choosing a cup.');
       return;
@@ -1508,6 +1568,11 @@ export default function GamePage() {
   }
 
   function confirmMove() {
+    if (!canControlActivePlayer) {
+      setError(remoteTurnLockMessage);
+      return;
+    }
+
     dispatch({
       type: 'MOVE',
       playerId: activePlayer.id,
@@ -1518,6 +1583,11 @@ export default function GamePage() {
   }
 
   function updateRushSpent(nextRushSpent) {
+    if (!canControlActivePlayer) {
+      setError(remoteTurnLockMessage);
+      return;
+    }
+
     const clamped = Math.min(
       activePlayer.rushTokens,
       Math.max(0, Number(nextRushSpent) || 0),
@@ -1651,6 +1721,29 @@ export default function GamePage() {
     isLiveRemotePeer ||
     isAsyncCommitRecoveryActive ||
     (isAsyncRemoteGame && (asyncDraftActionCount === 0 || Boolean(remoteStatus.pendingActionId)));
+  const invitePlayers =
+    isAsyncRemoteGame && isRemoteHost && state
+      ? state.players.filter((player) => player.id !== localPlayerId)
+      : [];
+  function renderInviteControls() {
+    return invitePlayers.length > 0 ? (
+      <div className="invite-actions">
+        {invitePlayers.map((player) => (
+          <button
+            key={player.id}
+            type="button"
+            onClick={() => copyInviteLink(player.id)}
+          >
+            Copy {player.name} invite
+          </button>
+        ))}
+      </div>
+    ) : (
+      <button type="button" onClick={() => copyInviteLink()}>
+        Copy invite
+      </button>
+    );
+  }
 
   return (
     <main className="game-page" ref={pageRef}>
@@ -1670,9 +1763,7 @@ export default function GamePage() {
               <span className="remote-status-pill">
                 {remoteModeLabel} {remoteSession.roomId} · {remoteStatusLabel}
               </span>
-              <button type="button" onClick={copyInviteLink}>
-                Copy invite
-              </button>
+              {renderInviteControls()}
             </>
           )}
           <span className="deck-counter">{state.deck.length} orders</span>
@@ -1709,9 +1800,7 @@ export default function GamePage() {
                   <span className="remote-status-pill">
                     {remoteModeLabel} {remoteSession.roomId} · {remoteStatusLabel}
                   </span>
-                  <button type="button" onClick={copyInviteLink}>
-                    Copy invite
-                  </button>
+                  {renderInviteControls()}
                 </>
               )}
               <span className="deck-counter">{state.deck.length} orders</span>
@@ -1798,7 +1887,7 @@ export default function GamePage() {
                       .join(' ')}
                     type="button"
                     onClick={() => selectMeeple(meeple.id)}
-                    disabled={isAsyncCommitRecoveryActive}
+                    disabled={isAsyncCommitRecoveryActive || !canControlActivePlayer}
                   >
                     {meepleLabel(meeple)}
                   </button>
@@ -1810,7 +1899,11 @@ export default function GamePage() {
                   <button
                     type="button"
                     onClick={() => updateRushSpent(rushSpent - 1)}
-                    disabled={rushSpent <= 0 || isAsyncCommitRecoveryActive}
+                    disabled={
+                      rushSpent <= 0 ||
+                      isAsyncCommitRecoveryActive ||
+                      !canControlActivePlayer
+                    }
                     aria-label="Spend one fewer Rush token"
                   >
                     -
@@ -1819,7 +1912,11 @@ export default function GamePage() {
                   <button
                     type="button"
                     onClick={() => updateRushSpent(rushSpent + 1)}
-                    disabled={rushSpent >= activePlayer.rushTokens || isAsyncCommitRecoveryActive}
+                    disabled={
+                      rushSpent >= activePlayer.rushTokens ||
+                      isAsyncCommitRecoveryActive ||
+                      !canControlActivePlayer
+                    }
                     aria-label="Spend one more Rush token"
                   >
                     +
@@ -1860,6 +1957,8 @@ export default function GamePage() {
           onCellClick={handleCellClick}
           movePreview={movePreview}
           selectedSetupCellId={selectedSetupCellId}
+          canSelectSetupCell={canControlSetupPlacement}
+          canSelectMoveCell={canControlActivePlayer}
         />
 
         {state.phase !== PHASES.MOVE && (
@@ -1869,17 +1968,23 @@ export default function GamePage() {
                 <div className="phase-summary">
                   <span className="phase-kicker">Setup placement</span>
                   <h2>
-                    {setupPlacement.player.name}, place{' '}
-                    {setupPlacement.meepleId.split('-')[1].toUpperCase()}
+                    {canControlSetupPlacement
+                      ? `${setupPlacement.player.name}, place ${setupPlacement.meepleId.split('-')[1].toUpperCase()}`
+                      : `Waiting for ${setupPlacement.player.name}`}
                   </h2>
                   <p>
-                    {selectedSetupCell
+                    {!canControlSetupPlacement
+                      ? `${setupPlacement.player.name} needs to place this starting barista before setup can continue.`
+                      : selectedSetupCell
                       ? `${ingredientLabel(
                           selectedSetupCell.ingredient,
                         )} selected from Cell ${selectedSetupCell.id}. Choose a cup for it.`
                       : 'Pick any open board space to collect its starting ingredient, then choose a cup.'}
                   </p>
                 </div>
+                {!canControlSetupPlacement && (
+                  <div className="inline-warning">{remoteTurnLockMessage}</div>
+                )}
                 <div className="cup-picker detailed-picker" aria-label="Starting ingredient cup">
                   {setupPlacement.player.cups.map((cup, index) => (
                     <button
@@ -1887,7 +1992,11 @@ export default function GamePage() {
                       className={selectedCup === index ? 'selected-tool' : ''}
                       type="button"
                       onClick={() => placeStartingIngredient(index)}
-                      disabled={!selectedSetupCell || isAsyncCommitRecoveryActive}
+                      disabled={
+                        !selectedSetupCell ||
+                        isAsyncCommitRecoveryActive ||
+                        !canControlSetupPlacement
+                      }
                     >
                       <span>Cup {index + 1}</span>
                       <small>{ingredientListLabel(cup)}</small>
@@ -1918,12 +2027,15 @@ export default function GamePage() {
                     <strong>{activePlayer.rushTokens}</strong>
                   </span>
                 </div>
+                {!canControlActivePlayer && (
+                  <div className="inline-warning">{remoteTurnLockMessage}</div>
+                )}
                 <div className="upgrade-action-row">
                   <button
                     className="upgrade-open-button"
                     type="button"
                     onClick={() => setIsUpgradeMenuOpen(true)}
-                    disabled={isAsyncCommitRecoveryActive}
+                    disabled={isAsyncCommitRecoveryActive || !canControlActivePlayer}
                   >
                     <span>{upgradeActionLabel}</span>
                     <small>{upgradeActionMeta}</small>
@@ -1934,7 +2046,7 @@ export default function GamePage() {
                     onClick={() =>
                       dispatch({ type: 'SKIP_UPGRADES', playerId: activePlayer.id })
                     }
-                    disabled={isAsyncCommitRecoveryActive}
+                    disabled={isAsyncCommitRecoveryActive || !canControlActivePlayer}
                   >
                     Move
                   </button>
@@ -1958,10 +2070,13 @@ export default function GamePage() {
                 <CupMemoryStrip
                   cups={activePlayer.cups}
                   selectedCup={selectedCup}
-                  onSelectCup={selectCup}
+                  onSelectCup={canControlActivePlayer ? selectCup : undefined}
                   readyCupIndexes={readyCupIndexes}
                   label="Pour target cup"
                 />
+                {!canControlActivePlayer && (
+                  <div className="inline-warning">{remoteTurnLockMessage}</div>
+                )}
                 <div className="hand-row" aria-label="Collected ingredients">
                   {activePlayer.hand.length === 0 && <span>No ingredients in hand</span>}
                   {activePlayer.hand.map((ingredient, index) => (
@@ -1978,7 +2093,11 @@ export default function GamePage() {
                         className="pour-button"
                         type="button"
                         onClick={() => pourIngredient(ingredient)}
-                        disabled={selectedCup === null || isAsyncCommitRecoveryActive}
+                        disabled={
+                          selectedCup === null ||
+                          isAsyncCommitRecoveryActive ||
+                          !canControlActivePlayer
+                        }
                         aria-label={
                           selectedCup === null
                             ? `Choose a cup before pouring ${ingredientLabel(ingredient)}`
@@ -1990,7 +2109,7 @@ export default function GamePage() {
                       <button
                         type="button"
                         onClick={() => discardIngredient(ingredient)}
-                        disabled={isAsyncCommitRecoveryActive}
+                        disabled={isAsyncCommitRecoveryActive || !canControlActivePlayer}
                         aria-label={`Discard ${ingredientLabel(ingredient)}`}
                       >
                         Discard
@@ -2007,7 +2126,7 @@ export default function GamePage() {
                         className="serve-order-button"
                         type="button"
                         onClick={() => fulfillOrder(match.cupIdx, match.order.id)}
-                        disabled={isAsyncCommitRecoveryActive}
+                        disabled={isAsyncCommitRecoveryActive || !canControlActivePlayer}
                       >
                         {`Serve C${match.cupIdx + 1}: ${match.order.name}`}
                       </button>
@@ -2019,7 +2138,11 @@ export default function GamePage() {
                     className="primary-button"
                     type="button"
                     onClick={() => dispatch({ type: 'END_TURN', playerId: activePlayer.id })}
-                    disabled={activePlayer.hand.length > 0 || isAsyncCommitRecoveryActive}
+                    disabled={
+                      activePlayer.hand.length > 0 ||
+                      isAsyncCommitRecoveryActive ||
+                      !canControlActivePlayer
+                    }
                   >
                     End turn
                   </button>
@@ -2035,6 +2158,9 @@ export default function GamePage() {
             aria-label={`${activePlayer.name} move confirmation`}
           >
             <div className="phase-tools move-confirm-tools">
+              {!canControlActivePlayer && (
+                <div className="inline-warning">{remoteTurnLockMessage}</div>
+              )}
               {movePreview?.error && (
                 <div className="inline-warning">
                   {movePreview.remainingSteps > 0
@@ -2048,14 +2174,22 @@ export default function GamePage() {
                 </span>
               )}
               <div className="button-row">
-                <button type="button" onClick={() => setPath([])} disabled={path.length === 0}>
+                <button
+                  type="button"
+                  onClick={() => setPath([])}
+                  disabled={!canControlActivePlayer || path.length === 0}
+                >
                   Clear
                 </button>
                 <button
                   className="primary-button"
                   type="button"
                   onClick={confirmMove}
-                  disabled={!movePreview?.canConfirm || isAsyncCommitRecoveryActive}
+                  disabled={
+                    !movePreview?.canConfirm ||
+                    isAsyncCommitRecoveryActive ||
+                    !canControlActivePlayer
+                  }
                 >
                   Confirm move
                 </button>
@@ -2076,6 +2210,7 @@ export default function GamePage() {
                 dispatch({ type: 'DUMP_CUP', playerId: activePlayer.id, cupIdx })
               }
               phase={state.phase}
+              canInteract={canControlActivePlayer}
             />
           ))}
         </aside>
@@ -2092,7 +2227,7 @@ export default function GamePage() {
 
       <UpgradeMenu
         player={activePlayer}
-        canActivate={canActivateUpgrade}
+        canActivate={canActivateUpgrade && canControlActivePlayer}
         isOpen={isUpgradeMenuOpen}
         onActivate={activateUpgrade}
         onClose={() => setIsUpgradeMenuOpen(false)}

@@ -96,6 +96,8 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
       relayAuth,
       hostAuth,
       gameKey,
+      localPlayerId: 'p1',
+      invitePlayerId: playerCount >= 2 ? 'p2' : '',
     });
 
     try {
@@ -152,6 +154,8 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
         roomId: invite.roomId,
         relayAuth: invite.relayAuth,
         gameKey: invite.gameKey,
+        localPlayerId: invite.localPlayerId || 'p2',
+        invitePlayerId: invite.localPlayerId || 'p2',
       }),
     );
     navigate('/game');

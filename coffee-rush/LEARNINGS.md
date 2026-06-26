@@ -187,6 +187,16 @@
 - Action: In browser smoke tests, pick current legal cells from `.board-cell.legal-cell` or `data-testid` values in the DOM instead of hard-coding sequential cell numbers.
 - Confidence: high
 
+**[2026-06-26] — Online invite UX**
+- Observation: `Host online game` creates the async room and immediately navigates to `/game`; the invite is copied from the game header or mobile Tools menu via `Copy invite`, not from the setup page.
+- Action: When explaining or testing online hosting, include the post-navigation `Copy invite` step and remember joiners can paste either the full invite URL or compact `ROOM.auth.key` token.
+- Confidence: high
+
+**[2026-06-26] — Async seat authority**
+- Observation: A shared async room secret lets browsers decrypt/sync the room but does not identify which player seat the browser owns, so setup and turn controls can be initiated for the wrong player unless the invite carries a local seat.
+- Action: Generate per-player async invite links with `player=pN`, persist `localPlayerId`, and gate both UI controls and local dispatch by `action.playerId` for every async setup/turn phase.
+- Confidence: high
+
 ## Patterns and Preferences
 
 **[2026-06-24] — Setup placement UX**

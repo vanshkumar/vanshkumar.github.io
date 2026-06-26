@@ -10,6 +10,7 @@ const SECRET_MAX_LENGTH = 128;
 const AES_KEY_TEXT_LENGTHS = new Set([22, 32, 43]);
 const HASH_PATTERN = /^[A-Za-z0-9_-]{32,96}$/;
 const QUERY_INVITE_SECRET_PARAMS = ['auth', 'key'];
+const PLAYER_ID_PATTERN = /^p[1-4]$/i;
 
 export const REMOTE_MODES = {
   LOCAL: 'local',
@@ -100,6 +101,11 @@ export function normalizeHeadHash(value) {
   return hash === '' || HASH_PATTERN.test(hash) ? hash : '';
 }
 
+export function normalizePlayerId(value) {
+  const playerId = String(value ?? '').trim().toLowerCase();
+  return PLAYER_ID_PATTERN.test(playerId) ? playerId : '';
+}
+
 function normalizeProtocol(value, fallback = REMOTE_PROTOCOLS.ASYNC) {
   if (Number(value) === REMOTE_PROTOCOLS.LIVE) return REMOTE_PROTOCOLS.LIVE;
   if (Number(value) === REMOTE_PROTOCOLS.ASYNC) return REMOTE_PROTOCOLS.ASYNC;
@@ -111,6 +117,17 @@ function normalizeHeadIndex(value) {
   return Number.isInteger(index) && index >= 0 ? index : 0;
 }
 
+function defaultLocalPlayerId(mode) {
+  if (mode === REMOTE_MODES.HOST) return 'p1';
+  if (mode === REMOTE_MODES.PEER) return 'p2';
+  return '';
+}
+
+function defaultInvitePlayerId(mode, localPlayerId) {
+  if (mode === REMOTE_MODES.HOST && localPlayerId === 'p1') return 'p2';
+  return '';
+}
+
 export function createRemoteSession({
   mode,
   roomId,
@@ -118,6 +135,8 @@ export function createRemoteSession({
   hostAuth = '',
   gameKey,
   clientId = '',
+  localPlayerId = '',
+  invitePlayerId = '',
   protocol = REMOTE_PROTOCOLS.ASYNC,
   headIndex = 0,
   headHash = '',
@@ -131,6 +150,11 @@ export function createRemoteSession({
     minLength: AUTH_SECRET_MIN_LENGTH,
   });
   const normalizedGameKey = normalizeGameKey(gameKey);
+  const normalizedLocalPlayerId =
+    normalizePlayerId(localPlayerId) || defaultLocalPlayerId(mode);
+  const normalizedInvitePlayerId =
+    normalizePlayerId(invitePlayerId) ||
+    defaultInvitePlayerId(mode, normalizedLocalPlayerId);
 
   if (![REMOTE_MODES.HOST, REMOTE_MODES.PEER].includes(mode)) {
     throw new Error('Remote session mode must be host or peer.');
@@ -157,6 +181,8 @@ export function createRemoteSession({
     hostAuth: normalizedHostAuth,
     gameKey: normalizedGameKey,
     clientId,
+    localPlayerId: normalizedLocalPlayerId,
+    invitePlayerId: normalizedInvitePlayerId,
     headIndex: normalizeHeadIndex(headIndex),
     headHash: normalizeHeadHash(headHash),
     roomCreatedAt,
@@ -191,6 +217,11 @@ export function loadRemoteSession() {
       minLength: AUTH_SECRET_MIN_LENGTH,
     });
     const gameKey = normalizeGameKey(parsed?.gameKey);
+    const localPlayerId =
+      normalizePlayerId(parsed?.localPlayerId) || defaultLocalPlayerId(mode);
+    const invitePlayerId =
+      normalizePlayerId(parsed?.invitePlayerId) ||
+      defaultInvitePlayerId(mode, localPlayerId);
 
     if (![REMOTE_MODES.HOST, REMOTE_MODES.PEER].includes(mode)) {
       return null;
@@ -216,6 +247,8 @@ export function loadRemoteSession() {
       hostAuth,
       gameKey,
       clientId: parsed.clientId ?? '',
+      localPlayerId,
+      invitePlayerId,
       headIndex: normalizeHeadIndex(parsed.headIndex),
       headHash: normalizeHeadHash(parsed.headHash),
       roomCreatedAt: parsed.roomCreatedAt ?? '',
@@ -283,6 +316,7 @@ export function parseInviteInput(value, baseLocation = window.location) {
       roomId: '',
       relayAuth: '',
       gameKey: '',
+      localPlayerId: '',
     };
   }
 
@@ -294,6 +328,7 @@ export function parseInviteInput(value, baseLocation = window.location) {
         minLength: AUTH_SECRET_MIN_LENGTH,
       }),
       gameKey: normalizeGameKey(tokenParts[2]),
+      localPlayerId: '',
     };
   }
 
@@ -302,6 +337,7 @@ export function parseInviteInput(value, baseLocation = window.location) {
       roomId: normalizeRoomCode(raw),
       relayAuth: '',
       gameKey: '',
+      localPlayerId: '',
     };
   }
 
@@ -316,12 +352,16 @@ export function parseInviteInput(value, baseLocation = window.location) {
         { minLength: AUTH_SECRET_MIN_LENGTH },
       ),
       gameKey: normalizeGameKey(hashParams.get('key')),
+      localPlayerId: normalizePlayerId(
+        hashParams.get('player') ?? url.searchParams.get('player'),
+      ),
     };
   } catch {
     return {
       roomId: normalizeRoomCode(raw),
       relayAuth: '',
       gameKey: '',
+      localPlayerId: '',
     };
   }
 }
@@ -334,6 +374,7 @@ export function getInviteFromLocation(location = window.location) {
       roomId: '',
       relayAuth: '',
       gameKey: '',
+      localPlayerId: '',
     };
   }
 }
@@ -356,7 +397,10 @@ export function getRoomCodeFromLocation(location = window.location) {
   return getInviteFromLocation(location).roomId;
 }
 
-export function buildInviteUrl({ roomId, relayAuth, gameKey }, location = window.location) {
+export function buildInviteUrl(
+  { roomId, relayAuth, gameKey, invitePlayerId },
+  location = window.location,
+) {
   const url = new URL(location.href);
   url.searchParams.set('room', normalizeRoomCode(roomId));
   const hashParams = new URLSearchParams();
@@ -365,6 +409,10 @@ export function buildInviteUrl({ roomId, relayAuth, gameKey }, location = window
     normalizeInviteSecret(relayAuth, { minLength: AUTH_SECRET_MIN_LENGTH }),
   );
   hashParams.set('key', normalizeGameKey(gameKey));
+  const normalizedInvitePlayerId = normalizePlayerId(invitePlayerId);
+  if (normalizedInvitePlayerId) {
+    hashParams.set('player', normalizedInvitePlayerId);
+  }
   url.hash = `#/?${hashParams.toString()}`;
   return url.toString();
 }

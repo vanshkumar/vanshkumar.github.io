@@ -73,6 +73,13 @@ h1 {
   justify-content: flex-end;
 }
 
+.invite-actions {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
 .setup-controls {
   display: grid;
   gap: 14px;
@@ -1559,10 +1566,15 @@ button.cup-memory-tile {
   }
 
   .mobile-utility-panel button,
+  .mobile-utility-panel .invite-actions,
   .mobile-utility-panel .deck-counter,
   .mobile-utility-panel .remote-status-pill {
     width: 100%;
     justify-content: center;
+  }
+
+  .mobile-utility-panel .invite-actions {
+    display: grid;
   }
 
   .deck-counter {

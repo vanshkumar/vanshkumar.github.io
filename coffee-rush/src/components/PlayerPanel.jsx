@@ -11,10 +11,11 @@ export default function PlayerPanel({
   onSelectCup,
   onDumpCup,
   phase,
+  canInteract = true,
 }) {
   const completable = isActive && phase === 'pour' ? getCompletableOrders(player) : [];
-  const canSelectCups = isActive && phase === 'pour';
-  const canDumpCups = isActive && phase === 'pour';
+  const canSelectCups = canInteract && isActive && phase === 'pour';
+  const canDumpCups = canInteract && isActive && phase === 'pour';
 
   return (
     <section className={`player-panel panel-${player.color} ${isActive ? 'active-panel' : ''}`}>

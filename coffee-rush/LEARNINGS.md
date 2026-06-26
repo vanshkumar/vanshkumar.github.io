@@ -265,8 +265,8 @@
 - Confidence: high
 
 **[2026-06-26] — WhatsApp mobile draft UX**
-- Observation: Opening `wa.me` drafts with `window.open(..., '_blank')` can leave an empty Chrome mobile tab after the WhatsApp app handoff.
-- Action: Navigate the current tab with `location.assign()` for WhatsApp drafts, and keep any `window.open` fallback targeted to `_self`.
+- Observation: Navigating the current game tab to `wa.me` preserves the WhatsApp handoff but strands the player away from Coffee Rush.
+- Action: Open WhatsApp drafts with `window.open(..., '_blank', 'noopener,noreferrer')`; accept the possible empty mobile handoff tab rather than replacing the game tab, and do not fall back to `_self`.
 - Confidence: high
 
 **[2026-06-24] — Setup placement UX**

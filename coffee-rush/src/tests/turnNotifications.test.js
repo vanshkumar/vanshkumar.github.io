@@ -146,24 +146,26 @@ describe('turn notification helpers', () => {
     ).toBe(ukTemplates[0].replaceAll('{name}', 'Ben').replaceAll('{room}', roomUrl));
   });
 
-  it('opens WhatsApp drafts in the current tab to avoid blank mobile tabs', () => {
+  it('opens WhatsApp drafts in a new tab so the game stays visible', () => {
     const whatsappUrl = 'https://wa.me/14155551212?text=Coffee%20Rush';
     const assign = vi.fn();
-    const open = vi.fn();
+    const open = vi.fn(() => ({}));
 
     expect(openWhatsAppDraft(whatsappUrl, { location: { assign }, open })).toBe(true);
 
-    expect(assign).toHaveBeenCalledWith(whatsappUrl);
-    expect(open).not.toHaveBeenCalled();
+    expect(open).toHaveBeenCalledWith(whatsappUrl, '_blank', 'noopener,noreferrer');
+    expect(assign).not.toHaveBeenCalled();
   });
 
-  it('falls back to same-tab window.open when location assignment is unavailable', () => {
+  it('does not navigate the current tab when a WhatsApp draft cannot open', () => {
     const whatsappUrl = 'https://wa.me/14155551212?text=Coffee%20Rush';
-    const open = vi.fn(() => ({}));
+    const assign = vi.fn();
+    const open = vi.fn(() => null);
 
-    expect(openWhatsAppDraft(whatsappUrl, { open })).toBe(true);
+    expect(openWhatsAppDraft(whatsappUrl, { location: { assign }, open })).toBe(false);
 
-    expect(open).toHaveBeenCalledWith(whatsappUrl, '_self');
+    expect(open).toHaveBeenCalledWith(whatsappUrl, '_blank', 'noopener,noreferrer');
+    expect(assign).not.toHaveBeenCalled();
     expect(openWhatsAppDraft('', { open })).toBe(false);
   });
 

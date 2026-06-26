@@ -1,0 +1,274 @@
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import {
+  clearNotificationContact,
+  createAcceptedTurnReminder,
+  createEmptyNotificationRoster,
+  createTurnReminderMessage,
+  createWhatsAppUrl,
+  decryptNotificationRoster,
+  encryptNotificationRoster,
+  getLocalNotificationContact,
+  getNotificationRosterDisplay,
+  hashNotificationRosterEnvelope,
+  loadNotificationRoster,
+  normalizeWhatsAppContact,
+  saveNotificationRoster,
+  upsertNotificationContact,
+} from '../network/turnNotifications';
+import {
+  REMOTE_MODES,
+  createRemoteSession,
+} from '../persistence/remoteSession';
+
+const RELAY_AUTH = 'relay_auth_token';
+const HOST_AUTH = 'host_auth_token1';
+const GAME_KEY = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
+const NOW = new Date('2026-06-26T00:00:00.000Z');
+
+function createSession(overrides = {}) {
+  return createRemoteSession({
+    mode: REMOTE_MODES.HOST,
+    roomId: 'ab12cd',
+    relayAuth: RELAY_AUTH,
+    hostAuth: HOST_AUTH,
+    gameKey: GAME_KEY,
+    ...overrides,
+  });
+}
+
+function normalize(country, nationalNumber) {
+  const result = normalizeWhatsAppContact({ country, nationalNumber, now: NOW });
+  expect(result.error).toBeUndefined();
+  return result.contact;
+}
+
+describe('turn notification helpers', () => {
+  beforeEach(() => {
+    globalThis.window = {
+      location: new URL('https://example.test/coffee-rush/?relay=wss://relay.example.test/room'),
+    };
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+    delete globalThis.fetch;
+    delete globalThis.window;
+  });
+
+  it('normalizes US and UK WhatsApp numbers from national input', () => {
+    expect(normalize('US', '(415) 555-1212')).toMatchObject({
+      country: 'US',
+      countryCode: '1',
+      nationalNumber: '4155551212',
+      whatsappNumber: '14155551212',
+    });
+    expect(normalize('US', '+1 415 555 1212').nationalNumber).toBe('4155551212');
+    expect(normalize('UK', '07700 900123')).toMatchObject({
+      country: 'UK',
+      countryCode: '44',
+      nationalNumber: '7700900123',
+      whatsappNumber: '447700900123',
+    });
+    expect(normalize('UK', '+44 7700 900123').nationalNumber).toBe('7700900123');
+
+    expect(normalizeWhatsAppContact({ country: 'CA', nationalNumber: '4165551212' })).toMatchObject({
+      error: 'Choose US or UK.',
+    });
+    expect(normalizeWhatsAppContact({ country: 'US', nationalNumber: '123456' })).toMatchObject({
+      error: 'Enter 7 to 11 digits.',
+    });
+    expect(
+      normalizeWhatsAppContact({ country: 'UK', nationalNumber: '123456789012' }),
+    ).toMatchObject({
+      error: 'Enter 7 to 11 digits.',
+    });
+  });
+
+  it('builds WhatsApp URLs without room secrets in the message text', () => {
+    const message = createTurnReminderMessage('ab12cd');
+    const url = createWhatsAppUrl('14155551212', message);
+
+    expect(message).toBe('Your turn in Coffee Rush room AB12CD. Open your existing game and sync.');
+    expect(message).not.toContain(RELAY_AUTH);
+    expect(message).not.toContain(GAME_KEY);
+    expect(url).toBe(
+      `https://wa.me/14155551212?text=${encodeURIComponent(message)}`,
+    );
+  });
+
+  it('encrypts and decrypts notification rosters without exposing plaintext in envelopes', async () => {
+    const session = createSession();
+    const contact = normalize('US', '4155551212');
+    const roster = upsertNotificationContact(
+      createEmptyNotificationRoster(session.roomId),
+      'p1',
+      contact,
+    );
+    const encryptedRoster = await encryptNotificationRoster(session, roster);
+    const envelopeText = JSON.stringify(encryptedRoster);
+    const rosterHash = await hashNotificationRosterEnvelope({
+      roomId: session.roomId,
+      encryptedRoster,
+    });
+
+    expect(encryptedRoster).toMatchObject({ v: 1, alg: 'A256GCM' });
+    expect(envelopeText).not.toContain('4155551212');
+    expect(envelopeText).not.toContain('14155551212');
+    expect(rosterHash).toMatch(/^[A-Za-z0-9_-]+$/);
+    await expect(decryptNotificationRoster(session, encryptedRoster)).resolves.toEqual(roster);
+  });
+
+  it('keeps non-local numbers out of display data and supports save/clear mutations', () => {
+    const session = createSession();
+    const p1Contact = normalize('US', '4155551212');
+    const p2Contact = normalize('UK', '07700900123');
+    const roster = upsertNotificationContact(
+      upsertNotificationContact(createEmptyNotificationRoster(session.roomId), 'p1', p1Contact),
+      'p2',
+      p2Contact,
+    );
+    const display = getNotificationRosterDisplay(
+      [
+        { id: 'p1', name: 'Ada' },
+        { id: 'p2', name: 'Ben' },
+      ],
+      roster,
+    );
+
+    expect(display).toEqual([
+      {
+        playerId: 'p1',
+        name: 'Ada',
+        status: 'set',
+      },
+      {
+        playerId: 'p2',
+        name: 'Ben',
+        status: 'set',
+      },
+    ]);
+
+    expect(getLocalNotificationContact(roster, 'p1')).toEqual(p1Contact);
+    const cleared = clearNotificationContact(roster, 'p1');
+    expect(getLocalNotificationContact(cleared, 'p1')).toBeNull();
+    expect(getLocalNotificationContact(cleared, 'p2')).toEqual(p2Contact);
+  });
+
+  it('loads and saves encrypted sidecar rosters without plaintext request bodies', async () => {
+    const session = createSession();
+    const contact = normalize('US', '4155551212');
+    const roster = upsertNotificationContact(
+      createEmptyNotificationRoster(session.roomId),
+      'p1',
+      contact,
+    );
+    const encryptedRoster = await encryptNotificationRoster(session, roster);
+    const rosterHash = await hashNotificationRosterEnvelope({
+      roomId: session.roomId,
+      encryptedRoster,
+    });
+    const requests = [];
+
+    globalThis.fetch = vi.fn(async (url, options) => {
+      requests.push({ url, body: JSON.parse(options.body) });
+      if (String(url).includes('/room/notifications/head')) {
+        return Response.json({
+          protocol: 2,
+          rosterHash,
+          encryptedRoster,
+          updatedAt: 1,
+        });
+      }
+
+      expect(String(url)).toContain('/room/notifications/update?room=AB12CD');
+      expect(options.body).not.toContain('4155551212');
+      expect(options.body).not.toContain('14155551212');
+      return Response.json({
+        protocol: 2,
+        accepted: true,
+        rosterHash: requests.at(-1).body.rosterHash,
+        encryptedRoster: requests.at(-1).body.encryptedRoster,
+        updatedAt: 2,
+      });
+    });
+
+    await expect(loadNotificationRoster(session)).resolves.toMatchObject({
+      rosterHash,
+      roster,
+    });
+    await expect(saveNotificationRoster(session, roster, rosterHash)).resolves.toMatchObject({
+      accepted: true,
+      roster,
+    });
+    expect(requests).toHaveLength(2);
+  });
+
+  it('creates reminders only for accepted async END_TURN commits with a next contact', () => {
+    const session = createSession();
+    const roster = upsertNotificationContact(
+      createEmptyNotificationRoster(session.roomId),
+      'p2',
+      normalize('UK', '07700900123'),
+    );
+    const resultState = {
+      phase: 'upgrade',
+      activePlayerId: 'p2',
+      players: [
+        { id: 'p1', name: 'Ada' },
+        { id: 'p2', name: 'Ben' },
+      ],
+    };
+    const actions = [{ type: 'END_TURN', playerId: 'p1' }];
+
+    expect(
+      createAcceptedTurnReminder({
+        session,
+        actions,
+        resultState,
+        commitResponse: { accepted: true },
+        roster,
+      }),
+    ).toMatchObject({
+      playerId: 'p2',
+      playerName: 'Ben',
+      roomId: 'AB12CD',
+      message: 'Your turn in Coffee Rush room AB12CD. Open your existing game and sync.',
+    });
+    expect(
+      createAcceptedTurnReminder({
+        session,
+        actions,
+        resultState,
+        commitResponse: { accepted: false, error: 'STALE_HEAD' },
+        roster,
+      }),
+    ).toBeNull();
+    expect(
+      createAcceptedTurnReminder({
+        session,
+        actions: [{ type: 'PLACE_STARTING_MEEPLE', playerId: 'p2' }],
+        resultState,
+        commitResponse: { accepted: true },
+        roster,
+      }),
+    ).toBeNull();
+    expect(
+      createAcceptedTurnReminder({
+        session,
+        actions,
+        resultState: { ...resultState, phase: 'gameOver' },
+        commitResponse: { accepted: true },
+        roster,
+      }),
+    ).toBeNull();
+    expect(
+      createAcceptedTurnReminder({
+        session,
+        actions,
+        resultState: { ...resultState, activePlayerId: 'p1' },
+        commitResponse: { accepted: true },
+        roster,
+      }),
+    ).toBeNull();
+  });
+});

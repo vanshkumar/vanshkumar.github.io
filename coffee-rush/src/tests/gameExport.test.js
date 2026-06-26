@@ -46,4 +46,18 @@ describe('game export', () => {
       'coffee-rush-turn-1-setupPlacement-2026-06-14T12-00-00-000Z.zip',
     );
   });
+
+  it('does not include WhatsApp notification roster data', () => {
+    const state = createInitialState({
+      playerNames: ['Ada', 'Ben'],
+      seed: 'export-notification-privacy-test',
+    });
+    const exportText = formatGameExport(state, []);
+
+    expect(exportText).not.toContain('4155551212');
+    expect(exportText).not.toContain('14155551212');
+    expect(exportText).not.toContain('wa.me');
+    expect(exportText).not.toContain('notificationRoster');
+    expect(exportText).not.toContain('WhatsApp reminders');
+  });
 });

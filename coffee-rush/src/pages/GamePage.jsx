@@ -66,6 +66,19 @@ import {
   createStateSnapshot,
 } from '../network/roomSync';
 import {
+  WHATSAPP_COUNTRY_OPTIONS,
+  clearNotificationContact,
+  createAcceptedTurnReminder,
+  createEmptyNotificationRoster,
+  getLocalNotificationContact,
+  getNotificationRosterDisplay,
+  loadNotificationRoster,
+  normalizeWhatsAppContact,
+  openWhatsAppDraft,
+  saveNotificationRoster,
+  upsertNotificationContact,
+} from '../network/turnNotifications';
+import {
   clearGame,
   clearAsyncDraft,
   loadGame,
@@ -140,12 +153,23 @@ export default function GamePage() {
   const asyncFailedCommitRef = useRef(null);
   const asyncClosedRoomRef = useRef(null);
   const asyncSyncInFlightRef = useRef(false);
+  const notificationSyncRef = useRef(null);
+  const notificationRosterRef = useRef(null);
+  const notificationRosterHashRef = useRef('');
   const [state, setState] = useState(() => loadGame());
   const [undoStack, setUndoStack] = useState(() => loadUndoStack());
   const [remoteSession, setRemoteSession] = useState(() => loadRemoteSession());
   const [asyncDraftActionCount, setAsyncDraftActionCount] = useState(0);
   const [asyncFailedCommit, setAsyncFailedCommit] = useState(null);
   const [asyncClosedRoom, setAsyncClosedRoom] = useState(null);
+  const [notificationRoster, setNotificationRoster] = useState(null);
+  const [notificationRosterHash, setNotificationRosterHash] = useState('');
+  const [notificationCountry, setNotificationCountry] = useState('US');
+  const [notificationNumber, setNotificationNumber] = useState('');
+  const [notificationStatus, setNotificationStatus] = useState('');
+  const [notificationError, setNotificationError] = useState('');
+  const [isNotificationSaving, setIsNotificationSaving] = useState(false);
+  const [pendingTurnReminder, setPendingTurnReminder] = useState(null);
   const [remoteStatus, setRemoteStatus] = useState(() => ({
     connection: loadRemoteSession() ? 'connecting' : 'offline',
     selfId: '',
@@ -176,11 +200,14 @@ export default function GamePage() {
   const isCurrentAsyncRoomClosed =
     isAsyncRemoteGame && asyncClosedRoom?.roomId === remoteSession?.roomId;
   remoteSessionRef.current = remoteSession;
+  notificationRosterRef.current = notificationRoster;
+  notificationRosterHashRef.current = notificationRosterHash;
   remoteHandlersRef.current = {
     handleRemoteMessage,
     sendHostSnapshot,
   };
   asyncSyncRef.current = syncAsyncRoom;
+  notificationSyncRef.current = syncNotificationRoster;
 
   const activePlayer = state ? getActivePlayer(state) : null;
   const setupPlacement = state ? getSetupPlacement(state) : null;
@@ -226,6 +253,26 @@ export default function GamePage() {
   const orderedPlayers = useMemo(
     () => (state ? orderPlayersForLocalView(state, localPlayerId) : []),
     [localPlayerId, state],
+  );
+  const rosterForCurrentRoom = useMemo(
+    () =>
+      notificationRoster ??
+      (remoteSession?.roomId ? createEmptyNotificationRoster(remoteSession.roomId) : null),
+    [notificationRoster, remoteSession?.roomId],
+  );
+  const localNotificationContact = useMemo(
+    () =>
+      rosterForCurrentRoom
+        ? getLocalNotificationContact(rosterForCurrentRoom, localPlayerId)
+        : null,
+    [localPlayerId, rosterForCurrentRoom],
+  );
+  const notificationDisplay = useMemo(
+    () =>
+      state && rosterForCurrentRoom
+        ? getNotificationRosterDisplay(state.players, rosterForCurrentRoom)
+        : [],
+    [rosterForCurrentRoom, state],
   );
 
   useEffect(() => {
@@ -438,6 +485,56 @@ export default function GamePage() {
       setAsyncClosedRoom(null);
     };
   }, [remoteRoomKey]);
+
+  useEffect(() => {
+    const session = remoteSessionRef.current;
+
+    if (!session || session.protocol !== REMOTE_PROTOCOLS.ASYNC) {
+      notificationRosterRef.current = null;
+      notificationRosterHashRef.current = '';
+      setNotificationRoster(null);
+      setNotificationRosterHash('');
+      setNotificationStatus('');
+      setNotificationError('');
+      setPendingTurnReminder(null);
+      return undefined;
+    }
+
+    let disposed = false;
+    notificationSyncRef.current?.({ silent: true, isDisposed: () => disposed });
+
+    const intervalId = window.setInterval(() => {
+      notificationSyncRef.current?.({ silent: true, isDisposed: () => disposed });
+    }, 30_000);
+
+    return () => {
+      disposed = true;
+      window.clearInterval(intervalId);
+      notificationRosterRef.current = null;
+      notificationRosterHashRef.current = '';
+      setNotificationRoster(null);
+      setNotificationRosterHash('');
+      setNotificationStatus('');
+      setNotificationError('');
+      setPendingTurnReminder(null);
+    };
+  }, [remoteRoomKey]);
+
+  useEffect(() => {
+    if (!isAsyncRemoteGame) return;
+
+    if (localNotificationContact) {
+      setNotificationCountry(localNotificationContact.country);
+      setNotificationNumber(localNotificationContact.nationalNumber);
+      return;
+    }
+
+    setNotificationCountry('US');
+    setNotificationNumber('');
+  }, [
+    isAsyncRemoteGame,
+    localNotificationContact,
+  ]);
 
   if (!state || !activePlayer) {
     if (isRemoteGame) {
@@ -655,6 +752,201 @@ export default function GamePage() {
       error: ASYNC_ROOM_CLOSED_MESSAGE,
       pendingActionId: '',
     }));
+  }
+
+  function applyNotificationRosterHead(head) {
+    notificationRosterRef.current = head.roster;
+    notificationRosterHashRef.current = head.rosterHash;
+    setNotificationRoster(head.roster);
+    setNotificationRosterHash(head.rosterHash);
+  }
+
+  async function syncNotificationRoster({
+    silent = false,
+    isDisposed = () => false,
+  } = {}) {
+    const session = remoteSessionRef.current;
+    if (!session || session.protocol !== REMOTE_PROTOCOLS.ASYNC) return null;
+
+    if (!silent) {
+      setNotificationStatus('Syncing WhatsApp reminders.');
+      setNotificationError('');
+    }
+
+    try {
+      const head = await loadNotificationRoster(session);
+      if (isDisposed()) return null;
+
+      applyNotificationRosterHead(head);
+      setNotificationError('');
+      if (!silent) {
+        setNotificationStatus('WhatsApp reminders synced.');
+      }
+      return head;
+    } catch (syncError) {
+      if (isDisposed()) return null;
+
+      setNotificationError(syncError?.message ?? 'Could not sync WhatsApp reminders.');
+      if (!silent) {
+        setNotificationStatus('');
+      }
+      return null;
+    }
+  }
+
+  async function updateLocalNotificationRoster(mutator) {
+    const session = remoteSessionRef.current;
+    if (!session || session.protocol !== REMOTE_PROTOCOLS.ASYNC) {
+      throw new Error('WhatsApp reminders need an async room.');
+    }
+
+    const baseRoster =
+      notificationRosterRef.current ?? createEmptyNotificationRoster(session.roomId);
+    const baseHash = notificationRosterHashRef.current ?? '';
+    let nextRoster = mutator(baseRoster);
+    let result = await saveNotificationRoster(session, nextRoster, baseHash);
+
+    if (result.accepted === false && result.error === 'STALE_NOTIFICATION_ROSTER') {
+      nextRoster = mutator(result.roster);
+      result = await saveNotificationRoster(session, nextRoster, result.rosterHash);
+    }
+
+    if (result.accepted !== true) {
+      throw new Error('Could not save WhatsApp reminders.');
+    }
+
+    applyNotificationRosterHead(result);
+    return result;
+  }
+
+  async function saveWhatsAppReminderContact() {
+    if (!localPlayerId) {
+      setNotificationError('This browser is not assigned to a player seat.');
+      return;
+    }
+
+    const normalized = normalizeWhatsAppContact({
+      country: notificationCountry,
+      nationalNumber: notificationNumber,
+    });
+
+    if (normalized.error) {
+      setNotificationError(normalized.error);
+      setNotificationStatus('');
+      return;
+    }
+
+    setIsNotificationSaving(true);
+    setNotificationError('');
+    setNotificationStatus('Saving WhatsApp reminder.');
+
+    try {
+      await updateLocalNotificationRoster((roster) =>
+        upsertNotificationContact(roster, localPlayerId, normalized.contact),
+      );
+      setNotificationStatus('WhatsApp reminder saved.');
+    } catch (saveError) {
+      setNotificationStatus('');
+      setNotificationError(saveError?.message ?? 'Could not save WhatsApp reminder.');
+    } finally {
+      setIsNotificationSaving(false);
+    }
+  }
+
+  async function clearWhatsAppReminderContact() {
+    if (!localPlayerId) {
+      setNotificationError('This browser is not assigned to a player seat.');
+      return;
+    }
+
+    setIsNotificationSaving(true);
+    setNotificationError('');
+    setNotificationStatus('Clearing WhatsApp reminder.');
+
+    try {
+      await updateLocalNotificationRoster((roster) =>
+        clearNotificationContact(roster, localPlayerId),
+      );
+      setNotificationStatus('WhatsApp reminder cleared.');
+      setNotificationNumber('');
+    } catch (clearError) {
+      setNotificationStatus('');
+      setNotificationError(clearError?.message ?? 'Could not clear WhatsApp reminder.');
+    } finally {
+      setIsNotificationSaving(false);
+    }
+  }
+
+  async function triggerAcceptedTurnReminder({ actions, resultState, commitResponse }) {
+    const session = remoteSessionRef.current;
+    if (!session || session.protocol !== REMOTE_PROTOCOLS.ASYNC) return;
+
+    let roster = notificationRosterRef.current;
+    if (!roster) {
+      const synced = await syncNotificationRoster({ silent: true });
+      roster = synced?.roster ?? null;
+    }
+
+    const reminder = createAcceptedTurnReminder({
+      session,
+      actions,
+      resultState,
+      commitResponse,
+      roster,
+    });
+
+    if (!reminder) return;
+
+    if (openWhatsAppDraft(reminder.whatsappUrl)) {
+      setPendingTurnReminder(null);
+      return;
+    }
+
+    setPendingTurnReminder(reminder);
+    setExportStatus(`WhatsApp reminder ready for ${reminder.playerName}.`);
+  }
+
+  async function copyPendingTurnReminder() {
+    if (!pendingTurnReminder) return;
+
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(pendingTurnReminder.message);
+      } else {
+        copyTextFallback(pendingTurnReminder.message);
+      }
+      setExportStatus('WhatsApp reminder copied.');
+    } catch {
+      try {
+        copyTextFallback(pendingTurnReminder.message);
+        setExportStatus('WhatsApp reminder copied.');
+      } catch {
+        setExportStatus('Could not copy the WhatsApp reminder.');
+      }
+    }
+  }
+
+  async function sharePendingTurnReminder() {
+    if (!pendingTurnReminder) return;
+
+    if (!navigator.share) {
+      await copyPendingTurnReminder();
+      return;
+    }
+
+    try {
+      await navigator.share({ text: pendingTurnReminder.message });
+      setExportStatus('WhatsApp reminder shared.');
+    } catch {
+      // Share cancellation should leave the fallback button available.
+    }
+  }
+
+  function openPendingTurnReminder() {
+    if (!pendingTurnReminder) return;
+    if (openWhatsAppDraft(pendingTurnReminder.whatsappUrl)) {
+      setPendingTurnReminder(null);
+    }
   }
 
   async function applyAsyncCommits(baseState, baseHead, commits) {
@@ -955,6 +1247,11 @@ export default function GamePage() {
         connection: 'connected',
         error: '',
       }));
+      void triggerAcceptedTurnReminder({
+        actions,
+        resultState,
+        commitResponse: response,
+      });
       return { state: resultState };
     } catch (commitError) {
       const errorMessage = commitError?.message ?? 'Could not commit the async turn.';
@@ -1740,6 +2037,116 @@ export default function GamePage() {
     );
   }
 
+  function renderWhatsAppReminderControls() {
+    if (!isAsyncRemoteGame || !rosterForCurrentRoom) return null;
+
+    const localSeatName = getPlayer(state, localPlayerId)?.name ?? 'Your seat';
+
+    return (
+      <section className="notification-control-panel" aria-label="WhatsApp reminders">
+        <details className="notification-details">
+          <summary>WhatsApp reminders</summary>
+          <div className="notification-control-body">
+            <div className="notification-roster-status" aria-label="Reminder status by player">
+              {notificationDisplay.map((item) => (
+                <span
+                  key={item.playerId}
+                  className={`notification-status-chip notification-status-${item.status}`}
+                >
+                  {item.name}: {item.status}
+                </span>
+              ))}
+            </div>
+            <div className="notification-form-row">
+              <label>
+                <span>Country</span>
+                <select
+                  value={notificationCountry}
+                  onChange={(event) => setNotificationCountry(event.target.value)}
+                  disabled={isNotificationSaving}
+                >
+                  {WHATSAPP_COUNTRY_OPTIONS.map((option) => (
+                    <option key={option.country} value={option.country}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label>
+                <span>{localSeatName} number</span>
+                <input
+                  type="tel"
+                  inputMode="tel"
+                  autoComplete="tel"
+                  value={notificationNumber}
+                  onChange={(event) => setNotificationNumber(event.target.value)}
+                  disabled={isNotificationSaving}
+                />
+              </label>
+              <div className="notification-actions">
+                <button
+                  type="button"
+                  className="primary-button"
+                  onClick={saveWhatsAppReminderContact}
+                  disabled={isNotificationSaving}
+                >
+                  Save
+                </button>
+                <button
+                  type="button"
+                  onClick={clearWhatsAppReminderContact}
+                  disabled={isNotificationSaving || !localNotificationContact}
+                >
+                  Clear
+                </button>
+                <button
+                  type="button"
+                  onClick={() => syncNotificationRoster()}
+                  disabled={isNotificationSaving}
+                >
+                  Refresh
+                </button>
+              </div>
+            </div>
+            {(notificationStatus || notificationError) && (
+              <small className={notificationError ? 'notification-error' : 'notification-status'}>
+                {notificationError || notificationStatus}
+              </small>
+            )}
+          </div>
+        </details>
+      </section>
+    );
+  }
+
+  function renderPendingTurnReminder() {
+    if (!pendingTurnReminder) return null;
+
+    return (
+      <section className="turn-reminder-panel" aria-live="polite">
+        <strong>WhatsApp reminder ready for {pendingTurnReminder.playerName}.</strong>
+        <div className="button-row turn-reminder-actions">
+          <button
+            type="button"
+            className="primary-button"
+            onClick={openPendingTurnReminder}
+          >
+            Message {pendingTurnReminder.playerName}
+          </button>
+          <button type="button" onClick={copyPendingTurnReminder}>
+            Copy message
+          </button>
+          <button type="button" onClick={sharePendingTurnReminder}>
+            Share
+          </button>
+          <button type="button" onClick={() => setPendingTurnReminder(null)}>
+            Dismiss
+          </button>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <main className="game-page" ref={pageRef}>
       <header className="game-header">
@@ -1813,6 +2220,8 @@ export default function GamePage() {
         </div>
       </header>
 
+      {renderWhatsAppReminderControls()}
+      {renderPendingTurnReminder()}
       {error && <div className="error-banner">{error}</div>}
       {remoteStatus.error && <div className="error-banner">{remoteStatus.error}</div>}
       {exportStatus && <div className="message-banner">{exportStatus}</div>}

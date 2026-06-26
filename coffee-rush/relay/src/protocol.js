@@ -4,6 +4,7 @@ export const ROOM_CODE_LENGTH = 6;
 export const MAX_RELAY_ENVELOPE_BYTES = 256 * 1024;
 export const MAX_HTTP_BODY_BYTES = 512 * 1024;
 export const MAX_ENCRYPTED_COMMIT_BYTES = 256 * 1024;
+export const MAX_ENCRYPTED_NOTIFICATION_ROSTER_BYTES = 64 * 1024;
 export const MAX_ENCRYPTED_SNAPSHOT_BYTES = 512 * 1024;
 export const MAX_ROOM_SOCKETS = 5;
 export const JOIN_TIMEOUT_MS = 5_000;
@@ -228,6 +229,51 @@ export function validateSnapshotRequest(message) {
   return '';
 }
 
+export function validateNotificationRosterHeadRequest(message) {
+  if (message?.protocol !== ASYNC_PROTOCOL_VERSION) {
+    return 'Unsupported async protocol.';
+  }
+
+  if (!isValidSecret(message.roomAuth)) {
+    return 'Invalid room auth.';
+  }
+
+  return '';
+}
+
+export function validateNotificationRosterUpdateRequest(message) {
+  if (message?.protocol !== ASYNC_PROTOCOL_VERSION) {
+    return 'Unsupported async protocol.';
+  }
+
+  if (!isValidSecret(message.roomAuth)) {
+    return 'Invalid room auth.';
+  }
+
+  if (
+    message.previousRosterHash !== undefined &&
+    message.previousRosterHash !== '' &&
+    !isValidHash(message.previousRosterHash)
+  ) {
+    return 'Invalid previous notification roster hash.';
+  }
+
+  if (!isValidHash(message.rosterHash)) {
+    return 'Invalid notification roster hash.';
+  }
+
+  if (
+    !isValidEncryptedEnvelopeWithMax(
+      message.encryptedRoster,
+      MAX_ENCRYPTED_NOTIFICATION_ROSTER_BYTES,
+    )
+  ) {
+    return 'Invalid encrypted notification roster.';
+  }
+
+  return '';
+}
+
 export function validateCloseRoomRequest(message) {
   if (message?.protocol !== ASYNC_PROTOCOL_VERSION) {
     return 'Unsupported async protocol.';
@@ -320,6 +366,32 @@ export async function hashCommitEnvelope({
       canonicalJson(encryptedCommit),
     ].join(':'),
   );
+}
+
+export async function hashNotificationRosterEnvelope({
+  roomId,
+  encryptedRoster,
+}) {
+  return sha256Base64Url(
+    [
+      'coffee-rush:v2:notifications',
+      normalizeRoomCode(roomId),
+      canonicalJson(encryptedRoster),
+    ].join(':'),
+  );
+}
+
+export function isNotificationRosterUpdateStale(currentRosterHash, previousRosterHash = '') {
+  return String(currentRosterHash ?? '') !== String(previousRosterHash ?? '');
+}
+
+export function createNotificationRosterHeadPayload(rosterRecord = null) {
+  return {
+    protocol: ASYNC_PROTOCOL_VERSION,
+    rosterHash: rosterRecord?.rosterHash ?? '',
+    encryptedRoster: rosterRecord?.encryptedRoster ?? null,
+    updatedAt: rosterRecord?.updatedAt ?? 0,
+  };
 }
 
 export function createTokenBucket(now = Date.now()) {

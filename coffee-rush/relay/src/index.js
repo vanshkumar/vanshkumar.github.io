@@ -8,9 +8,12 @@ import {
   MAX_ROOM_SOCKETS,
   ROOM_HARD_TTL_MS,
   ROOM_IDLE_TTL_MS,
+  createNotificationRosterHeadPayload,
   hashCommitEnvelope,
+  hashNotificationRosterEnvelope,
   createTokenBucket,
   consumeToken,
+  isNotificationRosterUpdateStale,
   normalizeRoomCode,
   safeParseRelayEnvelope,
   validateCloseRoomRequest,
@@ -18,6 +21,8 @@ import {
   validateCreateRoomRequest,
   validateHeadRequest,
   validateJoinEnvelope,
+  validateNotificationRosterHeadRequest,
+  validateNotificationRosterUpdateRequest,
   validateRoomMessageEnvelope,
   validateSnapshotRequest,
 } from './protocol.js';
@@ -56,6 +61,12 @@ const SQL_SCHEMA = `
     encrypted_snapshot TEXT NOT NULL,
     created_at INTEGER NOT NULL,
     PRIMARY KEY (room_id, snapshot_index)
+  );
+  CREATE TABLE IF NOT EXISTS notification_rosters (
+    room_id TEXT PRIMARY KEY,
+    roster_hash TEXT NOT NULL,
+    encrypted_roster TEXT NOT NULL,
+    updated_at INTEGER NOT NULL
   );
 `;
 
@@ -315,6 +326,10 @@ export class CoffeeRushRoom extends DurableObject {
         return this.handleAsyncCommit(roomId, parsed.value);
       case 'snapshot':
         return this.handleAsyncSnapshot(roomId, parsed.value);
+      case 'notifications/head':
+        return this.handleAsyncNotificationHead(roomId, parsed.value);
+      case 'notifications/update':
+        return this.handleAsyncNotificationUpdate(roomId, parsed.value);
       case 'close':
         return this.handleAsyncClose(roomId, parsed.value);
       default:
@@ -652,6 +667,85 @@ export class CoffeeRushRoom extends DurableObject {
     });
   }
 
+  async handleAsyncNotificationHead(roomId, body) {
+    const validationError = validateNotificationRosterHeadRequest(body);
+    if (validationError) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: validationError }, 400);
+    }
+
+    const meta = this.getAsyncMeta(roomId);
+    if (await this.deleteIfExpired(meta)) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: 'ROOM_NOT_FOUND' }, 404);
+    }
+
+    if (!(await this.verifyRoomAuth(meta, body.roomAuth))) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: 'BAD_AUTH' }, 403);
+    }
+
+    return jsonResponse(createNotificationRosterHeadPayload(this.getNotificationRoster(roomId)));
+  }
+
+  async handleAsyncNotificationUpdate(roomId, body) {
+    const validationError = validateNotificationRosterUpdateRequest(body);
+    if (validationError) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: validationError }, 400);
+    }
+
+    const expectedRosterHash = await hashNotificationRosterEnvelope({
+      roomId,
+      encryptedRoster: body.encryptedRoster,
+    });
+
+    if (!timingSafeEqualText(expectedRosterHash, body.rosterHash)) {
+      return jsonResponse(
+        { protocol: ASYNC_PROTOCOL_VERSION, error: 'BAD_NOTIFICATION_ROSTER_HASH' },
+        400,
+      );
+    }
+
+    const meta = this.getAsyncMeta(roomId);
+    if (await this.deleteIfExpired(meta)) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: 'ROOM_NOT_FOUND' }, 404);
+    }
+
+    if (!(await this.verifyRoomAuth(meta, body.roomAuth))) {
+      return jsonResponse({ protocol: ASYNC_PROTOCOL_VERSION, error: 'BAD_AUTH' }, 403);
+    }
+
+    const currentRoster = this.getNotificationRoster(roomId);
+    const currentRosterHash = currentRoster?.rosterHash ?? '';
+    if (isNotificationRosterUpdateStale(currentRosterHash, body.previousRosterHash ?? '')) {
+      return jsonResponse({
+        ...createNotificationRosterHeadPayload(currentRoster),
+        accepted: false,
+        error: 'STALE_NOTIFICATION_ROSTER',
+      }, 409);
+    }
+
+    const now = Date.now();
+    this.ctx.storage.sql.exec(
+      `INSERT OR REPLACE INTO notification_rosters (
+        room_id,
+        roster_hash,
+        encrypted_roster,
+        updated_at
+      ) VALUES (?, ?, ?, ?)`,
+      roomId,
+      body.rosterHash,
+      JSON.stringify(body.encryptedRoster),
+      now,
+    );
+
+    return jsonResponse({
+      ...createNotificationRosterHeadPayload({
+        rosterHash: body.rosterHash,
+        encryptedRoster: body.encryptedRoster,
+        updatedAt: now,
+      }),
+      accepted: true,
+    });
+  }
+
   async handleAsyncClose(roomId, body) {
     const validationError = validateCloseRoomRequest(body);
     if (validationError) {
@@ -721,6 +815,27 @@ export class CoffeeRushRoom extends DurableObject {
         ...row,
         encryptedCommit: JSON.parse(row.encryptedCommit),
       }));
+  }
+
+  getNotificationRoster(roomId) {
+    const row = firstRow(
+      this.ctx.storage.sql.exec(
+        `SELECT
+          roster_hash AS rosterHash,
+          encrypted_roster AS encryptedRoster,
+          updated_at AS updatedAt
+        FROM notification_rosters
+        WHERE room_id = ?`,
+        roomId,
+      ),
+    );
+
+    if (!row) return null;
+
+    return {
+      ...row,
+      encryptedRoster: JSON.parse(row.encryptedRoster),
+    };
   }
 
   async webSocketMessage(socket, rawMessage) {

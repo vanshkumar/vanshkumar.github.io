@@ -362,6 +362,97 @@ select {
   flex-wrap: wrap;
 }
 
+.notification-control-panel,
+.turn-reminder-panel {
+  max-width: 1440px;
+  margin: 0 auto 10px;
+  border: 1px solid #d7c7af;
+  background: rgba(255, 250, 242, 0.92);
+}
+
+.notification-details > summary {
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.notification-control-body {
+  display: grid;
+  gap: 10px;
+  padding: 0 12px 12px;
+}
+
+.notification-roster-status,
+.notification-actions,
+.turn-reminder-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.notification-status-chip {
+  min-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #d7c7af;
+  background: #fffaf2;
+  padding: 4px 8px;
+  color: #6e5e4a;
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.notification-status-set {
+  border-color: #8aa8a3;
+  background: #edf7f4;
+  color: #244f49;
+}
+
+.notification-form-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 160px) minmax(180px, 280px) auto;
+  gap: 8px;
+  align-items: end;
+}
+
+.notification-form-row label {
+  display: grid;
+  gap: 4px;
+  color: #6e5e4a;
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.notification-actions button {
+  min-height: 42px;
+}
+
+.notification-status,
+.notification-error {
+  color: #244f49;
+  font-weight: 800;
+}
+
+.notification-error {
+  color: #8d241b;
+}
+
+.turn-reminder-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+}
+
+.turn-reminder-panel strong {
+  line-height: 1.2;
+}
+
 .game-layout {
   max-width: 1440px;
   margin: 0 auto;
@@ -1563,6 +1654,20 @@ button.cup-memory-tile {
 
   .async-recovery-actions button {
     flex: 1 1 150px;
+  }
+
+  .notification-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .notification-actions button,
+  .turn-reminder-actions button {
+    flex: 1 1 120px;
+  }
+
+  .turn-reminder-panel {
+    align-items: stretch;
+    flex-direction: column;
   }
 
   .game-header {

@@ -212,6 +212,11 @@
 - Action: Keep turn controls, ready-order actions, and reducer dispatches tied to `activePlayer`, but order station context and player panels from the local view player when a local seat is known.
 - Confidence: high
 
+**[2026-06-26] — Async sidecar state**
+- Observation: Encrypted async sidecars such as WhatsApp notification rosters need stale-write protection that is independent from the room `headHash`, because roster edits can race without advancing the game commit chain.
+- Action: Give each sidecar its own encrypted-envelope hash, keep decrypted sidecar data in `GamePage` refs/state outside reducer persistence, and retry stale writes by decrypting the latest sidecar payload before merging the local edit.
+- Confidence: high
+
 **[2026-06-26] — Async off-turn action UI**
 - Observation: In async rooms, `GamePage` can render disabled active-player phase controls above the local player's station strip when `remoteSession.localPlayerId` differs from `activePlayer.id`.
 - Action: For non-setup async phases that the local seat cannot control, render only the existing turn-lock banner and keep the local cup/order context in `TurnBrief`.

@@ -2,16 +2,21 @@ import { describe, expect, it } from 'vitest';
 import {
   ASYNC_PROTOCOL_VERSION,
   CLOSE_CODES,
+  createNotificationRosterHeadPayload,
   createTokenBucket,
   consumeToken,
   hashCommitEnvelope,
+  hashNotificationRosterEnvelope,
   isValidEncryptedEnvelope,
+  isNotificationRosterUpdateStale,
   normalizeRoomCode,
   safeParseRelayEnvelope,
   validateCommitRequest,
   validateCreateRoomRequest,
   validateHeadRequest,
   validateJoinEnvelope,
+  validateNotificationRosterHeadRequest,
+  validateNotificationRosterUpdateRequest,
   validateRoomMessageEnvelope,
 } from './protocol.js';
 
@@ -166,5 +171,59 @@ describe('relay protocol validation', () => {
         commitIndex: 2,
       }),
     ).resolves.not.toBe(await hashCommitEnvelope(commit));
+  });
+
+  it('validates encrypted notification roster requests without plaintext contacts', async () => {
+    const hash = await hashNotificationRosterEnvelope({
+      roomId: 'ab12cd',
+      encryptedRoster: encryptedPayload,
+    });
+
+    expect(
+      validateNotificationRosterHeadRequest({
+        protocol: ASYNC_PROTOCOL_VERSION,
+        roomAuth: 'shared_room_auth',
+      }),
+    ).toBe('');
+    expect(
+      validateNotificationRosterUpdateRequest({
+        protocol: ASYNC_PROTOCOL_VERSION,
+        roomAuth: 'shared_room_auth',
+        previousRosterHash: '',
+        rosterHash: hash,
+        encryptedRoster: encryptedPayload,
+      }),
+    ).toBe('');
+    expect(
+      validateNotificationRosterUpdateRequest({
+        protocol: ASYNC_PROTOCOL_VERSION,
+        roomAuth: 'shared_room_auth',
+        previousRosterHash: '',
+        rosterHash: hash,
+        encryptedRoster: {
+          contacts: {
+            p1: {
+              whatsappNumber: '14155551212',
+            },
+          },
+        },
+      }),
+    ).toBe('Invalid encrypted notification roster.');
+
+    expect(isNotificationRosterUpdateStale('', '')).toBe(false);
+    expect(isNotificationRosterUpdateStale(hash, '')).toBe(true);
+
+    const responseText = JSON.stringify(
+      createNotificationRosterHeadPayload({
+        rosterHash: hash,
+        encryptedRoster: encryptedPayload,
+        updatedAt: 1,
+        plaintextContact: '14155551212',
+      }),
+    );
+
+    expect(responseText).toContain(hash);
+    expect(responseText).not.toContain('14155551212');
+    expect(responseText).not.toContain('plaintextContact');
   });
 });

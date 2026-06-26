@@ -192,6 +192,11 @@
 - Action: In live async smoke harnesses, assert route, phase, room mode, and relay head from `localStorage` state instead of relying on `/coffee-rush/game` path checks or desktop-only visible status text.
 - Confidence: high
 
+**[2026-06-26] — Production reminder smoke**
+- Observation: The GitHub Pages workflow deploys the Coffee Rush frontend but does not deploy `coffee-rush/relay`, so new async sidecar endpoints remain unavailable until the Worker is deployed separately.
+- Action: Before live WhatsApp reminder smokes, deploy `coffee-rush/relay` with Wrangler, probe the production sidecar endpoint, and use a temporary Chrome remote-debugging profile for isolated host/peer browser contexts when the bundled Playwright browser is unavailable.
+- Confidence: high
+
 **[2026-06-26] — Production closed-room smoke**
 - Observation: Existing-peer closed-room verification does not need clipboard access or setup placement; the host's saved v3 remote session contains enough data to build a hash-fragment invite for an isolated peer, then `New` can close the unadvanced async room.
 - Action: For future closed-room production smokes, use isolated Chrome contexts, build the peer invite from `coffee-rush:remote-session:v3`, and assert the peer clears `coffee-rush:active-game:v2` plus matching async room-state keys after the post-close reload.

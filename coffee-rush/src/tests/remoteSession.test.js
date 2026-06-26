@@ -12,10 +12,12 @@ import {
   formatInviteToken,
   getInviteFromLocation,
   getRoomCodeFromLocation,
+  hasQueryInviteSecrets,
   loadRemoteSession,
   normalizeRoomCode,
   parseInviteInput,
   saveRemoteSession,
+  scrubQueryInviteSecretsFromLocation,
 } from '../persistence/remoteSession';
 
 const RELAY_AUTH = 'relay_auth_token';
@@ -89,6 +91,44 @@ describe('remote session persistence', () => {
     expect(formatInviteToken('ab12cd', RELAY_AUTH, GAME_KEY)).toBe(
       `AB12CD.${RELAY_AUTH}.${GAME_KEY}`,
     );
+  });
+
+  it('rejects invite secrets carried in query strings', () => {
+    const querySecretInvite = new URL(
+      `https://example.test/coffee-rush/?room=ab12cd&auth=${RELAY_AUTH}&key=${GAME_KEY}#/`,
+    );
+
+    expect(hasQueryInviteSecrets(querySecretInvite)).toBe(true);
+    expect(getInviteFromLocation(querySecretInvite)).toEqual({
+      roomId: 'AB12CD',
+      relayAuth: '',
+      gameKey: '',
+    });
+    expect(parseInviteInput(querySecretInvite.toString())).toEqual({
+      roomId: 'AB12CD',
+      relayAuth: '',
+      gameKey: '',
+    });
+  });
+
+  it('scrubs query-string invite secrets while preserving room and hash data', () => {
+    const location = new URL(
+      `https://example.test/coffee-rush/?room=ab12cd&auth=query_auth&key=query_key&relay=ws://127.0.0.1:8787#/game?auth=${RELAY_AUTH}&key=${GAME_KEY}`,
+    );
+    const replaceCalls = [];
+    const history = {
+      state: { route: 'setup' },
+      replaceState: (...args) => replaceCalls.push(args),
+    };
+
+    expect(scrubQueryInviteSecretsFromLocation(location, history)).toBe(true);
+    expect(replaceCalls).toEqual([
+      [
+        { route: 'setup' },
+        '',
+        `https://example.test/coffee-rush/?room=ab12cd&relay=ws%3A%2F%2F127.0.0.1%3A8787#/game?auth=${RELAY_AUTH}&key=${GAME_KEY}`,
+      ],
+    ]);
   });
 
   it('round-trips valid remote sessions and ignores invalid saved data', () => {

@@ -9,6 +9,7 @@ const AUTH_SECRET_MIN_LENGTH = 16;
 const SECRET_MAX_LENGTH = 128;
 const AES_KEY_TEXT_LENGTHS = new Set([22, 32, 43]);
 const HASH_PATTERN = /^[A-Za-z0-9_-]{32,96}$/;
+const QUERY_INVITE_SECRET_PARAMS = ['auth', 'key'];
 
 export const REMOTE_MODES = {
   LOCAL: 'local',
@@ -240,6 +241,40 @@ function getHashSearchParams(hash) {
   return new URLSearchParams(String(hash).slice(queryIndex + 1));
 }
 
+export function hasQueryInviteSecrets(value = window.location, baseLocation = window.location) {
+  try {
+    const href = typeof value === 'string' ? value : value.href;
+    const url = new URL(href, baseLocation.href);
+    return QUERY_INVITE_SECRET_PARAMS.some((param) => url.searchParams.has(param));
+  } catch {
+    return false;
+  }
+}
+
+export function scrubQueryInviteSecretsFromLocation(
+  location = window.location,
+  history = window.history,
+) {
+  try {
+    const url = new URL(location.href);
+    let changed = false;
+
+    QUERY_INVITE_SECRET_PARAMS.forEach((param) => {
+      if (url.searchParams.has(param)) {
+        url.searchParams.delete(param);
+        changed = true;
+      }
+    });
+
+    if (!changed) return false;
+
+    history?.replaceState?.(history.state ?? null, '', url.toString());
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 export function parseInviteInput(value, baseLocation = window.location) {
   const raw = String(value ?? '').trim();
 
@@ -277,10 +312,10 @@ export function parseInviteInput(value, baseLocation = window.location) {
     return {
       roomId: normalizeRoomCode(url.searchParams.get('room')),
       relayAuth: normalizeInviteSecret(
-        hashParams.get('auth') ?? url.searchParams.get('auth'),
+        hashParams.get('auth'),
         { minLength: AUTH_SECRET_MIN_LENGTH },
       ),
-      gameKey: normalizeGameKey(hashParams.get('key') ?? url.searchParams.get('key')),
+      gameKey: normalizeGameKey(hashParams.get('key')),
     };
   } catch {
     return {

@@ -167,6 +167,11 @@
 - Action: Prefer hash-only invite secrets; if query parsing remains for compatibility, scrub or reject query `auth`/`key` after parsing and treat query-secret variants as security smoke cases.
 - Confidence: high
 
+**[2026-06-26] — Async invite query scrub**
+- Observation: Startup invite handling runs before `SetupPage` can show a warning, and the hash-router invite format still needs `room` in the query while keeping `auth` and `key` in the hash.
+- Action: Keep `scrubQueryInviteSecretsFromLocation()` in `main.jsx` before React renders, preserve non-secret query params such as `room` and `relay`, and reject pasted query-secret links through `hasQueryInviteSecrets`.
+- Confidence: high
+
 **[2026-06-25] — Production async browser smoke**
 - Observation: The live GitHub Pages app routes the game as `/coffee-rush/#/game`, and mobile-width remote status text can be hidden behind the Tools disclosure.
 - Action: In live async smoke harnesses, assert route, phase, room mode, and relay head from `localStorage` state instead of relying on `/coffee-rush/game` path checks or desktop-only visible status text.

@@ -19,11 +19,15 @@ import {
   createRoomCode,
   formatInviteToken,
   getInviteFromLocation,
+  hasQueryInviteSecrets,
   parseInviteInput,
   saveRemoteSession,
 } from '../persistence/remoteSession';
 
-export default function SetupPage() {
+const QUERY_SECRET_INVITE_MESSAGE =
+  'Invite links must keep private room keys after #. Ask the host for a fresh invite link.';
+
+export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
   const navigate = useNavigate();
   const savedGame = loadGame();
   const initialInvite = getInviteFromLocation();
@@ -40,7 +44,11 @@ export default function SetupPage() {
       : initialInvite.roomId,
   );
   const [remoteError, setRemoteError] = useState('');
+  const [querySecretWarning, setQuerySecretWarning] = useState(
+    queryInviteSecretsScrubbed ? QUERY_SECRET_INVITE_MESSAGE : '',
+  );
   const [isHostingOnline, setIsHostingOnline] = useState(false);
+  const visibleRemoteError = remoteError || querySecretWarning;
 
   function updateName(index, value) {
     setNames((current) =>
@@ -74,6 +82,7 @@ export default function SetupPage() {
 
     setIsHostingOnline(true);
     setRemoteError('');
+    setQuerySecretWarning('');
 
     const roomId = createRoomCode();
     const relayAuth = createRelayAuth();
@@ -114,14 +123,22 @@ export default function SetupPage() {
   }
 
   function joinOnlineGame() {
+    if (hasQueryInviteSecrets(joinRoomCode)) {
+      setQuerySecretWarning('');
+      setRemoteError(QUERY_SECRET_INVITE_MESSAGE);
+      return;
+    }
+
     const invite = parseInviteInput(joinRoomCode);
 
     if (invite.roomId.length !== 6) {
+      setQuerySecretWarning('');
       setRemoteError('Paste the invite link or room token from the host.');
       return;
     }
 
     if (!invite.relayAuth || !invite.gameKey) {
+      setQuerySecretWarning('');
       setRemoteError('That invite is missing its private room key.');
       return;
     }
@@ -224,7 +241,7 @@ export default function SetupPage() {
             <h2>Play mode</h2>
             <p>Local hot-seat stays on this device. Online rooms sync turns across phones.</p>
           </div>
-          {remoteError && <div className="error-banner">{remoteError}</div>}
+          {visibleRemoteError && <div className="error-banner">{visibleRemoteError}</div>}
           <div className="remote-play-actions">
             <button className="primary-button" type="button" onClick={startGame}>
               Start local game
@@ -241,6 +258,7 @@ export default function SetupPage() {
                 onChange={(event) => {
                   setJoinRoomCode(event.target.value.trim());
                   setRemoteError('');
+                  setQuerySecretWarning('');
                 }}
                 placeholder="Paste invite link or ABC123.auth.key"
                 inputMode="text"

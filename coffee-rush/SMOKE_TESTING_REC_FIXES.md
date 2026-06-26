@@ -89,6 +89,7 @@
 **2. Query-string invite secrets**
 
 - Priority: P1.
+- Status: Implemented 2026-06-26 by rejecting query-string `auth`/`key` during invite parsing, scrubbing those params from the current URL before React renders, and warning on query-secret invite joins.
 - Observation: Moving valid `auth` and `key` from the hash fragment into query params still joins successfully. That mutated invite put both secrets in the initial GitHub Pages document request URL before the app loaded.
 - Risk: Normal generated invites keep secrets in the hash, which is not sent to the server. Query-string secrets can end up in browser history, CDN/server logs, copied URLs, and possibly referrers before the app has a chance to scrub them.
 - Recommended fix: Prefer hash-only invite secrets. If query parsing must remain for backwards compatibility, immediately `replaceState` to remove query `auth`/`key` after parsing and show a warning or reject query-secret invites for new joins. Do not generate or document query-secret invite URLs.

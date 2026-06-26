@@ -111,6 +111,7 @@ describe('turn notification helpers', () => {
     expect(message).not.toContain(GAME_KEY);
     expect(message).not.toContain('auth=');
     expect(message).not.toContain('key=');
+    expect(message).not.toContain('player=');
     expect(url).toBe(
       `https://wa.me/14155551212?text=${encodeURIComponent(message)}`,
     );

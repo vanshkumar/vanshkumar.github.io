@@ -9,7 +9,9 @@ import {
   createRelayAuth,
   createRemoteSession,
   createRoomCode,
+  formatPlayerSeat,
   formatInviteToken,
+  getInviteLocalPlayerId,
   getInviteFromLocation,
   getRoomCodeFromLocation,
   hasQueryInviteSecrets,
@@ -67,8 +69,23 @@ describe('remote session persistence', () => {
     ).toBe(
       `https://example.test/coffee-rush/?room=AB12CD#/?auth=${RELAY_AUTH}&key=${GAME_KEY}&player=p2`,
     );
+    expect(
+      buildInviteUrl(
+        {
+          roomId: 'ab12cd',
+          relayAuth: RELAY_AUTH,
+          hostAuth: HOST_AUTH,
+          gameKey: GAME_KEY,
+          invitePlayerId: 'p1',
+        },
+        new URL('https://example.test/coffee-rush/#/game'),
+      ),
+    ).toBe(
+      `https://example.test/coffee-rush/?room=AB12CD#/?auth=${RELAY_AUTH}&key=${GAME_KEY}&player=p1`,
+    );
     expect(normalizePlayerId(' P2 ')).toBe('p2');
     expect(normalizePlayerId('p5')).toBe('');
+    expect(formatPlayerSeat('p1')).toBe('Player 1');
   });
 
   it('creates deterministic six-character room codes with injectable randomness', () => {
@@ -111,6 +128,18 @@ describe('remote session persistence', () => {
       gameKey: GAME_KEY,
       localPlayerId: 'p4',
     });
+    expect(getInviteLocalPlayerId(getInviteFromLocation(inviteUrl))).toBe('p2');
+    expect(
+      getInviteLocalPlayerId(parseInviteInput(`ab12cd.${RELAY_AUTH}.${GAME_KEY}`)),
+    ).toBe('p2');
+    expect(
+      getInviteLocalPlayerId(
+        parseInviteInput(
+          `https://example.test/coffee-rush/?room=ab12cd#/?auth=${RELAY_AUTH}&key=${GAME_KEY}&player=p1`,
+        ),
+      ),
+    ).toBe('p1');
+    expect(getInviteLocalPlayerId({ roomId: 'AB12CD' })).toBe('');
   });
 
   it('rejects invite secrets carried in query strings', () => {

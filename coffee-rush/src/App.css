@@ -141,6 +141,12 @@ h1 {
   font-weight: 750;
 }
 
+.invite-seat-hint {
+  color: #6e5e4a;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
 .name-grid,
 .profile-grid {
   display: grid;
@@ -389,11 +395,28 @@ select {
   gap: 10px;
 }
 
+.device-link-panel {
+  display: grid;
+  gap: 8px;
+}
+
+.device-link-heading,
 .notification-control-heading {
   min-height: 38px;
   display: flex;
   align-items: center;
   font-weight: 850;
+}
+
+.device-link-heading {
+  min-height: auto;
+  color: #6e5e4a;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+}
+
+.device-link-panel button {
+  min-height: 42px;
 }
 
 .notification-control-body {
@@ -503,6 +526,11 @@ select {
 
 .utility-tools-panel .notification-actions button {
   min-width: 0;
+}
+
+.utility-tools-panel .device-link-panel {
+  border-bottom: 1px solid #d7c7af;
+  padding-bottom: 8px;
 }
 
 .turn-reminder-panel {
@@ -1816,6 +1844,12 @@ button.cup-memory-tile {
 
   .mobile-utility-panel .invite-actions {
     display: grid;
+  }
+
+  .mobile-utility-panel .device-link-panel {
+    border-top: 1px solid #d7c7af;
+    border-bottom: 1px solid #d7c7af;
+    padding: 8px 0;
   }
 
   .mobile-utility-panel .notification-control-panel {

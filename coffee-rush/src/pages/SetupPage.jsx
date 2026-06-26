@@ -27,19 +27,26 @@ import {
   createRemoteSession,
   createRelayAuth,
   createRoomCode,
+  formatPlayerSeat,
+  getInviteLocalPlayerId,
   getInviteFromLocation,
   hasQueryInviteSecrets,
+  loadRemoteSession,
   parseInviteInput,
   saveRemoteSession,
 } from '../persistence/remoteSession';
 
 const QUERY_SECRET_INVITE_MESSAGE =
   'Invite links must keep private room keys after #. Ask the host for a fresh invite link.';
+const ROOM_LINK_MISSING_KEY_MESSAGE =
+  'This room link does not include the private room key. Open it on a device that already joined, or ask for a private invite/device link for this device.';
 
 export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
   const navigate = useNavigate();
   const savedGame = loadGame();
   const initialInvite = getInviteFromLocation();
+  const initialRoomLinkMissingKey =
+    initialInvite.roomId && (!initialInvite.relayAuth || !initialInvite.gameKey);
   const [playerCount, setPlayerCount] = useState(2);
   const [startingPlayerIndex, setStartingPlayerIndex] = useState(0);
   const [profileName, setProfileName] = useState('');
@@ -52,9 +59,22 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
   );
   const [remoteError, setRemoteError] = useState('');
   const [querySecretWarning, setQuerySecretWarning] = useState(
-    queryInviteSecretsScrubbed ? QUERY_SECRET_INVITE_MESSAGE : '',
+    queryInviteSecretsScrubbed
+      ? QUERY_SECRET_INVITE_MESSAGE
+      : initialRoomLinkMissingKey
+        ? ROOM_LINK_MISSING_KEY_MESSAGE
+        : '',
   );
   const [isHostingOnline, setIsHostingOnline] = useState(false);
+  const [pendingSeatSwitchKey, setPendingSeatSwitchKey] = useState('');
+  const parsedJoinInvite = parseInviteInput(joinRoomCode);
+  const joinLocalPlayerId = getInviteLocalPlayerId(parsedJoinInvite);
+  const joinButtonLabel = joinLocalPlayerId
+    ? `Join as ${formatPlayerSeat(joinLocalPlayerId)}`
+    : 'Join online game';
+  const joinSeatHint = joinLocalPlayerId
+    ? `This invite will join as ${formatPlayerSeat(joinLocalPlayerId)}.`
+    : '';
   const visibleRemoteError = remoteError || querySecretWarning;
 
   function playerSeatName(index) {
@@ -177,15 +197,48 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
 
     if (!invite.relayAuth || !invite.gameKey) {
       setQuerySecretWarning('');
-      setRemoteError('That invite is missing its private room key.');
+      setRemoteError(ROOM_LINK_MISSING_KEY_MESSAGE);
+      return;
+    }
+
+    const localPlayerId = getInviteLocalPlayerId(invite);
+    const existingSession = loadRemoteSession();
+    const seatSwitchKey =
+      existingSession?.roomId === invite.roomId &&
+      existingSession.localPlayerId &&
+      localPlayerId &&
+      existingSession.localPlayerId !== localPlayerId
+        ? `${invite.roomId}:${existingSession.localPlayerId}:${localPlayerId}`
+        : '';
+    const hostDowngradeKey =
+      existingSession?.roomId === invite.roomId &&
+      existingSession.localPlayerId === localPlayerId &&
+      existingSession.mode === REMOTE_MODES.HOST
+        ? `${invite.roomId}:${localPlayerId}:host-to-device`
+        : '';
+
+    if (seatSwitchKey && pendingSeatSwitchKey !== seatSwitchKey) {
+      setPendingSeatSwitchKey(seatSwitchKey);
+      setQuerySecretWarning('');
+      setRemoteError(
+        `This browser is already set up as ${formatPlayerSeat(existingSession.localPlayerId)} for room ${invite.roomId}. Press Join again to switch to ${formatPlayerSeat(localPlayerId)}.`,
+      );
+      return;
+    }
+
+    if (hostDowngradeKey && pendingSeatSwitchKey !== hostDowngradeKey) {
+      setPendingSeatSwitchKey(hostDowngradeKey);
+      setQuerySecretWarning('');
+      setRemoteError(
+        `This browser already has host controls for room ${invite.roomId}. Press Join again to replace them with a seat-only ${formatPlayerSeat(localPlayerId)} session.`,
+      );
       return;
     }
 
     const identity = validateOnlineIdentity();
     if (!identity) return;
 
-    const localPlayerId = invite.localPlayerId || 'p2';
-
+    setPendingSeatSwitchKey('');
     clearGame();
     clearRemoteSession();
     saveRemoteSession(
@@ -345,15 +398,17 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
                   setJoinRoomCode(event.target.value.trim());
                   setRemoteError('');
                   setQuerySecretWarning('');
+                  setPendingSeatSwitchKey('');
                 }}
                 placeholder="Paste invite link or ABC123.auth.key"
                 inputMode="text"
                 autoCapitalize="none"
                 spellCheck={false}
               />
+              {joinSeatHint && <small className="invite-seat-hint">{joinSeatHint}</small>}
             </label>
             <button type="button" onClick={joinOnlineGame}>
-              Join online game
+              {joinButtonLabel}
             </button>
           </div>
         </section>

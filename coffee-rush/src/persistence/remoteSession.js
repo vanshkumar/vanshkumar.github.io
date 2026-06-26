@@ -106,6 +106,20 @@ export function normalizePlayerId(value) {
   return PLAYER_ID_PATTERN.test(playerId) ? playerId : '';
 }
 
+export function getInviteLocalPlayerId(invite) {
+  const explicitPlayerId = normalizePlayerId(invite?.localPlayerId);
+  if (explicitPlayerId) return explicitPlayerId;
+
+  return invite?.relayAuth && invite?.gameKey ? 'p2' : '';
+}
+
+export function formatPlayerSeat(playerId) {
+  const normalizedPlayerId = normalizePlayerId(playerId);
+  if (!normalizedPlayerId) return 'Player';
+
+  return `Player ${normalizedPlayerId.slice(1)}`;
+}
+
 function normalizeProtocol(value, fallback = REMOTE_PROTOCOLS.ASYNC) {
   if (Number(value) === REMOTE_PROTOCOLS.LIVE) return REMOTE_PROTOCOLS.LIVE;
   if (Number(value) === REMOTE_PROTOCOLS.ASYNC) return REMOTE_PROTOCOLS.ASYNC;

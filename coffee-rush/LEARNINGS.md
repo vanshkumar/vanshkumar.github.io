@@ -227,6 +227,11 @@
 - Action: Generate per-player async invite links with `player=pN`, persist `localPlayerId`, and gate both UI controls and local dispatch by `action.playerId` for every async setup/turn phase.
 - Confidence: high
 
+**[2026-06-26] — Async device transfer links**
+- Observation: A host who opens a player invite on a new browser becomes that invite's `player=pN` seat; WhatsApp reminder URLs are intentionally room-only and cannot bootstrap a browser with no stored secrets.
+- Action: Keep self-transfer as a Tools action that copies a seat-specific `player=<localPlayerId>` device link without `hostAuth`, and show missing-key copy for room-only reminder links opened on fresh/incognito browsers.
+- Confidence: high
+
 **[2026-06-26] — Online-only entry points**
 - Observation: Local game creation existed in both `SetupPage` and the results `Rematch` action, so removing the setup button alone still left a local-game path.
 - Action: When making Coffee Rush online-only, audit results/rematch/reset flows as well as setup so every new game returns through hosted-room setup.

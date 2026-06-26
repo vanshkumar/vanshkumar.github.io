@@ -97,6 +97,7 @@ import {
   REMOTE_MODES,
   REMOTE_PROTOCOLS,
   clearRemoteSession,
+  formatPlayerSeat,
   loadRemoteSession,
   saveRemoteSession,
 } from '../persistence/remoteSession';
@@ -1909,7 +1910,10 @@ export default function GamePage() {
     }
   }
 
-  async function copyInviteLink(invitePlayerId = remoteSession?.invitePlayerId) {
+  async function copyInviteLink(
+    invitePlayerId = remoteSession?.invitePlayerId,
+    copiedMessage = '',
+  ) {
     if (!remoteSession) return;
 
     const inviteSession = invitePlayerId
@@ -1919,9 +1923,9 @@ export default function GamePage() {
     const invitePlayer = stateRef.current
       ? getPlayer(stateRef.current, invitePlayerId)
       : null;
-    const copiedMessage = invitePlayer
+    const copiedStatus = copiedMessage || (invitePlayer
       ? `${invitePlayer.name} invite link copied.`
-      : 'Invite link copied.';
+      : 'Invite link copied.');
 
     try {
       if (navigator.clipboard?.writeText) {
@@ -1929,15 +1933,28 @@ export default function GamePage() {
       } else {
         copyTextFallback(inviteLink);
       }
-      setExportStatus(copiedMessage);
+      setExportStatus(copiedStatus);
     } catch {
       try {
         copyTextFallback(inviteLink);
-        setExportStatus(copiedMessage);
+        setExportStatus(copiedStatus);
       } catch {
         setExportStatus('Could not copy the private invite link.');
       }
     }
+  }
+
+  async function copyMyDeviceLink() {
+    if (!localPlayerId) {
+      await copyInviteLink();
+      return;
+    }
+
+    const localPlayer = stateRef.current ? getPlayer(stateRef.current, localPlayerId) : null;
+    await copyInviteLink(
+      localPlayerId,
+      `${localPlayer?.name ?? formatPlayerSeat(localPlayerId)} device link copied.`,
+    );
   }
 
   function handleCellClick(cellId) {
@@ -2191,9 +2208,11 @@ export default function GamePage() {
     isAsyncRemoteGame && isRemoteHost && state
       ? state.players.filter((player) => player.id !== localPlayerId)
       : [];
+  const hasDeviceLinkControls = Boolean(isAsyncRemoteGame && localPlayerId);
   const hasWhatsAppReminderControls = Boolean(isAsyncRemoteGame && rosterForCurrentRoom);
+  const hasUtilityTools = hasDeviceLinkControls || hasWhatsAppReminderControls;
   function renderInviteControls() {
-    return invitePlayers.length > 0 ? (
+    return invitePlayers.length > 0 && isRemoteHost ? (
       <div className="invite-actions">
         {invitePlayers.map((player) => (
           <button
@@ -2205,10 +2224,19 @@ export default function GamePage() {
           </button>
         ))}
       </div>
-    ) : (
-      <button type="button" onClick={() => copyInviteLink()}>
-        Copy invite
-      </button>
+    ) : null;
+  }
+
+  function renderDeviceLinkControls() {
+    if (!hasDeviceLinkControls) return null;
+
+    return (
+      <section className="device-link-panel" aria-label="This device">
+        <div className="device-link-heading">This device</div>
+        <button type="button" onClick={copyMyDeviceLink}>
+          Copy my device link
+        </button>
+      </section>
     );
   }
 
@@ -2292,13 +2320,14 @@ export default function GamePage() {
     );
   }
 
-  function renderReminderToolsMenu(className = '') {
-    if (!hasWhatsAppReminderControls) return null;
+  function renderToolsMenu(className = '') {
+    if (!hasUtilityTools) return null;
 
     return (
       <details className={`utility-tools-menu ${className}`.trim()}>
         <summary>Tools</summary>
         <div className="utility-tools-panel">
+          {renderDeviceLinkControls()}
           {renderWhatsAppReminderControls()}
         </div>
       </details>
@@ -2381,7 +2410,7 @@ export default function GamePage() {
             </>
           )}
           <span className="deck-counter">{state.deck.length} orders</span>
-          {renderReminderToolsMenu('desktop-tools-menu')}
+          {renderToolsMenu('desktop-tools-menu')}
           <button
             type="button"
             onClick={undoLastAction}
@@ -2415,6 +2444,7 @@ export default function GamePage() {
                   <span className="remote-status-pill">
                     {remoteModeLabel} {remoteSession.roomId} · {remoteStatusLabel}
                   </span>
+                  {renderDeviceLinkControls()}
                   {renderInviteControls()}
                 </>
               )}

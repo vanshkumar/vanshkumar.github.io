@@ -3,7 +3,7 @@
 ## Summary
 
 - Implement async-only WhatsApp turn reminders with an encrypted contact roster sidecar, so the relay never sees plaintext phone numbers.
-- Players choose `US (+1)` or `UK (+44)` from a dropdown, then enter their normal national phone number. No WhatsApp ID is needed.
+- Players choose `US (+1)`, `UK (+44)`, or `Canada (+1)` from a dropdown, then enter their normal national phone number. No WhatsApp ID is needed.
 - After an accepted async `END_TURN`, the browser opens a WhatsApp draft to the next active player; the sender still taps Send.
 
 ## Key Changes
@@ -42,7 +42,7 @@
 
 ### Phone Helpers
 
-- Country options are fixed to `US (+1)` and `UK (+44)` for v1.
+- Country options are fixed to `US (+1)`, `UK (+44)`, and `Canada (+1)` for v1.
 - Strip spaces, punctuation, and trunk-prefix formatting from user input.
 - Reject fewer than 7 or more than 11 national digits.
 - Store and send the WhatsApp number as `<countryCode><nationalDigits>`, for example `14155551212` or `447700900123`.
@@ -69,7 +69,7 @@ Your turn in Coffee Rush room ABC123. Open your existing game and sync.
 
 ## Test Plan
 
-- Unit test US/UK normalization, trunk-prefix stripping, invalid inputs, WhatsApp URL encoding, and no room secrets in message text.
+- Unit test US/UK/Canada normalization, trunk-prefix stripping, invalid inputs, WhatsApp URL encoding, and no room secrets in message text.
 - Unit test encrypted roster round-trip and relay stale-hash behavior; assert relay responses do not contain plaintext phone numbers.
 - Client tests for saving and clearing the local contact, syncing roster status, hidden non-local numbers, and reload persistence.
 - Async commit tests: accepted `END_TURN` triggers exactly one reminder for the new active player; failed, stale, setup, and game-over commits trigger none.
@@ -77,7 +77,7 @@ Your turn in Coffee Rush room ABC123. Open your existing game and sync.
 
 ## Assumptions
 
-- V1 supports WhatsApp only, with US/UK country choices only.
+- V1 supports WhatsApp only, with US/UK/Canada country choices only.
 - The app should not guess country codes beyond the selected dropdown.
 - The relay may persist encrypted notification ciphertext but never plaintext contact info or turn ownership.
 - Silly message generation comes after the core reminder flow works.

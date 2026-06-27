@@ -58,7 +58,7 @@ describe('turn notification helpers', () => {
     delete globalThis.window;
   });
 
-  it('normalizes US and UK WhatsApp numbers from national input', () => {
+  it('normalizes US, UK, and Canada WhatsApp numbers from national input', () => {
     expect(normalize('US', '(415) 555-1212')).toMatchObject({
       country: 'US',
       countryCode: '1',
@@ -73,9 +73,16 @@ describe('turn notification helpers', () => {
       whatsappNumber: '447700900123',
     });
     expect(normalize('UK', '+44 7700 900123').nationalNumber).toBe('7700900123');
+    expect(normalize('CA', '(416) 555-1212')).toMatchObject({
+      country: 'CA',
+      countryCode: '1',
+      nationalNumber: '4165551212',
+      whatsappNumber: '14165551212',
+    });
+    expect(normalize('CA', '+1 416 555 1212').nationalNumber).toBe('4165551212');
 
-    expect(normalizeWhatsAppContact({ country: 'CA', nationalNumber: '4165551212' })).toMatchObject({
-      error: 'Choose US or UK.',
+    expect(normalizeWhatsAppContact({ country: 'MX', nationalNumber: '5555551212' })).toMatchObject({
+      error: 'Choose US, UK, or Canada.',
     });
     expect(normalizeWhatsAppContact({ country: 'US', nationalNumber: '123456' })).toMatchObject({
       error: 'Enter 7 to 11 digits.',

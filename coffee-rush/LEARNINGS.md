@@ -301,7 +301,12 @@
 
 **[2026-06-26] — WhatsApp reminder templates**
 - Observation: Country-specific silly reminder copy can use the encrypted roster country locally without exposing turn targets or countries to the relay.
-- Action: Keep reminder templates as static client data keyed by `US`/`UK`, require `{name}` and `{room}` placeholders, and interpolate after the room URL has been scrubbed of invite secrets.
+- Action: Keep reminder templates as static client data keyed by supported country codes with country-specific copy, require `{name}` and `{room}` placeholders, and interpolate after the room URL has been scrubbed of invite secrets.
+- Confidence: high
+
+**[2026-06-27] — WhatsApp reminder country expansion**
+- Observation: Reminder country support is centralized in `WHATSAPP_COUNTRY_OPTIONS`; adding a country before its template bank is safe because `createTurnReminderMessage` falls back to the neutral default when no country-specific templates exist.
+- Action: For new reminder countries, update the shared option list, normalization tests, and stale planning copy first; add country-specific template banks separately when the copy is ready.
 - Confidence: high
 
 **[2026-06-26] — WhatsApp mobile draft UX**

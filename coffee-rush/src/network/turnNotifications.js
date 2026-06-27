@@ -16,6 +16,7 @@ export const NOTIFICATION_ROSTER_VERSION = 1;
 export const WHATSAPP_COUNTRY_OPTIONS = [
   { country: 'US', label: 'US (+1)', countryCode: '1' },
   { country: 'UK', label: 'UK (+44)', countryCode: '44' },
+  { country: 'CA', label: 'Canada (+1)', countryCode: '1' },
 ];
 
 const HASH_PATTERN = /^[A-Za-z0-9_-]{32,96}$/;
@@ -51,7 +52,7 @@ export function normalizeWhatsAppContact({
   const option = getWhatsAppCountryOption(country);
 
   if (!option) {
-    return { error: 'Choose US or UK.' };
+    return { error: 'Choose US, UK, or Canada.' };
   }
 
   let digits = String(nationalNumber ?? '').replace(/\D/g, '');

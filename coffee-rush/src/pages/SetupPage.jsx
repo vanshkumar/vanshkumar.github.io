@@ -69,12 +69,24 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
   const [pendingSeatSwitchKey, setPendingSeatSwitchKey] = useState('');
   const parsedJoinInvite = parseInviteInput(joinRoomCode);
   const joinLocalPlayerId = getInviteLocalPlayerId(parsedJoinInvite);
+  const isJoiningPrivateInvite = Boolean(
+    parsedJoinInvite.roomId &&
+      parsedJoinInvite.relayAuth &&
+      parsedJoinInvite.gameKey,
+  );
   const joinButtonLabel = joinLocalPlayerId
     ? `Join as ${formatPlayerSeat(joinLocalPlayerId)}`
     : 'Join online game';
   const joinSeatHint = joinLocalPlayerId
-    ? `This invite will join as ${formatPlayerSeat(joinLocalPlayerId)}.`
+    ? `You'll join this room as ${formatPlayerSeat(joinLocalPlayerId)}.`
     : '';
+  const profileNameLabel = joinLocalPlayerId
+    ? `Your name for ${formatPlayerSeat(joinLocalPlayerId)}`
+    : 'Your name';
+  const remotePlayHeading = isJoiningPrivateInvite ? 'Join online room' : 'Online room';
+  const remotePlayDescription = isJoiningPrivateInvite && joinLocalPlayerId
+    ? `Enter your details, then join as ${formatPlayerSeat(joinLocalPlayerId)}.`
+    : 'Host a room or join with an invite. Each player uses their own phone.';
   const visibleRemoteError = remoteError || querySecretWarning;
 
   function playerSeatName(index) {
@@ -298,39 +310,43 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
         )}
 
         <div className="setup-controls">
-          <label>
-            Players
-            <select
-              value={playerCount}
-              onChange={(event) => {
-                const nextCount = Number(event.target.value);
-                setPlayerCount(nextCount);
-                setStartingPlayerIndex((current) => Math.min(current, nextCount - 1));
-              }}
-            >
-              <option value={2}>2</option>
-              <option value={3}>3</option>
-              <option value={4}>4</option>
-            </select>
-          </label>
+          {!isJoiningPrivateInvite && (
+            <>
+              <label>
+                Players
+                <select
+                  value={playerCount}
+                  onChange={(event) => {
+                    const nextCount = Number(event.target.value);
+                    setPlayerCount(nextCount);
+                    setStartingPlayerIndex((current) => Math.min(current, nextCount - 1));
+                  }}
+                >
+                  <option value={2}>2</option>
+                  <option value={3}>3</option>
+                  <option value={4}>4</option>
+                </select>
+              </label>
 
-          <label>
-            Starting player
-            <select
-              value={startingPlayerIndex}
-              onChange={(event) => setStartingPlayerIndex(Number(event.target.value))}
-            >
-              {Array.from({ length: playerCount }, (_, index) => (
-                <option key={index} value={index}>
-                  {playerSeatName(index)}
-                </option>
-              ))}
-            </select>
-          </label>
+              <label>
+                Starting player
+                <select
+                  value={startingPlayerIndex}
+                  onChange={(event) => setStartingPlayerIndex(Number(event.target.value))}
+                >
+                  {Array.from({ length: playerCount }, (_, index) => (
+                    <option key={index} value={index}>
+                      {playerSeatName(index)}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </>
+          )}
 
           <div className="profile-grid">
             <label>
-              Your name
+              {profileNameLabel}
               <input
                 value={profileName}
                 onChange={(event) => {
@@ -375,20 +391,22 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
 
         <section className="remote-play-panel" aria-label="Play options">
           <div>
-            <h2>Online room</h2>
-            <p>Host a room or join with an invite. Each player uses their own phone.</p>
+            <h2>{remotePlayHeading}</h2>
+            <p>{remotePlayDescription}</p>
           </div>
           {visibleRemoteError && <div className="error-banner">{visibleRemoteError}</div>}
-          <div className="remote-play-actions">
-            <button
-              className="primary-button"
-              type="button"
-              onClick={hostOnlineGame}
-              disabled={isHostingOnline}
-            >
-              {isHostingOnline ? 'Creating room...' : 'Host online game'}
-            </button>
-          </div>
+          {!isJoiningPrivateInvite && (
+            <div className="remote-play-actions">
+              <button
+                className="primary-button"
+                type="button"
+                onClick={hostOnlineGame}
+                disabled={isHostingOnline}
+              >
+                {isHostingOnline ? 'Creating room...' : 'Host online game'}
+              </button>
+            </div>
+          )}
           <div className="join-room-row">
             <label>
               Invite link

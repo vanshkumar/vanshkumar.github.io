@@ -361,6 +361,11 @@
 
 ## What Has Failed
 
+**[2026-06-27] — Async invite landing copy**
+- Observation: A valid player-specific async invite pre-fills the join form as the invited seat, but `SetupPage` still renders the host new-game setup controls above it, including `Starting player` with `You` for player 1.
+- Action: Treat full invite URLs as a join-only entry state; hide host-only player count/starting-player controls and avoid `You` copy unless it refers to the invite browser's local seat.
+- Confidence: high
+
 **[2026-06-25] — Async draft recovery**
 - Observation: Reloading an async room with an uncommitted local draft while the relay URL is unreachable can restore the visible draft state without the full draft action list; after a failed `END_TURN`, restoring the normal relay showed `1 draft` for a state that included earlier local move/discard actions, and Undo briefly showed `synced` while still on an uncommitted pour state.
 - Action: When testing or fixing async recovery, verify the saved draft action list, visible game state, and canonical room head stay aligned across reload, failed sync, failed commit, Undo, and retry; avoid committing from a restored state unless the draft count/actions match the visible state.

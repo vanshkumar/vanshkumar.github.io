@@ -42,6 +42,16 @@
 - Action: When committing root-site fixes, stage explicit root paths instead of broad `git add -A` so sibling app edits stay untouched.
 - Confidence: high
 
+**[2026-06-27] — Analytics setup**
+- Observation: User-facing Astro pages share `src/layouts/BaseLayout.astro`, while `/traces/[...slug].astro` is a standalone zero-delay redirect document with its own `<head>`.
+- Action: Put global head scripts in `BaseLayout.astro` for normal site pages, and handle the traces redirect separately only when the redirect page itself needs instrumentation.
+- Confidence: high
+
+**[2026-06-27] — Direct publish**
+- Observation: The active branch for this site repo is `main` tracking `origin/main`, and explicit "commit and push" requests are intended as direct publishes rather than PR branch work.
+- Action: Commit scoped site changes on the current tracking branch and push `origin/main`, while staging explicit paths when the worktree contains unrelated edits.
+- Confidence: medium
+
 ## Patterns and Preferences
 
 **[2026-06-26] — Typography size tuning**

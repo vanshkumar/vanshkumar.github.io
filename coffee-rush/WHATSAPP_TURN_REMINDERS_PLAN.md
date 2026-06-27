@@ -80,4 +80,4 @@ Your turn in Coffee Rush room ABC123. Open your existing game and sync.
 - V1 supports WhatsApp only, with US/UK/Canada country choices only.
 - The app should not guess country codes beyond the selected dropdown.
 - The relay may persist encrypted notification ciphertext but never plaintext contact info or turn ownership.
-- Silly message generation comes after the core reminder flow works.
+- Country-specific reminder template banks are static client data keyed by supported country codes.

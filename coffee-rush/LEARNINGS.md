@@ -291,7 +291,7 @@
 
 **[2026-06-26] — WhatsApp reminder phone UX**
 - Observation: Requiring players to type country codes makes reminder setup unnecessarily annoying for the first target audience.
-- Action: For the first WhatsApp reminder pass, offer a country dropdown limited to `US (+1)` and `UK (+44)`, then normalize the entered national number before building the WhatsApp link.
+- Action: Offer a country dropdown limited to supported reminder countries such as `US (+1)`, `UK (+44)`, and `Canada (+1)`, then normalize the entered national number before building the WhatsApp link.
 - Confidence: high
 
 **[2026-06-26] — WhatsApp reminder room links**
@@ -307,6 +307,11 @@
 **[2026-06-27] — WhatsApp reminder country expansion**
 - Observation: Reminder country support is centralized in `WHATSAPP_COUNTRY_OPTIONS`; adding a country before its template bank is safe because `createTurnReminderMessage` falls back to the neutral default when no country-specific templates exist.
 - Action: For new reminder countries, update the shared option list, normalization tests, and stale planning copy first; add country-specific template banks separately when the copy is ready.
+- Confidence: high
+
+**[2026-06-27] — Reminder template imports**
+- Observation: The reminder template JSON is a full country-keyed replacement file where each supported country should have 100 strings and every string must include `{name}` and `{room}`.
+- Action: Before importing external reminder copy, validate exact country keys, per-country counts, string types, required placeholders, whitespace, and duplicates; then extend `turnNotifications.test.js` for every country with a template bank.
 - Confidence: high
 
 **[2026-06-26] — WhatsApp mobile draft UX**

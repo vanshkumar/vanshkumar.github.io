@@ -127,13 +127,17 @@ describe('turn notification helpers', () => {
   it('loads country-specific reminder template banks with required placeholders', () => {
     const usTemplates = getTurnReminderTemplates('US');
     const ukTemplates = getTurnReminderTemplates('UK');
+    const caTemplates = getTurnReminderTemplates('CA');
 
     expect(usTemplates).toHaveLength(100);
     expect(ukTemplates).toHaveLength(100);
+    expect(caTemplates).toHaveLength(100);
     expect(usTemplates.every((template) => template.includes('{name}'))).toBe(true);
     expect(usTemplates.every((template) => template.includes('{room}'))).toBe(true);
     expect(ukTemplates.every((template) => template.includes('{name}'))).toBe(true);
     expect(ukTemplates.every((template) => template.includes('{room}'))).toBe(true);
+    expect(caTemplates.every((template) => template.includes('{name}'))).toBe(true);
+    expect(caTemplates.every((template) => template.includes('{room}'))).toBe(true);
 
     const roomUrl = createTurnReminderRoomUrl('ab12cd');
     expect(
@@ -152,6 +156,14 @@ describe('turn notification helpers', () => {
         random: () => 0,
       }),
     ).toBe(ukTemplates[0].replaceAll('{name}', 'Ben').replaceAll('{room}', roomUrl));
+    expect(
+      createTurnReminderMessage({
+        roomId: 'ab12cd',
+        playerName: 'Cal',
+        country: 'CA',
+        random: () => 0,
+      }),
+    ).toBe(caTemplates[0].replaceAll('{name}', 'Cal').replaceAll('{room}', roomUrl));
   });
 
   it('opens WhatsApp drafts in a new tab so the game stays visible', () => {

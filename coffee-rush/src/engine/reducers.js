@@ -4,6 +4,7 @@ import { PHASES } from './types';
 import { getCell, ingredientGainForCell, isOccupied, validateMovePath } from './board';
 import { applyFlowOfTime } from './penalties';
 import { cupMatchesOrder, drawOrders, findOrderOnTabs } from './orders';
+import { canPlayerActivateUpgrade } from './upgrades';
 import {
   getActivePlayer,
   getNextPlayerId,
@@ -116,15 +117,19 @@ function placeStartingMeeple(state, action) {
       meeple.id === placement.meepleId ? { ...meeple, cellId: cell.id } : meeple,
     ),
   };
+  const updatedState = replacePlayer(state, updatedPlayer);
   const queue = state.setupPlacementQueue.slice(1);
   const nextPlacement = queue[0];
+  const nextActivePlayerId = nextPlacement?.playerId ?? state.startingPlayerId;
 
   return {
     state: {
-      ...replacePlayer(state, updatedPlayer),
+      ...updatedState,
       setupPlacementQueue: queue,
-      activePlayerId: nextPlacement?.playerId ?? state.startingPlayerId,
-      phase: nextPlacement ? PHASES.SETUP_PLACEMENT : PHASES.UPGRADE,
+      activePlayerId: nextActivePlayerId,
+      phase: nextPlacement
+        ? PHASES.SETUP_PLACEMENT
+        : getTurnStartPhase(getPlayer(updatedState, nextActivePlayerId)),
       lastMessage: nextPlacement
         ? `${getPlayer(state, nextPlacement.playerId).name} places next.`
         : `${getPlayer(state, state.startingPlayerId).name} starts the first turn.`,
@@ -137,6 +142,15 @@ function skipUpgrades(state, action) {
   if (player.error) return player;
 
   if (state.phase !== PHASES.UPGRADE) {
+    if (state.phase === PHASES.MOVE && !canPlayerActivateUpgrade(player.value)) {
+      return {
+        state: {
+          ...state,
+          lastMessage: '',
+        },
+      };
+    }
+
     return { error: 'Upgrade decisions are only available at the start of turn.' };
   }
 
@@ -409,17 +423,18 @@ function endTurn(state, action) {
   }
 
   const nextPlayerId = getNextPlayerId(nextState, player.id);
+  const nextPlayer = getPlayer(nextState, nextPlayerId);
   nextState = {
     ...nextState,
     activePlayerId: nextPlayerId,
-    phase: PHASES.UPGRADE,
+    phase: getTurnStartPhase(nextPlayer),
     turn: nextPlayerId === nextState.startingPlayerId ? nextState.turn + 1 : nextState.turn,
     players: nextState.players.map((candidate) =>
       candidate.id === nextPlayerId
         ? { ...candidate, turnCompletedOrderIds: [] }
         : candidate,
     ),
-    lastMessage: `Pass to ${getPlayer(nextState, nextPlayerId).name}.`,
+    lastMessage: `Pass to ${nextPlayer.name}.`,
   };
 
   return { state: nextState };
@@ -477,6 +492,10 @@ function markFinalTurn(state, endingPlayerId) {
 
 function shouldEndAfterTurn(state, endingPlayerId) {
   return state.endTriggered && state.finalTurnPlayerId === endingPlayerId;
+}
+
+function getTurnStartPhase(player) {
+  return canPlayerActivateUpgrade(player) ? PHASES.UPGRADE : PHASES.MOVE;
 }
 
 function requireActivePlayer(state, playerId) {

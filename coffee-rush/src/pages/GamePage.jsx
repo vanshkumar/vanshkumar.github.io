@@ -16,6 +16,7 @@ import {
 } from '../engine/playerViews';
 import { normalizePlayerName } from '../engine/playerProfile';
 import { applyAction } from '../engine/reducers';
+import { canPlayerActivateUpgrade } from '../engine/upgrades';
 import {
   getActivePlayer,
   getCompletableOrders,
@@ -2171,7 +2172,7 @@ export default function GamePage() {
 
   const visibleLastMessage =
     state.lastMessage?.startsWith('Pass to ') && !passTo ? '' : state.lastMessage;
-  const canActivateUpgrade = activePlayer.completed.length >= 3;
+  const canActivateUpgrade = canPlayerActivateUpgrade(activePlayer);
   const hasInactiveUpgrades = Object.values(activePlayer.upgrades).some(
     (active) => !active,
   );

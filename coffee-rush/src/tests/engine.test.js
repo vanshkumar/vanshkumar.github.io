@@ -128,8 +128,47 @@ describe('Coffee Rush engine', () => {
     expect(state.players[1].cups[0]).toHaveLength(1);
 
     state = finishSetup(state);
-    expect(state.phase).toBe('upgrade');
+    expect(state.phase).toBe('move');
     expect(state.activePlayerId).toBe('p1');
+  });
+
+  it('starts turns in move until the active player can activate an upgrade', () => {
+    let state = finishSetup(setup(2));
+
+    expect(state.phase).toBe('move');
+    expect(state.activePlayerId).toBe('p1');
+
+    const skipped = applyAction(state, { type: 'SKIP_UPGRADES', playerId: 'p1' });
+    expect(skipped.error).toBeUndefined();
+    expect(skipped.state.phase).toBe('move');
+
+    state = {
+      ...state,
+      phase: 'pour',
+      players: state.players.map((player) =>
+        player.id === 'p1' ? { ...player, hand: [] } : player,
+      ),
+    };
+    state = applyAction(state, { type: 'END_TURN', playerId: 'p1' }).state;
+
+    expect(state.activePlayerId).toBe('p2');
+    expect(state.phase).toBe('move');
+
+    state = {
+      ...state,
+      phase: 'pour',
+      players: state.players.map((player) =>
+        player.id === 'p1'
+          ? { ...player, completed: [state.deck[0], state.deck[1], state.deck[2]] }
+          : player.id === 'p2'
+            ? { ...player, hand: [] }
+            : player,
+      ),
+    };
+    state = applyAction(state, { type: 'END_TURN', playerId: 'p2' }).state;
+
+    expect(state.activePlayerId).toBe('p1');
+    expect(state.phase).toBe('upgrade');
   });
 
   it('requires an explicit cup for starting ingredients', () => {

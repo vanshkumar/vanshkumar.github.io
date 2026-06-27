@@ -319,6 +319,11 @@
 - Action: Keep successful `ACTIVATE_UPGRADE` silent by clearing `lastMessage`; rely on phase and upgrade state for confirmation while preserving reducer errors.
 - Confidence: high
 
+**[2026-06-27] — Start-of-turn upgrade gating**
+- Observation: Turns can skip the upgrade decision phase entirely when the active player has fewer than 3 completed orders or no inactive upgrades, but older logs/drafts may still contain `SKIP_UPGRADES` before early movement.
+- Action: Gate turn-start phase selection in the reducer with shared upgrade eligibility, and keep `SKIP_UPGRADES` harmless only for already-moving turns where no upgrade can be activated.
+- Confidence: high
+
 **[2026-06-23] — Header utility UI**
 - Observation: The top-right game utility controls are low-frequency/debug-style actions, so icon-only buttons make them harder to scan than useful.
 - Action: Keep header utility actions as explicit text buttons, especially `Undo`, `Copy log`, `Download log + screenshot`, and `New`.

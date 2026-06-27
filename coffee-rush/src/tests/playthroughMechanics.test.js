@@ -193,16 +193,19 @@ describe('Coffee Rush playthrough mechanics', () => {
 
     expect(state.endTriggered).toBe(true);
     expect(state.finalTurnPlayerId).toBe('p2');
-    expect(state.phase).toBe('upgrade');
+    expect(state.phase).toBe('move');
     expect(state.players[0].penalties).toHaveLength(5);
     expect(state.players[0].rushTokens).toBe(1);
   });
 
   it('activates diagonal movement by spending three completed orders', () => {
     let state = finishSetup(setup());
-    state = updatePlayer(state, 'p1', () => ({
-      completed: [order('order_001'), order('order_002'), order('order_003')],
-    }));
+    state = {
+      ...updatePlayer(state, 'p1', () => ({
+        completed: [order('order_001'), order('order_002'), order('order_003')],
+      })),
+      phase: 'upgrade',
+    };
 
     state = apply(state, {
       type: 'ACTIVATE_UPGRADE',

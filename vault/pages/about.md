@@ -1,6 +1,7 @@
 ---
 title: About
-lastmod: 2026-05-28
+lastmod: 2026-06-27
+date: 2026-05-27
 ---
 ## This site
 is a living workspace for Vansh Kumar's experiments, projects, writing, and notes. Inspired heavily by the concept of [digital gardens](https://maggieappleton.com/garden-history), it evolves as the graph fills in.
@@ -12,7 +13,7 @@ am Vansh Kumar and the one who sculpts the terrain of this site. I live in Pasad
 
 ![[DSCF0096.jpg]]
 
-I am a husband, a father, and a generally curious person.
+I am a husband, father, and generally curious person.
 
 I spend my time pursuing whatever interests me. I was a tech lead & manager at Alphabet in a past life.
 

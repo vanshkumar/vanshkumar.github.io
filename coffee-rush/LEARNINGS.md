@@ -2,6 +2,16 @@
 
 ## What Has Worked
 
+**[2026-06-26] — Exported endgame audit**
+- Observation: Game-over ZIP exports include the terminal `END_TURN` in `state.log`/`actionLog`, while `undoStack` retains recent pre-action snapshots that can show whether `endTriggered` was already set before the final action.
+- Action: When auditing disputed endgames, inspect the last log actions plus `undoStack[-1]` before replaying the full reducer; this quickly identifies the trigger player, final-turn player, and pre-terminal penalty/tab counts.
+- Confidence: high
+
+**[2026-06-26] — Setup placement order**
+- Observation: The starting player takes the first normal turn and receives the extra setup order, but starting meeple placement intentionally begins with the player to their right; in 2-player games this is simply the non-starting player, repeated once per meeple.
+- Action: Keep `createSetupPlacementQueue` in reverse seat order from the starting player and set `activePlayerId` back to `startingPlayerId` only after setup placement finishes.
+- Confidence: high
+
 **[2026-06-24] — Ready-order controls**
 - Observation: The order deck contains separate card instances with identical names and recipes; listing every matching card creates duplicate serve buttons for a single cup.
 - Action: Deduplicate ready-order actions by cup, order name, specialty flag, and recipe while preserving separate actions for separate matching cups.

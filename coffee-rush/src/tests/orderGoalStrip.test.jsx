@@ -53,6 +53,7 @@ describe('OrderGoalStrip', () => {
     expect(html).toContain('order-goal-chip');
     expect(html).toContain('order-goal-chip-critical');
     expect(html).toContain('order-goal-chip-rush');
+    expect(html).not.toContain('order-goal-chip-name');
     expect(html).toContain('title="Restore Caramel Macchiato"');
     expect(html).toContain('highest pressure, next aging makes it a penalty');
     expect(html).toContain('minimized. Restore order');

@@ -64,7 +64,7 @@
 
 **[2026-06-27] — Active order minimization**
 - Observation: The compact `TurnBrief` order strip can hide individual distractions without changing game mechanics because `PlayerPanel` remains the expanded reference for all active orders.
-- Action: Keep per-order minimization as UI-only localStorage keyed by the game seed, prune it against live order ids, and use tiny absolute controls plus compact pressure chips instead of adding labeled buttons.
+- Action: Keep per-order minimization as UI-only localStorage keyed by the game seed, prune it against live order ids, and make minimized orders only pressure-chip width with title/ARIA detail instead of visible names or labeled buttons.
 - Confidence: high
 
 **[2026-06-26] — Order lane alignment**

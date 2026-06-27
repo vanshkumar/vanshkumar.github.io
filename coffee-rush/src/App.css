@@ -1150,23 +1150,21 @@ button.cup-memory-tile {
 }
 
 .order-goal-chip {
-  width: 76px;
-  min-width: 76px;
-  min-height: 54px;
+  position: relative;
+  width: 44px;
+  min-width: 44px;
+  min-height: 34px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 3px;
+  place-items: center;
   border: 1px solid #d7c7af;
-  border-left-width: 4px;
+  border-left-width: 3px;
   border-left-color: transparent;
   background: #fff8ea;
-  padding: 5px;
-  text-align: left;
+  padding: 4px;
 }
 
 .order-goal-chip .order-pressure-marker {
-  grid-column: 1 / -1;
+  width: 30px;
 }
 
 .order-goal-chip-critical {
@@ -1178,19 +1176,11 @@ button.cup-memory-tile {
   box-shadow: inset 0 0 0 2px rgba(39, 96, 90, 0.14);
 }
 
-.order-goal-chip-name {
-  min-width: 0;
-  overflow: hidden;
-  color: #2b211b;
-  font-size: 0.68rem;
-  font-weight: 900;
-  line-height: 1;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .order-goal-chip-rush {
-  width: 16px;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 14px;
   aspect-ratio: 1;
   display: grid;
   place-items: center;
@@ -1198,7 +1188,7 @@ button.cup-memory-tile {
   border-radius: 50%;
   background: #f0c23b;
   color: #4b3711;
-  font-size: 0.58rem;
+  font-size: 0.54rem;
   font-weight: 900;
 }
 
@@ -2132,8 +2122,8 @@ button.cup-memory-tile {
   }
 
   .order-goal-chip {
-    width: 70px;
-    min-width: 70px;
+    width: 42px;
+    min-width: 42px;
   }
 
   .order-goal-name {

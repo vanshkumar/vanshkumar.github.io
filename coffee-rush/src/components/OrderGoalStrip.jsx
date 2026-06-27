@@ -46,8 +46,9 @@ export default function OrderGoalStrip({
               title={`Restore ${order.name}`}
             >
               <OrderPressureMarker tabIndex={tabIndex} compact labeled={false} />
-              <span className="order-goal-chip-name">{order.name}</span>
-              {order.isSpecialty && <span className="order-goal-chip-rush">R</span>}
+              {order.isSpecialty && (
+                <span className="order-goal-chip-rush" aria-hidden="true">R</span>
+              )}
             </button>
           );
         }

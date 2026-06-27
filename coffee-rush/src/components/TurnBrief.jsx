@@ -7,6 +7,9 @@ export default function TurnBrief({
   phase,
   completableOrders = [],
   showCupsInPour = false,
+  minimizedOrderIds = new Set(),
+  onToggleMinimizedOrder,
+  allowOrderMinimize = false,
 }) {
   const readyOrderIds = new Set(completableOrders.map((match) => match.order.id));
   const showCups = phase !== PHASES.POUR || showCupsInPour;
@@ -16,7 +19,13 @@ export default function TurnBrief({
       {showCups && (
         <CupMemoryStrip cups={player.cups} label={`${player.name} current cups`} />
       )}
-      <OrderGoalStrip tabs={player.tabs} readyOrderIds={readyOrderIds} />
+      <OrderGoalStrip
+        tabs={player.tabs}
+        readyOrderIds={readyOrderIds}
+        minimizedOrderIds={minimizedOrderIds}
+        onToggleMinimizedOrder={onToggleMinimizedOrder}
+        allowOrderMinimize={allowOrderMinimize}
+      />
     </section>
   );
 }

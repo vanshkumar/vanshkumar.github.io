@@ -1056,6 +1056,7 @@ button.cup-memory-tile {
 }
 
 .order-goal-card {
+  position: relative;
   min-width: 132px;
   display: grid;
   gap: 5px;
@@ -1065,6 +1066,35 @@ button.cup-memory-tile {
   border-left-color: transparent;
   background: #fff8ea;
   padding: 7px;
+}
+
+.order-goal-minimize-button {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 20px;
+  min-width: 0;
+  min-height: 20px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: #6e5e4a;
+  padding: 0;
+  opacity: 0.72;
+}
+
+.order-goal-minimize-button:hover,
+.order-goal-minimize-button:focus-visible {
+  background: rgba(43, 33, 27, 0.08);
+  opacity: 1;
+}
+
+.order-goal-minimize-mark {
+  width: 10px;
+  height: 2px;
+  display: block;
+  background: currentColor;
 }
 
 .order-goal-card-critical {
@@ -1117,6 +1147,59 @@ button.cup-memory-tile {
 
 .order-goal-recipe {
   gap: 3px;
+}
+
+.order-goal-chip {
+  width: 76px;
+  min-width: 76px;
+  min-height: 54px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 3px;
+  border: 1px solid #d7c7af;
+  border-left-width: 4px;
+  border-left-color: transparent;
+  background: #fff8ea;
+  padding: 5px;
+  text-align: left;
+}
+
+.order-goal-chip .order-pressure-marker {
+  grid-column: 1 / -1;
+}
+
+.order-goal-chip-critical {
+  border-left-color: #b83f34;
+}
+
+.order-goal-chip-ready {
+  border-color: #27605a;
+  box-shadow: inset 0 0 0 2px rgba(39, 96, 90, 0.14);
+}
+
+.order-goal-chip-name {
+  min-width: 0;
+  overflow: hidden;
+  color: #2b211b;
+  font-size: 0.68rem;
+  font-weight: 900;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.order-goal-chip-rush {
+  width: 16px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 1px solid #9a7620;
+  border-radius: 50%;
+  background: #f0c23b;
+  color: #4b3711;
+  font-size: 0.58rem;
+  font-weight: 900;
 }
 
 .order-goal-empty {
@@ -2046,6 +2129,11 @@ button.cup-memory-tile {
   .order-goal-card {
     min-width: 116px;
     padding: 6px;
+  }
+
+  .order-goal-chip {
+    width: 70px;
+    min-width: 70px;
   }
 
   .order-goal-name {

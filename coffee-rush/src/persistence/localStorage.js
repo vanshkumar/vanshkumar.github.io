@@ -1,5 +1,6 @@
 const STORAGE_KEY = 'coffee-rush:active-game:v2';
 const UNDO_STORAGE_KEY = 'coffee-rush:undo-stack:v1';
+const MINIMIZED_ORDERS_KEY = 'coffee-rush:minimized-orders:v1';
 const ASYNC_ROOM_STATE_PREFIX = 'coffee-rush:async-room-state:v1:';
 const ASYNC_DRAFT_PREFIX = 'coffee-rush:async-draft:v1:';
 const PENDING_PLAYER_PROFILE_PREFIX = 'coffee-rush:pending-player-profile:v1:';
@@ -34,8 +35,53 @@ export function loadGame() {
 
 export function clearGame() {
   window.localStorage.removeItem(STORAGE_KEY);
+  clearMinimizedOrderIds();
   clearUndoStack();
   clearAllAsyncRoomStorage();
+}
+
+export function saveMinimizedOrderIds(gameKey, orderIds) {
+  const normalizedOrderIds = Array.from(
+    new Set(
+      (Array.isArray(orderIds) ? orderIds : [])
+        .map((orderId) => String(orderId ?? ''))
+        .filter(Boolean),
+    ),
+  );
+
+  window.localStorage.setItem(
+    MINIMIZED_ORDERS_KEY,
+    JSON.stringify({
+      version: 1,
+      gameKey: String(gameKey ?? ''),
+      orderIds: normalizedOrderIds,
+    }),
+  );
+}
+
+export function loadMinimizedOrderIds(gameKey) {
+  const parsed = parseJson(window.localStorage.getItem(MINIMIZED_ORDERS_KEY), null);
+
+  if (
+    !parsed ||
+    parsed.version !== 1 ||
+    parsed.gameKey !== String(gameKey ?? '') ||
+    !Array.isArray(parsed.orderIds)
+  ) {
+    return [];
+  }
+
+  return Array.from(
+    new Set(
+      parsed.orderIds
+        .map((orderId) => (typeof orderId === 'string' ? orderId : ''))
+        .filter(Boolean),
+    ),
+  );
+}
+
+export function clearMinimizedOrderIds() {
+  window.localStorage.removeItem(MINIMIZED_ORDERS_KEY);
 }
 
 export function saveUndoStack(stack) {

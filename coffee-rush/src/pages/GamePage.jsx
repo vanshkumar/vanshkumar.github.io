@@ -87,11 +87,13 @@ import {
   loadGame,
   loadAsyncDraft,
   loadAsyncRoomState,
+  loadMinimizedOrderIds,
   loadPendingPlayerProfile,
   loadUndoStack,
   saveAsyncDraft,
   saveAsyncRoomState,
   saveGame,
+  saveMinimizedOrderIds,
   saveUndoStack,
 } from '../persistence/localStorage';
 import {
@@ -142,9 +144,26 @@ function ingredientListLabel(ingredients) {
   return ingredients.map((ingredient) => ingredientLabel(ingredient)).join(', ');
 }
 
+function getMinimizedOrderGameKey(state) {
+  return state?.rngSeed ?? '';
+}
+
+function getActiveOrderIdSet(state) {
+  const orderIds = new Set();
+
+  state?.players.forEach((player) => {
+    player.tabs.forEach((tab) => {
+      tab.forEach((order) => orderIds.add(order.id));
+    });
+  });
+
+  return orderIds;
+}
+
 export default function GamePage() {
   const navigate = useNavigate();
   const pageRef = useRef(null);
+  const initialGameRef = useRef();
   const stateRef = useRef(null);
   const undoStackRef = useRef([]);
   const remoteClientRef = useRef(null);
@@ -164,8 +183,15 @@ export default function GamePage() {
   const profileSaveInFlightRef = useRef(false);
   const profileSaveAttemptKeyRef = useRef('');
   const savePendingOnlineProfileRef = useRef(null);
-  const [state, setState] = useState(() => loadGame());
+  if (initialGameRef.current === undefined) {
+    initialGameRef.current = loadGame();
+  }
+
+  const [state, setState] = useState(() => initialGameRef.current);
   const [undoStack, setUndoStack] = useState(() => loadUndoStack());
+  const [minimizedOrderIds, setMinimizedOrderIds] = useState(() =>
+    loadMinimizedOrderIds(getMinimizedOrderGameKey(initialGameRef.current)),
+  );
   const [remoteSession, setRemoteSession] = useState(() => loadRemoteSession());
   const [asyncDraftActionCount, setAsyncDraftActionCount] = useState(0);
   const [asyncFailedCommit, setAsyncFailedCommit] = useState(null);
@@ -268,6 +294,12 @@ export default function GamePage() {
     () => (state ? orderPlayersForLocalView(state, localPlayerId) : []),
     [localPlayerId, state],
   );
+  const minimizedOrderGameKey = getMinimizedOrderGameKey(state);
+  const activeOrderIds = useMemo(() => getActiveOrderIdSet(state), [state]);
+  const minimizedOrderIdSet = useMemo(
+    () => new Set(minimizedOrderIds),
+    [minimizedOrderIds],
+  );
   const rosterForCurrentRoom = useMemo(
     () =>
       notificationRoster ??
@@ -315,6 +347,21 @@ export default function GamePage() {
   useEffect(() => {
     saveUndoStack(undoStack);
   }, [undoStack]);
+
+  useEffect(() => {
+    if (!minimizedOrderGameKey) return;
+
+    setMinimizedOrderIds((current) => {
+      const pruned = current.filter((orderId) => activeOrderIds.has(orderId));
+      return pruned.length === current.length ? current : pruned;
+    });
+  }, [activeOrderIds, minimizedOrderGameKey]);
+
+  useEffect(() => {
+    if (!minimizedOrderGameKey) return;
+
+    saveMinimizedOrderIds(minimizedOrderGameKey, minimizedOrderIds);
+  }, [minimizedOrderGameKey, minimizedOrderIds]);
 
   useEffect(() => {
     if (setupPlacement) {
@@ -2127,6 +2174,14 @@ export default function GamePage() {
     }
   }
 
+  function toggleMinimizedOrder(orderId) {
+    setMinimizedOrderIds((current) =>
+      current.includes(orderId)
+        ? current.filter((candidate) => candidate !== orderId)
+        : [...current, orderId],
+    );
+  }
+
   async function newGame() {
     if (isAsyncRemoteGame) {
       if (isRemoteHost) {
@@ -2523,6 +2578,9 @@ export default function GamePage() {
             phase={state.phase}
             completableOrders={localViewCompletableOrders}
             showCupsInPour={localViewPlayer.id !== activePlayer.id}
+            minimizedOrderIds={minimizedOrderIdSet}
+            onToggleMinimizedOrder={toggleMinimizedOrder}
+            allowOrderMinimize
           />
         )}
 

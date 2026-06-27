@@ -62,6 +62,11 @@
 - Action: Keep reducer/storage tab indexes unchanged, and render order lanes through a shared urgency-first display order with compact pressure markers instead of visible tab numbers.
 - Confidence: high
 
+**[2026-06-27] — Active order minimization**
+- Observation: The compact `TurnBrief` order strip can hide individual distractions without changing game mechanics because `PlayerPanel` remains the expanded reference for all active orders.
+- Action: Keep per-order minimization as UI-only localStorage keyed by the game seed, prune it against live order ids, and use tiny absolute controls plus compact pressure chips instead of adding labeled buttons.
+- Confidence: high
+
 **[2026-06-26] — Order lane alignment**
 - Observation: CSS Grid stretches the pressure lane tracks to the tallest lane, so marker rows can appear vertically centered unless the lane grid content is explicitly pinned.
 - Action: Keep `.order-tab` grid content top-aligned with `align-content: start` whenever pressure lanes have mixed empty and filled order columns.

@@ -52,6 +52,16 @@
 - Action: Commit scoped site changes on the current tracking branch and push `origin/main`, while staging explicit paths when the worktree contains unrelated edits.
 - Confidence: medium
 
+**[2026-06-27] — Side-app analytics**
+- Observation: Deployed sibling apps `coffee-rush/` and `terminal-desires-ranker/` are separate Vite builds with their own `index.html`; their GitHub Pages SPA fallbacks live in each app's `public/404.html`.
+- Action: Global root-site head changes do not reach sibling apps; add shared analytics snippets directly to each app's `index.html`, and include the app `public/404.html` fallback only when redirect/fallback hits should be measured.
+- Confidence: high
+
+**[2026-06-27] — Analytics documentation**
+- Observation: `README.md` is the clearest durable orientation point for cross-app implementation rules; `SCHEMA.md` should stay focused on content collections and vault sync.
+- Action: Document shared analytics requirements in the root README editing notes when adding or changing deployed sub-app patterns.
+- Confidence: high
+
 ## Patterns and Preferences
 
 **[2026-06-26] — Typography size tuning**

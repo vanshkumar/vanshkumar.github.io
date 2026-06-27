@@ -40,5 +40,9 @@ content first. Edit markdown in `vault/`, not `src/content/`.
   slugs.
 - The sibling Vite apps have their own `package.json`, tests, builds, and
   READMEs. Work from inside the relevant app folder.
+- Analytics uses Google tag `G-3HGGFGZK6Y`. The root Astro site loads it from
+  `src/layouts/BaseLayout.astro`; deployed sibling Vite apps should include the
+  same snippet in their `index.html` and any GitHub Pages SPA fallback
+  `public/404.html`.
 - GitHub Actions builds the Astro site, then builds `terminal-desires-ranker/`
   and `coffee-rush/`, then assembles the final Pages artifact.

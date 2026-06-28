@@ -2716,7 +2716,7 @@ export default function GamePage() {
                   <h2>{activePlayer.name}, choose an upgrade or move</h2>
                   <p>
                     {canActivateUpgrade
-                      ? 'You may activate one upgrade for 3 completed orders, or skip straight to movement.'
+                      ? 'You may activate an upgrade for 3 completed orders, or skip straight to movement.'
                       : 'No upgrade is available until you have 3 completed orders.'}
                   </p>
                 </div>

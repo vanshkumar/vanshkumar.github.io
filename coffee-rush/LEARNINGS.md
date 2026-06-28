@@ -339,6 +339,11 @@
 - Action: Gate turn-start phase selection in the reducer with shared upgrade eligibility, and keep `SKIP_UPGRADES` harmless only for already-moving turns where no upgrade can be activated.
 - Confidence: high
 
+**[2026-06-28] — Upgrade activation chaining**
+- Observation: `ACTIVATE_UPGRADE` spends completed orders and may leave the active player eligible for another upgrade during the same start-of-turn decision window.
+- Action: After changing completed orders or upgrade flags during start-of-turn, derive the next phase with shared `getTurnStartPhase(updatedPlayer)` instead of forcing `move`.
+- Confidence: high
+
 **[2026-06-23] — Header utility UI**
 - Observation: The top-right game utility controls are low-frequency/debug-style actions, so icon-only buttons make them harder to scan than useful.
 - Action: Keep header utility actions as explicit text buttons, especially `Undo`, `Copy log`, `Download log + screenshot`, and `New`.

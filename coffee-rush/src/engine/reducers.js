@@ -198,7 +198,7 @@ function activateUpgrade(state, action) {
   return {
     state: {
       ...replacePlayer(state, updatedPlayer),
-      phase: PHASES.MOVE,
+      phase: getTurnStartPhase(updatedPlayer),
       lastMessage: '',
     },
   };

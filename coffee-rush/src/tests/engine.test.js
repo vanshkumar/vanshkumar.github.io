@@ -171,6 +171,40 @@ describe('Coffee Rush engine', () => {
     expect(state.phase).toBe('upgrade');
   });
 
+  it('keeps the player in upgrade choice after an activation when three orders remain', () => {
+    let state = finishSetup(setup(2));
+    const completedOrders = state.deck.slice(0, 6);
+    state = {
+      ...state,
+      phase: 'upgrade',
+      players: state.players.map((player) =>
+        player.id === 'p1' ? { ...player, completed: completedOrders } : player,
+      ),
+    };
+
+    const firstActivation = applyAction(state, {
+      type: 'ACTIVATE_UPGRADE',
+      playerId: 'p1',
+      tileId: 'diagonal_movement',
+    });
+    expect(firstActivation.error).toBeUndefined();
+    expect(firstActivation.state.phase).toBe('upgrade');
+    expect(firstActivation.state.players[0].completed).toEqual(
+      completedOrders.slice(3),
+    );
+    expect(firstActivation.state.players[0].upgrades.diagonal_movement).toBe(true);
+
+    const secondActivation = applyAction(firstActivation.state, {
+      type: 'ACTIVATE_UPGRADE',
+      playerId: 'p1',
+      tileId: 'double_corners',
+    });
+    expect(secondActivation.error).toBeUndefined();
+    expect(secondActivation.state.phase).toBe('move');
+    expect(secondActivation.state.players[0].completed).toEqual([]);
+    expect(secondActivation.state.players[0].upgrades.double_corners).toBe(true);
+  });
+
   it('requires an explicit cup for starting ingredients', () => {
     const state = setup(2);
     const placement = state.setupPlacementQueue[0];

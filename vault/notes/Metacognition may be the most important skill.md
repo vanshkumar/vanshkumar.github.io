@@ -1,4 +1,6 @@
 ---
+slug: metacognition-may-be-the-most-important-skill
+title: "Metacognition may be the most important skill"
 lastmod: 2026-06-28
 date: 2026-05-27
 ---

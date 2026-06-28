@@ -7,15 +7,15 @@ This is a page for how I approach living life, with my ever-evolving self as aud
 
 # Orienting lens
 
-My orienting lens for what I choose to work on is a combination of deathbed regret-minimization & [[The Clock Of The Long Now|the Long Now]]. As a result, I try to spend my time on things that will endure for decades & ideally well beyond my life. These items so far are:
-- Marriage
-- Kids & their education (plan to start a microschool)
-- Brain – reading, writing, thinking, externalized via this site
-- Friendships
+How I choose what to work on is a combination of deathbed regret-minimization & [[The Clock Of The Long Now|a Long Now style view]]. As a result, I mostly try to spend my time on things that will endure for decades & ideally well beyond my life. These items so far are:
+- My marriage
+- My kids & their education (plan to start a microschool for my + friends kids)
+- My brain – reading, writing, thinking, externalized via this site
+- My friendships
 
-The above are still quite self-forward, besides my kids' education. I don't yet have a satisfactory Long Now project.
+The above all start with "my" / are quite self-forward, besides perhaps my kids' education. I don't feel that I yet have a satisfactory Long Now project.
 
-I have found it useful to instantiate a Long Now view as the universe/Nature/God/Dao, as there is a natural merging between extreme long-term thinking & infinite entities. A question I am playing with is – what does the Dao want me to do today?
+I have found it useful to concretely instantiate a Long Now view as the universe/Nature/God/Dao, as there is a natural merging between extreme long-term thinking & infinite entities. A question I like to play with is – what does the Dao want me to do?
 
 # Topics
 

@@ -2,13 +2,13 @@
 slug: how-might-we-scale-high-quality-education
 title: How might we scale high quality education?
 date: 2026-06-18
-lastmod: 2026-06-20
+lastmod: 2026-06-28
 ---
-[[What makes for a high quality education?]] My answer is a positive context and personalization. Both of these require trust, goodwill, and love between students/teachers. That means scaling high quality education requires scaling human love. How do you do that?
+[[What makes for a high quality education?]] My answer so far is a positive context and personalization. Both of these require trust, goodwill, and love between students/teachers. That means scaling high quality education is likely bottlenecked on scaling human love. How might you do that?
 
 ---
 
-Let's do the math. If something like an Alpha school 5:1 ratio is needed. How many school-age kids are there in the world at any given time? That divided by 5 is how many well-paid high quality motivated teachers are needed, assuming perfect tech + culture.
+Let's [do the math](https://www.visakanv.com/blog/math/). Assume something like an Alpha school 5:1 ratio is needed. How many school-age kids are there in the world at any given time? That divided by 5 is how many well-paid high quality motivated teachers are needed, assuming perfect tech + culture.
 
 ChatGPT says **1.7-1.8 billion school-age kids (5-17)**
 
@@ -18,12 +18,9 @@ ChatGPT says today there are 70 million teachers
 
 So global ratio today is 25:1. We would **need to 5x the number of teachers**.
 
-Presumably the ROI on primary/secondary education is quite high? I guess it's unclear what the marginal effect of funding better/more teachers would be. Or to put it more directly, what is the economic surplus of reducing class sizes from 25:1 to 5:1? I assume significant but I wonder if there is data on this? Let's look for it. I think this is a good learning by writing claim to look into.
+Presumably the ROI on primary/secondary education is quite high? I guess it's unclear what the marginal effect of funding better/more teachers would be. Or to put it more directly, what is the economic surplus of reducing class sizes from 25:1 to 5:1? I assume significant but I wonder if there is data on this?
 
-But yea ASSUMING reducing class sizes by a factor of 5 has some significant economic surplus. Teachers should receive some of that somehow.
-
-The question then becomes what % of that economic surplus would teachers need to receive to be able to fund reducing class sizes by 5x? Besides salary there is also the question of buildings needing to be bigger (5x more rooms?) etc. But presumably salary is the dominant one.
-
+But yea ASSUMING reducing class sizes by a factor of 5 has some significant economic surplus. The question then becomes what % of that economic surplus would teachers need to receive to be able to fund reducing class sizes by 5x, and is it < 100% of the surplus (lol)? Besides salary there is also the question of buildings needing to be bigger (5x more rooms?) etc. But presumably salary is the dominant ongoing factor.
 
 The other assumption here is that these 5x more teachers are also being paid more than teachers are paid today. Which requires an even bigger portion of the presumed economic surplus that results.
 
@@ -50,4 +47,4 @@ The other part re: culture is also the issue that [[Public schools don't enforce
 
 ---
 
-The tech is prolly the easiest part.
+The tech is prolly the easiest part, I think it's ~already solved. It does need to be in a closed loop with the other aspects so it improves over time, but I highly doubt it's the bottleneck.

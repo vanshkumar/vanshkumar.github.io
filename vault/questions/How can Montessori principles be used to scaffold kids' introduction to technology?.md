@@ -1,7 +1,7 @@
 ---
 slug: how-can-montessori-principles-be-used-to-scaffold-kids-introduction-to-technology
 title: How can Montessori principles be used to scaffold kids' introduction to technology?
-lastmod: 2026-06-24
+lastmod: 2026-06-27
 date: 2026-06-13
 ---
 What are Montessori principles? From [here](https://blueprintforagoldenage.substack.com/p/montessoris-most-important-discovery):
@@ -24,7 +24,7 @@ This is the crux of the question. Technology is a tool to make humans' lives eas
 
 The example that springs to mind is jumping to look something up rather than sitting and thinking about it for even 5 minutes. Is this a good example? I am of two minds. On the one hand, taking the time to think through something is valuable in building up your own strong edifice of knowledge that you can then test things against, etc. There is some cost in rediscovering things others know, but it's essential in building up your own point of view. At the same time, for *most* things looking it up is the right answer. I guess the deciding factor is if what you're doing is instrumental or an end in itself. And maybe the easiest way to test that is seeing if you enjoy thinking through it yourself for 5 minutes.
 
-**Concentrated work is the fundamental tool**: Self-explanatory, and quite clear. The immediate (obvious) thought is to not give kids unrestricted access to technology. It should be heavily curated, appropriate to their developmental level, etc.
+**Concentrated work is the fundamental tool**: Self-explanatory, and quite clear. The immediate (obvious) thought is to not give kids unrestricted access to technology. It should be heavily curated, appropriate to their developmental level, etc. It should make concentration easy & 
 
 ---
 
@@ -37,7 +37,9 @@ A Linux box or old Mac with:
 - Duolingo
 - Local LLM tutor (should this selectively have internet access?)
 
-In this setup, the burden is fully on the child to figure out how things work and what's possible on a computer, albeit in a quite constrained environment. I'm not sure this is valuable until kids are reasonably older though.. this is more like a hackbox for older kids to play with than a real scaffolding for a younger child.
+In this setup, the burden is fully on the child to figure out how things work and what's possible on a computer, albeit in a quite constrained environment. I'm not sure this is valuable until kids are reasonably older though.. this is more like a hackbox for older kids to play with than a real scaffolding for a younger child. What about for younger kids?
+
+
 
 ---
 

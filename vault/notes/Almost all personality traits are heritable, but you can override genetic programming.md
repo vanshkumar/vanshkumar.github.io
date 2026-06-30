@@ -1,10 +1,13 @@
 ---
-lastmod: 2025-11-08
+slug: almost-all-personality-traits-are-heritable-but-you-can-override-genetic-programming
+title: "Almost all personality traits are heritable, but you can override genetic programming"
+lastmod: 2026-06-30
+date: 2026-05-27
 ---
 
 
 - Behavioral genetics research is fairly clear that parents don't have much of an influence on long-term personality – it is half genetics and half "non-shared environment" (which basically means things outside the home/parents)
-- I generally buy The Nurture Assumption argument that non-shared environment is dominated by effects of peer category (ie if you're a boy who likes academics, you will self-select into the 'nerd' category and that will self-reinforce) rather than randomness etc
+- I generally buy The Nurture Assumption argument that non-shared environment is dominated by effects of peer category (ie if you're a boy who likes academics, you will self-select into the 'nerd' category and that will self-reinforce) rather than randomness etc, though this is more based on my thoughts on how human culture is likely implemented in developing brains rather than clear scientific tests
   
 - While it does seems like genetics is fairly determinative of longer-term personality traits, I tend to believe that it is totally possible to change your personality traits, but it's just the case that most people simply don't do it (for a variety of reasons). see below
 

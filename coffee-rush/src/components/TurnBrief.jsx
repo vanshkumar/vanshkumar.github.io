@@ -24,7 +24,7 @@ export default function TurnBrief({
           <button
             className="turn-brief-orders-button"
             type="button"
-            onClick={() => onOpenOrders(player.id)}
+            onClick={onOpenOrders}
             aria-label={`Open ${player.name} orders`}
           >
             <UiIcon name="orders" />

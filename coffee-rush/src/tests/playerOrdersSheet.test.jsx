@@ -1,6 +1,5 @@
 import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
-import PlayerOrderPeekBar from '../components/PlayerOrderPeekBar';
 import PlayerOrdersSheet from '../components/PlayerOrdersSheet';
 
 const urgentOrder = {
@@ -64,38 +63,5 @@ describe('PlayerOrdersSheet', () => {
 
     expect(html).toContain('order-card-ready');
     expect(html).toContain('Caffe Latte is ready to serve');
-  });
-});
-
-describe('PlayerOrderPeekBar', () => {
-  it('renders a near-top order shortcut for each player', () => {
-    const html = renderToStaticMarkup(
-      <PlayerOrderPeekBar
-        players={[
-          createPlayer(),
-          createPlayer({
-            id: 'p2',
-            name: 'Ben',
-            color: 'blue',
-            tabs: [[], [newOrder], [], []],
-          }),
-          createPlayer({
-            id: 'p3',
-            name: 'Cleo',
-            color: 'green',
-            tabs: [[], [], [urgentOrder], []],
-          }),
-        ]}
-        activePlayerId="p2"
-        localPlayerId="p1"
-        onOpenPlayerOrders={() => {}}
-      />,
-    );
-
-    expect(html).toContain('Open Ada orders');
-    expect(html).toContain('Open Ben orders');
-    expect(html).toContain('Open Cleo orders');
-    expect(html).toContain('order-peek-active');
-    expect(html).toContain('order-peek-critical');
   });
 });

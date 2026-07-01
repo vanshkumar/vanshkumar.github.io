@@ -73,8 +73,8 @@
 - Confidence: high
 
 **[2026-07-01] — Mobile order planning UX**
-- Observation: Mobile players need near-top access to expanded order planning for every player, while cup contents are already visible enough in the station and full panels.
-- Action: Keep expanded mobile order views UI-only, urgency-first, and cup-free; open them from near-top player order shortcuts instead of requiring vertical scrolling through full `PlayerPanel` detail.
+- Observation: Mobile players need near-top access to their own expanded order planning, while opponent order shortcut rails make other players' orders too prominent.
+- Action: Keep expanded mobile order views UI-only, urgency-first, cup-free, and opened from the current/local `TurnBrief` only; avoid near-top opponent order shortcuts.
 - Confidence: high
 
 **[2026-06-26] — Order lane alignment**

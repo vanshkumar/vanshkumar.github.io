@@ -12,6 +12,7 @@ export default function PlayerPanel({
   selectedCup,
   onSelectCup,
   onDumpCup,
+  onOpenOrders,
   phase,
   canInteract = true,
 }) {
@@ -29,6 +30,16 @@ export default function PlayerPanel({
           <h2>{player.name}</h2>
           <p>{player.completed.length} done / {player.penalties.length} penalties</p>
         </div>
+        {onOpenOrders && (
+          <button
+            className="player-orders-button"
+            type="button"
+            onClick={() => onOpenOrders(player.id)}
+            aria-label={`Open ${player.name} orders`}
+          >
+            Orders
+          </button>
+        )}
         <RushTokenTracker count={player.rushTokens} />
       </header>
 

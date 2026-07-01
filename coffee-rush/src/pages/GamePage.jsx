@@ -4,6 +4,8 @@ import Board from '../components/Board';
 import CupMemoryStrip from '../components/CupMemoryStrip';
 import IngredientIcon from '../components/IngredientIcon';
 import PassDeviceModal from '../components/PassDeviceModal';
+import PlayerOrderPeekBar from '../components/PlayerOrderPeekBar';
+import PlayerOrdersSheet from '../components/PlayerOrdersSheet';
 import PlayerPanel from '../components/PlayerPanel';
 import TurnBrief from '../components/TurnBrief';
 import UpgradeMenu from '../components/UpgradeMenu';
@@ -225,6 +227,7 @@ export default function GamePage() {
   const [selectedSetupCellId, setSelectedSetupCellId] = useState(null);
   const [passTo, setPassTo] = useState('');
   const [isUpgradeMenuOpen, setIsUpgradeMenuOpen] = useState(false);
+  const [ordersSheetPlayerId, setOrdersSheetPlayerId] = useState('');
   const [deviceLinkPlayerId, setDeviceLinkPlayerId] = useState('');
   const isRemoteHost = remoteSession?.mode === REMOTE_MODES.HOST;
   const isRemotePeer = remoteSession?.mode === REMOTE_MODES.PEER;
@@ -336,6 +339,17 @@ export default function GamePage() {
 
     return deviceLinkPlayers[0]?.id ?? '';
   }, [deviceLinkPlayerId, deviceLinkPlayers, localPlayerId]);
+  const ordersSheetPlayer = useMemo(
+    () => (state && ordersSheetPlayerId ? getPlayer(state, ordersSheetPlayerId) : null),
+    [ordersSheetPlayerId, state],
+  );
+  const ordersSheetReadyOrderIds = useMemo(
+    () =>
+      ordersSheetPlayer?.id === activePlayer?.id
+        ? new Set(completableOrders.map((match) => match.order.id))
+        : new Set(),
+    [activePlayer?.id, completableOrders, ordersSheetPlayer?.id],
+  );
 
   useEffect(() => {
     stateRef.current = state;
@@ -378,6 +392,14 @@ export default function GamePage() {
 
     saveMinimizedOrderIds(minimizedOrderGameKey, minimizedOrderIds);
   }, [minimizedOrderGameKey, minimizedOrderIds]);
+
+  useEffect(() => {
+    if (!ordersSheetPlayerId) return;
+
+    if (!state?.players.some((player) => player.id === ordersSheetPlayerId)) {
+      setOrdersSheetPlayerId('');
+    }
+  }, [ordersSheetPlayerId, state]);
 
   useEffect(() => {
     if (setupPlacement) {
@@ -2200,6 +2222,10 @@ export default function GamePage() {
     );
   }
 
+  function openOrdersSheet(playerId) {
+    setOrdersSheetPlayerId(playerId);
+  }
+
   async function newGame() {
     if (isAsyncRemoteGame) {
       if (isRemoteHost) {
@@ -2617,7 +2643,17 @@ export default function GamePage() {
             showCupsInPour={localViewPlayer.id !== activePlayer.id}
             minimizedOrderIds={minimizedOrderIdSet}
             onToggleMinimizedOrder={toggleMinimizedOrder}
+            onOpenOrders={openOrdersSheet}
             allowOrderMinimize
+          />
+        )}
+
+        {state.phase !== PHASES.SETUP_PLACEMENT && (
+          <PlayerOrderPeekBar
+            players={orderedPlayers}
+            activePlayerId={activePlayer?.id}
+            localPlayerId={localViewPlayer?.id}
+            onOpenPlayerOrders={openOrdersSheet}
           />
         )}
 
@@ -2953,6 +2989,7 @@ export default function GamePage() {
               onDumpCup={(cupIdx) =>
                 dispatch({ type: 'DUMP_CUP', playerId: activePlayer.id, cupIdx })
               }
+              onOpenOrders={openOrdersSheet}
               phase={state.phase}
               canInteract={canControlActivePlayer && !isOnlineProfilePending}
             />
@@ -2977,6 +3014,11 @@ export default function GamePage() {
         onClose={() => setIsUpgradeMenuOpen(false)}
       />
       <PassDeviceModal nextPlayerName={passTo} onContinue={() => setPassTo('')} />
+      <PlayerOrdersSheet
+        player={ordersSheetPlayer}
+        readyOrderIds={ordersSheetReadyOrderIds}
+        onClose={() => setOrdersSheetPlayerId('')}
+      />
     </main>
   );
 }

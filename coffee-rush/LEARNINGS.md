@@ -67,6 +67,11 @@
 - Action: Keep per-order minimization as UI-only localStorage keyed by the game seed, prune it against live order ids, and make minimized orders only pressure-chip width with title/ARIA detail instead of visible names or labeled buttons.
 - Confidence: high
 
+**[2026-07-01] — Mobile order planning UX**
+- Observation: Mobile players need near-top access to expanded order planning for every player, while cup contents are already visible enough in the station and full panels.
+- Action: Keep expanded mobile order views UI-only, urgency-first, and cup-free; open them from near-top player order shortcuts instead of requiring vertical scrolling through full `PlayerPanel` detail.
+- Confidence: high
+
 **[2026-06-26] — Order lane alignment**
 - Observation: CSS Grid stretches the pressure lane tracks to the tallest lane, so marker rows can appear vertically centered unless the lane grid content is explicitly pinned.
 - Action: Keep `.order-tab` grid content top-aligned with `align-content: start` whenever pressure lanes have mixed empty and filled order columns.

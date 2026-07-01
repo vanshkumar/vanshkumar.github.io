@@ -1067,6 +1067,141 @@ button.cup-memory-tile {
   display: none;
 }
 
+.turn-brief-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.turn-brief-player {
+  min-width: 0;
+  overflow: hidden;
+  color: #5d4d3d;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.turn-brief-orders-button,
+.player-orders-button {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px 8px;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.turn-brief-orders-button .ui-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.player-orders-button {
+  display: none;
+}
+
+.order-peek-rail {
+  display: none;
+}
+
+.order-peek-button {
+  min-width: 0;
+  min-height: 58px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 5px 8px;
+  align-items: start;
+  border-left-width: 5px;
+  background: #fffaf2;
+  padding: 7px;
+  text-align: left;
+}
+
+.order-peek-active {
+  background: #d7ebe5;
+  border-color: #27605a;
+}
+
+.order-peek-critical {
+  box-shadow: inset 0 0 0 2px rgba(184, 63, 52, 0.12);
+}
+
+.order-peek-player {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  font-weight: 950;
+  line-height: 1.05;
+}
+
+.order-peek-player > span:first-child {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.order-peek-turn {
+  flex: 0 0 auto;
+  color: #27605a;
+  font-size: 0.58rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.order-peek-total {
+  min-width: 22px;
+  min-height: 22px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d7c7af;
+  background: #fff8ea;
+  font-size: 0.8rem;
+  font-weight: 950;
+}
+
+.order-peek-pressures {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 3px;
+}
+
+.order-peek-pressure {
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  color: #5d4d3d;
+  font-size: 0.68rem;
+  font-weight: 950;
+}
+
+.order-peek-pressure .order-pressure-marker {
+  width: 24px;
+  min-height: 14px;
+  grid-template-columns: repeat(4, 4px);
+  gap: 1px;
+  padding: 2px;
+}
+
+.order-peek-pressure .order-pressure-pip {
+  width: 4px;
+  height: 9px;
+}
+
+.order-peek-pressure-empty {
+  opacity: 0.42;
+}
+
 .order-goal-strip {
   display: flex;
   gap: 6px;
@@ -1776,6 +1911,103 @@ button.cup-memory-tile {
   padding: 20px;
 }
 
+.orders-sheet-backdrop {
+  position: fixed;
+  z-index: 24;
+  inset: 0;
+  display: grid;
+  align-items: end;
+  justify-items: center;
+  background: rgba(43, 33, 27, 0.58);
+  backdrop-filter: blur(4px);
+  padding: 18px;
+}
+
+.orders-sheet {
+  width: min(720px, 100%);
+  max-height: min(760px, calc(100vh - 36px));
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  overflow: hidden;
+  border: 1px solid #c7b7a0;
+  border-left-width: 8px;
+  background: #fffaf2;
+  box-shadow: 0 18px 44px rgba(43, 33, 27, 0.24);
+}
+
+.orders-sheet-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px;
+  border-bottom: 1px solid #d7c7af;
+}
+
+.orders-sheet-title-block {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+}
+
+.orders-sheet-title-block h2 {
+  font-size: 1.3rem;
+  line-height: 1.05;
+}
+
+.orders-sheet-title-block p {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  color: #5d4d3d;
+  font-size: 0.86rem;
+  font-weight: 750;
+}
+
+.orders-sheet-body {
+  min-height: 0;
+  display: grid;
+  gap: 12px;
+  overflow: auto;
+  padding: 14px;
+}
+
+.orders-sheet-section {
+  display: grid;
+  gap: 7px;
+}
+
+.orders-sheet-section-header {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #4b3d30;
+}
+
+.orders-sheet-section-header strong {
+  font-size: 0.86rem;
+  font-weight: 950;
+}
+
+.orders-sheet-section-header span:last-child {
+  min-width: 22px;
+  min-height: 22px;
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  border: 1px solid #d7c7af;
+  background: #fff8ea;
+  font-size: 0.72rem;
+  font-weight: 950;
+}
+
+.orders-sheet-orders {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+  gap: 8px;
+}
+
 .pass-modal {
   width: min(420px, 100%);
   display: grid;
@@ -1819,6 +2051,7 @@ button.cup-memory-tile {
   .game-layout > .board-shell,
   .game-layout > .action-panel,
   .game-layout > .turn-brief,
+  .game-layout > .order-peek-rail,
   .game-layout > .players-column {
     grid-column: 1;
     grid-row: auto;
@@ -2002,24 +2235,38 @@ button.cup-memory-tile {
     min-width: 0;
   }
 
+  .order-peek-rail {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .player-orders-button {
+    display: inline-flex;
+  }
+
   .phase-move .turn-brief {
     order: 1;
   }
 
-  .phase-move .move-control-panel {
+  .phase-move .order-peek-rail {
     order: 2;
   }
 
-  .phase-move .board-shell {
+  .phase-move .move-control-panel {
     order: 3;
   }
 
-  .phase-move .move-confirm-panel {
+  .phase-move .board-shell {
     order: 4;
   }
 
-  .phase-move .players-column {
+  .phase-move .move-confirm-panel {
     order: 5;
+  }
+
+  .phase-move .players-column {
+    order: 6;
   }
 
   .phase-pour .action-panel {
@@ -2030,12 +2277,16 @@ button.cup-memory-tile {
     order: 2;
   }
 
-  .phase-pour .players-column {
+  .phase-pour .order-peek-rail {
     order: 3;
   }
 
-  .phase-pour .board-shell {
+  .phase-pour .players-column {
     order: 4;
+  }
+
+  .phase-pour .board-shell {
+    order: 5;
   }
 
   .phase-upgrade .action-panel {
@@ -2046,12 +2297,16 @@ button.cup-memory-tile {
     order: 2;
   }
 
-  .phase-upgrade .board-shell {
+  .phase-upgrade .order-peek-rail {
     order: 3;
   }
 
-  .phase-upgrade .players-column {
+  .phase-upgrade .board-shell {
     order: 4;
+  }
+
+  .phase-upgrade .players-column {
+    order: 5;
   }
 
   .phase-setupPlacement .board-shell {

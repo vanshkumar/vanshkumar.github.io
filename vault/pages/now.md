@@ -1,6 +1,6 @@
 ---
 title: Now
-lastmod: 2026-06-27
+lastmod: 2026-06-30
 date: 2026-05-27
 ---
 This is a page for how I approach living life, with my ever-evolving self as audience
@@ -13,7 +13,7 @@ How I choose what to work on is a combination of deathbed regret-minimization & 
 - My brain – reading, writing, thinking, externalized via this site
 - My friendships
 
-The above all start with "my" / are quite self-forward, besides perhaps my kids' education. I don't feel that I yet have a satisfactory Long Now project.
+The above all start with "my" and are quite self-forward, besides perhaps my kids' education. I don't feel that I yet have a satisfactory Long Now project.
 
 I have found it useful to concretely instantiate a Long Now view as the universe/Nature/God/Dao, as there is a natural merging between extreme long-term thinking & infinite entities. A question I like to play with is – what does the Dao want me to do?
 

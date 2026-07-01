@@ -1,6 +1,6 @@
 ---
 slug: almost-all-personality-traits-are-heritable-but-you-can-override-genetic-programming
-title: "Almost all personality traits are heritable, but you can override genetic programming"
+title: Almost all personality traits are heritable, but you can override genetic programming
 lastmod: 2026-06-30
 date: 2026-05-27
 ---

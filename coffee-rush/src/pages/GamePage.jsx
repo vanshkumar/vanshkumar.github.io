@@ -225,6 +225,7 @@ export default function GamePage() {
   const [selectedSetupCellId, setSelectedSetupCellId] = useState(null);
   const [passTo, setPassTo] = useState('');
   const [isUpgradeMenuOpen, setIsUpgradeMenuOpen] = useState(false);
+  const [deviceLinkPlayerId, setDeviceLinkPlayerId] = useState('');
   const isRemoteHost = remoteSession?.mode === REMOTE_MODES.HOST;
   const isRemotePeer = remoteSession?.mode === REMOTE_MODES.PEER;
   const isRemoteGame = Boolean(remoteSession);
@@ -320,6 +321,21 @@ export default function GamePage() {
         : [],
     [rosterForCurrentRoom, state],
   );
+  const deviceLinkPlayers = useMemo(
+    () => (isAsyncRemoteGame && state ? state.players : []),
+    [isAsyncRemoteGame, state],
+  );
+  const selectedDeviceLinkPlayerId = useMemo(() => {
+    if (deviceLinkPlayers.some((player) => player.id === deviceLinkPlayerId)) {
+      return deviceLinkPlayerId;
+    }
+
+    if (deviceLinkPlayers.some((player) => player.id === localPlayerId)) {
+      return localPlayerId;
+    }
+
+    return deviceLinkPlayers[0]?.id ?? '';
+  }, [deviceLinkPlayerId, deviceLinkPlayers, localPlayerId]);
 
   useEffect(() => {
     stateRef.current = state;
@@ -1992,16 +2008,18 @@ export default function GamePage() {
     }
   }
 
-  async function copyMyDeviceLink() {
-    if (!localPlayerId) {
+  async function copyDeviceLink(playerId = selectedDeviceLinkPlayerId) {
+    const targetPlayerId = playerId || localPlayerId;
+
+    if (!targetPlayerId) {
       await copyInviteLink();
       return;
     }
 
-    const localPlayer = stateRef.current ? getPlayer(stateRef.current, localPlayerId) : null;
+    const targetPlayer = stateRef.current ? getPlayer(stateRef.current, targetPlayerId) : null;
     await copyInviteLink(
-      localPlayerId,
-      `${localPlayer?.name ?? formatPlayerSeat(localPlayerId)} device link copied.`,
+      targetPlayerId,
+      `${targetPlayer?.name ?? formatPlayerSeat(targetPlayerId)} device link copied.`,
     );
   }
 
@@ -2272,7 +2290,7 @@ export default function GamePage() {
     isAsyncRemoteGame && isRemoteHost && state
       ? state.players.filter((player) => player.id !== localPlayerId)
       : [];
-  const hasDeviceLinkControls = Boolean(isAsyncRemoteGame && localPlayerId);
+  const hasDeviceLinkControls = deviceLinkPlayers.length > 0;
   const hasWhatsAppReminderControls = Boolean(isAsyncRemoteGame && rosterForCurrentRoom);
   const hasUtilityTools = hasDeviceLinkControls || hasWhatsAppReminderControls;
   function renderInviteControls() {
@@ -2295,11 +2313,30 @@ export default function GamePage() {
     if (!hasDeviceLinkControls) return null;
 
     return (
-      <section className="device-link-panel" aria-label="This device">
-        <div className="device-link-heading">This device</div>
-        <button type="button" onClick={copyMyDeviceLink}>
-          Copy my device link
-        </button>
+      <section className="device-link-panel" aria-label="Device links">
+        <div className="device-link-heading">Device links</div>
+        <div className="device-link-row">
+          <label>
+            <span>Player</span>
+            <select
+              value={selectedDeviceLinkPlayerId}
+              onChange={(event) => setDeviceLinkPlayerId(event.target.value)}
+            >
+              {deviceLinkPlayers.map((player) => (
+                <option key={player.id} value={player.id}>
+                  {player.name} ({formatPlayerSeat(player.id)})
+                </option>
+              ))}
+            </select>
+          </label>
+          <button
+            type="button"
+            onClick={() => copyDeviceLink(selectedDeviceLinkPlayerId)}
+            disabled={!selectedDeviceLinkPlayerId}
+          >
+            Copy device link
+          </button>
+        </div>
       </section>
     );
   }

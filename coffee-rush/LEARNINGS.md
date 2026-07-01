@@ -257,6 +257,11 @@
 - Action: Keep self-transfer as a Tools action that copies a seat-specific `player=<localPlayerId>` device link without `hostAuth`, and show missing-key copy for room-only reminder links opened on fresh/incognito browsers.
 - Confidence: high
 
+**[2026-07-01] — Async seat rejoin links**
+- Observation: Any async participant with the room invite secrets can generate a fresh device link for another active seat by changing only the hash-fragment `player=pN`; `hostAuth` is not needed for turn control and must stay off copied links.
+- Action: Keep rejoin/device links seat-specific and generated from the current `state.players` list, default the selector to the browser's local seat, and route copies through `createInviteLink` so secrets remain hash-only.
+- Confidence: high
+
 **[2026-06-26] — Online-only entry points**
 - Observation: Local game creation existed in both `SetupPage` and the results `Rematch` action, so removing the setup button alone still left a local-game path.
 - Action: When making Coffee Rush online-only, audit results/rematch/reset flows as well as setup so every new game returns through hosted-room setup.

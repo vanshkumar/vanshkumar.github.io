@@ -7,4 +7,4 @@ This is structurally identical to social media doom scrolling but with a "produc
 
 The antidote is probably the same as regular doom scrolling: don't engage passively. Either participate actively (post, ask questions, share work) or don't open it at all.
 
-Related: [[Do I want to do a PhD?]], [[notes/Confirmation bias is the one to watch for]]
+Related: [[Do I want to do a PhD?]], [[hunches/Confirmation bias is the one to watch for]]

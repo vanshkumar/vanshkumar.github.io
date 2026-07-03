@@ -47,7 +47,7 @@ const logs = defineCollection({
   })
 });
 
-const notes = defineCollection({
+const hunches = defineCollection({
   type: 'content',
   schema: z.object({
     title: optionalText,
@@ -89,7 +89,7 @@ export const collections = {
   questions,
   projects,
   logs,
-  notes,
+  hunches,
   shelf,
   pages
 };

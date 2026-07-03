@@ -8,8 +8,8 @@ const repoRoot = path.resolve(root, '..');
 const vaultRoot = path.join(repoRoot, 'vault');
 const contentRoot = path.join(repoRoot, 'src', 'content');
 
-const collections = ['projects', 'questions', 'notes', 'logs', 'pages', 'shelf'];
-const customSlugCollections = new Set(['projects', 'questions', 'notes']);
+const collections = ['projects', 'questions', 'hunches', 'logs', 'pages', 'shelf'];
+const customSlugCollections = new Set(['projects', 'questions', 'hunches']);
 
 const slugify = (value) =>
   value

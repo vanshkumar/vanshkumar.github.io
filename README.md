@@ -36,7 +36,7 @@ content first. Edit markdown in `vault/`, not `src/content/`.
 - Main site pages live in `src/pages/`; shared page chrome is in
   `src/layouts/`; most visual styling is in `src/styles/global.css`.
 - Content URLs are usually controlled by `slug` frontmatter in `vault/` for
-  projects, questions, and notes. See `SCHEMA.md` before changing published
+  projects, questions, and hunches. See `SCHEMA.md` before changing published
   slugs.
 - The sibling Vite apps have their own `package.json`, tests, builds, and
   READMEs. Work from inside the relevant app folder.

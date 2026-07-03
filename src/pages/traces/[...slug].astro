@@ -3,12 +3,12 @@ import { getCollection } from 'astro:content';
 import { titleFromSlug } from '../../lib/content';
 
 export async function getStaticPaths() {
-  const entries = await getCollection('notes');
+  const entries = await getCollection('hunches');
   return entries.map((entry) => ({
     params: { slug: entry.slug },
     props: {
       title: entry.data.title ?? titleFromSlug(entry.slug),
-      target: `/notes/${entry.slug}`
+      target: `/hunches/${entry.slug}`
     }
   }));
 }
@@ -26,6 +26,6 @@ const { title, target } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <p>This note moved to <a href={target}>{target}</a>.</p>
+    <p>This hunch moved to <a href={target}>{target}</a>.</p>
   </body>
 </html>

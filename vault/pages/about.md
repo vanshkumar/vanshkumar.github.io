@@ -1,14 +1,14 @@
 ---
 title: About
-lastmod: 2026-06-30
+lastmod: 2026-07-02
 date: 2026-05-27
 ---
 ## This site
-is a living workspace for Vansh Kumar's experiments, projects, writing, and notes. Inspired heavily by the concept of [digital gardens](https://maggieappleton.com/garden-history), it evolves as the graph fills in.
+is a living workspace for Vansh Kumar's experiments, projects, writing, questions, and hunches. Inspired heavily by the concept of [digital gardens](https://maggieappleton.com/garden-history), it evolves as the graph fills in.
 
 My goal with this site is to **increase the number of true things that are written down**. This means that if someone else has already written a truer answer to a question I care about, I will just link to them.
 
-Organization-wise, the [terrain](/terrain) page has everything. [Projects/essays](/projects) are where I hope to have written or created something truer than what I could find. [Questions](/questions) contain rougher thinking in progress.
+Organization-wise, the [terrain](/terrain) page has everything. [Projects/essays](/projects) are where I hope to have written or created something truer than what I could find. [Questions](/questions) contain rougher thinking in progress. [Hunches](/hunches) are smaller claims I am willing to sharpen or discard.
 
 Everything on this site should be thought of as a **perpetual draft**, with all mistakes mine.
 

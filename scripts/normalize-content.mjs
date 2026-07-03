@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 const root = path.dirname(fileURLToPath(new URL(import.meta.url)));
 const repoRoot = path.resolve(root, '..');
 const vaultRoot = path.join(repoRoot, 'vault');
-const collections = ['projects', 'questions', 'notes'];
+const collections = ['projects', 'questions', 'hunches'];
 
 const slugify = (value) =>
   value

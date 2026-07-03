@@ -10,7 +10,7 @@ import { remarkImageCaptions } from './src/lib/image-captions.mjs';
 import {
   WIKI_INDEX_COLLECTIONS,
   isWikiAssetTarget,
-  legacyCollectionFor,
+  legacyCollectionsFor,
   normalizeWikiHeading,
   normalizeWikiTarget,
   urlForEntry
@@ -80,10 +80,9 @@ const buildWikiIndex = () => {
       }
       if (collection !== 'pages') {
         addIfMissing(normalizeWikiTarget(`${collection}/${slug}`), url);
-        const legacyCollection = legacyCollectionFor(collection);
-        if (legacyCollection) {
+        legacyCollectionsFor(collection).forEach((legacyCollection) => {
           addIfMissing(normalizeWikiTarget(`${legacyCollection}/${slug}`), url);
-        }
+        });
       }
 
       const file = fs.readFileSync(filePath, 'utf8');

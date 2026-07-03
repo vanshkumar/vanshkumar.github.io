@@ -1,7 +1,7 @@
 export const WIKI_INDEX_COLLECTIONS = [
   'projects',
   'questions',
-  'notes',
+  'hunches',
   'logs',
   'pages',
   'shelf'
@@ -10,20 +10,20 @@ export const WIKI_INDEX_COLLECTIONS = [
 export const WIKI_LOOKUP_ORDER = [
   'projects',
   'questions',
-  'notes',
+  'hunches',
   'shelf',
   'logs',
   'pages'
 ];
 
 const LEGACY_COLLECTION_ALIASES = {
-  projects: 'attractors',
-  questions: 'probes',
-  notes: 'traces'
+  projects: ['attractors'],
+  questions: ['probes'],
+  hunches: ['traces', 'notes', 'guesses']
 };
 
-export const legacyCollectionFor = (collection) =>
-  LEGACY_COLLECTION_ALIASES[collection];
+export const legacyCollectionsFor = (collection) =>
+  LEGACY_COLLECTION_ALIASES[collection] ?? [];
 
 export const normalizeWikiTarget = (value) => {
   const trimmed = String(value).trim().replace(/\.md$/i, '').replace(/\\/g, '/');
@@ -55,8 +55,8 @@ export const urlForEntry = (collection, slug) => {
   if (collection === 'questions') {
     return `/questions/${slug}`;
   }
-  if (collection === 'notes') {
-    return `/notes/${slug}`;
+  if (collection === 'hunches') {
+    return `/hunches/${slug}`;
   }
   if (collection === 'shelf') {
     return `/shelf/${slug}`;

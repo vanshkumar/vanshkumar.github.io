@@ -8,7 +8,7 @@ const pathname = Astro.url.pathname;
 const isTerrain = pathname === '/terrain';
 const siteEntry = await getEntry('pages', 'site');
 const brandSubtitle =
-  siteEntry?.data?.brandSubtitle ?? 'Notes, projects, and quiet experiments.';
+  siteEntry?.data?.brandSubtitle ?? 'Hunches, projects, and quiet experiments.';
 const pageDescription = description?.trim() || brandSubtitle;
 const siteUrl = 'https://vanshkumar.net';
 const ogImage = `${siteUrl}/og.png`;

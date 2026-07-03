@@ -2,7 +2,7 @@ import { getCollection } from 'astro:content';
 import { titleFromSlug } from './content';
 import {
   WIKI_LOOKUP_ORDER,
-  legacyCollectionFor,
+  legacyCollectionsFor,
   normalizeWikiTarget,
   urlForEntry
 } from './wiki-routing.mjs';
@@ -41,10 +41,10 @@ const extractTargets = (body: string) => {
 };
 
 const buildEntries = async () => {
-  const [projects, questions, notes, shelf, logs, pages] = await Promise.all([
+  const [projects, questions, hunches, shelf, logs, pages] = await Promise.all([
     getCollection('projects'),
     getCollection('questions'),
-    getCollection('notes'),
+    getCollection('hunches'),
     getCollection('shelf'),
     getCollection('logs'),
     getCollection('pages')
@@ -67,7 +67,7 @@ const buildEntries = async () => {
 
   pushEntries('projects', projects);
   pushEntries('questions', questions);
-  pushEntries('notes', notes);
+  pushEntries('hunches', hunches);
   pushEntries('shelf', shelf);
   pushEntries('logs', logs);
   pushEntries('pages', pages);
@@ -108,10 +108,9 @@ const buildLookup = (entries: WikiEntry[]) => {
     }
     if (entry.collection !== 'pages') {
       addIfMissing(normalizeWikiTarget(`${entry.collection}/${entry.slug}`), entry);
-      const legacyCollection = legacyCollectionFor(entry.collection);
-      if (legacyCollection) {
+      legacyCollectionsFor(entry.collection).forEach((legacyCollection) => {
         addIfMissing(normalizeWikiTarget(`${legacyCollection}/${entry.slug}`), entry);
-      }
+      });
     }
     entry.aliases.forEach((alias) => {
       addIfMissing(normalizeWikiTarget(alias), entry);

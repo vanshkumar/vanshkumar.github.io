@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Hunches">
+  <p>
+    Hunches now live in <a href="/terrain#hunches">Terrain</a>.
+  </p>
+  <script is:inline>
+    window.location.replace('/terrain#hunches');
+  </script>
+</BaseLayout>

@@ -62,6 +62,16 @@
 - Action: Document shared analytics requirements in the root README editing notes when adding or changing deployed sub-app patterns.
 - Confidence: high
 
+**[2026-07-02] — Content collection rename**
+- Observation: Published collection names are repeated across Astro content config, vault sync/normalize scripts, wiki routing/backlink helpers, and route files; Astro's wiki index reads generated `src/content/<collection>` during config evaluation.
+- Action: When renaming a published collection, update `src/content.config.ts`, `scripts/sync-content.mjs`, `scripts/normalize-content.mjs`, `src/lib/wiki-routing.mjs`, `src/lib/wiki.ts`, and page routes together, then run `scripts/sync-content.mjs` before direct Astro build verification.
+- Confidence: high
+
+**[2026-07-02] — Collection terminology follow-up**
+- Observation: A collection can accumulate multiple public names during terminology changes; `src/lib/wiki-routing.mjs` already supports arrays of legacy prefixes, and old route files can each redirect to the current route.
+- Action: Preserve every prior public prefix as a wiki alias and route redirect when renaming collection terminology, even if an intermediate name was short-lived.
+- Confidence: high
+
 ## Patterns and Preferences
 
 **[2026-06-26] — Typography size tuning**

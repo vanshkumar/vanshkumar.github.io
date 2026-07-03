@@ -44,4 +44,9 @@
 - Action: Route hunch changes through `buildHunchData`/`writeHunchData` and keep hunch cards on the plain note layout rather than the shelf cover layout.
 - Confidence: high
 
+**2026-07-03 — Git workflow**
+- Observation: `vault-weather` is a subdirectory of the parent `vanshkumar.github.io` repository, so Git writes from this app root update `../.git` rather than a local `.git` directory.
+- Action: When staging or committing from `vault-weather`, use explicit app-scoped paths and expect Git index/object writes to need elevated filesystem permission.
+- Confidence: high
+
 ## What Has Failed

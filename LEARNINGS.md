@@ -77,6 +77,11 @@
 - Action: Keep the Pages workflow on Node 24 and current GitHub-owned action majors, and keep `include-hidden-files: true` when uploading the Pages artifact. For local workflow-only verification, use the bundled Node binary to run Astro/Vite CLIs directly when avoiding repo sync scripts that would rewrite dirty vault-derived content.
 - Confidence: high
 
+**[2026-07-03] — Root npm ci lockfile validation**
+- Observation: With the Pages workflow using `npm ci` under newer npm, the root lockfile must include package entries for every `sharp` optional dependency; missing `@img/sharp-*linuxmusl*` entries cause npm to fail before build even though they are platform-specific optional packages.
+- Action: When changing Sharp or regenerating the root lockfile, keep the linux musl optional package entries in `package-lock.json` and verify that each `optionalDependencies` item has a matching `node_modules/<package>` entry.
+- Confidence: high
+
 ## Patterns and Preferences
 
 **[2026-06-26] — Typography size tuning**

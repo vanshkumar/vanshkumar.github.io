@@ -1,4 +1,5 @@
 import {
+  defaultHunchesOutputPath,
   defaultOutputPath,
   defaultShelfOutputPath,
   writeVaultWeatherData
@@ -8,6 +9,9 @@ const data = writeVaultWeatherData();
 
 console.log(
   `Generated ${data.questions.count} questions at ${defaultOutputPath}`
+);
+console.log(
+  `Generated ${data.hunches.count} hunches at ${defaultHunchesOutputPath}`
 );
 console.log(
   `Generated ${data.shelf.count} shelf items at ${defaultShelfOutputPath}`

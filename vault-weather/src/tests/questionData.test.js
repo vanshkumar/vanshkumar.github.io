@@ -5,8 +5,10 @@ import { afterEach, describe, expect, it } from 'vitest';
 import {
   activityWeightForAge,
   buildActivity,
+  buildHunchData,
   buildQuestionData,
   buildShelfData,
+  createHunchNote,
   createQuestionNote,
   createShelfNote,
   excerptFromMarkdown,
@@ -22,13 +24,15 @@ const makeTempVault = () => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'question-weather-'));
   const vaultDir = path.join(root, 'vault');
   const questionsDir = path.join(vaultDir, 'questions');
+  const hunchesDir = path.join(vaultDir, 'hunches');
   const shelfDir = path.join(vaultDir, 'shelf');
   const shelfAssetsDir = path.join(vaultDir, 'assets', 'shelf');
   fs.mkdirSync(questionsDir, { recursive: true });
+  fs.mkdirSync(hunchesDir, { recursive: true });
   fs.mkdirSync(shelfDir, { recursive: true });
   fs.mkdirSync(shelfAssetsDir, { recursive: true });
   tempDirs.push(root);
-  return { root, questionsDir, shelfDir, shelfAssetsDir };
+  return { root, questionsDir, hunchesDir, shelfDir, shelfAssetsDir };
 };
 
 const writeQuestion = (dir, filename, content) => {
@@ -161,6 +165,53 @@ lastMod: 2026-06-15
     expect(slugifyPath('Questions/Some Question.md')).toBe('questions/some-question');
   });
 
+  it('builds hunch data from plain note frontmatter', () => {
+    const { root, hunchesDir } = makeTempVault();
+    writeQuestion(
+      hunchesDir,
+      'A Hunch.md',
+      `---
+title: A Better Hunch
+date: 2026-06-01
+lastmod: 2026-06-28
+tags:
+  - belief
+---
+# Opening
+
+Body with [[Some Question]].
+`
+    );
+
+    const data = buildHunchData({
+      hunchesDir,
+      projectRoot: root,
+      now: new Date('2026-06-30T12:00:00Z')
+    });
+    const hunch = data.hunches[0];
+
+    expect(data.count).toBe(1);
+    expect(hunch).toMatchObject({
+      slug: 'a-hunch',
+      title: 'A Better Hunch',
+      date: '2026-06-01',
+      lastmod: '2026-06-28',
+      tags: ['belief'],
+      vaultPath: 'hunches/A Hunch.md',
+      repoPath: 'vault/hunches/A Hunch.md',
+      sitePath: '/hunches/a-hunch'
+    });
+    expect(hunch.wikilinks[0]).toMatchObject({
+      target: 'Some Question',
+      normalizedTarget: 'some-question'
+    });
+    expect(hunch.activity).toMatchObject({
+      recentUpdateCount: 1,
+      lastActivity: '2026-06-28',
+      level: 5
+    });
+  });
+
   it('computes quadratic activity weights by calendar day inside the recency window', () => {
     const activity = buildActivity({
       now: new Date('2026-06-15T12:00:00Z'),
@@ -200,6 +251,31 @@ lastMod: 2026-06-15
     );
     expect(fs.readFileSync(filePath, 'utf8')).toBe(
       `---\ndate: 2026-06-15\nlastmod: 2026-06-15\n---\n\n`
+    );
+  });
+
+  it('creates a new hunch note with frontmatter and an Obsidian URL', () => {
+    const { root, hunchesDir } = makeTempVault();
+    const created = createHunchNote({
+      hunchesDir,
+      projectRoot: root,
+      title: 'Reality has feedback loops',
+      now: new Date('2026-06-30T12:00:00Z')
+    });
+    const filePath = path.join(hunchesDir, 'Reality has feedback loops.md');
+
+    expect(created).toMatchObject({
+      title: 'Reality has feedback loops',
+      slug: 'reality-has-feedback-loops',
+      filename: 'Reality has feedback loops.md',
+      vaultPath: 'hunches/Reality has feedback loops.md',
+      repoPath: 'vault/hunches/Reality has feedback loops.md'
+    });
+    expect(created.obsidianUrl).toBe(
+      `obsidian://open?path=${encodeURIComponent(filePath)}`
+    );
+    expect(fs.readFileSync(filePath, 'utf8')).toBe(
+      `---\ndate: 2026-06-30\nlastmod: 2026-06-30\n---\n\n`
     );
   });
 

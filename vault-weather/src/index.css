@@ -162,6 +162,10 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 }
 
+.hunch-stack {
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
 .shelf-stack {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
@@ -281,6 +285,10 @@ a {
 
 @media (min-width: 1180px) {
   .question-stack {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .hunch-stack {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 

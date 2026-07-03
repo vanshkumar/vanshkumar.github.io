@@ -39,4 +39,9 @@
 - Action: When changing salience, update `buildActivity` and the frontmatter extraction path; do not reintroduce git-log based activity unless explicitly requested.
 - Confidence: high
 
+**2026-07-03 — Hunch surface**
+- Observation: Hunches live in `../vault/hunches` and use the same plain note frontmatter shape as questions (`title`, `date`, `lastmod`/`lastMod`), without shelf-only rating or cover fields.
+- Action: Route hunch changes through `buildHunchData`/`writeHunchData` and keep hunch cards on the plain note layout rather than the shelf cover layout.
+- Confidence: high
+
 ## What Has Failed

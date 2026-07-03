@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Plus, RefreshCw } from 'lucide-react';
 import { generatedAt as questionsGeneratedAt, questions } from './data/questions';
+import { generatedAt as hunchesGeneratedAt, hunches } from './data/hunches';
 import { generatedAt as shelfGeneratedAt, shelfItems } from './data/shelf';
 import {
   activityTone,
@@ -51,6 +52,24 @@ const collectionConfigs = {
     items: questions,
     generatedAt: questionsGeneratedAt
   },
+  hunches: {
+    route: '/hunch-weather',
+    navLabel: 'Hunches',
+    title: 'Hunch Weather',
+    countLabel: 'hunches',
+    listLabel: 'Hunches',
+    createPrompt: 'New hunch',
+    createEndpoint: '/__hunch-weather-create',
+    refreshEndpoint: '/__hunch-weather-refresh',
+    createError: 'Could not create hunch',
+    addLabel: 'Add hunch',
+    refreshLabel: 'Refresh hunches from vault',
+    payloadKey: 'hunch',
+    cardClassName: 'hunch-card',
+    stackClassName: 'hunch-stack',
+    items: hunches,
+    generatedAt: hunchesGeneratedAt
+  },
   shelf: {
     route: '/shelf-weather',
     navLabel: 'Shelf',
@@ -77,6 +96,7 @@ const collectionLinks = Object.values(collectionConfigs);
 
 const currentCollectionKey = () => {
   const pathname = window.location.pathname.replace(/\/+$/, '') || '/';
+  if (pathname === '/hunch-weather') return 'hunches';
   return pathname === '/shelf-weather' ? 'shelf' : 'questions';
 };
 

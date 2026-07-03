@@ -7,6 +7,7 @@ This app is for local use and is not assembled into the GitHub Pages deploy.
 ## Surfaces
 
 - `/` shows Question Weather from `../vault/questions`.
+- `/hunch-weather` shows Hunch Weather from `../vault/hunches`.
 - `/shelf-weather` shows Shelf Weather from `../vault/shelf`. Shelf cards use `coverImage` frontmatter when it points to an existing vault asset such as `/assets/shelf/book.webp`.
 
 ## Commands
@@ -17,7 +18,7 @@ This app is for local use and is not assembled into the GitHub Pages deploy.
 - `npm run test`
 - `npm run build`
 
-`npm run dev` and `npm run build` regenerate `src/data/questions.generated.json` and `src/data/shelf.generated.json` before starting. Those files are ignored because the vault is the source of truth.
+`npm run dev` and `npm run build` regenerate `src/data/*.generated.json` before starting. Those files are ignored because the vault is the source of truth.
 
 When the dev server is running, use the in-app Refresh button to regenerate the current surface and reload the page. Use the plus button to create a new note in that surface from a title and open it in Obsidian.
 

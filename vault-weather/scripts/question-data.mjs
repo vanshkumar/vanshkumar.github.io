@@ -9,12 +9,19 @@ export const appRoot = path.resolve(scriptDir, '..');
 export const repoRoot = path.resolve(appRoot, '..');
 export const defaultVaultDir = path.join(repoRoot, 'vault');
 export const defaultQuestionsDir = path.join(defaultVaultDir, 'questions');
+export const defaultHunchesDir = path.join(defaultVaultDir, 'hunches');
 export const defaultShelfDir = path.join(defaultVaultDir, 'shelf');
 export const defaultOutputPath = path.join(
   appRoot,
   'src',
   'data',
   'questions.generated.json'
+);
+export const defaultHunchesOutputPath = path.join(
+  appRoot,
+  'src',
+  'data',
+  'hunches.generated.json'
 );
 export const defaultShelfOutputPath = path.join(
   appRoot,
@@ -149,6 +156,14 @@ export class QuestionCreateError extends Error {
   constructor(message, statusCode = 400) {
     super(message);
     this.name = 'QuestionCreateError';
+    this.statusCode = statusCode;
+  }
+}
+
+export class HunchCreateError extends Error {
+  constructor(message, statusCode = 400) {
+    super(message);
+    this.name = 'HunchCreateError';
     this.statusCode = statusCode;
   }
 }
@@ -295,6 +310,23 @@ export const createQuestionNote = ({
     ErrorClass: QuestionCreateError,
     titleLabel: 'Question title',
     itemLabel: 'question'
+  });
+};
+
+export const createHunchNote = ({
+  title,
+  hunchesDir = defaultHunchesDir,
+  projectRoot = repoRoot,
+  now = new Date()
+} = {}) => {
+  return createMarkdownNote({
+    title,
+    notesDir: hunchesDir,
+    projectRoot,
+    now,
+    ErrorClass: HunchCreateError,
+    titleLabel: 'Hunch title',
+    itemLabel: 'hunch'
   });
 };
 
@@ -493,6 +525,53 @@ export const buildQuestionData = ({
   };
 };
 
+export const buildHunchData = ({
+  hunchesDir = defaultHunchesDir,
+  projectRoot = repoRoot,
+  now = new Date()
+} = {}) => {
+  const files = listMarkdownFiles(hunchesDir);
+  const hunches = files.map((filePath) => {
+    const raw = fs.readFileSync(filePath, 'utf8');
+    const parsed = matter(raw);
+    const filename = path.basename(filePath);
+    const slug = parsed.data.slug ? slugifyPath(parsed.data.slug) : slugify(filename);
+    const title = parsed.data.title ?? titleFromFilename(filename);
+    const content = parsed.content.trim();
+    const relativeVaultPath = toUnixPath(path.relative(path.join(projectRoot, 'vault'), filePath));
+    const relativeRepoPath = toUnixPath(path.relative(projectRoot, filePath));
+    const lastmod = frontmatterLastmod(parsed.data);
+
+    return {
+      slug,
+      title,
+      date: dateToIsoDate(parsed.data.date),
+      lastmod,
+      tags: Array.isArray(parsed.data.tags) ? parsed.data.tags.map(String) : [],
+      aliases: Array.isArray(parsed.data.aliases) ? parsed.data.aliases.map(String) : [],
+      excerpt: parsed.data.description ?? excerptFromMarkdown(content),
+      body: content,
+      headings: extractHeadings(content),
+      wikilinks: extractWikilinks(content),
+      wordCount: wordCount(content),
+      vaultPath: relativeVaultPath,
+      repoPath: relativeRepoPath,
+      obsidianUrl: buildObsidianUrl(filePath),
+      sitePath: `/hunches/${slug}`,
+      activity: buildActivity({ events: [lastmod], now })
+    };
+  });
+
+  assignActivityLevels(hunches);
+
+  return {
+    generatedAt: new Date().toISOString(),
+    source: toUnixPath(path.relative(projectRoot, hunchesDir)),
+    count: hunches.length,
+    hunches
+  };
+};
+
 export const buildShelfData = ({
   shelfDir = defaultShelfDir,
   projectRoot = repoRoot,
@@ -572,16 +651,34 @@ export const writeShelfData = ({
   return data;
 };
 
+export const writeHunchData = ({
+  hunchesDir = defaultHunchesDir,
+  outputPath = defaultHunchesOutputPath,
+  projectRoot = repoRoot
+} = {}) => {
+  const data = buildHunchData({ hunchesDir, projectRoot });
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFileSync(outputPath, `${JSON.stringify(data, null, 2)}\n`);
+  return data;
+};
+
 export const writeVaultWeatherData = ({
   questionsDir = defaultQuestionsDir,
+  hunchesDir = defaultHunchesDir,
   shelfDir = defaultShelfDir,
   questionOutputPath = defaultOutputPath,
+  hunchOutputPath = defaultHunchesOutputPath,
   shelfOutputPath = defaultShelfOutputPath,
   projectRoot = repoRoot
 } = {}) => ({
   questions: writeQuestionData({
     questionsDir,
     outputPath: questionOutputPath,
+    projectRoot
+  }),
+  hunches: writeHunchData({
+    hunchesDir,
+    outputPath: hunchOutputPath,
     projectRoot
   }),
   shelf: writeShelfData({

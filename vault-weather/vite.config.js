@@ -3,17 +3,21 @@ import path from 'node:path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import {
+  createHunchNote,
   createQuestionNote,
   createShelfNote,
   defaultVaultDir,
   resolveVaultAsset,
   vaultAssetUrlPrefix,
+  writeHunchData,
   writeQuestionData,
   writeShelfData
 } from './scripts/question-data.mjs';
 
 const createEndpoint = '/__question-weather-create';
 const refreshEndpoint = '/__question-weather-refresh';
+const hunchCreateEndpoint = '/__hunch-weather-create';
+const hunchRefreshEndpoint = '/__hunch-weather-refresh';
 const shelfCreateEndpoint = '/__shelf-weather-create';
 const shelfRefreshEndpoint = '/__shelf-weather-refresh';
 
@@ -94,6 +98,8 @@ const vaultWeatherLocalServer = () => ({
       if (
         pathname !== refreshEndpoint &&
         pathname !== createEndpoint &&
+        pathname !== hunchRefreshEndpoint &&
+        pathname !== hunchCreateEndpoint &&
         pathname !== shelfRefreshEndpoint &&
         pathname !== shelfCreateEndpoint
       ) {
@@ -122,6 +128,21 @@ const vaultWeatherLocalServer = () => ({
           return;
         }
 
+        if (pathname === hunchCreateEndpoint) {
+          const body = await readJsonBody(req);
+          const created = createHunchNote({ title: body.title });
+          const data = writeHunchData();
+          const hunch =
+            data.hunches.find((item) => item.repoPath === created.repoPath) ?? created;
+
+          sendJson(res, 201, {
+            ok: true,
+            item: hunch,
+            hunch
+          });
+          return;
+        }
+
         if (pathname === shelfCreateEndpoint) {
           const body = await readJsonBody(req);
           const created = createShelfNote({ title: body.title, rating: body.rating });
@@ -137,8 +158,14 @@ const vaultWeatherLocalServer = () => ({
           return;
         }
 
-        const data =
-          pathname === shelfRefreshEndpoint ? writeShelfData() : writeQuestionData();
+        let data;
+        if (pathname === shelfRefreshEndpoint) {
+          data = writeShelfData();
+        } else if (pathname === hunchRefreshEndpoint) {
+          data = writeHunchData();
+        } else {
+          data = writeQuestionData();
+        }
         sendJson(res, 200, {
           ok: true,
           count: data.count,

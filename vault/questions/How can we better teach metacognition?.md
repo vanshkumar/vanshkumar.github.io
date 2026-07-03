@@ -14,7 +14,7 @@ Requires some definitions:
 
 **Metacognitive know-how**: Strategies you use to steer that internal experience. Typically acquired through experience (solving many hard technical problems, solving many chess puzzles, reading & writing a lot, etc). This is also often tacit knowledge.
 
-The best article I have read on transmitting tacit knowledge: https://nintil.com/scaling-tacit-knowledge/
+The best article I have read so far on transmitting tacit knowledge: https://nintil.com/scaling-tacit-knowledge/
 
 ---
 
@@ -41,7 +41,7 @@ As with many things education, implicit nonverbal transfer is the most effective
 
 An effective example: [[Montessori teaches proto-metacognition]].
 
-Apprenticeships are tailor made for this. Tbh this is probably the best approach for older children & adults, especially as metacognitive skills are both domain-specific & can only be taught in context.
+Apprenticeships are tailor made for this. This is probably the best approach for older children & adults, especially as metacognitive skills are both domain-specific & can only be taught in context – a description of [cognitive apprenticeships](https://www.aft.org/ae/winter1991/collins_brown_holum).
 
 ## Explicit instruction
 
@@ -99,10 +99,6 @@ Why are videos so good at helping learn tacit knowledge?
 - The extreme case is *fully* simulating the experience of being an expert doing a task, and doing that across many experts. Your brain will naturally generalize across them.
 
 Could serious close observation of a coach/expert, eg in tennis, followed by high levels of awareness of yourself, be enough to learn technique etc? Zero words required. This is the Inner Game approach.
-
-
-
-V relevant: https://nintil.com/scaling-tacit-knowledge/
 
 
 From [here](https://commoncog.com/the-mental-model-fallacy/):

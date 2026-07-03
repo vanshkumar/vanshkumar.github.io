@@ -14,6 +14,8 @@ Requires some definitions:
 
 **Metacognitive know-how**: Strategies you use to steer that internal experience. Typically acquired through experience (solving many hard technical problems, solving many chess puzzles, reading & writing a lot, etc). This is also often tacit knowledge.
 
+The best article I have read on transmitting tacit knowledge: https://nintil.com/scaling-tacit-knowledge/
+
 ---
 
 I am increasingly starting to believe that [[Metacognition may be the most important skill]]. 
@@ -68,7 +70,7 @@ so my main questions:
 ---
 
 
-I wonder if/how tech & LLMs can help? One [interesting proposal](https://andymatuschak.org/hmwl/), though it's only focused on adult learners. For younger kids, this *has* to be physically mediated.
+I wonder if/how tech & LLMs can help? One [interesting proposal](https://andymatuschak.org/hmwl/), though it's only focused on adult learners. LLMs could control 3D printers to quickly create a material that isolates & provides immediate feedback for some concept. Can definitely create apps that kids can use to isolate some concept (young kids using messaging on ipad comes to mind, mentava, mathacademy)
 
 An interesting other angle: using tech to provide feedback for caregivers. Videos of young children that point out when the child initiates, withdraws, gets overloaded, asks for help, or tries again. I suspect high overlap between this and what Montessori trained teachers learn in their observation practice of children. Maybe a first version of this looks like a Montessori observation training app? Could you train a model to detect these signs in children?
 
@@ -84,10 +86,10 @@ From [here](http://www.papert.org/articles/Papertonpiaget.html):
 > Piaget was not an educator and never enunciated rules about how to intervene in such situations. But his work strongly suggests that the automatic reaction of putting the child right may well be abusive. Practicing the art of making theories may be more valuable for children than achieving meteorological orthodoxy. And if their theories are always greeted by "nice try, but this is how it really is..." they might give up after a while on making theories. As Piaget put it: "Children have real understanding only of that which they invent themselves, and each time that we try to teach them something too quickly, we keep them from reinventing it themselves."
 
 
-*Is* metacognition tacit knowledge?
-- What I'm really interested in is the "secondary stimuli" as per the original article, which isn't exactly equal to metacognition as per the usual definition of "thinking about thinking"
-- Metacognition / emotional control as the processes by which you *shape* these secondary stimuli. So upstream.
-- What is tacit knowledge? "knowledge that is very hard to acquire (in the broadest definition) or knowledge that is embodied in a person (or group) and that they can't make fully explicit"
+A key thing with all of this is that you really do not want to suppress the theory-building & knowledge-constructing instinct that kids have. Rather you want to allow them to construct their own knowledge, build their own theories, and provide ways to test them against the real world.
+
+
+
 
 Why are videos so good at helping learn tacit knowledge?
 - Tend to have running commentary, which is at least an attempt at making tacit knowledge explicit
@@ -97,7 +99,6 @@ Why are videos so good at helping learn tacit knowledge?
 - The extreme case is *fully* simulating the experience of being an expert doing a task, and doing that across many experts. Your brain will naturally generalize across them.
 
 Could serious close observation of a coach/expert, eg in tennis, followed by high levels of awareness of yourself, be enough to learn technique etc? Zero words required. This is the Inner Game approach.
-
 
 
 

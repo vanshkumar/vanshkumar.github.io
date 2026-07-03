@@ -72,6 +72,11 @@
 - Action: Preserve every prior public prefix as a wiki alias and route redirect when renaming collection terminology, even if an intermediate name was short-lived.
 - Confidence: high
 
+**[2026-07-03] — GitHub Pages Node 24 deployment**
+- Observation: The Pages workflow builds the root Astro site plus `terminal-desires-ranker/` and `coffee-rush/`; all three direct production builds run under the bundled Node 24 runtime even when host `node`/`npm` are not on PATH. `actions/upload-pages-artifact@v5` excludes dotfiles unless `include-hidden-files: true` is set, which matters because the assembled artifact intentionally creates `site/.nojekyll`.
+- Action: Keep the Pages workflow on Node 24 and current GitHub-owned action majors, and keep `include-hidden-files: true` when uploading the Pages artifact. For local workflow-only verification, use the bundled Node binary to run Astro/Vite CLIs directly when avoiding repo sync scripts that would rewrite dirty vault-derived content.
+- Confidence: high
+
 ## Patterns and Preferences
 
 **[2026-06-26] — Typography size tuning**

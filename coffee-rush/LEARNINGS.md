@@ -17,6 +17,11 @@
 - Action: Keep `createSetupPlacementQueue` in reverse seat order from the starting player and set `activePlayerId` back to `startingPlayerId` only after setup placement finishes.
 - Confidence: high
 
+**[2026-07-03] — Optional order setup**
+- Observation: The rulebook optional setup does not remove every two-ingredient card before dealing; it assigns one Ristretto/Espresso starter to each player, draws normal tab 2 cards and the starting-player extra card from the deck, then removes unused Ristretto/Espresso cards.
+- Action: Keep optional low-luck order setup inside `createInitialState` before starting order deal, and keep host setup toggles hidden for private invite joins.
+- Confidence: high
+
 **[2026-06-24] — Ready-order controls**
 - Observation: The order deck contains separate card instances with identical names and recipes; listing every matching card creates duplicate serve buttons for a single cup.
 - Action: Deduplicate ready-order actions by cup, order name, specialty flag, and recipe while preserving separate actions for separate matching cups.

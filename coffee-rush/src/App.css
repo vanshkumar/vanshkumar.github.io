@@ -141,6 +141,32 @@ h1 {
   font-weight: 750;
 }
 
+.setup-controls .setup-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.25;
+}
+
+.setup-checkbox input {
+  width: 18px;
+  height: 18px;
+  min-height: 18px;
+  margin: 2px 0 0;
+  accent-color: #27605a;
+}
+
+.setup-checkbox span {
+  display: grid;
+  gap: 3px;
+}
+
+.setup-checkbox small {
+  color: #6e5e4a;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
 .invite-seat-hint {
   color: #6e5e4a;
   font-size: 0.78rem;

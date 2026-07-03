@@ -49,6 +49,7 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
     initialInvite.roomId && (!initialInvite.relayAuth || !initialInvite.gameKey);
   const [playerCount, setPlayerCount] = useState(2);
   const [startingPlayerIndex, setStartingPlayerIndex] = useState(0);
+  const [useOptionalStarterOrders, setUseOptionalStarterOrders] = useState(false);
   const [profileName, setProfileName] = useState('');
   const [profileCountry, setProfileCountry] = useState('US');
   const [profileNumber, setProfileNumber] = useState('');
@@ -132,6 +133,7 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
       playerNames,
       seed: `${seedPrefix}-${Date.now()}`,
       startingPlayerIndex: Math.min(startingPlayerIndex, playerCount - 1),
+      useOptionalStarterOrders,
     });
   }
 
@@ -340,6 +342,21 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
                     </option>
                   ))}
                 </select>
+              </label>
+
+              <label className="setup-checkbox">
+                <input
+                  type="checkbox"
+                  checked={useOptionalStarterOrders}
+                  onChange={(event) => setUseOptionalStarterOrders(event.target.checked)}
+                />
+                <span>
+                  Optional starter orders
+                  <small>
+                    Start each player with Ristretto/Espresso and remove unused
+                    2-ingredient cards.
+                  </small>
+                </span>
               </label>
             </>
           )}

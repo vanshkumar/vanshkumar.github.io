@@ -10,6 +10,7 @@ export function createInitialState({
   playerNames,
   seed = 'coffee-rush',
   startingPlayerIndex = 0,
+  useOptionalStarterOrders = false,
 }) {
   const names = playerNames.slice(0, 4).filter(Boolean);
 
@@ -31,6 +32,9 @@ export function createInitialState({
     endTriggered: false,
     finalTurnPlayerId: null,
     deck: [],
+    setupOptions: {
+      useOptionalStarterOrders: Boolean(useOptionalStarterOrders),
+    },
     players: names.map((name, index) => ({
       id: `p${index + 1}`,
       name,
@@ -53,13 +57,22 @@ export function createInitialState({
     setupPlacementQueue: [],
   };
 
-  const shuffleResult = shuffleWithState(state, ORDER_DECK);
+  const optionalStarterOrders = useOptionalStarterOrders
+    ? getTwoIngredientOrders(ORDER_DECK)
+    : [];
+  const deckSource = useOptionalStarterOrders
+    ? ORDER_DECK.filter((order) => !optionalStarterOrders.some((starter) => starter.id === order.id))
+    : ORDER_DECK;
+
+  const shuffleResult = shuffleWithState(state, deckSource);
   state = {
     ...shuffleResult.state,
     deck: shuffleResult.items,
   };
 
-  state = dealStartingOrders(state);
+  state = useOptionalStarterOrders
+    ? dealOptionalStarterOrders(state, optionalStarterOrders)
+    : dealStartingOrders(state);
   state = {
     ...state,
     setupPlacementQueue: createSetupPlacementQueue(state),
@@ -103,6 +116,57 @@ function dealStartingOrders(state) {
         ? { ...player, tabs: [[...player.tabs[0], ...result.drawn], ...player.tabs.slice(1)] }
         : player,
     ),
+  };
+}
+
+function dealOptionalStarterOrders(state, optionalStarterOrders) {
+  if (optionalStarterOrders.length < state.players.length) {
+    throw new Error('Optional starter orders need one two-ingredient card per player.');
+  }
+
+  let nextState = {
+    ...state,
+    players: state.players.map((player, index) => ({
+      ...player,
+      tabs: [[cloneOrder(optionalStarterOrders[index])], [], [], []],
+    })),
+  };
+
+  for (const player of nextState.players) {
+    const result = drawOrders(nextState, 1);
+    nextState = {
+      ...result.state,
+      players: result.state.players.map((candidate) =>
+        candidate.id === player.id
+          ? { ...candidate, tabs: [candidate.tabs[0], result.drawn, [], []] }
+          : candidate,
+      ),
+    };
+  }
+
+  const result = drawOrders(nextState, 1);
+  nextState = result.state;
+
+  return {
+    ...nextState,
+    players: nextState.players.map((player) =>
+      player.id === state.startingPlayerId
+        ? { ...player, tabs: [[...player.tabs[0], ...result.drawn], ...player.tabs.slice(1)] }
+        : player,
+    ),
+  };
+}
+
+function getTwoIngredientOrders(deck) {
+  return deck.filter((order) =>
+    Object.values(order.recipe).reduce((total, count) => total + count, 0) === 2,
+  );
+}
+
+function cloneOrder(order) {
+  return {
+    ...order,
+    recipe: { ...order.recipe },
   };
 }
 

@@ -24,6 +24,18 @@ function setupWithStartingPlayer(playerCount, startingPlayerIndex) {
   });
 }
 
+function setupWithOptionalStarterOrders(playerCount = 3) {
+  return createInitialState({
+    playerNames: Array.from({ length: playerCount }, (_, index) => `P${index + 1}`),
+    seed: 'test-seed',
+    useOptionalStarterOrders: true,
+  });
+}
+
+function countOrderIngredients(order) {
+  return Object.values(order.recipe).reduce((total, count) => total + count, 0);
+}
+
 const SETUP_CELL_BY_MEEPLE = {
   'p1-m1': 22,
   'p1-m2': 32,
@@ -79,6 +91,25 @@ describe('Coffee Rush engine', () => {
       'p2',
       'p1',
     ]);
+  });
+
+  it('supports the optional starter-order setup from the rulebook', () => {
+    const state = setupWithOptionalStarterOrders(3);
+    const startingPlayer = state.players.find((player) => player.id === state.startingPlayerId);
+
+    expect(state.setupOptions.useOptionalStarterOrders).toBe(true);
+    expect(state.deck).toHaveLength(76 - 3 - 1);
+    expect(state.deck.some((order) => countOrderIngredients(order) === 2)).toBe(false);
+    expect(state.players.map((player) => player.tabs[0][0].name)).toEqual([
+      'Ristretto',
+      'Ristretto',
+      'Espresso',
+    ]);
+    expect(state.players.every((player) => countOrderIngredients(player.tabs[0][0]) === 2)).toBe(
+      true,
+    );
+    expect(state.players.every((player) => player.tabs[1].length === 1)).toBe(true);
+    expect(startingPlayer.tabs[0]).toHaveLength(2);
   });
 
   it('updates player profile names as a logged game action', () => {

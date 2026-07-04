@@ -87,6 +87,11 @@
 - Action: Prefer stable, slug-like names for new vault assets that are embedded in published pages, and compare downloaded Pages artifacts when the deploy step fails without a build error.
 - Confidence: medium
 
+**[2026-07-03] — Pages artifact size reduction**
+- Observation: The published artifact included both raw `partition-summer/*.png` comic pages and optimized `partition-summer/web/*.webp` pages; the raw PNGs dominated the deploy artifact size while the reader already served the optimized copies.
+- Action: Keep raw comic source pages in `vault/assets`, but prune numeric comic PNGs from generated `public/assets` after web optimization and link the reader click-throughs to the optimized assets.
+- Confidence: high
+
 ## Patterns and Preferences
 
 **[2026-06-26] — Typography size tuning**

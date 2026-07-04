@@ -88,6 +88,10 @@ const optimizeComicDir = async (dir, sharp) => {
       fs.copyFileSync(input, path.join(outputDir, `${page}.png`));
     })
   );
+
+  pages.forEach(({ name }) => {
+    fs.rmSync(path.join(dir, name));
+  });
 };
 
 const optimizeComicAssets = async () => {

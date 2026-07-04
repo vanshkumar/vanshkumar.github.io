@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-07-04] — Async room timeout**
+- Observation: Async room expiry is defined in both the client-facing `ASYNC_ROOM_TTL_DAYS` constant and the relay-enforced `ASYNC_ROOM_TTL_MS`; the relay applies the TTL on room create and each accepted commit.
+- Action: When changing async room inactivity windows, update both constants plus the README/relay plan docs and cover the exported values in focused async client/relay tests.
+- Confidence: high
+
 **[2026-06-26] — Exported endgame audit**
 - Observation: Game-over ZIP exports include the terminal `END_TURN` in `state.log`/`actionLog`, while `undoStack` retains recent pre-action snapshots that can show whether `endTriggered` was already set before the final action.
 - Action: When auditing disputed endgames, inspect the last log actions plus `undoStack[-1]` before replaying the full reducer; this quickly identifies the trigger player, final-turn player, and pre-terminal penalty/tab counts.

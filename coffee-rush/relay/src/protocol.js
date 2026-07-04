@@ -10,7 +10,7 @@ export const MAX_ROOM_SOCKETS = 5;
 export const JOIN_TIMEOUT_MS = 5_000;
 export const ROOM_IDLE_TTL_MS = 30 * 60 * 1000;
 export const ROOM_HARD_TTL_MS = 6 * 60 * 60 * 1000;
-export const ASYNC_ROOM_TTL_MS = 14 * 24 * 60 * 60 * 1000;
+export const ASYNC_ROOM_TTL_MS = 5 * 24 * 60 * 60 * 1000;
 export const TOKEN_BUCKET_CAPACITY = 20;
 export const TOKEN_BUCKET_REFILL_PER_SECOND = 10;
 

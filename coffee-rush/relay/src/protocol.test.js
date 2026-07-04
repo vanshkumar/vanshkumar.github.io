@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
+  ASYNC_ROOM_TTL_MS,
   ASYNC_PROTOCOL_VERSION,
   CLOSE_CODES,
   createNotificationRosterHeadPayload,
@@ -28,6 +29,10 @@ const encryptedPayload = {
 };
 
 describe('relay protocol validation', () => {
+  it('uses a five-day sliding expiry for async rooms', () => {
+    expect(ASYNC_ROOM_TTL_MS).toBe(5 * 24 * 60 * 60 * 1000);
+  });
+
   it('normalizes room codes and validates joins', () => {
     expect(normalizeRoomCode(' ab-c 123 ')).toBe('ABC123');
     expect(

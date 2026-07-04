@@ -360,9 +360,9 @@ decryption failure.
 
 Room lifetime:
 
-- 14 days after the last accepted move/commit
+- 5 days after the last accepted move/commit
 - each accepted commit sets `lastMoveAt = now`
-- each accepted commit sets `expiresAt = now + 14 days`
+- each accepted commit sets `expiresAt = now + 5 days`
 - reads, joins, failed commits, and sync requests do not reset expiry
 
 Cleanup:
@@ -462,7 +462,7 @@ New module for protocol v2:
 - validate encrypted envelope size/shape
 - validate room/auth/client ids
 - add commit/snapshot size caps
-- add TTL constants for 14-day sliding expiry
+- add TTL constants for 5-day sliding expiry
 
 ### `relay/src/index.js`
 
@@ -486,7 +486,7 @@ New module for protocol v2:
 ### `README.md`
 
 - document async online behavior
-- document 14-day expiry
+- document 5-day expiry
 - clarify that invite links are bearer secrets
 - clarify that Cloudflare stores encrypted state/logs, not plaintext game data
 
@@ -509,7 +509,7 @@ Relay unit tests:
 - head request rejects bad auth
 - commit accepts exact current `expectedHeadIndex` and `prevHeadHash`
 - commit rejects stale head without writing
-- commit resets `expiresAt` to 14 days from accepted write
+- commit resets `expiresAt` to 5 days from accepted write
 - head/read requests do not reset `expiresAt`
 - expired room is deleted/rejected on alarm and lazy request
 - oversized encrypted commit/snapshot is rejected
@@ -541,7 +541,7 @@ Recommended:
 
 - Whether to keep a host-only close-room action. If yes, keep `hostAuth` in host
   local session only. If no, any participant can locally leave and rooms expire
-  naturally after 14 days.
+  naturally after 5 days.
 - Whether to upload a full encrypted snapshot after every committed turn. This is
   simplest and likely cheap for Coffee Rush. If storage grows, snapshot every N
   commits and keep the encrypted log.

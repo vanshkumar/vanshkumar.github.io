@@ -26,7 +26,7 @@ Current relay behavior:
   commits, sequence hashes, auth hashes, and timing metadata only.
 - Cloudflare must not store plaintext player names, active player id, phase,
   turn details, reducer actions, order deck, or game state.
-- Async room expiry is 14 days after the last accepted commit. Reads, joins, and
+- Async room expiry is 5 days after the last accepted commit. Reads, joins, and
   sync checks do not extend the expiry.
 - Online undo is local-only for uncommitted draft actions. Once an `END_TURN`
   commit is accepted, there is no global rewind/delete operation.

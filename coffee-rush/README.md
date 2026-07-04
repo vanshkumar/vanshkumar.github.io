@@ -74,7 +74,7 @@ building the Coffee Rush Vite app.
 
 Async room undo is local-only for the current uncommitted draft turn. Once an
 `END_TURN` commit is accepted, there is no global online undo/delete operation.
-Async rooms expire 14 days after the last accepted commit. Reads, joins, and sync
+Async rooms expire 5 days after the last accepted commit. Reads, joins, and sync
 checks do not extend the expiry.
 
 ## Where Things Live

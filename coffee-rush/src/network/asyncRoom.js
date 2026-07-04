@@ -13,7 +13,7 @@ import {
 } from './roomCrypto';
 
 export const ASYNC_PROTOCOL_VERSION = 2;
-export const ASYNC_ROOM_TTL_DAYS = 14;
+export const ASYNC_ROOM_TTL_DAYS = 5;
 export const MAX_ASYNC_ACTIONS_PER_COMMIT = 40;
 export const MAX_DECRYPTED_PAYLOAD_BYTES = 512 * 1024;
 export const ASYNC_DRAFT_MISMATCH_MESSAGE =

@@ -3,6 +3,7 @@ import { createInitialState } from '../engine/initialState';
 import { applyAction } from '../engine/reducers';
 import {
   ASYNC_DRAFT_MISMATCH_MESSAGE,
+  ASYNC_ROOM_TTL_DAYS,
   assertAsyncDraftReplayMatchesResult,
   createAsyncEndpointUrl,
   createAsyncRoom,
@@ -99,6 +100,10 @@ describe('async room client', () => {
         new URL('https://example.test/coffee-rush/#/'),
       ),
     ).toBe('https://relay.example.test/room/head?debug=1&room=AB12CD');
+  });
+
+  it('advertises the async room inactivity timeout', () => {
+    expect(ASYNC_ROOM_TTL_DAYS).toBe(5);
   });
 
   it('validates allowlisted reducer action shapes', () => {

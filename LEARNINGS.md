@@ -82,6 +82,11 @@
 - Action: When changing Sharp or regenerating the root lockfile, keep the linux musl optional package entries in `package-lock.json` and verify that each `optionalDependencies` item has a matching `node_modules/<package>` entry.
 - Confidence: high
 
+**[2026-07-03] — Pages artifact asset filenames**
+- Observation: A Pages deployment can fail in the deploy job even after all build/upload steps pass, and the backend may only report `Deployment failed, try again later.` Comparing successful and failed `github-pages` artifacts with `gh run download` is useful for narrowing the changed deployment surface; in one failure the only artifact delta was a newly added timestamped screenshot asset.
+- Action: Prefer stable, slug-like names for new vault assets that are embedded in published pages, and compare downloaded Pages artifacts when the deploy step fails without a build error.
+- Confidence: medium
+
 ## Patterns and Preferences
 
 **[2026-06-26] — Typography size tuning**

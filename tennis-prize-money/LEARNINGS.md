@@ -24,4 +24,14 @@
 - Action: For future branch or commit operations from this app, expect normal reads to work but retry required git metadata writes with approval if sandboxing blocks `.git` updates.
 - Confidence: high
 
+**2026-07-05 — Task 1 dependency workflow**
+- Observation: This Codex shell did not have `npm` or `node` on PATH, but `/Users/vanshkumar/.local/share/mise/installs/node/24.16.0/bin/npm` worked once that same Node bin directory was prepended to PATH; package setup also needed approved network access.
+- Action: For app-local npm installs and scripts in future threads, use `PATH=/Users/vanshkumar/.local/share/mise/installs/node/24.16.0/bin:/usr/bin:/bin:/usr/sbin:/sbin /Users/vanshkumar/.local/share/mise/installs/node/24.16.0/bin/npm ...` and request escalation when registry access is required.
+- Confidence: high
+
+**2026-07-05 — Task 1 Vite/Vitest config**
+- Observation: With the current dependency set, adding a Vitest `test` block to `vite.config.ts` produced TypeScript conflicts between app Vite types and Vitest's nested Vite dependency.
+- Action: Keep `vite.config.ts` Vite-only for now; the current Vitest tests run with default Node behavior without a Vite test config.
+- Confidence: high
+
 ## What Has Failed

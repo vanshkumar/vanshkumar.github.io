@@ -2,7 +2,7 @@
 
 A static-first React + TypeScript + Vite dashboard for exploring tennis prize money alongside tournament revenue, profit, or surplus where reliable data exists.
 
-The current Task 3 app uses a small sourced 2025 Grand Slam men's singles seed dataset. Revenue and profit/surplus values are intentionally unavailable until compatible tournament-level financial sources are added.
+The current Task 4 app uses a small sourced 2025 Grand Slam men's singles seed dataset and renders first-version dashboard charts, filters, KPI cards, source coverage, empty states, and caveats. Revenue, profit/surplus, and year-over-year growth values are intentionally unavailable until compatible tournament-level financial sources and prior-year rows are added.
 
 ## Setup
 
@@ -12,6 +12,8 @@ npm run dev
 ```
 
 The local dev server serves the app with Vite. Deployed builds are configured for the GitHub Pages subpath `/tennis-prize-money/`.
+
+The first screen is the usable dashboard: use the tournament, year, event, and confidence controls to narrow records. The visualization panels use local CSS/SVG chart components rather than a charting dependency, so no extra setup is required.
 
 ## Scripts
 
@@ -30,8 +32,8 @@ npm run build
 - `src/data/normalized/` contains normalized tournament economics records.
 - `src/data/schemas.ts` validates the JSON contract at import time.
 - `src/lib/metricEngine.ts` contains calculation utilities and unavailable-reason handling.
-- `src/lib/dashboardMetrics.ts` contains dashboard formatting, filtering, and KPI helpers.
-- `src/test/dashboardMetrics.test.ts` tests seed data provenance, filters, and calculation edge cases.
+- `src/lib/dashboardMetrics.ts` contains dashboard formatting, filtering, KPI helpers, chart row view models, coverage summaries, and visible caveat helpers.
+- `src/test/dashboardMetrics.test.ts` tests seed data provenance, filters, display helpers, empty/unavailable states, and calculation edge cases.
 - `docs/ARCHITECTURE.md`, `docs/DATA_MODEL.md`, `docs/DATA_SOURCES.md`, and `docs/DATA_CAVEATS.md` describe the static app and data boundaries.
 
 ## Data Rules

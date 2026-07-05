@@ -35,6 +35,30 @@ export interface KpiMetric {
   unavailable?: boolean;
 }
 
+export interface ComparisonChartRow {
+  id: string;
+  label: string;
+  value: string;
+  status: string;
+  note: string;
+  barPercent: number | null;
+  unavailable: boolean;
+}
+
+export interface YearOverYearChartRow {
+  id: string;
+  label: string;
+  value: string;
+  note: string;
+  unavailable: boolean;
+}
+
+export interface CoverageSummaryItem {
+  confidence: string;
+  count: number;
+  share: number;
+}
+
 export function formatMoney(amount: number | null, currency: string | null): string {
   if (amount === null || currency === null) {
     return 'Unavailable';
@@ -210,8 +234,127 @@ export function getRoundPayoutPercentages(
   return calculateRoundPayoutPercentages(record);
 }
 
-export function getCoverageSummary(data: DashboardDataset) {
-  const counts = data.records.reduce<Record<string, number>>((summary, record) => {
+export function getFinalistComparisonRows(
+  record: TournamentEconomicsRecord,
+): ComparisonChartRow[] {
+  const rows = [
+    {
+      id: 'winner',
+      label: 'Winner',
+      value: record.winnerPayout,
+      status: record.winnerPayout.status,
+      note: `Allocation: ${formatAllocation(record.winnerPayout.allocation)}.`,
+    },
+    {
+      id: 'runner-up',
+      label: 'Runner-up',
+      value: record.runnerUpPayout,
+      status: record.runnerUpPayout.status,
+      note: `Allocation: ${formatAllocation(record.runnerUpPayout.allocation)}.`,
+    },
+  ];
+  const maxAmount = Math.max(0, ...rows.map((row) => row.value.amount ?? 0));
+
+  return rows.map((row) => ({
+    id: row.id,
+    label: row.label,
+    value: formatMoneyValue(row.value),
+    status: valueEyebrow(row.status),
+    note: row.note,
+    barPercent:
+      row.value.amount !== null && maxAmount > 0 ? (row.value.amount / maxAmount) * 100 : null,
+    unavailable: row.value.status === 'unavailable' || row.value.amount === null,
+  }));
+}
+
+export function getFinancialComparisonRows(
+  record: TournamentEconomicsRecord,
+): ComparisonChartRow[] {
+  const rows = [
+    {
+      id: 'prize-pool',
+      label: 'Prize pool',
+      value: record.prizePool,
+      status: record.prizePool.status,
+      note: record.prizePool.notes ?? 'Normalized prize-pool value.',
+    },
+    {
+      id: 'revenue',
+      label: 'Revenue',
+      value: record.revenue,
+      status: record.revenue.status,
+      note: record.revenue.notes ?? `Financial kind: ${formatFinancialKind(record.revenue.kind)}.`,
+    },
+    {
+      id: 'profit-surplus',
+      label: 'Profit/surplus',
+      value: record.profitOrSurplus,
+      status: record.profitOrSurplus.status,
+      note:
+        record.profitOrSurplus.notes ??
+        `Financial kind: ${formatFinancialKind(record.profitOrSurplus.kind)}.`,
+    },
+  ];
+  const baseCurrency = record.prizePool.currency;
+  const comparableAmounts = rows
+    .map((row) =>
+      row.value.amount !== null && row.value.currency === baseCurrency ? row.value.amount : null,
+    )
+    .filter((amount): amount is number => amount !== null);
+  const maxAmount = Math.max(0, ...comparableAmounts);
+
+  return rows.map((row) => {
+    const hasAmount = row.value.amount !== null && row.value.currency !== null;
+    const hasComparableCurrency = hasAmount && row.value.currency === baseCurrency;
+    const unavailable = row.value.status === 'unavailable' || !hasAmount;
+    const incompatibleCurrency = hasAmount && !hasComparableCurrency;
+
+    return {
+      id: row.id,
+      label: row.label,
+      value: formatMoneyValue(row.value),
+      status: unavailable
+        ? 'Unavailable'
+        : incompatibleCurrency
+          ? 'Currency mismatch'
+          : valueEyebrow(row.status),
+      note: incompatibleCurrency
+        ? 'Value is present, but it is not charted against the prize pool without FX conversion.'
+        : row.note,
+      barPercent:
+        hasComparableCurrency && maxAmount > 0 && row.value.amount !== null
+          ? (row.value.amount / maxAmount) * 100
+          : null,
+      unavailable: unavailable || incompatibleCurrency,
+    };
+  });
+}
+
+export function getYearOverYearChartRows(
+  records: TournamentEconomicsRecord[],
+  allRecords: TournamentEconomicsRecord[],
+): YearOverYearChartRow[] {
+  return records.map((record) => {
+    const result = calculateYearOverYearPrizePoolGrowth(allRecords, record);
+
+    return {
+      id: record.id,
+      label: `${record.tournament} ${record.year}`,
+      value: formatSignedMetricPercent(result),
+      note:
+        result.status === 'available'
+          ? `Compared with ${record.year - 1} ${record.event}.`
+          : describeUnavailableReason(result.reason),
+      unavailable: result.status === 'unavailable',
+    };
+  });
+}
+
+export function getCoverageSummary(
+  data: DashboardDataset,
+  records = data.records,
+): CoverageSummaryItem[] {
+  const counts = records.reduce<Record<string, number>>((summary, record) => {
     summary[record.confidence] = (summary[record.confidence] ?? 0) + 1;
     return summary;
   }, {});
@@ -219,6 +362,25 @@ export function getCoverageSummary(data: DashboardDataset) {
   return Object.entries(counts).map(([confidence, count]) => ({
     confidence,
     count,
+    share: records.length > 0 ? count / records.length : 0,
+  }));
+}
+
+export function getSourceCoverageSummary(
+  data: DashboardDataset,
+  records: TournamentEconomicsRecord[],
+): CoverageSummaryItem[] {
+  const linkedSourceIds = new Set(records.flatMap(getRecordSourceIds));
+  const linkedSources = data.sources.filter((source) => linkedSourceIds.has(source.id));
+  const counts = linkedSources.reduce<Record<string, number>>((summary, source) => {
+    summary[source.confidence] = (summary[source.confidence] ?? 0) + 1;
+    return summary;
+  }, {});
+
+  return Object.entries(counts).map(([confidence, count]) => ({
+    confidence,
+    count,
+    share: linkedSources.length > 0 ? count / linkedSources.length : 0,
   }));
 }
 
@@ -229,6 +391,57 @@ export function getSourcesForRecord(
   const recordSourceIds = new Set(record.sourceIds);
 
   return data.sources.filter((source) => recordSourceIds.has(source.id));
+}
+
+export function getVisibleCaveats(
+  record: TournamentEconomicsRecord,
+  allRecords: TournamentEconomicsRecord[],
+): string[] {
+  const caveats = new Set(record.caveats);
+  const values = [
+    ['Prize pool', record.prizePool],
+    ['Winner payout', record.winnerPayout],
+    ['Runner-up payout', record.runnerUpPayout],
+    ['Revenue', record.revenue],
+    ['Profit/surplus', record.profitOrSurplus],
+  ] as const;
+
+  for (const [label, value] of values) {
+    if (value.status === 'unavailable') {
+      caveats.add(`${label} is unavailable for this record.`);
+    }
+
+    if (value.status === 'derived') {
+      caveats.add(`${label} is derived from normalized source rows.`);
+    }
+
+    if (value.status === 'estimated') {
+      caveats.add(`${label} is estimated and should not be treated as audited.`);
+    }
+
+    if (value.status === 'mock') {
+      caveats.add(`${label} is mock/sample data.`);
+    }
+  }
+
+  const revenueRatio = calculatePrizePoolToRevenue(record);
+  if (revenueRatio.status === 'unavailable') {
+    caveats.add(`Prize pool / revenue is unavailable: ${describeUnavailableReason(revenueRatio.reason)}`);
+  }
+
+  const profitRatio = calculatePrizePoolToProfitOrSurplus(record);
+  if (profitRatio.status === 'unavailable') {
+    caveats.add(
+      `Prize pool / profit or surplus is unavailable: ${describeUnavailableReason(profitRatio.reason)}`,
+    );
+  }
+
+  const yearOverYearGrowth = calculateYearOverYearPrizePoolGrowth(allRecords, record);
+  if (yearOverYearGrowth.status === 'unavailable') {
+    caveats.add(`Year-over-year growth is unavailable: ${describeUnavailableReason(yearOverYearGrowth.reason)}`);
+  }
+
+  return [...caveats];
 }
 
 export function describeUnavailableReason(reason: MetricUnavailableReason): string {
@@ -290,6 +503,18 @@ function formatAllocation(allocation: string): string {
 
 function formatFinancialKind(kind: string): string {
   return kind.replace(/_/g, ' ');
+}
+
+function getRecordSourceIds(record: TournamentEconomicsRecord): string[] {
+  return [
+    ...record.sourceIds,
+    ...record.prizePool.sourceIds,
+    ...record.revenue.sourceIds,
+    ...record.profitOrSurplus.sourceIds,
+    ...record.winnerPayout.sourceIds,
+    ...record.runnerUpPayout.sourceIds,
+    ...record.roundPayouts.flatMap((roundPayout) => roundPayout.payout.sourceIds),
+  ];
 }
 
 function uniqueSorted(values: string[]) {

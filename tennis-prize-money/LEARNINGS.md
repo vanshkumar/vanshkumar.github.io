@@ -44,4 +44,9 @@
 - Action: For future source expansion, keep `prizePool` event-scoped when paired with singles round payouts, mark summed table totals as `derived`, lower confidence when source access is limited, and leave revenue/profit unavailable without a clear tournament-level financial source.
 - Confidence: high
 
+**2026-07-05 — Task 4 visualization UI**
+- Observation: Local CSS/SVG chart components were enough for payout curves, comparison bars, confidence coverage, empty states, and unavailable states without adding a charting dependency.
+- Action: For near-term dashboard visualization work, extend `src/lib/dashboardMetrics.ts` view models and `src/pages/DashboardPage.tsx` CSS/SVG panels before introducing a charting library.
+- Confidence: medium
+
 ## What Has Failed

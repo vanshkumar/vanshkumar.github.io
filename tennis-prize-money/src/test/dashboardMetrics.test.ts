@@ -3,9 +3,14 @@ import { dashboardDataset, type TournamentEconomicsRecord } from '../data/dashbo
 import {
   filterRecords,
   formatMetricPercent,
+  getFinalistComparisonRows,
+  getFinancialComparisonRows,
   getCoverageSummary,
   getFilterOptions,
+  getSourceCoverageSummary,
   getSourcesForRecord,
+  getVisibleCaveats,
+  getYearOverYearChartRows,
   summarizeKpis,
 } from '../lib/dashboardMetrics';
 import {
@@ -143,10 +148,106 @@ describe('validated seed dashboard dataset', () => {
       'US Open',
       'Wimbledon',
     ]);
-    expect(coverageSummary).toContainEqual({ confidence: 'high', count: 2 });
-    expect(coverageSummary).toContainEqual({ confidence: 'medium', count: 2 });
+    expect(coverageSummary).toContainEqual(
+      expect.objectContaining({ confidence: 'high', count: 2, share: 0.5 }),
+    );
+    expect(coverageSummary).toContainEqual(
+      expect.objectContaining({ confidence: 'medium', count: 2, share: 0.5 }),
+    );
     expect(kpis).toHaveLength(9);
     expect(kpis.map((kpi) => kpi.label)).toContain('Prize pool YoY growth');
+  });
+
+  it('returns an empty record set for filter combinations outside the seed data', () => {
+    const filtered = filterRecords(dashboardDataset.records, {
+      tournament: 'all',
+      year: 'all',
+      event: 'all',
+      confidence: 'low',
+    });
+
+    expect(filtered).toEqual([]);
+    expect(getCoverageSummary(dashboardDataset, filtered)).toEqual([]);
+    expect(getSourceCoverageSummary(dashboardDataset, filtered)).toEqual([]);
+  });
+
+  it('builds finalist and financial chart rows with unavailable states', () => {
+    const finalistRows = getFinalistComparisonRows(normalRecord);
+    const financialRows = getFinancialComparisonRows(normalRecord);
+
+    expect(finalistRows).toEqual([
+      expect.objectContaining({
+        id: 'winner',
+        value: 'A$3,500,000',
+        barPercent: 100,
+        unavailable: false,
+      }),
+      expect.objectContaining({
+        id: 'runner-up',
+        value: 'A$1,900,000',
+        barPercent: (1900000 / 3500000) * 100,
+        unavailable: false,
+      }),
+    ]);
+    expect(financialRows).toEqual([
+      expect.objectContaining({
+        id: 'prize-pool',
+        value: 'A$33,108,000',
+        barPercent: 100,
+        unavailable: false,
+      }),
+      expect.objectContaining({
+        id: 'revenue',
+        value: 'Unavailable',
+        status: 'Unavailable',
+        barPercent: null,
+        unavailable: true,
+      }),
+      expect.objectContaining({
+        id: 'profit-surplus',
+        value: 'Unavailable',
+        status: 'Unavailable',
+        barPercent: null,
+        unavailable: true,
+      }),
+    ]);
+  });
+
+  it('builds unavailable year-over-year chart rows for the 2025-only seed', () => {
+    const yearOverYearRows = getYearOverYearChartRows(
+      dashboardDataset.records,
+      dashboardDataset.records,
+    );
+
+    expect(yearOverYearRows).toHaveLength(dashboardDataset.records.length);
+    expect(yearOverYearRows.every((row) => row.unavailable)).toBe(true);
+    expect(yearOverYearRows[0]).toMatchObject({
+      id: normalRecord.id,
+      value: 'Unavailable',
+      note: 'No matching prior-year record is available.',
+    });
+  });
+
+  it('surfaces derived and unavailable caveats for display', () => {
+    const derivedRecord = dashboardDataset.records.find(
+      (record) => record.id === 'roland-garros-2025-ms',
+    );
+
+    expect(derivedRecord).toBeDefined();
+    if (!derivedRecord) {
+      throw new Error('Expected roland-garros-2025-ms fixture to exist');
+    }
+
+    const caveats = getVisibleCaveats(derivedRecord, dashboardDataset.records);
+
+    expect(caveats).toContain('Prize pool is derived from normalized source rows.');
+    expect(caveats).toContain('Revenue is unavailable for this record.');
+    expect(caveats).toContain(
+      'Prize pool / profit or surplus is unavailable: Missing compatible data.',
+    );
+    expect(caveats).toContain(
+      'Year-over-year growth is unavailable: No matching prior-year record is available.',
+    );
   });
 });
 

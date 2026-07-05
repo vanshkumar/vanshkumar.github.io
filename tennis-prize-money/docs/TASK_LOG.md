@@ -113,3 +113,31 @@ Checks:
 Next:
 
 - Task 4 should add real visualizations, filters, empty/unavailable states, responsive layout, and accessibility polish using the sourced seed dataset.
+
+## 2026-07-05 - Task 4: First Real Visualizations And UX Polish
+
+Status: Complete
+
+Branch: `feat/tennis-prize-economics-dashboard`
+
+Summary:
+
+- Confirmed the thread started on pushed Task 3 commit `e865a0b455e332cc60145697c01489f617c73595`.
+- Added testable dashboard display helpers for finalist comparisons, financial comparison rows, year-over-year rows, source coverage summaries, and visible caveats.
+- Reworked the dashboard filters so zero-match combinations show an explicit empty state instead of silently falling back to the first record.
+- Added first-version CSS/SVG visualizations for payout curve by round, winner vs runner-up payout, prize pool vs financial rows, year-over-year growth, and confidence/source coverage.
+- Added visible unavailable states for missing revenue, profit/surplus, and prior-year data.
+- Improved responsive layout, focus states, labeled filters, reset controls, chart labels, and keyboard-friendly native controls.
+- Updated README and architecture documentation for the Task 4 chart/data flow.
+- Expanded Vitest coverage for display helpers, filter empty states, unavailable chart rows, and caveat surfacing.
+
+Checks:
+
+- `npm run lint` - passed.
+- `npm run typecheck` - passed.
+- `npm run test` - passed, 1 test file and 19 tests.
+- `npm run build` - passed.
+
+Next:
+
+- Task 5 should add the on-demand refresh pipeline, CLI refresh script, GitHub Actions workflow, optional external refresh dispatch integration, and refresh/deployment docs.

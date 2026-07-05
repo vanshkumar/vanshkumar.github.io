@@ -54,14 +54,6 @@ jobs:
         env:
           VITE_COFFEE_RUSH_RELAY_URL: ${{ vars.COFFEE_RUSH_RELAY_URL }}
 
-      - name: Install tennis prize money dependencies
-        run: npm ci
-        working-directory: tennis-prize-money
-
-      - name: Build tennis prize money
-        run: npm run build
-        working-directory: tennis-prize-money
-
       - name: Assemble site artifact
         run: |
           rm -rf site
@@ -71,8 +63,6 @@ jobs:
           cp -a terminal-desires-ranker/dist/. site/terminal-desires-ranker/
           mkdir -p site/coffee-rush
           cp -a coffee-rush/dist/. site/coffee-rush/
-          mkdir -p site/tennis-prize-money
-          cp -a tennis-prize-money/dist/. site/tennis-prize-money/
           touch site/.nojekyll
           if [ -f CNAME ]; then cp CNAME site/CNAME; fi
 
@@ -80,8 +70,6 @@ jobs:
         run: |
           test -f site/terminal-desires-ranker/index.html
           test -f site/coffee-rush/index.html
-          test -f site/tennis-prize-money/index.html
-          test -d site/tennis-prize-money/assets
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5

@@ -17,7 +17,12 @@ The app Vite config already uses:
 base: '/tennis-prize-money/'
 ```
 
-The parent workflow currently builds other deployed side apps. Add analogous install/build/copy steps for this app when promoting it into the Pages artifact.
+The parent workflow now builds this app with the same sibling-app pattern used by the existing deployed Vite apps:
+
+- `npm ci` in `tennis-prize-money/`
+- `npm run build` in `tennis-prize-money/`
+- copy `tennis-prize-money/dist/.` into `site/tennis-prize-money/`
+- verify `site/tennis-prize-money/index.html` and the built assets directory exist before uploading the Pages artifact
 
 ## Release Checks
 
@@ -90,5 +95,5 @@ The backend dispatches the GitHub Action; it does not refresh data directly in t
 
 - The app is buildable as a static Vite bundle.
 - The parent refresh workflow exists at `.github/workflows/tennis-prize-money-refresh.yml`.
-- The parent Pages deployment workflow still needs explicit install/build/copy steps for `tennis-prize-money/` before the dashboard is published at `/tennis-prize-money/`.
+- The parent Pages deployment workflow includes explicit install/build/copy steps for `tennis-prize-money/` and an artifact smoke check before upload.
 - No serverless backend is required for the static dashboard. The optional refresh dispatch backend should be deployed separately only if browser-triggered refresh is desired.

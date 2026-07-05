@@ -32,5 +32,5 @@
 
 ## Deployment
 
-- Add `tennis-prize-money/` install/build/copy steps to the parent GitHub Pages workflow when the dashboard is ready to publish.
-- Add a smoke check for the built `/tennis-prize-money/` artifact after it is copied into the combined Pages output.
+- Monitor the first GitHub Pages deployment after merge and confirm the dashboard is served at `/tennis-prize-money/`.
+- Add a post-deploy browser smoke check if the parent repo starts running automated deployed-site verification.

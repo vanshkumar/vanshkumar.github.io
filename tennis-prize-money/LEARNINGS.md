@@ -64,4 +64,9 @@
 - Action: Keep real-data mock-leakage rules in `src/data/schemas.ts` and add focused validation tests in `src/test/dataValidation.test.ts` when tightening source or dataset contracts.
 - Confidence: high
 
+**2026-07-05 - Post-plan deployment follow-up**
+- Observation: The parent Pages workflow deploys sibling apps only when each app is explicitly installed, built, copied into `site/<subpath>/`, and smoke-checked in `.github/workflows/deploy.yml`.
+- Action: When adding or renaming deployed side apps, update the parent workflow and app deployment docs together; app-local Vite `base` is necessary but not sufficient for publication.
+- Confidence: high
+
 ## What Has Failed

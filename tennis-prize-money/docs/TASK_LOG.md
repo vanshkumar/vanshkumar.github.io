@@ -202,3 +202,32 @@ Next:
 
 - Open or review the pull request for `feat/tennis-prize-economics-dashboard`.
 - Do not create another implementation thread unless review or CI reveals a concrete bugfix.
+
+## 2026-07-05 - Post-Plan Release Follow-Up
+
+Status: Complete
+
+Branch: `feat/tennis-prize-economics-dashboard`
+
+Summary:
+
+- Confirmed the worktree was detached, then moved it to pushed Task 6 commit `b51a6af8e88b359db2903ac587975b9347bf851a`.
+- Confirmed PR #4 was open, non-draft, and mergeable at the Task 6 head before follow-up changes.
+- Confirmed the parent Pages workflow did not yet build or copy `tennis-prize-money/` into the combined Pages artifact.
+- Added parent workflow steps to install and build the app, copy its Vite output into `site/tennis-prize-money/`, and smoke-check the copied artifact.
+- Updated deployment docs, changelog, future-work notes, project memory, and a post-plan handoff for the release follow-up.
+
+Checks:
+
+- `npm ci` - passed; installed locked app dependencies in this worktree.
+- `npm run lint` - passed.
+- `npm run typecheck` - passed.
+- `npm run test` - passed, 4 test files and 32 tests.
+- `npm run build` - passed.
+- Local artifact smoke check - passed by copying `dist/.` into `/private/tmp/tennis-prize-money-site-check-b51a6af8/tennis-prize-money/`, verifying `index.html`, verifying `assets/`, and checking built HTML for `/tennis-prize-money/assets/`.
+
+Next:
+
+- Commit and push the follow-up to PR #4.
+- Re-check PR mergeability and merge only if safe.
+- Verify the first GitHub Pages deployment after merge.

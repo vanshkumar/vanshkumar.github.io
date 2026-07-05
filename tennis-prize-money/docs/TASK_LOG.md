@@ -56,3 +56,32 @@ Checks:
 Next:
 
 - Task 2 should add the validated data model, schemas, data directories, and tested calculation engine, then wire the dashboard to validated data rather than the temporary loose mock objects.
+
+## 2026-07-05 - Task 2: Data Schema, Validation, And Calculation Engine
+
+Status: Complete
+
+Branch: `feat/tennis-prize-economics-dashboard`
+
+Summary:
+
+- Confirmed the thread started on pushed Task 1 commit `c838e35ef1cd932f3d4f8b0a4118443c767e43c9`.
+- Added TypeScript data types and runtime validation in `src/data/schemas.ts`.
+- Split the visibly labeled mock/sample data into dataset metadata, raw source metadata, and normalized records under `src/data/static/`, `src/data/raw/source-metadata/`, and `src/data/normalized/`.
+- Added `src/data/dashboardDataset.ts` so the dashboard imports validated data instead of loose JSON casts.
+- Added `src/lib/metricEngine.ts` with calculations for prize pool, finalist payouts, payout ratios, prize-pool share of revenue, prize-pool share of profit/surplus, year-over-year growth, and round payout percentages.
+- Preserved semantic distinctions for missing data, zero denominators, negative profit/surplus, incompatible currencies, and incompatible financial denominators.
+- Updated the dashboard to render from validated records and structured metric results.
+- Added data model and data caveat documentation.
+- Expanded Vitest coverage for normal cases, missing data, negative and zero profit/surplus, incompatible currencies, semantically incompatible denominators, and mock data labeling.
+
+Checks:
+
+- `npm run lint` - passed.
+- `npm run typecheck` - passed.
+- `npm run test` - passed, 1 test file and 9 tests.
+- `npm run build` - passed.
+
+Next:
+
+- Task 3 should add a small, honest Grand Slam seed dataset using real verified data only when source metadata and semantics are clear, and should update `docs/DATA_SOURCES.md` and caveats.

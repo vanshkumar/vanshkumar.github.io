@@ -1,8 +1,24 @@
 import type {
   Confidence,
-  MockDashboardData,
+  DashboardDataset,
+  MoneyValue,
+  Source,
   TournamentEconomicsRecord,
-} from '../data/mockDashboardData';
+  ValueStatus,
+} from '../data/dashboardDataset';
+import {
+  calculatePrizePoolToProfitOrSurplus,
+  calculatePrizePoolToRevenue,
+  calculateRoundPayoutPercentages,
+  calculateWinnerRunnerUpRatio,
+  calculateYearOverYearPrizePoolGrowth,
+  getRunnerUpPayout,
+  getTotalPrizePool,
+  getWinnerPayout,
+  type MetricUnavailableReason,
+  type NumericMetricResult,
+  type RoundPayoutPercentage,
+} from './metricEngine';
 
 export interface DashboardFilters {
   tournament: string;
@@ -19,8 +35,8 @@ export interface KpiMetric {
   unavailable?: boolean;
 }
 
-export function formatMoney(amount: number | null, currency: string): string {
-  if (amount === null) {
+export function formatMoney(amount: number | null, currency: string | null): string {
+  if (amount === null || currency === null) {
     return 'Unavailable';
   }
 
@@ -31,20 +47,35 @@ export function formatMoney(amount: number | null, currency: string): string {
   }).format(amount);
 }
 
-export function formatPercent(numerator: number | null, denominator: number | null): string {
-  if (numerator === null || denominator === null || denominator <= 0) {
-    return 'Unavailable';
-  }
-
-  return `${((numerator / denominator) * 100).toFixed(1)}%`;
+export function formatMoneyValue(value: MoneyValue): string {
+  return formatMoney(value.amount, value.currency);
 }
 
-export function formatRatio(numerator: number | null, denominator: number | null): string {
-  if (numerator === null || denominator === null || denominator <= 0) {
+export function formatMetricPercent(result: NumericMetricResult): string {
+  if (result.status === 'unavailable') {
     return 'Unavailable';
   }
 
-  return `${(numerator / denominator).toFixed(2)}x`;
+  return `${(result.value * 100).toFixed(1)}%`;
+}
+
+export function formatSignedMetricPercent(result: NumericMetricResult): string {
+  if (result.status === 'unavailable') {
+    return 'Unavailable';
+  }
+
+  const percentage = result.value * 100;
+  const sign = percentage > 0 ? '+' : '';
+
+  return `${sign}${percentage.toFixed(1)}%`;
+}
+
+export function formatRatioResult(result: NumericMetricResult): string {
+  if (result.status === 'unavailable') {
+    return 'Unavailable';
+  }
+
+  return `${result.value.toFixed(2)}x`;
 }
 
 export function getFilterOptions(records: TournamentEconomicsRecord[]) {
@@ -74,77 +105,112 @@ export function filterRecords(
   });
 }
 
-export function summarizeKpis(record: TournamentEconomicsRecord): KpiMetric[] {
-  const prizePool = record.prizePool.amount;
-  const revenue = record.revenue.amount;
-  const profitOrSurplus = record.profitOrSurplus.amount;
-  const winnerPayout = record.winnerPayout.amount;
-  const runnerUpPayout = record.runnerUpPayout.amount;
-  const profitRatioUnavailable = profitOrSurplus === null || profitOrSurplus <= 0;
+export function summarizeKpis(
+  record: TournamentEconomicsRecord,
+  records: TournamentEconomicsRecord[],
+): KpiMetric[] {
+  const totalPrizePool = getTotalPrizePool(record);
+  const winnerPayout = getWinnerPayout(record);
+  const runnerUpPayout = getRunnerUpPayout(record);
+  const prizePoolToRevenue = calculatePrizePoolToRevenue(record);
+  const prizePoolToProfitOrSurplus = calculatePrizePoolToProfitOrSurplus(record);
+  const winnerRunnerUpRatio = calculateWinnerRunnerUpRatio(record);
+  const yearOverYearGrowth = calculateYearOverYearPrizePoolGrowth(records, record);
 
   return [
     {
       label: 'Total prize pool',
-      value: formatMoney(prizePool, record.currency),
-      eyebrow: 'Mock KPI',
-      note: 'Placeholder total prize pool.',
+      value:
+        totalPrizePool.status === 'available'
+          ? formatMoneyValue(totalPrizePool.value)
+          : 'Unavailable',
+      eyebrow: valueEyebrow(record.prizePool.status),
+      note: record.prizePool.notes ?? 'Total prize pool from normalized data.',
+      unavailable: totalPrizePool.status === 'unavailable',
     },
     {
       label: 'Reported revenue',
-      value: formatMoney(revenue, record.currency),
-      eyebrow: record.revenue.status === 'mock' ? 'Mock KPI' : 'Unavailable',
-      note:
-        record.revenue.status === 'mock'
-          ? 'Placeholder tournament revenue.'
-          : 'No compatible revenue row in this mock record.',
+      value: formatMoneyValue(record.revenue),
+      eyebrow: valueEyebrow(record.revenue.status),
+      note: record.revenue.notes ?? `Financial kind: ${formatFinancialKind(record.revenue.kind)}.`,
       unavailable: record.revenue.status === 'unavailable',
     },
     {
       label: 'Reported profit/surplus',
-      value: formatMoney(profitOrSurplus, record.currency),
-      eyebrow: record.profitOrSurplus.status === 'mock' ? 'Mock KPI' : 'Unavailable',
+      value: formatMoneyValue(record.profitOrSurplus),
+      eyebrow: valueEyebrow(record.profitOrSurplus.status),
       note:
-        record.profitOrSurplus.status === 'mock'
-          ? 'Placeholder profit/surplus value.'
-          : 'Missing, zero, negative, or incompatible profit remains unavailable.',
+        record.profitOrSurplus.notes ??
+        `Financial kind: ${formatFinancialKind(record.profitOrSurplus.kind)}.`,
       unavailable: record.profitOrSurplus.status === 'unavailable',
     },
     {
       label: 'Prize pool / revenue',
-      value: formatPercent(prizePool, revenue),
-      eyebrow: revenue === null ? 'Unavailable' : 'Mock derived',
-      note: 'Shown only when same-currency revenue is present.',
-      unavailable: revenue === null,
+      value: formatMetricPercent(prizePoolToRevenue),
+      eyebrow: derivedEyebrow(record, prizePoolToRevenue),
+      note: ratioNote(
+        prizePoolToRevenue,
+        'Uses same-currency tournament revenue only.',
+      ),
+      unavailable: prizePoolToRevenue.status === 'unavailable',
     },
     {
       label: 'Prize pool / profit',
-      value: profitRatioUnavailable ? 'Unavailable' : formatPercent(prizePool, profitOrSurplus),
-      eyebrow: profitRatioUnavailable ? 'Unavailable' : 'Mock derived',
-      note: 'Unavailable when profit/surplus is missing, zero, negative, or incompatible.',
-      unavailable: profitRatioUnavailable,
+      value: formatMetricPercent(prizePoolToProfitOrSurplus),
+      eyebrow: derivedEyebrow(record, prizePoolToProfitOrSurplus),
+      note: ratioNote(
+        prizePoolToProfitOrSurplus,
+        'Uses same-currency tournament profit or surplus only.',
+      ),
+      unavailable: prizePoolToProfitOrSurplus.status === 'unavailable',
+    },
+    {
+      label: 'Prize pool YoY growth',
+      value: formatSignedMetricPercent(yearOverYearGrowth),
+      eyebrow: derivedEyebrow(record, yearOverYearGrowth),
+      note: ratioNote(
+        yearOverYearGrowth,
+        'Compares this prize pool with the prior year for the same tournament and event.',
+      ),
+      unavailable: yearOverYearGrowth.status === 'unavailable',
     },
     {
       label: 'Winner payout',
-      value: formatMoney(winnerPayout, record.currency),
-      eyebrow: 'Mock KPI',
-      note: `Allocation: ${record.winnerPayout.allocation.replace('_', ' ')}.`,
+      value:
+        winnerPayout.status === 'available'
+          ? formatMoneyValue(winnerPayout.value)
+          : 'Unavailable',
+      eyebrow: valueEyebrow(record.winnerPayout.status),
+      note: `Allocation: ${formatAllocation(record.winnerPayout.allocation)}.`,
+      unavailable: winnerPayout.status === 'unavailable',
     },
     {
       label: 'Runner-up payout',
-      value: formatMoney(runnerUpPayout, record.currency),
-      eyebrow: 'Mock KPI',
-      note: `Allocation: ${record.runnerUpPayout.allocation.replace('_', ' ')}.`,
+      value:
+        runnerUpPayout.status === 'available'
+          ? formatMoneyValue(runnerUpPayout.value)
+          : 'Unavailable',
+      eyebrow: valueEyebrow(record.runnerUpPayout.status),
+      note: `Allocation: ${formatAllocation(record.runnerUpPayout.allocation)}.`,
+      unavailable: runnerUpPayout.status === 'unavailable',
     },
     {
       label: 'Winner / runner-up',
-      value: formatRatio(winnerPayout, runnerUpPayout),
-      eyebrow: 'Mock derived',
-      note: 'Simple payout comparison for the selected event.',
+      value: formatRatioResult(winnerRunnerUpRatio),
+      eyebrow: derivedEyebrow(record, winnerRunnerUpRatio),
+      note: ratioNote(winnerRunnerUpRatio, 'Compares same-currency finalist payouts.'),
+      unavailable: winnerRunnerUpRatio.status === 'unavailable',
     },
   ];
 }
 
-export function getMockCoverageSummary(data: MockDashboardData) {
+export function getRoundPayoutPercentages(
+  record: TournamentEconomicsRecord,
+): RoundPayoutPercentage[] {
+  return calculateRoundPayoutPercentages(record);
+}
+
+export function getCoverageSummary(data: DashboardDataset) {
   const counts = data.records.reduce<Record<string, number>>((summary, record) => {
     summary[record.confidence] = (summary[record.confidence] ?? 0) + 1;
     return summary;
@@ -154,6 +220,76 @@ export function getMockCoverageSummary(data: MockDashboardData) {
     confidence,
     count,
   }));
+}
+
+export function getSourcesForRecord(
+  data: DashboardDataset,
+  record: TournamentEconomicsRecord,
+): Source[] {
+  const recordSourceIds = new Set(record.sourceIds);
+
+  return data.sources.filter((source) => recordSourceIds.has(source.id));
+}
+
+export function describeUnavailableReason(reason: MetricUnavailableReason): string {
+  switch (reason) {
+    case 'missing_data':
+      return 'Missing compatible data.';
+    case 'zero_denominator':
+      return 'Denominator is zero.';
+    case 'negative_denominator':
+      return 'Denominator is negative.';
+    case 'incompatible_currency':
+      return 'Currency mismatch; no conversion has been applied.';
+    case 'incompatible_financial_kind':
+      return 'Financial denominator is not a compatible tournament-level value.';
+    case 'no_prior_record':
+      return 'No matching prior-year record is available.';
+  }
+}
+
+function ratioNote(result: NumericMetricResult, availableNote: string): string {
+  if (result.status === 'available') {
+    return availableNote;
+  }
+
+  return describeUnavailableReason(result.reason);
+}
+
+function derivedEyebrow(
+  record: TournamentEconomicsRecord,
+  result: NumericMetricResult,
+): string {
+  if (result.status === 'unavailable') {
+    return 'Unavailable';
+  }
+
+  return record.confidence === 'mock' ? 'Mock derived' : 'Derived';
+}
+
+function valueEyebrow(status: ValueStatus): string {
+  switch (status) {
+    case 'official':
+      return 'Official';
+    case 'reported':
+      return 'Reported';
+    case 'estimated':
+      return 'Estimated';
+    case 'derived':
+      return 'Derived';
+    case 'mock':
+      return 'Mock KPI';
+    case 'unavailable':
+      return 'Unavailable';
+  }
+}
+
+function formatAllocation(allocation: string): string {
+  return allocation.replace(/_/g, ' ');
+}
+
+function formatFinancialKind(kind: string): string {
+  return kind.replace(/_/g, ' ');
 }
 
 function uniqueSorted(values: string[]) {

@@ -277,6 +277,17 @@ h3 {
   font-weight: 700;
 }
 
+.bar-row > strong {
+  display: grid;
+  gap: 2px;
+}
+
+.bar-row small {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
 .bar-track {
   height: 12px;
   overflow: hidden;
@@ -338,7 +349,7 @@ h3 {
 
 .source-list {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 12px;
   margin: 0 0 20px;
 }

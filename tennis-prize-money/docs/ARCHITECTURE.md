@@ -2,29 +2,51 @@
 
 ## Current Scope
 
-Task 1 establishes a static React + TypeScript + Vite dashboard shell under `tennis-prize-money/`. The app is intentionally app-local inside the larger `vanshkumar.github.io` repository and is configured for GitHub Pages subpath hosting with `base: '/tennis-prize-money/'`.
+Task 2 establishes a static React + TypeScript + Vite dashboard with a validated data layer and tested calculation engine under `tennis-prize-money/`. The app remains app-local inside the larger `vanshkumar.github.io` repository and is configured for GitHub Pages subpath hosting with `base: '/tennis-prize-money/'`.
 
-The dashboard currently renders from a small, visibly labeled mock/sample JSON dataset. No real tournament financial or prize-money data has been added yet.
+The dashboard currently renders from visibly labeled mock/sample JSON. No real tournament financial or prize-money data has been added yet.
 
 ## App Structure
 
 - `index.html` mounts the Vite app.
-- `vite.config.ts` configures React, Vitest, and the `/tennis-prize-money/` base path.
+- `vite.config.ts` configures React and the `/tennis-prize-money/` base path.
 - `src/main.tsx` mounts React.
 - `src/App.tsx` owns the basic React Router setup.
-- `src/pages/DashboardPage.tsx` renders the initial dashboard route.
+- `src/pages/DashboardPage.tsx` renders the dashboard route.
 - `src/components/` contains small presentational UI components.
-- `src/data/mockPrizeEconomics.json` contains the Task 1 mock/sample records.
-- `src/data/mockDashboardData.ts` defines the temporary TypeScript shape for the mock data.
-- `src/lib/dashboardMetrics.ts` provides filtering, formatting, and placeholder KPI helpers.
+- `src/data/static/` contains dataset-level static JSON metadata.
+- `src/data/raw/source-metadata/` contains source metadata JSON.
+- `src/data/normalized/` contains normalized tournament economics records.
+- `src/data/schemas.ts` defines TypeScript types and runtime validation.
+- `src/data/dashboardDataset.ts` imports and validates JSON before exporting the typed dataset.
+- `src/lib/metricEngine.ts` computes trustworthy metrics with structured unavailable reasons.
+- `src/lib/dashboardMetrics.ts` adapts metric results into dashboard filters, KPI cards, labels, and formatting.
 - `src/styles/main.css` contains app-local CSS.
-- `src/test/` contains Vitest tests for the scaffold utilities and mock data labels.
+- `src/test/` contains Vitest tests for validation-backed data behavior and calculation edge cases.
 
 ## Data Flow
 
-For Task 1, the dashboard imports a static mock JSON file at build time. The page derives filter options, the selected record, KPI placeholders, and simple chart bars in the browser. The mock dataset includes source metadata with `sourceType: "mock"` and `confidence: "mock"`.
+The dashboard imports `dashboardDataset` from `src/data/dashboardDataset.ts`. That module loads static JSON from the app bundle, validates metadata, source rows, and normalized records, and throws a `DataValidationError` if the contract is broken.
 
-Future tasks should replace the temporary mock data shape with validated schemas, normalized static JSON, source metadata, and tested calculation utilities.
+Dashboard rendering then follows this path:
+
+1. Validated records provide filter options and selected-record state.
+2. `src/lib/metricEngine.ts` computes derived metrics and unavailable reasons.
+3. `src/lib/dashboardMetrics.ts` formats those results for KPI cards and chart labels.
+4. `DashboardPage.tsx` renders the mock-labeled dashboard UI.
+
+The app does not fetch data at runtime in the browser yet.
+
+## Metric Boundaries
+
+The calculation engine only computes ratios when values are compatible:
+
+- same currency
+- available numerator and denominator
+- positive denominator
+- compatible financial denominator semantics
+
+Organizer-level financials, expenses, unknown values, incompatible currencies, missing values, and zero or negative profit/surplus denominators return unavailable results rather than percentages.
 
 ## Static Deployment Boundary
 

@@ -1,13 +1,16 @@
 import { useMemo, useState } from 'react';
 import { KpiCard } from '../components/KpiCard';
 import { MockBadge } from '../components/MockBadge';
-import { mockDashboardData } from '../data/mockDashboardData';
+import { dashboardDataset } from '../data/dashboardDataset';
 import {
   type DashboardFilters,
   filterRecords,
   formatMoney,
+  formatMetricPercent,
   getFilterOptions,
-  getMockCoverageSummary,
+  getCoverageSummary,
+  getRoundPayoutPercentages,
+  getSourcesForRecord,
   summarizeKpis,
 } from '../lib/dashboardMetrics';
 
@@ -20,20 +23,26 @@ const initialFilters: DashboardFilters = {
 
 export function DashboardPage() {
   const [filters, setFilters] = useState<DashboardFilters>(initialFilters);
-  const options = useMemo(() => getFilterOptions(mockDashboardData.records), []);
+  const options = useMemo(() => getFilterOptions(dashboardDataset.records), []);
   const filteredRecords = useMemo(
-    () => filterRecords(mockDashboardData.records, filters),
+    () => filterRecords(dashboardDataset.records, filters),
     [filters],
   );
-  const selectedRecord = filteredRecords[0] ?? mockDashboardData.records[0];
-  const kpis = useMemo(() => summarizeKpis(selectedRecord), [selectedRecord]);
+  const selectedRecord = filteredRecords[0] ?? dashboardDataset.records[0];
+  const kpis = useMemo(
+    () => summarizeKpis(selectedRecord, dashboardDataset.records),
+    [selectedRecord],
+  );
+  const roundPayoutPercentages = useMemo(
+    () => getRoundPayoutPercentages(selectedRecord),
+    [selectedRecord],
+  );
   const maxRoundPayout = Math.max(
-    ...selectedRecord.roundPayouts.map((payout) => payout.amount),
+    1,
+    ...roundPayoutPercentages.map((payout) => payout.payout.amount ?? 0),
   );
-  const coverageSummary = getMockCoverageSummary(mockDashboardData);
-  const selectedSource = mockDashboardData.sources.find(
-    (source) => source.id === selectedRecord.sourceId,
-  );
+  const coverageSummary = getCoverageSummary(dashboardDataset);
+  const selectedSources = getSourcesForRecord(dashboardDataset, selectedRecord);
 
   function updateFilter<Key extends keyof DashboardFilters>(
     key: Key,
@@ -52,12 +61,13 @@ export function DashboardPage() {
           <p className="hero-copy">
             A static-first dashboard shell for comparing tournament prize pools,
             payouts, financial rows, source confidence, and caveats. The current
-            dataset is explicitly mock/sample data for Task 1 scaffolding.
+            dataset is explicitly mock/sample data for Task 2 validation and
+            calculation testing.
           </p>
         </div>
         <div className="refresh-panel" aria-label="Refresh status">
           <span>Last refreshed</span>
-          <strong>{new Date(mockDashboardData.lastRefreshedAt).toLocaleString()}</strong>
+          <strong>{new Date(dashboardDataset.metadata.lastRefreshedAt).toLocaleString()}</strong>
           <button type="button" disabled>
             Refresh not configured
           </button>
@@ -65,8 +75,8 @@ export function DashboardPage() {
       </section>
 
       <section className="notice-band" aria-label="Mock data notice">
-        <strong>{mockDashboardData.datasetLabel}</strong>
-        <p>{mockDashboardData.datasetNotice}</p>
+        <strong>{dashboardDataset.metadata.datasetLabel}</strong>
+        <p>{dashboardDataset.metadata.datasetNotice}</p>
       </section>
 
       <section className="filters-band" aria-label="Dashboard filters">
@@ -156,16 +166,21 @@ export function DashboardPage() {
             <MockBadge />
           </div>
           <div className="bar-chart" role="img" aria-label="Mock payout curve by round">
-            {selectedRecord.roundPayouts.map((payout) => (
+            {roundPayoutPercentages.map((payout) => (
               <div className="bar-row" key={payout.round}>
                 <span>{payout.round}</span>
                 <div className="bar-track">
                   <div
                     className="bar-fill"
-                    style={{ width: `${(payout.amount / maxRoundPayout) * 100}%` }}
+                    style={{
+                      width: `${((payout.payout.amount ?? 0) / maxRoundPayout) * 100}%`,
+                    }}
                   />
                 </div>
-                <strong>{formatMoney(payout.amount, selectedRecord.currency)}</strong>
+                <strong>
+                  {formatMoney(payout.payout.amount, payout.payout.currency)}
+                  <small>{formatMetricPercent(payout.percentage)} of pool</small>
+                </strong>
               </div>
             ))}
           </div>
@@ -182,11 +197,18 @@ export function DashboardPage() {
           <div className="comparison-bars" role="img" aria-label="Mock winner and runner-up payouts">
             <div>
               <span>Winner</span>
-              <strong>{formatMoney(selectedRecord.winnerPayout.amount, selectedRecord.currency)}</strong>
+              <strong>
+                {formatMoney(selectedRecord.winnerPayout.amount, selectedRecord.winnerPayout.currency)}
+              </strong>
             </div>
             <div>
               <span>Runner-up</span>
-              <strong>{formatMoney(selectedRecord.runnerUpPayout.amount, selectedRecord.currency)}</strong>
+              <strong>
+                {formatMoney(
+                  selectedRecord.runnerUpPayout.amount,
+                  selectedRecord.runnerUpPayout.currency,
+                )}
+              </strong>
             </div>
           </div>
         </article>
@@ -202,16 +224,21 @@ export function DashboardPage() {
           <ul className="metric-list">
             <li>
               <span>Prize pool</span>
-              <strong>{formatMoney(selectedRecord.prizePool.amount, selectedRecord.currency)}</strong>
+              <strong>
+                {formatMoney(selectedRecord.prizePool.amount, selectedRecord.prizePool.currency)}
+              </strong>
             </li>
             <li>
               <span>Revenue</span>
-              <strong>{formatMoney(selectedRecord.revenue.amount, selectedRecord.currency)}</strong>
+              <strong>{formatMoney(selectedRecord.revenue.amount, selectedRecord.revenue.currency)}</strong>
             </li>
             <li>
               <span>Profit/surplus</span>
               <strong>
-                {formatMoney(selectedRecord.profitOrSurplus.amount, selectedRecord.currency)}
+                {formatMoney(
+                  selectedRecord.profitOrSurplus.amount,
+                  selectedRecord.profitOrSurplus.currency,
+                )}
               </strong>
             </li>
           </ul>
@@ -243,28 +270,17 @@ export function DashboardPage() {
             </div>
             <MockBadge />
           </div>
-          {selectedSource ? (
+          {selectedSources.length > 0 ? (
             <dl className="source-list">
-              <div>
-                <dt>Source</dt>
-                <dd>{selectedSource.title}</dd>
-              </div>
-              <div>
-                <dt>Publisher</dt>
-                <dd>{selectedSource.publisher}</dd>
-              </div>
-              <div>
-                <dt>Source type</dt>
-                <dd>{selectedSource.sourceType}</dd>
-              </div>
-              <div>
-                <dt>URL</dt>
-                <dd>{selectedSource.url}</dd>
-              </div>
-              <div>
-                <dt>Accessed</dt>
-                <dd>{selectedSource.accessedAt}</dd>
-              </div>
+              {selectedSources.map((source) => (
+                <div key={source.id}>
+                  <dt>{source.title}</dt>
+                  <dd>{source.publisher}</dd>
+                  <dd>{source.sourceType}</dd>
+                  <dd>{source.url}</dd>
+                  <dd>Accessed {source.accessedAt}</dd>
+                </div>
+              ))}
             </dl>
           ) : null}
           <ul className="caveat-list">

@@ -34,4 +34,9 @@
 - Action: Keep `vite.config.ts` Vite-only for now; the current Vitest tests run with default Node behavior without a Vite test config.
 - Confidence: high
 
+**2026-07-05 — Task 2 data layer**
+- Observation: Runtime validation works cleanly without adding another dependency by importing `src/data/static/`, `src/data/raw/source-metadata/`, and `src/data/normalized/` through `src/data/dashboardDataset.ts`; calculations consume validated `TournamentEconomicsRecord` values.
+- Action: Future data tasks should extend those JSON directories and import from `src/data/dashboardDataset.ts`, avoiding direct JSON casts or parallel loose data files.
+- Confidence: high
+
 ## What Has Failed

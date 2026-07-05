@@ -53,3 +53,9 @@ Confidence describes source trust and data clarity, not truth in isolation.
 Task 3 should prefer official tournament pages, annual reports, Form 990s, official financial statements, and official press releases. Secondary sources should be clearly labeled with lower confidence and notes.
 
 Task 3 applies this by using high-confidence official Australian Open and Wimbledon sources, and medium-confidence Roland Garros and US Open rows where source limitations remain.
+
+## Refresh Caveats
+
+Task 5 refresh automation validates and rewrites the current static JSON, but it does not make manually sourced rows more authoritative. A refreshed timestamp means the pipeline ran successfully; source confidence still comes from the underlying source metadata and normalization notes.
+
+The generic JSON manifest adapter expects already-normalized rows. Future official-page, PDF, or financial-report adapters should keep the same caveat discipline: no fabricated values, no hidden currency conversion, and no compatible financial ratios unless denominator semantics are clear.

@@ -49,4 +49,14 @@
 - Action: For near-term dashboard visualization work, extend `src/lib/dashboardMetrics.ts` view models and `src/pages/DashboardPage.tsx` CSS/SVG panels before introducing a charting library.
 - Confidence: medium
 
+**2026-07-05 — Task 5 refresh pipeline**
+- Observation: Server-side refresh TypeScript can be compiled without adding runtime/dependency tooling by using `tsconfig.refresh.json` to emit only `src/refresh/` and `src/data/schemas.ts` into `node_modules/.tmp/refresh`, then importing that output from `scripts/refresh-data.mjs`.
+- Action: For future Node refresh scripts, keep Node-specific file IO in `.mjs` wrappers and keep reusable refresh logic in dependency-injected TypeScript modules that avoid Node globals.
+- Confidence: high
+
+**2026-07-05 — Task 5 refresh UI**
+- Observation: The static dashboard can safely wire browser refresh only to an absolute public `VITE_REFRESH_DISPATCH_URL`; relative `/api/refresh`-style values would imply a GitHub Pages server runtime that does not exist.
+- Action: Keep browser refresh configuration limited to public endpoint/doc URLs, and keep GitHub tokens, refresh passphrases, and signed source URLs in GitHub Actions or external serverless environment variables only.
+- Confidence: high
+
 ## What Has Failed

@@ -21,6 +21,7 @@ import {
   getYearOverYearChartRows,
   summarizeKpis,
 } from '../lib/dashboardMetrics';
+import { dispatchRefreshRequest, getRefreshConfig } from '../lib/refreshClient';
 import type { TournamentEconomicsRecord } from '../data/dashboardDataset';
 
 const initialFilters: DashboardFilters = {
@@ -29,9 +30,16 @@ const initialFilters: DashboardFilters = {
   event: 'all',
   confidence: 'all',
 };
+const refreshConfig = getRefreshConfig();
 
 export function DashboardPage() {
   const [filters, setFilters] = useState<DashboardFilters>(initialFilters);
+  const [isRefreshing, setIsRefreshing] = useState(false);
+  const [refreshMessage, setRefreshMessage] = useState(
+    refreshConfig.endpointUrl === null
+      ? 'Refresh is not configured for this static deployment.'
+      : 'Refresh endpoint configured.',
+  );
   const options = useMemo(() => getFilterOptions(dashboardDataset.records), []);
   const filteredRecords = useMemo(
     () => filterRecords(dashboardDataset.records, filters),
@@ -85,6 +93,30 @@ export function DashboardPage() {
     setFilters(initialFilters);
   }
 
+  async function requestRefresh() {
+    if (refreshConfig.endpointUrl === null || isRefreshing) {
+      return;
+    }
+
+    const refreshToken = window.prompt('Enter refresh passphrase');
+
+    if (refreshToken === null) {
+      setRefreshMessage('Refresh request canceled.');
+      return;
+    }
+
+    setIsRefreshing(true);
+    setRefreshMessage('Requesting refresh...');
+
+    const result = await dispatchRefreshRequest({
+      endpointUrl: refreshConfig.endpointUrl,
+      refreshToken,
+    });
+
+    setRefreshMessage(result.message);
+    setIsRefreshing(false);
+  }
+
   return (
     <main className="app-shell">
       <section className="hero-band" aria-labelledby="page-title">
@@ -103,9 +135,23 @@ export function DashboardPage() {
         <div className="refresh-panel" aria-label="Refresh status">
           <span>Last refreshed</span>
           <strong>{new Date(dashboardDataset.metadata.lastRefreshedAt).toLocaleString()}</strong>
-          <button type="button" disabled>
-            Refresh not configured
-          </button>
+          <div className="refresh-actions">
+            {refreshConfig.endpointUrl === null ? (
+              <button type="button" disabled>
+                Refresh not configured
+              </button>
+            ) : (
+              <button type="button" disabled={isRefreshing} onClick={requestRefresh}>
+                {isRefreshing ? 'Requesting refresh' : 'Request refresh'}
+              </button>
+            )}
+            <a href={refreshConfig.docsUrl} target="_blank" rel="noreferrer">
+              Refresh docs
+            </a>
+          </div>
+          <p className="refresh-status-message" role="status">
+            {refreshMessage}
+          </p>
         </div>
       </section>
 
@@ -355,7 +401,11 @@ export function DashboardPage() {
             {visibleCaveats.map((caveat) => (
               <li key={caveat}>{caveat}</li>
             ))}
-            <li>Browser refresh is disabled until a safe external endpoint exists.</li>
+            <li>
+              {refreshConfig.endpointUrl === null
+                ? 'Browser refresh is disabled until a safe external endpoint exists.'
+                : 'Browser refresh dispatch uses an external endpoint; no GitHub token is bundled in this app.'}
+            </li>
           </ul>
         </article>
       </section>

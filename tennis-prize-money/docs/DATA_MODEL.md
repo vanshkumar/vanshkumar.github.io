@@ -2,7 +2,9 @@
 
 ## Current Status
 
-Task 3 replaces the active mock/sample dataset with a small sourced seed dataset for 2025 Grand Slam men's singles prize money. Revenue and profit/surplus rows remain unavailable because this task did not find clear tournament-level financial denominators suitable for ratios.
+The active dataset is a small sourced seed dataset for 2025 Grand Slam men's singles prize money. Revenue and profit/surplus rows remain unavailable because the project has not added clear tournament-level financial denominators suitable for ratios.
+
+Task 5 adds a server-side refresh pipeline that reads, validates, merges, and writes the same static JSON files. It does not change the schema version.
 
 ## File Layout
 
@@ -12,6 +14,7 @@ Task 3 replaces the active mock/sample dataset with a small sourced seed dataset
 - `src/data/schemas.ts` defines TypeScript types and runtime validation.
 - `src/data/dashboardDataset.ts` imports the static JSON files, validates them, and exports the typed dataset used by the dashboard.
 - `src/lib/metricEngine.ts` computes derived metrics from validated records.
+- `src/refresh/index.ts` validates and writes these same JSON outputs during `npm run refresh:data`.
 
 ## Dataset Metadata
 
@@ -123,3 +126,15 @@ Compatible denominator rules:
 - `prizePool / profit or surplus` accepts `tournament_profit` and `tournament_surplus`.
 - Organizer-level revenue/profit/surplus, tour-level revenue, expenses, and unknown values are not treated as compatible denominators.
 - Profit or surplus denominators that are zero or negative are unavailable.
+
+## Refresh Merge Rules
+
+Refresh adapters normalize source data into the existing `Source` and `TournamentEconomicsRecord` shapes.
+
+- Sources are merged by `source.id`.
+- Records are merged by `record.id`.
+- Incoming rows replace matching ids.
+- Unrelated existing rows are preserved.
+- The complete merged dataset is validated before any static JSON output is written.
+
+The first refresh adapter accepts a JSON manifest with top-level `sources` and `records` arrays. Tournament-specific scraping, PDF parsing, and financial-report adapters are future work.

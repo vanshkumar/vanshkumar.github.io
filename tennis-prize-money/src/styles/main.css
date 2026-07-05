@@ -175,11 +175,31 @@ h3 {
   font-size: 1rem;
 }
 
-.refresh-panel button {
+.refresh-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.refresh-actions a {
+  color: var(--blue);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.refresh-panel button:disabled {
   border: 1px solid #cbd5e1;
   background: #e5e7eb;
   color: #475467;
   cursor: not-allowed;
+}
+
+.refresh-status-message {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.4;
 }
 
 .notice-band {

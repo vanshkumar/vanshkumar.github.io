@@ -2,7 +2,7 @@
 
 A static-first React + TypeScript + Vite dashboard for exploring tennis prize money alongside tournament revenue, profit, or surplus where reliable data exists.
 
-The current Task 4 app uses a small sourced 2025 Grand Slam men's singles seed dataset and renders first-version dashboard charts, filters, KPI cards, source coverage, empty states, and caveats. Revenue, profit/surplus, and year-over-year growth values are intentionally unavailable until compatible tournament-level financial sources and prior-year rows are added.
+The current Task 5 app uses a small sourced 2025 Grand Slam men's singles seed dataset and renders first-version dashboard charts, filters, KPI cards, source coverage, empty states, refresh status, and caveats. Revenue, profit/surplus, and year-over-year growth values are intentionally unavailable until compatible tournament-level financial sources and prior-year rows are added.
 
 ## Setup
 
@@ -23,7 +23,10 @@ npm run lint
 npm run typecheck
 npm run test
 npm run build
+npm run refresh:data
 ```
+
+`npm run refresh:data` compiles the server-side refresh module, validates the current static JSON, optionally fetches a configured JSON manifest, merges validated source/record rows, and writes the static JSON outputs. See `docs/REFRESH_PIPELINE.md`.
 
 ## Project Shape
 
@@ -33,8 +36,12 @@ npm run build
 - `src/data/schemas.ts` validates the JSON contract at import time.
 - `src/lib/metricEngine.ts` contains calculation utilities and unavailable-reason handling.
 - `src/lib/dashboardMetrics.ts` contains dashboard formatting, filtering, KPI helpers, chart row view models, coverage summaries, and visible caveat helpers.
+- `src/lib/refreshClient.ts` contains browser-safe refresh dispatch helpers. It only reads public `VITE_` endpoint/doc URLs.
+- `src/refresh/` contains the server-side refresh pipeline and source-adapter interfaces.
+- `scripts/refresh-data.mjs` runs the server-side refresh CLI.
+- `serverless/refresh-dispatch.mjs` is an optional external dispatch handler for separately hosted serverless runtimes.
 - `src/test/dashboardMetrics.test.ts` tests seed data provenance, filters, display helpers, empty/unavailable states, and calculation edge cases.
-- `docs/ARCHITECTURE.md`, `docs/DATA_MODEL.md`, `docs/DATA_SOURCES.md`, and `docs/DATA_CAVEATS.md` describe the static app and data boundaries.
+- `docs/ARCHITECTURE.md`, `docs/DATA_MODEL.md`, `docs/DATA_SOURCES.md`, `docs/DATA_CAVEATS.md`, `docs/REFRESH_PIPELINE.md`, and `docs/DEPLOYMENT.md` describe the static app, refresh, deployment, and data boundaries.
 
 ## Data Rules
 
@@ -42,4 +49,4 @@ npm run build
 - Keep mock/sample data visibly labeled in code and UI.
 - Treat prize money, revenue, profit, surplus, expenses, and unavailable values as distinct concepts.
 - Do not compute ratios when values are missing, nonpositive, semantically incompatible, or in incompatible currencies.
-- Browser-triggered refresh is disabled until a safe external endpoint exists.
+- Browser-triggered refresh is disabled until a safe external endpoint exists. Never put GitHub tokens or refresh passphrases in `VITE_` variables.

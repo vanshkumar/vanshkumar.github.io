@@ -8,7 +8,7 @@ Task 3 adds a small seed dataset for 2025 Grand Slam men's singles prize money. 
 - `src/data/raw/source-metadata/grandSlam2025Sources.json`
 - `src/data/normalized/grandSlam2025MensSingles.json`
 
-No source adapters are implemented yet. All rows are manually normalized from the cited sources and validated at app import time and in Vitest fixtures.
+Task 5 adds the first server-side refresh pipeline and a generic JSON manifest adapter. Tournament-specific source adapters are not implemented yet, so the seed rows below remain manually normalized from the cited sources and validated at app import time, in Vitest fixtures, and during `npm run refresh:data`.
 
 ## Source Inventory
 
@@ -20,6 +20,21 @@ No source adapters are implemented yet. All rows are manually normalized from th
 | `wimbledon-2025-prize-money-pdf` | [The Championships, Wimbledon 2025 Prize Money](https://www.wimbledon.com/pdf/Wimbledon_Prize_Money_2025.pdf) | The All England Lawn Tennis Club / Wimbledon | Gentlemen's/ladies' singles per-player round payouts, singles event total, total tournament prize money | High | PDF parsing is manual in Task 3; future adapter should parse tables. | No |
 | `us-open-2025-prize-money-page` | [2025 US Open Prize Money](https://www.usopen.org/en_US/visit/prize_money.html) | United States Tennis Association / US Open | US Open prize-money table and total player compensation | Medium | Official page was reachable but did not expose crawler-readable text in this task. | No |
 | `us-open-2025-secondary-crosscheck` | [US Open prize-money table](https://en.wikipedia.org/wiki/US_Open_(tennis)#Prize_money) | Wikipedia, citing the official US Open prize-money page | Singles round payouts, combined singles total, total player compensation | Medium | Used only as a cross-check because the official page did not parse in this environment. | No |
+
+## Refresh Adapter Status
+
+The current refresh adapter accepts a server-side JSON manifest with this shape:
+
+```json
+{
+  "sources": [],
+  "records": []
+}
+```
+
+Those arrays must already match the app data model. The adapter fetches the manifest, normalizes through the existing parsers, merges rows by id, validates the full dataset, and writes static JSON only after validation succeeds.
+
+Official tournament page adapters, PDF table parsers, and financial-report adapters remain future work.
 
 ## Normalized Seed Rows
 

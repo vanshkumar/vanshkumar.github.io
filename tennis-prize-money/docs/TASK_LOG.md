@@ -141,3 +141,34 @@ Checks:
 Next:
 
 - Task 5 should add the on-demand refresh pipeline, CLI refresh script, GitHub Actions workflow, optional external refresh dispatch integration, and refresh/deployment docs.
+
+## 2026-07-05 - Task 5: On-Demand Refresh Pipeline
+
+Status: Complete
+
+Branch: `feat/tennis-prize-economics-dashboard`
+
+Summary:
+
+- Confirmed the thread started on pushed Task 4 commit `67936909e424d16dc3de7cb36b6ce470a1409fb0`.
+- Added a server-side TypeScript refresh pipeline with source-adapter interfaces for fetching raw data, normalizing, validating, merging by id, and writing static JSON outputs.
+- Added `npm run refresh:data`, backed by a Node CLI wrapper and a refresh-only TypeScript build config.
+- Added safe refresh logging, sanitized error handling, `.env.example`, and `.env` ignore rules.
+- Added a manual GitHub Actions workflow at `.github/workflows/tennis-prize-money-refresh.yml` that installs app dependencies, runs tests, refreshes data, commits changed static JSON only, and pushes back to the selected branch.
+- Added optional external serverless dispatch code that requires server-side GitHub and refresh tokens and dispatches the refresh workflow without exposing secrets to the browser bundle.
+- Wired the dashboard refresh button to an absolute configured external endpoint when present; otherwise it stays in a "Refresh not configured" state and links to refresh docs.
+- Added refresh and deployment documentation.
+- Added Vitest coverage for the refresh pipeline, mocked fetch adapters, validation failures before writes, safe failure logging, and browser refresh-client behavior.
+
+Checks:
+
+- `npm run build:refresh` - passed after enabling declarations in the refresh TypeScript config.
+- `npm run refresh:data` - passed; validated and stabilized static JSON output.
+- `npm run lint` - passed.
+- `npm run typecheck` - passed after tightening refresh test fixture types.
+- `npm run test` - passed, 3 test files and 27 tests.
+- `npm run build` - passed after the typecheck fix.
+
+Next:
+
+- Task 6 should harden the v0.1 dashboard and docs, audit for mock leakage/secrets/terminology issues, add future-work and changelog docs, run final checks, commit, push, and prepare PR instructions or a PR.

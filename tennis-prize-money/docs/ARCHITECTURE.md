@@ -2,7 +2,7 @@
 
 ## Current Scope
 
-Task 4 builds on the static React + TypeScript + Vite dashboard with a validated data layer, sourced seed data, tested calculation engine, and first-version CSS/SVG visualizations under `tennis-prize-money/`. The app remains app-local inside the larger `vanshkumar.github.io` repository and is configured for GitHub Pages subpath hosting with `base: '/tennis-prize-money/'`.
+Task 5 builds on the static React + TypeScript + Vite dashboard with a validated data layer, sourced seed data, tested calculation engine, first-version CSS/SVG visualizations, and a server-side refresh pipeline under `tennis-prize-money/`. The app remains app-local inside the larger `vanshkumar.github.io` repository and is configured for GitHub Pages subpath hosting with `base: '/tennis-prize-money/'`.
 
 The dashboard currently renders from a small sourced 2025 Grand Slam men's singles prize-money seed dataset. Compatible tournament-level revenue, profit, surplus, and prior-year comparison values remain unavailable until clearer financial sources and additional years are added.
 
@@ -21,6 +21,10 @@ The dashboard currently renders from a small sourced 2025 Grand Slam men's singl
 - `src/data/dashboardDataset.ts` imports and validates JSON before exporting the typed dataset.
 - `src/lib/metricEngine.ts` computes trustworthy metrics with structured unavailable reasons.
 - `src/lib/dashboardMetrics.ts` adapts metric results into dashboard filters, KPI cards, labels, chart row view models, coverage summaries, visible caveats, and formatting.
+- `src/lib/refreshClient.ts` handles browser-safe refresh endpoint configuration and dispatch requests. It only reads public `VITE_` variables.
+- `src/refresh/` contains the server-side refresh pipeline, source-adapter interfaces, validation, merge, and static JSON output code.
+- `scripts/refresh-data.mjs` is the Node CLI wrapper for `npm run refresh:data`.
+- `serverless/refresh-dispatch.mjs` is an optional external serverless dispatch handler. It is not bundled into the static app.
 - `src/styles/main.css` contains app-local CSS.
 - `src/test/` contains Vitest tests for validation-backed data behavior, display helpers, unavailable states, and calculation edge cases.
 
@@ -35,7 +39,20 @@ Dashboard rendering then follows this path:
 3. `src/lib/dashboardMetrics.ts` formats those results for KPI cards, chart row view models, coverage summaries, and visible caveats.
 4. `DashboardPage.tsx` renders the dashboard UI with filters, KPI cards, CSS/SVG charts, empty states, unavailable states, record confidence, source links, and caveats.
 
-The app does not fetch data at runtime in the browser yet.
+The app does not fetch tournament data at runtime in the browser. The browser can optionally request a refresh dispatch only when `VITE_REFRESH_DISPATCH_URL` points to a separately hosted external endpoint.
+
+## Refresh Flow
+
+The server-side refresh pipeline follows this path:
+
+1. `scripts/refresh-data.mjs` reads the current static JSON files.
+2. `src/refresh/index.ts` validates the existing dataset.
+3. Configured source adapters fetch raw/source data and normalize it to `Source[]` and `TournamentEconomicsRecord[]`.
+4. Adapter output is merged by stable ids, replacing matching source/record rows and preserving unrelated rows.
+5. The merged dataset is validated with `parseDashboardDataset`.
+6. The pipeline writes the three static JSON outputs only after validation succeeds.
+
+The first adapter implementation is a generic JSON manifest adapter for server-side use. Tournament-specific official-page or PDF adapters are future work.
 
 ## Metric Boundaries
 
@@ -64,7 +81,9 @@ Filtering by tournament, year, event, and confidence happens before chart view m
 
 ## Static Deployment Boundary
 
-The app assumes GitHub Pages static hosting. There are no app-local API routes and no client-side secrets. The refresh button is disabled and clearly marked as not configured until a future task adds a CLI/GitHub Actions refresh path and, optionally, a separately hosted serverless dispatch endpoint.
+The app assumes GitHub Pages static hosting. There are no app-local API routes and no client-side secrets. The refresh button is clearly marked as not configured unless `VITE_REFRESH_DISPATCH_URL` is set to an absolute external endpoint URL.
+
+The optional dispatch endpoint requires a separate serverless host with server-side `GITHUB_TOKEN` and `REFRESH_TOKEN` values. Those values must never be exposed through Vite variables.
 
 ## Checks
 
@@ -75,3 +94,4 @@ The app provides these app-local scripts:
 - `npm run typecheck`
 - `npm run test`
 - `npm run build`
+- `npm run refresh:data`

@@ -6,43 +6,52 @@
     "event": "Men's singles",
     "confidence": "high",
     "displayCurrency": "AUD",
-    "sourceIds": ["ao-2025-prize-money-release", "ao-2025-prize-money-pdf"],
+    "sourceIds": [
+      "ao-2025-prize-money-release",
+      "ao-2025-prize-money-pdf"
+    ],
     "prizePool": {
       "amount": 33108000,
       "currency": "AUD",
       "status": "official",
-      "sourceIds": ["ao-2025-prize-money-pdf"],
+      "sourceIds": [
+        "ao-2025-prize-money-pdf"
+      ],
       "notes": "Official total for one 128-player singles event, computed in the source PDF from the listed round payouts."
     },
     "revenue": {
       "amount": null,
       "currency": null,
-      "kind": "unknown",
       "status": "unavailable",
       "sourceIds": [],
-      "notes": "No clear tournament-level Australian Open 2025 revenue source is included in this seed."
+      "notes": "No clear tournament-level Australian Open 2025 revenue source is included in this seed.",
+      "kind": "unknown"
     },
     "profitOrSurplus": {
       "amount": null,
       "currency": null,
-      "kind": "unknown",
       "status": "unavailable",
       "sourceIds": [],
-      "notes": "No clear tournament-level Australian Open 2025 profit or surplus source is included in this seed."
+      "notes": "No clear tournament-level Australian Open 2025 profit or surplus source is included in this seed.",
+      "kind": "unknown"
     },
     "winnerPayout": {
       "amount": 3500000,
       "currency": "AUD",
-      "allocation": "per_player",
       "status": "official",
-      "sourceIds": ["ao-2025-prize-money-pdf"]
+      "sourceIds": [
+        "ao-2025-prize-money-pdf"
+      ],
+      "allocation": "per_player"
     },
     "runnerUpPayout": {
       "amount": 1900000,
       "currency": "AUD",
-      "allocation": "per_player",
       "status": "official",
-      "sourceIds": ["ao-2025-prize-money-pdf"]
+      "sourceIds": [
+        "ao-2025-prize-money-pdf"
+      ],
+      "allocation": "per_player"
     },
     "roundPayouts": [
       {
@@ -50,9 +59,11 @@
         "payout": {
           "amount": 132000,
           "currency": "AUD",
-          "allocation": "per_player",
           "status": "official",
-          "sourceIds": ["ao-2025-prize-money-pdf"]
+          "sourceIds": [
+            "ao-2025-prize-money-pdf"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -60,9 +71,11 @@
         "payout": {
           "amount": 200000,
           "currency": "AUD",
-          "allocation": "per_player",
           "status": "official",
-          "sourceIds": ["ao-2025-prize-money-pdf"]
+          "sourceIds": [
+            "ao-2025-prize-money-pdf"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -70,9 +83,11 @@
         "payout": {
           "amount": 290000,
           "currency": "AUD",
-          "allocation": "per_player",
           "status": "official",
-          "sourceIds": ["ao-2025-prize-money-pdf"]
+          "sourceIds": [
+            "ao-2025-prize-money-pdf"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -80,9 +95,11 @@
         "payout": {
           "amount": 420000,
           "currency": "AUD",
-          "allocation": "per_player",
           "status": "official",
-          "sourceIds": ["ao-2025-prize-money-pdf"]
+          "sourceIds": [
+            "ao-2025-prize-money-pdf"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -90,9 +107,11 @@
         "payout": {
           "amount": 665000,
           "currency": "AUD",
-          "allocation": "per_player",
           "status": "official",
-          "sourceIds": ["ao-2025-prize-money-pdf"]
+          "sourceIds": [
+            "ao-2025-prize-money-pdf"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -100,9 +119,11 @@
         "payout": {
           "amount": 1100000,
           "currency": "AUD",
-          "allocation": "per_player",
           "status": "official",
-          "sourceIds": ["ao-2025-prize-money-pdf"]
+          "sourceIds": [
+            "ao-2025-prize-money-pdf"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -110,9 +131,11 @@
         "payout": {
           "amount": 1900000,
           "currency": "AUD",
-          "allocation": "per_player",
           "status": "official",
-          "sourceIds": ["ao-2025-prize-money-pdf"]
+          "sourceIds": [
+            "ao-2025-prize-money-pdf"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -120,9 +143,11 @@
         "payout": {
           "amount": 3500000,
           "currency": "AUD",
-          "allocation": "per_player",
           "status": "official",
-          "sourceIds": ["ao-2025-prize-money-pdf"]
+          "sourceIds": [
+            "ao-2025-prize-money-pdf"
+          ],
+          "allocation": "per_player"
         }
       }
     ],
@@ -139,43 +164,51 @@
     "event": "Men's singles",
     "confidence": "medium",
     "displayCurrency": "EUR",
-    "sourceIds": ["roland-garros-2025-secondary-prize-money"],
+    "sourceIds": [
+      "roland-garros-2025-secondary-prize-money"
+    ],
     "prizePool": {
       "amount": 20509000,
       "currency": "EUR",
       "status": "derived",
-      "sourceIds": ["roland-garros-2025-secondary-prize-money"],
+      "sourceIds": [
+        "roland-garros-2025-secondary-prize-money"
+      ],
       "notes": "Derived by summing the 128-player singles round allocations from the cited round-by-round table."
     },
     "revenue": {
       "amount": null,
       "currency": null,
-      "kind": "unknown",
       "status": "unavailable",
       "sourceIds": [],
-      "notes": "No clear tournament-level Roland Garros 2025 revenue source is included in this seed."
+      "notes": "No clear tournament-level Roland Garros 2025 revenue source is included in this seed.",
+      "kind": "unknown"
     },
     "profitOrSurplus": {
       "amount": null,
       "currency": null,
-      "kind": "unknown",
       "status": "unavailable",
       "sourceIds": [],
-      "notes": "No clear tournament-level Roland Garros 2025 profit or surplus source is included in this seed."
+      "notes": "No clear tournament-level Roland Garros 2025 profit or surplus source is included in this seed.",
+      "kind": "unknown"
     },
     "winnerPayout": {
       "amount": 2550000,
       "currency": "EUR",
-      "allocation": "per_player",
       "status": "reported",
-      "sourceIds": ["roland-garros-2025-secondary-prize-money"]
+      "sourceIds": [
+        "roland-garros-2025-secondary-prize-money"
+      ],
+      "allocation": "per_player"
     },
     "runnerUpPayout": {
       "amount": 1275000,
       "currency": "EUR",
-      "allocation": "per_player",
       "status": "reported",
-      "sourceIds": ["roland-garros-2025-secondary-prize-money"]
+      "sourceIds": [
+        "roland-garros-2025-secondary-prize-money"
+      ],
+      "allocation": "per_player"
     },
     "roundPayouts": [
       {
@@ -183,9 +216,11 @@
         "payout": {
           "amount": 78000,
           "currency": "EUR",
-          "allocation": "per_player",
           "status": "reported",
-          "sourceIds": ["roland-garros-2025-secondary-prize-money"]
+          "sourceIds": [
+            "roland-garros-2025-secondary-prize-money"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -193,9 +228,11 @@
         "payout": {
           "amount": 117000,
           "currency": "EUR",
-          "allocation": "per_player",
           "status": "reported",
-          "sourceIds": ["roland-garros-2025-secondary-prize-money"]
+          "sourceIds": [
+            "roland-garros-2025-secondary-prize-money"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -203,9 +240,11 @@
         "payout": {
           "amount": 168000,
           "currency": "EUR",
-          "allocation": "per_player",
           "status": "reported",
-          "sourceIds": ["roland-garros-2025-secondary-prize-money"]
+          "sourceIds": [
+            "roland-garros-2025-secondary-prize-money"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -213,9 +252,11 @@
         "payout": {
           "amount": 265000,
           "currency": "EUR",
-          "allocation": "per_player",
           "status": "reported",
-          "sourceIds": ["roland-garros-2025-secondary-prize-money"]
+          "sourceIds": [
+            "roland-garros-2025-secondary-prize-money"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -223,9 +264,11 @@
         "payout": {
           "amount": 440000,
           "currency": "EUR",
-          "allocation": "per_player",
           "status": "reported",
-          "sourceIds": ["roland-garros-2025-secondary-prize-money"]
+          "sourceIds": [
+            "roland-garros-2025-secondary-prize-money"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -233,9 +276,11 @@
         "payout": {
           "amount": 690000,
           "currency": "EUR",
-          "allocation": "per_player",
           "status": "reported",
-          "sourceIds": ["roland-garros-2025-secondary-prize-money"]
+          "sourceIds": [
+            "roland-garros-2025-secondary-prize-money"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -243,9 +288,11 @@
         "payout": {
           "amount": 1275000,
           "currency": "EUR",
-          "allocation": "per_player",
           "status": "reported",
-          "sourceIds": ["roland-garros-2025-secondary-prize-money"]
+          "sourceIds": [
+            "roland-garros-2025-secondary-prize-money"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -253,9 +300,11 @@
         "payout": {
           "amount": 2550000,
           "currency": "EUR",
-          "allocation": "per_player",
           "status": "reported",
-          "sourceIds": ["roland-garros-2025-secondary-prize-money"]
+          "sourceIds": [
+            "roland-garros-2025-secondary-prize-money"
+          ],
+          "allocation": "per_player"
         }
       }
     ],
@@ -273,43 +322,51 @@
     "event": "Men's singles",
     "confidence": "high",
     "displayCurrency": "GBP",
-    "sourceIds": ["wimbledon-2025-prize-money-pdf"],
+    "sourceIds": [
+      "wimbledon-2025-prize-money-pdf"
+    ],
     "prizePool": {
       "amount": 19414000,
       "currency": "GBP",
       "status": "official",
-      "sourceIds": ["wimbledon-2025-prize-money-pdf"],
+      "sourceIds": [
+        "wimbledon-2025-prize-money-pdf"
+      ],
       "notes": "Official total for one gentlemen's or ladies' singles event."
     },
     "revenue": {
       "amount": null,
       "currency": null,
-      "kind": "unknown",
       "status": "unavailable",
       "sourceIds": [],
-      "notes": "No clear tournament-level Wimbledon 2025 revenue source is included in this seed."
+      "notes": "No clear tournament-level Wimbledon 2025 revenue source is included in this seed.",
+      "kind": "unknown"
     },
     "profitOrSurplus": {
       "amount": null,
       "currency": null,
-      "kind": "unknown",
       "status": "unavailable",
       "sourceIds": [],
-      "notes": "No clear tournament-level Wimbledon 2025 profit or surplus source is included in this seed."
+      "notes": "No clear tournament-level Wimbledon 2025 profit or surplus source is included in this seed.",
+      "kind": "unknown"
     },
     "winnerPayout": {
       "amount": 3000000,
       "currency": "GBP",
-      "allocation": "per_player",
       "status": "official",
-      "sourceIds": ["wimbledon-2025-prize-money-pdf"]
+      "sourceIds": [
+        "wimbledon-2025-prize-money-pdf"
+      ],
+      "allocation": "per_player"
     },
     "runnerUpPayout": {
       "amount": 1520000,
       "currency": "GBP",
-      "allocation": "per_player",
       "status": "official",
-      "sourceIds": ["wimbledon-2025-prize-money-pdf"]
+      "sourceIds": [
+        "wimbledon-2025-prize-money-pdf"
+      ],
+      "allocation": "per_player"
     },
     "roundPayouts": [
       {
@@ -317,9 +374,11 @@
         "payout": {
           "amount": 66000,
           "currency": "GBP",
-          "allocation": "per_player",
           "status": "official",
-          "sourceIds": ["wimbledon-2025-prize-money-pdf"]
+          "sourceIds": [
+            "wimbledon-2025-prize-money-pdf"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -327,9 +386,11 @@
         "payout": {
           "amount": 99000,
           "currency": "GBP",
-          "allocation": "per_player",
           "status": "official",
-          "sourceIds": ["wimbledon-2025-prize-money-pdf"]
+          "sourceIds": [
+            "wimbledon-2025-prize-money-pdf"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -337,9 +398,11 @@
         "payout": {
           "amount": 152000,
           "currency": "GBP",
-          "allocation": "per_player",
           "status": "official",
-          "sourceIds": ["wimbledon-2025-prize-money-pdf"]
+          "sourceIds": [
+            "wimbledon-2025-prize-money-pdf"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -347,9 +410,11 @@
         "payout": {
           "amount": 240000,
           "currency": "GBP",
-          "allocation": "per_player",
           "status": "official",
-          "sourceIds": ["wimbledon-2025-prize-money-pdf"]
+          "sourceIds": [
+            "wimbledon-2025-prize-money-pdf"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -357,9 +422,11 @@
         "payout": {
           "amount": 400000,
           "currency": "GBP",
-          "allocation": "per_player",
           "status": "official",
-          "sourceIds": ["wimbledon-2025-prize-money-pdf"]
+          "sourceIds": [
+            "wimbledon-2025-prize-money-pdf"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -367,9 +434,11 @@
         "payout": {
           "amount": 775000,
           "currency": "GBP",
-          "allocation": "per_player",
           "status": "official",
-          "sourceIds": ["wimbledon-2025-prize-money-pdf"]
+          "sourceIds": [
+            "wimbledon-2025-prize-money-pdf"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -377,9 +446,11 @@
         "payout": {
           "amount": 1520000,
           "currency": "GBP",
-          "allocation": "per_player",
           "status": "official",
-          "sourceIds": ["wimbledon-2025-prize-money-pdf"]
+          "sourceIds": [
+            "wimbledon-2025-prize-money-pdf"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -387,9 +458,11 @@
         "payout": {
           "amount": 3000000,
           "currency": "GBP",
-          "allocation": "per_player",
           "status": "official",
-          "sourceIds": ["wimbledon-2025-prize-money-pdf"]
+          "sourceIds": [
+            "wimbledon-2025-prize-money-pdf"
+          ],
+          "allocation": "per_player"
         }
       }
     ],
@@ -406,43 +479,55 @@
     "event": "Men's singles",
     "confidence": "medium",
     "displayCurrency": "USD",
-    "sourceIds": ["us-open-2025-prize-money-page", "us-open-2025-secondary-crosscheck"],
+    "sourceIds": [
+      "us-open-2025-prize-money-page",
+      "us-open-2025-secondary-crosscheck"
+    ],
     "prizePool": {
       "amount": 31620000,
       "currency": "USD",
       "status": "derived",
-      "sourceIds": ["us-open-2025-prize-money-page", "us-open-2025-secondary-crosscheck"],
+      "sourceIds": [
+        "us-open-2025-prize-money-page",
+        "us-open-2025-secondary-crosscheck"
+      ],
       "notes": "Derived by summing the 128-player singles round allocations from the cited prize-money table."
     },
     "revenue": {
       "amount": null,
       "currency": null,
-      "kind": "unknown",
       "status": "unavailable",
       "sourceIds": [],
-      "notes": "No clear tournament-level US Open 2025 revenue source is included in this seed."
+      "notes": "No clear tournament-level US Open 2025 revenue source is included in this seed.",
+      "kind": "unknown"
     },
     "profitOrSurplus": {
       "amount": null,
       "currency": null,
-      "kind": "unknown",
       "status": "unavailable",
       "sourceIds": [],
-      "notes": "No clear tournament-level US Open 2025 profit or surplus source is included in this seed."
+      "notes": "No clear tournament-level US Open 2025 profit or surplus source is included in this seed.",
+      "kind": "unknown"
     },
     "winnerPayout": {
       "amount": 5000000,
       "currency": "USD",
-      "allocation": "per_player",
       "status": "reported",
-      "sourceIds": ["us-open-2025-prize-money-page", "us-open-2025-secondary-crosscheck"]
+      "sourceIds": [
+        "us-open-2025-prize-money-page",
+        "us-open-2025-secondary-crosscheck"
+      ],
+      "allocation": "per_player"
     },
     "runnerUpPayout": {
       "amount": 2500000,
       "currency": "USD",
-      "allocation": "per_player",
       "status": "reported",
-      "sourceIds": ["us-open-2025-prize-money-page", "us-open-2025-secondary-crosscheck"]
+      "sourceIds": [
+        "us-open-2025-prize-money-page",
+        "us-open-2025-secondary-crosscheck"
+      ],
+      "allocation": "per_player"
     },
     "roundPayouts": [
       {
@@ -450,9 +535,12 @@
         "payout": {
           "amount": 110000,
           "currency": "USD",
-          "allocation": "per_player",
           "status": "reported",
-          "sourceIds": ["us-open-2025-prize-money-page", "us-open-2025-secondary-crosscheck"]
+          "sourceIds": [
+            "us-open-2025-prize-money-page",
+            "us-open-2025-secondary-crosscheck"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -460,9 +548,12 @@
         "payout": {
           "amount": 154000,
           "currency": "USD",
-          "allocation": "per_player",
           "status": "reported",
-          "sourceIds": ["us-open-2025-prize-money-page", "us-open-2025-secondary-crosscheck"]
+          "sourceIds": [
+            "us-open-2025-prize-money-page",
+            "us-open-2025-secondary-crosscheck"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -470,9 +561,12 @@
         "payout": {
           "amount": 237000,
           "currency": "USD",
-          "allocation": "per_player",
           "status": "reported",
-          "sourceIds": ["us-open-2025-prize-money-page", "us-open-2025-secondary-crosscheck"]
+          "sourceIds": [
+            "us-open-2025-prize-money-page",
+            "us-open-2025-secondary-crosscheck"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -480,9 +574,12 @@
         "payout": {
           "amount": 400000,
           "currency": "USD",
-          "allocation": "per_player",
           "status": "reported",
-          "sourceIds": ["us-open-2025-prize-money-page", "us-open-2025-secondary-crosscheck"]
+          "sourceIds": [
+            "us-open-2025-prize-money-page",
+            "us-open-2025-secondary-crosscheck"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -490,9 +587,12 @@
         "payout": {
           "amount": 660000,
           "currency": "USD",
-          "allocation": "per_player",
           "status": "reported",
-          "sourceIds": ["us-open-2025-prize-money-page", "us-open-2025-secondary-crosscheck"]
+          "sourceIds": [
+            "us-open-2025-prize-money-page",
+            "us-open-2025-secondary-crosscheck"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -500,9 +600,12 @@
         "payout": {
           "amount": 1260000,
           "currency": "USD",
-          "allocation": "per_player",
           "status": "reported",
-          "sourceIds": ["us-open-2025-prize-money-page", "us-open-2025-secondary-crosscheck"]
+          "sourceIds": [
+            "us-open-2025-prize-money-page",
+            "us-open-2025-secondary-crosscheck"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -510,9 +613,12 @@
         "payout": {
           "amount": 2500000,
           "currency": "USD",
-          "allocation": "per_player",
           "status": "reported",
-          "sourceIds": ["us-open-2025-prize-money-page", "us-open-2025-secondary-crosscheck"]
+          "sourceIds": [
+            "us-open-2025-prize-money-page",
+            "us-open-2025-secondary-crosscheck"
+          ],
+          "allocation": "per_player"
         }
       },
       {
@@ -520,9 +626,12 @@
         "payout": {
           "amount": 5000000,
           "currency": "USD",
-          "allocation": "per_player",
           "status": "reported",
-          "sourceIds": ["us-open-2025-prize-money-page", "us-open-2025-secondary-crosscheck"]
+          "sourceIds": [
+            "us-open-2025-prize-money-page",
+            "us-open-2025-secondary-crosscheck"
+          ],
+          "allocation": "per_player"
         }
       }
     ],

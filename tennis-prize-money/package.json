@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:refresh": "tsc -p tsconfig.refresh.json",
     "lint": "eslint .",
     "preview": "vite preview",
+    "refresh:data": "npm run build:refresh && node scripts/refresh-data.mjs",
     "test": "vitest run",
     "typecheck": "tsc -b --noEmit"
   },

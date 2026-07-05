@@ -1,6 +1,7 @@
 import type {
   Confidence,
   DashboardDataset,
+  FinancialValue,
   MoneyValue,
   Source,
   TournamentEconomicsRecord,
@@ -309,13 +310,16 @@ export function getPrimaryQuestionRows(
       label: 'Prize money as % of tournament revenue',
       value: formatMetricPercent(prizePoolToRevenue),
       eyebrow: primaryAnswerEyebrow(prizePoolToRevenue, 'revenue'),
-      numeratorLabel: 'Prize money',
+      numeratorLabel: formatPrizeMoneyScopeLabel(record),
       numeratorValue: prizePoolValue,
-      denominatorLabel: 'Revenue',
+      denominatorLabel: record.revenue.scopeLabel ?? 'Revenue',
       denominatorValue: formatMoneyValue(record.revenue),
       note: primaryRatioNote(
         prizePoolToRevenue,
-        'Prize pool divided by compatible same-currency tournament revenue.',
+        availablePrimaryRatioNote(
+          'Prize pool divided by compatible same-currency tournament revenue.',
+          record.revenue,
+        ),
         'Add a compatible tournament-level revenue denominator before showing this percentage.',
       ),
       barPercent: ratioBarPercent(prizePoolToRevenue),
@@ -326,13 +330,16 @@ export function getPrimaryQuestionRows(
       label: 'Prize money as % of tournament profit/surplus',
       value: formatMetricPercent(prizePoolToProfitOrSurplus),
       eyebrow: primaryAnswerEyebrow(prizePoolToProfitOrSurplus, 'profit/surplus'),
-      numeratorLabel: 'Prize money',
+      numeratorLabel: formatPrizeMoneyScopeLabel(record),
       numeratorValue: prizePoolValue,
-      denominatorLabel: 'Profit/surplus',
+      denominatorLabel: record.profitOrSurplus.scopeLabel ?? 'Profit/surplus',
       denominatorValue: formatMoneyValue(record.profitOrSurplus),
       note: primaryRatioNote(
         prizePoolToProfitOrSurplus,
-        'Prize pool divided by compatible same-currency tournament profit or surplus.',
+        availablePrimaryRatioNote(
+          'Prize pool divided by compatible same-currency tournament profit or surplus.',
+          record.profitOrSurplus,
+        ),
         'Add a positive compatible tournament-level profit or surplus denominator before showing this percentage.',
       ),
       barPercent: ratioBarPercent(prizePoolToProfitOrSurplus),
@@ -372,6 +379,7 @@ export function getPrimaryQuestionCoverage(
 
 export function getPrimaryQuestionCaveats(record: TournamentEconomicsRecord): string[] {
   const caveats = new Set(record.caveats);
+  caveats.add(`Prize-money scope: ${record.prizeMoneyScope.notes}`);
   const values = [
     ['Prize pool', record.prizePool],
     ['Revenue', record.revenue],
@@ -600,6 +608,8 @@ export function describeUnavailableReason(reason: MetricUnavailableReason): stri
       return 'Currency mismatch; no conversion has been applied.';
     case 'incompatible_financial_kind':
       return 'Financial denominator is not a compatible tournament-level value.';
+    case 'incompatible_scope':
+      return 'Prize-money scope does not match the financial denominator scope.';
     case 'no_prior_record':
       return 'No matching prior-year record is available.';
   }
@@ -623,6 +633,14 @@ function primaryRatioNote(
   }
 
   return `${describeUnavailableReason(result.reason)} ${unavailableAction}`;
+}
+
+function availablePrimaryRatioNote(prefix: string, denominator: FinancialValue): string {
+  if (!denominator.scopeLabel) {
+    return prefix;
+  }
+
+  return `${prefix} Denominator: ${denominator.scopeLabel}.`;
 }
 
 function primaryAnswerEyebrow(
@@ -702,6 +720,10 @@ function formatAllocation(allocation: string): string {
 
 function formatFinancialKind(kind: string): string {
   return kind.replace(/_/g, ' ');
+}
+
+function formatPrizeMoneyScopeLabel(record: TournamentEconomicsRecord): string {
+  return `Prize money (${record.prizeMoneyScope.label})`;
 }
 
 function getRecordSourceIds(record: TournamentEconomicsRecord): string[] {

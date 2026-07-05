@@ -15,6 +15,8 @@ export type {
   MoneyValue,
   PayoutAllocation,
   PayoutValue,
+  PrizeMoneyScope,
+  PrizeMoneyScopeType,
   RoundPayout,
   Source,
   SourceType,

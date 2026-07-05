@@ -4,6 +4,10 @@
 
 - Refocused the dashboard visuals around the primary question: prize money as a percentage of tournament revenue and profit/surplus.
 - Moved payout-curve, finalist, year-over-year, and broad coverage visuals out of the main dashboard flow in favor of answer cards, ratio inputs, answerability coverage, and calculation caveats.
+- Added explicit prize-money scope metadata so full-tournament rows and event-level rows cannot be mixed silently in financial ratios.
+- Added Wimbledon 2024 and 2025 full-tournament rows with official total prize money, AELTC Championships Ltd turnover, and AELTC Championships Ltd operating profit.
+- Added Australian Open 2024 and 2025 full-tournament prize-money numerator rows while keeping revenue/profit unavailable.
+- Kept US Open full-tournament compensation/purse values as research leads until the model can distinguish competition prize money from total player compensation/support.
 
 ## v0.1.0 - 2026-07-05
 

@@ -2,9 +2,9 @@
 
 ## Current Dataset
 
-The active v0.1 dataset is a small sourced seed for 2025 Grand Slam men's singles prize money. It includes one row each for the Australian Open, Roland Garros, Wimbledon, and the US Open.
+The active v0.1 dataset is a small sourced seed for Grand Slam prize-money economics. It includes 2024-2025 full-tournament rows for Wimbledon and the Australian Open, plus one 2025 men's singles row each for the Australian Open, Roland Garros, Wimbledon, and the US Open.
 
-The seed does not include compatible tournament-level revenue, profit, or surplus. Those values remain unavailable rather than estimated. Prize-pool share of revenue and prize-pool share of profit/surplus therefore show unavailable for the active records.
+Wimbledon full-tournament rows include compatible AELTC Championships Ltd turnover and operating-profit denominators. Australian Open, Roland Garros, and US Open rows do not include compatible tournament-level revenue, profit, or surplus. Those values remain unavailable rather than estimated.
 
 Roland Garros and US Open rows are medium confidence in this seed:
 
@@ -23,9 +23,9 @@ Prize money, revenue, profit, surplus, expenses, and unavailable values are diff
 - Expenses are not profit or surplus denominators.
 - Unknown and unavailable values should remain visible as unavailable rather than guessed.
 
-For v0.1 records, the prize pool is the men's singles event allocation, not total tournament prize money across singles, doubles, mixed doubles, wheelchair, qualifying, per diems, or player support.
+For event-level v0.1 records, the prize pool is the men's singles event allocation, not total tournament prize money across singles, doubles, mixed doubles, wheelchair, qualifying, per diems, or player support.
 
-For the primary revenue/profit-share question, future rows should prefer full tournament prize-money totals. If an event-level numerator is ever compared with a tournament-level denominator, the UI must label it as partial rather than presenting it as the players' full tournament share.
+For the primary revenue/profit-share question, the app now requires compatible numerator scope. Full-tournament financial denominators require full-tournament prize-money rows. Event-level rows are partial and do not compute against tournament-level denominators.
 
 ## Currency Caveats
 
@@ -34,6 +34,8 @@ The app does not do currency conversion yet. A ratio is computed only when numer
 ## Profit And Surplus Caveats
 
 Prize pool / profit or surplus is unavailable when profit/surplus is missing, zero, negative, semantically incompatible, or in another currency. Negative and zero denominators are shown as unavailable because a percentage would be misleading for this dashboard.
+
+Wimbledon profit/surplus ratios use the AELTC Championships Ltd operating-profit line. This must be labeled narrowly as Championships operating-company operating profit: it is before net finance income, before the division of net available surplus to LTA Operations, and before tax. The LTA distribution is documented but must not be treated as profit.
 
 ## Round Payout Caveats
 
@@ -55,6 +57,8 @@ Confidence describes source trust and data clarity, not truth in isolation.
 Future source expansion should prefer official tournament pages, annual reports, Form 990s, official financial statements, and official press releases. Secondary sources should be clearly labeled with lower confidence and notes.
 
 The v0.1 seed applies this by using high-confidence official Australian Open and Wimbledon sources, and medium-confidence Roland Garros and US Open rows where source limitations remain.
+
+US Open total player compensation/purse values for 2024 and 2025 are not normalized as full-tournament prize-money rows in this slice because the official US Open pages were not crawler-readable here and the reported totals include player support/expense coverage beyond competition prize money. They remain research leads until the model can distinguish those concepts or a parseable official competition-prize total is verified.
 
 ## Refresh Caveats
 

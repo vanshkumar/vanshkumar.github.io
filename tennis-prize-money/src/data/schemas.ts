@@ -35,6 +35,10 @@ export const payoutAllocations = [
   'per_team',
   'total_allocation',
 ] as const;
+export const prizeMoneyScopeTypes = [
+  'event_main_draw',
+  'tournament_total',
+] as const;
 
 export type Confidence = (typeof confidenceLevels)[number];
 export type DataMode = (typeof dataModes)[number];
@@ -42,6 +46,7 @@ export type SourceType = (typeof sourceTypes)[number];
 export type ValueStatus = (typeof valueStatuses)[number];
 export type FinancialMetricKind = (typeof financialMetricKinds)[number];
 export type PayoutAllocation = (typeof payoutAllocations)[number];
+export type PrizeMoneyScopeType = (typeof prizeMoneyScopeTypes)[number];
 export type CurrencyCode = string;
 
 export interface DatasetMetadata {
@@ -74,6 +79,7 @@ export interface MoneyValue {
 
 export interface FinancialValue extends MoneyValue {
   kind: FinancialMetricKind;
+  scopeLabel?: string;
 }
 
 export interface PayoutValue extends MoneyValue {
@@ -85,6 +91,13 @@ export interface RoundPayout {
   payout: PayoutValue;
 }
 
+export interface PrizeMoneyScope {
+  type: PrizeMoneyScopeType;
+  label: string;
+  includedCategories: string[];
+  notes: string;
+}
+
 export interface TournamentEconomicsRecord {
   id: string;
   tournament: string;
@@ -93,6 +106,7 @@ export interface TournamentEconomicsRecord {
   confidence: Confidence;
   displayCurrency: CurrencyCode;
   sourceIds: string[];
+  prizeMoneyScope: PrizeMoneyScope;
   prizePool: MoneyValue;
   revenue: FinancialValue;
   profitOrSurplus: FinancialValue;
@@ -235,6 +249,7 @@ function parseTournamentRecord(value: unknown, index: number): TournamentEconomi
     confidence: expectEnum(object.confidence, confidenceLevels, `${path}.confidence`),
     displayCurrency: expectCurrencyCode(object.displayCurrency, `${path}.displayCurrency`),
     sourceIds: expectStringArray(object.sourceIds, `${path}.sourceIds`),
+    prizeMoneyScope: parsePrizeMoneyScope(object.prizeMoneyScope, `${path}.prizeMoneyScope`),
     prizePool: parseMoneyValue(object.prizePool, `${path}.prizePool`, false),
     revenue: parseFinancialValue(object.revenue, `${path}.revenue`),
     profitOrSurplus: parseFinancialValue(object.profitOrSurplus, `${path}.profitOrSurplus`),
@@ -250,10 +265,12 @@ function parseFinancialValue(value: unknown, path: string): FinancialValue {
   const kind = expectEnum(object.kind, financialMetricKinds, `${path}.kind`);
   const allowNegative = isTournamentProfitOrSurplusKind(kind) || kind === 'organization_profit' || kind === 'organization_surplus';
   const money = parseMoneyValue(value, path, allowNegative);
+  const scopeLabel = expectOptionalString(object.scopeLabel, `${path}.scopeLabel`);
 
   return {
     ...money,
     kind,
+    ...(scopeLabel === undefined ? {} : { scopeLabel }),
   };
 }
 
@@ -274,6 +291,17 @@ function parseRoundPayout(value: unknown, index: number): RoundPayout {
   return {
     round: expectString(object.round, `${path}.round`),
     payout: parsePayoutValue(object.payout, `${path}.payout`),
+  };
+}
+
+function parsePrizeMoneyScope(value: unknown, path: string): PrizeMoneyScope {
+  const object = expectObject(value, path);
+
+  return {
+    type: expectEnum(object.type, prizeMoneyScopeTypes, `${path}.type`),
+    label: expectString(object.label, `${path}.label`),
+    includedCategories: expectStringArray(object.includedCategories, `${path}.includedCategories`),
+    notes: expectString(object.notes, `${path}.notes`),
   };
 }
 

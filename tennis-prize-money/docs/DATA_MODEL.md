@@ -2,7 +2,7 @@
 
 ## Current Status
 
-The active dataset is a small sourced seed dataset for 2025 Grand Slam men's singles prize money. Revenue and profit/surplus rows remain unavailable because the project has not added clear tournament-level financial denominators suitable for ratios.
+The active dataset is a small sourced seed dataset for Grand Slam prize-money economics. It now includes 2024-2025 full-tournament prize-money rows for Wimbledon and the Australian Open plus 2025 Grand Slam men's singles event rows. Wimbledon full-tournament rows include compatible AELTC Championships Ltd turnover and operating-profit denominators; Australian Open full-tournament rows and the event-level rows keep financial denominators unavailable unless tournament-specific sources exist.
 
 Version `0.1.0` includes a server-side refresh pipeline that reads, validates, merges, and writes the same static JSON files. It does not change the schema version.
 
@@ -10,7 +10,7 @@ Version `0.1.0` includes a server-side refresh pipeline that reads, validates, m
 
 - `src/data/static/seedDatasetMetadata.json` stores dataset-level metadata such as schema version, label, notice, data mode, and last refresh timestamp.
 - `src/data/raw/source-metadata/grandSlam2025Sources.json` stores the v0.1 source inventory for Grand Slam prize-money rows.
-- `src/data/normalized/grandSlam2025MensSingles.json` stores normalized 2025 men's singles records for the Australian Open, Roland Garros, Wimbledon, and US Open.
+- `src/data/normalized/grandSlam2025MensSingles.json` stores normalized seed records. The historical filename remains, but the file now contains full-tournament rows as well as 2025 men's singles event rows.
 - `src/data/schemas.ts` defines TypeScript types and runtime validation.
 - `src/data/dashboardDataset.ts` imports the static JSON files, validates them, and exports the typed dataset used by the dashboard.
 - `src/lib/metricEngine.ts` computes derived metrics from validated records.
@@ -50,7 +50,7 @@ Mock source type and mock confidence must be paired. The active v0.1 seed datase
 
 ## Tournament Records
 
-Each normalized record represents one tournament, year, and event. In the v0.1 seed, each row represents one 2025 men's singles event, not the entire tournament:
+Each normalized record represents one tournament, year, and event/scope:
 
 - `id`
 - `tournament`
@@ -59,6 +59,7 @@ Each normalized record represents one tournament, year, and event. In the v0.1 s
 - `confidence`
 - `displayCurrency`
 - `sourceIds`
+- `prizeMoneyScope`
 - `prizePool`
 - `revenue`
 - `profitOrSurplus`
@@ -69,9 +70,14 @@ Each normalized record represents one tournament, year, and event. In the v0.1 s
 
 `displayCurrency` is a UI convenience. Calculations use each value's own `currency` and refuse to compare incompatible currencies.
 
-For the v0.1 seed, `prizePool` is the event-level men's singles allocation when an official per-event total is available. When only round payouts are available, `prizePool.status` is `derived` and the value is the weighted sum of the 128-player singles draw payouts.
+`prizeMoneyScope` is required because the primary ratio is only meaningful when the numerator scope matches the denominator scope:
 
-Future tournament-total rows should add or otherwise model numerator scope explicitly, such as full tournament prize money, event-level prize money, included draws/categories, per-diem/player-support inclusion, and derivation method. This is required before the primary revenue/profit-share UI can distinguish a full tournament answer from a partial event-level comparison.
+- `event_main_draw`: one main-draw event, such as men's singles. These rows are partial numerators for whole-tournament revenue/profit questions.
+- `tournament_total`: full tournament prize money across the categories/components described by the source.
+
+For the men's singles rows, `prizePool` is the event-level men's singles allocation when an official per-event total is available. When only round payouts are available, `prizePool.status` is `derived` and the value is the weighted sum of the 128-player singles draw payouts.
+
+For Wimbledon full-tournament rows, `prizePool` is official total Championships prize money including tennis-events prize money and estimated per diems. For Australian Open full-tournament rows, `prizePool` is the official total AO prize pool; the source PDF does not break every component into the normalized event model.
 
 ## Value Objects
 
@@ -97,6 +103,11 @@ Financial values also include `kind`:
 - `organization_surplus`
 - `expenses`
 - `unknown`
+
+Financial values may include `scopeLabel` when the denominator needs a precise user-facing label. Wimbledon uses:
+
+- `Championships operating-company turnover`
+- `Championships operating-company operating profit`
 
 Payout values also include `allocation`:
 
@@ -126,12 +137,15 @@ Unavailable reasons:
 - `negative_denominator`
 - `incompatible_currency`
 - `incompatible_financial_kind`
+- `incompatible_scope`
 - `no_prior_record`
 
 Compatible denominator rules:
 
 - `prizePool / revenue` accepts `tournament_revenue` and `event_revenue`.
 - `prizePool / profit or surplus` accepts `tournament_profit` and `tournament_surplus`.
+- `tournament_revenue`, `tournament_profit`, and `tournament_surplus` require a `tournament_total` prize-money scope.
+- `event_revenue` requires an `event_main_draw` prize-money scope.
 - Organizer-level revenue/profit/surplus, tour-level revenue, expenses, and unknown values are not treated as compatible denominators.
 - Profit or surplus denominators that are zero or negative are unavailable.
 

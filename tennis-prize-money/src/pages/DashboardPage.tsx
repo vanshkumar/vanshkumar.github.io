@@ -101,7 +101,8 @@ export function DashboardPage() {
             The answer is calculated only when prize money and the financial
             denominator are compatible: same currency, tournament-level scope,
             and a positive revenue, profit, or surplus value. The current seed
-            has sourced prize money but no compatible financial denominator yet.
+            can answer this for Wimbledon and keeps other tournament financial
+            denominators unavailable until the source scope is clear.
           </p>
         </div>
       </section>
@@ -377,17 +378,17 @@ function RatioInputStrip({ record }: RatioInputStripProps) {
 
   const inputs = [
     {
-      label: 'Prize money numerator',
+      label: `Prize money numerator (${record.prizeMoneyScope.label})`,
       value: formatMoney(record.prizePool.amount, record.prizePool.currency),
-      note: record.prizePool.notes ?? 'Normalized prize-pool value.',
+      note: `${record.prizePool.notes ?? 'Normalized prize-pool value.'} Scope: ${record.prizeMoneyScope.notes}`,
     },
     {
-      label: 'Revenue denominator',
+      label: record.revenue.scopeLabel ?? 'Revenue denominator',
       value: formatMoney(record.revenue.amount, record.revenue.currency),
       note: record.revenue.notes ?? 'Compatible tournament-level revenue is required.',
     },
     {
-      label: 'Profit/surplus denominator',
+      label: record.profitOrSurplus.scopeLabel ?? 'Profit/surplus denominator',
       value: formatMoney(record.profitOrSurplus.amount, record.profitOrSurplus.currency),
       note:
         record.profitOrSurplus.notes ??

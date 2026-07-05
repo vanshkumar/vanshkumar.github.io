@@ -1,5 +1,38 @@
 # Task Log
 
+## 2026-07-05 - Primary Question Data Normalization Slice
+
+Status: Complete
+
+Branch: `main`
+
+Summary:
+
+- Started from merged `main` at PR #5 commit `9038940e26a4500b108c12ae9f1908b1e5ee2192`.
+- Verified official Wimbledon 2024 and 2025 total-prize-money PDFs and AELTC Championships Ltd Companies House accounts.
+- Added Wimbledon 2024 and 2025 full-tournament records with official total prize money, Championships operating-company turnover, and Championships operating-company operating profit.
+- Added Australian Open 2024 and 2025 full-tournament prize-money numerator rows from official AO/Tennis Australia sources, with revenue/profit unavailable.
+- Added explicit `prizeMoneyScope` metadata and financial `scopeLabel` support so event-level rows cannot silently compute against whole-tournament denominators.
+- Kept US Open full-tournament values as research leads because the official pages were not crawler-readable and the reported totals are total player compensation/purse, not clean competition prize money in the current model.
+- Updated dashboard copy, tests, source docs, caveats, future work, changelog, and handoff documentation.
+
+Checks:
+
+- `npm ci` - passed; installed locked dependencies in this worktree.
+- `npm run test -- --run` - passed after updating fixture-order assumptions.
+- `npm run typecheck` - passed.
+- `npm run lint` - passed.
+- `npm run refresh:data` - passed; validated and rewrote static JSON metadata timestamp.
+- Final `npm run lint` - passed.
+- Final `npm run typecheck` - passed.
+- Final `npm run test -- --run` - passed, 4 test files and 36 tests.
+- Final `npm run build` - passed.
+
+Next:
+
+- Build model support for US Open total player compensation versus competition prize money before normalizing full-tournament US Open rows.
+- Continue source expansion with official Roland Garros/FFT prize-money and audited revenue/profit sources only.
+
 ## 2026-07-05 - Task 0: Repository Reconnaissance And Execution Plan
 
 Status: Complete

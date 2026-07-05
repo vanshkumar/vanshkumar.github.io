@@ -4,7 +4,7 @@
 
 Version `0.1.0` is a static React + TypeScript + Vite dashboard with a validated data layer, sourced seed data, tested calculation engine, CSS visualizations, and a server-side refresh pipeline under `tennis-prize-money/`. The app remains app-local inside the larger `vanshkumar.github.io` repository and is configured for GitHub Pages subpath hosting with `base: '/tennis-prize-money/'`.
 
-The dashboard currently renders from a small sourced 2025 Grand Slam men's singles prize-money seed dataset. Compatible tournament-level revenue, profit, surplus, and prior-year comparison values remain unavailable until clearer financial sources and additional years are added.
+The dashboard currently renders from a small sourced Grand Slam prize-money economics seed dataset. It includes 2024-2025 full-tournament rows for Wimbledon and the Australian Open plus 2025 Grand Slam men's singles event rows. Wimbledon full-tournament rows include compatible AELTC Championships Ltd turnover and operating-profit denominators; other tournament financial denominators remain unavailable until clearer tournament-specific sources are added.
 
 ## App Structure
 
@@ -62,8 +62,9 @@ The calculation engine only computes ratios when values are compatible:
 - available numerator and denominator
 - positive denominator
 - compatible financial denominator semantics
+- compatible prize-money numerator scope
 
-Organizer-level financials, expenses, unknown values, incompatible currencies, missing values, and zero or negative profit/surplus denominators return unavailable results rather than percentages.
+Tournament-level revenue/profit denominators require a `tournament_total` prize-money scope. Event-level rows remain partial and return unavailable rather than silently computing whole-tournament ratios. Organizer-level financials, expenses, unknown values, incompatible currencies, missing values, incompatible scopes, and zero or negative profit/surplus denominators return unavailable results rather than percentages.
 
 ## Visualization Flow
 
@@ -92,7 +93,7 @@ The optional dispatch endpoint requires a separate serverless host with server-s
 - The active dataset has `dataMode: "real"` and validation rejects mock sources, mock record confidence, or mock value statuses in that mode.
 - Source rows must include title, publisher, URL, source type, accessed date, confidence, and notes before the dashboard can import them.
 - Filters return explicit empty states for zero-match combinations instead of falling back to the first record.
-- Financial rows remain visible but unavailable when denominators are missing, semantically incompatible, zero, negative, or in another currency.
+- Financial rows remain visible but unavailable when denominators are missing, semantically incompatible, scope-incompatible, zero, negative, or in another currency.
 - The browser refresh button remains disabled unless `VITE_REFRESH_DISPATCH_URL` is an absolute external URL.
 
 ## Checks

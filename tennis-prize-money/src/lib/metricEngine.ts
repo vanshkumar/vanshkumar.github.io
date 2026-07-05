@@ -6,6 +6,7 @@ import {
   type FinancialValue,
   type MoneyValue,
   type PayoutAllocation,
+  type PrizeMoneyScopeType,
   type RoundPayout,
   type TournamentEconomicsRecord,
 } from '../data/dashboardDataset';
@@ -16,6 +17,7 @@ export type MetricUnavailableReason =
   | 'negative_denominator'
   | 'incompatible_currency'
   | 'incompatible_financial_kind'
+  | 'incompatible_scope'
   | 'no_prior_record';
 
 export type NumericMetricResult =
@@ -92,7 +94,7 @@ export function calculatePrizePoolToRevenue(
   record: TournamentEconomicsRecord,
 ): NumericMetricResult {
   return calculateMoneyOverFinancialValue(
-    record.prizePool,
+    record,
     record.revenue,
     isTournamentRevenueKind,
   );
@@ -102,7 +104,7 @@ export function calculatePrizePoolToProfitOrSurplus(
   record: TournamentEconomicsRecord,
 ): NumericMetricResult {
   return calculateMoneyOverFinancialValue(
-    record.prizePool,
+    record,
     record.profitOrSurplus,
     isTournamentProfitOrSurplusKind,
   );
@@ -154,26 +156,49 @@ export function calculateRoundPayoutPercentages(
 }
 
 function calculateMoneyOverFinancialValue(
-  numerator: MoneyValue,
+  record: TournamentEconomicsRecord,
   denominator: FinancialValue,
   isCompatibleKind: (kind: FinancialMetricKind) => boolean,
 ): NumericMetricResult {
-  const numeratorValue = getAvailableMoneyValue(numerator);
+  const numeratorValue = getAvailableMoneyValue(record.prizePool);
   const denominatorValue = getAvailableFinancialValue(denominator);
 
   if (!numeratorValue || !denominatorValue) {
     return unavailable('missing_data');
   }
 
-  if (!hasCompatibleCurrency(numeratorValue, denominatorValue)) {
-    return unavailable('incompatible_currency');
-  }
-
   if (!isCompatibleKind(denominator.kind)) {
     return unavailable('incompatible_financial_kind');
   }
 
+  if (!isPrizeMoneyScopeCompatibleWithFinancialKind(record.prizeMoneyScope.type, denominator.kind)) {
+    return unavailable('incompatible_scope');
+  }
+
+  if (!hasCompatibleCurrency(numeratorValue, denominatorValue)) {
+    return unavailable('incompatible_currency');
+  }
+
   return divideByPositiveDenominator(numeratorValue.amount, denominatorValue.amount);
+}
+
+function isPrizeMoneyScopeCompatibleWithFinancialKind(
+  scopeType: PrizeMoneyScopeType,
+  kind: FinancialMetricKind,
+): boolean {
+  if (kind === 'event_revenue') {
+    return scopeType === 'event_main_draw';
+  }
+
+  if (
+    kind === 'tournament_revenue' ||
+    kind === 'tournament_profit' ||
+    kind === 'tournament_surplus'
+  ) {
+    return scopeType === 'tournament_total';
+  }
+
+  return false;
 }
 
 function calculateRoundPayoutPercentage(

@@ -2,7 +2,7 @@
 
 Static-first React + TypeScript + Vite dashboard for exploring tennis prize money alongside tournament revenue, profit, or surplus where reliable data exists.
 
-Version `0.1.0` is a review-ready first release. It renders a small sourced 2025 Grand Slam men's singles seed dataset with filters, a primary answer board for prize money as a percentage of revenue/profit, answerability coverage, source links, refresh status, and caveats. Revenue and profit/surplus percentages are intentionally unavailable until compatible tournament-level financial sources are added.
+Version `0.1.0` is a review-ready first release. The current seed now includes 2024-2025 full-tournament rows for Wimbledon and the Australian Open plus the original 2025 Grand Slam men's singles rows. Wimbledon has compatible AELTC Championships Ltd turnover and operating-profit denominators, so the primary answer board can compute prize money as a percentage of revenue/profit there. Australian Open financial ratios remain unavailable until tournament-specific denominators are found.
 
 ## Quickstart
 
@@ -48,7 +48,7 @@ npm run refresh:data
 
 - `src/data/static/` contains dataset-level static JSON metadata.
 - `src/data/raw/source-metadata/` contains source metadata JSON.
-- `src/data/normalized/` contains normalized tournament economics records.
+- `src/data/normalized/` contains normalized tournament economics records, including explicit prize-money scope metadata for full-tournament and event-level rows.
 - `src/data/schemas.ts` validates the JSON contract at import time and rejects mock leakage in datasets labeled `real`.
 - `src/lib/metricEngine.ts` contains calculation utilities and unavailable-reason handling.
 - `src/lib/dashboardMetrics.ts` contains dashboard formatting, filtering, primary-question view models, answerability coverage summaries, and visible caveat helpers.
@@ -70,8 +70,10 @@ npm run refresh:data
 
 ## v0.1 Limitations
 
-- The seed covers 2025 men's singles rows for the four Grand Slam tournaments only.
+- The seed covers 2024-2025 Wimbledon and Australian Open full-tournament prize-money rows plus 2025 men's singles rows for the four Grand Slam tournaments.
+- Wimbledon full-tournament ratios use AELTC Championships Ltd turnover and operating profit, labeled as Championships operating-company values.
+- Australian Open full-tournament rows include official prize-money numerators only; revenue and profit/surplus remain unavailable.
 - Roland Garros and US Open prize-money rows remain medium confidence until clearer official, parseable sources replace the secondary/cross-check paths.
-- No compatible tournament-level revenue, profit, or surplus denominators are included.
+- US Open full-tournament total compensation/purse remains a research lead, not a normalized prize-money row, because the official pages were not crawler-readable and the value includes player support beyond competition prize money.
 - No FX conversion exists; cross-currency comparisons are not computed.
 - The parent GitHub Pages workflow builds and copies this app into the combined Pages artifact at `/tennis-prize-money/`.

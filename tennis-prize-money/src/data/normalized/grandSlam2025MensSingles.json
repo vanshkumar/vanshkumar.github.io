@@ -1,5 +1,289 @@
 [
   {
+    "id": "wimbledon-2025-tournament-total",
+    "tournament": "Wimbledon",
+    "year": 2025,
+    "event": "Full tournament",
+    "confidence": "high",
+    "displayCurrency": "GBP",
+    "sourceIds": [
+      "wimbledon-2025-prize-money-pdf",
+      "aeltc-championships-2025-accounts"
+    ],
+    "prizeMoneyScope": {
+      "type": "tournament_total",
+      "label": "full tournament",
+      "includedCategories": [
+        "Tennis events prize money",
+        "Estimated per diems"
+      ],
+      "notes": "Full Championships prize-money total from the official Wimbledon PDF, including tennis events prize money and estimated per diems."
+    },
+    "prizePool": {
+      "amount": 53500000,
+      "currency": "GBP",
+      "status": "official",
+      "sourceIds": [
+        "wimbledon-2025-prize-money-pdf"
+      ],
+      "notes": "Official total prize money for The Championships 2025; includes GBP 52.0m tennis-events prize money and GBP 1.5m estimated per diems."
+    },
+    "revenue": {
+      "amount": 423626000,
+      "currency": "GBP",
+      "status": "reported",
+      "sourceIds": [
+        "aeltc-championships-2025-accounts"
+      ],
+      "notes": "AELTC Championships Ltd turnover for the year ended 31 July 2025; this is the Championships operating company, not generic All England Club revenue.",
+      "kind": "tournament_revenue",
+      "scopeLabel": "Championships operating-company turnover"
+    },
+    "profitOrSurplus": {
+      "amount": 52720000,
+      "currency": "GBP",
+      "status": "reported",
+      "sourceIds": [
+        "aeltc-championships-2025-accounts"
+      ],
+      "notes": "AELTC Championships Ltd operating profit for the year ended 31 July 2025, before net finance income, before division of net available surplus to LTA Operations, and before tax. The LTA distribution is not treated as profit.",
+      "kind": "tournament_profit",
+      "scopeLabel": "Championships operating-company operating profit"
+    },
+    "winnerPayout": {
+      "amount": null,
+      "currency": null,
+      "status": "unavailable",
+      "sourceIds": [],
+      "notes": "Not modeled on the full-tournament total row; use event-level rows for singles champion payout.",
+      "allocation": "per_player"
+    },
+    "runnerUpPayout": {
+      "amount": null,
+      "currency": null,
+      "status": "unavailable",
+      "sourceIds": [],
+      "notes": "Not modeled on the full-tournament total row; use event-level rows for singles runner-up payout.",
+      "allocation": "per_player"
+    },
+    "roundPayouts": [],
+    "caveats": [
+      "Prize money is full Championships prize money, not only gentlemen's singles.",
+      "Revenue is AELTC Championships Ltd turnover for the Championships operating company.",
+      "Profit/surplus denominator is AELTC Championships Ltd operating profit before net finance income, LTA distribution, and tax.",
+      "The division of net available surplus to LTA Operations is not treated as profit."
+    ]
+  },
+  {
+    "id": "wimbledon-2024-tournament-total",
+    "tournament": "Wimbledon",
+    "year": 2024,
+    "event": "Full tournament",
+    "confidence": "high",
+    "displayCurrency": "GBP",
+    "sourceIds": [
+      "wimbledon-2024-prize-money-pdf",
+      "aeltc-championships-2025-accounts"
+    ],
+    "prizeMoneyScope": {
+      "type": "tournament_total",
+      "label": "full tournament",
+      "includedCategories": [
+        "Tennis events prize money",
+        "Estimated per diems"
+      ],
+      "notes": "Full Championships prize-money total from the official Wimbledon PDF, including tennis events prize money and estimated per diems."
+    },
+    "prizePool": {
+      "amount": 50000000,
+      "currency": "GBP",
+      "status": "official",
+      "sourceIds": [
+        "wimbledon-2024-prize-money-pdf"
+      ],
+      "notes": "Official total prize money for The Championships 2024; includes GBP 48.55m tennis-events prize money and GBP 1.45m estimated per diems."
+    },
+    "revenue": {
+      "amount": 406507000,
+      "currency": "GBP",
+      "status": "reported",
+      "sourceIds": [
+        "aeltc-championships-2025-accounts"
+      ],
+      "notes": "AELTC Championships Ltd turnover for the year ended 31 July 2024, as restated in the 2025 accounts comparative column; this is the Championships operating company, not generic All England Club revenue.",
+      "kind": "tournament_revenue",
+      "scopeLabel": "Championships operating-company turnover"
+    },
+    "profitOrSurplus": {
+      "amount": 54332000,
+      "currency": "GBP",
+      "status": "reported",
+      "sourceIds": [
+        "aeltc-championships-2025-accounts"
+      ],
+      "notes": "AELTC Championships Ltd operating profit for the year ended 31 July 2024, as restated in the 2025 accounts comparative column, before net finance income, before division of net available surplus to LTA Operations, and before tax. The LTA distribution is not treated as profit.",
+      "kind": "tournament_profit",
+      "scopeLabel": "Championships operating-company operating profit"
+    },
+    "winnerPayout": {
+      "amount": null,
+      "currency": null,
+      "status": "unavailable",
+      "sourceIds": [],
+      "notes": "Not modeled on the full-tournament total row; use event-level rows for singles champion payout.",
+      "allocation": "per_player"
+    },
+    "runnerUpPayout": {
+      "amount": null,
+      "currency": null,
+      "status": "unavailable",
+      "sourceIds": [],
+      "notes": "Not modeled on the full-tournament total row; use event-level rows for singles runner-up payout.",
+      "allocation": "per_player"
+    },
+    "roundPayouts": [],
+    "caveats": [
+      "Prize money is full Championships prize money, not only gentlemen's singles.",
+      "Revenue is AELTC Championships Ltd turnover for the Championships operating company.",
+      "Profit/surplus denominator is AELTC Championships Ltd operating profit before net finance income, LTA distribution, and tax.",
+      "The division of net available surplus to LTA Operations is not treated as profit."
+    ]
+  },
+  {
+    "id": "australian-open-2025-tournament-total",
+    "tournament": "Australian Open",
+    "year": 2025,
+    "event": "Full tournament",
+    "confidence": "high",
+    "displayCurrency": "AUD",
+    "sourceIds": [
+      "ao-2025-prize-money-release",
+      "ao-2025-prize-money-pdf"
+    ],
+    "prizeMoneyScope": {
+      "type": "tournament_total",
+      "label": "full tournament",
+      "includedCategories": [
+        "Official Australian Open total prize pool"
+      ],
+      "notes": "Full Australian Open prize-money total from official Australian Open and Tennis Australia sources."
+    },
+    "prizePool": {
+      "amount": 96500000,
+      "currency": "AUD",
+      "status": "official",
+      "sourceIds": [
+        "ao-2025-prize-money-release",
+        "ao-2025-prize-money-pdf"
+      ],
+      "notes": "Official Australian Open 2025 total prize pool. The PDF does not break every component into the normalized event model."
+    },
+    "revenue": {
+      "amount": null,
+      "currency": null,
+      "status": "unavailable",
+      "sourceIds": [],
+      "notes": "No clear Australian Open 2025 tournament-specific revenue denominator is included; Tennis Australia annual reports are organization-level context.",
+      "kind": "unknown"
+    },
+    "profitOrSurplus": {
+      "amount": null,
+      "currency": null,
+      "status": "unavailable",
+      "sourceIds": [],
+      "notes": "No clear Australian Open 2025 tournament-specific profit or surplus denominator is included; Tennis Australia annual reports are organization-level context.",
+      "kind": "unknown"
+    },
+    "winnerPayout": {
+      "amount": null,
+      "currency": null,
+      "status": "unavailable",
+      "sourceIds": [],
+      "notes": "Not modeled on the full-tournament total row; use event-level rows for singles champion payout.",
+      "allocation": "per_player"
+    },
+    "runnerUpPayout": {
+      "amount": null,
+      "currency": null,
+      "status": "unavailable",
+      "sourceIds": [],
+      "notes": "Not modeled on the full-tournament total row; use event-level rows for singles runner-up payout.",
+      "allocation": "per_player"
+    },
+    "roundPayouts": [],
+    "caveats": [
+      "Prize money is full Australian Open prize money, not only men's singles.",
+      "Revenue and profit/surplus are unavailable because no compatible tournament-specific financial source is included.",
+      "Tennis Australia organization-level annual-report values are not treated as Australian Open tournament denominators."
+    ]
+  },
+  {
+    "id": "australian-open-2024-tournament-total",
+    "tournament": "Australian Open",
+    "year": 2024,
+    "event": "Full tournament",
+    "confidence": "high",
+    "displayCurrency": "AUD",
+    "sourceIds": [
+      "ao-2025-prize-money-pdf"
+    ],
+    "prizeMoneyScope": {
+      "type": "tournament_total",
+      "label": "full tournament",
+      "includedCategories": [
+        "Official Australian Open total prize pool"
+      ],
+      "notes": "Full Australian Open prize-money total from the official Tennis Australia 2021-2025 prize-money PDF."
+    },
+    "prizePool": {
+      "amount": 86500000,
+      "currency": "AUD",
+      "status": "official",
+      "sourceIds": [
+        "ao-2025-prize-money-pdf"
+      ],
+      "notes": "Official Australian Open 2024 total prize pool from the Tennis Australia 2021-2025 prize-money PDF."
+    },
+    "revenue": {
+      "amount": null,
+      "currency": null,
+      "status": "unavailable",
+      "sourceIds": [],
+      "notes": "No clear Australian Open 2024 tournament-specific revenue denominator is included; Tennis Australia annual reports are organization-level context.",
+      "kind": "unknown"
+    },
+    "profitOrSurplus": {
+      "amount": null,
+      "currency": null,
+      "status": "unavailable",
+      "sourceIds": [],
+      "notes": "No clear Australian Open 2024 tournament-specific profit or surplus denominator is included; Tennis Australia annual reports are organization-level context.",
+      "kind": "unknown"
+    },
+    "winnerPayout": {
+      "amount": null,
+      "currency": null,
+      "status": "unavailable",
+      "sourceIds": [],
+      "notes": "Not modeled on the full-tournament total row; use event-level rows for singles champion payout.",
+      "allocation": "per_player"
+    },
+    "runnerUpPayout": {
+      "amount": null,
+      "currency": null,
+      "status": "unavailable",
+      "sourceIds": [],
+      "notes": "Not modeled on the full-tournament total row; use event-level rows for singles runner-up payout.",
+      "allocation": "per_player"
+    },
+    "roundPayouts": [],
+    "caveats": [
+      "Prize money is full Australian Open prize money, not only men's singles.",
+      "Revenue and profit/surplus are unavailable because no compatible tournament-specific financial source is included.",
+      "Tennis Australia organization-level annual-report values are not treated as Australian Open tournament denominators."
+    ]
+  },
+  {
     "id": "australian-open-2025-ms",
     "tournament": "Australian Open",
     "year": 2025,
@@ -10,6 +294,14 @@
       "ao-2025-prize-money-release",
       "ao-2025-prize-money-pdf"
     ],
+    "prizeMoneyScope": {
+      "type": "event_main_draw",
+      "label": "men's singles main draw",
+      "includedCategories": [
+        "Men's singles 128-player main draw"
+      ],
+      "notes": "Men's singles main-draw allocation only; this is a partial numerator for whole-tournament revenue or profit questions."
+    },
     "prizePool": {
       "amount": 33108000,
       "currency": "AUD",
@@ -167,6 +459,14 @@
     "sourceIds": [
       "roland-garros-2025-secondary-prize-money"
     ],
+    "prizeMoneyScope": {
+      "type": "event_main_draw",
+      "label": "men's singles main draw",
+      "includedCategories": [
+        "Men's singles 128-player main draw"
+      ],
+      "notes": "Men's singles main-draw allocation only; this is a partial numerator for whole-tournament revenue or profit questions."
+    },
     "prizePool": {
       "amount": 20509000,
       "currency": "EUR",
@@ -325,6 +625,14 @@
     "sourceIds": [
       "wimbledon-2025-prize-money-pdf"
     ],
+    "prizeMoneyScope": {
+      "type": "event_main_draw",
+      "label": "gentlemen's singles main draw",
+      "includedCategories": [
+        "Gentlemen's singles 128-player main draw"
+      ],
+      "notes": "Gentlemen's singles main-draw allocation only; this is a partial numerator for whole-tournament revenue or profit questions."
+    },
     "prizePool": {
       "amount": 19414000,
       "currency": "GBP",
@@ -483,6 +791,14 @@
       "us-open-2025-prize-money-page",
       "us-open-2025-secondary-crosscheck"
     ],
+    "prizeMoneyScope": {
+      "type": "event_main_draw",
+      "label": "men's singles main draw",
+      "includedCategories": [
+        "Men's singles 128-player main draw"
+      ],
+      "notes": "Men's singles main-draw allocation only; this is a partial numerator for whole-tournament revenue or profit questions."
+    },
     "prizePool": {
       "amount": 31620000,
       "currency": "USD",

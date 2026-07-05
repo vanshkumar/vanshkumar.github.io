@@ -79,4 +79,14 @@
 - Action: Add explicit numerator scope before normalizing denominator ratios, prioritize full tournament prize-money totals, and start financial-ratio expansion with Wimbledon while keeping AO/US Open/Roland Garros denominators unavailable or caveated until tournament-specific sources are verified.
 - Confidence: high
 
+**2026-07-05 - Primary question data normalization**
+- Observation: AELTC Championships Ltd Companies House filings are image-scanned PDFs; the profit-and-loss account values are reliable after visual rendering, but text extraction may return nothing.
+- Action: For future Wimbledon financial updates, verify Companies House profit-and-loss tables visually with rendered PDF pages and label turnover/profit as Championships operating-company values.
+- Confidence: high
+
+**2026-07-05 - US Open source semantics**
+- Observation: US Open 2024/2025 official totals are framed as total player compensation/purse and include support or expense coverage; official pages were not crawler-readable in this environment.
+- Action: Do not normalize US Open full-tournament totals as prize money until the model distinguishes competition prize money from total player compensation/support or a parseable official competition-prize total is verified.
+- Confidence: high
+
 ## What Has Failed

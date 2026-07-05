@@ -45,17 +45,23 @@ describe('dashboard data validation hardening', () => {
 
   it('rejects available money values without source ids', () => {
     const dataset = cloneDataset();
-    dataset.records[0] = {
-      ...dataset.records[0],
+    const recordIndex = dataset.records.findIndex(
+      (record) => record.id === 'australian-open-2025-ms',
+    );
+
+    expect(recordIndex).toBeGreaterThanOrEqual(0);
+
+    dataset.records[recordIndex] = {
+      ...dataset.records[recordIndex],
       winnerPayout: {
-        ...dataset.records[0].winnerPayout,
+        ...dataset.records[recordIndex].winnerPayout,
         sourceIds: [],
       },
     };
 
     expect(() => parseDashboardDataset(dataset)).toThrow(DataValidationError);
     expect(() => parseDashboardDataset(dataset)).toThrow(
-      'records[0].winnerPayout.sourceIds must include at least one source id',
+      `records[${recordIndex}].winnerPayout.sourceIds must include at least one source id`,
     );
   });
 

@@ -27,6 +27,8 @@ import {
   getWinnerPayout,
 } from '../lib/metricEngine';
 import {
+  eventSeedExpectations,
+  fullTournamentExpectations,
   mainDrawRoundMultipliers,
   seedDatasetExpectations,
 } from './fixtures/seedDatasetExpectations';
@@ -34,9 +36,16 @@ import {
 const normalRecord = dashboardDataset.records.find(
   (record) => record.id === 'australian-open-2025-ms',
 );
+const wimbledonTotalRecord = dashboardDataset.records.find(
+  (record) => record.id === 'wimbledon-2025-tournament-total',
+);
 
 if (!normalRecord) {
   throw new Error('Expected australian-open-2025-ms fixture to exist');
+}
+
+if (!wimbledonTotalRecord) {
+  throw new Error('Expected wimbledon-2025-tournament-total fixture to exist');
 }
 
 describe('validated seed dashboard dataset', () => {
@@ -47,19 +56,22 @@ describe('validated seed dashboard dataset', () => {
     expect(dashboardDataset.sources.every((source) => source.sourceType !== 'mock')).toBe(true);
   });
 
-  it('contains the expected 2025 Grand Slam men singles seed records', () => {
+  it('contains expected event-level and full-tournament seed records', () => {
     expect(dashboardDataset.records).toHaveLength(seedDatasetExpectations.length);
 
-    for (const expected of seedDatasetExpectations) {
+    for (const expected of eventSeedExpectations) {
       const record = dashboardDataset.records.find((item) => item.id === expected.id);
 
       expect(record).toBeDefined();
       expect(record).toMatchObject({
         tournament: expected.tournament,
-        event: "Men's singles",
-        year: 2025,
+        event: expected.event,
+        year: expected.year,
         confidence: expected.confidence,
         displayCurrency: expected.currency,
+        prizeMoneyScope: {
+          type: expected.prizeMoneyScopeType,
+        },
         prizePool: {
           amount: expected.prizePool,
           currency: expected.currency,
@@ -73,6 +85,53 @@ describe('validated seed dashboard dataset', () => {
           currency: expected.currency,
         },
       });
+    }
+
+    for (const expected of fullTournamentExpectations) {
+      const record = dashboardDataset.records.find((item) => item.id === expected.id);
+
+      expect(record).toBeDefined();
+      expect(record).toMatchObject({
+        tournament: expected.tournament,
+        event: expected.event,
+        year: expected.year,
+        confidence: expected.confidence,
+        displayCurrency: expected.currency,
+        prizeMoneyScope: {
+          type: expected.prizeMoneyScopeType,
+        },
+        prizePool: {
+          amount: expected.prizePool,
+          currency: expected.currency,
+        },
+        winnerPayout: {
+          amount: null,
+          currency: null,
+          status: 'unavailable',
+        },
+        runnerUpPayout: {
+          amount: null,
+          currency: null,
+          status: 'unavailable',
+        },
+        roundPayouts: [],
+      });
+
+      if (expected.revenue) {
+        expect(record?.revenue).toMatchObject({
+          amount: expected.revenue,
+          currency: expected.currency,
+          kind: 'tournament_revenue',
+        });
+      }
+
+      if (expected.profitOrSurplus) {
+        expect(record?.profitOrSurplus).toMatchObject({
+          amount: expected.profitOrSurplus,
+          currency: expected.currency,
+          kind: 'tournament_profit',
+        });
+      }
     }
   });
 
@@ -98,7 +157,13 @@ describe('validated seed dashboard dataset', () => {
   });
 
   it('keeps tournament financial denominators unavailable unless sourced clearly', () => {
-    for (const record of dashboardDataset.records) {
+    const recordsWithoutFinancials = dashboardDataset.records.filter(
+      (record) => record.revenue.status === 'unavailable',
+    );
+
+    expect(recordsWithoutFinancials.length).toBeGreaterThan(0);
+
+    for (const record of recordsWithoutFinancials) {
       expect(record.revenue).toMatchObject({
         amount: null,
         currency: null,
@@ -115,10 +180,30 @@ describe('validated seed dashboard dataset', () => {
       });
       expect(record.caveats.join(' ')).toContain('Revenue and profit/surplus are unavailable');
     }
+
+    expect(wimbledonTotalRecord.revenue).toMatchObject({
+      amount: 423626000,
+      currency: 'GBP',
+      kind: 'tournament_revenue',
+      scopeLabel: 'Championships operating-company turnover',
+    });
+    expect(wimbledonTotalRecord.profitOrSurplus).toMatchObject({
+      amount: 52720000,
+      currency: 'GBP',
+      kind: 'tournament_profit',
+      scopeLabel: 'Championships operating-company operating profit',
+    });
+    expect(wimbledonTotalRecord.profitOrSurplus.notes).toContain(
+      'The LTA distribution is not treated as profit.',
+    );
   });
 
   it('matches each seed prize pool to the weighted main-draw round payouts', () => {
-    for (const record of dashboardDataset.records) {
+    const eventRecords = dashboardDataset.records.filter(
+      (record) => record.prizeMoneyScope.type === 'event_main_draw',
+    );
+
+    for (const record of eventRecords) {
       const weightedRoundTotal = record.roundPayouts.reduce((total, roundPayout) => {
         const multiplier = mainDrawRoundMultipliers[roundPayout.round] ?? 0;
         return total + (roundPayout.payout.amount ?? 0) * multiplier;
@@ -151,11 +236,13 @@ describe('validated seed dashboard dataset', () => {
       'US Open',
       'Wimbledon',
     ]);
+    expect(options.years).toEqual(['2025', '2024']);
+    expect(options.events).toEqual(['Full tournament', "Men's singles"]);
     expect(coverageSummary).toContainEqual(
-      expect.objectContaining({ confidence: 'high', count: 2, share: 0.5 }),
+      expect.objectContaining({ confidence: 'high', count: 6, share: 0.75 }),
     );
     expect(coverageSummary).toContainEqual(
-      expect.objectContaining({ confidence: 'medium', count: 2, share: 0.5 }),
+      expect.objectContaining({ confidence: 'medium', count: 2, share: 0.25 }),
     );
     expect(kpis).toHaveLength(9);
     expect(kpis.map((kpi) => kpi.label)).toContain('Prize pool YoY growth');
@@ -226,6 +313,7 @@ describe('validated seed dashboard dataset', () => {
         id: 'revenue-share',
         label: 'Prize money as % of tournament revenue',
         value: 'Unavailable',
+        numeratorLabel: "Prize money (men's singles main draw)",
         numeratorValue: 'A$33,108,000',
         denominatorValue: 'Unavailable',
         barPercent: null,
@@ -235,6 +323,7 @@ describe('validated seed dashboard dataset', () => {
         id: 'profit-surplus-share',
         label: 'Prize money as % of tournament profit/surplus',
         value: 'Unavailable',
+        numeratorLabel: "Prize money (men's singles main draw)",
         numeratorValue: 'A$33,108,000',
         denominatorValue: 'Unavailable',
         barPercent: null,
@@ -244,17 +333,17 @@ describe('validated seed dashboard dataset', () => {
     expect(coverage).toEqual([
       expect.objectContaining({
         id: 'revenue-share',
-        value: '0/4',
-        answerableCount: 0,
-        totalCount: 4,
-        unavailable: true,
+        value: '2/8',
+        answerableCount: 2,
+        totalCount: 8,
+        unavailable: false,
       }),
       expect.objectContaining({
         id: 'profit-surplus-share',
-        value: '0/4',
-        answerableCount: 0,
-        totalCount: 4,
-        unavailable: true,
+        value: '2/8',
+        answerableCount: 2,
+        totalCount: 8,
+        unavailable: false,
       }),
     ]);
     expect(caveats).toContain('Prize money / revenue is unavailable: Missing compatible data.');
@@ -263,36 +352,25 @@ describe('validated seed dashboard dataset', () => {
     );
   });
 
-  it('marks primary question rows answerable when compatible denominators exist', () => {
-    const record = cloneRecord(normalRecord, {
-      revenue: {
-        amount: 132432000,
-        currency: 'AUD',
-        kind: 'tournament_revenue',
-        status: 'reported',
-        sourceIds: ['ao-2025-prize-money-release'],
-      },
-      profitOrSurplus: {
-        amount: 16554000,
-        currency: 'AUD',
-        kind: 'tournament_surplus',
-        status: 'reported',
-        sourceIds: ['ao-2025-prize-money-release'],
-      },
-    });
+  it('marks primary question rows answerable when compatible full-tournament denominators exist', () => {
+    const record = wimbledonTotalRecord;
 
     expect(getPrimaryQuestionRows(record)).toEqual([
       expect.objectContaining({
         id: 'revenue-share',
-        value: '25.0%',
-        denominatorValue: 'A$132,432,000',
-        barPercent: 25,
+        value: '12.6%',
+        numeratorLabel: 'Prize money (full tournament)',
+        denominatorLabel: 'Championships operating-company turnover',
+        denominatorValue: '£423,626,000',
+        barPercent: (53500000 / 423626000) * 100,
         unavailable: false,
       }),
       expect.objectContaining({
         id: 'profit-surplus-share',
-        value: '200.0%',
-        denominatorValue: 'A$16,554,000',
+        value: '101.5%',
+        numeratorLabel: 'Prize money (full tournament)',
+        denominatorLabel: 'Championships operating-company operating profit',
+        denominatorValue: '£52,720,000',
         barPercent: 100,
         unavailable: false,
       }),
@@ -303,15 +381,33 @@ describe('validated seed dashboard dataset', () => {
     ]);
   });
 
-  it('builds unavailable year-over-year chart rows for the 2025-only seed', () => {
+  it('builds year-over-year chart rows when prior full-tournament records exist', () => {
     const yearOverYearRows = getYearOverYearChartRows(
       dashboardDataset.records,
       dashboardDataset.records,
     );
+    const wimbledonRow = yearOverYearRows.find(
+      (row) => row.id === 'wimbledon-2025-tournament-total',
+    );
+    const australianOpenRow = yearOverYearRows.find(
+      (row) => row.id === 'australian-open-2025-tournament-total',
+    );
+    const mensSinglesRow = yearOverYearRows.find(
+      (row) => row.id === normalRecord.id,
+    );
 
     expect(yearOverYearRows).toHaveLength(dashboardDataset.records.length);
-    expect(yearOverYearRows.every((row) => row.unavailable)).toBe(true);
-    expect(yearOverYearRows[0]).toMatchObject({
+    expect(wimbledonRow).toMatchObject({
+      value: '+7.0%',
+      note: 'Compared with 2024 Full tournament.',
+      unavailable: false,
+    });
+    expect(australianOpenRow).toMatchObject({
+      value: '+11.6%',
+      note: 'Compared with 2024 Full tournament.',
+      unavailable: false,
+    });
+    expect(mensSinglesRow).toMatchObject({
       id: normalRecord.id,
       value: 'Unavailable',
       note: 'No matching prior-year record is available.',
@@ -379,7 +475,35 @@ describe('metric engine calculations', () => {
     ).toBe('10.6%');
   });
 
-  it('calculates compatible financial ratios when a record includes sourced denominators', () => {
+  it('calculates compatible event-revenue ratios for event-level records', () => {
+    const record = cloneRecord(normalRecord, {
+      revenue: {
+        amount: 132432000,
+        currency: 'AUD',
+        kind: 'event_revenue',
+        status: 'reported',
+        sourceIds: ['ao-2025-prize-money-release'],
+      },
+    });
+
+    expect(calculatePrizePoolToRevenue(record)).toMatchObject({
+      status: 'available',
+      value: 0.25,
+    });
+  });
+
+  it('calculates compatible financial ratios for full-tournament records', () => {
+    expect(calculatePrizePoolToRevenue(wimbledonTotalRecord)).toMatchObject({
+      status: 'available',
+      value: 53500000 / 423626000,
+    });
+    expect(calculatePrizePoolToProfitOrSurplus(wimbledonTotalRecord)).toMatchObject({
+      status: 'available',
+      value: 53500000 / 52720000,
+    });
+  });
+
+  it('does not compare event-level prize money to tournament-level denominators', () => {
     const record = cloneRecord(normalRecord, {
       revenue: {
         amount: 132432000,
@@ -398,12 +522,12 @@ describe('metric engine calculations', () => {
     });
 
     expect(calculatePrizePoolToRevenue(record)).toMatchObject({
-      status: 'available',
-      value: 0.25,
+      status: 'unavailable',
+      reason: 'incompatible_scope',
     });
     expect(calculatePrizePoolToProfitOrSurplus(record)).toMatchObject({
-      status: 'available',
-      value: 2,
+      status: 'unavailable',
+      reason: 'incompatible_scope',
     });
   });
 
@@ -435,13 +559,13 @@ describe('metric engine calculations', () => {
   });
 
   it('does not compute prize pool / profit when profit is negative', () => {
-    const record = cloneRecord(normalRecord, {
+    const record = cloneRecord(wimbledonTotalRecord, {
       profitOrSurplus: {
         amount: -250000,
-        currency: 'AUD',
+        currency: 'GBP',
         kind: 'tournament_profit',
         status: 'reported',
-        sourceIds: ['ao-2025-prize-money-release'],
+        sourceIds: ['aeltc-championships-2025-accounts'],
       },
     });
 
@@ -452,13 +576,13 @@ describe('metric engine calculations', () => {
   });
 
   it('does not compute prize pool / profit when profit is zero', () => {
-    const record = cloneRecord(normalRecord, {
+    const record = cloneRecord(wimbledonTotalRecord, {
       profitOrSurplus: {
         amount: 0,
-        currency: 'AUD',
+        currency: 'GBP',
         kind: 'tournament_surplus',
         status: 'reported',
-        sourceIds: ['ao-2025-prize-money-release'],
+        sourceIds: ['aeltc-championships-2025-accounts'],
       },
     });
 
@@ -469,13 +593,13 @@ describe('metric engine calculations', () => {
   });
 
   it('does not compute compatible-looking ratios across incompatible currencies', () => {
-    const record = cloneRecord(normalRecord, {
+    const record = cloneRecord(wimbledonTotalRecord, {
       revenue: {
         amount: 12400000,
         currency: 'EUR',
         kind: 'tournament_revenue',
         status: 'reported',
-        sourceIds: ['ao-2025-prize-money-release'],
+        sourceIds: ['aeltc-championships-2025-accounts'],
       },
     });
 

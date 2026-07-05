@@ -3,7 +3,7 @@ slug: partition-summer
 title: Partition Summer
 description: A comic memoir of the 1947 Partition of India, as seen through my grandfather’s childhood memories
 date: 2026-06-03T12:00:00-04:00
-lastmod: 2026-06-03T12:00:00-04:00
+lastmod: 2026-07-03
 kind: project
 comic:
   assetDir: partition-summer
@@ -47,3 +47,4 @@ Other miscellaneous notes:
 - Asking the LLM to give me an image gen prompt for how to fix a particular issue is a useful first pass
 - LLMs can't handle more than a single page at a time
 - I tried to make this comic a couple times and thought the image gen was shit each time – great lesson that in an era of LLMs it's sometimes better to just wait until it's easy lol
+- Posted on [Amazon](https://www.amazon.com/dp/B0H66R3VPP) for fun, amazed at how easy the KDP process was!

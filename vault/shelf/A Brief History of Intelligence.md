@@ -1,6 +1,6 @@
 ---
 date: 2026-06-17
-lastmod: 2026-06-21
+lastmod: 2026-07-04
 rating: 5
 coverImage: /assets/shelf/a-brief-history-of-intelligence.jpg
 ---
@@ -27,7 +27,8 @@ Things I was struck by in the book:
 - A speculation in the book – we imagine the mind of others (theory of mind) the same way we imagine the mind of our own future self (anticipating future needs). This is supported by our bias of projecting our own experience onto others. Thirsty people become biased to predict others must also be thirsty. This makes the belief "my experience is a reasonable reference" from [belief-consistent information processing](https://substack.com/home/post/p-176561881) appear like an inbuilt default, rather than a 'belief' per se. I wonder if confirmation bias might also be due to mental abilities being similarly repurposed/overloaded?
 
 
+## Provenance
 
-Provenance: Forget exactly where I first heard about this book, but possibly from [this podcast episode](https://www.dwarkesh.com/p/adam-marblestone) which I really enjoyed
+Forget exactly where I first heard about this book, but possibly from [this podcast episode](https://www.dwarkesh.com/p/adam-marblestone) which I really enjoyed
 
 [^1]: I don't actually think there is a meaningful distinction between hardware & software in the brain (which this point kind of proves), but it's a useful abstraction/analogy

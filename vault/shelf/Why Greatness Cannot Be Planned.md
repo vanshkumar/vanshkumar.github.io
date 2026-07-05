@@ -1,10 +1,10 @@
 ---
 date: 2026-06-23
-lastmod: 2026-06-24
-rating: 3
+lastmod: 2026-07-04
+rating: 4
 coverImage: /assets/shelf/why-greatness-cannot-be-planned.jpg
 ---
-IN PROGRESS
+IN PROGRESS (https://readwise.io/bookreview/50377846)
 
 A straightforward argument, made by very loose analogy to evolution & machine learning, that directly aiming for "greatness" via objectives does not work. Seeking out novelty is more effective.
 
@@ -21,4 +21,6 @@ Implicit in this idea is that any objective that can be aimed & planned for is a
 
 
 
-Provenance: no idea
+## Provenance
+
+No idea! Probably somewhere around the Pathless scene

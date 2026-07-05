@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-06-18
+lastmod: 2026-07-04
 date: 2026-06-15
 rating: 5
 coverImage: /assets/shelf/the-clock-of-the-long-now.webp
@@ -31,5 +31,6 @@ Other interesting ideas from the book:
 - "You can always improve things as long as you're prepared to wait"
 - Parallel: biological systems often use multiple timescales for stable identity + fast responsiveness (eg epigenetics, histone modifications & DNA methylation); multiple timescales and multi-level organization are how any complex system works
 
+## Provenance
 
-Provenance: decided to read this book after reading https://gwern.net/about#long-content
+Decided to read this book after reading https://gwern.net/about#long-content

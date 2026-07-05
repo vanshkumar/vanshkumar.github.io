@@ -2,7 +2,7 @@
 
 Static-first React + TypeScript + Vite dashboard for exploring tennis prize money alongside tournament revenue, profit, or surplus where reliable data exists.
 
-Version `0.1.0` is a review-ready first release. It renders a small sourced 2025 Grand Slam men's singles seed dataset with filters, KPI cards, payout charts, confidence coverage, source links, refresh status, and caveats. Revenue, profit/surplus, and year-over-year growth values are intentionally unavailable until compatible tournament-level financial sources and prior-year rows are added.
+Version `0.1.0` is a review-ready first release. It renders a small sourced 2025 Grand Slam men's singles seed dataset with filters, a primary answer board for prize money as a percentage of revenue/profit, answerability coverage, source links, refresh status, and caveats. Revenue and profit/surplus percentages are intentionally unavailable until compatible tournament-level financial sources are added.
 
 ## Quickstart
 
@@ -51,7 +51,7 @@ npm run refresh:data
 - `src/data/normalized/` contains normalized tournament economics records.
 - `src/data/schemas.ts` validates the JSON contract at import time and rejects mock leakage in datasets labeled `real`.
 - `src/lib/metricEngine.ts` contains calculation utilities and unavailable-reason handling.
-- `src/lib/dashboardMetrics.ts` contains dashboard formatting, filtering, KPI helpers, chart row view models, coverage summaries, and visible caveat helpers.
+- `src/lib/dashboardMetrics.ts` contains dashboard formatting, filtering, primary-question view models, answerability coverage summaries, and visible caveat helpers.
 - `src/lib/refreshClient.ts` contains browser-safe refresh dispatch helpers. It only reads public `VITE_` endpoint/doc URLs.
 - `src/refresh/` contains the server-side refresh pipeline and source-adapter interfaces.
 - `scripts/refresh-data.mjs` runs the server-side refresh CLI.
@@ -74,4 +74,4 @@ npm run refresh:data
 - Roland Garros and US Open prize-money rows remain medium confidence until clearer official, parseable sources replace the secondary/cross-check paths.
 - No compatible tournament-level revenue, profit, or surplus denominators are included.
 - No FX conversion exists; cross-currency comparisons are not computed.
-- The parent GitHub Pages workflow still needs explicit build/copy steps before this app is published in the combined Pages artifact.
+- The parent GitHub Pages workflow builds and copies this app into the combined Pages artifact at `/tennis-prize-money/`.

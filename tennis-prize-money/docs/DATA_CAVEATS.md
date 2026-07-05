@@ -25,6 +25,8 @@ Prize money, revenue, profit, surplus, expenses, and unavailable values are diff
 
 For v0.1 records, the prize pool is the men's singles event allocation, not total tournament prize money across singles, doubles, mixed doubles, wheelchair, qualifying, per diems, or player support.
 
+For the primary revenue/profit-share question, future rows should prefer full tournament prize-money totals. If an event-level numerator is ever compared with a tournament-level denominator, the UI must label it as partial rather than presenting it as the players' full tournament share.
+
 ## Currency Caveats
 
 The app does not do currency conversion yet. A ratio is computed only when numerator and denominator currencies match exactly. If later tasks need cross-currency comparisons, they should add explicit FX source metadata, conversion dates, and tests.

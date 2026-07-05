@@ -49,6 +49,33 @@ Official tournament page adapters, PDF table parsers, and financial-report adapt
 
 No tournament-level revenue, profit, or surplus values are included in the v0.1 seed. The dashboard leaves those fields unavailable for every seed record. Organization-level revenues, press estimates, and player-share claims are not normalized as compatible denominators unless a future task can tie them to a specific tournament/event and currency.
 
+## Primary-Question Research Leads
+
+The 2026-07-05 research sweep focused on the dashboard's primary question: prize money as a percentage of tournament revenue or profit/surplus. These leads are not normalized into JSON yet.
+
+| Priority | Tournament | Candidate numerator | Candidate denominator | Current recommendation |
+| --- | --- | --- | --- | --- |
+| 1 | Wimbledon | Official total prize money: 2025 £53.5m and 2024 £50.0m from Wimbledon prize-money PDFs. | AELTC Championships Ltd turnover: 2025 £423.626m and 2024 £406.507m from Companies House filings; operating profit is available but needs an operating-company caveat. | Best next production candidate. Add as tournament-total records after verifying filings and labeling denominator as Championships operating-company turnover. |
+| 2 | Roland Garros | Total prize money lead: 2025 €56.352m and 2024 €53.478m from Roland Garros press-kit citations / secondary tables. | Revenue leads: 2025 €395m from Guardian reporting on a player statement; 2024 €340m from secondary/Bloomberg-cited reporting. No tournament profit/surplus found. | Possible revenue-share row only with medium/low confidence and visible secondary-source caveat; do not add profit/surplus. |
+| 3 | Australian Open | Official total prize money: 2025 A$96.5m and 2024 A$86.5m from AO/Tennis Australia sources. | Tennis Australia annual reports disclose organization-level revenue and surplus, not AO tournament revenue/profit. | Add official tournament-total numerator; keep revenue/profit unavailable unless AO-specific financial denominators are found. |
+| 4 | US Open | Official total player compensation/prize package: 2024 US$75.0m and 2025 US$90.0m from US Open sources. | USTA Form 990 values are organization-wide; a secondary FT operating-revenue lead needs primary confirmation. No tournament profit/surplus found. | Add official tournament-total numerator; keep revenue/profit unavailable until US Open-specific financial denominators are confirmed. |
+
+Useful lead URLs:
+
+- Wimbledon 2025 prize money: <https://www.wimbledon.com/pdf/Wimbledon_Prize_Money_2025.pdf>
+- Wimbledon 2024 prize money: <https://www.wimbledon.com/pdf/Wimbledon_Prize_Money_2024.pdf>
+- AELTC Championships Ltd filings: <https://find-and-update.company-information.service.gov.uk/company/07546773/filing-history>
+- AO 2025 prize release: <https://ausopen.com/articles/news/australian-open-prize-money-increases-more-11-cent-2025>
+- AO25 prize-money PDF: <https://www.tennis.com.au/wp-content/uploads/2025/01/AO25-Prize-Money.pdf>
+- Tennis Australia annual reports: <https://www.tennis.com.au/about-us/reports-publications-national-policies/annual-reports>
+- US Open 2024 prize-money release: <https://www.usopen.org/en_US/news/articles/2024-08-07/2024_us_open_prize_money_will_be_largest_purse_in_tennis_history.html>
+- US Open 2025 prize-money release: <https://www.usopen.org/en_US/news/articles/2025-08-06/2025_us_open_prize_money_sets_record_for_largest_purse_in_tennis_history.html>
+- USTA Form 990 summary: <https://projects.propublica.org/nonprofits/organizations/135459420>
+- Roland Garros revenue lead: <https://www.theguardian.com/sport/2026/may/03/tennis-french-open-prize-money-novak-djokovic-jannik-sinner-aryna-sabalenka>
+- Roland Garros 2025 prize-money lead: <https://de.wikipedia.org/wiki/French_Open_2025>
+
+Data-model implication: the primary ratio should prefer full tournament prize-money totals over event-level men's singles rows. Event-level rows can still exist, but any comparison to tournament revenue must be labeled as partial or kept unavailable until the numerator scope is made explicit.
+
 ## v0.1 Audit Status
 
 - No active mock/sample rows are present in the `real` seed dataset.

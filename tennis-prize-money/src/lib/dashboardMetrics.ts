@@ -59,6 +59,31 @@ export interface CoverageSummaryItem {
   share: number;
 }
 
+export interface PrimaryQuestionRow {
+  id: 'revenue-share' | 'profit-surplus-share';
+  label: string;
+  value: string;
+  eyebrow: string;
+  numeratorLabel: string;
+  numeratorValue: string;
+  denominatorLabel: string;
+  denominatorValue: string;
+  note: string;
+  barPercent: number | null;
+  unavailable: boolean;
+}
+
+export interface PrimaryQuestionCoverageRow {
+  id: 'revenue-share' | 'profit-surplus-share';
+  label: string;
+  value: string;
+  note: string;
+  answerableCount: number;
+  totalCount: number;
+  barPercent: number;
+  unavailable: boolean;
+}
+
 export function formatMoney(amount: number | null, currency: string | null): string {
   if (amount === null || currency === null) {
     return 'Unavailable';
@@ -271,6 +296,121 @@ export function getFinalistComparisonRows(
   }));
 }
 
+export function getPrimaryQuestionRows(
+  record: TournamentEconomicsRecord,
+): PrimaryQuestionRow[] {
+  const prizePoolToRevenue = calculatePrizePoolToRevenue(record);
+  const prizePoolToProfitOrSurplus = calculatePrizePoolToProfitOrSurplus(record);
+  const prizePoolValue = formatMoneyValue(record.prizePool);
+
+  return [
+    {
+      id: 'revenue-share',
+      label: 'Prize money as % of tournament revenue',
+      value: formatMetricPercent(prizePoolToRevenue),
+      eyebrow: primaryAnswerEyebrow(prizePoolToRevenue, 'revenue'),
+      numeratorLabel: 'Prize money',
+      numeratorValue: prizePoolValue,
+      denominatorLabel: 'Revenue',
+      denominatorValue: formatMoneyValue(record.revenue),
+      note: primaryRatioNote(
+        prizePoolToRevenue,
+        'Prize pool divided by compatible same-currency tournament revenue.',
+        'Add a compatible tournament-level revenue denominator before showing this percentage.',
+      ),
+      barPercent: ratioBarPercent(prizePoolToRevenue),
+      unavailable: prizePoolToRevenue.status === 'unavailable',
+    },
+    {
+      id: 'profit-surplus-share',
+      label: 'Prize money as % of tournament profit/surplus',
+      value: formatMetricPercent(prizePoolToProfitOrSurplus),
+      eyebrow: primaryAnswerEyebrow(prizePoolToProfitOrSurplus, 'profit/surplus'),
+      numeratorLabel: 'Prize money',
+      numeratorValue: prizePoolValue,
+      denominatorLabel: 'Profit/surplus',
+      denominatorValue: formatMoneyValue(record.profitOrSurplus),
+      note: primaryRatioNote(
+        prizePoolToProfitOrSurplus,
+        'Prize pool divided by compatible same-currency tournament profit or surplus.',
+        'Add a positive compatible tournament-level profit or surplus denominator before showing this percentage.',
+      ),
+      barPercent: ratioBarPercent(prizePoolToProfitOrSurplus),
+      unavailable: prizePoolToProfitOrSurplus.status === 'unavailable',
+    },
+  ];
+}
+
+export function getPrimaryQuestionCoverage(
+  records: TournamentEconomicsRecord[],
+): PrimaryQuestionCoverageRow[] {
+  const totalCount = records.length;
+  const revenueAnswerableCount = records.filter(
+    (record) => calculatePrizePoolToRevenue(record).status === 'available',
+  ).length;
+  const profitAnswerableCount = records.filter(
+    (record) => calculatePrizePoolToProfitOrSurplus(record).status === 'available',
+  ).length;
+
+  return [
+    buildPrimaryCoverageRow(
+      'revenue-share',
+      'Records that can answer prize money / revenue',
+      revenueAnswerableCount,
+      totalCount,
+      'No active records have compatible tournament-level revenue yet.',
+    ),
+    buildPrimaryCoverageRow(
+      'profit-surplus-share',
+      'Records that can answer prize money / profit/surplus',
+      profitAnswerableCount,
+      totalCount,
+      'No active records have positive compatible tournament-level profit or surplus yet.',
+    ),
+  ];
+}
+
+export function getPrimaryQuestionCaveats(record: TournamentEconomicsRecord): string[] {
+  const caveats = new Set(record.caveats);
+  const values = [
+    ['Prize pool', record.prizePool],
+    ['Revenue', record.revenue],
+    ['Profit/surplus', record.profitOrSurplus],
+  ] as const;
+
+  for (const [label, value] of values) {
+    if (value.status === 'unavailable') {
+      caveats.add(`${label} is unavailable for this record.`);
+    }
+
+    if (value.status === 'derived') {
+      caveats.add(`${label} is derived from normalized source rows.`);
+    }
+
+    if (value.status === 'estimated') {
+      caveats.add(`${label} is estimated and should not be treated as audited.`);
+    }
+
+    if (value.status === 'mock') {
+      caveats.add(`${label} is mock/sample data.`);
+    }
+  }
+
+  const revenueRatio = calculatePrizePoolToRevenue(record);
+  if (revenueRatio.status === 'unavailable') {
+    caveats.add(`Prize money / revenue is unavailable: ${describeUnavailableReason(revenueRatio.reason)}`);
+  }
+
+  const profitRatio = calculatePrizePoolToProfitOrSurplus(record);
+  if (profitRatio.status === 'unavailable') {
+    caveats.add(
+      `Prize money / profit or surplus is unavailable: ${describeUnavailableReason(profitRatio.reason)}`,
+    );
+  }
+
+  return [...caveats];
+}
+
 export function getFinancialComparisonRows(
   record: TournamentEconomicsRecord,
 ): ComparisonChartRow[] {
@@ -471,6 +611,61 @@ function ratioNote(result: NumericMetricResult, availableNote: string): string {
   }
 
   return describeUnavailableReason(result.reason);
+}
+
+function primaryRatioNote(
+  result: NumericMetricResult,
+  availableNote: string,
+  unavailableAction: string,
+): string {
+  if (result.status === 'available') {
+    return availableNote;
+  }
+
+  return `${describeUnavailableReason(result.reason)} ${unavailableAction}`;
+}
+
+function primaryAnswerEyebrow(
+  result: NumericMetricResult,
+  denominatorLabel: string,
+): string {
+  if (result.status === 'available') {
+    return 'Answer available';
+  }
+
+  return `Needs ${denominatorLabel} data`;
+}
+
+function ratioBarPercent(result: NumericMetricResult): number | null {
+  if (result.status === 'unavailable') {
+    return null;
+  }
+
+  return Math.min(100, Math.max(3, result.value * 100));
+}
+
+function buildPrimaryCoverageRow(
+  id: PrimaryQuestionCoverageRow['id'],
+  label: string,
+  answerableCount: number,
+  totalCount: number,
+  unavailableNote: string,
+): PrimaryQuestionCoverageRow {
+  const share = totalCount > 0 ? answerableCount / totalCount : 0;
+
+  return {
+    id,
+    label,
+    value: `${answerableCount}/${totalCount}`,
+    note:
+      answerableCount > 0
+        ? `${answerableCount} of ${totalCount} active record(s) have the needed compatible denominator.`
+        : unavailableNote,
+    answerableCount,
+    totalCount,
+    barPercent: share * 100,
+    unavailable: answerableCount === 0,
+  };
 }
 
 function derivedEyebrow(

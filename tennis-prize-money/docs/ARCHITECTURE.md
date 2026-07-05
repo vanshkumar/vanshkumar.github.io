@@ -2,7 +2,7 @@
 
 ## Current Scope
 
-Version `0.1.0` is a static React + TypeScript + Vite dashboard with a validated data layer, sourced seed data, tested calculation engine, CSS/SVG visualizations, and a server-side refresh pipeline under `tennis-prize-money/`. The app remains app-local inside the larger `vanshkumar.github.io` repository and is configured for GitHub Pages subpath hosting with `base: '/tennis-prize-money/'`.
+Version `0.1.0` is a static React + TypeScript + Vite dashboard with a validated data layer, sourced seed data, tested calculation engine, CSS visualizations, and a server-side refresh pipeline under `tennis-prize-money/`. The app remains app-local inside the larger `vanshkumar.github.io` repository and is configured for GitHub Pages subpath hosting with `base: '/tennis-prize-money/'`.
 
 The dashboard currently renders from a small sourced 2025 Grand Slam men's singles prize-money seed dataset. Compatible tournament-level revenue, profit, surplus, and prior-year comparison values remain unavailable until clearer financial sources and additional years are added.
 
@@ -20,7 +20,7 @@ The dashboard currently renders from a small sourced 2025 Grand Slam men's singl
 - `src/data/schemas.ts` defines TypeScript types and runtime validation, including mock-leakage checks for datasets labeled `real`.
 - `src/data/dashboardDataset.ts` imports and validates JSON before exporting the typed dataset.
 - `src/lib/metricEngine.ts` computes trustworthy metrics with structured unavailable reasons.
-- `src/lib/dashboardMetrics.ts` adapts metric results into dashboard filters, KPI cards, labels, chart row view models, coverage summaries, visible caveats, and formatting.
+- `src/lib/dashboardMetrics.ts` adapts metric results into dashboard filters, primary-question answer rows, answerability coverage summaries, visible caveats, and formatting.
 - `src/lib/refreshClient.ts` handles browser-safe refresh endpoint configuration and dispatch requests. It only reads public `VITE_` variables.
 - `src/refresh/` contains the server-side refresh pipeline, source-adapter interfaces, validation, merge, and static JSON output code.
 - `scripts/refresh-data.mjs` is the Node CLI wrapper for `npm run refresh:data`.
@@ -36,8 +36,8 @@ Dashboard rendering then follows this path:
 
 1. Validated records provide filter options and selected-record state.
 2. `src/lib/metricEngine.ts` computes derived metrics and unavailable reasons.
-3. `src/lib/dashboardMetrics.ts` formats those results for KPI cards, chart row view models, coverage summaries, and visible caveats.
-4. `DashboardPage.tsx` renders the dashboard UI with filters, KPI cards, CSS/SVG charts, empty states, unavailable states, record confidence, source links, and caveats.
+3. `src/lib/dashboardMetrics.ts` formats those results for the primary answer board, ratio-input summaries, answerability coverage, and visible caveats.
+4. `DashboardPage.tsx` renders the dashboard UI with the primary answer board first, then filters, answerability coverage, empty states, unavailable states, record confidence, refresh status, source links, and caveats.
 
 The app does not fetch tournament data at runtime in the browser. The browser can optionally request a refresh dispatch only when `VITE_REFRESH_DISPATCH_URL` points to a separately hosted external endpoint.
 
@@ -67,15 +67,17 @@ Organizer-level financials, expenses, unknown values, incompatible currencies, m
 
 ## Visualization Flow
 
-The charting layer is app-local and dependency-light. `DashboardPage.tsx` renders SVG and CSS bar charts from view models created in `src/lib/dashboardMetrics.ts`.
+The visual layer is app-local and dependency-light. `DashboardPage.tsx` renders CSS answer cards and coverage bars from view models created in `src/lib/dashboardMetrics.ts`.
 
-Current panels:
+Current panels focus on one question: how much prize money do players receive as a percentage of tournament revenue or profit/surplus?
 
-- payout curve by round for the selected record
-- winner vs runner-up payout comparison for the selected record
-- prize pool vs revenue/profit rows, with unavailable or currency-mismatch rows not charted as comparable values
-- year-over-year prize-pool growth, currently shown as an unavailable state because the seed has only 2025 rows
-- record and linked-source confidence coverage for the active filter set
+- primary answer cards for prize money / revenue and prize money / profit/surplus
+- ratio-input summaries for the prize-money numerator and the two financial denominators
+- answerability coverage for the active filter set
+- calculation caveats explaining missing, incompatible, zero, negative, or cross-currency denominators
+- selected-record source cards
+
+Payout curves, finalist comparisons, and year-over-year prize-pool growth remain available as tested helper logic, but they are no longer first-class dashboard visuals because they do not answer the primary revenue/profit-share question.
 
 Filtering by tournament, year, event, and confidence happens before chart view models are built. If filters produce zero matching records, the page renders explicit empty states instead of falling back to a hidden default record.
 

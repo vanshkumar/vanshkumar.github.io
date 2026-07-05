@@ -92,6 +92,11 @@
 - Action: Keep raw comic source pages in `vault/assets`, but prune numeric comic PNGs from generated `public/assets` after web optimization and link the reader click-throughs to the optimized assets.
 - Confidence: high
 
+**[2026-07-05] — Removed side app deployment cleanup**
+- Observation: Removing a deployed sibling app directory can leave `.github/workflows/deploy.yml` install/build/copy/verify steps and app-specific workflows pointing at a missing working directory, causing Pages builds to fail before artifact upload.
+- Action: When removing a side app from the parent repo, update the Pages deploy assembly and delete or rewrite any app-specific workflows in the same change; verify with `rg` for the app path outside `.git`.
+- Confidence: high
+
 ## Patterns and Preferences
 
 **[2026-06-26] — Typography size tuning**

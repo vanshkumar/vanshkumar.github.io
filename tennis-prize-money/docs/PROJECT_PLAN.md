@@ -87,6 +87,14 @@ Task 6: Final hardening, documentation, and v0.1 readiness.
 - Audit for mock leakage, source labels, terminology, secrets, filters, empty states, and build failures.
 - Complete docs, changelog, tests, push, and open a PR if available.
 
+## Codex Thread Requirement
+
+Every new Codex chat thread created for this project must use xhigh effort/thinking. This is mandatory for major task handoff threads and any auxiliary Codex chat threads created for project work.
+
+When creating the next thread, set the thread creation tool's thinking/reasoning option to `xhigh` when available. The seed prompt must also include: `Use xhigh effort/thinking for this thread.`
+
+If xhigh cannot be configured for a thread, document the limitation in the handoff and final response instead of silently creating a lower-effort thread.
+
 ## Assumptions
 
 - The dashboard will be deployed as a static GitHub Pages side app at `/tennis-prize-money/`.
@@ -114,7 +122,7 @@ For Task 0:
 - The selected stack is React + TypeScript + Vite with npm and GitHub Pages subpath deployment.
 - Available lightweight checks have been run.
 - Changes are committed and pushed on `feat/tennis-prize-economics-dashboard`.
-- A Task 1 Codex thread is created and seeded with the handoff and instructions.
+- A Task 1 Codex thread is created with xhigh effort/thinking and seeded with the handoff and instructions.
 
 For v0.1 overall:
 
@@ -128,4 +136,4 @@ For v0.1 overall:
 - Documentation is sufficient for a future Codex thread or developer to continue.
 - Available checks pass.
 - Work is committed and pushed at every task boundary.
-- Each new Codex task thread is created with xhigh effort/thinking.
+- Each new Codex chat thread created as part of the project is created with xhigh effort/thinking.

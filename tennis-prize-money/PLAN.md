@@ -21,7 +21,7 @@ Operating rules:
 3. Do not begin a later major task until the current task is implemented, documented, tested, committed, and pushed.
 4. After each major task, create/update documentation, run checks, commit, and push.
 5. After each major task, create a new Codex thread for the next task in this same project/repo.
-6. Every new Codex chat thread created for this project should use xhigh effort/thinking.
+6. Every new Codex chat thread created for this project must use xhigh effort/thinking. Set the thread creation tool's thinking/reasoning option to `xhigh` when available, and include "Use xhigh effort/thinking for this thread." in the seed prompt.
 7. The next thread must start from the latest pushed commit.
 8. The current thread must not continue implementing the next major task after creating the next thread.
 9. At every task boundary, write a complete handoff file under docs/handoffs/.
@@ -79,6 +79,7 @@ Each handoff file must include:
 - assumptions made
 - next task objective
 - exact instructions used to create the next Codex thread
+- confirmation that the next Codex thread must be created with xhigh effort/thinking
 
 The app should eventually support:
 - Static JSON data loaded by the dashboard.
@@ -197,11 +198,11 @@ Steps:
 9. Commit with message:
    chore: add project plan and codex handoff docs
 10. Push the branch.
-11. Create a new Codex thread for TASK 1 in this same project/repo.
+11. Create a new Codex thread for TASK 1 in this same project/repo with xhigh effort/thinking.
 12. Seed the new thread with:
    - docs/handoffs/task-0-summary.md
    - TASK 1 instructions from this prompt
-   - reminder to read AGENTS.md, docs/PROJECT_PLAN.md, and docs/TASK_LOG.md before starting
+   - reminder to use xhigh effort/thinking and to read AGENTS.md, docs/PROJECT_PLAN.md, and docs/TASK_LOG.md before starting
 13. Stop this thread after creating the TASK 1 thread.
 
 TASK 1 — Scaffold the app and baseline dashboard
@@ -238,11 +239,11 @@ Steps:
 15. Commit with message:
    feat: scaffold tennis prize economics dashboard
 16. Push.
-17. Create a new Codex thread for TASK 2 in this same project/repo.
+17. Create a new Codex thread for TASK 2 in this same project/repo with xhigh effort/thinking.
 18. Seed the new thread with:
    - docs/handoffs/task-1-summary.md
    - TASK 2 instructions from this prompt
-   - reminder to read AGENTS.md and relevant docs before starting
+   - reminder to use xhigh effort/thinking and to read AGENTS.md and relevant docs before starting
 19. Stop this thread after creating the TASK 2 thread.
 
 TASK 2 — Data schema, validation, and calculation engine
@@ -284,11 +285,11 @@ Steps:
 13. Commit with message:
    feat: add validated data model and metrics engine
 14. Push.
-15. Create a new Codex thread for TASK 3 in this same project/repo.
+15. Create a new Codex thread for TASK 3 in this same project/repo with xhigh effort/thinking.
 16. Seed the new thread with:
    - docs/handoffs/task-2-summary.md
    - TASK 3 instructions from this prompt
-   - reminder to read AGENTS.md and relevant docs before starting
+   - reminder to use xhigh effort/thinking and to read AGENTS.md and relevant docs before starting
 17. Stop this thread after creating the TASK 3 thread.
 
 TASK 3 — Initial data sourcing and seed dataset
@@ -321,11 +322,11 @@ Steps:
 15. Commit with message:
    feat: add sourced seed dataset and source documentation
 16. Push.
-17. Create a new Codex thread for TASK 4 in this same project/repo.
+17. Create a new Codex thread for TASK 4 in this same project/repo with xhigh effort/thinking.
 18. Seed the new thread with:
    - docs/handoffs/task-3-summary.md
    - TASK 4 instructions from this prompt
-   - reminder to read AGENTS.md and relevant docs before starting
+   - reminder to use xhigh effort/thinking and to read AGENTS.md and relevant docs before starting
 19. Stop this thread after creating the TASK 4 thread.
 
 TASK 4 — First real visualizations and UX polish
@@ -356,11 +357,11 @@ Steps:
 15. Commit with message:
    feat: add dashboard visualizations and filtering
 16. Push.
-17. Create a new Codex thread for TASK 5 in this same project/repo.
+17. Create a new Codex thread for TASK 5 in this same project/repo with xhigh effort/thinking.
 18. Seed the new thread with:
    - docs/handoffs/task-4-summary.md
    - TASK 5 instructions from this prompt
-   - reminder to read AGENTS.md and relevant docs before starting
+   - reminder to use xhigh effort/thinking and to read AGENTS.md and relevant docs before starting
 19. Stop this thread after creating the TASK 5 thread.
 
 TASK 5 — On-demand refresh pipeline
@@ -411,11 +412,11 @@ Steps:
 17. Commit with message:
    feat: add on-demand data refresh pipeline
 18. Push.
-19. Create a new Codex thread for TASK 6 in this same project/repo.
+19. Create a new Codex thread for TASK 6 in this same project/repo with xhigh effort/thinking.
 20. Seed the new thread with:
    - docs/handoffs/task-5-summary.md
    - TASK 6 instructions from this prompt
-   - reminder to read AGENTS.md and relevant docs before starting
+   - reminder to use xhigh effort/thinking and to read AGENTS.md and relevant docs before starting
 21. Stop this thread after creating the TASK 6 thread.
 
 TASK 6 — Final hardening, documentation, and v0.1 release readiness

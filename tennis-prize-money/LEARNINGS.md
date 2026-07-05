@@ -15,8 +15,8 @@
 - Confidence: high
 
 **2026-07-05 — Codex thread setup**
-- Observation: New Codex chat threads for this project should use xhigh effort/thinking.
-- Action: When creating Task 1 and later handoff threads, configure the thread with xhigh effort/thinking and include that requirement in the seed prompt.
+- Observation: New Codex chat threads for this project must use xhigh effort/thinking.
+- Action: When creating Task 1 and later handoff or auxiliary Codex chat threads, set the thread creation tool's thinking/reasoning option to `xhigh` when available and include that requirement in the seed prompt.
 - Confidence: high
 
 **2026-07-05 — Task 0 git setup**

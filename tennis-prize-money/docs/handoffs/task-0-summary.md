@@ -40,6 +40,7 @@ Pending until the Task 0 commit is pushed. The current thread final response and
 - `rg -n "xhigh|React \+ TypeScript \+ Vite|GitHub Pages|Pending|Status:" PLAN.md AGENTS.md LEARNINGS.md docs/PROJECT_PLAN.md docs/TASK_LOG.md docs/handoffs/task-0-summary.md`: confirmed the key planning constraints are recorded.
 - `find . -maxdepth 3 -type f -print | sort`: confirmed expected Task 0 files exist.
 - `git status --short --branch`: confirmed branch and untracked app folder before staging.
+- Follow-up documentation pass: made xhigh effort/thinking mandatory for every new Codex chat thread created for this project, including the tool setting and seed prompt wording.
 
 ## Tests And Checks Status
 
@@ -68,7 +69,7 @@ Create a working React + TypeScript + Vite dashboard shell with clearly labeled 
 
 ## Exact Instructions For The Next Codex Thread
 
-Create the Task 1 Codex chat thread with xhigh effort/thinking.
+Create the Task 1 Codex chat thread with xhigh effort/thinking. If the thread creation tool exposes a thinking/reasoning option, set it explicitly to `xhigh`.
 
 Use this prompt to create the Task 1 thread:
 
@@ -122,11 +123,11 @@ Steps:
 15. Commit with message:
    feat: scaffold tennis prize economics dashboard
 16. Push.
-17. Create a new Codex thread for TASK 2 in this same project/repo.
+17. Create a new Codex thread for TASK 2 in this same project/repo with xhigh effort/thinking. If the thread creation tool exposes a thinking/reasoning option, set it explicitly to `xhigh`.
 18. Seed the new thread with:
    - docs/handoffs/task-1-summary.md
    - TASK 2 instructions from PLAN.md
-   - reminder to read AGENTS.md and relevant docs before starting
+   - reminder to use xhigh effort/thinking and to read AGENTS.md and relevant docs before starting
 19. Stop this thread after creating the TASK 2 thread.
 
 Important project constraints:
@@ -135,4 +136,5 @@ Important project constraints:
 - Do not fabricate real data.
 - Do not assume a server runtime on GitHub Pages.
 - Stage explicit paths and never delete user work.
+- Every new Codex chat thread created as part of this project must use xhigh effort/thinking.
 ```

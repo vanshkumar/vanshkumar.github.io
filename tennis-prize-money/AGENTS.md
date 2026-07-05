@@ -45,6 +45,14 @@ This project is intentionally serial across Codex threads:
 7. Configure every new Codex chat thread for this project with xhigh effort/thinking.
 8. Stop the current thread after creating the next thread.
 
+## Thread Creation Requirement
+
+Every new Codex chat thread created as part of this project must use xhigh effort/thinking. This applies to major task handoff threads and any auxiliary Codex chat threads created for project work.
+
+When using a thread creation tool that exposes a reasoning or thinking option, set it explicitly to `xhigh`. Also include `Use xhigh effort/thinking for this thread.` in the seed prompt so the requirement survives in the thread history and future handoffs.
+
+If a thread cannot be created with xhigh effort/thinking, do not silently proceed. Document the limitation in the current handoff and final response before creating or using that thread.
+
 Use the current branch unless it is clearly inappropriate. If starting from `main` or `master` and no feature branch exists, use `feat/tennis-prize-economics-dashboard`.
 
 Never force-push. Never delete user work. Stage explicit paths, especially because the parent repo can contain unrelated root-site or sibling-app changes.

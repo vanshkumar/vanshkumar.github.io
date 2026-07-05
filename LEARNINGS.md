@@ -97,6 +97,11 @@
 - Action: When removing a side app from the parent repo, update the Pages deploy assembly and delete or rewrite any app-specific workflows in the same change; verify with `rg` for the app path outside `.git`.
 - Confidence: high
 
+**[2026-07-05] — Branch drift after side app removal**
+- Observation: Feature branches based before `tennis-prize-money/` was removed can show the entire app as locally deleted even though `origin/main` already removed it cleanly.
+- Action: Before staging side-app deletions from an older branch, compare with `origin/main` and move fixes onto main or merge main first so already-published removals are not recommitted from stale branch state.
+- Confidence: high
+
 ## Patterns and Preferences
 
 **[2026-06-26] — Typography size tuning**

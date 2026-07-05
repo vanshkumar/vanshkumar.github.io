@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
+import { DataModeBadge } from '../components/DataModeBadge';
 import { KpiCard } from '../components/KpiCard';
-import { MockBadge } from '../components/MockBadge';
 import { dashboardDataset } from '../data/dashboardDataset';
 import {
   type DashboardFilters,
@@ -43,6 +43,7 @@ export function DashboardPage() {
   );
   const coverageSummary = getCoverageSummary(dashboardDataset);
   const selectedSources = getSourcesForRecord(dashboardDataset, selectedRecord);
+  const datasetMode = dashboardDataset.metadata.dataMode;
 
   function updateFilter<Key extends keyof DashboardFilters>(
     key: Key,
@@ -55,14 +56,15 @@ export function DashboardPage() {
     <main className="app-shell">
       <section className="hero-band" aria-labelledby="page-title">
         <div>
-          <MockBadge />
+          <DataModeBadge mode={datasetMode} />
           <p className="eyebrow">Tennis economics dashboard</p>
           <h1 id="page-title">Prize money, revenue, and surplus context</h1>
           <p className="hero-copy">
-            A static-first dashboard shell for comparing tournament prize pools,
+            A static-first dashboard for comparing tournament prize pools,
             payouts, financial rows, source confidence, and caveats. The current
-            dataset is explicitly mock/sample data for Task 2 validation and
-            calculation testing.
+            seed focuses on sourced 2025 Grand Slam men's singles prize money,
+            with financial denominators left unavailable where source semantics
+            are not clear.
           </p>
         </div>
         <div className="refresh-panel" aria-label="Refresh status">
@@ -74,7 +76,7 @@ export function DashboardPage() {
         </div>
       </section>
 
-      <section className="notice-band" aria-label="Mock data notice">
+      <section className="notice-band" aria-label="Dataset notice">
         <strong>{dashboardDataset.metadata.datasetLabel}</strong>
         <p>{dashboardDataset.metadata.datasetNotice}</p>
       </section>
@@ -142,30 +144,33 @@ export function DashboardPage() {
 
       <section className="selection-summary" aria-live="polite">
         <div>
-          <span>Selected mock record</span>
+          <span>Selected record</span>
           <h2>
             {selectedRecord.tournament} · {selectedRecord.year} · {selectedRecord.event}
           </h2>
         </div>
-        <MockBadge label={`${filteredRecords.length} matching mock record(s)`} />
+        <DataModeBadge
+          mode={datasetMode}
+          label={`${filteredRecords.length} matching record(s) · ${selectedRecord.confidence} confidence`}
+        />
       </section>
 
-      <section className="kpi-grid" aria-label="KPI placeholders">
+      <section className="kpi-grid" aria-label="Dashboard KPIs">
         {kpis.map((metric) => (
           <KpiCard key={metric.label} metric={metric} />
         ))}
       </section>
 
-      <section className="dashboard-grid" aria-label="Chart placeholders and caveats">
+      <section className="dashboard-grid" aria-label="Charts and caveats">
         <article className="panel wide-panel">
           <div className="panel-heading">
             <div>
-              <span>Simple chart placeholder</span>
+              <span>Round payouts</span>
               <h2>Payout curve by round</h2>
             </div>
-            <MockBadge />
+            <DataModeBadge mode={datasetMode} label={selectedRecord.confidence} />
           </div>
-          <div className="bar-chart" role="img" aria-label="Mock payout curve by round">
+          <div className="bar-chart" role="img" aria-label="Payout curve by round">
             {roundPayoutPercentages.map((payout) => (
               <div className="bar-row" key={payout.round}>
                 <span>{payout.round}</span>
@@ -189,12 +194,12 @@ export function DashboardPage() {
         <article className="panel">
           <div className="panel-heading">
             <div>
-              <span>Simple comparison</span>
+              <span>Finalist payouts</span>
               <h2>Winner vs runner-up</h2>
             </div>
-            <MockBadge />
+            <DataModeBadge mode={datasetMode} label={selectedRecord.confidence} />
           </div>
-          <div className="comparison-bars" role="img" aria-label="Mock winner and runner-up payouts">
+          <div className="comparison-bars" role="img" aria-label="Winner and runner-up payouts">
             <div>
               <span>Winner</span>
               <strong>
@@ -219,7 +224,7 @@ export function DashboardPage() {
               <span>Financial context</span>
               <h2>Prize pool vs financial rows</h2>
             </div>
-            <MockBadge />
+            <DataModeBadge mode={datasetMode} label={selectedRecord.confidence} />
           </div>
           <ul className="metric-list">
             <li>
@@ -247,10 +252,10 @@ export function DashboardPage() {
         <article className="panel">
           <div className="panel-heading">
             <div>
-              <span>Coverage placeholder</span>
+              <span>Coverage</span>
               <h2>Source confidence summary</h2>
             </div>
-            <MockBadge />
+            <DataModeBadge mode={datasetMode} />
           </div>
           <ul className="metric-list">
             {coverageSummary.map((item) => (
@@ -268,7 +273,7 @@ export function DashboardPage() {
               <span>Sources and caveats</span>
               <h2>Current data status</h2>
             </div>
-            <MockBadge />
+            <DataModeBadge mode={datasetMode} label={selectedRecord.confidence} />
           </div>
           {selectedSources.length > 0 ? (
             <dl className="source-list">
@@ -277,8 +282,14 @@ export function DashboardPage() {
                   <dt>{source.title}</dt>
                   <dd>{source.publisher}</dd>
                   <dd>{source.sourceType}</dd>
-                  <dd>{source.url}</dd>
+                  <dd>Confidence: {source.confidence}</dd>
+                  <dd>
+                    <a href={source.url} target="_blank" rel="noreferrer">
+                      Open source
+                    </a>
+                  </dd>
                   <dd>Accessed {source.accessedAt}</dd>
+                  <dd>{source.notes}</dd>
                 </div>
               ))}
             </dl>

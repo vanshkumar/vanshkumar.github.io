@@ -39,4 +39,9 @@
 - Action: Future data tasks should extend those JSON directories and import from `src/data/dashboardDataset.ts`, avoiding direct JSON casts or parallel loose data files.
 - Confidence: high
 
+**2026-07-05 — Task 3 seed sourcing**
+- Observation: Grand Slam prize-money rows fit the current model best as event-level singles records; AO and Wimbledon publish official per-event totals, while Roland Garros and US Open may require derived event totals or secondary cross-checks when official pages are not crawler-readable.
+- Action: For future source expansion, keep `prizePool` event-scoped when paired with singles round payouts, mark summed table totals as `derived`, lower confidence when source access is limited, and leave revenue/profit unavailable without a clear tournament-level financial source.
+- Confidence: high
+
 ## What Has Failed

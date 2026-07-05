@@ -2,13 +2,13 @@
 
 ## Current Status
 
-Task 2 adds a validated data layer for the dashboard. The current dataset is still mock/sample data only; it exists to exercise schema validation, calculation behavior, unavailable states, and visible mock labels before real sources are added.
+Task 3 replaces the active mock/sample dataset with a small sourced seed dataset for 2025 Grand Slam men's singles prize money. Revenue and profit/surplus rows remain unavailable because this task did not find clear tournament-level financial denominators suitable for ratios.
 
 ## File Layout
 
-- `src/data/static/mockDatasetMetadata.json` stores dataset-level metadata such as schema version, label, notice, data mode, and last refresh timestamp.
-- `src/data/raw/source-metadata/mockSources.json` stores source metadata. Task 3 should replace or extend this with real source inventory entries.
-- `src/data/normalized/mockTournamentEconomics.json` stores normalized tournament-year-event records used by the app.
+- `src/data/static/seedDatasetMetadata.json` stores dataset-level metadata such as schema version, label, notice, data mode, and last refresh timestamp.
+- `src/data/raw/source-metadata/grandSlam2025Sources.json` stores the Task 3 source inventory for Grand Slam prize-money rows.
+- `src/data/normalized/grandSlam2025MensSingles.json` stores normalized 2025 men's singles records for the Australian Open, Roland Garros, Wimbledon, and US Open.
 - `src/data/schemas.ts` defines TypeScript types and runtime validation.
 - `src/data/dashboardDataset.ts` imports the static JSON files, validates them, and exports the typed dataset used by the dashboard.
 - `src/lib/metricEngine.ts` computes derived metrics from validated records.
@@ -37,11 +37,11 @@ Every available real value should be traceable to source metadata:
 - `confidence`: `high`, `medium`, `low`, or `mock`
 - `notes`
 
-Mock datasets may only contain mock sources with mock confidence.
+Mock datasets may only contain mock sources with mock confidence. The active Task 3 seed dataset uses real source metadata and has `dataMode: "real"`.
 
 ## Tournament Records
 
-Each normalized record represents one tournament, year, and event:
+Each normalized record represents one tournament, year, and event. In the Task 3 seed, each row represents one 2025 men's singles event, not the entire tournament:
 
 - `id`
 - `tournament`
@@ -59,6 +59,8 @@ Each normalized record represents one tournament, year, and event:
 - `caveats`
 
 `displayCurrency` is a UI convenience. Calculations use each value's own `currency` and refuse to compare incompatible currencies.
+
+For the Task 3 seed, `prizePool` is the event-level men's singles allocation when an official per-event total is available. When only round payouts are available, `prizePool.status` is `derived` and the value is the weighted sum of the 128-player singles draw payouts.
 
 ## Value Objects
 

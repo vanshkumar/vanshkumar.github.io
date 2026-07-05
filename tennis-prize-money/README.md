@@ -1,8 +1,8 @@
 # Tennis Prize Money Economics
 
-A static-first React + TypeScript + Vite dashboard for exploring tennis prize money alongside tournament revenue, profit, or surplus where reliable data eventually exists.
+A static-first React + TypeScript + Vite dashboard for exploring tennis prize money alongside tournament revenue, profit, or surplus where reliable data exists.
 
-The current Task 2 app uses **mock/sample data only**. Values are deliberately labeled in the JSON and UI and must not be treated as real tournament facts.
+The current Task 3 app uses a small sourced 2025 Grand Slam men's singles seed dataset. Revenue and profit/surplus values are intentionally unavailable until compatible tournament-level financial sources are added.
 
 ## Setup
 
@@ -31,8 +31,8 @@ npm run build
 - `src/data/schemas.ts` validates the JSON contract at import time.
 - `src/lib/metricEngine.ts` contains calculation utilities and unavailable-reason handling.
 - `src/lib/dashboardMetrics.ts` contains dashboard formatting, filtering, and KPI helpers.
-- `src/test/dashboardMetrics.test.ts` tests mock labeling, filters, and calculation edge cases.
-- `docs/ARCHITECTURE.md`, `docs/DATA_MODEL.md`, and `docs/DATA_CAVEATS.md` describe the static app and data boundaries.
+- `src/test/dashboardMetrics.test.ts` tests seed data provenance, filters, and calculation edge cases.
+- `docs/ARCHITECTURE.md`, `docs/DATA_MODEL.md`, `docs/DATA_SOURCES.md`, and `docs/DATA_CAVEATS.md` describe the static app and data boundaries.
 
 ## Data Rules
 

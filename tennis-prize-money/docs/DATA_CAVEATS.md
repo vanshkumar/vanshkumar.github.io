@@ -2,7 +2,14 @@
 
 ## Current Dataset
 
-The current Task 2 dataset is mock/sample data only. It is not real tennis tournament prize-money or financial data. Mock labels appear in dataset metadata, source metadata, normalized records, tests, and UI copy.
+The active Task 3 dataset is a small sourced seed for 2025 Grand Slam men's singles prize money. It includes one row each for the Australian Open, Roland Garros, Wimbledon, and the US Open.
+
+The seed does not include compatible tournament-level revenue, profit, or surplus. Those values remain unavailable rather than estimated. Prize-pool share of revenue and prize-pool share of profit/surplus therefore show unavailable for the active records.
+
+Roland Garros and US Open rows are medium confidence in this seed:
+
+- Roland Garros uses a secondary source because a clear official FFT/Roland Garros prize-money page was not found in this research pass.
+- The US Open official prize-money URL was identified, but it did not expose parseable text to the crawler; values are cross-checked through a secondary page citing the official source.
 
 ## Semantic Distinctions
 
@@ -16,9 +23,11 @@ Prize money, revenue, profit, surplus, expenses, and unavailable values are diff
 - Expenses are not profit or surplus denominators.
 - Unknown and unavailable values should remain visible as unavailable rather than guessed.
 
+For Task 3 records, the prize pool is the men's singles event allocation, not total tournament prize money across singles, doubles, mixed doubles, wheelchair, qualifying, per diems, or player support.
+
 ## Currency Caveats
 
-The app does not do currency conversion in Task 2. A ratio is computed only when numerator and denominator currencies match exactly. If later tasks need cross-currency comparisons, they should add explicit FX source metadata, conversion dates, and tests.
+The app does not do currency conversion yet. A ratio is computed only when numerator and denominator currencies match exactly. If later tasks need cross-currency comparisons, they should add explicit FX source metadata, conversion dates, and tests.
 
 ## Profit And Surplus Caveats
 
@@ -30,6 +39,8 @@ Round payout percentages compare each published round payout to the record's tot
 
 Doubles payouts may be per team while singles payouts are usually per player. The `allocation` field must remain visible where payout rows are shown.
 
+Task 3 test fixtures validate the singles prize-pool rows by weighting round payouts across the 128-player main draw. This is still not a replacement for richer draw-size modeling in the app UI.
+
 ## Source Confidence Caveats
 
 Confidence describes source trust and data clarity, not truth in isolation.
@@ -40,3 +51,5 @@ Confidence describes source trust and data clarity, not truth in isolation.
 - `mock`: fictional sample data only.
 
 Task 3 should prefer official tournament pages, annual reports, Form 990s, official financial statements, and official press releases. Secondary sources should be clearly labeled with lower confidence and notes.
+
+Task 3 applies this by using high-confidence official Australian Open and Wimbledon sources, and medium-confidence Roland Garros and US Open rows where source limitations remain.

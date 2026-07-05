@@ -85,3 +85,31 @@ Checks:
 Next:
 
 - Task 3 should add a small, honest Grand Slam seed dataset using real verified data only when source metadata and semantics are clear, and should update `docs/DATA_SOURCES.md` and caveats.
+
+## 2026-07-05 - Task 3: Initial Data Sourcing And Seed Dataset
+
+Status: Complete
+
+Branch: `feat/tennis-prize-economics-dashboard`
+
+Summary:
+
+- Confirmed the thread started on pushed Task 2 commit `e150e0043e80efa516a9076204a0a2fd7a84c482`.
+- Researched 2025 Grand Slam prize-money sources and used official Australian Open and Wimbledon sources where clear.
+- Added a sourced 2025 men's singles seed row for each Grand Slam: Australian Open, Roland Garros, Wimbledon, and US Open.
+- Kept Roland Garros and US Open rows at medium confidence where source access had limitations.
+- Kept revenue and profit/surplus unavailable for every seed record because no clear compatible tournament-level financial denominators were added.
+- Replaced mock-only UI language with sourced-data labels, selected-record confidence, source confidence, source notes, and clickable source links.
+- Added `docs/DATA_SOURCES.md` plus updated data model, caveats, architecture, and README documentation.
+- Replaced mock-focused tests with source/provenance fixtures and weighted prize-pool validation for the seed dataset.
+
+Checks:
+
+- `npm run lint` - passed.
+- `npm run typecheck` - passed.
+- `npm run test` - passed, 1 test file and 15 tests.
+- `npm run build` - passed.
+
+Next:
+
+- Task 4 should add real visualizations, filters, empty/unavailable states, responsive layout, and accessibility polish using the sourced seed dataset.

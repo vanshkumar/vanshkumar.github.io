@@ -2,9 +2,9 @@
 
 ## Current Scope
 
-Task 2 establishes a static React + TypeScript + Vite dashboard with a validated data layer and tested calculation engine under `tennis-prize-money/`. The app remains app-local inside the larger `vanshkumar.github.io` repository and is configured for GitHub Pages subpath hosting with `base: '/tennis-prize-money/'`.
+Task 3 builds on the static React + TypeScript + Vite dashboard with a validated data layer, sourced seed data, and tested calculation engine under `tennis-prize-money/`. The app remains app-local inside the larger `vanshkumar.github.io` repository and is configured for GitHub Pages subpath hosting with `base: '/tennis-prize-money/'`.
 
-The dashboard currently renders from visibly labeled mock/sample JSON. No real tournament financial or prize-money data has been added yet.
+The dashboard currently renders from a small sourced 2025 Grand Slam men's singles prize-money seed dataset. Compatible tournament-level revenue, profit, and surplus values remain unavailable until clearer financial sources are added.
 
 ## App Structure
 
@@ -33,7 +33,7 @@ Dashboard rendering then follows this path:
 1. Validated records provide filter options and selected-record state.
 2. `src/lib/metricEngine.ts` computes derived metrics and unavailable reasons.
 3. `src/lib/dashboardMetrics.ts` formats those results for KPI cards and chart labels.
-4. `DashboardPage.tsx` renders the mock-labeled dashboard UI.
+4. `DashboardPage.tsx` renders the dashboard UI with record confidence, source links, and caveats.
 
 The app does not fetch data at runtime in the browser yet.
 

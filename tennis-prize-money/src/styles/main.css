@@ -110,18 +110,31 @@ h3 {
   line-height: 1.6;
 }
 
-.mock-badge {
+.data-mode-badge {
   display: inline-flex;
   width: fit-content;
   align-items: center;
-  border: 1px solid #ffd28a;
+  border: 1px solid #b7c7e6;
   border-radius: 999px;
-  background: #fff6df;
-  color: #744100;
+  background: #eef4ff;
+  color: #174ea6;
   font-size: 0.78rem;
   font-weight: 800;
   line-height: 1;
   padding: 7px 10px;
+  text-transform: capitalize;
+}
+
+.data-mode-badge.is-mock {
+  border-color: #ffd28a;
+  background: #fff6df;
+  color: #744100;
+}
+
+.data-mode-badge.is-mixed {
+  border-color: #b7dac4;
+  background: #effaf3;
+  color: #17633a;
 }
 
 .refresh-panel {
@@ -365,6 +378,10 @@ h3 {
   margin: 6px 0 0;
   overflow-wrap: anywhere;
   font-weight: 700;
+}
+
+.source-list a {
+  color: var(--blue);
 }
 
 .caveat-list li {

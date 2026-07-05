@@ -6,6 +6,10 @@ Build a static-first dashboard that helps compare tennis tournament prize money 
 
 The first version should be honest before it is comprehensive. Prize money is often easier to source than tournament-level financials, so gaps must be explicit rather than hidden.
 
+## Current Release Status
+
+Version `0.1.0` is review-ready with a static dashboard, validated 2025 Grand Slam men's singles seed data, tested calculation/display/refresh logic, docs, changelog, and a secure non-configured browser refresh fallback. Remaining expansion work is tracked in `docs/FUTURE_WORK.md`.
+
 ## Repository Context
 
 This folder is part of the larger `vanshkumar.github.io` personal-site repository, not a separate Git repository. The parent repo is an Astro 5 static site deployed to GitHub Pages.

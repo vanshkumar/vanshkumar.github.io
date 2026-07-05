@@ -2,7 +2,7 @@
 
 ## Current Status
 
-Task 5 adds the first server-side refresh pipeline. The dashboard remains a static GitHub Pages app by default; refresh work happens through a Node CLI, GitHub Actions, or an optional separately hosted serverless dispatch endpoint.
+Version `0.1.0` includes the first server-side refresh pipeline. The dashboard remains a static GitHub Pages app by default; refresh work happens through a Node CLI, GitHub Actions, or an optional separately hosted serverless dispatch endpoint.
 
 The browser bundle never receives GitHub tokens or server-side refresh secrets. It only reads public `VITE_REFRESH_DISPATCH_URL` and `VITE_REFRESH_DOCS_URL` values.
 
@@ -27,6 +27,15 @@ Optional local environment variables:
 - `REFRESH_DRY_RUN`: set to `true` to report changes without writing files.
 
 The manifest must follow the existing source and tournament record schema. The pipeline validates merged output before writing any static JSON.
+
+Useful hardening checks:
+
+```bash
+npm run build:refresh
+npm run refresh:data
+```
+
+Set `REFRESH_DRY_RUN=true` to validate and report output status without writing static JSON.
 
 ## GitHub Action Refresh
 
@@ -78,3 +87,10 @@ When `VITE_REFRESH_DISPATCH_URL` is absent or not an absolute `http`/`https` URL
 - GitHub Pages cannot keep server-side secrets, so browser refresh requires a separate backend.
 - The optional dispatch endpoint returns status messages only; it must not echo GitHub tokens, source manifest URLs, or passphrases.
 - The refresh pipeline logs adapter ids, counts, output paths, and sanitized failures. It does not log configured source URLs with query strings.
+
+## v0.1 Readiness Notes
+
+- The generic JSON manifest adapter is intentionally conservative: incoming rows must already match the validated source and record schema.
+- Merge behavior is by stable `id`; incoming rows replace matching ids and unrelated rows are preserved.
+- Static JSON files are written only after the full merged dataset validates.
+- Browser refresh remains a dispatch-only path; it does not fetch, parse, normalize, or commit data from the browser.

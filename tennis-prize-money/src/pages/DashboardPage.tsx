@@ -10,6 +10,7 @@ import {
   filterRecords,
   formatMoney,
   formatMetricPercent,
+  formatSourceType,
   getFinalistComparisonRows,
   getFinancialComparisonRows,
   getFilterOptions,
@@ -379,8 +380,8 @@ export function DashboardPage() {
                 <div key={source.id}>
                   <dt>{source.title}</dt>
                   <dd>{source.publisher}</dd>
-                  <dd>{source.sourceType}</dd>
-                  <dd>Confidence: {source.confidence}</dd>
+                  <dd>Source type: {formatSourceType(source.sourceType)}</dd>
+                  <dd>Source confidence: {source.confidence}</dd>
                   <dd>
                     <a href={source.url} target="_blank" rel="noreferrer">
                       Open source

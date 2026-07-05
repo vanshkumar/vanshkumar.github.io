@@ -172,3 +172,33 @@ Checks:
 Next:
 
 - Task 6 should harden the v0.1 dashboard and docs, audit for mock leakage/secrets/terminology issues, add future-work and changelog docs, run final checks, commit, push, and prepare PR instructions or a PR.
+
+## 2026-07-05 - Task 6: Final Hardening, Documentation, And v0.1 Release Readiness
+
+Status: Complete
+
+Branch: `feat/tennis-prize-economics-dashboard`
+
+Summary:
+
+- Confirmed the thread started from pushed Task 5 commit `df1a96864d8a0b08326c5765c5d40d29eb38774a`.
+- Audited the app for mock data leakage, source labels, terminology, exposed secrets, filter behavior, empty states, and build readiness.
+- Added schema hardening so datasets labeled `real` reject mock sources, mock record confidence, and mock value statuses.
+- Added validation tests for mock-leakage rejection, paired mock source labels, required source ids, and active seed source metadata completeness.
+- Tightened dashboard terminology so unavailable financial rows do not imply reported values, and source rows show labeled source type/confidence.
+- Updated README, architecture, data model, data sources, caveats, refresh, deployment, project plan, and future-work docs for v0.1.
+- Added `CHANGELOG.md` entry for `v0.1.0` and set the app package version to `0.1.0`.
+- Documented high-value next steps in `docs/FUTURE_WORK.md`.
+
+Checks:
+
+- `npm ci` - passed; installed missing locked dependencies in this worktree.
+- `npm run lint` - passed after dependencies were installed.
+- `npm run typecheck` - passed.
+- `npm run test` - passed, 4 test files and 32 tests.
+- `npm run build` - passed.
+
+Next:
+
+- Open or review the pull request for `feat/tennis-prize-economics-dashboard`.
+- Do not create another implementation thread unless review or CI reveals a concrete bugfix.

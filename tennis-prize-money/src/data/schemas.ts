@@ -132,7 +132,7 @@ export function parseSources(value: unknown): Source[] {
   const sources = expectArray(value, 'sources', (item, index) => {
     const object = expectObject(item, `sources[${index}]`);
 
-    return {
+    const source = {
       id: expectString(object.id, `sources[${index}].id`),
       title: expectString(object.title, `sources[${index}].title`),
       publisher: expectString(object.publisher, `sources[${index}].publisher`),
@@ -142,6 +142,14 @@ export function parseSources(value: unknown): Source[] {
       confidence: expectEnum(object.confidence, confidenceLevels, `sources[${index}].confidence`),
       notes: expectString(object.notes, `sources[${index}].notes`),
     };
+
+    if ((source.sourceType === 'mock') !== (source.confidence === 'mock')) {
+      throw new DataValidationError(
+        `sources[${index}] mock source type and confidence must be paired`,
+      );
+    }
+
+    return source;
   });
 
   ensureUniqueIds(
@@ -202,7 +210,7 @@ export function parseDashboardDataset(value: {
     }
   }
 
-  assertMockDatasetIntegrity(metadata, sources, records);
+  assertDataModeIntegrity(metadata, sources, records);
 
   return { metadata, sources, records };
 }
@@ -308,11 +316,16 @@ function parseMoneyValue(value: unknown, path: string, allowNegative: boolean): 
   };
 }
 
-function assertMockDatasetIntegrity(
+function assertDataModeIntegrity(
   metadata: DatasetMetadata,
   sources: Source[],
   records: TournamentEconomicsRecord[],
 ) {
+  if (metadata.dataMode === 'real') {
+    assertRealDatasetIntegrity(sources, records);
+    return;
+  }
+
   if (metadata.dataMode !== 'mock') {
     return;
   }
@@ -344,6 +357,33 @@ function assertMockDatasetIntegrity(
 
     if (statuses.some((status) => status !== 'mock' && status !== 'unavailable')) {
       throw new DataValidationError(`Mock record ${record.id} contains a non-mock value status`);
+    }
+  }
+}
+
+function assertRealDatasetIntegrity(sources: Source[], records: TournamentEconomicsRecord[]) {
+  for (const source of sources) {
+    if (source.sourceType === 'mock' || source.confidence === 'mock') {
+      throw new DataValidationError('Real datasets cannot contain mock sources');
+    }
+  }
+
+  for (const record of records) {
+    if (record.confidence === 'mock') {
+      throw new DataValidationError(`Real record ${record.id} cannot have mock confidence`);
+    }
+
+    const statuses = [
+      record.prizePool.status,
+      record.revenue.status,
+      record.profitOrSurplus.status,
+      record.winnerPayout.status,
+      record.runnerUpPayout.status,
+      ...record.roundPayouts.map((payout) => payout.payout.status),
+    ];
+
+    if (statuses.includes('mock')) {
+      throw new DataValidationError(`Real record ${record.id} cannot contain mock value status`);
     }
   }
 }

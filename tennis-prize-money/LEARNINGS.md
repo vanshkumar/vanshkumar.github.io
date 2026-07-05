@@ -59,4 +59,9 @@
 - Action: Keep browser refresh configuration limited to public endpoint/doc URLs, and keep GitHub tokens, refresh passphrases, and signed source URLs in GitHub Actions or external serverless environment variables only.
 - Confidence: high
 
+**2026-07-05 - Task 6 release hardening**
+- Observation: The active v0.1 seed uses `dataMode: "real"`, so schema-level checks can prevent future mock leakage before the dashboard imports JSON.
+- Action: Keep real-data mock-leakage rules in `src/data/schemas.ts` and add focused validation tests in `src/test/dataValidation.test.ts` when tightening source or dataset contracts.
+- Confidence: high
+
 ## What Has Failed

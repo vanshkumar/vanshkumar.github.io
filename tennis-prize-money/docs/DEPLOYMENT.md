@@ -19,6 +19,19 @@ base: '/tennis-prize-money/'
 
 The parent workflow currently builds other deployed side apps. Add analogous install/build/copy steps for this app when promoting it into the Pages artifact.
 
+## Release Checks
+
+Before promoting a commit for review or deployment, run from `tennis-prize-money/`:
+
+```bash
+npm run lint
+npm run typecheck
+npm run test
+npm run build
+```
+
+`npm run refresh:data` is also useful before data releases because it validates the static JSON through the server-side refresh path.
+
 ## Static Runtime Boundary
 
 GitHub Pages serves static files only. Do not deploy server-side refresh code as part of the Vite bundle, and do not add app-local `/api/refresh` assumptions for Pages.
@@ -72,3 +85,10 @@ VITE_REFRESH_DISPATCH_URL=https://your-refresh-backend.example.com/dispatch
 ```
 
 The backend dispatches the GitHub Action; it does not refresh data directly in the browser.
+
+## v0.1 Deployment Status
+
+- The app is buildable as a static Vite bundle.
+- The parent refresh workflow exists at `.github/workflows/tennis-prize-money-refresh.yml`.
+- The parent Pages deployment workflow still needs explicit install/build/copy steps for `tennis-prize-money/` before the dashboard is published at `/tennis-prize-money/`.
+- No serverless backend is required for the static dashboard. The optional refresh dispatch backend should be deployed separately only if browser-triggered refresh is desired.

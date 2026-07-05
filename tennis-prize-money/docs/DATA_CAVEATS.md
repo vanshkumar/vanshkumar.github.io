@@ -2,7 +2,7 @@
 
 ## Current Dataset
 
-The active Task 3 dataset is a small sourced seed for 2025 Grand Slam men's singles prize money. It includes one row each for the Australian Open, Roland Garros, Wimbledon, and the US Open.
+The active v0.1 dataset is a small sourced seed for 2025 Grand Slam men's singles prize money. It includes one row each for the Australian Open, Roland Garros, Wimbledon, and the US Open.
 
 The seed does not include compatible tournament-level revenue, profit, or surplus. Those values remain unavailable rather than estimated. Prize-pool share of revenue and prize-pool share of profit/surplus therefore show unavailable for the active records.
 
@@ -23,7 +23,7 @@ Prize money, revenue, profit, surplus, expenses, and unavailable values are diff
 - Expenses are not profit or surplus denominators.
 - Unknown and unavailable values should remain visible as unavailable rather than guessed.
 
-For Task 3 records, the prize pool is the men's singles event allocation, not total tournament prize money across singles, doubles, mixed doubles, wheelchair, qualifying, per diems, or player support.
+For v0.1 records, the prize pool is the men's singles event allocation, not total tournament prize money across singles, doubles, mixed doubles, wheelchair, qualifying, per diems, or player support.
 
 ## Currency Caveats
 
@@ -39,7 +39,7 @@ Round payout percentages compare each published round payout to the record's tot
 
 Doubles payouts may be per team while singles payouts are usually per player. The `allocation` field must remain visible where payout rows are shown.
 
-Task 3 test fixtures validate the singles prize-pool rows by weighting round payouts across the 128-player main draw. This is still not a replacement for richer draw-size modeling in the app UI.
+The test fixtures validate the singles prize-pool rows by weighting round payouts across the 128-player main draw. This is still not a replacement for richer draw-size modeling in the app UI.
 
 ## Source Confidence Caveats
 
@@ -50,12 +50,19 @@ Confidence describes source trust and data clarity, not truth in isolation.
 - `low`: usable but limited source, likely with caveats.
 - `mock`: fictional sample data only.
 
-Task 3 should prefer official tournament pages, annual reports, Form 990s, official financial statements, and official press releases. Secondary sources should be clearly labeled with lower confidence and notes.
+Future source expansion should prefer official tournament pages, annual reports, Form 990s, official financial statements, and official press releases. Secondary sources should be clearly labeled with lower confidence and notes.
 
-Task 3 applies this by using high-confidence official Australian Open and Wimbledon sources, and medium-confidence Roland Garros and US Open rows where source limitations remain.
+The v0.1 seed applies this by using high-confidence official Australian Open and Wimbledon sources, and medium-confidence Roland Garros and US Open rows where source limitations remain.
 
 ## Refresh Caveats
 
-Task 5 refresh automation validates and rewrites the current static JSON, but it does not make manually sourced rows more authoritative. A refreshed timestamp means the pipeline ran successfully; source confidence still comes from the underlying source metadata and normalization notes.
+Refresh automation validates and rewrites the current static JSON, but it does not make manually sourced rows more authoritative. A refreshed timestamp means the pipeline ran successfully; source confidence still comes from the underlying source metadata and normalization notes.
 
 The generic JSON manifest adapter expects already-normalized rows. Future official-page, PDF, or financial-report adapters should keep the same caveat discipline: no fabricated values, no hidden currency conversion, and no compatible financial ratios unless denominator semantics are clear.
+
+## v0.1 Audit Notes
+
+- No active mock/sample rows are present. If mock rows are reintroduced, the dataset mode, labels, source type, confidence, and value statuses must make that visible.
+- Unavailable financial rows are displayed as unavailable rather than hidden or silently treated as zero.
+- Filters that match no records show empty states and reset actions.
+- Source limitations for Roland Garros and US Open remain visible instead of being smoothed into high-confidence language.

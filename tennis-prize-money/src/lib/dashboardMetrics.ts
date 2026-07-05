@@ -102,6 +102,10 @@ export function formatRatioResult(result: NumericMetricResult): string {
   return `${result.value.toFixed(2)}x`;
 }
 
+export function formatSourceType(sourceType: string): string {
+  return sourceType.replace(/_/g, ' ');
+}
+
 export function getFilterOptions(records: TournamentEconomicsRecord[]) {
   return {
     tournaments: uniqueSorted(records.map((record) => record.tournament)),
@@ -153,14 +157,14 @@ export function summarizeKpis(
       unavailable: totalPrizePool.status === 'unavailable',
     },
     {
-      label: 'Reported revenue',
+      label: 'Revenue',
       value: formatMoneyValue(record.revenue),
       eyebrow: valueEyebrow(record.revenue.status),
       note: record.revenue.notes ?? `Financial kind: ${formatFinancialKind(record.revenue.kind)}.`,
       unavailable: record.revenue.status === 'unavailable',
     },
     {
-      label: 'Reported profit/surplus',
+      label: 'Profit/surplus',
       value: formatMoneyValue(record.profitOrSurplus),
       eyebrow: valueEyebrow(record.profitOrSurplus.status),
       note:
@@ -179,7 +183,7 @@ export function summarizeKpis(
       unavailable: prizePoolToRevenue.status === 'unavailable',
     },
     {
-      label: 'Prize pool / profit',
+      label: 'Prize pool / profit or surplus',
       value: formatMetricPercent(prizePoolToProfitOrSurplus),
       eyebrow: derivedEyebrow(record, prizePoolToProfitOrSurplus),
       note: ratioNote(

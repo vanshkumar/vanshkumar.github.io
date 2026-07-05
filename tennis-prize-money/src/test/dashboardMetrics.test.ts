@@ -7,6 +7,9 @@ import {
   getFinancialComparisonRows,
   getCoverageSummary,
   getFilterOptions,
+  getPrimaryQuestionCaveats,
+  getPrimaryQuestionCoverage,
+  getPrimaryQuestionRows,
   getSourceCoverageSummary,
   getSourcesForRecord,
   getVisibleCaveats,
@@ -210,6 +213,93 @@ describe('validated seed dashboard dataset', () => {
         barPercent: null,
         unavailable: true,
       }),
+    ]);
+  });
+
+  it('builds primary question rows around revenue and profit share only', () => {
+    const rows = getPrimaryQuestionRows(normalRecord);
+    const coverage = getPrimaryQuestionCoverage(dashboardDataset.records);
+    const caveats = getPrimaryQuestionCaveats(normalRecord);
+
+    expect(rows).toEqual([
+      expect.objectContaining({
+        id: 'revenue-share',
+        label: 'Prize money as % of tournament revenue',
+        value: 'Unavailable',
+        numeratorValue: 'A$33,108,000',
+        denominatorValue: 'Unavailable',
+        barPercent: null,
+        unavailable: true,
+      }),
+      expect.objectContaining({
+        id: 'profit-surplus-share',
+        label: 'Prize money as % of tournament profit/surplus',
+        value: 'Unavailable',
+        numeratorValue: 'A$33,108,000',
+        denominatorValue: 'Unavailable',
+        barPercent: null,
+        unavailable: true,
+      }),
+    ]);
+    expect(coverage).toEqual([
+      expect.objectContaining({
+        id: 'revenue-share',
+        value: '0/4',
+        answerableCount: 0,
+        totalCount: 4,
+        unavailable: true,
+      }),
+      expect.objectContaining({
+        id: 'profit-surplus-share',
+        value: '0/4',
+        answerableCount: 0,
+        totalCount: 4,
+        unavailable: true,
+      }),
+    ]);
+    expect(caveats).toContain('Prize money / revenue is unavailable: Missing compatible data.');
+    expect(caveats).not.toContain(
+      'Year-over-year growth is unavailable: No matching prior-year record is available.',
+    );
+  });
+
+  it('marks primary question rows answerable when compatible denominators exist', () => {
+    const record = cloneRecord(normalRecord, {
+      revenue: {
+        amount: 132432000,
+        currency: 'AUD',
+        kind: 'tournament_revenue',
+        status: 'reported',
+        sourceIds: ['ao-2025-prize-money-release'],
+      },
+      profitOrSurplus: {
+        amount: 16554000,
+        currency: 'AUD',
+        kind: 'tournament_surplus',
+        status: 'reported',
+        sourceIds: ['ao-2025-prize-money-release'],
+      },
+    });
+
+    expect(getPrimaryQuestionRows(record)).toEqual([
+      expect.objectContaining({
+        id: 'revenue-share',
+        value: '25.0%',
+        denominatorValue: 'A$132,432,000',
+        barPercent: 25,
+        unavailable: false,
+      }),
+      expect.objectContaining({
+        id: 'profit-surplus-share',
+        value: '200.0%',
+        denominatorValue: 'A$16,554,000',
+        barPercent: 100,
+        unavailable: false,
+      }),
+    ]);
+    expect(getPrimaryQuestionCoverage([record])).toEqual([
+      expect.objectContaining({ id: 'revenue-share', value: '1/1', barPercent: 100 }),
+      expect.objectContaining({ id: 'profit-surplus-share', value: '1/1', barPercent: 100 }),
     ]);
   });
 

@@ -71,6 +71,8 @@ Each normalized record represents one tournament, year, and event. In the v0.1 s
 
 For the v0.1 seed, `prizePool` is the event-level men's singles allocation when an official per-event total is available. When only round payouts are available, `prizePool.status` is `derived` and the value is the weighted sum of the 128-player singles draw payouts.
 
+Future tournament-total rows should add or otherwise model numerator scope explicitly, such as full tournament prize money, event-level prize money, included draws/categories, per-diem/player-support inclusion, and derivation method. This is required before the primary revenue/profit-share UI can distinguish a full tournament answer from a partial event-level comparison.
+
 ## Value Objects
 
 Money-like values share these fields:

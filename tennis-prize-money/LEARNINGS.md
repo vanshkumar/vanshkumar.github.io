@@ -69,4 +69,14 @@
 - Action: When adding or renaming deployed side apps, update the parent workflow and app deployment docs together; app-local Vite `base` is necessary but not sufficient for publication.
 - Confidence: high
 
+**2026-07-05 - Primary question dashboard rehash**
+- Observation: The revenue/profit-share question is clearest when the dashboard first shows two answer cards for prize money / revenue and prize money / profit/surplus, with payout curves and finalist charts removed from the main flow.
+- Action: Keep the first viewport focused on the selected comparison and primary answer cards; keep refresh, provenance, and broader context below the primary answer.
+- Confidence: high
+
+**2026-07-05 - Primary financial data sourcing**
+- Observation: The active seed's men's singles event prize pools are not the right numerator for a full tournament revenue/profit-share answer; Wimbledon has the strongest next data path because official total-prize-money PDFs can be paired with AELTC Championships Ltd financial filings.
+- Action: Add explicit numerator scope before normalizing denominator ratios, prioritize full tournament prize-money totals, and start financial-ratio expansion with Wimbledon while keeping AO/US Open/Roland Garros denominators unavailable or caveated until tournament-specific sources are verified.
+- Confidence: high
+
 ## What Has Failed

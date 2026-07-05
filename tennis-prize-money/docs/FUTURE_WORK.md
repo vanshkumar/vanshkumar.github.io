@@ -2,6 +2,10 @@
 
 ## Data Coverage
 
+- Add full tournament prize-money totals before adding more denominator ratios; event-level prize money should remain labeled as partial when compared with whole-tournament financials.
+- Start the financial-ratio expansion with Wimbledon because official prize-money PDFs and AELTC Championships Ltd filings provide the strongest candidate numerator/denominator pair.
+- Add Australian Open and US Open total prize-money numerators next, but keep revenue/profit unavailable until tournament-specific financial denominators are found.
+- Treat Roland Garros revenue leads as secondary-source candidates until FFT/Roland Garros official or audited tournament revenue is found.
 - Add more tournaments beyond the four Grand Slam men's singles rows, starting with women's singles and prior-year Grand Slam rows so year-over-year growth can become available.
 - Add doubles, mixed doubles, wheelchair, qualifying, per diem, and player-support data only when allocation semantics are clear.
 - Add compatible tournament-level revenue, profit, or surplus denominators from official financial statements, annual reports, Form 990 filings, or clearly scoped tournament reports.

@@ -231,3 +231,34 @@ Next:
 - Commit and push the follow-up to PR #4.
 - Re-check PR mergeability and merge only if safe.
 - Verify the first GitHub Pages deployment after merge.
+
+## 2026-07-05 - Primary Question Visual Rehash And Data Gathering
+
+Status: Complete
+
+Branch: `feat/tennis-prize-economics-dashboard`
+
+Summary:
+
+- Refocused the dashboard around one primary question: prize money as a percentage of tournament revenue and profit/surplus.
+- Replaced the main payout-curve/finalist/year-over-year/coverage visual flow with two primary answer cards, ratio-input summaries, answerability coverage, calculation caveats, and selected-record sources.
+- Moved refresh status out of the hero so the answer board appears immediately after the selected comparison, including on mobile.
+- Added primary-question dashboard view models and tests for unavailable ratios, answerability coverage, and compatible denominator cases.
+- Updated README, architecture, data sources, caveats, data model, future work, changelog, and handoff notes to match the primary-question direction.
+- Ran five parallel xhigh research agents for Wimbledon, US Open, Australian Open, Roland Garros, and methodology/data-model fit.
+- Recorded the research sweep as leads, not normalized data. Wimbledon is the strongest next candidate; AO and US Open have strong official total-prize-money numerators but only organization-level financials; Roland Garros has secondary revenue leads but no tournament profit/surplus.
+
+Checks:
+
+- `npm run lint` - passed.
+- `npm run typecheck` - passed.
+- `npm run test -- --run` - passed, 4 test files and 34 tests.
+- `npm run build` - passed.
+- Local Vite visual QA at `http://127.0.0.1:5177/tennis-prize-money/` - desktop and mobile sanity checks passed; mobile had no horizontal overflow and showed the primary answer card in the opening viewport after moving refresh status.
+
+Next:
+
+- Normalize full tournament prize-money totals before adding more revenue/profit ratios.
+- Start with Wimbledon because official prize-money PDFs and AELTC Championships Ltd filings provide the clearest candidate numerator and denominator.
+- Add AO and US Open tournament-total prize-money numerators while keeping financial ratios unavailable until tournament-specific denominators are found.
+- Treat Roland Garros revenue as a secondary-source lead until FFT/Roland Garros official or audited revenue is found.

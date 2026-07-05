@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Refocused the dashboard visuals around the primary question: prize money as a percentage of tournament revenue and profit/surplus.
+- Moved payout-curve, finalist, year-over-year, and broad coverage visuals out of the main dashboard flow in favor of answer cards, ratio inputs, answerability coverage, and calculation caveats.
+
 ## v0.1.0 - 2026-07-05
 
 - Added the first static React + TypeScript + Vite dashboard for tennis prize-money economics.

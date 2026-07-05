@@ -1,6 +1,6 @@
 ---
 slug: what-will-an-hour-of-biokinetic-release-for-a-month-do-to-me
-title: "What will an hour of biokinetic release for a month do to me?"
+title: What will an hour of biokinetic release for a month do to me?
 date: 2026-07-05
 lastmod: 2026-07-05
 ---

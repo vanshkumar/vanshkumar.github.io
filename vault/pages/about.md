@@ -1,6 +1,6 @@
 ---
 title: About
-lastmod: 2026-07-02
+lastmod: 2026-07-06
 date: 2026-05-27
 ---
 ## This site
@@ -31,6 +31,10 @@ Some of my interests:
 - Staring at trees
 - Reading
 - Poetry
+- Economic history
+- Cognitive psychology
+- History of science
+- Child development/parenting
 
 ## Inspo
 - [Andy Matuschak](https://andymatuschak.org/)
@@ -42,3 +46,4 @@ Some of my interests:
 - [Coherence](https://www.imdb.com/title/tt2866360/)
 - [Gwern Branwen](https://gwern.net/)
 - [Long Now Foundation](https://longnow.org/)
+- [Max Bennett](https://www.abriefhistoryofintelligence.com/)

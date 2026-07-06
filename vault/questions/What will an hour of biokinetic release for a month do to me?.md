@@ -2,7 +2,7 @@
 slug: what-will-an-hour-of-biokinetic-release-for-a-month-do-to-me
 title: What will an hour of biokinetic release for a month do to me?
 date: 2026-07-05
-lastmod: 2026-07-05
+lastmod: 2026-07-06
 ---
 After reading [this post](https://arcove.substack.com/p/the-game-of-you), I really want to do a Pochinko-lineage clowning workshop. Unfortunately none are available right now. So instead I figured I'll at least do the Biokinetic Release lightening warm-up described in the post. Asked Claude to create a ~1 hour solo routine for me, and I will keep notes on my experience here.
 
@@ -77,3 +77,11 @@ The Reichian core; where the emotional voltage lives.
 
 # Journal
 
+7/6:
+- So fun!!! wtf. completely letting loose on my fantasies. I love this
+- No real tears tho I did feel the sensation of grief at times
+- Lots of laughing from the breath exercises. Interestingly only one out of those times did my brain generate a story (at least that I noticed)
+- Masks that showed up: dragon/demon possessing my body, person or set of persons running from the dragon/demon but being trapped in a room of circular infinite mirrors, lots of dancing, singing/rapping to diff songs, carefree bodybuilder influencer (?) type, climbing out of a deep cave, old man with a messed up knee that's still tryna play tennis (lmao so literal)
+- Maybe not too surprising but a lot of random contorting and stretching, kinda checks out as I did work out this morning lmao
+- Any emotions without a story attached? Mmm not really, no strong ones
+- I had a loooot of fun. Was even able to stay mostly in character when I had to go pee in the middle of the rivering

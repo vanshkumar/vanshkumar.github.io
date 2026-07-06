@@ -2,7 +2,7 @@
 slug: what-projects-make-sense-to-work-on-if-you-believe-agi-is-coming-in-5-years
 title: What projects make sense to work on if you believe AGI is coming in <5 years?
 date: 2026-06-21
-lastmod: 2026-06-22
+lastmod: 2026-07-06
 ---
 Triggered by listening to [this podcast](https://www.dwarkesh.com/p/gwern-branwen). This is a thought experiment, not necessarily something I believe. There is an implicit assumption in the premise that any AGI will both be available to me and steerable by me.
 
@@ -27,7 +27,7 @@ Curiosity, trolling, and a desire to fulfill my potential/purpose. This is corre
 For each these:
 - Astonishment/wonder – I spend much of my time reading & learning, and my projects already tend to revolve around this
 - Trolling – much to be done here, need to bring the [Riley Walz](https://walzr.com/) energy I had in college back into my life
-- Desire to fulfill my potential/purpose – this is the one I dislike the most about myself, and therefore probably where the most growth is; realistically I think this is something related to education/children, with the microschool being my current planned manifestation
+- Desire to fulfill my potential/purpose – this is the one I dislike the most about myself, and therefore probably where the most growth is; realistically I think this will be something related to education/children, with a microschool being my current planned manifestation
 
 ## Doing only the human part
 

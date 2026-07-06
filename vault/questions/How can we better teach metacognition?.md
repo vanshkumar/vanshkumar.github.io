@@ -2,7 +2,7 @@
 slug: how-can-we-better-teach-metacognition
 title: How can we better teach metacognition?
 date: 2026-06-28
-lastmod: 2026-07-03
+lastmod: 2026-07-06
 ---
 A potentially better framing:
 
@@ -89,8 +89,6 @@ From [here](http://www.papert.org/articles/Papertonpiaget.html):
 A key thing with all of this is that you really do not want to suppress the theory-building & knowledge-constructing instinct that kids have. Rather you want to allow them to construct their own knowledge, build their own theories, and provide ways to test them against the real world.
 
 
-
-
 Why are videos so good at helping learn tacit knowledge?
 - Tend to have running commentary, which is at least an attempt at making tacit knowledge explicit
 - It's more input data – you can see more clearly what experts are paying attention to as they do some task they're experts at
@@ -102,7 +100,7 @@ Could serious close observation of a coach/expert, eg in tennis, followed by hig
 
 
 From [here](https://commoncog.com/the-mental-model-fallacy/):
-> Read from the source material of master practitioners, copy their actions, climb their skill trees,  and reflect through trial and error. Don't read third-party accounts of technê.
+> Read from the source material of master practitioners, copy their actions, climb their skill trees, and reflect through trial and error. Don't read third-party accounts of technê.
 
 
 To read: https://commoncog.com/the-tacit-knowledge-series/

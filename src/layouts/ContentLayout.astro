@@ -7,13 +7,20 @@ const {
   date,
   kind,
   backlinks = [],
-  lastUpdated
+  lastUpdated,
+  showDateRange = false
 } = Astro.props;
-const formattedDate = date
-  ? new Intl.DateTimeFormat('en-US', {
-      dateStyle: 'medium',
-      timeZone: 'UTC'
-    }).format(date)
+const formatHeaderDate = (value) =>
+  new Intl.DateTimeFormat('en-US', {
+    dateStyle: 'medium',
+    timeZone: 'UTC'
+  }).format(value);
+const startDate = date ?? (showDateRange ? lastUpdated : null);
+const endDate = showDateRange ? lastUpdated ?? startDate : null;
+const formattedDate = startDate
+  ? showDateRange && endDate
+    ? `${formatHeaderDate(startDate)} – ${formatHeaderDate(endDate)}`
+    : formatHeaderDate(startDate)
   : null;
 const meta = [formattedDate, kind].filter(Boolean).join(' | ');
 const formattedLastUpdated = lastUpdated
@@ -51,7 +58,7 @@ const formattedLastUpdated = lastUpdated
       </section>
     ) : null}
 
-    {formattedLastUpdated ? (
+    {!showDateRange && formattedLastUpdated ? (
       <div class="content-updated">Last updated {formattedLastUpdated}</div>
     ) : null}
   </article>

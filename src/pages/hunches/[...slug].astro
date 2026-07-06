@@ -23,7 +23,9 @@ const lastUpdated = entry.data.lastmod ?? entry.data.date ?? null;
   title={title}
   description={entry.data.description}
   date={entry.data.date}
+  kind="Hunch"
   lastUpdated={lastUpdated}
+  showDateRange
   backlinks={backlinks}
 >
   <Content />

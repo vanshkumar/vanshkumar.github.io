@@ -107,6 +107,11 @@
 - Action: Before troubleshooting Obsidian Git settings, check `git status --short --branch` and `git worktree list`; if another Codex worktree holds `main`, remove that clean worktree, fast-forward local `main` to `origin/main`, then `git switch main` in the vault checkout.
 - Confidence: high
 
+**[2026-07-06] — Content header metadata**
+- Observation: `src/layouts/ContentLayout.astro` is shared by projects, questions, hunches, shelf items, logs, and static pages, but only projects/questions/hunches should show the start-to-last-modified date range in the header.
+- Action: Keep date-range header metadata opt-in from the relevant route files, and pass explicit `Question`/`Hunch` labels because those collections do not provide a `kind` field.
+- Confidence: high
+
 ## Patterns and Preferences
 
 **[2026-06-26] — Typography size tuning**

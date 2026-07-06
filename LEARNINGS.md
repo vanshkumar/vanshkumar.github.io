@@ -102,6 +102,11 @@
 - Action: Before staging side-app deletions from an older branch, compare with `origin/main` and move fixes onto main or merge main first so already-published removals are not recommitted from stale branch state.
 - Confidence: high
 
+**[2026-07-06] — Obsidian Git detached checkout diagnosis**
+- Observation: Obsidian Git commit-and-sync can fail with `ambiguous argument 'undefined'` and `No upstream-branch is set` when the vault checkout is on detached `HEAD`; in this repo that can happen while `main` is checked out in a separate Codex worktree.
+- Action: Before troubleshooting Obsidian Git settings, check `git status --short --branch` and `git worktree list`; if another Codex worktree holds `main`, remove that clean worktree, fast-forward local `main` to `origin/main`, then `git switch main` in the vault checkout.
+- Confidence: high
+
 ## Patterns and Preferences
 
 **[2026-06-26] — Typography size tuning**

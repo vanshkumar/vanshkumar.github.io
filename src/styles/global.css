@@ -204,7 +204,7 @@ h3 {
   display: block;
 }
 
-.terrain-hero-title span:first-child {
+.terrain-hero-title:not(.terrain-hero-title-accent-only) span:first-child {
   color: var(--accent);
 }
 

@@ -118,8 +118,8 @@
 - Confidence: high
 
 **[2026-07-07] — Terrain accent-only hero sizing**
-- Observation: The generic `.terrain-hero-title span:first-child` selector is more specific than `.terrain-hero-accent`, so a lone accent span can accidentally inherit the normal hero title color.
-- Action: For accent-only terrain heroes, use `.terrain-hero-title-accent-only .terrain-hero-accent` for the burgundy color and scoped single-line sizing rules; keep the wider content wrapper on `.terrain-hero-content-accent-only`.
+- Observation: The generic `.terrain-hero-title span:first-child` selector is more specific than `.terrain-hero-accent`, so a lone accent span inherits the normal green title color unless the generic selector opts out.
+- Action: For accent-only terrain heroes, exclude `.terrain-hero-title-accent-only` from the generic first-child color rule, then use scoped single-line sizing rules and the wider `.terrain-hero-content-accent-only` wrapper.
 - Confidence: high
 
 ## Patterns and Preferences

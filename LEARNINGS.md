@@ -112,6 +112,11 @@
 - Action: Keep date-range header metadata opt-in from the relevant route files, and pass explicit `Question`/`Hunch` labels because those collections do not provide a `kind` field.
 - Confidence: high
 
+**[2026-07-07] — Terrain accent-only hero**
+- Observation: `src/pages/terrain.astro` now supports a terrain hero with no normal `heroTitle`: a lone `heroAccent` renders in the existing title position, and empty page body content no longer emits the subtitle wrapper.
+- Action: For a single accent-styled terrain prompt, omit `heroTitle` in `vault/pages/terrain.md`, set `heroAccent`, and keep accent-only spacing scoped through `.terrain-hero-title-accent-only`.
+- Confidence: high
+
 ## Patterns and Preferences
 
 **[2026-06-26] — Typography size tuning**

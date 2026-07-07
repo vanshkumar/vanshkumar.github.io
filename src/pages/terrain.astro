@@ -10,6 +10,9 @@ if (!entry) {
 }
 const { Content } = await entry.render();
 const pageLastUpdated = entry.data.lastmod;
+const heroTitle = entry.data.heroTitle ?? null;
+const heroAccent = entry.data.heroAccent ?? null;
+const hasHeroBody = Boolean(entry.body?.trim());
 
 const projects = await getCollection('projects');
 const questions = await getCollection('questions');
@@ -83,15 +86,18 @@ const hunchCards = hunches.map((entry) => toCard(entry, 'hunches')).sort(sortByU
 <BaseLayout title="Terrain">
   <section class="terrain-hero">
     <div class="terrain-hero-content">
-      <h1 class="terrain-hero-title">
-        <span>{entry.data.heroTitle ?? entry.data.title ?? 'Terrain'}</span>
-        {entry.data.heroAccent ? (
-          <span class="terrain-hero-accent">{entry.data.heroAccent}</span>
+      <h1 class:list={['terrain-hero-title', !heroTitle && heroAccent && 'terrain-hero-title-accent-only']}>
+        {heroTitle ? <span>{heroTitle}</span> : null}
+        {heroAccent ? (
+          <span class="terrain-hero-accent">{heroAccent}</span>
         ) : null}
+        {!heroTitle && !heroAccent ? <span>{entry.data.title ?? 'Terrain'}</span> : null}
       </h1>
-      <div class="terrain-hero-subtitle">
-        <Content />
-      </div>
+      {hasHeroBody ? (
+        <div class="terrain-hero-subtitle">
+          <Content />
+        </div>
+      ) : null}
     </div>
   </section>
 

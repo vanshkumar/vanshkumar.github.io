@@ -1,6 +1,6 @@
 ---
 title: Now
-lastmod: 2026-06-30
+lastmod: 2026-07-06
 date: 2026-05-27
 ---
 This is a page for how I approach living life, with my ever-evolving self as audience
@@ -17,12 +17,10 @@ The above all start with "my" and are quite self-forward, besides perhaps my kid
 
 I have found it useful to concretely instantiate a Long Now view as the universe/Nature/God/Dao, as there is a natural merging between extreme long-term thinking & infinite entities. A question I like to play with is – what does the Dao want me to do?
 
-# Topics
+# My quest(ion)
 
-I pursue my interests. I have noticed that my interests tend to fall into one of two primary quest(ion)s:
+I pursue my interests. I have noticed that the thread running through all my interests is the question
 
-## How Do We Learn?
-What are the learning rules that give rise to the incredible plasticity of the brain, while still reliably producing important behavior?
+**How does a mind develop?**
 
-## How Might We Learn?
-How can we advance & improve education as a cultural technology?
+I have been approaching this from a variety of angles, including neuroscience, cognitive psychology, education, culture, child development, and philosophy.

@@ -22,8 +22,8 @@ I am a husband, father, and generally curious person.
 I spend my time pursuing whatever interests me. I was a tech lead & manager at Alphabet in a past life.
 
 Some of my interests:
-- Neuroscience ([how do we learn?](/now))
-- Education/culture ([how might we learn?](/now))
+- Neuroscience
+- Education/culture
 - Watching a lot of tennis
 - Playing all racket sports – tennis, paddle/pop tennis, ping pong, you name it
 - [Doing Nothing](https://www.youtube.com/watch?v=cZ6cdIaUZCA)

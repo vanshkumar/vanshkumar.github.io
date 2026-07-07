@@ -1,6 +1,5 @@
 ---
 title: Terrain
-heroTitle: How do we learn?
-heroAccent: How might we learn?
-lastmod: 2026-05-28
+heroAccent: How does a mind develop?
+lastmod: 2026-07-07
 ---

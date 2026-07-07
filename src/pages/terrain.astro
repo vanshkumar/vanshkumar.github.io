@@ -13,6 +13,7 @@ const pageLastUpdated = entry.data.lastmod;
 const heroTitle = entry.data.heroTitle ?? null;
 const heroAccent = entry.data.heroAccent ?? null;
 const hasHeroBody = Boolean(entry.body?.trim());
+const isAccentOnlyHero = !heroTitle && heroAccent;
 
 const projects = await getCollection('projects');
 const questions = await getCollection('questions');
@@ -85,8 +86,8 @@ const hunchCards = hunches.map((entry) => toCard(entry, 'hunches')).sort(sortByU
 
 <BaseLayout title="Terrain">
   <section class="terrain-hero">
-    <div class="terrain-hero-content">
-      <h1 class:list={['terrain-hero-title', !heroTitle && heroAccent && 'terrain-hero-title-accent-only']}>
+    <div class:list={['terrain-hero-content', isAccentOnlyHero && 'terrain-hero-content-accent-only']}>
+      <h1 class:list={['terrain-hero-title', isAccentOnlyHero && 'terrain-hero-title-accent-only']}>
         {heroTitle ? <span>{heroTitle}</span> : null}
         {heroAccent ? (
           <span class="terrain-hero-accent">{heroAccent}</span>

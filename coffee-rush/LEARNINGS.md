@@ -102,6 +102,16 @@
 - Action: Size board ingredient tokens and meeple markers with board-specific CSS, with smaller mobile overrides to avoid crowding.
 - Confidence: high
 
+**[2026-07-14] — Specialty board audit**
+- Observation: Caramel, water, tea, and chocolate board cells are correctly marked as specialties in data and mechanics, but the UI only shows a small `SPECIAL` text flag on desktop; the flag is hidden at 620px and below and specialty status is absent from board-cell accessible labels. The physical board identifies these cells with a red diagonal ribbon.
+- Action: When aligning the board with the physical game, use a responsive red diagonal ribbon on all four specialty cells at every viewport size and include specialty status in the cell accessible label; do not rely on `.cell-flags` alone.
+- Confidence: high
+
+**[2026-07-14] — Specialty ribbon implementation**
+- Observation: A clipped red diagonal band remains clear behind the board ingredient icons at both 174px desktop cells and 89px mobile cells when the ribbon, ingredient, corner label, meeple, and path marker have explicit stacking order; `pointer-events: none` keeps the decorated cell interactive.
+- Action: Keep specialty decoration inside each cell as a non-interactive layer below gameplay content, preserve `overflow: hidden` on board cells, and cover the four ribbons plus their accessible labels in the focused board render test.
+- Confidence: high
+
 **[2026-06-24] — Mobile cup memory**
 - Observation: On phone-width layouts, the active player panel sits below the board and action panel, so players must remember cup contents while planning movement and pouring.
 - Action: Surface compact active-cup state inside the turn action panel during move and pour phases instead of relying only on the player panel.

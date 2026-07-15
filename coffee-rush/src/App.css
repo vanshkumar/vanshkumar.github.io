@@ -641,12 +641,29 @@ select {
   display: grid;
   place-items: center;
   min-width: 0;
+  overflow: hidden;
   border: 2px solid #7f6e58;
   background: #fffaf2;
   cursor: pointer;
 }
 
+.specialty-cell-ribbon {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  width: 145%;
+  height: clamp(14px, 12%, 22px);
+  border-block: 2px solid rgba(111, 28, 24, 0.34);
+  background: #b83f34;
+  box-shadow: 0 2px 5px rgba(43, 33, 27, 0.18);
+  transform: translate(-50%, -50%) rotate(-45deg);
+  pointer-events: none;
+}
+
 .board-cell > .ingredient-icon {
+  position: relative;
+  z-index: 1;
   width: clamp(66px, 40%, 96px);
   border-width: 3px;
 }
@@ -678,6 +695,7 @@ select {
 
 .path-step-marker {
   position: absolute;
+  z-index: 4;
   left: 6px;
   top: 6px;
   width: 24px;
@@ -693,6 +711,7 @@ select {
 
 .cell-flags {
   position: absolute;
+  z-index: 2;
   left: 5px;
   bottom: 4px;
   display: grid;
@@ -704,6 +723,7 @@ select {
 
 .meeple-stack {
   position: absolute;
+  z-index: 3;
   top: 8px;
   right: 8px;
   display: flex;

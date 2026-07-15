@@ -51,6 +51,8 @@ export default function Board({
           const legalCellNote =
             state.phase === PHASES.SETUP_PLACEMENT ? 'open setup space' : 'next step';
           const cellNotes = [
+            cell.isSpecialty ? 'specialty ingredient' : '',
+            cell.isCorner ? 'corner' : '',
             isLegal ? legalCellNote : '',
             nextCell && !nextCell.canEnd ? 'pass through only' : '',
             isInPath ? `path step ${pathStep}` : '',
@@ -61,7 +63,9 @@ export default function Board({
           return (
             <div
               key={cell.id}
-              className={`board-cell ${isLegal ? 'legal-cell' : ''} ${
+              className={`board-cell ${cell.isSpecialty ? 'specialty-cell' : ''} ${
+                isLegal ? 'legal-cell' : ''
+              } ${
                 nextCell && !nextCell.canEnd ? 'pass-only-cell' : ''
               } ${isInPath ? 'path-cell' : ''} ${
                 isCurrentMoveCell ? 'current-cell' : ''
@@ -81,11 +85,13 @@ export default function Board({
                 }
               }}
             >
+              {cell.isSpecialty && (
+                <span className="specialty-cell-ribbon" aria-hidden="true" />
+              )}
               <IngredientIcon ingredient={cell.ingredient} />
               {isInPath && <span className="path-step-marker">{pathStep}</span>}
               <span className="cell-flags">
                 {cell.isCorner && <span>corner</span>}
-                {cell.isSpecialty && <span>special</span>}
               </span>
               <span className="meeple-stack">
                 {cell.meeples.map((meeple) => {

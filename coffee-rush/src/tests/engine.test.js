@@ -583,7 +583,7 @@ describe('Coffee Rush engine', () => {
     ]);
   });
 
-  it('chooses the most urgent duplicate ready order for a matching cup', () => {
+  it('lists duplicate ready orders from distinct pressure lanes in urgency order', () => {
     const lessUrgentOrder = {
       id: 'order_004',
       name: 'Espresso Doppio',
@@ -603,12 +603,11 @@ describe('Coffee Rush engine', () => {
 
     const matches = getCompletableOrders(player);
 
-    expect(matches).toHaveLength(1);
-    expect(matches[0]).toMatchObject({
-      cupIdx: 0,
-      tabIdx: 3,
-      order: urgentOrder,
-    });
+    expect(matches).toHaveLength(2);
+    expect(matches).toEqual([
+      { cupIdx: 0, tabIdx: 3, order: urgentOrder },
+      { cupIdx: 0, tabIdx: 0, order: lessUrgentOrder },
+    ]);
   });
 
   it('slides tab four cards into penalties and grants rush tokens', () => {

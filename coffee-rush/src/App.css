@@ -1677,10 +1677,19 @@ button.cup-memory-tile {
 
 .serve-order-button {
   min-height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   border-color: #27605a;
   background: #27605a;
   color: #fffaf2;
   font-weight: 850;
+  text-align: left;
+}
+
+.serve-order-button .order-pressure-marker {
+  flex: 0 0 auto;
 }
 
 .order-name {

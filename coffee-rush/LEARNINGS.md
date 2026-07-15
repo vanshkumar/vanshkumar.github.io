@@ -34,7 +34,12 @@
 
 **[2026-06-26] — Ready-order urgency**
 - Observation: `getCompletableOrders` keeps the first matching order per dedupe key, so tab traversal order determines which duplicate order a serve button targets.
-- Action: Traverse order tabs from most urgent to newest before deduping ready-order actions so identical matching orders default to the nearest-penalty card.
+- Action: Traverse order tabs from most urgent to newest so matching serve actions are listed nearest-penalty first.
+- Confidence: high
+
+**[2026-07-15] — Duplicate ready-order choices**
+- Observation: Identical ready orders are strategically distinct when they occupy different pressure lanes, while copies within one lane are interchangeable.
+- Action: Include the tab index in ready-order dedupe keys, preserve urgency-first ordering, and show pressure markers on serve controls so any distinct lane can be selected.
 - Confidence: high
 
 **[2026-06-24] — Mobile export downloads**

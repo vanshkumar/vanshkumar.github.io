@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Board from '../components/Board';
 import CupMemoryStrip from '../components/CupMemoryStrip';
 import IngredientIcon from '../components/IngredientIcon';
+import OrderPressureMarker from '../components/OrderPressureMarker';
 import PassDeviceModal from '../components/PassDeviceModal';
 import PlayerOrdersSheet from '../components/PlayerOrdersSheet';
 import PlayerPanel from '../components/PlayerPanel';
@@ -2904,7 +2905,8 @@ export default function GamePage() {
                         onClick={() => fulfillOrder(match.cupIdx, match.order.id)}
                         disabled={isAsyncActionBlocked}
                       >
-                        {`Serve C${match.cupIdx + 1}: ${match.order.name}`}
+                        <span>{`Serve C${match.cupIdx + 1}: ${match.order.name}`}</span>
+                        <OrderPressureMarker tabIndex={match.tabIdx} compact />
                       </button>
                     ))}
                   </div>

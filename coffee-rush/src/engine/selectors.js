@@ -179,7 +179,7 @@ export function getCompletableOrders(player) {
 
       tab.forEach((order) => {
         if (cupMatchesOrder(cup, order)) {
-          const key = completableOrderKey(cupIdx, order);
+          const key = completableOrderKey(cupIdx, tabIdx, order);
           if (seen.has(key)) {
             return;
           }
@@ -194,13 +194,15 @@ export function getCompletableOrders(player) {
   return matches;
 }
 
-function completableOrderKey(cupIdx, order) {
+function completableOrderKey(cupIdx, tabIdx, order) {
   const recipeKey = Object.entries(order.recipe)
     .sort(([ingredientA], [ingredientB]) => ingredientA.localeCompare(ingredientB))
     .map(([ingredient, count]) => `${ingredient}:${count}`)
     .join('|');
 
-  return [cupIdx, order.name, order.isSpecialty ? 'specialty' : 'regular', recipeKey].join('::');
+  return [cupIdx, tabIdx, order.name, order.isSpecialty ? 'specialty' : 'regular', recipeKey].join(
+    '::',
+  );
 }
 
 export function getScores(state) {

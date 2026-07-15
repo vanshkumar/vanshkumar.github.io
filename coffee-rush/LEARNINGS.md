@@ -107,6 +107,11 @@
 - Action: Render specialty markers as corner-clipped pseudo-elements on a non-interactive overlay, keep ingredient and gameplay markers above them, and preserve the specialty accessible label at every viewport size.
 - Confidence: high
 
+**[2026-07-14] — Specialty corner ribbon screenshots**
+- Observation: In the saved move-phase game, scrolling to the page top frames the complete ingredient board at both 1440×1000 and 390×844; the mobile frame also includes the compact cup/order context and move confirmation around the board.
+- Action: Use the same saved move state at page-top scroll when comparing desktop and mobile specialty-corner treatments so the board position and gameplay state remain consistent.
+- Confidence: high
+
 **[2026-06-24] — Mobile cup memory**
 - Observation: On phone-width layouts, the active player panel sits below the board and action panel, so players must remember cup contents while planning movement and pouring.
 - Action: Surface compact active-cup state inside the turn action panel during move and pour phases instead of relying only on the player panel.

@@ -22,10 +22,11 @@ function renderBoard() {
 }
 
 describe('Board specialty cells', () => {
-  it('renders the four physical-board specialty ribbons', () => {
+  it('renders the four physical-board ribbons behind opaque ingredient insets', () => {
     const html = renderBoard();
 
     expect(html.match(/class="specialty-cell-ribbon"/g)).toHaveLength(4);
+    expect(html.match(/class="specialty-cell-inset"/g)).toHaveLength(4);
     expect(html.match(/class="board-cell specialty-cell /g)).toHaveLength(4);
   });
 

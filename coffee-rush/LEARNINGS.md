@@ -103,13 +103,23 @@
 - Confidence: high
 
 **[2026-07-14] — Specialty board audit**
-- Observation: Caramel, water, tea, and chocolate board cells are correctly marked as specialties in data and mechanics, but the UI only shows a small `SPECIAL` text flag on desktop; the flag is hidden at 620px and below and specialty status is absent from board-cell accessible labels. The physical board identifies these cells with a red diagonal ribbon.
-- Action: When aligning the board with the physical game, use a responsive red diagonal ribbon on all four specialty cells at every viewport size and include specialty status in the cell accessible label; do not rely on `.cell-flags` alone.
+- Observation: Caramel, water, tea, and chocolate board cells are correctly marked as specialties in data and mechanics, but the original UI only showed a small `SPECIAL` text flag on desktop; the physical board identifies them with a gold/yellow diagonal ribbon tucked behind an opaque white ingredient inset, leaving only the two opposing ribbon ends visible.
+- Action: When aligning the board with the physical game, show responsive opposing ribbon ends on all four specialty cells at every viewport size and include specialty status in the cell accessible label; do not rely on `.cell-flags` alone or run the ribbon through the ingredient artwork.
 - Confidence: high
 
 **[2026-07-14] — Specialty ribbon implementation**
-- Observation: A clipped red diagonal band remains clear behind the board ingredient icons at both 174px desktop cells and 89px mobile cells when the ribbon, ingredient, corner label, meeple, and path marker have explicit stacking order; `pointer-events: none` keeps the decorated cell interactive.
-- Action: Keep specialty decoration inside each cell as a non-interactive layer below gameplay content, preserve `overflow: hidden` on board cells, and cover the four ribbons plus their accessible labels in the focused board render test.
+- Observation: At both 174px desktop cells and 89px mobile cells, a gold diagonal band at `z-index: 0` masked by a clamped opaque inset at `z-index: 1` reads as two physical ribbon ends while the ingredient icon stays clear at `z-index: 2`; `pointer-events: none` keeps both decoration layers interactive-safe.
+- Action: Preserve the band/inset/ingredient stacking order, `overflow: hidden` on board cells, and clamped ribbon and inset sizing; cover all four ribbons, insets, and specialty accessible labels in the focused board render test.
+- Confidence: high
+
+**[2026-07-14] — Board screenshot capture**
+- Observation: A 1440×1000 viewport captures the complete 720px ingredient board, both player stations, and the start of the active action panel in one readable image; all four diagonal specialty ribbons remain clearly visible without a crop.
+- Action: Use a resumed saved game at 1440×1000 for future user-facing desktop screenshots of board treatments so board state and surrounding gameplay context appear together.
+- Confidence: high
+
+**[2026-07-14] — Mobile board screenshot capture**
+- Observation: In the mobile pour layout, the board follows the action and player panels, making a full-page 390px screenshot too tall for a useful board preview; at maximum page scroll, a 390×844 viewport places the complete 370px board between the local player panel and ingredient legend.
+- Action: For focused mobile board screenshots during pour, scroll to the bottom and capture the viewport instead of using a full-page screenshot.
 - Confidence: high
 
 **[2026-06-24] — Mobile cup memory**
@@ -430,6 +440,11 @@
 - Confidence: high
 
 ## What Has Failed
+
+**[2026-07-14] — Physical specialty ribbon verification**
+- Observation: Close-up physical-board photography shows the specialty ribbon only at opposing outer edges of a cell; the opaque white ingredient panel masks the ribbon through the center, so a solid diagonal band behind the ingredient icon overstates the original treatment. The photographed Japanese edition uses a gold/yellow ribbon.
+- Action: When matching the physical specialty cells, render paired diagonal ribbon ends behind an opaque inset panel rather than a stripe through the ingredient artwork, and verify the target edition before naming the ribbon color.
+- Confidence: high
 
 **[2026-06-27] — Async invite landing copy**
 - Observation: A valid player-specific async invite pre-fills the join form as the invited seat, but `SetupPage` still renders the host new-game setup controls above it, including `Starting player` with `You` for player 1.

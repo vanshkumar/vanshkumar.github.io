@@ -86,7 +86,10 @@ export default function Board({
               }}
             >
               {cell.isSpecialty && (
-                <span className="specialty-cell-ribbon" aria-hidden="true" />
+                <>
+                  <span className="specialty-cell-ribbon" aria-hidden="true" />
+                  <span className="specialty-cell-inset" aria-hidden="true" />
+                </>
               )}
               <IngredientIcon ingredient={cell.ingredient} />
               {isInPath && <span className="path-step-marker">{pathStep}</span>}

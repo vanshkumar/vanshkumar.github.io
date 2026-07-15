@@ -359,6 +359,11 @@
 - Action: Keep setup cup selection in the setup action panel and leave player-panel cups disabled during setup so players pick a board space first.
 - Confidence: high
 
+**[2026-07-14] — First setup ingredient shortcut**
+- Observation: A player's three cups are empty and interchangeable before their first setup meeple, so assigning that ingredient to Cup 1 preserves every gameplay choice; only a 2-player game's second meeple creates a meaningful combine-or-separate cup choice.
+- Action: Auto-dispatch each player's first setup placement with `cupIdx: 0`, keep the explicit cup picker for second meeples, and retain `cupIdx` in the logged action for replay and network compatibility.
+- Confidence: high
+
 **[2026-06-24] — Upgrade control UX**
 - Observation: `UpgradeTray` currently uses compact coded buttons in every player panel, while `GamePage` already has a dedicated start-of-turn upgrade phase action surface.
 - Action: Keep player-panel upgrades as compact status indicators, and put upgrade purchasing descriptions/actions in the active player's upgrade-phase menu or modal.

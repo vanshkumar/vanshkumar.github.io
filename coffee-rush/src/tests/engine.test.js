@@ -7,6 +7,7 @@ import {
   getMeepleForFirstMoveStep,
   getMovePathPreview,
   getScores,
+  getSetupPlacement,
 } from '../engine/selectors';
 
 function setup(playerCount = 3) {
@@ -161,6 +162,41 @@ describe('Coffee Rush engine', () => {
     state = finishSetup(state);
     expect(state.phase).toBe('move');
     expect(state.activePlayerId).toBe('p1');
+  });
+
+  it('marks only each player\'s first setup ingredient for automatic Cup 1 placement', () => {
+    for (const playerCount of [3, 4]) {
+      let state = setup(playerCount);
+
+      while (state.phase === 'setupPlacement') {
+        expect(getSetupPlacement(state).autoPlaceInFirstCup).toBe(true);
+        const placement = state.setupPlacementQueue[0];
+        state = applyAction(state, {
+          type: 'PLACE_STARTING_MEEPLE',
+          playerId: placement.playerId,
+          meepleId: placement.meepleId,
+          cellId: SETUP_CELL_BY_MEEPLE[placement.meepleId],
+          cupIdx: 0,
+        }).state;
+      }
+    }
+
+    let twoPlayerState = setup(2);
+    const automaticPlacements = [];
+
+    while (twoPlayerState.phase === 'setupPlacement') {
+      automaticPlacements.push(getSetupPlacement(twoPlayerState).autoPlaceInFirstCup);
+      const placement = twoPlayerState.setupPlacementQueue[0];
+      twoPlayerState = applyAction(twoPlayerState, {
+        type: 'PLACE_STARTING_MEEPLE',
+        playerId: placement.playerId,
+        meepleId: placement.meepleId,
+        cellId: SETUP_CELL_BY_MEEPLE[placement.meepleId],
+        cupIdx: 0,
+      }).state;
+    }
+
+    expect(automaticPlacements).toEqual([true, true, false, false]);
   });
 
   it('starts turns in move until the active player can activate an upgrade', () => {

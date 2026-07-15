@@ -50,6 +50,10 @@ For 2 players:
    owner's other meeple.
 5. Starting orders are the same as 3-4 player setup.
 
+Web setup shortcut: the ingredient gained from each player's first meeple
+placement goes automatically into Cup 1. In a 2-player game, the player still
+chooses a cup for the ingredient gained from their second meeple placement.
+
 ## Turn Sequence
 
 Each turn proceeds in this order:

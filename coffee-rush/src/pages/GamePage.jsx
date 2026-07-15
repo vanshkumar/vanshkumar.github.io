@@ -2057,6 +2057,11 @@ export default function GamePage() {
         return;
       }
 
+      if (setupPlacement.autoPlaceInFirstCup) {
+        placeStartingIngredient(0, cell.id);
+        return;
+      }
+
       setSelectedSetupCellId(cell.id);
       setSelectedCup(null);
       setError('');
@@ -2101,7 +2106,7 @@ export default function GamePage() {
     setPath((current) => [...current, cellId]);
   }
 
-  function placeStartingIngredient(cupIdx) {
+  function placeStartingIngredient(cupIdx, cellId = selectedSetupCellId) {
     if (!setupPlacement) return;
 
     if (!canControlSetupPlacement) {
@@ -2109,7 +2114,7 @@ export default function GamePage() {
       return;
     }
 
-    if (selectedSetupCellId === null) {
+    if (cellId === null) {
       setError('Choose a board space before choosing a cup.');
       return;
     }
@@ -2118,7 +2123,7 @@ export default function GamePage() {
       type: 'PLACE_STARTING_MEEPLE',
       playerId: setupPlacement.playerId,
       meepleId: setupPlacement.meepleId,
-      cellId: selectedSetupCellId,
+      cellId,
       cupIdx,
     });
   }
@@ -2730,7 +2735,9 @@ export default function GamePage() {
                   <p>
                     {!canControlSetupPlacement
                       ? `${setupPlacement.player.name} needs to place this starting barista before setup can continue.`
-                      : selectedSetupCell
+                      : setupPlacement.autoPlaceInFirstCup
+                        ? 'Pick any open board space. Its ingredient will go to Cup 1 automatically.'
+                        : selectedSetupCell
                       ? `${ingredientLabel(
                           selectedSetupCell.ingredient,
                         )} selected from Cell ${selectedSetupCell.id}. Choose a cup for it.`
@@ -2740,24 +2747,26 @@ export default function GamePage() {
                 {!canControlSetupPlacement && (
                   <div className="inline-warning">{remoteTurnLockMessage}</div>
                 )}
-                <div className="cup-picker detailed-picker" aria-label="Starting ingredient cup">
-                  {setupPlacement.player.cups.map((cup, index) => (
-                    <button
-                      key={index}
-                      className={selectedCup === index ? 'selected-tool' : ''}
-                      type="button"
-                      onClick={() => placeStartingIngredient(index)}
-                      disabled={
-                        !selectedSetupCell ||
-                        isAsyncActionBlocked ||
-                        !canControlSetupPlacement
-                      }
-                    >
-                      <span>Cup {index + 1}</span>
-                      <small>{ingredientListLabel(cup)}</small>
-                    </button>
-                  ))}
-                </div>
+                {!setupPlacement.autoPlaceInFirstCup && (
+                  <div className="cup-picker detailed-picker" aria-label="Starting ingredient cup">
+                    {setupPlacement.player.cups.map((cup, index) => (
+                      <button
+                        key={index}
+                        className={selectedCup === index ? 'selected-tool' : ''}
+                        type="button"
+                        onClick={() => placeStartingIngredient(index)}
+                        disabled={
+                          !selectedSetupCell ||
+                          isAsyncActionBlocked ||
+                          !canControlSetupPlacement
+                        }
+                      >
+                        <span>Cup {index + 1}</span>
+                        <small>{ingredientListLabel(cup)}</small>
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
 

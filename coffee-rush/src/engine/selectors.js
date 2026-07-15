@@ -155,9 +155,12 @@ export function getSetupPlacement(state) {
     return null;
   }
 
+  const player = getPlayer(state, placement.playerId);
+
   return {
     ...placement,
-    player: getPlayer(state, placement.playerId),
+    player,
+    autoPlaceInFirstCup: player.meeples.every((meeple) => meeple.cellId === null),
   };
 }
 

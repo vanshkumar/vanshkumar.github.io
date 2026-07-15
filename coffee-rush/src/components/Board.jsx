@@ -52,7 +52,6 @@ export default function Board({
             state.phase === PHASES.SETUP_PLACEMENT ? 'open setup space' : 'next step';
           const cellNotes = [
             cell.isSpecialty ? 'specialty ingredient' : '',
-            cell.isCorner ? 'corner' : '',
             isLegal ? legalCellNote : '',
             nextCell && !nextCell.canEnd ? 'pass through only' : '',
             isInPath ? `path step ${pathStep}` : '',
@@ -65,9 +64,9 @@ export default function Board({
               key={cell.id}
               className={`board-cell ${cell.isSpecialty ? 'specialty-cell' : ''} ${
                 isLegal ? 'legal-cell' : ''
+              } ${nextCell && !nextCell.canEnd ? 'pass-only-cell' : ''} ${
+                isInPath ? 'path-cell' : ''
               } ${
-                nextCell && !nextCell.canEnd ? 'pass-only-cell' : ''
-              } ${isInPath ? 'path-cell' : ''} ${
                 isCurrentMoveCell ? 'current-cell' : ''
               } ${
                 isSelectedSetupCell ? 'setup-selected-cell' : ''
@@ -86,10 +85,7 @@ export default function Board({
               }}
             >
               {cell.isSpecialty && (
-                <>
-                  <span className="specialty-cell-ribbon" aria-hidden="true" />
-                  <span className="specialty-cell-inset" aria-hidden="true" />
-                </>
+                <span className="specialty-corner-ribbons" aria-hidden="true" />
               )}
               <IngredientIcon ingredient={cell.ingredient} />
               {isInPath && <span className="path-step-marker">{pathStep}</span>}

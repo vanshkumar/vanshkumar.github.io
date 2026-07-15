@@ -22,12 +22,12 @@ function renderBoard() {
 }
 
 describe('Board specialty cells', () => {
-  it('renders the four physical-board ribbons behind opaque ingredient insets', () => {
+  it('renders two-corner ribbon overlays on all four specialty cells', () => {
     const html = renderBoard();
 
-    expect(html.match(/class="specialty-cell-ribbon"/g)).toHaveLength(4);
-    expect(html.match(/class="specialty-cell-inset"/g)).toHaveLength(4);
+    expect(html.match(/class="specialty-corner-ribbons"/g)).toHaveLength(4);
     expect(html.match(/class="board-cell specialty-cell /g)).toHaveLength(4);
+    expect(html).not.toContain('specialty-cell-inset');
   });
 
   it('announces specialty ingredient cells accessibly', () => {

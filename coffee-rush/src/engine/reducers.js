@@ -5,6 +5,7 @@ import { getCell, ingredientGainForCell, isOccupied, validateMovePath } from './
 import { applyFlowOfTime } from './penalties';
 import { cupMatchesOrder, drawOrders, findOrderOnTabs } from './orders';
 import { canPlayerActivateUpgrade } from './upgrades';
+import { migrateGameState } from './stateMigration';
 import {
   getActivePlayer,
   getNextPlayerId,
@@ -17,13 +18,15 @@ export function applyAction(state, action) {
     return { state, error: 'The game is already over.' };
   }
 
+  const currentState = migrateGameState(state);
+
   const handler = ACTIONS[action.type];
 
   if (!handler) {
     return { state, error: `Unknown action: ${action.type}` };
   }
 
-  const result = handler(state, action);
+  const result = handler(currentState, action);
 
   if (result.error) {
     return { state, error: result.error };
@@ -32,7 +35,7 @@ export function applyAction(state, action) {
   return {
     state: {
       ...result.state,
-      log: [...state.log, action],
+      log: [...currentState.log, action],
     },
   };
 }

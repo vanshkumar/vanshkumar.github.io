@@ -54,7 +54,7 @@ Created from the local how-to-play video pass and focused on 2-4 player hot-seat
 
 ## Endgame And Scoring
 
-- [x] The game end is triggered by deck exhaustion.
+- [x] House rule: deck exhaustion does not trigger the end; empty draws are no-ops.
 - [x] The game end is triggered when a player reaches 5 penalties.
 - [x] The final turn is assigned so players receive a fair closing turn.
 - [x] Scoring is completed orders + 2 per active upgrade - penalties.

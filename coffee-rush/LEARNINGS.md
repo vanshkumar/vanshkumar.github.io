@@ -12,6 +12,21 @@
 - Action: When auditing disputed endgames, inspect the last log actions plus `undoStack[-1]` before replaying the full reducer; this quickly identifies the trigger player, final-turn player, and pre-terminal penalty/tab counts.
 - Confidence: high
 
+**[2026-07-16] — Partial catch-up deck exhaustion**
+- Observation: Before the penalty-only house rule, a 3-player completed-order catch-up could exhaust the deck while serving the first recipient, leave the second recipient's draw unsatisfied, and trigger the endgame with every player below 5 penalties.
+- Action: When auditing pre-1.2 exports, record the active player's completed-order count, deck size before `END_TURN`, and both catch-up recipients before evaluating the historical closing-turn sequence.
+- Confidence: high
+
+**[2026-07-16] — Penalty-only endgame fairness**
+- Observation: If play continues after deck exhaustion, the existing catch-up order freezes a small seat-order asymmetry because the next player receives all owed cards before the second recipient; extra orders are simultaneously scoring choices and future penalty exposure, so the net advantage is ambiguous.
+- Action: Keep empty draws as no-ops and preserve catch-up ordering; only introduce round-robin allocation of the final cards if playtesting shows the last partial draw materially affects outcomes.
+- Confidence: medium
+
+**[2026-07-16] — Penalty-only endgame migration**
+- Observation: An active saved state with an empty deck, `endTriggered: true`, and every player below 5 penalties can only carry the retired deck-exhaustion trigger; completed games and states with any player at 5 penalties must retain their closing state.
+- Action: Normalize retired deck-only markers on local load and before reducer actions, including undo/async-derived active states, while leaving `gameOver` and penalty-triggered states unchanged.
+- Confidence: high
+
 **[2026-07-01] — 3-player export audit**
 - Observation: In 3-player logs, `applyTooManyOrders` draws one new order per completed order for each of the next two players, while the active player does not receive a routine draw during `applyFlowOfTime`.
 - Action: When auditing 3-player exports, start from the 73-card post-setup deck and subtract 2 cards for each completed order at end turn; verify recipient `tabs[0]` additions before aging only the active player's tabs.

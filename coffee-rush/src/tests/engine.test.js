@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
+import { ORDER_DECK } from '../data/orderDeck';
 import { createInitialState } from '../engine/initialState';
 import { applyAction } from '../engine/reducers';
+import { migrateGameState } from '../engine/stateMigration';
 import {
   getCompletableOrders,
   getLegalDestinations,
@@ -522,6 +524,87 @@ describe('Coffee Rush engine', () => {
 
     expect(state.players[1].tabs[0]).toHaveLength(beforeP2 + 1);
     expect(state.players[2].tabs[0]).toHaveLength(beforeP3 + 1);
+  });
+
+  it('keeps playing when a partial catch-up draw exhausts the deck', () => {
+    let state = finishSetup(setup(3));
+    const finalOrders = state.deck.slice(0, 2);
+    const beforeP2 = state.players[1].tabs[0].length;
+    const beforeP3 = state.players[2].tabs[0].length;
+
+    state = {
+      ...state,
+      phase: 'pour',
+      deck: finalOrders,
+      players: state.players.map((player) =>
+        player.id === 'p1'
+          ? {
+              ...player,
+              hand: [],
+              turnCompletedOrderIds: ['completed-a', 'completed-b'],
+            }
+          : player,
+      ),
+    };
+
+    state = applyAction(state, { type: 'END_TURN', playerId: 'p1' }).state;
+
+    expect(state.deck).toEqual([]);
+    expect(state.players[1].tabs[0]).toHaveLength(beforeP2 + 2);
+    expect(state.players[1].tabs[0]).toEqual(expect.arrayContaining(finalOrders));
+    expect(state.players[2].tabs[0]).toHaveLength(beforeP3);
+    expect(state.endTriggered).toBe(false);
+    expect(state.finalTurnPlayerId).toBeNull();
+    expect(state.activePlayerId).toBe('p2');
+    expect(state.phase).toBe('move');
+  });
+
+  it('treats empty-deck draws as no-ops in two-player games', () => {
+    let state = finishSetup(setup(2));
+    state = {
+      ...state,
+      phase: 'pour',
+      deck: [],
+      endTriggered: true,
+      finalTurnPlayerId: 'p2',
+      players: state.players.map((player) =>
+        player.id === 'p1' ? { ...player, hand: [] } : player,
+      ),
+    };
+
+    state = applyAction(state, { type: 'END_TURN', playerId: 'p1' }).state;
+
+    expect(state.deck).toEqual([]);
+    expect(state.endTriggered).toBe(false);
+    expect(state.finalTurnPlayerId).toBeNull();
+    expect(state.activePlayerId).toBe('p2');
+    expect(state.phase).toBe('move');
+  });
+
+  it('reopens active deck-triggered saves but preserves completed games', () => {
+    const activeState = {
+      ...finishSetup(setup(3)),
+      deck: [],
+      endTriggered: true,
+      finalTurnPlayerId: 'p3',
+    };
+    const migrated = migrateGameState(activeState);
+
+    expect(migrated.endTriggered).toBe(false);
+    expect(migrated.finalTurnPlayerId).toBeNull();
+
+    const completedState = { ...activeState, phase: 'gameOver' };
+    expect(migrateGameState(completedState)).toBe(completedState);
+
+    const penaltyState = {
+      ...activeState,
+      players: activeState.players.map((player) =>
+        player.id === 'p1'
+          ? { ...player, penalties: ORDER_DECK.slice(0, 5) }
+          : player,
+      ),
+    };
+    expect(migrateGameState(penaltyState)).toBe(penaltyState);
   });
 
   it('does not fulfill an order while collected ingredients remain unplaced', () => {

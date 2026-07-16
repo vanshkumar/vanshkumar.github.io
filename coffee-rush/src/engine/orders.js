@@ -3,13 +3,11 @@ import { INGREDIENTS } from '../data/ingredients';
 export function drawOrders(state, count) {
   const drawn = [];
   const deck = [...state.deck];
-  let endTriggered = state.endTriggered;
 
   for (let index = 0; index < count; index += 1) {
     const card = deck.shift();
 
     if (!card) {
-      endTriggered = true;
       break;
     }
 
@@ -20,7 +18,6 @@ export function drawOrders(state, count) {
     state: {
       ...state,
       deck,
-      endTriggered: endTriggered || deck.length === 0,
     },
     drawn,
   };

@@ -140,7 +140,7 @@ The exact card-by-card composition of the order deck and the upgrade-tile catalo
   4. *Process Order* — match a cup's contents to an order card on your tabs; on match, return ingredients to supply, place card in your "up-vote" pile. **Catchup mechanic:** for every order you complete this turn, the next *N* players must each draw *N* new order cards onto their tabs.
   5. *Flow of Time* — every card on your player board slides down 1 tab. Cards falling off tab 4 become penalty cards in your "down-vote" pile; you immediately gain Rush tokens equal to your total penalties.
   6. *Check end* — see end-game triggers below.
-- **End-game:** triggered when the order draw pile depletes, OR a player takes their 5th penalty (immediate end).
+- **End-game house rule:** unlike the physical rulebook, an empty order draw pile does not end the game; empty draws are no-ops. Reaching a 5th penalty is the only trigger for the final-round sequence.
 - **Scoring:** +1 per completed order, +2 per activated upgrade tile, −1 per penalty. Tiebreak: most completed orders, then most Rush tokens.
 
 ## v1 hot-seat UX
@@ -204,8 +204,8 @@ This file is checked in. Future sessions read it.
    - Pour locks ingredient in cup; dump-cup clears it
    - Fulfil removes order from tabs and triggers draw-N catchup on next players
    - Tab decay creates penalty + grants rush tokens equal to total penalties
-   - 5th penalty ends game immediately
-   - Empty draw pile ends game at end of round
+   - 5th penalty starts the final-round sequence
+   - Empty draw pile leaves the game active and later draws are no-ops
    - Scoring formula and tiebreaks
 2. **Local dev playthrough:** `npm run dev`. Start a 2-player and a 4-player game, play to completion, verify scores match a hand calculation.
 3. **Build smoke test:** `npm run build` → `npx serve dist/`. Click through Setup → Game → Results without console errors. Confirm `/coffee-rush/` base path resolves all assets.

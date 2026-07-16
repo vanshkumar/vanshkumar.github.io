@@ -1,3 +1,5 @@
+import { migrateGameState } from '../engine/stateMigration';
+
 const STORAGE_KEY = 'coffee-rush:active-game:v2';
 const UNDO_STORAGE_KEY = 'coffee-rush:undo-stack:v1';
 const MINIMIZED_ORDERS_KEY = 'coffee-rush:minimized-orders:v1';
@@ -30,7 +32,7 @@ export function saveGame(state) {
 
 export function loadGame() {
   const raw = window.localStorage.getItem(STORAGE_KEY);
-  return parseJson(raw, null);
+  return migrateGameState(parseJson(raw, null));
 }
 
 export function clearGame() {
@@ -92,7 +94,7 @@ export function saveUndoStack(stack) {
 export function loadUndoStack() {
   const raw = window.localStorage.getItem(UNDO_STORAGE_KEY);
   const parsed = parseJson(raw, []);
-  return Array.isArray(parsed) ? parsed : [];
+  return Array.isArray(parsed) ? parsed.map(migrateGameState) : [];
 }
 
 export function clearUndoStack() {

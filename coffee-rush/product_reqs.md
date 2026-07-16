@@ -110,7 +110,8 @@ Each turn proceeds in this order:
   required cards before the next player draws theirs.
 - In 2-player games, the other player draws that many order cards onto tab 1.
 - If the deck runs out while distributing these cards, distribute all available
-  cards and flip the starting player token to closed.
+  cards in the normal recipient order. Later draws from the empty deck do
+  nothing.
 
 ## Flow Of Time
 
@@ -122,13 +123,14 @@ Each turn proceeds in this order:
 - If the active player has 5 or more total penalties, flip the starting player
   token to closed.
 - 2-player exception: after sliding cards, add 1 order card to the active
-  player's tab 1 before finishing the turn. If this depletes the deck, flip the
-  starting player token to closed.
+  player's tab 1 before finishing the turn. If the deck is empty, no card is
+  added.
 
 ## End Game
 
-- The starting player token flips to closed when the deck cannot satisfy an order
-  draw or a player reaches 5 penalties.
+- House rule: unlike the physical rulebook, deck exhaustion does not end the
+  game. The starting player token flips to closed only when a player reaches 5
+  penalties.
 - In 3-4 player games, once the token is closed, continue until the player to the
   starting player's right finishes their turn; then end the game.
 - In 2-player games, if the starting player triggers the end, the other player

@@ -15,6 +15,14 @@ npm run build
 npm run preview
 ```
 
+## House Rule
+
+This adaptation ends only when a player reaches 5 penalties. Unlike the physical
+rulebook, exhausting the order deck does not close the game: distribute any
+remaining cards in the normal recipient order, then treat later empty-deck draws
+as no-ops. The existing final-round sequence still begins when the penalty
+threshold is reached.
+
 ## Online Room Testing
 
 Newly hosted online rooms use async protocol v2. The Cloudflare relay stores

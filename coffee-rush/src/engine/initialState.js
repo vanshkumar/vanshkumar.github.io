@@ -21,7 +21,7 @@ export function createInitialState({
   const startingIndex = Math.min(Math.max(Number(startingPlayerIndex) || 0, 0), names.length - 1);
 
   let state = {
-    version: '1.1.0',
+    version: '1.2.0',
     rngSeed: seed,
     rngCursor: 0,
     playerCount: names.length,

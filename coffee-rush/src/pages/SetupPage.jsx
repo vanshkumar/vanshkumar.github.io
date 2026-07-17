@@ -49,7 +49,7 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
     initialInvite.roomId && (!initialInvite.relayAuth || !initialInvite.gameKey);
   const [playerCount, setPlayerCount] = useState(2);
   const [startingPlayerIndex, setStartingPlayerIndex] = useState(0);
-  const [useOptionalStarterOrders, setUseOptionalStarterOrders] = useState(false);
+  const [disableStarterOrders, setDisableStarterOrders] = useState(false);
   const [profileName, setProfileName] = useState('');
   const [profileCountry, setProfileCountry] = useState('US');
   const [profileNumber, setProfileNumber] = useState('');
@@ -133,7 +133,7 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
       playerNames,
       seed: `${seedPrefix}-${Date.now()}`,
       startingPlayerIndex: Math.min(startingPlayerIndex, playerCount - 1),
-      useOptionalStarterOrders,
+      useOptionalStarterOrders: !disableStarterOrders,
     });
   }
 
@@ -347,14 +347,14 @@ export default function SetupPage({ queryInviteSecretsScrubbed = false }) {
               <label className="setup-checkbox">
                 <input
                   type="checkbox"
-                  checked={useOptionalStarterOrders}
-                  onChange={(event) => setUseOptionalStarterOrders(event.target.checked)}
+                  checked={disableStarterOrders}
+                  onChange={(event) => setDisableStarterOrders(event.target.checked)}
                 />
                 <span>
-                  Optional starter orders
+                  Disable starter orders
                   <small>
-                    Start each player with Ristretto/Espresso and remove unused
-                    2-ingredient cards.
+                    Use the full shuffled order deck instead of assigning
+                    Ristretto/Espresso starters.
                   </small>
                 </span>
               </label>

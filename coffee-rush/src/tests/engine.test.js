@@ -27,11 +27,11 @@ function setupWithStartingPlayer(playerCount, startingPlayerIndex) {
   });
 }
 
-function setupWithOptionalStarterOrders(playerCount = 3) {
+function setupWithStandardOrderDeck(playerCount = 3) {
   return createInitialState({
     playerNames: Array.from({ length: playerCount }, (_, index) => `P${index + 1}`),
     seed: 'test-seed',
-    useOptionalStarterOrders: true,
+    useOptionalStarterOrders: false,
   });
 }
 
@@ -81,9 +81,10 @@ function moveToPour(state) {
 }
 
 describe('Coffee Rush engine', () => {
-  it('uses seeded setup with 80-card deck minus setup orders', () => {
-    const state = setup(4);
+  it('uses seeded standard setup when starter orders are disabled', () => {
+    const state = setupWithStandardOrderDeck(4);
 
+    expect(state.setupOptions.useOptionalStarterOrders).toBe(false);
     expect(state.deck).toHaveLength(80 - 4 * 2 - 1);
     expect(state.players[0].tabs[0]).toHaveLength(2);
     expect(state.players[1].tabs[0]).toHaveLength(1);
@@ -96,8 +97,8 @@ describe('Coffee Rush engine', () => {
     ]);
   });
 
-  it('supports the optional starter-order setup from the rulebook', () => {
-    const state = setupWithOptionalStarterOrders(3);
+  it('uses the rulebook starter-order setup by default', () => {
+    const state = setup(3);
     const startingPlayer = state.players.find((player) => player.id === state.startingPlayerId);
 
     expect(state.setupOptions.useOptionalStarterOrders).toBe(true);

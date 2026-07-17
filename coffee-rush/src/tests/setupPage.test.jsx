@@ -38,11 +38,11 @@ describe('SetupPage invite entry', () => {
     delete globalThis.window;
   });
 
-  it('shows the optional starter-order control for hosted games', () => {
+  it('shows the starter-order disable control for hosted games', () => {
     const html = renderSetupPage('https://example.test/coffee-rush/');
 
-    expect(html).toContain('Optional starter orders');
-    expect(html).toContain('remove unused');
+    expect(html).toContain('Disable starter orders');
+    expect(html).toContain('full shuffled order deck');
   });
 
   it('hides host-only setup copy for a player-specific private invite', () => {
@@ -55,7 +55,7 @@ describe('SetupPage invite entry', () => {
     expect(html).toContain('join as Player 2');
     expect(html).toContain('Join as Player 2');
     expect(html).not.toContain('Starting player');
-    expect(html).not.toContain('Optional starter orders');
+    expect(html).not.toContain('Disable starter orders');
     expect(html).not.toContain('Host online game');
     expect(html).not.toContain('>You</option>');
   });

@@ -10,7 +10,7 @@ export function createInitialState({
   playerNames,
   seed = 'coffee-rush',
   startingPlayerIndex = 0,
-  useOptionalStarterOrders = false,
+  useOptionalStarterOrders = true,
 }) {
   const names = playerNames.slice(0, 4).filter(Boolean);
 

@@ -42,6 +42,11 @@
 - Action: Keep optional low-luck order setup inside `createInitialState` before starting order deal, and keep host setup toggles hidden for private invite joins.
 - Confidence: high
 
+**[2026-07-17] — Starter-order default**
+- Observation: New Coffee Rush games now use the rulebook starter-order setup by default, while the host setup checkbox is intentionally inverse and disables starter orders when checked.
+- Action: Treat bare `createInitialState()` calls as starter-order games; pass `useOptionalStarterOrders: false` only for full shuffled-deck setup and keep setup-page copy framed as disabling starter orders.
+- Confidence: high
+
 **[2026-06-24] — Ready-order controls**
 - Observation: The order deck contains separate card instances with identical names and recipes; listing every matching card creates duplicate serve buttons for a single cup.
 - Action: Deduplicate ready-order actions by cup, order name, specialty flag, and recipe while preserving separate actions for separate matching cups.

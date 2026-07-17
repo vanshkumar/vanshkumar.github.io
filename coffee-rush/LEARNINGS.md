@@ -82,6 +82,11 @@
 - Action: After committing from a mixed worktree, inspect `git show --name-status HEAD`; if unrelated vault files were added, remove them from the index and amend with hooks skipped.
 - Confidence: high
 
+**[2026-07-16] — Sandboxed GitHub authentication**
+- Observation: `gh auth status` inside the restricted sandbox can report the keyring token as invalid even when the same command outside the sandbox confirms valid authentication and required scopes.
+- Action: Re-run GitHub authentication checks with escalated network access before asking the user to reauthenticate.
+- Confidence: high
+
 **[2026-06-19] — Hot-seat mobile UX**
 - Observation: On phone-width layouts, putting the active player panel first keeps cups/orders immediately below the board and action panel instead of one or more screens away.
 - Action: Preserve active-player-first ordering for the game sidebar and avoid assumptions that table seat order must match visual panel order.

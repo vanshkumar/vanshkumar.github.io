@@ -1114,13 +1114,7 @@ export default function GamePage() {
 
     if (!reminder) return;
 
-    if (openWhatsAppDraft(reminder.whatsappUrl)) {
-      setPendingTurnReminder(null);
-      return;
-    }
-
     setPendingTurnReminder(reminder);
-    setExportStatus(`WhatsApp reminder ready for ${reminder.playerName}.`);
   }
 
   async function copyPendingTurnReminder() {
@@ -2460,7 +2454,6 @@ export default function GamePage() {
 
     return (
       <section className="turn-reminder-panel" aria-live="polite">
-        <strong>WhatsApp reminder ready for {pendingTurnReminder.playerName}.</strong>
         <div className="button-row turn-reminder-actions">
           <button
             type="button"

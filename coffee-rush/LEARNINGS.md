@@ -454,6 +454,11 @@
 - Action: When changing serve eligibility, gate both derivation paths so the action panel and player/order context stay in sync.
 - Confidence: high
 
+**[2026-07-16] — Explicit reminder handoff**
+- Observation: `triggerAcceptedTurnReminder` runs after an accepted async turn commit, so opening its WhatsApp URL there launches an external messaging flow without a separate user choice.
+- Action: Queue accepted-turn reminders in `pendingTurnReminder` and open WhatsApp only from the explicit player message action; keep the reminder panel action-only without duplicate ready-status copy.
+- Confidence: high
+
 ## What Has Failed
 
 **[2026-06-27] — Async invite landing copy**

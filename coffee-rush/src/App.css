@@ -360,18 +360,48 @@ select {
   box-shadow: 4px -2px 0 -1px currentColor;
 }
 
-.message-banner,
 .error-banner {
   max-width: 1440px;
   margin: 0 auto 10px;
   padding: 10px 12px;
-  border: 1px solid #d7c7af;
+  border: 1px solid #b83f34;
   background: #fffaf2;
+  color: #8d241b;
 }
 
-.error-banner {
-  border-color: #b83f34;
-  color: #8d241b;
+.status-alert {
+  display: grid;
+  gap: 4px;
+}
+
+.status-alert-message {
+  display: block;
+}
+
+.operation-status {
+  max-width: 1440px;
+  margin: 0 auto 8px;
+  padding: 6px 10px;
+  border-left: 3px solid #27605a;
+  background: #edf7f4;
+  color: #214f4a;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.status-toast {
+  position: fixed;
+  z-index: 30;
+  right: 20px;
+  bottom: max(20px, env(safe-area-inset-bottom));
+  max-width: min(360px, calc(100vw - 40px));
+  padding: 10px 14px;
+  border: 1px solid #27605a;
+  background: #214f4a;
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(43, 33, 27, 0.2);
+  font-size: 0.9rem;
+  font-weight: 800;
 }
 
 .async-recovery-panel,
@@ -2027,6 +2057,14 @@ button.cup-memory-tile {
 }
 
 @media (max-width: 620px) {
+  .status-toast {
+    right: 10px;
+    bottom: max(10px, env(safe-area-inset-bottom));
+    left: 10px;
+    max-width: none;
+    text-align: center;
+  }
+
   .game-page,
   .setup-page,
   .results-page {

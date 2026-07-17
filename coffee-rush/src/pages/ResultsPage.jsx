@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { StatusAlert, StatusToast } from '../components/StatusFeedback';
 import { getScores, getWinnerIds } from '../engine/selectors';
 import {
   clearGame,
@@ -22,7 +23,8 @@ import {
 export default function ResultsPage() {
   const navigate = useNavigate();
   const pageRef = useRef(null);
-  const [exportStatus, setExportStatus] = useState('');
+  const [error, setError] = useState('');
+  const [toast, setToast] = useState({ id: 0, message: '' });
   const [isExporting, setIsExporting] = useState(false);
   const state = loadGame();
   const undoStack = loadUndoStack();
@@ -42,6 +44,10 @@ export default function ResultsPage() {
 
   const scores = getScores(state);
   const winners = getWinnerIds(state);
+
+  function showToast(message) {
+    setToast((current) => ({ id: current.id + 1, message }));
+  }
 
   function newGame() {
     clearGame();
@@ -75,11 +81,13 @@ export default function ResultsPage() {
         ],
         gameExportArchiveFilename(state, exportedAt),
       );
-      setExportStatus('Game log and screenshot downloaded.');
+      setError('');
+      showToast('Game log and screenshot downloaded.');
     } catch (screenshotError) {
       console.error(screenshotError);
       downloadTextFile(exportText, exportFilename, 'application/json');
-      setExportStatus('Game log downloaded. Screenshot failed.');
+      setToast((current) => ({ ...current, message: '' }));
+      setError('Game log downloaded, but the screenshot failed.');
     } finally {
       setIsExporting(false);
     }
@@ -89,7 +97,7 @@ export default function ResultsPage() {
     <main className="results-page" ref={pageRef}>
       <section className="results-panel">
         <h1>{winners.length > 1 ? 'Shared win' : `${scores[0].name} wins`}</h1>
-        {exportStatus && <div className="message-banner">{exportStatus}</div>}
+        <StatusAlert messages={[error]} />
         <div className="score-table">
           {scores.map((score) => (
             <div
@@ -114,6 +122,11 @@ export default function ResultsPage() {
           </button>
         </div>
       </section>
+      <StatusToast
+        key={toast.id}
+        message={toast.message}
+        onDismiss={() => setToast((current) => ({ ...current, message: '' }))}
+      />
     </main>
   );
 }

@@ -7,6 +7,7 @@ import OrderPressureMarker from '../components/OrderPressureMarker';
 import PassDeviceModal from '../components/PassDeviceModal';
 import PlayerOrdersSheet from '../components/PlayerOrdersSheet';
 import PlayerPanel from '../components/PlayerPanel';
+import { StatusAlert, StatusToast } from '../components/StatusFeedback';
 import TurnBrief from '../components/TurnBrief';
 import UpgradeMenu from '../components/UpgradeMenu';
 import { UiIcon } from '../components/UiIcon';
@@ -206,7 +207,6 @@ export default function GamePage() {
   const [notificationError, setNotificationError] = useState('');
   const [isNotificationSaving, setIsNotificationSaving] = useState(false);
   const [pendingPlayerProfile, setPendingPlayerProfile] = useState(null);
-  const [profileStatus, setProfileStatus] = useState('');
   const [profileError, setProfileError] = useState('');
   const [isProfileSaving, setIsProfileSaving] = useState(false);
   const [pendingTurnReminder, setPendingTurnReminder] = useState(null);
@@ -218,7 +218,8 @@ export default function GamePage() {
     pendingActionId: '',
   }));
   const [error, setError] = useState('');
-  const [exportStatus, setExportStatus] = useState('');
+  const [operationStatus, setOperationStatus] = useState('');
+  const [toast, setToast] = useState({ id: 0, message: '' });
   const [isExporting, setIsExporting] = useState(false);
   const [selectedMeepleId, setSelectedMeepleId] = useState('');
   const [path, setPath] = useState([]);
@@ -613,7 +614,6 @@ export default function GamePage() {
 
     profileSaveInFlightRef.current = false;
     profileSaveAttemptKeyRef.current = '';
-    setProfileStatus('');
     setProfileError('');
 
     if (!session || session.protocol !== REMOTE_PROTOCOLS.ASYNC || !session.localPlayerId) {
@@ -719,7 +719,7 @@ export default function GamePage() {
     }
 
     setError('');
-    setExportStatus('');
+    setOperationStatus('');
     stateRef.current = result.state;
     if (recordUndo) {
       const nextUndoStack = [
@@ -746,6 +746,10 @@ export default function GamePage() {
     }
 
     return result;
+  }
+
+  function showToast(message) {
+    setToast((current) => ({ id: current.id + 1, message }));
   }
 
   function updateAsyncSessionHead(headIndex, headHash) {
@@ -869,7 +873,8 @@ export default function GamePage() {
     setAsyncDraftActionCount(0);
     setUndoStack([]);
     setState(null);
-    setExportStatus('');
+    setOperationStatus('');
+    setToast((current) => ({ ...current, message: '' }));
     setPassTo('');
     resetActionUi();
     setError(ASYNC_ROOM_CLOSED_MESSAGE);
@@ -1018,14 +1023,12 @@ export default function GamePage() {
     });
 
     if (!name || normalized.error) {
-      setProfileStatus('');
       setProfileError(normalized.error || 'Enter your name.');
       return;
     }
 
     profileSaveInFlightRef.current = true;
     setIsProfileSaving(true);
-    setProfileStatus('Saving your player profile.');
     setProfileError('');
 
     try {
@@ -1062,8 +1065,7 @@ export default function GamePage() {
             headHash: canonical.headHash,
           },
           {
-            pendingStatus: 'Saving player profile.',
-            successStatus: '',
+            pendingStatus: '',
           },
         );
 
@@ -1079,9 +1081,7 @@ export default function GamePage() {
       clearPendingPlayerProfile(session.roomId, session.localPlayerId);
       setPendingPlayerProfile(null);
       setProfileError('');
-      setProfileStatus('Player profile saved.');
     } catch (saveError) {
-      setProfileStatus('');
       setProfileError(saveError?.message ?? 'Could not save your player profile.');
     } finally {
       profileSaveInFlightRef.current = false;
@@ -1126,13 +1126,15 @@ export default function GamePage() {
       } else {
         copyTextFallback(pendingTurnReminder.message);
       }
-      setExportStatus('WhatsApp reminder copied.');
+      setError('');
+      showToast('WhatsApp reminder copied.');
     } catch {
       try {
         copyTextFallback(pendingTurnReminder.message);
-        setExportStatus('WhatsApp reminder copied.');
+        setError('');
+        showToast('WhatsApp reminder copied.');
       } catch {
-        setExportStatus('Could not copy the WhatsApp reminder.');
+        setError('Could not copy the WhatsApp reminder.');
       }
     }
   }
@@ -1147,7 +1149,8 @@ export default function GamePage() {
 
     try {
       await navigator.share({ text: pendingTurnReminder.message });
-      setExportStatus('WhatsApp reminder shared.');
+      setError('');
+      showToast('WhatsApp reminder shared.');
     } catch {
       // Share cancellation should leave the fallback button available.
     }
@@ -1378,7 +1381,7 @@ export default function GamePage() {
     clearAsyncDraftState();
     undoStackRef.current = [];
     setUndoStack([]);
-    setExportStatus('');
+    setOperationStatus('');
     resetActionUi();
 
     if (canonical?.state) {
@@ -1429,7 +1432,7 @@ export default function GamePage() {
     );
     const pendingId = `async-${Date.now()}`;
     setPendingActionId(pendingId);
-    setExportStatus(
+    setOperationStatus(
       options.pendingStatus ??
         (isTurnCommit
           ? 'Committing turn.'
@@ -1447,7 +1450,7 @@ export default function GamePage() {
         undoStackRef.current = [];
         setUndoStack([]);
         await syncAsyncRoom({ discardDraft: true });
-        setExportStatus('');
+        setOperationStatus('');
         setError('Another device committed first. Synced the latest room state.');
         return { error: 'STALE_HEAD' };
       }
@@ -1461,10 +1464,7 @@ export default function GamePage() {
       undoStackRef.current = [];
       setUndoStack([]);
       clearPendingActionId(pendingId);
-      setExportStatus(
-        options.successStatus ??
-          (isTurnCommit ? '' : isProfileCommit ? '' : 'Setup synced.'),
-      );
+      setOperationStatus('');
       clearAsyncFailedCommitState();
       setRemoteStatus((current) => ({
         ...current,
@@ -1489,7 +1489,7 @@ export default function GamePage() {
       setAsyncDraftState(baseHead, actions, resultState);
       setAsyncFailedCommitState(failedCommit);
       clearPendingActionId(pendingId);
-      setExportStatus('');
+      setOperationStatus('');
       setPassTo('');
       setError(errorMessage);
       return { error: errorMessage };
@@ -1560,7 +1560,7 @@ export default function GamePage() {
     }
 
     setAsyncDraftState(baseHead, nextActions, result.state);
-    setExportStatus('');
+    setOperationStatus('');
     return result;
   }
 
@@ -1585,11 +1585,11 @@ export default function GamePage() {
       const request = createActionRequest(action, client.selfId || remoteStatus.selfId || 'peer');
       setPendingActionId(request.clientActionId);
       setError('');
-      setExportStatus('Waiting for the host to confirm that action.');
+      setOperationStatus('Waiting for the host to confirm that action.');
 
       client.send(request).catch(() => {
         clearPendingActionId(request.clientActionId);
-        setExportStatus('');
+        setOperationStatus('');
         setError('Could not send that action to the host.');
       });
 
@@ -1636,7 +1636,7 @@ export default function GamePage() {
     setState(message.state);
     setUndoStack(undoStackRef.current);
     setError('');
-    setExportStatus('Synced with host.');
+    setOperationStatus('');
     clearPendingActionId();
     resetActionUi();
   }
@@ -1713,7 +1713,7 @@ export default function GamePage() {
         if (message.clientActionId) {
           clearPendingActionId(message.clientActionId);
         }
-        setExportStatus('');
+        setOperationStatus('');
         return;
       }
 
@@ -1721,7 +1721,7 @@ export default function GamePage() {
         if (message.clientActionId) {
           clearPendingActionId(message.clientActionId);
         }
-        setExportStatus('');
+        setOperationStatus('');
         setError(message.error ?? 'The host rejected that action.');
         return;
       }
@@ -1819,7 +1819,7 @@ export default function GamePage() {
     setUndoStack(nextUndoStack);
     setState(previousState);
     setError('');
-    setExportStatus('');
+    setOperationStatus('');
     resetActionUi();
 
     if (isAsyncRemoteGame) {
@@ -1850,11 +1850,11 @@ export default function GamePage() {
     if (!failedCommit || pendingActionIdRef.current) return;
 
     setError('');
-    setExportStatus('Retrying commit.');
     const result = await commitAsyncActions(
       failedCommit.actions,
       failedCommit.resultState,
       failedCommit.baseHead,
+      { pendingStatus: '' },
     );
 
     if (!result?.error) {
@@ -1867,9 +1867,7 @@ export default function GamePage() {
     if (!failedCommit || pendingActionIdRef.current || asyncSyncInFlightRef.current) return;
 
     setError('');
-    setExportStatus('Syncing latest room state.');
     await syncAsyncRoom({ discardDraft: true });
-    setExportStatus('');
 
     if (asyncFailedCommitRef.current === failedCommit) {
       setError('Could not sync the latest room state.');
@@ -1891,7 +1889,7 @@ export default function GamePage() {
     resetActionUi();
     setPassTo('');
     setError('');
-    setExportStatus(ASYNC_DISCARD_DRAFT_MESSAGE);
+    showToast(ASYNC_DISCARD_DRAFT_MESSAGE);
 
     if (canonical?.state) {
       setAsyncCanonicalState(canonical);
@@ -1915,13 +1913,16 @@ export default function GamePage() {
       } else {
         copyTextFallback(exportText);
       }
-      setExportStatus('Game log copied.');
+      setError('');
+      showToast('Game log copied.');
     } catch {
       try {
         copyTextFallback(exportText);
-        setExportStatus('Game log copied.');
+        setError('');
+        showToast('Game log copied.');
       } catch {
-        setExportStatus('Could not copy. Download the log instead.');
+        setToast((current) => ({ ...current, message: '' }));
+        setError('Could not copy. Download the log instead.');
       }
     }
   }
@@ -1969,11 +1970,13 @@ export default function GamePage() {
         ],
         gameExportArchiveFilename(state, exportedAt),
       );
-      setExportStatus('Game log and screenshot downloaded.');
+      setError('');
+      showToast('Game log and screenshot downloaded.');
     } catch (screenshotError) {
       console.error(screenshotError);
       downloadTextFile(exportText, exportFilename, 'application/json');
-      setExportStatus('Game log downloaded. Screenshot failed.');
+      setToast((current) => ({ ...current, message: '' }));
+      setError('Game log downloaded, but the screenshot failed.');
     } finally {
       setIsExporting(false);
     }
@@ -2002,13 +2005,16 @@ export default function GamePage() {
       } else {
         copyTextFallback(inviteLink);
       }
-      setExportStatus(copiedStatus);
+      setError('');
+      showToast(copiedStatus);
     } catch {
       try {
         copyTextFallback(inviteLink);
-        setExportStatus(copiedStatus);
+        setError('');
+        showToast(copiedStatus);
       } catch {
-        setExportStatus('Could not copy the private invite link.');
+        setToast((current) => ({ ...current, message: '' }));
+        setError('Could not copy the private invite link.');
       }
     }
   }
@@ -2257,8 +2263,6 @@ export default function GamePage() {
     navigate('/');
   }
 
-  const visibleLastMessage =
-    state.lastMessage?.startsWith('Pass to ') && !passTo ? '' : state.lastMessage;
   const canActivateUpgrade = canPlayerActivateUpgrade(activePlayer);
   const hasInactiveUpgrades = Object.values(activePlayer.upgrades).some(
     (active) => !active,
@@ -2292,8 +2296,13 @@ export default function GamePage() {
   const isAsyncCommitRecoveryActive = Boolean(asyncFailedCommit);
   const isAsyncActionBlocked =
     isAsyncCommitRecoveryActive || isOnlineProfilePending;
+  const isRetryingAsyncCommit = Boolean(remoteStatus.pendingActionId);
+  const isReplayingAsyncCommit = remoteStatus.connection === 'syncing';
   const isAsyncCommitRecoveryBusy =
-    Boolean(remoteStatus.pendingActionId) || remoteStatus.connection === 'syncing';
+    isRetryingAsyncCommit || isReplayingAsyncCommit;
+  const statusErrors = isAsyncCommitRecoveryActive
+    ? []
+    : [error, remoteStatus.error];
   const undoDisabled =
     undoStack.length === 0 ||
     isLiveRemotePeer ||
@@ -2484,7 +2493,7 @@ export default function GamePage() {
         <div className="phase-summary">
           <span className="phase-kicker">Player profile</span>
           <h2>{isProfileSaving ? 'Saving your profile' : 'Finish joining the room'}</h2>
-          <p>{profileError || profileStatus || 'Saving your name and WhatsApp number.'}</p>
+          <p>{profileError || 'Saving your name and WhatsApp number.'}</p>
         </div>
         {profileError && (
           <div className="button-row profile-save-actions">
@@ -2578,12 +2587,7 @@ export default function GamePage() {
         </div>
       </header>
 
-      {renderPendingTurnReminder()}
       {renderPendingProfileSave()}
-      {error && <div className="error-banner">{error}</div>}
-      {remoteStatus.error && <div className="error-banner">{remoteStatus.error}</div>}
-      {exportStatus && <div className="message-banner">{exportStatus}</div>}
-      {visibleLastMessage && <div className="message-banner">{visibleLastMessage}</div>}
       {isAsyncCommitRecoveryActive && (
         <section className="async-recovery-panel" aria-live="assertive">
           <div className="phase-summary">
@@ -2601,14 +2605,14 @@ export default function GamePage() {
               onClick={retryFailedAsyncCommit}
               disabled={isAsyncCommitRecoveryBusy}
             >
-              Retry commit
+              {isRetryingAsyncCommit ? 'Retrying…' : 'Retry commit'}
             </button>
             <button
               type="button"
               onClick={replayFailedAsyncCommitFromLatest}
               disabled={isAsyncCommitRecoveryBusy}
             >
-              Replay from latest
+              {isReplayingAsyncCommit ? 'Syncing…' : 'Replay from latest'}
             </button>
             <button
               type="button"
@@ -2620,6 +2624,13 @@ export default function GamePage() {
           </div>
         </section>
       )}
+      <StatusAlert messages={statusErrors} />
+      {operationStatus && (
+        <div className="operation-status" role="status" aria-live="polite">
+          {operationStatus}
+        </div>
+      )}
+      {renderPendingTurnReminder()}
 
       <div className={`game-layout phase-${state.phase}`}>
         {state.phase !== PHASES.SETUP_PLACEMENT && localViewPlayer && (
@@ -2814,13 +2825,9 @@ export default function GamePage() {
                 <div className="phase-summary">
                   <span className="phase-kicker">Pour and serve</span>
                   <h2>Resolve cups for {activePlayer.name}</h2>
-                  <p>
-                    {activePlayer.hand.length > 0
-                      ? 'Pour or discard every collected ingredient before serving.'
-                      : completableOrders.length > 0
-                        ? 'Serve ready orders, then end the turn.'
-                        : 'No ingredients remain in hand. End the turn when ready.'}
-                  </p>
+                  {activePlayer.hand.length > 0 && (
+                    <p>Pour or discard every collected ingredient before serving.</p>
+                  )}
                 </div>
                 <CupMemoryStrip
                   cups={activePlayer.cups}
@@ -2889,7 +2896,6 @@ export default function GamePage() {
                 </div>
                 {completableOrders.length > 0 && (
                   <div className="ready-orders" aria-label="Ready orders">
-                    <strong>Ready to serve</strong>
                     {completableOrders.map((match) => (
                       <button
                         key={`${match.order.id}-${match.cupIdx}`}
@@ -2994,6 +3000,11 @@ export default function GamePage() {
         isOpen={isUpgradeMenuOpen}
         onActivate={activateUpgrade}
         onClose={() => setIsUpgradeMenuOpen(false)}
+      />
+      <StatusToast
+        key={toast.id}
+        message={toast.message}
+        onDismiss={() => setToast((current) => ({ ...current, message: '' }))}
       />
       <PassDeviceModal nextPlayerName={passTo} onContinue={() => setPassTo('')} />
       <PlayerOrdersSheet

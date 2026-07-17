@@ -424,6 +424,16 @@
 - Action: Remove unnecessary top-row status text at the source that sets it, e.g. clear `lastMessage` for no-op phase transitions and clear `exportStatus` for silent async draft saves.
 - Confidence: high
 
+**[2026-07-16] — Mobile top-status inventory**
+- Observation: `GamePage` can stack local and remote error banners plus export/network and reducer-message banners above gameplay; a remote failure can occupy both error channels, while the visible `Ready` label belongs to contextual cup/order controls rather than this banner stack.
+- Action: When simplifying the mobile top area, consolidate duplicate error/status channels, keep only actionable failures and pending/recovery states as full-width banners, and leave ready-to-serve guidance beside the relevant cup/order action.
+- Confidence: high
+
+**[2026-07-16] — Status feedback separation**
+- Observation: `exportStatus` mixed blocking network progress, persistent utility failures, and brief success confirmations, while reducer `lastMessage` remains part of persisted and hashed game state even when its top banner is redundant.
+- Action: Preserve `lastMessage` for save/export/replay compatibility, route blocking work to a compact operation status, consolidate failures into one alert, and use keyed auto-dismiss toasts for utility successes so repeated identical feedback resets its timer.
+- Confidence: high
+
 **[2026-06-26] — Async turn commit UX**
 - Observation: Successful async `END_TURN` commits already advance the visible turn state and may leave reducer pass-state copy available, so an extra `Turn committed.` `exportStatus` banner lingers as stale top-row confirmation text.
 - Action: Keep async commit progress and error statuses, but clear `exportStatus` after accepted `END_TURN` commits; reserve success copy such as `Setup synced.` for setup commits that do not otherwise visibly advance the turn.

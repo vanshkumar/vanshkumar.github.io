@@ -132,6 +132,11 @@
 - Action: Size board ingredient tokens and meeple markers with board-specific CSS, with smaller mobile overrides to avoid crowding.
 - Confidence: high
 
+**[2026-07-17] — Mobile pass-device modal stacking**
+- Observation: The shared fixed modal backdrop had no explicit stack level, so the board's positive-z-index ingredient, ribbon, and meeple layers painted over the pass-device dialog in an iOS Home Screen viewport.
+- Action: Keep `.modal-backdrop` at an explicit z-index above all board content layers whenever board tokens use positioned positive stack levels.
+- Confidence: high
+
 **[2026-07-14] — Specialty corner ribbon reference**
 - Observation: The physical board marks caramel, water, tea, and chocolate with two short yellow-gold bands clipped across the top-left and bottom-right corners; the bands sit directly on the cell frame, with no center stripe and no additional inset panel.
 - Action: Render specialty markers as corner-clipped pseudo-elements on a non-interactive overlay, keep ingredient and gameplay markers above them, and preserve the specialty accessible label at every viewport size.

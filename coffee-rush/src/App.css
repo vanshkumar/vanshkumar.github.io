@@ -1898,6 +1898,7 @@ button.cup-memory-tile {
 
 .modal-backdrop {
   position: fixed;
+  z-index: 20;
   inset: 0;
   display: grid;
   place-items: center;

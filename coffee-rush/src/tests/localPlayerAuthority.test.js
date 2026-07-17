@@ -111,7 +111,7 @@ describe('local async player authority', () => {
 
     expect(state.activePlayerId).toBe('p1');
     expect(getLocalActionError(state, 'p2', action)).toBe(
-      "It is Ada's turn. Wait for their turn to sync.",
+      "It is Ada's turn.",
     );
     expect(getLocalActionError(state, 'p1', action)).toBe('');
   });

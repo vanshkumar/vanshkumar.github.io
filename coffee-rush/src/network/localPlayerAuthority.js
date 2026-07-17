@@ -17,5 +17,5 @@ export function getLocalActionError(state, localPlayerId, action) {
     return `${playerName} is placing now. Wait for their setup placement to sync.`;
   }
 
-  return `It is ${playerName}'s turn. Wait for their turn to sync.`;
+  return `It is ${playerName}'s turn.`;
 }

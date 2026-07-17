@@ -424,6 +424,11 @@
 - Action: Remove unnecessary top-row status text at the source that sets it, e.g. clear `lastMessage` for no-op phase transitions and clear `exportStatus` for silent async draft saves.
 - Confidence: high
 
+**[2026-07-16] — Async off-turn copy**
+- Observation: Normal off-turn wording is defined separately by `GamePage` `remoteTurnLockMessage` for the visible lock banner and `getLocalActionError` for blocked interactions.
+- Action: Keep both messages aligned when changing async off-turn copy, and update the local-player-authority expectation alongside them.
+- Confidence: high
+
 **[2026-07-16] — Mobile top-status inventory**
 - Observation: `GamePage` can stack local and remote error banners plus export/network and reducer-message banners above gameplay; a remote failure can occupy both error channels, while the visible `Ready` label belongs to contextual cup/order controls rather than this banner stack.
 - Action: When simplifying the mobile top area, consolidate duplicate error/status channels, keep only actionable failures and pending/recovery states as full-width banners, and leave ready-to-serve guidance beside the relevant cup/order action.

@@ -271,7 +271,7 @@ export default function GamePage() {
     isAsyncRemoteGame && state?.phase === PHASES.SETUP_PLACEMENT && !canControlSetupPlacement
       ? `${setupPlacement?.player?.name ?? 'That player'} is placing now. Wait for their setup placement to sync.`
       : isAsyncRemoteGame && state?.phase !== PHASES.SETUP_PLACEMENT && !canControlActivePlayer
-        ? `It is ${activePlayer?.name ?? 'that player'}'s turn. Wait for their turn to sync.`
+        ? `It is ${activePlayer?.name ?? 'that player'}'s turn.`
         : '';
   const completableOrders = useMemo(
     () =>

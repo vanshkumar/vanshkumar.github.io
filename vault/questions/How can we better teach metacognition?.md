@@ -2,7 +2,7 @@
 slug: how-can-we-better-teach-metacognition
 title: How can we better teach metacognition?
 date: 2026-06-28
-lastmod: 2026-07-06
+lastmod: 2026-07-16
 ---
 A potentially better framing:
 
@@ -103,4 +103,4 @@ From [here](https://commoncog.com/the-mental-model-fallacy/):
 > Read from the source material of master practitioners, copy their actions, climb their skill trees, and reflect through trial and error. Don't read third-party accounts of technê.
 
 
-To read: https://commoncog.com/the-tacit-knowledge-series/
+To read: https://commoncog.com/the-tacit-knowledge-series/, https://commoncog.com/accelerated-expertise/, https://www.leiderschapsdomeinen.nl/wp-content/uploads/2016/12/Zimmerman-B.-2002-Becoming-Self-Regulated-Learner.pdf, https://www.aft.org/ae/winter1991/collins_brown_holum, https://notion.moontowermeta.com/principles-of-learning-fast, https://nintil.com/bloom-sigma, https://andymatuschak.org/hmwl/, https://x.com/ejames_c/status/2076105059855970725, https://jtpeterson.substack.com/p/faq-on-expertise

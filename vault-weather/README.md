@@ -1,34 +1,49 @@
 # Vault Weather
 
-A local-only Vite app for browsing vault surfaces, seeing computed recent-activity salience, and opening selected notes in Obsidian.
+Vault Weather is a personal Obsidian plugin for browsing three local vault surfaces by recent
+activity:
 
-This app is for local use and is not assembled into the GitHub Pages deploy.
+- **Question Weather** reads `questions`.
+- **Hunch Weather** reads `hunches`.
+- **Shelf Weather** reads `shelf` and displays valid vault-relative `coverImage` assets such as
+  `/assets/shelf/book.webp`.
 
-## Surfaces
+The plugin runs entirely inside Obsidian. It does not require a browser, Vite server, generated
+JSON, or a background terminal process.
 
-- `/` shows Question Weather from `../vault/questions`.
-- `/hunch-weather` shows Hunch Weather from `../vault/hunches`.
-- `/shelf-weather` shows Shelf Weather from `../vault/shelf`. Shelf cards use `coverImage` frontmatter when it points to an existing vault asset such as `/assets/shelf/book.webp`.
+## Install in the local vault
 
-## Commands
+From this directory:
 
-- `npm install`
-- `npm run generate`
-- `mise x -- npm run dev -- --host 127.0.0.1`
-- `npm run test`
-- `npm run build`
+```bash
+mise x -- npm install
+mise x -- npm run install:plugin
+```
 
-`npm run dev` and `npm run build` regenerate `src/data/*.generated.json` before starting. Those files are ignored because the vault is the source of truth.
+The install command builds `main.js`, `manifest.json`, and `styles.css`, then copies them to
+`../vault/.obsidian/plugins/vault-weather/`. In Obsidian, open **Settings → Community plugins**,
+enable **Vault Weather**, and run **Open Vault Weather** from the command palette or ribbon.
 
-When the dev server is running, use the in-app Refresh button to regenerate the current surface and reload the page. Use the plus button to create a new note in that surface from a title and open it in Obsidian.
+After subsequent code changes, rerun `mise x -- npm run install:plugin` and reload the plugin in
+Obsidian.
 
-## Where Things Live
+## Development commands
 
-- `scripts/question-data.mjs` reads the vault, computes activity, resolves shelf covers, and creates new notes.
-- `vite.config.js` adds local-only refresh/create endpoints and cover asset serving for the dev server.
-- `src/data/*.generated.json` is generated and ignored by git.
-- `src/lib/questionState.js` owns shared sorting and activity tone logic.
+- `mise x -- npm run dev` watches plugin sources and rebuilds `dist/main.js`.
+- `mise x -- npm run test` runs the activity, data-service, creation, and refresh tests.
+- `mise x -- npm run lint` runs ESLint and TypeScript checking.
+- `mise x -- npm run build` creates the three production plugin artifacts in `dist/`.
 
-## Salience
+## Behavior
 
-Salience is generated from each note's `lastmod`/`lastMod` frontmatter. The generator treats that value as one recent edit, keeps it if it falls within the last 30 days, and applies a quadratic recency discount: an update today contributes much more than one several weeks ago.
+Activity comes only from each note's `lastmod` or `lastMod` frontmatter. Updates from the last 30
+days receive a quadratic recency discount, and visual levels are assigned relative to other notes
+within the current surface.
+
+Vault Weather listens for Obsidian metadata and vault file events, refreshes whenever its view
+becomes active, and recalculates activity at each UTC date boundary. The plus button creates a note
+with minimal `date` and `lastmod` frontmatter; shelf notes additionally require an integer `rating`
+from 0 to 5. New notes intentionally omit `slug` and `title`.
+
+The plugin source is tracked here. Installed artifacts under the vault's `.obsidian` directory and
+the local `dist/` directory are ignored by the parent repository.

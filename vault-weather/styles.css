@@ -1,0 +1,362 @@
+.vault-weather-view {
+  --vw-bg: #f5f2eb;
+  --vw-surface: #fffdf9;
+  --vw-surface-cool: #f4faf6;
+  --vw-text: #24201a;
+  --vw-muted: #6f675c;
+  --vw-border: #ded6ca;
+  --vw-green: #2f5d50;
+  --vw-activity-low: #edf3ea;
+  --vw-activity-mid: #c6d8b8;
+  --vw-activity-high: #476f4d;
+  --vw-shadow: 0 10px 24px rgba(34, 25, 18, 0.08);
+  height: 100%;
+  min-width: 320px;
+  overflow: auto;
+  padding: 0;
+  background: var(--vw-bg);
+  color: var(--vw-text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.vault-weather-view * {
+  box-sizing: border-box;
+}
+
+.vault-weather-view .weather-app {
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.vault-weather-view .app-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.vault-weather-view .app-header h1 {
+  margin: 0;
+  color: var(--vw-text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.35rem;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.vault-weather-view .eyebrow {
+  margin: 0 0 4px;
+  color: var(--vw-green);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.vault-weather-view .app-subtitle {
+  margin: 7px 0 0;
+  color: var(--vw-muted);
+  font-size: 0.86rem;
+}
+
+.vault-weather-view .header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.vault-weather-view .collection-tabs {
+  min-height: 34px;
+  border: 1px solid var(--vw-border);
+  border-radius: 8px;
+  background: var(--vw-surface);
+  display: inline-flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.vault-weather-view .collection-tab,
+.vault-weather-view .action-button,
+.vault-weather-view .weather-card-link {
+  appearance: none;
+  box-shadow: none;
+  font-family: inherit;
+}
+
+.vault-weather-view .collection-tab {
+  min-width: 80px;
+  min-height: 32px;
+  border: 0;
+  border-radius: 0;
+  padding: 0 10px;
+  background: transparent;
+  color: var(--vw-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.84rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background 140ms ease, color 140ms ease;
+  cursor: pointer;
+}
+
+.vault-weather-view .collection-tab:hover {
+  background: var(--vw-surface-cool);
+  color: var(--vw-green);
+}
+
+.vault-weather-view .collection-tab.active {
+  background: var(--vw-green);
+  color: #fffaf0;
+}
+
+.vault-weather-view .action-button {
+  min-height: 34px;
+  border: 1px solid var(--vw-border);
+  border-radius: 8px;
+  background: var(--vw-surface);
+  color: var(--vw-green);
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 140ms ease, background 140ms ease;
+}
+
+.vault-weather-view .icon-button {
+  width: 36px;
+  justify-content: center;
+  padding: 0;
+}
+
+.vault-weather-view .action-button:hover {
+  border-color: var(--vw-green);
+  background: var(--vw-surface-cool);
+  color: var(--vw-green);
+}
+
+.vault-weather-view .status-error,
+.vault-weather-create-modal .vault-weather-create-error {
+  color: #7a3f32;
+  font-size: 0.84rem;
+}
+
+.vault-weather-view .status-error {
+  margin: -6px 18px 12px;
+}
+
+.vault-weather-view .weather-stack {
+  display: grid;
+  gap: 8px;
+}
+
+.vault-weather-view .question-stack,
+.vault-weather-view .hunch-stack {
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.vault-weather-view .shelf-stack {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.vault-weather-view .weather-card {
+  min-width: 0;
+  min-height: 124px;
+  border: 1px solid var(--vw-border);
+  background: var(--vw-surface);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+}
+
+.vault-weather-view .weather-card.tone-electric {
+  border-color: #34573a;
+  background: var(--vw-activity-high);
+  color: #fffaf0;
+}
+
+.vault-weather-view .weather-card.tone-bright,
+.vault-weather-view .weather-card.tone-warm {
+  border-color: #6f925d;
+  background: var(--vw-activity-mid);
+}
+
+.vault-weather-view .weather-card.tone-warm {
+  border-color: #8faf78;
+}
+
+.vault-weather-view .weather-card.tone-stirring {
+  border-color: #c7d8bf;
+  background: var(--vw-activity-low);
+}
+
+.vault-weather-view .weather-card.tone-quiet {
+  background: var(--vw-surface-cool);
+}
+
+.vault-weather-view .weather-card:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--vw-shadow);
+}
+
+.vault-weather-view .weather-card-link {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  height: 100%;
+  min-height: 122px;
+  border: 0;
+  border-radius: 0;
+  padding: 11px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  justify-content: stretch;
+  justify-items: stretch;
+  gap: 10px;
+  overflow: hidden;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  white-space: normal;
+  cursor: pointer;
+}
+
+.vault-weather-view .weather-card-meta {
+  display: block;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--vw-muted);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vault-weather-view .tone-electric .weather-card-meta {
+  color: rgba(255, 250, 240, 0.74);
+}
+
+.vault-weather-view .weather-card-title {
+  display: block;
+  align-self: center;
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.vault-weather-view .weather-card-link:hover .weather-card-title {
+  color: #163f34;
+}
+
+.vault-weather-view .tone-electric .weather-card-link:hover .weather-card-title {
+  color: #ffffff;
+}
+
+.vault-weather-view .shelf-card.has-cover {
+  aspect-ratio: 2 / 3;
+  min-height: 0;
+}
+
+.vault-weather-view .shelf-card.has-cover .weather-card-link {
+  min-height: 0;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 7px;
+  padding: 8px;
+}
+
+.vault-weather-view .weather-card-cover {
+  min-height: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(255, 253, 249, 0.5);
+}
+
+.vault-weather-view .weather-card-cover img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.vault-weather-view .empty-state {
+  margin: 24px 0;
+  color: var(--vw-muted);
+  text-align: center;
+}
+
+.vault-weather-view .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.vault-weather-create-modal .vault-weather-create-error {
+  min-height: 1.25em;
+  margin-top: 8px;
+}
+
+@media (min-width: 1180px) {
+  .vault-weather-view .question-stack,
+  .vault-weather-view .hunch-stack {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .vault-weather-view .shelf-stack {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .vault-weather-view .weather-app {
+    padding: 14px;
+  }
+
+  .vault-weather-view .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .vault-weather-view .app-header {
+    flex-direction: column;
+  }
+
+  .vault-weather-view .header-actions {
+    align-self: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .vault-weather-view .weather-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .vault-weather-view .shelf-stack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

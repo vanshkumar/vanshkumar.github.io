@@ -12,7 +12,7 @@ In fall of 2020 the admissions process went through an overhaul. While the initi
 ![[Pasted image 20260718133154.png]]
 
 
-Needless to say, this broke the business model of the many “TJ test prep” programs & caused much distress among the (primarily Asian-American) parents who _needed_ their kids to go to TJ. I recall hearing stories around when I was graduating of parents who had moved cross-country & even internationally so their kids could go to TJ. This all culminated in [a legal case](https://en.wikipedia.org/wiki/Coalition_for_TJ_v._Fairfax_County_School_Board) between the Coalition for TJ[1](#footnote-1) and the Fairfax County School Board that ended with the Supreme Court declining to hear the Coalition’s appeal. The admissions process continues to be the holistic review described above.
+Needless to say, this broke the business model of the many “TJ test prep” programs & caused much distress among the (primarily Asian-American) parents who _needed_ their kids to go to TJ. I recall hearing stories around when I was graduating of parents who had moved cross-country & even internationally so their kids could go to TJ. This all culminated in [a legal case](https://en.wikipedia.org/wiki/Coalition_for_TJ_v._Fairfax_County_School_Board) between the Coalition for TJ[^1] and the Fairfax County School Board that ended with the Supreme Court declining to hear the Coalition’s appeal. The admissions process continues to be the holistic review described above.
 
 I had heard about this policy change & discussed it with a few friends at the time, but forgot about it until I saw [this tweet](https://x.com/francisdeng/status/1834344019293622323):
 
@@ -20,17 +20,16 @@ I had heard about this policy change & discussed it with a few friends at the ti
 
 This is an interesting and more importantly, measurable take! Some explanation:
 
-A student is a National Merit Semifinalist (NMSF) if they take the PSAT in their junior year & get a score above some cutoff. Not _exactly_ accurate[2](#footnote-2), but you can think of NMSF = top national %ile score on the PSAT.
+A student is a National Merit Semifinalist (NMSF) if they take the PSAT in their junior year & get a score above some cutoff. Not _exactly_ accurate[^2], but you can think of NMSF = top national %ile score on the PSAT.
 
 There was a large decline in the number of NMSFs at TJ in the first class admitted under the new admissions process, the class of 2025, compared to the previous year. This is pretty unsurprising IMO – as [this comment](https://www.dcurbanmom.com/jforum/posts/list/45/1229818.page#28423081) puts it:
 
 > BREAKING: School that no longer overselects for test-taking ability suddenly performs worse than before but still better than everyone else at test-taking contest
 
-But this tweeter is saying that the **total number** of NMSFs in the TJ geographic region went down too. The large decrease in TJ NMSFs was not compensated for by increases at the TJ-eligible high schools in the region. This is potentially more interesting – is there some net benefit to clustering “talent”[3](#footnote-3)? Are there kids who _would have been_ NMSFs had they gone to TJ? In other words, **was the change in admissions policy a net loss in NMSFs rather than just a redistribution**?
+But this tweeter is saying that the **total number** of NMSFs in the TJ geographic region went down too. The large decrease in TJ NMSFs was not compensated for by increases at the TJ-eligible high schools in the region. This is potentially more interesting – is there some net benefit to clustering “talent”[^3]? Are there kids who _would have been_ NMSFs had they gone to TJ? In other words, **was the change in admissions policy a net loss in NMSFs rather than just a redistribution**?
 
 _disclaimer: we can’t rigorously answer this with public data but we can at least do a descriptive analysis_
-
-## Answer: unclear so far
+# Answer: unclear so far
 
 I put [the bots on the case](https://github.com/vanshkumar/tj-psat-analysis) (gotta burn tokens somehow) to both reproduce the tweeter’s numbers & expand the analysis to two years pre-policy change and two years post. Here are the results in a nifty infographic:
 
@@ -45,7 +44,7 @@ If you prefer words:
 
 So.. wtf happened with the class of 2025? I’m not sure!
 
-My main guess[4](#footnote-4) is that this is somehow related to the class of 2025 being the first set of juniors to take the [digital PSAT](https://ihsvoice.com/2023/10/27/college-boards-new-digital-adaptive-psat/) instead of a paper version. The test itself changed a lot as part of this: it became shorter, “adaptive” to each student, calculators were allowed, etc. No idea why this would make the PSAT relatively harder for specifically Virginia students, but I don’t currently have a better hypothesis! Lmk if you can think of a better, ideally testable, one.
+My main guess[^4] is that this is somehow related to the class of 2025 being the first set of juniors to take the [digital PSAT](https://ihsvoice.com/2023/10/27/college-boards-new-digital-adaptive-psat/) instead of a paper version. The test itself changed a lot as part of this: it became shorter, “adaptive” to each student, calculators were allowed, etc. No idea why this would make the PSAT relatively harder for specifically Virginia students, but I don’t currently have a better hypothesis! Lmk if you can think of a better, ideally testable, one.
 
 ---
 
@@ -53,20 +52,12 @@ This whole thing took maybe like 4-5 hours of active time, though it was somewha
 
 
 
-[1](#footnote-anchor-1)
+[^1]: Their site coalitionfortj.net (don’t go to it!) is Indonesian casino stuff now. Their [twitter account](https://x.com/coalitionforTJ) also hasn’t posted in a year 😬. Guess that’s what happens when you lose
 
-Their site coalitionfortj.net (don’t go to it!) is Indonesian casino stuff now. Their [twitter account](https://x.com/coalitionforTJ) also hasn’t posted in a year 😬. Guess that’s what happens when you lose
+[^2]: The cutoff is actually determined at the state level: there are a fixed number of NMSFs allocated per state, and then you have to be in the top N students in the state to be an NMSF. So if you’re in a more “competitive” state, you need a higher PSAT score.
 
-[2](#footnote-anchor-2)
+[^3]: Obviously test scores are a shit measure of talent, but it’s at least _a_ measure
 
-The cutoff is actually determined at the state level: there are a fixed number of NMSFs allocated per state, and then you have to be in the top N students in the state to be an NMSF. So if you’re in a more “competitive” state, you need a higher PSAT score.
-
-[3](#footnote-anchor-3)
-
-Obviously test scores are a shit measure of talent, but it’s at least _a_ measure
-
-[4](#footnote-anchor-4)
-
-I did check a couple other things:
+[^4]: I did check a couple other things:
 - Whether the Virginia NMSF cutoff PSAT score changed over these years – it did shift a bit, but it’s unlikely it caused such a big regional level drop
 - Perhaps there were differences in how many juniors actually decided to take the PSAT, which my enrollment normalized metric doesn’t capture – this doesn’t seem to have been the case in the aggregate, though there may have been school-by-school diffs

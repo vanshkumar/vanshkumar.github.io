@@ -12,7 +12,7 @@ In fall of 2020 the admissions process went through an overhaul. While the initi
 ![[Pasted image 20260718133154.png]]
 
 
-Needless to say, this broke the business model of the many “TJ test prep” programs & caused much distress among the (primarily Asian-American) parents who _needed_ their kids to go to TJ. I recall hearing stories around when I was graduating of parents who had moved cross-country & even internationally so their kids could go to TJ. This all culminated in [a legal case](https://en.wikipedia.org/wiki/Coalition_for_TJ_v._Fairfax_County_School_Board) between the Coalition for TJ[^1] and the Fairfax County School Board that ended with the Supreme Court declining to hear the Coalition’s appeal. The admissions process continues to be the holistic review described above.
+Needless to say, this broke the business model of the many “TJ test prep” programs & caused [much](https://pacificlegal.org/washington-examiner-my-son-was-rejected-from-thomas-jefferson-high-school-the-supreme-court-should-have-heard-our-case/) [distress](https://pacificlegal.org/the-hill-the-parents-were-right-documents-show-discrimination-against-asian-american-students/) among the (primarily Asian-American) parents who _needed_ their kids to go to TJ. I recall hearing stories around when I was graduating of parents who had moved cross-country & even internationally so their kids could go to TJ. This all culminated in [a legal case](https://en.wikipedia.org/wiki/Coalition_for_TJ_v._Fairfax_County_School_Board) between the Coalition for TJ[^1] and the Fairfax County School Board that ended with the Supreme Court declining to hear the Coalition’s appeal. The admissions process continues to be the holistic review described above.
 
 I had heard about this policy change & discussed it with a few friends at the time, but forgot about it until I saw [this tweet](https://x.com/francisdeng/status/1834344019293622323):
 
@@ -59,5 +59,5 @@ This whole thing took maybe like 4-5 hours of active time, though it was somewha
 [^3]: Obviously test scores are a shit measure of talent, but it’s at least _a_ measure
 
 [^4]: I did check a couple other things:
-- Whether the Virginia NMSF cutoff PSAT score changed over these years – it did shift a bit, but it’s unlikely it caused such a big regional level drop
-- Perhaps there were differences in how many juniors actually decided to take the PSAT, which my enrollment normalized metric doesn’t capture – this doesn’t seem to have been the case in the aggregate, though there may have been school-by-school diffs
+	- Whether the Virginia NMSF cutoff PSAT score changed over these years – it did shift a bit, but it’s unlikely it caused such a big regional level drop
+	- Perhaps there were differences in how many juniors actually decided to take the PSAT, which my enrollment normalized metric doesn’t capture – this doesn’t seem to have been the case in the aggregate, though there may have been school-by-school diffs

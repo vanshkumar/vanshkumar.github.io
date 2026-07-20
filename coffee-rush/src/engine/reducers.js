@@ -35,7 +35,7 @@ export function applyAction(state, action) {
   return {
     state: {
       ...result.state,
-      log: [...currentState.log, action],
+      log: [...currentState.log, result.loggedAction ?? action],
     },
   };
 }
@@ -222,14 +222,15 @@ function move(state, action) {
     return { error: 'Choose one of your meeples.' };
   }
 
-  const rushSpent = Number(action.rushSpent ?? 0);
+  const rushAllowance = Number(action.rushSpent ?? 0);
   const path = action.path.map(Number);
-  const pathError = validateMovePath(state, player, meeple, path, rushSpent);
+  const pathError = validateMovePath(state, player, meeple, path, rushAllowance);
 
   if (pathError) {
     return { error: pathError };
   }
 
+  const rushSpent = Math.max(0, path.length - 3);
   const gained = path.flatMap((cellId) =>
     ingredientGainForCell(state, player, meeple, cellId),
   );
@@ -251,6 +252,10 @@ function move(state, action) {
       lastMessage: `${player.name} collected ${gained.length} ingredient${
         gained.length === 1 ? '' : 's'
       }.`,
+    },
+    loggedAction: {
+      ...action,
+      rushSpent,
     },
   };
 }

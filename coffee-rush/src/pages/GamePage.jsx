@@ -2140,7 +2140,7 @@ export default function GamePage() {
       playerId: activePlayer.id,
       meepleId: selectedMeepleId,
       path,
-      rushSpent,
+      rushSpent: movePreview?.rushCost ?? 0,
     });
   }
 
@@ -2658,13 +2658,13 @@ export default function GamePage() {
             ) : (
               <div className="phase-tools move-tools">
                 {activePlayer.rushTokens > 0 && (
-                  <div className="rush-stepper" aria-label="Rush spent">
-                    <span>Rush</span>
+                  <div className="rush-stepper" aria-label="Extra movement steps">
+                    <span>Extra steps</span>
                     <button
                       type="button"
                       onClick={() => updateRushSpent(rushSpent - 1)}
                       disabled={rushSpent <= 0 || isAsyncActionBlocked}
-                      aria-label="Spend one fewer Rush token"
+                      aria-label="Allow one fewer extra movement step"
                     >
                       -
                     </button>
@@ -2675,11 +2675,14 @@ export default function GamePage() {
                       disabled={
                         rushSpent >= activePlayer.rushTokens || isAsyncActionBlocked
                       }
-                      aria-label="Spend one more Rush token"
+                      aria-label="Allow one more extra movement step"
                     >
                       +
                     </button>
-                    <small>{activePlayer.rushTokens} available</small>
+                    <small>
+                      {movePreview?.rushCost ?? 0} Rush will be spent ·{' '}
+                      {activePlayer.rushTokens} available
+                    </small>
                   </div>
                 )}
                 <div className="move-status-line">

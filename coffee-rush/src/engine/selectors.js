@@ -71,6 +71,7 @@ export function getMovePathPreview(state, meepleId, path = [], rushSpent = 0) {
   const normalizedPath = Array.isArray(path) ? path.map(Number) : [];
   const spentRush = Number(rushSpent ?? 0);
   const maxSteps = 3 + Math.max(0, spentRush);
+  const rushCost = Math.max(0, normalizedPath.length - 3);
 
   if (!player || !meeple) {
     return {
@@ -81,6 +82,7 @@ export function getMovePathPreview(state, meepleId, path = [], rushSpent = 0) {
       maxSteps,
       nextCells: [],
       remainingSteps: maxSteps,
+      rushCost,
       stepsUsed: normalizedPath.length,
     };
   }
@@ -116,6 +118,7 @@ export function getMovePathPreview(state, meepleId, path = [], rushSpent = 0) {
     maxSteps,
     nextCells,
     remainingSteps,
+    rushCost,
     stepsUsed: normalizedPath.length,
   };
 }

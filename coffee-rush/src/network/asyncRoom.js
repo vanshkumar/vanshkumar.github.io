@@ -1,5 +1,6 @@
 import { applyAction } from '../engine/reducers';
 import { isValidPlayerName } from '../engine/playerProfile';
+import { migrateGameState } from '../engine/stateMigration';
 import { normalizeRoomCode } from '../persistence/remoteSession';
 import { getRelayUrl } from './roomSync';
 import {
@@ -453,7 +454,10 @@ export async function decryptSnapshot(session, encryptedSnapshot, headIndex, hea
     throw new AsyncRoomError('The room snapshot did not validate.');
   }
 
-  return payload;
+  return {
+    ...payload,
+    state: migrateGameState(payload.state),
+  };
 }
 
 export async function decryptCommit(session, commit) {

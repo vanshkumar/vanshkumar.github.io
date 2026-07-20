@@ -94,6 +94,51 @@ describe('Coffee Rush playthrough mechanics', () => {
     expect(state.players[0].hand).toEqual(['coffee', 'ice', 'caramel', 'steam']);
   });
 
+  it('only spends Rush for extra movement steps that were actually used', () => {
+    let state = finishSetup(setup());
+    state = apply(state, { type: 'SKIP_UPGRADES', playerId: 'p1' });
+    state = updatePlayer(state, 'p1', () => ({ rushTokens: 2 }));
+
+    const beforeMove = state;
+    state = apply(state, {
+      type: 'MOVE',
+      playerId: 'p1',
+      meepleId: 'p1-m1',
+      path: [21, 11, 12],
+      rushSpent: 2,
+    });
+
+    expect(state.players[0].rushTokens).toBe(2);
+    expect(state.log.at(-1)).toEqual({
+      type: 'MOVE',
+      playerId: 'p1',
+      meepleId: 'p1-m1',
+      path: [21, 11, 12],
+      rushSpent: 0,
+    });
+
+    const replay = applyAction(beforeMove, state.log.at(-1));
+    expect(replay.error).toBeUndefined();
+    expect(replay.state).toEqual(state);
+  });
+
+  it('spends only one Rush when two extra steps were reserved but one was used', () => {
+    let state = finishSetup(setup());
+    state = apply(state, { type: 'SKIP_UPGRADES', playerId: 'p1' });
+    state = updatePlayer(state, 'p1', () => ({ rushTokens: 2 }));
+
+    state = apply(state, {
+      type: 'MOVE',
+      playerId: 'p1',
+      meepleId: 'p1-m1',
+      path: [21, 11, 12, 13],
+      rushSpent: 2,
+    });
+
+    expect(state.players[0].rushTokens).toBe(1);
+    expect(state.log.at(-1).rushSpent).toBe(1);
+  });
+
   it('grants Rush immediately when a specialty order is fulfilled', () => {
     const specialty = order('order_010');
     let state = finishSetup(setup());

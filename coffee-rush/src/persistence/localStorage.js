@@ -136,6 +136,7 @@ export function loadAsyncRoomState(roomId) {
   return {
     ...parsed,
     headIndex: Number(parsed.headIndex),
+    state: migrateGameState(parsed.state),
   };
 }
 
@@ -185,7 +186,10 @@ export function loadAsyncDraft(roomId) {
   return {
     ...parsed,
     baseHeadIndex: Number(parsed.baseHeadIndex),
-    undoStack: Array.isArray(parsed.undoStack) ? parsed.undoStack : [],
+    state: migrateGameState(parsed.state),
+    undoStack: Array.isArray(parsed.undoStack)
+      ? parsed.undoStack.map(migrateGameState)
+      : [],
   };
 }
 

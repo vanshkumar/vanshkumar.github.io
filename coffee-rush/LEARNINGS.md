@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-07-20] — Rush movement reservations**
+- Observation: The move UI's Rush stepper grants planning allowance before confirmation, so recording and deducting that selected allowance overcharges short paths when a player enables extra steps but does not use them.
+- Action: Derive Rush cost from `max(0, path.length - 3)`, log the derived cost, and idempotently refund older saved/local/async states whose `MOVE.rushSpent` exceeds the path's actual cost.
+- Confidence: high
+
 **[2026-07-04] — Async room timeout**
 - Observation: Async room expiry is defined in both the client-facing `ASYNC_ROOM_TTL_DAYS` constant and the relay-enforced `ASYNC_ROOM_TTL_MS`; the relay applies the TTL on room create and each accepted commit.
 - Action: When changing async room inactivity windows, update both constants plus the README/relay plan docs and cover the exported values in focused async client/relay tests.

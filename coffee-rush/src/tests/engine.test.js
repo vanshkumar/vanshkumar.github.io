@@ -350,6 +350,7 @@ describe('Coffee Rush engine', () => {
     const emptyPreview = getMovePathPreview(state, 'p1-m1', [], 0);
     expect(emptyPreview.stepsUsed).toBe(0);
     expect(emptyPreview.remainingSteps).toBe(3);
+    expect(emptyPreview.rushCost).toBe(0);
     expect(emptyPreview.canConfirm).toBe(false);
     expect(emptyPreview.nextCells).toEqual(
       expect.arrayContaining([
@@ -397,6 +398,7 @@ describe('Coffee Rush engine', () => {
     const rushPreview = getMovePathPreview(state, 'p1-m1', [21, 11, 12, 13], 1);
     expect(rushPreview.maxSteps).toBe(4);
     expect(rushPreview.remainingSteps).toBe(0);
+    expect(rushPreview.rushCost).toBe(1);
     expect(rushPreview.canConfirm).toBe(true);
   });
 
@@ -606,6 +608,40 @@ describe('Coffee Rush engine', () => {
       ),
     };
     expect(migrateGameState(penaltyState)).toBe(penaltyState);
+  });
+
+  it('refunds Rush reserved for movement steps that saved games did not use', () => {
+    const state = finishSetup(setup(3));
+    const overchargedState = {
+      ...state,
+      players: state.players.map((player) =>
+        player.id === 'p2' ? { ...player, rushTokens: 1 } : player,
+      ),
+      log: [
+        ...state.log,
+        {
+          type: 'MOVE',
+          playerId: 'p1',
+          meepleId: 'p1-m1',
+          path: [21, 11, 12, 13],
+          rushSpent: 1,
+        },
+        {
+          type: 'MOVE',
+          playerId: 'p2',
+          meepleId: 'p2-m1',
+          path: [24, 14, 13],
+          rushSpent: 2,
+        },
+      ],
+    };
+
+    const migrated = migrateGameState(overchargedState);
+
+    expect(migrated.players.find((player) => player.id === 'p2').rushTokens).toBe(3);
+    expect(migrated.log.at(-2).rushSpent).toBe(1);
+    expect(migrated.log.at(-1).rushSpent).toBe(0);
+    expect(migrateGameState(migrated)).toBe(migrated);
   });
 
   it('does not fulfill an order while collected ingredients remain unplaced', () => {

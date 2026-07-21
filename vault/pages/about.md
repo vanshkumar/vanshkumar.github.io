@@ -1,12 +1,12 @@
 ---
 title: About
-lastmod: 2026-07-06
+lastmod: 2026-07-21
 date: 2026-05-27
 ---
 ## This site
 is a living workspace for Vansh Kumar's experiments and writing. Inspired heavily by the concept of [digital gardens](https://maggieappleton.com/garden-history), it evolves as the graph fills in.
 
-My goal with this site is to **increase the number of true things that are written down**. This means that if someone else has already written a truer answer to a question I care about, I will just link to them.
+My goal with my writing is to **learn what I think**.
 
 Everything I publish lives in one [terrain](/terrain): an underlying set of notes that may be unfinished, overlap categories, or have no category at all. Projects, essays, questions, and hunches are useful views across that terrain rather than different kinds of objects.
 

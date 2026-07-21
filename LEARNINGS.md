@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-07-19] — Discord domain verification DNS**
+- Observation: Namecheap's Advanced DNS Host field automatically appends `vanshkumar.net`; entering Discord's full `_discord.vanshkumar.net` name publishes the TXT record at `_discord.vanshkumar.net.vanshkumar.net`, which Discord cannot find.
+- Action: For Discord DNS verification on Namecheap, set the TXT Host to `_discord` only and put the complete `dh=...` token in Value.
+- Confidence: high
+
 **[2026-07-21] — Unified Terrain corpus**
 - Observation: Public general writing now consists only of Markdown files directly at the vault root; projects, essays, questions, hunches, topics, and untagged notes are views over one optional `tags` array, while project logs and Shelf entries remain structured collections.
 - Action: Route, sync, normalize, index wikilinks/backlinks, and publish RSS through the `terrain` collection; preserve retired collection paths as redirects or lookup aliases, and never make a root-level Markdown file private.

@@ -1,7 +1,7 @@
 ---
 date: 2026-07-21
 lastmod: 2026-07-21
-rating: 5
+rating: 4
 coverImage: /assets/shelf/the-childrens-machine.jpg
 ---
 A wonderful book, packed with insightful ideas on both how computers can be used to transform education and how they permit different "ways of knowing" (epistemologies) beyond the abstract that is currently supervalued by school.
@@ -15,3 +15,4 @@ Rather than the typical edtech ideas that boil down to "use computers to acceler
 - A word for learning & getting better at it – *mathetics*
 
 Questions this book got me thinking about:
+- 

@@ -26,4 +26,11 @@ describe('Obsidian style isolation', () => {
     expect(titleRule).toContain('overflow-wrap: anywhere');
     expect(titleRule).toContain('white-space: normal');
   });
+
+  it('keeps empty Weather views from becoming Obsidian pointer-blocking overlays', () => {
+    const emptyRule = ruleFor('.vault-weather-view .weather-empty-state');
+    expect(emptyRule).toContain('position: static');
+    expect(emptyRule).toContain('pointer-events: none');
+    expect(styles).not.toContain('.vault-weather-view .empty-state');
+  });
 });

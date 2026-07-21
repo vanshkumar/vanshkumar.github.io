@@ -328,9 +328,12 @@
   object-fit: cover;
 }
 
-.vault-weather-view .empty-state {
+.vault-weather-view .weather-empty-state {
+  position: static;
+  display: block;
   margin: 24px 0;
   color: var(--vw-muted);
+  pointer-events: none;
   text-align: center;
 }
 

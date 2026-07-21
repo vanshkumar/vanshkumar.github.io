@@ -54,6 +54,16 @@
 - Action: Refresh a Weather view when its leaf becomes active and at each UTC date boundary; do not add a manual data-refresh control unless a concrete missed-event case appears.
 - Confidence: high
 
+**2026-07-21 — Root Terrain discovery**
+- Observation: Obsidian reports the vault root folder as `/` through `TFile.parent.path`, while the unit-test fake reported an empty string, so direct root notes disappeared only in the installed runtime.
+- Action: Determine direct-folder membership from the directory portion of the vault-relative `TFile.path`, and keep the root regression fixture on Obsidian's `/` parent representation while asserting nested notes stay excluded.
+- Confidence: high
+
+**2026-07-21 — Empty-state style isolation**
+- Observation: Obsidian's global `.empty-state` class is an absolute full-pane overlay with active pointer events; using it for an empty Weather filter covered the header controls even though the message looked harmless.
+- Action: Prefix Weather empty-state classes, keep the message in normal flow with pointer events disabled, and regression-test both the rendered class name and its isolation CSS.
+- Confidence: high
+
 ## What Has Failed
 
 **2026-07-17 — Dependency installation**

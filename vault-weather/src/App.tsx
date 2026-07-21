@@ -198,7 +198,7 @@ export function WeatherPage({
 
       <section className="weather-list" aria-label={config.listLabel}>
         {data && visibleItems.length === 0 ? (
-          <p className="empty-state">No notes found in this view.</p>
+          <p className="weather-empty-state">No notes found in this view.</p>
         ) : (
           <div className={`weather-stack ${config.stackClassName}`}>
             {visibleItems.map((item) => (

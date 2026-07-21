@@ -45,7 +45,11 @@ export class WeatherDataService {
     const folder = COLLECTION_CONFIGS[collectionKey].folder;
     return this.app.vault
       .getMarkdownFiles()
-      .filter((file) => file.parent?.path === folder)
+      .filter((file) => {
+        const separatorIndex = file.path.lastIndexOf('/');
+        const directory = separatorIndex === -1 ? '' : file.path.slice(0, separatorIndex);
+        return directory === folder;
+      })
       .sort((a, b) => a.path.localeCompare(b.path));
   }
 

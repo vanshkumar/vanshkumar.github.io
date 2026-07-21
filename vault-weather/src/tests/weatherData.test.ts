@@ -10,7 +10,7 @@ interface FakeFile {
   parent: { path: string };
 }
 
-const makeFile = (path: string): FakeFile => {
+const makeFile = (path: string, parentPath?: string): FakeFile => {
   const name = path.split('/').at(-1) ?? path;
   const extension = name.includes('.') ? name.split('.').at(-1) ?? '' : '';
   return {
@@ -18,7 +18,7 @@ const makeFile = (path: string): FakeFile => {
     name,
     basename: extension ? name.slice(0, -(extension.length + 1)) : name,
     extension,
-    parent: { path: path.split('/').slice(0, -1).join('/') }
+    parent: { path: parentPath ?? path.split('/').slice(0, -1).join('/') }
   };
 };
 
@@ -64,7 +64,10 @@ const makeApp = ({
 
 describe('WeatherDataService', () => {
   it('builds root Terrain data and ignores nested Markdown files', async () => {
-    const files = [makeFile('A Question.md'), makeFile('writing inbox/Ignore.md')];
+    const files = [
+      makeFile('A Question.md', '/'),
+      makeFile('writing inbox/Ignore.md', 'writing inbox')
+    ];
     const { app } = makeApp({
       files,
       frontmatter: {

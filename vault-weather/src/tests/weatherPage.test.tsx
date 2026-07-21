@@ -40,14 +40,15 @@ const itemFor = (key: CollectionKey): WeatherItem => {
 
 const renderSurface = (
   key: CollectionKey,
-  terrainFilter: TerrainFilter = { mode: 'all' }
+  terrainFilter: TerrainFilter = { mode: 'all' },
+  items: WeatherItem[] = [itemFor(key)]
 ): string => {
   const data: WeatherCollectionData = {
     key,
     filter: terrainFilter,
     availableTags: key === 'terrain' ? ['hunches', 'questions'] : [],
     refreshedAt: '2026-07-17T12:00:00.000Z',
-    items: [itemFor(key)]
+    items
   };
   return renderToStaticMarkup(
     <WeatherPage
@@ -85,6 +86,12 @@ describe('sandboxed WeatherPage rendering', () => {
     expect(html).toContain('>Hunches</button>');
     expect(html).toContain('aria-current="page">Questions</button>');
     expect(html).toContain('aria-label="Add questions entry"');
+  });
+
+  it('keeps the empty Terrain message out of Obsidian\'s full-pane empty-state overlay', () => {
+    const html = renderSurface('terrain', { mode: 'untagged' }, []);
+    expect(html).toContain('class="weather-empty-state"');
+    expect(html).not.toContain('class="empty-state"');
   });
 
   it('renders a resolved shelf cover resource', () => {

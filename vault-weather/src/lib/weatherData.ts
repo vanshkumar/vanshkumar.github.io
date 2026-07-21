@@ -10,8 +10,10 @@ import {
   WeatherCreateError
 } from './weatherCore';
 import {
+  ALL_TERRAIN_FILTER,
   COLLECTION_CONFIGS,
   type CollectionKey,
+  type TerrainFilter,
   type WeatherCollectionData,
   type WeatherItem
 } from './weatherTypes';
@@ -23,6 +25,18 @@ const isFile = (file: TAbstractFile | null): file is TFile =>
 
 const stringValue = (value: unknown): string | null =>
   typeof value === 'string' && value.trim() ? value.trim() : null;
+
+const tagsValue = (value: unknown): string[] => {
+  const values = Array.isArray(value) ? value : value == null ? [] : [value];
+  return Array.from(
+    new Set(
+      values
+        .filter((tag): tag is string => typeof tag === 'string')
+        .map((tag) => tag.trim().replace(/^#+/, ''))
+        .filter(Boolean)
+    )
+  );
+};
 
 export class WeatherDataService {
   constructor(private readonly app: App) {}
@@ -54,13 +68,13 @@ export class WeatherDataService {
 
   async buildCollection(
     collectionKey: CollectionKey,
+    filter: TerrainFilter = ALL_TERRAIN_FILTER,
     now = new Date()
   ): Promise<WeatherCollectionData> {
-    const config = COLLECTION_CONFIGS[collectionKey];
-    const items = this.directMarkdownFiles(collectionKey).map((file): WeatherItem => {
+    const allItems = this.directMarkdownFiles(collectionKey).map((file): WeatherItem => {
       const frontmatter = this.frontmatter(file);
       const lastmod = dateToIsoDate(frontmatter.lastmod ?? frontmatter.lastMod);
-      const cover = config.cardMode === 'cover' ? this.resolveCover(frontmatter.coverImage) : null;
+      const cover = this.resolveCover(frontmatter.coverImage);
 
       return {
         file,
@@ -69,6 +83,7 @@ export class WeatherDataService {
         vaultPath: file.path,
         date: dateToIsoDate(frontmatter.date),
         lastmod,
+        tags: tagsValue(frontmatter.tags),
         rating: frontmatter.rating ?? null,
         coverImage: stringValue(frontmatter.coverImage),
         coverUrl: cover?.url ?? null,
@@ -76,10 +91,22 @@ export class WeatherDataService {
       };
     });
 
+    const availableTags = Array.from(new Set(allItems.flatMap((item) => item.tags))).sort((a, b) =>
+      a.localeCompare(b)
+    );
+    const visibleItems =
+      collectionKey !== 'terrain' || filter.mode === 'all'
+        ? allItems
+        : filter.mode === 'untagged'
+          ? allItems.filter((item) => item.tags.length === 0)
+          : allItems.filter((item) => item.tags.includes(filter.tag));
+
     return {
       key: collectionKey,
+      filter,
+      availableTags: collectionKey === 'terrain' ? availableTags : [],
       refreshedAt: new Date().toISOString(),
-      items: assignActivityLevels(items)
+      items: assignActivityLevels(visibleItems)
     };
   }
 
@@ -87,15 +114,17 @@ export class WeatherDataService {
     collectionKey,
     title,
     rating,
+    tag,
     now = new Date()
   }: {
     collectionKey: CollectionKey;
     title: unknown;
     rating?: unknown;
+    tag?: unknown;
     now?: Date;
   }): Promise<TFile> {
     const config = COLLECTION_CONFIGS[collectionKey];
-    const draft = createNoteDraft({ collectionKey, title, rating, now });
+    const draft = createNoteDraft({ collectionKey, title, rating, tag, now });
 
     if (this.app.vault.getAbstractFileByPath(draft.vaultPath)) {
       throw new WeatherCreateError(`A ${config.itemLabel} with that title already exists`);
@@ -111,7 +140,7 @@ export class WeatherDataService {
       throw new WeatherCreateError(`A ${config.itemLabel} with that slug already exists`);
     }
 
-    if (!this.app.vault.getAbstractFileByPath(config.folder)) {
+    if (config.folder && !this.app.vault.getAbstractFileByPath(config.folder)) {
       await this.app.vault.createFolder(config.folder);
     }
 

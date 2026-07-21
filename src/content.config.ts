@@ -2,26 +2,13 @@ import { defineCollection, z } from 'astro:content';
 
 const optionalText = z.string().optional().nullable();
 
-const questions = defineCollection({
+const terrain = defineCollection({
   type: 'content',
   schema: z.object({
     title: optionalText,
     description: optionalText,
     date: z.coerce.date().optional(),
     lastmod: z.coerce.date().optional(),
-    tags: z.array(z.string()).optional(),
-    aliases: z.array(z.string()).optional()
-  })
-});
-
-const projects = defineCollection({
-  type: 'content',
-  schema: z.object({
-    title: optionalText,
-    description: optionalText,
-    date: z.coerce.date().optional(),
-    lastmod: z.coerce.date().optional(),
-    kind: z.enum(['project', 'essay']),
     tags: z.array(z.string()).optional(),
     coverImage: z.string().optional(),
     aliases: z.array(z.string()).optional(),
@@ -43,18 +30,7 @@ const logs = defineCollection({
     lastmod: z.coerce.date().optional(),
     parent: z.string(),
     day: z.string().optional(),
-    title: z.string().optional()
-  })
-});
-
-const hunches = defineCollection({
-  type: 'content',
-  schema: z.object({
-    title: optionalText,
-    description: optionalText,
-    date: z.coerce.date().optional(),
-    lastmod: z.coerce.date().optional(),
-    tags: z.array(z.string()).optional(),
+    title: z.string().optional(),
     aliases: z.array(z.string()).optional()
   })
 });
@@ -86,10 +62,8 @@ const pages = defineCollection({
 });
 
 export const collections = {
-  questions,
-  projects,
+  terrain,
   logs,
-  hunches,
   shelf,
   pages
 };

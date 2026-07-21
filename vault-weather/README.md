@@ -1,10 +1,10 @@
 # Vault Weather
 
-Vault Weather is a personal Obsidian plugin for browsing three local vault surfaces by recent
+Vault Weather is a personal Obsidian plugin for browsing two local vault surfaces by recent
 activity:
 
-- **Question Weather** reads `questions`.
-- **Hunch Weather** reads `hunches`.
+- **Terrain Weather** reads public Markdown files directly at the vault root. It provides built-in
+  All and Untagged views plus a view for every discovered tag.
 - **Shelf Weather** reads `shelf` and displays valid vault-relative `coverImage` assets such as
   `/assets/shelf/book.webp`.
 
@@ -38,12 +38,16 @@ Obsidian.
 
 Activity comes only from each note's `lastmod` or `lastMod` frontmatter. Updates from the last 30
 days receive a quadratic recency discount, and visual levels are assigned relative to other notes
-within the current surface.
+within the active Terrain view or Shelf surface.
 
 Vault Weather listens for Obsidian metadata and vault file events, refreshes whenever its view
 becomes active, and recalculates activity at each UTC date boundary. The plus button creates a note
-with minimal `date` and `lastmod` frontmatter; shelf notes additionally require an integer `rating`
-from 0 to 5. New notes intentionally omit `slug` and `title`.
+with minimal `date` and `lastmod` frontmatter. Creation from a Terrain tag view preapplies that tag;
+creation from All or Untagged creates an untagged root file. Shelf notes additionally require an
+integer `rating` from 0 to 5. New notes intentionally omit `slug` and `title`.
+
+The selected Terrain filter or Shelf surface is stored in the Obsidian workspace layout and
+restored with the view.
 
 The plugin source is tracked here. Installed artifacts under the vault's `.obsidian` directory and
 the local `dist/` directory are ignored by the parent repository.

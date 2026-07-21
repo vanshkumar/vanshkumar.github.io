@@ -3,13 +3,20 @@ import { createRoot, type Root } from 'react-dom/client';
 import { VaultWeatherApp } from './App';
 import { CreateNoteModal } from './CreateNoteModal';
 import { WeatherDataService } from './lib/weatherData';
-import { isCollectionKey, type CollectionKey } from './lib/weatherTypes';
+import {
+  ALL_TERRAIN_FILTER,
+  isCollectionKey,
+  isTerrainFilter,
+  type CollectionKey,
+  type TerrainFilter
+} from './lib/weatherTypes';
 
 export const VAULT_WEATHER_VIEW_TYPE = 'vault-weather-view';
 
 export class VaultWeatherView extends ItemView {
   private reactRoot: Root | null = null;
-  private collectionKey: CollectionKey = 'questions';
+  private collectionKey: CollectionKey = 'terrain';
+  private terrainFilter: TerrainFilter = ALL_TERRAIN_FILTER;
   private refreshToken = 0;
 
   constructor(
@@ -45,11 +52,12 @@ export class VaultWeatherView extends ItemView {
   }
 
   getState(): Record<string, unknown> {
-    return { collectionKey: this.collectionKey };
+    return { collectionKey: this.collectionKey, terrainFilter: this.terrainFilter };
   }
 
   async setState(state: Record<string, unknown>, result: ViewStateResult): Promise<void> {
     if (isCollectionKey(state.collectionKey)) this.collectionKey = state.collectionKey;
+    if (isTerrainFilter(state.terrainFilter)) this.terrainFilter = state.terrainFilter;
     await super.setState(state, result);
     this.renderView();
   }
@@ -63,10 +71,12 @@ export class VaultWeatherView extends ItemView {
     this.reactRoot?.render(
       <VaultWeatherApp
         collectionKey={this.collectionKey}
+        terrainFilter={this.terrainFilter}
         refreshToken={this.refreshToken}
         service={this.service}
         changeCollection={(key) => this.changeCollection(key)}
-        createNote={(key) => this.openCreateModal(key)}
+        changeTerrainFilter={(filter) => this.changeTerrainFilter(filter)}
+        createNote={(key, tag) => this.openCreateModal(key, tag)}
         openFile={(file) => this.openFile(file)}
       />
     );
@@ -78,9 +88,16 @@ export class VaultWeatherView extends ItemView {
     this.renderView();
   }
 
-  private openCreateModal(key: CollectionKey): void {
+  private changeTerrainFilter(filter: TerrainFilter): void {
+    this.collectionKey = 'terrain';
+    this.terrainFilter = filter;
+    this.app.workspace.requestSaveLayout();
+    this.renderView();
+  }
+
+  private openCreateModal(key: CollectionKey, tag?: string): void {
     new CreateNoteModal(this.app, key, async (title, rating) => {
-      const file = await this.service.createNote({ collectionKey: key, title, rating });
+      const file = await this.service.createNote({ collectionKey: key, title, rating, tag });
       this.refresh();
       await this.openFile(file);
     }).open();

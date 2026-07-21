@@ -87,6 +87,9 @@ const buildWikiIndex = () => {
 
       const file = fs.readFileSync(filePath, 'utf8');
       const { data } = matter(file);
+      if (data.title) {
+        addIfMissing(normalizeWikiTarget(String(data.title)), url);
+      }
       const aliases = Array.isArray(data.aliases)
         ? data.aliases
         : data.aliases
@@ -95,6 +98,11 @@ const buildWikiIndex = () => {
       aliases.forEach((alias) => {
         addIfMissing(normalizeWikiTarget(String(alias)), url);
       });
+      if (collection === 'terrain' && Array.isArray(data.tags)) {
+        data.tags.forEach((tag) => {
+          addIfMissing(normalizeWikiTarget(`${tag}/${slug}`), url);
+        });
+      }
     });
   });
 

@@ -7,6 +7,7 @@ import {
   COLLECTION_CONFIGS,
   COLLECTION_KEYS,
   type CollectionKey,
+  type TerrainFilter,
   type WeatherCollectionData,
   type WeatherItem
 } from './lib/weatherTypes';
@@ -21,6 +22,23 @@ const formatDate = (value: string | null): string => {
   }).format(new Date(value));
 };
 
+const filterMatches = (left: TerrainFilter, right: TerrainFilter): boolean =>
+  left.mode === right.mode &&
+  (left.mode !== 'tag' || (right.mode === 'tag' && left.tag === right.tag));
+
+const tagLabel = (tag: string): string =>
+  tag
+    .split(/[-_\s]+/)
+    .filter(Boolean)
+    .map((part) => `${part.charAt(0).toUpperCase()}${part.slice(1)}`)
+    .join(' ');
+
+const terrainTitle = (filter: TerrainFilter): string => {
+  if (filter.mode === 'untagged') return 'Untagged Weather';
+  if (filter.mode === 'tag') return `${tagLabel(filter.tag)} Weather`;
+  return 'Terrain Weather';
+};
+
 interface WeatherCardProps {
   item: WeatherItem;
   collectionKey: CollectionKey;
@@ -31,7 +49,7 @@ function WeatherCard({ item, collectionKey, openFile }: WeatherCardProps) {
   const config = COLLECTION_CONFIGS[collectionKey];
   const tone = activityTone(item.activity.level);
   const updatedDate = getItemUpdatedDate(item);
-  const hasCover = config.cardMode === 'cover' && Boolean(item.coverUrl);
+  const hasCover = collectionKey === 'shelf' && Boolean(item.coverUrl);
 
   return (
     <article
@@ -59,27 +77,33 @@ function WeatherCard({ item, collectionKey, openFile }: WeatherCardProps) {
 
 interface VaultWeatherAppProps {
   collectionKey: CollectionKey;
+  terrainFilter: TerrainFilter;
   refreshToken: number;
   service: WeatherDataService;
   changeCollection: (key: CollectionKey) => void;
-  createNote: (key: CollectionKey) => void;
+  changeTerrainFilter: (filter: TerrainFilter) => void;
+  createNote: (key: CollectionKey, tag?: string) => void;
   openFile: (file: TFile) => Promise<void>;
 }
 
 interface WeatherPageProps {
   collectionKey: CollectionKey;
+  terrainFilter: TerrainFilter;
   data: WeatherCollectionData | null;
   error: string;
   changeCollection: (key: CollectionKey) => void;
-  createNote: (key: CollectionKey) => void;
+  changeTerrainFilter: (filter: TerrainFilter) => void;
+  createNote: (key: CollectionKey, tag?: string) => void;
   openFile: (file: TFile) => Promise<void>;
 }
 
 export function WeatherPage({
   collectionKey,
+  terrainFilter,
   data,
   error,
   changeCollection,
+  changeTerrainFilter,
   createNote,
   openFile
 }: WeatherPageProps) {
@@ -88,13 +112,17 @@ export function WeatherPage({
   const activeCount = (data?.items ?? []).filter(
     (item) => item.activity.recentUpdateCount > 0
   ).length;
+  const title = collectionKey === 'terrain' ? terrainTitle(terrainFilter) : config.title;
+  const creationTag =
+    collectionKey === 'terrain' && terrainFilter.mode === 'tag' ? terrainFilter.tag : undefined;
+  const addLabel = creationTag ? `Add ${creationTag} entry` : config.addLabel;
 
   return (
     <main className="weather-app">
       <header className="app-header">
         <div>
           <p className="eyebrow">Local vault surface</p>
-          <h1>{config.title}</h1>
+          <h1>{title}</h1>
           <p className="app-subtitle">
             {data?.items.length ?? 0} {config.countLabel} · {activeCount} active in the last 30
             days · refreshed {formatDate(data?.refreshedAt ?? null)}
@@ -121,20 +149,56 @@ export function WeatherPage({
           <button
             className="action-button icon-button"
             type="button"
-            onClick={() => createNote(collectionKey)}
-            title={config.addLabel}
-            aria-label={config.addLabel}
+            onClick={() => createNote(collectionKey, creationTag)}
+            title={addLabel}
+            aria-label={addLabel}
           >
             <Plus aria-hidden="true" size={18} />
           </button>
         </div>
       </header>
 
+      {collectionKey === 'terrain' ? (
+        <nav className="terrain-filter-tabs" aria-label="Terrain views">
+          <button
+            type="button"
+            className={`terrain-filter-tab${terrainFilter.mode === 'all' ? ' active' : ''}`}
+            onClick={() => changeTerrainFilter({ mode: 'all' })}
+            aria-current={terrainFilter.mode === 'all' ? 'page' : undefined}
+          >
+            All
+          </button>
+          <button
+            type="button"
+            className={`terrain-filter-tab${terrainFilter.mode === 'untagged' ? ' active' : ''}`}
+            onClick={() => changeTerrainFilter({ mode: 'untagged' })}
+            aria-current={terrainFilter.mode === 'untagged' ? 'page' : undefined}
+          >
+            Untagged
+          </button>
+          {(data?.availableTags ?? []).map((tag) => {
+            const filter: TerrainFilter = { mode: 'tag', tag };
+            const active = filterMatches(terrainFilter, filter);
+            return (
+              <button
+                key={tag}
+                type="button"
+                className={`terrain-filter-tab${active ? ' active' : ''}`}
+                onClick={() => changeTerrainFilter(filter)}
+                aria-current={active ? 'page' : undefined}
+              >
+                {tagLabel(tag)}
+              </button>
+            );
+          })}
+        </nav>
+      ) : null}
+
       {error ? <p className="status-error">{error}</p> : null}
 
       <section className="weather-list" aria-label={config.listLabel}>
         {data && visibleItems.length === 0 ? (
-          <p className="empty-state">No notes found in {config.folder}.</p>
+          <p className="empty-state">No notes found in this view.</p>
         ) : (
           <div className={`weather-stack ${config.stackClassName}`}>
             {visibleItems.map((item) => (
@@ -154,9 +218,11 @@ export function WeatherPage({
 
 export function VaultWeatherApp({
   collectionKey,
+  terrainFilter,
   refreshToken,
   service,
   changeCollection,
+  changeTerrainFilter,
   createNote,
   openFile
 }: VaultWeatherAppProps) {
@@ -166,9 +232,10 @@ export function VaultWeatherApp({
   useEffect(() => {
     let cancelled = false;
     setError('');
+    setData(null);
 
     void service
-      .buildCollection(collectionKey)
+      .buildCollection(collectionKey, terrainFilter)
       .then((nextData) => {
         if (!cancelled) setData(nextData);
       })
@@ -181,14 +248,16 @@ export function VaultWeatherApp({
     return () => {
       cancelled = true;
     };
-  }, [collectionKey, refreshToken, service]);
+  }, [collectionKey, refreshToken, service, terrainFilter]);
 
   return (
     <WeatherPage
       collectionKey={collectionKey}
-      data={data?.key === collectionKey ? data : null}
+      terrainFilter={terrainFilter}
+      data={data}
       error={error}
       changeCollection={changeCollection}
+      changeTerrainFilter={changeTerrainFilter}
       createNote={createNote}
       openFile={openFile}
     />

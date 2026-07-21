@@ -5,7 +5,7 @@ import '../styles/global.css';
 const { title, description, enableMath = false } = Astro.props;
 const pageTitle = title ? `Vansh Kumar | ${title}` : 'Vansh Kumar';
 const pathname = Astro.url.pathname;
-const isTerrain = pathname === '/terrain';
+const isTerrain = pathname === '/terrain' || pathname.startsWith('/terrain/');
 const siteEntry = await getEntry('pages', 'site');
 const brandSubtitle =
   siteEntry?.data?.brandSubtitle ?? 'Hunches, projects, and quiet experiments.';

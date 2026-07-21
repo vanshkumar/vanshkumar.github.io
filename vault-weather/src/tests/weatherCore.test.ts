@@ -47,6 +47,7 @@ describe('weather core', () => {
       vaultPath: `${title}.md`,
       date: '2026-06-01',
       lastmod: '2026-06-10',
+      tags: [],
       rating: null,
       coverImage: null,
       coverUrl: null,
@@ -77,16 +78,18 @@ describe('weather core', () => {
     expect(noteFilenameFromTitle('One/two: three.md')).toBe('One-two - three.md');
     expect(
       createNoteDraft({
-        collectionKey: 'questions',
+        collectionKey: 'terrain',
         title: 'How do I choose?',
+        tag: 'questions',
         now: new Date('2026-06-15T12:00:00Z')
       })
     ).toEqual({
       title: 'How do I choose?',
       slug: 'how-do-i-choose',
       filename: 'How do I choose?.md',
-      vaultPath: 'questions/How do I choose?.md',
-      markdown: '---\ndate: 2026-06-15\nlastmod: 2026-06-15\n---\n\n'
+      vaultPath: 'How do I choose?.md',
+      markdown:
+        '---\ndate: 2026-06-15\nlastmod: 2026-06-15\ntags:\n  - "questions"\n---\n\n'
     });
     expect(
       createNoteDraft({
@@ -99,8 +102,8 @@ describe('weather core', () => {
   });
 
   it('validates required titles and shelf ratings', () => {
-    expect(() => createNoteDraft({ collectionKey: 'questions', title: '' })).toThrow(
-      'Question title is required'
+    expect(() => createNoteDraft({ collectionKey: 'terrain', title: '' })).toThrow(
+      'Entry title is required'
     );
     expect(() => createNoteDraft({ collectionKey: 'shelf', title: 'Book' })).toThrow(
       'Shelf rating is required'

@@ -17,6 +17,7 @@ type WikiEntry = {
   title: string;
   url: string;
   aliases: string[];
+  tags: string[];
   body: string;
 };
 
@@ -41,10 +42,8 @@ const extractTargets = (body: string) => {
 };
 
 const buildEntries = async () => {
-  const [projects, questions, hunches, shelf, logs, pages] = await Promise.all([
-    getCollection('projects'),
-    getCollection('questions'),
-    getCollection('hunches'),
+  const [terrain, shelf, logs, pages] = await Promise.all([
+    getCollection('terrain'),
     getCollection('shelf'),
     getCollection('logs'),
     getCollection('pages')
@@ -60,14 +59,13 @@ const buildEntries = async () => {
         title: entryTitle(collection, entry),
         url: urlForEntry(collection, entry.slug),
         aliases: Array.isArray(entry.data.aliases) ? entry.data.aliases : [],
+        tags: Array.isArray(entry.data.tags) ? entry.data.tags : [],
         body: entry.body ?? ''
       });
     });
   };
 
-  pushEntries('projects', projects);
-  pushEntries('questions', questions);
-  pushEntries('hunches', hunches);
+  pushEntries('terrain', terrain);
   pushEntries('shelf', shelf);
   pushEntries('logs', logs);
   pushEntries('pages', pages);
@@ -100,6 +98,7 @@ const buildLookup = (entries: WikiEntry[]) => {
   orderedEntries.forEach((entry) => {
     const slugKey = normalizeWikiTarget(entry.slug);
     addIfMissing(slugKey, entry);
+    addIfMissing(normalizeWikiTarget(entry.title), entry);
     if (entry.collection === 'logs') {
       const basename = entry.slug.split('/').filter(Boolean).pop();
       if (basename) {
@@ -110,6 +109,11 @@ const buildLookup = (entries: WikiEntry[]) => {
       addIfMissing(normalizeWikiTarget(`${entry.collection}/${entry.slug}`), entry);
       legacyCollectionsFor(entry.collection).forEach((legacyCollection) => {
         addIfMissing(normalizeWikiTarget(`${legacyCollection}/${entry.slug}`), entry);
+      });
+    }
+    if (entry.collection === 'terrain') {
+      entry.tags.forEach((tag) => {
+        addIfMissing(normalizeWikiTarget(`${tag}/${entry.slug}`), entry);
       });
     }
     entry.aliases.forEach((alias) => {

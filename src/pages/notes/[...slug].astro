@@ -1,14 +1,15 @@
 ---
 import { getCollection } from 'astro:content';
+import RedirectLayout from '../../layouts/RedirectLayout.astro';
 import { titleFromSlug } from '../../lib/content';
 
 export async function getStaticPaths() {
-  const entries = await getCollection('hunches');
+  const entries = await getCollection('terrain');
   return entries.map((entry) => ({
     params: { slug: entry.slug },
     props: {
       title: entry.data.title ?? titleFromSlug(entry.slug),
-      target: `/hunches/${entry.slug}`
+      target: `/terrain/${entry.slug}`
     }
   }));
 }
@@ -16,16 +17,4 @@ export async function getStaticPaths() {
 const { title, target } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="refresh" content={`0; url=${target}`} />
-    <link rel="canonical" href={target} />
-    <title>{title}</title>
-  </head>
-  <body>
-    <p>This hunch moved to <a href={target}>{target}</a>.</p>
-  </body>
-</html>
+<RedirectLayout title={title} target={target} message="This post moved" />

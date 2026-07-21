@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import RedirectLayout from '../../../layouts/RedirectLayout.astro';
+import { titleFromSlug } from '../../../lib/content';
+import { normalizeWikiTarget } from '../../../lib/wiki-routing.mjs';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('terrain');
+  const paths = [];
+  const seen = new Set();
+
+  entries.forEach((entry) => {
+    const tags = Array.isArray(entry.data.tags) ? entry.data.tags : [];
+    tags.forEach((tag) => {
+      const normalizedTag = normalizeWikiTarget(tag).replace(/\//g, '-');
+      const key = `${normalizedTag}/${entry.slug}`;
+      if (!normalizedTag || seen.has(key)) return;
+      seen.add(key);
+      paths.push({
+        params: { tag: normalizedTag, slug: entry.slug },
+        props: {
+          title: entry.data.title ?? titleFromSlug(entry.slug),
+          target: `/terrain/${entry.slug}`
+        }
+      });
+    });
+  });
+
+  return paths;
+}
+
+const { title, target } = Astro.props;
+---
+
+<RedirectLayout title={title} target={target} message="This tagged path moved" />

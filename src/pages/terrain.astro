@@ -15,9 +15,14 @@ const heroAccent = entry.data.heroAccent ?? null;
 const hasHeroBody = Boolean(entry.body?.trim());
 const isAccentOnlyHero = !heroTitle && heroAccent;
 
-const projects = await getCollection('projects');
-const questions = await getCollection('questions');
-const hunches = await getCollection('hunches');
+const terrainEntries = await getCollection('terrain');
+const hasTag = (entry, tag) =>
+  (entry.data.tags ?? []).some((value) => value.toLowerCase() === tag);
+const projects = terrainEntries.filter(
+  (entry) => hasTag(entry, 'projects') || hasTag(entry, 'essays')
+);
+const questions = terrainEntries.filter((entry) => hasTag(entry, 'questions'));
+const hunches = terrainEntries.filter((entry) => hasTag(entry, 'hunches'));
 
 const displayTitle = (entry) => entry.data.title ?? titleFromSlug(entry.slug);
 const stripMarkdown = (value) =>
@@ -64,24 +69,24 @@ const sortByUpdated = (a, b) => {
   return bTime - aTime;
 };
 
-const toCard = (entry, collection) => {
+const toCard = (entry) => {
   const lastUpdated = entry.data.lastmod ?? entry.data.date ?? null;
   return {
-    key: `${collection}:${entry.slug}`,
+    key: `terrain:${entry.slug}`,
     title: displayTitle(entry),
     description: entry.data.description ?? excerpt(entry.body ?? ''),
     date: entry.data.date ?? null,
     dateLabel: formatCardDate(entry.data.date),
     lastUpdated,
     lastUpdatedLabel: formatLastUpdated(lastUpdated),
-    href: `/${collection}/${entry.slug}`,
+    href: `/terrain/${entry.slug}`,
     coverImage: entry.data.coverImage ?? null
   };
 };
 
-const projectCards = projects.map((entry) => toCard(entry, 'projects')).sort(sortByUpdated);
-const questionCards = questions.map((entry) => toCard(entry, 'questions')).sort(sortByUpdated);
-const hunchCards = hunches.map((entry) => toCard(entry, 'hunches')).sort(sortByUpdated);
+const projectCards = projects.map(toCard).sort(sortByUpdated);
+const questionCards = questions.map(toCard).sort(sortByUpdated);
+const hunchCards = hunches.map(toCard).sort(sortByUpdated);
 ---
 
 <BaseLayout title="Terrain">

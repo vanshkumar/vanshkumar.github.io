@@ -38,6 +38,9 @@ export const normalizeNoteTitle = (value: unknown): string =>
     .replace(/\.md$/i, '')
     .trim();
 
+export const normalizeTag = (value: unknown): string =>
+  normalizeNoteTitle(value).replace(/^#+/, '').trim();
+
 const withoutControlCharacters = (value: string): string =>
   Array.from(value)
     .filter((character) => character.charCodeAt(0) >= 32)
@@ -160,11 +163,13 @@ export const createNoteDraft = ({
   collectionKey,
   title,
   rating,
+  tag,
   now = new Date()
 }: {
   collectionKey: CollectionKey;
   title: unknown;
   rating?: unknown;
+  tag?: unknown;
   now?: Date;
 }): NoteDraft => {
   const config = COLLECTION_CONFIGS[collectionKey];
@@ -183,13 +188,17 @@ export const createNoteDraft = ({
 
   const date = dateToIsoDate(now) ?? dateToIsoDate(new Date())!;
   const fields = [`date: ${date}`, `lastmod: ${date}`];
+  const cleanTag = collectionKey === 'terrain' ? normalizeTag(tag) : '';
+  if (cleanTag) fields.push('tags:', `  - ${JSON.stringify(cleanTag)}`);
   if (config.requiresRating) fields.push(`rating: ${normalizeRating(rating)}`);
+
+  const vaultPath = config.folder ? `${config.folder}/${filename}` : filename;
 
   return {
     title: cleanTitle,
     slug,
     filename,
-    vaultPath: `${config.folder}/${filename}`,
+    vaultPath,
     markdown: ['---', ...fields, '---', '', ''].join('\n')
   };
 };

@@ -20,13 +20,13 @@
 - Confidence: high
 
 **2026-06-17 — Create note frontmatter**
-- Observation: The user prefers create buttons to avoid writing `slug` or `title`; question `slug`/`title` are normalized by the main repo commit hook, and shelf display can fall back to the filename.
+- Observation: The user prefers create buttons to avoid writing `slug` or `title`; root Terrain `slug`/`title` are normalized by the main repo commit hook, and Shelf display can fall back to the filename.
 - Action: Keep fresh note frontmatter minimal; write date fields, require an explicit shelf rating, and do not stamp `slug` or `title` from the Weather plugin.
 - Confidence: high
 
 **2026-06-25 — Activity weighting investigation**
-- Observation: Question Weather, Hunch Weather, and Shelf Weather use the same raw edit scores, then assign visual activity levels separately within each collection.
-- Action: Change shared weighting in `src/lib/weatherCore.ts`; remember that visual activity levels are relative within each surface, not globally comparable.
+- Observation: Terrain views and Shelf Weather use the same raw edit scores, then assign visual activity levels after the active Terrain tag/Untagged filter has been applied.
+- Action: Change shared weighting in `src/lib/weatherCore.ts`; remember that visual activity levels are relative within the active view, not globally comparable.
 - Confidence: high
 
 **2026-06-25 — Frontmatter activity source**
@@ -34,9 +34,9 @@
 - Action: Change salience extraction in `src/lib/weatherData.ts`; do not reintroduce git-log based activity unless explicitly requested.
 - Confidence: high
 
-**2026-07-03 — Hunch surface**
-- Observation: Hunches live in `hunches` and use the same plain note frontmatter shape as questions (`title`, `date`, `lastmod`/`lastMod`), without shelf-only rating or cover fields.
-- Action: Keep the hunch collection on the plain note layout and route its behavior through the shared collection config and data service.
+**2026-07-21 — Terrain filter surface**
+- Observation: All direct root Markdown belongs to one Terrain dataset; All, Untagged, and automatically discovered tags are filters over it, while Shelf remains a separate surface.
+- Action: Discover tag views from the complete root dataset, filter before assigning activity levels, preapply the active tag on creation, and persist both the surface and Terrain filter in workspace state.
 - Confidence: high
 
 **2026-07-03 — Git workflow**

@@ -5,7 +5,6 @@ import { fileURLToPath } from 'node:url';
 const root = path.dirname(fileURLToPath(new URL(import.meta.url)));
 const repoRoot = path.resolve(root, '..');
 const vaultRoot = path.join(repoRoot, 'vault');
-const collections = ['projects', 'questions', 'hunches'];
 
 const slugify = (value) =>
   value
@@ -22,28 +21,11 @@ const titleFromFilename = (filename) =>
 
 const titleValue = (title) => JSON.stringify(title);
 
-const walkMarkdownFiles = (dir) => {
-  if (!fs.existsSync(dir)) return [];
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-  const files = [];
-  entries.forEach((entry) => {
-    if (entry.name.startsWith('.')) return;
-    const fullPath = path.join(dir, entry.name);
-    if (entry.isDirectory()) {
-      files.push(...walkMarkdownFiles(fullPath));
-    } else if (entry.isFile() && entry.name.endsWith('.md')) {
-      files.push(fullPath);
-    }
-  });
-  return files;
-};
-
-const slugFromRelativePath = (relativePath) =>
-  relativePath
-    .split('/')
-    .map(slugify)
-    .filter(Boolean)
-    .join('/');
+const rootMarkdownFiles = () =>
+  fs
+    .readdirSync(vaultRoot, { withFileTypes: true })
+    .filter((entry) => entry.isFile() && entry.name.endsWith('.md'))
+    .map((entry) => path.join(vaultRoot, entry.name));
 
 const normalizeFrontmatter = (text, { slug, title }) => {
   if (!text.startsWith('---\n')) {
@@ -69,24 +51,24 @@ const normalizeFrontmatter = (text, { slug, title }) => {
 
 const changed = [];
 
-collections.forEach((collection) => {
-  const sourceDir = path.join(vaultRoot, collection);
-  walkMarkdownFiles(sourceDir).forEach((filePath) => {
-    const rel = path.relative(sourceDir, filePath).replace(/\\/g, '/');
-    const slug = slugFromRelativePath(rel);
-    if (!slug) return;
+rootMarkdownFiles().forEach((filePath) => {
+  const slug = slugify(path.basename(filePath));
+  if (!slug) {
+    throw new Error(
+      `Could not derive a public Terrain slug from ${path.relative(repoRoot, filePath)}`
+    );
+  }
 
-    const before = fs.readFileSync(filePath, 'utf8');
-    const after = normalizeFrontmatter(before, {
-      slug,
-      title: titleFromFilename(path.basename(filePath))
-    });
-
-    if (after !== before) {
-      fs.writeFileSync(filePath, after);
-      changed.push(path.relative(repoRoot, filePath));
-    }
+  const before = fs.readFileSync(filePath, 'utf8');
+  const after = normalizeFrontmatter(before, {
+    slug,
+    title: titleFromFilename(path.basename(filePath))
   });
+
+  if (after !== before) {
+    fs.writeFileSync(filePath, after);
+    changed.push(path.relative(repoRoot, filePath));
+  }
 });
 
 changed.forEach((file) => {

@@ -63,34 +63,66 @@ const makeApp = ({
 };
 
 describe('WeatherDataService', () => {
-  it('builds direct-folder question data from Obsidian metadata', async () => {
-    const files = [makeFile('questions/A Question.md'), makeFile('questions/nested/Ignore.md')];
+  it('builds root Terrain data and ignores nested Markdown files', async () => {
+    const files = [makeFile('A Question.md'), makeFile('writing inbox/Ignore.md')];
     const { app } = makeApp({
       files,
       frontmatter: {
-        'questions/A Question.md': {
+        'A Question.md': {
           title: 'Custom title',
           date: '2026-06-01',
           lastMod: '2026-06-14',
-          slug: 'custom-question'
+          slug: 'custom-question',
+          tags: ['questions']
         }
       }
     });
 
     const data = await new WeatherDataService(app).buildCollection(
-      'questions',
+      'terrain',
+      { mode: 'all' },
       new Date('2026-06-15T12:00:00Z')
     );
 
+    expect(data.availableTags).toEqual(['questions']);
     expect(data.items).toHaveLength(1);
     expect(data.items[0]).toMatchObject({
       title: 'Custom title',
       slug: 'custom-question',
-      date: '2026-06-01',
-      lastmod: '2026-06-14',
-      vaultPath: 'questions/A Question.md',
+      tags: ['questions'],
+      vaultPath: 'A Question.md',
       activity: { recentUpdateCount: 1, level: 5, lastActivity: '2026-06-14' }
     });
+  });
+
+  it('filters tag and untagged views before assigning activity levels', async () => {
+    const files = [makeFile('Question.md'), makeFile('Multiple.md'), makeFile('Untagged.md')];
+    const { app } = makeApp({
+      files,
+      frontmatter: {
+        'Question.md': { tags: ['questions'], lastmod: '2026-06-15' },
+        'Multiple.md': { tags: ['questions', 'essays'], lastmod: '2026-06-13' },
+        'Untagged.md': { lastmod: '2026-06-14' }
+      }
+    });
+    const service = new WeatherDataService(app);
+
+    const questions = await service.buildCollection(
+      'terrain',
+      { mode: 'tag', tag: 'questions' },
+      new Date('2026-06-15T12:00:00Z')
+    );
+    const untagged = await service.buildCollection(
+      'terrain',
+      { mode: 'untagged' },
+      new Date('2026-06-15T12:00:00Z')
+    );
+
+    expect(questions.items.map((item) => item.title)).toEqual(['Multiple', 'Question']);
+    expect(questions.items[0].activity.level).toBeLessThan(5);
+    expect(questions.items[1].activity.level).toBe(5);
+    expect(untagged.items.map((item) => item.title)).toEqual(['Untagged']);
+    expect(untagged.items[0].activity.level).toBe(5);
   });
 
   it('resolves only valid in-vault shelf covers', async () => {
@@ -115,36 +147,42 @@ describe('WeatherDataService', () => {
     ]);
   });
 
-  it('creates notes through the vault API and creates a missing collection folder', async () => {
+  it('creates tagged and untagged Terrain entries at the vault root', async () => {
     const files: FakeFile[] = [];
-    const { app, contents, folders } = makeApp({ files });
+    const { app, contents } = makeApp({ files });
+    const service = new WeatherDataService(app);
 
-    const file = await new WeatherDataService(app).createNote({
-      collectionKey: 'hunches',
+    const tagged = await service.createNote({
+      collectionKey: 'terrain',
       title: 'Reality has feedback loops',
+      tag: 'hunches',
+      now: new Date('2026-06-30T12:00:00Z')
+    });
+    const untagged = await service.createNote({
+      collectionKey: 'terrain',
+      title: 'An unclear thought',
       now: new Date('2026-06-30T12:00:00Z')
     });
 
-    expect(folders.has('hunches')).toBe(true);
-    expect(file.path).toBe('hunches/Reality has feedback loops.md');
-    expect(contents.get(file.path)).toBe(
-      '---\ndate: 2026-06-30\nlastmod: 2026-06-30\n---\n\n'
-    );
+    expect(tagged.path).toBe('Reality has feedback loops.md');
+    expect(contents.get(tagged.path)).toContain('tags:\n  - "hunches"');
+    expect(untagged.path).toBe('An unclear thought.md');
+    expect(contents.get(untagged.path)).not.toContain('tags:');
   });
 
-  it('rejects duplicate filenames and frontmatter slugs', async () => {
-    const files = [makeFile('questions/Existing.md')];
+  it('rejects duplicate root filenames and frontmatter slugs', async () => {
+    const files = [makeFile('Existing.md')];
     const { app } = makeApp({
       files,
-      frontmatter: { 'questions/Existing.md': { slug: 'duplicate-question' } }
+      frontmatter: { 'Existing.md': { slug: 'duplicate-entry' } }
     });
     const service = new WeatherDataService(app);
 
     await expect(
-      service.createNote({ collectionKey: 'questions', title: 'Existing' })
-    ).rejects.toThrow('A question with that title already exists');
+      service.createNote({ collectionKey: 'terrain', title: 'Existing' })
+    ).rejects.toThrow('A terrain entry with that title already exists');
     await expect(
-      service.createNote({ collectionKey: 'questions', title: 'Duplicate Question' })
-    ).rejects.toThrow('A question with that slug already exists');
+      service.createNote({ collectionKey: 'terrain', title: 'Duplicate Entry' })
+    ).rejects.toThrow('A terrain entry with that slug already exists');
   });
 });

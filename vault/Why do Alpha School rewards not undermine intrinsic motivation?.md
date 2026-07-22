@@ -1,12 +1,12 @@
 ---
 slug: why-do-alpha-school-rewards-not-undermine-intrinsic-motivation
-title: "Why do Alpha School rewards not undermine intrinsic motivation?"
+title: Why do Alpha School rewards not undermine intrinsic motivation?
 lastmod: 2026-07-22
 date: 2026-05-27
 tags:
   - questions
 ---
-First, is the premise even accurate? Do Alpha graduates have intrinsic motivation for *formal academics*? Selection effects dominate again...
+First, is the premise even accurate? Do Alpha graduates have intrinsic motivation for *formal academics*? Unclear.. they may just prefer the real world projects / life skills afternoons and see formal academic learning as something to "get through" in their 2 hours. Hard to say.
 
 Separately, is intrinsic motivation for formal academics valuable? Lmao. I suppose it's more intrinsic motivation for broadly learning that's useful..
 

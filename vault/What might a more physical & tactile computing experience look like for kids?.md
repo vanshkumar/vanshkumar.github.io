@@ -3,7 +3,7 @@ tags:
   - questions
 slug: what-might-a-more-physical-tactile-computing-experience-look-like-for-kids
 title: What might a more physical & tactile computing experience look like for kids?
-lastmod: 2026-07-03
+lastmod: 2026-08-13
 date: 2026-06-12
 ---
 Physical computation can make abstract concepts much more obvious & intuitive. The Montessori abacus is one of the classic examples. Since young kids are such physical learners, isolating a concept (like addition) with a material & then letting them play with it makes the concept feel almost inevitable.
@@ -16,8 +16,9 @@ Some examples at the end of [this discussion with ChatGPT](https://chatgpt.com/c
 
 ---
 
-Misc other notes:
+Misc other ideas:
 - AR glasses and playing w LEGOs or whatever
-- Rapid 3D printing and iteration
+- Rapid 3D printing and iteration (tinkercad)
 - How can you compute using physical materials? What does that mean? Turing Castle like in Diamond Age?
 - Minecraft level ability to compute in real life? How???
+- 

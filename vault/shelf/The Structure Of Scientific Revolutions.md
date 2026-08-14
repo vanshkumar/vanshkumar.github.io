@@ -1,6 +1,6 @@
 ---
 date: 2026-06-25
-lastmod: 2026-06-26
+lastmod: 2026-08-13
 rating: 5
 coverImage: /assets/shelf/the-structure-of-scientific-revolutions.jpg
 ---

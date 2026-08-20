@@ -1,6 +1,6 @@
 ---
 title: Now
-lastmod: 2026-07-06
+lastmod: 2026-08-19
 date: 2026-05-27
 ---
 This is a page for how I approach living life, with my ever-evolving self as audience
@@ -19,8 +19,8 @@ I have found it useful to concretely instantiate a Long Now view as the universe
 
 # My quest(ion)
 
-I pursue my interests. I have noticed that the thread running through all my interests is the question
+I pursue my interests. I have noticed that the thread running through all my interests is the question:
 
 **How does a mind develop?**
 
-I have been approaching this from a variety of angles, including neuroscience, cognitive psychology, education, culture, child development, and philosophy.
+I have been approaching this from a variety of angles, including developmental neuroscience, cognitive psychology, education, culture, child development, and philosophy.

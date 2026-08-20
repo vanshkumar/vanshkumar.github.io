@@ -1,6 +1,6 @@
 ---
 title: About
-lastmod: 2026-07-21
+lastmod: 2026-08-16
 date: 2026-05-27
 ---
 ## This site

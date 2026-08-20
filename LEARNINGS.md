@@ -139,6 +139,11 @@
 
 ## Patterns and Preferences
 
+**[2026-08-16] — Editorial inventory**
+- Observation: The strongest post-ready ideas are distributed across public Terrain notes, private `writing inbox` fragments, project reflections, and sibling-app documentation; clusters with both a personal stake and a concrete artifact are substantially more developed than their individual filenames suggest.
+- Action: When mining this repo for essays, group related notes across those surfaces and prioritize clusters that already contain a lived hook, a defensible thesis, and implementation or research evidence; check existing Substack links before treating a topic as unpublished.
+- Confidence: high
+
 **[2026-06-26] — Typography size tuning**
 - Observation: A 20% root font-size increase made the site feel oversized against existing article and terrain content; a 10% increase preserves the readability bump without overwhelming the layout.
 - Action: Prefer `html { font-size: 110%; }` for this site's global readability scale unless a larger type treatment is explicitly requested.

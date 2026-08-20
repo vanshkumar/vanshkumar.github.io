@@ -799,7 +799,7 @@ h3 {
 .word-garden-scroll {
   direction: rtl;
   margin: 0.65rem -0.2rem 0;
-  padding: 1.45rem 0.2rem 0.7rem;
+  padding: 3.35rem 0.2rem 0.7rem;
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-color: #c8c1b3 transparent;
@@ -852,6 +852,14 @@ h3 {
   font-size: 0.5rem;
   line-height: 1;
   white-space: nowrap;
+}
+
+.word-garden-plot {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 0.58rem;
+  height: 0.58rem;
 }
 
 .word-garden-cell {
@@ -913,15 +921,84 @@ h3 {
   border-radius: 0.18rem 0.1rem 0.16rem 0.2rem;
 }
 
-.word-garden-cell[tabindex]:hover,
-.word-garden-cell[tabindex]:focus-visible {
-  z-index: 2;
+.word-garden-plot[tabindex]:hover,
+.word-garden-plot[tabindex]:focus-visible {
+  z-index: 3;
+}
+
+.word-garden-plot[tabindex]:hover .word-garden-cell,
+.word-garden-plot[tabindex]:focus-visible .word-garden-cell {
   transform: rotate(var(--garden-rotation)) scale(1.42);
 }
 
-.word-garden-cell[tabindex]:focus-visible {
+.word-garden-plot[tabindex]:focus-visible {
+  outline: none;
+}
+
+.word-garden-plot[tabindex]:focus-visible .word-garden-cell {
   outline: 2px solid #5c0a25;
   outline-offset: 0.12rem;
+}
+
+.word-garden-tooltip {
+  position: absolute;
+  bottom: calc(100% + 0.45rem);
+  left: 50%;
+  z-index: 4;
+  display: grid;
+  gap: 0.08rem;
+  width: max-content;
+  padding: 0.38rem 0.5rem 0.42rem;
+  border: 1px solid rgba(73, 65, 52, 0.16);
+  border-radius: 0.38rem;
+  background: #fffdf7;
+  box-shadow: 0 0.32rem 0.9rem rgba(38, 31, 20, 0.16);
+  color: #4f463a;
+  font-size: 0.59rem;
+  line-height: 1.25;
+  letter-spacing: 0;
+  text-align: left;
+  text-transform: none;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 0.15rem);
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.word-garden-tooltip strong {
+  color: var(--accent-dark);
+  font-size: 0.64rem;
+  font-weight: 650;
+}
+
+.word-garden-tooltip span {
+  color: #8b8375;
+}
+
+.word-garden-plot[tabindex]:hover .word-garden-tooltip,
+.word-garden-plot[tabindex]:focus-visible .word-garden-tooltip {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.word-garden-week:nth-child(-n + 6) .word-garden-tooltip {
+  right: auto;
+  left: -0.2rem;
+  transform: translate(0, 0.15rem);
+}
+
+.word-garden-week:nth-last-child(-n + 6) .word-garden-tooltip {
+  right: -0.2rem;
+  left: auto;
+  transform: translate(0, 0.15rem);
+}
+
+.word-garden-week:nth-child(-n + 6) .word-garden-plot:hover .word-garden-tooltip,
+.word-garden-week:nth-child(-n + 6) .word-garden-plot:focus-visible .word-garden-tooltip,
+.word-garden-week:nth-last-child(-n + 6) .word-garden-plot:hover .word-garden-tooltip,
+.word-garden-week:nth-last-child(-n + 6) .word-garden-plot:focus-visible .word-garden-tooltip {
+  transform: translate(0, 0);
 }
 
 .word-garden-cell.is-removal-heavy::after,

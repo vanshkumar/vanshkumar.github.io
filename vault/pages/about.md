@@ -12,6 +12,8 @@ Everything I publish lives in one [terrain](/terrain): an underlying set of note
 
 Everything on this site should be thought of as a **perpetual draft**, with all mistakes mine.
 
+<!-- word-garden -->
+
 ## I
 am Vansh Kumar and the one who sculpts the terrain of this site. I live in Pasadena, CA.
 

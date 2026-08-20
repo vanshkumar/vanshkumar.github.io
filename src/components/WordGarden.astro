@@ -2,8 +2,10 @@
 const { garden } = Astro.props;
 const number = new Intl.NumberFormat('en-US');
 const weekdayLabels = ['', 'Mon', '', 'Wed', '', 'Fri', ''];
+const touchedLabel = (day) =>
+  `${number.format(day.touched)} ${day.touched === 1 ? 'word' : 'words'} touched`;
 const cellLabel = (day) =>
-  `${day.label}: ${number.format(day.added)} added, ${number.format(day.edited)} edited, ${number.format(day.removed)} removed.`;
+  `${day.label}: ${touchedLabel(day)}; ${number.format(day.added)} added, ${number.format(day.edited)} edited, ${number.format(day.removed)} removed.`;
 ---
 
 <section class="word-garden" aria-labelledby="word-garden-title">
@@ -48,19 +50,28 @@ const cellLabel = (day) =>
             </span>
             {week.days.map((day) => (
               <span
-                class:list={[
-                  'word-garden-cell',
-                  `word-garden-cell-level-${day.level}`,
-                  `word-garden-cell-shape-${day.shape}`,
-                  day.removalHeavy && 'is-removal-heavy',
-                  day.future && 'is-future'
-                ]}
+                class="word-garden-plot"
                 tabindex={day.touched > 0 ? '0' : undefined}
                 role={day.touched > 0 ? 'img' : undefined}
                 aria-label={day.touched > 0 ? cellLabel(day) : undefined}
-                title={day.touched > 0 ? cellLabel(day) : undefined}
                 aria-hidden={day.touched === 0 ? 'true' : undefined}
-              />
+              >
+                <span
+                  class:list={[
+                    'word-garden-cell',
+                    `word-garden-cell-level-${day.level}`,
+                    `word-garden-cell-shape-${day.shape}`,
+                    day.removalHeavy && 'is-removal-heavy',
+                    day.future && 'is-future'
+                  ]}
+                />
+                {day.touched > 0 ? (
+                  <span class="word-garden-tooltip" aria-hidden="true">
+                    <strong>{touchedLabel(day)}</strong>
+                    <span>{day.label}</span>
+                  </span>
+                ) : null}
+              </span>
             ))}
           </div>
         ))}

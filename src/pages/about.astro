@@ -10,7 +10,18 @@ const entry = await getEntry('pages', 'about');
 if (!entry) {
   throw new Error('Missing content entry: pages/about');
 }
-const { Content } = await entry.render();
+const wordGardenMarker = '<!-- word-garden -->';
+const renderedAbout = entry.rendered?.html;
+if (typeof renderedAbout !== 'string') {
+  throw new Error('Missing rendered content for pages/about');
+}
+const aboutSections = renderedAbout.split(wordGardenMarker);
+if (aboutSections.length !== 2) {
+  throw new Error(
+    'pages/about must contain exactly one <!-- word-garden --> placement marker'
+  );
+}
+const [beforeWordGarden, afterWordGarden] = aboutSections;
 const backlinks = await getBacklinksForEntry('pages', entry.slug);
 const title = entry.data.title ?? titleFromSlug(entry.slug);
 const lastUpdated = entry.data.lastmod;
@@ -23,6 +34,7 @@ const wordGarden = getWordActivity();
   lastUpdated={lastUpdated}
   backlinks={backlinks}
 >
-  <Content />
-  <WordGarden slot="after-content" garden={wordGarden} />
+  <Fragment set:html={beforeWordGarden} />
+  <WordGarden garden={wordGarden} />
+  <Fragment set:html={afterWordGarden} />
 </ContentLayout>

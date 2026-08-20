@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-08-20] — Mid-Markdown component placement**
+- Observation: Static page entries render as one HTML block, so the About page cannot place an Astro component between Markdown sections through `ContentLayout`'s after-content slot.
+- Action: Keep a single `<!-- word-garden -->` marker in `vault/pages/about.md`, split the entry's build-time rendered HTML at that marker, and fail the build if the marker is missing or duplicated.
+- Confidence: high
+
 **[2026-08-19] — Build-time word activity history**
 - Observation: The About-page Word Garden derives daily word edits from current and legacy public vault paths during the Astro build; a shallow GitHub Pages checkout silently loses the history, while a broad vault glob would include private writing folders.
 - Action: Keep the Pages checkout at `fetch-depth: 0`, and update the Word Garden public-path allowlist whenever a published collection path changes instead of widening it to all vault Markdown.

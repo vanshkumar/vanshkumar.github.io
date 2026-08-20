@@ -1,8 +1,10 @@
 ---
 import { getEntry } from 'astro:content';
 import ContentLayout from '../layouts/ContentLayout.astro';
+import WordGarden from '../components/WordGarden.astro';
 import { getBacklinksForEntry } from '../lib/wiki';
 import { titleFromSlug } from '../lib/content';
+import { getWordActivity } from '../lib/word-activity.mjs';
 
 const entry = await getEntry('pages', 'home');
 if (!entry) {
@@ -12,6 +14,7 @@ const { Content } = await entry.render();
 const backlinks = await getBacklinksForEntry('pages', entry.slug);
 const title = entry.data.title ?? titleFromSlug(entry.slug);
 const lastUpdated = entry.data.lastmod;
+const wordGarden = getWordActivity();
 ---
 
 <ContentLayout
@@ -21,4 +24,5 @@ const lastUpdated = entry.data.lastmod;
   backlinks={backlinks}
 >
   <Content />
+  <WordGarden slot="after-content" garden={wordGarden} />
 </ContentLayout>

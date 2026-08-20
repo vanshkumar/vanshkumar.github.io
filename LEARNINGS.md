@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-08-19] — Build-time word activity history**
+- Observation: The homepage Word Garden derives daily word edits from current and legacy public vault paths during the Astro build; a shallow GitHub Pages checkout silently loses the history, while a broad vault glob would include private writing folders.
+- Action: Keep the Pages checkout at `fetch-depth: 0`, and update the Word Garden public-path allowlist whenever a published collection path changes instead of widening it to all vault Markdown.
+- Confidence: high
+
 **[2026-07-19] — Discord domain verification DNS**
 - Observation: Namecheap's Advanced DNS Host field automatically appends `vanshkumar.net`; entering Discord's full `_discord.vanshkumar.net` name publishes the TXT record at `_discord.vanshkumar.net.vanshkumar.net`, which Discord cannot find.
 - Action: For Discord DNS verification on Namecheap, set the TXT Host to `_discord` only and put the complete `dh=...` token in Value.

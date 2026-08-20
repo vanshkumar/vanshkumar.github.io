@@ -1,0 +1,82 @@
+---
+const { garden } = Astro.props;
+const number = new Intl.NumberFormat('en-US');
+const weekdayLabels = ['', 'Mon', '', 'Wed', '', 'Fri', ''];
+const cellLabel = (day) =>
+  `${day.label}: ${number.format(day.added)} added, ${number.format(day.edited)} edited, ${number.format(day.removed)} removed.`;
+---
+
+<section class="word-garden" aria-labelledby="word-garden-title">
+  <div class="word-garden-heading">
+    <div>
+      <p class="word-garden-kicker">Cultivation log</p>
+      <h2 id="word-garden-title">The word garden</h2>
+    </div>
+    <p id="word-garden-description" class="word-garden-description">
+      A year of tending this site, measured in words touched.
+    </p>
+  </div>
+
+  <div class="word-garden-stats" aria-label="Word Garden totals">
+    <span><strong>{number.format(garden.activeDays)}</strong> active days</span>
+    <span><strong>{number.format(garden.totals.added)}</strong> added</span>
+    <span><strong>{number.format(garden.totals.edited)}</strong> edited</span>
+    <span><strong>{number.format(garden.totals.removed)}</strong> removed</span>
+  </div>
+
+  <p class="visually-hidden">
+    The visual calendar covers {garden.startDate} through {garden.endDate}. Active
+    days can be focused to hear their word totals.
+  </p>
+
+  <div
+    class="word-garden-scroll"
+    tabindex="0"
+    aria-label="Word activity calendar. Scroll horizontally to see earlier weeks."
+    aria-describedby="word-garden-description"
+  >
+    <div class="word-garden-calendar">
+      <div class="word-garden-weekdays" aria-hidden="true">
+        {weekdayLabels.map((label) => <span>{label}</span>)}
+      </div>
+
+      <div class="word-garden-weeks">
+        {garden.weeks.map((week) => (
+          <div class="word-garden-week">
+            <span class="word-garden-month" aria-hidden="true">
+              {week.monthLabel}
+            </span>
+            {week.days.map((day) => (
+              <span
+                class:list={[
+                  'word-garden-cell',
+                  `word-garden-cell-level-${day.level}`,
+                  `word-garden-cell-shape-${day.shape}`,
+                  day.removalHeavy && 'is-removal-heavy',
+                  day.future && 'is-future'
+                ]}
+                tabindex={day.touched > 0 ? '0' : undefined}
+                role={day.touched > 0 ? 'img' : undefined}
+                aria-label={day.touched > 0 ? cellLabel(day) : undefined}
+                title={day.touched > 0 ? cellLabel(day) : undefined}
+                aria-hidden={day.touched === 0 ? 'true' : undefined}
+              />
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <div class="word-garden-legend" aria-label="Activity intensity legend">
+    <span>Quiet</span>
+    <span class="word-garden-legend-cells" aria-hidden="true">
+      {[0, 1, 2, 3, 4].map((level) => (
+        <i class={`word-garden-cell word-garden-cell-level-${level}`} />
+      ))}
+    </span>
+    <span>Flourishing</span>
+    <span class="word-garden-pruning-key" aria-hidden="true"></span>
+    <span>Pruning-heavy</span>
+  </div>
+</section>

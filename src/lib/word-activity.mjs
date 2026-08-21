@@ -185,7 +185,6 @@ export const buildCalendar = (
         ? activity.get(date) ?? { added: 0, edited: 0, removed: 0 }
         : { added: 0, edited: 0, removed: 0 };
       const touched = counts.added + counts.edited + counts.removed;
-      const removalHeavy = touched > 0 && counts.removed / touched >= 0.25;
 
       if (!future) {
         totals.added += counts.added;
@@ -203,7 +202,6 @@ export const buildCalendar = (
         removed: counts.removed,
         touched,
         level: getActivityLevel(touched),
-        removalHeavy,
         future,
         shape: (weekIndex * 7 + dayIndex) % 5
       });

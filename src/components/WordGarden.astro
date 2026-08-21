@@ -61,7 +61,6 @@ const cellLabel = (day) =>
                     'word-garden-cell',
                     `word-garden-cell-level-${day.level}`,
                     `word-garden-cell-shape-${day.shape}`,
-                    day.removalHeavy && 'is-removal-heavy',
                     day.future && 'is-future'
                   ]}
                 />
@@ -87,7 +86,5 @@ const cellLabel = (day) =>
       ))}
     </span>
     <span>Flourishing</span>
-    <span class="word-garden-pruning-key" aria-hidden="true"></span>
-    <span>Pruning-heavy</span>
   </div>
 </section>

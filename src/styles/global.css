@@ -1001,18 +1001,6 @@ h3 {
   transform: translate(0, 0);
 }
 
-.word-garden-cell.is-removal-heavy::after,
-.word-garden-pruning-key::after {
-  content: "";
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  width: 0.2rem;
-  height: 0.2rem;
-  border-radius: 0 0.12rem 0 0.12rem;
-  background: #5c0a25;
-}
-
 .word-garden-cell.is-future {
   visibility: hidden;
 }
@@ -1035,20 +1023,10 @@ h3 {
   gap: 0.13rem;
 }
 
-.word-garden-legend .word-garden-cell,
-.word-garden-pruning-key {
+.word-garden-legend .word-garden-cell {
   width: 0.52rem;
   min-width: 0.52rem;
   height: 0.52rem;
-}
-
-.word-garden-pruning-key {
-  position: relative;
-  display: inline-block;
-  margin-left: 0.5rem;
-  border: 1px solid rgba(67, 95, 45, 0.2);
-  border-radius: 0.13rem;
-  background: #adc499;
 }
 
 .comic-reader {

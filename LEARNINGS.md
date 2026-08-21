@@ -149,6 +149,11 @@
 
 ## Patterns and Preferences
 
+**[2026-08-20] — Word Garden visual encoding**
+- Observation: The Word Garden reads more clearly when plot color communicates only words touched; the burgundy deletion-heavy corner and separate pruning classification added unnecessary visual semantics.
+- Action: Keep added, edited, and removed counts in summaries and accessible labels, but encode daily plots only with the moss-green words-touched intensity scale.
+- Confidence: high
+
 **[2026-08-16] — Editorial inventory**
 - Observation: The strongest post-ready ideas are distributed across public Terrain notes, private `writing inbox` fragments, project reflections, and sibling-app documentation; clusters with both a personal stake and a concrete artifact are substantially more developed than their individual filenames suggest.
 - Action: When mining this repo for essays, group related notes across those surfaces and prioritize clusters that already contain a lived hook, a defensible thesis, and implementation or research evidence; check existing Substack links before treating a topic as unpublished.

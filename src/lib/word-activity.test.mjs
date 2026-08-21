@@ -63,7 +63,7 @@ diff --git a/vault/pages/about.md b/vault/pages/about.md
   });
 });
 
-test('uses stable activity levels and marks removal-heavy days', () => {
+test('uses stable activity levels and aggregates daily totals', () => {
   assert.deepEqual(
     [0, 1, 49, 50, 249, 250, 999, 1000].map(getActivityLevel),
     [0, 1, 1, 2, 2, 3, 3, 4]
@@ -90,7 +90,6 @@ test('uses stable activity levels and marks removal-heavy days', () => {
     removed: 2,
     touched: 8
   });
-  assert.equal(day.removalHeavy, true);
   assert.equal(day.level, 1);
 });
 

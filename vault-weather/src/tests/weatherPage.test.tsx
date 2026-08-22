@@ -46,7 +46,6 @@ const renderSurface = (
   const data: WeatherCollectionData = {
     key,
     filter: terrainFilter,
-    availableTags: key === 'terrain' ? ['hunches', 'questions'] : [],
     refreshedAt: '2026-07-17T12:00:00.000Z',
     items
   };
@@ -66,7 +65,7 @@ const renderSurface = (
 
 describe('sandboxed WeatherPage rendering', () => {
   it.each([
-    ['terrain', 'Terrain Weather', 'A Terrain Note', 'terrain-stack'],
+    ['terrain', 'Writing Weather', 'A Terrain Note', 'writing-stack'],
     ['shelf', 'Shelf Weather', 'A Book', 'shelf-stack']
   ] as const)('renders the %s surface', (key, heading, itemTitle, stackClass) => {
     const html = renderSurface(key);
@@ -78,18 +77,19 @@ describe('sandboxed WeatherPage rendering', () => {
     expect(html).toContain('aria-current="page"');
   });
 
-  it('renders All, Untagged, and discovered tag views for Terrain', () => {
-    const html = renderSurface('terrain', { mode: 'tag', tag: 'questions' });
-    expect(html).toContain('<h1>Questions Weather</h1>');
+  it('renders writing views that match the public Posts and Notes model', () => {
+    const html = renderSurface('terrain', { mode: 'group', group: 'notes' });
+    expect(html).toContain('<h1>Notes Weather</h1>');
     expect(html).toContain('>All</button>');
-    expect(html).toContain('>Untagged</button>');
-    expect(html).toContain('>Hunches</button>');
-    expect(html).toContain('aria-current="page">Questions</button>');
-    expect(html).toContain('aria-label="Add questions entry"');
+    expect(html).toContain('>Posts</button>');
+    expect(html).toContain('aria-current="page">Notes</button>');
+    expect(html).not.toContain('>Untagged</button>');
+    expect(html).not.toContain('>Hunches</button>');
+    expect(html).toContain('aria-label="Add note"');
   });
 
-  it('keeps the empty Terrain message out of Obsidian\'s full-pane empty-state overlay', () => {
-    const html = renderSurface('terrain', { mode: 'untagged' }, []);
+  it('keeps an empty Writing view out of Obsidian\'s full-pane empty-state overlay', () => {
+    const html = renderSurface('terrain', { mode: 'group', group: 'posts' }, []);
     expect(html).toContain('class="weather-empty-state"');
     expect(html).not.toContain('class="empty-state"');
   });
@@ -98,6 +98,6 @@ describe('sandboxed WeatherPage rendering', () => {
     const html = renderSurface('shelf');
     expect(html).toContain('src="app://vault/assets/shelf/book.webp"');
     expect(html).toContain('has-cover');
-    expect(html).not.toContain('terrain-filter-tabs');
+    expect(html).not.toContain('writing-filter-tabs');
   });
 });

@@ -15,7 +15,8 @@ import {
   type CollectionKey,
   type TerrainFilter,
   type WeatherCollectionData,
-  type WeatherItem
+  type WeatherItem,
+  writingGroupForTag
 } from './weatherTypes';
 
 const IMAGE_EXTENSIONS = new Set(['avif', 'gif', 'jpeg', 'jpg', 'png', 'webp']);
@@ -95,20 +96,16 @@ export class WeatherDataService {
       };
     });
 
-    const availableTags = Array.from(new Set(allItems.flatMap((item) => item.tags))).sort((a, b) =>
-      a.localeCompare(b)
-    );
     const visibleItems =
       collectionKey !== 'terrain' || filter.mode === 'all'
         ? allItems
-        : filter.mode === 'untagged'
-          ? allItems.filter((item) => item.tags.length === 0)
-          : allItems.filter((item) => item.tags.includes(filter.tag));
+        : allItems.filter((item) =>
+            item.tags.some((tag) => writingGroupForTag(tag.toLowerCase()) === filter.group)
+          );
 
     return {
       key: collectionKey,
       filter,
-      availableTags: collectionKey === 'terrain' ? availableTags : [],
       refreshedAt: new Date().toISOString(),
       items: assignActivityLevels(visibleItems)
     };

@@ -25,7 +25,7 @@
 - Confidence: high
 
 **2026-06-25 — Activity weighting investigation**
-- Observation: Terrain views and Shelf Weather use the same raw edit scores, then assign visual activity levels after the active Terrain tag/Untagged filter has been applied.
+- Observation: Writing views and Shelf Weather use the same raw edit scores, then assign visual activity levels after the active All/Posts/Notes filter has been applied.
 - Action: Change shared weighting in `src/lib/weatherCore.ts`; remember that visual activity levels are relative within the active view, not globally comparable.
 - Confidence: high
 
@@ -35,8 +35,13 @@
 - Confidence: high
 
 **2026-07-21 — Terrain filter surface**
-- Observation: All direct root Markdown belongs to one Terrain dataset; All, Untagged, and automatically discovered tags are filters over it, while Shelf remains a separate surface.
-- Action: Discover tag views from the complete root dataset, filter before assigning activity levels, preapply the active tag on creation, and persist both the surface and Terrain filter in workspace state.
+- Observation: All direct root Markdown belongs to one internal Terrain dataset, while Shelf remains a separate surface; the public redesign later replaced the original Untagged/tag UI described here.
+- Action: Keep Terrain as the internal collection key, but follow the current Posts/Notes alignment below for visible filters, creation, and workspace state.
+- Confidence: high
+
+**2026-08-22 — Posts/Notes view alignment**
+- Observation: The public site now requires every root Terrain entry to belong to exactly one classification group: projects/essays are Posts, and hunches/questions are Notes; untagged entries fail publishing validation.
+- Action: Present the plugin surface as Writing with All, Posts, and Notes filters; require a Project, Essay, Hunch, or Question selection on creation, and migrate legacy Untagged/tag workspace state to the closest current filter.
 - Confidence: high
 
 **2026-07-03 — Git workflow**

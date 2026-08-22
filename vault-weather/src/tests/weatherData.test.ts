@@ -87,7 +87,6 @@ describe('WeatherDataService', () => {
       new Date('2026-06-15T12:00:00Z')
     );
 
-    expect(data.availableTags).toEqual(['questions']);
     expect(data.items).toHaveLength(1);
     expect(data.items[0]).toMatchObject({
       title: 'Custom title',
@@ -98,34 +97,34 @@ describe('WeatherDataService', () => {
     });
   });
 
-  it('filters tag and untagged views before assigning activity levels', async () => {
-    const files = [makeFile('Question.md'), makeFile('Multiple.md'), makeFile('Untagged.md')];
+  it('filters Posts and Notes before assigning activity levels', async () => {
+    const files = [makeFile('Question.md'), makeFile('Hunch.md'), makeFile('Project.md')];
     const { app } = makeApp({
       files,
       frontmatter: {
         'Question.md': { tags: ['questions'], lastmod: '2026-06-15' },
-        'Multiple.md': { tags: ['questions', 'essays'], lastmod: '2026-06-13' },
-        'Untagged.md': { lastmod: '2026-06-14' }
+        'Hunch.md': { tags: ['hunches'], lastmod: '2026-06-13' },
+        'Project.md': { tags: ['projects'], lastmod: '2026-06-14' }
       }
     });
     const service = new WeatherDataService(app);
 
-    const questions = await service.buildCollection(
+    const notes = await service.buildCollection(
       'terrain',
-      { mode: 'tag', tag: 'questions' },
+      { mode: 'group', group: 'notes' },
       new Date('2026-06-15T12:00:00Z')
     );
-    const untagged = await service.buildCollection(
+    const posts = await service.buildCollection(
       'terrain',
-      { mode: 'untagged' },
+      { mode: 'group', group: 'posts' },
       new Date('2026-06-15T12:00:00Z')
     );
 
-    expect(questions.items.map((item) => item.title)).toEqual(['Multiple', 'Question']);
-    expect(questions.items[0].activity.level).toBeLessThan(5);
-    expect(questions.items[1].activity.level).toBe(5);
-    expect(untagged.items.map((item) => item.title)).toEqual(['Untagged']);
-    expect(untagged.items[0].activity.level).toBe(5);
+    expect(notes.items.map((item) => item.title)).toEqual(['Hunch', 'Question']);
+    expect(notes.items[0].activity.level).toBeLessThan(5);
+    expect(notes.items[1].activity.level).toBe(5);
+    expect(posts.items.map((item) => item.title)).toEqual(['Project']);
+    expect(posts.items[0].activity.level).toBe(5);
   });
 
   it('resolves only valid in-vault shelf covers', async () => {
@@ -150,27 +149,28 @@ describe('WeatherDataService', () => {
     ]);
   });
 
-  it('creates tagged and untagged Terrain entries at the vault root', async () => {
+  it('creates classified Writing entries at the vault root', async () => {
     const files: FakeFile[] = [];
     const { app, contents } = makeApp({ files });
     const service = new WeatherDataService(app);
 
-    const tagged = await service.createNote({
+    const hunch = await service.createNote({
       collectionKey: 'terrain',
       title: 'Reality has feedback loops',
       tag: 'hunches',
       now: new Date('2026-06-30T12:00:00Z')
     });
-    const untagged = await service.createNote({
+    const project = await service.createNote({
       collectionKey: 'terrain',
-      title: 'An unclear thought',
+      title: 'A new project',
+      tag: 'projects',
       now: new Date('2026-06-30T12:00:00Z')
     });
 
-    expect(tagged.path).toBe('Reality has feedback loops.md');
-    expect(contents.get(tagged.path)).toContain('tags:\n  - "hunches"');
-    expect(untagged.path).toBe('An unclear thought.md');
-    expect(contents.get(untagged.path)).not.toContain('tags:');
+    expect(hunch.path).toBe('Reality has feedback loops.md');
+    expect(contents.get(hunch.path)).toContain('tags:\n  - "hunches"');
+    expect(project.path).toBe('A new project.md');
+    expect(contents.get(project.path)).toContain('tags:\n  - "projects"');
   });
 
   it('rejects duplicate root filenames and frontmatter slugs', async () => {
@@ -182,10 +182,10 @@ describe('WeatherDataService', () => {
     const service = new WeatherDataService(app);
 
     await expect(
-      service.createNote({ collectionKey: 'terrain', title: 'Existing' })
-    ).rejects.toThrow('A terrain entry with that title already exists');
+      service.createNote({ collectionKey: 'terrain', title: 'Existing', tag: 'hunches' })
+    ).rejects.toThrow('A writing entry with that title already exists');
     await expect(
-      service.createNote({ collectionKey: 'terrain', title: 'Duplicate Entry' })
-    ).rejects.toThrow('A terrain entry with that slug already exists');
+      service.createNote({ collectionKey: 'terrain', title: 'Duplicate Entry', tag: 'questions' })
+    ).rejects.toThrow('A writing entry with that slug already exists');
   });
 });

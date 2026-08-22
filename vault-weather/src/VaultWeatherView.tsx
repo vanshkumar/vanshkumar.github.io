@@ -6,9 +6,10 @@ import { WeatherDataService } from './lib/weatherData';
 import {
   ALL_TERRAIN_FILTER,
   isCollectionKey,
-  isTerrainFilter,
+  terrainFilterFromState,
   type CollectionKey,
-  type TerrainFilter
+  type TerrainFilter,
+  type WritingGroup
 } from './lib/weatherTypes';
 
 export const VAULT_WEATHER_VIEW_TYPE = 'vault-weather-view';
@@ -57,7 +58,7 @@ export class VaultWeatherView extends ItemView {
 
   async setState(state: Record<string, unknown>, result: ViewStateResult): Promise<void> {
     if (isCollectionKey(state.collectionKey)) this.collectionKey = state.collectionKey;
-    if (isTerrainFilter(state.terrainFilter)) this.terrainFilter = state.terrainFilter;
+    this.terrainFilter = terrainFilterFromState(state.terrainFilter) ?? this.terrainFilter;
     await super.setState(state, result);
     this.renderView();
   }
@@ -95,8 +96,8 @@ export class VaultWeatherView extends ItemView {
     this.renderView();
   }
 
-  private openCreateModal(key: CollectionKey, tag?: string): void {
-    new CreateNoteModal(this.app, key, async (title, rating) => {
+  private openCreateModal(key: CollectionKey, group?: WritingGroup): void {
+    new CreateNoteModal(this.app, key, group, async (title, rating, tag) => {
       const file = await this.service.createNote({ collectionKey: key, title, rating, tag });
       this.refresh();
       await this.openFile(file);

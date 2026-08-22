@@ -9,7 +9,8 @@ import {
   type CollectionKey,
   type TerrainFilter,
   type WeatherCollectionData,
-  type WeatherItem
+  type WeatherItem,
+  type WritingGroup
 } from './lib/weatherTypes';
 
 const formatDate = (value: string | null): string => {
@@ -22,21 +23,9 @@ const formatDate = (value: string | null): string => {
   }).format(new Date(value));
 };
 
-const filterMatches = (left: TerrainFilter, right: TerrainFilter): boolean =>
-  left.mode === right.mode &&
-  (left.mode !== 'tag' || (right.mode === 'tag' && left.tag === right.tag));
-
-const tagLabel = (tag: string): string =>
-  tag
-    .split(/[-_\s]+/)
-    .filter(Boolean)
-    .map((part) => `${part.charAt(0).toUpperCase()}${part.slice(1)}`)
-    .join(' ');
-
 const terrainTitle = (filter: TerrainFilter): string => {
-  if (filter.mode === 'untagged') return 'Untagged Weather';
-  if (filter.mode === 'tag') return `${tagLabel(filter.tag)} Weather`;
-  return 'Terrain Weather';
+  if (filter.mode === 'group') return `${filter.group === 'posts' ? 'Posts' : 'Notes'} Weather`;
+  return 'Writing Weather';
 };
 
 interface WeatherCardProps {
@@ -82,7 +71,7 @@ interface VaultWeatherAppProps {
   service: WeatherDataService;
   changeCollection: (key: CollectionKey) => void;
   changeTerrainFilter: (filter: TerrainFilter) => void;
-  createNote: (key: CollectionKey, tag?: string) => void;
+  createNote: (key: CollectionKey, group?: WritingGroup) => void;
   openFile: (file: TFile) => Promise<void>;
 }
 
@@ -93,7 +82,7 @@ interface WeatherPageProps {
   error: string;
   changeCollection: (key: CollectionKey) => void;
   changeTerrainFilter: (filter: TerrainFilter) => void;
-  createNote: (key: CollectionKey, tag?: string) => void;
+  createNote: (key: CollectionKey, group?: WritingGroup) => void;
   openFile: (file: TFile) => Promise<void>;
 }
 
@@ -113,9 +102,13 @@ export function WeatherPage({
     (item) => item.activity.recentUpdateCount > 0
   ).length;
   const title = collectionKey === 'terrain' ? terrainTitle(terrainFilter) : config.title;
-  const creationTag =
-    collectionKey === 'terrain' && terrainFilter.mode === 'tag' ? terrainFilter.tag : undefined;
-  const addLabel = creationTag ? `Add ${creationTag} entry` : config.addLabel;
+  const creationGroup =
+    collectionKey === 'terrain' && terrainFilter.mode === 'group'
+      ? terrainFilter.group
+      : undefined;
+  const addLabel = creationGroup
+    ? `Add ${creationGroup === 'posts' ? 'post' : 'note'}`
+    : config.addLabel;
 
   return (
     <main className="weather-app">
@@ -149,7 +142,7 @@ export function WeatherPage({
           <button
             className="action-button icon-button"
             type="button"
-            onClick={() => createNote(collectionKey, creationTag)}
+            onClick={() => createNote(collectionKey, creationGroup)}
             title={addLabel}
             aria-label={addLabel}
           >
@@ -159,35 +152,26 @@ export function WeatherPage({
       </header>
 
       {collectionKey === 'terrain' ? (
-        <nav className="terrain-filter-tabs" aria-label="Terrain views">
+        <nav className="writing-filter-tabs" aria-label="Writing views">
           <button
             type="button"
-            className={`terrain-filter-tab${terrainFilter.mode === 'all' ? ' active' : ''}`}
+            className={`writing-filter-tab${terrainFilter.mode === 'all' ? ' active' : ''}`}
             onClick={() => changeTerrainFilter({ mode: 'all' })}
             aria-current={terrainFilter.mode === 'all' ? 'page' : undefined}
           >
             All
           </button>
-          <button
-            type="button"
-            className={`terrain-filter-tab${terrainFilter.mode === 'untagged' ? ' active' : ''}`}
-            onClick={() => changeTerrainFilter({ mode: 'untagged' })}
-            aria-current={terrainFilter.mode === 'untagged' ? 'page' : undefined}
-          >
-            Untagged
-          </button>
-          {(data?.availableTags ?? []).map((tag) => {
-            const filter: TerrainFilter = { mode: 'tag', tag };
-            const active = filterMatches(terrainFilter, filter);
+          {(['posts', 'notes'] as const).map((group) => {
+            const active = terrainFilter.mode === 'group' && terrainFilter.group === group;
             return (
               <button
-                key={tag}
+                key={group}
                 type="button"
-                className={`terrain-filter-tab${active ? ' active' : ''}`}
-                onClick={() => changeTerrainFilter(filter)}
+                className={`writing-filter-tab${active ? ' active' : ''}`}
+                onClick={() => changeTerrainFilter({ mode: 'group', group })}
                 aria-current={active ? 'page' : undefined}
               >
-                {tagLabel(tag)}
+                {group === 'posts' ? 'Posts' : 'Notes'}
               </button>
             );
           })}

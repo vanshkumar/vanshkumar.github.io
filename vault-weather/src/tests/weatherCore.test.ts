@@ -113,6 +113,15 @@ describe('weather core', () => {
     ).toThrow('Shelf rating must be an integer from 0 to 5');
   });
 
+  it('requires Writing entries to use the site classification types', () => {
+    expect(() =>
+      createNoteDraft({ collectionKey: 'terrain', title: 'Unclassified thought' })
+    ).toThrow('Writing type is required');
+    expect(() =>
+      createNoteDraft({ collectionKey: 'terrain', title: 'Topic only', tag: 'learning' })
+    ).toThrow('Writing type must be Project, Essay, Hunch, or Question');
+  });
+
   it('normalizes safe vault cover paths', () => {
     expect(normalizeVaultAssetPath('/assets/shelf/book.webp')).toBe('assets/shelf/book.webp');
     expect(normalizeVaultAssetPath('../outside.webp')).toBeNull();

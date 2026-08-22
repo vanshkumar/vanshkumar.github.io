@@ -2,6 +2,7 @@ import {
   COLLECTION_CONFIGS,
   type Activity,
   type CollectionKey,
+  isWritingTypeTag,
   type WeatherItem
 } from './weatherTypes';
 
@@ -188,8 +189,14 @@ export const createNoteDraft = ({
 
   const date = dateToIsoDate(now) ?? dateToIsoDate(new Date())!;
   const fields = [`date: ${date}`, `lastmod: ${date}`];
-  const cleanTag = collectionKey === 'terrain' ? normalizeTag(tag) : '';
-  if (cleanTag) fields.push('tags:', `  - ${JSON.stringify(cleanTag)}`);
+  const cleanTag = collectionKey === 'terrain' ? normalizeTag(tag).toLowerCase() : '';
+  if (collectionKey === 'terrain') {
+    if (!cleanTag) throw new WeatherCreateError('Writing type is required');
+    if (!isWritingTypeTag(cleanTag)) {
+      throw new WeatherCreateError('Writing type must be Project, Essay, Hunch, or Question');
+    }
+    fields.push('tags:', `  - ${JSON.stringify(cleanTag)}`);
+  }
   if (config.requiresRating) fields.push(`rating: ${normalizeRating(rating)}`);
 
   const vaultPath = config.folder ? `${config.folder}/${filename}` : filename;

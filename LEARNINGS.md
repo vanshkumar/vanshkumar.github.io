@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-08-22] — Fresh-checkout corpus tests**
+- Observation: `src/content/terrain` is generated and absent from a fresh checkout, so corpus classification tests that read it fail in CI when `npm test` runs before the site build.
+- Action: Keep `npm test` self-contained by running `sync-content` before tests that validate the generated Terrain corpus; do not rely on a prior local dev or build command having populated `src/content`.
+- Confidence: high
+
 **[2026-08-21] — Canonical Posts/Notes over internal Terrain**
 - Observation: The Astro site can preserve Terrain as its vault, sync, backlink, and collection identity while exposing a strict Posts/Notes split; generating both public namespaces for every entry makes later category changes redirect-safe without rewriting authored Markdown.
 - Action: Keep classification, ordering, canonical writing URLs, log URLs, wiki resolution, archives, homepage queries, RSS, and legacy redirects routed through `src/lib/writing.mjs`; require exactly one tag group and Post-only log parents at build time.

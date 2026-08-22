@@ -12,7 +12,7 @@
     "preview": "astro preview",
     "sync-content": "node scripts/sync-content.mjs",
     "sync-assets": "node scripts/sync-assets.mjs",
-    "test": "node --test src/lib/*.test.mjs",
+    "test": "node scripts/sync-content.mjs && node --test src/lib/*.test.mjs",
     "verify-build": "node scripts/verify-build.mjs"
   },
   "dependencies": {

@@ -1,0 +1,46 @@
+---
+const concepts = [
+  { slug: 'comic-first', number: '01', title: 'Comic First', note: 'The control: your name, a large unmissable strip, then the full Generous Hello introduction.' },
+  { slug: 'hello-first', number: '02', title: 'Hello First', note: 'You meet the person first; the comic becomes the generous pause between the directory and the reading.' },
+  { slug: 'masthead-strip', number: '03', title: 'Masthead Strip', note: 'The comic literally remains the front page—the very first thing on the screen, before even your name.' },
+  { slug: 'comic-interlude', number: '04', title: 'Comic Interlude', note: 'The strip sits between “hello” and the statement of purpose, like a visual part of the introduction.' },
+  { slug: 'framed-frontispiece', number: '05', title: 'Framed Frontispiece', note: 'Treats the strip as a deliberately chosen object, with warmer paper, a label, and a quiet frame.' },
+  { slug: 'quiet-bookmark', number: '06', title: 'Quiet Bookmark', note: 'Keeps everything inside 05’s narrow column; the comic feels like an epigraph rather than a hero.' }
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Vansh Kumar — Generous Hello + comic studies</title>
+    <style is:global>
+      * { box-sizing: border-box; }
+      #dev-toolbar-root { display: none !important; }
+      body { margin: 0; background: #f4f0e8; color: #24211c; font-family: ui-sans-serif, system-ui, sans-serif; }
+      main { width: min(1040px, calc(100% - 40px)); margin: 0 auto; padding: 64px 0 90px; }
+      header { max-width: 770px; margin-bottom: 51px; }
+      .back { color: #687064; font-size: .72rem; text-decoration: none; }
+      .eyebrow { margin-top: 48px; color: #697365; font-size: .7rem; font-weight: 650; letter-spacing: .14em; text-transform: uppercase; }
+      h1 { margin: 15px 0 18px; font-family: Georgia, serif; font-size: clamp(2.7rem, 7vw, 5.5rem); font-weight: 400; letter-spacing: -.055em; line-height: .96; }
+      header p { color: #656057; font-family: Georgia, serif; font-size: 1.03rem; line-height: 1.62; }
+      .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid #c9c5bb; }
+      .concept { display: grid; grid-template-columns: 42px 1fr; gap: 16px; min-height: 190px; padding: 28px 27px 31px 0; border-bottom: 1px solid #c9c5bb; color: inherit; text-decoration: none; }
+      .concept:nth-child(odd) { border-right: 1px solid #c9c5bb; }
+      .concept:nth-child(even) { padding-left: 28px; }
+      .number { padding-top: 6px; color: #84907f; font-family: ui-monospace, monospace; font-size: .69rem; }
+      h2 { margin: 0 0 11px; font-family: Georgia, serif; font-size: 1.58rem; font-weight: 400; }
+      .concept p { margin: 0; color: #6b675f; font-family: Georgia, serif; font-size: .88rem; line-height: 1.55; }
+      .open { display: inline-block; margin-top: 20px; color: #31533a; font-size: .7rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; }
+      @media (max-width: 680px) { main { padding-top: 38px; } .eyebrow { margin-top: 36px; } .grid { grid-template-columns: 1fr; } .concept:nth-child(odd) { border-right: 0; } .concept:nth-child(even) { padding-left: 0; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header><a class="back" href="/homepage-variants/refined">← 05 × 01 studies</a><div class="eyebrow">Generous Hello × the comic</div><h1>Six ways to keep the front page.</h1><p>The same warm introduction and reading lists each time. Only the comic’s role changes: opening statement, pause, masthead, frontispiece, or epigraph.</p></header>
+      <section class="grid" aria-label="Generous Hello comic concepts">{concepts.map((concept) => <a class="concept" href={`/homepage-variants/generous-comic/${concept.slug}`}><span class="number">{concept.number}</span><div><h2>{concept.title}</h2><p>{concept.note}</p><span class="open">Open concept →</span></div></a>)}</section>
+    </main>
+  </body>
+</html>

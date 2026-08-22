@@ -8,9 +8,17 @@ const canonicalUrl = new URL(target, Astro.site ?? Astro.url.origin);
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,follow" />
     <meta http-equiv="refresh" content={`0; url=${target}`} />
     <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
     <title>{title}</title>
+    <style>
+      body { margin: 0; padding: 3rem 1.25rem; background: #fffdfa; color: #28231e; font-family: Georgia, serif; }
+      p { max-width: 42rem; margin: 0 auto; }
+      a { color: #315c39; text-underline-offset: .17em; }
+    </style>
   </head>
   <body>
     <p>{message} to <a href={target}>{target}</a>.</p>

@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import RedirectLayout from '../../../../layouts/RedirectLayout.astro';
 import { titleFromSlug } from '../../../../lib/content';
+import { canonicalLogPath } from '../../../../lib/writing.mjs';
 
 export async function getStaticPaths() {
   const entries = await getCollection('logs');
@@ -11,7 +12,7 @@ export async function getStaticPaths() {
       params: { project, slug },
       props: {
         title: entry.data.title ?? entry.data.day ?? titleFromSlug(slug),
-        target: `/terrain/${project}/logs/${slug}`
+        target: canonicalLogPath(project, slug)
       }
     };
   });

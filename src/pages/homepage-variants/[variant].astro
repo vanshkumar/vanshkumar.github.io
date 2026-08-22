@@ -1,0 +1,335 @@
+---
+export function getStaticPaths() {
+  return [
+    { slug: 'plainspoken', title: 'Plainspoken' },
+    { slug: 'field-notes', title: 'Field Notes' },
+    { slug: 'ledger', title: 'Open Ledger' },
+    { slug: 'postcard', title: 'Personal Postcard' },
+    { slug: 'quiet-editorial', title: 'Quiet Editorial' },
+    { slug: 'garden-light', title: 'Garden, Lightly' }
+  ].map((concept) => ({
+    params: { variant: concept.slug },
+    props: { concept }
+  }));
+}
+
+const { concept } = Astro.props;
+const variant = concept.slug;
+
+const selected = [
+  {
+    href: '/terrain/partition-summer',
+    title: 'Partition Summer',
+    description: 'A comic memoir of the 1947 Partition of India, as seen through my grandfather’s childhood memories.',
+    kind: 'comic + reflection',
+    date: 'Jul 2026'
+  },
+  {
+    href: '/terrain/how-do-we-learn-dec-2025-aliveline',
+    title: 'Doing computational neuroscience in a month, from scratch',
+    description: 'What happened when I gave myself a month to have and publish an original insight about the brain.',
+    kind: 'project',
+    date: 'Feb 2026'
+  },
+  {
+    href: '/terrain/how-can-i-have-a-better-rest-ethic',
+    title: 'How can I have a better rest ethic?',
+    description: 'Learning to treat focus as abundant rather than precious, fragile, and easily lost.',
+    kind: 'question',
+    date: 'Jun 2026'
+  }
+];
+
+const recent = [
+  {
+    href: '/terrain/what-might-a-more-physical-tactile-computing-experience-look-like-for-kids',
+    title: 'What might a more physical & tactile computing experience look like for kids?',
+    kind: 'question',
+    date: 'Aug 13'
+  },
+  {
+    href: '/terrain/a-mind-cannot-be-defined-independently-of-its-social-environment',
+    title: 'A mind cannot be defined independently of its social environment',
+    kind: 'hunch',
+    date: 'Aug 4'
+  },
+  {
+    href: '/terrain/what-is-the-future-of-the-university',
+    title: 'What is the future of the university?',
+    kind: 'early note',
+    date: 'Jul 6'
+  },
+  {
+    href: '/terrain/design-your-environment-as-scaffolding-towards-creating-the-world-you-want-to-see',
+    title: 'Design your environment as scaffolding towards creating the world you want to see',
+    kind: 'hunch',
+    date: 'Oct 2025'
+  }
+];
+---
+
+<!doctype html>
+<html lang="en" data-variant={variant}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Vansh Kumar — {concept.title} homepage concept</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600&family=Libre+Caslon+Text:ital@0;1&family=Manrope:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet" />
+    <style is:global>
+      * { box-sizing: border-box; }
+      #dev-toolbar-root { display: none !important; }
+      html { min-height: 100%; }
+      body { margin: 0; min-height: 100vh; }
+      a { text-underline-offset: .15em; }
+      .concept-home { min-height: 100vh; }
+
+      /* 01 — Plainspoken */
+      .plainspoken {
+        background: #f8fcff;
+        color: #111;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+      .plain-page {
+        width: min(650px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 48px 0 80px;
+      }
+      .plainspoken a { color: #154b78; }
+      .plainspoken a:hover { color: #0a2f4e; }
+      .plain-name {
+        display: inline-block;
+        margin-bottom: 38px;
+        color: #111 !important;
+        font-size: 1.35rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .plainspoken p { margin: 0 0 1.15rem; }
+      .plainspoken ul { margin: .45rem 0 1.35rem; padding-left: 1.45rem; }
+      .plainspoken li + li { margin-top: .2rem; }
+      .plainspoken h2 { margin: 2rem 0 .55rem; font-size: 1.28rem; line-height: 1.25; }
+      .plainspoken h2 small { font-size: .72em; font-weight: 400; }
+      .plain-list { list-style: none; padding: 0 !important; }
+      .plain-list li + li { margin-top: .38rem; }
+      .plain-note { margin-top: 2.5rem !important; color: #58616a; font-size: .88rem; }
+
+      /* 02 — Field Notes */
+      .field-notes {
+        --ink: #241f17;
+        --moss: #334c26;
+        --paper: #fbf8f1;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Inter, sans-serif;
+      }
+      .field-shell { width: min(1080px, calc(100% - 56px)); margin: 0 auto; padding: 32px 0 70px; }
+      .field-header { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 24px; border-bottom: 1px solid #d9d3c7; }
+      .field-header > a { color: var(--ink); font-family: 'Playfair Display', serif; font-size: 1.35rem; text-decoration: none; }
+      .field-nav { display: flex; gap: 24px; }
+      .field-nav a { color: #625d53; font-size: .78rem; font-weight: 500; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
+      .field-hero { display: grid; grid-template-columns: 2fr 1fr; gap: 80px; padding: 84px 0 72px; }
+      .field-hero h1 { margin: 0; max-width: 760px; font-family: 'Playfair Display', serif; font-size: clamp(3.8rem, 7vw, 6.7rem); font-weight: 500; letter-spacing: -.035em; line-height: .91; }
+      .field-hero h1 em { color: #6b1531; font-weight: 500; }
+      .field-intro { align-self: end; border-left: 2px solid #8aa076; padding-left: 22px; color: #555045; font-size: .98rem; line-height: 1.7; }
+      .field-intro p { margin: 0 0 18px; }
+      .field-intro a { color: var(--moss); }
+      .field-section { display: grid; grid-template-columns: 1fr 3fr; gap: 48px; padding: 34px 0 12px; border-top: 1px solid #d9d3c7; }
+      .field-section h2 { margin: 0; color: #777064; font-size: .7rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; }
+      .field-work { list-style: none; margin: 0; padding: 0; }
+      .field-work li { display: grid; grid-template-columns: 34px 1fr; gap: 10px; padding: 0 0 30px; }
+      .field-number { padding-top: .25rem; color: #939d89; font-family: 'DM Mono', monospace; font-size: .72rem; }
+      .field-work a { color: var(--ink); font-family: 'Playfair Display', serif; font-size: 1.5rem; line-height: 1.2; text-decoration-color: #b5c2aa; }
+      .field-work p { margin: 7px 0 0; max-width: 620px; color: #6c665c; font-size: .9rem; line-height: 1.55; }
+      .field-recent { columns: 2; column-gap: 44px; list-style: none; margin: 0; padding: 0; }
+      .field-recent li { break-inside: avoid; margin: 0 0 22px; }
+      .field-recent a { color: var(--ink); line-height: 1.45; text-decoration-color: #aeb9a6; }
+      .field-recent span { display: block; margin-top: 4px; color: #8b857a; font-family: 'DM Mono', monospace; font-size: .67rem; text-transform: uppercase; }
+
+      /* 03 — Open Ledger */
+      .ledger { background: #f3f1e9; color: #1c211b; font-family: 'DM Mono', monospace; }
+      .ledger-shell { width: min(1160px, calc(100% - 64px)); margin: 0 auto; padding: 38px 0 64px; }
+      .ledger-top { display: grid; grid-template-columns: 1fr auto; gap: 20px; padding-bottom: 16px; border-bottom: 1px solid #1c211b; font-size: .73rem; letter-spacing: .09em; text-transform: uppercase; }
+      .ledger-top a { color: inherit; text-decoration: none; }
+      .ledger-grid { display: grid; grid-template-columns: 330px 1fr; gap: 70px; padding-top: 70px; }
+      .ledger-intro { position: sticky; top: 32px; align-self: start; }
+      .ledger-intro h1 { margin: 0 0 24px; font-family: 'Libre Caslon Text', serif; font-size: 3.9rem; font-weight: 400; letter-spacing: -.045em; line-height: .95; }
+      .ledger-intro p { color: #51574f; font-family: Inter, sans-serif; font-size: .92rem; line-height: 1.7; }
+      .ledger-links { display: flex; flex-wrap: wrap; gap: 9px 15px; margin-top: 30px; }
+      .ledger-links a { color: #1f482d; font-size: .75rem; }
+      .ledger-heading { display: grid; grid-template-columns: 1fr auto; gap: 20px; padding-bottom: 10px; border-bottom: 1px solid #878b83; color: #5f655d; font-size: .68rem; letter-spacing: .11em; text-transform: uppercase; }
+      .ledger-list { list-style: none; margin: 0 0 54px; padding: 0; }
+      .ledger-row { display: grid; grid-template-columns: 115px 1fr 85px; gap: 22px; align-items: start; padding: 19px 0 20px; border-bottom: 1px solid #cbc9c0; }
+      .ledger-kind, .ledger-date { color: #757a72; font-size: .67rem; line-height: 1.5; text-transform: uppercase; }
+      .ledger-date { text-align: right; }
+      .ledger-row a { color: #1c211b; font-family: 'Libre Caslon Text', serif; font-size: 1.14rem; line-height: 1.35; text-decoration: none; }
+      .ledger-row a:hover { text-decoration: underline; }
+      .ledger-status { display: inline-flex; gap: 7px; align-items: center; }
+      .ledger-status::before { width: 6px; height: 6px; border-radius: 50%; background: #4d7351; content: ''; }
+
+      /* 04 — Personal Postcard */
+      .postcard { background: #e7b5a5; color: #241d19; font-family: Manrope, sans-serif; }
+      .postcard-shell { display: grid; grid-template-columns: minmax(330px, .85fr) minmax(500px, 1.15fr); min-height: 100vh; }
+      .postcard-left { display: flex; flex-direction: column; justify-content: space-between; padding: 42px 48px; border-right: 1px solid rgba(36,29,25,.3); }
+      .postcard-brand { color: inherit; font-size: .8rem; font-weight: 600; letter-spacing: .11em; text-decoration: none; text-transform: uppercase; }
+      .postcard-left h1 { margin: 48px 0; font-family: 'Libre Caslon Text', serif; font-size: clamp(4.8rem, 8vw, 8.4rem); font-weight: 400; letter-spacing: -.07em; line-height: .76; }
+      .postcard-left h1 em { display: block; color: #5f1730; font-weight: 400; }
+      .postcard-links { display: flex; gap: 18px; }
+      .postcard-links a { color: inherit; font-size: .78rem; }
+      .postcard-right { background: #fffaf2; padding: 60px 7vw 60px 6vw; }
+      .postcard-intro { max-width: 620px; margin-bottom: 65px; font-family: 'Libre Caslon Text', serif; font-size: 1.5rem; line-height: 1.52; }
+      .postcard-intro a { color: #6d2340; }
+      .postcard-section { margin-top: 50px; }
+      .postcard-section h2 { margin: 0 0 19px; color: #7d746e; font-size: .68rem; letter-spacing: .15em; text-transform: uppercase; }
+      .postcard-list { list-style: none; margin: 0; padding: 0; }
+      .postcard-list li { padding: 15px 0; border-top: 1px solid #ded8ce; }
+      .postcard-list a { display: grid; grid-template-columns: 1fr auto; gap: 24px; color: #241d19; font-family: 'Libre Caslon Text', serif; font-size: 1.13rem; line-height: 1.35; text-decoration: none; }
+      .postcard-list span { color: #8d837b; font-family: 'DM Mono', monospace; font-size: .62rem; text-transform: uppercase; }
+
+      /* 05 — Quiet Editorial */
+      .quiet-editorial { background: #fff; color: #26231f; font-family: 'Libre Caslon Text', serif; }
+      .quiet-shell { width: min(760px, calc(100% - 42px)); margin: 0 auto; padding: 50px 0 90px; }
+      .quiet-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 92px; }
+      .quiet-header > a { color: inherit; font-size: 1.05rem; text-decoration: none; }
+      .quiet-nav { display: flex; gap: 20px; }
+      .quiet-nav a { color: #756e65; font-family: Inter, sans-serif; font-size: .72rem; text-decoration: none; }
+      .quiet-kicker { margin-bottom: 16px; color: #8b8175; font-family: Inter, sans-serif; font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; }
+      .quiet-intro { margin: 0 0 92px; font-size: clamp(2rem, 4.1vw, 3.15rem); letter-spacing: -.035em; line-height: 1.22; }
+      .quiet-intro a { color: #305b36; text-decoration-thickness: 1px; }
+      .quiet-rule { width: 36px; height: 1px; margin: 0 0 34px; background: #8f897f; }
+      .quiet-section { margin-top: 70px; }
+      .quiet-section h2 { margin: 0 0 28px; font-family: Inter, sans-serif; font-size: .68rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; }
+      .quiet-feature { margin-bottom: 30px; }
+      .quiet-feature a { color: #26231f; font-size: 1.4rem; line-height: 1.35; text-decoration-color: #a8b7a7; }
+      .quiet-feature p { margin: 7px 0 0; color: #797067; font-size: .92rem; font-style: italic; line-height: 1.6; }
+      .quiet-recent { list-style: none; margin: 0; padding: 0; }
+      .quiet-recent li { display: grid; grid-template-columns: 72px 1fr; gap: 22px; padding: 11px 0; }
+      .quiet-recent span { padding-top: .26rem; color: #9a9188; font-family: Inter, sans-serif; font-size: .63rem; text-transform: uppercase; }
+      .quiet-recent a { color: #26231f; line-height: 1.45; text-decoration-color: #bcc7bb; }
+      .quiet-footer { margin-top: 78px; padding-top: 22px; border-top: 1px solid #e2dfda; color: #91897f; font-family: Inter, sans-serif; font-size: .68rem; }
+
+      /* 06 — Garden, Lightly */
+      .garden-light { --green: #29472b; position: relative; overflow: hidden; background: #f7f6ee; color: #20251f; font-family: Inter, sans-serif; }
+      .garden-light::before, .garden-light::after { position: absolute; z-index: 0; border-radius: 50%; background: rgba(164,184,145,.18); content: ''; filter: blur(2px); }
+      .garden-light::before { top: -230px; right: -210px; width: 540px; height: 540px; }
+      .garden-light::after { bottom: -260px; left: -250px; width: 520px; height: 520px; }
+      .garden-shell { position: relative; z-index: 1; width: min(940px, calc(100% - 48px)); margin: 0 auto; padding: 38px 0 80px; }
+      .garden-header { display: flex; justify-content: space-between; align-items: center; }
+      .garden-header > a { color: #20251f; font-family: 'Playfair Display', serif; font-size: 1.3rem; text-decoration: none; }
+      .garden-nav { display: flex; gap: 22px; }
+      .garden-nav a { color: #576155; font-size: .76rem; text-decoration: none; }
+      .garden-hero { max-width: 760px; padding: 98px 0 78px; }
+      .garden-hero .garden-eyebrow { margin-bottom: 19px; color: #748171; font-family: 'DM Mono', monospace; font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; }
+      .garden-hero h1 { margin: 0 0 28px; font-family: 'Playfair Display', serif; font-size: clamp(3.15rem, 6.5vw, 5.8rem); font-weight: 500; letter-spacing: -.035em; line-height: .98; }
+      .garden-hero h1 em { color: #6a1f3b; font-weight: 500; }
+      .garden-hero p { max-width: 585px; margin: 0; color: #576155; font-size: 1rem; line-height: 1.75; }
+      .garden-hero a { color: var(--green); }
+      .garden-columns { display: grid; grid-template-columns: 1.15fr .85fr; gap: 75px; padding-top: 36px; border-top: 1px solid #d8dace; }
+      .garden-column h2 { margin: 0 0 27px; color: #657064; font-size: .7rem; font-weight: 500; letter-spacing: .13em; text-transform: uppercase; }
+      .garden-feature { margin: 0 0 30px; }
+      .garden-feature a { color: #20251f; font-family: 'Playfair Display', serif; font-size: 1.4rem; line-height: 1.3; text-decoration: none; }
+      .garden-feature p { margin: 7px 0 0; color: #72796e; font-size: .82rem; line-height: 1.55; }
+      .growing-list { list-style: none; margin: 0; padding: 0; }
+      .growing-list li { position: relative; margin: 0 0 19px; padding-left: 25px; }
+      .growing-list li::before { position: absolute; top: .1em; left: 0; color: #78906f; content: '✣'; font-size: .8rem; }
+      .growing-list a { color: #2a332a; font-family: 'Libre Caslon Text', serif; font-size: 1.03rem; line-height: 1.45; text-decoration-color: #a8b9a2; }
+      .growing-list span { display: block; margin-top: 4px; color: #899087; font-family: 'DM Mono', monospace; font-size: .6rem; text-transform: uppercase; }
+      .garden-footer { display: flex; justify-content: space-between; margin-top: 72px; padding-top: 18px; border-top: 1px solid #d8dace; color: #7e867c; font-size: .68rem; }
+      .garden-footer a { color: #596656; }
+
+      @media (max-width: 780px) {
+        .plainspoken { font-size: 17px; }
+        .plain-page { padding-top: 30px; }
+        .plain-name { margin-bottom: 26px; }
+        .field-shell, .ledger-shell { width: min(100% - 36px, 650px); }
+        .field-nav a:nth-child(2), .field-nav a:nth-child(3) { display: none; }
+        .field-hero { grid-template-columns: 1fr; gap: 34px; padding: 62px 0 50px; }
+        .field-hero h1 { font-size: 3.55rem; }
+        .field-intro { max-width: 420px; }
+        .field-section { grid-template-columns: 1fr; gap: 24px; }
+        .field-recent { columns: 1; }
+        .ledger-top span:last-child { display: none; }
+        .ledger-grid { grid-template-columns: 1fr; gap: 48px; padding-top: 50px; }
+        .ledger-intro { position: static; }
+        .ledger-intro h1 { font-size: 3.25rem; }
+        .ledger-row { grid-template-columns: 78px 1fr; gap: 14px; }
+        .ledger-date { display: none; }
+        .postcard-shell { display: block; }
+        .postcard-left { min-height: 480px; padding: 30px 25px; border-right: 0; border-bottom: 1px solid rgba(36,29,25,.3); }
+        .postcard-left h1 { font-size: 5.4rem; }
+        .postcard-right { padding: 45px 25px 60px; }
+        .postcard-intro { margin-bottom: 48px; font-size: 1.25rem; }
+        .quiet-header { margin-bottom: 68px; }
+        .quiet-nav a:nth-child(2) { display: none; }
+        .quiet-intro { margin-bottom: 68px; font-size: 2.15rem; }
+        .quiet-recent li { grid-template-columns: 60px 1fr; gap: 12px; }
+        .garden-shell { width: min(100% - 36px, 650px); }
+        .garden-nav a:nth-child(2), .garden-nav a:nth-child(3) { display: none; }
+        .garden-hero { padding: 70px 0 56px; }
+        .garden-hero h1 { font-size: 3.5rem; }
+        .garden-columns { grid-template-columns: 1fr; gap: 46px; }
+      }
+    </style>
+  </head>
+  <body>
+    {variant === 'plainspoken' && (
+      <main class="concept-home plainspoken"><div class="plain-page">
+        <a class="plain-name" href="/">Vansh Kumar</a>
+        <p>Hello! I’m a husband, father, and generally curious person in Pasadena, California. I’m interested in how minds develop—and in building better environments for learning.</p>
+        <p>On this website you can find:</p>
+        <ul><li>What I’m doing <a href="/now">now</a></li><li>What I’m <a href="/shelf">reading</a></li><li>Some unfinished <a href="/terrain">notes and questions</a></li><li>A few projects and longer pieces (below)</li></ul>
+        <h2>Selected</h2><ul class="plain-list">{selected.map((item) => <li><a href={item.href}>{item.title}</a></li>)}</ul>
+        <h2>Recent notes <small>(<a href="/terrain">see all</a>)</small></h2><ul class="plain-list">{recent.slice(0, 3).map((item) => <li><a href={item.href}>{item.title}</a></li>)}</ul>
+        <p class="plain-note">Everything here is a perpetual draft. You can also follow along via <a href="/rss.xml">RSS</a>.</p>
+      </div></main>
+    )}
+
+    {variant === 'field-notes' && (
+      <main class="concept-home field-notes"><div class="field-shell">
+        <header class="field-header"><a href="/">Vansh Kumar</a><nav class="field-nav" aria-label="Primary"><a href="/about">About</a><a href="/now">Now</a><a href="/shelf">Shelf</a><a href="/terrain">All notes</a></nav></header>
+        <section class="field-hero"><h1>How does a <em>mind</em> develop?</h1><div class="field-intro"><p>I’m Vansh—a husband, father, and curious person living in Pasadena.</p><p>This is where I keep <a href="/terrain">working notes</a>, questions, and projects about minds, learning, and building a life.</p></div></section>
+        <section class="field-section"><h2>Selected work</h2><ol class="field-work">{selected.map((item, index) => <li><span class="field-number">0{index + 1}</span><div><a href={item.href}>{item.title}</a><p>{item.description}</p></div></li>)}</ol></section>
+        <section class="field-section"><h2>Recently touched</h2><ul class="field-recent">{recent.map((item) => <li><a href={item.href}>{item.title}</a><span>{item.kind} · {item.date}</span></li>)}</ul></section>
+      </div></main>
+    )}
+
+    {variant === 'ledger' && (
+      <main class="concept-home ledger"><div class="ledger-shell">
+        <header class="ledger-top"><a href="/">Vansh Kumar / personal index</a><span>Pasadena, CA · Updated irregularly</span></header>
+        <div class="ledger-grid"><aside class="ledger-intro"><h1>Ideas in<br/>public.</h1><p>I’m Vansh. I follow questions about how minds develop, how people learn, and how environments shape us. This site is an open ledger of the projects and notes that fall out.</p><nav class="ledger-links"><a href="/now">[now]</a><a href="/shelf">[reading]</a><a href="/about">[about]</a><a href="/terrain">[everything]</a><a href="/rss.xml">[rss]</a></nav></aside>
+          <div><div class="ledger-heading"><span>Selected entries</span><span>03 items</span></div><ol class="ledger-list">{selected.map((item) => <li class="ledger-row"><span class="ledger-kind"><span class="ledger-status">{item.kind}</span></span><a href={item.href}>{item.title}</a><span class="ledger-date">{item.date}</span></li>)}</ol><div class="ledger-heading"><span>Notes in progress</span><span>04 items</span></div><ol class="ledger-list">{recent.map((item) => <li class="ledger-row"><span class="ledger-kind">{item.kind}</span><a href={item.href}>{item.title}</a><span class="ledger-date">{item.date}</span></li>)}</ol></div>
+        </div>
+      </div></main>
+    )}
+
+    {variant === 'postcard' && (
+      <main class="concept-home postcard"><div class="postcard-shell">
+        <section class="postcard-left"><a class="postcard-brand" href="/">Vansh Kumar · Pasadena</a><h1>Thinking<br/><em>out loud.</em></h1><nav class="postcard-links"><a href="/about">About</a><a href="/now">Now</a><a href="/shelf">Reading</a><a href="/terrain">Notes</a></nav></section>
+        <section class="postcard-right"><div class="postcard-intro">I’m a husband, father, and generally curious person. I’m trying to understand <a href="/now">how a mind develops</a>—through neuroscience, education, culture, child development, and whatever else seems alive.</div><div class="postcard-section"><h2>A few things I’ve made</h2><ul class="postcard-list">{selected.map((item) => <li><a href={item.href}>{item.title}<span>{item.kind}</span></a></li>)}</ul></div><div class="postcard-section"><h2>From the notebook</h2><ul class="postcard-list">{recent.slice(0, 3).map((item) => <li><a href={item.href}>{item.title}<span>{item.kind}</span></a></li>)}</ul></div></section>
+      </div></main>
+    )}
+
+    {variant === 'quiet-editorial' && (
+      <main class="concept-home quiet-editorial"><div class="quiet-shell">
+        <header class="quiet-header"><a href="/">Vansh Kumar</a><nav class="quiet-nav"><a href="/now">Now</a><a href="/shelf">Reading</a><a href="/terrain">All notes</a></nav></header>
+        <div class="quiet-kicker">A personal website</div><p class="quiet-intro">I’m interested in how minds develop, and how we might shape the environments around us to help people <a href="/now">learn and flourish</a>.</p><div class="quiet-rule"></div>
+        <section class="quiet-section"><h2>Selected</h2>{selected.map((item) => <article class="quiet-feature"><a href={item.href}>{item.title}</a><p>{item.description}</p></article>)}</section>
+        <section class="quiet-section"><h2>Recent notes</h2><ul class="quiet-recent">{recent.map((item) => <li><span>{item.kind}</span><a href={item.href}>{item.title}</a></li>)}</ul></section>
+        <footer class="quiet-footer">Everything here is a perpetual draft. <a href="/about">About this site</a> · <a href="/rss.xml">RSS</a></footer>
+      </div></main>
+    )}
+
+    {variant === 'garden-light' && (
+      <main class="concept-home garden-light"><div class="garden-shell">
+        <header class="garden-header"><a href="/">Vansh Kumar</a><nav class="garden-nav"><a href="/about">About</a><a href="/now">Now</a><a href="/shelf">Shelf</a><a href="/terrain">Notes</a></nav></header>
+        <section class="garden-hero"><div class="garden-eyebrow">A mind, in progress</div><h1>Following what feels <em>alive.</em></h1><p>I’m a husband, father, and curious person in Pasadena. I keep notes here while following one question from many directions: <a href="/now">how does a mind develop?</a></p></section>
+        <div class="garden-columns"><section class="garden-column"><h2>Made & considered</h2>{selected.map((item) => <article class="garden-feature"><a href={item.href}>{item.title}</a><p>{item.description}</p></article>)}</section><section class="garden-column"><h2>Currently growing</h2><ul class="growing-list">{recent.map((item) => <li><a href={item.href}>{item.title}</a><span>{item.kind} · {item.date}</span></li>)}</ul></section></div>
+        <footer class="garden-footer"><span>Perpetual drafts, tended irregularly.</span><span><a href="/terrain">Explore all notes</a> · <a href="/rss.xml">RSS</a></span></footer>
+      </div></main>
+    )}
+  </body>
+</html>

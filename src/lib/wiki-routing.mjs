@@ -1,3 +1,8 @@
+import {
+  canonicalLogPath,
+  canonicalWritingPathFrom
+} from './writing.mjs';
+
 export const WIKI_INDEX_COLLECTIONS = [
   'terrain',
   'logs',
@@ -15,6 +20,7 @@ export const WIKI_LOOKUP_ORDER = [
 const LEGACY_COLLECTION_ALIASES = {
   terrain: [
     'projects',
+    'posts',
     'questions',
     'hunches',
     'essays',
@@ -49,16 +55,16 @@ export const normalizeWikiHeading = (value) =>
 export const isWikiAssetTarget = (value) =>
   /\.(png|jpe?g|gif|svg|webp|bmp|ico|apng|pdf)$/i.test(String(value));
 
-export const urlForEntry = (collection, slug) => {
+export const urlForEntry = (collection, slug, data = {}) => {
   if (collection === 'pages') {
     return slug === 'home' ? '/' : `/${slug}`;
   }
   if (collection === 'terrain') {
-    return `/terrain/${slug}`;
+    return canonicalWritingPathFrom(slug, data.tags);
   }
   if (collection === 'shelf') {
     return `/shelf/${slug}`;
   }
   const [project, ...rest] = slug.split('/');
-  return `/terrain/${project}/logs/${rest.join('/')}`;
+  return canonicalLogPath(project, rest.join('/'));
 };

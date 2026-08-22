@@ -1,0 +1,298 @@
+---
+export function getStaticPaths() {
+  const concepts = [
+    { slug: 'quiet-index', number: '01', title: 'Quiet Index' },
+    { slug: 'lucid-directory', number: '02', title: 'Lucid Directory' },
+    { slug: 'soft-blue-editorial', number: '03', title: 'Soft Blue Editorial' },
+    { slug: 'margin-notes', number: '04', title: 'Margin Notes' },
+    { slug: 'generous-hello', number: '05', title: 'Generous Hello' },
+    { slug: 'reading-room', number: '06', title: 'Reading Room' }
+  ];
+
+  return concepts.map((concept) => ({
+    params: { variant: concept.slug },
+    props: { concept }
+  }));
+}
+
+const { concept } = Astro.props;
+const variant = concept.slug;
+
+const selected = [
+  {
+    href: '/terrain/partition-summer',
+    title: 'Partition Summer',
+    description: 'A comic memoir of the 1947 Partition of India, as seen through my grandfather’s childhood memories.',
+    kind: 'comic + reflection',
+    date: 'Jul 2026'
+  },
+  {
+    href: '/terrain/how-do-we-learn-dec-2025-aliveline',
+    title: 'Doing computational neuroscience in a month, from scratch',
+    description: 'What happened when I gave myself a month to have and publish an original insight about the brain.',
+    kind: 'project',
+    date: 'Feb 2026'
+  },
+  {
+    href: '/terrain/how-can-i-have-a-better-rest-ethic',
+    title: 'How can I have a better rest ethic?',
+    description: 'Learning to treat focus as abundant rather than precious, fragile, and easily lost.',
+    kind: 'question',
+    date: 'Jun 2026'
+  }
+];
+
+const recent = [
+  {
+    href: '/terrain/what-might-a-more-physical-tactile-computing-experience-look-like-for-kids',
+    title: 'What might a more physical & tactile computing experience look like for kids?',
+    kind: 'question',
+    date: 'Aug 13'
+  },
+  {
+    href: '/terrain/a-mind-cannot-be-defined-independently-of-its-social-environment',
+    title: 'A mind cannot be defined independently of its social environment',
+    kind: 'hunch',
+    date: 'Aug 4'
+  },
+  {
+    href: '/terrain/what-is-the-future-of-the-university',
+    title: 'What is the future of the university?',
+    kind: 'early note',
+    date: 'Jul 6'
+  },
+  {
+    href: '/terrain/design-your-environment-as-scaffolding-towards-creating-the-world-you-want-to-see',
+    title: 'Design your environment as scaffolding towards creating the world you want to see',
+    kind: 'hunch',
+    date: 'Oct 2025'
+  }
+];
+---
+
+<!doctype html>
+<html lang="en" data-variant={variant}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Vansh Kumar — {concept.title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Inter:wght@400;500&family=Libre+Caslon+Text:ital@0;1&display=swap" rel="stylesheet" />
+    <style is:global>
+      * { box-sizing: border-box; }
+      #dev-toolbar-root { display: none !important; }
+      html { min-height: 100%; }
+      body { margin: 0; min-height: 100vh; }
+      a { text-underline-offset: .17em; }
+      .refined-home { min-height: 100vh; }
+
+      /* 01 — Quiet Index: the most direct 05/01 midpoint. */
+      .quiet-index { background: #fff; color: #26231f; font-family: 'Libre Caslon Text', Georgia, serif; }
+      .qi-shell { width: min(760px, calc(100% - 44px)); margin: 0 auto; padding: 48px 0 88px; }
+      .qi-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 86px; }
+      .qi-header > a { color: inherit; font-size: 1.05rem; text-decoration: none; }
+      .qi-nav { display: flex; gap: 19px; }
+      .qi-nav a { color: #756f66; font-family: Inter, sans-serif; font-size: .69rem; text-decoration: none; }
+      .qi-kicker { margin-bottom: 15px; color: #8c8479; font-family: Inter, sans-serif; font-size: .64rem; letter-spacing: .15em; text-transform: uppercase; }
+      .qi-intro { margin: 0 0 38px; font-size: clamp(2rem, 4vw, 3.02rem); letter-spacing: -.035em; line-height: 1.23; }
+      .qi-intro a { color: #315b37; text-decoration-thickness: 1px; }
+      .qi-directory { margin: 0 0 86px; color: #6f685f; font-size: .9rem; font-style: italic; line-height: 1.7; }
+      .qi-directory a { color: #4e6850; }
+      .qi-section { margin-top: 67px; }
+      .qi-section h2 { margin: 0 0 27px; font-family: Inter, sans-serif; font-size: .66rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; }
+      .qi-feature { margin-bottom: 29px; }
+      .qi-feature a { color: inherit; font-size: 1.37rem; line-height: 1.35; text-decoration-color: #aebaa9; }
+      .qi-feature p { margin: 7px 0 0; color: #7b736a; font-size: .89rem; font-style: italic; line-height: 1.58; }
+      .qi-recent { list-style: none; margin: 0; padding: 0; }
+      .qi-recent li { display: grid; grid-template-columns: 67px 1fr; gap: 18px; padding: 10px 0; }
+      .qi-recent span { padding-top: .31rem; color: #999087; font-family: Inter, sans-serif; font-size: .6rem; text-transform: uppercase; }
+      .qi-recent a { color: inherit; line-height: 1.45; text-decoration-color: #c1c9bd; }
+      .qi-footer { margin-top: 75px; padding-top: 20px; border-top: 1px solid #e6e2dc; color: #91897f; font-family: Inter, sans-serif; font-size: .66rem; }
+      .qi-footer a { color: inherit; }
+
+      /* 02 — Lucid Directory: 01's information architecture with gentler type. */
+      .lucid-directory { background: #f5fbff; color: #17191a; font-family: Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 1.58; }
+      .ld-shell { width: min(650px, calc(100% - 42px)); margin: 0 auto; padding: 42px 0 82px; }
+      .ld-name { display: inline-block; margin-bottom: 56px; color: #17191a; font-size: 1.22rem; font-weight: 700; text-decoration: none; }
+      .ld-intro { margin: 0 0 1.08rem; }
+      .ld-directory { margin: .35rem 0 2.45rem; padding-left: 1.3rem; }
+      .ld-directory li + li { margin-top: .18rem; }
+      .lucid-directory a { color: #235e8d; }
+      .ld-section { margin-top: 2.15rem; }
+      .ld-section h2 { margin: 0 0 .75rem; font-size: 1.16rem; line-height: 1.25; }
+      .ld-list { list-style: none; margin: 0; padding: 0; }
+      .ld-list li + li { margin-top: .5rem; }
+      .ld-list a { text-decoration-thickness: 1px; }
+      .ld-list small { margin-left: .4rem; color: #7d858b; font-family: Inter, sans-serif; font-size: .61rem; text-transform: uppercase; }
+      .ld-note { margin-top: 3.25rem; color: #667078; font-size: .83rem; }
+
+      /* 03 — Soft Blue Editorial: 05 hierarchy on 01's airy field. */
+      .soft-blue-editorial { background: #ecf6fc; color: #20262a; font-family: 'Libre Caslon Text', Georgia, serif; }
+      .sb-shell { width: min(820px, calc(100% - 48px)); margin: 0 auto; padding: 45px 0 90px; }
+      .sb-header { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 17px; border-bottom: 1px solid #c7d6df; }
+      .sb-header > a { color: inherit; font-size: 1.04rem; text-decoration: none; }
+      .sb-nav { display: flex; gap: 22px; }
+      .sb-nav a { color: #577080; font-family: Inter, sans-serif; font-size: .68rem; text-decoration: none; }
+      .sb-hero { padding: 72px 0 74px; }
+      .sb-hello { margin-bottom: 14px; color: #66808e; font-family: Inter, sans-serif; font-size: .65rem; letter-spacing: .15em; text-transform: uppercase; }
+      .sb-hero h1 { margin: 0; max-width: 730px; font-size: clamp(2.5rem, 5vw, 4.25rem); font-weight: 400; letter-spacing: -.045em; line-height: 1.1; }
+      .sb-hero p { max-width: 600px; margin: 24px 0 0; color: #536670; font-size: .98rem; font-style: italic; line-height: 1.65; }
+      .sb-hero a { color: #2e6343; }
+      .sb-section { display: grid; grid-template-columns: 118px 1fr; gap: 34px; padding: 34px 0; border-top: 1px solid #c7d6df; }
+      .sb-section h2 { margin: 5px 0 0; color: #69808c; font-family: Inter, sans-serif; font-size: .64rem; font-weight: 500; letter-spacing: .13em; text-transform: uppercase; }
+      .sb-features { list-style: none; margin: 0; padding: 0; }
+      .sb-feature + .sb-feature { margin-top: 25px; }
+      .sb-feature a { color: inherit; font-size: 1.31rem; line-height: 1.35; text-decoration-color: #9db4ad; }
+      .sb-feature p { margin: 6px 0 0; color: #657781; font-size: .84rem; font-style: italic; line-height: 1.55; }
+      .sb-recent { list-style: none; margin: 0; padding: 0; counter-reset: note; }
+      .sb-recent li { display: grid; grid-template-columns: 25px 1fr; gap: 8px; counter-increment: note; }
+      .sb-recent li + li { margin-top: 14px; }
+      .sb-recent li::before { padding-top: .3rem; color: #8095a0; content: '0' counter(note); font-family: 'DM Mono', monospace; font-size: .58rem; }
+      .sb-recent a { color: inherit; line-height: 1.45; text-decoration-color: #afc1c5; }
+
+      /* 04 — Margin Notes: unfinishedness is present, but quiet. */
+      .margin-notes { background: #faf9f5; color: #24231f; font-family: 'Libre Caslon Text', Georgia, serif; }
+      .mn-shell { width: min(790px, calc(100% - 46px)); margin: 0 auto; padding: 45px 0 88px; }
+      .mn-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 76px; }
+      .mn-header > a { color: inherit; font-size: 1.02rem; text-decoration: none; }
+      .mn-header nav { display: flex; gap: 20px; }
+      .mn-header nav a { color: #716f68; font-family: Inter, sans-serif; font-size: .66rem; text-decoration: none; }
+      .mn-intro { max-width: 700px; margin: 0 0 84px; font-size: clamp(1.72rem, 3.5vw, 2.65rem); letter-spacing: -.025em; line-height: 1.28; }
+      .mn-intro a { color: #355e3c; text-decoration-thickness: 1px; }
+      .mn-section { margin-top: 64px; }
+      .mn-section h2 { margin: 0 0 26px; padding-left: 118px; color: #68665f; font-family: Inter, sans-serif; font-size: .64rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; }
+      .mn-row { display: grid; grid-template-columns: 94px 1fr; gap: 24px; padding: 13px 0; border-top: 1px solid #dedbd3; }
+      .mn-meta { padding-top: .28rem; color: #908c83; font-family: 'DM Mono', monospace; font-size: .59rem; line-height: 1.5; text-transform: uppercase; }
+      .mn-copy a { color: inherit; font-size: 1.13rem; line-height: 1.4; text-decoration-color: #aeb8a8; }
+      .mn-copy p { margin: 6px 0 2px; color: #77736b; font-size: .82rem; font-style: italic; line-height: 1.55; }
+      .mn-footer { margin: 74px 0 0 118px; color: #8b877f; font-family: Inter, sans-serif; font-size: .64rem; }
+      .mn-footer a { color: inherit; }
+
+      /* 05 — Generous Hello: conversational 01 copy with 05's breathing room. */
+      .generous-hello { background: #fffdfa; color: #28231e; font-family: 'Libre Caslon Text', Georgia, serif; }
+      .gh-shell { width: min(710px, calc(100% - 44px)); margin: 0 auto; padding: 48px 0 92px; }
+      .gh-name { display: inline-block; margin-bottom: 82px; color: inherit; font-size: 1.03rem; text-decoration: none; }
+      .gh-intro { margin: 0; font-size: clamp(1.48rem, 3vw, 2.08rem); line-height: 1.42; }
+      .gh-intro + .gh-intro { margin-top: 18px; }
+      .gh-intro a, .generous-hello a { color: #315c39; text-decoration-color: #9fac98; text-decoration-thickness: 1px; }
+      .gh-directory { margin: 35px 0 83px; padding: 0; list-style: none; color: #6f685f; font-size: .91rem; line-height: 1.75; }
+      .gh-directory li::before { margin-right: 9px; color: #a69f94; content: '—'; }
+      .gh-section { margin-top: 67px; }
+      .gh-section h2 { margin: 0 0 25px; color: #6b655d; font-family: Inter, sans-serif; font-size: .64rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; }
+      .gh-feature + .gh-feature { margin-top: 26px; }
+      .gh-feature a { color: #28231e; font-size: 1.27rem; line-height: 1.35; }
+      .gh-feature p { margin: 6px 0 0; color: #7e766d; font-size: .85rem; font-style: italic; line-height: 1.55; }
+      .gh-recent { margin: 0; padding-left: 1.2rem; }
+      .gh-recent li + li { margin-top: 9px; }
+      .gh-recent li::marker { color: #a3a097; }
+      .gh-recent a { color: #28231e; line-height: 1.45; }
+      .gh-note { margin-top: 72px; color: #999086; font-family: Inter, sans-serif; font-size: .64rem; }
+
+      /* 06 — Reading Room: lower contrast, smaller type, slightly denser index. */
+      .reading-room { background: #f4f0e7; color: #292720; font-family: 'Libre Caslon Text', Georgia, serif; }
+      .rr-shell { width: min(730px, calc(100% - 44px)); margin: 0 auto; padding: 46px 0 86px; }
+      .rr-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 91px; padding-bottom: 15px; border-bottom: 1px solid #cec8bb; }
+      .rr-header > a { color: inherit; font-size: 1rem; text-decoration: none; }
+      .rr-header nav { display: flex; gap: 18px; }
+      .rr-header nav a { color: #716d63; font-family: Inter, sans-serif; font-size: .64rem; text-decoration: none; }
+      .rr-intro { margin: 0 0 73px; font-size: clamp(1.72rem, 3.4vw, 2.45rem); letter-spacing: -.025em; line-height: 1.31; }
+      .rr-intro a { color: #395d3d; text-decoration-thickness: 1px; }
+      .rr-section { display: grid; grid-template-columns: 92px 1fr; gap: 23px; padding: 29px 0 19px; border-top: 1px solid #cec8bb; }
+      .rr-section h2 { margin: 3px 0 0; color: #777167; font-family: Inter, sans-serif; font-size: .62rem; font-weight: 500; letter-spacing: .13em; text-transform: uppercase; }
+      .rr-list { list-style: none; margin: 0; padding: 0; }
+      .rr-list li { padding: 0 0 17px; }
+      .rr-list a { color: inherit; font-size: 1.08rem; line-height: 1.4; text-decoration-color: #aaa99d; }
+      .rr-list p { margin: 5px 0 0; color: #777268; font-size: .8rem; font-style: italic; line-height: 1.5; }
+      .rr-list small { display: block; margin-top: 4px; color: #928d83; font-family: 'DM Mono', monospace; font-size: .57rem; text-transform: uppercase; }
+      .rr-footer { margin-top: 59px; color: #8b867d; font-family: Inter, sans-serif; font-size: .63rem; }
+      .rr-footer a { color: inherit; }
+
+      @media (max-width: 680px) {
+        .qi-shell, .ld-shell, .sb-shell, .mn-shell, .gh-shell, .rr-shell { width: min(100% - 36px, 560px); padding-top: 30px; }
+        .qi-header, .mn-header { margin-bottom: 59px; }
+        .qi-nav a:nth-child(2), .mn-header nav a:nth-child(2), .sb-nav a:nth-child(2), .rr-header nav a:nth-child(2) { display: none; }
+        .qi-intro { font-size: 2rem; }
+        .qi-directory { margin-bottom: 65px; }
+        .ld-name { margin-bottom: 39px; }
+        .sb-hero { padding: 55px 0; }
+        .sb-hero h1 { font-size: 2.55rem; }
+        .sb-section, .rr-section { grid-template-columns: 1fr; gap: 21px; }
+        .mn-intro { margin-bottom: 61px; font-size: 1.72rem; }
+        .mn-section h2 { padding-left: 0; }
+        .mn-row { grid-template-columns: 72px 1fr; gap: 14px; }
+        .mn-footer { margin-left: 0; }
+        .gh-name { margin-bottom: 58px; }
+        .gh-intro { font-size: 1.45rem; }
+        .rr-header { margin-bottom: 61px; }
+      }
+    </style>
+  </head>
+  <body>
+    {variant === 'quiet-index' && (
+      <main class="refined-home quiet-index"><div class="qi-shell">
+        <header class="qi-header"><a href="/">Vansh Kumar</a><nav class="qi-nav" aria-label="Primary"><a href="/now">Now</a><a href="/shelf">Reading</a><a href="/terrain">All notes</a></nav></header>
+        <div class="qi-kicker">A personal website</div>
+        <p class="qi-intro">I’m interested in how minds develop, and how we might shape the environments around us to help people <a href="/now">learn and flourish</a>.</p>
+        <p class="qi-directory">You can also see what I’m doing <a href="/now">now</a>, what I’m <a href="/shelf">reading</a>, or wander through my unfinished <a href="/terrain">notes and questions</a>.</p>
+        <section class="qi-section"><h2>Selected</h2>{selected.map((item) => <article class="qi-feature"><a href={item.href}>{item.title}</a><p>{item.description}</p></article>)}</section>
+        <section class="qi-section"><h2>Recent notes</h2><ul class="qi-recent">{recent.map((item) => <li><span>{item.kind}</span><a href={item.href}>{item.title}</a></li>)}</ul></section>
+        <footer class="qi-footer">Everything here is a perpetual draft. <a href="/about">About this site</a> · <a href="/rss.xml">RSS</a></footer>
+      </div></main>
+    )}
+
+    {variant === 'lucid-directory' && (
+      <main class="refined-home lucid-directory"><div class="ld-shell">
+        <a class="ld-name" href="/">Vansh Kumar</a>
+        <p class="ld-intro">Hello! I’m a husband, father, and generally curious person in Pasadena, California. I’m interested in how minds develop—and in building better environments for learning.</p>
+        <p class="ld-intro">On this website you can find:</p>
+        <ul class="ld-directory"><li>What I’m doing <a href="/now">now</a></li><li>What I’m <a href="/shelf">reading</a></li><li>Unfinished <a href="/terrain">notes and questions</a></li><li>A few projects and longer pieces, below</li></ul>
+        <section class="ld-section"><h2>Selected</h2><ul class="ld-list">{selected.map((item) => <li><a href={item.href}>{item.title}</a></li>)}</ul></section>
+        <section class="ld-section"><h2>Recent notes</h2><ul class="ld-list">{recent.slice(0, 3).map((item) => <li><a href={item.href}>{item.title}</a><small>{item.kind}</small></li>)}</ul></section>
+        <p class="ld-note">Everything here is a perpetual draft. You can also follow along via <a href="/rss.xml">RSS</a>.</p>
+      </div></main>
+    )}
+
+    {variant === 'soft-blue-editorial' && (
+      <main class="refined-home soft-blue-editorial"><div class="sb-shell">
+        <header class="sb-header"><a href="/">Vansh Kumar</a><nav class="sb-nav"><a href="/now">Now</a><a href="/shelf">Reading</a><a href="/terrain">All notes</a></nav></header>
+        <section class="sb-hero"><div class="sb-hello">Hello, I’m Vansh</div><h1>I follow questions about how minds develop and how people learn.</h1><p>A husband, father, and generally curious person in Pasadena. This site holds a few finished projects and many <a href="/terrain">unfinished thoughts</a>.</p></section>
+        <section class="sb-section"><h2>Selected</h2><ul class="sb-features">{selected.map((item) => <li class="sb-feature"><a href={item.href}>{item.title}</a><p>{item.description}</p></li>)}</ul></section>
+        <section class="sb-section"><h2>Recent notes</h2><ol class="sb-recent">{recent.map((item) => <li><a href={item.href}>{item.title}</a></li>)}</ol></section>
+      </div></main>
+    )}
+
+    {variant === 'margin-notes' && (
+      <main class="refined-home margin-notes"><div class="mn-shell">
+        <header class="mn-header"><a href="/">Vansh Kumar</a><nav><a href="/about">About</a><a href="/now">Now</a><a href="/terrain">Index</a></nav></header>
+        <p class="mn-intro">I’m a husband, father, and curious person in Pasadena, following questions about minds, learning, and the environments that <a href="/now">shape us</a>.</p>
+        <section class="mn-section"><h2>A few things I’ve made</h2>{selected.map((item) => <article class="mn-row"><div class="mn-meta">{item.kind}<br />{item.date}</div><div class="mn-copy"><a href={item.href}>{item.title}</a><p>{item.description}</p></div></article>)}</section>
+        <section class="mn-section"><h2>Notes in progress</h2>{recent.map((item) => <article class="mn-row"><div class="mn-meta">{item.kind}<br />{item.date}</div><div class="mn-copy"><a href={item.href}>{item.title}</a></div></article>)}</section>
+        <footer class="mn-footer">An irregular record. <a href="/terrain">See everything</a> · <a href="/rss.xml">RSS</a></footer>
+      </div></main>
+    )}
+
+    {variant === 'generous-hello' && (
+      <main class="refined-home generous-hello"><div class="gh-shell">
+        <a class="gh-name" href="/">Vansh Kumar</a>
+        <p class="gh-intro">Hello! I’m a husband, father, and generally curious person living in Pasadena.</p>
+        <p class="gh-intro">I’m trying to understand how minds develop—and how we can build environments that help people <a href="/now">learn and flourish</a>.</p>
+        <ul class="gh-directory"><li>what I’m doing <a href="/now">now</a></li><li>what I’m <a href="/shelf">reading</a></li><li>all my unfinished <a href="/terrain">notes and questions</a></li></ul>
+        <section class="gh-section"><h2>Selected</h2>{selected.map((item) => <article class="gh-feature"><a href={item.href}>{item.title}</a><p>{item.description}</p></article>)}</section>
+        <section class="gh-section"><h2>Recently written</h2><ul class="gh-recent">{recent.slice(0, 3).map((item) => <li><a href={item.href}>{item.title}</a></li>)}</ul></section>
+        <p class="gh-note">Everything here is a perpetual draft. <a href="/rss.xml">RSS</a></p>
+      </div></main>
+    )}
+
+    {variant === 'reading-room' && (
+      <main class="refined-home reading-room"><div class="rr-shell">
+        <header class="rr-header"><a href="/">Vansh Kumar</a><nav><a href="/now">Now</a><a href="/shelf">Reading</a><a href="/terrain">Notes</a></nav></header>
+        <p class="rr-intro">I keep this site to think through how minds develop, how people learn, and how the environments around us might help us <a href="/now">become more fully ourselves</a>.</p>
+        <section class="rr-section"><h2>Selected</h2><ul class="rr-list">{selected.map((item) => <li><a href={item.href}>{item.title}</a><p>{item.description}</p></li>)}</ul></section>
+        <section class="rr-section"><h2>Notebook</h2><ul class="rr-list">{recent.map((item) => <li><a href={item.href}>{item.title}</a><small>{item.kind} · {item.date}</small></li>)}</ul></section>
+        <footer class="rr-footer"><a href="/terrain">Full index</a> · <a href="/about">About</a> · <a href="/rss.xml">RSS</a></footer>
+      </div></main>
+    )}
+  </body>
+</html>

@@ -5,15 +5,17 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
 
 ## Collections
 
-- **terrain** → root-level `vault/*.md` → `/terrain/<slug>`
+- **terrain** → root-level `vault/*.md` → canonical `/posts/<slug>` or `/notes/<slug>`
   - `slug?` `title?` `description?` `date?` `lastmod?` `tags?[]` `coverImage?`
     `aliases?[]` `comic?` (`assetDir`, `pageCount`, `width`, `height`)
   - Every root-level Markdown file is public. A Terrain slug must be one flat path segment.
-  - Tags are optional and may represent either format or topic. Current format views use
-    `projects`, `essays`, `questions`, and `hunches`; entries may have multiple tags or none.
-- **logs** → `vault/logs/<project>/` → `/terrain/<project>/logs/<slug>`
+  - Every entry must have at least one Post tag (`projects` or `essays`) or one Note tag
+    (`hunches` or `questions`), and may not combine tags from both groups. Multiple tags within
+    one group and unrelated topic tags remain valid. The Astro build fails on an invalid split.
+- **logs** → `vault/logs/<project>/` → `/posts/<project>/logs/<slug>`
   - `date` (required) `lastmod?` `parent` (required or inferred from folder) `day?` `title?`
     `aliases?[]`
+  - A log parent must resolve to a Terrain entry classified as a Post.
 - **shelf** → `vault/shelf/` → `/shelf/<slug>`
   - `title?` `description?` `date?` `lastmod?` `rating` (`0`–`5`) `coverImage?`
     `aliases?[]`
@@ -45,18 +47,24 @@ are not part of the root Terrain collection.
 
 ## URLs and Compatibility
 
-- `/terrain/<slug>` is the canonical Terrain URL.
-- `/terrain/<tag>/<slug>` is a generated redirect for every tag currently attached to an entry.
+- `/posts` and `/notes` are the public archives. Posts are sorted by `date` (falling back to
+  `lastmod`); Notes are sorted by `lastmod` (falling back to `date`), with slug tie-breakers.
+- `/posts/<slug>` and `/notes/<slug>` are both generated for every Terrain entry. The namespace
+  matching its current classification renders the entry; the other redirects to it, preserving
+  URLs when an entry later changes category.
+- `/terrain` remains an unlinked, `noindex` legacy archive. `/terrain/<slug>` and
+  `/terrain/<tag>/<slug>` redirect to the entry's current canonical Posts/Notes URL.
 - Existing `/projects/<slug>`, `/questions/<slug>`, `/hunches/<slug>`, `/notes/<slug>`,
-  `/guesses/<slug>`, and `/traces/<slug>` paths redirect to the canonical Terrain URL.
-- Existing `/projects/<project>/logs/<slug>` paths redirect to the canonical Terrain log URL.
+  `/guesses/<slug>`, and `/traces/<slug>` paths redirect or render at the current canonical URL.
+- Existing `/projects/<project>/logs/<slug>` and `/terrain/<project>/logs/<slug>` paths redirect
+  to the canonical Posts log URL.
 - Shelf URLs remain unchanged.
 
 ## Wikilinks and Backlinks
 
 - Wikilinks resolve by Terrain slug, title-derived slug, alias, current collection path, or a
-  retired prefix. For example, `[[foo]]`, `[[questions/foo]]`, and `[[notes/foo]]` can all resolve
-  to `/terrain/foo`.
+  compatibility prefix. For example, `[[foo]]`, `[[posts/foo]]`, `[[questions/foo]]`, and
+  `[[notes/foo]]` all resolve directly to the entry's canonical Posts/Notes URL.
 - Tag-qualified targets such as `[[essays/foo]]` resolve when that tag is attached to the entry.
 - Logs, Shelf entries, and special pages participate in lookup and backlinks while preserving
   their own canonical URLs.

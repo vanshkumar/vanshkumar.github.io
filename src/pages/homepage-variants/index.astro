@@ -1,0 +1,52 @@
+---
+const concepts = [
+  { slug: 'plainspoken', number: '01', title: 'Plainspoken', note: 'Closest to Ponnekanti: one narrow column, browser-default energy, almost no design system.' },
+  { slug: 'field-notes', number: '02', title: 'Field Notes', note: 'Your current question-led identity, stripped of cards and expressed as an editorial index.' },
+  { slug: 'ledger', number: '03', title: 'Open Ledger', note: 'Makes incompleteness explicit through kinds, dates, and a notebook-like working record.' },
+  { slug: 'postcard', number: '04', title: 'Personal Postcard', note: 'More personality and color, but still just an introduction and two short lists.' },
+  { slug: 'quiet-editorial', number: '05', title: 'Quiet Editorial', note: 'A highly readable, bookish home for a small number of stronger pieces and recent notes.' },
+  { slug: 'garden-light', number: '06', title: 'Garden, Lightly', note: 'Keeps a trace of the living-garden metaphor without making it the information architecture.' }
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Vansh Kumar — Homepage concepts</title>
+    <style is:global>
+      * { box-sizing: border-box; }
+      #dev-toolbar-root { display: none !important; }
+      body { margin: 0; background: #f2f0e9; color: #211f1b; font-family: ui-sans-serif, system-ui, sans-serif; }
+      main { width: min(1060px, calc(100% - 40px)); margin: 0 auto; padding: 70px 0 90px; }
+      header { max-width: 720px; margin-bottom: 54px; }
+      .eyebrow { color: #677062; font-size: .72rem; font-weight: 650; letter-spacing: .14em; text-transform: uppercase; }
+      h1 { margin: 14px 0 16px; font-family: Georgia, serif; font-size: clamp(2.6rem, 7vw, 5.7rem); font-weight: 400; letter-spacing: -.05em; line-height: .95; }
+      header p { color: #646057; font-family: Georgia, serif; font-size: 1.05rem; line-height: 1.6; }
+      .refined { display: flex; justify-content: space-between; gap: 30px; align-items: center; margin: 0 0 44px; padding: 24px 26px; border: 1px solid #aeb7a9; background: #e9eee5; color: inherit; text-decoration: none; }
+      .refined strong { display: block; margin-bottom: 5px; font-family: Georgia, serif; font-size: 1.18rem; font-weight: 400; }
+      .refined span { color: #676c63; font-family: Georgia, serif; font-size: .88rem; line-height: 1.5; }
+      .refined b { flex: 0 0 auto; color: #315038; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; }
+      .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid #c9c6bc; }
+      .concept { display: grid; grid-template-columns: 42px 1fr; gap: 16px; min-height: 190px; padding: 28px 26px 30px 0; border-bottom: 1px solid #c9c6bc; color: inherit; text-decoration: none; }
+      .concept:nth-child(odd) { border-right: 1px solid #c9c6bc; }
+      .concept:nth-child(even) { padding-left: 28px; }
+      .number { padding-top: 6px; color: #879080; font-family: ui-monospace, monospace; font-size: .7rem; }
+      h2 { margin: 0 0 11px; font-family: Georgia, serif; font-size: 1.65rem; font-weight: 400; }
+      .concept p { margin: 0; color: #6b675f; font-family: Georgia, serif; font-size: .9rem; line-height: 1.55; }
+      .open { display: inline-block; margin-top: 21px; color: #315038; font-size: .72rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; }
+      @media (max-width: 680px) { main { padding-top: 44px; } .refined { align-items: flex-start; } .refined b { display: none; } .grid { grid-template-columns: 1fr; } .concept:nth-child(odd) { border-right: 0; } .concept:nth-child(even) { padding-left: 0; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header><div class="eyebrow">Homepage direction study</div><h1>Six simpler ways in.</h1><p>Each uses the same real projects and working notes. The only variable is how much the homepage feels like a directory, an editorial object, or a garden.</p></header>
+      <a class="refined" href="/homepage-variants/refined"><span><strong>Round two: 05 × 01 studies</strong>Six more focused variations on Quiet Editorial and Plainspoken.</span><b>Open refined set →</b></a>
+      <section class="grid" aria-label="Homepage concepts">
+        {concepts.map((concept) => <a class="concept" href={`/homepage-variants/${concept.slug}`}><span class="number">{concept.number}</span><div><h2>{concept.title}</h2><p>{concept.note}</p><span class="open">Open concept →</span></div></a>)}
+      </section>
+    </main>
+  </body>
+</html>

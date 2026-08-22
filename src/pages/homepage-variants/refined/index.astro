@@ -1,0 +1,53 @@
+---
+const concepts = [
+  { slug: 'quiet-index', number: '01', title: 'Quiet Index', note: 'The cleanest 50/50 blend: editorial introduction, then a tiny directory and two considered lists.' },
+  { slug: 'lucid-directory', number: '02', title: 'Lucid Directory', note: 'Closest to Ponnekanti: plain blue links, familiar prose, and almost no visible design system.' },
+  { slug: 'soft-blue-editorial', number: '03', title: 'Soft Blue Editorial', note: 'Quiet Editorial hierarchy on Plainspoken’s airy pale-blue field, with a slightly stronger opening.' },
+  { slug: 'margin-notes', number: '04', title: 'Margin Notes', note: 'Keeps the calm bookish feel while letting type, date, and unfinishedness sit softly in the margin.' },
+  { slug: 'generous-hello', number: '05', title: 'Generous Hello', note: 'The most personal version: conversational opening, generous whitespace, then a very small reading list.' },
+  { slug: 'reading-room', number: '06', title: 'Reading Room', note: 'Warmer, quieter, and slightly denser—more like an understated book index than a designed homepage.' }
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Vansh Kumar — Refined homepage concepts</title>
+    <style is:global>
+      * { box-sizing: border-box; }
+      #dev-toolbar-root { display: none !important; }
+      body { margin: 0; background: #f4f2ec; color: #24211c; font-family: ui-sans-serif, system-ui, sans-serif; }
+      main { width: min(1040px, calc(100% - 40px)); margin: 0 auto; padding: 66px 0 90px; }
+      header { max-width: 745px; margin-bottom: 51px; }
+      .back { color: #687064; font-size: .72rem; text-decoration: none; }
+      .eyebrow { margin-top: 50px; color: #697365; font-size: .7rem; font-weight: 650; letter-spacing: .14em; text-transform: uppercase; }
+      h1 { margin: 15px 0 18px; font-family: Georgia, serif; font-size: clamp(2.7rem, 7vw, 5.6rem); font-weight: 400; letter-spacing: -.055em; line-height: .96; }
+      header p { color: #656057; font-family: Georgia, serif; font-size: 1.03rem; line-height: 1.62; }
+      .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid #c9c5bb; }
+      .comic-round { display: flex; justify-content: space-between; gap: 30px; align-items: center; margin: 0 0 44px; padding: 24px 26px; border: 1px solid #aaa99f; background: #ebe5da; color: inherit; text-decoration: none; }
+      .comic-round strong { display: block; margin-bottom: 5px; font-family: Georgia, serif; font-size: 1.18rem; font-weight: 400; }
+      .comic-round span { color: #67635d; font-family: Georgia, serif; font-size: .88rem; line-height: 1.5; }
+      .comic-round b { flex: 0 0 auto; color: #315038; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; }
+      .concept { display: grid; grid-template-columns: 42px 1fr; gap: 16px; min-height: 190px; padding: 28px 27px 31px 0; border-bottom: 1px solid #c9c5bb; color: inherit; text-decoration: none; }
+      .concept:nth-child(odd) { border-right: 1px solid #c9c5bb; }
+      .concept:nth-child(even) { padding-left: 28px; }
+      .number { padding-top: 6px; color: #84907f; font-family: ui-monospace, monospace; font-size: .69rem; }
+      h2 { margin: 0 0 11px; font-family: Georgia, serif; font-size: 1.58rem; font-weight: 400; }
+      .concept p { margin: 0; color: #6b675f; font-family: Georgia, serif; font-size: .88rem; line-height: 1.55; }
+      .open { display: inline-block; margin-top: 20px; color: #31533a; font-size: .7rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; }
+      @media (max-width: 680px) { main { padding-top: 38px; } .eyebrow { margin-top: 36px; } .comic-round b { display: none; } .grid { grid-template-columns: 1fr; } .concept:nth-child(odd) { border-right: 0; } .concept:nth-child(even) { padding-left: 0; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header><a class="back" href="/homepage-variants">← First round</a><div class="eyebrow">05 × 01 refinement study</div><h1>Six quieter ways in.</h1><p>Same content, same basic idea: a personal introduction, a small directory, and a few things worth reading. These only vary the hierarchy, density, metadata, and temperature.</p></header>
+      <a class="comic-round" href="/homepage-variants/generous-comic"><span><strong>Round three: 05 + the comic</strong>Six placements that preserve Generous Hello while keeping the current strip on the front page.</span><b>Open comic set →</b></a>
+      <section class="grid" aria-label="Refined homepage concepts">
+        {concepts.map((concept) => <a class="concept" href={`/homepage-variants/refined/${concept.slug}`}><span class="number">{concept.number}</span><div><h2>{concept.title}</h2><p>{concept.note}</p><span class="open">Open concept →</span></div></a>)}
+      </section>
+    </main>
+  </body>
+</html>

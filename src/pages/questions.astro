@@ -1,12 +1,5 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import RedirectLayout from '../layouts/RedirectLayout.astro';
 ---
 
-<BaseLayout title="Questions">
-  <p class="meta">
-    Questions now live in <a href="/terrain#questions">Terrain</a>.
-  </p>
-  <script is:inline>
-    window.location.replace('/terrain#questions');
-  </script>
-</BaseLayout>
+<RedirectLayout title="Questions" target="/notes" message="Questions now live under Notes" />

@@ -72,7 +72,9 @@ const buildWikiIndex = () => {
         .replace(/\\/g, '/')
         .replace(/\.md$/, '');
       const slug = rel;
-      const url = urlForEntry(collection, slug);
+      const file = fs.readFileSync(filePath, 'utf8');
+      const { data } = matter(file);
+      const url = urlForEntry(collection, slug, data);
       permalinks.add(url);
       addIfMissing(normalizeWikiTarget(slug), url);
       if (collection === 'logs') {
@@ -85,8 +87,6 @@ const buildWikiIndex = () => {
         });
       }
 
-      const file = fs.readFileSync(filePath, 'utf8');
-      const { data } = matter(file);
       if (data.title) {
         addIfMissing(normalizeWikiTarget(String(data.title)), url);
       }
@@ -137,6 +137,7 @@ const urlResolver = (name) => {
 export default defineConfig({
   site: 'https://vanshkumar.net',
   output: 'static',
+  devToolbar: { enabled: false },
   trailingSlash: 'never',
   markdown: {
     remarkPlugins: [

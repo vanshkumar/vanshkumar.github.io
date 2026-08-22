@@ -1,0 +1,79 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const dist = path.join(process.cwd(), 'dist');
+const htmlFor = (route) => {
+  const relative = route === '/' ? 'index.html' : `${route.replace(/^\//, '')}/index.html`;
+  const file = path.join(dist, relative);
+  assert.ok(fs.existsSync(file), `Missing built route: ${route}`);
+  return fs.readFileSync(file, 'utf8');
+};
+const has = (route, pattern, message) =>
+  assert.match(htmlFor(route), pattern, `${route}: ${message}`);
+const canonical = (route, target) =>
+  has(route, new RegExp(`<link rel="canonical" href="https://vanshkumar\\.net${target}"`), `canonical should be ${target}`);
+const redirect = (route, target) => {
+  has(route, /<meta name="robots" content="noindex,follow">/, 'redirect must be noindex,follow');
+  canonical(route, target);
+};
+
+const post = 'partition-summer';
+const note = 'what-is-the-future-of-the-university';
+const project = 'how-do-we-learn-dec-2025-aliveline';
+const log = 'day-1';
+
+has('/', /<h2 id="recent-posts-title">Recent posts<\/h2>/, 'missing Recent posts');
+has('/', /<h2 id="recent-notes-title">Recent notes<\/h2>/, 'missing Recent notes');
+has('/', /alt="Calvin and Hobbes discussing/, 'comic needs descriptive alt text');
+has('/', /class="skip-link" href="#main-content"/, 'missing skip link');
+has('/posts', /<h1 id="posts-title">Posts<\/h1>/, 'missing Posts archive');
+has('/notes', /<h1 id="notes-title">Notes<\/h1>/, 'missing Notes archive');
+
+canonical(`/posts/${post}`, `/posts/${post}`);
+has(`/posts/${post}`, /<meta property="og:type" content="article">/, 'Post must use article OG type');
+has(`/posts/${post}`, /class="article-kind" href="\/posts">Post<\/a>/, 'Post label missing');
+canonical(`/notes/${note}`, `/notes/${note}`);
+has(`/notes/${note}`, /class="article-kind" href="\/notes">Note<\/a>/, 'Note label missing');
+
+redirect(`/posts/${note}`, `/notes/${note}`);
+redirect(`/notes/${post}`, `/posts/${post}`);
+redirect(`/terrain/${post}`, `/posts/${post}`);
+redirect(`/terrain/projects/${post}`, `/posts/${post}`);
+redirect(`/projects/${post}`, `/posts/${post}`);
+redirect(`/questions/${note}`, `/notes/${note}`);
+redirect(`/hunches/${note}`, `/notes/${note}`);
+redirect(`/guesses/${note}`, `/notes/${note}`);
+redirect(`/traces/${note}`, `/notes/${note}`);
+redirect(`/projects/${project}/logs/${log}`, `/posts/${project}/logs/${log}`);
+redirect(`/terrain/${project}/logs/${log}`, `/posts/${project}/logs/${log}`);
+canonical(`/posts/${project}/logs/${log}`, `/posts/${project}/logs/${log}`);
+has(`/posts/${project}/logs/${log}`, /<meta property="og:type" content="article">/, 'log must use article OG type');
+
+has('/terrain', /<meta name="robots" content="noindex,follow">/, 'legacy archive must be noindex');
+has('/terrain', /id="projects"/, 'legacy Projects fragment missing');
+has('/terrain', /id="questions"/, 'legacy Questions fragment missing');
+has('/terrain', /id="hunches"/, 'legacy Hunches fragment missing');
+redirect('/projects', '/posts');
+redirect('/questions', '/notes');
+redirect('/hunches', '/notes');
+redirect('/guesses', '/notes');
+
+const rss = fs.readFileSync(path.join(dist, 'rss.xml'), 'utf8');
+const items = [...rss.matchAll(/<item>/g)];
+const writingLinks = [...rss.matchAll(/<link>https:\/\/vanshkumar\.net\/(posts|notes)\/[^<]+<\/link>/g)].map((match) => match[0]);
+assert.equal(items.length, 53, 'RSS should contain all 53 writing entries');
+assert.equal(writingLinks.length, 53, 'RSS items should all use canonical Posts/Notes links');
+assert.equal(new Set(writingLinks).size, 53, 'RSS canonical links should be unique');
+
+const walk = (directory) => fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+  const file = path.join(directory, entry.name);
+  return entry.isDirectory() ? walk(file) : [file];
+});
+walk(path.join(dist, 'homepage-variants'))
+  .filter((file) => file.endsWith('.html'))
+  .forEach((file) => {
+    assert.match(fs.readFileSync(file, 'utf8'), /<meta name="robots" content="noindex">/, `${file} must remain noindex`);
+  });
+
+console.log('Verified canonical writing routes, redirects, metadata, homepage, archives, RSS, and prototype isolation.');

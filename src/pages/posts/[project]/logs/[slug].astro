@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import ProjectLog from '../../../../components/ProjectLog.astro';
+import { validateLogParents } from '../../../../lib/writing.mjs';
+
+export async function getStaticPaths() {
+  const [logs, writing] = await Promise.all([
+    getCollection('logs'),
+    getCollection('terrain')
+  ]);
+  validateLogParents(logs, writing);
+  return logs.map((entry) => {
+    const [project, slug] = entry.slug.split('/');
+    return { params: { project, slug }, props: { entry } };
+  });
+}
+
+const { entry } = Astro.props;
+---
+
+<ProjectLog entry={entry} />

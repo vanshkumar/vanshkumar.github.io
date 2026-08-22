@@ -1,24 +1,60 @@
 ---
-import { getEntry } from 'astro:content';
-import ContentLayout from '../layouts/ContentLayout.astro';
-import { getBacklinksForEntry } from '../lib/wiki';
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import { titleFromSlug } from '../lib/content';
+import { canonicalWritingPath, partitionWriting } from '../lib/writing.mjs';
 
-const entry = await getEntry('pages', 'home');
-if (!entry) {
-  throw new Error('Missing content entry: pages/home');
-}
-const { Content } = await entry.render();
-const backlinks = await getBacklinksForEntry('pages', entry.slug);
-const title = entry.data.title ?? titleFromSlug(entry.slug);
-const lastUpdated = entry.data.lastmod;
+const { posts, notes } = partitionWriting(await getCollection('terrain'));
+const titleFor = (entry) => entry.data.title ?? titleFromSlug(entry.slug);
 ---
 
-<ContentLayout
-  title={title}
-  description={entry.data.description}
-  lastUpdated={lastUpdated}
-  backlinks={backlinks}
->
-  <Content />
-</ContentLayout>
+<BaseLayout pageClass="home-page">
+  <div class="home-copy">
+    <h1 class="home-intro">Hello! I’m a husband, father, and generally curious person living in Pasadena.</h1>
+
+    <figure class="home-comic">
+      <img
+        src="/assets/Pasted image 20260203101338.png"
+        alt="Calvin and Hobbes discussing whether to obey the inscrutable exhortations of the soul"
+        width="908"
+        height="295"
+      />
+      <figcaption>A useful mandate · Calvin and Hobbes, March 16, 1995</figcaption>
+    </figure>
+
+    <p class="home-intro">I’m trying to understand how minds develop—and how we can build environments that help people <a href="/now">learn and flourish</a>.</p>
+
+    <ul class="home-directory">
+      <li>what I’m doing <a href="/now">now</a></li>
+      <li>what I’m <a href="/shelf">reading</a></li>
+      <li>my unfinished <a href="/notes">notes and questions</a></li>
+    </ul>
+
+    <section class="home-section" aria-labelledby="recent-posts-title">
+      <div class="section-heading">
+        <h2 id="recent-posts-title">Recent posts</h2>
+        <a href="/posts">see all</a>
+      </div>
+      <div class="home-posts">
+        {posts.slice(0, 3).map((entry) => (
+          <article class="home-post">
+            <h3><a href={canonicalWritingPath(entry)}>{titleFor(entry)}</a></h3>
+            {entry.data.description ? <p>{entry.data.description}</p> : null}
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="home-section" aria-labelledby="recent-notes-title">
+      <div class="section-heading">
+        <h2 id="recent-notes-title">Recent notes</h2>
+        <a href="/notes">see all</a>
+      </div>
+      <ul class="home-notes">
+        {notes.slice(0, 3).map((entry) => (
+          <li><a href={canonicalWritingPath(entry)}>{titleFor(entry)}</a></li>
+        ))}
+      </ul>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,12 +1,5 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import RedirectLayout from '../layouts/RedirectLayout.astro';
 ---
 
-<BaseLayout title="Guesses">
-  <p>
-    Hunches now live in <a href="/terrain#hunches">Terrain</a>.
-  </p>
-  <script is:inline>
-    window.location.replace('/terrain#hunches');
-  </script>
-</BaseLayout>
+<RedirectLayout title="Guesses" target="/notes" message="Guesses now live under Notes" />

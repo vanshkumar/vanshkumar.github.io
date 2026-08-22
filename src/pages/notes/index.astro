@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { titleFromSlug } from '../../lib/content';
+import { canonicalWritingPath, partitionWriting } from '../../lib/writing.mjs';
+
+const { notes } = partitionWriting(await getCollection('terrain'));
+---
+
+<BaseLayout title="Notes">
+  <section class="writing-archive" aria-labelledby="notes-title">
+    <header class="archive-header">
+      <h1 id="notes-title">Notes</h1>
+    </header>
+    <ul class="note-archive-list">
+      {notes.map((entry) => (
+        <li><a href={canonicalWritingPath(entry)}>{entry.data.title ?? titleFromSlug(entry.slug)}</a></li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>

@@ -1,4 +1,5 @@
 import { defineCollection, z } from 'astro:content';
+import { writingClassificationIssue } from './lib/writing.mjs';
 
 const optionalText = z.string().optional().nullable();
 
@@ -9,7 +10,7 @@ const terrain = defineCollection({
     description: optionalText,
     date: z.coerce.date().optional(),
     lastmod: z.coerce.date().optional(),
-    tags: z.array(z.string()).optional(),
+    tags: z.array(z.string()),
     coverImage: z.string().optional(),
     aliases: z.array(z.string()).optional(),
     comic: z
@@ -20,6 +21,15 @@ const terrain = defineCollection({
         height: z.number().int().positive()
       })
       .optional()
+  }).superRefine((entry, ctx) => {
+    const issue = writingClassificationIssue(entry.tags);
+    if (issue) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['tags'],
+        message: `Terrain entry ${issue}.`
+      });
+    }
   })
 });
 

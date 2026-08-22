@@ -14,7 +14,7 @@ GitHub Pages deployment.
 - `coffee-rush/` - React/Vite hot-seat game deployed at `/coffee-rush/`.
 - `terminal-desires-ranker/` - React/Vite client-only ranker deployed at
   `/terminal-desires-ranker/`.
-- `vault-weather/` - local-only React/Vite surface over the root Terrain corpus
+- `vault-weather/` - local-only React/Vite surface over the internal Terrain corpus
   and the separate `vault/shelf/` collection; it is not part of the Pages deploy.
 - `SCHEMA.md` - content collections and vault sync rules.
 - `TECH_STACK.md` - concise technology inventory.
@@ -35,10 +35,10 @@ content first. Edit markdown in `vault/`, not `src/content/`.
 
 - Main site pages live in `src/pages/`; shared page chrome is in
   `src/layouts/`; most visual styling is in `src/styles/global.css`.
-- Root-level Markdown files in `vault/` form the public Terrain corpus. Their
-  URLs are controlled by `slug` frontmatter; tags provide optional views such
-  as projects, questions, hunches, and essays. See `SCHEMA.md` before changing
-  published slugs.
+- Root-level Markdown files in `vault/` form the internal Terrain collection.
+  Their `projects`/`essays` or `hunches`/`questions` tags classify them into the
+  public Posts and Notes routes; `slug` frontmatter remains their stable URL
+  identity. See `SCHEMA.md` before changing published slugs or classifications.
 - The sibling Vite apps have their own `package.json`, tests, builds, and
   READMEs. Work from inside the relevant app folder.
 - Analytics uses Google tag `G-3HGGFGZK6Y`. The root Astro site loads it from

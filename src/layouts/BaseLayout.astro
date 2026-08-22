@@ -2,16 +2,24 @@
 import { getEntry } from 'astro:content';
 import '../styles/global.css';
 
-const { title, description, enableMath = false } = Astro.props;
+const {
+  title,
+  description,
+  enableMath = false,
+  canonicalPath,
+  pageType = 'website',
+  robots,
+  pageClass
+} = Astro.props;
 const pageTitle = title ? `Vansh Kumar | ${title}` : 'Vansh Kumar';
 const pathname = Astro.url.pathname;
-const isTerrain = pathname === '/terrain' || pathname.startsWith('/terrain/');
 const siteEntry = await getEntry('pages', 'site');
 const brandSubtitle =
   siteEntry?.data?.brandSubtitle ?? 'Hunches, projects, and quiet experiments.';
 const pageDescription = description?.trim() || brandSubtitle;
 const siteUrl = 'https://vanshkumar.net';
 const ogImage = `${siteUrl}/og.png`;
+const canonicalUrl = new URL(canonicalPath ?? pathname, Astro.site ?? siteUrl);
 ---
 
 <!doctype html>
@@ -30,18 +38,22 @@ const ogImage = `${siteUrl}/og.png`;
     </script>
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
+    {robots ? <meta name="robots" content={robots} /> : null}
+    <link rel="canonical" href={canonicalUrl} />
     <meta property="og:site_name" content="Vansh Kumar" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={pageType} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:url" content={`${siteUrl}${pathname}`} />
+    <meta property="og:url" content={canonicalUrl} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDescription} />
     <meta name="twitter:image" content={ogImage} />
     <link rel="icon" href="/brand/vk_logo.png" />
     <link rel="apple-touch-icon" href="/brand/vk_logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     {enableMath ? (
       <>
         <script is:inline>
@@ -75,44 +87,29 @@ const ogImage = `${siteUrl}/og.png`;
     ) : null}
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-shell">
       <header class="site-header">
         <div class="site-header-inner">
-          <div class="brand">
-            <a href="/">Vansh Kumar</a>
-            <span class="brand-subtitle">{brandSubtitle}</span>
-          </div>
-          <nav class="site-nav" aria-label="Primary">
-            <a href="/about" class:list={['nav-link', pathname === '/about' && 'is-active']}>About</a>
-            <a href="/now" class:list={['nav-link', pathname === '/now' && 'is-active']}>Now</a>
-            <a href="/contact" class:list={['nav-link', pathname === '/contact' && 'is-active']}>Contact</a>
-            <a href="/shelf" class:list={['nav-link', pathname === '/shelf' && 'is-active']}>Shelf</a>
-            <a
-              href="/terrain"
-              class:list={['nav-link', 'nav-pill', isTerrain && 'is-active']}
-            >
-              <span class="nav-icon" aria-hidden="true">🌱</span>
-              Terrain
-            </a>
-          </nav>
+          <a class="site-name" href="/">Vansh Kumar</a>
         </div>
       </header>
 
-      <div class="page">
-        <main class="content">
+      <div class:list={['page', pageClass]}>
+        <main class="content" id="main-content" tabindex="-1">
           <slot />
         </main>
       </div>
 
       <footer class="site-footer">
         <div class="site-footer-inner">
-          <div class="site-footer-brand">
-            <span class="site-footer-icon" aria-hidden="true">
-              <img src="/brand/vk_logo.png" alt="VK logo" />
-            </span>
-          </div>
           <nav class="site-footer-links" aria-label="Footer">
-            <a href="/now">Quest(ion)s</a>
+            <a href="/posts">Posts</a>
+            <a href="/notes">Notes</a>
+            <a href="/now">Now</a>
+            <a href="/shelf">Shelf</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
             <a href="https://x.com/lunchwithav" rel="me noopener noreferrer" target="_blank" class="external-link">Twitter</a>
             <a href="https://vanshkumar.substack.com/" rel="noopener noreferrer" target="_blank" class="external-link">Substack</a>
             <a href="/rss.xml">RSS</a>

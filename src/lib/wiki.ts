@@ -57,7 +57,7 @@ const buildEntries = async () => {
         collection,
         slug: entry.slug,
         title: entryTitle(collection, entry),
-        url: urlForEntry(collection, entry.slug),
+        url: urlForEntry(collection, entry.slug, entry.data),
         aliases: Array.isArray(entry.data.aliases) ? entry.data.aliases : [],
         tags: Array.isArray(entry.data.tags) ? entry.data.tags : [],
         body: entry.body ?? ''

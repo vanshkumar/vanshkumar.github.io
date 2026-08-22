@@ -7,17 +7,14 @@ import { canonicalWritingPath, classifyWritingEntry } from '../../lib/writing.mj
 
 export async function getStaticPaths() {
   const entries = await getCollection('terrain');
-  return entries.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry }
-  }));
+  return entries.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
 }
 
 const { entry } = Astro.props;
 const title = entry.data.title ?? titleFromSlug(entry.slug);
-const canonical = classifyWritingEntry(entry) === 'note';
+const canonical = classifyWritingEntry(entry) === 'post';
 ---
 
 {canonical
   ? <WritingEntry entry={entry} />
-  : <RedirectLayout title={title} target={canonicalWritingPath(entry)} message="This writing is now a Post" />}
+  : <RedirectLayout title={title} target={canonicalWritingPath(entry)} message="This writing is now a Note" />}

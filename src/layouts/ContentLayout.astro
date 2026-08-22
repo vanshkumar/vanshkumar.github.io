@@ -6,6 +6,7 @@ const {
   description,
   date,
   kind,
+  kindHref,
   backlinks = [],
   lastUpdated,
   showDateRange = false
@@ -33,9 +34,15 @@ const formattedLastUpdated = lastUpdated
   : null;
 ---
 
-<BaseLayout title={title} description={description} enableMath>
+<BaseLayout
+  title={title}
+  description={description}
+  enableMath
+  pageType={kind ? 'article' : 'website'}
+>
   <article class="article">
     <header class="article-header">
+      {kind && kindHref ? <a class="article-kind" href={kindHref}>{kind}</a> : null}
       <h1>{title}</h1>
       {description ? <p class="lede">{description}</p> : null}
       {meta ? <p class="meta">{meta}</p> : null}

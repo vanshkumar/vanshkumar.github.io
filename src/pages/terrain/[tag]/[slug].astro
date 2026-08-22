@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import RedirectLayout from '../../../layouts/RedirectLayout.astro';
 import { titleFromSlug } from '../../../lib/content';
 import { normalizeWikiTarget } from '../../../lib/wiki-routing.mjs';
+import { canonicalWritingPath } from '../../../lib/writing.mjs';
 
 export async function getStaticPaths() {
   const entries = await getCollection('terrain');
@@ -20,7 +21,7 @@ export async function getStaticPaths() {
         params: { tag: normalizedTag, slug: entry.slug },
         props: {
           title: entry.data.title ?? titleFromSlug(entry.slug),
-          target: `/terrain/${entry.slug}`
+          target: canonicalWritingPath(entry)
         }
       });
     });

@@ -2,6 +2,21 @@
 
 ## What Has Worked
 
+**[2026-08-21] — Canonical Posts/Notes over internal Terrain**
+- Observation: The Astro site can preserve Terrain as its vault, sync, backlink, and collection identity while exposing a strict Posts/Notes split; generating both public namespaces for every entry makes later category changes redirect-safe without rewriting authored Markdown.
+- Action: Keep classification, ordering, canonical writing URLs, log URLs, wiki resolution, archives, homepage queries, RSS, and legacy redirects routed through `src/lib/writing.mjs`; require exactly one tag group and Post-only log parents at build time.
+- Confidence: high
+
+**[2026-08-21] — Isolated homepage concept routes**
+- Observation: Standalone, `noindex` routes under `/homepage-variants` make it possible to compare homepage directions against the same real content without disturbing `/`; Astro compiles `getStaticPaths` independently, so it cannot close over a frontmatter-local concepts array.
+- Action: Keep exploratory homepage studies out of primary navigation, define their descriptors inside `getStaticPaths` (or import them from a module), and use a separate comparison index while the live homepage remains unchanged.
+- Confidence: high
+
+**[2026-08-21] — Personal timeline ingestion path**
+- Observation: The Astro build regenerates collection directories in `src/content/` from `vault/`, while root Terrain sync intentionally ignores nested vault folders; a publishing worker that copies the reference implementation's `src/content/timeline/` target would bypass this repo's source-of-truth model.
+- Action: Store bot-authored micro-posts in `vault/timeline/`, add a dedicated timeline collection to the vault sync and Astro content config, and render that collection inline on one reverse-chronological page without per-post routes.
+- Confidence: high
+
 **[2026-08-20] — Mid-Markdown component placement**
 - Observation: Static page entries render as one HTML block, so the About page cannot place an Astro component between Markdown sections through `ContentLayout`'s after-content slot.
 - Action: Keep a single `<!-- word-garden -->` marker in `vault/pages/about.md`, split the entry's build-time rendered HTML at that marker, and fail the build if the marker is missing or duplicated.
@@ -148,6 +163,26 @@
 - Confidence: high
 
 ## Patterns and Preferences
+
+**[2026-08-21] — Posts and notes architecture**
+- Observation: The user no longer wants the site framed as a digital garden because maintaining interlinked, perpetually tended material raises the activation energy of writing; they prefer a simple public split where projects and essays are “Posts,” while hunches and questions are “Notes.”
+- Action: Preserve the unified Terrain source collection, existing detail URLs, content, tags, wikilinks, and backlinks, but present separate Posts and Notes archives; remove Terrain/garden language from primary navigation and show “Recent posts (see all)” followed by “Recent notes (see all)” on the homepage, with no subscription UI.
+- Confidence: high
+
+**[2026-08-21] — Homepage comic continuity**
+- Observation: The existing Calvin and Hobbes strip on `/` is an intentional front-page element the user wants to preserve while moving toward the warm, author-centric Generous Hello direction.
+- Action: Treat the strip as part of the homepage identity—prefer a masthead, frontispiece, or epigraph placement that remains visually prominent, then place the concise personal introduction and selected/recent reading below it.
+- Confidence: high
+
+**[2026-08-21] — Refined homepage comparison**
+- Observation: After seeing the broad first round, the user preferred a blend of Plainspoken’s directory structure and Quiet Editorial’s typography; the useful design space is now subtle hierarchy, density, metadata, and color rather than cards or garden metaphors.
+- Action: For the eventual homepage, keep one narrow serif column with a brief personal introduction plus selected and recent lists, and use further comparisons to tune information density instead of reintroducing taxonomy-heavy UI.
+- Confidence: high
+
+**[2026-08-21] — Homepage editorial direction**
+- Observation: The user is increasingly drawn to a calm, author-centric homepage like `ponnekanti.net` and feels the visual garden makes a modest body of finished writing seem thinner than it is.
+- Action: Prefer a concise introduction plus small curated lists of selected and recent writing; keep Terrain available as the fuller notes archive, and label unfinished material as notes rather than forcing everything to read as a finished post.
+- Confidence: medium
 
 **[2026-08-20] — Word Garden visual encoding**
 - Observation: The Word Garden reads more clearly when plot color communicates only words touched; the burgundy deletion-heavy corner and separate pruning classification added unnecessary visual semantics.

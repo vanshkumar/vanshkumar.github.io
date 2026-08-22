@@ -35,6 +35,9 @@ jobs:
       - name: Install Astro dependencies
         run: npm ci
 
+      - name: Test writing classification
+        run: npm test
+
       - name: Build Astro site
         run: npm run build
 

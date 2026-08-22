@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Caslon+Text:ital@0;1&display=swap');
 
 :root {
   --bg: #fdfbf7;
@@ -11,6 +11,7 @@
   --card-border: #e8e6dc;
   --max-width: 67.5rem;
 }
+
 
 * {
   box-sizing: border-box;
@@ -1324,5 +1325,521 @@ h3 {
 @media (max-width: 420px) {
   .terrain-hero-title-accent-only {
     font-size: 1.18rem;
+  }
+}
+
+/* 2026 editorial system — based on the approved Comic Interlude study. */
+:root {
+  --bg: #fffdfa;
+  --text: #28231e;
+  --muted: #746d64;
+  --accent: #315c39;
+  --accent-dark: #23472b;
+  --border: #ddd6cc;
+  --card: #fffdfa;
+  --card-border: #d7d0c5;
+  --max-width: 710px;
+  --comic-width: 860px;
+  --serif: "Libre Caslon Text", Georgia, serif;
+  --sans: "Inter", system-ui, sans-serif;
+}
+
+html {
+  font-size: 110%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  line-height: 1.68;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: #9fac98;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.17em;
+}
+
+a:hover {
+  color: var(--accent-dark);
+  text-decoration-color: currentColor;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 0.22rem;
+  border-radius: 0.08rem;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 0.65rem;
+  left: 0.65rem;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  transform: translateY(-180%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+h1,
+h2,
+h3,
+.shelf-cover-title,
+.word-garden-description {
+  font-family: var(--serif);
+  font-weight: 400;
+}
+
+.site-header {
+  padding: 2.55rem 1.25rem 0;
+}
+
+.site-header-inner {
+  display: block;
+  max-width: var(--max-width);
+}
+
+.site-name {
+  color: var(--text);
+  font-size: 1.03rem;
+  text-decoration: none;
+}
+
+.page {
+  max-width: var(--max-width);
+  padding: 4.25rem 0 5.5rem;
+}
+
+.content {
+  padding-top: 0;
+}
+
+.site-footer {
+  margin: 0;
+  padding: 0 1.25rem 2.6rem;
+  border: 0;
+  background: transparent;
+}
+
+.site-footer-inner {
+  display: block;
+  max-width: var(--max-width);
+  padding: 1.15rem 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.site-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  letter-spacing: 0;
+}
+
+.site-footer-links a {
+  color: #777067;
+  text-decoration: none;
+}
+
+.external-link:hover::after {
+  display: none;
+}
+
+.home-page {
+  padding-top: 4.05rem;
+}
+
+.home-copy {
+  width: 100%;
+}
+
+.home-intro {
+  margin: 0;
+  font-size: clamp(1.48rem, 3vw, 2.08rem);
+  font-weight: 400;
+  line-height: 1.42;
+}
+
+.home-comic {
+  width: min(var(--comic-width), calc(100vw - 2.1rem));
+  margin: 2.55rem calc(50% - min(26.875rem, calc(50vw - 1.05rem)));
+}
+
+.home-comic img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #c8c2b8;
+  filter: sepia(0.04);
+}
+
+.home-comic figcaption {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.58rem;
+  line-height: 1.4;
+  text-align: right;
+}
+
+.home-directory {
+  margin: 1.85rem 0 4.5rem;
+  padding: 0;
+  list-style: none;
+  color: #6f685f;
+  font-size: 0.91rem;
+  line-height: 1.75;
+}
+
+.home-directory li::before {
+  margin-right: 0.55rem;
+  color: #a69f94;
+  content: "—";
+}
+
+.home-section + .home-section {
+  margin-top: 3.7rem;
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.35rem;
+}
+
+.section-heading h2,
+.section-heading > a,
+.archive-header::after,
+.article-kind {
+  font-family: var(--sans);
+  font-size: 0.64rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: #6b655d;
+}
+
+.section-heading > a {
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+}
+
+.home-post + .home-post {
+  margin-top: 1.5rem;
+}
+
+.home-post h3,
+.archive-post h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.38;
+}
+
+.home-post h3 a,
+.archive-post h2 a,
+.home-notes a,
+.note-archive-list a {
+  color: var(--text);
+}
+
+.home-post p,
+.archive-post p {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.home-notes,
+.note-archive-list {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.home-notes li + li {
+  margin-top: 0.45rem;
+}
+
+.home-notes li::marker,
+.note-archive-list li::marker {
+  color: #a3a097;
+}
+
+.home-notes a {
+  line-height: 1.45;
+}
+
+.writing-archive,
+.article {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.archive-header {
+  margin-bottom: 2.35rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.archive-header h1,
+.article-header h1 {
+  overflow-wrap: anywhere;
+  color: var(--text);
+  font-size: clamp(2.15rem, 7vw, 3.35rem);
+  line-height: 1.06;
+}
+
+.archive-header h1 {
+  margin: 0;
+}
+
+.archive-post + .archive-post {
+  margin-top: 2.15rem;
+  padding-top: 2.15rem;
+  border-top: 1px solid var(--border);
+}
+
+.note-archive-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.note-archive-list li {
+  padding: 0.72rem 0;
+  border-bottom: 1px solid #ebe5dd;
+  line-height: 1.42;
+}
+
+.note-archive-list li:first-child {
+  padding-top: 0;
+}
+
+.article {
+  display: block;
+}
+
+.article-header {
+  margin-bottom: 2.6rem;
+  padding: 0 0 1.65rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.article-kind {
+  display: inline-block;
+  margin-bottom: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.lede {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.meta,
+.content-updated,
+.log-nav-label,
+.log-nav-date {
+  font-family: var(--sans);
+}
+
+.article-header .meta {
+  margin: 0.8rem 0 0;
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+.prose {
+  color: #312b25;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.prose a {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--accent);
+}
+
+.prose a:hover {
+  background: transparent;
+}
+
+.prose h2 {
+  margin-top: 3.2rem;
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.prose h3 {
+  margin-top: 2.35rem;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.section {
+  margin-top: 3rem;
+  margin-bottom: 0;
+  padding: 1.6rem 0 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 0;
+}
+
+.section h2 {
+  font-size: 1.35rem;
+}
+
+.content-updated {
+  margin-top: 3rem;
+  color: var(--muted);
+  font-size: 0.58rem;
+}
+
+.list {
+  padding-left: 1.15rem;
+}
+
+.shelf-grid {
+  margin-top: 0;
+}
+
+.shelf-cover {
+  border-color: var(--border);
+  border-radius: 0.15rem;
+  background: #f5efe6;
+  box-shadow: 0 0.35rem 0.9rem rgba(55, 44, 32, 0.08);
+}
+
+.word-garden {
+  border-color: var(--border);
+  border-radius: 0.3rem;
+  background: #fbf8f1;
+  box-shadow: none;
+}
+
+.word-garden h2 {
+  color: var(--accent);
+}
+
+.word-garden-kicker,
+.word-garden-stats,
+.word-garden-weekdays span,
+.word-garden-month,
+.word-garden-tooltip span,
+.word-garden-legend {
+  color: var(--muted);
+}
+
+.log-nav-label,
+.log-nav-date {
+  color: var(--muted);
+}
+
+.word-garden-cell-level-1 { background: #dce6d9; }
+.word-garden-cell-level-2 { background: #b6c9b0; }
+.word-garden-cell-level-3 { background: #789572; }
+.word-garden-cell-level-4 { background: #315c39; }
+
+.terrain-hero,
+.terrain-map {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.terrain-hero-title,
+.terrain-map-header h2,
+.terrain-card-title {
+  font-family: var(--serif);
+}
+
+.terrain-card-grid {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.terrain-card,
+.terrain-card-question {
+  min-height: 0;
+  padding: 1.15rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.terrain-card-footer {
+  border: 0;
+  padding-top: 0.55rem;
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    padding-top: 1.55rem;
+  }
+
+  .page,
+  .home-page {
+    padding: 2.8rem 0.85rem 4.25rem;
+  }
+
+  .site-header,
+  .site-footer {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .home-intro {
+    font-size: 1.43rem;
+  }
+
+  .home-comic {
+    width: calc(100vw - 1.1rem);
+    margin: 2.1rem calc(50% - 50vw + 0.55rem);
+  }
+
+  .home-directory {
+    margin-bottom: 3.7rem;
+  }
+
+  .article-header h1,
+  .archive-header h1 {
+    font-size: 2.18rem;
+  }
+
+  .site-footer-links {
+    gap: 0.45rem 0.85rem;
+  }
+
+  .word-garden {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 1.05rem 0.85rem;
   }
 }

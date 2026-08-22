@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection, getEntry } from 'astro:content';
 import { titleFromSlug } from '../lib/content';
 import { stripCalloutMarkers } from '../lib/callouts.mjs';
+import { canonicalWritingPath, partitionWriting } from '../lib/writing.mjs';
 
 const entry = await getEntry('pages', 'terrain');
 if (!entry) {
@@ -16,13 +17,12 @@ const hasHeroBody = Boolean(entry.body?.trim());
 const isAccentOnlyHero = !heroTitle && heroAccent;
 
 const terrainEntries = await getCollection('terrain');
+const writing = partitionWriting(terrainEntries);
 const hasTag = (entry, tag) =>
   (entry.data.tags ?? []).some((value) => value.toLowerCase() === tag);
-const projects = terrainEntries.filter(
-  (entry) => hasTag(entry, 'projects') || hasTag(entry, 'essays')
-);
-const questions = terrainEntries.filter((entry) => hasTag(entry, 'questions'));
-const hunches = terrainEntries.filter((entry) => hasTag(entry, 'hunches'));
+const projects = writing.posts;
+const questions = writing.notes.filter((entry) => hasTag(entry, 'questions'));
+const hunches = writing.notes.filter((entry) => hasTag(entry, 'hunches'));
 
 const displayTitle = (entry) => entry.data.title ?? titleFromSlug(entry.slug);
 const stripMarkdown = (value) =>
@@ -79,7 +79,7 @@ const toCard = (entry) => {
     dateLabel: formatCardDate(entry.data.date),
     lastUpdated,
     lastUpdatedLabel: formatLastUpdated(lastUpdated),
-    href: `/terrain/${entry.slug}`,
+    href: canonicalWritingPath(entry),
     coverImage: entry.data.coverImage ?? null
   };
 };
@@ -89,7 +89,7 @@ const questionCards = questions.map(toCard).sort(sortByUpdated);
 const hunchCards = hunches.map(toCard).sort(sortByUpdated);
 ---
 
-<BaseLayout title="Terrain">
+<BaseLayout title="Terrain" robots="noindex,follow" canonicalPath="/terrain">
   <section class="terrain-hero">
     <div class:list={['terrain-hero-content', isAccentOnlyHero && 'terrain-hero-content-accent-only']}>
       <h1 class:list={['terrain-hero-title', isAccentOnlyHero && 'terrain-hero-title-accent-only']}>

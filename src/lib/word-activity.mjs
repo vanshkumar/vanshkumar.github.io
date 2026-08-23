@@ -202,8 +202,7 @@ export const buildCalendar = (
         removed: counts.removed,
         touched,
         level: getActivityLevel(touched),
-        future,
-        shape: (weekIndex * 7 + dayIndex) % 5
+        future
       });
     }
 

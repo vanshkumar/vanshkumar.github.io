@@ -22,10 +22,10 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
 - **pages** → `vault/pages/` → static pages, archive copy, and shared site copy
   - Common fields: `title?` `description?` `date?` `lastmod?` `aliases?[]`
     `heroTitle?` `heroAccent?`
-  - `home.md` owns the live homepage prose and its `home` display settings. Keep
-    exactly one `<!-- home-comic -->` marker where the comic belongs.
-  - `about.md` and `now.md` own their respective page prose; `about.md` also owns
-    Word Garden labels through `wordGarden`.
+  - `home.md` owns the live homepage prose, its `home` display settings, and Word
+    Garden labels through `wordGarden`. Keep exactly one `<!-- home-comic -->`
+    marker where the comic belongs.
+  - `about.md` and `now.md` own their respective page prose.
   - `posts.md`, `notes.md`, and `shelf.md` own archive titles and optional archive
     introductions; `shelf.md` also owns Shelf display labels through `shelf`.
   - `terrain.md` owns the legacy archive hero and section labels through `terrain`.

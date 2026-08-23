@@ -24,10 +24,7 @@ const rangeDescription = formatCopy(copy.rangeDescriptionTemplate, {
 
 <section class="word-garden" aria-labelledby="word-garden-title">
   <div class="word-garden-heading">
-    <div>
-      <p class="word-garden-kicker">{copy.kicker}</p>
-      <h2 id="word-garden-title">{copy.title}</h2>
-    </div>
+    <h2 id="word-garden-title">{copy.title}</h2>
     <p id="word-garden-description" class="word-garden-description">
       {copy.description}
     </p>
@@ -40,7 +37,7 @@ const rangeDescription = formatCopy(copy.rangeDescriptionTemplate, {
     <span><strong>{number.format(garden.totals.removed)}</strong> {copy.removedLabel}</span>
   </div>
 
-  <p class="visually-hidden">
+  <p id="word-garden-range-description" class="visually-hidden">
     {rangeDescription}
   </p>
 
@@ -48,7 +45,7 @@ const rangeDescription = formatCopy(copy.rangeDescriptionTemplate, {
     class="word-garden-scroll"
     tabindex="0"
     aria-label={copy.calendarLabel}
-    aria-describedby="word-garden-description"
+    aria-describedby="word-garden-description word-garden-range-description"
   >
     <div class="word-garden-calendar">
       <div class="word-garden-weekdays" aria-hidden="true">
@@ -73,7 +70,6 @@ const rangeDescription = formatCopy(copy.rangeDescriptionTemplate, {
                   class:list={[
                     'word-garden-cell',
                     `word-garden-cell-level-${day.level}`,
-                    `word-garden-cell-shape-${day.shape}`,
                     day.future && 'is-future'
                   ]}
                 />

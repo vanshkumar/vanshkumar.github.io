@@ -27,6 +27,14 @@ has('/', /<h2 id="recent-posts-title">Recent posts<\/h2>/, 'missing Recent posts
 has('/', /<h2 id="recent-notes-title">Recent notes<\/h2>/, 'missing Recent notes');
 has('/', /alt="Calvin and Hobbes discussing/, 'comic needs descriptive alt text');
 has('/', /class="skip-link" href="#main-content"/, 'missing skip link');
+const homeHtml = htmlFor('/');
+const gardenMatches = homeHtml.match(/id="word-garden-title"/g) ?? [];
+assert.equal(gardenMatches.length, 1, 'homepage should contain the Word Garden exactly once');
+assert.ok(
+  homeHtml.indexOf('id="word-garden-title"') > homeHtml.indexOf('id="recent-notes-title"'),
+  'Word Garden should appear after Recent notes'
+);
+assert.doesNotMatch(htmlFor('/about'), /id="word-garden-title"/, 'About should not contain the Word Garden');
 has('/posts', /<h1 id="posts-title">Posts<\/h1>/, 'missing Posts archive');
 has('/notes', /<h1 id="notes-title">Notes<\/h1>/, 'missing Notes archive');
 

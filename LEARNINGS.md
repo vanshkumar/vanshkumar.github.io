@@ -37,13 +37,18 @@
 - Action: Store bot-authored micro-posts in `vault/timeline/`, add a dedicated timeline collection to the vault sync and Astro content config, and render that collection inline on one reverse-chronological page without per-post routes.
 - Confidence: high
 
-**[2026-08-20] — Mid-Markdown component placement**
-- Observation: Static page entries render as one HTML block, so the About page cannot place an Astro component between Markdown sections through `ContentLayout`'s after-content slot.
-- Action: Keep a single `<!-- word-garden -->` marker in `vault/pages/about.md`, split the entry's build-time rendered HTML at that marker, and fail the build if the marker is missing or duplicated.
+**[2026-08-23] — Homepage Word Garden placement**
+- Observation: The Word Garden is now a standalone homepage section after Recent notes, so its labels can live in `vault/pages/home.md` and the About page no longer needs marker-based Markdown splitting.
+- Action: Render the Word Garden after `recent-notes-title` in `src/pages/index.astro`, keep About on the normal `<Content />` path, and preserve the homepage ordering/absence-from-About assertions in `scripts/verify-build.mjs`.
 - Confidence: high
 
+**[2026-08-23] — Homepage Word Garden visual review**
+- Observation: At the desktop 1280×720 viewport, one normal screenshot can frame Recent notes, the complete Word Garden, and the footer; the in-app browser's stitched full-page capture duplicated the homepage ending.
+- Action: Review the homepage garden with a regular viewport capture focused on the page ending rather than a stitched full-page screenshot.
+- Confidence: medium
+
 **[2026-08-19] — Build-time word activity history**
-- Observation: The About-page Word Garden derives daily word edits from current and legacy public vault paths during the Astro build; a shallow GitHub Pages checkout silently loses the history, while a broad vault glob would include private writing folders.
+- Observation: The homepage Word Garden derives daily word edits from current and legacy public vault paths during the Astro build; a shallow GitHub Pages checkout silently loses the history, while a broad vault glob would include private writing folders.
 - Action: Keep the Pages checkout at `fetch-depth: 0`, and update the Word Garden public-path allowlist whenever a published collection path changes instead of widening it to all vault Markdown.
 - Confidence: high
 
@@ -111,6 +116,11 @@
 - Observation: The active branch for this site repo is `main` tracking `origin/main`, and explicit "commit and push" requests are intended as direct publishes rather than PR branch work.
 - Action: Commit scoped site changes on the current tracking branch and push `origin/main`, while staging explicit paths when the worktree contains unrelated edits.
 - Confidence: medium
+
+**[2026-08-23] — Mixed-file direct publish**
+- Observation: Homepage work can share `src/styles/global.css` and `LEARNINGS.md` with concurrent archive or article edits, so staging those whole files would include unrelated work even when every other path is scoped.
+- Action: Before a direct publish from a dirty `main`, recheck the current HEAD and use hunk-level staging for shared files in addition to explicit path staging.
+- Confidence: high
 
 **[2026-06-27] — Side-app analytics**
 - Observation: Deployed sibling apps `coffee-rush/` and `terminal-desires-ranker/` are separate Vite builds with their own `index.html`; their GitHub Pages SPA fallbacks live in each app's `public/404.html`.

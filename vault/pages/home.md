@@ -16,6 +16,30 @@ home:
     title: Recent notes
     href: /notes
     linkLabel: see all
+wordGarden:
+  title: The word garden
+  description: A year of tending this site, measured in words touched.
+  totalsLabel: Word Garden totals
+  activeDaysLabel: active days
+  addedLabel: added
+  editedLabel: edited
+  removedLabel: removed
+  rangeDescriptionTemplate: The visual calendar covers {startDate} through {endDate}. Active days can be focused to hear their word totals.
+  calendarLabel: Word activity calendar. Scroll horizontally to see earlier weeks.
+  legendLabel: Activity intensity legend
+  quietLabel: Quiet
+  flourishingLabel: Flourishing
+  touchedSingularTemplate: "{count} word touched"
+  touchedPluralTemplate: "{count} words touched"
+  cellLabelTemplate: "{date}: {touched}; {added} added, {edited} edited, {removed} removed."
+  weekdayLabels:
+    - ""
+    - Mon
+    - ""
+    - Wed
+    - ""
+    - Fri
+    - ""
 date: 2026-05-27
 ---
 # Hi! I’m a husband, father, and generally curious person living in Pasadena.

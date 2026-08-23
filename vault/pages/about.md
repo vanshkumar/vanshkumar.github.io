@@ -1,32 +1,7 @@
 ---
 title: About
-lastmod: 2026-08-16
+lastmod: 2026-08-23
 date: 2026-05-27
-wordGarden:
-  kicker: Cultivation log
-  title: The word garden
-  description: A year of tending this site, measured in words touched.
-  totalsLabel: Word Garden totals
-  activeDaysLabel: active days
-  addedLabel: added
-  editedLabel: edited
-  removedLabel: removed
-  rangeDescriptionTemplate: "The visual calendar covers {startDate} through {endDate}. Active days can be focused to hear their word totals."
-  calendarLabel: Word activity calendar. Scroll horizontally to see earlier weeks.
-  legendLabel: Activity intensity legend
-  quietLabel: Quiet
-  flourishingLabel: Flourishing
-  touchedSingularTemplate: "{count} word touched"
-  touchedPluralTemplate: "{count} words touched"
-  cellLabelTemplate: "{date}: {touched}; {added} added, {edited} edited, {removed} removed."
-  weekdayLabels:
-    - ""
-    - Mon
-    - ""
-    - Wed
-    - ""
-    - Fri
-    - ""
 ---
 ## This site
 is a living workspace for Vansh Kumar's experiments and writing. Inspired heavily by the concept of [digital gardens](https://maggieappleton.com/garden-history), it evolves as the graph fills in.
@@ -36,8 +11,6 @@ My goal with my writing is to **learn what I think**.
 Everything I publish lives in one [terrain](/terrain): an underlying set of notes that may be unfinished, overlap categories, or have no category at all. Projects, essays, questions, and hunches are useful views across that terrain rather than different kinds of objects.
 
 Everything on this site should be thought of as a **perpetual draft**, with all mistakes mine.
-
-<!-- word-garden -->
 
 ## I
 am Vansh Kumar and the one who sculpts the terrain of this site. I live in Pasadena, CA.

@@ -1,12 +1,17 @@
 ---
 import { getCollection, getEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import WordGarden from '../components/WordGarden.astro';
 import { titleFromSlug } from '../lib/content';
 import { canonicalWritingPath, partitionWriting } from '../lib/writing.mjs';
+import { getWordActivity } from '../lib/word-activity.mjs';
 
 const homeEntry = await getEntry('pages', 'home');
 if (!homeEntry?.data.home) {
   throw new Error('Missing homepage copy in vault/pages/home.md');
+}
+if (!homeEntry.data.wordGarden) {
+  throw new Error('Missing Word Garden copy in vault/pages/home.md');
 }
 const homeMarker = '<!-- home-comic -->';
 const renderedHome = homeEntry.rendered?.html;
@@ -21,6 +26,7 @@ const [beforeComic, afterComic] = homeSections;
 const home = homeEntry.data.home;
 const { posts, notes } = partitionWriting(await getCollection('terrain'));
 const titleFor = (entry) => entry.data.title ?? titleFromSlug(entry.slug);
+const wordGarden = getWordActivity();
 ---
 
 <BaseLayout description={homeEntry.data.description} pageClass="home-page">
@@ -65,5 +71,7 @@ const titleFor = (entry) => entry.data.title ?? titleFromSlug(entry.slug);
         ))}
       </ul>
     </section>
+
+    <WordGarden garden={wordGarden} copy={homeEntry.data.wordGarden} />
   </div>
 </BaseLayout>

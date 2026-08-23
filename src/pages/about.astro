@@ -1,34 +1,17 @@
 ---
 import { getEntry } from 'astro:content';
 import ContentLayout from '../layouts/ContentLayout.astro';
-import WordGarden from '../components/WordGarden.astro';
 import { getBacklinksForEntry } from '../lib/wiki';
 import { titleFromSlug } from '../lib/content';
-import { getWordActivity } from '../lib/word-activity.mjs';
 
 const entry = await getEntry('pages', 'about');
 if (!entry) {
   throw new Error('Missing content entry: pages/about');
 }
-if (!entry.data.wordGarden) {
-  throw new Error('Missing Word Garden copy in vault/pages/about.md');
-}
-const wordGardenMarker = '<!-- word-garden -->';
-const renderedAbout = entry.rendered?.html;
-if (typeof renderedAbout !== 'string') {
-  throw new Error('Missing rendered content for pages/about');
-}
-const aboutSections = renderedAbout.split(wordGardenMarker);
-if (aboutSections.length !== 2) {
-  throw new Error(
-    'pages/about must contain exactly one <!-- word-garden --> placement marker'
-  );
-}
-const [beforeWordGarden, afterWordGarden] = aboutSections;
+const { Content } = await entry.render();
 const backlinks = await getBacklinksForEntry('pages', entry.slug);
 const title = entry.data.title ?? titleFromSlug(entry.slug);
 const lastUpdated = entry.data.lastmod;
-const wordGarden = getWordActivity();
 ---
 
 <ContentLayout
@@ -37,7 +20,5 @@ const wordGarden = getWordActivity();
   lastUpdated={lastUpdated}
   backlinks={backlinks}
 >
-  <Fragment set:html={beforeWordGarden} />
-  <WordGarden garden={wordGarden} copy={entry.data.wordGarden} />
-  <Fragment set:html={afterWordGarden} />
+  <Content />
 </ContentLayout>

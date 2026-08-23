@@ -107,7 +107,6 @@ const terrainCopy = z.object({
 });
 
 const wordGardenCopy = z.object({
-  kicker: z.string(),
   title: z.string(),
   description: z.string(),
   totalsLabel: z.string(),

@@ -179,9 +179,9 @@
 
 ## Patterns and Preferences
 
-**[2026-08-23] — Notes archive separators**
-- Observation: On `/notes/`, the fully underlined note titles already distinguish each entry, so pale horizontal row rules add a redundant second line treatment.
-- Action: Keep `.note-archive-list` entries borderless and rely on vertical padding for separation; do not apply this preference to post archives or homepage lists without an explicit request.
+**[2026-08-23] — Writing archive separators**
+- Observation: On `/notes/` and `/posts/`, linked titles and generous vertical spacing already distinguish entries, so pale horizontal rules add a redundant line treatment.
+- Action: Keep `.note-archive-list` entries and adjacent `.archive-post` entries borderless, relying on spacing for separation; retain the rule beneath the archive heading and do not apply this preference to homepage lists without an explicit request.
 - Confidence: high
 
 **[2026-08-23] — Minimal footer navigation**

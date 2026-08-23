@@ -1466,7 +1466,8 @@ h3,
   width: 100%;
 }
 
-.home-intro {
+.home-static > h1,
+.home-static > p {
   margin: 0;
   font-size: clamp(1.48rem, 3vw, 2.08rem);
   font-weight: 400;
@@ -1495,7 +1496,7 @@ h3,
   text-align: right;
 }
 
-.home-directory {
+.home-static > ul {
   margin: 1.85rem 0 4.5rem;
   padding: 0;
   list-style: none;
@@ -1504,7 +1505,7 @@ h3,
   line-height: 1.75;
 }
 
-.home-directory li::before {
+.home-static > ul li::before {
   margin-right: 0.55rem;
   color: #a69f94;
   content: "—";
@@ -1815,7 +1816,8 @@ h3,
     padding-right: 0.85rem;
   }
 
-  .home-intro {
+  .home-static > h1,
+  .home-static > p {
     font-size: 1.43rem;
   }
 
@@ -1824,7 +1826,7 @@ h3,
     margin: 2.1rem calc(50% - 50vw + 0.55rem);
   }
 
-  .home-directory {
+  .home-static > ul {
     margin-bottom: 3.7rem;
   }
 

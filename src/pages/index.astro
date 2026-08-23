@@ -1,39 +1,48 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { titleFromSlug } from '../lib/content';
 import { canonicalWritingPath, partitionWriting } from '../lib/writing.mjs';
 
+const homeEntry = await getEntry('pages', 'home');
+if (!homeEntry?.data.home) {
+  throw new Error('Missing homepage copy in vault/pages/home.md');
+}
+const homeMarker = '<!-- home-comic -->';
+const renderedHome = homeEntry.rendered?.html;
+if (typeof renderedHome !== 'string') {
+  throw new Error('Missing rendered content for pages/home');
+}
+const homeSections = renderedHome.split(homeMarker);
+if (homeSections.length !== 2) {
+  throw new Error('pages/home must contain exactly one <!-- home-comic --> placement marker');
+}
+const [beforeComic, afterComic] = homeSections;
+const home = homeEntry.data.home;
 const { posts, notes } = partitionWriting(await getCollection('terrain'));
 const titleFor = (entry) => entry.data.title ?? titleFromSlug(entry.slug);
 ---
 
-<BaseLayout pageClass="home-page">
+<BaseLayout description={homeEntry.data.description} pageClass="home-page">
   <div class="home-copy">
-    <h1 class="home-intro">Hello! I’m a husband, father, and generally curious person living in Pasadena.</h1>
+    <div class="home-static" set:html={beforeComic} />
 
     <figure class="home-comic">
       <img
-        src="/assets/Pasted image 20260203101338.png"
-        alt="Calvin and Hobbes discussing whether to obey the inscrutable exhortations of the soul"
-        width="908"
-        height="295"
+        src={home.comic.src}
+        alt={home.comic.alt}
+        width={home.comic.width}
+        height={home.comic.height}
       />
-      <figcaption>A useful mandate · Calvin and Hobbes, March 16, 1995</figcaption>
+      <figcaption>{home.comic.caption}</figcaption>
     </figure>
 
-    <p class="home-intro">I’m trying to understand how minds develop—and how we can build environments that help people <a href="/now">learn and flourish</a>.</p>
-
-    <ul class="home-directory">
-      <li>what I’m doing <a href="/now">now</a></li>
-      <li>what I’m <a href="/shelf">reading</a></li>
-      <li>my unfinished <a href="/notes">notes and questions</a></li>
-    </ul>
+    <div class="home-static" set:html={afterComic} />
 
     <section class="home-section" aria-labelledby="recent-posts-title">
       <div class="section-heading">
-        <h2 id="recent-posts-title">Recent posts</h2>
-        <a href="/posts">see all</a>
+        <h2 id="recent-posts-title">{home.recentPosts.title}</h2>
+        <a href={home.recentPosts.href}>{home.recentPosts.linkLabel}</a>
       </div>
       <div class="home-posts">
         {posts.slice(0, 3).map((entry) => (
@@ -47,8 +56,8 @@ const titleFor = (entry) => entry.data.title ?? titleFromSlug(entry.slug);
 
     <section class="home-section" aria-labelledby="recent-notes-title">
       <div class="section-heading">
-        <h2 id="recent-notes-title">Recent notes</h2>
-        <a href="/notes">see all</a>
+        <h2 id="recent-notes-title">{home.recentNotes.title}</h2>
+        <a href={home.recentNotes.href}>{home.recentNotes.linkLabel}</a>
       </div>
       <ul class="home-notes">
         {notes.slice(0, 3).map((entry) => (

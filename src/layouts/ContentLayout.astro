@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import { formatCopy, getSiteCopy } from '../lib/site-copy';
 
 const {
   title,
@@ -32,6 +33,7 @@ const formattedLastUpdated = lastUpdated
       timeZone: 'UTC'
     }).format(lastUpdated)
   : null;
+const siteCopy = await getSiteCopy();
 ---
 
 <BaseLayout
@@ -54,7 +56,7 @@ const formattedLastUpdated = lastUpdated
 
     {backlinks.length ? (
       <section class="section">
-        <h2>Backlinks</h2>
+        <h2>{siteCopy.content.backlinksTitle}</h2>
         <ul class="list">
           {backlinks.map((link) => (
             <li>
@@ -66,7 +68,9 @@ const formattedLastUpdated = lastUpdated
     ) : null}
 
     {!showDateRange && formattedLastUpdated ? (
-      <div class="content-updated">Last updated {formattedLastUpdated}</div>
+      <div class="content-updated">
+        {formatCopy(siteCopy.content.lastUpdatedTemplate, { date: formattedLastUpdated })}
+      </div>
     ) : null}
   </article>
 </BaseLayout>

@@ -33,8 +33,15 @@ content first. Edit markdown in `vault/`, not `src/content/`.
 
 ## Editing Notes
 
-- Main site pages live in `src/pages/`; shared page chrome is in
-  `src/layouts/`; most visual styling is in `src/styles/global.css`.
+- Edit visitor-facing text for the main site in `vault/`, not in Astro files.
+  Page prose and page-specific labels live in `vault/pages/`; global text such
+  as the site name, footer links, metadata, writing controls, redirects, and RSS
+  labels lives in `vault/pages/site.md`. `vault/pages/home.md` controls the live
+  homepage copy around its required `<!-- home-comic -->` placement marker.
+- Main site layouts and rendering logic live in `src/pages/` and `src/layouts/`;
+  most visual styling is in `src/styles/global.css`. The isolated, noindex
+  `src/pages/homepage-variants/` prototypes are design studies and intentionally
+  keep their sample copy alongside their standalone markup.
 - Root-level Markdown files in `vault/` form the internal Terrain collection.
   Their `projects`/`essays` or `hunches`/`questions` tags classify them into the
   public Posts and Notes routes; `slug` frontmatter remains their stable URL

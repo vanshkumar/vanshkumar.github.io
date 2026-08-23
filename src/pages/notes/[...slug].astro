@@ -20,4 +20,4 @@ const canonical = classifyWritingEntry(entry) === 'note';
 
 {canonical
   ? <WritingEntry entry={entry} />
-  : <RedirectLayout title={title} target={canonicalWritingPath(entry)} message="This writing is now a Post" />}
+  : <RedirectLayout title={title} target={canonicalWritingPath(entry)} messageKey="writingNowPost" />}

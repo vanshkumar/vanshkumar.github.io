@@ -6,8 +6,10 @@ import {
   compareWriting,
   writingDateForEntry
 } from '../lib/writing.mjs';
+import { getSiteCopy } from '../lib/site-copy';
 
 export async function GET(context) {
+  const siteCopy = await getSiteCopy();
   const terrain = await getCollection('terrain');
   const items = terrain
     .sort(compareWriting)
@@ -22,8 +24,8 @@ export async function GET(context) {
     });
 
   return rss({
-    title: 'Vansh Kumar — Writing',
-    description: 'Posts and notes from Vansh Kumar.',
+    title: siteCopy.rss.title,
+    description: siteCopy.rss.description,
     site: context.site,
     items
   });

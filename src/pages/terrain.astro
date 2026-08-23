@@ -4,12 +4,19 @@ import { getCollection, getEntry } from 'astro:content';
 import { titleFromSlug } from '../lib/content';
 import { stripCalloutMarkers } from '../lib/callouts.mjs';
 import { canonicalWritingPath, partitionWriting } from '../lib/writing.mjs';
+import { formatCopy, getSiteCopy } from '../lib/site-copy';
 
 const entry = await getEntry('pages', 'terrain');
 if (!entry) {
   throw new Error('Missing content entry: pages/terrain');
 }
+if (!entry.data.terrain) {
+  throw new Error('Missing Terrain copy in vault/pages/terrain.md');
+}
 const { Content } = await entry.render();
+const siteCopy = await getSiteCopy();
+const terrainCopy = entry.data.terrain;
+const pageTitle = entry.data.title ?? titleFromSlug(entry.slug);
 const pageLastUpdated = entry.data.lastmod;
 const heroTitle = entry.data.heroTitle ?? null;
 const heroAccent = entry.data.heroAccent ?? null;
@@ -89,7 +96,7 @@ const questionCards = questions.map(toCard).sort(sortByUpdated);
 const hunchCards = hunches.map(toCard).sort(sortByUpdated);
 ---
 
-<BaseLayout title="Terrain" robots="noindex,follow" canonicalPath="/terrain">
+<BaseLayout title={pageTitle} description={entry.data.description} robots="noindex,follow" canonicalPath="/terrain">
   <section class="terrain-hero">
     <div class:list={['terrain-hero-content', isAccentOnlyHero && 'terrain-hero-content-accent-only']}>
       <h1 class:list={['terrain-hero-title', isAccentOnlyHero && 'terrain-hero-title-accent-only']}>
@@ -97,7 +104,7 @@ const hunchCards = hunches.map(toCard).sort(sortByUpdated);
         {heroAccent ? (
           <span class="terrain-hero-accent">{heroAccent}</span>
         ) : null}
-        {!heroTitle && !heroAccent ? <span>{entry.data.title ?? 'Terrain'}</span> : null}
+        {!heroTitle && !heroAccent ? <span>{pageTitle}</span> : null}
       </h1>
       {hasHeroBody ? (
         <div class="terrain-hero-subtitle">
@@ -109,11 +116,11 @@ const hunchCards = hunches.map(toCard).sort(sortByUpdated);
 
   <section class="terrain-map" id="projects">
     <div class="terrain-map-header">
-      <h2>Projects & essays</h2>
+      <h2>{terrainCopy.projectsTitle}</h2>
     </div>
 
     {projectCards.length === 0 ? (
-      <p class="meta">No projects yet.</p>
+      <p class="meta">{terrainCopy.noProjectsMessage}</p>
     ) : (
       <div class="terrain-card-grid">
         {projectCards.map((card) => (
@@ -136,7 +143,11 @@ const hunchCards = hunches.map(toCard).sort(sortByUpdated);
             <p class="terrain-card-description">{card.description}</p>
 
             <div class="terrain-card-footer">
-              <span>{card.lastUpdatedLabel ? `Updated ${card.lastUpdatedLabel}` : ''}</span>
+              <span>
+                {card.lastUpdatedLabel
+                  ? formatCopy(terrainCopy.updatedTemplate, { date: card.lastUpdatedLabel })
+                  : ''}
+              </span>
             </div>
           </article>
         ))}
@@ -146,11 +157,11 @@ const hunchCards = hunches.map(toCard).sort(sortByUpdated);
 
   <section class="terrain-map" id="questions">
     <div class="terrain-map-header">
-      <h2>Questions</h2>
+      <h2>{terrainCopy.questionsTitle}</h2>
     </div>
 
     {questionCards.length === 0 ? (
-      <p class="meta">No questions yet.</p>
+      <p class="meta">{terrainCopy.noQuestionsMessage}</p>
     ) : (
       <div class="terrain-card-grid">
         {questionCards.map((card) => (
@@ -160,7 +171,11 @@ const hunchCards = hunches.map(toCard).sort(sortByUpdated);
             </h3>
 
             <div class="terrain-card-footer">
-              <span>{card.lastUpdatedLabel ? `Updated ${card.lastUpdatedLabel}` : ''}</span>
+              <span>
+                {card.lastUpdatedLabel
+                  ? formatCopy(terrainCopy.updatedTemplate, { date: card.lastUpdatedLabel })
+                  : ''}
+              </span>
             </div>
           </article>
         ))}
@@ -170,11 +185,11 @@ const hunchCards = hunches.map(toCard).sort(sortByUpdated);
 
   <section class="terrain-map" id="hunches">
     <div class="terrain-map-header">
-      <h2>Hunches</h2>
+      <h2>{terrainCopy.hunchesTitle}</h2>
     </div>
 
     {hunchCards.length === 0 ? (
-      <p class="meta">No hunches yet.</p>
+      <p class="meta">{terrainCopy.noHunchesMessage}</p>
     ) : (
       <div class="terrain-card-grid">
         {hunchCards.map((card) => (
@@ -184,7 +199,11 @@ const hunchCards = hunches.map(toCard).sort(sortByUpdated);
             </h3>
 
             <div class="terrain-card-footer">
-              <span>{card.lastUpdatedLabel ? `Updated ${card.lastUpdatedLabel}` : ''}</span>
+              <span>
+                {card.lastUpdatedLabel
+                  ? formatCopy(terrainCopy.updatedTemplate, { date: card.lastUpdatedLabel })
+                  : ''}
+              </span>
             </div>
           </article>
         ))}
@@ -193,6 +212,10 @@ const hunchCards = hunches.map(toCard).sort(sortByUpdated);
   </section>
 
   {pageLastUpdated ? (
-    <div class="content-updated">Last updated {formatLastUpdated(pageLastUpdated)}</div>
+    <div class="content-updated">
+      {formatCopy(siteCopy.content.lastUpdatedTemplate, {
+        date: formatLastUpdated(pageLastUpdated)
+      })}
+    </div>
   ) : null}
 </BaseLayout>

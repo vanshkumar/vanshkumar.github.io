@@ -18,4 +18,4 @@ export async function getStaticPaths() {
 const { title, target } = Astro.props;
 ---
 
-<RedirectLayout title={title} target={target} message="This post moved" />
+<RedirectLayout title={title} target={target} messageKey="postMoved" />

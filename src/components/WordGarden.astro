@@ -1,45 +1,58 @@
 ---
-const { garden } = Astro.props;
+import { formatCopy } from '../lib/site-copy';
+
+const { garden, copy } = Astro.props;
 const number = new Intl.NumberFormat('en-US');
-const weekdayLabels = ['', 'Mon', '', 'Wed', '', 'Fri', ''];
 const touchedLabel = (day) =>
-  `${number.format(day.touched)} ${day.touched === 1 ? 'word' : 'words'} touched`;
+  formatCopy(
+    day.touched === 1 ? copy.touchedSingularTemplate : copy.touchedPluralTemplate,
+    { count: number.format(day.touched) }
+  );
 const cellLabel = (day) =>
-  `${day.label}: ${touchedLabel(day)}; ${number.format(day.added)} added, ${number.format(day.edited)} edited, ${number.format(day.removed)} removed.`;
+  formatCopy(copy.cellLabelTemplate, {
+    date: day.label,
+    touched: touchedLabel(day),
+    added: number.format(day.added),
+    edited: number.format(day.edited),
+    removed: number.format(day.removed)
+  });
+const rangeDescription = formatCopy(copy.rangeDescriptionTemplate, {
+  startDate: garden.startDate,
+  endDate: garden.endDate
+});
 ---
 
 <section class="word-garden" aria-labelledby="word-garden-title">
   <div class="word-garden-heading">
     <div>
-      <p class="word-garden-kicker">Cultivation log</p>
-      <h2 id="word-garden-title">The word garden</h2>
+      <p class="word-garden-kicker">{copy.kicker}</p>
+      <h2 id="word-garden-title">{copy.title}</h2>
     </div>
     <p id="word-garden-description" class="word-garden-description">
-      A year of tending this site, measured in words touched.
+      {copy.description}
     </p>
   </div>
 
-  <div class="word-garden-stats" aria-label="Word Garden totals">
-    <span><strong>{number.format(garden.activeDays)}</strong> active days</span>
-    <span><strong>{number.format(garden.totals.added)}</strong> added</span>
-    <span><strong>{number.format(garden.totals.edited)}</strong> edited</span>
-    <span><strong>{number.format(garden.totals.removed)}</strong> removed</span>
+  <div class="word-garden-stats" aria-label={copy.totalsLabel}>
+    <span><strong>{number.format(garden.activeDays)}</strong> {copy.activeDaysLabel}</span>
+    <span><strong>{number.format(garden.totals.added)}</strong> {copy.addedLabel}</span>
+    <span><strong>{number.format(garden.totals.edited)}</strong> {copy.editedLabel}</span>
+    <span><strong>{number.format(garden.totals.removed)}</strong> {copy.removedLabel}</span>
   </div>
 
   <p class="visually-hidden">
-    The visual calendar covers {garden.startDate} through {garden.endDate}. Active
-    days can be focused to hear their word totals.
+    {rangeDescription}
   </p>
 
   <div
     class="word-garden-scroll"
     tabindex="0"
-    aria-label="Word activity calendar. Scroll horizontally to see earlier weeks."
+    aria-label={copy.calendarLabel}
     aria-describedby="word-garden-description"
   >
     <div class="word-garden-calendar">
       <div class="word-garden-weekdays" aria-hidden="true">
-        {weekdayLabels.map((label) => <span>{label}</span>)}
+        {copy.weekdayLabels.map((label) => <span>{label}</span>)}
       </div>
 
       <div class="word-garden-weeks">
@@ -78,13 +91,13 @@ const cellLabel = (day) =>
     </div>
   </div>
 
-  <div class="word-garden-legend" aria-label="Activity intensity legend">
-    <span>Quiet</span>
+  <div class="word-garden-legend" aria-label={copy.legendLabel}>
+    <span>{copy.quietLabel}</span>
     <span class="word-garden-legend-cells" aria-hidden="true">
       {[0, 1, 2, 3, 4].map((level) => (
         <i class={`word-garden-cell word-garden-cell-level-${level}`} />
       ))}
     </span>
-    <span>Flourishing</span>
+    <span>{copy.flourishingLabel}</span>
   </div>
 </section>

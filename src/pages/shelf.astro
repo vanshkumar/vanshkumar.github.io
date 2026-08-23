@@ -1,9 +1,16 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
 import ContentLayout from '../layouts/ContentLayout.astro';
 import { titleFromSlug } from '../lib/content';
+import { formatCopy } from '../lib/site-copy';
 
-const title = 'Shelf';
+const pageEntry = await getEntry('pages', 'shelf');
+if (!pageEntry?.data.shelf) {
+  throw new Error('Missing Shelf copy in vault/pages/shelf.md');
+}
+const { Content } = await pageEntry.render();
+const title = pageEntry.data.title ?? titleFromSlug(pageEntry.slug);
+const shelfCopy = pageEntry.data.shelf;
 const reviews = (await getCollection('shelf')).sort((a, b) => {
   const aDate = a.data.date ?? a.data.lastmod ?? new Date(0);
   const bDate = b.data.date ?? b.data.lastmod ?? new Date(0);
@@ -16,12 +23,16 @@ const reviewTitle = (review) => review.data.title ?? titleFromSlug(review.slug);
 
 <ContentLayout
   title={title}
+  description={pageEntry.data.description}
 >
+  {pageEntry.body?.trim() ? <Content /> : null}
   {reviews.length ? (
-    <div class="shelf-grid" aria-label="Book reviews">
+    <div class="shelf-grid" aria-label={shelfCopy.gridLabel}>
       {reviews.map((review) => {
         const displayTitle = reviewTitle(review);
-        const ratingLabel = `${review.data.rating} out of 5 stars`;
+        const ratingLabel = formatCopy(shelfCopy.ratingLabelTemplate, {
+          rating: review.data.rating
+        });
         return (
           <a
             class="shelf-book"
@@ -37,7 +48,7 @@ const reviewTitle = (review) => review.data.title ?? titleFromSlug(review.slug);
               {review.data.coverImage ? (
                 <img
                   src={review.data.coverImage}
-                  alt={`${displayTitle} cover`}
+                  alt={formatCopy(shelfCopy.coverAltTemplate, { title: displayTitle })}
                   loading="lazy"
                   decoding="async"
                 />

@@ -1,8 +1,9 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import { getBacklinksForEntry } from '../../lib/wiki';
 import { titleFromSlug } from '../../lib/content';
+import { formatCopy } from '../../lib/site-copy';
 
 export async function getStaticPaths() {
   const entries = await getCollection('shelf');
@@ -17,7 +18,13 @@ const { Content } = await entry.render();
 const backlinks = await getBacklinksForEntry('shelf', entry.slug);
 const title = entry.data.title ?? titleFromSlug(entry.slug);
 const lastUpdated = entry.data.lastmod ?? entry.data.date ?? null;
-const ratingMeta = `${entry.data.rating}/5 stars`;
+const shelfPage = await getEntry('pages', 'shelf');
+if (!shelfPage?.data.shelf) {
+  throw new Error('Missing Shelf copy in vault/pages/shelf.md');
+}
+const ratingMeta = formatCopy(shelfPage.data.shelf.detailRatingTemplate, {
+  rating: entry.data.rating
+});
 ---
 
 <ContentLayout

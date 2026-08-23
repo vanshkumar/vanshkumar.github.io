@@ -19,9 +19,21 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
 - **shelf** → `vault/shelf/` → `/shelf/<slug>`
   - `title?` `description?` `date?` `lastmod?` `rating` (`0`–`5`) `coverImage?`
     `aliases?[]`
-- **pages** → `vault/pages/` → `/`, `/about`, `/now`, `/contact`, `/terrain`
-  - `title?` `description?` `lastmod?` `aliases?[]` `heroTitle?` `heroAccent?`
-    `brandSubtitle?`
+- **pages** → `vault/pages/` → static pages, archive copy, and shared site copy
+  - Common fields: `title?` `description?` `date?` `lastmod?` `aliases?[]`
+    `heroTitle?` `heroAccent?`
+  - `home.md` owns the live homepage prose and its `home` display settings. Keep
+    exactly one `<!-- home-comic -->` marker where the comic belongs.
+  - `about.md`, `contact.md`, and `now.md` own their respective page prose;
+    `about.md` also owns Word Garden labels through `wordGarden`.
+  - `posts.md`, `notes.md`, and `shelf.md` own archive titles and optional archive
+    introductions; `shelf.md` also owns Shelf display labels through `shelf`.
+  - `terrain.md` owns the legacy archive hero and section labels through `terrain`.
+  - `site.md` owns shared visitor-facing copy through `site`, including the site
+    name, description, footer, content and writing labels, comic-reader controls,
+    redirect messages, and RSS metadata.
+  - Structured page-copy fields are validated in `src/content.config.ts`; text
+    templates use named placeholders such as `{title}`, `{date}`, or `{rating}`.
 
 Folders such as `scratch/`, `writing inbox/`, `_voice_inbox/`, `logs/`, `shelf/`, and `pages/`
 are not part of the root Terrain collection.

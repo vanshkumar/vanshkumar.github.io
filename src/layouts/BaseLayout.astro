@@ -1,6 +1,6 @@
 ---
-import { getEntry } from 'astro:content';
 import '../styles/global.css';
+import { getSiteCopy } from '../lib/site-copy';
 
 const {
   title,
@@ -11,12 +11,10 @@ const {
   robots,
   pageClass
 } = Astro.props;
-const pageTitle = title ? `Vansh Kumar | ${title}` : 'Vansh Kumar';
+const siteCopy = await getSiteCopy();
+const pageTitle = title ? `${siteCopy.name} | ${title}` : siteCopy.name;
 const pathname = Astro.url.pathname;
-const siteEntry = await getEntry('pages', 'site');
-const brandSubtitle =
-  siteEntry?.data?.brandSubtitle ?? 'Hunches, projects, and quiet experiments.';
-const pageDescription = description?.trim() || brandSubtitle;
+const pageDescription = description?.trim() || siteCopy.brandSubtitle;
 const siteUrl = 'https://vanshkumar.net';
 const ogImage = `${siteUrl}/og.png`;
 const canonicalUrl = new URL(canonicalPath ?? pathname, Astro.site ?? siteUrl);
@@ -40,7 +38,7 @@ const canonicalUrl = new URL(canonicalPath ?? pathname, Astro.site ?? siteUrl);
     <meta name="description" content={pageDescription} />
     {robots ? <meta name="robots" content={robots} /> : null}
     <link rel="canonical" href={canonicalUrl} />
-    <meta property="og:site_name" content="Vansh Kumar" />
+    <meta property="og:site_name" content={siteCopy.name} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
     <meta property="og:type" content={pageType} />
@@ -87,11 +85,11 @@ const canonicalUrl = new URL(canonicalPath ?? pathname, Astro.site ?? siteUrl);
     ) : null}
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <a class="skip-link" href="#main-content">{siteCopy.skipLinkLabel}</a>
     <div class="site-shell">
       <header class="site-header">
         <div class="site-header-inner">
-          <a class="site-name" href="/">Vansh Kumar</a>
+          <a class="site-name" href="/">{siteCopy.name}</a>
         </div>
       </header>
 
@@ -103,16 +101,17 @@ const canonicalUrl = new URL(canonicalPath ?? pathname, Astro.site ?? siteUrl);
 
       <footer class="site-footer">
         <div class="site-footer-inner">
-          <nav class="site-footer-links" aria-label="Footer">
-            <a href="/posts">Posts</a>
-            <a href="/notes">Notes</a>
-            <a href="/now">Now</a>
-            <a href="/shelf">Shelf</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-            <a href="https://x.com/lunchwithav" rel="me noopener noreferrer" target="_blank" class="external-link">Twitter</a>
-            <a href="https://vanshkumar.substack.com/" rel="noopener noreferrer" target="_blank" class="external-link">Substack</a>
-            <a href="/rss.xml">RSS</a>
+          <nav class="site-footer-links" aria-label={siteCopy.footerLabel}>
+            {siteCopy.footerLinks.map((link) => (
+              <a
+                href={link.href}
+                rel={link.rel}
+                target={link.external ? '_blank' : undefined}
+                class:list={[link.external && 'external-link']}
+              >
+                {link.label}
+              </a>
+            ))}
           </nav>
         </div>
       </footer>

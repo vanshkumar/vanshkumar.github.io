@@ -1,17 +1,24 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { titleFromSlug } from '../../lib/content';
 import { canonicalWritingPath, partitionWriting } from '../../lib/writing.mjs';
 
 const { notes } = partitionWriting(await getCollection('terrain'));
+const pageEntry = await getEntry('pages', 'notes');
+if (!pageEntry) {
+  throw new Error('Missing content entry: pages/notes');
+}
+const { Content } = await pageEntry.render();
+const title = pageEntry.data.title ?? titleFromSlug(pageEntry.slug);
 ---
 
-<BaseLayout title="Notes">
+<BaseLayout title={title} description={pageEntry.data.description}>
   <section class="writing-archive" aria-labelledby="notes-title">
     <header class="archive-header">
-      <h1 id="notes-title">Notes</h1>
+      <h1 id="notes-title">{title}</h1>
     </header>
+    {pageEntry.body?.trim() ? <div class="prose"><Content /></div> : null}
     <ul class="note-archive-list">
       {notes.map((entry) => (
         <li><a href={canonicalWritingPath(entry)}>{entry.data.title ?? titleFromSlug(entry.slug)}</a></li>

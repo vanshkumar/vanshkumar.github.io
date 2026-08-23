@@ -6,6 +6,7 @@ import ContentLayout from '../layouts/ContentLayout.astro';
 import { getBacklinksForEntry } from '../lib/wiki';
 import { titleFromSlug } from '../lib/content';
 import { canonicalLogPath, classifyWritingEntry } from '../lib/writing.mjs';
+import { formatCopy, getSiteCopy } from '../lib/site-copy';
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
@@ -16,8 +17,11 @@ const logs = allLogs
 const backlinks = await getBacklinksForEntry('terrain', entry.slug);
 const title = entry.data.title ?? titleFromSlug(entry.slug);
 const lastUpdated = entry.data.lastmod ?? entry.data.date ?? null;
+const siteCopy = await getSiteCopy();
 const writingKind = classifyWritingEntry(entry);
-const kind = writingKind === 'post' ? 'Post' : 'Note';
+const kind = writingKind === 'post'
+  ? siteCopy.writing.postLabel
+  : siteCopy.writing.noteLabel;
 const kindHref = writingKind === 'post' ? '/posts' : '/notes';
 
 const formatDate = (date) =>
@@ -47,19 +51,32 @@ const comicReader = comic
   ? {
       assetDir: comic.assetDir,
       title,
+      readerLabel: formatCopy(siteCopy.comicReader.readerLabelTemplate, { title }),
       width: comic.width,
       height: comic.height,
+      labels: {
+        previous: siteCopy.comicReader.previousLabel,
+        next: siteCopy.comicReader.nextLabel,
+        cover: siteCopy.comicReader.coverLabel,
+        pageTemplate: siteCopy.comicReader.pageLabelTemplate,
+        pagesTemplate: siteCopy.comicReader.pagesLabelTemplate,
+        statusTemplate: siteCopy.comicReader.statusTemplate
+      },
       pages: Array.from({ length: comic.pageCount }, (_, index) => {
         const page = index + 1;
         const src = comicPageSrc(comic.assetDir, page);
+        const alt = formatCopy(
+          page === 1
+            ? siteCopy.comicReader.coverAltTemplate
+            : siteCopy.comicReader.pageAltTemplate,
+          { title, page }
+        );
         return {
           page,
           src,
           originalSrc: src,
-          alt:
-            page === 1
-              ? `${title} cover`
-              : `${title} page ${page}`
+          alt,
+          openLabel: formatCopy(siteCopy.comicReader.openLabelTemplate, { alt })
         };
       })
     }
@@ -100,7 +117,7 @@ const comicReader = comic
 
           const root = document.createElement('section');
           root.className = 'comic-reader';
-          root.setAttribute('aria-label', `${reader.title} comic reader`);
+          root.setAttribute('aria-label', reader.readerLabel);
 
           const stage = document.createElement('div');
           stage.className = 'comic-reader-stage';
@@ -112,12 +129,12 @@ const comicReader = comic
           const previousButton = document.createElement('button');
           previousButton.className = 'comic-reader-button';
           previousButton.type = 'button';
-          previousButton.textContent = 'Previous';
+          previousButton.textContent = reader.labels.previous;
 
           const nextButton = document.createElement('button');
           nextButton.className = 'comic-reader-button';
           nextButton.type = 'button';
-          nextButton.textContent = 'Next';
+          nextButton.textContent = reader.labels.next;
 
           const controls = document.createElement('div');
           controls.className = 'comic-reader-controls';
@@ -153,10 +170,22 @@ const comicReader = comic
             return reader.pages.slice(start, start + 2);
           };
 
+          const interpolate = (template, values) =>
+            template.replace(/\{([^}]+)\}/g, (match, key) =>
+              Object.prototype.hasOwnProperty.call(values, key)
+                ? String(values[key])
+                : match
+            );
+
           const labelForPages = (pages) => {
-            if (pages.length === 1 && pages[0].page === 1) return 'Cover';
-            if (pages.length === 1) return `Page ${pages[0].page}`;
-            return `Pages ${pages[0].page}-${pages[1].page}`;
+            if (pages.length === 1 && pages[0].page === 1) return reader.labels.cover;
+            if (pages.length === 1) {
+              return interpolate(reader.labels.pageTemplate, { page: pages[0].page });
+            }
+            return interpolate(reader.labels.pagesTemplate, {
+              start: pages[0].page,
+              end: pages[1].page
+            });
           };
 
           const preloadView = (index) => {
@@ -180,7 +209,7 @@ const comicReader = comic
                 link.href = page.originalSrc;
                 link.target = '_blank';
                 link.rel = 'noopener noreferrer';
-                link.setAttribute('aria-label', `Open ${page.alt}`);
+                link.setAttribute('aria-label', page.openLabel);
 
                 const image = document.createElement('img');
                 image.className = 'comic-reader-page';
@@ -196,7 +225,10 @@ const comicReader = comic
               })
             );
 
-            status.textContent = `${labelForPages(pages)} of ${reader.pages.length}`;
+            status.textContent = interpolate(reader.labels.statusTemplate, {
+              pages: labelForPages(pages),
+              total: reader.pages.length
+            });
             previousButton.disabled = viewIndex === 0;
             nextButton.disabled = viewIndex === totalViews - 1;
 
@@ -235,7 +267,7 @@ const comicReader = comic
   ) : null}
   {logs.length ? (
     <section class="section" slot="after-content">
-      <h2>Logs</h2>
+      <h2>{siteCopy.writing.logsTitle}</h2>
       <ul class="list">
         {logs.map((log) => (
           <li>

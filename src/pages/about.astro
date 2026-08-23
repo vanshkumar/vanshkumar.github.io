@@ -10,6 +10,9 @@ const entry = await getEntry('pages', 'about');
 if (!entry) {
   throw new Error('Missing content entry: pages/about');
 }
+if (!entry.data.wordGarden) {
+  throw new Error('Missing Word Garden copy in vault/pages/about.md');
+}
 const wordGardenMarker = '<!-- word-garden -->';
 const renderedAbout = entry.rendered?.html;
 if (typeof renderedAbout !== 'string') {
@@ -35,6 +38,6 @@ const wordGarden = getWordActivity();
   backlinks={backlinks}
 >
   <Fragment set:html={beforeWordGarden} />
-  <WordGarden garden={wordGarden} />
+  <WordGarden garden={wordGarden} copy={entry.data.wordGarden} />
   <Fragment set:html={afterWordGarden} />
 </ContentLayout>

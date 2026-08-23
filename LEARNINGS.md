@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-08-23] — Vault-backed site copy**
+- Observation: The live site's authored prose and display labels can all use the existing pages collection: Markdown bodies hold page prose, typed frontmatter holds structured page/global labels, and Astro stays responsible for layout. Empty frontmatter-only page entries may have an undefined `body`.
+- Action: Edit live copy under `vault/pages/`—especially `home.md` for the homepage and `site.md` for shared text—keep optional-body checks null-safe, and leave the isolated `src/pages/homepage-variants/` sample copy with those noindex prototypes.
+- Confidence: high
+
 **[2026-08-22] — Fresh-checkout corpus tests**
 - Observation: `src/content/terrain` is generated and absent from a fresh checkout, so corpus classification tests that read it fail in CI when `npm test` runs before the site build.
 - Action: Keep `npm test` self-contained by running `sync-content` before tests that validate the generated Terrain corpus; do not rely on a prior local dev or build command having populated `src/content`.

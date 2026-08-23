@@ -224,6 +224,11 @@
 - Action: Keep `.note-archive-list` entries and adjacent `.archive-post` entries borderless, retain the rule beneath the archive heading, and use the tighter `1.5rem` margin-plus-padding rhythm between Posts unless the user explicitly revises it; do not apply this preference to homepage lists without an explicit request.
 - Confidence: high
 
+**[2026-08-23] — Homepage writing-list rhythm**
+- Observation: On the desktop homepage, the `0.45rem` gap between Recent note items is barely distinct from the spacing inside a wrapped title, while the `1.5rem` gap between Recent post blocks also reads tighter than the surrounding editorial scale; section-level gaps are already generous.
+- Action: Fix homepage crowding locally: prefer about `0.8rem` between Recent note items and `2rem` between Recent post blocks, while leaving title-to-description and section-to-section spacing unchanged.
+- Confidence: high
+
 **[2026-08-23] — Minimal footer navigation**
 - Observation: The user wants the global footer limited to About, Shelf, Twitter, Substack, and RSS, in that order; Posts, Notes, and Now should remain accessible elsewhere rather than appearing in the footer.
 - Action: Preserve that exact footer link set and order in `vault/pages/site.md` unless the user explicitly revises the global navigation.

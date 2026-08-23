@@ -16,12 +16,11 @@ home:
     title: Recent notes
     href: /notes
     linkLabel: see all
+date: 2026-05-27
 ---
 # Hello! I’m a husband, father, and generally curious person living in Pasadena.
 
 <!-- home-comic -->
-
-I’m trying to understand how minds develop—and how we can build environments that help people [learn and flourish](/now).
 
 - what I’m doing [now](/now)
 - what I’m [reading](/shelf)

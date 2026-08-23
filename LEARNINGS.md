@@ -179,6 +179,11 @@
 
 ## Patterns and Preferences
 
+**[2026-08-23] — Notes archive separators**
+- Observation: On `/notes/`, the fully underlined note titles already distinguish each entry, so pale horizontal row rules add a redundant second line treatment.
+- Action: Keep `.note-archive-list` entries borderless and rely on vertical padding for separation; do not apply this preference to post archives or homepage lists without an explicit request.
+- Confidence: high
+
 **[2026-08-23] — Minimal footer navigation**
 - Observation: The user wants the global footer limited to About, Shelf, Twitter, Substack, and RSS, in that order; Posts, Notes, and Now should remain accessible elsewhere rather than appearing in the footer.
 - Action: Preserve that exact footer link set and order in `vault/pages/site.md` unless the user explicitly revises the global navigation.

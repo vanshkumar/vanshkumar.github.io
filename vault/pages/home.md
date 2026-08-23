@@ -18,10 +18,10 @@ home:
     linkLabel: see all
 date: 2026-05-27
 ---
-# Hello! I’m a husband, father, and generally curious person living in Pasadena.
+# Hi! I’m a husband, father, and generally curious person living in Pasadena.
 
 <!-- home-comic -->
 
 - what I’m doing [now](/now)
 - what I’m [reading](/shelf)
-- my unfinished [notes and questions](/notes)
+- more [about me](/about)

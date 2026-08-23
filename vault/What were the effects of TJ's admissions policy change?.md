@@ -31,7 +31,7 @@ There was a large decline in the number of NMSFs at TJ in the first class admitt
 But this tweeter is saying that the **total number** of NMSFs in the TJ geographic region went down too. The large decrease in TJ NMSFs was not compensated for by increases at the TJ-eligible high schools in the region. This is potentially more interesting – is there some net benefit to clustering “talent”[^3]? Are there kids who _would have been_ NMSFs had they gone to TJ? In other words, **was the change in admissions policy a net loss in NMSFs rather than just a redistribution**?
 
 _disclaimer: we can’t rigorously answer this with public data but we can at least do a descriptive analysis_
-# Answer: unclear so far
+## Answer: unclear so far
 
 I put [the bots on the case](https://github.com/vanshkumar/tj-psat-analysis) (gotta burn tokens somehow) to both reproduce the tweeter’s numbers & expand the analysis to two years pre-policy change and two years post. Here are the results in a nifty infographic:
 

@@ -18,10 +18,10 @@ Claim: Montessori is more effective than traditional schooling
 
 On what dimensions? We'll figure it out as we go
 
-# Round 1
+## Round 1
 
 Initial pieces I read that (a) defend the claim or (b) attack the claim or (c) set out to comprehensively review the evidence on both sides
-## [Montessori education: a review of the evidence base](https://www.nature.com/articles/s41539-017-0012-7)
+### [Montessori education: a review of the evidence base](https://www.nature.com/articles/s41539-017-0012-7)
 
 SOME KEY ELEMENTS OF THE MONTESSORI EDUCATIONAL METHOD
 - Learning materials
@@ -74,7 +74,7 @@ The lack of ability to randomize or properly blind (parents, teachers) in the st
 
 Using systematic phonics to learn how to read, writing before reading, breaking writing into its component skills, and using sensorial materials to teach geometry/numbers/math match general educational recs. Sustained attention and self-regulation in Montessori is suspected to help with executive function.
 
-## [Comparison of Academic Achievement Between Montessori and Traditional Education Programs](https://psycnet.apa.org/record/2006-02138-001)
+### [Comparison of Academic Achievement Between Montessori and Traditional Education Programs](https://psycnet.apa.org/record/2006-02138-001)
 
 Abstract:
 >The purpose of this study was to compare the academic achievement of 543 urban 4th- (n=291) and 8th- (n=252) grade students who attended Montessori or traditional education programs. The majority of the sample consisted of minority students (approximately 53 percent), and was considered low income (approximately 67 percent). Students who attended a public Montessori school were compared with students who attended structured magnet, open magnet, and traditional non-magnet public schools on standardized measures of math and language arts. Results of the study failed to support the hypothesis that enrollment in a Montessori school was associated with higher academic achievement. Implications and suggestions for future research are provided. 
@@ -91,14 +91,14 @@ Limitations:
 - Program implementation and fidelity were not controlled
 - No data on duration of enrollment in the particular program
 
-## Current hypothesis
+### Current hypothesis
 
 Montessori schooling is more effective than traditional schooling at developing executive function, social skills, an overall positive attitude towards school/learning, and fostering intrinsic motivation in students for future independent learning. There is strikingly little methodologically robust data for this claim, mostly due to how it's unethical to randomize students into a schooling program and also impossible to blind teachers/parents in any studies. The best data is really a single randomized study that found better executive function, certain academic skills (letter-word identification, phonological decoding ability, and math skills), social skills, and theory of mind for 5 year olds. For 12 year olds, it found better story writing and social skills, and students self-reported a greater sense of community. Evidence against this claim is that fidelity to the Montessori method can be quite variable, other kinds of schooling include Montessori-style methods anyways, and that other kinds of school programs can actually produce better academic achievement results. Tbh the best evidence against is just that there aren't enough actually good studies proving this.
 
 
 Tbh I personally don't even really care if Montessori leads to somewhat lower academic achievement at a particular age. I care more about executive function, social skills, an overall positive attitude towards school/learning, and fostering intrinsic motivation in students for future independent learning. Process over outcome imo when it comes to things like measuring academic achievement at a particular point in time.
 
-## Weaknesses in my case
+### Weaknesses in my case
 
 - The positive arguments all rely on a single study, with small sample size (one school), though at least the school was a strict Montessori school
 	- Also I didn't read this study closely yet. Maybe it has some methodological flaw too!
@@ -106,7 +106,7 @@ Tbh I personally don't even really care if Montessori leads to somewhat lower ac
 	- Also I doubt something like "intrinsic motivation for future independent learning" can be proven with a study, given the "future" bit. It should just be "higher intrinsic motivation for independent learning" at the point in the time of measurement, I assume that's the best we could do.
 - Even if we do find benefits to Montessori, maybe any parent who cares enough to do Montessori might just as well choose another program or pedagogy or homeschool or something and get similar results in these areas? I guess partially I am reacting to my perception of the negative effects of public school. I have a strong belief in non-coercion when it comes to children & developing intrinsic motivation... but tbh given the bloom talent development stuff it might just be wrong beyond stage 1? I guess Montessori may be the best for early development (like 3-9 or something?). Dunno.
 
-## Pick a subquestion and read more
+### Pick a subquestion and read more
 
 **Sub question to dig into**: Montessori schooling is more effective than traditional schooling at fostering intrinsic motivation in students for independent learning.
 
@@ -154,7 +154,7 @@ Middle School Students’ Motivation and Quality of Experience: A Comparison of 
 - Results from the study showed that while engaged in academic work at school, Montessori students reported higher affect, potency (i.e., feeling alert and energetic), intrinsic motivation (i.e., enjoyment, interest), and flow experience than students from traditional middle schools. The traditional students did report higher salience (i.e., perceptions of importance for their futures), how- ever, this finding must be interpreted within the context of the other expe- riential differences that characterized the two samples. For example, when looking at the students’ undivided interest (above average intrinsic motivation and salience), or the times when students said they were feeling high interest while doing something with high relevance for their futures, the Montessori students’ experiences were far more positive. Almost 40 percent of their school- work was intrinsically motivating and important; in contrast, the traditional students felt this way only 24 percent of the time. One way to gauge the practical effect of these percentages is in terms of time. Since the ESM sampled about 23 hours of academic schoolwork (i.e., 62 percent of about 37.5 total hours sampled at school), this meant that Montessori students spent approx- imately three and a half hours more per week than traditional students doing schoolwork they felt was interesting and important. Over the course of a year, this time difference is likely to have a significant impact on students’ percep- tions of school.
 	- The traditional students’ higher salience levels and their significantly higher feelings of drudgery (i.e., perceiving schoolwork as important but not moti- vating) are consistent with research showing that traditional middle school contexts often emphasize performance goals (Eccles et al. 1993). Goal theory suggests that the psychological environment of classrooms and schools deter- mines students’ perceptions of goals (Maehr and Midgley 1991). Reports of high salience and low intrinsic motivation reflect the dulled attitudes that one might expect from students in a context where the future importance of what they are doing is emphasized at the expense of immediate engagement. The differences students reported in terms of flow experience have similar impli- cations. Flow is a high-challenge condition, but high challenge is not important in itself. In other words, it is only when students feel they have skills equal to the task at hand that optimal experience is likely to occur. Montessori students reported about 7 percent more flow experience, or about one and a half hours more per week.
 
-## Revise my claim / switch sides
+### Revise my claim / switch sides
 
 >I often try radically flipping around my hypothesis, even if I haven’t actually been convinced that it’s wrong - sometimes when I’m feeling iffy about arguing for one side, it’s productive to just go ahead and try arguing for the other side. **I tend to get further by noticing how I feel about the "best arguments for both sides" than by trying from the start to be even-handed.**
 

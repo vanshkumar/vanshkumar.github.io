@@ -70,6 +70,39 @@ const walk = (directory) => fs.readdirSync(directory, { withFileTypes: true }).f
   const file = path.join(directory, entry.name);
   return entry.isDirectory() ? walk(file) : [file];
 });
+
+const headingDepths = (html) =>
+  [...html.matchAll(/<h([1-6])(?:\s|>)/g)].map((match) => Number(match[1]));
+
+const homeHeadings = headingDepths(htmlFor('/'));
+assert.equal(
+  homeHeadings.filter((depth) => depth === 1).length,
+  1,
+  'homepage should contain exactly one H1'
+);
+
+walk(dist)
+  .filter((file) => file.endsWith('.html'))
+  .forEach((file) => {
+    const html = fs.readFileSync(file, 'utf8');
+    if (!/<article class="article">/.test(html)) return;
+
+    const depths = headingDepths(html);
+    assert.equal(depths[0], 1, `${file}: article page should start with an H1`);
+    assert.equal(
+      depths.filter((depth) => depth === 1).length,
+      1,
+      `${file}: article page should contain exactly one H1`
+    );
+    depths.slice(1).forEach((depth, index) => {
+      const previous = depths[index];
+      assert.ok(
+        depth <= previous + 1,
+        `${file}: heading hierarchy should not jump from H${previous} to H${depth}`
+      );
+    });
+  });
+
 walk(path.join(dist, 'homepage-variants'))
   .filter((file) => file.endsWith('.html'))
   .forEach((file) => {

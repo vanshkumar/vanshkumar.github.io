@@ -3,7 +3,7 @@ parent: how-do-we-learn-dec-2025-aliveline
 date: 2026-01-11
 lastmod: 2026-01-15
 ---
-# Day 20
+## Day 20
 
 I had already run ADM on the 12 Kato WT_Stim worms, and the DPCA/transition matrices looked like they still had structure, so discussing with ChatGPT for how to move forward with them. Realistically this large QSimeon dataset can support something along the lines of 1 and 2 suggested by Chat yday:
 1. Representation generalization (partial observation + different neuron sets)

@@ -10,7 +10,7 @@ Based on:
 - Themes from [[Concretely describe your utopia]]
 - My answer to [[If after death, a deity tells you you didn’t fulfill your life’s purpose that it put you on earth to fulfill, what would that have been?]]
 
-# I want to see
+## I want to see
 
 **Friends/family THRIVING:** Joy, emotional openness, authenticity, creativity, a feeling of doing your best work and being your best self
 

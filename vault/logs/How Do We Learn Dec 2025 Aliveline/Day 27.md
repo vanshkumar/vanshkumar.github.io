@@ -3,7 +3,7 @@ parent: how-do-we-learn-dec-2025-aliveline
 date: 2026-01-26
 lastmod: 2026-01-26
 ---
-# Day 27
+## Day 27
 
 Continuing to work on a few things with LOOPER:
 - Repro Kato 2015 data from original paper (immobilized, no stimulus)

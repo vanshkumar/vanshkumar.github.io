@@ -3,12 +3,12 @@ parent: how-do-we-learn-dec-2025-aliveline
 date: 2025-12-05
 lastmod: 2026-02-10
 ---
-# Day 4 (12/5)
+## Day 4 (12/5)
 Slept late & quite poorly again thanks to having to clean for hours due to this pantry moth infestation. Just a little bit of time to work on this. Let's review lit notes & ask chatgpt/notebooklm what the core assumptions are that each paper makes. That might be a fruitful way forward. I do think I've been under-using LLMs as a way to interrogate papers and instead just skimming them myself. Should do both!
 
 OK let's go through it idea by idea
 
-## Neural population geometry
+### Neural population geometry
 
 Is there an analog to Kolmogorov complexity for how neuron populations activate in response to stimuli?
 	One of the difficulties is that these neural state space trajectories seem to be quite dynamical / time dependent

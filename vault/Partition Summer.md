@@ -16,7 +16,7 @@ _Partition Summer_ is a short comic I created based on stories my grandfather to
 
 <div data-comic-reader="partition-summer"></div>
 
-# Behind the scenes
+## Behind the scenes
 
 In early 2025, I spent around an hour every morning for about a month video calling with my grandfather (who I call "Pappi"). It started as a way for me to practice Hindi before my son was born while getting to know Pappi's life story. I took detailed notes – the stories he told about being a six year old child during Partition were wild. They seemed like they were straight out of a movie. I had no plan for what I would do with the notes.
 
@@ -24,7 +24,7 @@ My son was born a few months later and I became busy with taking care of him and
 
 Coincidentally my grandfather's 85th birthday was on June 4 2026, so my mom suggested I finish the comic as his birthday present. I spent a few weeks making the comic, my uncle in India got it printed, and we gave it to him on his birthday!
 
-## Reflections on the process
+### Reflections on the process
 
 I structured this as a project in ChatGPT and had a few key things in the sources:
 - My detailed notes – source of truth for many decisions in the comic

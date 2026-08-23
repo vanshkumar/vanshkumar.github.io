@@ -3,7 +3,7 @@ parent: how-do-we-learn-dec-2025-aliveline
 date: 2025-12-08
 lastmod: 2026-02-10
 ---
-# Day 6
+## Day 6
 Sigh slept+woke up late due to a very busy day yesterday & writing IRL much later in the day than usual. Sad! My sleep timing has been fluctuating quite a lot the last 5 days or so which has caused me to be much more tired in the mornings. Oh well, it will be better moving forward. Let's hop to it.
 
 Couple thoughts this morning:

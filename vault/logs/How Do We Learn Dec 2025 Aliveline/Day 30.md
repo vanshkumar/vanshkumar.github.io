@@ -3,7 +3,7 @@ parent: how-do-we-learn-dec-2025-aliveline
 date: 2026-01-29
 lastmod: 2026-01-30
 ---
-# Day 30
+## Day 30
 
 Second to last day! What would I like to get done before the end?
 - Code wise

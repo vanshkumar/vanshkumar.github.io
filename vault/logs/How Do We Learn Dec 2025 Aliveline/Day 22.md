@@ -3,7 +3,7 @@ parent: how-do-we-learn-dec-2025-aliveline
 date: 2026-01-13
 lastmod: 2026-01-14
 ---
-# Day 22
+## Day 22
 
 Strongest form of hypothesis:
 > Genetics encodes behavior (eg locomotion) as a top-down computational constraint on a neuronal network. Locomotion in the worm brain is implemented by loops in phase space. Local neuronal rules are constrained by the top-down behavior so that the loop structure shows up, but are otherwise completely free to develop.

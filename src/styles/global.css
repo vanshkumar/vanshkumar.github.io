@@ -1702,6 +1702,53 @@ h3,
   line-height: 1.25;
 }
 
+.prose h4 {
+  margin-top: 2rem;
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.prose h4 + * {
+  margin-top: 0.9rem;
+}
+
+.article > .prose {
+  display: grid;
+  grid-template-columns:
+    [wide-start] minmax(0, 1fr)
+    [text-start] min(36rem, 100%)
+    [text-end] minmax(0, 1fr)
+    [wide-end];
+}
+
+.article > .prose > * {
+  grid-column: text-start / text-end;
+  min-width: 0;
+}
+
+.article > .prose > :is(
+  figure,
+  .shelf-grid,
+  pre,
+  table,
+  [data-comic-reader],
+  .comic-reader,
+  p:has(> img),
+  p:has(> a > img)
+) {
+  grid-column: wide-start / wide-end;
+}
+
+.article > .section,
+.article > .log-nav,
+.article > .content-updated {
+  max-width: 36rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .section {
   margin-top: 3rem;
   margin-bottom: 0;

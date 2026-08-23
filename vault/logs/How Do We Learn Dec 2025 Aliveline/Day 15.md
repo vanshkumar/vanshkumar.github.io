@@ -3,7 +3,7 @@ parent: how-do-we-learn-dec-2025-aliveline
 date: 2025-12-18
 lastmod: 2026-02-10
 ---
-# Day 15
+## Day 15
 
 More questions/thoughts:
 - Tracy-Widom style phase transition hypothesis = some set of neurons that were previously weakly/not coupled, become strongly coupled after learning a rule

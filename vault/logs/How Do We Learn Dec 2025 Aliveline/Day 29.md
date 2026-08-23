@@ -3,7 +3,7 @@ parent: how-do-we-learn-dec-2025-aliveline
 date: 2026-01-28
 lastmod: 2026-01-29
 ---
-# Day 29
+## Day 29
 
 Mostly finalized repo is up: https://github.com/vanshkumar/LOOPER-freely-moving-worms
 

@@ -16,7 +16,7 @@ What I mean by "have and publish an original insight":
 I'll keep track of how things are going on this blog. Let's go!
 
 ---
-# Day 1 (12/2)
+## Day 1 (12/2)
 
 This feels like a daunting task! How might I begin?
 

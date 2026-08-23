@@ -3,7 +3,7 @@ parent: how-do-we-learn-dec-2025-aliveline
 date: 2026-01-27
 lastmod: 2026-01-27
 ---
-# Day 28
+## Day 28
 
 Working on the same stuff as yesterday. I am fairly satisfied in recovering Kato worms, though I will run the shared neuron subset across all worms thing later today (it takes many hours).
 

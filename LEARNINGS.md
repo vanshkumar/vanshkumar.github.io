@@ -184,6 +184,16 @@
 
 ## Patterns and Preferences
 
+**[2026-08-23] — Vault article heading hierarchy**
+- Observation: `ContentLayout` supplies the page H1; before the hierarchy cleanup, 39 published Markdown entries also authored an H1, and the representative Aliveline post rendered six H1s before jumping to H4 phase headings.
+- Action: Keep vault source aligned with the rendered document by authoring top-level body sections as H2 and nested sections consecutively below them; retain build-wide checks that every article has exactly one H1 and no skipped heading levels.
+- Confidence: high
+
+**[2026-08-23] — Narrow prose with wide article media**
+- Observation: The `ContentLayout` default slot places normal Markdown, Shelf grids, image paragraphs, and comic mounts inside the same `.prose` wrapper, so narrowing that wrapper would also squeeze media-heavy content.
+- Action: Keep `.prose` at the 710px article width, use a centered 36rem grid track for text-flow children, and explicitly span figures, image paragraphs, code/tables, Shelf grids, and comic mounts across the wide track; verify article, Shelf, image, and comic layouts at desktop and mobile widths.
+- Confidence: high
+
 **[2026-08-23] — Writing archive separators**
 - Observation: On `/notes/` and `/posts/`, linked titles and generous vertical spacing already distinguish entries, so pale horizontal rules add a redundant line treatment.
 - Action: Keep `.note-archive-list` entries and adjacent `.archive-post` entries borderless, relying on spacing for separation; retain the rule beneath the archive heading and do not apply this preference to homepage lists without an explicit request.

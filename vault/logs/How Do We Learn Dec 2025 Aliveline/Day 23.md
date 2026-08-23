@@ -3,7 +3,7 @@ parent: how-do-we-learn-dec-2025-aliveline
 date: 2026-01-14
 lastmod: 2026-01-15
 ---
-# Day 23
+## Day 23
 
 I have noticed that through these daily working notes I am repeating ideas and not really getting into the level of depth I would like. Part of that is because there was a 2-3 week break in the middle of this whole thing, which probably caused me to lose a bunch of intuition that was brewing. I think I have a pretty interesting experiment I can run to connect LOOPER and the DD-DC view using QSimeon (and/or a simulation), so I will start on that soon. But for now I think I could get a lot of value out of converting my understanding/hypotheses into Evergreen Notes.
 
@@ -45,9 +45,9 @@ LOOPER/DD-DC experiment:
 
 Yes — there’s a pretty clean “highest value” experiment you can run on qSimeon that ties the two stories together **without needing to literally prove “neurons are optimal controllers.”** It tests the part where DD-DC says “local (piecewise) linear closed-loop rules are enough,” and LOOPER says “global activity organizes into 1-D strands that branch/merge.”
 
-## Highest-value dataset experiment: scaffold-conditioned local linear dynamics + “control leverage” per neuron
+### Highest-value dataset experiment: scaffold-conditioned local linear dynamics + “control leverage” per neuron
 
-### Idea in one sentence
+#### Idea in one sentence
 
 Use LOOPER/ADM to label where you are on the 1-D scaffold (which strand + phase), then ask: **does a piecewise-linear model predict the next population state much better than a single global model, and which neurons have the most leverage on moving along the strand vs switching strands?**
 
@@ -55,7 +55,7 @@ That’s the tightest bridge:
 - **LOOPER:** provides the scaffold (1-D trajectories, branches/merges).
 - **DD-DC:** predicts that behavior can be governed by **local linear rules / switching between regimes**, i.e., “a controller bank.”
 
-### What you do (concrete)
+#### What you do (concrete)
 1. **Build a scaffold label for every timepoint**
     - If you have LOOPER: use its strand ID + 1-D coordinate (position/phase).
     - If not: use your ADM embedding and define:
@@ -88,7 +88,7 @@ That’s the tightest bridge:
     - Are the top-leverage neurons **consistent across animals** (suggesting genetically constrained micro-implementation)?
     - Or does each worm use a different set of neurons to implement the same scaffold motion (degeneracy with conserved macro dynamics)?
 
-### What would count as a strong tie between the papers
+#### What would count as a strong tie between the papers
 
 You’d be able to say something like:
 - “LOOPER’s strands correspond to **regimes where a local linear predictor is stable and accurate**.”
@@ -97,22 +97,22 @@ You’d be able to say something like:
 
 That’s basically “switching DD-DC controllers generate LOOPER scaffolds,” tested in the only way you reasonably can with imaging data.
 
-### Why this is high value
+#### Why this is high value
 - It’s fast to implement (it’s just regression + your existing embedding/transition structure).
 - It produces crisp plots: prediction error vs phase; leverage heatmaps; worm-to-worm consistency.
 - It directly addresses your “local rule → global scaffold” question.
 
-### Main caveat (worth keeping in mind)
+#### Main caveat (worth keeping in mind)
 
 With calcium imaging you don’t have true causal interventions, so “control leverage” is _effective influence_ (predictive, not causal). Still, it’s the right first pass.
 
 ---
 
-## If you want an even cleaner story: do a small simulation in parallel
+### If you want an even cleaner story: do a small simulation in parallel
 
 If you want something that **really looks like DD-DC → LOOPER** end-to-end:
 
-### Minimal simulation recipe
+#### Minimal simulation recipe
 - Latent motor phase (\theta_t) on a ring (oscillator).
 - High-dimensional neural state (x_t) that is a nonlinear embedding of (\theta_t) plus noise.
 - Add a **switching mechanism** (e.g., two gaits / turn vs forward) that changes the local linearization.
@@ -128,7 +128,7 @@ This gives you a “proof of concept” that the conceptual link is mechanically
 
 ---
 
-## If you only run one thing
+### If you only run one thing
 
 Run the **scaffold-conditioned local linear predictor + phase/switch leverage** on 2–3 conditions (e.g., spontaneous locomotion + stimulated) across multiple worms.
 

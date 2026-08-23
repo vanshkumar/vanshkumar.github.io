@@ -3,7 +3,7 @@ parent: how-do-we-learn-dec-2025-aliveline
 date: 2025-12-17
 lastmod: 2026-02-10
 ---
-# Day 14
+## Day 14
 What do I hypothesize/believe about the *C. Elegans* brain **right now**?
 - Each individual's brain has its own coordinate system to implement the same behaviors
 	- "Macroscopic universality, microscopic degeneracy"

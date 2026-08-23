@@ -3,7 +3,7 @@ parent: how-do-we-learn-dec-2025-aliveline
 date: 2026-01-10
 lastmod: 2026-02-10
 ---
-# Day 19 (1/10)
+## Day 19 (1/10)
 
 Hm one of the most surprising results from the Brennan paper is actually that they were able to reconstruct the locomotion manifold from such a small subset of neurons (15) and I think even from a single neuron? Building a manifold from ~100 neurons is cool but it's even odder that you can get it from just one... weird. I mean the single neuron has to be part of the process (locomotion) you're trying to model. What's the intuition there? Every neuron's delay embedded trace has the manifold in there. But every neuron is not _needed_ for the brain to implement the locomotion manifold? That might be too strong of a statement.
 

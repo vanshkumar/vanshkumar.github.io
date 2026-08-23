@@ -10,8 +10,8 @@ I have been playing with the idea of doing a PhD for a looong time. This note ce
 
 Another way to think about this question: would applying [[What makes for a high quality education?]] to myself look "formal PhD program"-shaped?
 
-# Lay of the land
-## Current situation
+## Lay of the land
+### Current situation
 The answer to this question is relative to my current situation, which is fairly unusual and could be described as "self-funded independent researcher." Some specifics worth calling out:
 - I have full control over my time, outside of parenting/family responsibilities
 	- I currently work ~4-6h for 6 days, so ~30h/week
@@ -24,7 +24,7 @@ The answer to this question is relative to my current situation, which is fairly
 - No interest in working in academia long-term
 - Unclear if I would get past the PhD application gate now given my distance from academia & the current funding climate[^1]
 
-## Topic of study
+### Topic of study
 My chosen topic of study is intelligence. My two primary [quest(ions)](/now):
 1. How Do We Learn?
 	- Current formulation: what are the learning rules that give rise to the incredible plasticity of the brain, while still reliably producing important behavior?
@@ -35,14 +35,14 @@ My approach to (1) so far has been through more theoretical/computational lenses
 
 My approach to (2) so far has mostly been reading, thinking, and discussing with others. I don't think I would pursue a PhD in education in any scenario. My plan is to start a microschool for my/friends' kids in the future, so I am not as actively focused on this question at the moment.
 
-# Parts of a PhD program I am a fan of
+## Parts of a PhD program I am a fan of
 I like the idea of:
 - Having an advisor/mentor
 - Likeminded peers to cook with, both at your school and at conferences
 
 This boils down to having a high quality social environment & structures for getting feedback. It feels difficult to replicate this well in an independent research setting (eg [Andy Matuschak](https://andymatuschak.org/) mentions this often), and would likely be the main reason I would pursue a PhD.
 
-# Parts of a PhD program I don't like as much
+## Parts of a PhD program I don't like as much
 I don't like the idea that:
 - Grant funding may impact what kinds of science are pursued
 - Active training on strategic thinking around what questions to pursue may be under-emphasized
@@ -55,7 +55,7 @@ On the former, this seems like a real possibility but probably is strongly domin
 
 On the latter, I am pointing at the notion that [[New ideas require thinking through things yourself before learning what others think]]. I also wonder if there is a homogenizing effect on the problems PhD students choose to work on? This would occur from osmosing a specific paradigm, [[The Structure Of Scientific Revolutions|a la Kuhn]]. This is too speculative/premature to really take into account much though.
 
-# Conclusion
+## Conclusion
 Continue doing independent research for now.
 
 Prioritize reaching out to PhD students/postdocs/profs more as I work through my own questions. See if natural collaborations emerge from these discussions & if I want to work more closely with a specific lab. Evaluate how I am feeling about my social environment & feedback structures in 6 months or so, and revisit the broader question at that time.

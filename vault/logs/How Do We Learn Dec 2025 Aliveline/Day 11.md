@@ -3,7 +3,7 @@ parent: how-do-we-learn-dec-2025-aliveline
 date: 2025-12-13
 lastmod: 2026-02-10
 ---
-# Day 11
+## Day 11
 Continuing data work with mouse pre-frontal cortex today. Integrated Codex into the Matlab workflow as well.
 
 Pipeline (for each mouse):

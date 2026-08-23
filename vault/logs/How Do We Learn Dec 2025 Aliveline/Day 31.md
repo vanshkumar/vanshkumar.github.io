@@ -3,7 +3,7 @@ parent: how-do-we-learn-dec-2025-aliveline
 date: 2026-01-30
 lastmod: 2026-02-09
 ---
-# Day 31
+## Day 31
 
 Last day!
 

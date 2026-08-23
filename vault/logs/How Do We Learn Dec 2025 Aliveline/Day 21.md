@@ -3,7 +3,7 @@ parent: how-do-we-learn-dec-2025-aliveline
 date: 2026-01-12
 lastmod: 2026-01-13
 ---
-# Day 21
+## Day 21
 
 Strongest form of my hypothesis again:
 >The worm brain *implements* locomotion behaviors as loops in phase space, with local neuronal rules ensuring this structure shows up
@@ -43,9 +43,9 @@ Below are experiments grouped by claim, with **what to compute** and **what woul
 
 ---
 
-## A. “Locomotion is loop structure in phase space” (topology)
+### A. “Locomotion is loop structure in phase space” (topology)
 
-### A1) Loop topology prevalence across datasets/conditions
+#### A1) Loop topology prevalence across datasets/conditions
 
 **Goal:** Is “loopiness” a robust signature of locomotion-like dynamics, or just Kato-style immobilized fictive motor programs?
 
@@ -66,7 +66,7 @@ Below are experiments grouped by claim, with **what to compute** and **what woul
 
 ---
 
-### A2) Within-worm state dependence: loop collapses in sleep/quiescence
+#### A2) Within-worm state dependence: loop collapses in sleep/quiescence
 
 **Goal:** If loops are the locomotion control manifold, they should weaken when locomotion circuitry is globally downregulated (sleep, quiescence).
 
@@ -84,9 +84,9 @@ Below are experiments grouped by claim, with **what to compute** and **what woul
 
 ---
 
-## B. “Micro rules are otherwise free” (degeneracy of implementations)
+### B. “Micro rules are otherwise free” (degeneracy of implementations)
 
-### B1) Same manifold, different neuron-to-manifold mappings across individuals
+#### B1) Same manifold, different neuron-to-manifold mappings across individuals
 
 This is the _core_ “degeneracy” test.
 
@@ -113,7 +113,7 @@ This lines up directly with Brennan/Proekt’s observation: neuron activity diff
 
 ---
 
-### B2) Many different neuron subsets recover the same loop
+#### B2) Many different neuron subsets recover the same loop
 
 If local rules are “free,” the loop should be recoverable from _many_ different subsets, not just command interneurons.
 
@@ -137,7 +137,7 @@ qSimeon provides a neuron mask per worm and standardized traces, so this is easy
 
 ---
 
-### B3) “Same loop, different speeds”: parameterization varies but topology doesn’t
+#### B3) “Same loop, different speeds”: parameterization varies but topology doesn’t
 
 A clean way to separate “macro constraint” from “micro freedom” is: topology fixed, dynamics reparameterized.
 
@@ -156,11 +156,11 @@ Compare across conditions (fed vs starved, different genotypes, immobilized vs f
 
 ---
 
-## C. “Genetics encodes behavior as a top-down constraint” (genotype vs phenotype)
+### C. “Genetics encodes behavior as a top-down constraint” (genotype vs phenotype)
 
 You won’t fully prove “genetics encodes behavior” with these datasets alone, but you can test **the implied invariances**:
 
-### C1) Genotype changes that preserve locomotion should preserve manifold topology
+#### C1) Genotype changes that preserve locomotion should preserve manifold topology
 
 Example: different wild-type backgrounds, mild mutants, or lab-to-lab differences where gross locomotion is similar.
 
@@ -177,7 +177,7 @@ Example: different wild-type backgrounds, mild mutants, or lab-to-lab difference
 
 ---
 
-### C2) Genotype changes that alter behavior should alter manifold structure
+#### C2) Genotype changes that alter behavior should alter manifold structure
 
 Conversely, pick manipulations known to alter state structure (sleep mutants, neuromodulator perturbations, etc.).
 
@@ -193,11 +193,11 @@ Conversely, pick manipulations known to alter state structure (sleep mutants, ne
 
 ---
 
-## D. “Macro constraint predicts future motor commands” (causal usefulness)
+### D. “Macro constraint predicts future motor commands” (causal usefulness)
 
 ADM’s original selling point is: from current latent state you can predict future transitions better than dwell-time-only models.
 
-### D1) Cross-dataset prediction of transitions
+#### D1) Cross-dataset prediction of transitions
 
 **Method**
 - Train ADM transition operator / Markov model on one dataset (or subset of worms).
@@ -215,7 +215,7 @@ ADM’s original selling point is: from current latent state you can predict fut
 
 ---
 
-## Practical roadmap (so this doesn’t explode)
+### Practical roadmap (so this doesn’t explode)
 
 1. **Reproduce** Brennan/Proekt on a single dataset you trust (sanity check your ADM implementation). ADM should yield a loop/loops + usable phase and transition model.
 2. Do **A1 + B2** first: “Do loops exist broadly?” and “Do many neuron subsets recover them?” These are fast and highly diagnostic.
@@ -225,7 +225,7 @@ ADM’s original selling point is: from current latent state you can predict fut
 
 ---
 
-## What I’d watch out for (common failure modes)
+### What I’d watch out for (common failure modes)
 
 - **Behavior vs state mismatch:** some datasets are primarily sensory coding or sleep state; ADM may find loops that are _not locomotion_. That’s okay—your hypothesis predicts loop structure is _behavior-dependent_, not universal.
 - **Windowing matters:** loop topology often appears in the right time window; too long mixes regimes, too short under-samples.

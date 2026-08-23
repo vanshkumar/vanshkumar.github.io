@@ -17,9 +17,9 @@ diff --git a/vault/pages/about.md b/vault/pages/about.md
 -old small phrase
 +new small phrase with growth
 ~
-diff --git a/vault/pages/contact.md b/vault/pages/contact.md
---- a/vault/pages/contact.md
-+++ b/vault/pages/contact.md
+diff --git a/vault/pages/now.md b/vault/pages/now.md
+--- a/vault/pages/now.md
++++ b/vault/pages/now.md
 -three words leave
 ~
 __WORD_GARDEN_COMMIT__2026-08-18T18:00:00-07:00

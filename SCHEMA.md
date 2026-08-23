@@ -24,8 +24,8 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
     `heroTitle?` `heroAccent?`
   - `home.md` owns the live homepage prose and its `home` display settings. Keep
     exactly one `<!-- home-comic -->` marker where the comic belongs.
-  - `about.md`, `contact.md`, and `now.md` own their respective page prose;
-    `about.md` also owns Word Garden labels through `wordGarden`.
+  - `about.md` and `now.md` own their respective page prose; `about.md` also owns
+    Word Garden labels through `wordGarden`.
   - `posts.md`, `notes.md`, and `shelf.md` own archive titles and optional archive
     introductions; `shelf.md` also owns Shelf display labels through `shelf`.
   - `terrain.md` owns the legacy archive hero and section labels through `terrain`.

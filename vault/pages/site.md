@@ -7,18 +7,10 @@ site:
   skipLinkLabel: Skip to content
   footerLabel: Footer
   footerLinks:
-    - label: Posts
-      href: /posts
-    - label: Notes
-      href: /notes
-    - label: Now
-      href: /now
-    - label: Shelf
-      href: /shelf
     - label: About
       href: /about
-    - label: Contact
-      href: /contact
+    - label: Shelf
+      href: /shelf
     - label: Twitter
       href: https://x.com/lunchwithav
       external: true

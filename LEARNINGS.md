@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-08-23] — Static page removal**
+- Observation: A vault-backed static page remains independently represented by its authored Markdown file, its Astro route, and any shared navigation entry in `vault/pages/site.md`; content sync removes the generated page entry after the source Markdown is deleted.
+- Action: When retiring a static page entirely, delete both `vault/pages/<page>.md` and `src/pages/<page>.astro`, remove its shared links, update page-inventory documentation, then sync and confirm the build emits no route.
+- Confidence: high
+
 **[2026-08-23] — Vault-backed site copy**
 - Observation: The live site's authored prose and display labels can all use the existing pages collection: Markdown bodies hold page prose, typed frontmatter holds structured page/global labels, and Astro stays responsible for layout. Empty frontmatter-only page entries may have an undefined `body`.
 - Action: Edit live copy under `vault/pages/`—especially `home.md` for the homepage and `site.md` for shared text—keep optional-body checks null-safe, and leave the isolated `src/pages/homepage-variants/` sample copy with those noindex prototypes.
@@ -173,6 +178,11 @@
 - Confidence: high
 
 ## Patterns and Preferences
+
+**[2026-08-23] — Minimal footer navigation**
+- Observation: The user wants the global footer limited to About, Shelf, Twitter, Substack, and RSS, in that order; Posts, Notes, and Now should remain accessible elsewhere rather than appearing in the footer.
+- Action: Preserve that exact footer link set and order in `vault/pages/site.md` unless the user explicitly revises the global navigation.
+- Confidence: high
 
 **[2026-08-21] — Posts and notes architecture**
 - Observation: The user no longer wants the site framed as a digital garden because maintaining interlinked, perpetually tended material raises the activation energy of writing; they prefer a simple public split where projects and essays are “Posts,” while hunches and questions are “Notes.”

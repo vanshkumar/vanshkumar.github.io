@@ -31,7 +31,7 @@ const wordGarden = getWordActivity();
 
 <BaseLayout description={homeEntry.data.description} pageClass="home-page">
   <div class="home-copy">
-    <div class="home-static" set:html={beforeComic} />
+    <div class="home-static home-static-intro" set:html={beforeComic} />
 
     <figure class="home-comic">
       <img
@@ -43,7 +43,7 @@ const wordGarden = getWordActivity();
       <figcaption>{home.comic.caption}</figcaption>
     </figure>
 
-    <div class="home-static" set:html={afterComic} />
+    <div class="home-static home-static-directory" set:html={afterComic} />
 
     <section class="home-section" aria-labelledby="recent-posts-title">
       <div class="section-heading">

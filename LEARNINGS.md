@@ -281,6 +281,11 @@
 
 ## What Has Failed
 
+**[2026-08-23] — Homepage Markdown paragraph styling**
+- Observation: `src/pages/index.astro` renders both sides of the comic marker inside `.home-static`, so the broad `.home-static > p` rule styles every authored homepage paragraph as oversized intro copy and removes its margin; adding ordinary paragraphs after the comic therefore makes them look like headings and collide with the following Recent posts section even though Markdown produced correct `<p>` elements.
+- Action: Keep display typography scoped to `.home-static-intro > h1`, keep post-comic prose and directory styling under `.home-static-directory`, and preserve the explicit gap from that fragment to the first `.home-section`.
+- Confidence: high
+
 **[2026-06-25] — Terrain question card vertical balance**
 - Observation: Moving the updated date into normal flow to match the top title gap made question cards feel wrong; the preferred layout keeps the updated date locked to the card bottom.
 - Action: Do not remove `margin-top: auto` from `.terrain-card-question .terrain-card-footer` to chase equal top/title-to-date spacing.

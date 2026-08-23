@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-08-23] — Homepage comic attribution**
+- Observation: The live homepage renders `home.comic.caption` verbatim from `vault/pages/home.md`; the local comic PNG's low-resolution syndication line looks like `3/16`, but GoComics and a contemporary March 13, 1995 newspaper page identify the pictured “inscrutable exhortations” strip as March 13, 1995.
+- Action: Treat the homepage comic caption as authored copy, not inferred metadata, and verify publication dates against an archive or contemporary print page rather than the pasted-image filename or a blurry syndication line.
+- Confidence: high
+
 **[2026-08-23] — Static page removal**
 - Observation: A vault-backed static page remains independently represented by its authored Markdown file, its Astro route, and any shared navigation entry in `vault/pages/site.md`; content sync removes the generated page entry after the source Markdown is deleted.
 - Action: When retiring a static page entirely, delete both `vault/pages/<page>.md` and `src/pages/<page>.astro`, remove its shared links, update page-inventory documentation, then sync and confirm the build emits no route.

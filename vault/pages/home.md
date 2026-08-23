@@ -5,7 +5,7 @@ home:
   comic:
     src: /assets/Pasted image 20260203101338.png
     alt: Calvin and Hobbes discussing whether to obey the inscrutable exhortations of the soul
-    caption: A useful mandate · Calvin and Hobbes, March 16, 1995
+    caption: A useful mandate · Calvin and Hobbes, March 13, 1995
     width: 908
     height: 295
   recentPosts:

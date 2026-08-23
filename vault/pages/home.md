@@ -40,6 +40,9 @@ date: 2026-05-27
 
 <!-- home-comic -->
 
+On this site you can find:
 - what I’m doing [now](/now)
 - what I’m [reading](/shelf)
 - more [about me](/about)
+
+Shoot me an email at [vanshkumar95@gmail.com](mailto:vanshkumar95@gmail.com) if you want to chat.

@@ -209,6 +209,16 @@
 - Action: Keep UI accents on the moss palette, use dedicated saturated-green link tokens with a more visible underline, and style standard blockquotes with inherited prose color plus a restrained green fill and sage border; do not carry that quote treatment into callouts.
 - Confidence: high
 
+**[2026-08-23] — Long-form article readability**
+- Observation: The editorial article template shares one 710px width between display headers and running prose, which produces roughly 75–85-character body lines in desktop captures; its Post/Note kind is also repeated in the kicker and metadata row, while the metadata and tracked uppercase kicker render at about 12px and 11px.
+- Action: For article readability tuning, keep the established global type scale but test a separate 35–37rem prose measure, balanced headline wrapping, slightly larger small-print text, and a date-only metadata row; preserve the wider measure for headers and media.
+- Confidence: high
+
+**[2026-08-23] — Article gutter breakpoint**
+- Observation: The editorial `.page` removes horizontal padding above the 640px breakpoint, so viewports from 641px through the 710px content maximum can place article text directly against the viewport edge.
+- Action: Keep an outer horizontal gutter until the viewport is wider than the article measure plus both gutters, rather than adding article padding only at 640px and below.
+- Confidence: high
+
 **[2026-08-23] — Writing archive separators**
 - Observation: On `/notes/` and `/posts/`, linked titles distinguish entries without pale horizontal rules; on the Posts archive, `2.15rem` of both margin and padding created an overly loose 76px visual gap, while `1.5rem` of each produces a calmer 53px gap at the site's 110% root scale.
 - Action: Keep `.note-archive-list` entries and adjacent `.archive-post` entries borderless, retain the rule beneath the archive heading, and use the tighter `1.5rem` margin-plus-padding rhythm between Posts unless the user explicitly revises it; do not apply this preference to homepage lists without an explicit request.

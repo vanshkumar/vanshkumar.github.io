@@ -22,21 +22,7 @@ const rangeDescription = formatCopy(copy.rangeDescriptionTemplate, {
 });
 ---
 
-<section class="word-garden" aria-labelledby="word-garden-title">
-  <div class="word-garden-heading">
-    <h2 id="word-garden-title">{copy.title}</h2>
-    <p id="word-garden-description" class="word-garden-description">
-      {copy.description}
-    </p>
-  </div>
-
-  <div class="word-garden-stats" aria-label={copy.totalsLabel}>
-    <span><strong>{number.format(garden.activeDays)}</strong> {copy.activeDaysLabel}</span>
-    <span><strong>{number.format(garden.totals.added)}</strong> {copy.addedLabel}</span>
-    <span><strong>{number.format(garden.totals.edited)}</strong> {copy.editedLabel}</span>
-    <span><strong>{number.format(garden.totals.removed)}</strong> {copy.removedLabel}</span>
-  </div>
-
+<section class="word-garden" aria-label={copy.sectionLabel}>
   <p id="word-garden-range-description" class="visually-hidden">
     {rangeDescription}
   </p>
@@ -45,7 +31,7 @@ const rangeDescription = formatCopy(copy.rangeDescriptionTemplate, {
     class="word-garden-scroll"
     tabindex="0"
     aria-label={copy.calendarLabel}
-    aria-describedby="word-garden-description word-garden-range-description"
+    aria-describedby="word-garden-range-description"
   >
     <div class="word-garden-calendar">
       <div class="word-garden-weekdays" aria-hidden="true">

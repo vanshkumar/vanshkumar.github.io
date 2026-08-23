@@ -239,6 +239,11 @@
 - Action: Keep added, edited, and removed counts in summaries and accessible labels, but encode daily plots only with the moss-green words-touched intensity scale.
 - Confidence: high
 
+**[2026-08-23] — Understated homepage Word Garden**
+- Observation: The user prefers the homepage activity plot to stand entirely on its own, without a visible title, explainer, totals row, or separating rule.
+- Action: Keep the section named accessibly as “Writing activity,” begin visually with the calendar, and do not reintroduce introductory chrome or summary totals unless explicitly requested.
+- Confidence: high
+
 **[2026-08-16] — Editorial inventory**
 - Observation: The strongest post-ready ideas are distributed across public Terrain notes, private `writing inbox` fragments, project reflections, and sibling-app documentation; clusters with both a personal stake and a concrete artifact are substantially more developed than their individual filenames suggest.
 - Action: When mining this repo for essays, group related notes across those surfaces and prioritize clusters that already contain a lived hook, a defensible thesis, and implementation or research evidence; check existing Substack links before treating a topic as unpublished.

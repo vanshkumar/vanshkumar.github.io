@@ -17,13 +17,7 @@ home:
     href: /notes
     linkLabel: see all
 wordGarden:
-  title: The word garden
-  description: A year of tending this site, measured in words touched.
-  totalsLabel: Word Garden totals
-  activeDaysLabel: active days
-  addedLabel: added
-  editedLabel: edited
-  removedLabel: removed
+  sectionLabel: Writing activity
   rangeDescriptionTemplate: The visual calendar covers {startDate} through {endDate}. Active days can be focused to hear their word totals.
   calendarLabel: Word activity calendar. Scroll horizontally to see earlier weeks.
   legendLabel: Activity intensity legend

@@ -107,13 +107,7 @@ const terrainCopy = z.object({
 });
 
 const wordGardenCopy = z.object({
-  title: z.string(),
-  description: z.string(),
-  totalsLabel: z.string(),
-  activeDaysLabel: z.string(),
-  addedLabel: z.string(),
-  editedLabel: z.string(),
-  removedLabel: z.string(),
+  sectionLabel: z.string(),
   rangeDescriptionTemplate: z.string(),
   calendarLabel: z.string(),
   legendLabel: z.string(),

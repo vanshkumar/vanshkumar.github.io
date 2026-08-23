@@ -743,51 +743,6 @@ h3 {
   box-shadow: 0 0.5rem 1.7rem rgba(38, 31, 20, 0.07);
 }
 
-.word-garden-heading {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 1.5rem;
-}
-
-.word-garden h2 {
-  margin: 0;
-  color: var(--accent);
-  font-size: 1.75rem;
-  line-height: 1.05;
-}
-
-.word-garden-description {
-  max-width: 17rem;
-  margin: 0 0 0.1rem;
-  color: var(--muted);
-  font-family: "Playfair Display", "Iowan Old Style", serif;
-  font-size: 0.9rem;
-  font-style: italic;
-  line-height: 1.4;
-  text-align: right;
-}
-
-.word-garden-stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem 1.1rem;
-  margin-top: 1rem;
-  padding: 0.65rem 0;
-  border-top: 1px solid rgba(222, 216, 202, 0.8);
-  border-bottom: 1px solid rgba(222, 216, 202, 0.8);
-  color: #8b8375;
-  font-size: 0.67rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.word-garden-stats strong {
-  color: #4f463a;
-  font-size: 0.72rem;
-  font-weight: 600;
-}
-
 .word-garden-scroll {
   direction: rtl;
   margin: 0.65rem -0.2rem 0;
@@ -1244,21 +1199,6 @@ h3 {
     padding: 1.15rem 1rem 1rem;
   }
 
-  .word-garden-heading {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.45rem;
-  }
-
-  .word-garden-description {
-    max-width: none;
-    text-align: left;
-  }
-
-  .word-garden-stats {
-    column-gap: 0.8rem;
-  }
-
   .word-garden-legend {
     justify-content: flex-start;
   }
@@ -1362,8 +1302,7 @@ a:hover {
 h1,
 h2,
 h3,
-.shelf-cover-title,
-.word-garden-description {
+.shelf-cover-title {
   font-family: var(--serif);
   font-weight: 400;
 }
@@ -1753,61 +1692,15 @@ h3,
 }
 
 .word-garden {
-  padding: 1.5rem 0 0;
+  padding: 0;
   border: 0;
-  border-top: 1px solid var(--border);
   border-radius: 0;
   background: transparent;
   box-shadow: none;
 }
 
-.word-garden-heading {
-  display: block;
-}
-
-.word-garden h2 {
-  margin: 0;
-  color: #6b655d;
-  font-family: var(--sans);
-  font-size: 0.64rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  line-height: 1.4;
-  text-transform: uppercase;
-}
-
-.word-garden-description {
-  max-width: none;
-  margin: 0.42rem 0 0;
-  color: var(--muted);
-  font-family: var(--serif);
-  font-size: 0.84rem;
-  font-style: italic;
-  line-height: 1.55;
-  text-align: left;
-}
-
-.word-garden-stats {
-  gap: 0.3rem 1rem;
-  margin: 0.9rem 0 0;
-  padding: 0;
-  border: 0;
-  color: var(--muted);
-  font-family: var(--sans);
-  font-size: 0.6rem;
-  line-height: 1.45;
-  letter-spacing: 0.01em;
-  text-transform: none;
-}
-
-.word-garden-stats strong {
-  color: var(--text);
-  font-size: inherit;
-  font-weight: 600;
-}
-
 .word-garden-scroll {
-  margin: 0.7rem 0 0;
+  margin: 0;
   padding: 3rem 0 0.45rem;
   scrollbar-color: #cec8be transparent;
 }
@@ -1950,6 +1843,6 @@ h3,
   .word-garden {
     margin-right: 0;
     margin-left: 0;
-    padding: 1.4rem 0 0;
+    padding: 0;
   }
 }

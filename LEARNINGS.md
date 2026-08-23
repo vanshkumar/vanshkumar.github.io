@@ -204,6 +204,11 @@
 - Action: Keep `.prose` at the 710px article width, use a centered 36rem grid track for text-flow children, and explicitly span figures, image paragraphs, code/tables, Shelf grids, and comic mounts across the wide track; verify article, Shelf, image, and comic layouts at desktop and mobile widths.
 - Confidence: high
 
+**[2026-08-23] — Link and quotation color differentiation**
+- Observation: The editorial link green `#315c39` has strong contrast against the cream page but only modest visual separation from body copy; its pale underline is also easy to overlook. For quotations, the user prefers normal body-colored text on a light green-tinted background rather than green quote text, and favored a lighter wash after the first preview.
+- Action: Keep UI accents on the moss palette, use dedicated saturated-green link tokens with a more visible underline, and style standard blockquotes with inherited prose color plus a restrained green fill and sage border; do not carry that quote treatment into callouts.
+- Confidence: high
+
 **[2026-08-23] — Writing archive separators**
 - Observation: On `/notes/` and `/posts/`, linked titles distinguish entries without pale horizontal rules; on the Posts archive, `2.15rem` of both margin and padding created an overly loose 76px visual gap, while `1.5rem` of each produces a calmer 53px gap at the site's 110% root scale.
 - Action: Keep `.note-archive-list` entries and adjacent `.archive-post` entries borderless, retain the rule beneath the archive heading, and use the tighter `1.5rem` margin-plus-padding rhythm between Posts unless the user explicitly revises it; do not apply this preference to homepage lists without an explicit request.

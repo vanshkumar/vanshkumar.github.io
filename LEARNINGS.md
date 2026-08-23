@@ -205,8 +205,8 @@
 - Confidence: high
 
 **[2026-08-23] — Writing archive separators**
-- Observation: On `/notes/` and `/posts/`, linked titles and generous vertical spacing already distinguish entries, so pale horizontal rules add a redundant line treatment.
-- Action: Keep `.note-archive-list` entries and adjacent `.archive-post` entries borderless, relying on spacing for separation; retain the rule beneath the archive heading and do not apply this preference to homepage lists without an explicit request.
+- Observation: On `/notes/` and `/posts/`, linked titles distinguish entries without pale horizontal rules; on the Posts archive, `2.15rem` of both margin and padding created an overly loose 76px visual gap, while `1.5rem` of each produces a calmer 53px gap at the site's 110% root scale.
+- Action: Keep `.note-archive-list` entries and adjacent `.archive-post` entries borderless, retain the rule beneath the archive heading, and use the tighter `1.5rem` margin-plus-padding rhythm between Posts unless the user explicitly revises it; do not apply this preference to homepage lists without an explicit request.
 - Confidence: high
 
 **[2026-08-23] — Minimal footer navigation**

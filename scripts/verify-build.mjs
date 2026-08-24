@@ -44,17 +44,17 @@ has('/posts', /<h1 id="posts-title">Posts<\/h1>/, 'missing Posts archive');
 has('/notes', /<h1 id="notes-title">Notes<\/h1>/, 'missing Notes archive');
 
 const shelfHtml = htmlFor('/shelf');
-assert.match(shelfHtml, /<h2 id="currently-reading-title">Currently reading<\/h2>/, 'Shelf needs Currently reading');
-assert.match(shelfHtml, /<h2 id="book-reviews-title">Book reviews<\/h2>/, 'Shelf needs Book reviews');
+assert.match(shelfHtml, /<h2 id="currently-reading">Currently reading<\/h2>/, 'Shelf needs Markdown-authored Currently reading');
+assert.match(shelfHtml, /<h2 id="book-reviews">Book reviews<\/h2>/, 'Shelf needs Markdown-authored Book reviews');
 assert.ok(
-  shelfHtml.indexOf('id="currently-reading-title"') < shelfHtml.indexOf('id="book-reviews-title"'),
+  shelfHtml.indexOf('id="currently-reading"') < shelfHtml.indexOf('id="book-reviews"'),
   'Currently reading should appear before Book reviews'
 );
 const currentlyReadingHtml = shelfHtml.slice(
-  shelfHtml.indexOf('id="currently-reading-title"'),
-  shelfHtml.indexOf('id="book-reviews-title"')
+  shelfHtml.indexOf('id="currently-reading"'),
+  shelfHtml.indexOf('id="book-reviews"')
 );
-const bookReviewsHtml = shelfHtml.slice(shelfHtml.indexOf('id="book-reviews-title"'));
+const bookReviewsHtml = shelfHtml.slice(shelfHtml.indexOf('id="book-reviews"'));
 assert.match(
   currentlyReadingHtml,
   /href="\/shelf\/why-greatness-cannot-be-planned"/,

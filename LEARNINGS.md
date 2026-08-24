@@ -204,6 +204,11 @@
 
 ## Patterns and Preferences
 
+**[2026-08-24] — Markdown-first site authorship**
+- Observation: The user wants visitor-facing page structure, headings, ordering, and prose to be directly editable as Markdown whenever possible; keeping ordinary copy in opaque structured properties makes the site harder to author.
+- Action: Default authored page content to Markdown under `vault/pages/`; reserve typed frontmatter for data that genuinely powers rendering, and use visible Markdown placement markers when generated blocks must interrupt authored content.
+- Confidence: high
+
 **[2026-08-24] — Shelf sectioning**
 - Observation: The user wants the Shelf landing page to distinguish books being read now from completed book reviews, with “Currently reading” and “Book reviews” as the two visible sections.
 - Action: Keep both sections on `/shelf`; when implementing, model the distinction as book lifecycle metadata so an entry can move between sections without changing its Markdown file or public URL.

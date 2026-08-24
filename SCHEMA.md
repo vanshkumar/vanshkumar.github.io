@@ -29,7 +29,10 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
     marker where the comic belongs.
   - `about.md` and `now.md` own their respective page prose.
   - `posts.md`, `notes.md`, and `shelf.md` own archive titles and optional archive
-    introductions; `shelf.md` also owns Shelf display labels through `shelf`.
+    introductions. Shelf section headings and surrounding prose live directly in the
+    `shelf.md` Markdown body around `<!-- shelf-currently-reading -->` and
+    `<!-- shelf-book-reviews -->`; its `shelf` frontmatter is limited to generated-copy
+    templates that depend on book data.
   - `terrain.md` owns the legacy archive hero and section labels through `terrain`.
   - `site.md` owns shared visitor-facing copy through `site`, including the site
     name, description, footer, content and writing labels, comic-reader controls,

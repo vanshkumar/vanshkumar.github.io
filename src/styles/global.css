@@ -1713,16 +1713,15 @@ h3,
 }
 
 .shelf-section + .shelf-section {
-  margin-top: 3.5rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid var(--border);
+  margin-top: 3.25rem;
 }
 
 .shelf-section h2 {
-  max-width: 36rem;
-  margin: 0 auto 1.35rem;
-  font-size: 1.35rem;
-  line-height: 1.25;
+  max-width: none;
+  margin: 0 0 1.5rem;
+  font-size: clamp(2rem, 5vw, 2.65rem);
+  line-height: 1.08;
+  text-align: left;
 }
 
 .shelf-current-grid {

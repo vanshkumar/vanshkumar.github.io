@@ -8,7 +8,22 @@ const pageEntry = await getEntry('pages', 'shelf');
 if (!pageEntry?.data.shelf) {
   throw new Error('Missing Shelf copy in vault/pages/shelf.md');
 }
-const { Content } = await pageEntry.render();
+const currentMarker = '<!-- shelf-currently-reading -->';
+const reviewsMarker = '<!-- shelf-book-reviews -->';
+const renderedShelf = pageEntry.rendered?.html;
+if (typeof renderedShelf !== 'string') {
+  throw new Error('Missing rendered content for pages/shelf');
+}
+const currentSections = renderedShelf.split(currentMarker);
+if (currentSections.length !== 2) {
+  throw new Error('pages/shelf must contain exactly one <!-- shelf-currently-reading --> placement marker');
+}
+const [beforeCurrent, afterCurrentMarker] = currentSections;
+const reviewSections = afterCurrentMarker.split(reviewsMarker);
+if (reviewSections.length !== 2) {
+  throw new Error('pages/shelf must contain exactly one <!-- shelf-book-reviews --> placement marker');
+}
+const [currentCopy, reviewsCopy] = reviewSections;
 const title = pageEntry.data.title ?? titleFromSlug(pageEntry.slug);
 const shelfCopy = pageEntry.data.shelf;
 const books = (await getCollection('shelf')).sort((a, b) => {
@@ -27,11 +42,11 @@ const bookTitle = (book) => book.data.title ?? titleFromSlug(book.slug);
   title={title}
   description={pageEntry.data.description}
 >
-  {pageEntry.body?.trim() ? <Content /> : null}
-  <section class="shelf-section shelf-current-section" aria-labelledby="currently-reading-title">
-    <h2 id="currently-reading-title">{shelfCopy.currentlyReadingTitle}</h2>
+  {beforeCurrent.trim() ? <div class="shelf-page-copy" set:html={beforeCurrent} /> : null}
+  <section class="shelf-section shelf-current-section">
+    <div class="shelf-section-copy" set:html={currentCopy} />
     {currentlyReading.length ? (
-      <div class="shelf-current-grid" aria-label={shelfCopy.currentlyReadingGridLabel}>
+      <div class="shelf-current-grid">
         {currentlyReading.map((book) => {
           const displayTitle = bookTitle(book);
           const byline = formatCopy(shelfCopy.bylineTemplate, { author: book.data.author });
@@ -69,10 +84,10 @@ const bookTitle = (book) => book.data.title ?? titleFromSlug(book.slug);
     ) : null}
   </section>
 
-  <section class="shelf-section shelf-reviews-section" aria-labelledby="book-reviews-title">
-    <h2 id="book-reviews-title">{shelfCopy.bookReviewsTitle}</h2>
+  <section class="shelf-section shelf-reviews-section">
+    <div class="shelf-section-copy" set:html={reviewsCopy} />
     {reviews.length ? (
-      <div class="shelf-grid" aria-label={shelfCopy.bookReviewsGridLabel}>
+      <div class="shelf-grid">
         {reviews.map((review) => {
           const displayTitle = bookTitle(review);
           const ratingLabel = formatCopy(shelfCopy.ratingLabelTemplate, {

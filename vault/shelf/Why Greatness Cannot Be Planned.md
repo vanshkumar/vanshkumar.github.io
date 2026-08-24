@@ -1,10 +1,10 @@
 ---
 date: 2026-06-23
 lastmod: 2026-08-24
-status: reading
+status: reviewed
 coverImage: /assets/shelf/why-greatness-cannot-be-planned.jpg
 ---
-IN PROGRESS (https://readwise.io/bookreview/50377846)
+REVIEW IN PROGRESS (https://readwise.io/bookreview/50377846)
 
 A straightforward argument, made by very loose analogy to evolution & machine learning, that directly aiming for "greatness" via objectives does not work. Seeking out novelty is more effective.
 

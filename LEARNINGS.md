@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-08-23] — Editorial background warmth study**
+- Observation: The active editorial `:root` block overrides the earlier `--bg` token; in homepage captures, the user selected the moderate `#fbf7ef` “warm paper” option over the subtler previous-site `#fdfbf7` and the visibly grayer older `#f6f3ee` palette.
+- Action: Keep the effective editorial background at `#fbf7ef`; when revisiting page warmth, edit the later editorial token rather than the stale first `:root` value.
+- Confidence: high
+
 **[2026-08-23] — Homepage comic attribution**
 - Observation: The live homepage renders `home.comic.caption` verbatim from `vault/pages/home.md`; the local comic PNG's low-resolution syndication line looks like `3/16`, but GoComics and a contemporary March 13, 1995 newspaper page identify the pictured “inscrutable exhortations” strip as March 13, 1995.
 - Action: Treat the homepage comic caption as authored copy, not inferred metadata, and verify publication dates against an archive or contemporary print page rather than the pasted-image filename or a blurry syndication line.

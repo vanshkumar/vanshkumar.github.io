@@ -17,8 +17,10 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
     `aliases?[]`
   - A log parent must resolve to a Terrain entry classified as a Post.
 - **shelf** → `vault/shelf/` → `/shelf/<slug>`
-  - `title?` `description?` `date?` `lastmod?` `rating` (`0`–`5`) `coverImage?`
-    `aliases?[]`
+  - Common fields: `status` (`reading` or `reviewed`), `author`, `title?`, `description?`,
+    `date?`, `lastmod?`, `coverImage?`, `aliases?[]`
+  - Reviewed books require `rating` (`0`–`5`); currently reading books omit it. Changing
+    `status` moves a book between the two Shelf sections without changing its file or URL.
 - **pages** → `vault/pages/` → static pages, archive copy, and shared site copy
   - Common fields: `title?` `description?` `date?` `lastmod?` `aliases?[]`
     `heroTitle?` `heroAccent?`

@@ -90,7 +90,12 @@ const homeCopy = z.object({
 });
 
 const shelfCopy = z.object({
-  gridLabel: z.string(),
+  currentlyReadingTitle: z.string(),
+  currentlyReadingGridLabel: z.string(),
+  currentlyReadingDetailLabel: z.string(),
+  bookReviewsTitle: z.string(),
+  bookReviewsGridLabel: z.string(),
+  bylineTemplate: z.string(),
   ratingLabelTemplate: z.string(),
   detailRatingTemplate: z.string(),
   coverAltTemplate: z.string()
@@ -161,17 +166,28 @@ const logs = defineCollection({
   })
 });
 
+const shelfBook = z.object({
+  title: optionalText,
+  author: z.string(),
+  description: optionalText,
+  date: z.coerce.date().optional(),
+  lastmod: z.coerce.date().optional(),
+  coverImage: z.string().startsWith('/assets/').optional(),
+  aliases: z.array(z.string()).optional()
+});
+
 const shelf = defineCollection({
   type: 'content',
-  schema: z.object({
-    title: optionalText,
-    description: optionalText,
-    date: z.coerce.date().optional(),
-    lastmod: z.coerce.date().optional(),
-    rating: z.number().int().min(0).max(5),
-    coverImage: z.string().startsWith('/assets/').optional(),
-    aliases: z.array(z.string()).optional()
-  })
+  schema: z.discriminatedUnion('status', [
+    shelfBook.extend({
+      status: z.literal('reading'),
+      rating: z.never().optional()
+    }),
+    shelfBook.extend({
+      status: z.literal('reviewed'),
+      rating: z.number().int().min(0).max(5)
+    })
+  ])
 });
 
 const pages = defineCollection({

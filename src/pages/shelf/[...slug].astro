@@ -22,16 +22,18 @@ const shelfPage = await getEntry('pages', 'shelf');
 if (!shelfPage?.data.shelf) {
   throw new Error('Missing Shelf copy in vault/pages/shelf.md');
 }
-const ratingMeta = formatCopy(shelfPage.data.shelf.detailRatingTemplate, {
-  rating: entry.data.rating
-});
+const shelfMeta = entry.data.status === 'reviewed'
+  ? formatCopy(shelfPage.data.shelf.detailRatingTemplate, {
+      rating: entry.data.rating
+    })
+  : shelfPage.data.shelf.currentlyReadingDetailLabel;
 ---
 
 <ContentLayout
   title={title}
   description={entry.data.description}
   date={entry.data.date}
-  kind={ratingMeta}
+  kind={shelfMeta}
   lastUpdated={lastUpdated}
   backlinks={backlinks}
 >

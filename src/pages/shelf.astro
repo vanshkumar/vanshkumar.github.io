@@ -11,14 +11,16 @@ if (!pageEntry?.data.shelf) {
 const { Content } = await pageEntry.render();
 const title = pageEntry.data.title ?? titleFromSlug(pageEntry.slug);
 const shelfCopy = pageEntry.data.shelf;
-const reviews = (await getCollection('shelf')).sort((a, b) => {
+const books = (await getCollection('shelf')).sort((a, b) => {
   const aDate = a.data.date ?? a.data.lastmod ?? new Date(0);
   const bDate = b.data.date ?? b.data.lastmod ?? new Date(0);
   return bDate.getTime() - aDate.getTime();
 });
+const currentlyReading = books.filter((book) => book.data.status === 'reading');
+const reviews = books.filter((book) => book.data.status === 'reviewed');
 
 const starsForRating = (rating) => '★'.repeat(rating) + '☆'.repeat(5 - rating);
-const reviewTitle = (review) => review.data.title ?? titleFromSlug(review.slug);
+const bookTitle = (book) => book.data.title ?? titleFromSlug(book.slug);
 ---
 
 <ContentLayout
@@ -26,42 +28,86 @@ const reviewTitle = (review) => review.data.title ?? titleFromSlug(review.slug);
   description={pageEntry.data.description}
 >
   {pageEntry.body?.trim() ? <Content /> : null}
-  {reviews.length ? (
-    <div class="shelf-grid" aria-label={shelfCopy.gridLabel}>
-      {reviews.map((review) => {
-        const displayTitle = reviewTitle(review);
-        const ratingLabel = formatCopy(shelfCopy.ratingLabelTemplate, {
-          rating: review.data.rating
-        });
-        return (
-          <a
-            class="shelf-book"
-            href={`/shelf/${review.slug}`}
-            aria-label={`${displayTitle}, ${ratingLabel}`}
-          >
-            <span
-              class:list={[
-                'shelf-cover',
-                !review.data.coverImage && 'shelf-cover-placeholder'
-              ]}
+  <section class="shelf-section shelf-current-section" aria-labelledby="currently-reading-title">
+    <h2 id="currently-reading-title">{shelfCopy.currentlyReadingTitle}</h2>
+    {currentlyReading.length ? (
+      <div class="shelf-current-grid" aria-label={shelfCopy.currentlyReadingGridLabel}>
+        {currentlyReading.map((book) => {
+          const displayTitle = bookTitle(book);
+          const byline = formatCopy(shelfCopy.bylineTemplate, { author: book.data.author });
+          return (
+            <a
+              class="shelf-current-book"
+              href={`/shelf/${book.slug}`}
+              aria-label={`${displayTitle}, ${byline}, ${shelfCopy.currentlyReadingDetailLabel}`}
             >
-              {review.data.coverImage ? (
-                <img
-                  src={review.data.coverImage}
-                  alt={formatCopy(shelfCopy.coverAltTemplate, { title: displayTitle })}
-                  loading="lazy"
-                  decoding="async"
-                />
-              ) : (
-                <span class="shelf-cover-title">{displayTitle}</span>
-              )}
-            </span>
-            <span class="shelf-rating" aria-label={ratingLabel}>
-              <span aria-hidden="true">{starsForRating(review.data.rating)}</span>
-            </span>
-          </a>
-        );
-      })}
-    </div>
-  ) : null}
+              <span
+                class:list={[
+                  'shelf-cover',
+                  !book.data.coverImage && 'shelf-cover-placeholder'
+                ]}
+              >
+                {book.data.coverImage ? (
+                  <img
+                    src={book.data.coverImage}
+                    alt={formatCopy(shelfCopy.coverAltTemplate, { title: displayTitle })}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                ) : (
+                  <span class="shelf-cover-title">{displayTitle}</span>
+                )}
+              </span>
+              <span class="shelf-current-copy">
+                <span class="shelf-book-title">{displayTitle}</span>
+                <span class="shelf-book-author">{byline}</span>
+              </span>
+            </a>
+          );
+        })}
+      </div>
+    ) : null}
+  </section>
+
+  <section class="shelf-section shelf-reviews-section" aria-labelledby="book-reviews-title">
+    <h2 id="book-reviews-title">{shelfCopy.bookReviewsTitle}</h2>
+    {reviews.length ? (
+      <div class="shelf-grid" aria-label={shelfCopy.bookReviewsGridLabel}>
+        {reviews.map((review) => {
+          const displayTitle = bookTitle(review);
+          const ratingLabel = formatCopy(shelfCopy.ratingLabelTemplate, {
+            rating: review.data.rating
+          });
+          return (
+            <a
+              class="shelf-book"
+              href={`/shelf/${review.slug}`}
+              aria-label={`${displayTitle}, ${ratingLabel}`}
+            >
+              <span
+                class:list={[
+                  'shelf-cover',
+                  !review.data.coverImage && 'shelf-cover-placeholder'
+                ]}
+              >
+                {review.data.coverImage ? (
+                  <img
+                    src={review.data.coverImage}
+                    alt={formatCopy(shelfCopy.coverAltTemplate, { title: displayTitle })}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                ) : (
+                  <span class="shelf-cover-title">{displayTitle}</span>
+                )}
+              </span>
+              <span class="shelf-rating" aria-label={ratingLabel}>
+                <span aria-hidden="true">{starsForRating(review.data.rating)}</span>
+              </span>
+            </a>
+          );
+        })}
+      </div>
+    ) : null}
+  </section>
 </ContentLayout>

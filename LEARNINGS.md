@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-08-24] — Shelf lifecycle implementation**
+- Observation: A discriminated Shelf schema can require `rating` only for `status: reviewed` while rejecting it for `status: reading`; because the landing page’s two grids are wrapped in semantic sections, the `.shelf-section` wrapper itself must span the wide prose track.
+- Action: Move a book between Shelf sections by editing `status` and `rating` on the same `vault/shelf/` entry, keep `author` on every entry, and preserve the wide-track rule when changing Shelf section markup.
+- Confidence: high
+
 **[2026-08-23] — Editorial background warmth study**
 - Observation: The active editorial `:root` block overrides the earlier `--bg` token; in homepage captures, the user selected the moderate `#fbf7ef` “warm paper” option over the subtler previous-site `#fdfbf7` and the visibly grayer older `#f6f3ee` palette.
 - Action: Keep the effective editorial background at `#fbf7ef`; when revisiting page warmth, edit the later editorial token rather than the stale first `:root` value.
@@ -198,6 +203,11 @@
 - Confidence: high
 
 ## Patterns and Preferences
+
+**[2026-08-24] — Shelf sectioning**
+- Observation: The user wants the Shelf landing page to distinguish books being read now from completed book reviews, with “Currently reading” and “Book reviews” as the two visible sections.
+- Action: Keep both sections on `/shelf`; when implementing, model the distinction as book lifecycle metadata so an entry can move between sections without changing its Markdown file or public URL.
+- Confidence: high
 
 **[2026-08-23] — Article phase heading rhythm**
 - Observation: Article H3 phase headings followed directly by lists looked crowded with the generic `0.9rem` heading-to-content gap, while other heading transitions were not part of the requested change.

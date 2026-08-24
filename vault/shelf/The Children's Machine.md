@@ -1,6 +1,8 @@
 ---
 date: 2026-07-21
 lastmod: 2026-08-07
+status: reviewed
+author: Seymour Papert
 rating: 5
 coverImage: /assets/shelf/the-childrens-machine.jpg
 ---

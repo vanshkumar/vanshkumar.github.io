@@ -1,6 +1,8 @@
 ---
 date: 2026-06-17
 lastmod: 2026-07-04
+status: reviewed
+author: Max S. Bennett
 rating: 5
 coverImage: /assets/shelf/a-brief-history-of-intelligence.jpg
 ---

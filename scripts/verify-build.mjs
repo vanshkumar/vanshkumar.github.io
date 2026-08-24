@@ -43,6 +43,45 @@ assert.doesNotMatch(htmlFor('/about'), /class="word-garden"/, 'About should not 
 has('/posts', /<h1 id="posts-title">Posts<\/h1>/, 'missing Posts archive');
 has('/notes', /<h1 id="notes-title">Notes<\/h1>/, 'missing Notes archive');
 
+const shelfHtml = htmlFor('/shelf');
+assert.match(shelfHtml, /<h2 id="currently-reading-title">Currently reading<\/h2>/, 'Shelf needs Currently reading');
+assert.match(shelfHtml, /<h2 id="book-reviews-title">Book reviews<\/h2>/, 'Shelf needs Book reviews');
+assert.ok(
+  shelfHtml.indexOf('id="currently-reading-title"') < shelfHtml.indexOf('id="book-reviews-title"'),
+  'Currently reading should appear before Book reviews'
+);
+const currentlyReadingHtml = shelfHtml.slice(
+  shelfHtml.indexOf('id="currently-reading-title"'),
+  shelfHtml.indexOf('id="book-reviews-title"')
+);
+const bookReviewsHtml = shelfHtml.slice(shelfHtml.indexOf('id="book-reviews-title"'));
+assert.match(
+  currentlyReadingHtml,
+  /href="\/shelf\/why-greatness-cannot-be-planned"/,
+  'in-progress book should be in Currently reading'
+);
+assert.doesNotMatch(currentlyReadingHtml, /class="shelf-rating"/, 'Currently reading should not show ratings');
+assert.match(
+  bookReviewsHtml,
+  /href="\/shelf\/the-invention-of-nature"/,
+  'completed book should be in Book reviews'
+);
+assert.doesNotMatch(
+  bookReviewsHtml,
+  /href="\/shelf\/why-greatness-cannot-be-planned"/,
+  'currently reading book should not be in Book reviews'
+);
+has(
+  '/shelf/why-greatness-cannot-be-planned',
+  /<p class="meta">[^<]*Currently reading<\/p>/,
+  'currently reading detail should show its lifecycle state'
+);
+has(
+  '/shelf/the-invention-of-nature',
+  /<p class="meta">[^<]*5\/5 stars<\/p>/,
+  'review detail should show its rating'
+);
+
 canonical(`/posts/${post}`, `/posts/${post}`);
 has(`/posts/${post}`, /<meta property="og:type" content="article">/, 'Post must use article OG type');
 has(`/posts/${post}`, /class="article-kind" href="\/posts">Post<\/a>/, 'Post label missing');
@@ -122,4 +161,4 @@ walk(path.join(dist, 'homepage-variants'))
     assert.match(fs.readFileSync(file, 'utf8'), /<meta name="robots" content="noindex">/, `${file} must remain noindex`);
   });
 
-console.log('Verified canonical writing routes, redirects, metadata, homepage, archives, RSS, and prototype isolation.');
+console.log('Verified canonical writing routes, redirects, metadata, homepage, archives, Shelf, RSS, and prototype isolation.');

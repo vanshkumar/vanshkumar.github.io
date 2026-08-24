@@ -1,6 +1,8 @@
 ---
 lastmod: 2026-07-04
 date: 2026-06-15
+status: reviewed
+author: Stewart Brand
 rating: 5
 coverImage: /assets/shelf/the-clock-of-the-long-now.webp
 ---

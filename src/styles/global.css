@@ -552,6 +552,10 @@ h3 {
   margin-top: 0.9rem;
 }
 
+.prose h3 + :is(ul, ol) {
+  margin-top: 1.25rem;
+}
+
 .prose ul,
 .prose ol {
   padding-left: 1.35rem;

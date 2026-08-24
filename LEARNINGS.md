@@ -199,6 +199,11 @@
 
 ## Patterns and Preferences
 
+**[2026-08-23] — Article phase heading rhythm**
+- Observation: Article H3 phase headings followed directly by lists looked crowded with the generic `0.9rem` heading-to-content gap, while other heading transitions were not part of the requested change.
+- Action: Keep the larger `1.25rem` gap scoped to `.prose h3 + :is(ul, ol)` so phase-style lists breathe without loosening heading-to-paragraph spacing.
+- Confidence: high
+
 **[2026-08-23] — Vault article heading hierarchy**
 - Observation: `ContentLayout` supplies the page H1; before the hierarchy cleanup, 39 published Markdown entries also authored an H1, and the representative Aliveline post rendered six H1s before jumping to H4 phase headings.
 - Action: Keep vault source aligned with the rendered document by authoring top-level body sections as H2 and nested sections consecutively below them; retain build-wide checks that every article has exactly one H1 and no skipped heading levels.

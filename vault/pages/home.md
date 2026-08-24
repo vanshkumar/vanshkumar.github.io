@@ -36,13 +36,14 @@ wordGarden:
     - ""
 date: 2026-05-27
 ---
-# Hi! I’m a husband, father, and generally curious person living in Pasadena.
+# Hi! I’m a husband, father, and professional dilettante.
 
 <!-- home-comic -->
 
-On this site you can find:
+Here you can find:
 - what I’m doing [now](/now)
 - what I’m [reading](/shelf)
 - more [about me](/about)
+- and words I've written, below
 
-Shoot me an email at [vanshkumar95@gmail.com](mailto:vanshkumar95@gmail.com) if you want to chat.
+Email me at [vanshkumar95@gmail.com](mailto:vanshkumar95@gmail.com) if you want to chat.

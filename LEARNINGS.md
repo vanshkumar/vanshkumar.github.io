@@ -204,6 +204,11 @@
 
 ## Patterns and Preferences
 
+**[2026-08-24] — Shelf heading rhythm**
+- Observation: The wide, left-aligned Shelf section headings read too large at a `2.65rem` maximum, while the title-to-books gap and the gap between Currently reading and Book reviews felt too tight.
+- Action: Keep Shelf section headings as Markdown H2s with a `2.25rem` maximum, `2rem` below each heading, and `4.5rem` between the two sections unless the user revises the rhythm again.
+- Confidence: high
+
 **[2026-08-24] — Markdown-first site authorship**
 - Observation: The user wants visitor-facing page structure, headings, ordering, and prose to be directly editable as Markdown whenever possible; keeping ordinary copy in opaque structured properties makes the site harder to author.
 - Action: Default authored page content to Markdown under `vault/pages/`; reserve typed frontmatter for data that genuinely powers rendering, and use visible Markdown placement markers when generated blocks must interrupt authored content.

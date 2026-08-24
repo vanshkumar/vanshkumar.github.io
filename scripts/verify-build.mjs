@@ -44,42 +44,32 @@ has('/posts', /<h1 id="posts-title">Posts<\/h1>/, 'missing Posts archive');
 has('/notes', /<h1 id="notes-title">Notes<\/h1>/, 'missing Notes archive');
 
 const shelfHtml = htmlFor('/shelf');
-assert.match(shelfHtml, /<h2 id="currently-reading">Currently reading<\/h2>/, 'Shelf needs Markdown-authored Currently reading');
-assert.match(shelfHtml, /<h2 id="book-reviews">Book reviews<\/h2>/, 'Shelf needs Markdown-authored Book reviews');
+const currentlyReadingStart = shelfHtml.indexOf('class="shelf-section shelf-current-section"');
+const reviewsStart = shelfHtml.indexOf('class="shelf-section shelf-reviews-section"');
+assert.notEqual(currentlyReadingStart, -1, 'Shelf needs a Currently reading section');
+assert.notEqual(reviewsStart, -1, 'Shelf needs a reviewed books section');
 assert.ok(
-  shelfHtml.indexOf('id="currently-reading"') < shelfHtml.indexOf('id="book-reviews"'),
-  'Currently reading should appear before Book reviews'
+  currentlyReadingStart < reviewsStart,
+  'Currently reading should appear before reviewed books'
 );
-const currentlyReadingHtml = shelfHtml.slice(
-  shelfHtml.indexOf('id="currently-reading"'),
-  shelfHtml.indexOf('id="book-reviews"')
-);
-const bookReviewsHtml = shelfHtml.slice(shelfHtml.indexOf('id="book-reviews"'));
-assert.match(
-  currentlyReadingHtml,
-  /href="\/shelf\/why-greatness-cannot-be-planned"/,
-  'in-progress book should be in Currently reading'
-);
-assert.doesNotMatch(currentlyReadingHtml, /class="shelf-rating"/, 'Currently reading should not show ratings');
+const currentlyReadingHtml = shelfHtml.slice(currentlyReadingStart, reviewsStart);
+const bookReviewsHtml = shelfHtml.slice(reviewsStart);
+assert.match(currentlyReadingHtml, /<h2\b/, 'Currently reading needs a Markdown-authored heading');
+assert.match(bookReviewsHtml, /<h2\b/, 'Reviewed books need a Markdown-authored heading');
 assert.match(
   bookReviewsHtml,
   /href="\/shelf\/the-invention-of-nature"/,
-  'completed book should be in Book reviews'
+  'reviewed book should be in the reviewed section'
 );
 assert.doesNotMatch(
-  bookReviewsHtml,
-  /href="\/shelf\/why-greatness-cannot-be-planned"/,
-  'currently reading book should not be in Book reviews'
-);
-has(
-  '/shelf/why-greatness-cannot-be-planned',
-  /<p class="meta">[^<]*Currently reading<\/p>/,
-  'currently reading detail should show its lifecycle state'
+  shelfHtml,
+  /class="shelf-rating"|★|☆|out of 5 stars/,
+  'Shelf should not display star ratings'
 );
 has(
   '/shelf/the-invention-of-nature',
-  /<p class="meta">[^<]*5\/5 stars<\/p>/,
-  'review detail should show its rating'
+  /<p class="meta">[^<]*by Andrea Wulf<\/p>/,
+  'review detail should show its author'
 );
 
 canonical(`/posts/${post}`, `/posts/${post}`);

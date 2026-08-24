@@ -19,8 +19,9 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
 - **shelf** → `vault/shelf/` → `/shelf/<slug>`
   - Common fields: `status` (`reading` or `reviewed`), `author`, `title?`, `description?`,
     `date?`, `lastmod?`, `coverImage?`, `aliases?[]`
-  - Reviewed books require `rating` (`0`–`5`); currently reading books omit it. Changing
-    `status` moves a book between the two Shelf sections without changing its file or URL.
+  - Ratings are intentionally unsupported: the reviewed section is a curated set of books
+    recommended through their Markdown reviews. Changing `status` moves a book between the
+    two Shelf sections without changing its file or URL.
 - **pages** → `vault/pages/` → static pages, archive copy, and shared site copy
   - Common fields: `title?` `description?` `date?` `lastmod?` `aliases?[]`
     `heroTitle?` `heroAccent?`
@@ -38,7 +39,7 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
     name, description, footer, content and writing labels, comic-reader controls,
     redirect messages, and RSS metadata.
   - Structured page-copy fields are validated in `src/content.config.ts`; text
-    templates use named placeholders such as `{title}`, `{date}`, or `{rating}`.
+    templates use named placeholders such as `{title}`, `{author}`, or `{date}`.
 
 Folders such as `scratch/`, `writing inbox/`, `_voice_inbox/`, `logs/`, `shelf/`, and `pages/`
 are not part of the root Terrain collection.

@@ -3,7 +3,6 @@ date: 2026-06-17
 lastmod: 2026-07-04
 status: reviewed
 author: Max S. Bennett
-rating: 5
 coverImage: /assets/shelf/a-brief-history-of-intelligence.jpg
 ---
 I learned **a lot** from this book. It covers a truly gigantic territory in evolutionary neuroscience, but is written extraordinarily clearly. It is one of my favorite nonfiction books. If you have any interest in evolution, neuroscience, or AI, I highly recommend this book.

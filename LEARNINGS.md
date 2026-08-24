@@ -8,8 +8,8 @@
 - Confidence: high
 
 **[2026-08-24] — Shelf lifecycle implementation**
-- Observation: A discriminated Shelf schema can require `rating` only for `status: reviewed` while rejecting it for `status: reading`; because the landing page’s two grids are wrapped in semantic sections, the `.shelf-section` wrapper itself must span the wide prose track.
-- Action: Move a book between Shelf sections by editing `status` and `rating` on the same `vault/shelf/` entry, keep `author` on every entry, and preserve the wide-track rule when changing Shelf section markup.
+- Observation: Shelf lifecycle is represented by `status: reading` or `status: reviewed`; because the landing page’s two grids are wrapped in semantic sections, the `.shelf-section` wrapper itself must span the wide prose track.
+- Action: Move a book between Shelf sections by editing `status` on the same `vault/shelf/` entry, keep `author` on every entry, write recommendations in the Markdown body, and preserve the wide-track rule when changing Shelf section markup.
 - Confidence: high
 
 **[2026-08-23] — Editorial background warmth study**
@@ -208,6 +208,11 @@
 - Confidence: high
 
 ## Patterns and Preferences
+
+**[2026-08-24] — Curated Shelf without ratings**
+- Observation: The user uses StoryGraph for comprehensive book tracking and ratings; the site Shelf is instead a curated set of books liked enough to review and recommend, making its previous all-5-star display redundant.
+- Action: Do not store or render Shelf ratings. Treat inclusion in the reviewed section as the endorsement, keep the recommendation directly in the entry’s Markdown body, and show the author instead of a rating on review detail pages.
+- Confidence: high
 
 **[2026-08-24] — Shelf heading rhythm**
 - Observation: The wide, left-aligned Shelf section headings read too large at a `2.65rem` maximum, while the title-to-books gap and the gap between Currently reading and Book reviews felt too tight.

@@ -92,8 +92,6 @@ const homeCopy = z.object({
 const shelfCopy = z.object({
   currentlyReadingDetailLabel: z.string(),
   bylineTemplate: z.string(),
-  ratingLabelTemplate: z.string(),
-  detailRatingTemplate: z.string(),
   coverAltTemplate: z.string()
 });
 
@@ -169,21 +167,15 @@ const shelfBook = z.object({
   date: z.coerce.date().optional(),
   lastmod: z.coerce.date().optional(),
   coverImage: z.string().startsWith('/assets/').optional(),
-  aliases: z.array(z.string()).optional()
+  aliases: z.array(z.string()).optional(),
+  rating: z.never().optional()
 });
 
 const shelf = defineCollection({
   type: 'content',
-  schema: z.discriminatedUnion('status', [
-    shelfBook.extend({
-      status: z.literal('reading'),
-      rating: z.never().optional()
-    }),
-    shelfBook.extend({
-      status: z.literal('reviewed'),
-      rating: z.number().int().min(0).max(5)
-    })
-  ])
+  schema: shelfBook.extend({
+    status: z.enum(['reading', 'reviewed'])
+  })
 });
 
 const pages = defineCollection({

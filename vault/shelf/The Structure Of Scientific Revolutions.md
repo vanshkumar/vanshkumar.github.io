@@ -3,7 +3,6 @@ date: 2026-06-25
 lastmod: 2026-08-13
 status: reviewed
 author: Thomas S. Kuhn
-rating: 5
 coverImage: /assets/shelf/the-structure-of-scientific-revolutions.jpg
 ---
 Exquisite book. A very different view of how the process of science occurs than the textbook-style edited narrative you learn in school. Almost guaranteed to make you rethink what you know and see science for the sociological process it is.

@@ -23,8 +23,8 @@ if (!shelfPage?.data.shelf) {
   throw new Error('Missing Shelf copy in vault/pages/shelf.md');
 }
 const shelfMeta = entry.data.status === 'reviewed'
-  ? formatCopy(shelfPage.data.shelf.detailRatingTemplate, {
-      rating: entry.data.rating
+  ? formatCopy(shelfPage.data.shelf.bylineTemplate, {
+      author: entry.data.author
     })
   : shelfPage.data.shelf.currentlyReadingDetailLabel;
 ---

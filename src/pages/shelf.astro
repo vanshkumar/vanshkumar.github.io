@@ -34,7 +34,6 @@ const books = (await getCollection('shelf')).sort((a, b) => {
 const currentlyReading = books.filter((book) => book.data.status === 'reading');
 const reviews = books.filter((book) => book.data.status === 'reviewed');
 
-const starsForRating = (rating) => '★'.repeat(rating) + '☆'.repeat(5 - rating);
 const bookTitle = (book) => book.data.title ?? titleFromSlug(book.slug);
 ---
 
@@ -90,14 +89,12 @@ const bookTitle = (book) => book.data.title ?? titleFromSlug(book.slug);
       <div class="shelf-grid">
         {reviews.map((review) => {
           const displayTitle = bookTitle(review);
-          const ratingLabel = formatCopy(shelfCopy.ratingLabelTemplate, {
-            rating: review.data.rating
-          });
+          const byline = formatCopy(shelfCopy.bylineTemplate, { author: review.data.author });
           return (
             <a
               class="shelf-book"
               href={`/shelf/${review.slug}`}
-              aria-label={`${displayTitle}, ${ratingLabel}`}
+              aria-label={`${displayTitle}, ${byline}`}
             >
               <span
                 class:list={[
@@ -115,9 +112,6 @@ const bookTitle = (book) => book.data.title ?? titleFromSlug(book.slug);
                 ) : (
                   <span class="shelf-cover-title">{displayTitle}</span>
                 )}
-              </span>
-              <span class="shelf-rating" aria-label={ratingLabel}>
-                <span aria-hidden="true">{starsForRating(review.data.rating)}</span>
               </span>
             </a>
           );

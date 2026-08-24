@@ -3,7 +3,6 @@ date: 2026-08-14
 lastmod: 2026-08-14
 status: reviewed
 author: Andrea Wulf
-rating: 5
 coverImage: /assets/shelf/the-invention-of-nature.jpg
 ---
 Warning: reading this book will make you want to quit your job and travel to South America to become a scientist-explorer. It may also make Alexander von Humboldt your favorite scientist.

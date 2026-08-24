@@ -44,6 +44,6 @@ Here you can find:
 - what I’m doing [now](/now)
 - what I’m [reading](/shelf)
 - more [about me](/about)
-- and words I've written, below
+- words I've written, below
 
-Email me at [vanshkumar95@gmail.com](mailto:vanshkumar95@gmail.com) if you want to chat.
+Email me at [vanshkumar95@gmail.com](mailto:vanshkumar95@gmail.com) to chat.

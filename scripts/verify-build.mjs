@@ -61,8 +61,11 @@ assert.match(
   /class="shelf-review-link" href="\/shelf\/the-invention-of-nature"[^>]*>\s*Review/,
   'a recommendation with Markdown should link to its Review'
 );
-assert.match(recommendationsHtml, /class="shelf-book-title">The Invention Of Nature<\/span>/, 'recommendations should show titles');
-assert.match(recommendationsHtml, /class="shelf-book-author">by Andrea Wulf<\/span>/, 'recommendations should show authors');
+assert.doesNotMatch(
+  recommendationsHtml,
+  /class="shelf-book-(?:title|author)"/,
+  'recommendation cards should not repeat titles or authors beneath their covers'
+);
 assert.doesNotMatch(
   shelfHtml,
   /class="shelf-rating"|★|☆|out of 5 stars/,

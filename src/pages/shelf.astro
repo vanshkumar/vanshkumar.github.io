@@ -90,7 +90,6 @@ const bookTitle = (book) => book.data.title ?? titleFromSlug(book.slug);
       <div class="shelf-grid">
         {recommendations.map((book) => {
           const displayTitle = bookTitle(book);
-          const byline = formatCopy(shelfCopy.bylineTemplate, { author: book.data.author });
           const hasReview = hasShelfReview(book);
           return (
             <div class="shelf-book">
@@ -111,19 +110,15 @@ const bookTitle = (book) => book.data.title ?? titleFromSlug(book.slug);
                   <span class="shelf-cover-title">{displayTitle}</span>
                 )}
               </span>
-              <span class="shelf-book-copy">
-                <span class="shelf-book-title">{displayTitle}</span>
-                <span class="shelf-book-author">{byline}</span>
-                {hasReview ? (
-                  <a
-                    class="shelf-review-link"
-                    href={`/shelf/${book.slug}`}
-                    aria-label={`${shelfCopy.reviewLinkLabel}: ${displayTitle}`}
-                  >
-                    {shelfCopy.reviewLinkLabel} <span aria-hidden="true">→</span>
-                  </a>
-                ) : null}
-              </span>
+              {hasReview ? (
+                <a
+                  class="shelf-review-link"
+                  href={`/shelf/${book.slug}`}
+                  aria-label={`${shelfCopy.reviewLinkLabel}: ${displayTitle}`}
+                >
+                  {shelfCopy.reviewLinkLabel} <span aria-hidden="true">→</span>
+                </a>
+              ) : null}
             </div>
           );
         })}

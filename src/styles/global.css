@@ -1736,14 +1736,6 @@ h3,
   gap: 0.25rem;
 }
 
-.shelf-book-copy {
-  display: flex;
-  min-width: 0;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.18rem;
-}
-
 .shelf-book-title {
   font-family: var(--serif);
   font-size: 1rem;
@@ -1757,12 +1749,7 @@ h3,
   line-height: 1.4;
 }
 
-.shelf-grid .shelf-book-title {
-  font-size: 0.88rem;
-}
-
 .prose .shelf-review-link {
-  margin-top: 0.18rem;
   font-family: var(--sans);
   font-size: 0.7rem;
   line-height: 1.35;

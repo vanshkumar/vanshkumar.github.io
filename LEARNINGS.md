@@ -215,8 +215,8 @@
 - Confidence: high
 
 **[2026-08-24] — Optional reviews for Shelf recommendations**
-- Observation: A book can belong under “Books I recommend” without a written review; recommendation membership and review availability are separate facts, and the user wants the optional writing labeled “Review,” not “Notes.”
-- Action: Use `status: recommended` for section membership, infer review availability from a non-empty Markdown body, show cover/title/author for every recommendation, and add a `Review` link and detail route only when that body exists. Do not add a `hasReview` frontmatter flag.
+- Observation: A book can belong under “Books I recommend” without a written review; recommendation membership and review availability are separate facts, the cover already communicates title and author, and the user wants the optional writing labeled “Review,” not “Notes.”
+- Action: Use `status: recommended` for section membership, infer review availability from a non-empty Markdown body, keep recommendation cards cover-only, and add a `Review` link and detail route only when that body exists. Do not add a `hasReview` frontmatter flag.
 - Confidence: high
 
 **[2026-08-24] — Shelf heading rhythm**

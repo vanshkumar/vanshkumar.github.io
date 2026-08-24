@@ -3,14 +3,17 @@ import { getCollection, getEntry } from 'astro:content';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import { getBacklinksForEntry } from '../../lib/wiki';
 import { titleFromSlug } from '../../lib/content';
+import { hasShelfReview } from '../../lib/shelf.mjs';
 import { formatCopy } from '../../lib/site-copy';
 
 export async function getStaticPaths() {
   const entries = await getCollection('shelf');
-  return entries.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry }
-  }));
+  return entries
+    .filter((entry) => entry.data.status === 'reading' || hasShelfReview(entry))
+    .map((entry) => ({
+      params: { slug: entry.slug },
+      props: { entry }
+    }));
 }
 
 const { entry } = Astro.props;
@@ -22,7 +25,7 @@ const shelfPage = await getEntry('pages', 'shelf');
 if (!shelfPage?.data.shelf) {
   throw new Error('Missing Shelf copy in vault/pages/shelf.md');
 }
-const shelfMeta = entry.data.status === 'reviewed'
+const shelfMeta = entry.data.status === 'recommended'
   ? formatCopy(shelfPage.data.shelf.bylineTemplate, {
       author: entry.data.author
     })

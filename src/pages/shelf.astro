@@ -2,6 +2,7 @@
 import { getCollection, getEntry } from 'astro:content';
 import ContentLayout from '../layouts/ContentLayout.astro';
 import { titleFromSlug } from '../lib/content';
+import { hasShelfReview } from '../lib/shelf.mjs';
 import { formatCopy } from '../lib/site-copy';
 
 const pageEntry = await getEntry('pages', 'shelf');
@@ -9,7 +10,7 @@ if (!pageEntry?.data.shelf) {
   throw new Error('Missing Shelf copy in vault/pages/shelf.md');
 }
 const currentMarker = '<!-- shelf-currently-reading -->';
-const reviewsMarker = '<!-- shelf-book-reviews -->';
+const recommendationsMarker = '<!-- shelf-recommendations -->';
 const renderedShelf = pageEntry.rendered?.html;
 if (typeof renderedShelf !== 'string') {
   throw new Error('Missing rendered content for pages/shelf');
@@ -19,11 +20,11 @@ if (currentSections.length !== 2) {
   throw new Error('pages/shelf must contain exactly one <!-- shelf-currently-reading --> placement marker');
 }
 const [beforeCurrent, afterCurrentMarker] = currentSections;
-const reviewSections = afterCurrentMarker.split(reviewsMarker);
-if (reviewSections.length !== 2) {
-  throw new Error('pages/shelf must contain exactly one <!-- shelf-book-reviews --> placement marker');
+const recommendationSections = afterCurrentMarker.split(recommendationsMarker);
+if (recommendationSections.length !== 2) {
+  throw new Error('pages/shelf must contain exactly one <!-- shelf-recommendations --> placement marker');
 }
-const [currentCopy, reviewsCopy] = reviewSections;
+const [currentCopy, recommendationsCopy] = recommendationSections;
 const title = pageEntry.data.title ?? titleFromSlug(pageEntry.slug);
 const shelfCopy = pageEntry.data.shelf;
 const books = (await getCollection('shelf')).sort((a, b) => {
@@ -32,7 +33,7 @@ const books = (await getCollection('shelf')).sort((a, b) => {
   return bDate.getTime() - aDate.getTime();
 });
 const currentlyReading = books.filter((book) => book.data.status === 'reading');
-const reviews = books.filter((book) => book.data.status === 'reviewed');
+const recommendations = books.filter((book) => book.data.status === 'recommended');
 
 const bookTitle = (book) => book.data.title ?? titleFromSlug(book.slug);
 ---
@@ -83,28 +84,25 @@ const bookTitle = (book) => book.data.title ?? titleFromSlug(book.slug);
     ) : null}
   </section>
 
-  <section class="shelf-section shelf-reviews-section">
-    <div class="shelf-section-copy" set:html={reviewsCopy} />
-    {reviews.length ? (
+  <section class="shelf-section shelf-recommendations-section">
+    <div class="shelf-section-copy" set:html={recommendationsCopy} />
+    {recommendations.length ? (
       <div class="shelf-grid">
-        {reviews.map((review) => {
-          const displayTitle = bookTitle(review);
-          const byline = formatCopy(shelfCopy.bylineTemplate, { author: review.data.author });
+        {recommendations.map((book) => {
+          const displayTitle = bookTitle(book);
+          const byline = formatCopy(shelfCopy.bylineTemplate, { author: book.data.author });
+          const hasReview = hasShelfReview(book);
           return (
-            <a
-              class="shelf-book"
-              href={`/shelf/${review.slug}`}
-              aria-label={`${displayTitle}, ${byline}`}
-            >
+            <div class="shelf-book">
               <span
                 class:list={[
                   'shelf-cover',
-                  !review.data.coverImage && 'shelf-cover-placeholder'
+                  !book.data.coverImage && 'shelf-cover-placeholder'
                 ]}
               >
-                {review.data.coverImage ? (
+                {book.data.coverImage ? (
                   <img
-                    src={review.data.coverImage}
+                    src={book.data.coverImage}
                     alt={formatCopy(shelfCopy.coverAltTemplate, { title: displayTitle })}
                     loading="lazy"
                     decoding="async"
@@ -113,7 +111,20 @@ const bookTitle = (book) => book.data.title ?? titleFromSlug(book.slug);
                   <span class="shelf-cover-title">{displayTitle}</span>
                 )}
               </span>
-            </a>
+              <span class="shelf-book-copy">
+                <span class="shelf-book-title">{displayTitle}</span>
+                <span class="shelf-book-author">{byline}</span>
+                {hasReview ? (
+                  <a
+                    class="shelf-review-link"
+                    href={`/shelf/${book.slug}`}
+                    aria-label={`${shelfCopy.reviewLinkLabel}: ${displayTitle}`}
+                  >
+                    {shelfCopy.reviewLinkLabel} <span aria-hidden="true">→</span>
+                  </a>
+                ) : null}
+              </span>
+            </div>
           );
         })}
       </div>

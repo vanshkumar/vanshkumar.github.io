@@ -8,8 +8,8 @@
 - Confidence: high
 
 **[2026-08-24] — Shelf lifecycle implementation**
-- Observation: Shelf lifecycle is represented by `status: reading` or `status: reviewed`; because the landing page’s two grids are wrapped in semantic sections, the `.shelf-section` wrapper itself must span the wide prose track.
-- Action: Move a book between Shelf sections by editing `status` on the same `vault/shelf/` entry, keep `author` on every entry, write recommendations in the Markdown body, and preserve the wide-track rule when changing Shelf section markup.
+- Observation: Shelf lifecycle is represented by `status: reading` or `status: recommended`; because the landing page’s two grids are wrapped in semantic sections, the `.shelf-section` wrapper itself must span the wide prose track.
+- Action: Move a book between Shelf sections by editing `status` on the same `vault/shelf/` entry, keep `author` on every entry, and preserve the wide-track rule when changing Shelf section markup.
 - Confidence: high
 
 **[2026-08-23] — Editorial background warmth study**
@@ -210,8 +210,13 @@
 ## Patterns and Preferences
 
 **[2026-08-24] — Curated Shelf without ratings**
-- Observation: The user uses StoryGraph for comprehensive book tracking and ratings; the site Shelf is instead a curated set of books liked enough to review and recommend, making its previous all-5-star display redundant.
-- Action: Do not store or render Shelf ratings. Treat inclusion in the reviewed section as the endorsement, keep the recommendation directly in the entry’s Markdown body, and show the author instead of a rating on review detail pages.
+- Observation: The user uses StoryGraph for comprehensive book tracking and ratings; the site Shelf is instead a curated set of recommended books, making its previous all-5-star display redundant.
+- Action: Do not store or render Shelf ratings. Treat inclusion in the recommended section as the endorsement and show the author instead of a rating on review detail pages.
+- Confidence: high
+
+**[2026-08-24] — Optional reviews for Shelf recommendations**
+- Observation: A book can belong under “Books I recommend” without a written review; recommendation membership and review availability are separate facts, and the user wants the optional writing labeled “Review,” not “Notes.”
+- Action: Use `status: recommended` for section membership, infer review availability from a non-empty Markdown body, show cover/title/author for every recommendation, and add a `Review` link and detail route only when that body exists. Do not add a `hasReview` frontmatter flag.
 - Confidence: high
 
 **[2026-08-24] — Shelf heading rhythm**

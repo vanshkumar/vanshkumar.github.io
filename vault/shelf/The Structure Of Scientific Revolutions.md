@@ -1,7 +1,7 @@
 ---
 date: 2026-06-25
 lastmod: 2026-08-13
-status: reviewed
+status: recommended
 author: Thomas S. Kuhn
 coverImage: /assets/shelf/the-structure-of-scientific-revolutions.jpg
 ---

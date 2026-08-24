@@ -4,6 +4,7 @@ lastmod: 2026-08-24
 shelf:
   currentlyReadingDetailLabel: Currently reading
   bylineTemplate: by {author}
+  reviewLinkLabel: Review
   coverAltTemplate: "{title} cover"
 date: 2026-08-23
 ---
@@ -12,6 +13,6 @@ date: 2026-08-23
 
 ## Currently reading
 
-<!-- shelf-book-reviews -->
+<!-- shelf-recommendations -->
 
-## Books I liked enough to review & recommend
+## Books I recommend

@@ -92,6 +92,7 @@ const homeCopy = z.object({
 const shelfCopy = z.object({
   currentlyReadingDetailLabel: z.string(),
   bylineTemplate: z.string(),
+  reviewLinkLabel: z.string(),
   coverAltTemplate: z.string()
 });
 
@@ -174,7 +175,7 @@ const shelfBook = z.object({
 const shelf = defineCollection({
   type: 'content',
   schema: shelfBook.extend({
-    status: z.enum(['reading', 'reviewed'])
+    status: z.enum(['reading', 'recommended'])
   })
 });
 

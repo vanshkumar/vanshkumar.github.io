@@ -45,22 +45,24 @@ has('/notes', /<h1 id="notes-title">Notes<\/h1>/, 'missing Notes archive');
 
 const shelfHtml = htmlFor('/shelf');
 const currentlyReadingStart = shelfHtml.indexOf('class="shelf-section shelf-current-section"');
-const reviewsStart = shelfHtml.indexOf('class="shelf-section shelf-reviews-section"');
+const recommendationsStart = shelfHtml.indexOf('class="shelf-section shelf-recommendations-section"');
 assert.notEqual(currentlyReadingStart, -1, 'Shelf needs a Currently reading section');
-assert.notEqual(reviewsStart, -1, 'Shelf needs a reviewed books section');
+assert.notEqual(recommendationsStart, -1, 'Shelf needs a recommended books section');
 assert.ok(
-  currentlyReadingStart < reviewsStart,
-  'Currently reading should appear before reviewed books'
+  currentlyReadingStart < recommendationsStart,
+  'Currently reading should appear before recommended books'
 );
-const currentlyReadingHtml = shelfHtml.slice(currentlyReadingStart, reviewsStart);
-const bookReviewsHtml = shelfHtml.slice(reviewsStart);
+const currentlyReadingHtml = shelfHtml.slice(currentlyReadingStart, recommendationsStart);
+const recommendationsHtml = shelfHtml.slice(recommendationsStart);
 assert.match(currentlyReadingHtml, /<h2\b/, 'Currently reading needs a Markdown-authored heading');
-assert.match(bookReviewsHtml, /<h2\b/, 'Reviewed books need a Markdown-authored heading');
+assert.match(recommendationsHtml, /<h2\b/, 'Recommended books need a Markdown-authored heading');
 assert.match(
-  bookReviewsHtml,
-  /href="\/shelf\/the-invention-of-nature"/,
-  'reviewed book should be in the reviewed section'
+  recommendationsHtml,
+  /class="shelf-review-link" href="\/shelf\/the-invention-of-nature"[^>]*>\s*Review/,
+  'a recommendation with Markdown should link to its Review'
 );
+assert.match(recommendationsHtml, /class="shelf-book-title">The Invention Of Nature<\/span>/, 'recommendations should show titles');
+assert.match(recommendationsHtml, /class="shelf-book-author">by Andrea Wulf<\/span>/, 'recommendations should show authors');
 assert.doesNotMatch(
   shelfHtml,
   /class="shelf-rating"|★|☆|out of 5 stars/,

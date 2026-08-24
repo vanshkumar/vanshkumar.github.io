@@ -1,7 +1,7 @@
 ---
 date: 2026-08-14
 lastmod: 2026-08-14
-status: reviewed
+status: recommended
 author: Andrea Wulf
 coverImage: /assets/shelf/the-invention-of-nature.jpg
 ---

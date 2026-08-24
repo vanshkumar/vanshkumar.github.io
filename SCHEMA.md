@@ -17,11 +17,11 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
     `aliases?[]`
   - A log parent must resolve to a Terrain entry classified as a Post.
 - **shelf** → `vault/shelf/` → `/shelf/<slug>`
-  - Common fields: `status` (`reading` or `reviewed`), `author`, `title?`, `description?`,
+  - Common fields: `status` (`reading` or `recommended`), `author`, `title?`, `description?`,
     `date?`, `lastmod?`, `coverImage?`, `aliases?[]`
-  - Ratings are intentionally unsupported: the reviewed section is a curated set of books
-    recommended through their Markdown reviews. Changing `status` moves a book between the
-    two Shelf sections without changing its file or URL.
+  - Ratings are intentionally unsupported. `status: recommended` adds a book to the curated
+    recommendation grid; a non-empty Markdown body independently adds its `Review` link and
+    detail route. Changing `status` never changes the Markdown file or its potential URL.
 - **pages** → `vault/pages/` → static pages, archive copy, and shared site copy
   - Common fields: `title?` `description?` `date?` `lastmod?` `aliases?[]`
     `heroTitle?` `heroAccent?`
@@ -32,7 +32,7 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
   - `posts.md`, `notes.md`, and `shelf.md` own archive titles and optional archive
     introductions. Shelf section headings and surrounding prose live directly in the
     `shelf.md` Markdown body around `<!-- shelf-currently-reading -->` and
-    `<!-- shelf-book-reviews -->`; its `shelf` frontmatter is limited to generated-copy
+    `<!-- shelf-recommendations -->`; its `shelf` frontmatter is limited to generated-copy
     templates that depend on book data.
   - `terrain.md` owns the legacy archive hero and section labels through `terrain`.
   - `site.md` owns shared visitor-facing copy through `site`, including the site

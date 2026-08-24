@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-08-24] — Vault backup deployment drift**
+- Observation: An automatic vault backup can land between related site commits and overwrite directly authored page Markdown; here it changed the Shelf heading from `Book reviews` to `Reviews`, so the following CSS-only commit inherited a source/build verification mismatch.
+- Action: When a vault backup lands during a multi-commit site edit, diff its changes to touched `vault/pages/` files before the next push and rerun the full build from the new HEAD.
+- Confidence: high
+
 **[2026-08-24] — Shelf lifecycle implementation**
 - Observation: A discriminated Shelf schema can require `rating` only for `status: reviewed` while rejecting it for `status: reading`; because the landing page’s two grids are wrapped in semantic sections, the `.shelf-section` wrapper itself must span the wide prose track.
 - Action: Move a book between Shelf sections by editing `status` and `rating` on the same `vault/shelf/` entry, keep `author` on every entry, and preserve the wide-track rule when changing Shelf section markup.

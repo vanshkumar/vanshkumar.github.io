@@ -2,6 +2,7 @@
 date: 2026-06-23
 lastmod: 2026-08-24
 status: reviewed
+author: Kenneth O. Stanley and Joel Lehman
 coverImage: /assets/shelf/why-greatness-cannot-be-planned.jpg
 ---
 REVIEW IN PROGRESS (https://readwise.io/bookreview/50377846)

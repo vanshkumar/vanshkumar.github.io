@@ -1,16 +1,12 @@
 ---
 title: About
-lastmod: 2026-08-23
+lastmod: 2026-08-24
 date: 2026-05-27
 ---
 ## This site
-is a living workspace for Vansh Kumar's experiments and writing. Inspired heavily by the concept of [digital gardens](https://maggieappleton.com/garden-history), it evolves as the graph fills in.
+is a living workspace for my projects and writing.
 
-My goal with my writing is to **learn what I think**.
-
-Everything I publish lives in one [terrain](/terrain): an underlying set of notes that may be unfinished, overlap categories, or have no category at all. Projects, essays, questions, and hunches are useful views across that terrain rather than different kinds of objects.
-
-Everything on this site should be thought of as a **perpetual draft**, with all mistakes mine.
+My goal with my writing is to **learn what I think**. Everything on this site should be thought of as a **perpetual draft**, with all mistakes mine.
 
 ## I
 am Vansh Kumar and the one who sculpts the terrain of this site. I live in Pasadena, CA.
@@ -22,7 +18,7 @@ I am a husband, father, and generally curious person.
 I spend my time pursuing whatever interests me. I was a tech lead & manager at Alphabet in a past life.
 
 Some of my interests:
-- Neuroscience
+- Developmental neuroscience
 - Education/culture
 - Watching a lot of tennis
 - Playing all racket sports – tennis, paddle/pop tennis, ping pong, you name it

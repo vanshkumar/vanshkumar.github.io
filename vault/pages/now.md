@@ -3,22 +3,19 @@ title: Now
 lastmod: 2026-08-25
 date: 2026-05-27
 ---
-This page describes how I approach living life, with my ever-evolving self as audience.
+Dear friend,
 
-## Orienting lens
+It's been [a full revolution around the sun](https://sive.rs/now2) since I've seen you! I sincerely hope you have been well.
 
-How I choose what to work on is a combination of deathbed regret-minimization & [[The Clock Of The Long Now|a Long Now style view]]. As a result, I mostly try to spend my time on things that will endure for decades & ideally well beyond my life. These items so far are:
-- My marriage
-- My kids & their education (plan to start a microschool for my + friends kids)
-- My brain – reading, writing, thinking, externalized via this site
-- My friendships
+I'm writing to you today from Pasadena, California. My son Rami is 15 months old and it's been an absolute joy to be able to spend the majority of my time with him and my wife, Kathy. We are very grateful to have the flexibility to slow down our careers as our family grows.
 
-I have found it useful to concretely instantiate a Long Now view as the universe/Nature/God/Dao, as there is a natural merging between extreme long-term thinking & infinite entities. A question I like to play with is – what does the Dao want me to do?
+Rami is walking as of a couple months ago and starting to say some words as well. He remains obsessed with animals, especially dogs. Nowadays, one of Kathy or me takes him to storytime at the library & the park multiple times a week. We have met multiple families in the area with babies, and it's fun to see how different all the kids are & to see Rami interact with them. He's a wonderful, hilarious, sweet, and jolly kid. We are very lucky.
 
-## My quest(ion)
+As for myself, I am continuing to figure life out, something that I'm slowly coming to understand will never be over and indeed may be what it means to live an interesting life. Since quitting my job in late 2024 I have embraced being a professional dilettante. I pursue whatever interests me. I have noticed that the thread running through all my interests is the question of **how a mind develops**, which I am thinking about through the lenses of neuroscience, cognitive psychology, education, culture, child development, and philosophy. I hope to make headway on this question over [[The Clock Of The Long Now|the long-term]], especially as I plan to start a microschool for my + my friends' kids down the road. Most recently, I have been [reading](/shelf), writing on this site, asking myself [what the Dao wants me to do](https://sashachapin.substack.com/p/should-you-be-in-charge-of-your-life), and mentoring a few local kids in the area.
 
-I pursue my interests. I have noticed that the thread running through all my interests is the question:
+Not having a clear career and taking care of an ever-evolving little human keeps me on my toes, but it also means I'm always dancing.
 
-**How does a mind develop?**
+Please [reply to](mailto:vanshkumar95@gmail.com) this letter if you'd like, I'd love to hear from you.
 
-I have been approaching this from a variety of angles, including developmental neuroscience, cognitive psychology, education, culture, child development, and philosophy.
+Yours,
+Vansh

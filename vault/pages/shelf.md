@@ -11,7 +11,7 @@ date: 2026-08-23
 <!-- shelf-currently-reading -->
 
 ## Currently reading
-I like to read together with friends & discuss. [Email me](mailto:vanshkumar95@gmail.com) if you want to read a book like this.
+I like to read together with friends & discuss. [Email me](mailto:vanshkumar95@gmail.com) if you want to read like this.
 
 <!-- shelf-recommendations -->
 

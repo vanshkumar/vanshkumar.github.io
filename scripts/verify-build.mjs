@@ -3,9 +3,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const dist = path.join(process.cwd(), 'dist');
-const htmlFor = (route) => {
+const fileForRoute = (route) => {
   const relative = route === '/' ? 'index.html' : `${route.replace(/^\//, '')}/index.html`;
-  const file = path.join(dist, relative);
+  return path.join(dist, relative);
+};
+const htmlFor = (route) => {
+  const file = fileForRoute(route);
   assert.ok(fs.existsSync(file), `Missing built route: ${route}`);
   return fs.readFileSync(file, 'utf8');
 };
@@ -67,15 +70,26 @@ assertAlphabeticalShelfOrder(currentlyReadingHtml, 'Currently reading');
 assertAlphabeticalShelfOrder(recommendationsHtml, 'Recommended');
 assert.match(currentlyReadingHtml, /<h2\b/, 'Currently reading needs a Markdown-authored heading');
 assert.match(recommendationsHtml, /<h2\b/, 'Recommended books need a Markdown-authored heading');
+assert.match(currentlyReadingHtml, /class="shelf-grid"/, 'Currently reading should use the shared Shelf grid');
+assert.doesNotMatch(
+  currentlyReadingHtml,
+  /<a\b[^>]*>\s*<span\b[^>]*class="[^"]*\bshelf-cover\b/,
+  'Currently reading covers should not be links'
+);
+assert.equal(
+  fs.existsSync(fileForRoute('/shelf/anna-karenina')),
+  false,
+  'Currently reading books without reviews should not get empty detail routes'
+);
 assert.match(
   recommendationsHtml,
   /class="shelf-review-link" href="\/shelf\/the-invention-of-nature"[^>]*>\s*Review/,
   'a recommendation with Markdown should link to its Review'
 );
 assert.doesNotMatch(
-  recommendationsHtml,
+  shelfHtml,
   /class="shelf-book-(?:title|author)"/,
-  'recommendation cards should not repeat titles or authors beneath their covers'
+  'Shelf cards should not repeat titles or authors beneath their covers'
 );
 assert.doesNotMatch(
   shelfHtml,

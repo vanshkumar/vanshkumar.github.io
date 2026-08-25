@@ -449,18 +449,6 @@ h3 {
   overflow-wrap: anywhere;
 }
 
-.shelf-current-book:hover .shelf-cover,
-.shelf-current-book:focus-visible .shelf-cover {
-  border-color: #d2c6ad;
-  box-shadow: 0 0.6rem 1.4rem rgba(38, 31, 20, 0.14);
-  transform: translateY(-0.125rem);
-}
-
-.shelf-current-book:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 0.35rem;
-}
-
 .content-updated {
   margin-top: 1.5rem;
   color: #a5a1a1;
@@ -1712,46 +1700,6 @@ h3,
   font-size: clamp(1.8rem, 4vw, 2.25rem);
   line-height: 1.08;
   text-align: left;
-}
-
-.shelf-current-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(13rem, 18rem));
-  gap: 1.25rem;
-  align-items: start;
-}
-
-.prose .shelf-current-book {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  color: var(--text);
-  text-decoration: none;
-}
-
-.shelf-current-book .shelf-cover {
-  flex: 0 0 5.2rem;
-  width: 5.2rem;
-}
-
-.shelf-current-copy {
-  display: flex;
-  min-width: 0;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.shelf-book-title {
-  font-family: var(--serif);
-  font-size: 1rem;
-  line-height: 1.25;
-}
-
-.shelf-book-author {
-  color: var(--muted);
-  font-family: var(--sans);
-  font-size: 0.68rem;
-  line-height: 1.4;
 }
 
 .prose .shelf-review-link {

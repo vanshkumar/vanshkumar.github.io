@@ -2,7 +2,6 @@
 title: Shelf
 lastmod: 2026-08-24
 shelf:
-  currentlyReadingDetailLabel: Currently reading
   bylineTemplate: by {author}
   reviewLinkLabel: Review
   coverAltTemplate: "{title} cover"

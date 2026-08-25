@@ -90,7 +90,6 @@ const homeCopy = z.object({
 });
 
 const shelfCopy = z.object({
-  currentlyReadingDetailLabel: z.string(),
   bylineTemplate: z.string(),
   reviewLinkLabel: z.string(),
   coverAltTemplate: z.string()

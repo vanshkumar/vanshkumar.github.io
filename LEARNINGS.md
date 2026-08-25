@@ -234,9 +234,9 @@
 - Action: Do not store or render Shelf ratings. Treat inclusion in the recommended section as the endorsement and show the author instead of a rating on review detail pages.
 - Confidence: high
 
-**[2026-08-24] — Optional reviews for Shelf recommendations**
-- Observation: A book can belong under “Books I recommend” without a written review; recommendation membership and review availability are separate facts, the cover already communicates title and author, and the user wants the optional writing labeled “Review,” not “Notes.”
-- Action: Use `status: recommended` for section membership, infer review availability from a non-empty Markdown body, keep recommendation cards cover-only, and add a `Review` link and detail route only when that body exists. Do not add a `hasReview` frontmatter flag.
+**[2026-08-24] — Shelf covers and optional reviews**
+- Observation: Covers in both Shelf sections should be non-clickable, cover-only cards; section membership and review availability are separate facts, and the user wants optional writing labeled “Review,” not “Notes.”
+- Action: Infer review availability from a non-empty Markdown body, generate a detail route only for books with one, and expose it through a separate `Review` link beneath the cover. Do not wrap covers in links, repeat title/author text below them, or add a `hasReview` frontmatter flag.
 - Confidence: high
 
 **[2026-08-24] — Shelf heading rhythm**

@@ -9,7 +9,7 @@ import { formatCopy } from '../../lib/site-copy';
 export async function getStaticPaths() {
   const entries = await getCollection('shelf');
   return entries
-    .filter((entry) => entry.data.status === 'reading' || hasShelfReview(entry))
+    .filter((entry) => hasShelfReview(entry))
     .map((entry) => ({
       params: { slug: entry.slug },
       props: { entry }
@@ -25,11 +25,9 @@ const shelfPage = await getEntry('pages', 'shelf');
 if (!shelfPage?.data.shelf) {
   throw new Error('Missing Shelf copy in vault/pages/shelf.md');
 }
-const shelfMeta = entry.data.status === 'recommended'
-  ? formatCopy(shelfPage.data.shelf.bylineTemplate, {
-      author: entry.data.author
-    })
-  : shelfPage.data.shelf.currentlyReadingDetailLabel;
+const shelfMeta = formatCopy(shelfPage.data.shelf.bylineTemplate, {
+  author: entry.data.author
+});
 ---
 
 <ContentLayout

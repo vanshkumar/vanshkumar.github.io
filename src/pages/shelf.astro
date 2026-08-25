@@ -45,16 +45,12 @@ const recommendations = books.filter((book) => book.data.status === 'recommended
   <section class="shelf-section shelf-current-section">
     <div class="shelf-section-copy" set:html={currentCopy} />
     {currentlyReading.length ? (
-      <div class="shelf-current-grid">
+      <div class="shelf-grid">
         {currentlyReading.map((book) => {
           const displayTitle = bookTitle(book);
-          const byline = formatCopy(shelfCopy.bylineTemplate, { author: book.data.author });
+          const hasReview = hasShelfReview(book);
           return (
-            <a
-              class="shelf-current-book"
-              href={`/shelf/${book.slug}`}
-              aria-label={`${displayTitle}, ${byline}, ${shelfCopy.currentlyReadingDetailLabel}`}
-            >
+            <div class="shelf-book">
               <span
                 class:list={[
                   'shelf-cover',
@@ -72,11 +68,16 @@ const recommendations = books.filter((book) => book.data.status === 'recommended
                   <span class="shelf-cover-title">{displayTitle}</span>
                 )}
               </span>
-              <span class="shelf-current-copy">
-                <span class="shelf-book-title">{displayTitle}</span>
-                <span class="shelf-book-author">{byline}</span>
-              </span>
-            </a>
+              {hasReview ? (
+                <a
+                  class="shelf-review-link"
+                  href={`/shelf/${book.slug}`}
+                  aria-label={`${shelfCopy.reviewLinkLabel}: ${displayTitle}`}
+                >
+                  {shelfCopy.reviewLinkLabel} <span aria-hidden="true">→</span>
+                </a>
+              ) : null}
+            </div>
           );
         })}
       </div>

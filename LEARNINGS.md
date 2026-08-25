@@ -214,6 +214,11 @@
 
 ## Patterns and Preferences
 
+**[2026-08-24] — Alphabetical Shelf ordering**
+- Observation: The user prefers books within both Shelf sections to be alphabetized by displayed title rather than preserving the order in which a reading or recommendation batch was supplied.
+- Action: Sort Shelf entries with a case-insensitive English title comparison and a slug tie-breaker; do not add manual `order` frontmatter to Shelf books.
+- Confidence: high
+
 **[2026-08-24] — Top-level page headers**
 - Observation: The user finds the horizontal rule below the large title unnecessary on navigational and personal top-level pages, but wants it retained on posts, notes, logs, and individual book pages.
 - Action: Keep About, Now, Shelf, Posts, and Notes headers borderless with no reserved divider padding; keep the shared detail-page header divider as the default.

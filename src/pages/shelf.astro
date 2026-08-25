@@ -27,18 +27,13 @@ if (recommendationSections.length !== 2) {
 const [currentCopy, recommendationsCopy] = recommendationSections;
 const title = pageEntry.data.title ?? titleFromSlug(pageEntry.slug);
 const shelfCopy = pageEntry.data.shelf;
+const bookTitle = (book) => book.data.title ?? titleFromSlug(book.slug);
 const books = (await getCollection('shelf')).sort((a, b) => {
-  const aOrder = a.data.order ?? Number.MAX_SAFE_INTEGER;
-  const bOrder = b.data.order ?? Number.MAX_SAFE_INTEGER;
-  if (aOrder !== bOrder) return aOrder - bOrder;
-  const aDate = a.data.date ?? a.data.lastmod ?? new Date(0);
-  const bDate = b.data.date ?? b.data.lastmod ?? new Date(0);
-  return bDate.getTime() - aDate.getTime();
+  const byTitle = bookTitle(a).localeCompare(bookTitle(b), 'en', { sensitivity: 'base' });
+  return byTitle || a.slug.localeCompare(b.slug, 'en', { sensitivity: 'base' });
 });
 const currentlyReading = books.filter((book) => book.data.status === 'reading');
 const recommendations = books.filter((book) => book.data.status === 'recommended');
-
-const bookTitle = (book) => book.data.title ?? titleFromSlug(book.slug);
 ---
 
 <ContentLayout

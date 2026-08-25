@@ -54,6 +54,17 @@ assert.ok(
 );
 const currentlyReadingHtml = shelfHtml.slice(currentlyReadingStart, recommendationsStart);
 const recommendationsHtml = shelfHtml.slice(recommendationsStart);
+const shelfCoverTitles = (html) =>
+  [...html.matchAll(/<img\b[^>]*\balt="([^"]+) cover"/g)].map((match) => match[1]);
+const assertAlphabeticalShelfOrder = (html, label) => {
+  const titles = shelfCoverTitles(html);
+  const sortedTitles = [...titles].sort((a, b) =>
+    a.localeCompare(b, 'en', { sensitivity: 'base' })
+  );
+  assert.deepEqual(titles, sortedTitles, `${label} Shelf books should be alphabetized by title`);
+};
+assertAlphabeticalShelfOrder(currentlyReadingHtml, 'Currently reading');
+assertAlphabeticalShelfOrder(recommendationsHtml, 'Recommended');
 assert.match(currentlyReadingHtml, /<h2\b/, 'Currently reading needs a Markdown-authored heading');
 assert.match(recommendationsHtml, /<h2\b/, 'Recommended books need a Markdown-authored heading');
 assert.match(

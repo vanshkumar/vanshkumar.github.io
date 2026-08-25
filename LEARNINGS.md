@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-08-25] — Editorial serif bold weight**
+- Observation: The editorial system used Libre Caslon Text for body copy but requested only its regular and italic faces from Google Fonts, leaving Markdown bold text to browser-synthesized weight that looked too light.
+- Action: Keep Libre Caslon Text's real 700 normal face in the shared Google Fonts request whenever the editorial serif is used for bold prose.
+- Confidence: high
+
 **[2026-08-24] — Shelf batch cataloging**
 - Observation: Adding many Shelf entries with the same `date` leaves their relative order to collection enumeration, which does not preserve the order of an authored reading list.
 - Action: Use optional positive `order` metadata for explicitly ordered Shelf batches and sort it before the existing date fallback; leave older entries without `order` so they follow the curated batch in their normal date order.

@@ -1,9 +1,9 @@
 ---
 title: Now
-lastmod: 2026-08-19
+lastmod: 2026-08-24
 date: 2026-05-27
 ---
-This is a page for how I approach living life, with my ever-evolving self as audience
+This page describes how I approach living life, with my ever-evolving self as audience.
 
 ## Orienting lens
 

@@ -16,4 +16,4 @@ date: 2026-08-23
 <!-- shelf-recommendations -->
 
 ## Books I recommend
-because they changed something about how I see the world
+because they changed how I see the world

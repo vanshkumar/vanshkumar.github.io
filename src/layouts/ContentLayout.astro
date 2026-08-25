@@ -10,7 +10,8 @@ const {
   kindHref,
   backlinks = [],
   lastUpdated,
-  showDateRange = false
+  showDateRange = false,
+  showHeaderDivider = true
 } = Astro.props;
 const formatHeaderDate = (value) =>
   new Intl.DateTimeFormat('en-US', {
@@ -43,7 +44,7 @@ const siteCopy = await getSiteCopy();
   pageType={kind ? 'article' : 'website'}
 >
   <article class="article">
-    <header class="article-header">
+    <header class:list={['article-header', !showHeaderDivider && 'article-header-no-divider']}>
       {kind && kindHref ? <a class="article-kind" href={kindHref}>{kind}</a> : null}
       <h1>{title}</h1>
       {description ? <p class="lede">{description}</p> : null}

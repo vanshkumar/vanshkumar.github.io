@@ -214,6 +214,11 @@
 
 ## Patterns and Preferences
 
+**[2026-08-24] — Top-level page headers**
+- Observation: The user finds the horizontal rule below the large title unnecessary on navigational and personal top-level pages, but wants it retained on posts, notes, logs, and individual book pages.
+- Action: Keep About, Now, Shelf, Posts, and Notes headers borderless with no reserved divider padding; keep the shared detail-page header divider as the default.
+- Confidence: high
+
 **[2026-08-24] — Shelf translation specificity**
 - Observation: The user's `Zhuangzi` Shelf entry is Burton Watson's abridged *Zhuangzi: Basic Writings*, not Brook Ziporyn's *Complete Writings*; for translated classics, the translator and selection materially determine the edition and cover.
 - Action: Preserve the exact translator and abridged/complete edition in Shelf metadata and use its matching cover rather than inferring an edition from the short title alone.

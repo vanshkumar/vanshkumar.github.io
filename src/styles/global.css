@@ -1517,8 +1517,8 @@ h3,
 
 .archive-header {
   margin-bottom: 2.35rem;
-  padding-bottom: 1.1rem;
-  border-bottom: 1px solid var(--border);
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 .archive-header h1,
@@ -1560,6 +1560,11 @@ h3,
   margin-bottom: 2.6rem;
   padding: 0 0 1.65rem;
   border-bottom: 1px solid var(--border);
+}
+
+.article-header-no-divider {
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 .article-kind {

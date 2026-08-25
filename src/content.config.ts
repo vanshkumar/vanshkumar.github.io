@@ -164,6 +164,7 @@ const logs = defineCollection({
 const shelfBook = z.object({
   title: optionalText,
   author: z.string(),
+  order: z.number().int().positive().optional(),
   description: optionalText,
   date: z.coerce.date().optional(),
   lastmod: z.coerce.date().optional(),

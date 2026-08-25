@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-08-24] — Shelf batch cataloging**
+- Observation: Adding many Shelf entries with the same `date` leaves their relative order to collection enumeration, which does not preserve the order of an authored reading list.
+- Action: Use optional positive `order` metadata for explicitly ordered Shelf batches and sort it before the existing date fallback; leave older entries without `order` so they follow the curated batch in their normal date order.
+- Confidence: high
+
 **[2026-08-24] — Vault backup deployment drift**
 - Observation: An automatic vault backup can land between related site commits and overwrite directly authored page Markdown; here it changed the Shelf heading from `Book reviews` to `Reviews`, so the following CSS-only commit inherited a source/build verification mismatch.
 - Action: When a vault backup lands during a multi-commit site edit, diff its changes to touched `vault/pages/` files before the next push and rerun the full build from the new HEAD.
@@ -208,6 +213,11 @@
 - Confidence: high
 
 ## Patterns and Preferences
+
+**[2026-08-24] — Shelf translation specificity**
+- Observation: The user's `Zhuangzi` Shelf entry is Burton Watson's abridged *Zhuangzi: Basic Writings*, not Brook Ziporyn's *Complete Writings*; for translated classics, the translator and selection materially determine the edition and cover.
+- Action: Preserve the exact translator and abridged/complete edition in Shelf metadata and use its matching cover rather than inferring an edition from the short title alone.
+- Confidence: high
 
 **[2026-08-24] — Curated Shelf without ratings**
 - Observation: The user uses StoryGraph for comprehensive book tracking and ratings; the site Shelf is instead a curated set of recommended books, making its previous all-5-star display redundant.

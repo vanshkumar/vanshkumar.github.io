@@ -28,6 +28,9 @@ const [currentCopy, recommendationsCopy] = recommendationSections;
 const title = pageEntry.data.title ?? titleFromSlug(pageEntry.slug);
 const shelfCopy = pageEntry.data.shelf;
 const books = (await getCollection('shelf')).sort((a, b) => {
+  const aOrder = a.data.order ?? Number.MAX_SAFE_INTEGER;
+  const bOrder = b.data.order ?? Number.MAX_SAFE_INTEGER;
+  if (aOrder !== bOrder) return aOrder - bOrder;
   const aDate = a.data.date ?? a.data.lastmod ?? new Date(0);
   const bDate = b.data.date ?? b.data.lastmod ?? new Date(0);
   return bDate.getTime() - aDate.getTime();

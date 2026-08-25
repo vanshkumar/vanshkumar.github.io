@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-08-25] — Markdown line breaks**
+- Observation: The Now page uses Astro's standard Markdown rendering, where a single newline inside a paragraph is a soft break and renders as ordinary whitespace; consequently, adjacent signature lines appear on one visual line.
+- Action: When an authored line break must remain visible, end the first Markdown line with a backslash or two spaces; use a blank line only when separate paragraphs and their larger spacing are intended.
+- Confidence: high
+
 **[2026-08-25] — Editorial serif bold weight**
 - Observation: The editorial system used Libre Caslon Text for body copy but requested only its regular and italic faces from Google Fonts, leaving Markdown bold text to browser-synthesized weight that looked too light.
 - Action: Keep Libre Caslon Text's real 700 normal face in the shared Google Fonts request whenever the editorial serif is used for bold prose.

@@ -19,7 +19,7 @@ Most recently, I have been [reading](/shelf), writing on this site, [tweeting](h
 
 Not having a defined career and taking care of an ever-evolving little human keeps me on my toes, but it also means I'm always dancing.
 
-Please [reply to](mailto:vanshkumar95@gmail.com) this letter if you'd like, I'd love to hear from you.
+Please [reply to](mailto:vanshkumar95@gmail.com) this letter if you'd like, I'd love to hear from you. A year is much too long.
 
 Yours,
 Vansh

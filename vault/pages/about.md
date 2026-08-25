@@ -1,6 +1,6 @@
 ---
 title: About
-lastmod: 2026-08-24
+lastmod: 2026-08-25
 date: 2026-05-27
 ---
 ## This site
@@ -13,13 +13,11 @@ am Vansh Kumar and the one who sculpts the terrain of this site. I live in Pasad
 
 ![[DSCF0096.jpg]]
 
-I am a husband, father, and generally curious person.
-
 I spend my time pursuing whatever interests me. I was a tech lead & manager at Alphabet in a past life.
 
 Some of my interests:
 - Developmental neuroscience
-- Education/culture
+- Education & culture
 - Watching a lot of tennis
 - Playing all racket sports – tennis, paddle/pop tennis, ping pong, you name it
 - [Doing Nothing](https://www.youtube.com/watch?v=cZ6cdIaUZCA)

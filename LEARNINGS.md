@@ -224,6 +224,11 @@
 
 ## Patterns and Preferences
 
+**[2026-08-26] — Finite and Infinite Games shelf placement**
+- Observation: The user considers *Finite and Infinite Games* part of the recommended Shelf collection rather than a current read.
+- Action: Keep this entry's lifecycle status as `recommended` unless the user explicitly moves it again.
+- Confidence: high
+
 **[2026-08-24] — Alphabetical Shelf ordering**
 - Observation: The user prefers books within both Shelf sections to be alphabetized by displayed title rather than preserving the order in which a reading or recommendation batch was supplied.
 - Action: Sort Shelf entries with a case-insensitive English title comparison and a slug tie-breaker; do not add manual `order` frontmatter to Shelf books.

@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-08-26] — Shelf cover aspect-ratio preservation**
+- Observation: The *Children of Dune* (251×450) and *Chapterhouse: Dune* (279×500) cover assets are substantially narrower than the Shelf's fixed 2:3 frames, so `object-fit: cover` crops their titles and author names.
+- Action: Keep Shelf cover images on `object-fit: contain` inside the fixed frames so covers with nonstandard proportions remain fully visible.
+- Confidence: high
+
 **[2026-08-25] — Markdown line breaks**
 - Observation: The Now page uses Astro's standard Markdown rendering, where a single newline inside a paragraph is a soft break and renders as ordinary whitespace; consequently, adjacent signature lines appear on one visual line.
 - Action: When an authored line break must remain visible, end the first Markdown line with a backslash or two spaces; use a blank line only when separate paragraphs and their larger spacing are intended.

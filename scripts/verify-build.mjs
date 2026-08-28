@@ -57,6 +57,17 @@ assert.ok(
 );
 const currentlyReadingHtml = shelfHtml.slice(currentlyReadingStart, recommendationsStart);
 const recommendationsHtml = shelfHtml.slice(recommendationsStart);
+const shelfStylesheetHref = shelfHtml.match(/<link rel="stylesheet" href="([^"]+\.css)">/)?.[1];
+assert.ok(shelfStylesheetHref, 'Shelf needs a built stylesheet');
+const shelfCss = fs.readFileSync(
+  path.join(dist, shelfStylesheetHref.replace(/^\//, '')),
+  'utf8'
+);
+assert.match(
+  shelfCss,
+  /\.prose\s+\.shelf-cover\s+img\s*\{[^}]*height:\s*100%[^}]*object-fit:\s*contain[^}]*\}/,
+  'Shelf cover sizing must outrank the generic prose image height rule'
+);
 const shelfCoverTitles = (html) =>
   [...html.matchAll(/<img\b[^>]*\balt="([^"]+) cover"/g)].map((match) => match[1]);
 const assertAlphabeticalShelfOrder = (html, label) => {

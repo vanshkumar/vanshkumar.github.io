@@ -3,8 +3,8 @@
 ## What Has Worked
 
 **[2026-08-26] — Shelf cover aspect-ratio preservation**
-- Observation: The *Children of Dune* (251×450) and *Chapterhouse: Dune* (279×500) cover assets are substantially narrower than the Shelf's fixed 2:3 frames, so `object-fit: cover` crops their titles and author names.
-- Action: Keep Shelf cover images on `object-fit: contain` inside the fixed frames so covers with nonstandard proportions remain fully visible.
+- Observation: The *Children of Dune* (251×450) and *Chapterhouse: Dune* (279×500) assets are narrower than the Shelf's fixed 2:3 frames. A `.shelf-cover img` rule with `height: 100%` and `object-fit: contain` still failed because the later, equally specific `.prose img { height: auto; }` rule won the cascade, leaving the images taller than their clipped frames.
+- Action: Keep the cover-sizing selector more specific than generic prose image rules (`.prose .shelf-cover img`) and assert that selector plus `height: 100%` and `object-fit: contain` in the production build.
 - Confidence: high
 
 **[2026-08-25] — Markdown line breaks**

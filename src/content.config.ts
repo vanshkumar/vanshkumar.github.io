@@ -73,7 +73,6 @@ const homeCopy = z.object({
   comic: z.object({
     src: z.string(),
     alt: z.string(),
-    caption: z.string(),
     width: z.number().int().positive(),
     height: z.number().int().positive()
   }),

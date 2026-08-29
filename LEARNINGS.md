@@ -229,6 +229,11 @@
 
 ## Patterns and Preferences
 
+**[2026-08-29] — Captionless homepage comic**
+- Observation: The user wants the Calvin and Hobbes strip on the homepage to stand without a visible caption.
+- Action: Keep the homepage comic descriptive `alt` text, but do not restore caption copy or a `figcaption` unless explicitly requested.
+- Confidence: high
+
 **[2026-08-26] — Finite and Infinite Games shelf placement**
 - Observation: The user considers *Finite and Infinite Games* part of the recommended Shelf collection rather than a current read.
 - Action: Keep this entry's lifecycle status as `recommended` unless the user explicitly moves it again.

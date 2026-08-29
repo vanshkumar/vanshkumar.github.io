@@ -31,6 +31,11 @@ has('/', /<h2 id="recent-notes-title">Recent notes<\/h2>/, 'missing Recent notes
 has('/', /alt="Calvin and Hobbes discussing/, 'comic needs descriptive alt text');
 has('/', /class="skip-link" href="#main-content"/, 'missing skip link');
 const homeHtml = htmlFor('/');
+assert.doesNotMatch(
+  homeHtml,
+  /<figure class="home-comic">[\s\S]*?<figcaption>/,
+  'homepage comic should not have a caption'
+);
 const gardenMatches = homeHtml.match(/class="word-garden"/g) ?? [];
 assert.equal(gardenMatches.length, 1, 'homepage should contain the Word Garden exactly once');
 assert.ok(

@@ -73,6 +73,11 @@ assert.match(
   /\.prose\s+\.shelf-cover\s+img\s*\{[^}]*height:\s*100%[^}]*object-fit:\s*contain[^}]*\}/,
   'Shelf cover sizing must outrank the generic prose image height rule'
 );
+assert.match(
+  shelfCss,
+  /\.prose\s+\.shelf-review-link\s*\{[^}]*align-self:\s*center[^}]*\}/,
+  'Shelf notes links should be centered below their covers'
+);
 const shelfCoverTitles = (html) =>
   [...html.matchAll(/<img\b[^>]*\balt="([^"]+) cover"/g)].map((match) => match[1]);
 const assertAlphabeticalShelfOrder = (html, label) => {
@@ -99,8 +104,8 @@ assert.equal(
 );
 assert.match(
   recommendationsHtml,
-  /class="shelf-review-link" href="\/shelf\/the-invention-of-nature"[^>]*>\s*Review/,
-  'a recommendation with Markdown should link to its Review'
+  /class="shelf-review-link" href="\/shelf\/the-invention-of-nature"[^>]*>\s*notes/,
+  'a recommendation with Markdown should link to its notes'
 );
 assert.doesNotMatch(
   shelfHtml,

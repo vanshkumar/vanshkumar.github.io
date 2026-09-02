@@ -20,7 +20,7 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
   - Common fields: `status` (`reading` or `recommended`), `author`, `title?`, `description?`,
     `date?`, `lastmod?`, `coverImage?`, `aliases?[]`
   - Ratings are intentionally unsupported. `status: recommended` adds a book to the curated
-    recommendation grid; a non-empty Markdown body independently adds its `Review` link and
+    recommendation grid; a non-empty Markdown body independently adds its `notes` link and
     detail route. Changing `status` never changes the Markdown file or its potential URL.
 - **pages** → `vault/pages/` → static pages, archive copy, and shared site copy
   - Common fields: `title?` `description?` `date?` `lastmod?` `aliases?[]`

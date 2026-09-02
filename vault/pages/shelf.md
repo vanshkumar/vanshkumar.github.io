@@ -3,7 +3,7 @@ title: Shelf
 lastmod: 2026-08-25
 shelf:
   bylineTemplate: by {author}
-  reviewLinkLabel: Review
+  reviewLinkLabel: notes
   coverAltTemplate: "{title} cover"
 date: 2026-08-23
 ---

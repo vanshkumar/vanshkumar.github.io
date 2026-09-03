@@ -3,7 +3,7 @@ tags:
   - questions
 slug: why-am-i-interested-in-alt-ed
 title: Why am I interested in alt-ed?
-lastmod: 2026-06-22
+lastmod: 2026-09-03
 date: 2026-06-13
 ---
 In my view opinions & disagreements about education often boil down to differences in values. Even if we had RCT evidence for one approach being better, those would be population-level effects by definition and it's less clear how relevant they are to the idiosyncratic process of raising a _particular_ child.
@@ -66,3 +66,4 @@ open qs:
 Where does this leave us?
 - This is close to my ideal life: [https://x.com/_cturner/status/1940418736533422344](https://x.com/_cturner/status/1940418736533422344)
 - Microschool/homeschool, Alpha school, Montessori
+- For the microschool.. this is ideal: https://www.educationprogress.org/p/how-i-found-myself-running-a-microschool

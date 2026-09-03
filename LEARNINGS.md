@@ -229,9 +229,29 @@
 
 ## Patterns and Preferences
 
+**[2026-08-29] — Private stream sync decision**
+- Observation: After resolving the immediate synchronization problems, the user chose to keep the private Obsidian vault in iCloud and proceed with an iPhone-first stream/timeline plugin.
+- Action: Treat iCloud as the settled vault sync layer and keep the plugin offline-first, writing only through Obsidian's Vault API; do not introduce a backend, Git ingestion, or another active sync service unless explicitly requested.
+- Confidence: high
+
 **[2026-08-29] — Captionless homepage comic**
 - Observation: The user wants the Calvin and Hobbes strip on the homepage to stand without a visible caption.
 - Action: Keep the homepage comic descriptive `alt` text, but do not restore caption copy or a `figcaption` unless explicitly requested.
+- Confidence: high
+
+**[2026-08-27] — Private stream capture target**
+- Observation: The user wants Streams-style low-friction capture with Markdown, images, audio, and commands in a separate private Obsidian vault that currently syncs through iCloud Drive; they do not use Telegram and do not want this stream added to the public site vault.
+- Action: Prefer an on-device Shortcut/Obsidian URI workflow while iCloud Drive remains the vault source of truth. Use a private Git repository as the ingestion target only if Git deliberately becomes the canonical sync layer, rather than adding a second active writer beside iCloud.
+- Confidence: high
+
+**[2026-08-27] — Private stream interaction**
+- Observation: The user rejects Apple Shortcut prompt UI and values a persistent messaging-style composer with easily browsable capture history.
+- Action: Prefer a mobile-compatible Obsidian timeline/plugin surface over raw Shortcut prompts, a PWA, or a native iOS app until the plugin approach has been tested.
+- Confidence: high
+
+**[2026-08-27] — Private vault sync preference**
+- Observation: The user finds iCloud Drive sync for Obsidian slow and unreliable and is open to replacing it for the separate private vault.
+- Action: Prefer Obsidian Sync as the simple mobile-first source of truth; if avoiding a subscription, present Remotely Save as the easier compromise and keep Git for backup/version history rather than primary mobile synchronization.
 - Confidence: high
 
 **[2026-08-26] — Finite and Infinite Games shelf placement**

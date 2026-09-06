@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-06] — Note-to-Post classification checks**
+- Observation: `src/lib/writing.test.mjs` hard-codes the corpus split as 2 Posts and 51 Notes, so promoting an existing note changes a test expectation even though the total corpus and RSS item counts stay the same.
+- Action: When changing an entry's classification, update the corpus test's group counts and name along with the vault tag; do not change total-count assertions for a promotion.
+- Confidence: high
+
 **[2026-08-26] — Shelf cover aspect-ratio preservation**
 - Observation: The *Children of Dune* (251×450) and *Chapterhouse: Dune* (279×500) assets are narrower than the Shelf's fixed 2:3 frames. A `.shelf-cover img` rule with `height: 100%` and `object-fit: contain` still failed because the later, equally specific `.prose img { height: auto; }` rule won the cascade, leaving the images taller than their clipped frames.
 - Action: Keep the cover-sizing selector more specific than generic prose image rules (`.prose .shelf-cover img`) and assert that selector plus `height: 100%` and `object-fit: contain` in the production build.
@@ -228,6 +233,16 @@
 - Confidence: high
 
 ## Patterns and Preferences
+
+**[2026-09-06] — Class of 2027 TJ follow-up**
+- Observation: The user requested checks every two months for Class of 2027 PSAT/National Merit data and updates to the linked TJ admissions analysis when usable data is released.
+- Action: Use the task's recurring monitor to update `tj-psat-analysis` and prepare matching post changes from source-backed school counts; match this cohort to the fall 2025 PSAT and 2025–26 Grade 11 enrollment, and surface meaningful findings rather than unchanged check-ins.
+- Confidence: high
+
+**[2026-09-06] — Mechanical Post promotion**
+- Observation: For the TJ admissions analysis, the user's request to convert a Note into a Post meant changing its site classification, without an editorial review or rewrite.
+- Action: Treat site Note-to-Post requests as classification changes; preserve the authored content and existing metadata unless the user requests revisions.
+- Confidence: high
 
 **[2026-08-29] — Private stream sync decision**
 - Observation: After resolving the immediate synchronization problems, the user chose to keep the private Obsidian vault in iCloud and proceed with an iPhone-first stream/timeline plugin.

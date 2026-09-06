@@ -56,7 +56,7 @@ test('requires every log parent to be a Post', () => {
   );
 });
 
-test('the current corpus is a complete 2 Post / 51 Note partition', () => {
+test('the current corpus is a complete 3 Post / 50 Note partition', () => {
   const root = path.join(process.cwd(), 'src', 'content', 'terrain');
   const entries = fs.readdirSync(root)
     .filter((name) => name.endsWith('.md'))
@@ -69,7 +69,7 @@ test('the current corpus is a complete 2 Post / 51 Note partition', () => {
   const paths = [...posts, ...notes].map(canonicalWritingPath);
 
   assert.equal(entries.length, 53);
-  assert.equal(posts.length, 2);
-  assert.equal(notes.length, 51);
+  assert.equal(posts.length, 3);
+  assert.equal(notes.length, 50);
   assert.equal(new Set(paths).size, 53);
 });

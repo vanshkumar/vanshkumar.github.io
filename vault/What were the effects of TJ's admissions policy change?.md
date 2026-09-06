@@ -3,6 +3,7 @@ tags:
   - essays
 slug: what-were-the-results-of-tjs-switch-to-a-lottery-system
 title: What were the effects of TJ's admissions policy change?
+description: A short data analysis
 date: 2026-06-18
 lastmod: 2026-07-18
 ---

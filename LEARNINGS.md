@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-06] — Post subtitle metadata**
+- Observation: A Post's `description` frontmatter supplies its subtitle, homepage and Posts archive summary, and RSS description; the TJ post uses “A short data analysis.”
+- Action: Add or edit Post subtitles through the existing vault `description` field so all four surfaces share the authored text.
+- Confidence: high
+
 **[2026-09-06] — Note-to-Post classification checks**
 - Observation: `src/lib/writing.test.mjs` hard-codes the corpus split as 2 Posts and 51 Notes, so promoting an existing note changes a test expectation even though the total corpus and RSS item counts stay the same.
 - Action: When changing an entry's classification, update the corpus test's group counts and name along with the vault tag; do not change total-count assertions for a promotion.

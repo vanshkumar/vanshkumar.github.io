@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-08] — Blindsight Shelf cover source**
+- Observation: The local `vault/assets/shelf/blindsight.jpg` cover is the Tor Essentials edition (ISBN 9781250237484), sourced from Macmillan's linked cover CDN at `https://mpd-biblio-covers.imgix.net/9781250237484.jpg` and sized to 600px wide.
+- Action: Use this publisher source when refreshing the Blindsight cover so the Shelf retains its matching Peter Watts edition.
+- Confidence: high
+
 **[2026-09-06] — Post subtitle metadata**
 - Observation: A Post's `description` frontmatter supplies its subtitle, homepage and Posts archive summary, and RSS description; the TJ post uses “A short data analysis.”
 - Action: Add or edit Post subtitles through the existing vault `description` field so all four surfaces share the authored text.

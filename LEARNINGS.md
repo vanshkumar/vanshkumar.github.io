@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-10] — Content-driven build verification**
+- Observation: Adding a valid vault note broke Pages because tests fixed the writing total at 53. The user requested removal of tests that freeze editorial content; the live-corpus unit test is now removed, and build checks derive RSS links, writing routes, and Shelf note availability from current content instead of fixed totals or named entries.
+- Action: Keep unit tests on controlled fixtures and omit content sync from `npm test`. Do not assert fixed corpus sizes, specific books' note availability, or literal authored copy; retain content-independent behavior checks and source-to-output integrity checks.
+- Confidence: high
+
 **[2026-09-08] — Blindsight Shelf cover source**
 - Observation: The local `vault/assets/shelf/blindsight.jpg` cover is the Tor Essentials edition (ISBN 9781250237484), sourced from Macmillan's linked cover CDN at `https://mpd-biblio-covers.imgix.net/9781250237484.jpg` and sized to 600px wide.
 - Action: Use this publisher source when refreshing the Blindsight cover so the Shelf retains its matching Peter Watts edition.
@@ -10,11 +15,6 @@
 **[2026-09-06] — Post subtitle metadata**
 - Observation: A Post's `description` frontmatter supplies its subtitle, homepage and Posts archive summary, and RSS description; the TJ post uses “A short data analysis.”
 - Action: Add or edit Post subtitles through the existing vault `description` field so all four surfaces share the authored text.
-- Confidence: high
-
-**[2026-09-06] — Note-to-Post classification checks**
-- Observation: `src/lib/writing.test.mjs` hard-codes the corpus split as 2 Posts and 51 Notes, so promoting an existing note changes a test expectation even though the total corpus and RSS item counts stay the same.
-- Action: When changing an entry's classification, update the corpus test's group counts and name along with the vault tag; do not change total-count assertions for a promotion.
 - Confidence: high
 
 **[2026-08-26] — Shelf cover aspect-ratio preservation**
@@ -65,11 +65,6 @@
 **[2026-08-23] — Vault-backed site copy**
 - Observation: The live site's authored prose and display labels can all use the existing pages collection: Markdown bodies hold page prose, typed frontmatter holds structured page/global labels, and Astro stays responsible for layout. Empty frontmatter-only page entries may have an undefined `body`.
 - Action: Edit live copy under `vault/pages/`—especially `home.md` for the homepage and `site.md` for shared text—keep optional-body checks null-safe, and leave the isolated `src/pages/homepage-variants/` sample copy with those noindex prototypes.
-- Confidence: high
-
-**[2026-08-22] — Fresh-checkout corpus tests**
-- Observation: `src/content/terrain` is generated and absent from a fresh checkout, so corpus classification tests that read it fail in CI when `npm test` runs before the site build.
-- Action: Keep `npm test` self-contained by running `sync-content` before tests that validate the generated Terrain corpus; do not rely on a prior local dev or build command having populated `src/content`.
 - Confidence: high
 
 **[2026-08-21] — Canonical Posts/Notes over internal Terrain**

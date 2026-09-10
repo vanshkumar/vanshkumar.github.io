@@ -1,14 +1,9 @@
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
-import path from 'node:path';
 import test from 'node:test';
-import matter from 'gray-matter';
 import {
-  canonicalWritingPath,
   classifyWritingTags,
   compareNotes,
   comparePosts,
-  partitionWriting,
   validateLogParents
 } from './writing.mjs';
 
@@ -54,22 +49,4 @@ test('requires every log parent to be a Post', () => {
     () => validateLogParents([{ slug: 'question/day-1', data: { parent: 'question' } }], [post, note]),
     /parent classified as a Post/
   );
-});
-
-test('the current corpus is a complete 3 Post / 50 Note partition', () => {
-  const root = path.join(process.cwd(), 'src', 'content', 'terrain');
-  const entries = fs.readdirSync(root)
-    .filter((name) => name.endsWith('.md'))
-    .map((name) => {
-      const slug = name.replace(/\.md$/, '');
-      const { data } = matter(fs.readFileSync(path.join(root, name), 'utf8'));
-      return { slug, data: { ...data, date: data.date, lastmod: data.lastmod } };
-    });
-  const { posts, notes } = partitionWriting(entries);
-  const paths = [...posts, ...notes].map(canonicalWritingPath);
-
-  assert.equal(entries.length, 53);
-  assert.equal(posts.length, 3);
-  assert.equal(notes.length, 50);
-  assert.equal(new Set(paths).size, 53);
 });

@@ -384,9 +384,9 @@
 - Action: For new reminder countries, update the shared option list, normalization tests, and stale planning copy first; add country-specific template banks separately when the copy is ready.
 - Confidence: high
 
-**[2026-06-27] — Reminder template imports**
-- Observation: The reminder template JSON is a full country-keyed replacement file where each supported country should have 100 strings and every string must include `{name}` and `{room}`.
-- Action: Before importing external reminder copy, validate exact country keys, per-country counts, string types, required placeholders, whitespace, and duplicates; then extend `turnNotifications.test.js` for every country with a template bank.
+**[2026-09-10] — Reminder template verification**
+- Observation: Reminder tests fixed US, UK, and Canadian template banks at 100 entries and repeated the first US message verbatim. Those editorial snapshots were removed during the user's repository-wide cleanup of fixed-content assertions.
+- Action: Validate required `{name}` and `{room}` placeholders, interpolation, and secret-free room links without requiring a particular bank size or freezing reminder wording.
 - Confidence: high
 
 **[2026-06-26] — WhatsApp mobile draft UX**

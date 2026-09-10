@@ -1,6 +1,9 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import matter from 'gray-matter';
+import { canonicalWritingPath } from '../src/lib/writing.mjs';
+import { hasShelfReview } from '../src/lib/shelf.mjs';
 
 const dist = path.join(process.cwd(), 'dist');
 const fileForRoute = (route) => {
@@ -21,14 +24,9 @@ const redirect = (route, target) => {
   canonical(route, target);
 };
 
-const post = 'partition-summer';
-const note = 'what-is-the-future-of-the-university';
-const project = 'how-do-we-learn-dec-2025-aliveline';
-const log = 'day-1';
-
-has('/', /<h2 id="recent-posts-title">Recent posts<\/h2>/, 'missing Recent posts');
-has('/', /<h2 id="recent-notes-title">Recent notes<\/h2>/, 'missing Recent notes');
-has('/', /alt="Calvin and Hobbes discussing/, 'comic needs descriptive alt text');
+has('/', /<h2 id="recent-posts-title">/, 'missing Recent posts heading');
+has('/', /<h2 id="recent-notes-title">/, 'missing Recent notes heading');
+has('/', /<figure class="home-comic">[\s\S]*?<img\b[^>]*alt="[^"]+"/, 'comic needs non-empty alt text');
 has('/', /class="skip-link" href="#main-content"/, 'missing skip link');
 const homeHtml = htmlFor('/');
 assert.doesNotMatch(
@@ -48,8 +46,8 @@ assert.doesNotMatch(
   'Word Garden should not display introductory copy or totals'
 );
 assert.doesNotMatch(htmlFor('/about'), /class="word-garden"/, 'About should not contain the Word Garden');
-has('/posts', /<h1 id="posts-title">Posts<\/h1>/, 'missing Posts archive');
-has('/notes', /<h1 id="notes-title">Notes<\/h1>/, 'missing Notes archive');
+has('/posts', /<h1 id="posts-title">/, 'missing Posts archive heading');
+has('/notes', /<h1 id="notes-title">/, 'missing Notes archive heading');
 
 const shelfHtml = htmlFor('/shelf');
 const currentlyReadingStart = shelfHtml.indexOf('class="shelf-section shelf-current-section"');
@@ -91,21 +89,10 @@ assertAlphabeticalShelfOrder(currentlyReadingHtml, 'Currently reading');
 assertAlphabeticalShelfOrder(recommendationsHtml, 'Recommended');
 assert.match(currentlyReadingHtml, /<h2\b/, 'Currently reading needs a Markdown-authored heading');
 assert.match(recommendationsHtml, /<h2\b/, 'Recommended books need a Markdown-authored heading');
-assert.match(currentlyReadingHtml, /class="shelf-grid"/, 'Currently reading should use the shared Shelf grid');
 assert.doesNotMatch(
   currentlyReadingHtml,
   /<a\b[^>]*>\s*<span\b[^>]*class="[^"]*\bshelf-cover\b/,
   'Currently reading covers should not be links'
-);
-assert.equal(
-  fs.existsSync(fileForRoute('/shelf/anna-karenina')),
-  false,
-  'Currently reading books without reviews should not get empty detail routes'
-);
-assert.match(
-  recommendationsHtml,
-  /class="shelf-review-link" href="\/shelf\/the-invention-of-nature"[^>]*>\s*notes/,
-  'a recommendation with Markdown should link to its notes'
 );
 assert.doesNotMatch(
   shelfHtml,
@@ -117,31 +104,14 @@ assert.doesNotMatch(
   /class="shelf-rating"|★|☆|out of 5 stars/,
   'Shelf should not display star ratings'
 );
-has(
-  '/shelf/the-invention-of-nature',
-  /<p class="meta">[^<]*by Andrea Wulf<\/p>/,
-  'review detail should show its author'
-);
-
-canonical(`/posts/${post}`, `/posts/${post}`);
-has(`/posts/${post}`, /<meta property="og:type" content="article">/, 'Post must use article OG type');
-has(`/posts/${post}`, /class="article-kind" href="\/posts">Post<\/a>/, 'Post label missing');
-canonical(`/notes/${note}`, `/notes/${note}`);
-has(`/notes/${note}`, /class="article-kind" href="\/notes">Note<\/a>/, 'Note label missing');
-
-redirect(`/posts/${note}`, `/notes/${note}`);
-redirect(`/notes/${post}`, `/posts/${post}`);
-redirect(`/terrain/${post}`, `/posts/${post}`);
-redirect(`/terrain/projects/${post}`, `/posts/${post}`);
-redirect(`/projects/${post}`, `/posts/${post}`);
-redirect(`/questions/${note}`, `/notes/${note}`);
-redirect(`/hunches/${note}`, `/notes/${note}`);
-redirect(`/guesses/${note}`, `/notes/${note}`);
-redirect(`/traces/${note}`, `/notes/${note}`);
-redirect(`/projects/${project}/logs/${log}`, `/posts/${project}/logs/${log}`);
-redirect(`/terrain/${project}/logs/${log}`, `/posts/${project}/logs/${log}`);
-canonical(`/posts/${project}/logs/${log}`, `/posts/${project}/logs/${log}`);
-has(`/posts/${project}/logs/${log}`, /<meta property="og:type" content="article">/, 'log must use article OG type');
+const shelfRoot = path.join(process.cwd(), 'src', 'content', 'shelf');
+fs.readdirSync(shelfRoot).filter((name) => name.endsWith('.md')).forEach((name) => {
+  const { content } = matter(fs.readFileSync(path.join(shelfRoot, name), 'utf8'));
+  const route = `/shelf/${name.replace(/\.md$/, '')}`;
+  const hasNotes = hasShelfReview({ body: content });
+  assert.equal(fs.existsSync(fileForRoute(route)), hasNotes, `${route}: detail routes should depend on authored notes`);
+  assert.equal(shelfHtml.includes(`class="shelf-review-link" href="${route}"`), hasNotes, `${route}: notes links should depend on authored notes`);
+});
 
 has('/terrain', /<meta name="robots" content="noindex,follow">/, 'legacy archive must be noindex');
 has('/terrain', /id="projects"/, 'legacy Projects fragment missing');
@@ -154,10 +124,29 @@ redirect('/guesses', '/notes');
 
 const rss = fs.readFileSync(path.join(dist, 'rss.xml'), 'utf8');
 const items = [...rss.matchAll(/<item>/g)];
-const writingLinks = [...rss.matchAll(/<link>https:\/\/vanshkumar\.net\/(posts|notes)\/[^<]+<\/link>/g)].map((match) => match[0]);
-assert.equal(items.length, 53, 'RSS should contain all 53 writing entries');
-assert.equal(writingLinks.length, 53, 'RSS items should all use canonical Posts/Notes links');
-assert.equal(new Set(writingLinks).size, 53, 'RSS canonical links should be unique');
+const writingLinks = [...rss.matchAll(/<link>(https:\/\/vanshkumar\.net\/(?:posts|notes)\/[^<]+)<\/link>/g)]
+  .map((match) => match[1].replace(/\/$/, ''));
+const writingRoot = path.join(process.cwd(), 'src', 'content', 'terrain');
+const expectedWritingLinks = fs.readdirSync(writingRoot)
+  .filter((name) => name.endsWith('.md'))
+  .map((name) => {
+    const { data } = matter(fs.readFileSync(path.join(writingRoot, name), 'utf8'));
+    return `https://vanshkumar.net${canonicalWritingPath({ slug: name.replace(/\.md$/, ''), data })}`;
+  });
+assert.equal(items.length, expectedWritingLinks.length, 'RSS should contain every writing entry');
+assert.deepEqual(writingLinks.sort(), expectedWritingLinks.sort(), 'RSS should use the canonical link for every writing entry');
+assert.equal(new Set(writingLinks).size, expectedWritingLinks.length, 'RSS canonical links should be unique');
+
+expectedWritingLinks.forEach((link) => {
+  const route = new URL(link).pathname;
+  canonical(route, route);
+  has(route, /<meta property="og:type" content="article">/, 'writing must use article OG type');
+  const slug = path.posix.basename(route);
+  ['posts', 'notes', 'terrain', 'projects', 'questions', 'hunches', 'guesses', 'traces'].forEach((prefix) => {
+    const alias = `/${prefix}/${slug}`;
+    if (alias !== route) redirect(alias, route);
+  });
+});
 
 const walk = (directory) => fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
   const file = path.join(directory, entry.name);

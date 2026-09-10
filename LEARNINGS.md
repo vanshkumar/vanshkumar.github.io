@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-10] — Billy Budd Shelf cover source**
+- Observation: The Shelf entry for *Billy Budd and the Piazza Tales* uses the combined Barnes & Noble Classics volume (ISBN 9781593082536); its matching 321×500 cover is available from `https://covers.openlibrary.org/b/isbn/9781593082536-L.jpg?default=false`.
+- Action: Keep this combined volume as one Shelf entry and use its matching cover when refreshing `vault/assets/shelf/billy-budd-and-the-piazza-tales.jpg`.
+- Confidence: high
+
 **[2026-09-10] — Content-driven build verification**
 - Observation: Adding a valid vault note broke Pages because tests fixed the writing total at 53. The user requested removal of tests that freeze editorial content; the live-corpus unit test is now removed, and build checks derive RSS links, writing routes, and Shelf note availability from current content instead of fixed totals or named entries.
 - Action: Keep unit tests on controlled fixtures and omit content sync from `npm test`. Do not assert fixed corpus sizes, specific books' note availability, or literal authored copy; retain content-independent behavior checks and source-to-output integrity checks.

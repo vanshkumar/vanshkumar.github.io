@@ -5,7 +5,8 @@ slug: impact
 title: Impact
 description: tracing a feeling
 date: 2024-12-08
-lastmod: 2026-09-11
+lastmod: 2024-12-08
+exclude_modified_update: true
 ---
 I read this great article a couple weeks ago from [Experimental History](https://open.substack.com/pub/experimentalhistory), titled [Underrated ways to change the world](https://substack.com/inbox/post/151872212), which resonated a lot with me. I strongly recommend reading the article, but the basic idea is summarized in the quote below:
 

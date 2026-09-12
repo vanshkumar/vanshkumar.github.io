@@ -4,7 +4,8 @@ tags:
 slug: inscrutable-exhortations
 title: Inscrutable exhortations
 date: 2024-11-29
-lastmod: 2026-09-11
+lastmod: 2024-11-29
+exclude_modified_update: true
 description: a useful mandate
 ---
 I feel a tap on my shoulder. Trying to ignore it, I unwittingly give it even more of my attention, and then hear “shouldn’t you be producing something, shouldn’t you be creating something out of all this stuff you’re reading?” I immediately feel worse about what I’m doing. That tap again, and then: “shouldn’t you be feeling better about this? What’s the point of reading for fun if it’s not fun?” Aha, got you, I think to myself. You made me feel bad by asking why I’m not creating something, so you can’t turn around and ask why I’m not feeling better! Logic prevails, but then: “shouldn’t you do something a bit more productive than arguing with yourself?” Like talking to an Indian aunty brick wall, I mumble internally.

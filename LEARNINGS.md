@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-11] — Locking imported post dates**
+- Observation: The vault's `frontmatter-modified-date` Obsidian plugin rewrites `lastmod` after edits, but its configured `excludeField` is `exclude_modified_update` and a truthy value skips the update.
+- Action: To preserve an imported post's historical modification date, set `exclude_modified_update: true` alongside its explicit `lastmod`; remove the flag to resume automatic updates.
+- Confidence: high
+
 **[2026-09-11] — Empty Post scaffold**
 - Observation: A frontmatter-only `vault/Inscrutable exhortations.md` with an `essays` tag, stable slug, title, and date passes the site build and canonical writing verification.
 - Action: For title-and-date-only Post creation, leave the Markdown body empty for the user's writing; no placeholder prose is required.

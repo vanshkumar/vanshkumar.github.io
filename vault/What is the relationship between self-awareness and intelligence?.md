@@ -18,7 +18,8 @@ Anyways, the core thread here is – perhaps our natural intelligence (likely wh
 From [[A Brief History Of Intelligence]] it seems that one of the leading theories of why the human brain scaled up as much as it did is that our social dynamics got more and more complex, leading to greater returns on intelligence. More intelligence meant more complex social dynamics, creating a positive feedback loop:
 
 > Every roundabout of this cycle made our ancestors' brains bigger and bigger. As social groups got bigger (powered by improved gossip, altruism, and punishment), it created more pressure for bigger brains to keep track of all the social relationships. As more ideas accumulated across generations, it created more pressure for bigger brains to increase the storage capacity of ideas that could be maintained within a generation. As the usefulness of inner simulations increased due to more reliable sharing of thoughts through language, it created more pressure for bigger brains to render more sophisticated inner simulations in the first place.
-![[Screenshot 2026-09-12 at 7.55.05 AM.png]]
+> 
+ ![[Screenshot 2026-09-12 at 7.55.05 AM.png]]
 
 Does any of this *require* consciousness/self-awareness though? Ants have complex social dynamics without self-awareness (as far as we know). Is language the difference? LLMs have language but no self-awareness (as far as we know). So why do we have self-awareness? Presumably it's expensive to run in the brain.
 

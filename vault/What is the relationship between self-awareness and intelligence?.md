@@ -1,6 +1,6 @@
 ---
 slug: what-is-the-relationship-between-self-awareness-and-intelligence
-title: "What is the relationship between self-awareness and intelligence?"
+title: What is the relationship between self-awareness and intelligence?
 date: 2026-09-12
 lastmod: 2026-09-12
 tags:
@@ -10,7 +10,7 @@ Lots of thoughts on this recently... brain dump time.
 
 Reading [[Blindsight]] was my first exposure to the idea that self-awareness / consciousness / sentience could actually be an *inhibitor* on intelligence. Spending brain space on modeling & thinking about yourself may be worse than purely acting intelligently without any self-awareness. I don't fully buy this idea, but it's novel and worth thinking through.
 
-Concurrently I have been reading Daoist ideas (the *Zhuangzhi*) and related articles – this wonderful post on [Surrender](https://sashachapin.substack.com/p/should-you-be-in-charge-of-your-life) and this article it links to about [Returning to Nature](https://luminousdharma.org/returning-to-nature-advanced-dharma-practice/). One of the core Daoist ideas, referenced in all of these texts, is that *wuwei*, translated poorly as "inaction," though it seems to be more about letting your natural intelligence drive & aligning your actions to flow effortlessly with what is occurring. Return the body and mind to nature and see what happens. "Wisdom is timeliness."
+Concurrently I have been reading Daoist ideas (the *Zhuangzhi*) and related articles – this wonderful post on [Surrender](https://sashachapin.substack.com/p/should-you-be-in-charge-of-your-life) and this article it links to about [Returning to Nature](https://luminousdharma.org/returning-to-nature-advanced-dharma-practice/). One of the core Daoist ideas, referenced in all of these texts, is that *wu wei*, translated poorly as "inaction," though it seems to be more about letting your natural intelligence drive & aligning your actions to flow effortlessly with what is occurring. Return the body and mind to nature and see what happens. "Wisdom is timeliness."
 
 Anyways, the core thread here is – perhaps our natural intelligence (likely what we refer to as the unconscious mind) already knows what to do & our self-awareness can get in the way in many situations. That's a bit stronger of a statement than I would make, as I think self-awareness can be quite valuable for humans specifically. I do buy the idea though from Blindsight that there are other pathways to intelligence.
 

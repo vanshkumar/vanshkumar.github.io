@@ -8,7 +8,7 @@ lastmod: 2026-09-12
 ---
 I don't want to write much here because I don't want to spoil the main idea. Highly recommend this work of fiction. Its central question around consciousness and intelligence was truly novel to me. I keep thinking about it weeks later.
 
-If you really want a spoiler of the core idea, I have two very long quotes from the book which capture it. I would recommend just reading the book, though.
+If you really want a spoiler of the core idea, I have two very long quotes from the book below which capture it. I would recommend just reading the book, though.
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 

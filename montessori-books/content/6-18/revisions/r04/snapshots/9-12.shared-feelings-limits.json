@@ -1,0 +1,119 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "shared-feelings-limits",
+        "kind": "perspective",
+        "title": "Make room for feelings and keep the limit",
+        "summary": "Both books allow a child’s feelings while keeping clear limits on actions that cause harm. Understanding an upset child and protecting them or someone else can happen together.",
+        "cue": "When your child is upset about a boundary.",
+        "detail": [
+          "The books describe acknowledging the feeling and remaining available, rather than trying to make every difficult feeling disappear.",
+          "They also keep the adult responsible for stopping unsafe actions and showing what is acceptable. A child’s disappointment does not make the boundary unkind.",
+          "When the meaning of an action is unclear, observation can suggest possibilities. Davies treats putting a possible need into words as a tentative interpretation, not certainty about what the child means."
+        ],
+        "principle": {
+          "id": "principle.connection-and-limits",
+          "text": "A feeling can be accepted while an action has a limit."
+        },
+        "references": [
+          {
+            "id": "shared.ref.baby.feelings-limits",
+            "sourceId": "baby-2021",
+            "section": "Having kind and clear boundaries; When our baby cries",
+            "locator": "Safety/ability/family boundaries, alternatives, acknowledging feelings and responding to needs",
+            "pdfPages": [
+              {
+                "start": 103,
+                "end": 104
+              },
+              {
+                "start": 110,
+                "end": 111
+              }
+            ]
+          },
+          {
+            "id": "shared.ref.toddler.feelings-limits",
+            "sourceId": "toddler-2019",
+            "section": "Accepting our child for who they are; Be their translator; Allow all feelings, but not all behavior",
+            "locator": "Acceptance, tentative interpretation, protective adult limits including the adult’s safety",
+            "pdfPages": [
+              {
+                "start": 108,
+                "end": 110
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "9-12.shared-feelings-limits",
+        "entryId": "shared-feelings-limits",
+        "ageId": "9-12",
+        "topicIds": [
+          "connection-feelings",
+          "you-family"
+        ]
+      },
+      "displayContext": {
+        "ageLabel": "9–12 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "What’s underneath",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          },
+          {
+            "id": "you-family",
+            "label": "For you & your family"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 103–104, 110–111"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 108–110"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "4e6c1598e4184e7fb90691a563e5060e35f28d9c6b8040a63a72b57c48239acc",
+  "artContextSha256": null,
+  "publicProjectionSha256": "097564765c34cfd2b74bd4b231cdb5d483bcf62588d6c5b013671cec80954760",
+  "provenance": {
+    "revision": "r04",
+    "placementDraft": {
+      "path": "content/6-18/drafts/shared-placements/draft-r01.json",
+      "sha256": "be9ae97ea203dbd01c5f3b346415ee8eff0b483d023b3203be5e24246645ca2f"
+    },
+    "canonical": {
+      "entryId": "shared-feelings-limits",
+      "canonicalEntrySha256": "07c45c4884b3cd9d73a3c14bb041d30f4880d0c839ad31ab67918540724bdabf",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/shared/draft-r02.json",
+        "sha256": "04720cdd2997dc461a619234d74bea952b2fd3c388a49b326dc282f065f39b06",
+        "jsonPointer": "/entries/4",
+        "author": "/root/shared_pilot_draft",
+        "provenancePointer": "/provenance/4"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

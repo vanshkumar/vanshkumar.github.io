@@ -1,0 +1,131 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-solids-perspective",
+        "kind": "perspective",
+        "title": "Beginning solid foods",
+        "summary": "The authors describe first foods as gradual shared exploration, waiting until six months and signs of readiness. Their account pairs manageable food and the baby’s pace with choking precautions and learning first aid.",
+        "cue": "Your baby is showing interest in food and meals.",
+        "detail": [
+          "They describe noticing a food’s smell and texture, hearing its name and seeing it prepared. Eating can bring language and purposeful hand use together.",
+          "Their preference is for food the baby can manage with help suited to their coordination, rather than being hurried to an adult’s pace. The book’s practical food examples sit beside choking precautions and a recommendation to learn first aid.",
+          "The authors’ earlier descriptions of food interest are not the same as their explicit six-month-plus-readiness condition for starting solids."
+        ],
+        "references": [
+          {
+            "id": "baby-solids-perspective.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Eating / Introducing solid food",
+            "locator": "Six-month-plus-readiness condition, sensory discovery, baby pace and adjacent choking/first-aid context",
+            "pdfPages": [
+              {
+                "start": 186,
+                "end": 188
+              }
+            ]
+          },
+          {
+            "id": "baby-solids-perspective.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Tools for eating",
+            "locator": "Assistance adapted to coordination",
+            "pdfPages": [
+              {
+                "start": 189,
+                "end": 190
+              }
+            ]
+          },
+          {
+            "id": "baby-solids-perspective.ref.3",
+            "sourceId": "baby-2021",
+            "section": "Movement activities / 6 to 9 months",
+            "locator": "Food and utensil use as purposeful hand movement",
+            "pdfPages": [
+              {
+                "start": 161,
+                "end": 161
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "9-12.baby-solids-perspective",
+        "entryId": "baby-solids-perspective",
+        "ageId": "9-12",
+        "topicIds": [
+          "everyday-care",
+          "play-discovery"
+        ],
+        "ageContext": {
+          "bookAge": "Six months and signs of readiness; the book describes food exploration from six months to one year.",
+          "readiness": "Interest in food and meals while early solid-food experiences are unfolding."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "9–12 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          },
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 186–188"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 189–190"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF p. 161"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "5690a6e6fc59dc0c7b8f52d355d34ecfb8f1865ed41f1a68b74dc59fa355bb0f",
+  "artContextSha256": null,
+  "publicProjectionSha256": "83b818a144a6d622ab17865e9f44684fb3e6571fd9d9d25090c5ef242f1ec923",
+  "provenance": {
+    "revision": "r06",
+    "placementDraft": {
+      "path": "content/6-18/drafts/editorial-r03/02.json",
+      "sha256": "1d5860acf671c24090b0c5b86bd1297bc7b12db5b77e1663b7f75425506a115e"
+    },
+    "canonical": {
+      "entryId": "baby-solids-perspective",
+      "canonicalEntrySha256": "420fad449875509346e7fb703e1c3090fb8a2b9204a9bc3a3bb99d5a592a46de",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/18",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/18"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

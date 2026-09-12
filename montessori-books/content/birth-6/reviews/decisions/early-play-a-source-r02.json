@@ -1,0 +1,91 @@
+{
+  "id": "early-play-a-source-r02",
+  "date": "2026-09-12",
+  "reviewer": {
+    "task": "/root/trial_source",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "retainedReads": [
+    {
+      "path": "content/birth-6/reviews/early-play-a-source-r01.json",
+      "sha256": "b06b903a18ac4ade27fc2239a7d641972d610fbc4d5e71682bb9dc88e0043e8f",
+      "readLogIds": [
+        "text-144",
+        "text-145",
+        "visual-144",
+        "visual-145",
+        "text-290",
+        "visual-290"
+      ]
+    },
+    {
+      "path": "content/birth-6/reviews/trial-source-r01.json",
+      "sha256": "8c0a342169282b2084f716265922d266b26920c5a723a30a838c4bc5e38186f8",
+      "readLogIds": [
+        "source-monthly",
+        "visual-287",
+        "visual-288",
+        "visual-289"
+      ]
+    }
+  ],
+  "readLogs": [],
+  "decisions": [
+    {
+      "placementIds": [
+        "0-3.early-shadows",
+        "3-6.early-shadows"
+      ],
+      "verdict": "pass",
+      "assessment": "The added Months 3 to 4 reference visibly exposes PDF 287–289 and supports the existing continued-watching age statement.",
+      "readLogIds": [
+        "source-monthly",
+        "visual-287",
+        "visual-288",
+        "visual-289"
+      ],
+      "resolves": [
+        "early-shadows.age-reference"
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "0-3.baby-movement",
+        "3-6.baby-movement"
+      ],
+      "reuseBody": true,
+      "verdict": "pass",
+      "assessment": "The visible age-context citation now identifies PDF 144–145 for early holding and mat time while retaining comfort and current-interest qualifications.",
+      "readLogIds": [
+        "text-144",
+        "text-145",
+        "visual-144",
+        "visual-145"
+      ],
+      "resolves": [
+        "baby-movement.early-age-reference"
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "3-6.baby-treasure-baskets"
+      ],
+      "reuseBody": true,
+      "verdict": "pass",
+      "assessment": "The visible Months 5 to 6 citation now exposes PDF 289–290 while preserving independent sitting and the separate familiar-toy-basket example.",
+      "readLogIds": [
+        "source-monthly",
+        "visual-289",
+        "text-290",
+        "visual-290"
+      ],
+      "resolves": [
+        "baby-treasure-baskets.early-age-reference"
+      ],
+      "issues": []
+    }
+  ]
+}

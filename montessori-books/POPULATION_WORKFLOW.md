@@ -1,4 +1,55 @@
-# Population workflow — lean v1
+# Population workflow — consolidated editorial trial
+
+## Full continuation authorized — 2026-09-12
+
+After the completed trial and a remaining-work estimate, the user said “ok,
+let's run it.” Continue through full content population, independent review,
+original age illustrations and final integration. The trial-only stop below is
+historical. Use one editor and the two retained independent xhigh reviewers;
+the three old population tasks/authors remain paused. The editor may recover
+their saved unfinished drafts, preserving origin without claiming borrowed reads.
+Keep per-entry/source-unit tool outputs bounded. Reuse all existing exact passes,
+consolidate each batch's concrete corrections, and do not reopen harmless style.
+No deployment or design-score chase is authorized by this continuation.
+
+## Active amendment — 2026-09-12
+
+The user approved one editor and two independent xhigh reviewers, organized by
+source topic across age bands. The three previous population tasks and all their
+authors remain paused. The coordinator is the sole editor for this bounded trial;
+there is no application writer. Reuse their saved drafts without restarting them.
+
+The immediate scope is five entries / nine placements named in
+`content/review-trial/INPUTS-r01.json`. Complete two independent reviews, at most
+one consolidated correction pass, and a cost checkpoint, then STOP. Remaining
+substantive issues stay unresolved; there is no automatic further review cycle.
+No new art, publication, or integration belongs in the trial.
+
+`content/review-trial/COVERAGE.jsonl` joins the original 1,309 source ideas and
+saved mappings in one queue. Authored variants, age distinctions, reasons and
+holds remain. Conflicting candidates and missing applicability decisions are
+flagged, not automatically resolved. Only trial-relevant editorial ambiguities
+are resolved now; draft mappings do not grant content approval. Keep one ledger
+for later topic batches instead of three independent whole-book reconciliations.
+
+Reviewers receive the exact reader text once per body, all age/context differences,
+original source units and meaningful tables. They write decisions and actual
+read logs only. The existing compiler fills metadata; the editor runs checks.
+`review-packet.mjs --compact` interns repeated references and omits operational
+metadata while preserving actual surfaces and substantive age evidence. The
+machine report schema remains `lean-v1`; the editorial organization is revised.
+
+`verify-contribution.mjs --batch <input-manifest.json>` verifies every explicitly
+selected placement with the unchanged semantic gates. Its separate receipt has
+`contributionComplete: false` and `publication: false`; it cannot stand in for a
+complete contribution receipt. Historical pilot approvals remain unchanged.
+
+Report elapsed time, agent calls, packet/report sizes and any actually available
+token counters. Label byte/character sizes as proxies. Do not claim a percentage
+token saving from them. Retain the reading duties and correction rules below;
+this amendment supersedes the older three-task coordination requirement.
+
+## Previous amendment — lean v1
 
 Approved by the user on 2026-09-10: significantly reduce token use and continue,
 preserving content quality. This amendment governs Tasks 5–8 and supersedes older

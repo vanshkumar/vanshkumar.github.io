@@ -1,0 +1,97 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-languages",
+        "kind": "perspective",
+        "title": "The languages in your family’s day",
+        "summary": "Davies describes different ways a multilingual family can make its languages part of everyday life: through particular people, or through familiar places and times.",
+        "cue": "Your household or caregivers may use more than one language.",
+        "detail": [
+          "One example has adults speaking their own mother tongues with the child and an agreed language together. Another uses different languages in different settings. These are alternatives families can consider, not a demand to use both.",
+          "The useful focus is the language children share with real people in daily life. The book’s family anecdote illustrates an arrangement; it does not establish a fluency timetable."
+        ],
+        "references": [
+          {
+            "id": "toddler-languages.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Bilingualism",
+            "locator": "One Person One Language, Domains of Use and a multilingual-family example",
+            "pdfPages": [
+              {
+                "start": 182,
+                "end": 183
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "24-36.toddler-languages",
+        "entryId": "toddler-languages",
+        "ageId": "24-36",
+        "topicIds": [
+          "connection-feelings",
+          "play-discovery"
+        ],
+        "ageContext": {
+          "readiness": "Your household or caregivers may use more than one language."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "2–3 years",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          },
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 182–183"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "20eed4e202170f32ba294643514e24e82d255bf3bd608318a91c4009f06a972c",
+  "artContextSha256": null,
+  "publicProjectionSha256": "d12f3e75b89e3ab212c95b2f57d84fc35a39dae1d39b7b6eb9d24219a13b4b18",
+  "provenance": {
+    "revision": "r01",
+    "placementDraft": {
+      "path": "content/18-36/placements/care-frozen-reuse-r02.json",
+      "sha256": "58fcc86ec387d2fbdc7c458b9e56ef2a3a5455c0b9107bc4393ac7929c4e9d4b"
+    },
+    "canonical": {
+      "entryId": "toddler-languages",
+      "canonicalEntrySha256": "133cde8e6a04e472b3747ee8828431e4c02ffc65fbf080ae337cc8326dac6668",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/49",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/49"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

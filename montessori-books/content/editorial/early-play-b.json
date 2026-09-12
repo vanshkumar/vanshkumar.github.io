@@ -1,0 +1,185 @@
+{
+  "revision": "content/birth-6/revisions/r01",
+  "name": "early-play-b",
+  "entryIds": [
+    "early-read-aloud",
+    "baby-books",
+    "baby-naming",
+    "baby-outdoors",
+    "baby-languages",
+    "baby-choices-within-reach",
+    "baby-photos-at-eye-level",
+    "baby-space-to-explore"
+  ],
+  "placementIds": [
+    "0-3.early-read-aloud",
+    "3-6.early-read-aloud",
+    "0-3.baby-books",
+    "3-6.baby-books",
+    "0-3.baby-naming",
+    "3-6.baby-naming",
+    "0-3.baby-outdoors",
+    "3-6.baby-outdoors",
+    "0-3.baby-languages",
+    "3-6.baby-languages",
+    "3-6.baby-choices-within-reach",
+    "0-3.baby-photos-at-eye-level",
+    "3-6.baby-photos-at-eye-level",
+    "3-6.baby-space-to-explore"
+  ],
+  "packets": [
+    {
+      "id": "early-read-aloud",
+      "path": "tmp/editorial/early-play-b/early-read-aloud.json",
+      "sha256": "5dc592de7e3724b07e649b138ae7a11c88718a95c06e7f6503f78d3f1554931d",
+      "bytes": 10787,
+      "placementIds": [
+        "0-3.early-read-aloud",
+        "3-6.early-read-aloud"
+      ],
+      "sourcePages": {
+        "baby": [
+          123,
+          124,
+          130,
+          131,
+          132
+        ]
+      }
+    },
+    {
+      "id": "baby-books",
+      "path": "tmp/editorial/early-play-b/baby-books.json",
+      "sha256": "700220d9df93503ecf04fa878ba1345cb25ecf8a8c01295e0dda8d30c7bc32c8",
+      "bytes": 9728,
+      "placementIds": [
+        "0-3.baby-books",
+        "3-6.baby-books"
+      ],
+      "sourcePages": {
+        "baby": [
+          130,
+          131,
+          132,
+          134,
+          295
+        ]
+      }
+    },
+    {
+      "id": "baby-naming",
+      "path": "tmp/editorial/early-play-b/baby-naming.json",
+      "sha256": "864ad600074a2ddca1f11bc2144233fd7586c87aab6b81cfc07ead84e0e4d5e8",
+      "bytes": 9550,
+      "placementIds": [
+        "0-3.baby-naming",
+        "3-6.baby-naming"
+      ],
+      "sourcePages": {
+        "baby": [
+          119,
+          120,
+          130,
+          135
+        ]
+      }
+    },
+    {
+      "id": "baby-outdoors",
+      "path": "tmp/editorial/early-play-b/baby-outdoors.json",
+      "sha256": "fc662c0e5ec31af370d7876f4e624d435b87d1a7ee09a03cc42cf723a8e64328",
+      "bytes": 9135,
+      "placementIds": [
+        "0-3.baby-outdoors",
+        "3-6.baby-outdoors"
+      ],
+      "sourcePages": {
+        "baby": [
+          75,
+          171
+        ]
+      }
+    },
+    {
+      "id": "baby-languages",
+      "path": "tmp/editorial/early-play-b/baby-languages.json",
+      "sha256": "d7fe1d2ca70a1e416e215b462eaab8ac462f4a73d4f71b02c417fd3a81ed7614",
+      "bytes": 10010,
+      "placementIds": [
+        "0-3.baby-languages",
+        "3-6.baby-languages"
+      ],
+      "sourcePages": {
+        "baby": [
+          41,
+          130,
+          139
+        ]
+      }
+    },
+    {
+      "id": "baby-choices-within-reach",
+      "path": "tmp/editorial/early-play-b/baby-choices-within-reach.json",
+      "sha256": "763f79d22dcca0489202a5b61b4b18c0754664c39b0b49d9e0ad437eae61d92b",
+      "bytes": 8060,
+      "placementIds": [
+        "3-6.baby-choices-within-reach"
+      ],
+      "sourcePages": {
+        "baby": [
+          66,
+          68,
+          69,
+          79,
+          80,
+          122,
+          123,
+          156,
+          299
+        ]
+      }
+    },
+    {
+      "id": "baby-photos-at-eye-level",
+      "path": "tmp/editorial/early-play-b/baby-photos-at-eye-level.json",
+      "sha256": "d364df3977d1daca4a54b8185bdb8939a67daa83627e39663dddc7c7bb4756a0",
+      "bytes": 8881,
+      "placementIds": [
+        "0-3.baby-photos-at-eye-level",
+        "3-6.baby-photos-at-eye-level"
+      ],
+      "sourcePages": {
+        "baby": [
+          66,
+          70,
+          74
+        ]
+      }
+    },
+    {
+      "id": "baby-space-to-explore",
+      "path": "tmp/editorial/early-play-b/baby-space-to-explore.json",
+      "sha256": "117c05bc9875b7fbc0d357dc765e0f3852b04edd6fcad38ef6406218755190be",
+      "bytes": 7690,
+      "placementIds": [
+        "3-6.baby-space-to-explore"
+      ],
+      "sourcePages": {
+        "baby": [
+          66,
+          67,
+          157,
+          158,
+          159,
+          287,
+          288,
+          299,
+          300,
+          301
+        ]
+      }
+    }
+  ],
+  "sourcePageDirectory": "tmp/editorial/sources",
+  "publication": false
+}

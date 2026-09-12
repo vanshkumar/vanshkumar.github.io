@@ -1,0 +1,107 @@
+{
+  "sourceIdeas": 1309,
+  "sourceLedgers": [
+    {
+      "path": "research/baby/COVERAGE_LEDGER.jsonl",
+      "sha256": "b30e5c55e2364af2762aa7af49a5e752908bdb3481779e61fc39762a05432a0f",
+      "ideas": 617
+    },
+    {
+      "path": "research/toddler/COVERAGE_LEDGER.jsonl",
+      "sha256": "dff004b408d6a74d83b41560d5aaf0fda7e3ec7c819a03b11605344e7b2074e2",
+      "ideas": 692
+    }
+  ],
+  "inputs": [
+    {
+      "path": "content/pilots/revisions/r08/COVERAGE_RECONCILIATION.jsonl",
+      "sha256": "cf1435414b381e48706c4259f5f6e480ab15ecbdd207edbfb6fa641aeaaa8d2d",
+      "records": 1309,
+      "state": "pilot-stage"
+    },
+    {
+      "path": "tmp/birth-6/root/coverage-working.json",
+      "sha256": "0ab7375b73f2f1bab586539e73348880d6efd1156fdb6d58eae83042d4ccec76",
+      "records": 2659,
+      "state": "draft"
+    },
+    {
+      "path": "tmp/birth-6/root/coverage-pending.json",
+      "sha256": "ae6f92fbd750902abfd6f4b6095c976e5ff535004d9c04e971ca7ed4e8d724df",
+      "records": 331,
+      "state": "pending"
+    },
+    {
+      "path": "content/birth-6/authoring/activities-COVERAGE_SUGGESTIONS-r01.json",
+      "sha256": "99c8a69e16f419feaa39c68e4eacc783f8862ff65d4ed770cfde3a830e7b3efa",
+      "records": 19,
+      "state": "suggestion"
+    },
+    {
+      "path": "content/birth-6/authoring/care-coverage-decisions-r01.json",
+      "sha256": "12a610c5566c0d62cc7299f91e7a30b0201c11922b095d14b16b68c3cb09a35b",
+      "records": 39,
+      "state": "draft"
+    },
+    {
+      "path": "content/6-18/drafts/baby-play/COVERAGE-r03.jsonl",
+      "sha256": "7e7a6e1e25f1972ad697789e3ebfb9787aba7d3b13596b6079b99b5831f56592",
+      "records": 715,
+      "state": "draft"
+    },
+    {
+      "path": "content/6-18/drafts/shared-placements/COVERAGE_PARENT_INTENTS.jsonl",
+      "sha256": "c533a95c87d03cc408dfa12eab8db580402f3aeb4af427bbcb35cc42c0db8ab6",
+      "records": 621,
+      "state": "draft"
+    },
+    {
+      "path": "content/6-18/drafts/baby-care/draft-r02.json",
+      "sha256": "0bd13710c5b9c91a33379d0c1ca8e7cc0b9447d2207b6ca6b286c7a692e71826",
+      "records": 5,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/source-work/play-COVERAGE-r01.jsonl",
+      "sha256": "01da0f445a58e27fbf9c4d94b712e58412263dfa5f8a1ef5d9089806fc0bfd73",
+      "records": 812,
+      "state": "draft"
+    },
+    {
+      "path": "content/18-36/source-work/care-author/COVERAGE-r02.jsonl",
+      "sha256": "a14ea9da6e692f2cdfd68e881c07cfcf6748d8dfeff51ca47240d4b5fb99593b",
+      "records": 311,
+      "state": "draft"
+    },
+    {
+      "path": "content/18-36/source-work/family-author/COVERAGE-r02.jsonl",
+      "sha256": "9b7995aefb478fb5795e65ac552d0da625f1125f9d0a085bc5fb83a2d6876668",
+      "records": 161,
+      "state": "draft"
+    },
+    {
+      "path": "content/18-36/source-work/root-context-decisions-r01.json",
+      "sha256": "58dcbd80a2a27a5c15c4d15789a4256da6216829eafaab9c2765229329a1e869",
+      "records": 43,
+      "state": "draft"
+    },
+    {
+      "path": "content/18-36/source-work/root-family-MAPPING-r01.json",
+      "sha256": "d98967efd3ce12ab1f5d7258ac069721f52968f56391213d90eca97569d6827f",
+      "records": 3,
+      "state": "suggestion"
+    },
+    {
+      "path": "content/18-36/source-work/root-no-performance-MAPPING-r01.json",
+      "sha256": "e62b0611b5b62dff68096e504c084053db0690e2d211324cae175bd9fa3b779a",
+      "records": 1,
+      "state": "suggestion"
+    }
+  ],
+  "mappingRecords": 7085,
+  "ageCellsWithoutExplicitMapping": 3270,
+  "possibleConflictCells": 1073,
+  "unknownSourceIds": [],
+  "publication": false,
+  "boundary": "An editorial queue, not a completeness verdict. Missing age mappings need applicability decisions; possible conflicts need interpretation. Drafts and suggestions are never approvals. Only trial-linked meanings are resolved in this run."
+}

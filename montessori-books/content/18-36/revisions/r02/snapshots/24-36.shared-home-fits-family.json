@@ -1,0 +1,139 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "shared-home-fits-family",
+        "kind": "perspective",
+        "title": "Let the home fit your family",
+        "summary": "Start with the child and the home you have. The books describe useful surroundings that change with family life, without requiring a collection of special furniture or toys.",
+        "cue": "When setting up the home starts to feel like another large project.",
+        "detail": [
+          "Look at what is helping and what is making everyday life harder. A useful change might make something easier to find, reduce repeated tidying, or give an interested child more room to take part.",
+          "The Baby authors say Montessori can be practiced without buying special materials. Davies describes homes that retain their character, cultures, and traditions, including when space is shared or small.",
+          "People belong to this environment too: their presence, language, and relationships matter alongside the physical space."
+        ],
+        "principle": {
+          "id": "principle.environment-in-service",
+          "text": "The surroundings serve the child and the people who live there."
+        },
+        "references": [
+          {
+            "id": "shared.ref.baby.home-family",
+            "sourceId": "baby-2021",
+            "section": "Babies don’t need so much stuff; Prepared environment; How can you do Montessori on a budget?; 49 ideas for staying calm",
+            "locator": "Using what you have, people as part of the environment, and idea 25 on arranging the home to reduce work",
+            "pdfPages": [
+              {
+                "start": 19,
+                "end": 19
+              },
+              {
+                "start": 37,
+                "end": 37
+              },
+              {
+                "start": 223,
+                "end": 224
+              },
+              {
+                "start": 240,
+                "end": 240
+              }
+            ]
+          },
+          {
+            "id": "shared.ref.toddler.home-family",
+            "sourceId": "toddler-2019",
+            "section": "Making it cozy; Setting up our home to save us work; Sharing spaces; Small spaces; Use our home as a helper",
+            "locator": "Culture and family context, gradual changes, people/environment and reducing everyday friction",
+            "pdfPages": [
+              {
+                "start": 83,
+                "end": 85
+              },
+              {
+                "start": 96,
+                "end": 96
+              },
+              {
+                "start": 196,
+                "end": 196
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "24-36.shared-home-fits-family",
+        "entryId": "shared-home-fits-family",
+        "ageId": "24-36",
+        "topicIds": [
+          "home-that-helps",
+          "you-family"
+        ],
+        "ageContext": {
+          "note": "General guidance for family life with a toddler; no skill is expected at this age. Age and readiness sources: The Montessori Toddler, PDF pp. 14."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "2–3 years",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "What’s underneath",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "home-that-helps",
+            "label": "A home that helps"
+          },
+          {
+            "id": "you-family",
+            "label": "For you & your family"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 19, 37, 223–224, 240"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 83–85, 96, 196"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "365323bcf93146fe6ad3313f58278e1c7c49fb179f7caed9f83bca209a556c04",
+  "artContextSha256": null,
+  "publicProjectionSha256": "5a322af69283592e187ce1c0cfb8296a90597402b64b72407c5a5a7f64607ef4",
+  "provenance": {
+    "revision": "r02",
+    "placementDraft": {
+      "path": "content/18-36/drafts/editorial-r02/34.json",
+      "sha256": "c026667b04c9574c54eeff687bed820f2340433517129d031a32ad2aa332b15c"
+    },
+    "canonical": {
+      "entryId": "shared-home-fits-family",
+      "canonicalEntrySha256": "fb7f30238d159ef3395035a56b71356f237faaaa4369ad932effe544ff0625d0",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/shared/draft-r02.json",
+        "sha256": "04720cdd2997dc461a619234d74bea952b2fd3c388a49b326dc282f065f39b06",
+        "jsonPointer": "/entries/5",
+        "author": "/root/shared_pilot_draft",
+        "provenancePointer": "/provenance/5"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

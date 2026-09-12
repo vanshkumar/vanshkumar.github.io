@@ -4,6 +4,7 @@ import HomeStudy from './HomeStudy';
 import { readRoute, homeLink } from './guide/routes';
 import { guide } from './guide';
 import './styles.css';
+import './art-surfaces.css';
 
 // Vite removes this branch and its entire import graph from production.
 // Alternate studies preserve their original, unreviewed development presentations.

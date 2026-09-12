@@ -1,0 +1,3654 @@
+{
+  "revision": "r03",
+  "owner": "birth-6",
+  "mode": "text-only-contribution",
+  "verifiedOn": "2026-09-12",
+  "manifest": {
+    "path": "content/birth-6/revisions/r03/MANIFEST.json",
+    "sha256": "a37902763951714c0bb20135fd84ccef6e53d64719cd0cb08662bc78dc146ad7"
+  },
+  "payload": {
+    "path": "content/birth-6/revisions/r03/payload.json",
+    "sha256": "071a443538ef353206ef8c2f22889d114ef1712995706da0195fc9a615bec5e7"
+  },
+  "renderedSurfaces": {
+    "path": "content/birth-6/revisions/r03/RENDERED_SURFACES.json",
+    "sha256": "ebfa5bcd326ce713d494f89e69d7d3a4692cd70ffd5c877fec46e66b230aa190"
+  },
+  "registry": {
+    "path": "content/pilots/CANONICAL_REGISTRY.json",
+    "sha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+  },
+  "components": [
+    {
+      "entryId": "shared-observe",
+      "placementId": "0-3.shared-observe",
+      "textPlacementSha256": "b4a7d112cb379665c878323ea967d07476d5704d4434c29497bb3e4e2598bee8",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-foundations-source-r01.0-3.shared-observe",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-foundations-source-r01.json",
+          "fileSha256": "2cb8a8222e22ec4d297cf9039542eb29c6ff2e0cec537ffb06b144083819c72f",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-observe.json",
+          "textPlacementSha256": "b4a7d112cb379665c878323ea967d07476d5704d4434c29497bb3e4e2598bee8",
+          "bodyReview": {
+            "entryId": "shared-observe",
+            "canonicalEntrySha256": "be586cb71ff0fed0a1e9904aa80691945c86bee712e7f2a83fe5779cbf93741d",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-foundations-tone-r01.0-3.shared-observe",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-foundations-tone-r01.json",
+          "fileSha256": "64ee729cd3cc3fab9e3090c3de26afaef1bdac49195dd2054cfe1a7bd6777421",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-observe.json",
+          "textPlacementSha256": "b4a7d112cb379665c878323ea967d07476d5704d4434c29497bb3e4e2598bee8",
+          "bodyReview": {
+            "entryId": "shared-observe",
+            "canonicalEntrySha256": "be586cb71ff0fed0a1e9904aa80691945c86bee712e7f2a83fe5779cbf93741d",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-observe",
+      "placementId": "3-6.shared-observe",
+      "textPlacementSha256": "d2077a73259bc51e0066889805056423d22d66bdc497c06c464723fbe434e570",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-foundations-source-r01.3-6.shared-observe",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-foundations-source-r01.json",
+          "fileSha256": "2cb8a8222e22ec4d297cf9039542eb29c6ff2e0cec537ffb06b144083819c72f",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-observe.json",
+          "textPlacementSha256": "d2077a73259bc51e0066889805056423d22d66bdc497c06c464723fbe434e570",
+          "bodyReview": {
+            "entryId": "shared-observe",
+            "canonicalEntrySha256": "be586cb71ff0fed0a1e9904aa80691945c86bee712e7f2a83fe5779cbf93741d",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-foundations-tone-r01.3-6.shared-observe",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-foundations-tone-r01.json",
+          "fileSha256": "64ee729cd3cc3fab9e3090c3de26afaef1bdac49195dd2054cfe1a7bd6777421",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-observe.json",
+          "textPlacementSha256": "d2077a73259bc51e0066889805056423d22d66bdc497c06c464723fbe434e570",
+          "bodyReview": {
+            "entryId": "shared-observe",
+            "canonicalEntrySha256": "be586cb71ff0fed0a1e9904aa80691945c86bee712e7f2a83fe5779cbf93741d",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-follow-readiness",
+      "placementId": "0-3.shared-follow-readiness",
+      "textPlacementSha256": "3eff404fb89c2f1a724906d7c863a618af74f68894dc18222ec2277b2d5effd3",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-foundations-source-r01.0-3.shared-follow-readiness",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-foundations-source-r01.json",
+          "fileSha256": "2cb8a8222e22ec4d297cf9039542eb29c6ff2e0cec537ffb06b144083819c72f",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-follow-readiness.json",
+          "textPlacementSha256": "3eff404fb89c2f1a724906d7c863a618af74f68894dc18222ec2277b2d5effd3",
+          "bodyReview": {
+            "entryId": "shared-follow-readiness",
+            "canonicalEntrySha256": "faf6b70472402cf68b23e4a7351c5c38613801bc3e0185ccc02f79c63b6b762f",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-foundations-tone-r01.0-3.shared-follow-readiness",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-foundations-tone-r01.json",
+          "fileSha256": "64ee729cd3cc3fab9e3090c3de26afaef1bdac49195dd2054cfe1a7bd6777421",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-follow-readiness.json",
+          "textPlacementSha256": "3eff404fb89c2f1a724906d7c863a618af74f68894dc18222ec2277b2d5effd3",
+          "bodyReview": {
+            "entryId": "shared-follow-readiness",
+            "canonicalEntrySha256": "faf6b70472402cf68b23e4a7351c5c38613801bc3e0185ccc02f79c63b6b762f",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-follow-readiness",
+      "placementId": "3-6.shared-follow-readiness",
+      "textPlacementSha256": "15576b12b51c3c23109411026171e568ddb87ff8c38f3f0acd20ed99a8f193e6",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-foundations-source-r01.3-6.shared-follow-readiness",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-foundations-source-r01.json",
+          "fileSha256": "2cb8a8222e22ec4d297cf9039542eb29c6ff2e0cec537ffb06b144083819c72f",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-follow-readiness.json",
+          "textPlacementSha256": "15576b12b51c3c23109411026171e568ddb87ff8c38f3f0acd20ed99a8f193e6",
+          "bodyReview": {
+            "entryId": "shared-follow-readiness",
+            "canonicalEntrySha256": "faf6b70472402cf68b23e4a7351c5c38613801bc3e0185ccc02f79c63b6b762f",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-foundations-tone-r01.3-6.shared-follow-readiness",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-foundations-tone-r01.json",
+          "fileSha256": "64ee729cd3cc3fab9e3090c3de26afaef1bdac49195dd2054cfe1a7bd6777421",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-follow-readiness.json",
+          "textPlacementSha256": "15576b12b51c3c23109411026171e568ddb87ff8c38f3f0acd20ed99a8f193e6",
+          "bodyReview": {
+            "entryId": "shared-follow-readiness",
+            "canonicalEntrySha256": "faf6b70472402cf68b23e4a7351c5c38613801bc3e0185ccc02f79c63b6b762f",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-participation-help",
+      "placementId": "0-3.shared-participation-help",
+      "textPlacementSha256": "e82dddde85d0b48b652dee3bbf8c5c1cd20683821b4c63194f70bda3eedd006b",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-foundations-source-r01.0-3.shared-participation-help",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-foundations-source-r01.json",
+          "fileSha256": "2cb8a8222e22ec4d297cf9039542eb29c6ff2e0cec537ffb06b144083819c72f",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-participation-help.json",
+          "textPlacementSha256": "e82dddde85d0b48b652dee3bbf8c5c1cd20683821b4c63194f70bda3eedd006b",
+          "bodyReview": {
+            "entryId": "shared-participation-help",
+            "canonicalEntrySha256": "179d1031c809beab7faf2065ff47caa85c7c1bf73df76bdbe05e296c1fe2b4c4",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-foundations-tone-r01.0-3.shared-participation-help",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-foundations-tone-r01.json",
+          "fileSha256": "64ee729cd3cc3fab9e3090c3de26afaef1bdac49195dd2054cfe1a7bd6777421",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-participation-help.json",
+          "textPlacementSha256": "e82dddde85d0b48b652dee3bbf8c5c1cd20683821b4c63194f70bda3eedd006b",
+          "bodyReview": {
+            "entryId": "shared-participation-help",
+            "canonicalEntrySha256": "179d1031c809beab7faf2065ff47caa85c7c1bf73df76bdbe05e296c1fe2b4c4",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-participation-help",
+      "placementId": "3-6.shared-participation-help",
+      "textPlacementSha256": "cf5836fad33bf03c8d592dfec0d4ea3c7238ea0f971cc1bb7746ad4a3077a1be",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-foundations-source-r01.3-6.shared-participation-help",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-foundations-source-r01.json",
+          "fileSha256": "2cb8a8222e22ec4d297cf9039542eb29c6ff2e0cec537ffb06b144083819c72f",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-participation-help.json",
+          "textPlacementSha256": "cf5836fad33bf03c8d592dfec0d4ea3c7238ea0f971cc1bb7746ad4a3077a1be",
+          "bodyReview": {
+            "entryId": "shared-participation-help",
+            "canonicalEntrySha256": "179d1031c809beab7faf2065ff47caa85c7c1bf73df76bdbe05e296c1fe2b4c4",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-foundations-tone-r01.3-6.shared-participation-help",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-foundations-tone-r01.json",
+          "fileSha256": "64ee729cd3cc3fab9e3090c3de26afaef1bdac49195dd2054cfe1a7bd6777421",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-participation-help.json",
+          "textPlacementSha256": "cf5836fad33bf03c8d592dfec0d4ea3c7238ea0f971cc1bb7746ad4a3077a1be",
+          "bodyReview": {
+            "entryId": "shared-participation-help",
+            "canonicalEntrySha256": "179d1031c809beab7faf2065ff47caa85c7c1bf73df76bdbe05e296c1fe2b4c4",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-time-to-explore",
+      "placementId": "0-3.shared-time-to-explore",
+      "textPlacementSha256": "bdfef14e29ee6a09b01b83046df0e54ee669aab67dafdc33e11d5758ef3a1a4f",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-foundations-source-r01.0-3.shared-time-to-explore",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-foundations-source-r01.json",
+          "fileSha256": "2cb8a8222e22ec4d297cf9039542eb29c6ff2e0cec537ffb06b144083819c72f",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-time-to-explore.json",
+          "textPlacementSha256": "bdfef14e29ee6a09b01b83046df0e54ee669aab67dafdc33e11d5758ef3a1a4f",
+          "bodyReview": {
+            "entryId": "shared-time-to-explore",
+            "canonicalEntrySha256": "8904cbdc1e74829188d73117b0eb343cce29beb2384e3cfb6e5517ff674eda33",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-foundations-tone-r01.0-3.shared-time-to-explore",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-foundations-tone-r01.json",
+          "fileSha256": "64ee729cd3cc3fab9e3090c3de26afaef1bdac49195dd2054cfe1a7bd6777421",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-time-to-explore.json",
+          "textPlacementSha256": "bdfef14e29ee6a09b01b83046df0e54ee669aab67dafdc33e11d5758ef3a1a4f",
+          "bodyReview": {
+            "entryId": "shared-time-to-explore",
+            "canonicalEntrySha256": "8904cbdc1e74829188d73117b0eb343cce29beb2384e3cfb6e5517ff674eda33",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-time-to-explore",
+      "placementId": "3-6.shared-time-to-explore",
+      "textPlacementSha256": "6827392fa3fbebfa17c651e607002fc4f4d195baceffa31180ad0484c06067d7",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-foundations-source-r01.3-6.shared-time-to-explore",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-foundations-source-r01.json",
+          "fileSha256": "2cb8a8222e22ec4d297cf9039542eb29c6ff2e0cec537ffb06b144083819c72f",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-time-to-explore.json",
+          "textPlacementSha256": "6827392fa3fbebfa17c651e607002fc4f4d195baceffa31180ad0484c06067d7",
+          "bodyReview": {
+            "entryId": "shared-time-to-explore",
+            "canonicalEntrySha256": "8904cbdc1e74829188d73117b0eb343cce29beb2384e3cfb6e5517ff674eda33",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-foundations-tone-r01.3-6.shared-time-to-explore",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-foundations-tone-r01.json",
+          "fileSha256": "64ee729cd3cc3fab9e3090c3de26afaef1bdac49195dd2054cfe1a7bd6777421",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-time-to-explore.json",
+          "textPlacementSha256": "6827392fa3fbebfa17c651e607002fc4f4d195baceffa31180ad0484c06067d7",
+          "bodyReview": {
+            "entryId": "shared-time-to-explore",
+            "canonicalEntrySha256": "8904cbdc1e74829188d73117b0eb343cce29beb2384e3cfb6e5517ff674eda33",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-feelings-limits",
+      "placementId": "0-3.shared-feelings-limits",
+      "textPlacementSha256": "c70ef2ae9dfd10a036b8bdac4ba64c9488fd778f5e130fa389ada639f1a3ddfc",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-foundations-source-r01.0-3.shared-feelings-limits",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-foundations-source-r01.json",
+          "fileSha256": "2cb8a8222e22ec4d297cf9039542eb29c6ff2e0cec537ffb06b144083819c72f",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-feelings-limits.json",
+          "textPlacementSha256": "c70ef2ae9dfd10a036b8bdac4ba64c9488fd778f5e130fa389ada639f1a3ddfc",
+          "bodyReview": {
+            "entryId": "shared-feelings-limits",
+            "canonicalEntrySha256": "07c45c4884b3cd9d73a3c14bb041d30f4880d0c839ad31ab67918540724bdabf",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-foundations-tone-r01.0-3.shared-feelings-limits",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-foundations-tone-r01.json",
+          "fileSha256": "64ee729cd3cc3fab9e3090c3de26afaef1bdac49195dd2054cfe1a7bd6777421",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-feelings-limits.json",
+          "textPlacementSha256": "c70ef2ae9dfd10a036b8bdac4ba64c9488fd778f5e130fa389ada639f1a3ddfc",
+          "bodyReview": {
+            "entryId": "shared-feelings-limits",
+            "canonicalEntrySha256": "07c45c4884b3cd9d73a3c14bb041d30f4880d0c839ad31ab67918540724bdabf",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-feelings-limits",
+      "placementId": "3-6.shared-feelings-limits",
+      "textPlacementSha256": "d4dbffbae7d4b1bdec91a6062935180739889564f4b7fb7603c740d7aa30483d",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-foundations-source-r01.3-6.shared-feelings-limits",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-foundations-source-r01.json",
+          "fileSha256": "2cb8a8222e22ec4d297cf9039542eb29c6ff2e0cec537ffb06b144083819c72f",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-feelings-limits.json",
+          "textPlacementSha256": "d4dbffbae7d4b1bdec91a6062935180739889564f4b7fb7603c740d7aa30483d",
+          "bodyReview": {
+            "entryId": "shared-feelings-limits",
+            "canonicalEntrySha256": "07c45c4884b3cd9d73a3c14bb041d30f4880d0c839ad31ab67918540724bdabf",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-foundations-tone-r01.3-6.shared-feelings-limits",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-foundations-tone-r01.json",
+          "fileSha256": "64ee729cd3cc3fab9e3090c3de26afaef1bdac49195dd2054cfe1a7bd6777421",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-feelings-limits.json",
+          "textPlacementSha256": "d4dbffbae7d4b1bdec91a6062935180739889564f4b7fb7603c740d7aa30483d",
+          "bodyReview": {
+            "entryId": "shared-feelings-limits",
+            "canonicalEntrySha256": "07c45c4884b3cd9d73a3c14bb041d30f4880d0c839ad31ab67918540724bdabf",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-home-fits-family",
+      "placementId": "0-3.shared-home-fits-family",
+      "textPlacementSha256": "e7d0b21ebb9f97ccfe2313cd4b10d9a6c87ec2d02bfde2a24f2bd35d1c8ac412",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-foundations-source-r01.0-3.shared-home-fits-family",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-foundations-source-r01.json",
+          "fileSha256": "2cb8a8222e22ec4d297cf9039542eb29c6ff2e0cec537ffb06b144083819c72f",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-home-fits-family.json",
+          "textPlacementSha256": "e7d0b21ebb9f97ccfe2313cd4b10d9a6c87ec2d02bfde2a24f2bd35d1c8ac412",
+          "bodyReview": {
+            "entryId": "shared-home-fits-family",
+            "canonicalEntrySha256": "fb7f30238d159ef3395035a56b71356f237faaaa4369ad932effe544ff0625d0",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-foundations-tone-r01.0-3.shared-home-fits-family",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-foundations-tone-r01.json",
+          "fileSha256": "64ee729cd3cc3fab9e3090c3de26afaef1bdac49195dd2054cfe1a7bd6777421",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-home-fits-family.json",
+          "textPlacementSha256": "e7d0b21ebb9f97ccfe2313cd4b10d9a6c87ec2d02bfde2a24f2bd35d1c8ac412",
+          "bodyReview": {
+            "entryId": "shared-home-fits-family",
+            "canonicalEntrySha256": "fb7f30238d159ef3395035a56b71356f237faaaa4369ad932effe544ff0625d0",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-home-fits-family",
+      "placementId": "3-6.shared-home-fits-family",
+      "textPlacementSha256": "46eb8536a1cf106f93973de1297280ff710e13ea9ccaf5baee646314ee2d3ff6",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-foundations-source-r01.3-6.shared-home-fits-family",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-foundations-source-r01.json",
+          "fileSha256": "2cb8a8222e22ec4d297cf9039542eb29c6ff2e0cec537ffb06b144083819c72f",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-home-fits-family.json",
+          "textPlacementSha256": "46eb8536a1cf106f93973de1297280ff710e13ea9ccaf5baee646314ee2d3ff6",
+          "bodyReview": {
+            "entryId": "shared-home-fits-family",
+            "canonicalEntrySha256": "fb7f30238d159ef3395035a56b71356f237faaaa4369ad932effe544ff0625d0",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-foundations-tone-r01.3-6.shared-home-fits-family",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-foundations-tone-r01.json",
+          "fileSha256": "64ee729cd3cc3fab9e3090c3de26afaef1bdac49195dd2054cfe1a7bd6777421",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-home-fits-family.json",
+          "textPlacementSha256": "46eb8536a1cf106f93973de1297280ff710e13ea9ccaf5baee646314ee2d3ff6",
+          "bodyReview": {
+            "entryId": "shared-home-fits-family",
+            "canonicalEntrySha256": "fb7f30238d159ef3395035a56b71356f237faaaa4369ad932effe544ff0625d0",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-adult-needs-support",
+      "placementId": "0-3.shared-adult-needs-support",
+      "textPlacementSha256": "9035edf452d59223677135bfd2e69a6ae59dc667137c9f41886a1e6ae8fc9408",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-family-source-r01.0-3.shared-adult-needs-support",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-family-source-r01.json",
+          "fileSha256": "27e42b539a8f50eab9e8a110254fbf3dcde7fdd785dfd7ab29b22db10a5b1b86",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-adult-needs-support.json",
+          "textPlacementSha256": "9035edf452d59223677135bfd2e69a6ae59dc667137c9f41886a1e6ae8fc9408",
+          "bodyReview": {
+            "entryId": "shared-adult-needs-support",
+            "canonicalEntrySha256": "9eb3d6c99388c760b335570260180e97d59b9e2ae1e5ad17b41e2be4e28a90fb",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-family-tone-r01.0-3.shared-adult-needs-support",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-family-tone-r01.json",
+          "fileSha256": "2d06eb3c78e9aab26cecc73ed211ede181c1813ec12bb40af222906d1a0649e9",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-adult-needs-support.json",
+          "textPlacementSha256": "9035edf452d59223677135bfd2e69a6ae59dc667137c9f41886a1e6ae8fc9408",
+          "bodyReview": {
+            "entryId": "shared-adult-needs-support",
+            "canonicalEntrySha256": "9eb3d6c99388c760b335570260180e97d59b9e2ae1e5ad17b41e2be4e28a90fb",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-adult-needs-support",
+      "placementId": "3-6.shared-adult-needs-support",
+      "textPlacementSha256": "835aaea786b4f77ffb3da39b84a49e1fc68f8662a2c3ce3d882554f7310754e6",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-family-source-r01.3-6.shared-adult-needs-support",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-family-source-r01.json",
+          "fileSha256": "27e42b539a8f50eab9e8a110254fbf3dcde7fdd785dfd7ab29b22db10a5b1b86",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-adult-needs-support.json",
+          "textPlacementSha256": "835aaea786b4f77ffb3da39b84a49e1fc68f8662a2c3ce3d882554f7310754e6",
+          "bodyReview": {
+            "entryId": "shared-adult-needs-support",
+            "canonicalEntrySha256": "9eb3d6c99388c760b335570260180e97d59b9e2ae1e5ad17b41e2be4e28a90fb",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-family-tone-r01.3-6.shared-adult-needs-support",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-family-tone-r01.json",
+          "fileSha256": "2d06eb3c78e9aab26cecc73ed211ede181c1813ec12bb40af222906d1a0649e9",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-adult-needs-support.json",
+          "textPlacementSha256": "835aaea786b4f77ffb3da39b84a49e1fc68f8662a2c3ce3d882554f7310754e6",
+          "bodyReview": {
+            "entryId": "shared-adult-needs-support",
+            "canonicalEntrySha256": "9eb3d6c99388c760b335570260180e97d59b9e2ae1e5ad17b41e2be4e28a90fb",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-something-for-you",
+      "placementId": "0-3.shared-something-for-you",
+      "textPlacementSha256": "59858d2777450a2297b5c83b36da853582bb2cdfd487b520516b9a943db8b413",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-family-source-r01.0-3.shared-something-for-you",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-family-source-r01.json",
+          "fileSha256": "27e42b539a8f50eab9e8a110254fbf3dcde7fdd785dfd7ab29b22db10a5b1b86",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-something-for-you.json",
+          "textPlacementSha256": "59858d2777450a2297b5c83b36da853582bb2cdfd487b520516b9a943db8b413",
+          "bodyReview": {
+            "entryId": "shared-something-for-you",
+            "canonicalEntrySha256": "6488f1305c07855fd68a21f8e981aa8d73906cf4df29ee9903458c02fdc9b9c3",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-family-tone-r01.0-3.shared-something-for-you",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-family-tone-r01.json",
+          "fileSha256": "2d06eb3c78e9aab26cecc73ed211ede181c1813ec12bb40af222906d1a0649e9",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-something-for-you.json",
+          "textPlacementSha256": "59858d2777450a2297b5c83b36da853582bb2cdfd487b520516b9a943db8b413",
+          "bodyReview": {
+            "entryId": "shared-something-for-you",
+            "canonicalEntrySha256": "6488f1305c07855fd68a21f8e981aa8d73906cf4df29ee9903458c02fdc9b9c3",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-something-for-you",
+      "placementId": "3-6.shared-something-for-you",
+      "textPlacementSha256": "964a6ae96a17ecba738d38c907ca06aadd1b471f347ecb1c4575f5742715e8c4",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-family-source-r01.3-6.shared-something-for-you",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-family-source-r01.json",
+          "fileSha256": "27e42b539a8f50eab9e8a110254fbf3dcde7fdd785dfd7ab29b22db10a5b1b86",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-something-for-you.json",
+          "textPlacementSha256": "964a6ae96a17ecba738d38c907ca06aadd1b471f347ecb1c4575f5742715e8c4",
+          "bodyReview": {
+            "entryId": "shared-something-for-you",
+            "canonicalEntrySha256": "6488f1305c07855fd68a21f8e981aa8d73906cf4df29ee9903458c02fdc9b9c3",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-family-tone-r01.3-6.shared-something-for-you",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-family-tone-r01.json",
+          "fileSha256": "2d06eb3c78e9aab26cecc73ed211ede181c1813ec12bb40af222906d1a0649e9",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-something-for-you.json",
+          "textPlacementSha256": "964a6ae96a17ecba738d38c907ca06aadd1b471f347ecb1c4575f5742715e8c4",
+          "bodyReview": {
+            "entryId": "shared-something-for-you",
+            "canonicalEntrySha256": "6488f1305c07855fd68a21f8e981aa8d73906cf4df29ee9903458c02fdc9b9c3",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-less-crowded-day",
+      "placementId": "0-3.shared-less-crowded-day",
+      "textPlacementSha256": "873a05adcd3b477c5984aacb1ce206922898c58f05c5fb812c7bc119e9f2afee",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-foundations-source-r01.0-3.shared-less-crowded-day",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-foundations-source-r01.json",
+          "fileSha256": "2cb8a8222e22ec4d297cf9039542eb29c6ff2e0cec537ffb06b144083819c72f",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-less-crowded-day.json",
+          "textPlacementSha256": "873a05adcd3b477c5984aacb1ce206922898c58f05c5fb812c7bc119e9f2afee",
+          "bodyReview": {
+            "entryId": "shared-less-crowded-day",
+            "canonicalEntrySha256": "bb2335181b6e1faf055f9c5e195b5ff504f5cd3a5890e36da19f30a50f552e70",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-foundations-tone-r01.0-3.shared-less-crowded-day",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-foundations-tone-r01.json",
+          "fileSha256": "64ee729cd3cc3fab9e3090c3de26afaef1bdac49195dd2054cfe1a7bd6777421",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-less-crowded-day.json",
+          "textPlacementSha256": "873a05adcd3b477c5984aacb1ce206922898c58f05c5fb812c7bc119e9f2afee",
+          "bodyReview": {
+            "entryId": "shared-less-crowded-day",
+            "canonicalEntrySha256": "bb2335181b6e1faf055f9c5e195b5ff504f5cd3a5890e36da19f30a50f552e70",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-less-crowded-day",
+      "placementId": "3-6.shared-less-crowded-day",
+      "textPlacementSha256": "0ad8ad90819047afb46402fcc761476da2158f529f21e8ce0947636eae944b5b",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-foundations-source-r01.3-6.shared-less-crowded-day",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-foundations-source-r01.json",
+          "fileSha256": "2cb8a8222e22ec4d297cf9039542eb29c6ff2e0cec537ffb06b144083819c72f",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-less-crowded-day.json",
+          "textPlacementSha256": "0ad8ad90819047afb46402fcc761476da2158f529f21e8ce0947636eae944b5b",
+          "bodyReview": {
+            "entryId": "shared-less-crowded-day",
+            "canonicalEntrySha256": "bb2335181b6e1faf055f9c5e195b5ff504f5cd3a5890e36da19f30a50f552e70",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-foundations-tone-r01.3-6.shared-less-crowded-day",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-foundations-tone-r01.json",
+          "fileSha256": "64ee729cd3cc3fab9e3090c3de26afaef1bdac49195dd2054cfe1a7bd6777421",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-less-crowded-day.json",
+          "textPlacementSha256": "0ad8ad90819047afb46402fcc761476da2158f529f21e8ce0947636eae944b5b",
+          "bodyReview": {
+            "entryId": "shared-less-crowded-day",
+            "canonicalEntrySha256": "bb2335181b6e1faf055f9c5e195b5ff504f5cd3a5890e36da19f30a50f552e70",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-adult-pause",
+      "placementId": "0-3.shared-adult-pause",
+      "textPlacementSha256": "2acd4872b5a581dfab7ee6174664cafdd2f7bb8732ed37de5b80b8654879ae4f",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-family-source-r01.0-3.shared-adult-pause",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-family-source-r01.json",
+          "fileSha256": "27e42b539a8f50eab9e8a110254fbf3dcde7fdd785dfd7ab29b22db10a5b1b86",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-adult-pause.json",
+          "textPlacementSha256": "2acd4872b5a581dfab7ee6174664cafdd2f7bb8732ed37de5b80b8654879ae4f",
+          "bodyReview": {
+            "entryId": "shared-adult-pause",
+            "canonicalEntrySha256": "f76130da96f90ba217443bf341dcbcffc5213bee068e55820607ee1aa78d87d5",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-family-tone-r01.0-3.shared-adult-pause",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-family-tone-r01.json",
+          "fileSha256": "2d06eb3c78e9aab26cecc73ed211ede181c1813ec12bb40af222906d1a0649e9",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-adult-pause.json",
+          "textPlacementSha256": "2acd4872b5a581dfab7ee6174664cafdd2f7bb8732ed37de5b80b8654879ae4f",
+          "bodyReview": {
+            "entryId": "shared-adult-pause",
+            "canonicalEntrySha256": "f76130da96f90ba217443bf341dcbcffc5213bee068e55820607ee1aa78d87d5",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-adult-pause",
+      "placementId": "3-6.shared-adult-pause",
+      "textPlacementSha256": "6cf5ae08a662fd49a4fd3f7a49f687e7dac724bc0e1abdea61d5b14c82f195dc",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-family-source-r01.3-6.shared-adult-pause",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-family-source-r01.json",
+          "fileSha256": "27e42b539a8f50eab9e8a110254fbf3dcde7fdd785dfd7ab29b22db10a5b1b86",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-adult-pause.json",
+          "textPlacementSha256": "6cf5ae08a662fd49a4fd3f7a49f687e7dac724bc0e1abdea61d5b14c82f195dc",
+          "bodyReview": {
+            "entryId": "shared-adult-pause",
+            "canonicalEntrySha256": "f76130da96f90ba217443bf341dcbcffc5213bee068e55820607ee1aa78d87d5",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-family-tone-r01.3-6.shared-adult-pause",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-family-tone-r01.json",
+          "fileSha256": "2d06eb3c78e9aab26cecc73ed211ede181c1813ec12bb40af222906d1a0649e9",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-adult-pause.json",
+          "textPlacementSha256": "6cf5ae08a662fd49a4fd3f7a49f687e7dac724bc0e1abdea61d5b14c82f195dc",
+          "bodyReview": {
+            "entryId": "shared-adult-pause",
+            "canonicalEntrySha256": "f76130da96f90ba217443bf341dcbcffc5213bee068e55820607ee1aa78d87d5",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-repair",
+      "placementId": "0-3.shared-repair",
+      "textPlacementSha256": "e903821d2d8d54bc514888665f7223a7c933bd75dcd88decd4eeb682619f5fde",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-family-source-r01.0-3.shared-repair",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-family-source-r01.json",
+          "fileSha256": "27e42b539a8f50eab9e8a110254fbf3dcde7fdd785dfd7ab29b22db10a5b1b86",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-repair.json",
+          "textPlacementSha256": "e903821d2d8d54bc514888665f7223a7c933bd75dcd88decd4eeb682619f5fde",
+          "bodyReview": {
+            "entryId": "shared-repair",
+            "canonicalEntrySha256": "bd229463b295f6eff67d11e194bbbad311a8409c8e8b4b423419af5b1ce73f45",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-family-tone-r01.0-3.shared-repair",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-family-tone-r01.json",
+          "fileSha256": "2d06eb3c78e9aab26cecc73ed211ede181c1813ec12bb40af222906d1a0649e9",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-repair.json",
+          "textPlacementSha256": "e903821d2d8d54bc514888665f7223a7c933bd75dcd88decd4eeb682619f5fde",
+          "bodyReview": {
+            "entryId": "shared-repair",
+            "canonicalEntrySha256": "bd229463b295f6eff67d11e194bbbad311a8409c8e8b4b423419af5b1ce73f45",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-repair",
+      "placementId": "3-6.shared-repair",
+      "textPlacementSha256": "a7e7b3c3daa5b0e7caaee70dd38efcb0af35f43a44959ae902f0ec1c6e02a026",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-family-source-r01.3-6.shared-repair",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-family-source-r01.json",
+          "fileSha256": "27e42b539a8f50eab9e8a110254fbf3dcde7fdd785dfd7ab29b22db10a5b1b86",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-repair.json",
+          "textPlacementSha256": "a7e7b3c3daa5b0e7caaee70dd38efcb0af35f43a44959ae902f0ec1c6e02a026",
+          "bodyReview": {
+            "entryId": "shared-repair",
+            "canonicalEntrySha256": "bd229463b295f6eff67d11e194bbbad311a8409c8e8b4b423419af5b1ce73f45",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-family-tone-r01.3-6.shared-repair",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-family-tone-r01.json",
+          "fileSha256": "2d06eb3c78e9aab26cecc73ed211ede181c1813ec12bb40af222906d1a0649e9",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-repair.json",
+          "textPlacementSha256": "a7e7b3c3daa5b0e7caaee70dd38efcb0af35f43a44959ae902f0ec1c6e02a026",
+          "bodyReview": {
+            "entryId": "shared-repair",
+            "canonicalEntrySha256": "bd229463b295f6eff67d11e194bbbad311a8409c8e8b4b423419af5b1ce73f45",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-family-needs",
+      "placementId": "0-3.shared-family-needs",
+      "textPlacementSha256": "67aae94fb42d550c6878b9b4e9401313682d029486c4ed2cc5bec8f4378955fb",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-family-source-r01.0-3.shared-family-needs",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-family-source-r01.json",
+          "fileSha256": "27e42b539a8f50eab9e8a110254fbf3dcde7fdd785dfd7ab29b22db10a5b1b86",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-family-needs.json",
+          "textPlacementSha256": "67aae94fb42d550c6878b9b4e9401313682d029486c4ed2cc5bec8f4378955fb",
+          "bodyReview": {
+            "entryId": "shared-family-needs",
+            "canonicalEntrySha256": "2b681012f29bec4ea9bf3a5b2b09969d0e7af714bdfbc5c6d2adeeb85a1faf75",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-family-tone-r01.0-3.shared-family-needs",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-family-tone-r01.json",
+          "fileSha256": "2d06eb3c78e9aab26cecc73ed211ede181c1813ec12bb40af222906d1a0649e9",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-family-needs.json",
+          "textPlacementSha256": "67aae94fb42d550c6878b9b4e9401313682d029486c4ed2cc5bec8f4378955fb",
+          "bodyReview": {
+            "entryId": "shared-family-needs",
+            "canonicalEntrySha256": "2b681012f29bec4ea9bf3a5b2b09969d0e7af714bdfbc5c6d2adeeb85a1faf75",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-family-needs",
+      "placementId": "3-6.shared-family-needs",
+      "textPlacementSha256": "a1a81395351f6c8dc453f0b58d12298587ce1d6853b55411ec8682bcf5e19b7e",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-family-source-r01.3-6.shared-family-needs",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-family-source-r01.json",
+          "fileSha256": "27e42b539a8f50eab9e8a110254fbf3dcde7fdd785dfd7ab29b22db10a5b1b86",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-family-needs.json",
+          "textPlacementSha256": "a1a81395351f6c8dc453f0b58d12298587ce1d6853b55411ec8682bcf5e19b7e",
+          "bodyReview": {
+            "entryId": "shared-family-needs",
+            "canonicalEntrySha256": "2b681012f29bec4ea9bf3a5b2b09969d0e7af714bdfbc5c6d2adeeb85a1faf75",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-family-tone-r01.3-6.shared-family-needs",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-family-tone-r01.json",
+          "fileSha256": "2d06eb3c78e9aab26cecc73ed211ede181c1813ec12bb40af222906d1a0649e9",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-family-needs.json",
+          "textPlacementSha256": "a1a81395351f6c8dc453f0b58d12298587ce1d6853b55411ec8682bcf5e19b7e",
+          "bodyReview": {
+            "entryId": "shared-family-needs",
+            "canonicalEntrySha256": "2b681012f29bec4ea9bf3a5b2b09969d0e7af714bdfbc5c6d2adeeb85a1faf75",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-caregiver-common-ground",
+      "placementId": "0-3.shared-caregiver-common-ground",
+      "textPlacementSha256": "2404b4b73179df81af97077a539b746d4fc08fed2820446159b347a0da6df105",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-family-source-r01.0-3.shared-caregiver-common-ground",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-family-source-r01.json",
+          "fileSha256": "27e42b539a8f50eab9e8a110254fbf3dcde7fdd785dfd7ab29b22db10a5b1b86",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-caregiver-common-ground.json",
+          "textPlacementSha256": "2404b4b73179df81af97077a539b746d4fc08fed2820446159b347a0da6df105",
+          "bodyReview": {
+            "entryId": "shared-caregiver-common-ground",
+            "canonicalEntrySha256": "da1c89367248409bc919f6f899ddd6a1f7e35934150e9d2d05418d04401b2943",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-family-tone-r01.0-3.shared-caregiver-common-ground",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-family-tone-r01.json",
+          "fileSha256": "2d06eb3c78e9aab26cecc73ed211ede181c1813ec12bb40af222906d1a0649e9",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-caregiver-common-ground.json",
+          "textPlacementSha256": "2404b4b73179df81af97077a539b746d4fc08fed2820446159b347a0da6df105",
+          "bodyReview": {
+            "entryId": "shared-caregiver-common-ground",
+            "canonicalEntrySha256": "da1c89367248409bc919f6f899ddd6a1f7e35934150e9d2d05418d04401b2943",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-caregiver-common-ground",
+      "placementId": "3-6.shared-caregiver-common-ground",
+      "textPlacementSha256": "5c59e5aa5a58677f67f18d8fef82058706da8fd1e1ab06cd606f49d6845ec9d7",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-family-source-r01.3-6.shared-caregiver-common-ground",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-family-source-r01.json",
+          "fileSha256": "27e42b539a8f50eab9e8a110254fbf3dcde7fdd785dfd7ab29b22db10a5b1b86",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-caregiver-common-ground.json",
+          "textPlacementSha256": "5c59e5aa5a58677f67f18d8fef82058706da8fd1e1ab06cd606f49d6845ec9d7",
+          "bodyReview": {
+            "entryId": "shared-caregiver-common-ground",
+            "canonicalEntrySha256": "da1c89367248409bc919f6f899ddd6a1f7e35934150e9d2d05418d04401b2943",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-family-tone-r01.3-6.shared-caregiver-common-ground",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-family-tone-r01.json",
+          "fileSha256": "2d06eb3c78e9aab26cecc73ed211ede181c1813ec12bb40af222906d1a0649e9",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-caregiver-common-ground.json",
+          "textPlacementSha256": "5c59e5aa5a58677f67f18d8fef82058706da8fd1e1ab06cd606f49d6845ec9d7",
+          "bodyReview": {
+            "entryId": "shared-caregiver-common-ground",
+            "canonicalEntrySha256": "da1c89367248409bc919f6f899ddd6a1f7e35934150e9d2d05418d04401b2943",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-family-separation",
+      "placementId": "0-3.shared-family-separation",
+      "textPlacementSha256": "b9423857ff0fd1a622361071657d359f8ea23f42cddc53eafdb100bf77983f53",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-family-source-r01.0-3.shared-family-separation",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-family-source-r01.json",
+          "fileSha256": "27e42b539a8f50eab9e8a110254fbf3dcde7fdd785dfd7ab29b22db10a5b1b86",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-family-separation.json",
+          "textPlacementSha256": "b9423857ff0fd1a622361071657d359f8ea23f42cddc53eafdb100bf77983f53",
+          "bodyReview": {
+            "entryId": "shared-family-separation",
+            "canonicalEntrySha256": "b255f1ce2d259ca26c350df871ab3dea2e699506a8713f9f30360205b3b5c015",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-family-tone-r01.0-3.shared-family-separation",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-family-tone-r01.json",
+          "fileSha256": "2d06eb3c78e9aab26cecc73ed211ede181c1813ec12bb40af222906d1a0649e9",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-family-separation.json",
+          "textPlacementSha256": "b9423857ff0fd1a622361071657d359f8ea23f42cddc53eafdb100bf77983f53",
+          "bodyReview": {
+            "entryId": "shared-family-separation",
+            "canonicalEntrySha256": "b255f1ce2d259ca26c350df871ab3dea2e699506a8713f9f30360205b3b5c015",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-family-separation",
+      "placementId": "3-6.shared-family-separation",
+      "textPlacementSha256": "6c3d6f65d326f853295a936989aa2c8ab91a2df0bafd10b362676aa8c56c47eb",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-family-source-r01.3-6.shared-family-separation",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-family-source-r01.json",
+          "fileSha256": "27e42b539a8f50eab9e8a110254fbf3dcde7fdd785dfd7ab29b22db10a5b1b86",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-family-separation.json",
+          "textPlacementSha256": "6c3d6f65d326f853295a936989aa2c8ab91a2df0bafd10b362676aa8c56c47eb",
+          "bodyReview": {
+            "entryId": "shared-family-separation",
+            "canonicalEntrySha256": "b255f1ce2d259ca26c350df871ab3dea2e699506a8713f9f30360205b3b5c015",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-family-tone-r01.3-6.shared-family-separation",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-family-tone-r01.json",
+          "fileSha256": "2d06eb3c78e9aab26cecc73ed211ede181c1813ec12bb40af222906d1a0649e9",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-family-separation.json",
+          "textPlacementSha256": "6c3d6f65d326f853295a936989aa2c8ab91a2df0bafd10b362676aa8c56c47eb",
+          "bodyReview": {
+            "entryId": "shared-family-separation",
+            "canonicalEntrySha256": "b255f1ce2d259ca26c350df871ab3dea2e699506a8713f9f30360205b3b5c015",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-choosing-care",
+      "placementId": "0-3.shared-choosing-care",
+      "textPlacementSha256": "07bf2ceb113e76b274944372a7400a3075d4dd4ad63e0ea775b922742ca79e36",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-family-source-r01.0-3.shared-choosing-care",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-family-source-r01.json",
+          "fileSha256": "27e42b539a8f50eab9e8a110254fbf3dcde7fdd785dfd7ab29b22db10a5b1b86",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-choosing-care.json",
+          "textPlacementSha256": "07bf2ceb113e76b274944372a7400a3075d4dd4ad63e0ea775b922742ca79e36",
+          "bodyReview": {
+            "entryId": "shared-choosing-care",
+            "canonicalEntrySha256": "b00e2d2966250d488c4f275a1a1d133e8828f24c547c3eab94de72ae7c0ce2ad",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-family-tone-r01.0-3.shared-choosing-care",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-family-tone-r01.json",
+          "fileSha256": "2d06eb3c78e9aab26cecc73ed211ede181c1813ec12bb40af222906d1a0649e9",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-choosing-care.json",
+          "textPlacementSha256": "07bf2ceb113e76b274944372a7400a3075d4dd4ad63e0ea775b922742ca79e36",
+          "bodyReview": {
+            "entryId": "shared-choosing-care",
+            "canonicalEntrySha256": "b00e2d2966250d488c4f275a1a1d133e8828f24c547c3eab94de72ae7c0ce2ad",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "shared-choosing-care",
+      "placementId": "3-6.shared-choosing-care",
+      "textPlacementSha256": "32127ffb536ffba46320bd240cebc6589982ad884640e8cf5cb9b1670cf24920",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "shared-family-source-r01.3-6.shared-choosing-care",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/shared-family-source-r01.json",
+          "fileSha256": "27e42b539a8f50eab9e8a110254fbf3dcde7fdd785dfd7ab29b22db10a5b1b86",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-choosing-care.json",
+          "textPlacementSha256": "32127ffb536ffba46320bd240cebc6589982ad884640e8cf5cb9b1670cf24920",
+          "bodyReview": {
+            "entryId": "shared-choosing-care",
+            "canonicalEntrySha256": "b00e2d2966250d488c4f275a1a1d133e8828f24c547c3eab94de72ae7c0ce2ad",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "shared-family-tone-r01.3-6.shared-choosing-care",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/shared-family-tone-r01.json",
+          "fileSha256": "2d06eb3c78e9aab26cecc73ed211ede181c1813ec12bb40af222906d1a0649e9",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-choosing-care.json",
+          "textPlacementSha256": "32127ffb536ffba46320bd240cebc6589982ad884640e8cf5cb9b1670cf24920",
+          "bodyReview": {
+            "entryId": "shared-choosing-care",
+            "canonicalEntrySha256": "b00e2d2966250d488c4f275a1a1d133e8828f24c547c3eab94de72ae7c0ce2ad",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-newborn-conversation",
+      "placementId": "0-3.early-newborn-conversation",
+      "textPlacementSha256": "a9ea0d059a972a68cf43c7fd1f4d95f5d3f2602c36f9e4e6cc96feac6e6cc89f",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "trial-source-r01.0-3.early-newborn-conversation",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/trial-source-r01.json",
+          "fileSha256": "8c0a342169282b2084f716265922d266b26920c5a723a30a838c4bc5e38186f8",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.early-newborn-conversation.json",
+          "textPlacementSha256": "a9ea0d059a972a68cf43c7fd1f4d95f5d3f2602c36f9e4e6cc96feac6e6cc89f",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "trial-tone-r01.0-3.early-newborn-conversation",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/trial-tone-r01.json",
+          "fileSha256": "ebcca701f4e592e85a60b3587c5c7d57fef12089b76bf1930b98a5b0a5840490",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.early-newborn-conversation.json",
+          "textPlacementSha256": "a9ea0d059a972a68cf43c7fd1f4d95f5d3f2602c36f9e4e6cc96feac6e6cc89f",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-read-aloud",
+      "placementId": "0-3.early-read-aloud",
+      "textPlacementSha256": "a44ec1f23d0d0c78bd4dad3bd4b0aa019b17bbd85a7c8a43d6ae8cc1eff3b52a",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-b-source-r01.0-3.early-read-aloud",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-b-source-r01.json",
+          "fileSha256": "85a270e03834a93fac55b4827a9f2b68e0afeb81baaf611cba9908c4a9c43535",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.early-read-aloud.json",
+          "textPlacementSha256": "a44ec1f23d0d0c78bd4dad3bd4b0aa019b17bbd85a7c8a43d6ae8cc1eff3b52a",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-b-tone-r01.0-3.early-read-aloud",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-b-tone-r01.json",
+          "fileSha256": "0a00b69d8cb9baaf0c2e5b2de58e9ddefc6b83f6f03baf0c1c593b8cbcf806e1",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.early-read-aloud.json",
+          "textPlacementSha256": "a44ec1f23d0d0c78bd4dad3bd4b0aa019b17bbd85a7c8a43d6ae8cc1eff3b52a",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-shadows",
+      "placementId": "0-3.early-shadows",
+      "textPlacementSha256": "afae45c2e52458f48782036c7660f27d95b61b0fa03f6c819b2bf6a99cc82513",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-a-source-r02.0-3.early-shadows",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-a-source-r02.json",
+          "fileSha256": "e4f4510c13db8af87a9077f05ca5bcb8415cfecb0e7d806cc23e42d234dc7920",
+          "snapshotPath": "content/birth-6/revisions/r02/snapshots/0-3.early-shadows.json",
+          "textPlacementSha256": "afae45c2e52458f48782036c7660f27d95b61b0fa03f6c819b2bf6a99cc82513",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-a-tone-r02.0-3.early-shadows",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-a-tone-r02.json",
+          "fileSha256": "9fe0f85226f83d7b6e552b687e162a8359c022f61fdd93f306ed34cf21cba3fd",
+          "snapshotPath": "content/birth-6/revisions/r02/snapshots/0-3.early-shadows.json",
+          "textPlacementSha256": "afae45c2e52458f48782036c7660f27d95b61b0fa03f6c819b2bf6a99cc82513",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-visual-mobiles",
+      "placementId": "0-3.early-visual-mobiles",
+      "textPlacementSha256": "62e860197a4b030ff2cbac8b2b4375cce096af7a0cee2eb589e954c8de57ed7c",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-a-source-r01.0-3.early-visual-mobiles",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-a-source-r01.json",
+          "fileSha256": "b06b903a18ac4ade27fc2239a7d641972d610fbc4d5e71682bb9dc88e0043e8f",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.early-visual-mobiles.json",
+          "textPlacementSha256": "62e860197a4b030ff2cbac8b2b4375cce096af7a0cee2eb589e954c8de57ed7c",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-a-tone-r01.0-3.early-visual-mobiles",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-a-tone-r01.json",
+          "fileSha256": "d3c16582e54860a60e26af4a4fc78333e4f5700be1a9df00699805cc80ddc61a",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.early-visual-mobiles.json",
+          "textPlacementSha256": "62e860197a4b030ff2cbac8b2b4375cce096af7a0cee2eb589e954c8de57ed7c",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-read-aloud",
+      "placementId": "3-6.early-read-aloud",
+      "textPlacementSha256": "35576a84973f0eccf98023c7160564b18bb0e103a281c3864c0fd9dc15422c08",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-b-source-r01.3-6.early-read-aloud",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-b-source-r01.json",
+          "fileSha256": "85a270e03834a93fac55b4827a9f2b68e0afeb81baaf611cba9908c4a9c43535",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.early-read-aloud.json",
+          "textPlacementSha256": "35576a84973f0eccf98023c7160564b18bb0e103a281c3864c0fd9dc15422c08",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-b-tone-r01.3-6.early-read-aloud",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-b-tone-r01.json",
+          "fileSha256": "0a00b69d8cb9baaf0c2e5b2de58e9ddefc6b83f6f03baf0c1c593b8cbcf806e1",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.early-read-aloud.json",
+          "textPlacementSha256": "35576a84973f0eccf98023c7160564b18bb0e103a281c3864c0fd9dc15422c08",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-shadows",
+      "placementId": "3-6.early-shadows",
+      "textPlacementSha256": "2773ca722f86f8d6983a85d3fff46b2110394b35a5abbcdf89731fdb30ab53ec",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-a-source-r02.3-6.early-shadows",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-a-source-r02.json",
+          "fileSha256": "e4f4510c13db8af87a9077f05ca5bcb8415cfecb0e7d806cc23e42d234dc7920",
+          "snapshotPath": "content/birth-6/revisions/r02/snapshots/3-6.early-shadows.json",
+          "textPlacementSha256": "2773ca722f86f8d6983a85d3fff46b2110394b35a5abbcdf89731fdb30ab53ec",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-a-tone-r02.3-6.early-shadows",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-a-tone-r02.json",
+          "fileSha256": "9fe0f85226f83d7b6e552b687e162a8359c022f61fdd93f306ed34cf21cba3fd",
+          "snapshotPath": "content/birth-6/revisions/r02/snapshots/3-6.early-shadows.json",
+          "textPlacementSha256": "2773ca722f86f8d6983a85d3fff46b2110394b35a5abbcdf89731fdb30ab53ec",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-visual-mobiles",
+      "placementId": "3-6.early-visual-mobiles",
+      "textPlacementSha256": "c004c5a89eeafab0986679d339107078862a2a96ac2172f19c50303b4bf0167b",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-a-source-r01.3-6.early-visual-mobiles",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-a-source-r01.json",
+          "fileSha256": "b06b903a18ac4ade27fc2239a7d641972d610fbc4d5e71682bb9dc88e0043e8f",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.early-visual-mobiles.json",
+          "textPlacementSha256": "c004c5a89eeafab0986679d339107078862a2a96ac2172f19c50303b4bf0167b",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-a-tone-r01.3-6.early-visual-mobiles",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-a-tone-r01.json",
+          "fileSha256": "d3c16582e54860a60e26af4a4fc78333e4f5700be1a9df00699805cc80ddc61a",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.early-visual-mobiles.json",
+          "textPlacementSha256": "c004c5a89eeafab0986679d339107078862a2a96ac2172f19c50303b4bf0167b",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-grasping-reflex",
+      "placementId": "0-3.early-grasping-reflex",
+      "textPlacementSha256": "715027448b81fab3a36fb381cfb14c595cb7e8700459104a39ff9a24ca1c87ba",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-a-source-r01.0-3.early-grasping-reflex",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-a-source-r01.json",
+          "fileSha256": "b06b903a18ac4ade27fc2239a7d641972d610fbc4d5e71682bb9dc88e0043e8f",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.early-grasping-reflex.json",
+          "textPlacementSha256": "715027448b81fab3a36fb381cfb14c595cb7e8700459104a39ff9a24ca1c87ba",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-a-tone-r01.0-3.early-grasping-reflex",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-a-tone-r01.json",
+          "fileSha256": "d3c16582e54860a60e26af4a4fc78333e4f5700be1a9df00699805cc80ddc61a",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.early-grasping-reflex.json",
+          "textPlacementSha256": "715027448b81fab3a36fb381cfb14c595cb7e8700459104a39ff9a24ca1c87ba",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-tactile-mobiles",
+      "placementId": "3-6.early-tactile-mobiles",
+      "textPlacementSha256": "8a2c0336144f99a520eb3b7f6d0e435ca65f7cc85757ba83bc9dc4792721d30b",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-a-source-r01.3-6.early-tactile-mobiles",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-a-source-r01.json",
+          "fileSha256": "b06b903a18ac4ade27fc2239a7d641972d610fbc4d5e71682bb9dc88e0043e8f",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.early-tactile-mobiles.json",
+          "textPlacementSha256": "8a2c0336144f99a520eb3b7f6d0e435ca65f7cc85757ba83bc9dc4792721d30b",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-a-tone-r01.3-6.early-tactile-mobiles",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-a-tone-r01.json",
+          "fileSha256": "d3c16582e54860a60e26af4a4fc78333e4f5700be1a9df00699805cc80ddc61a",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.early-tactile-mobiles.json",
+          "textPlacementSha256": "8a2c0336144f99a520eb3b7f6d0e435ca65f7cc85757ba83bc9dc4792721d30b",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-tactile-mobiles",
+      "placementId": "6-9.early-tactile-mobiles",
+      "textPlacementSha256": "5edad238dd35ce04ee5604133997e46056389c907f3bedeb9a0bb75c6ee14760",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-a-source-r01.6-9.early-tactile-mobiles",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-a-source-r01.json",
+          "fileSha256": "b06b903a18ac4ade27fc2239a7d641972d610fbc4d5e71682bb9dc88e0043e8f",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/6-9.early-tactile-mobiles.json",
+          "textPlacementSha256": "5edad238dd35ce04ee5604133997e46056389c907f3bedeb9a0bb75c6ee14760",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-a-tone-r01.6-9.early-tactile-mobiles",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-a-tone-r01.json",
+          "fileSha256": "d3c16582e54860a60e26af4a4fc78333e4f5700be1a9df00699805cc80ddc61a",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/6-9.early-tactile-mobiles.json",
+          "textPlacementSha256": "5edad238dd35ce04ee5604133997e46056389c907f3bedeb9a0bb75c6ee14760",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-steady-toy",
+      "placementId": "3-6.early-steady-toy",
+      "textPlacementSha256": "5213b4de73ee241951bf1af0b7219b71242c5e6c6a145290b64402cafedea9a8",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "trial-source-r01.3-6.early-steady-toy",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/trial-source-r01.json",
+          "fileSha256": "8c0a342169282b2084f716265922d266b26920c5a723a30a838c4bc5e38186f8",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.early-steady-toy.json",
+          "textPlacementSha256": "5213b4de73ee241951bf1af0b7219b71242c5e6c6a145290b64402cafedea9a8",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "trial-tone-r01.3-6.early-steady-toy",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/trial-tone-r01.json",
+          "fileSha256": "ebcca701f4e592e85a60b3587c5c7d57fef12089b76bf1930b98a5b0a5840490",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.early-steady-toy.json",
+          "textPlacementSha256": "5213b4de73ee241951bf1af0b7219b71242c5e6c6a145290b64402cafedea9a8",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-steady-toy",
+      "placementId": "6-9.early-steady-toy",
+      "textPlacementSha256": "771b22938b6db6d0ac4fcf246efed2ece1eb1bc2fc66f71b660108a4407794f4",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "trial-source-r01.6-9.early-steady-toy",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/trial-source-r01.json",
+          "fileSha256": "8c0a342169282b2084f716265922d266b26920c5a723a30a838c4bc5e38186f8",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/6-9.early-steady-toy.json",
+          "textPlacementSha256": "771b22938b6db6d0ac4fcf246efed2ece1eb1bc2fc66f71b660108a4407794f4",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "trial-tone-r01.6-9.early-steady-toy",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/trial-tone-r01.json",
+          "fileSha256": "ebcca701f4e592e85a60b3587c5c7d57fef12089b76bf1930b98a5b0a5840490",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/6-9.early-steady-toy.json",
+          "textPlacementSha256": "771b22938b6db6d0ac4fcf246efed2ece1eb1bc2fc66f71b660108a4407794f4",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-steady-toy",
+      "placementId": "9-12.early-steady-toy",
+      "textPlacementSha256": "8986f548a5d20cc1b75e13c6f3392a360a2d9a9bc7566d8328570e1905592383",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "trial-source-r01.9-12.early-steady-toy",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/trial-source-r01.json",
+          "fileSha256": "8c0a342169282b2084f716265922d266b26920c5a723a30a838c4bc5e38186f8",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/9-12.early-steady-toy.json",
+          "textPlacementSha256": "8986f548a5d20cc1b75e13c6f3392a360a2d9a9bc7566d8328570e1905592383",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "trial-tone-r01.9-12.early-steady-toy",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/trial-tone-r01.json",
+          "fileSha256": "ebcca701f4e592e85a60b3587c5c7d57fef12089b76bf1930b98a5b0a5840490",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/9-12.early-steady-toy.json",
+          "textPlacementSha256": "8986f548a5d20cc1b75e13c6f3392a360a2d9a9bc7566d8328570e1905592383",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-movement",
+      "placementId": "0-3.baby-movement",
+      "textPlacementSha256": "dafb11dd93c7bfa9df09cbc7d954ef8404a11638775456ded6184d7badfe218a",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-a-source-r02.0-3.baby-movement",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-a-source-r02.json",
+          "fileSha256": "e4f4510c13db8af87a9077f05ca5bcb8415cfecb0e7d806cc23e42d234dc7920",
+          "snapshotPath": "content/birth-6/revisions/r02/snapshots/0-3.baby-movement.json",
+          "textPlacementSha256": "dafb11dd93c7bfa9df09cbc7d954ef8404a11638775456ded6184d7badfe218a",
+          "bodyReview": {
+            "entryId": "baby-movement",
+            "canonicalEntrySha256": "ad2f99ea61a19b42cfae1dcb274f6924ef45dda8a4c1dc224b5b337163e59b5f",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-a-tone-r02.0-3.baby-movement",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-a-tone-r02.json",
+          "fileSha256": "9fe0f85226f83d7b6e552b687e162a8359c022f61fdd93f306ed34cf21cba3fd",
+          "snapshotPath": "content/birth-6/revisions/r02/snapshots/0-3.baby-movement.json",
+          "textPlacementSha256": "dafb11dd93c7bfa9df09cbc7d954ef8404a11638775456ded6184d7badfe218a",
+          "bodyReview": {
+            "entryId": "baby-movement",
+            "canonicalEntrySha256": "ad2f99ea61a19b42cfae1dcb274f6924ef45dda8a4c1dc224b5b337163e59b5f",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-books",
+      "placementId": "0-3.baby-books",
+      "textPlacementSha256": "d55a3e5fdb19db829d2fa6918300f8294fa0971d4334a4b391fc3e3f67db5ee3",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-b-source-r01.0-3.baby-books",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-b-source-r01.json",
+          "fileSha256": "85a270e03834a93fac55b4827a9f2b68e0afeb81baaf611cba9908c4a9c43535",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.baby-books.json",
+          "textPlacementSha256": "d55a3e5fdb19db829d2fa6918300f8294fa0971d4334a4b391fc3e3f67db5ee3",
+          "bodyReview": {
+            "entryId": "baby-books",
+            "canonicalEntrySha256": "7b6eec01204593538719b0258d43cd48cb540082c9005b04f3c326fd54abb198",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-b-tone-r01.0-3.baby-books",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-b-tone-r01.json",
+          "fileSha256": "0a00b69d8cb9baaf0c2e5b2de58e9ddefc6b83f6f03baf0c1c593b8cbcf806e1",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.baby-books.json",
+          "textPlacementSha256": "d55a3e5fdb19db829d2fa6918300f8294fa0971d4334a4b391fc3e3f67db5ee3",
+          "bodyReview": {
+            "entryId": "baby-books",
+            "canonicalEntrySha256": "7b6eec01204593538719b0258d43cd48cb540082c9005b04f3c326fd54abb198",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-songs",
+      "placementId": "0-3.baby-songs",
+      "textPlacementSha256": "264d7217d8525a8d76eb546035e6f4e2f476cffaaa59008060b998eab908bfc1",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "trial-source-r01.0-3.baby-songs",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/trial-source-r01.json",
+          "fileSha256": "8c0a342169282b2084f716265922d266b26920c5a723a30a838c4bc5e38186f8",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.baby-songs.json",
+          "textPlacementSha256": "264d7217d8525a8d76eb546035e6f4e2f476cffaaa59008060b998eab908bfc1",
+          "bodyReview": {
+            "entryId": "baby-songs",
+            "canonicalEntrySha256": "0f46408402a1df0553cffc0ad0996480701cb8e236f515d1da4632ad58a47aee",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "trial-tone-r01.0-3.baby-songs",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/trial-tone-r01.json",
+          "fileSha256": "ebcca701f4e592e85a60b3587c5c7d57fef12089b76bf1930b98a5b0a5840490",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.baby-songs.json",
+          "textPlacementSha256": "264d7217d8525a8d76eb546035e6f4e2f476cffaaa59008060b998eab908bfc1",
+          "bodyReview": {
+            "entryId": "baby-songs",
+            "canonicalEntrySha256": "0f46408402a1df0553cffc0ad0996480701cb8e236f515d1da4632ad58a47aee",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-languages",
+      "placementId": "0-3.baby-languages",
+      "textPlacementSha256": "73bc1b6b79b681d23df16662fcd52c7080cf7ec324b90ec16870df363c952c81",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-b-source-r01.0-3.baby-languages",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-b-source-r01.json",
+          "fileSha256": "85a270e03834a93fac55b4827a9f2b68e0afeb81baaf611cba9908c4a9c43535",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.baby-languages.json",
+          "textPlacementSha256": "73bc1b6b79b681d23df16662fcd52c7080cf7ec324b90ec16870df363c952c81",
+          "bodyReview": {
+            "entryId": "baby-languages",
+            "canonicalEntrySha256": "dc1bdf8a7b5b6a9c212e898a5c01614ccc19a32b933cfaf7d63d978047d38ba2",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-b-tone-r01.0-3.baby-languages",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-b-tone-r01.json",
+          "fileSha256": "0a00b69d8cb9baaf0c2e5b2de58e9ddefc6b83f6f03baf0c1c593b8cbcf806e1",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.baby-languages.json",
+          "textPlacementSha256": "73bc1b6b79b681d23df16662fcd52c7080cf7ec324b90ec16870df363c952c81",
+          "bodyReview": {
+            "entryId": "baby-languages",
+            "canonicalEntrySha256": "dc1bdf8a7b5b6a9c212e898a5c01614ccc19a32b933cfaf7d63d978047d38ba2",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-outdoors",
+      "placementId": "0-3.baby-outdoors",
+      "textPlacementSha256": "af0e9b47c78517735ef954873bff89050a59686946abe5da9e0cdc4c2d8e8874",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-b-source-r01.0-3.baby-outdoors",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-b-source-r01.json",
+          "fileSha256": "85a270e03834a93fac55b4827a9f2b68e0afeb81baaf611cba9908c4a9c43535",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.baby-outdoors.json",
+          "textPlacementSha256": "af0e9b47c78517735ef954873bff89050a59686946abe5da9e0cdc4c2d8e8874",
+          "bodyReview": {
+            "entryId": "baby-outdoors",
+            "canonicalEntrySha256": "4b9fef68743252e8349ab4fcb7c0d9a06df63691606e1ad282391ac35a410846",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-b-tone-r01.0-3.baby-outdoors",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-b-tone-r01.json",
+          "fileSha256": "0a00b69d8cb9baaf0c2e5b2de58e9ddefc6b83f6f03baf0c1c593b8cbcf806e1",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.baby-outdoors.json",
+          "textPlacementSha256": "af0e9b47c78517735ef954873bff89050a59686946abe5da9e0cdc4c2d8e8874",
+          "bodyReview": {
+            "entryId": "baby-outdoors",
+            "canonicalEntrySha256": "4b9fef68743252e8349ab4fcb7c0d9a06df63691606e1ad282391ac35a410846",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-naming",
+      "placementId": "0-3.baby-naming",
+      "textPlacementSha256": "66489bbe0ceedbb489531fe00e60d1456c0ec282fb1c2223a558d18ec6dff8ec",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-b-source-r02.0-3.baby-naming",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-b-source-r02.json",
+          "fileSha256": "1b6b5c9d37b4679d7823a03d419ea444ed86c55b1178e5539f4e183032a34601",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.baby-naming.json",
+          "textPlacementSha256": "66489bbe0ceedbb489531fe00e60d1456c0ec282fb1c2223a558d18ec6dff8ec",
+          "bodyReview": {
+            "entryId": "baby-naming",
+            "canonicalEntrySha256": "d57795253de38f3e04089e3d609fc4bfe8fdf60ea1798cef83bff278b6dcb965",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-b-tone-r02.0-3.baby-naming",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-b-tone-r02.json",
+          "fileSha256": "133ab75d131a51412011678869008238b290d80238d2d0158009a261032e97f7",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.baby-naming.json",
+          "textPlacementSha256": "66489bbe0ceedbb489531fe00e60d1456c0ec282fb1c2223a558d18ec6dff8ec",
+          "bodyReview": {
+            "entryId": "baby-naming",
+            "canonicalEntrySha256": "d57795253de38f3e04089e3d609fc4bfe8fdf60ea1798cef83bff278b6dcb965",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-movement",
+      "placementId": "3-6.baby-movement",
+      "textPlacementSha256": "992f1554b131ce5d33c7c313bd83b0e09787dfd106624de03e1467321b9eedd0",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-a-source-r02.3-6.baby-movement",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-a-source-r02.json",
+          "fileSha256": "e4f4510c13db8af87a9077f05ca5bcb8415cfecb0e7d806cc23e42d234dc7920",
+          "snapshotPath": "content/birth-6/revisions/r02/snapshots/3-6.baby-movement.json",
+          "textPlacementSha256": "992f1554b131ce5d33c7c313bd83b0e09787dfd106624de03e1467321b9eedd0",
+          "bodyReview": {
+            "entryId": "baby-movement",
+            "canonicalEntrySha256": "ad2f99ea61a19b42cfae1dcb274f6924ef45dda8a4c1dc224b5b337163e59b5f",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-a-tone-r02.3-6.baby-movement",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-a-tone-r02.json",
+          "fileSha256": "9fe0f85226f83d7b6e552b687e162a8359c022f61fdd93f306ed34cf21cba3fd",
+          "snapshotPath": "content/birth-6/revisions/r02/snapshots/3-6.baby-movement.json",
+          "textPlacementSha256": "992f1554b131ce5d33c7c313bd83b0e09787dfd106624de03e1467321b9eedd0",
+          "bodyReview": {
+            "entryId": "baby-movement",
+            "canonicalEntrySha256": "ad2f99ea61a19b42cfae1dcb274f6924ef45dda8a4c1dc224b5b337163e59b5f",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-books",
+      "placementId": "3-6.baby-books",
+      "textPlacementSha256": "20de0791556fb6ee19309dfecd6664d68d35931524c0052676ddab96f0e47baf",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-b-source-r01.3-6.baby-books",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-b-source-r01.json",
+          "fileSha256": "85a270e03834a93fac55b4827a9f2b68e0afeb81baaf611cba9908c4a9c43535",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-books.json",
+          "textPlacementSha256": "20de0791556fb6ee19309dfecd6664d68d35931524c0052676ddab96f0e47baf",
+          "bodyReview": {
+            "entryId": "baby-books",
+            "canonicalEntrySha256": "7b6eec01204593538719b0258d43cd48cb540082c9005b04f3c326fd54abb198",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-b-tone-r01.3-6.baby-books",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-b-tone-r01.json",
+          "fileSha256": "0a00b69d8cb9baaf0c2e5b2de58e9ddefc6b83f6f03baf0c1c593b8cbcf806e1",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-books.json",
+          "textPlacementSha256": "20de0791556fb6ee19309dfecd6664d68d35931524c0052676ddab96f0e47baf",
+          "bodyReview": {
+            "entryId": "baby-books",
+            "canonicalEntrySha256": "7b6eec01204593538719b0258d43cd48cb540082c9005b04f3c326fd54abb198",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-songs",
+      "placementId": "3-6.baby-songs",
+      "textPlacementSha256": "b70d58bc54ddc217c6b3f4964e8b969172eb31872851af8d263fe9d607d9a3bd",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "trial-source-r01.3-6.baby-songs",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/trial-source-r01.json",
+          "fileSha256": "8c0a342169282b2084f716265922d266b26920c5a723a30a838c4bc5e38186f8",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-songs.json",
+          "textPlacementSha256": "b70d58bc54ddc217c6b3f4964e8b969172eb31872851af8d263fe9d607d9a3bd",
+          "bodyReview": {
+            "entryId": "baby-songs",
+            "canonicalEntrySha256": "0f46408402a1df0553cffc0ad0996480701cb8e236f515d1da4632ad58a47aee",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "trial-tone-r01.3-6.baby-songs",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/trial-tone-r01.json",
+          "fileSha256": "ebcca701f4e592e85a60b3587c5c7d57fef12089b76bf1930b98a5b0a5840490",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-songs.json",
+          "textPlacementSha256": "b70d58bc54ddc217c6b3f4964e8b969172eb31872851af8d263fe9d607d9a3bd",
+          "bodyReview": {
+            "entryId": "baby-songs",
+            "canonicalEntrySha256": "0f46408402a1df0553cffc0ad0996480701cb8e236f515d1da4632ad58a47aee",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-languages",
+      "placementId": "3-6.baby-languages",
+      "textPlacementSha256": "ee7b64bdeb1fe9997a109fbf854db0106402fb93123c15c2049eaea41ababf38",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-b-source-r01.3-6.baby-languages",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-b-source-r01.json",
+          "fileSha256": "85a270e03834a93fac55b4827a9f2b68e0afeb81baaf611cba9908c4a9c43535",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-languages.json",
+          "textPlacementSha256": "ee7b64bdeb1fe9997a109fbf854db0106402fb93123c15c2049eaea41ababf38",
+          "bodyReview": {
+            "entryId": "baby-languages",
+            "canonicalEntrySha256": "dc1bdf8a7b5b6a9c212e898a5c01614ccc19a32b933cfaf7d63d978047d38ba2",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-b-tone-r01.3-6.baby-languages",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-b-tone-r01.json",
+          "fileSha256": "0a00b69d8cb9baaf0c2e5b2de58e9ddefc6b83f6f03baf0c1c593b8cbcf806e1",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-languages.json",
+          "textPlacementSha256": "ee7b64bdeb1fe9997a109fbf854db0106402fb93123c15c2049eaea41ababf38",
+          "bodyReview": {
+            "entryId": "baby-languages",
+            "canonicalEntrySha256": "dc1bdf8a7b5b6a9c212e898a5c01614ccc19a32b933cfaf7d63d978047d38ba2",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-outdoors",
+      "placementId": "3-6.baby-outdoors",
+      "textPlacementSha256": "7ca2101d0f0aca4a36f43145f8afea27cf91e00be0e779e8a14810f0cc6ac0cf",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-b-source-r01.3-6.baby-outdoors",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-b-source-r01.json",
+          "fileSha256": "85a270e03834a93fac55b4827a9f2b68e0afeb81baaf611cba9908c4a9c43535",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-outdoors.json",
+          "textPlacementSha256": "7ca2101d0f0aca4a36f43145f8afea27cf91e00be0e779e8a14810f0cc6ac0cf",
+          "bodyReview": {
+            "entryId": "baby-outdoors",
+            "canonicalEntrySha256": "4b9fef68743252e8349ab4fcb7c0d9a06df63691606e1ad282391ac35a410846",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-b-tone-r01.3-6.baby-outdoors",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-b-tone-r01.json",
+          "fileSha256": "0a00b69d8cb9baaf0c2e5b2de58e9ddefc6b83f6f03baf0c1c593b8cbcf806e1",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-outdoors.json",
+          "textPlacementSha256": "7ca2101d0f0aca4a36f43145f8afea27cf91e00be0e779e8a14810f0cc6ac0cf",
+          "bodyReview": {
+            "entryId": "baby-outdoors",
+            "canonicalEntrySha256": "4b9fef68743252e8349ab4fcb7c0d9a06df63691606e1ad282391ac35a410846",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-naming",
+      "placementId": "3-6.baby-naming",
+      "textPlacementSha256": "24a3ea04ba218a82a1c1de578b2aafa7aabe57824470037bd91c5d58b5cd6a1f",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-b-source-r02.3-6.baby-naming",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-b-source-r02.json",
+          "fileSha256": "1b6b5c9d37b4679d7823a03d419ea444ed86c55b1178e5539f4e183032a34601",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-naming.json",
+          "textPlacementSha256": "24a3ea04ba218a82a1c1de578b2aafa7aabe57824470037bd91c5d58b5cd6a1f",
+          "bodyReview": {
+            "entryId": "baby-naming",
+            "canonicalEntrySha256": "d57795253de38f3e04089e3d609fc4bfe8fdf60ea1798cef83bff278b6dcb965",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-b-tone-r02.3-6.baby-naming",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-b-tone-r02.json",
+          "fileSha256": "133ab75d131a51412011678869008238b290d80238d2d0158009a261032e97f7",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-naming.json",
+          "textPlacementSha256": "24a3ea04ba218a82a1c1de578b2aafa7aabe57824470037bd91c5d58b5cd6a1f",
+          "bodyReview": {
+            "entryId": "baby-naming",
+            "canonicalEntrySha256": "d57795253de38f3e04089e3d609fc4bfe8fdf60ea1798cef83bff278b6dcb965",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-language",
+      "placementId": "3-6.baby-language",
+      "textPlacementSha256": "50145f0c559357ab23a67c4ef64c3f2853c150edbfd7c8713a696900110a0f15",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "trial-source-r01.3-6.baby-language",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/trial-source-r01.json",
+          "fileSha256": "8c0a342169282b2084f716265922d266b26920c5a723a30a838c4bc5e38186f8",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-language.json",
+          "textPlacementSha256": "50145f0c559357ab23a67c4ef64c3f2853c150edbfd7c8713a696900110a0f15",
+          "bodyReview": {
+            "entryId": "baby-language",
+            "canonicalEntrySha256": "f73c743dcacd0fd6b178539e6918812d6c35fc28ca65b123b6455686166e2213",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "trial-tone-r01.3-6.baby-language",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/trial-tone-r01.json",
+          "fileSha256": "ebcca701f4e592e85a60b3587c5c7d57fef12089b76bf1930b98a5b0a5840490",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-language.json",
+          "textPlacementSha256": "50145f0c559357ab23a67c4ef64c3f2853c150edbfd7c8713a696900110a0f15",
+          "bodyReview": {
+            "entryId": "baby-language",
+            "canonicalEntrySha256": "f73c743dcacd0fd6b178539e6918812d6c35fc28ca65b123b6455686166e2213",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-hand-discovery",
+      "placementId": "3-6.baby-hand-discovery",
+      "textPlacementSha256": "76fef69cf987e4be09848f45a706c60191645fbe0fbbaa408c0e85f793e5e65d",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-a-source-r01.3-6.baby-hand-discovery",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-a-source-r01.json",
+          "fileSha256": "b06b903a18ac4ade27fc2239a7d641972d610fbc4d5e71682bb9dc88e0043e8f",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-hand-discovery.json",
+          "textPlacementSha256": "76fef69cf987e4be09848f45a706c60191645fbe0fbbaa408c0e85f793e5e65d",
+          "bodyReview": {
+            "entryId": "baby-hand-discovery",
+            "canonicalEntrySha256": "3dfd23555603fb0fa13f5d28988780fb3bf6aae4e18c7529560225aea0d5107c",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-a-tone-r01.3-6.baby-hand-discovery",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-a-tone-r01.json",
+          "fileSha256": "d3c16582e54860a60e26af4a4fc78333e4f5700be1a9df00699805cc80ddc61a",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-hand-discovery.json",
+          "textPlacementSha256": "76fef69cf987e4be09848f45a706c60191645fbe0fbbaa408c0e85f793e5e65d",
+          "bodyReview": {
+            "entryId": "baby-hand-discovery",
+            "canonicalEntrySha256": "3dfd23555603fb0fa13f5d28988780fb3bf6aae4e18c7529560225aea0d5107c",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-choices-within-reach",
+      "placementId": "3-6.baby-choices-within-reach",
+      "textPlacementSha256": "9f25dcbdfc75aa7cdcf6c522fc7d71408d93cfbb4d4fa8553bd3543721e2acbd",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-b-source-r02.3-6.baby-choices-within-reach",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-b-source-r02.json",
+          "fileSha256": "1b6b5c9d37b4679d7823a03d419ea444ed86c55b1178e5539f4e183032a34601",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-choices-within-reach.json",
+          "textPlacementSha256": "9f25dcbdfc75aa7cdcf6c522fc7d71408d93cfbb4d4fa8553bd3543721e2acbd",
+          "bodyReview": {
+            "entryId": "baby-choices-within-reach",
+            "canonicalEntrySha256": "45424d8504436568c1018f797350c2733693210947c881cae4b25cadc1ac3343",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-b-tone-r02.3-6.baby-choices-within-reach",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-b-tone-r02.json",
+          "fileSha256": "133ab75d131a51412011678869008238b290d80238d2d0158009a261032e97f7",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-choices-within-reach.json",
+          "textPlacementSha256": "9f25dcbdfc75aa7cdcf6c522fc7d71408d93cfbb4d4fa8553bd3543721e2acbd",
+          "bodyReview": {
+            "entryId": "baby-choices-within-reach",
+            "canonicalEntrySha256": "45424d8504436568c1018f797350c2733693210947c881cae4b25cadc1ac3343",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-rolling-balls",
+      "placementId": "3-6.baby-rolling-balls",
+      "textPlacementSha256": "5f5990ece59dceb2c9b87e9ee87cb212f8eb1fa0be348e38057e3e937a44a6eb",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-a-source-r01.3-6.baby-rolling-balls",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-a-source-r01.json",
+          "fileSha256": "b06b903a18ac4ade27fc2239a7d641972d610fbc4d5e71682bb9dc88e0043e8f",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-rolling-balls.json",
+          "textPlacementSha256": "5f5990ece59dceb2c9b87e9ee87cb212f8eb1fa0be348e38057e3e937a44a6eb",
+          "bodyReview": {
+            "entryId": "baby-rolling-balls",
+            "canonicalEntrySha256": "b83de48e1bca1b3850da9c3b081967551b26aed3eba6d5fcbde50fe37ff7d378",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-a-tone-r01.3-6.baby-rolling-balls",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-a-tone-r01.json",
+          "fileSha256": "d3c16582e54860a60e26af4a4fc78333e4f5700be1a9df00699805cc80ddc61a",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-rolling-balls.json",
+          "textPlacementSha256": "5f5990ece59dceb2c9b87e9ee87cb212f8eb1fa0be348e38057e3e937a44a6eb",
+          "bodyReview": {
+            "entryId": "baby-rolling-balls",
+            "canonicalEntrySha256": "b83de48e1bca1b3850da9c3b081967551b26aed3eba6d5fcbde50fe37ff7d378",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-treasure-baskets",
+      "placementId": "3-6.baby-treasure-baskets",
+      "textPlacementSha256": "663662ba35d1a231214d389ab3d2c3f2619444387a70c559f6f879f7227b6d34",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-a-source-r02.3-6.baby-treasure-baskets",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-a-source-r02.json",
+          "fileSha256": "e4f4510c13db8af87a9077f05ca5bcb8415cfecb0e7d806cc23e42d234dc7920",
+          "snapshotPath": "content/birth-6/revisions/r02/snapshots/3-6.baby-treasure-baskets.json",
+          "textPlacementSha256": "663662ba35d1a231214d389ab3d2c3f2619444387a70c559f6f879f7227b6d34",
+          "bodyReview": {
+            "entryId": "baby-treasure-baskets",
+            "canonicalEntrySha256": "f25eab09d61589304616896faf4837643f49046236ee21fc4a9c4dc372a89cb6",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-a-tone-r02.3-6.baby-treasure-baskets",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-a-tone-r02.json",
+          "fileSha256": "9fe0f85226f83d7b6e552b687e162a8359c022f61fdd93f306ed34cf21cba3fd",
+          "snapshotPath": "content/birth-6/revisions/r02/snapshots/3-6.baby-treasure-baskets.json",
+          "textPlacementSha256": "663662ba35d1a231214d389ab3d2c3f2619444387a70c559f6f879f7227b6d34",
+          "bodyReview": {
+            "entryId": "baby-treasure-baskets",
+            "canonicalEntrySha256": "f25eab09d61589304616896faf4837643f49046236ee21fc4a9c4dc372a89cb6",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-newborn-surroundings",
+      "placementId": "0-3.early-newborn-surroundings",
+      "textPlacementSha256": "bac4872a925b4dfc279ef4a05bf97e94f91a69c2aeb8870e38547df173cf378a",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-a-source-r01.0-3.early-newborn-surroundings",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-a-source-r01.json",
+          "fileSha256": "0d325aa2894b1d7bbe8dce3abf0d717494e16e1a3fee58efbb1776118b8ade98",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.early-newborn-surroundings.json",
+          "textPlacementSha256": "bac4872a925b4dfc279ef4a05bf97e94f91a69c2aeb8870e38547df173cf378a",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-a-tone-r01.0-3.early-newborn-surroundings",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-a-tone-r01.json",
+          "fileSha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.early-newborn-surroundings.json",
+          "textPlacementSha256": "bac4872a925b4dfc279ef4a05bf97e94f91a69c2aeb8870e38547df173cf378a",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-feeding-cues",
+      "placementId": "0-3.early-feeding-cues",
+      "textPlacementSha256": "6c46ce58253eec34e86845be8ee17b422834aef649023f236fbea125c8570317",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-a-source-r01.0-3.early-feeding-cues",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-a-source-r01.json",
+          "fileSha256": "0d325aa2894b1d7bbe8dce3abf0d717494e16e1a3fee58efbb1776118b8ade98",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.early-feeding-cues.json",
+          "textPlacementSha256": "6c46ce58253eec34e86845be8ee17b422834aef649023f236fbea125c8570317",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-a-tone-r01.0-3.early-feeding-cues",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-a-tone-r01.json",
+          "fileSha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.early-feeding-cues.json",
+          "textPlacementSha256": "6c46ce58253eec34e86845be8ee17b422834aef649023f236fbea125c8570317",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-feeding-cues",
+      "placementId": "3-6.early-feeding-cues",
+      "textPlacementSha256": "276a43048469163109af3a10b0cec3bfd662f9c94a596239e9f5084cd2b0a04f",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-a-source-r01.3-6.early-feeding-cues",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-a-source-r01.json",
+          "fileSha256": "0d325aa2894b1d7bbe8dce3abf0d717494e16e1a3fee58efbb1776118b8ade98",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.early-feeding-cues.json",
+          "textPlacementSha256": "276a43048469163109af3a10b0cec3bfd662f9c94a596239e9f5084cd2b0a04f",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-a-tone-r01.3-6.early-feeding-cues",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-a-tone-r01.json",
+          "fileSha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.early-feeding-cues.json",
+          "textPlacementSha256": "276a43048469163109af3a10b0cec3bfd662f9c94a596239e9f5084cd2b0a04f",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-feeding-cues",
+      "placementId": "6-9.early-feeding-cues",
+      "textPlacementSha256": "5739d6b00fac5481b1c14afbe40211beb1489c0ac133a11a36607724d20326d2",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-a-source-r01.6-9.early-feeding-cues",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-a-source-r01.json",
+          "fileSha256": "0d325aa2894b1d7bbe8dce3abf0d717494e16e1a3fee58efbb1776118b8ade98",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/6-9.early-feeding-cues.json",
+          "textPlacementSha256": "5739d6b00fac5481b1c14afbe40211beb1489c0ac133a11a36607724d20326d2",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-a-tone-r01.6-9.early-feeding-cues",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-a-tone-r01.json",
+          "fileSha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/6-9.early-feeding-cues.json",
+          "textPlacementSha256": "5739d6b00fac5481b1c14afbe40211beb1489c0ac133a11a36607724d20326d2",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-feeding-cues",
+      "placementId": "9-12.early-feeding-cues",
+      "textPlacementSha256": "009670bc30181afdc24c449b112e975cf8485d830da45839b53a752556a17760",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-a-source-r01.9-12.early-feeding-cues",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-a-source-r01.json",
+          "fileSha256": "0d325aa2894b1d7bbe8dce3abf0d717494e16e1a3fee58efbb1776118b8ade98",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/9-12.early-feeding-cues.json",
+          "textPlacementSha256": "009670bc30181afdc24c449b112e975cf8485d830da45839b53a752556a17760",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-a-tone-r01.9-12.early-feeding-cues",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-a-tone-r01.json",
+          "fileSha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/9-12.early-feeding-cues.json",
+          "textPlacementSha256": "009670bc30181afdc24c449b112e975cf8485d830da45839b53a752556a17760",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-movement-friendly-clothes",
+      "placementId": "0-3.early-movement-friendly-clothes",
+      "textPlacementSha256": "5023ed2405e6b084a269e49d9e681d284c30c412451e2a3491d1bb9bd455c323",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.0-3.early-movement-friendly-clothes",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.early-movement-friendly-clothes.json",
+          "textPlacementSha256": "5023ed2405e6b084a269e49d9e681d284c30c412451e2a3491d1bb9bd455c323",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.0-3.early-movement-friendly-clothes",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.early-movement-friendly-clothes.json",
+          "textPlacementSha256": "5023ed2405e6b084a269e49d9e681d284c30c412451e2a3491d1bb9bd455c323",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-movement-friendly-clothes",
+      "placementId": "3-6.early-movement-friendly-clothes",
+      "textPlacementSha256": "590b5178bdaf139b55b2ebc385b0967f1befca527d18fc8367e9423b4b95be6f",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.3-6.early-movement-friendly-clothes",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.early-movement-friendly-clothes.json",
+          "textPlacementSha256": "590b5178bdaf139b55b2ebc385b0967f1befca527d18fc8367e9423b4b95be6f",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.3-6.early-movement-friendly-clothes",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.early-movement-friendly-clothes.json",
+          "textPlacementSha256": "590b5178bdaf139b55b2ebc385b0967f1befca527d18fc8367e9423b4b95be6f",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-movement-friendly-clothes",
+      "placementId": "6-9.early-movement-friendly-clothes",
+      "textPlacementSha256": "30c5778074efdf6c211499df49cd2d63730eeb15e7a3f2e70999ea4879877cae",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.6-9.early-movement-friendly-clothes",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/6-9.early-movement-friendly-clothes.json",
+          "textPlacementSha256": "30c5778074efdf6c211499df49cd2d63730eeb15e7a3f2e70999ea4879877cae",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.6-9.early-movement-friendly-clothes",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/6-9.early-movement-friendly-clothes.json",
+          "textPlacementSha256": "30c5778074efdf6c211499df49cd2d63730eeb15e7a3f2e70999ea4879877cae",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-movement-friendly-clothes",
+      "placementId": "9-12.early-movement-friendly-clothes",
+      "textPlacementSha256": "484f4a8c88a23a07c30ce30e30ef1d16494ce1d8f8827bbcb68de8f709a119fd",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.9-12.early-movement-friendly-clothes",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/9-12.early-movement-friendly-clothes.json",
+          "textPlacementSha256": "484f4a8c88a23a07c30ce30e30ef1d16494ce1d8f8827bbcb68de8f709a119fd",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.9-12.early-movement-friendly-clothes",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/9-12.early-movement-friendly-clothes.json",
+          "textPlacementSha256": "484f4a8c88a23a07c30ce30e30ef1d16494ce1d8f8827bbcb68de8f709a119fd",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-movement-friendly-clothes",
+      "placementId": "12-18.early-movement-friendly-clothes",
+      "textPlacementSha256": "f0994efbc1db169044d84fd377201c854709253d0afb0e82b32211892a072baf",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.12-18.early-movement-friendly-clothes",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/12-18.early-movement-friendly-clothes.json",
+          "textPlacementSha256": "f0994efbc1db169044d84fd377201c854709253d0afb0e82b32211892a072baf",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.12-18.early-movement-friendly-clothes",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/12-18.early-movement-friendly-clothes.json",
+          "textPlacementSha256": "f0994efbc1db169044d84fd377201c854709253d0afb0e82b32211892a072baf",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-bathing-together",
+      "placementId": "0-3.early-bathing-together",
+      "textPlacementSha256": "4f170f06b9157002d0580f085a65c59413d420e9e9030bb1c15254d2515a6ca5",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.0-3.early-bathing-together",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.early-bathing-together.json",
+          "textPlacementSha256": "4f170f06b9157002d0580f085a65c59413d420e9e9030bb1c15254d2515a6ca5",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.0-3.early-bathing-together",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.early-bathing-together.json",
+          "textPlacementSha256": "4f170f06b9157002d0580f085a65c59413d420e9e9030bb1c15254d2515a6ca5",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-bathing-together",
+      "placementId": "3-6.early-bathing-together",
+      "textPlacementSha256": "01af92f0232bef2070f151fb993791331cdf0a40005eedc0866b535d9fdf8efd",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.3-6.early-bathing-together",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.early-bathing-together.json",
+          "textPlacementSha256": "01af92f0232bef2070f151fb993791331cdf0a40005eedc0866b535d9fdf8efd",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.3-6.early-bathing-together",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.early-bathing-together.json",
+          "textPlacementSha256": "01af92f0232bef2070f151fb993791331cdf0a40005eedc0866b535d9fdf8efd",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-bathing-together",
+      "placementId": "6-9.early-bathing-together",
+      "textPlacementSha256": "bc66ae684730aed817b4cdfa12764bfe8e13209b93f51f80f1b09bbcdace2364",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.6-9.early-bathing-together",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/6-9.early-bathing-together.json",
+          "textPlacementSha256": "bc66ae684730aed817b4cdfa12764bfe8e13209b93f51f80f1b09bbcdace2364",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.6-9.early-bathing-together",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/6-9.early-bathing-together.json",
+          "textPlacementSha256": "bc66ae684730aed817b4cdfa12764bfe8e13209b93f51f80f1b09bbcdace2364",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-bathing-together",
+      "placementId": "9-12.early-bathing-together",
+      "textPlacementSha256": "f2061b2c22db0df57c95b1ab1138b2d722769301f655e3dce59b9abf8a156b98",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.9-12.early-bathing-together",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/9-12.early-bathing-together.json",
+          "textPlacementSha256": "f2061b2c22db0df57c95b1ab1138b2d722769301f655e3dce59b9abf8a156b98",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.9-12.early-bathing-together",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/9-12.early-bathing-together.json",
+          "textPlacementSha256": "f2061b2c22db0df57c95b1ab1138b2d722769301f655e3dce59b9abf8a156b98",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-bathing-together",
+      "placementId": "12-18.early-bathing-together",
+      "textPlacementSha256": "8cc6623cbedd7dce9dc6d18356d4321725b86221ad2b77c2097fa1254ff502a3",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.12-18.early-bathing-together",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/12-18.early-bathing-together.json",
+          "textPlacementSha256": "8cc6623cbedd7dce9dc6d18356d4321725b86221ad2b77c2097fa1254ff502a3",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.12-18.early-bathing-together",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/12-18.early-bathing-together.json",
+          "textPlacementSha256": "8cc6623cbedd7dce9dc6d18356d4321725b86221ad2b77c2097fa1254ff502a3",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-car-seat-care",
+      "placementId": "0-3.early-car-seat-care",
+      "textPlacementSha256": "b61dd6e1d89e38452ff0dcdfe91300a1a1442a864d0f95837abdd00812a39b47",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.0-3.early-car-seat-care",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.early-car-seat-care.json",
+          "textPlacementSha256": "b61dd6e1d89e38452ff0dcdfe91300a1a1442a864d0f95837abdd00812a39b47",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.0-3.early-car-seat-care",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.early-car-seat-care.json",
+          "textPlacementSha256": "b61dd6e1d89e38452ff0dcdfe91300a1a1442a864d0f95837abdd00812a39b47",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-car-seat-care",
+      "placementId": "3-6.early-car-seat-care",
+      "textPlacementSha256": "09e43cc945de40472f2c422dacd77c3f44075a63acdeaeabee7ce8fd2d71211b",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.3-6.early-car-seat-care",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.early-car-seat-care.json",
+          "textPlacementSha256": "09e43cc945de40472f2c422dacd77c3f44075a63acdeaeabee7ce8fd2d71211b",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.3-6.early-car-seat-care",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.early-car-seat-care.json",
+          "textPlacementSha256": "09e43cc945de40472f2c422dacd77c3f44075a63acdeaeabee7ce8fd2d71211b",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-car-seat-care",
+      "placementId": "6-9.early-car-seat-care",
+      "textPlacementSha256": "8cc7850eb4fdd478566760ee9d197e236e9b9a937d87c5f225e01c3a7a9e7c31",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.6-9.early-car-seat-care",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/6-9.early-car-seat-care.json",
+          "textPlacementSha256": "8cc7850eb4fdd478566760ee9d197e236e9b9a937d87c5f225e01c3a7a9e7c31",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.6-9.early-car-seat-care",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/6-9.early-car-seat-care.json",
+          "textPlacementSha256": "8cc7850eb4fdd478566760ee9d197e236e9b9a937d87c5f225e01c3a7a9e7c31",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-car-seat-care",
+      "placementId": "9-12.early-car-seat-care",
+      "textPlacementSha256": "6b3ad97ec2eadcfd768f13be5ce3889c50b4ccb8517015765aa516d5be2f993d",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.9-12.early-car-seat-care",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/9-12.early-car-seat-care.json",
+          "textPlacementSha256": "6b3ad97ec2eadcfd768f13be5ce3889c50b4ccb8517015765aa516d5be2f993d",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.9-12.early-car-seat-care",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/9-12.early-car-seat-care.json",
+          "textPlacementSha256": "6b3ad97ec2eadcfd768f13be5ce3889c50b4ccb8517015765aa516d5be2f993d",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-car-seat-care",
+      "placementId": "12-18.early-car-seat-care",
+      "textPlacementSha256": "8afe6082b4a2909bb44b49c5defe49ee46eae7c716008d4f57ca76f99cf85b4d",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.12-18.early-car-seat-care",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/12-18.early-car-seat-care.json",
+          "textPlacementSha256": "8afe6082b4a2909bb44b49c5defe49ee46eae7c716008d4f57ca76f99cf85b4d",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.12-18.early-car-seat-care",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/12-18.early-car-seat-care.json",
+          "textPlacementSha256": "8afe6082b4a2909bb44b49c5defe49ee46eae7c716008d4f57ca76f99cf85b4d",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-carrying-and-floor-time",
+      "placementId": "0-3.early-carrying-and-floor-time",
+      "textPlacementSha256": "786f5c50d09d75f7083880c5106a36fb343e5a23573647b344a5215e90968dfa",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.0-3.early-carrying-and-floor-time",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.early-carrying-and-floor-time.json",
+          "textPlacementSha256": "786f5c50d09d75f7083880c5106a36fb343e5a23573647b344a5215e90968dfa",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.0-3.early-carrying-and-floor-time",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.early-carrying-and-floor-time.json",
+          "textPlacementSha256": "786f5c50d09d75f7083880c5106a36fb343e5a23573647b344a5215e90968dfa",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-carrying-and-floor-time",
+      "placementId": "3-6.early-carrying-and-floor-time",
+      "textPlacementSha256": "3566309bdb7900cc42353be638c0a08b0e4f39dcf1ae51595c0a331a0ebd2960",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.3-6.early-carrying-and-floor-time",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.early-carrying-and-floor-time.json",
+          "textPlacementSha256": "3566309bdb7900cc42353be638c0a08b0e4f39dcf1ae51595c0a331a0ebd2960",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.3-6.early-carrying-and-floor-time",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.early-carrying-and-floor-time.json",
+          "textPlacementSha256": "3566309bdb7900cc42353be638c0a08b0e4f39dcf1ae51595c0a331a0ebd2960",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-carrying-and-floor-time",
+      "placementId": "6-9.early-carrying-and-floor-time",
+      "textPlacementSha256": "cdd1368be05a7b55672833b4d5f9aea819e69f17839f898904d68c93f66e3933",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.6-9.early-carrying-and-floor-time",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/6-9.early-carrying-and-floor-time.json",
+          "textPlacementSha256": "cdd1368be05a7b55672833b4d5f9aea819e69f17839f898904d68c93f66e3933",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.6-9.early-carrying-and-floor-time",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/6-9.early-carrying-and-floor-time.json",
+          "textPlacementSha256": "cdd1368be05a7b55672833b4d5f9aea819e69f17839f898904d68c93f66e3933",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-carrying-and-floor-time",
+      "placementId": "9-12.early-carrying-and-floor-time",
+      "textPlacementSha256": "9665a63b38561478d3bf3224ef5076af7eee0a9a8047e0271a66b15818c7d1f1",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.9-12.early-carrying-and-floor-time",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/9-12.early-carrying-and-floor-time.json",
+          "textPlacementSha256": "9665a63b38561478d3bf3224ef5076af7eee0a9a8047e0271a66b15818c7d1f1",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.9-12.early-carrying-and-floor-time",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/9-12.early-carrying-and-floor-time.json",
+          "textPlacementSha256": "9665a63b38561478d3bf3224ef5076af7eee0a9a8047e0271a66b15818c7d1f1",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-carrying-and-floor-time",
+      "placementId": "12-18.early-carrying-and-floor-time",
+      "textPlacementSha256": "fa2ed296ebd764c685b4b1fc915380ff28892d6de6eb05e5e0b28f8718b7d241",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.12-18.early-carrying-and-floor-time",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/12-18.early-carrying-and-floor-time.json",
+          "textPlacementSha256": "fa2ed296ebd764c685b4b1fc915380ff28892d6de6eb05e5e0b28f8718b7d241",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.12-18.early-carrying-and-floor-time",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/12-18.early-carrying-and-floor-time.json",
+          "textPlacementSha256": "fa2ed296ebd764c685b4b1fc915380ff28892d6de6eb05e5e0b28f8718b7d241",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-teething",
+      "placementId": "3-6.early-teething",
+      "textPlacementSha256": "7482f0d081f585612163ee3edb4ec01124b8aecfe91dfd88768530a57e1f0d23",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.3-6.early-teething",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.early-teething.json",
+          "textPlacementSha256": "7482f0d081f585612163ee3edb4ec01124b8aecfe91dfd88768530a57e1f0d23",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.3-6.early-teething",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.early-teething.json",
+          "textPlacementSha256": "7482f0d081f585612163ee3edb4ec01124b8aecfe91dfd88768530a57e1f0d23",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-teething",
+      "placementId": "6-9.early-teething",
+      "textPlacementSha256": "a98bfb1ba54448270997169b8e227265065ec97fb85ce1504ab9b55656d704d3",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.6-9.early-teething",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/6-9.early-teething.json",
+          "textPlacementSha256": "a98bfb1ba54448270997169b8e227265065ec97fb85ce1504ab9b55656d704d3",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.6-9.early-teething",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/6-9.early-teething.json",
+          "textPlacementSha256": "a98bfb1ba54448270997169b8e227265065ec97fb85ce1504ab9b55656d704d3",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-teething",
+      "placementId": "9-12.early-teething",
+      "textPlacementSha256": "20bbcf450b3bce792555aee0f68eac1f4b4342294ca418a6768ee4f515b36c57",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.9-12.early-teething",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/9-12.early-teething.json",
+          "textPlacementSha256": "20bbcf450b3bce792555aee0f68eac1f4b4342294ca418a6768ee4f515b36c57",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.9-12.early-teething",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/9-12.early-teething.json",
+          "textPlacementSha256": "20bbcf450b3bce792555aee0f68eac1f4b4342294ca418a6768ee4f515b36c57",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-teething",
+      "placementId": "12-18.early-teething",
+      "textPlacementSha256": "6fe603ecdb50d8f52254e0908fff9275958cbe9345fe240161a1a272793b84a0",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.12-18.early-teething",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/12-18.early-teething.json",
+          "textPlacementSha256": "6fe603ecdb50d8f52254e0908fff9275958cbe9345fe240161a1a272793b84a0",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.12-18.early-teething",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/12-18.early-teething.json",
+          "textPlacementSha256": "6fe603ecdb50d8f52254e0908fff9275958cbe9345fe240161a1a272793b84a0",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-connection-in-nicu",
+      "placementId": "0-3.early-connection-in-nicu",
+      "textPlacementSha256": "a68410663c8d312c7dfb97f43f1cb3cd9665faf5c4b4928c61b1568616712082",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-a-source-r01.0-3.early-connection-in-nicu",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-a-source-r01.json",
+          "fileSha256": "0d325aa2894b1d7bbe8dce3abf0d717494e16e1a3fee58efbb1776118b8ade98",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.early-connection-in-nicu.json",
+          "textPlacementSha256": "a68410663c8d312c7dfb97f43f1cb3cd9665faf5c4b4928c61b1568616712082",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-a-tone-r01.0-3.early-connection-in-nicu",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-a-tone-r01.json",
+          "fileSha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.early-connection-in-nicu.json",
+          "textPlacementSha256": "a68410663c8d312c7dfb97f43f1cb3cd9665faf5c4b4928c61b1568616712082",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "early-connection-in-nicu",
+      "placementId": "3-6.early-connection-in-nicu",
+      "textPlacementSha256": "dd324eff048a25b4e6c399a6662f67faa0c911ab33da97c14085ef8262571709",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-a-source-r01.3-6.early-connection-in-nicu",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-a-source-r01.json",
+          "fileSha256": "0d325aa2894b1d7bbe8dce3abf0d717494e16e1a3fee58efbb1776118b8ade98",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.early-connection-in-nicu.json",
+          "textPlacementSha256": "dd324eff048a25b4e6c399a6662f67faa0c911ab33da97c14085ef8262571709",
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-a-tone-r01.3-6.early-connection-in-nicu",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-a-tone-r01.json",
+          "fileSha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.early-connection-in-nicu.json",
+          "textPlacementSha256": "dd324eff048a25b4e6c399a6662f67faa0c911ab33da97c14085ef8262571709",
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-connection",
+      "placementId": "0-3.baby-connection",
+      "textPlacementSha256": "801bc9ab5ef126c20167a835010899e5745afd1ef7ba91ec3a318a1e839f999c",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.0-3.baby-connection",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.baby-connection.json",
+          "textPlacementSha256": "801bc9ab5ef126c20167a835010899e5745afd1ef7ba91ec3a318a1e839f999c",
+          "bodyReview": {
+            "entryId": "baby-connection",
+            "canonicalEntrySha256": "94cd17cb3bb058e59df59718625347eb704e287b8d5fdd40637ff157154269d6",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.0-3.baby-connection",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.baby-connection.json",
+          "textPlacementSha256": "801bc9ab5ef126c20167a835010899e5745afd1ef7ba91ec3a318a1e839f999c",
+          "bodyReview": {
+            "entryId": "baby-connection",
+            "canonicalEntrySha256": "94cd17cb3bb058e59df59718625347eb704e287b8d5fdd40637ff157154269d6",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-connection",
+      "placementId": "3-6.baby-connection",
+      "textPlacementSha256": "4e3e8c072a240ac3b3805fcf95a98ece91fb05b94d61e1e7fda605b10ab4eb8a",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.3-6.baby-connection",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-connection.json",
+          "textPlacementSha256": "4e3e8c072a240ac3b3805fcf95a98ece91fb05b94d61e1e7fda605b10ab4eb8a",
+          "bodyReview": {
+            "entryId": "baby-connection",
+            "canonicalEntrySha256": "94cd17cb3bb058e59df59718625347eb704e287b8d5fdd40637ff157154269d6",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.3-6.baby-connection",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-connection.json",
+          "textPlacementSha256": "4e3e8c072a240ac3b3805fcf95a98ece91fb05b94d61e1e7fda605b10ab4eb8a",
+          "bodyReview": {
+            "entryId": "baby-connection",
+            "canonicalEntrySha256": "94cd17cb3bb058e59df59718625347eb704e287b8d5fdd40637ff157154269d6",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-diaper-conversation",
+      "placementId": "0-3.baby-diaper-conversation",
+      "textPlacementSha256": "c3eaf853d41f9e8290922194e86cdd15d598d4265d9e2b00a75888daa7bc13f5",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "trial-source-r01.0-3.baby-diaper-conversation",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/trial-source-r01.json",
+          "fileSha256": "8c0a342169282b2084f716265922d266b26920c5a723a30a838c4bc5e38186f8",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.baby-diaper-conversation.json",
+          "textPlacementSha256": "c3eaf853d41f9e8290922194e86cdd15d598d4265d9e2b00a75888daa7bc13f5",
+          "bodyReview": {
+            "entryId": "baby-diaper-conversation",
+            "canonicalEntrySha256": "508c711d2938fe27fc73487ea048f401a793d60652433e3697b33a2e4a031620",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "trial-tone-r01.0-3.baby-diaper-conversation",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/trial-tone-r01.json",
+          "fileSha256": "ebcca701f4e592e85a60b3587c5c7d57fef12089b76bf1930b98a5b0a5840490",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.baby-diaper-conversation.json",
+          "textPlacementSha256": "c3eaf853d41f9e8290922194e86cdd15d598d4265d9e2b00a75888daa7bc13f5",
+          "bodyReview": {
+            "entryId": "baby-diaper-conversation",
+            "canonicalEntrySha256": "508c711d2938fe27fc73487ea048f401a793d60652433e3697b33a2e4a031620",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-diaper-conversation",
+      "placementId": "3-6.baby-diaper-conversation",
+      "textPlacementSha256": "945ba235f2ebd49c75013bdc4ac4bea09286f6d4b92e9b77f0a4a37cda179ec1",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "trial-source-r01.3-6.baby-diaper-conversation",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/trial-source-r01.json",
+          "fileSha256": "8c0a342169282b2084f716265922d266b26920c5a723a30a838c4bc5e38186f8",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-diaper-conversation.json",
+          "textPlacementSha256": "945ba235f2ebd49c75013bdc4ac4bea09286f6d4b92e9b77f0a4a37cda179ec1",
+          "bodyReview": {
+            "entryId": "baby-diaper-conversation",
+            "canonicalEntrySha256": "508c711d2938fe27fc73487ea048f401a793d60652433e3697b33a2e4a031620",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "trial-tone-r01.3-6.baby-diaper-conversation",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/trial-tone-r01.json",
+          "fileSha256": "ebcca701f4e592e85a60b3587c5c7d57fef12089b76bf1930b98a5b0a5840490",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-diaper-conversation.json",
+          "textPlacementSha256": "945ba235f2ebd49c75013bdc4ac4bea09286f6d4b92e9b77f0a4a37cda179ec1",
+          "bodyReview": {
+            "entryId": "baby-diaper-conversation",
+            "canonicalEntrySha256": "508c711d2938fe27fc73487ea048f401a793d60652433e3697b33a2e4a031620",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-dressing",
+      "placementId": "0-3.baby-dressing",
+      "textPlacementSha256": "dcac93786635f452a49dbf37a11fb1980efab0f1c8a5b160228ee6351a10973a",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.0-3.baby-dressing",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.baby-dressing.json",
+          "textPlacementSha256": "dcac93786635f452a49dbf37a11fb1980efab0f1c8a5b160228ee6351a10973a",
+          "bodyReview": {
+            "entryId": "baby-dressing",
+            "canonicalEntrySha256": "59c4ff2aefc7407d12d794eb7fef8dbe8c04aa43242f6897b13574fe7d4a1012",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.0-3.baby-dressing",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.baby-dressing.json",
+          "textPlacementSha256": "dcac93786635f452a49dbf37a11fb1980efab0f1c8a5b160228ee6351a10973a",
+          "bodyReview": {
+            "entryId": "baby-dressing",
+            "canonicalEntrySha256": "59c4ff2aefc7407d12d794eb7fef8dbe8c04aa43242f6897b13574fe7d4a1012",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-dressing",
+      "placementId": "3-6.baby-dressing",
+      "textPlacementSha256": "92073dd8fbdcf77c47d240377b318c1497d89e56162bdeb14af16fe82f75283a",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.3-6.baby-dressing",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-dressing.json",
+          "textPlacementSha256": "92073dd8fbdcf77c47d240377b318c1497d89e56162bdeb14af16fe82f75283a",
+          "bodyReview": {
+            "entryId": "baby-dressing",
+            "canonicalEntrySha256": "59c4ff2aefc7407d12d794eb7fef8dbe8c04aa43242f6897b13574fe7d4a1012",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.3-6.baby-dressing",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-dressing.json",
+          "textPlacementSha256": "92073dd8fbdcf77c47d240377b318c1497d89e56162bdeb14af16fe82f75283a",
+          "bodyReview": {
+            "entryId": "baby-dressing",
+            "canonicalEntrySha256": "59c4ff2aefc7407d12d794eb7fef8dbe8c04aa43242f6897b13574fe7d4a1012",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-care-resistance",
+      "placementId": "0-3.baby-care-resistance",
+      "textPlacementSha256": "e72edbc4610e8351dd8783baa66a7136c34856c18a8d320a540b90b801edff08",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.0-3.baby-care-resistance",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.baby-care-resistance.json",
+          "textPlacementSha256": "e72edbc4610e8351dd8783baa66a7136c34856c18a8d320a540b90b801edff08",
+          "bodyReview": {
+            "entryId": "baby-care-resistance",
+            "canonicalEntrySha256": "4d36e198fd45b15a8dee03e1641735fb4d131067fc9b3e2454100e9f4df8bae8",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.0-3.baby-care-resistance",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.baby-care-resistance.json",
+          "textPlacementSha256": "e72edbc4610e8351dd8783baa66a7136c34856c18a8d320a540b90b801edff08",
+          "bodyReview": {
+            "entryId": "baby-care-resistance",
+            "canonicalEntrySha256": "4d36e198fd45b15a8dee03e1641735fb4d131067fc9b3e2454100e9f4df8bae8",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-care-resistance",
+      "placementId": "3-6.baby-care-resistance",
+      "textPlacementSha256": "bf515565990e1c4ac1fb6cab47dc5f5affa82cfc22489b7de8503ffc30ef1ec4",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.3-6.baby-care-resistance",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-care-resistance.json",
+          "textPlacementSha256": "bf515565990e1c4ac1fb6cab47dc5f5affa82cfc22489b7de8503ffc30ef1ec4",
+          "bodyReview": {
+            "entryId": "baby-care-resistance",
+            "canonicalEntrySha256": "4d36e198fd45b15a8dee03e1641735fb4d131067fc9b3e2454100e9f4df8bae8",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.3-6.baby-care-resistance",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-care-resistance.json",
+          "textPlacementSha256": "bf515565990e1c4ac1fb6cab47dc5f5affa82cfc22489b7de8503ffc30ef1ec4",
+          "bodyReview": {
+            "entryId": "baby-care-resistance",
+            "canonicalEntrySha256": "4d36e198fd45b15a8dee03e1641735fb4d131067fc9b3e2454100e9f4df8bae8",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-feeding-connection",
+      "placementId": "0-3.baby-feeding-connection",
+      "textPlacementSha256": "591403a1741911e10fb4c5eb50aa117890324885dcaebc93c61d38a062e89794",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-a-source-r01.0-3.baby-feeding-connection",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-a-source-r01.json",
+          "fileSha256": "0d325aa2894b1d7bbe8dce3abf0d717494e16e1a3fee58efbb1776118b8ade98",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.baby-feeding-connection.json",
+          "textPlacementSha256": "591403a1741911e10fb4c5eb50aa117890324885dcaebc93c61d38a062e89794",
+          "bodyReview": {
+            "entryId": "baby-feeding-connection",
+            "canonicalEntrySha256": "a5792ab355d43f1012026836a540d8ad0e9c08d9d264707311024a260e3026fa",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-a-tone-r01.0-3.baby-feeding-connection",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-a-tone-r01.json",
+          "fileSha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.baby-feeding-connection.json",
+          "textPlacementSha256": "591403a1741911e10fb4c5eb50aa117890324885dcaebc93c61d38a062e89794",
+          "bodyReview": {
+            "entryId": "baby-feeding-connection",
+            "canonicalEntrySha256": "a5792ab355d43f1012026836a540d8ad0e9c08d9d264707311024a260e3026fa",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-feeding-connection",
+      "placementId": "3-6.baby-feeding-connection",
+      "textPlacementSha256": "91fbde36d0a79801dcba7ac6c601180dad28519d255a9c7c7e8a6b22e9335c55",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-a-source-r01.3-6.baby-feeding-connection",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-a-source-r01.json",
+          "fileSha256": "0d325aa2894b1d7bbe8dce3abf0d717494e16e1a3fee58efbb1776118b8ade98",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-feeding-connection.json",
+          "textPlacementSha256": "91fbde36d0a79801dcba7ac6c601180dad28519d255a9c7c7e8a6b22e9335c55",
+          "bodyReview": {
+            "entryId": "baby-feeding-connection",
+            "canonicalEntrySha256": "a5792ab355d43f1012026836a540d8ad0e9c08d9d264707311024a260e3026fa",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-a-tone-r01.3-6.baby-feeding-connection",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-a-tone-r01.json",
+          "fileSha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-feeding-connection.json",
+          "textPlacementSha256": "91fbde36d0a79801dcba7ac6c601180dad28519d255a9c7c7e8a6b22e9335c55",
+          "bodyReview": {
+            "entryId": "baby-feeding-connection",
+            "canonicalEntrySha256": "a5792ab355d43f1012026836a540d8ad0e9c08d9d264707311024a260e3026fa",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-daily-rhythm",
+      "placementId": "0-3.baby-daily-rhythm",
+      "textPlacementSha256": "b5737a9a4a151fafd8d52942a28b5b6f0a4e375648ad5dd437759ed886b8bd25",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-a-source-r01.0-3.baby-daily-rhythm",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-a-source-r01.json",
+          "fileSha256": "0d325aa2894b1d7bbe8dce3abf0d717494e16e1a3fee58efbb1776118b8ade98",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.baby-daily-rhythm.json",
+          "textPlacementSha256": "b5737a9a4a151fafd8d52942a28b5b6f0a4e375648ad5dd437759ed886b8bd25",
+          "bodyReview": {
+            "entryId": "baby-daily-rhythm",
+            "canonicalEntrySha256": "b89e657fd3eceec72cea57c6f533a524b433f16728c56b2fa2cd26d165c77332",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-a-tone-r01.0-3.baby-daily-rhythm",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-a-tone-r01.json",
+          "fileSha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.baby-daily-rhythm.json",
+          "textPlacementSha256": "b5737a9a4a151fafd8d52942a28b5b6f0a4e375648ad5dd437759ed886b8bd25",
+          "bodyReview": {
+            "entryId": "baby-daily-rhythm",
+            "canonicalEntrySha256": "b89e657fd3eceec72cea57c6f533a524b433f16728c56b2fa2cd26d165c77332",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-daily-rhythm",
+      "placementId": "3-6.baby-daily-rhythm",
+      "textPlacementSha256": "d09f9f850e59d6d419a225c6866888df044796a4bf99b3c046b074265548590d",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-a-source-r01.3-6.baby-daily-rhythm",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-a-source-r01.json",
+          "fileSha256": "0d325aa2894b1d7bbe8dce3abf0d717494e16e1a3fee58efbb1776118b8ade98",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-daily-rhythm.json",
+          "textPlacementSha256": "d09f9f850e59d6d419a225c6866888df044796a4bf99b3c046b074265548590d",
+          "bodyReview": {
+            "entryId": "baby-daily-rhythm",
+            "canonicalEntrySha256": "b89e657fd3eceec72cea57c6f533a524b433f16728c56b2fa2cd26d165c77332",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-a-tone-r01.3-6.baby-daily-rhythm",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-a-tone-r01.json",
+          "fileSha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-daily-rhythm.json",
+          "textPlacementSha256": "d09f9f850e59d6d419a225c6866888df044796a4bf99b3c046b074265548590d",
+          "bodyReview": {
+            "entryId": "baby-daily-rhythm",
+            "canonicalEntrySha256": "b89e657fd3eceec72cea57c6f533a524b433f16728c56b2fa2cd26d165c77332",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-sleep-support",
+      "placementId": "0-3.baby-sleep-support",
+      "textPlacementSha256": "dc00e4b41066313938339bbf64ffc09098c68364611ee54779e819de973b7fec",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-a-source-r01.0-3.baby-sleep-support",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-a-source-r01.json",
+          "fileSha256": "0d325aa2894b1d7bbe8dce3abf0d717494e16e1a3fee58efbb1776118b8ade98",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.baby-sleep-support.json",
+          "textPlacementSha256": "dc00e4b41066313938339bbf64ffc09098c68364611ee54779e819de973b7fec",
+          "bodyReview": {
+            "entryId": "baby-sleep-support",
+            "canonicalEntrySha256": "0a8654cd8887e95ca8d741f978f830aa8d0b91d99f1916dcc8d3ef7b3a9bbe64",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-a-tone-r01.0-3.baby-sleep-support",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-a-tone-r01.json",
+          "fileSha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.baby-sleep-support.json",
+          "textPlacementSha256": "dc00e4b41066313938339bbf64ffc09098c68364611ee54779e819de973b7fec",
+          "bodyReview": {
+            "entryId": "baby-sleep-support",
+            "canonicalEntrySha256": "0a8654cd8887e95ca8d741f978f830aa8d0b91d99f1916dcc8d3ef7b3a9bbe64",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-sleep-support",
+      "placementId": "3-6.baby-sleep-support",
+      "textPlacementSha256": "ded1fcc8f056fe0ee451e2acc384578ba3a4b928e3e90cb5a36bae38c74cf049",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-a-source-r01.3-6.baby-sleep-support",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-a-source-r01.json",
+          "fileSha256": "0d325aa2894b1d7bbe8dce3abf0d717494e16e1a3fee58efbb1776118b8ade98",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-sleep-support.json",
+          "textPlacementSha256": "ded1fcc8f056fe0ee451e2acc384578ba3a4b928e3e90cb5a36bae38c74cf049",
+          "bodyReview": {
+            "entryId": "baby-sleep-support",
+            "canonicalEntrySha256": "0a8654cd8887e95ca8d741f978f830aa8d0b91d99f1916dcc8d3ef7b3a9bbe64",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-a-tone-r01.3-6.baby-sleep-support",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-a-tone-r01.json",
+          "fileSha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-sleep-support.json",
+          "textPlacementSha256": "ded1fcc8f056fe0ee451e2acc384578ba3a4b928e3e90cb5a36bae38c74cf049",
+          "bodyReview": {
+            "entryId": "baby-sleep-support",
+            "canonicalEntrySha256": "0a8654cd8887e95ca8d741f978f830aa8d0b91d99f1916dcc8d3ef7b3a9bbe64",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-pacifier",
+      "placementId": "0-3.baby-pacifier",
+      "textPlacementSha256": "e295f1f89b32b0cc0fb9e88eb51ec1a3d9bcaebfc4f95dccadd65bbcaf2289b7",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-a-source-r01.0-3.baby-pacifier",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-a-source-r01.json",
+          "fileSha256": "0d325aa2894b1d7bbe8dce3abf0d717494e16e1a3fee58efbb1776118b8ade98",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.baby-pacifier.json",
+          "textPlacementSha256": "e295f1f89b32b0cc0fb9e88eb51ec1a3d9bcaebfc4f95dccadd65bbcaf2289b7",
+          "bodyReview": {
+            "entryId": "baby-pacifier",
+            "canonicalEntrySha256": "b6fb7ad16a00a12109903b336417857b207aef7899f37a1c24cd004c343a5b21",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-a-tone-r01.0-3.baby-pacifier",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-a-tone-r01.json",
+          "fileSha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.baby-pacifier.json",
+          "textPlacementSha256": "e295f1f89b32b0cc0fb9e88eb51ec1a3d9bcaebfc4f95dccadd65bbcaf2289b7",
+          "bodyReview": {
+            "entryId": "baby-pacifier",
+            "canonicalEntrySha256": "b6fb7ad16a00a12109903b336417857b207aef7899f37a1c24cd004c343a5b21",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-pacifier",
+      "placementId": "3-6.baby-pacifier",
+      "textPlacementSha256": "19822ffbeab33327ff7848afc4df3a3b7c1a5ef0d11340d46ad302b65f376d1d",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-a-source-r01.3-6.baby-pacifier",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-a-source-r01.json",
+          "fileSha256": "0d325aa2894b1d7bbe8dce3abf0d717494e16e1a3fee58efbb1776118b8ade98",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-pacifier.json",
+          "textPlacementSha256": "19822ffbeab33327ff7848afc4df3a3b7c1a5ef0d11340d46ad302b65f376d1d",
+          "bodyReview": {
+            "entryId": "baby-pacifier",
+            "canonicalEntrySha256": "b6fb7ad16a00a12109903b336417857b207aef7899f37a1c24cd004c343a5b21",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-a-tone-r01.3-6.baby-pacifier",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-a-tone-r01.json",
+          "fileSha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-pacifier.json",
+          "textPlacementSha256": "19822ffbeab33327ff7848afc4df3a3b7c1a5ef0d11340d46ad302b65f376d1d",
+          "bodyReview": {
+            "entryId": "baby-pacifier",
+            "canonicalEntrySha256": "b6fb7ad16a00a12109903b336417857b207aef7899f37a1c24cd004c343a5b21",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-crying",
+      "placementId": "0-3.baby-crying",
+      "textPlacementSha256": "243f5a3bce8de1cb8617f393b6e907b38b156b2e6d09f799b5e5bff74a162f1f",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-a-source-r01.0-3.baby-crying",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-a-source-r01.json",
+          "fileSha256": "0d325aa2894b1d7bbe8dce3abf0d717494e16e1a3fee58efbb1776118b8ade98",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.baby-crying.json",
+          "textPlacementSha256": "243f5a3bce8de1cb8617f393b6e907b38b156b2e6d09f799b5e5bff74a162f1f",
+          "bodyReview": {
+            "entryId": "baby-crying",
+            "canonicalEntrySha256": "24d7f3701fa5c3d1c8b2f49010050baac3a804a2c691d00a35da88218457d99a",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-a-tone-r01.0-3.baby-crying",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-a-tone-r01.json",
+          "fileSha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.baby-crying.json",
+          "textPlacementSha256": "243f5a3bce8de1cb8617f393b6e907b38b156b2e6d09f799b5e5bff74a162f1f",
+          "bodyReview": {
+            "entryId": "baby-crying",
+            "canonicalEntrySha256": "24d7f3701fa5c3d1c8b2f49010050baac3a804a2c691d00a35da88218457d99a",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-crying",
+      "placementId": "3-6.baby-crying",
+      "textPlacementSha256": "92fd21404eeffa0887050c35caa4ebed657ea090c4206d6e5c5ac0dbb5b4c7be",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-a-source-r01.3-6.baby-crying",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-a-source-r01.json",
+          "fileSha256": "0d325aa2894b1d7bbe8dce3abf0d717494e16e1a3fee58efbb1776118b8ade98",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-crying.json",
+          "textPlacementSha256": "92fd21404eeffa0887050c35caa4ebed657ea090c4206d6e5c5ac0dbb5b4c7be",
+          "bodyReview": {
+            "entryId": "baby-crying",
+            "canonicalEntrySha256": "24d7f3701fa5c3d1c8b2f49010050baac3a804a2c691d00a35da88218457d99a",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-a-tone-r01.3-6.baby-crying",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-a-tone-r01.json",
+          "fileSha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-crying.json",
+          "textPlacementSha256": "92fd21404eeffa0887050c35caa4ebed657ea090c4206d6e5c5ac0dbb5b4c7be",
+          "bodyReview": {
+            "entryId": "baby-crying",
+            "canonicalEntrySha256": "24d7f3701fa5c3d1c8b2f49010050baac3a804a2c691d00a35da88218457d99a",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-photos-at-eye-level",
+      "placementId": "0-3.baby-photos-at-eye-level",
+      "textPlacementSha256": "c61143781e4d97790e0f3385d0c9a44c548c1c0e3fa9ee9c83e8227271bbba32",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-b-source-r01.0-3.baby-photos-at-eye-level",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-b-source-r01.json",
+          "fileSha256": "85a270e03834a93fac55b4827a9f2b68e0afeb81baaf611cba9908c4a9c43535",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.baby-photos-at-eye-level.json",
+          "textPlacementSha256": "c61143781e4d97790e0f3385d0c9a44c548c1c0e3fa9ee9c83e8227271bbba32",
+          "bodyReview": {
+            "entryId": "baby-photos-at-eye-level",
+            "canonicalEntrySha256": "4b3f1aa84ddfd2616b3033c57d0c31996f589e9d3f1d6400e05e6653df7cd486",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-b-tone-r01.0-3.baby-photos-at-eye-level",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-b-tone-r01.json",
+          "fileSha256": "0a00b69d8cb9baaf0c2e5b2de58e9ddefc6b83f6f03baf0c1c593b8cbcf806e1",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.baby-photos-at-eye-level.json",
+          "textPlacementSha256": "c61143781e4d97790e0f3385d0c9a44c548c1c0e3fa9ee9c83e8227271bbba32",
+          "bodyReview": {
+            "entryId": "baby-photos-at-eye-level",
+            "canonicalEntrySha256": "4b3f1aa84ddfd2616b3033c57d0c31996f589e9d3f1d6400e05e6653df7cd486",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-photos-at-eye-level",
+      "placementId": "3-6.baby-photos-at-eye-level",
+      "textPlacementSha256": "34e411986288fc8378f545dc45282faa788f6db59d19a3db062b1b9f34e767e3",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-b-source-r01.3-6.baby-photos-at-eye-level",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-b-source-r01.json",
+          "fileSha256": "85a270e03834a93fac55b4827a9f2b68e0afeb81baaf611cba9908c4a9c43535",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-photos-at-eye-level.json",
+          "textPlacementSha256": "34e411986288fc8378f545dc45282faa788f6db59d19a3db062b1b9f34e767e3",
+          "bodyReview": {
+            "entryId": "baby-photos-at-eye-level",
+            "canonicalEntrySha256": "4b3f1aa84ddfd2616b3033c57d0c31996f589e9d3f1d6400e05e6653df7cd486",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-b-tone-r01.3-6.baby-photos-at-eye-level",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-b-tone-r01.json",
+          "fileSha256": "0a00b69d8cb9baaf0c2e5b2de58e9ddefc6b83f6f03baf0c1c593b8cbcf806e1",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-photos-at-eye-level.json",
+          "textPlacementSha256": "34e411986288fc8378f545dc45282faa788f6db59d19a3db062b1b9f34e767e3",
+          "bodyReview": {
+            "entryId": "baby-photos-at-eye-level",
+            "canonicalEntrySha256": "4b3f1aa84ddfd2616b3033c57d0c31996f589e9d3f1d6400e05e6653df7cd486",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-space-to-explore",
+      "placementId": "3-6.baby-space-to-explore",
+      "textPlacementSha256": "fe987810d9d5cec924512020655ec131ff38154b6ce961547a327e8cefd2ba0a",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-play-b-source-r01.3-6.baby-space-to-explore",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-play-b-source-r01.json",
+          "fileSha256": "85a270e03834a93fac55b4827a9f2b68e0afeb81baaf611cba9908c4a9c43535",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-space-to-explore.json",
+          "textPlacementSha256": "fe987810d9d5cec924512020655ec131ff38154b6ce961547a327e8cefd2ba0a",
+          "bodyReview": {
+            "entryId": "baby-space-to-explore",
+            "canonicalEntrySha256": "3bdb7c451f91bc1efbccd1b770abd47e928b621c32c74e2105acbe788b11183e",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-play-b-tone-r01.3-6.baby-space-to-explore",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-play-b-tone-r01.json",
+          "fileSha256": "0a00b69d8cb9baaf0c2e5b2de58e9ddefc6b83f6f03baf0c1c593b8cbcf806e1",
+          "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-space-to-explore.json",
+          "textPlacementSha256": "fe987810d9d5cec924512020655ec131ff38154b6ce961547a327e8cefd2ba0a",
+          "bodyReview": {
+            "entryId": "baby-space-to-explore",
+            "canonicalEntrySha256": "3bdb7c451f91bc1efbccd1b770abd47e928b621c32c74e2105acbe788b11183e",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    },
+    {
+      "entryId": "baby-sharing",
+      "placementId": "3-6.baby-sharing",
+      "textPlacementSha256": "0258c547c343e09338806784d357d8df11dfb674b074b5324cd488f205f14134",
+      "artContextSha256": null,
+      "approvals": {
+        "source": {
+          "reviewId": "early-care-b-source-r01.3-6.baby-sharing",
+          "reviewer": "/root/trial_source",
+          "file": "content/birth-6/reviews/early-care-b-source-r01.json",
+          "fileSha256": "2ae659f5847406a6884c52e42b0b0643ad24de58cbee3e293efc99973732f1d4",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-sharing.json",
+          "textPlacementSha256": "0258c547c343e09338806784d357d8df11dfb674b074b5324cd488f205f14134",
+          "bodyReview": {
+            "entryId": "baby-sharing",
+            "canonicalEntrySha256": "4e7d06d1d8858c0750593af9d0b12ddcf418d9a1aad78ef673bf5d9a587297b4",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        },
+        "tone": {
+          "reviewId": "early-care-b-tone-r01.3-6.baby-sharing",
+          "reviewer": "/root/trial_tone",
+          "file": "content/birth-6/reviews/early-care-b-tone-r01.json",
+          "fileSha256": "b51feb6b46aa183971113a82dbe857a1bd49d512053690e9a63a9c75203cc14e",
+          "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-sharing.json",
+          "textPlacementSha256": "0258c547c343e09338806784d357d8df11dfb674b074b5324cd488f205f14134",
+          "bodyReview": {
+            "entryId": "baby-sharing",
+            "canonicalEntrySha256": "4e7d06d1d8858c0750593af9d0b12ddcf418d9a1aad78ef673bf5d9a587297b4",
+            "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+          },
+          "workflow": "lean-v1"
+        }
+      }
+    }
+  ],
+  "publication": false,
+  "artwork": "Pending actual-image and combination review by Task 8; this receipt approves neither images nor composition."
+}

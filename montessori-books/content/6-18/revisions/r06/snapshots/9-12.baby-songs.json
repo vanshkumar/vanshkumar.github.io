@@ -1,0 +1,119 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-songs",
+        "kind": "invitation",
+        "title": "Make a moment for a song",
+        "summary": "Sing a familiar song or listen to a short piece together. Notice a look, a sound, or a movement that joins in.",
+        "cue": "Your baby is interested in your voice or the rhythm they hear.",
+        "detail": [
+          "You can try the same song a little slower or with a different voice and see what holds their interest. A short rhyme with a familiar gesture is another possibility.",
+          "The authors make space for quiet between musical moments. Music need not run all day, and an instrument is not needed for sharing a song."
+        ],
+        "references": [
+          {
+            "id": "baby-songs.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Language activities / 6 to 9 months; Other activities / Music",
+            "locator": "Varying a familiar song; shared listening and quiet between music",
+            "pdfPages": [
+              {
+                "start": 135,
+                "end": 135
+              },
+              {
+                "start": 170,
+                "end": 170
+              }
+            ]
+          },
+          {
+            "id": "baby-songs.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Activities list for babies / Rhythmic language",
+            "locator": "Short songs, poetry and optional gestures",
+            "pdfPages": [
+              {
+                "start": 295,
+                "end": 295
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "9-12.baby-songs",
+        "entryId": "baby-songs",
+        "ageId": "9-12",
+        "topicIds": [
+          "play-discovery",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "The song variation appears at 6–9 months; appendix music and rhythmic-language rows say All ages.",
+          "readiness": "Interest in the voice or music, with a look, sound or movement in response.",
+          "note": "The activity may continue while it fits your child’s interest and current skills; the source ages are guides."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "9–12 months",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 135, 170"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF p. 295"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "85157f5b16a49207a99a11776d461388630740bfc06cd0029613b5aadb5a3bf8",
+  "artContextSha256": null,
+  "publicProjectionSha256": "df536ecc4174a6d08010588b287037acfcd72d152d0f3f09e55219703873dec6",
+  "provenance": {
+    "revision": "r06",
+    "placementDraft": {
+      "path": "content/6-18/drafts/editorial-r04/01.json",
+      "sha256": "714957507ce3bb904cf57c87d0d0c0be87dc234ad7163e25fa5a4ef019dcfb22"
+    },
+    "canonical": {
+      "entryId": "baby-songs",
+      "canonicalEntrySha256": "0f46408402a1df0553cffc0ad0996480701cb8e236f515d1da4632ad58a47aee",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/5",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/5"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

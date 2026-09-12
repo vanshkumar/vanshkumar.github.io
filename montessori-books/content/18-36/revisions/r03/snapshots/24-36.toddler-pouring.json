@@ -1,0 +1,155 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-pouring",
+        "kind": "invitation",
+        "title": "A little water to pour",
+        "actionLabel": "Pour",
+        "invitation": "A small jug, a little water, and a turn to pour—with help nearby.",
+        "summary": "If your child is interested in pouring and can manage a small jug, offer a little water with a cloth nearby. Stay available to help.",
+        "cue": "Notice an interest in tipping, filling, or pouring, and whether the jug feels manageable in their hands.",
+        "detail": [
+          "A small amount of water makes the invitation easier to share. Davies includes pouring in ordinary family life, with a little jug and something ready for spills.",
+          "Show the movement slowly, then leave room for a turn. Your child may want to repeat just the pouring or the wiping. You can help with the rest."
+        ],
+        "steps": [
+          "Set out a small jug with a little water, a glass, and a cloth or sponge for spills.",
+          "Show one slow pour, then offer a turn.",
+          "Wipe up together when needed."
+        ],
+        "references": [
+          {
+            "id": "toddler-pouring.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Practical life activities by age",
+            "locator": "12 to 18 months: small jug, small amount of liquid and wiping spills; chart continuation retains earlier activities",
+            "pdfPages": [
+              {
+                "start": 51,
+                "end": 51
+              }
+            ]
+          },
+          {
+            "id": "toddler-pouring.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "Room by room / Eating area",
+            "locator": "Small jug with a little liquid and hand mitts or sponges for spills",
+            "pdfPages": [
+              {
+                "start": 78,
+                "end": 78
+              }
+            ]
+          },
+          {
+            "id": "toddler-pouring.ref.3",
+            "sourceId": "toddler-2019",
+            "section": "List of Montessori activities for toddlers",
+            "locator": "18+ months: Pour a glass of water",
+            "pdfPages": [
+              {
+                "start": 251,
+                "end": 251
+              }
+            ]
+          },
+          {
+            "id": "toddler-pouring.ref.4",
+            "sourceId": "toddler-2019",
+            "section": "What makes an activity Montessori? / Showing an activity / General principles",
+            "locator": "Partial repetition, slow demonstration, available help and shared putting away",
+            "pdfPages": [
+              {
+                "start": 34,
+                "end": 38
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "24-36.toddler-pouring",
+        "entryId": "toddler-pouring",
+        "ageId": "24-36",
+        "topicIds": [
+          "play-discovery",
+          "everyday-care"
+        ],
+        "ageContext": {
+          "bookAge": "12 to 18 months in the home chart; 18+ months in the appendix, with earlier activities continuing into later ages.",
+          "readiness": "Interest in pouring; a manageable small jug, a little liquid, and help for spills.",
+          "note": "Age and readiness sources: The Montessori Toddler, PDF pp. 48–50, 52."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "2–3 years",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "Age, interest & context",
+          "Try it together",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          },
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 51"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 78"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 251"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 34–38"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "eebfb1a21f6293818e8d7a50a2a8574e79f70d17c03b0e2aebcb3b18a8c5ee02",
+  "artContextSha256": null,
+  "publicProjectionSha256": "dbe185b76e10913054ebc0b0bf0d521e3f999851e09a742814f559b0618e0046",
+  "provenance": {
+    "revision": "r03",
+    "placementDraft": {
+      "path": "content/18-36/drafts/editorial-r02/16.json",
+      "sha256": "6f305efa8d5da1c82e3e4342541848980a6d11733014761aab21749a3ec6b117"
+    },
+    "canonical": {
+      "entryId": "toddler-pouring",
+      "canonicalEntrySha256": "747d33c98b0b87e7c542916268c893ed288985faf51699e0e189da1c4908df69",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/0",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/0"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

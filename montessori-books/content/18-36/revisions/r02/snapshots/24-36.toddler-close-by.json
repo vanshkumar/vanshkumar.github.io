@@ -1,0 +1,99 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-close-by",
+        "kind": "everyday-situation",
+        "title": "When they want you close",
+        "summary": "Davies makes room for toddlers who want company. Shared play or a small part of daily work can offer connection while you notice what help they need.",
+        "cue": "Your child wants to stay beside you, follows you, or asks you to do something together.",
+        "detail": [
+          "Changes, temperament, divided attention, or difficulty managing an activity are among the possibilities Davies considers. None explains every child or every day.",
+          "She begins with playing together and gradually watching more while the child leads. She also includes the child in ordinary work, such as handling socks while the adult does laundry.",
+          "Toddlers still need supervision and are not expected to play alone for hours. In new places, she suggests helping them get oriented and saying where you are going instead of sneaking away."
+        ],
+        "references": [
+          {
+            "id": "toddler-close-by.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "When our child is clingy",
+            "locator": "Possible context, normal supervision, shared play/work, understanding and announced departures",
+            "pdfPages": [
+              {
+                "start": 179,
+                "end": 180
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "24-36.toddler-close-by",
+        "entryId": "toddler-close-by",
+        "ageId": "24-36",
+        "topicIds": [
+          "connection-feelings",
+          "everyday-care"
+        ],
+        "ageContext": {
+          "readiness": "Your child wants to stay beside you, follows you, or asks you to do something together.",
+          "note": "Age and readiness sources: The Montessori Toddler, PDF pp. 14."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "2–3 years",
+        "kindLabel": "An everyday situation",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          },
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 179–180"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "f4c9cf6f88ad609ec7757d9ec1792dd515eee969f05fd640b2d3775c7a036e74",
+  "artContextSha256": null,
+  "publicProjectionSha256": "183577e7510d9b77ab3c263ac48bab3e27d607e4ec44fc624f176599692c942d",
+  "provenance": {
+    "revision": "r02",
+    "placementDraft": {
+      "path": "content/18-36/drafts/editorial-r02/31.json",
+      "sha256": "bab1969e2cba983a089b3163f76b2b266f5a01de749735f18d5b4bb008e7ba19"
+    },
+    "canonical": {
+      "entryId": "toddler-close-by",
+      "canonicalEntrySha256": "9c340d3a91239a5e759221b2e4d2a703c4db90fa1d1484aa1dabf7c46d3c34c2",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/45",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/45"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

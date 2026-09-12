@@ -1,0 +1,219 @@
+{
+  "id": "early-play-b-source-r01",
+  "date": "2026-09-12",
+  "reviewer": {
+    "task": "/root/trial_source",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "retainedReads": [
+    {
+      "path": "content/birth-6/reviews/trial-source-r01.json",
+      "sha256": "8c0a342169282b2084f716265922d266b26920c5a723a30a838c4bc5e38186f8",
+      "readLogIds": [
+        "source-conversation",
+        "source-framing",
+        "visual-295",
+        "visual-299",
+        "source-changing",
+        "source-monthly",
+        "visual-287",
+        "visual-288"
+      ]
+    },
+    {
+      "path": "content/birth-6/reviews/early-play-a-source-r01.json",
+      "sha256": "b06b903a18ac4ade27fc2239a7d641972d610fbc4d5e71682bb9dc88e0043e8f",
+      "readLogIds": [
+        "text-155",
+        "text-156"
+      ]
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "text-124",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 124,
+          "end": 124
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/124.txt",
+      "notes": "Read full activity-timing passage: alert, full and comfortable; calm attention and following the baby’s choice."
+    },
+    {
+      "id": "text-171",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 171,
+          "end": 171
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/171.txt",
+      "notes": "Read outdoors unit: first-month context, early looking and vocabulary distinguished from later handling and movement."
+    },
+    {
+      "id": "text-66",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 66,
+          "end": 66
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/66.txt",
+      "notes": "Read home tips and yes-space opening, including low visible art and preparation for increasing independence."
+    },
+    {
+      "id": "text-67",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 67,
+          "end": 67
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/67.txt",
+      "notes": "Read yes-space continuation: actual reach, freedom from birth, one adapted area and named precautions."
+    }
+  ],
+  "decisions": [
+    {
+      "placementIds": [
+        "0-3.early-read-aloud",
+        "3-6.early-read-aloud"
+      ],
+      "verdict": "pass",
+      "assessment": "The first-month read-aloud invitation follows the adult-interest-book passage and permits continued early listening without requiring later book handling.",
+      "readLogIds": [
+        "source-conversation",
+        "source-framing",
+        "text-124"
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "0-3.baby-books",
+        "3-6.baby-books"
+      ],
+      "verdict": "pass",
+      "assessment": "The early language passages and all-ages book row support shared looking and listening, with page turning explicitly conditional on developing grasp.",
+      "readLogIds": [
+        "source-conversation",
+        "visual-295"
+      ],
+      "issues": [],
+      "reuseBody": true
+    },
+    {
+      "placementIds": [
+        "0-3.baby-naming",
+        "3-6.baby-naming"
+      ],
+      "verdict": "revise",
+      "assessment": "The early naming context is supported, but the reader-facing references expose only the later examples and omit the early passage invoked by the new age statement.",
+      "readLogIds": [
+        "source-conversation",
+        "source-framing"
+      ],
+      "issues": [
+        {
+          "id": "baby-naming.early-age-reference",
+          "status": "open",
+          "severity": "minor",
+          "message": "The new age context says naming surroundings appears at 0 to 3 months, but Back to the books cites only the 6 to 9 months passage on PDF 135; the early naming passage on PDF 130 remains private age evidence.",
+          "requestedChange": "Expose a reader-facing age-context citation to The Montessori Baby, Language activities / 0 to 3 months / Speak to our baby, PDF p. 130, while retaining the distinction from the later examples."
+        }
+      ],
+      "reuseBody": true
+    },
+    {
+      "placementIds": [
+        "0-3.baby-outdoors",
+        "3-6.baby-outdoors"
+      ],
+      "verdict": "pass",
+      "assessment": "The source explicitly starts outdoor observation in the first month, and these placements keep looking/listening separate from later natural-object handling or independent movement.",
+      "readLogIds": [
+        "text-171"
+      ],
+      "issues": [],
+      "reuseBody": true
+    },
+    {
+      "placementIds": [
+        "0-3.baby-languages",
+        "3-6.baby-languages"
+      ],
+      "verdict": "pass",
+      "assessment": "The early multilingual-language passage and infancy discussion support these family-arrangement placements without language-performance requirements.",
+      "readLogIds": [
+        "source-conversation"
+      ],
+      "issues": [],
+      "reuseBody": true
+    },
+    {
+      "placementIds": [
+        "3-6.baby-choices-within-reach"
+      ],
+      "verdict": "revise",
+      "assessment": "Emerging choice and movement support this placement, but the new source-age statement cites two passages absent from the reader-facing references.",
+      "readLogIds": [
+        "source-framing",
+        "text-155",
+        "text-156",
+        "visual-299",
+        "text-66"
+      ],
+      "issues": [
+        {
+          "id": "baby-choices-within-reach.early-age-reference",
+          "status": "open",
+          "severity": "minor",
+          "message": "The new age context invokes the 3 to 6 months movement section and the familiar-toy basket’s 5 or 6+ months label, while the public bibliography omits PDF 156 and 299 that establish those specific contexts.",
+          "requestedChange": "Expose reader-facing age-context citations to Movement activities / 3 to 6 months / Gross-motor skills, PDF p. 156, and Activities list for babies / Basket with known objects, PDF p. 299; preserve the existing conditional readiness."
+        }
+      ],
+      "reuseBody": true
+    },
+    {
+      "placementIds": [
+        "0-3.baby-photos-at-eye-level",
+        "3-6.baby-photos-at-eye-level"
+      ],
+      "verdict": "pass",
+      "assessment": "The unaged home guidance supports low visible familiar pictures, and the new contexts use the baby’s actual viewing position without requiring recognition or reaching.",
+      "readLogIds": [
+        "text-66",
+        "source-changing"
+      ],
+      "issues": [],
+      "reuseBody": true
+    },
+    {
+      "placementIds": [
+        "3-6.baby-space-to-explore"
+      ],
+      "verdict": "pass",
+      "assessment": "The from-birth yes-space guidance and months 3–4 reaching context support adaptation to current reach while later crawling and pulling-up examples remain conditional.",
+      "readLogIds": [
+        "text-66",
+        "text-67",
+        "source-monthly",
+        "visual-287",
+        "visual-288"
+      ],
+      "issues": [],
+      "reuseBody": true
+    }
+  ]
+}

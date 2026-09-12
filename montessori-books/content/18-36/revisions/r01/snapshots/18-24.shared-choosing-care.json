@@ -1,0 +1,98 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "shared-choosing-care",
+        "kind": "perspective",
+        "title": "Look at the care that is available",
+        "summary": "The Montessori Baby puts warmth and a family’s real options at the center of choosing care. The authors ask families to consider a setting as it is today.",
+        "cue": "When you need or want someone else to care for your baby.",
+        "detail": [
+          "The authors describe patient, responsive caregivers who enjoy babies, attend to their signals, and support parents. Familiar, consistent caregivers matter in their account.",
+          "They acknowledge that one-to-one care or a Montessori program may be unavailable or outside a family’s budget. A warm setting without a Montessori label may suit a family better than one that applies the principles more strictly.",
+          "Their question is whether the care feels acceptable as it currently works, without relying on the provider changing later. They offer possible alternatives when it does not fit, while recognizing that families have different options."
+        ],
+        "principle": {
+          "id": "principle.family-respect-and-context",
+          "text": "The relationship and the family’s real options matter when choosing care."
+        },
+        "references": [
+          {
+            "id": "shared.ref.baby.care-choice",
+            "sourceId": "baby-2021",
+            "section": "What to look for in a day care or caregiver; What if the day care has different values than at home?",
+            "locator": "Warm/responsive and consistent care, availability/budget, present-setting assessment and alternatives",
+            "pdfPages": [
+              {
+                "start": 253,
+                "end": 255
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "18-24.shared-choosing-care",
+        "entryId": "shared-choosing-care",
+        "ageId": "18-24",
+        "topicIds": [
+          "you-family"
+        ],
+        "ageContext": {
+          "note": "A perspective from The Montessori Baby on choosing care; its discussion includes the first three years."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "18–24 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "What’s underneath",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "you-family",
+            "label": "For you & your family"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 253–255"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "dabd2f650a15f5ec545ecd861192f71a1a283eae8fcf0d004ec0b9adbb120fb3",
+  "artContextSha256": null,
+  "publicProjectionSha256": "b9b49e74b1f2bbe2229fb7dc05c3556a5da143b12785dc0f59dd0e59d4297e73",
+  "provenance": {
+    "revision": "r01",
+    "placementDraft": {
+      "path": "content/18-36/placements/shared-reuse-r01.json",
+      "sha256": "1dc11c5b1b9d28ff48558a6623c4ba4a438b0459ce4df25d409d9e9d9c6a705e"
+    },
+    "canonical": {
+      "entryId": "shared-choosing-care",
+      "canonicalEntrySha256": "b00e2d2966250d488c4f275a1a1d133e8828f24c547c3eab94de72ae7c0ce2ad",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/shared/draft-r02.json",
+        "sha256": "04720cdd2997dc461a619234d74bea952b2fd3c388a49b326dc282f065f39b06",
+        "jsonPointer": "/entries/14",
+        "author": "/root/shared_pilot_draft",
+        "provenancePointer": "/provenance/14"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

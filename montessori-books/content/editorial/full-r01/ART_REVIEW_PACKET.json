@@ -1,0 +1,122 @@
+{
+  "status": "Pending actual-art decisions. No text or art approval inferred by packet creation.",
+  "groups": [
+    {
+      "id": "home-newborn-conversation",
+      "path": "content/editorial/full-r01/home-newborn-conversation.art-packet.json",
+      "sha256": "95237315fead5ffd0af2ff96e24adc6b12156dc8202da9bed66294cac1775617",
+      "bytes": 16617,
+      "placementIds": [
+        "0-3.early-newborn-conversation",
+        "0-3.early-read-aloud",
+        "0-3.baby-movement"
+      ]
+    },
+    {
+      "id": "home-held-conversation",
+      "path": "content/editorial/full-r01/home-held-conversation.art-packet.json",
+      "sha256": "56106ed86d3e34f7e468acc1260abd411400656a091cf8d5449e9aed335bb8c3",
+      "bytes": 16697,
+      "placementIds": [
+        "3-6.early-shadows",
+        "3-6.baby-movement",
+        "3-6.baby-language"
+      ]
+    },
+    {
+      "id": "home-peekaboo",
+      "path": "content/editorial/full-r01/home-peekaboo.art-packet.json",
+      "sha256": "d2b2ae55f1be0e2c6383dc71fe044185b87e7c2b0d71e75c107c633c5fa016eb",
+      "bytes": 15372,
+      "placementIds": [
+        "9-12.infant-peekaboo",
+        "9-12.baby-language",
+        "9-12.baby-connection"
+      ]
+    },
+    {
+      "id": "home-fetching-shoe",
+      "path": "content/editorial/full-r01/home-fetching-shoe.art-packet.json",
+      "sha256": "f7a28610788ca1352012e6445e9a33660c3451ccc4618f02df8fd7a842f5b87c",
+      "bytes": 17538,
+      "placementIds": [
+        "12-18.toddler-pouring",
+        "12-18.toddler-drawing",
+        "12-18.toddler-shoes"
+      ]
+    },
+    {
+      "id": "home-window-cleaning",
+      "path": "content/editorial/full-r01/home-window-cleaning.art-packet.json",
+      "sha256": "f3969784c93823830d1843a1cb0b44afc4765beac03ad0e608d101f15244ea72",
+      "bytes": 16282,
+      "placementIds": [
+        "24-36.later-remember-together",
+        "24-36.later-window-cleaning",
+        "24-36.toddler-drawing"
+      ]
+    },
+    {
+      "id": "toddler-getting-dressed",
+      "path": "content/editorial/full-r01/toddler-getting-dressed.art-packet.json",
+      "sha256": "1f87a1d384fab553e0b7f0e6fe7609435d1b6e91c176ad4b805d0317e15b046a",
+      "bytes": 12321,
+      "placementIds": [
+        "18-24.toddler-getting-dressed",
+        "12-18.toddler-getting-dressed",
+        "24-36.toddler-getting-dressed"
+      ]
+    }
+  ],
+  "newPlacementIds": [
+    "18-24.toddler-getting-dressed",
+    "0-3.early-newborn-conversation",
+    "0-3.early-read-aloud",
+    "3-6.early-shadows",
+    "0-3.baby-movement",
+    "3-6.baby-movement",
+    "3-6.baby-language",
+    "9-12.infant-peekaboo",
+    "9-12.baby-language",
+    "9-12.baby-connection",
+    "12-18.toddler-pouring",
+    "12-18.toddler-drawing",
+    "12-18.toddler-shoes",
+    "12-18.toddler-getting-dressed",
+    "24-36.later-remember-together",
+    "24-36.later-window-cleaning",
+    "24-36.toddler-drawing",
+    "24-36.toddler-getting-dressed"
+  ],
+  "unchangedPilotArtContexts": 6,
+  "renderedWith": "Actual HomeStudy component and frozen existing styles plus narrowly scoped art-surfaces.css",
+  "viewportSamples": {
+    "desktop": {
+      "width": 1280,
+      "height": 1050
+    },
+    "phone": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "reviewOutput": "content/editorial/art-<source|tone>-r01.json",
+  "decisionShape": {
+    "reviewer": {
+      "task": "your retained reviewer task",
+      "role": "source or tone",
+      "reasoning": "xhigh"
+    },
+    "readLogs": "declare new original source reading or own retained reads when needed",
+    "decisions": [
+      {
+        "placementIds": [
+          "exact IDs, grouped by actual image when verdict is shared"
+        ],
+        "verdict": "pass | revise | hold",
+        "assessment": "tight art + actual age/context judgment",
+        "issues": []
+      }
+    ]
+  }
+}

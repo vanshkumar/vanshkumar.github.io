@@ -1,0 +1,98 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-sleep-changes",
+        "kind": "perspective",
+        "title": "When familiar sleep changes",
+        "summary": "The authors describe changing sleep as a time to notice what is different and offer needed support. Their developmental examples are possibilities, not an explanation for every waking baby.",
+        "cue": "Sleep has changed from the pattern you had come to know.",
+        "detail": [
+          "The book mentions changes around eight months as one example, while also asking about comfort, surroundings and the baby’s response. More help may be needed for a time.",
+          "The authors return to observing readiness before reducing that help again. Their examples do not set a deadline for sleep to return to a previous pattern."
+        ],
+        "references": [
+          {
+            "id": "baby-sleep-changes.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Common sleep questions / Night waking; Sleep regression",
+            "locator": "Possible causes, extra comfort and changing support",
+            "pdfPages": [
+              {
+                "start": 201,
+                "end": 202
+              },
+              {
+                "start": 204,
+                "end": 204
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "9-12.baby-sleep-changes",
+        "entryId": "baby-sleep-changes",
+        "ageId": "9-12",
+        "topicIds": [
+          "everyday-care"
+        ],
+        "ageContext": {
+          "bookAge": "The sleep-change examples include around four, eight and twelve months.",
+          "readiness": "A familiar sleep pattern has changed and more support may be needed.",
+          "note": "The book also gives an example around twelve months. Its examples are possibilities to consider, not a schedule of sleep changes."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "9–12 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 201–202, 204"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "dae1578cc2490942cdfd095dae5f34f1ec49a4e964512764a2714796357ac8ad",
+  "artContextSha256": null,
+  "publicProjectionSha256": "03c5abc1ab34753a8f47567154749794cb8ffcb2bd2a2a3248b3674e39f4255b",
+  "provenance": {
+    "revision": "r04",
+    "placementDraft": {
+      "path": "content/6-18/drafts/editorial-r03/02.json",
+      "sha256": "1d5860acf671c24090b0c5b86bd1297bc7b12db5b77e1663b7f75425506a115e"
+    },
+    "canonical": {
+      "entryId": "baby-sleep-changes",
+      "canonicalEntrySha256": "a6df5ec4cbb1778383c29e7909549d0479041636adefd0ceddc77d4f749c716a",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/24",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/24"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-books",
+        "kind": "invitation",
+        "title": "Stay with a favorite page",
+        "summary": "Share a simple book about familiar people or things. Follow the page that interests your baby, even if you never finish the book.",
+        "cue": "Your baby looks closely, reaches for a page, or responds to a familiar picture.",
+        "detail": [
+          "The authors suggest sturdy board books, simple pictures and subjects from daily life. Describe what your baby is looking at, or enjoy the picture together.",
+          "A small book of family photographs is another possibility. Let page turning and looking be part of the experience; reading backward or returning to one page can belong too."
+        ],
+        "references": [
+          {
+            "id": "baby-books.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Language activities / First books; Tips for choosing books in the first year",
+            "locator": "Simple pictures, family-photo books, board books and following page interest",
+            "pdfPages": [
+              {
+                "start": 130,
+                "end": 132
+              }
+            ]
+          },
+          {
+            "id": "baby-books.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Activities list for babies / Books",
+            "locator": "All-ages row; familiar subjects and visible accessible fronts",
+            "pdfPages": [
+              {
+                "start": 295,
+                "end": 295
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.baby-books",
+        "entryId": "baby-books",
+        "ageId": "12-18",
+        "topicIds": [
+          "play-discovery",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "First-year book guidance; appendix Books row says All ages.",
+          "readiness": "Interest in pictures, pages or familiar subjects; follow the baby’s chosen page.",
+          "note": "The activity may continue while it fits your child’s interest and current skills; the source ages are guides."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 130–132"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF p. 295"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "44d180e089454b3683a0e416ad99ea01f92555df76ea3afd6df663e299849727",
+  "artContextSha256": null,
+  "publicProjectionSha256": "f4afb7aff25a65ac8ce9316a01d09a42d2a8b3a3bb001f9950b3d3835fc3f074",
+  "provenance": {
+    "revision": "r02",
+    "placementDraft": {
+      "path": "content/6-18/drafts/baby-play/draft-r03.json",
+      "sha256": "d7e9ed69c12763e82ba9463c8c44c063a3d45a8128c4375a0f488d8f0e0bfce2"
+    },
+    "canonical": {
+      "entryId": "baby-books",
+      "canonicalEntrySha256": "7b6eec01204593538719b0258d43cd48cb540082c9005b04f3c326fd54abb198",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/4",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/4"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

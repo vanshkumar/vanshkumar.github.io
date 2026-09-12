@@ -1,0 +1,948 @@
+{
+  "author": "/root/s6_toddler_overlap_author",
+  "revision": "r01",
+  "workflow": "lean-v1",
+  "sourceInputs": {
+    "research/toddler/COVERAGE_LEDGER.jsonl": "dff004b408d6a74d83b41560d5aaf0fda7e3ec7c819a03b11605344e7b2074e2",
+    "research/toddler/EVIDENCE.jsonl": "ad7d7b0132a4f1389d41f1f393ec01d88cab415c54913dc6a198bd2e24123440",
+    "research/toddler/COMPLETENESS_AUDIT.md": "74f608526e012a48b02ca53678631f0be6eb6c7bbf9810ab6aaf034c796de9c7",
+    "content/pilots/CANONICAL_REGISTRY.json": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5",
+    "content/pilots/revisions/r08/payload.json": "9d371c590ec6bc22872912769c8e61c795b0fd5ec4265b02a6ee6a126317a7f6",
+    "POPULATION_WORKFLOW.md": "ff46565536b23fd73c0c61132be0e1f0884e2edb82e57e55e1db6ef3fd587b7e"
+  },
+  "frozenBodyPlacements": [
+    {
+      "entryId": "toddler-pouring",
+      "ageId": "12-18",
+      "pages": [
+        51,
+        78,
+        251
+      ],
+      "sourceAge": "The practical-life chart says12–18 months; the appendix’s fuller pouring row says18+ months.",
+      "readiness": "Interest in pouring, with a small jug manageable in the child’s hands.",
+      "note": "This invitation uses the chart’s small jug and small amount of liquid; the appendix also lists later ways to get water.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-drawing",
+      "ageId": "12-18",
+      "pages": [
+        53,
+        54,
+        66,
+        245
+      ],
+      "sourceAge": "Scribbling: from12 months.",
+      "readiness": "Interest in making marks with a drawing tool the child can hold.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-shoes",
+      "ageId": "12-18",
+      "pages": [
+        51,
+        76,
+        149
+      ],
+      "sourceAge": "Fetching shoes appears in the12–18-month chart.",
+      "readiness": "Interest in fetching shoes or returning them to their familiar place.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-puzzles",
+      "ageId": "12-18",
+      "pages": [
+        45,
+        46,
+        60,
+        246,
+        177,
+        178
+      ],
+      "sourceAge": "The appendix says12–14+ months for puzzles. The pictured small-knob puzzle is from around18 months.",
+      "readiness": "Taking pieces out can be the activity; putting them back may need adult help.",
+      "note": "Choose a simple puzzle for the part your child enjoys. The photographed small-knob example and more complex fitting are later possibilities.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-fitting-and-turning",
+      "ageId": "12-18",
+      "pages": [
+        33,
+        39,
+        43,
+        44,
+        45,
+        246,
+        247,
+        248
+      ],
+      "sourceAge": "The appendix lists basic rings, opening/closing, peg boxes and cubes from12+ months; sliding/bin boxes and posting from14+ months.",
+      "readiness": "Interest in removing, replacing, fitting or turning; keep the challenge manageable.",
+      "note": "The opening-and-closing photograph is labeled from18 months. The earlier appendix examples and gradual changes in challenge have their own ages.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-music",
+      "ageId": "12-18",
+      "pages": [
+        46,
+        47,
+        245
+      ],
+      "sourceAge": "The appendix says“all ages” within this toddler book.",
+      "readiness": "Interest in shared songs, rhythm, sounds or movement.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-books",
+      "ageId": "12-18",
+      "pages": [
+        57,
+        58,
+        80,
+        245
+      ],
+      "sourceAge": "The appendix says“all ages”; the chapter distinguishes simple words for young toddlers from longer stories later.",
+      "readiness": "Return to familiar books, pictures and subjects with shared enjoyment.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-conversation",
+      "ageId": "12-18",
+      "pages": [
+        55,
+        56,
+        57,
+        58,
+        245
+      ],
+      "sourceAge": "The appendix says“all ages” and explicitly includes nonverbal children.",
+      "readiness": "Sounds, gestures, expressions or words can be the child’s part in the exchange.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-objects-and-pictures",
+      "ageId": "12-18",
+      "pages": [
+        55,
+        56,
+        57,
+        68,
+        246,
+        251
+      ],
+      "sourceAge": "Vocabulary objects:12+ months; matching objects with cards:14+ months. The separate vocabulary-card row says18+ months.",
+      "readiness": "Start with naming and exploring objects; matching follows interest, and similar pictures follow identical matches.",
+      "note": "Picture cards without matching objects are a later vocabulary example. Formal naming tests are for children over3 in this book.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-paint-and-chalk",
+      "ageId": "12-18",
+      "pages": [
+        53,
+        54,
+        66,
+        245,
+        251
+      ],
+      "sourceAge": "Chalk: from12 months. Easel paint: able to stand unaided. Watercolors: from18 months in the caption and appendix.",
+      "readiness": "Interest in marks and the particular material, with adult supervision; easel work requires standing unaided.",
+      "note": "At this age, chalk and readiness-based easel painting are the earlier examples. The watercolor description is a later possibility from18 months.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-glue-and-mold",
+      "ageId": "12-18",
+      "pages": [
+        53,
+        54,
+        66,
+        249,
+        251
+      ],
+      "sourceAge": "Clay/play dough: from16 months in the caption, around16–18+ months in the appendix. Gluing: around18 months.",
+      "readiness": "Interest in pressing, rolling or changing a material with the hands, with supervision.",
+      "note": "The clay example can be relevant toward the later part of this band. Gluing is the separate later example, around18 months.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-outside-noticing",
+      "ageId": "12-18",
+      "pages": [
+        69,
+        70,
+        80,
+        98,
+        99,
+        100
+      ],
+      "sourceAge": "No fixed age in the outdoor-noticing passage; it addresses toddlers.",
+      "readiness": "Interest in a detail, sound, movement or quiet moment outdoors.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-room-to-move",
+      "ageId": "12-18",
+      "pages": [
+        33,
+        46,
+        47,
+        247,
+        248
+      ],
+      "sourceAge": "No one age for movement; the appendix’s named movement rows commonly say14–16 months and retain differing readiness conditions.",
+      "readiness": "The movements the child already seeks guide the choice.",
+      "note": "Running, jumping, climbing and riding are different possibilities. This band does not imply that a child is ready for all of them.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-wipe-and-dust",
+      "ageId": "12-18",
+      "pages": [
+        49,
+        50,
+        51,
+        64,
+        246,
+        249
+      ],
+      "sourceAge": "Wiping spills:12–18 months in the chart; cleaning caption: from12 months. Appendix dusting/sweeping:16–18+ months; table wiping: once a child can walk.",
+      "readiness": "Interest in copying wiping or cleaning and a tool the child can manage.",
+      "note": "A cloth and shared wiping are the earlier parts. Sweeping and dusting have later appendix labels and can wait for interest and manageable movement.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-laundry",
+      "ageId": "12-18",
+      "pages": [
+        49,
+        50,
+        51,
+        52,
+        249
+      ],
+      "sourceAge": "Putting dirty clothes in the basket:12–18 months in the chart. The T-shirt example is18 months; sorting and hanging cloths are later examples.",
+      "readiness": "Interest in carrying one piece of clothing to the laundry basket.",
+      "note": "The early part here is carrying dirty clothing. Sorting socks and hanging cloths are described from18 months, rather than expected throughout this band.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-plants-and-flowers",
+      "ageId": "12-18",
+      "pages": [
+        34,
+        35,
+        64,
+        247,
+        248,
+        249,
+        250
+      ],
+      "sourceAge": "Watering:14+ months and walking steadily. Washing leaves: around15–16+ months; dusting leaves:16–18+ months. Flower arranging:18+ months.",
+      "readiness": "Interest in plants; steady walking is explicit for the watering example.",
+      "note": "Plant care can begin with the supported earlier parts. Arranging cut flowers and the fuller gardening examples are later possibilities from18 months.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-table-together",
+      "ageId": "12-18",
+      "pages": [
+        35,
+        36,
+        51,
+        52,
+        77,
+        78,
+        250
+      ],
+      "sourceAge": "Taking a plate to the kitchen:12–18 months in the chart. Setting/clearing the table as fuller activities:18+ months.",
+      "readiness": "Interest in carrying a manageable item, with the adult doing the rest.",
+      "note": "The earlier chart supports helping return a plate after a meal. The fuller table-setting example is listed from18 months.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-getting-dressed",
+      "ageId": "12-18",
+      "pages": [
+        51,
+        78,
+        148,
+        149,
+        150,
+        151,
+        247
+      ],
+      "sourceAge": "Assisted dressing and taking off socks:12–18 months in the chart; dressing/storage row:14+ months.",
+      "readiness": "Reaching for clothes, trying one part, resisting help, or wanting more help on a particular day.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-care-connection",
+      "ageId": "12-18",
+      "pages": [
+        145,
+        131,
+        132,
+        133,
+        173
+      ],
+      "sourceAge": "No fixed age; daily care is described for toddlers, including children without words.",
+      "readiness": "A glance, gesture, sound or small turn during necessary care.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-nose-and-hair",
+      "ageId": "12-18",
+      "pages": [
+        51,
+        64,
+        247,
+        248
+      ],
+      "sourceAge": "Hair brushing:12–18 months in the chart; nose wiping:14+ months; hair-brushing appendix: around15–18+ months.",
+      "readiness": "Interest in the tissue or brush and in copying the adult’s movement.",
+      "note": "Nose wiping and blowing are not the same task. The invitation is a supported turn with a tissue or brush.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-daily-rhythm",
+      "ageId": "12-18",
+      "pages": [
+        119,
+        120,
+        121,
+        126,
+        145,
+        146
+      ],
+      "sourceAge": "No fixed age; the book gives a toddler rhythm and a picture-checklist example.",
+      "readiness": "A familiar sequence can help explain what comes next; the adult supports use of pictures.",
+      "note": "A picture list is something to look at together, not a task the child must manage independently.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-family-rituals",
+      "ageId": "12-18",
+      "pages": [
+        147,
+        148
+      ],
+      "sourceAge": "No fixed age; family rituals are discussed in the toddler daily-care chapter.",
+      "readiness": "Familiar shared songs, outings, occasions or traditions the family enjoys.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-meals",
+      "ageId": "12-18",
+      "pages": [
+        152,
+        153,
+        154,
+        155
+      ],
+      "sourceAge": "The eating chapter addresses toddlers; its milk/glass discussion separately names12 months.",
+      "readiness": "Shared meals, gradually supported participation, or concerns about how meals are going.",
+      "note": "This is Davies’s toddler-mealtime perspective, not a food-intake rule or a requirement for independent eating.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-food-on-floor",
+      "ageId": "12-18",
+      "pages": [
+        152,
+        153,
+        154,
+        155
+      ],
+      "sourceAge": "No fixed age in the toddler food-throwing passage.",
+      "readiness": "Food is being thrown; the adult asks what the child may be communicating.",
+      "note": "Food throwing alone does not establish that a child has eaten enough.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-sleep",
+      "ageId": "12-18",
+      "pages": [
+        156,
+        157,
+        158
+      ],
+      "sourceAge": "The sleep chapter addresses toddlers and includes12–16-month examples; no age alone determines a sleeping arrangement.",
+      "readiness": "The current bedtime or sleep arrangement may not be working for the child or family.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-teeth",
+      "ageId": "12-18",
+      "pages": [
+        51,
+        159,
+        247
+      ],
+      "sourceAge": "Brushing with assistance:12–18 months in the chart; child starts/adult finishes:14+ months in the appendix.",
+      "readiness": "A child may want a part in brushing or may resist necessary care.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-toileting",
+      "ageId": "12-18",
+      "pages": [
+        160,
+        161,
+        162,
+        163
+      ],
+      "sourceAge": "Davies explicitly gives no fixed age for toileting readiness.",
+      "readiness": "Possible signs include pulling at a wet diaper, seeking privacy, or communicating about pee or poop.",
+      "note": "The toddler placement offers readiness context; it is not an expectation to use the toilet at12–18 months.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-pacifier-change",
+      "ageId": "12-18",
+      "pages": [
+        156,
+        157,
+        158,
+        163,
+        164
+      ],
+      "sourceAge": "The passage discusses a young toddler who still uses a pacifier; it does not set a new change deadline.",
+      "readiness": "A family is considering a change and wants to include and support the child.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-transitions",
+      "ageId": "12-18",
+      "pages": [
+        119,
+        122,
+        123,
+        124,
+        125,
+        126,
+        131,
+        134,
+        135,
+        136
+      ],
+      "sourceAge": "No fixed age; the passage addresses toddlers and says clock-time understanding is still developing.",
+      "readiness": "Stopping or leaving a current activity is difficult; help and preparation depend on the situation.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-words-that-help",
+      "ageId": "12-18",
+      "pages": [
+        122,
+        123,
+        124,
+        125,
+        126
+      ],
+      "sourceAge": "No fixed age; the passage is about communicating with toddlers.",
+      "readiness": "A request has not led to action; the adult can make the cue clearer and show what it means.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-solving-together",
+      "ageId": "12-18",
+      "pages": [
+        119,
+        127,
+        133
+      ],
+      "sourceAge": "The problem-solving passage explicitly includes preverbal toddlers.",
+      "readiness": "A gesture or action may contribute; the adult may supply most ideas and retains safety responsibility.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-waiting-outside-home",
+      "ageId": "12-18",
+      "pages": [
+        125,
+        126,
+        181
+      ],
+      "sourceAge": "No fixed age; the passage describes toddler movement and communication needs while waiting.",
+      "readiness": "A waiting room, journey or café asks the child to wait with little room to move.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-clear-limits",
+      "ageId": "12-18",
+      "pages": [
+        129,
+        130,
+        131,
+        132,
+        133,
+        139
+      ],
+      "sourceAge": "No fixed age; limits are to fit the toddler’s age and ability.",
+      "readiness": "Safety, belongings, shared space or inconsistent rules need clear adult responsibility.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-big-feelings",
+      "ageId": "12-18",
+      "pages": [
+        134,
+        135,
+        136,
+        137,
+        138,
+        139
+      ],
+      "sourceAge": "No fixed age for this toddler support; the around/over3 calm-place example is separate.",
+      "readiness": "A toddler is distressed, may accept or decline touch, and needs safety and available support.",
+      "note": "The adult stays responsible for protection and comfort; the child is not expected to talk through distress.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-make-amends",
+      "ageId": "12-18",
+      "pages": [
+        137,
+        138,
+        139
+      ],
+      "sourceAge": "The passage explicitly says adults model amends for children who are still young.",
+      "readiness": "Everyone is calm after hurt or damage; the child can join a small part with help.",
+      "note": "Adult modeling carries the repair when the toddler cannot yet take part.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-new-sibling",
+      "ageId": "12-18",
+      "pages": [
+        164,
+        165,
+        166
+      ],
+      "sourceAge": "No fixed toddler age; a new baby has joined the family.",
+      "readiness": "The toddler may seek closeness, offer help or decline involvement.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-sibling-conflict",
+      "ageId": "12-18",
+      "pages": [
+        119,
+        166,
+        167,
+        168,
+        169
+      ],
+      "sourceAge": "The sibling section explicitly includes preverbal children and young toddlers; its anecdote has children aged2 years and9 months.",
+      "readiness": "Siblings want different things; the adult supports each and stops harm.",
+      "note": "The older-child anecdote is not a requirement to negotiate verbally or settle a conflict alone.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-taking-turns",
+      "ageId": "12-18",
+      "pages": [
+        170,
+        171
+      ],
+      "sourceAge": "Davies describes changes in keeping an activity around14–16 months; she distinguishes parallel play before2½ from later shared play.",
+      "readiness": "One child wants an activity another is using; both receive adult support.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-joining-in",
+      "ageId": "12-18",
+      "pages": [
+        172,
+        173,
+        180
+      ],
+      "sourceAge": "No fixed age; these are ways to support a toddler in an unfamiliar social setting.",
+      "readiness": "The child wants to watch near the adult before joining.",
+      "note": "Verbal greetings and assertive phrases are examples to grow toward, not requirements for a child without those words.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-wanted-hugs",
+      "ageId": "12-18",
+      "pages": [
+        131,
+        132,
+        133,
+        173
+      ],
+      "sourceAge": "No fixed age; Davies applies respect for ordinary touch to young toddlers.",
+      "readiness": "A child withdraws from offered affection, or another child’s hug is unwelcome.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-hitting",
+      "ageId": "12-18",
+      "pages": [
+        174,
+        175,
+        176,
+        134,
+        135,
+        138,
+        139
+      ],
+      "sourceAge": "No fixed age; this is the book’s toddler conflict discussion.",
+      "readiness": "Hitting, biting or pushing requires immediate protection, followed by observation and supported repair.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-throwing",
+      "ageId": "12-18",
+      "pages": [
+        132,
+        176
+      ],
+      "sourceAge": "No fixed age; this is the toddler throwing discussion.",
+      "readiness": "Objects are pushed or thrown; the adult considers patterns, protection and an appropriate outlet.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-close-by",
+      "ageId": "12-18",
+      "pages": [
+        179,
+        180
+      ],
+      "sourceAge": "No fixed age; the source explicitly includes small excursions by crawling as well as later walking.",
+      "readiness": "The child wants company, shared play or ordinary work beside an adult.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-waiting-to-speak",
+      "ageId": "12-18",
+      "pages": [
+        171,
+        172,
+        133
+      ],
+      "sourceAge": "No fixed age is stated for the toddler conversation signal.",
+      "readiness": "A child wants to communicate during an ordinary adult conversation and can use the shared gesture.",
+      "note": "This is an optional gesture with adult acknowledgment, not a waiting-time expectation or a condition for help.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-feedback",
+      "ageId": "12-18",
+      "pages": [
+        37,
+        111,
+        112,
+        113
+      ],
+      "sourceAge": "No fixed age; the feedback and label discussion addresses toddlers.",
+      "readiness": "The child looks for a response, or an adult wants to share what they noticed.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-screens",
+      "ageId": "12-18",
+      "pages": [
+        181,
+        182,
+        134,
+        135,
+        138
+      ],
+      "sourceAge": "No fixed age; Davies describes toddler screen choices and separately recounts later childhood.",
+      "readiness": "The adult is considering screens, background noise or alternatives during ordinary family time.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-languages",
+      "ageId": "12-18",
+      "pages": [
+        182,
+        183
+      ],
+      "sourceAge": "The multilingual arrangements are not assigned a fixed age; the discussion addresses toddler families.",
+      "readiness": "Different people, places or times in the family use different languages.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-shelf-and-rotation",
+      "ageId": "12-18",
+      "pages": [
+        33,
+        34,
+        35,
+        37,
+        38,
+        39,
+        75,
+        82,
+        177,
+        178
+      ],
+      "sourceAge": "No fixed age; the source explicitly describes adult modeling and shared return for young toddlers.",
+      "readiness": "The child can see and choose familiar activities; the adult notices interest or difficulty.",
+      "note": "Putting things away remains shared; the child need not complete a whole work cycle.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-spaces-for-different-ages",
+      "ageId": "12-18",
+      "pages": [
+        76,
+        83,
+        84,
+        85
+      ],
+      "sourceAge": "No fixed age; the source considers younger and older children sharing a home.",
+      "readiness": "Children share space or materials, with smaller parts kept inaccessible to younger children.",
+      "note": "",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-art-has-a-place",
+      "ageId": "12-18",
+      "pages": [
+        75,
+        76,
+        79,
+        245
+      ],
+      "sourceAge": "Toddler materials are prepared together; gathering a whole set independently is a separate example around3 years.",
+      "readiness": "A simple drawing activity needs an accessible place and somewhere for finished work.",
+      "note": "The earlier drawing example is from12 months; independent material gathering is later.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-everyday-play",
+      "ageId": "12-18",
+      "pages": [
+        39,
+        71,
+        72,
+        103,
+        104
+      ],
+      "sourceAge": "Home play has no fixed age; the separate pretend-play discussion says around2½ years and later.",
+      "readiness": "Interest in familiar toys and open-ended exploration at home.",
+      "note": "At12–18 months, the relevant idea is exploring familiar materials. The pretend scenarios described later are not an expectation now.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    },
+    {
+      "entryId": "toddler-handwashing",
+      "ageId": "12-18",
+      "pages": [
+        34,
+        35,
+        36,
+        51,
+        64,
+        247,
+        250
+      ],
+      "sourceAge": "Handwashing:12–18 months in the chart and14+ months at the sink in the appendix. The separate table setup is18+ months with jug-carrying readiness.",
+      "readiness": "The child wants a turn with soap, towel or a familiar washing movement.",
+      "note": "Ordinary supported handwashing is the early context. The repeating handwashing-table setup has its own later conditions.",
+      "reason": "Useful within the book’s around1–3 toddler scope when this particular situation or interest is present. The browse band is not a requirement to perform the actions."
+    }
+  ],
+  "frozenBodyExclusions": [
+    {
+      "entryId": "toddler-sorting",
+      "ageIds": [
+        "6-9",
+        "9-12",
+        "12-18"
+      ],
+      "reason": "The canonical summary explicitly starts grouping around18 months; the small-button example is from2 years. The12–18 band does not make this an earlier grouping expectation."
+    },
+    {
+      "entryId": "toddler-coat-flip",
+      "ageIds": [
+        "6-9",
+        "9-12",
+        "12-18"
+      ],
+      "reason": "The technique has no numeric age in149, but its canonical chart reference places putting on a coat in18 months–3 years. Earlier assisted dressing and fetching shoes survive in their own exact bodies."
+    },
+    {
+      "entryId": "toddler-food-preparation",
+      "ageIds": [
+        "6-9",
+        "9-12",
+        "12-18"
+      ],
+      "reason": "The canonical invitation’s concrete rinsing/tearing and cutting examples connect to18+ preparation and a2-year apple caption. The distinct12-month premeasured baking variant has its own entry; no earlier tool/food protocol is inferred."
+    },
+    {
+      "entryId": "toddler-small-job-on-an-errand",
+      "ageIds": [
+        "6-9",
+        "9-12",
+        "12-18"
+      ],
+      "reason": "The canonical activity chart lists supermarket fetching/cart/unpacking in18 months–3 years. Earlier supported waiting remains in toddler-waiting-outside-home."
+    }
+  ],
+  "youngerDecisions": [
+    {
+      "entryId": "toddler-puzzles",
+      "ageId": "9-12",
+      "disposition": "combined",
+      "placementId": "9-12.toddler-puzzles",
+      "reason": "Full Baby9–12 removal paragraph supports exact frozen taking-apart body;6–9 inventory and12+ appendix variants remain visible."
+    },
+    {
+      "entryIds": [
+        "toddler-hitting",
+        "toddler-throwing",
+        "toddler-big-feelings",
+        "toddler-toileting"
+      ],
+      "ageIds": [
+        "6-9",
+        "9-12"
+      ],
+      "disposition": "context-only",
+      "reason": "Frozen toddler bodies retain toddler participation/repair or toileting-readiness context. Baby217–219 earlier adult modeling and209 bodily-language awareness are distinct earlier source variants for the Baby author; no whole-topic exclusion.",
+      "outstandingOwner": "Task6 Baby care author",
+      "references": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 217,
+              "end": 219
+            }
+          ],
+          "section": "",
+          "locator": ""
+        },
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 74,
+              "end": 74
+            }
+          ],
+          "section": "",
+          "locator": ""
+        },
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 209,
+              "end": 209
+            }
+          ],
+          "section": "",
+          "locator": ""
+        }
+      ]
+    }
+  ],
+  "newCanonicalEntries": [
+    {
+      "entryId": "infant-nuts-and-bolts",
+      "sourceIdeaIds": [
+        "toddler.activities.idea.nuts-bolts-basic",
+        "toddler.activities.idea.nuts-chapter"
+      ],
+      "sourceAge": "12+ months for the basic shaped pairs; the graded board is from around2 years.",
+      "heldDetails": [
+        "The graded multi-hole board belongs to a separately allocated later variant, not the early basic-set invitation."
+      ]
+    },
+    {
+      "entryId": "infant-threading-beads",
+      "sourceIdeaIds": [
+        "toddler.activities.idea.beads-chapter",
+        "toddler.activities.idea.bead-photo",
+        "toddler.activities.idea.bead-stringing"
+      ],
+      "sourceAge": "From16 months in the caption;16–18+ months in the appendix.",
+      "heldDetails": [
+        "Appendix249 lists bigger beads among more-challenging examples; this unexplained comparison is not silently corrected or turned into a progression.",
+        "Fine threading with small beads/thin lace has later3+ context on254. No early age or independent safety claim is inferred.",
+        "No DIY cord length, bead dimensions or construction instructions are supplied."
+      ]
+    },
+    {
+      "entryId": "infant-dressing-fasteners",
+      "sourceIdeaIds": [
+        "toddler.activities.idea.frame-velcro",
+        "toddler.activities.idea.frame-zipper",
+        "toddler.activities.idea.frame-buttons",
+        "toddler.activities.idea.frame-snaps",
+        "toddler.activities.idea.frame-buckles"
+      ],
+      "sourceAge": "Velcro14+ months; attached zipper16–18+ months; buttons/snaps18–22+ months; buckles2½+ years.",
+      "heldDetails": [
+        "Optional metal ring on zipper pull is not turned into a DIY modification; no attachment specification is supplied.",
+        "At12–18 the later buttons/snaps/buckles remain explicitly later context."
+      ]
+    },
+    {
+      "entryId": "infant-stir-premeasured-ingredients",
+      "sourceIdeaIds": [
+        "toddler.activities.idea.practical-baking",
+        "toddler.activities.idea.bake-photo"
+      ],
+      "sourceAge": "From12 months for adding adult-measured ingredients and mixing; helping measure is a later2½+ appendix example.",
+      "heldDetails": [
+        "No heat, oven, raw-food tasting, recipe, tool-selection or independent kitchen-access procedure is introduced.",
+        "The3–4-year measuring/mixing chart and2½+ appendix measuring variant retain their own ages; they are not the early claim."
+      ]
+    },
+    {
+      "entryId": "infant-nighttime-needs",
+      "sourceIdeaIds": [
+        "toddler.care.idea.night-problem-solving"
+      ],
+      "sourceAge": "No fixed age for the conversation; the book addresses toddlers around1–3 years and its problem-solving passage includes preverbal children.",
+      "heldDetails": [
+        "Bedding/tucking arrangement and practice-pulling covers are unselected operational details, not a safe-sleep setup.",
+        "Night-feed reduction, milk dilution and maternal-sleep anecdotes are separate held context, not part of this entry."
+      ]
+    }
+  ],
+  "openingSelection": {
+    "12-18": [
+      "toddler-shoes",
+      "toddler-pouring",
+      "toddler-drawing"
+    ]
+  },
+  "allocationBoundary": "The parent owns complete source reconciliation, shared-* and Baby placements. Any named family-* or later-* allocation remains outstanding until matched to a concrete reviewed target."
+}

@@ -1,0 +1,95 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-new-sibling",
+        "kind": "everyday-situation",
+        "title": "Room for your toddler beside a new baby",
+        "summary": "Davies makes room for a toddler’s difficult feelings and ordinary time together when a new baby joins the family. The adult still steps in immediately to prevent harm.",
+        "cue": "Your toddler may want closeness, want to help, or want little to do with the baby.",
+        "detail": [
+          "The book suggests keeping the early weeks simple and accepting extra hands when available. Books or familiar toys close by can give you something to share with your toddler while feeding the baby.",
+          "Fetching a clean diaper may interest a toddler; declining to help is allowed too. A brief walk or ordinary errand together can offer time with you.",
+          "If the toddler expresses anger or jealousy, Davies listens rather than denying the feeling. She is equally clear that hitting the baby must be stopped immediately."
+        ],
+        "references": [
+          {
+            "id": "toddler-new-sibling.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Dealing with changes / Siblings",
+            "locator": "Post-arrival adjustment, optional helping, books during feeding, feelings, immediate protection and individual time",
+            "pdfPages": [
+              {
+                "start": 164,
+                "end": 166
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.toddler-new-sibling",
+        "entryId": "toddler-new-sibling",
+        "ageId": "12-18",
+        "topicIds": [
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "No fixed toddler age; a new baby has joined the family.",
+          "readiness": "The toddler may seek closeness, offer help or decline involvement.",
+          "note": "Age and readiness sources: The Montessori Toddler, PDF pp. 14."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "An everyday situation",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 164–166"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "cd940585edad0bdf579b388fba3795f9f6b0002913c068b783d6976010e27436",
+  "artContextSha256": null,
+  "publicProjectionSha256": "55b78ec41be9e10b71b559f64a4846e708c39eb178c8eff0586c658b084a5b42",
+  "provenance": {
+    "revision": "r04",
+    "placementDraft": {
+      "path": "content/6-18/drafts/editorial-r03/04.json",
+      "sha256": "08355b5f46c91d41026b565353944e89670fdefc1ebdece4a45b321515d2cb48"
+    },
+    "canonical": {
+      "entryId": "toddler-new-sibling",
+      "canonicalEntrySha256": "889892a0aaaa4b916474be371354b041511e72e312289fa7d715e1975a06afaa",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/38",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/38"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "shared-family-needs",
+        "kind": "invitation",
+        "title": "Make space for everyone’s needs",
+        "summary": "Bring the adults’ needs into the family conversation too. Look together at the care, rest, company, and practical work that need room in the coming days.",
+        "cue": "When family plans seem to leave someone’s needs out.",
+        "detail": [
+          "If you share care, check how the other person is doing and what support would help. The Baby authors suggest a regular chance to discuss arrangements, what is working, and what needs adjusting.",
+          "Davies describes planning around different needs, such as errands, rest, friendship, and a child’s wish to play. Her example looks for a workable combination rather than making the child’s enjoyment a reward for being good.",
+          "The books recognize many forms of family and support. A partner, relatives, or friends may have a part, according to who is in your life. Start with what is possible; the conversation need not produce a perfect solution."
+        ],
+        "principle": {
+          "id": "principle.family-respect-and-context",
+          "text": "The child’s needs belong alongside the needs of the family."
+        },
+        "references": [
+          {
+            "id": "shared.ref.baby.family-needs",
+            "sourceId": "baby-2021",
+            "section": "We don’t walk alone; Working with our partner; Getting on the same page",
+            "locator": "Family forms, partner check-in, shared needs and complete regular parenting-chat suggestion",
+            "pdfPages": [
+              {
+                "start": 244,
+                "end": 247
+              },
+              {
+                "start": 249,
+                "end": 253
+              }
+            ]
+          },
+          {
+            "id": "shared.ref.toddler.family-needs",
+            "sourceId": "toddler-2019",
+            "section": "What about everyone else?; Parents are people, too; The key to working together as a family",
+            "locator": "Family forms, adult needs, practical weekend example and nonconditional plans",
+            "pdfPages": [
+              {
+                "start": 203,
+                "end": 206
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.shared-family-needs",
+        "entryId": "shared-family-needs",
+        "ageId": "12-18",
+        "topicIds": [
+          "you-family"
+        ]
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "What’s underneath",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "you-family",
+            "label": "For you & your family"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 244–247, 249–253"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 203–206"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "9f95bee3285b779d2b0ae4a6f1d07c511b25449d844ff5097726d2df52c526b8",
+  "artContextSha256": null,
+  "publicProjectionSha256": "c046297ed9a86f5ddc413b85c8e9a3be2d400bea230cee1300c5cd506a2cdecf",
+  "provenance": {
+    "revision": "r04",
+    "placementDraft": {
+      "path": "content/6-18/drafts/shared-placements/draft-r01.json",
+      "sha256": "be9ae97ea203dbd01c5f3b346415ee8eff0b483d023b3203be5e24246645ca2f"
+    },
+    "canonical": {
+      "entryId": "shared-family-needs",
+      "canonicalEntrySha256": "2b681012f29bec4ea9bf3a5b2b09969d0e7af714bdfbc5c6d2adeeb85a1faf75",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/shared/draft-r02.json",
+        "sha256": "04720cdd2997dc461a619234d74bea952b2fd3c388a49b326dc282f065f39b06",
+        "jsonPointer": "/entries/11",
+        "author": "/root/shared_pilot_draft",
+        "provenancePointer": "/provenance/11"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

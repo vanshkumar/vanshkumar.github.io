@@ -1,0 +1,136 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-books",
+        "kind": "invitation",
+        "title": "Read the book they bring back",
+        "summary": "Choose a book you both enjoy and let familiar pictures open a conversation. Repeated readings can be part of the pleasure.",
+        "cue": "Notice the pages, subjects, or books your child returns to.",
+        "detail": [
+          "Davies favors books connected to daily life and a child’s interests, with room for families, cultures, and experiences different from your own. Simple words or sentences can grow into longer stories as interest changes.",
+          "Show a slow page turn and careful return to the shelf. Keep a few covers visible in a basket or on a shelf so your child can choose.",
+          "Her emphasis on realistic books is a Montessori preference. She also describes enjoying an occasional pretend story while playfully pointing out what is pretend."
+        ],
+        "references": [
+          {
+            "id": "toddler-books.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Language / Books",
+            "locator": "Book choices, diversity, repeated reading, careful handling and occasional pretend example",
+            "pdfPages": [
+              {
+                "start": 57,
+                "end": 58
+              }
+            ]
+          },
+          {
+            "id": "toddler-books.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "Room by room / Cozy place for reading",
+            "locator": "Few visible covers, rotation and comfortable reading place",
+            "pdfPages": [
+              {
+                "start": 80,
+                "end": 80
+              }
+            ]
+          },
+          {
+            "id": "toddler-books.ref.3",
+            "sourceId": "toddler-2019",
+            "section": "List of Montessori activities for toddlers",
+            "locator": "All ages: Books",
+            "pdfPages": [
+              {
+                "start": 245,
+                "end": 245
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "24-36.toddler-books",
+        "entryId": "toddler-books",
+        "ageId": "24-36",
+        "topicIds": [
+          "play-discovery",
+          "home-that-helps",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "All ages in the appendix; the chapter distinguishes short wording for younger toddlers and longer sentences and rhymes for older toddlers.",
+          "readiness": "Interest in familiar books and pictures; choose by the child’s interest and handling of pages."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "2–3 years",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          },
+          {
+            "id": "home-that-helps",
+            "label": "A home that helps"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 57–58"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 80"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 245"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "09631407c7184192472aa9315c2f9b8450e0ec76d596c03a8267b73d810eb73a",
+  "artContextSha256": null,
+  "publicProjectionSha256": "7ca447bcdd90e50a14e3030c5359f5e27477f6d0467b9f1aa258a66aa9667f94",
+  "provenance": {
+    "revision": "r02",
+    "placementDraft": {
+      "path": "content/18-36/drafts/editorial-r02/16.json",
+      "sha256": "6f305efa8d5da1c82e3e4342541848980a6d11733014761aab21749a3ec6b117"
+    },
+    "canonical": {
+      "entryId": "toddler-books",
+      "canonicalEntrySha256": "4964c571d3f7f81a9e94cab706a6c5f1ab74b5f06c475897da5a445e8a07229b",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/7",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/7"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

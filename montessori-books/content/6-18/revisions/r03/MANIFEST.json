@@ -1,0 +1,3043 @@
+{
+  "revision": "r03",
+  "owner": "6-18",
+  "mode": "text-only-contribution",
+  "createdOn": "2026-09-10",
+  "purpose": "Private exact text review. Artwork, composition and publication remain pending.",
+  "registry": {
+    "path": "content/pilots/CANONICAL_REGISTRY.json",
+    "sha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+  },
+  "context": {
+    "manifest": {
+      "path": "content/pilots/revisions/r08/MANIFEST.json",
+      "sha256": "98d48bcaa5b1ca8df36eba8cd47671be05fec7d09f88cd60be1d355391ace7bf"
+    },
+    "integrationReceipt": {
+      "path": "content/pilots/revisions/r08/INTEGRATION_RECEIPT.json",
+      "sha256": "380af98a5c058d75db9e511da69cb1e73debd803b27e68e76e34c8448d2e4098"
+    },
+    "payload": {
+      "path": "content/pilots/revisions/r08/payload.json",
+      "sha256": "9d371c590ec6bc22872912769c8e61c795b0fd5ec4265b02a6ee6a126317a7f6"
+    },
+    "placementIds": [
+      "6-9.baby-movement",
+      "6-9.baby-language",
+      "6-9.baby-connection",
+      "6-9.baby-naming",
+      "6-9.baby-books",
+      "6-9.baby-songs",
+      "6-9.baby-outdoors",
+      "6-9.baby-hand-discovery",
+      "6-9.baby-treasure-baskets",
+      "6-9.baby-rolling-balls",
+      "6-9.baby-first-containers",
+      "6-9.baby-choices-within-reach",
+      "6-9.baby-photos-at-eye-level",
+      "6-9.baby-space-to-explore",
+      "6-9.baby-dressing",
+      "6-9.baby-diaper-conversation",
+      "6-9.baby-care-resistance",
+      "6-9.baby-feeding-connection",
+      "6-9.baby-solids-perspective",
+      "6-9.baby-eating-place",
+      "6-9.baby-eating-amount",
+      "6-9.baby-meal-cleanup",
+      "6-9.baby-daily-rhythm",
+      "6-9.baby-sleep-support",
+      "6-9.baby-sleep-changes",
+      "6-9.baby-pacifier",
+      "6-9.baby-crying",
+      "6-9.baby-separation",
+      "6-9.baby-sharing",
+      "6-9.baby-languages",
+      "18-24.toddler-pouring",
+      "18-24.toddler-drawing",
+      "18-24.toddler-shoes",
+      "18-24.toddler-puzzles",
+      "18-24.toddler-fitting-and-turning",
+      "18-24.toddler-sorting",
+      "18-24.toddler-music",
+      "18-24.toddler-books",
+      "18-24.toddler-conversation",
+      "18-24.toddler-objects-and-pictures",
+      "18-24.toddler-paint-and-chalk",
+      "18-24.toddler-glue-and-mold",
+      "18-24.toddler-outside-noticing",
+      "18-24.toddler-room-to-move",
+      "18-24.toddler-wipe-and-dust",
+      "18-24.toddler-laundry",
+      "18-24.toddler-plants-and-flowers",
+      "18-24.toddler-food-preparation",
+      "18-24.toddler-table-together",
+      "18-24.toddler-getting-dressed",
+      "18-24.toddler-coat-flip",
+      "18-24.toddler-care-connection",
+      "18-24.toddler-nose-and-hair",
+      "18-24.toddler-daily-rhythm",
+      "18-24.toddler-family-rituals",
+      "18-24.toddler-meals",
+      "18-24.toddler-food-on-floor",
+      "18-24.toddler-sleep",
+      "18-24.toddler-teeth",
+      "18-24.toddler-toileting",
+      "18-24.toddler-pacifier-change",
+      "18-24.toddler-transitions",
+      "18-24.toddler-words-that-help",
+      "18-24.toddler-solving-together",
+      "18-24.toddler-waiting-outside-home",
+      "18-24.toddler-clear-limits",
+      "18-24.toddler-big-feelings",
+      "18-24.toddler-make-amends",
+      "18-24.toddler-new-sibling",
+      "18-24.toddler-sibling-conflict",
+      "18-24.toddler-taking-turns",
+      "18-24.toddler-joining-in",
+      "18-24.toddler-wanted-hugs",
+      "18-24.toddler-hitting",
+      "18-24.toddler-throwing",
+      "18-24.toddler-close-by",
+      "18-24.toddler-waiting-to-speak",
+      "18-24.toddler-feedback",
+      "18-24.toddler-screens",
+      "18-24.toddler-languages",
+      "18-24.toddler-shelf-and-rotation",
+      "18-24.toddler-spaces-for-different-ages",
+      "18-24.toddler-art-has-a-place",
+      "18-24.toddler-everyday-play",
+      "18-24.toddler-handwashing",
+      "18-24.toddler-small-job-on-an-errand",
+      "6-9.shared-observe",
+      "18-24.shared-observe",
+      "6-9.shared-follow-readiness",
+      "18-24.shared-follow-readiness",
+      "6-9.shared-participation-help",
+      "18-24.shared-participation-help",
+      "6-9.shared-time-to-explore",
+      "18-24.shared-time-to-explore",
+      "6-9.shared-feelings-limits",
+      "18-24.shared-feelings-limits",
+      "6-9.shared-home-fits-family",
+      "18-24.shared-home-fits-family",
+      "6-9.shared-adult-needs-support",
+      "18-24.shared-adult-needs-support",
+      "6-9.shared-something-for-you",
+      "18-24.shared-something-for-you",
+      "6-9.shared-less-crowded-day",
+      "18-24.shared-less-crowded-day",
+      "6-9.shared-adult-pause",
+      "18-24.shared-adult-pause",
+      "6-9.shared-repair",
+      "18-24.shared-repair",
+      "6-9.shared-family-needs",
+      "18-24.shared-family-needs",
+      "6-9.shared-caregiver-common-ground",
+      "18-24.shared-caregiver-common-ground",
+      "6-9.shared-family-separation",
+      "18-24.shared-family-separation",
+      "6-9.shared-choosing-care"
+    ]
+  },
+  "sources": [
+    {
+      "path": "content/6-18/drafts/editorial-r03/01.json",
+      "sha256": "61a49bf9e1a943bfb5e9ce6c43274455ef78f110be8ea45e504f9f6d3aeb79f8",
+      "author": {
+        "task": "/root",
+        "reasoning": "xhigh",
+        "priorAuthor": {
+          "task": "/root/s6_baby_play_author",
+          "reasoningLevel": "xhigh",
+          "date": "2026-09-10",
+          "workflow": "lean-v1"
+        },
+        "editorialAmendment": "Expose existing structured age/readiness page references; no canonical body edits."
+      }
+    },
+    {
+      "path": "content/6-18/drafts/editorial-r03/02.json",
+      "sha256": "1d5860acf671c24090b0c5b86bd1297bc7b12db5b77e1663b7f75425506a115e",
+      "author": {
+        "task": "/root",
+        "reasoning": "xhigh",
+        "priorAuthor": {
+          "task": "6-18",
+          "id": "/root/s6_baby_care_author",
+          "role": "Baby home, connection and care author",
+          "reasoningLevel": "xhigh",
+          "date": "2026-09-10",
+          "workflow": "lean-v1",
+          "revision": "draft-r02"
+        },
+        "editorialAmendment": "Expose existing structured age/readiness page references; no canonical body edits."
+      }
+    },
+    {
+      "path": "content/6-18/drafts/shared-placements/draft-r01.json",
+      "sha256": "be9ae97ea203dbd01c5f3b346415ee8eff0b483d023b3203be5e24246645ca2f",
+      "author": {
+        "task": "/root",
+        "reasoning": "xhigh"
+      }
+    },
+    {
+      "path": "content/6-18/drafts/editorial-r03/04.json",
+      "sha256": "08355b5f46c91d41026b565353944e89670fdefc1ebdece4a45b321515d2cb48",
+      "author": {
+        "task": "/root",
+        "reasoning": "xhigh",
+        "priorAuthor": {
+          "task": "/root",
+          "reasoning": "xhigh",
+          "recoveredFrom": {
+            "path": "tmp/6-18/toddler-overlap/build-draft.py",
+            "sha256": "0e527909aa1f65100eaf420203de307b2cfe9d7f119eeec7ec37a3d9ddfdfa5b",
+            "originalWriter": "/root/s6_toddler_overlap_author",
+            "boundary": "Recovered unfinished draft. Original writer reading claims are unverified notes, not editor reads or content approval."
+          }
+        },
+        "editorialAmendment": "Expose existing structured age/readiness page references; no canonical body edits."
+      }
+    },
+    {
+      "path": "content/6-18/drafts/material-variants/draft-r01.json",
+      "sha256": "0860d5ff65133e979c6cc77fe1107d6a995677e0c38a7fb5b698def4a9f8458d",
+      "author": {
+        "task": "/root",
+        "reasoning": "xhigh"
+      }
+    }
+  ],
+  "reuse": [
+    {
+      "entryId": "baby-movement",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "ad2f99ea61a19b42cfae1dcb274f6924ef45dda8a4c1dc224b5b337163e59b5f",
+      "publicProjection": {
+        "path": "content/pilots/revisions/r08/payload.json",
+        "sha256": "9d371c590ec6bc22872912769c8e61c795b0fd5ec4265b02a6ee6a126317a7f6",
+        "jsonPointer": "/entries/0",
+        "role": "Generated immutable public projection of the authoring record; never edit a second body here"
+      },
+      "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+    },
+    {
+      "entryId": "baby-language",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "f73c743dcacd0fd6b178539e6918812d6c35fc28ca65b123b6455686166e2213",
+      "publicProjection": {
+        "path": "content/pilots/revisions/r08/payload.json",
+        "sha256": "9d371c590ec6bc22872912769c8e61c795b0fd5ec4265b02a6ee6a126317a7f6",
+        "jsonPointer": "/entries/1",
+        "role": "Generated immutable public projection of the authoring record; never edit a second body here"
+      },
+      "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+    },
+    {
+      "entryId": "baby-naming",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "d57795253de38f3e04089e3d609fc4bfe8fdf60ea1798cef83bff278b6dcb965",
+      "publicProjection": {
+        "path": "content/pilots/revisions/r08/payload.json",
+        "sha256": "9d371c590ec6bc22872912769c8e61c795b0fd5ec4265b02a6ee6a126317a7f6",
+        "jsonPointer": "/entries/3",
+        "role": "Generated immutable public projection of the authoring record; never edit a second body here"
+      },
+      "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+    },
+    {
+      "entryId": "baby-books",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "7b6eec01204593538719b0258d43cd48cb540082c9005b04f3c326fd54abb198",
+      "publicProjection": {
+        "path": "content/pilots/revisions/r08/payload.json",
+        "sha256": "9d371c590ec6bc22872912769c8e61c795b0fd5ec4265b02a6ee6a126317a7f6",
+        "jsonPointer": "/entries/4",
+        "role": "Generated immutable public projection of the authoring record; never edit a second body here"
+      },
+      "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+    },
+    {
+      "entryId": "baby-songs",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "0f46408402a1df0553cffc0ad0996480701cb8e236f515d1da4632ad58a47aee",
+      "publicProjection": {
+        "path": "content/pilots/revisions/r08/payload.json",
+        "sha256": "9d371c590ec6bc22872912769c8e61c795b0fd5ec4265b02a6ee6a126317a7f6",
+        "jsonPointer": "/entries/5",
+        "role": "Generated immutable public projection of the authoring record; never edit a second body here"
+      },
+      "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+    },
+    {
+      "entryId": "baby-outdoors",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "4b9fef68743252e8349ab4fcb7c0d9a06df63691606e1ad282391ac35a410846",
+      "publicProjection": {
+        "path": "content/pilots/revisions/r08/payload.json",
+        "sha256": "9d371c590ec6bc22872912769c8e61c795b0fd5ec4265b02a6ee6a126317a7f6",
+        "jsonPointer": "/entries/6",
+        "role": "Generated immutable public projection of the authoring record; never edit a second body here"
+      },
+      "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+    },
+    {
+      "entryId": "baby-hand-discovery",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "3dfd23555603fb0fa13f5d28988780fb3bf6aae4e18c7529560225aea0d5107c",
+      "publicProjection": {
+        "path": "content/pilots/revisions/r08/payload.json",
+        "sha256": "9d371c590ec6bc22872912769c8e61c795b0fd5ec4265b02a6ee6a126317a7f6",
+        "jsonPointer": "/entries/7",
+        "role": "Generated immutable public projection of the authoring record; never edit a second body here"
+      },
+      "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+    },
+    {
+      "entryId": "baby-treasure-baskets",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "f25eab09d61589304616896faf4837643f49046236ee21fc4a9c4dc372a89cb6",
+      "publicProjection": {
+        "path": "content/pilots/revisions/r08/payload.json",
+        "sha256": "9d371c590ec6bc22872912769c8e61c795b0fd5ec4265b02a6ee6a126317a7f6",
+        "jsonPointer": "/entries/8",
+        "role": "Generated immutable public projection of the authoring record; never edit a second body here"
+      },
+      "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+    },
+    {
+      "entryId": "baby-rolling-balls",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "b83de48e1bca1b3850da9c3b081967551b26aed3eba6d5fcbde50fe37ff7d378",
+      "publicProjection": {
+        "path": "content/pilots/revisions/r08/payload.json",
+        "sha256": "9d371c590ec6bc22872912769c8e61c795b0fd5ec4265b02a6ee6a126317a7f6",
+        "jsonPointer": "/entries/9",
+        "role": "Generated immutable public projection of the authoring record; never edit a second body here"
+      },
+      "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+    },
+    {
+      "entryId": "baby-first-containers",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "9ff4f1eb70cd2c3657214e1e1e694da50397ccb67409b9d2c59e2b85a40f076c",
+      "publicProjection": {
+        "path": "content/pilots/revisions/r08/payload.json",
+        "sha256": "9d371c590ec6bc22872912769c8e61c795b0fd5ec4265b02a6ee6a126317a7f6",
+        "jsonPointer": "/entries/10",
+        "role": "Generated immutable public projection of the authoring record; never edit a second body here"
+      },
+      "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+    },
+    {
+      "entryId": "baby-languages",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "dc1bdf8a7b5b6a9c212e898a5c01614ccc19a32b933cfaf7d63d978047d38ba2",
+      "publicProjection": {
+        "path": "content/pilots/revisions/r08/payload.json",
+        "sha256": "9d371c590ec6bc22872912769c8e61c795b0fd5ec4265b02a6ee6a126317a7f6",
+        "jsonPointer": "/entries/29",
+        "role": "Generated immutable public projection of the authoring record; never edit a second body here"
+      },
+      "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+    },
+    {
+      "entryId": "baby-connection",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "94cd17cb3bb058e59df59718625347eb704e287b8d5fdd40637ff157154269d6"
+    },
+    {
+      "entryId": "baby-choices-within-reach",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "45424d8504436568c1018f797350c2733693210947c881cae4b25cadc1ac3343"
+    },
+    {
+      "entryId": "baby-photos-at-eye-level",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "4b3f1aa84ddfd2616b3033c57d0c31996f589e9d3f1d6400e05e6653df7cd486"
+    },
+    {
+      "entryId": "baby-space-to-explore",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "3bdb7c451f91bc1efbccd1b770abd47e928b621c32c74e2105acbe788b11183e"
+    },
+    {
+      "entryId": "baby-dressing",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "59c4ff2aefc7407d12d794eb7fef8dbe8c04aa43242f6897b13574fe7d4a1012"
+    },
+    {
+      "entryId": "baby-diaper-conversation",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "508c711d2938fe27fc73487ea048f401a793d60652433e3697b33a2e4a031620"
+    },
+    {
+      "entryId": "baby-care-resistance",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "4d36e198fd45b15a8dee03e1641735fb4d131067fc9b3e2454100e9f4df8bae8"
+    },
+    {
+      "entryId": "baby-feeding-connection",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "a5792ab355d43f1012026836a540d8ad0e9c08d9d264707311024a260e3026fa"
+    },
+    {
+      "entryId": "baby-solids-perspective",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "420fad449875509346e7fb703e1c3090fb8a2b9204a9bc3a3bb99d5a592a46de"
+    },
+    {
+      "entryId": "baby-eating-place",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "926fc1cff90a5fd3908df5e1f11a667b9f1d0fb333b361cbac328478f0d4c109"
+    },
+    {
+      "entryId": "baby-eating-amount",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "04918cee80578c151d573ab290f16e05ac6ad2f2ca34b5b9b61f6516d47f7399"
+    },
+    {
+      "entryId": "baby-meal-cleanup",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "33aa5c0c16d6380b2f10e9aae6554836619cd7d6e8374ba764e2e1ca0e723038"
+    },
+    {
+      "entryId": "baby-daily-rhythm",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "b89e657fd3eceec72cea57c6f533a524b433f16728c56b2fa2cd26d165c77332"
+    },
+    {
+      "entryId": "baby-sleep-support",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "0a8654cd8887e95ca8d741f978f830aa8d0b91d99f1916dcc8d3ef7b3a9bbe64"
+    },
+    {
+      "entryId": "baby-sleep-changes",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "a6df5ec4cbb1778383c29e7909549d0479041636adefd0ceddc77d4f749c716a"
+    },
+    {
+      "entryId": "baby-pacifier",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "b6fb7ad16a00a12109903b336417857b207aef7899f37a1c24cd004c343a5b21"
+    },
+    {
+      "entryId": "baby-crying",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "24d7f3701fa5c3d1c8b2f49010050baac3a804a2c691d00a35da88218457d99a"
+    },
+    {
+      "entryId": "baby-separation",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "63db4ba153f89e94dd6b1a2d7daf366f168477417a320d9b6700a9166072ae9b"
+    },
+    {
+      "entryId": "baby-sharing",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "4e7d06d1d8858c0750593af9d0b12ddcf418d9a1aad78ef673bf5d9a587297b4"
+    },
+    {
+      "entryId": "shared-observe",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "be586cb71ff0fed0a1e9904aa80691945c86bee712e7f2a83fe5779cbf93741d"
+    },
+    {
+      "entryId": "shared-follow-readiness",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "faf6b70472402cf68b23e4a7351c5c38613801bc3e0185ccc02f79c63b6b762f"
+    },
+    {
+      "entryId": "shared-participation-help",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "179d1031c809beab7faf2065ff47caa85c7c1bf73df76bdbe05e296c1fe2b4c4"
+    },
+    {
+      "entryId": "shared-time-to-explore",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "8904cbdc1e74829188d73117b0eb343cce29beb2384e3cfb6e5517ff674eda33"
+    },
+    {
+      "entryId": "shared-feelings-limits",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "07c45c4884b3cd9d73a3c14bb041d30f4880d0c839ad31ab67918540724bdabf"
+    },
+    {
+      "entryId": "shared-home-fits-family",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "fb7f30238d159ef3395035a56b71356f237faaaa4369ad932effe544ff0625d0"
+    },
+    {
+      "entryId": "shared-adult-needs-support",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "9eb3d6c99388c760b335570260180e97d59b9e2ae1e5ad17b41e2be4e28a90fb"
+    },
+    {
+      "entryId": "shared-something-for-you",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "6488f1305c07855fd68a21f8e981aa8d73906cf4df29ee9903458c02fdc9b9c3"
+    },
+    {
+      "entryId": "shared-less-crowded-day",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "bb2335181b6e1faf055f9c5e195b5ff504f5cd3a5890e36da19f30a50f552e70"
+    },
+    {
+      "entryId": "shared-adult-pause",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "f76130da96f90ba217443bf341dcbcffc5213bee068e55820607ee1aa78d87d5"
+    },
+    {
+      "entryId": "shared-repair",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "bd229463b295f6eff67d11e194bbbad311a8409c8e8b4b423419af5b1ce73f45"
+    },
+    {
+      "entryId": "shared-family-needs",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "2b681012f29bec4ea9bf3a5b2b09969d0e7af714bdfbc5c6d2adeeb85a1faf75"
+    },
+    {
+      "entryId": "shared-caregiver-common-ground",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "da1c89367248409bc919f6f899ddd6a1f7e35934150e9d2d05418d04401b2943"
+    },
+    {
+      "entryId": "shared-family-separation",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "b255f1ce2d259ca26c350df871ab3dea2e699506a8713f9f30360205b3b5c015"
+    },
+    {
+      "entryId": "shared-choosing-care",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "b00e2d2966250d488c4f275a1a1d133e8828f24c547c3eab94de72ae7c0ce2ad"
+    },
+    {
+      "entryId": "toddler-pouring",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "747d33c98b0b87e7c542916268c893ed288985faf51699e0e189da1c4908df69"
+    },
+    {
+      "entryId": "toddler-drawing",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "be7c4de9bb5dda39d982b88827cc02ba03b0093fcc0fdfacbe54e98d9544235a"
+    },
+    {
+      "entryId": "toddler-shoes",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "3b01d2c3293fa7ac94f7915532762ceb6a1165922c561b20021658e478b890dc"
+    },
+    {
+      "entryId": "toddler-puzzles",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "df7e45529a65f89beb0fb5ad2ee63ba73d517d88b4f133acffe1525448299800"
+    },
+    {
+      "entryId": "toddler-fitting-and-turning",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "3843680bd21cbd0066fe9a4b41a2e83022b81c413112d84cfdacde422a47b2eb"
+    },
+    {
+      "entryId": "toddler-music",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "a094cce0575fb3f071254fc8cafda4a3ebe047dba057bc038f4a9767c96b4c0b"
+    },
+    {
+      "entryId": "toddler-books",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "4964c571d3f7f81a9e94cab706a6c5f1ab74b5f06c475897da5a445e8a07229b"
+    },
+    {
+      "entryId": "toddler-conversation",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "0875458cc97af55f3a5913da543c129a6d96262903d755a8c3d2a5458a972468"
+    },
+    {
+      "entryId": "toddler-objects-and-pictures",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "373eb7a0c92491420382e4ddc4937f5d2f30593c440998ce7a2c0d0fe4ee9347"
+    },
+    {
+      "entryId": "toddler-paint-and-chalk",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "944a9b1ad9d539b0e2b96c2ac354f82d591dab1171251dc4433dc60f3e1c52e3"
+    },
+    {
+      "entryId": "toddler-glue-and-mold",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "ddca3d58e042b63bab3bb88def36bcd354e1ecf1dff8b7ccbd26e26727f6787c"
+    },
+    {
+      "entryId": "toddler-outside-noticing",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "7b60f40267daeb0c86559abe2c8717820362f77605bdbac5837d98d5d4f95653"
+    },
+    {
+      "entryId": "toddler-room-to-move",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "0b8728f50870a1a73d222bd1d3b0658a9917f699668af7d0bdd662591ae79096"
+    },
+    {
+      "entryId": "toddler-wipe-and-dust",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "23ce094bc8854dee6119d823a1edc14eea07af51a0678551aafd382d26518830"
+    },
+    {
+      "entryId": "toddler-laundry",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "1936d1f1857c93b755bee952c7b3b5b22ecc0238a9a6347ac6fac666c0791873"
+    },
+    {
+      "entryId": "toddler-plants-and-flowers",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "226c584cc6b7aff697e06298dabef9ed3833889cec1bff5312ddd969e5efbbd2"
+    },
+    {
+      "entryId": "toddler-table-together",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "d1b8685ec0e2212c88d87c3c4289ecc7ba4ae4b33bb4a2e94e8351e605555b8e"
+    },
+    {
+      "entryId": "toddler-getting-dressed",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "c4fdaaf63f5547951ce6f4a25a77b68d1bea42913b74af31c5f1e312c32e7a46"
+    },
+    {
+      "entryId": "toddler-care-connection",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "a76ca88bdb93746f570b9db3a9f58dc9c9d8b8a116eb4edec98140129580b8dd"
+    },
+    {
+      "entryId": "toddler-nose-and-hair",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "3137e8d035d3550e27bbc1a29ed5bdb6d19002c67d965222ff9a03278f4a2321"
+    },
+    {
+      "entryId": "toddler-daily-rhythm",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "cc34d21e0811c77b0507a19a645937bc9921c6e85d89ec4ed8d12cf75cb1a5d5"
+    },
+    {
+      "entryId": "toddler-family-rituals",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "7c12477669efcda6cc5b521602a3cc4aea26c525c9adb0df90916ddf87964c63"
+    },
+    {
+      "entryId": "toddler-meals",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "c285c57db897ca799eeaf2fe78bda31f31f5d9567d979f66d4ec94b838f21ba2"
+    },
+    {
+      "entryId": "toddler-food-on-floor",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "37b807e3a20eb6506aeb976108dbd23d97457159b91e59388d229854cbc0e662"
+    },
+    {
+      "entryId": "toddler-sleep",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "647ca5ee387d84d06f9bad1196867bd51588a70117b449a683f398e3960f590f"
+    },
+    {
+      "entryId": "toddler-teeth",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "e7c625930b31127df375d9bc0028045e2124acf28d9f8ba5cbdc67aaa927b0a9"
+    },
+    {
+      "entryId": "toddler-toileting",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "eb7ce212e75e59a1c699384be80d8c520a2ad8c9916d5509d9f6ac569eb2975e"
+    },
+    {
+      "entryId": "toddler-pacifier-change",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "bef99d80e4182f9ac74590eed99713fb1e265cb35409b7848c7b5eeb3d309b82"
+    },
+    {
+      "entryId": "toddler-transitions",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "fc128c1f151d8c9b69fed49c54a8771269862f360aca0b63da408a86a2c4fa0c"
+    },
+    {
+      "entryId": "toddler-words-that-help",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "3543cf4d3f0da3c3e0efdb9856f538d1b192783f91ce42d9a4acbbed519fa9c2"
+    },
+    {
+      "entryId": "toddler-solving-together",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "2ef72e8dc7513d63c4ee9fb0c1dbac49fc5c565b290ae3a7e9a8b324a08cd3fd"
+    },
+    {
+      "entryId": "toddler-waiting-outside-home",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "60c9b0bc354e7f6f01231d6f0c2132a1410a5b6c9aa482cdc7d2325ef1de32b8"
+    },
+    {
+      "entryId": "toddler-clear-limits",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "3ad0f4c7e8e7f7f53d5b5f78cd7bbd8804392ca920cfb8af11759d44faf3dee0"
+    },
+    {
+      "entryId": "toddler-big-feelings",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "ba42bfc7da559fe1ca577b16a81a8196f7063305c144ffc940f81f39e77e7bd3"
+    },
+    {
+      "entryId": "toddler-make-amends",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "595be97301dc2356584142e99e6e5479676023e4883f2f88dc65f0392d00ed21"
+    },
+    {
+      "entryId": "toddler-new-sibling",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "889892a0aaaa4b916474be371354b041511e72e312289fa7d715e1975a06afaa"
+    },
+    {
+      "entryId": "toddler-sibling-conflict",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "cfb1879e2c3bf75e381f1306636747dbda290dc69e90652be5dcc6cf28e04a46"
+    },
+    {
+      "entryId": "toddler-taking-turns",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "106daab36f2765ff8778aee7541014ed0274e9fd1545bbeeb5676a00a4712f07"
+    },
+    {
+      "entryId": "toddler-joining-in",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "1adce28cdec488a04a0752f5ccf5e1b1938b3160d329a02af7decda2840ab874"
+    },
+    {
+      "entryId": "toddler-wanted-hugs",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "562c08420ebb31e1d21e8dfa3c6079482e06e346ee9146a3285e7d6b51a46aa4"
+    },
+    {
+      "entryId": "toddler-hitting",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "dc38fd730049674da1233106116db74244907b06d9f6ea5fc54dfe7cb0602e66"
+    },
+    {
+      "entryId": "toddler-throwing",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "5b9720b604042d2bb14182c6018b4f37ac87186746c76cd23d1429870f25472f"
+    },
+    {
+      "entryId": "toddler-close-by",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "9c340d3a91239a5e759221b2e4d2a703c4db90fa1d1484aa1dabf7c46d3c34c2"
+    },
+    {
+      "entryId": "toddler-waiting-to-speak",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "34a000fd97b7b0999edc2e7d23943d581a5e82347bdb9b1d11f77fcb1e46af94"
+    },
+    {
+      "entryId": "toddler-feedback",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "23377ce93fd0fed1d0521b307d258709d6049bb153df6a9569bbab151e43c8ad"
+    },
+    {
+      "entryId": "toddler-screens",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "8aab757b441257d7eb5da4df25452023675b23e4d86496eda3109cc5a4e84068"
+    },
+    {
+      "entryId": "toddler-languages",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "133cde8e6a04e472b3747ee8828431e4c02ffc65fbf080ae337cc8326dac6668"
+    },
+    {
+      "entryId": "toddler-shelf-and-rotation",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "42d024dde481c6ae844a61b307b76af4b22d3c8ef4c5c95452c38251727c1d46"
+    },
+    {
+      "entryId": "toddler-spaces-for-different-ages",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "38af447c5b7fde6344600ca96c75b45fcd62241dd82bbef5da695611fce8f70c"
+    },
+    {
+      "entryId": "toddler-art-has-a-place",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "2379542e84299dccf3866aeca2f1cd9dc12c4ebd518c8569b84d7d07e9bb7bf9"
+    },
+    {
+      "entryId": "toddler-everyday-play",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "55df76379be43cfe04dffac4fd075110e443f776396f4cd6e54da59bd1a4a8a9"
+    },
+    {
+      "entryId": "toddler-handwashing",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "5e47a5d4c0f136bfb4f932e4518461577bf745bb67ee7ec4bbfc0e12ad3ea40b"
+    }
+  ],
+  "renderer": [
+    {
+      "path": "src/HomeStudy.jsx",
+      "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c"
+    },
+    {
+      "path": "src/home.css",
+      "sha256": "55de72c5b21d2f1a3ead85c5975febd09ac3135fcbc2219e6672a13f4786a6e1"
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "503e980cdf9ba4728adf678bb27bc4cd4095d1ae131c3c02181cc4b9a4df22ce"
+    },
+    {
+      "path": "src/guide/catalog.js",
+      "sha256": "d8d30a17c5f1b1c99ed68764f3f412cf99b48f55d09bf528313f0df1439da71c"
+    },
+    {
+      "path": "src/concepts.js",
+      "sha256": "cb086bcc98ad4fde98677a03cb42a849ae5993405dd886a71e7642ca079a3e4a"
+    }
+  ],
+  "targetPlacementIds": [
+    "9-12.infant-peekaboo",
+    "12-18.infant-peekaboo",
+    "9-12.infant-find-a-sound",
+    "12-18.infant-find-a-sound",
+    "9-12.infant-push-wagon",
+    "12-18.infant-push-wagon",
+    "6-9.infant-ball-tracker",
+    "9-12.infant-ball-tracker",
+    "12-18.infant-ball-tracker",
+    "18-24.infant-ball-tracker",
+    "24-36.infant-ball-tracker",
+    "6-9.infant-climbing-stairs",
+    "9-12.infant-climbing-stairs",
+    "12-18.infant-climbing-stairs",
+    "9-12.infant-posting-drawer",
+    "12-18.infant-posting-drawer",
+    "18-24.infant-posting-drawer",
+    "24-36.infant-posting-drawer",
+    "9-12.infant-push-through-balls",
+    "12-18.infant-push-through-balls",
+    "18-24.infant-push-through-balls",
+    "24-36.infant-push-through-balls",
+    "9-12.infant-press-and-squeeze",
+    "12-18.infant-press-and-squeeze",
+    "9-12.infant-drawer-to-explore",
+    "12-18.infant-drawer-to-explore",
+    "18-24.infant-drawer-to-explore",
+    "24-36.infant-drawer-to-explore",
+    "6-9.infant-music-player",
+    "9-12.infant-music-player",
+    "12-18.infant-music-player",
+    "6-9.infant-spinning-top",
+    "9-12.infant-spinning-top",
+    "12-18.infant-spinning-top",
+    "18-24.infant-spinning-top",
+    "24-36.infant-spinning-top",
+    "9-12.baby-movement",
+    "12-18.baby-movement",
+    "9-12.baby-language",
+    "12-18.baby-language",
+    "9-12.baby-naming",
+    "12-18.baby-naming",
+    "9-12.baby-books",
+    "12-18.baby-books",
+    "9-12.baby-songs",
+    "12-18.baby-songs",
+    "9-12.baby-outdoors",
+    "12-18.baby-outdoors",
+    "9-12.baby-hand-discovery",
+    "12-18.baby-hand-discovery",
+    "9-12.baby-treasure-baskets",
+    "12-18.baby-treasure-baskets",
+    "9-12.baby-rolling-balls",
+    "12-18.baby-rolling-balls",
+    "9-12.baby-first-containers",
+    "12-18.baby-first-containers",
+    "9-12.baby-languages",
+    "12-18.baby-languages",
+    "9-12.baby-connection",
+    "12-18.baby-connection",
+    "9-12.baby-choices-within-reach",
+    "9-12.baby-photos-at-eye-level",
+    "12-18.baby-photos-at-eye-level",
+    "9-12.baby-space-to-explore",
+    "12-18.baby-space-to-explore",
+    "9-12.baby-dressing",
+    "12-18.baby-dressing",
+    "9-12.baby-diaper-conversation",
+    "12-18.baby-diaper-conversation",
+    "9-12.baby-care-resistance",
+    "12-18.baby-care-resistance",
+    "9-12.baby-feeding-connection",
+    "12-18.baby-feeding-connection",
+    "9-12.baby-solids-perspective",
+    "9-12.baby-eating-place",
+    "12-18.baby-eating-place",
+    "9-12.baby-eating-amount",
+    "12-18.baby-eating-amount",
+    "9-12.baby-meal-cleanup",
+    "12-18.baby-meal-cleanup",
+    "9-12.baby-daily-rhythm",
+    "12-18.baby-daily-rhythm",
+    "9-12.baby-sleep-support",
+    "12-18.baby-sleep-support",
+    "9-12.baby-sleep-changes",
+    "12-18.baby-sleep-changes",
+    "9-12.baby-pacifier",
+    "9-12.baby-crying",
+    "12-18.baby-crying",
+    "9-12.baby-separation",
+    "12-18.baby-separation",
+    "9-12.baby-sharing",
+    "12-18.baby-sharing",
+    "6-9.infant-eating-tools",
+    "9-12.infant-eating-tools",
+    "12-18.infant-eating-tools",
+    "18-24.infant-eating-tools",
+    "24-36.infant-eating-tools",
+    "6-9.infant-standing-diaper-change",
+    "9-12.infant-standing-diaper-change",
+    "12-18.infant-standing-diaper-change",
+    "18-24.infant-standing-diaper-change",
+    "24-36.infant-standing-diaper-change",
+    "9-12.infant-dressing-place",
+    "12-18.infant-dressing-place",
+    "18-24.infant-dressing-place",
+    "24-36.infant-dressing-place",
+    "9-12.infant-changing-preferences",
+    "12-18.infant-changing-preferences",
+    "9-12.infant-first-toilet-interest",
+    "12-18.infant-first-toilet-interest",
+    "9-12.shared-observe",
+    "12-18.shared-observe",
+    "9-12.shared-follow-readiness",
+    "12-18.shared-follow-readiness",
+    "9-12.shared-participation-help",
+    "12-18.shared-participation-help",
+    "9-12.shared-time-to-explore",
+    "12-18.shared-time-to-explore",
+    "9-12.shared-feelings-limits",
+    "12-18.shared-feelings-limits",
+    "9-12.shared-home-fits-family",
+    "12-18.shared-home-fits-family",
+    "9-12.shared-adult-needs-support",
+    "12-18.shared-adult-needs-support",
+    "9-12.shared-something-for-you",
+    "12-18.shared-something-for-you",
+    "9-12.shared-less-crowded-day",
+    "12-18.shared-less-crowded-day",
+    "9-12.shared-adult-pause",
+    "12-18.shared-adult-pause",
+    "9-12.shared-repair",
+    "12-18.shared-repair",
+    "9-12.shared-family-needs",
+    "12-18.shared-family-needs",
+    "9-12.shared-caregiver-common-ground",
+    "12-18.shared-caregiver-common-ground",
+    "9-12.shared-family-separation",
+    "12-18.shared-family-separation",
+    "9-12.shared-choosing-care",
+    "12-18.shared-choosing-care",
+    "12-18.toddler-pouring",
+    "12-18.toddler-drawing",
+    "12-18.toddler-shoes",
+    "12-18.toddler-puzzles",
+    "12-18.toddler-fitting-and-turning",
+    "12-18.toddler-music",
+    "12-18.toddler-books",
+    "12-18.toddler-conversation",
+    "12-18.toddler-objects-and-pictures",
+    "12-18.toddler-paint-and-chalk",
+    "12-18.toddler-glue-and-mold",
+    "12-18.toddler-outside-noticing",
+    "12-18.toddler-room-to-move",
+    "12-18.toddler-wipe-and-dust",
+    "12-18.toddler-laundry",
+    "12-18.toddler-plants-and-flowers",
+    "12-18.toddler-table-together",
+    "12-18.toddler-getting-dressed",
+    "12-18.toddler-care-connection",
+    "12-18.toddler-nose-and-hair",
+    "12-18.toddler-daily-rhythm",
+    "12-18.toddler-family-rituals",
+    "12-18.toddler-meals",
+    "12-18.toddler-food-on-floor",
+    "12-18.toddler-sleep",
+    "12-18.toddler-teeth",
+    "12-18.toddler-toileting",
+    "12-18.toddler-pacifier-change",
+    "12-18.toddler-transitions",
+    "12-18.toddler-words-that-help",
+    "12-18.toddler-solving-together",
+    "12-18.toddler-waiting-outside-home",
+    "12-18.toddler-clear-limits",
+    "12-18.toddler-big-feelings",
+    "12-18.toddler-make-amends",
+    "12-18.toddler-new-sibling",
+    "12-18.toddler-sibling-conflict",
+    "12-18.toddler-taking-turns",
+    "12-18.toddler-joining-in",
+    "12-18.toddler-wanted-hugs",
+    "12-18.toddler-hitting",
+    "12-18.toddler-throwing",
+    "12-18.toddler-close-by",
+    "12-18.toddler-waiting-to-speak",
+    "12-18.toddler-feedback",
+    "12-18.toddler-screens",
+    "12-18.toddler-languages",
+    "12-18.toddler-shelf-and-rotation",
+    "12-18.toddler-spaces-for-different-ages",
+    "12-18.toddler-art-has-a-place",
+    "12-18.toddler-everyday-play",
+    "12-18.toddler-handwashing",
+    "9-12.toddler-puzzles",
+    "12-18.infant-nuts-and-bolts",
+    "18-24.infant-nuts-and-bolts",
+    "24-36.infant-nuts-and-bolts",
+    "12-18.infant-threading-beads",
+    "18-24.infant-threading-beads",
+    "24-36.infant-threading-beads",
+    "12-18.infant-dressing-fasteners",
+    "18-24.infant-dressing-fasteners",
+    "24-36.infant-dressing-fasteners",
+    "12-18.infant-stir-premeasured-ingredients",
+    "18-24.infant-stir-premeasured-ingredients",
+    "24-36.infant-stir-premeasured-ingredients",
+    "12-18.infant-nighttime-needs",
+    "18-24.infant-nighttime-needs",
+    "24-36.infant-nighttime-needs",
+    "6-9.infant-rings-and-posts",
+    "9-12.infant-rings-and-posts",
+    "12-18.infant-rings-and-posts",
+    "18-24.infant-rings-and-posts",
+    "24-36.infant-rings-and-posts",
+    "9-12.infant-pegs-and-cubes",
+    "12-18.infant-pegs-and-cubes",
+    "18-24.infant-pegs-and-cubes",
+    "24-36.infant-pegs-and-cubes",
+    "12-18.infant-slot-posting",
+    "18-24.infant-slot-posting",
+    "24-36.infant-slot-posting",
+    "12-18.infant-opening-and-keys",
+    "18-24.infant-opening-and-keys",
+    "24-36.infant-opening-and-keys"
+  ],
+  "snapshots": [
+    {
+      "entryId": "infant-peekaboo",
+      "placementId": "9-12.infant-peekaboo",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.infant-peekaboo.json",
+      "sha256": "64e817c85bb90b30e21f3ebde7b2db5515effd622a97f30eb8e1ec9390a8ce5e",
+      "textPlacementSha256": "706280c682e106b3f857e80e875a3b770755c241414d693ce54664f3790e471f",
+      "artContextSha256": null,
+      "publicProjectionSha256": "bf516440eebb80f0ffb3ecc6712addef45dd0c6401e39229e1f7e5ec36e730f3"
+    },
+    {
+      "entryId": "infant-peekaboo",
+      "placementId": "12-18.infant-peekaboo",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-peekaboo.json",
+      "sha256": "4caa53600377a14311e8dad5f653e7bfe058f480aa3267cdc3b75076d6ce216d",
+      "textPlacementSha256": "4f4174d1e0c1318743d7ec85ccf8d50cc1991327ed00b8907dcc07cce31fc1d1",
+      "artContextSha256": null,
+      "publicProjectionSha256": "32bda526663d19469f2745d7f3158f2b1dd1d826a4bdd7106b255d4599fb679b"
+    },
+    {
+      "entryId": "infant-find-a-sound",
+      "placementId": "9-12.infant-find-a-sound",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.infant-find-a-sound.json",
+      "sha256": "3f4ee3940026a1c72b351c1a973a975a5b2664f72f0ec7e82e7ea8cccad2d03f",
+      "textPlacementSha256": "7f9c9aae7df33aa6a704c4f74a04a996cbda011aee8282992bbadbe97b800c57",
+      "artContextSha256": null,
+      "publicProjectionSha256": "6bbf40aafea04e93785b576c712810d6f743d22eddd3138dab22d8523fbbbff3"
+    },
+    {
+      "entryId": "infant-find-a-sound",
+      "placementId": "12-18.infant-find-a-sound",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-find-a-sound.json",
+      "sha256": "32c22b4230afd7582bfc72314cd5c06244089cceca027b0750f9fd0cf37be7af",
+      "textPlacementSha256": "5740056da3b1c8700987e43a1e883828466d7dcd6b65b81583dd2295a2f59141",
+      "artContextSha256": null,
+      "publicProjectionSha256": "7702251d87a20f4724487bb44039021b5873f016145cdb91b4634d008179fdba"
+    },
+    {
+      "entryId": "infant-push-wagon",
+      "placementId": "9-12.infant-push-wagon",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.infant-push-wagon.json",
+      "sha256": "4cddd083c434de369078c5264aa56d49d8de22cef9be503cb129415b9a8eaf03",
+      "textPlacementSha256": "5f68144d8fbf4a76a793b26ca6c31cd839cd036676a698cce1ccaf29035c0d7d",
+      "artContextSha256": null,
+      "publicProjectionSha256": "fe74a10d4dcf150e73e11c60ba98a4d3dc6b8fe3c16d51cd51d790cde53b747a"
+    },
+    {
+      "entryId": "infant-push-wagon",
+      "placementId": "12-18.infant-push-wagon",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-push-wagon.json",
+      "sha256": "94cf14c91b5058b1c1faced2b6ef8e6ae475979c2cbc284d2d24157b3958f668",
+      "textPlacementSha256": "e4b362ba4e82d2f17d02b08bb15a041cae57f02a90d77133f31e9e6580f0982b",
+      "artContextSha256": null,
+      "publicProjectionSha256": "20fd0eb99d5b8082ad4119e7f117f3c4a27ed544c146aa5527525dfc6475db4a"
+    },
+    {
+      "entryId": "infant-ball-tracker",
+      "placementId": "6-9.infant-ball-tracker",
+      "path": "content/6-18/revisions/r03/snapshots/6-9.infant-ball-tracker.json",
+      "sha256": "cad279eb019b43cdcaeb58628ce99f9d79c98ab33cc5f79eab51293f6b711c2b",
+      "textPlacementSha256": "29e85b45d761cc001af793b2443fb46d8ba566424428938992bfc06ffaed8f90",
+      "artContextSha256": null,
+      "publicProjectionSha256": "03ae2f4f9f9c704b4e43eb20087fce7418c33b2aca1a746d1d1222af73482097"
+    },
+    {
+      "entryId": "infant-ball-tracker",
+      "placementId": "9-12.infant-ball-tracker",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.infant-ball-tracker.json",
+      "sha256": "b93543594d17e7faf6f9dc356bb21314cb9c649ddd51756a5849f162e88ffdee",
+      "textPlacementSha256": "17fedd382993bc4589708074e09231eb599c7cb1ba95cb3a8d8e6ee99182f08b",
+      "artContextSha256": null,
+      "publicProjectionSha256": "5702b1915e302549736ed8cc92ed58114da24900bdb2b33476d380edbf8f34ec"
+    },
+    {
+      "entryId": "infant-ball-tracker",
+      "placementId": "12-18.infant-ball-tracker",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-ball-tracker.json",
+      "sha256": "12deb2c763fd1936a62ed43184135c12bfcc143c1eabc91202c8ba07870cb0da",
+      "textPlacementSha256": "4c4ed1fe8db0c96ea0f4ca9b89688343f77f887e4c16db483e5446487fd160fb",
+      "artContextSha256": null,
+      "publicProjectionSha256": "4fe28f3d4447ad7267263d4891bd391c0963856af024377724f9a75be09fedea"
+    },
+    {
+      "entryId": "infant-ball-tracker",
+      "placementId": "18-24.infant-ball-tracker",
+      "path": "content/6-18/revisions/r03/snapshots/18-24.infant-ball-tracker.json",
+      "sha256": "1c1dc6f4bf9badf8394dc8d35f8a108c7ad4262621ec0cbeb7abcdd3048e3320",
+      "textPlacementSha256": "84eccb6f4b1e170f6a0f9a83d3a9f1ee897fa7e44024baac7221650712c4db6b",
+      "artContextSha256": null,
+      "publicProjectionSha256": "ea678d99b8a5b22ae7df93f4152f718f714d2a2720d78856453d8ad42ce55e42"
+    },
+    {
+      "entryId": "infant-ball-tracker",
+      "placementId": "24-36.infant-ball-tracker",
+      "path": "content/6-18/revisions/r03/snapshots/24-36.infant-ball-tracker.json",
+      "sha256": "ab18baacbef49249d1a3dbefb87eb0fc07b7e516ac7b577fb48bbc1a1decf5a0",
+      "textPlacementSha256": "d2888923d73ceac1ad5daaf8e8bde4817ccaedcde81dbc478c00ec02f5cb5890",
+      "artContextSha256": null,
+      "publicProjectionSha256": "3fff81e7f8e41e2c5549f629d4897bb920b571b4c684073d1100ea8290d9d457"
+    },
+    {
+      "entryId": "infant-climbing-stairs",
+      "placementId": "6-9.infant-climbing-stairs",
+      "path": "content/6-18/revisions/r03/snapshots/6-9.infant-climbing-stairs.json",
+      "sha256": "b423099efcedc387c5309382018e3f0ce27bdc422d09ed9b888993b2fb988fb5",
+      "textPlacementSha256": "895eaf22a9e3b032226cb48e0a7a35a304ee976ae76ce6dbe908f018a4745b68",
+      "artContextSha256": null,
+      "publicProjectionSha256": "fa30e73cf02b1f883e74da01f024e2baa4780abdfba6ea273d8b101a4548b52e"
+    },
+    {
+      "entryId": "infant-climbing-stairs",
+      "placementId": "9-12.infant-climbing-stairs",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.infant-climbing-stairs.json",
+      "sha256": "2268a3712be67e99e5f85437f82877ce5484afa9fb890906b1ad3819e9069cc8",
+      "textPlacementSha256": "b41ae4c4db2022c8dac46d7d1aca6903cea04ac1d2bb40bb9755ae5a3e5cc946",
+      "artContextSha256": null,
+      "publicProjectionSha256": "e641c2b7e0204489176c05266711b64577048cf7a617c740730de2a0071bf9b8"
+    },
+    {
+      "entryId": "infant-climbing-stairs",
+      "placementId": "12-18.infant-climbing-stairs",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-climbing-stairs.json",
+      "sha256": "63809003f14edb22920b98e1653523de1e0679437303bb82ec38c4c5ec52105c",
+      "textPlacementSha256": "249361e5ce676e82b04579aa7296a9bb202697fb70e1d0181e107c822fdf72d7",
+      "artContextSha256": null,
+      "publicProjectionSha256": "6a93bd7f509a6cbf3273d8c1738e2cab2c41f8b258a1bb7dd28a3f6598f15e04"
+    },
+    {
+      "entryId": "infant-posting-drawer",
+      "placementId": "9-12.infant-posting-drawer",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.infant-posting-drawer.json",
+      "sha256": "a0a39a0b014be8c19550eabfc58db10289199feab6839e705131b432659b985f",
+      "textPlacementSha256": "80957bf699d65f40e009fb8008ea6bd5479c28b677bcb98ea0e23a19c0f46c10",
+      "artContextSha256": null,
+      "publicProjectionSha256": "58de6873f7dfb3dc3fd649a0b36d5182399616f4f470daec5a3e4e5b7c600071"
+    },
+    {
+      "entryId": "infant-posting-drawer",
+      "placementId": "12-18.infant-posting-drawer",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-posting-drawer.json",
+      "sha256": "6dda784e154d22d09502b74f9b434cb8ed5a7206217f69b70fc4b1fbbfee83a0",
+      "textPlacementSha256": "4da8dff8c83c5e1ef4fa298c102b5a3583d7f057eb38137caf834bc3c2f8eed5",
+      "artContextSha256": null,
+      "publicProjectionSha256": "5ac0d4daeb87cf0de6cb5206e6736ac9dcf33c1becd57a6d1035b1b67078b64b"
+    },
+    {
+      "entryId": "infant-posting-drawer",
+      "placementId": "18-24.infant-posting-drawer",
+      "path": "content/6-18/revisions/r03/snapshots/18-24.infant-posting-drawer.json",
+      "sha256": "ba9215756d7d1cbc09131532df1a44850a78d1627530a15df9cafb945c37ef2a",
+      "textPlacementSha256": "315361e13d6369cba791b9cb5549d622cdfb7af033b2557684e3a14cf5ea518d",
+      "artContextSha256": null,
+      "publicProjectionSha256": "58adc68e713237332331f09069a4d506162f0405e7e30f3396aaa040ddfb9ab7"
+    },
+    {
+      "entryId": "infant-posting-drawer",
+      "placementId": "24-36.infant-posting-drawer",
+      "path": "content/6-18/revisions/r03/snapshots/24-36.infant-posting-drawer.json",
+      "sha256": "971c30bdb63d926a745f6dcaa2da76d23b429f25ca4c1ed4e332f6a5666a21f2",
+      "textPlacementSha256": "6c70231c69f95407e3bf1945c644565fb855dd9c4ae2302917ecccd784efd5f7",
+      "artContextSha256": null,
+      "publicProjectionSha256": "62df238ac2756c33c226b4093aa440be95d8bd6365262113376cdfd8789be6fc"
+    },
+    {
+      "entryId": "infant-push-through-balls",
+      "placementId": "9-12.infant-push-through-balls",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.infant-push-through-balls.json",
+      "sha256": "4890794f9853d669f70b61d5fedb872addb522b4aff39cc25928b13a379330ee",
+      "textPlacementSha256": "bfce06eb5d571a3b7a931a352b710f249219125394a21afd3c7e6dbe781d575b",
+      "artContextSha256": null,
+      "publicProjectionSha256": "8fce7c6199e6cfd0ac729a50aa5ef37c033f9498e7ba837d03a7e71045c2a0f2"
+    },
+    {
+      "entryId": "infant-push-through-balls",
+      "placementId": "12-18.infant-push-through-balls",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-push-through-balls.json",
+      "sha256": "2b242da6d3286d5d1ac03f23d3940e61813a49899bf2d036b24610ac61ed8249",
+      "textPlacementSha256": "91d1e00841e7affd2e2a6ac00196da9aee1b93b4aa1038b2c6ffd3c016254921",
+      "artContextSha256": null,
+      "publicProjectionSha256": "12df790b70afafcc3dac83b34bae2d84ef828664134bc162290383c23edefa03"
+    },
+    {
+      "entryId": "infant-push-through-balls",
+      "placementId": "18-24.infant-push-through-balls",
+      "path": "content/6-18/revisions/r03/snapshots/18-24.infant-push-through-balls.json",
+      "sha256": "e83c31681e41650c5ff51fcd09a66be11bc02eafd7a574912062e903f14539a1",
+      "textPlacementSha256": "acac5cf1e186c9f7e33b569053ea81dfa92badebfd8dfba38e1a02874ddb4e03",
+      "artContextSha256": null,
+      "publicProjectionSha256": "030345bcda69b18e8b3bed8ddcbbe32fb2d7703010de0aa4ef4c7bb4e642994d"
+    },
+    {
+      "entryId": "infant-push-through-balls",
+      "placementId": "24-36.infant-push-through-balls",
+      "path": "content/6-18/revisions/r03/snapshots/24-36.infant-push-through-balls.json",
+      "sha256": "7a8136c93a971d1d153929722b15f6e235d7239406469c096914fef1d1edcac5",
+      "textPlacementSha256": "776fc6e1a1a58921409f16229c72fbeba0778d3d6390c175e0c8a08b7ab97be3",
+      "artContextSha256": null,
+      "publicProjectionSha256": "6ec3df280b4d9c34e9fd67bac5085dc956dab030a07dfbbc748120148fa41b2d"
+    },
+    {
+      "entryId": "infant-press-and-squeeze",
+      "placementId": "9-12.infant-press-and-squeeze",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.infant-press-and-squeeze.json",
+      "sha256": "bfc9adfd448e01f5f9ca643f8f20f447ff845378f162bb833e51509946df28f9",
+      "textPlacementSha256": "798a3b43da1ac2cd73a6f5f1b2294a809eee800ea3504debe5f88537b04654bb",
+      "artContextSha256": null,
+      "publicProjectionSha256": "187f0c1f4fb331790f725e69cc254309b092b15905c5d33318a1df6043900b27"
+    },
+    {
+      "entryId": "infant-press-and-squeeze",
+      "placementId": "12-18.infant-press-and-squeeze",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-press-and-squeeze.json",
+      "sha256": "c09c5045c002af16d1ae193bf2336b95bc68488818dc8eea7a773a3f08a0b886",
+      "textPlacementSha256": "5cb5565bb6ca850dd2645cff0ebd3badabe90ba17415f0f40c639b3b347550fb",
+      "artContextSha256": null,
+      "publicProjectionSha256": "f6bcf78789a7f70572116d362ebd5217ce3759aa2428e0bfd24813c328e015fc"
+    },
+    {
+      "entryId": "infant-drawer-to-explore",
+      "placementId": "9-12.infant-drawer-to-explore",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.infant-drawer-to-explore.json",
+      "sha256": "4e988a005d3d4c3cf3785311615e49f222bfcc0a996d42c66840502724ed8009",
+      "textPlacementSha256": "2f2f9131f194a8476be175bab2e893c83ac65eaf8051661a14ef888bf205d3e3",
+      "artContextSha256": null,
+      "publicProjectionSha256": "c5d3e3a523c58168c04e68fa43b4530b7ba83deb27ea903dc0a358e31ffb3c77"
+    },
+    {
+      "entryId": "infant-drawer-to-explore",
+      "placementId": "12-18.infant-drawer-to-explore",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-drawer-to-explore.json",
+      "sha256": "8254d18267760c55e08d2254b8f8bf48d07029f1308d15a0d741e0f9fb18280e",
+      "textPlacementSha256": "129c1322f0104ef657dda996f028d4018c9d75b3fe4b7c77a3a9bee729746307",
+      "artContextSha256": null,
+      "publicProjectionSha256": "36bd4ee954fdf3737e79226062ea1c4c0947280ab5d07329038e714e270bcbf1"
+    },
+    {
+      "entryId": "infant-drawer-to-explore",
+      "placementId": "18-24.infant-drawer-to-explore",
+      "path": "content/6-18/revisions/r03/snapshots/18-24.infant-drawer-to-explore.json",
+      "sha256": "8fed3ad55537704cf83acc78b4b011e5d000c581c4beabf63a449efd2fd1cfd7",
+      "textPlacementSha256": "576ffc2520db10496f76df8df623cdcd9d05eb9f39e80109a30344ebc9102cb6",
+      "artContextSha256": null,
+      "publicProjectionSha256": "7ec82b2fb4bec10ff72cd1bf425894782723b6e199b02a2a3312ae69606f1b3e"
+    },
+    {
+      "entryId": "infant-drawer-to-explore",
+      "placementId": "24-36.infant-drawer-to-explore",
+      "path": "content/6-18/revisions/r03/snapshots/24-36.infant-drawer-to-explore.json",
+      "sha256": "921c3858c28e340aa8f0b047683a5e22d10a8a73828a10d8c7ea8cf0a4646e3f",
+      "textPlacementSha256": "76f1dba8a25ea405da26e4fabdb6e268539a928a3d0a55635f0800474422dd99",
+      "artContextSha256": null,
+      "publicProjectionSha256": "84fea1a003c38713500156268c3af5e7a4d5290245da91c403cb49a1708bcc44"
+    },
+    {
+      "entryId": "infant-music-player",
+      "placementId": "6-9.infant-music-player",
+      "path": "content/6-18/revisions/r03/snapshots/6-9.infant-music-player.json",
+      "sha256": "29504ce973a512bd6672c984f83710f69d6c9aef7edcd94d65693e499092972c",
+      "textPlacementSha256": "489fd753fec47321903231d41f33e3f1932b2b1cff83c21d30a1804ad8a8c8af",
+      "artContextSha256": null,
+      "publicProjectionSha256": "fe327e08bde7ba51de3a6742214bc1596240ab225deb105dd3f1d5806b1a3c54"
+    },
+    {
+      "entryId": "infant-music-player",
+      "placementId": "9-12.infant-music-player",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.infant-music-player.json",
+      "sha256": "fe351a292fdbfb48c876d859ff9d0736bc9d7a50102e90520265ea85ed0d9f5f",
+      "textPlacementSha256": "f46cb0cf13f21f65f5e3f42d24d53c0278fbae04ea59aa6f21a06492eb84ee13",
+      "artContextSha256": null,
+      "publicProjectionSha256": "a10cca83f72940e02094d2f2ac2ab04e77f05e450acd6d47ae6ac399660eb60f"
+    },
+    {
+      "entryId": "infant-music-player",
+      "placementId": "12-18.infant-music-player",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-music-player.json",
+      "sha256": "b393c6947e8c492986312a2489e9bef2a145562007431e18f4c4b0c8b98f2e02",
+      "textPlacementSha256": "f423ec3e95c5d50d50ec96f074e00a18cc8289cf39d1413cd5e3d273635948f4",
+      "artContextSha256": null,
+      "publicProjectionSha256": "e1ff8f8f57a134c0d6ab26f3787ffb5515286e411c6138033f11dc0fe057dba9"
+    },
+    {
+      "entryId": "infant-spinning-top",
+      "placementId": "6-9.infant-spinning-top",
+      "path": "content/6-18/revisions/r03/snapshots/6-9.infant-spinning-top.json",
+      "sha256": "8126d9b4d08a4d5cc56fc3fef83b2249f9c82555f958b9033dd81f0b84a2190d",
+      "textPlacementSha256": "ee829de72aa2ad34025f4799b093adc0c7bda654b493cf01348c557ba9ec2eb6",
+      "artContextSha256": null,
+      "publicProjectionSha256": "9aff7c8bba315b15b5eb1213f3d10094ad0607296e2987ce39b0f6a34ce99c79"
+    },
+    {
+      "entryId": "infant-spinning-top",
+      "placementId": "9-12.infant-spinning-top",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.infant-spinning-top.json",
+      "sha256": "7a0b72f4bb985f3d78beb91034ed9332ab39be60ca514d2eadbd21b87bb28fc1",
+      "textPlacementSha256": "bb9fec27d48c845c670ac09041bd5beb628edada10f9a9a0626336ffb4328e0c",
+      "artContextSha256": null,
+      "publicProjectionSha256": "bb3c75d17f928dc302ad9dca057f4a666d3ff8c15177715d912831c6f0e598c7"
+    },
+    {
+      "entryId": "infant-spinning-top",
+      "placementId": "12-18.infant-spinning-top",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-spinning-top.json",
+      "sha256": "d4e3fea57a84230f0515c54c53937b54414ba3e8986ff240ea2479c794816549",
+      "textPlacementSha256": "ba2c1a1f02dfbde3d43b3689f714e9a48c4b25324dc8664d74a4e06cbd832e23",
+      "artContextSha256": null,
+      "publicProjectionSha256": "ba9459d4f99074a0203bbee8911b157ee0f862329732d86ed357cfba5112d4db"
+    },
+    {
+      "entryId": "infant-spinning-top",
+      "placementId": "18-24.infant-spinning-top",
+      "path": "content/6-18/revisions/r03/snapshots/18-24.infant-spinning-top.json",
+      "sha256": "58cb5c33524402381763c25f85d789530a3a02b3c48393cc482cc94f3aac2100",
+      "textPlacementSha256": "7785b28d34c840ff25dbaaa1ae841478c136eb2f5cf95b4dc5604cce31934801",
+      "artContextSha256": null,
+      "publicProjectionSha256": "3def9424a0af94cd1da3e42df12536223fdbe5c9293d53363ae0f842a90758e7"
+    },
+    {
+      "entryId": "infant-spinning-top",
+      "placementId": "24-36.infant-spinning-top",
+      "path": "content/6-18/revisions/r03/snapshots/24-36.infant-spinning-top.json",
+      "sha256": "54a9fb4401e2bbdbc85b5af6ea01e2fb00dd7515ab4ebd5ccc60d87447fc48f9",
+      "textPlacementSha256": "3bf3525c1a2af4b81535c5d962794da8f0d8af01e48ae5178260c89bd27477ef",
+      "artContextSha256": null,
+      "publicProjectionSha256": "ff35fed48ecdd4569a855383115f28dbb532fdc08d69064712e73c954ee1c0c8"
+    },
+    {
+      "entryId": "baby-movement",
+      "placementId": "9-12.baby-movement",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-movement.json",
+      "sha256": "463e62531d2f2584bcab5ff972b9f388a4e020bb9aad469e45cc534b7a93a724",
+      "textPlacementSha256": "1ca980b48d9ccd95b9daea64b4871e5ac7272583b6e00b11debf008d60a97bea",
+      "artContextSha256": null,
+      "publicProjectionSha256": "b4134dc0757e9fd892842268cbae252e5ef4c27396bf4b721f7514024565d93d"
+    },
+    {
+      "entryId": "baby-movement",
+      "placementId": "12-18.baby-movement",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-movement.json",
+      "sha256": "519fcb5623059f5fa9405fa7726b05cd8c285847c646f658ff6be38fbdbb06a1",
+      "textPlacementSha256": "7a32d0cc33af9f56d7f34d33be4c8490f54fe17e98ba008d531cd4b4cefb1a59",
+      "artContextSha256": null,
+      "publicProjectionSha256": "55b389c6583d0595703fdf5332181f375beefb0682203f466c3618db7f1e79ed"
+    },
+    {
+      "entryId": "baby-language",
+      "placementId": "9-12.baby-language",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-language.json",
+      "sha256": "5ca7b5cc7f1ac539c8d1a7ee82058037e6f3ee008b0f1b8093bd35df926be161",
+      "textPlacementSha256": "025af3f25bb78fee841107b0767cfe4cae89f1f87c0ced599818840c1dbd5984",
+      "artContextSha256": null,
+      "publicProjectionSha256": "57be69a648c6bb9fb7c6236d00161cf99b3e3cdbd630c6b6c9405b549b6e4ef3"
+    },
+    {
+      "entryId": "baby-language",
+      "placementId": "12-18.baby-language",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-language.json",
+      "sha256": "2af2e3057e2de4bc1674aa146925abb69bc43a53afb51be5596997bceed4cdf2",
+      "textPlacementSha256": "f07f551aa3a6258f7d061d2d26983915a9e46ca3d0625faf0c58d24cc9d2fed1",
+      "artContextSha256": null,
+      "publicProjectionSha256": "8a1e5fdc2b3445617cf91928a14343f04d37cceff44cd98deeddf159050e387f"
+    },
+    {
+      "entryId": "baby-naming",
+      "placementId": "9-12.baby-naming",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-naming.json",
+      "sha256": "00c0ee318626412b52bae636339bae68b8cb0e8496bcab055bb1cbaff09166a9",
+      "textPlacementSha256": "35d612423c7fb90c092073bd6349e5fed8569391f092a9988e2170ced864b2da",
+      "artContextSha256": null,
+      "publicProjectionSha256": "6a5df47803ec037dd8514e32371f6bce6d8ec9ffc375c562c227244a8f362e52"
+    },
+    {
+      "entryId": "baby-naming",
+      "placementId": "12-18.baby-naming",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-naming.json",
+      "sha256": "b6761853bc84a49e6dc0aef856161fdab214311703d59ffe9c31685df2b6a958",
+      "textPlacementSha256": "361ddb8eccb05aa9bc1ae9adbb3923305d84da2c3d760237366b8ed452cc16fa",
+      "artContextSha256": null,
+      "publicProjectionSha256": "f26cde067a98fddd27638955bc0063122d75878621d95950cdf71d38f1aead27"
+    },
+    {
+      "entryId": "baby-books",
+      "placementId": "9-12.baby-books",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-books.json",
+      "sha256": "9c69cb4d24281e7a9bc560da929de8c6ca7d8d89812dce1a0ba579f0a422e876",
+      "textPlacementSha256": "703ff3d10ecad3f6c1bde6cc16e741367283eede1251dde71fc599ca871c28bc",
+      "artContextSha256": null,
+      "publicProjectionSha256": "16dec1283d30fe33f033b98d28b9ecf039b56b9d9f93f33160afb788231751f8"
+    },
+    {
+      "entryId": "baby-books",
+      "placementId": "12-18.baby-books",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-books.json",
+      "sha256": "0160a3cf41e440f03703335253127f3d43ec3c984ef922a5d925e078542e3c49",
+      "textPlacementSha256": "44d180e089454b3683a0e416ad99ea01f92555df76ea3afd6df663e299849727",
+      "artContextSha256": null,
+      "publicProjectionSha256": "f4afb7aff25a65ac8ce9316a01d09a42d2a8b3a3bb001f9950b3d3835fc3f074"
+    },
+    {
+      "entryId": "baby-songs",
+      "placementId": "9-12.baby-songs",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-songs.json",
+      "sha256": "8c7c8c4931294bc54d644ac01953cdf157e9257a53e8be973aa506ad36aeeb96",
+      "textPlacementSha256": "85157f5b16a49207a99a11776d461388630740bfc06cd0029613b5aadb5a3bf8",
+      "artContextSha256": null,
+      "publicProjectionSha256": "df536ecc4174a6d08010588b287037acfcd72d152d0f3f09e55219703873dec6"
+    },
+    {
+      "entryId": "baby-songs",
+      "placementId": "12-18.baby-songs",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-songs.json",
+      "sha256": "c3f7b68f59ccc2aa28a166dfda6c5e927cf6522cbd7090f923c24fd5c325e8eb",
+      "textPlacementSha256": "75c61e5bd5e7922690cef1f31d804e37f5e82d7b2e81edf729f8f6c9f032620d",
+      "artContextSha256": null,
+      "publicProjectionSha256": "0b1be84f48b23271e23bce2b688fde9d2db02cb3d84ed4a42130ae7ffd0008d8"
+    },
+    {
+      "entryId": "baby-outdoors",
+      "placementId": "9-12.baby-outdoors",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-outdoors.json",
+      "sha256": "59289e186a7b4af6eaf471c78b06ecc3c5950856b284cc926f835af80009eff7",
+      "textPlacementSha256": "6aca35f77e59afcf5bf7eb87b2cf3c429ff0f3858bdc180de918bb7bd4978c57",
+      "artContextSha256": null,
+      "publicProjectionSha256": "6336d115d321e96937cd6f492a0db41e8cf2c11816db9295a9fb99b6ec42791a"
+    },
+    {
+      "entryId": "baby-outdoors",
+      "placementId": "12-18.baby-outdoors",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-outdoors.json",
+      "sha256": "3f4692f4a77f5790a08252f0a81a48cb58ef10e12ed2b9bdecf1fbeb0317c930",
+      "textPlacementSha256": "f34e1eb7141f566728d8a84f28823a0aea04c836f85a8b84dc7f13e4bd7de327",
+      "artContextSha256": null,
+      "publicProjectionSha256": "127cadaa4436918ea1d30d1d0a3f4c39b65199b8599d712029bbd141380c8c96"
+    },
+    {
+      "entryId": "baby-hand-discovery",
+      "placementId": "9-12.baby-hand-discovery",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-hand-discovery.json",
+      "sha256": "26b3672b22f240bd67c11632c4e45a90c831122a69a1d9e5cbc5c40b8391572d",
+      "textPlacementSha256": "d3e4f3f05cc9495ae5b06dd369eba69d9339318ec400a6d1473677cc1008ba31",
+      "artContextSha256": null,
+      "publicProjectionSha256": "488f1c74705881e53e7c5a56a1318f75eae3c4fa7c60329ae9b1c453bddcb809"
+    },
+    {
+      "entryId": "baby-hand-discovery",
+      "placementId": "12-18.baby-hand-discovery",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-hand-discovery.json",
+      "sha256": "008f5e08136c5dffcf7aae9e516dad56e39899ce5fbf2723bf6b0fcba6eb7f16",
+      "textPlacementSha256": "9934468b4c518cb21c7bcf3add420d6cb3427a794609d79a3c1d24a1cb329fe1",
+      "artContextSha256": null,
+      "publicProjectionSha256": "6f26fea82eda5d018eaee14e76ea4eb1fc67a55c6a2f0e7b3e400eca9e0723d2"
+    },
+    {
+      "entryId": "baby-treasure-baskets",
+      "placementId": "9-12.baby-treasure-baskets",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-treasure-baskets.json",
+      "sha256": "6761c0dc1b2e891b10d568c5c9c7731924fa270ba00e68ee4da5c29f889eb8a5",
+      "textPlacementSha256": "9757b202152d03d5ce768e969c81260f8e5c31ba31eb05e095efbf0fc025c7aa",
+      "artContextSha256": null,
+      "publicProjectionSha256": "1f9c0ae0d400eafc5d50612d62697e0cc53433215437ca6b3d48ae869e5cfdd0"
+    },
+    {
+      "entryId": "baby-treasure-baskets",
+      "placementId": "12-18.baby-treasure-baskets",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-treasure-baskets.json",
+      "sha256": "49b376d146411c549db89e0bd606751e9926535613061aaaac0344dbbe282c45",
+      "textPlacementSha256": "6d3bb095d022ba26658e1e68d9abe9099bfa2111e784552af188e19a09ece891",
+      "artContextSha256": null,
+      "publicProjectionSha256": "44710d30cf848093750edfdb4d3f2d97027c46cfa4058106ae70c14018012b45"
+    },
+    {
+      "entryId": "baby-rolling-balls",
+      "placementId": "9-12.baby-rolling-balls",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-rolling-balls.json",
+      "sha256": "af95625874a35b4329dd6563b640579864737c8123237843f11e08fc804553e0",
+      "textPlacementSha256": "1b2a8a3691ab9c6ddce083e16118e8ed76b9a5f708d0c8e2ab9674f60d141d4d",
+      "artContextSha256": null,
+      "publicProjectionSha256": "4fe1aaaca7af0e2eedac77f6e7fd838f74714c7c6d714dae792c73f55d66dc67"
+    },
+    {
+      "entryId": "baby-rolling-balls",
+      "placementId": "12-18.baby-rolling-balls",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-rolling-balls.json",
+      "sha256": "6f16dd98df330865b0ad0dc85ee654c8f8d361644b4031c0a3effb97c82ae432",
+      "textPlacementSha256": "256f0ff29dad117ad2666c534eeea6a81f14f58aad89a81355c82ff36092a9bd",
+      "artContextSha256": null,
+      "publicProjectionSha256": "77b7a4df1690b6ba334fed9913dcd4906315c37aa9fe3d8f029bf659ae759a99"
+    },
+    {
+      "entryId": "baby-first-containers",
+      "placementId": "9-12.baby-first-containers",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-first-containers.json",
+      "sha256": "9d4d73f8d7935d9481909b0b03ff3f7a3ca9af6d85bf43955950ab99f6ecde5d",
+      "textPlacementSha256": "d6b1e78b306d0762d2f52f458aa5516a1dbb690ea7df17e46751843f79d1dac2",
+      "artContextSha256": null,
+      "publicProjectionSha256": "da5b7b6d2a6616f22151d644225187015bc872ffac9480589fabb3703c2f0c1f"
+    },
+    {
+      "entryId": "baby-first-containers",
+      "placementId": "12-18.baby-first-containers",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-first-containers.json",
+      "sha256": "5afeb92ee9b04fe519cd8f105edd228b4680f177e3f0bc1ef1ae7bbfad851cf6",
+      "textPlacementSha256": "65eb7a0c0481ae4424e748e18e2097bf797ad77beee4e3db2628f9489786c20e",
+      "artContextSha256": null,
+      "publicProjectionSha256": "57909b1433a415f437571094b88855ff82760d71ee45ea491406c24e4310349d"
+    },
+    {
+      "entryId": "baby-languages",
+      "placementId": "9-12.baby-languages",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-languages.json",
+      "sha256": "494fa61489de9a45607f7306099856c6cea27ab06c1d16fca5b3a16c9fc109ff",
+      "textPlacementSha256": "e87c619ee7ff1020638e3e3316e7b2e056087421b9c52dd0e257b3e538484c4d",
+      "artContextSha256": null,
+      "publicProjectionSha256": "65dc105adc3d6739f445974728de4efd5151ea89ce42d0a13f3ac8c6a68951d8"
+    },
+    {
+      "entryId": "baby-languages",
+      "placementId": "12-18.baby-languages",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-languages.json",
+      "sha256": "6765d424bc19c7053040a25032b664baeb7c75b12c79beab3f31cd2d18e79b65",
+      "textPlacementSha256": "7ce7f64f291ba89c7c17dc2f6d38aa79b93a0db49dbf3df3c9ada72168969588",
+      "artContextSha256": null,
+      "publicProjectionSha256": "c3b98bae29859e031c67aece3422051d5cab5f0bdbea3fa67ad66bdc082e1c8f"
+    },
+    {
+      "entryId": "baby-connection",
+      "placementId": "9-12.baby-connection",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-connection.json",
+      "sha256": "8d839c8f3e48119d0f1523e40a500d2cc4ef280c0aeb64812864f678009ab773",
+      "textPlacementSha256": "18627e7b06e6d4cc77e695b820c596fd3fa0bffdd4e634d345292e77fad5a13e",
+      "artContextSha256": null,
+      "publicProjectionSha256": "c2f9998a4893f1c26bbd0b0f0a8c17b1c59ace54245c81ea1cfdc6b497fdfc11"
+    },
+    {
+      "entryId": "baby-connection",
+      "placementId": "12-18.baby-connection",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-connection.json",
+      "sha256": "0791a5b40b084e5f44c9a11e9da22931756a2cb920133315364d9ac92111dc9e",
+      "textPlacementSha256": "880682ce0d540e937f51ace3efdfee5a6ce5628508c17131df1a7a7e7d8b705e",
+      "artContextSha256": null,
+      "publicProjectionSha256": "26839373842451b300ae8150c04dcdcd2927e866316bfd32fba0926072804603"
+    },
+    {
+      "entryId": "baby-choices-within-reach",
+      "placementId": "9-12.baby-choices-within-reach",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-choices-within-reach.json",
+      "sha256": "aba399d6154b8e749f9d69a41c7fd8eff29863620d6e0224a3f513b1088535a3",
+      "textPlacementSha256": "cbf94b86a6a271b77b95431f515110a871bc8cdbdceeff8e7b84dbf16d53ff2f",
+      "artContextSha256": null,
+      "publicProjectionSha256": "59df19a907c3151e369839509073d6497a69cf57208e943b95c0c902c72633ff"
+    },
+    {
+      "entryId": "baby-photos-at-eye-level",
+      "placementId": "9-12.baby-photos-at-eye-level",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-photos-at-eye-level.json",
+      "sha256": "6c2e2fd52abde8861a36305a79bc6e3f26220fe18dbfa9b6c6388c162fba953b",
+      "textPlacementSha256": "4528ed6188a7ca8fb84205baa529cd8084faf73e9cf5d142f8a6fc41426ecd69",
+      "artContextSha256": null,
+      "publicProjectionSha256": "25fa840b233301b93b008e83936553e7ea6113ea548ee1d4728a2f0550c8374f"
+    },
+    {
+      "entryId": "baby-photos-at-eye-level",
+      "placementId": "12-18.baby-photos-at-eye-level",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-photos-at-eye-level.json",
+      "sha256": "9fcff5cece5f49801076c40de7f2ea91585fd5f714d090de76fcd29d3a23929d",
+      "textPlacementSha256": "2c6fd07919c3b165d50c2dc947c9f6cf94a6c7f1b67aacabd8861e03f40028a0",
+      "artContextSha256": null,
+      "publicProjectionSha256": "35f9759d83675822d06df4a8b7c6ef7b212fa5ae6923ad6dcc1b436c216f3eef"
+    },
+    {
+      "entryId": "baby-space-to-explore",
+      "placementId": "9-12.baby-space-to-explore",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-space-to-explore.json",
+      "sha256": "8ba3520d698066cbbff43383609ca5a345b8d2a3148d83bee73eaff7ca40e0bd",
+      "textPlacementSha256": "13a15a6458c921f203047f4ee80421838343402f3b0d4b2de9018d5c8f891965",
+      "artContextSha256": null,
+      "publicProjectionSha256": "01b7a829925b143be715be0cc7f174c0cf76e66f8ad922752cb58348a2742d8d"
+    },
+    {
+      "entryId": "baby-space-to-explore",
+      "placementId": "12-18.baby-space-to-explore",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-space-to-explore.json",
+      "sha256": "e4c8bafe078c217cb4aafd1d2f93c8eec316e012084f404e9444287292649bb4",
+      "textPlacementSha256": "bad41e4659bc3467dd82ad8f75b01e5482b1b441767136cc56d2137b6c1d2640",
+      "artContextSha256": null,
+      "publicProjectionSha256": "f57e494d1cc4a5453fd973176e63a957e90ef8fbfb8c5461d912fc94416082d4"
+    },
+    {
+      "entryId": "baby-dressing",
+      "placementId": "9-12.baby-dressing",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-dressing.json",
+      "sha256": "8975d86c3f3b0086989b942985cc085d11d30d2523ea53d88e7142210cb9efa6",
+      "textPlacementSha256": "f74e656458e85c0dd347f3980f2b0e38b806a1809c89974ed9951047345218ee",
+      "artContextSha256": null,
+      "publicProjectionSha256": "a8e478eee0b199866ef34014576c71e93ab17c494e26be59e8408c8951ee20a0"
+    },
+    {
+      "entryId": "baby-dressing",
+      "placementId": "12-18.baby-dressing",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-dressing.json",
+      "sha256": "c3842a6450484f1f79043ca7e217e3bb34e2241fde29b9b4fce70bfd734dbeae",
+      "textPlacementSha256": "46cc0415184ca3304e0c4f1eda882584a3ec6e2801beff94a47f9675f0b1d881",
+      "artContextSha256": null,
+      "publicProjectionSha256": "b2f9b1982fa02f1c333fe8d7000f4bc025abb3cee31722b381db4c63d90c90e9"
+    },
+    {
+      "entryId": "baby-diaper-conversation",
+      "placementId": "9-12.baby-diaper-conversation",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-diaper-conversation.json",
+      "sha256": "2f050d7b3ff986e2cd83cb8c07d857b87afa3c4f3c7feb2ceb9654d4dbce6660",
+      "textPlacementSha256": "d5d3178509a0b588bd405e0be8b152eb71446bd9f6f0ecbae1d5d3de4fa87c01",
+      "artContextSha256": null,
+      "publicProjectionSha256": "8bb80f30fcf6d7024d5d8f6bad0b81d1f90f9a54c4a61489573f5f637fc56db1"
+    },
+    {
+      "entryId": "baby-diaper-conversation",
+      "placementId": "12-18.baby-diaper-conversation",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-diaper-conversation.json",
+      "sha256": "7649e59f78ed8c7c9ea8f92856f9c0afa2c81fbf57b3512006c0fd753a903935",
+      "textPlacementSha256": "b48868d35221c0faaf589f91d894e9e242487860604f71fcc5e8cce95c43ecc5",
+      "artContextSha256": null,
+      "publicProjectionSha256": "5cf58b9759159323c0f0ea9e8d83715550d96a09e1a17dd511bc4dda78fe7536"
+    },
+    {
+      "entryId": "baby-care-resistance",
+      "placementId": "9-12.baby-care-resistance",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-care-resistance.json",
+      "sha256": "28624fda9f6eca79068e6296b0e92d4982cad7fbbc70e7393337332e5b71643b",
+      "textPlacementSha256": "a38eaefe8ddcecc00d7aeb700a9e05fe76da1de26cbb98c9e03c7eaa14611e76",
+      "artContextSha256": null,
+      "publicProjectionSha256": "7d65c92f9a347c3249af7ba56e12ba0f5ef3b9c937db9573107daa73f4e861ea"
+    },
+    {
+      "entryId": "baby-care-resistance",
+      "placementId": "12-18.baby-care-resistance",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-care-resistance.json",
+      "sha256": "d7a2a5050ae0638c28e2b8b75b7314ea6453b0e334d2fdd98b3b06a2412500a2",
+      "textPlacementSha256": "f29134aa769fbe0c8db4a6ccf85d895bea5caf1c420028967b7f48f50d618375",
+      "artContextSha256": null,
+      "publicProjectionSha256": "d3d981dae99ece63f1d099b07d76a87124a655ae157d8dc303287138f1587a99"
+    },
+    {
+      "entryId": "baby-feeding-connection",
+      "placementId": "9-12.baby-feeding-connection",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-feeding-connection.json",
+      "sha256": "2f7b70cd1c8705f7db11b1cfeaf591e64348721a6b83561be70ef1f8a2d2ac4e",
+      "textPlacementSha256": "6be046d0c19f093edd1afd356e23d62cb2e9bdf532e1d5203825b4453ffddc59",
+      "artContextSha256": null,
+      "publicProjectionSha256": "76c4feda752c274ccc6330bd6fdcd7d257b492d22aba2f7b48f79f8db4c58fee"
+    },
+    {
+      "entryId": "baby-feeding-connection",
+      "placementId": "12-18.baby-feeding-connection",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-feeding-connection.json",
+      "sha256": "48204f9ec3581c8a768f978174bb6c032970e31545e0a1a844dc167f8461cea3",
+      "textPlacementSha256": "baff036d6ef4b172fe2406aea27fa291dfdd28f90c17e60b87b41fc24b03a019",
+      "artContextSha256": null,
+      "publicProjectionSha256": "91a3c4f3e2bbbe4dd3dba35e0c6f6766877e4061657b5c0ef5f24b9a0e74d80f"
+    },
+    {
+      "entryId": "baby-solids-perspective",
+      "placementId": "9-12.baby-solids-perspective",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-solids-perspective.json",
+      "sha256": "01b6c74529449fea9b58e869b1aaf06add7ca5acb0d04b087c1bb0c387e7fb68",
+      "textPlacementSha256": "5690a6e6fc59dc0c7b8f52d355d34ecfb8f1865ed41f1a68b74dc59fa355bb0f",
+      "artContextSha256": null,
+      "publicProjectionSha256": "83b818a144a6d622ab17865e9f44684fb3e6571fd9d9d25090c5ef242f1ec923"
+    },
+    {
+      "entryId": "baby-eating-place",
+      "placementId": "9-12.baby-eating-place",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-eating-place.json",
+      "sha256": "6823c3aa4c35628a677652f967617ca24b0419ecb334fbcbaf3ea94c4feec98c",
+      "textPlacementSha256": "866ca73bcd9736508112eb242cceb57a05a98b44c7fefd0d00cd563208048138",
+      "artContextSha256": null,
+      "publicProjectionSha256": "0a0ccbf55e476a23fe0880db4d81bb9e24282c8fe6288350a1aa7d86a4384174"
+    },
+    {
+      "entryId": "baby-eating-place",
+      "placementId": "12-18.baby-eating-place",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-eating-place.json",
+      "sha256": "e95f368d4698a4e0ce736aa18440faf850f7d45459660f8cfe52c6d86c098d64",
+      "textPlacementSha256": "8a98596d98b2f88929aadb1664914be69722beb88fa93bc4369affc732c7587c",
+      "artContextSha256": null,
+      "publicProjectionSha256": "ae05fdb652985deb8664f0c29ca0a10cba5c9d3ca8331effa5e564e6aa804182"
+    },
+    {
+      "entryId": "baby-eating-amount",
+      "placementId": "9-12.baby-eating-amount",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-eating-amount.json",
+      "sha256": "323377862bca080d0eb98b20c829c771a7c0d2e11bf6114db55535c241fcf27a",
+      "textPlacementSha256": "ee10cf47177e52fd08a70a6582bce54cb56ed0861d6cdd6f31c9c9d82114ac97",
+      "artContextSha256": null,
+      "publicProjectionSha256": "74e9569af8dba42a941942e86d94a9cef0faefa39fe849b3d6a5da1d5fe6b351"
+    },
+    {
+      "entryId": "baby-eating-amount",
+      "placementId": "12-18.baby-eating-amount",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-eating-amount.json",
+      "sha256": "51283022ea3b072cb7d13ddf478b07101c67d794fb9a4f9eec7224eaaa74ff68",
+      "textPlacementSha256": "87c4281798168dae48e32633080d0416fa8f1ec3d4e0aaf758d4580a34626c4f",
+      "artContextSha256": null,
+      "publicProjectionSha256": "7db66e314cb24838d7d31bef43ebe0f02a3884cf77f6647296b0fab30722259e"
+    },
+    {
+      "entryId": "baby-meal-cleanup",
+      "placementId": "9-12.baby-meal-cleanup",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-meal-cleanup.json",
+      "sha256": "816b9de183215dd56a1241426e9d1f72e3b1af6d18e90b1e5932c415e641832a",
+      "textPlacementSha256": "71ba1e2fc630e7c469843b34561836690b5ff60ec5dc07c5e93c1827531a1790",
+      "artContextSha256": null,
+      "publicProjectionSha256": "0e504b2f303db147754af45ac660ba279c4323affce2af7b0acd06dc96e30549"
+    },
+    {
+      "entryId": "baby-meal-cleanup",
+      "placementId": "12-18.baby-meal-cleanup",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-meal-cleanup.json",
+      "sha256": "f8cee1900c47cab08c6ac356c4e7400278fca5eed386a30be32b8628f0ff8d74",
+      "textPlacementSha256": "86973bdcad030baf73a6f456d51072eff84e675cbc42ac6a01a5e4752ee9a96d",
+      "artContextSha256": null,
+      "publicProjectionSha256": "cab62783ab4e36f47ead2cabad39a8fb056ef800141e3a2a3aa7ba130b6cd430"
+    },
+    {
+      "entryId": "baby-daily-rhythm",
+      "placementId": "9-12.baby-daily-rhythm",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-daily-rhythm.json",
+      "sha256": "23b8cef5e69c2fa65ad61ce73a438be7b5812938e777bd6b432864d9694a663c",
+      "textPlacementSha256": "1f7db592f3fbca9c3dcb93238fdb4bbe323376c4bce69802083c5e6312724b7b",
+      "artContextSha256": null,
+      "publicProjectionSha256": "00bcfca3f267d6e13c3f0253985a17d9e94649b0f00bcaa862df3eab3abde494"
+    },
+    {
+      "entryId": "baby-daily-rhythm",
+      "placementId": "12-18.baby-daily-rhythm",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-daily-rhythm.json",
+      "sha256": "3145e2f16fcf9561a7091e9a50d94468f195be972e693a67074367e8341bfdb3",
+      "textPlacementSha256": "a3672e7b27398e179369a07a928154e26e799ea8d04728ee3a7eb24aa0928f49",
+      "artContextSha256": null,
+      "publicProjectionSha256": "67c7b77ef3968e5b71eb129321f90f1d598da0559201d0c014be1f30589db28f"
+    },
+    {
+      "entryId": "baby-sleep-support",
+      "placementId": "9-12.baby-sleep-support",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-sleep-support.json",
+      "sha256": "3287b3f1f3399597046456437811767aa02973e79731e222a7e1296b0c9e7f54",
+      "textPlacementSha256": "13caace1835dd50cdb327accf81508883d44633587556d123d770e4bb309d7d5",
+      "artContextSha256": null,
+      "publicProjectionSha256": "fc29a46b401ce8311bc637ba9c4c743a3a792cd3c45cef1812b1eb029fdd70e6"
+    },
+    {
+      "entryId": "baby-sleep-support",
+      "placementId": "12-18.baby-sleep-support",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-sleep-support.json",
+      "sha256": "05bf96962a0bd3827e512162937600759b32feeb34327f1af24d0370fcccca99",
+      "textPlacementSha256": "10a3a72af2d2a1c0246842249580d22ec6b205dbe1d3726f7b25c98b9dfd984c",
+      "artContextSha256": null,
+      "publicProjectionSha256": "9fcb7fe8472b751d0d37cbc1b03fe0bddb3b664c037091e53cc690ede424dcde"
+    },
+    {
+      "entryId": "baby-sleep-changes",
+      "placementId": "9-12.baby-sleep-changes",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-sleep-changes.json",
+      "sha256": "d6bfed9ce14cd3011835c51e34cfc05af03f2fccc88486f62ad77af16eb8d3cb",
+      "textPlacementSha256": "dae1578cc2490942cdfd095dae5f34f1ec49a4e964512764a2714796357ac8ad",
+      "artContextSha256": null,
+      "publicProjectionSha256": "03c5abc1ab34753a8f47567154749794cb8ffcb2bd2a2a3248b3674e39f4255b"
+    },
+    {
+      "entryId": "baby-sleep-changes",
+      "placementId": "12-18.baby-sleep-changes",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-sleep-changes.json",
+      "sha256": "a2f5e1729868bd11a6c1f8e5af7315fa40c1b8f364afadabf4f1ba464319e530",
+      "textPlacementSha256": "c4797d715790bf881aeb6699f80cf17e0112b517836f803f8edd443b765d4875",
+      "artContextSha256": null,
+      "publicProjectionSha256": "92ba4e5f361bc1f674d92901e6f4a4a7ba4fb8946354d0508590bdd95d1642a2"
+    },
+    {
+      "entryId": "baby-pacifier",
+      "placementId": "9-12.baby-pacifier",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-pacifier.json",
+      "sha256": "cbbbccd852ef3ca629cdfd92320ecc096edde6e7c9b26ef1efca83be58ce083d",
+      "textPlacementSha256": "cfe7c84d60e5c5b2d99c4438c9b0b6d8d3fee6cd5bf1b9fc91048c6839e5dac6",
+      "artContextSha256": null,
+      "publicProjectionSha256": "d063cc7f809b9c10321a12a0c7221c6589df943cb92f0d018bca41348356b776"
+    },
+    {
+      "entryId": "baby-crying",
+      "placementId": "9-12.baby-crying",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-crying.json",
+      "sha256": "29132163d87e5eed31ff1ac60503a3ada90f801dd1f234365847c119c0dcb6cf",
+      "textPlacementSha256": "77fc36eaf96f9ffd14bc10ac4f7a21cf8d02a06f3db842f6231fd4361c89a282",
+      "artContextSha256": null,
+      "publicProjectionSha256": "37e781f2f8fede2233dec11fa3c32e74d645d286cab33b4be0de67a697b61800"
+    },
+    {
+      "entryId": "baby-crying",
+      "placementId": "12-18.baby-crying",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-crying.json",
+      "sha256": "b898c48f26abd1c0ba71bf0b935a5640b5234e27a76ed7978a15022a07c8f3db",
+      "textPlacementSha256": "6912aa71fb4b27b2b4719c6d6f53bc1a67bcea7528328b82fbcea7582a0baeab",
+      "artContextSha256": null,
+      "publicProjectionSha256": "dba6e05cadab9da4f4a88b203e3b43dd394664ac7f2e2d611a18f58b21afb7c4"
+    },
+    {
+      "entryId": "baby-separation",
+      "placementId": "9-12.baby-separation",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-separation.json",
+      "sha256": "17dd4a4f3bfba1c7da263fae504c3929cfdf275151fc40df8493f190168fdbe1",
+      "textPlacementSha256": "fc5e8d46bfb7b9edd66d1beedcf9bd13bbb6d4d75aebc17b4597cb9464b416fe",
+      "artContextSha256": null,
+      "publicProjectionSha256": "dd68fa4d3468955041e9c20536c9bd2fe0f717955bc0c44fae910fe6a22bff2d"
+    },
+    {
+      "entryId": "baby-separation",
+      "placementId": "12-18.baby-separation",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-separation.json",
+      "sha256": "c84e7a6dc0eb3725ed8cf6324e61b85e2999c29a2190184e6447b07406ed0dad",
+      "textPlacementSha256": "7625403f53d6d45bc1715e0ff438c4fdc2db966acf4b670ed3d72d1aa91d5ec8",
+      "artContextSha256": null,
+      "publicProjectionSha256": "1d1179ec210c1a3ff20fbc772a515a6f9e057362374ce0cd241077df874379a6"
+    },
+    {
+      "entryId": "baby-sharing",
+      "placementId": "9-12.baby-sharing",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.baby-sharing.json",
+      "sha256": "64bdd71658963fb005c20e37872df26ea7e29e3853d6a6a513928a5de48da52b",
+      "textPlacementSha256": "e023a6d9b3f0eec1d9af569bb3ee8495089687de926c3169fb3da97ed8d50393",
+      "artContextSha256": null,
+      "publicProjectionSha256": "7bc4918f92cd3bdad9c88b05b89cc854e3e7e7698f8f5aff6eae10d86c6a9179"
+    },
+    {
+      "entryId": "baby-sharing",
+      "placementId": "12-18.baby-sharing",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.baby-sharing.json",
+      "sha256": "34006b8a763752a318ee1d1cf68a53a202a64587e776bd68fd6b9c8b9a360f65",
+      "textPlacementSha256": "a3ae0fc2099d962da06d200876c5e2d86a90b14adf68ca2a9f4892596377d6d2",
+      "artContextSha256": null,
+      "publicProjectionSha256": "85453463228f500bd5acca72a41e19dae27fa58badbbb873c68d59063c525a38"
+    },
+    {
+      "entryId": "infant-eating-tools",
+      "placementId": "6-9.infant-eating-tools",
+      "path": "content/6-18/revisions/r03/snapshots/6-9.infant-eating-tools.json",
+      "sha256": "ed78bfffab9cdea32168066d5839555b1f48f6e35461549a8a6258615260afa9",
+      "textPlacementSha256": "334b1b515b279c67af75c4943980ead2457dc9c7731d8806528a8b10f7a338ce",
+      "artContextSha256": null,
+      "publicProjectionSha256": "478afb7ce2dccd438be54da92ec111da104923b9750a9f0236783c6c4ec11dff"
+    },
+    {
+      "entryId": "infant-eating-tools",
+      "placementId": "9-12.infant-eating-tools",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.infant-eating-tools.json",
+      "sha256": "a276ab4c749d084303036ca8857fe18e6ccfa47828ea06e48d1d3406476b6b5c",
+      "textPlacementSha256": "94b008a123eff1a0c6a17a4ab55e33060e6681252fe2a9393154b1622a36343c",
+      "artContextSha256": null,
+      "publicProjectionSha256": "3198f539df6774cae3c5c130a0c6b9faee4a7ccde49b7270c980c145ad00116e"
+    },
+    {
+      "entryId": "infant-eating-tools",
+      "placementId": "12-18.infant-eating-tools",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-eating-tools.json",
+      "sha256": "c0c8ee2db1dc597702d4e603f354310bd4fe46d7e3af5e38dded7561d1e79cab",
+      "textPlacementSha256": "af2775f0f03a749abbc3f36ebec9d56d4087a4222537d02aaa96d7b790c6f6f5",
+      "artContextSha256": null,
+      "publicProjectionSha256": "3ba16d33e45d8b0f9e449be189aeca049b2d5dffb73124e3b5a3dbf31707bc09"
+    },
+    {
+      "entryId": "infant-eating-tools",
+      "placementId": "18-24.infant-eating-tools",
+      "path": "content/6-18/revisions/r03/snapshots/18-24.infant-eating-tools.json",
+      "sha256": "82b148628af0aa3ecaa7e04af630ab2f335ef6592cf10460bf1fe2f2afdec12e",
+      "textPlacementSha256": "f7f5062769440ce8fe56f3ca1dfed4324faa821619fec5ecc117a5868af161db",
+      "artContextSha256": null,
+      "publicProjectionSha256": "0bcb2012f0830d4dcc400403f1411361cd2d5e95d40edb60ba6f53489b646a75"
+    },
+    {
+      "entryId": "infant-eating-tools",
+      "placementId": "24-36.infant-eating-tools",
+      "path": "content/6-18/revisions/r03/snapshots/24-36.infant-eating-tools.json",
+      "sha256": "d933b0746ada2e7205c8a6d16a0eb315e9cd688a7c7f163e855179a965d258aa",
+      "textPlacementSha256": "3cab3d8610dd8485f69238ca7a4728f8c71d62a4de0fbe8d0d88c2260435aeef",
+      "artContextSha256": null,
+      "publicProjectionSha256": "ea4a918586a0f7b4ff78647ef0b2dcad9bfbbb54c8e55a88d34c5abe1d42cf3c"
+    },
+    {
+      "entryId": "infant-standing-diaper-change",
+      "placementId": "6-9.infant-standing-diaper-change",
+      "path": "content/6-18/revisions/r03/snapshots/6-9.infant-standing-diaper-change.json",
+      "sha256": "14f8b6d0f0ef1b15abe2c6ea59d0c4a7399f1fc27bdd10c4f4b5c40c6ecfc00e",
+      "textPlacementSha256": "6bd80c20565027ac4f99d0223323c850fad0527e19d522e1fc0bd9e8f0820a07",
+      "artContextSha256": null,
+      "publicProjectionSha256": "1f74420296103f46c971dc3569c85bbeaf0793e1d7c70a20a0679a4f4804fb76"
+    },
+    {
+      "entryId": "infant-standing-diaper-change",
+      "placementId": "9-12.infant-standing-diaper-change",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.infant-standing-diaper-change.json",
+      "sha256": "3fe36f3791ddbe15268cb91af1666dd591e37bb75fa27d42517c94932b9eb043",
+      "textPlacementSha256": "5156d87648c7833b75d6eaf27962ec80589fe9badbd923f99f0be729b55b309a",
+      "artContextSha256": null,
+      "publicProjectionSha256": "9ad37dc3bb977a8d0301c9569ef8c785289296df9ffc6023dec4ca4073d505a1"
+    },
+    {
+      "entryId": "infant-standing-diaper-change",
+      "placementId": "12-18.infant-standing-diaper-change",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-standing-diaper-change.json",
+      "sha256": "cdb02ba1a18fa6e32d0c67a0ee053ec313b87758ede8b5000353d326619dd588",
+      "textPlacementSha256": "f07a3d4ea9cc9dcaf64f2a673ac35a442c5b6a56d3974fd7744087ea73091cc3",
+      "artContextSha256": null,
+      "publicProjectionSha256": "2f85871f87d93790da52828192433e28dff02ea712cc03584fd064ddf927d8d2"
+    },
+    {
+      "entryId": "infant-standing-diaper-change",
+      "placementId": "18-24.infant-standing-diaper-change",
+      "path": "content/6-18/revisions/r03/snapshots/18-24.infant-standing-diaper-change.json",
+      "sha256": "4e2a306e6192cd0fbf02267a59905db9e8757db3b39ee50b6bc28a38bd3d165e",
+      "textPlacementSha256": "82c834dbc7919c0a1bd84a376d19fb64730df033c81089412ec6ea7e8f3adcbb",
+      "artContextSha256": null,
+      "publicProjectionSha256": "5bbc5a53415897cdfa8d3ba8782f16c2cd6c109b439d9313e280f10f324af7b0"
+    },
+    {
+      "entryId": "infant-standing-diaper-change",
+      "placementId": "24-36.infant-standing-diaper-change",
+      "path": "content/6-18/revisions/r03/snapshots/24-36.infant-standing-diaper-change.json",
+      "sha256": "fb17aa97006e1a79b51522fd9fd85a0cee940ed89af51072fddc81273a5a8278",
+      "textPlacementSha256": "2789dbc6330f620d6606e350741ac308e25f2e8d0af8fa766653a669595d752e",
+      "artContextSha256": null,
+      "publicProjectionSha256": "d91738f07f3f50e2a241fbe714021955d0aafe466cf84c83a35b28985daf816c"
+    },
+    {
+      "entryId": "infant-dressing-place",
+      "placementId": "9-12.infant-dressing-place",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.infant-dressing-place.json",
+      "sha256": "2bcbcaa5599de629392b5b57af9ffa40de769ca15ff168eef21943679da68fe3",
+      "textPlacementSha256": "c0eeebea84aa338280136bb0fee4c25e59b3eaa703a9514f3b9d419a8d486bdd",
+      "artContextSha256": null,
+      "publicProjectionSha256": "9eed8a38d008ec0f697b00685265b6b9a761c66d0c367cfb7f907f39fc3a3407"
+    },
+    {
+      "entryId": "infant-dressing-place",
+      "placementId": "12-18.infant-dressing-place",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-dressing-place.json",
+      "sha256": "00929231d8a7927868a622b6528148a0d5033593fa79e31618dcbd982439a038",
+      "textPlacementSha256": "8ae268a2224c4de7bb720f4fc0ee257d0f75c1830d98900ed8dae3364e7df29c",
+      "artContextSha256": null,
+      "publicProjectionSha256": "d2c7fb578c90ca3fd7c12da553c30f4a21d2ba95d8af63a68eb605585d8f0267"
+    },
+    {
+      "entryId": "infant-dressing-place",
+      "placementId": "18-24.infant-dressing-place",
+      "path": "content/6-18/revisions/r03/snapshots/18-24.infant-dressing-place.json",
+      "sha256": "e253a3c3f260025362edbf0a83bdc9f6494bb5f9444b349731ef8f776510d165",
+      "textPlacementSha256": "b5dba795e19d3eedbd58e23a106f13f8163403c5765b6aa53b07abf24622c46f",
+      "artContextSha256": null,
+      "publicProjectionSha256": "1a7527efb1ec3f79d5ead5b836dd68f1525dc0c33f3d4b7fb1c83d436a244d92"
+    },
+    {
+      "entryId": "infant-dressing-place",
+      "placementId": "24-36.infant-dressing-place",
+      "path": "content/6-18/revisions/r03/snapshots/24-36.infant-dressing-place.json",
+      "sha256": "daf481464af214139c561fbc163ef3355c4a8d986cd550501b30ce8840cfa23b",
+      "textPlacementSha256": "67ab0adafafa25a6cb4b09941cebc0c01d3295dcca99f2ed8ebce2bf178bd574",
+      "artContextSha256": null,
+      "publicProjectionSha256": "a8c61d47e92dfc62b44c41d0a1de92e790a81278bdd650fe086edcc1a5c00600"
+    },
+    {
+      "entryId": "infant-changing-preferences",
+      "placementId": "9-12.infant-changing-preferences",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.infant-changing-preferences.json",
+      "sha256": "5f401ea2de567834e5a7cf2a994629abb5a559ae1f1c7298e1e7ea645dd02a41",
+      "textPlacementSha256": "c1c67088b1406cea4eeedd7bcadbdf747dabb1b944999e30270166faf0b77229",
+      "artContextSha256": null,
+      "publicProjectionSha256": "e01ff665f69b68848999e016d7f04ae9f4d144c214220f208eac01fb0251da9d"
+    },
+    {
+      "entryId": "infant-changing-preferences",
+      "placementId": "12-18.infant-changing-preferences",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-changing-preferences.json",
+      "sha256": "fc141ea6715ade84efa31f68b0d9f4521b84e1a7b6b0ca31d373f4c7fd6af9f9",
+      "textPlacementSha256": "bda9b3e30aba2b8220ce55b92ea07b9ff26d57193c95b11ae12d19d928c34271",
+      "artContextSha256": null,
+      "publicProjectionSha256": "97206801355b3a7acc0eb684602901dc1245de3944463f320a129bbadaf83279"
+    },
+    {
+      "entryId": "infant-first-toilet-interest",
+      "placementId": "9-12.infant-first-toilet-interest",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.infant-first-toilet-interest.json",
+      "sha256": "99bfb96a76856441bf5edd1078f7841c2537cb13a1195f32cae0ca55c516d54b",
+      "textPlacementSha256": "ad4a03244d6f73b26c06a8615de2922464ec98b4b6a711c386b3749682d6a003",
+      "artContextSha256": null,
+      "publicProjectionSha256": "a6d31f979861cb5852358c8c64315aa2053f58b7ef00ae6de5c82670a1c87003"
+    },
+    {
+      "entryId": "infant-first-toilet-interest",
+      "placementId": "12-18.infant-first-toilet-interest",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-first-toilet-interest.json",
+      "sha256": "c0e03510177a4e10b99fb99287b7aab255c6ca2281c1d8ea9dabb70b1f6f85cf",
+      "textPlacementSha256": "62376fd16f1e3672d37fe548637c4c201b8b86da18305be9104cd331bf539b9b",
+      "artContextSha256": null,
+      "publicProjectionSha256": "76dbee36d76d9e826535143f1f2bf5ac8bc0099e5abf4af7e860c4ca7fd1165b"
+    },
+    {
+      "entryId": "shared-observe",
+      "placementId": "9-12.shared-observe",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.shared-observe.json",
+      "sha256": "256ecee82f7a535dac321a666dcdf5a5bd1148c233fb1955f2eaecd099348d37",
+      "textPlacementSha256": "a258d359057b3626edb7c216068b1566129caed3cf6f741e3c42ceb2ec888c8b",
+      "artContextSha256": null,
+      "publicProjectionSha256": "962e6bec4b4036d0d077e7ec44b8fc1a66608ab34b35911315e447dd467d9010"
+    },
+    {
+      "entryId": "shared-observe",
+      "placementId": "12-18.shared-observe",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.shared-observe.json",
+      "sha256": "2356852bbd3925dd7eb0803ced1276e74d4bd6b2fd8bd78cb82147216cf1380d",
+      "textPlacementSha256": "1b236bd61d3c18c92aafac35700030444f9a6ccc846b94b8e07dff892b94bec5",
+      "artContextSha256": null,
+      "publicProjectionSha256": "94ac1711c6cc9e47b7ed4afc266c43f84a8fc906b53b5926e128b8337f5b7d8a"
+    },
+    {
+      "entryId": "shared-follow-readiness",
+      "placementId": "9-12.shared-follow-readiness",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.shared-follow-readiness.json",
+      "sha256": "5ff80aa693c1574f69d8709fd51a12f7cd76d05885a07fcb54f87527da47786f",
+      "textPlacementSha256": "87084d57f2a36e0e9854ee98a44b85b9526643e36211fbffcad6f9d1747fc2fa",
+      "artContextSha256": null,
+      "publicProjectionSha256": "c38664788c7e12c4fea3a298187ed56a29b615e9cf9ee7988ebe3cd7f68285f2"
+    },
+    {
+      "entryId": "shared-follow-readiness",
+      "placementId": "12-18.shared-follow-readiness",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.shared-follow-readiness.json",
+      "sha256": "daa73dbf61ac7466e9320a8cec55661998b3bc56cca66774aedb3a6df091bdd4",
+      "textPlacementSha256": "ed4927df6578e56753822b47efca0ba451745c61fa03df9756b69bcbc1fc5058",
+      "artContextSha256": null,
+      "publicProjectionSha256": "39494428d58ee5d95b84aea5d303f2857f9da82fa00ca95d722fdba0ce79ba66"
+    },
+    {
+      "entryId": "shared-participation-help",
+      "placementId": "9-12.shared-participation-help",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.shared-participation-help.json",
+      "sha256": "884ee5ee4a0b0ed5502a484938d264b7b9a12140a1b0a8b5cc5d007ae3d9095f",
+      "textPlacementSha256": "cd574debed6e035b29cc47864d1f5783b21ebf54d71f8a43f442993f89d78e5a",
+      "artContextSha256": null,
+      "publicProjectionSha256": "31412227eb15fb2dd5f247a81e5926758de699715bf26de52d8b92ed448b388b"
+    },
+    {
+      "entryId": "shared-participation-help",
+      "placementId": "12-18.shared-participation-help",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.shared-participation-help.json",
+      "sha256": "b2e5238fe0647153a88331c4b9bf81d5d4e7e3f282c851bb78950df0a7eead84",
+      "textPlacementSha256": "17d69734bc09d709ce7691e16cd2ce252d5a148a0f5d9755aa44e8f84b0f8a45",
+      "artContextSha256": null,
+      "publicProjectionSha256": "bc75e9050421c2856dc1dc45a6a1798639a1769415dfdd3cf23815d38bca8e9d"
+    },
+    {
+      "entryId": "shared-time-to-explore",
+      "placementId": "9-12.shared-time-to-explore",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.shared-time-to-explore.json",
+      "sha256": "1d6d31ce712dfcb1e9801494785e33599e3937b3a70886983dd1b1f3745cc224",
+      "textPlacementSha256": "d7258f2b89c7db1c32216659ede6517395c8696d909dd7b980ba023034b685af",
+      "artContextSha256": null,
+      "publicProjectionSha256": "e1b39817d40428300165ac809bd50d29ff06f35e9e81a4802ae7693781749424"
+    },
+    {
+      "entryId": "shared-time-to-explore",
+      "placementId": "12-18.shared-time-to-explore",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.shared-time-to-explore.json",
+      "sha256": "eefafda93ef155fed7466cf22772c7c4716b8ed5e7b1d9032c7526d603096bef",
+      "textPlacementSha256": "4d49959b516eab11fd3a37f4118c33f798acd761f5fa9d55da96bf1462d8942c",
+      "artContextSha256": null,
+      "publicProjectionSha256": "e0011ebf35d70bc0f4e84173d2938b067bf15fb41bf01bae555e26982b79d6d5"
+    },
+    {
+      "entryId": "shared-feelings-limits",
+      "placementId": "9-12.shared-feelings-limits",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.shared-feelings-limits.json",
+      "sha256": "aac06a5a20e4c2c99178e95b2b05f50cf1e291d576cbf8e75a19bbaff4bf64a7",
+      "textPlacementSha256": "4e6c1598e4184e7fb90691a563e5060e35f28d9c6b8040a63a72b57c48239acc",
+      "artContextSha256": null,
+      "publicProjectionSha256": "097564765c34cfd2b74bd4b231cdb5d483bcf62588d6c5b013671cec80954760"
+    },
+    {
+      "entryId": "shared-feelings-limits",
+      "placementId": "12-18.shared-feelings-limits",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.shared-feelings-limits.json",
+      "sha256": "5480e524273d66fb16d23da717cd5852e7b4c481bcf6738c796447a7d0f475bc",
+      "textPlacementSha256": "f0a49e211cdf4b75bd59db54b87da0aa3fd49a6a1e577a4f1774f7089d486a14",
+      "artContextSha256": null,
+      "publicProjectionSha256": "8a07325c2770f57843566a79d81d148ff67620def84fb828bfe0fcd93ef2246d"
+    },
+    {
+      "entryId": "shared-home-fits-family",
+      "placementId": "9-12.shared-home-fits-family",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.shared-home-fits-family.json",
+      "sha256": "cb675dfa4d6bf04d00a0a65b9ae7e7aea95fd1389c48c4daf003e8202ea9989e",
+      "textPlacementSha256": "33d0cfa64450e07194efd6f2eed37f33753e39ff138c0ac9654b0bbfef1c5945",
+      "artContextSha256": null,
+      "publicProjectionSha256": "bb5411297c33e1df0683ed23e46d892eed14e91fa0062cb354df5eac124da26f"
+    },
+    {
+      "entryId": "shared-home-fits-family",
+      "placementId": "12-18.shared-home-fits-family",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.shared-home-fits-family.json",
+      "sha256": "76f4e2b8437a81cb54bbf8ed1a7031a0bc0c17217881839dc7c1101e29bc496a",
+      "textPlacementSha256": "12e503c75d32fb2d36f771445972d73ecc25602cd9bb85c47ca3c0f313f018f5",
+      "artContextSha256": null,
+      "publicProjectionSha256": "4613d2063f5fc4bdd75d16d9ad35c7afe6dd452b937f5a840b9b26e13eddfac6"
+    },
+    {
+      "entryId": "shared-adult-needs-support",
+      "placementId": "9-12.shared-adult-needs-support",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.shared-adult-needs-support.json",
+      "sha256": "c9160c7da2a81ca1c4f4f340a1bdbfff3dfa25471877136ceb6a4b3db9b72788",
+      "textPlacementSha256": "5559c0335d40186892cf051a41db3fb2615717d2677f71023c474933811883ac",
+      "artContextSha256": null,
+      "publicProjectionSha256": "c73601ee3d2a3a5436b70ac9e313a7efd4c2e6d3253655ae95c3e8cfe42519b7"
+    },
+    {
+      "entryId": "shared-adult-needs-support",
+      "placementId": "12-18.shared-adult-needs-support",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.shared-adult-needs-support.json",
+      "sha256": "53a77ce2dd47c1e7598153ebdb6a1d0c182cbb5cea725cf179ba1487776aed6f",
+      "textPlacementSha256": "6473f2acbe58c6cb65a092eaa8e4aace88e95dede91e334f7a17ceaa4801e531",
+      "artContextSha256": null,
+      "publicProjectionSha256": "0107eced2936e9a8e8cd035cb85204854d40b9478f348c4ab4fdd70193ff4962"
+    },
+    {
+      "entryId": "shared-something-for-you",
+      "placementId": "9-12.shared-something-for-you",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.shared-something-for-you.json",
+      "sha256": "f9a37cc08dd4c45d72a89fbdbdddbe2ce14193cdcb45984dc616d1f1f2021662",
+      "textPlacementSha256": "16f9f14254e74576ac41821ff2a30eddefa58427484b29b575a617aee4e65f86",
+      "artContextSha256": null,
+      "publicProjectionSha256": "f887c1a060bf5062ba29b2f5be11095bab3b6cff4615681e4b1d4ee1dee0bf5d"
+    },
+    {
+      "entryId": "shared-something-for-you",
+      "placementId": "12-18.shared-something-for-you",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.shared-something-for-you.json",
+      "sha256": "f06c2e7b9d372fabe3da43b13f04fd57cc482eb016f8042c5cd6d9c46bd12448",
+      "textPlacementSha256": "2a12bf378b447b904d1cf624bab1b414ab6bc444667051318cc6218addfffff0",
+      "artContextSha256": null,
+      "publicProjectionSha256": "4b810489544763a597bb87f287ac1eb06a94d79c9cb94492e0ff3df65b5b9e5a"
+    },
+    {
+      "entryId": "shared-less-crowded-day",
+      "placementId": "9-12.shared-less-crowded-day",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.shared-less-crowded-day.json",
+      "sha256": "6b75c44f581ed4ca6246b346cbe4910fc4c653bb915e7ec9c59d427c14e39a43",
+      "textPlacementSha256": "4b5c59eb092d367aeeefbfe2fbe0349a0f4ebae5e753533c4a6036c870950490",
+      "artContextSha256": null,
+      "publicProjectionSha256": "0404db94f4702f4ac2a48ba341b56a279486d0cbc27371c5a0c98123fff88739"
+    },
+    {
+      "entryId": "shared-less-crowded-day",
+      "placementId": "12-18.shared-less-crowded-day",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.shared-less-crowded-day.json",
+      "sha256": "56fcb33322515f0e9e524b86d2f12510d7672384291ac5e2a13b6212b659912a",
+      "textPlacementSha256": "051be43d86373d8f4f59ebee828f24db202026ef9c3cf06153da0b8521a7ef32",
+      "artContextSha256": null,
+      "publicProjectionSha256": "17cb6ae980eefdf6951efdfabc435f11fd5a15281385f8fc1d2e0639d5ff6f16"
+    },
+    {
+      "entryId": "shared-adult-pause",
+      "placementId": "9-12.shared-adult-pause",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.shared-adult-pause.json",
+      "sha256": "03cce2ec0f4e341273324c506f0e43a0f62e3dfbea421280cf4c2622715a3b55",
+      "textPlacementSha256": "55dd824e370c9a88d48f751ac4f3d4372e20b56a848c9506f489c758a472202f",
+      "artContextSha256": null,
+      "publicProjectionSha256": "8a2202a7df445e90cd2e4565eec32412fd53e907e3fd98a4802741c2def22867"
+    },
+    {
+      "entryId": "shared-adult-pause",
+      "placementId": "12-18.shared-adult-pause",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.shared-adult-pause.json",
+      "sha256": "71bcec524bbd47c71c08041eb577e97d4691422a30850d3cfc0d77266a33f58f",
+      "textPlacementSha256": "35ad8541d8ce116a8b9cfb139249774f4fe3f76654d4159b1f50e7aed710b99f",
+      "artContextSha256": null,
+      "publicProjectionSha256": "1c00a2781701b6c0ee74fedc3701b70c6d56845076ef2f6b4973bd9dd7c55b8c"
+    },
+    {
+      "entryId": "shared-repair",
+      "placementId": "9-12.shared-repair",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.shared-repair.json",
+      "sha256": "f9fdd664de78221eb05a0e9f86c1d091a923c0242e3bb6d21e831cee6c1ac545",
+      "textPlacementSha256": "bd3b3df77482dbd6f9739227db008179adfd55681c359327f0faee34e2762811",
+      "artContextSha256": null,
+      "publicProjectionSha256": "6d82d40f01419f27d8e488a026c465ac4e6b1a2b67b54a0c7c01ec7704495e8e"
+    },
+    {
+      "entryId": "shared-repair",
+      "placementId": "12-18.shared-repair",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.shared-repair.json",
+      "sha256": "318b0c2afce73c62b86875dad56283755d3c315a759fe3c10fdc4c309122b6c0",
+      "textPlacementSha256": "954efdb475482c2dbcaa5c9cc5731cbf397e4a246df380949070807337ed377e",
+      "artContextSha256": null,
+      "publicProjectionSha256": "fbbe49f5d7c0cd935843618a37a1e2ec7f4cdbdfcdd8ad9cfeca0b6bd020cf2f"
+    },
+    {
+      "entryId": "shared-family-needs",
+      "placementId": "9-12.shared-family-needs",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.shared-family-needs.json",
+      "sha256": "ae441cc9a148fc755e1fb3d5e5a0b100afd1967e405384496c5311bc729944c1",
+      "textPlacementSha256": "e2ab24206b520ef87e2577dd753ebf76d84b88b40a7770b462d49d3cd61b4857",
+      "artContextSha256": null,
+      "publicProjectionSha256": "ee687c6e8c5b827164e9f3640aa487344d9d5d474eefc1b2bad4fc726ad23c38"
+    },
+    {
+      "entryId": "shared-family-needs",
+      "placementId": "12-18.shared-family-needs",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.shared-family-needs.json",
+      "sha256": "90e84a402ffb4c9beb87e81004a817d3016ed4e44e3d9880c622afc2fe1231d2",
+      "textPlacementSha256": "9f95bee3285b779d2b0ae4a6f1d07c511b25449d844ff5097726d2df52c526b8",
+      "artContextSha256": null,
+      "publicProjectionSha256": "c046297ed9a86f5ddc413b85c8e9a3be2d400bea230cee1300c5cd506a2cdecf"
+    },
+    {
+      "entryId": "shared-caregiver-common-ground",
+      "placementId": "9-12.shared-caregiver-common-ground",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.shared-caregiver-common-ground.json",
+      "sha256": "328c6c2ce63376c858953914bf6ec0eaf273a02e4d57a3288272e906fbb55299",
+      "textPlacementSha256": "ad963584926aaac603c78c5597b0c0eafd71ec0cf9b6dc728307128fc0c04a31",
+      "artContextSha256": null,
+      "publicProjectionSha256": "8a3fd21f5f719f7f642e5d60b37e28a223f7a1f3b6eaa7309b2278550fb9e6de"
+    },
+    {
+      "entryId": "shared-caregiver-common-ground",
+      "placementId": "12-18.shared-caregiver-common-ground",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.shared-caregiver-common-ground.json",
+      "sha256": "e722bf1f1e834e1921ed61238d1c9c0a5a651d7006ac49d5f3fe0c5101658231",
+      "textPlacementSha256": "34a987d261cd87ac093581b38a470b436d70b5035f01db06b77589276a10a449",
+      "artContextSha256": null,
+      "publicProjectionSha256": "2897620b8f9e3f722458c6269831b9912ab83e571df01063138dcc92f86bbfe1"
+    },
+    {
+      "entryId": "shared-family-separation",
+      "placementId": "9-12.shared-family-separation",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.shared-family-separation.json",
+      "sha256": "70530345a625e3e4d59babce3fc2abd3ddd62c29a69688ab46efc9eca06345d3",
+      "textPlacementSha256": "bb1ff18679174771bf45d94e048116241e18083697f11618228834eaf0d5a5fd",
+      "artContextSha256": null,
+      "publicProjectionSha256": "e47e70f377e6cdb3099913bd7982bcc9d0d74e0900779fab45dd8ab77450db43"
+    },
+    {
+      "entryId": "shared-family-separation",
+      "placementId": "12-18.shared-family-separation",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.shared-family-separation.json",
+      "sha256": "438a0f2e8ab45f19a423810d92bac0e2a6607383fb02281a4083f74ade0fef64",
+      "textPlacementSha256": "3a4bc01f18a7cde28a28fa08c66002cc33a10b4d6eb9d80df43fa7ea9ef428cd",
+      "artContextSha256": null,
+      "publicProjectionSha256": "7a8c7d989cf950f7661957d6db1b0f2c8c7fe5b006663a46656be59dff2f338a"
+    },
+    {
+      "entryId": "shared-choosing-care",
+      "placementId": "9-12.shared-choosing-care",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.shared-choosing-care.json",
+      "sha256": "5ce4301f86933c67cd990708e288c47decfcd4ee405dcd80c2b2e41152b580d6",
+      "textPlacementSha256": "de84d1b70a8e11bb4bdbb01c529c849981b934b0231742a0068f06fe468d27ce",
+      "artContextSha256": null,
+      "publicProjectionSha256": "4ea039c513d6904883e769de6d21e576a65860d6227221bc9ec5cbd9dbf7a310"
+    },
+    {
+      "entryId": "shared-choosing-care",
+      "placementId": "12-18.shared-choosing-care",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.shared-choosing-care.json",
+      "sha256": "50fe835f2acd0229116abf79876a31732da782631a0cb2e06346bebe88cbbbf7",
+      "textPlacementSha256": "0b1891b71b455336d23a47395e365440673b88240f794924203948d819d43cc8",
+      "artContextSha256": null,
+      "publicProjectionSha256": "a821b3031b87815a3bc4a39f89e612fcb6c1a4a81f92acbba4372ddabeadc513"
+    },
+    {
+      "entryId": "toddler-pouring",
+      "placementId": "12-18.toddler-pouring",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-pouring.json",
+      "sha256": "148612fb4659558d5055f7425a825ca2342c342a6610f476e344231e74ade37e",
+      "textPlacementSha256": "9f495df36b66ca6202fb820559bce5e3a2fd97ea6dd119c3069d0c16fa5508fb",
+      "artContextSha256": null,
+      "publicProjectionSha256": "30a57f29d7417ec0246999e27e6e87751d080c4c9ea597112811b34f675f709b"
+    },
+    {
+      "entryId": "toddler-drawing",
+      "placementId": "12-18.toddler-drawing",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-drawing.json",
+      "sha256": "cbdedefd7c639d21ae7e39d60e234b5d1620197ad35edca36da36f1631a1fccb",
+      "textPlacementSha256": "6752f875d43610d3a33d8f17479ba9fdd28c676308d0c3a33fe043309d998034",
+      "artContextSha256": null,
+      "publicProjectionSha256": "e08938b1dc07d8d57d7aede368d3b1b0e8b86064c689fa425b58ff3b27d53dad"
+    },
+    {
+      "entryId": "toddler-shoes",
+      "placementId": "12-18.toddler-shoes",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-shoes.json",
+      "sha256": "0147241935d50b1a3d219d7c6e2f5f07f7e53f11456f7d3688e0ceecbc7860ce",
+      "textPlacementSha256": "c36a21da17ee1aaa04cef7d66cdb8491ad5f3c94613f64b5e696ef67eb97a2dd",
+      "artContextSha256": null,
+      "publicProjectionSha256": "386404ac76a7095c0364cd4e58af7424ec9f02232e345d06410fdbc76d4a01ee"
+    },
+    {
+      "entryId": "toddler-puzzles",
+      "placementId": "12-18.toddler-puzzles",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-puzzles.json",
+      "sha256": "81de1207bba2cf9958bdbcc7dedf5c0237c0bdc24721fe395b902cf598697dee",
+      "textPlacementSha256": "ad6ecf27d49663235433f4d459cc22c33768a521dbb5bd111e8b4404137a0e6f",
+      "artContextSha256": null,
+      "publicProjectionSha256": "86c764ecb313e451ac9172645e857adf28f443b6283ff6df419d62b6b0ca2107"
+    },
+    {
+      "entryId": "toddler-fitting-and-turning",
+      "placementId": "12-18.toddler-fitting-and-turning",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-fitting-and-turning.json",
+      "sha256": "6aae6c7bfc55817045f04151a362048f313d03d57c44574421a3db38a4aebdb8",
+      "textPlacementSha256": "816d8c5b3680878fdac05a890f682f3ae2b0decbee827022904be3accba5ade9",
+      "artContextSha256": null,
+      "publicProjectionSha256": "90a0880655493687d0298fbe7adc4e35954823ccb6e86046952e5e937e2ee2c5"
+    },
+    {
+      "entryId": "toddler-music",
+      "placementId": "12-18.toddler-music",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-music.json",
+      "sha256": "a550656e3b255066d37db9c7b413adc4027708653a9b8df470dc4da2a4129422",
+      "textPlacementSha256": "388ae1abeacf98a1161b842482d8406337ea61e051a0a8914238a01573ba9b71",
+      "artContextSha256": null,
+      "publicProjectionSha256": "8078cbd7081e5861544b45c3e908172e6eb39e11ca7a19df14c87fa289304482"
+    },
+    {
+      "entryId": "toddler-books",
+      "placementId": "12-18.toddler-books",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-books.json",
+      "sha256": "bcd94f5ecdf35f5618a4d26e6d901046b581c01aba870cf9ea261a189219d7fc",
+      "textPlacementSha256": "5dce0602d3908cdae4b938c750c79f9a3b5f8361a574d503c003bcf427ef595e",
+      "artContextSha256": null,
+      "publicProjectionSha256": "7ea3548537f8b75e3e39adabe92646cef63d695b9eb38b118fac1c5c1d87fb1b"
+    },
+    {
+      "entryId": "toddler-conversation",
+      "placementId": "12-18.toddler-conversation",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-conversation.json",
+      "sha256": "867d69c0f43c76e0f4b11e66780c920951e8ae327d56c5fa755279f55a110598",
+      "textPlacementSha256": "f6592ec5ba1ddbf8a2b39aa44dadeb780266dfa6a98ddefa71c55569d6731822",
+      "artContextSha256": null,
+      "publicProjectionSha256": "46639032b6fc6886f181e797055ff0b6ace0dbb0c58c2b697e60b4f9322fd9d2"
+    },
+    {
+      "entryId": "toddler-objects-and-pictures",
+      "placementId": "12-18.toddler-objects-and-pictures",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-objects-and-pictures.json",
+      "sha256": "d93dfabbb7ec63e35841cd19705a15ef029b7c61d734c1f8b2b323a8f45346c3",
+      "textPlacementSha256": "8e2eec1be125cea709c84889ee186322765c9a0bcb057b624d29084460f172e5",
+      "artContextSha256": null,
+      "publicProjectionSha256": "6e8cf104827d81c2ed80e1bc231e9b8ddbbdf9003815747097a3f73b17a53701"
+    },
+    {
+      "entryId": "toddler-paint-and-chalk",
+      "placementId": "12-18.toddler-paint-and-chalk",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-paint-and-chalk.json",
+      "sha256": "126f839989294929fcbe398e487f816746f271aef0d1dd4a200c86810b6966cf",
+      "textPlacementSha256": "81059ad755126db3033de7a729c3b90a6b342932a6d1adbddb9c413f01ce37ef",
+      "artContextSha256": null,
+      "publicProjectionSha256": "66c4487ddb23294855b570e16f62a7a4faced3deaa764aef3d43b4df5be1e3c6"
+    },
+    {
+      "entryId": "toddler-glue-and-mold",
+      "placementId": "12-18.toddler-glue-and-mold",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-glue-and-mold.json",
+      "sha256": "0439085505a20818fad624cbfa7f9c81e50e768d47ba5a2b8fdaf6d95ebdf37b",
+      "textPlacementSha256": "89791ee68bacb79499bdab76f662e980dbc3657f6250eca82ba659f29f61479f",
+      "artContextSha256": null,
+      "publicProjectionSha256": "2ea0f0ef94062e1205859c0ba6e1b3cb008f7e231b1400e2c9a9689b4e3bf638"
+    },
+    {
+      "entryId": "toddler-outside-noticing",
+      "placementId": "12-18.toddler-outside-noticing",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-outside-noticing.json",
+      "sha256": "1e35b2e7f7df8142df8bd06ecafb627eb76d7104102634a97c64dc799431cad7",
+      "textPlacementSha256": "5177d199575d360a97cae22ea665292ab45fb87f514b298ddfbf3e323202a202",
+      "artContextSha256": null,
+      "publicProjectionSha256": "2c9c1845be3fb916507db9a905786253f462e6ea8b67bb81a3727122e16e0948"
+    },
+    {
+      "entryId": "toddler-room-to-move",
+      "placementId": "12-18.toddler-room-to-move",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-room-to-move.json",
+      "sha256": "8e05eadf1099ab2530039956dab22e0dff3b8b33abbbd608e72da834ee270ece",
+      "textPlacementSha256": "6fea49848b3a4cc1c2d303aae76e50134a779092a0c438fbbacfa4e3f021ab40",
+      "artContextSha256": null,
+      "publicProjectionSha256": "16d0361f28dfacd3674d5f51986c1b989a59dd35d3efdefba0e38b65847408ad"
+    },
+    {
+      "entryId": "toddler-wipe-and-dust",
+      "placementId": "12-18.toddler-wipe-and-dust",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-wipe-and-dust.json",
+      "sha256": "b6bd85f263421b4ff1d805ac1b801605137f36d2ba8d23dcea6450322958a1c6",
+      "textPlacementSha256": "1add93aded42b3a423a2a465c4bbd2e9d1e8095df764aba28c86726337219ca6",
+      "artContextSha256": null,
+      "publicProjectionSha256": "3f9fdf42e97d14e2589221d201c75169dc13f5e81a98dcc5dd958df4ecdde5f6"
+    },
+    {
+      "entryId": "toddler-laundry",
+      "placementId": "12-18.toddler-laundry",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-laundry.json",
+      "sha256": "c1c42961c702c2c5dacb065274fa9989d92ac71771d4ed7723946bfe2add02ca",
+      "textPlacementSha256": "e067cd0c3173fdb49148cee3c4245f304baa802e4649701c94b988632eb9198f",
+      "artContextSha256": null,
+      "publicProjectionSha256": "256965db0e481cd71a1d437280e718c9143de0f0c932b4a59e1d937e7c4840d6"
+    },
+    {
+      "entryId": "toddler-plants-and-flowers",
+      "placementId": "12-18.toddler-plants-and-flowers",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-plants-and-flowers.json",
+      "sha256": "6186f62341161ef030b3a901ca480e0a07c71153f07386b44111e17631fb462f",
+      "textPlacementSha256": "9c5fe432d4f62212875883aec4970ef50af82162572fefd294a5e973bea17529",
+      "artContextSha256": null,
+      "publicProjectionSha256": "bf67a05aea833bf3da2bfb60b32c2bf638819f6847be34a0264390384d14ee91"
+    },
+    {
+      "entryId": "toddler-table-together",
+      "placementId": "12-18.toddler-table-together",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-table-together.json",
+      "sha256": "4a924b53b5b64918846d77891534f0fe83602774308fe9f7859f2cee827a3a6f",
+      "textPlacementSha256": "772cc710be10fea1c0b0f39f481f423716200000502d473b82be6152cee98bcd",
+      "artContextSha256": null,
+      "publicProjectionSha256": "2f5652995b22fdd96a59b30dfe573e034837ed6bf3892e566da5e99ac17e90c9"
+    },
+    {
+      "entryId": "toddler-getting-dressed",
+      "placementId": "12-18.toddler-getting-dressed",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-getting-dressed.json",
+      "sha256": "627054c955d24c4bf980cc7d5d27081fd0e88011dd4469f73da2a10b8347faff",
+      "textPlacementSha256": "98f85663194bc253bf3aaced7407a97d1140c3614c3f3295518798fdb3e75815",
+      "artContextSha256": null,
+      "publicProjectionSha256": "5ccea6ff4211c82a0443849dda46edc2406ea49002ec319c69e217e8887205f0"
+    },
+    {
+      "entryId": "toddler-care-connection",
+      "placementId": "12-18.toddler-care-connection",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-care-connection.json",
+      "sha256": "2a92bdc58a55b187f246c896f8ec8ccc5b1a0a4bab1c662ed27b371cd39c2cfa",
+      "textPlacementSha256": "c21e1d3754ee1c1a57ff33b436139c68fb8036c860ad5f72fd18a4212bf9c9e1",
+      "artContextSha256": null,
+      "publicProjectionSha256": "1be614bc02a80196657c4c0bfae72f1547d55c4aebe1721e7eb04e872b96a053"
+    },
+    {
+      "entryId": "toddler-nose-and-hair",
+      "placementId": "12-18.toddler-nose-and-hair",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-nose-and-hair.json",
+      "sha256": "6601f45283defbf27b25a5dffad164dba8cbdfd77d715c64978c9a7941bc4bd9",
+      "textPlacementSha256": "67a1240696816caa9ec855d530e45cb9e1a117c830df5bb1a8bedf5648e8231f",
+      "artContextSha256": null,
+      "publicProjectionSha256": "691319f4050243fd617d64ee6848810e87b24adaf02ae1f166cea7f5c1641ec0"
+    },
+    {
+      "entryId": "toddler-daily-rhythm",
+      "placementId": "12-18.toddler-daily-rhythm",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-daily-rhythm.json",
+      "sha256": "f98c40925dce84989b70b29bd883976ed7cf3bf8999ac4b3b52454e3c1178802",
+      "textPlacementSha256": "f35e3b0cff0b488d0cf141e4c46c741f71eca6135dcb4a24c26858d77f18443f",
+      "artContextSha256": null,
+      "publicProjectionSha256": "ffe804f361d9d6c24eae16e9c534a2c131fb886d7e012ba8c107e78bb35466ec"
+    },
+    {
+      "entryId": "toddler-family-rituals",
+      "placementId": "12-18.toddler-family-rituals",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-family-rituals.json",
+      "sha256": "7e0b91f842c990d8f1e64e02f0368a1d35472bee24ecd3583e9370905a70fab7",
+      "textPlacementSha256": "169009ccc589b89966ade6238d4acde5782b2dd73d3de8c4ab3f05ff55e2e7ef",
+      "artContextSha256": null,
+      "publicProjectionSha256": "cbf2ef47d32ae43984649f1689f160fbc9af8b69f84e8a429ad8f1bcceeccf27"
+    },
+    {
+      "entryId": "toddler-meals",
+      "placementId": "12-18.toddler-meals",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-meals.json",
+      "sha256": "41d04006b57ddf5c19e1934a45a62d241abc96d976165d4b7a48bb65e11e2de3",
+      "textPlacementSha256": "2ebecf083d20231a021c4113bd7fe3629e19e1c5521ceba8be3523a421a5354b",
+      "artContextSha256": null,
+      "publicProjectionSha256": "c7da835149d8dc51573de113013c38befd3a25eb68e13cc19b5e5af1f6e83700"
+    },
+    {
+      "entryId": "toddler-food-on-floor",
+      "placementId": "12-18.toddler-food-on-floor",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-food-on-floor.json",
+      "sha256": "06d3862e670824cd4dc781d66ffdfd3aecc638de5e78370d2c31838ecc24bce1",
+      "textPlacementSha256": "3f0b6898ee5bc980e720d1fcce542693069932b10ceda09e04c62bda954408d4",
+      "artContextSha256": null,
+      "publicProjectionSha256": "dc46097c151e70d4b29e4c095cb51a3986615bc40ecae7b94b37a547f9f13307"
+    },
+    {
+      "entryId": "toddler-sleep",
+      "placementId": "12-18.toddler-sleep",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-sleep.json",
+      "sha256": "e338f9de4ae59e15e913be877e0c487cbf988345148185c5a07d71af17ab49c3",
+      "textPlacementSha256": "daaa9865304e55e49539abb0f989bff7fd20bb32f203c223e9ac0b37c3f5aed8",
+      "artContextSha256": null,
+      "publicProjectionSha256": "06bcef02472290d90e05985acbfa8cad0b55af5fc5cd3288fc09dffbf906da05"
+    },
+    {
+      "entryId": "toddler-teeth",
+      "placementId": "12-18.toddler-teeth",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-teeth.json",
+      "sha256": "b0f00baf3160ec7e884510ddc7735cb2b730b9ec05253c4034c7bd92211551a5",
+      "textPlacementSha256": "b4c715eddf10fa9cff249d1ee63ea4049e5616da8710eafd6407e8d4271f6ceb",
+      "artContextSha256": null,
+      "publicProjectionSha256": "969684eb4d818702739fc0e82ddf034e9fb8a9f7a7e4a0da2620b14c7119a293"
+    },
+    {
+      "entryId": "toddler-toileting",
+      "placementId": "12-18.toddler-toileting",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-toileting.json",
+      "sha256": "219832e82342167d4def6d6a445e331cf86afb7bb526d4e0435a44746d31133c",
+      "textPlacementSha256": "779dbc0fe836e177d1ed3e1b43cf6353e077d3d593457b630ed1f988e7735b44",
+      "artContextSha256": null,
+      "publicProjectionSha256": "d2b4e65e9b4d8ae169c270449b8b411440cfef181d37d0449cc0f145033a9db6"
+    },
+    {
+      "entryId": "toddler-pacifier-change",
+      "placementId": "12-18.toddler-pacifier-change",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-pacifier-change.json",
+      "sha256": "8a886fb834e50880b138d7e0637ed177c32b011c322d64f1124d059c4f0895a0",
+      "textPlacementSha256": "3671c8866c5d14306e4a1a0d6bf488cd93fe812337842d7aa824808bb5daddf7",
+      "artContextSha256": null,
+      "publicProjectionSha256": "42f22e66eeabd9940a46a7f44abc662979fce2ed38fa08bfc3653fd37162bf8f"
+    },
+    {
+      "entryId": "toddler-transitions",
+      "placementId": "12-18.toddler-transitions",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-transitions.json",
+      "sha256": "b43cfffac0bb25e7a153765f751f4d905900723bfb022d5348720d9218a1f00b",
+      "textPlacementSha256": "7477e31983966b4ed3745b6caacebc3839e835fd3643a03bf67091e051814259",
+      "artContextSha256": null,
+      "publicProjectionSha256": "bce8646d98f88cc6b742b4bd5cc18eb153abd16efc108ca3289bb37d90358d07"
+    },
+    {
+      "entryId": "toddler-words-that-help",
+      "placementId": "12-18.toddler-words-that-help",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-words-that-help.json",
+      "sha256": "6b10baca93b2baa16635fc0d40767239e7e69540bbc39f04960bb0a8084c7cf1",
+      "textPlacementSha256": "b6a3a21cda3711ac5559b610d4672d5f1a9d451198bc52b98b9e0db34c12d645",
+      "artContextSha256": null,
+      "publicProjectionSha256": "54a576a9803af4372447c6ddea025ec5bed75d25eabd12c36142acba8bb9192b"
+    },
+    {
+      "entryId": "toddler-solving-together",
+      "placementId": "12-18.toddler-solving-together",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-solving-together.json",
+      "sha256": "fdfbe52a0bf9f9e329c7c28090f560a4d9e6f2a789216259a220d561ac2ce785",
+      "textPlacementSha256": "9161a0b4976fd04e740d790da54c6a9e5ae32491d89acb7f97cffc78404fd4a3",
+      "artContextSha256": null,
+      "publicProjectionSha256": "eb7202faa1565522e1c03d6dd8a0baf3dcfdbd155488700a4672290db96f58de"
+    },
+    {
+      "entryId": "toddler-waiting-outside-home",
+      "placementId": "12-18.toddler-waiting-outside-home",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-waiting-outside-home.json",
+      "sha256": "7b0396238cfd97dee19300d9eced1597738f8db0cf54cccb2cefc64bd02e82b4",
+      "textPlacementSha256": "a9d2f1859d58326ed4166768cdaeb0c2e6653ebbfc677e6cb4c9b435c8609f43",
+      "artContextSha256": null,
+      "publicProjectionSha256": "6ed5b310d73bbdccae5e384b94eb03514668e1d29501f8aafcc969b10269474d"
+    },
+    {
+      "entryId": "toddler-clear-limits",
+      "placementId": "12-18.toddler-clear-limits",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-clear-limits.json",
+      "sha256": "9825c9087786abcb900ddc3ae2aa5bee939caa962a9f74cec60e63163675fa5a",
+      "textPlacementSha256": "0490be9bef1d035b554ce741e7d3596095dd792abada9603792fa4acec230e9e",
+      "artContextSha256": null,
+      "publicProjectionSha256": "6f023654668a28864d15d0c1862721d0ded234ddd4385531816dcddba3d479b7"
+    },
+    {
+      "entryId": "toddler-big-feelings",
+      "placementId": "12-18.toddler-big-feelings",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-big-feelings.json",
+      "sha256": "004ba0d66b8cc59830bae78975595f30498792ca53cba1eaa2bbca60de2a664b",
+      "textPlacementSha256": "c447165ff76d3c4a16777efc2894a3f24eecc09c34d54027535cc35816fe19be",
+      "artContextSha256": null,
+      "publicProjectionSha256": "bcc769cb1118fbd8fefbcddac1134a4160b56d67518f352824cf8e9ee87892b0"
+    },
+    {
+      "entryId": "toddler-make-amends",
+      "placementId": "12-18.toddler-make-amends",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-make-amends.json",
+      "sha256": "260c8a032dcbea7fa5973617c8865aa2574d93bf8f285c8fc7d733fd25d07593",
+      "textPlacementSha256": "b4cc41b28d44dc19a2a321b7f70983f0a13bd3bfdaa511bdab6a86b403a4cab0",
+      "artContextSha256": null,
+      "publicProjectionSha256": "76b1d3aeb08ea4f3921ba291a5c9d9833c429dd7da0028951bb27c4d838f4024"
+    },
+    {
+      "entryId": "toddler-new-sibling",
+      "placementId": "12-18.toddler-new-sibling",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-new-sibling.json",
+      "sha256": "ec9ea731e1e1a749ee8f8a0b2b530255c3d0dd533747628f649cfac02ed66bba",
+      "textPlacementSha256": "cd940585edad0bdf579b388fba3795f9f6b0002913c068b783d6976010e27436",
+      "artContextSha256": null,
+      "publicProjectionSha256": "55b78ec41be9e10b71b559f64a4846e708c39eb178c8eff0586c658b084a5b42"
+    },
+    {
+      "entryId": "toddler-sibling-conflict",
+      "placementId": "12-18.toddler-sibling-conflict",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-sibling-conflict.json",
+      "sha256": "6c1d55c7d116d33ab3f8f31bb11fb9df153dc0b9ed6f53de2b330553a1053938",
+      "textPlacementSha256": "fce9ba599001cee0ba9dc3c1c4137ac124f2892c94eeef6cf908bb81c15c26d8",
+      "artContextSha256": null,
+      "publicProjectionSha256": "acfe180fcde1f2c9e5667549c832833692f4c1823cbd812b579df48db5ddf0ce"
+    },
+    {
+      "entryId": "toddler-taking-turns",
+      "placementId": "12-18.toddler-taking-turns",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-taking-turns.json",
+      "sha256": "93b7c05c4b057e8b93f6eadb449e85895c2bebc632a0d0ac392b2209d216ccb4",
+      "textPlacementSha256": "d79f9469e351142235e1d34872a308f8ac609e742c7aac11d7bfca8f41bcda8a",
+      "artContextSha256": null,
+      "publicProjectionSha256": "2387cbc7a2586dddd0f504f285dae6536973088aef283698f0598942a90d7036"
+    },
+    {
+      "entryId": "toddler-joining-in",
+      "placementId": "12-18.toddler-joining-in",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-joining-in.json",
+      "sha256": "d9423df8398bab571f2e959f335b99b87e708c9b2b3ca59d99c38486e5a823ef",
+      "textPlacementSha256": "d666f6b0b39d56be54a467b002ea5f8c9b1b3e8554036477ce513b68f18f2b64",
+      "artContextSha256": null,
+      "publicProjectionSha256": "7bd46368ad2e756925e675c3f4d1b78fe2997508c7d5ab788c9fc28d3cfd9b45"
+    },
+    {
+      "entryId": "toddler-wanted-hugs",
+      "placementId": "12-18.toddler-wanted-hugs",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-wanted-hugs.json",
+      "sha256": "d846841c33d8ab3909c9306ccc3c4f84c99c7b2754fd46ff8205721770797693",
+      "textPlacementSha256": "48c7b982bb10539f61eaf3e2b4786f853e530851f1359cb0e27a19305c036242",
+      "artContextSha256": null,
+      "publicProjectionSha256": "17917b34adae9448729d7e964c8c04aa9d4cde53c88a41512aad381b0733eaef"
+    },
+    {
+      "entryId": "toddler-hitting",
+      "placementId": "12-18.toddler-hitting",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-hitting.json",
+      "sha256": "ffef3e1cbcc87ea983fdc0de589bd663c1cb56b8331666858178ca4c46839e88",
+      "textPlacementSha256": "ffb8adecc620767e249c53741f97b7e8e8a21c72af83c48ee759f951b7254419",
+      "artContextSha256": null,
+      "publicProjectionSha256": "7256db1ac80f6138521a8495accb0dd9b9e58cbc83b3a4fbb2f2b0f0b58ada57"
+    },
+    {
+      "entryId": "toddler-throwing",
+      "placementId": "12-18.toddler-throwing",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-throwing.json",
+      "sha256": "b05b5fbe08ff7d85cc28ab8d73767c201f33d5dcafd5e7eb043c66be3798c177",
+      "textPlacementSha256": "3736e164357bd82502999c5a37623aceb84be90324693653c3a512bfd07bd545",
+      "artContextSha256": null,
+      "publicProjectionSha256": "fc18246e971cacea070a62d757a9e564e0aeb28d191d635e07c1c5a85fdd0564"
+    },
+    {
+      "entryId": "toddler-close-by",
+      "placementId": "12-18.toddler-close-by",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-close-by.json",
+      "sha256": "c73331bc6772e25615b03911f0bfb5002352afd993b59653ec520547cebb37df",
+      "textPlacementSha256": "aa22582d8e71e05d0f175d2bcf7817c82133ee34adff03d8a11350c89a178c11",
+      "artContextSha256": null,
+      "publicProjectionSha256": "4eaf7bcba5ff4fe857137dd8ec6f9f3ce980e46b4cec9e51c0e5bed44cb149df"
+    },
+    {
+      "entryId": "toddler-waiting-to-speak",
+      "placementId": "12-18.toddler-waiting-to-speak",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-waiting-to-speak.json",
+      "sha256": "fedd2d663e256ba86879a7f6c5098105acbce2a884b17c5c8400cdbf93188c3d",
+      "textPlacementSha256": "864a1937ed11d0f990b59c467f9e74ed11fb3b97e7ee16e29f7c626ad5531bcb",
+      "artContextSha256": null,
+      "publicProjectionSha256": "47a007d104429f2fde0668dd10d5974629b669a006008a69b6352602f1191c94"
+    },
+    {
+      "entryId": "toddler-feedback",
+      "placementId": "12-18.toddler-feedback",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-feedback.json",
+      "sha256": "245020ba8ecbd0985a14776679685c9ae181b1347900a22e29d5934c42965d2e",
+      "textPlacementSha256": "148f8e5881b5d6a11ed084078d6fae44782f279830188ac9e8613fe1b76460c0",
+      "artContextSha256": null,
+      "publicProjectionSha256": "2d37bfcdccf3b1de1838edcaac046815b3711b795215bf40ed29ed43f3ceb0f2"
+    },
+    {
+      "entryId": "toddler-screens",
+      "placementId": "12-18.toddler-screens",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-screens.json",
+      "sha256": "d4aca9055a82e4ad362ca081fe5f615e17c351802fef791045ac5fe65657d92c",
+      "textPlacementSha256": "6370c36f34a29ad8539a35e1c583150330323bfe0b8d125e14c3d84e4d9de989",
+      "artContextSha256": null,
+      "publicProjectionSha256": "66f38b537d2ed05b81b13c435e768912237be12a65d6f3442ecdb168d40cb1e1"
+    },
+    {
+      "entryId": "toddler-languages",
+      "placementId": "12-18.toddler-languages",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-languages.json",
+      "sha256": "3e2058be0f032902ad2dd9509d244848b0cb7e391868a436d1a00a7ff5865119",
+      "textPlacementSha256": "25dec5de301f34b1003ba52ff593e3ae13bc0f8d2e3327e2f7e90b88318f8e6a",
+      "artContextSha256": null,
+      "publicProjectionSha256": "1d69ec8a4699de5ee5a27b321430c368c8ae20ed494bd1bff2d37149c0566205"
+    },
+    {
+      "entryId": "toddler-shelf-and-rotation",
+      "placementId": "12-18.toddler-shelf-and-rotation",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-shelf-and-rotation.json",
+      "sha256": "51ab8d165bd650c400d9272f738989429bbe573493530739aa5c9d6ecd8d2d81",
+      "textPlacementSha256": "e984a85c619d05ede0ee2501785b27da7e3152a35a983d83161002a576a1bf49",
+      "artContextSha256": null,
+      "publicProjectionSha256": "7dc125c37762d55949b26074468de5e4b1cef515bbfe1a2e5242e747c2ec4131"
+    },
+    {
+      "entryId": "toddler-spaces-for-different-ages",
+      "placementId": "12-18.toddler-spaces-for-different-ages",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-spaces-for-different-ages.json",
+      "sha256": "6c7a0c06347d3d5e44f243aa27ce78769434d1a7a32fed96f26146bbb237b915",
+      "textPlacementSha256": "4364bc0cb2b36f4345027458bc9a0f2dac76636ef9a4f4c9fdbd19ac84e7b4f4",
+      "artContextSha256": null,
+      "publicProjectionSha256": "c73b1b64a532cd444631781d4552fe3e962e5a494915c5319c2df8a3a8dec3e3"
+    },
+    {
+      "entryId": "toddler-art-has-a-place",
+      "placementId": "12-18.toddler-art-has-a-place",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-art-has-a-place.json",
+      "sha256": "8ea4f243bd42871aa0fafd64b412be07ec839e305963777caf10de5284a2e72d",
+      "textPlacementSha256": "6165aa1e0791333634a70640b9f5606dabbc34f5205447e5983e3c0827d09828",
+      "artContextSha256": null,
+      "publicProjectionSha256": "a373c0d705c7e6112026f09c6b744192daf8cc8f8009fe4f9c35f0c68b53b2ea"
+    },
+    {
+      "entryId": "toddler-everyday-play",
+      "placementId": "12-18.toddler-everyday-play",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-everyday-play.json",
+      "sha256": "392078d469c3f03bed0db34c51ec47b29c14b4462fe9676c91dfe9f28dd1dfbc",
+      "textPlacementSha256": "be4539a26eec0ca3e0cd2516f871fb1995ee78570d97e26d76a0974c421af1bb",
+      "artContextSha256": null,
+      "publicProjectionSha256": "8cb0c0fd58f01e00c4a1b5a02eedef04ea1c3d7d0045dd24566c70018284a453"
+    },
+    {
+      "entryId": "toddler-handwashing",
+      "placementId": "12-18.toddler-handwashing",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.toddler-handwashing.json",
+      "sha256": "ccf7a3e22e6751e1f31c547eaa6decd3ff55e3faa145407b6795291f137b7234",
+      "textPlacementSha256": "b8b593cecb164cd31ace323819723e777d879c7c90cb017b678615e30e6450bc",
+      "artContextSha256": null,
+      "publicProjectionSha256": "3c420255270983ebdd8dd984e7c0eabcd1f08ed531beb5faa7d194fee3c3647b"
+    },
+    {
+      "entryId": "toddler-puzzles",
+      "placementId": "9-12.toddler-puzzles",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.toddler-puzzles.json",
+      "sha256": "1380845fa32432c020a64918ef25024ad6c0763e5288446b7422a7bbea1d7d29",
+      "textPlacementSha256": "d2953e7cde804cba244a0c196c43ffd645df7289a02a6e24d6128b5504afec64",
+      "artContextSha256": null,
+      "publicProjectionSha256": "7badb3b5b54359d24716bca128c0502cb06b76774f3e46be290e6f8b957045ce"
+    },
+    {
+      "entryId": "infant-nuts-and-bolts",
+      "placementId": "12-18.infant-nuts-and-bolts",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-nuts-and-bolts.json",
+      "sha256": "cec569ddf5cdf14168bb72097dfc778b9d0b02358f9d3437340a80681fd6f68c",
+      "textPlacementSha256": "abdc28d5fd4a990bd1816e89c49d787671f61e9fd533ba68445668f224a01e74",
+      "artContextSha256": null,
+      "publicProjectionSha256": "227082d9c8039fcdf4c852c4ee3696d7668b0a09fa32f53f89561779cc80cd5f"
+    },
+    {
+      "entryId": "infant-nuts-and-bolts",
+      "placementId": "18-24.infant-nuts-and-bolts",
+      "path": "content/6-18/revisions/r03/snapshots/18-24.infant-nuts-and-bolts.json",
+      "sha256": "07bfa2783f1fa56fdba2d44215ed435d6abeb16685430331679f91813a7d72ac",
+      "textPlacementSha256": "b45bad94b3207fa5e02e1af9cf3b5140fac1208a0eeb44d0acce94185dbb3f84",
+      "artContextSha256": null,
+      "publicProjectionSha256": "cd3ce3253dc28b10973109f4f7aceb0b5c982beec0fcfba7c1c97dfb378432c4"
+    },
+    {
+      "entryId": "infant-nuts-and-bolts",
+      "placementId": "24-36.infant-nuts-and-bolts",
+      "path": "content/6-18/revisions/r03/snapshots/24-36.infant-nuts-and-bolts.json",
+      "sha256": "25f66ed7ce0c6db8adda11aaeca82114ee50a896d5ba83f339c6ac0ee33a38af",
+      "textPlacementSha256": "90db871dc98e37b113ca0b09b3271486f2e65c1ccc4c69406deb093120ec3ee4",
+      "artContextSha256": null,
+      "publicProjectionSha256": "38db4f076a5ecd30b8438f9501a5dd4b7cb7ae187958ce2e5135894014bcba61"
+    },
+    {
+      "entryId": "infant-threading-beads",
+      "placementId": "12-18.infant-threading-beads",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-threading-beads.json",
+      "sha256": "89a1019b2997c52ce532882424698f6cd625866ee155b6854b5ddceb42553b42",
+      "textPlacementSha256": "8e2f0936638bb814c30fa28d1ca3362163a9852bfe7184e1af2f5dd9bef8b527",
+      "artContextSha256": null,
+      "publicProjectionSha256": "abab54d9f56bac12beabbd537fd6c6c218cbdde9618315f30326150371dbca62"
+    },
+    {
+      "entryId": "infant-threading-beads",
+      "placementId": "18-24.infant-threading-beads",
+      "path": "content/6-18/revisions/r03/snapshots/18-24.infant-threading-beads.json",
+      "sha256": "c6958871d68af277d2accbc91689e8318a8517a016310158d530fa8de837444b",
+      "textPlacementSha256": "a8c6cc8cee0b36b9374a9d678e29e1813eeb8305f2c4468a0dcd1e91ab2a7b93",
+      "artContextSha256": null,
+      "publicProjectionSha256": "54e9719accba07757e846370cd51dabaed011f083fdc104c8b0b1dc9b1ae4a87"
+    },
+    {
+      "entryId": "infant-threading-beads",
+      "placementId": "24-36.infant-threading-beads",
+      "path": "content/6-18/revisions/r03/snapshots/24-36.infant-threading-beads.json",
+      "sha256": "5628c70a2e2be60a94157b70a606a6bb037efcd016c997bf5b6873c1c280ae69",
+      "textPlacementSha256": "40acef70605fff796a7cb2dca14b2ba811ecfcaad38d31a39655335ab2c1f290",
+      "artContextSha256": null,
+      "publicProjectionSha256": "3a28dbd6cda3e7dfeeb11d3bb9a624ac9bbf73769867dec184b061c9ac9d7fca"
+    },
+    {
+      "entryId": "infant-dressing-fasteners",
+      "placementId": "12-18.infant-dressing-fasteners",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-dressing-fasteners.json",
+      "sha256": "e1420d98de16482ec24562a871e062cbef8077b4c53bb214d0f13fe876369440",
+      "textPlacementSha256": "f55bc1ee692d63e82e0a48470ef67db94dd6f4b939b51801a43129b4ab484de0",
+      "artContextSha256": null,
+      "publicProjectionSha256": "485793c4921663e0f12dac38f24fa6dd3625d4c589bb018722bce14c46dad6f1"
+    },
+    {
+      "entryId": "infant-dressing-fasteners",
+      "placementId": "18-24.infant-dressing-fasteners",
+      "path": "content/6-18/revisions/r03/snapshots/18-24.infant-dressing-fasteners.json",
+      "sha256": "6a05d816ee322fafbbc68372212d5a1c460843067f9c828d922e6ffba141b624",
+      "textPlacementSha256": "667e81ec79759dba6ccfae83837c5394c4d9707e248935aeb03291f1cb003790",
+      "artContextSha256": null,
+      "publicProjectionSha256": "42ebd40b8a13d63cad2fdfcdb1a12fe0d2f6b8d5c7c3e8b9f473216e5ab7e175"
+    },
+    {
+      "entryId": "infant-dressing-fasteners",
+      "placementId": "24-36.infant-dressing-fasteners",
+      "path": "content/6-18/revisions/r03/snapshots/24-36.infant-dressing-fasteners.json",
+      "sha256": "478176b9835895eb1f97b26b62f2d630e356141094800d7eec4c1c6abb555ed9",
+      "textPlacementSha256": "03b63c6e7e8ed2255c7b3d6883a75b9c242bf98fee818bd5d5f5cbf70471123b",
+      "artContextSha256": null,
+      "publicProjectionSha256": "38f859cd8bc29cf43af4b964fd7a54666ee9a353eafa3e9ecd7d9895ffb43948"
+    },
+    {
+      "entryId": "infant-stir-premeasured-ingredients",
+      "placementId": "12-18.infant-stir-premeasured-ingredients",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-stir-premeasured-ingredients.json",
+      "sha256": "35d74aca3b0b8128a5839bcfc748a6f063f268c7313b9c881fdefea0dbada923",
+      "textPlacementSha256": "d85e890d3c737b0113f5ba38416d105e9e11238c81cf937505fce922eba629ea",
+      "artContextSha256": null,
+      "publicProjectionSha256": "b5152963562c2b16ff531ad448747951e1890259a6fb512914e48b6d331b756f"
+    },
+    {
+      "entryId": "infant-stir-premeasured-ingredients",
+      "placementId": "18-24.infant-stir-premeasured-ingredients",
+      "path": "content/6-18/revisions/r03/snapshots/18-24.infant-stir-premeasured-ingredients.json",
+      "sha256": "38150c42cad4b2d3d13b1e1881d94af407d3be65ad405ee29c7482a12b8a9793",
+      "textPlacementSha256": "44634297340387dbc616e97ea388171a88a34285c65574e9e335c6e543766723",
+      "artContextSha256": null,
+      "publicProjectionSha256": "f36b38cc3889f35df31d7a5c78a029e8adf7a171576d0b9e333685d002709e11"
+    },
+    {
+      "entryId": "infant-stir-premeasured-ingredients",
+      "placementId": "24-36.infant-stir-premeasured-ingredients",
+      "path": "content/6-18/revisions/r03/snapshots/24-36.infant-stir-premeasured-ingredients.json",
+      "sha256": "90589cb4c292cb82f125316e74c94f8ca24771f582e2b131bb288fdb0ff5e9cf",
+      "textPlacementSha256": "b60051e72b5d66b49e950e512cedb2373a8c7c69b58aaf6be3f1d9e893f3bda3",
+      "artContextSha256": null,
+      "publicProjectionSha256": "dd80144600053f30d9a9172e06536ffd32d35f17dcc3255a4dbe539acb1b5202"
+    },
+    {
+      "entryId": "infant-nighttime-needs",
+      "placementId": "12-18.infant-nighttime-needs",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-nighttime-needs.json",
+      "sha256": "c31488823d980128355881509a5942651ce44c2c1864a16c1b4af069c357352a",
+      "textPlacementSha256": "9b23299214107a3e44f5a9c20793a1a21ae578f9f2ce47f7f6ddb2fc304e1618",
+      "artContextSha256": null,
+      "publicProjectionSha256": "fd34f14da58b097c4cfc5eb9d52af14f43e0b1e8cacfc911ba86c60c0c35ec39"
+    },
+    {
+      "entryId": "infant-nighttime-needs",
+      "placementId": "18-24.infant-nighttime-needs",
+      "path": "content/6-18/revisions/r03/snapshots/18-24.infant-nighttime-needs.json",
+      "sha256": "64004fcc102eeddda713e7e7a4810de50caa1765838163756089bde8db64d910",
+      "textPlacementSha256": "f4b27b7c6a6a4e7d2cc1e5da8199c6979c4158b5431890da5a6db8eaf6e3be33",
+      "artContextSha256": null,
+      "publicProjectionSha256": "235ee9b0ceaf005399dbb238c8a5a110cbc9dec2fe14686ee3a0e1848bcc13de"
+    },
+    {
+      "entryId": "infant-nighttime-needs",
+      "placementId": "24-36.infant-nighttime-needs",
+      "path": "content/6-18/revisions/r03/snapshots/24-36.infant-nighttime-needs.json",
+      "sha256": "e42e77ae6ff7ab09e53fbcf0a95b5ed23341b5fc12e2de11fa52090409973487",
+      "textPlacementSha256": "040529cb2a875b0944b02cb03ca73bd281b5747fa764b7b31de9fb4b8441ed28",
+      "artContextSha256": null,
+      "publicProjectionSha256": "e07d2f943c787734e3adb93b80132462ca26cbc719ba5325c4a5927d2183041f"
+    },
+    {
+      "entryId": "infant-rings-and-posts",
+      "placementId": "6-9.infant-rings-and-posts",
+      "path": "content/6-18/revisions/r03/snapshots/6-9.infant-rings-and-posts.json",
+      "sha256": "7ad6d17d97987cf04b32c196c1b14131fc46f2910894de3853c260116fd682f3",
+      "textPlacementSha256": "53156a061d772f2dfe94dd833e61521c61cded91ef3f46bd9743cf028c1cafd2",
+      "artContextSha256": null,
+      "publicProjectionSha256": "4aac378311c5b4bcf4edccf3371270c179d9845e30abba9aee269eea70a6ccae"
+    },
+    {
+      "entryId": "infant-rings-and-posts",
+      "placementId": "9-12.infant-rings-and-posts",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.infant-rings-and-posts.json",
+      "sha256": "5e1bd910633f22ddbf7708c80403c5ebf7bc0b288192bfc483115348664e0b61",
+      "textPlacementSha256": "73c8fac01fc302f581d622ab8a5f34f6d71cca620d229e4ba03ee89db9ae7229",
+      "artContextSha256": null,
+      "publicProjectionSha256": "5d2f029df650e5fd39e9e18801aa0b5b7f0fa21ef966f077179d79b454114b35"
+    },
+    {
+      "entryId": "infant-rings-and-posts",
+      "placementId": "12-18.infant-rings-and-posts",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-rings-and-posts.json",
+      "sha256": "c5805d4cd0e5523fb60e790bc970481b8980bc5d75370e667d6769fe12cf457a",
+      "textPlacementSha256": "7e70c3e1b32cd059a3a90dac10f47ae049e9cc1cba59d58e145095d9d8c8dda6",
+      "artContextSha256": null,
+      "publicProjectionSha256": "e065ef2e279b24eaec386ee511361dd351e317b335623bc0e5515322f874df48"
+    },
+    {
+      "entryId": "infant-rings-and-posts",
+      "placementId": "18-24.infant-rings-and-posts",
+      "path": "content/6-18/revisions/r03/snapshots/18-24.infant-rings-and-posts.json",
+      "sha256": "bd8c28cda1accb534d68105739eac24d0bf60f7b723925a40e94154d53a47d3a",
+      "textPlacementSha256": "4f4884c588e01dabb3da6de32507afed5b861628c5368c8af873103601ae8c53",
+      "artContextSha256": null,
+      "publicProjectionSha256": "88a2a9e9e57a872227f42ad50021d176c7028cb55dfb81760b86c12890b8106b"
+    },
+    {
+      "entryId": "infant-rings-and-posts",
+      "placementId": "24-36.infant-rings-and-posts",
+      "path": "content/6-18/revisions/r03/snapshots/24-36.infant-rings-and-posts.json",
+      "sha256": "b104489671c146137469125492051e2f198ebe09a9fcdc2f7633cb2427e2befb",
+      "textPlacementSha256": "6fb63d270399be3829a6a08701f2f5a29637ea8a1a918b36af09746b2766bcef",
+      "artContextSha256": null,
+      "publicProjectionSha256": "55240263c17b4799d0ae5ceb78da43d31a522bba7854a889212e0108f9c2b725"
+    },
+    {
+      "entryId": "infant-pegs-and-cubes",
+      "placementId": "9-12.infant-pegs-and-cubes",
+      "path": "content/6-18/revisions/r03/snapshots/9-12.infant-pegs-and-cubes.json",
+      "sha256": "820293adb07c2f8860fa630c0bd487287f26e7c8925c4d3638b81fb59bd195f1",
+      "textPlacementSha256": "99bba643fd42564abce6135870518963ec2c11de14644df11029492677f3f2e0",
+      "artContextSha256": null,
+      "publicProjectionSha256": "9e8adcac35525fe4dd47caa4ef52f752e5978adab962a0b57616b49e296c6836"
+    },
+    {
+      "entryId": "infant-pegs-and-cubes",
+      "placementId": "12-18.infant-pegs-and-cubes",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-pegs-and-cubes.json",
+      "sha256": "0056fafa3c038b2aa263c161b4bb61d596eccc7c1e42565f52dfd9af21d7a356",
+      "textPlacementSha256": "4d5d35f598317226b1dd80570dc833a1d1f5876d41aa6c928180268d8daf8861",
+      "artContextSha256": null,
+      "publicProjectionSha256": "28b4edb16a97c4d4382dbe669b53582e336c67ecc2d408b23cf08504b8b492c5"
+    },
+    {
+      "entryId": "infant-pegs-and-cubes",
+      "placementId": "18-24.infant-pegs-and-cubes",
+      "path": "content/6-18/revisions/r03/snapshots/18-24.infant-pegs-and-cubes.json",
+      "sha256": "ea947892550466c28bf93c0379c21e451b517b9a681596d22d500aff9c5933e9",
+      "textPlacementSha256": "34b54bcba766e1b0786a7ab526b97eb30a110c14e609673b539c4e91ffecbbff",
+      "artContextSha256": null,
+      "publicProjectionSha256": "23ca662accedb49f025464240bf09ced5a557412e4cd81e20849495c80ff9f2e"
+    },
+    {
+      "entryId": "infant-pegs-and-cubes",
+      "placementId": "24-36.infant-pegs-and-cubes",
+      "path": "content/6-18/revisions/r03/snapshots/24-36.infant-pegs-and-cubes.json",
+      "sha256": "a7a33b3a92895f3a2b7f52f2774ef822bb446cbf2f6bcedf7b6cfc9d23aca461",
+      "textPlacementSha256": "c07416e3f3073c376b9a091807f705327a0d22809111ce8038c1f10099281758",
+      "artContextSha256": null,
+      "publicProjectionSha256": "ff0286e3dfeec8f001aefe2571f4911c6cd8a32eab31e1416657ecbf4d3b20c5"
+    },
+    {
+      "entryId": "infant-slot-posting",
+      "placementId": "12-18.infant-slot-posting",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-slot-posting.json",
+      "sha256": "ed2d7fd1f84fc1bd28fbf9a3dd68f8f7d5c0bc7e7db827fd8dd3c13139089863",
+      "textPlacementSha256": "207274258d6f67af38940da51cf5e98ab1b8d7f8aa4b10daeefd4f1c26421f59",
+      "artContextSha256": null,
+      "publicProjectionSha256": "478c6c1a387911441a4ffb458c8685324205181fb7d65e41efbdc8d1aa249350"
+    },
+    {
+      "entryId": "infant-slot-posting",
+      "placementId": "18-24.infant-slot-posting",
+      "path": "content/6-18/revisions/r03/snapshots/18-24.infant-slot-posting.json",
+      "sha256": "29e23ee22e12bc7a43db5fa7f0ba2ca3ef14dc5e7ef9dda26e3efbc82dfc9bd4",
+      "textPlacementSha256": "022e5a67ec4a0b3bec0f7d46640bcd273237e6f7fcca93c72032679f001dca1d",
+      "artContextSha256": null,
+      "publicProjectionSha256": "7e9340c69c2fbba1cf0a530875eb05f6ca2f35b91c77cd5b53cc5ec3d89c4189"
+    },
+    {
+      "entryId": "infant-slot-posting",
+      "placementId": "24-36.infant-slot-posting",
+      "path": "content/6-18/revisions/r03/snapshots/24-36.infant-slot-posting.json",
+      "sha256": "920db8a86952f82d3a9e9809956be3bb7259e14957815db72d6caf6b151867d6",
+      "textPlacementSha256": "e9bdfa378c3add86ff9651af02bebcedd662502fbf395cfd3691950fcd2b2e74",
+      "artContextSha256": null,
+      "publicProjectionSha256": "cf2f643df58021eefc41778f27a852dd7f333b2b25258dca8967119284dbfe87"
+    },
+    {
+      "entryId": "infant-opening-and-keys",
+      "placementId": "12-18.infant-opening-and-keys",
+      "path": "content/6-18/revisions/r03/snapshots/12-18.infant-opening-and-keys.json",
+      "sha256": "70adca0c4498ec335ba2ff914228bd8def4c09e4c52643da34ca7c6c2d1d70df",
+      "textPlacementSha256": "8eead1e034c023070c3e63efbad5a469d4eeaa06bce4c5c9944f5c131146c865",
+      "artContextSha256": null,
+      "publicProjectionSha256": "0631ecba2bbcfd38863648c1c5ef218e12fc0c54be414d1076b6457520358ff9"
+    },
+    {
+      "entryId": "infant-opening-and-keys",
+      "placementId": "18-24.infant-opening-and-keys",
+      "path": "content/6-18/revisions/r03/snapshots/18-24.infant-opening-and-keys.json",
+      "sha256": "ddd624acb9b9280027413fe034dbe0ed7acff58a1072ebd7022ce5ffb0d040d9",
+      "textPlacementSha256": "3857c4273bf33c698825cd2954282d1ef91e1fbc1fb1d416e57ca4d326780594",
+      "artContextSha256": null,
+      "publicProjectionSha256": "de34828091fab68e927ce73076a9bd746c455627ec670c0dc94d57cf7aee9aad"
+    },
+    {
+      "entryId": "infant-opening-and-keys",
+      "placementId": "24-36.infant-opening-and-keys",
+      "path": "content/6-18/revisions/r03/snapshots/24-36.infant-opening-and-keys.json",
+      "sha256": "31e7a0853730f1d110ff737d0e0ba16ca0d57ea01f0456c8fc0e6fe624c7dba4",
+      "textPlacementSha256": "d9592055bce896fdaac3d58ce3abbc8922398b6a3d8d3fc75c25127fab5fd0b3",
+      "artContextSha256": null,
+      "publicProjectionSha256": "397654f0c92079b681eb29717235a0135fc1b304c300ba8ed34866277d0b6fa7"
+    }
+  ],
+  "artworkBoundary": "No scene or placeholder asset in this contribution. Existing canonical illustrations are omitted from this generated text-only projection. Exact actual artwork combinations require Task 8 reviews."
+}

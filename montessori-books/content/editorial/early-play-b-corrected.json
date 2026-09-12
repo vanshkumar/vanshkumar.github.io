@@ -1,0 +1,57 @@
+{
+  "revision": "content/birth-6/revisions/r03",
+  "name": "early-play-b-corrected",
+  "entryIds": [
+    "baby-naming",
+    "baby-choices-within-reach"
+  ],
+  "placementIds": [
+    "0-3.baby-naming",
+    "3-6.baby-naming",
+    "3-6.baby-choices-within-reach"
+  ],
+  "packets": [
+    {
+      "id": "baby-naming",
+      "path": "tmp/editorial/early-play-b-corrected/baby-naming.json",
+      "sha256": "7aadf1ae8ff1a3edc8f33ca729456d97d38f2110a2d1c762bbf7b1f8a3287149",
+      "bytes": 9768,
+      "placementIds": [
+        "0-3.baby-naming",
+        "3-6.baby-naming"
+      ],
+      "sourcePages": {
+        "baby": [
+          119,
+          120,
+          130,
+          135
+        ]
+      }
+    },
+    {
+      "id": "baby-choices-within-reach",
+      "path": "tmp/editorial/early-play-b-corrected/baby-choices-within-reach.json",
+      "sha256": "b5cd5c506023e41fd074f7c10c8743ebccf210e004fdc7189d2ebd073b1896ad",
+      "bytes": 8204,
+      "placementIds": [
+        "3-6.baby-choices-within-reach"
+      ],
+      "sourcePages": {
+        "baby": [
+          66,
+          68,
+          69,
+          79,
+          80,
+          122,
+          123,
+          156,
+          299
+        ]
+      }
+    }
+  ],
+  "sourcePageDirectory": "tmp/editorial/sources",
+  "publication": false
+}

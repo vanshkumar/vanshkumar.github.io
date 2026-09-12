@@ -1,0 +1,115 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-music",
+        "kind": "invitation",
+        "title": "Sing, move, and answer a rhythm",
+        "summary": "Share a song you enjoy, copy a movement your child makes, or listen to a piece of music together. There is no need to perform well.",
+        "cue": "Notice a sway, a clap, a repeated sound, or a wish to hear a song again.",
+        "detail": [
+          "Davies includes spontaneous songs with actions, family and cultural dances, and copying the rhythm a child makes. You can make room for their response as well as offer your own.",
+          "Listening can be an activity in itself. Give the music a moment of attention, instead of always leaving it behind other noise. Short rhymes with finger or body actions are another way to share rhythm."
+        ],
+        "references": [
+          {
+            "id": "toddler-music.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Music and movement",
+            "locator": "Enjoying music, imitating rhythm/movement, singing/actions and cultural dance",
+            "pdfPages": [
+              {
+                "start": 46,
+                "end": 47
+              }
+            ]
+          },
+          {
+            "id": "toddler-music.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "List of Montessori activities for toddlers",
+            "locator": "All ages: music/dance/movement/singing and rhythmic language",
+            "pdfPages": [
+              {
+                "start": 245,
+                "end": 245
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.toddler-music",
+        "entryId": "toddler-music",
+        "ageId": "12-18",
+        "topicIds": [
+          "play-discovery",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "The appendix says“all ages” within this toddler book.",
+          "readiness": "Interest in shared songs, rhythm, sounds or movement.",
+          "note": "Age and readiness sources: The Montessori Toddler, PDF pp. 14."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 46–47"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 245"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "388ae1abeacf98a1161b842482d8406337ea61e051a0a8914238a01573ba9b71",
+  "artContextSha256": null,
+  "publicProjectionSha256": "8078cbd7081e5861544b45c3e908172e6eb39e11ca7a19df14c87fa289304482",
+  "provenance": {
+    "revision": "r04",
+    "placementDraft": {
+      "path": "content/6-18/drafts/editorial-r03/04.json",
+      "sha256": "08355b5f46c91d41026b565353944e89670fdefc1ebdece4a45b321515d2cb48"
+    },
+    "canonical": {
+      "entryId": "toddler-music",
+      "canonicalEntrySha256": "a094cce0575fb3f071254fc8cafda4a3ebe047dba057bc038f4a9767c96b4c0b",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/6",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/6"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

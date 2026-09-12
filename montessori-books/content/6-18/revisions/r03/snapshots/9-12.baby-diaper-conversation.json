@@ -1,0 +1,115 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-diaper-conversation",
+        "kind": "everyday-situation",
+        "title": "A conversation during a diaper change",
+        "summary": "Tell your baby what is happening during a needed change, using gentle touch and ordinary words for their body. Their response can be part of the exchange.",
+        "cue": "A diaper needs changing.",
+        "detail": [
+          "The authors describe diapering as private, respectful care. They name what has happened without calling the baby dirty or making a disgusted face.",
+          "They explain the next action and leave room for a response or a small movement. The adult still provides the care the baby needs.",
+          "In the home-setup passage, they keep supplies ready and always keep a hand on the baby at a raised changing surface."
+        ],
+        "references": [
+          {
+            "id": "baby-diaper-conversation.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Diapering; Resistance to care",
+            "locator": "Privacy, neutral body language, communication and necessary care",
+            "pdfPages": [
+              {
+                "start": 208,
+                "end": 210
+              }
+            ]
+          },
+          {
+            "id": "baby-diaper-conversation.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Room by room / Changing area",
+            "locator": "Supplies ready and hand-on-baby raised-surface condition",
+            "pdfPages": [
+              {
+                "start": 73,
+                "end": 73
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "9-12.baby-diaper-conversation",
+        "entryId": "baby-diaper-conversation",
+        "ageId": "9-12",
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "No fixed age in the diapering discussion.",
+          "readiness": "A needed diaper change; the adult provides necessary private care."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "9–12 months",
+        "kindLabel": "An everyday situation",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 208–210"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF p. 73"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "d5d3178509a0b588bd405e0be8b152eb71446bd9f6f0ecbae1d5d3de4fa87c01",
+  "artContextSha256": null,
+  "publicProjectionSha256": "8bb80f30fcf6d7024d5d8f6bad0b81d1f90f9a54c4a61489573f5f637fc56db1",
+  "provenance": {
+    "revision": "r03",
+    "placementDraft": {
+      "path": "content/6-18/drafts/editorial-r03/02.json",
+      "sha256": "1d5860acf671c24090b0c5b86bd1297bc7b12db5b77e1663b7f75425506a115e"
+    },
+    "canonical": {
+      "entryId": "baby-diaper-conversation",
+      "canonicalEntrySha256": "508c711d2938fe27fc73487ea048f401a793d60652433e3697b33a2e4a031620",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/15",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/15"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

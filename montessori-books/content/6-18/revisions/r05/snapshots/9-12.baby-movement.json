@@ -1,0 +1,154 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-movement",
+        "kind": "perspective",
+        "title": "Room for their own movement",
+        "actionLabel": "Move",
+        "invitation": "The authors make room for the baby’s own awake movement, with comfort and help close by.",
+        "summary": "The authors favor awake movement that the baby initiates, with room to explore, help when needed, and no propping into sitting or standing before they can get there themselves.",
+        "cue": "Notice how your baby moves now, what catches their attention, and when effort becomes frustration.",
+        "detail": [
+          "Davies and Uzodike describe a prepared space where a baby can explore their own movements. A nearby object may invite a reach or a change of direction; the point is to follow the baby’s present interest and pace.",
+          "Their caution is about propping a baby into sitting or standing. They separately describe awake time on both the back and tummy, while noticing discomfort and changing things or picking the baby up when needed.",
+          "When effort turns to frustration, they describe coming closer and offering enough help for the baby to continue. Their activity ages are guides, and they explicitly welcome seeking support for developmental concerns."
+        ],
+        "references": [
+          {
+            "id": "baby-movement.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Freedom of movement",
+            "locator": "Self-initiated movement, propping, reachable interest and individual pace",
+            "pdfPages": [
+              {
+                "start": 107,
+                "end": 108
+              }
+            ]
+          },
+          {
+            "id": "baby-movement.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Movement activities / 3 to 6 months and 6 to 9 months",
+            "locator": "Awake floor movement; tummy-time disagreement and comfort qualification; specific sitting distinction",
+            "pdfPages": [
+              {
+                "start": 155,
+                "end": 159
+              }
+            ]
+          },
+          {
+            "id": "baby-movement.ref.3",
+            "sourceId": "baby-2021",
+            "section": "Activities / Help when stuck; Observe 6 to 9 months",
+            "locator": "Frustration and proportionate help; observing current movement",
+            "pdfPages": [
+              {
+                "start": 126,
+                "end": 126
+              },
+              {
+                "start": 162,
+                "end": 162
+              }
+            ]
+          },
+          {
+            "id": "baby-movement.ref.4",
+            "sourceId": "baby-2021",
+            "section": "Introduction to activities",
+            "locator": "Individual timeline and permission to seek support",
+            "pdfPages": [
+              {
+                "start": 119,
+                "end": 120
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "9-12.baby-movement",
+        "entryId": "baby-movement",
+        "ageId": "9-12",
+        "topicIds": [
+          "play-discovery",
+          "home-that-helps"
+        ],
+        "ageContext": {
+          "bookAge": "The movement chapter groups examples at 3–6 and 6–9 months; later sections describe the same self-initiated movement through walking.",
+          "readiness": "The baby chooses their movements; no propping, and help remains available.",
+          "note": "The activity may continue while it fits your child’s interest and current skills; the source ages are guides. Age and readiness sources: The Montessori Baby, PDF pp. 121–122, 160–161, 163–169."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "9–12 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          },
+          {
+            "id": "home-that-helps",
+            "label": "A home that helps"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 107–108"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 155–159"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 126, 162"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 119–120"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "1ca980b48d9ccd95b9daea64b4871e5ac7272583b6e00b11debf008d60a97bea",
+  "artContextSha256": null,
+  "publicProjectionSha256": "b4134dc0757e9fd892842268cbae252e5ef4c27396bf4b721f7514024565d93d",
+  "provenance": {
+    "revision": "r05",
+    "placementDraft": {
+      "path": "content/6-18/drafts/editorial-r04/01.json",
+      "sha256": "714957507ce3bb904cf57c87d0d0c0be87dc234ad7163e25fa5a4ef019dcfb22"
+    },
+    "canonical": {
+      "entryId": "baby-movement",
+      "canonicalEntrySha256": "ad2f99ea61a19b42cfae1dcb274f6924ef45dda8a4c1dc224b5b337163e59b5f",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/0",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/0"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

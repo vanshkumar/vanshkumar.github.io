@@ -1,0 +1,663 @@
+{
+  "id": "trial-tone-r01",
+  "workflow": "lean-v1",
+  "reviewer": {
+    "task": "/root/trial_tone",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-12",
+  "scope": "Explicit grouped source-topic decisions; exact age contexts reviewed.",
+  "renderedSurfaces": {
+    "path": "content/birth-6/revisions/r01/RENDERED_SURFACES.json",
+    "sha256": "47f5ef2bd8a94e69f9101d68a5509181550a5c1d5f12bec82a2b85d2be516341"
+  },
+  "decisionInput": {
+    "path": "content/birth-6/reviews/decisions/trial-tone-r01.json",
+    "sha256": "96a755040a2c1f99b921a3ba3ee6b610ac91384a3daff4c521a9db47822b9d25"
+  },
+  "retainedReads": [],
+  "readLogs": [
+    {
+      "id": "tone-framing",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 123
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/review-trial/source-framing.txt",
+      "notes": "Read the guidance on individual pace, observation, child control, suitable materials, frustration, and parent role."
+    },
+    {
+      "id": "tone-conversation",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 129,
+          "end": 135
+        },
+        {
+          "start": 138,
+          "end": 138
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/review-trial/source-conversation.txt",
+      "notes": "Read early conversation, shared music, vocal exploration, both sign-age presentations, and observation prompts."
+    },
+    {
+      "id": "tone-sitting",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 158,
+          "end": 160
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/review-trial/source-sitting.txt",
+      "notes": "Read the movement context and the encouragement to wait for self-initiated sitting."
+    },
+    {
+      "id": "tone-music",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 170,
+          "end": 170
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/review-trial/source-music.txt",
+      "notes": "Read shared music before mobility, later independent examples, and the caution about nonstop music."
+    },
+    {
+      "id": "tone-care",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 208,
+          "end": 210
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/review-trial/source-care.txt",
+      "notes": "Read respectful diaper conversation, early collaboration, later standing context, and gentle necessary care."
+    },
+    {
+      "id": "tone-sibling",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 226,
+          "end": 226
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/review-trial/source-sibling.txt",
+      "notes": "Read the awake-baby conversation example and surrounding respect for older siblings' interest and feelings."
+    },
+    {
+      "id": "tone-monthly",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 286,
+          "end": 289
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/review-trial/source-monthly.txt",
+      "notes": "Read early care connection, continuing gentle handling, parent rest and help, and the transitions between monthly sections."
+    },
+    {
+      "id": "tone-monthly-start",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 285,
+          "end": 285
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/review-trial/source-extra-285.txt",
+      "notes": "Read the Months 1 to 2 heading and the opening security and gentle-handling context."
+    },
+    {
+      "id": "tone-activities-framing",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/review-trial/source-activities.txt",
+      "notes": "Read the appendix instruction to use ages as guidelines and follow individual interests and developing skills."
+    },
+    {
+      "id": "tone-visual-138",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 138,
+          "end": 138
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/review-trial/baby-138.png",
+      "notes": "Inspected the 7 to 9 months sign-learning bullet, the later repetition bullet, and optional-sign observation wording."
+    },
+    {
+      "id": "tone-visual-295",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 295,
+          "end": 295
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/review-trial/baby-295.png",
+      "notes": "Inspected the all-ages music and rhythmic-language rows, singing from birth, active listening, and short rhymes with movements."
+    },
+    {
+      "id": "tone-visual-296",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 296,
+          "end": 296
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/review-trial/baby-296.png",
+      "notes": "Inspected the self-expression row from shortly after birth, nonverbal exchanges, adult presence, and culturally qualified eye contact."
+    },
+    {
+      "id": "tone-visual-299",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 299,
+          "end": 299
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/review-trial/baby-299.png",
+      "notes": "Inspected the suction-cup toy row's alternative age and sitting cue, fixed-base description, and batting, reaching, and grasping actions."
+    },
+    {
+      "id": "tone-visual-286",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 286,
+          "end": 286
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/review-trial/baby-286.png",
+      "notes": "Inspected diaper conversation under bonding alongside gentle touch, simple routines, and practical help and rest for parents."
+    },
+    {
+      "id": "tone-visual-287",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 287,
+          "end": 287
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/review-trial/baby-287.png",
+      "notes": "Inspected continuing early care, time for conversation responses, and the boundary introducing Months 3 to 4."
+    },
+    {
+      "id": "tone-visual-288",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 288,
+          "end": 288
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/review-trial/baby-288.png",
+      "notes": "Inspected care as connection, face and voice interest, musical quiet, and parent capacity in the Months 3 to 4 table."
+    },
+    {
+      "id": "tone-visual-289",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 289,
+          "end": 289
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/review-trial/baby-289.png",
+      "notes": "Inspected continuing permission to handle, emerging vocal and movement interest, and the boundary introducing Months 5 to 6."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "trial-tone-r01.0-3.early-newborn-conversation",
+      "entryId": "early-newborn-conversation",
+      "placementId": "0-3.early-newborn-conversation",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.early-newborn-conversation.json",
+      "snapshotFileSha256": "7013fdf2ceaff32fd7b49f4f0320819da77512a2daf67eb8d255753ab769fa71",
+      "textPlacementSha256": "a9ea0d059a972a68cf43c7fd1f4d95f5d3f2602c36f9e4e6cc96feac6e6cc89f",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "tone-conversation",
+        "tone-sibling",
+        "tone-visual-296"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 120
+            },
+            {
+              "start": 129,
+              "end": 130
+            },
+            {
+              "start": 226,
+              "end": 226
+            },
+            {
+              "start": 296,
+              "end": 296
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The newborn wording treats names, care talk, and pauses as ordinary conversation without requiring a visible response or assigning the older sibling a caregiving role."
+      }
+    },
+    {
+      "id": "trial-tone-r01.3-6.early-steady-toy",
+      "entryId": "early-steady-toy",
+      "placementId": "3-6.early-steady-toy",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.early-steady-toy.json",
+      "snapshotFileSha256": "fcd342087837543c795e8c3a2f1b4151b369789f38326980a550386d0524132b",
+      "textPlacementSha256": "5213b4de73ee241951bf1af0b7219b71242c5e6c6a145290b64402cafedea9a8",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "tone-sitting",
+        "tone-activities-framing",
+        "tone-visual-299"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 123
+            },
+            {
+              "start": 159,
+              "end": 159
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 299,
+              "end": 299
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The fixed-toy description preserves the appendix's alternative age and sitting cue, protects self-initiated sitting, and leaves continued use to present interest."
+      }
+    },
+    {
+      "id": "trial-tone-r01.6-9.early-steady-toy",
+      "entryId": "early-steady-toy",
+      "placementId": "6-9.early-steady-toy",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/6-9.early-steady-toy.json",
+      "snapshotFileSha256": "bb1aeaf7d9a6b3c3d2755fd781caf827ab750933a1a831a0eb0b530cd6a687e6",
+      "textPlacementSha256": "771b22938b6db6d0ac4fcf246efed2ece1eb1bc2fc66f71b660108a4407794f4",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "tone-sitting",
+        "tone-activities-framing",
+        "tone-visual-299"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 123
+            },
+            {
+              "start": 159,
+              "end": 159
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 299,
+              "end": 299
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The fixed-toy description preserves the appendix's alternative age and sitting cue, protects self-initiated sitting, and leaves continued use to present interest."
+      }
+    },
+    {
+      "id": "trial-tone-r01.9-12.early-steady-toy",
+      "entryId": "early-steady-toy",
+      "placementId": "9-12.early-steady-toy",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/9-12.early-steady-toy.json",
+      "snapshotFileSha256": "26322363c792b80320aecdfe9e0dcc0944ef859d622c7c392e5969f92c91dea6",
+      "textPlacementSha256": "8986f548a5d20cc1b75e13c6f3392a360a2d9a9bc7566d8328570e1905592383",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "tone-sitting",
+        "tone-activities-framing",
+        "tone-visual-299"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 123
+            },
+            {
+              "start": 159,
+              "end": 159
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 299,
+              "end": 299
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The fixed-toy description preserves the appendix's alternative age and sitting cue, protects self-initiated sitting, and leaves continued use to present interest."
+      }
+    },
+    {
+      "id": "trial-tone-r01.3-6.baby-language",
+      "entryId": "baby-language",
+      "placementId": "3-6.baby-language",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-language.json",
+      "snapshotFileSha256": "3a7ccf60750ccfe4cb17d6afda79fbfb8748e29e32accc9d7b22da90ec29721b",
+      "textPlacementSha256": "50145f0c559357ab23a67c4ef64c3f2853c150edbfd7c8713a696900110a0f15",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "tone-conversation",
+        "tone-visual-138"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 120
+            },
+            {
+              "start": 133,
+              "end": 135
+            },
+            {
+              "start": 138,
+              "end": 138
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The new 3–6-month placement keeps signs optional and both source age labels visible while inviting parents to respond to existing sounds and gestures."
+      },
+      "bodyReview": {
+        "entryId": "baby-language",
+        "canonicalEntrySha256": "f73c743dcacd0fd6b178539e6918812d6c35fc28ca65b123b6455686166e2213",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "trial-tone-r01.0-3.baby-songs",
+      "entryId": "baby-songs",
+      "placementId": "0-3.baby-songs",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.baby-songs.json",
+      "snapshotFileSha256": "58cb50af5c18e7f1e3673b2e2de4cea2d39cdbc9be6d97d5c0acbaa3aa3264f2",
+      "textPlacementSha256": "264d7217d8525a8d76eb546035e6f4e2f476cffaaa59008060b998eab908bfc1",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "tone-conversation",
+        "tone-music",
+        "tone-visual-295"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 120
+            },
+            {
+              "start": 131,
+              "end": 132
+            },
+            {
+              "start": 135,
+              "end": 135
+            },
+            {
+              "start": 170,
+              "end": 170
+            },
+            {
+              "start": 295,
+              "end": 295
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both early placements frame songs as shared listening with optional response, so the reused variations do not imply performance or equipment requirements."
+      },
+      "bodyReview": {
+        "entryId": "baby-songs",
+        "canonicalEntrySha256": "0f46408402a1df0553cffc0ad0996480701cb8e236f515d1da4632ad58a47aee",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "trial-tone-r01.3-6.baby-songs",
+      "entryId": "baby-songs",
+      "placementId": "3-6.baby-songs",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-songs.json",
+      "snapshotFileSha256": "8103262b67c78f5013dd8eb28a8ec88a760053df07285c616c967c3faaac30da",
+      "textPlacementSha256": "b70d58bc54ddc217c6b3f4964e8b969172eb31872851af8d263fe9d607d9a3bd",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "tone-conversation",
+        "tone-music",
+        "tone-visual-295"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 120
+            },
+            {
+              "start": 131,
+              "end": 132
+            },
+            {
+              "start": 135,
+              "end": 135
+            },
+            {
+              "start": 170,
+              "end": 170
+            },
+            {
+              "start": 295,
+              "end": 295
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both early placements frame songs as shared listening with optional response, so the reused variations do not imply performance or equipment requirements."
+      },
+      "bodyReview": {
+        "entryId": "baby-songs",
+        "canonicalEntrySha256": "0f46408402a1df0553cffc0ad0996480701cb8e236f515d1da4632ad58a47aee",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "trial-tone-r01.0-3.baby-diaper-conversation",
+      "entryId": "baby-diaper-conversation",
+      "placementId": "0-3.baby-diaper-conversation",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.baby-diaper-conversation.json",
+      "snapshotFileSha256": "d41875b6bed36a1efecdf64e5fa2d4e31cea05c9483be88a9a50ad929730e3b3",
+      "textPlacementSha256": "c3eaf853d41f9e8290922194e86cdd15d598d4265d9e2b00a75888daa7bc13f5",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-care",
+        "tone-monthly-start",
+        "tone-monthly",
+        "tone-visual-286",
+        "tone-visual-287",
+        "tone-visual-288",
+        "tone-visual-289"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 208,
+              "end": 210
+            },
+            {
+              "start": 285,
+              "end": 289
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The early placements keep changing as necessary, gentle adult care with optional baby response, without importing later standing or toilet expectations."
+      },
+      "bodyReview": {
+        "entryId": "baby-diaper-conversation",
+        "canonicalEntrySha256": "508c711d2938fe27fc73487ea048f401a793d60652433e3697b33a2e4a031620",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "trial-tone-r01.3-6.baby-diaper-conversation",
+      "entryId": "baby-diaper-conversation",
+      "placementId": "3-6.baby-diaper-conversation",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-diaper-conversation.json",
+      "snapshotFileSha256": "7d8848032a6c5217db5b3bbadde18e22589c347d8bfea6caf117d3480b6e2fd9",
+      "textPlacementSha256": "945ba235f2ebd49c75013bdc4ac4bea09286f6d4b92e9b77f0a4a37cda179ec1",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-care",
+        "tone-monthly-start",
+        "tone-monthly",
+        "tone-visual-286",
+        "tone-visual-287",
+        "tone-visual-288",
+        "tone-visual-289"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 208,
+              "end": 210
+            },
+            {
+              "start": 285,
+              "end": 289
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The early placements keep changing as necessary, gentle adult care with optional baby response, without importing later standing or toilet expectations."
+      },
+      "bodyReview": {
+        "entryId": "baby-diaper-conversation",
+        "canonicalEntrySha256": "508c711d2938fe27fc73487ea048f401a793d60652433e3697b33a2e4a031620",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    }
+  ]
+}

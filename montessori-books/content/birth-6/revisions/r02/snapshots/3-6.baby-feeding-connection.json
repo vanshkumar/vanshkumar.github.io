@@ -1,0 +1,109 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-feeding-connection",
+        "kind": "perspective",
+        "title": "Connection can be part of feeding",
+        "summary": "The authors describe breast or bottle feeding as time for closeness and communication. They also acknowledge feeding choices, difficulties and the support a family may need.",
+        "cue": "Your baby is feeding, and you notice their gaze, sounds or movements.",
+        "detail": [
+          "Holding the baby, meeting their gaze and noticing their response are forms of connection in the book’s account. This possibility belongs to different primary caregivers and feeding arrangements.",
+          "The authors acknowledge that some people choose not to breastfeed, that difficulties may call for specialist support, and that feeding not going as hoped can bring grief. The relationship is not limited to one way of offering milk."
+        ],
+        "references": [
+          {
+            "id": "baby-feeding-connection.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Eating / Breastfeeding and bottle-feeding",
+            "locator": "Caregiver inclusion, connection, feeding choices and difficulties",
+            "pdfPages": [
+              {
+                "start": 182,
+                "end": 185
+              }
+            ]
+          },
+          {
+            "id": "baby-feeding-connection.ref.2",
+            "sourceId": "baby-2021",
+            "section": "From conception to the first 6 weeks / Family inclusion",
+            "locator": "Opening paragraph includes different caregivers and non-breastfeeding families",
+            "pdfPages": [
+              {
+                "start": 41,
+                "end": 41
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "3-6.baby-feeding-connection",
+        "entryId": "baby-feeding-connection",
+        "ageId": "3-6",
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ]
+      },
+      "displayContext": {
+        "ageLabel": "3–6 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 182–185"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF p. 41"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "91fbde36d0a79801dcba7ac6c601180dad28519d255a9c7c7e8a6b22e9335c55",
+  "artContextSha256": null,
+  "publicProjectionSha256": "8078e4a5192f4f91eb6f73a87883946ec348e9e86236b7fa6f427c12f5675f47",
+  "provenance": {
+    "revision": "r02",
+    "placementDraft": {
+      "path": "content/birth-6/drafts/care-r01.json",
+      "sha256": "26593e72e36d37bd0a30292301c2cdd4de2c1afebed740fffbfa42850831d572"
+    },
+    "canonical": {
+      "entryId": "baby-feeding-connection",
+      "canonicalEntrySha256": "a5792ab355d43f1012026836a540d8ad0e9c08d9d264707311024a260e3026fa",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/17",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/17"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

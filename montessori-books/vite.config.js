@@ -10,11 +10,16 @@ const reviewedArtwork = {
   name: 'reviewed-companion-artwork',
   apply: 'build',
   buildStart() {
-    const release = JSON.parse(readBytes('./content/pilots/APPROVED_RELEASE.json'));
-    if (!/^content\/pilots\/revisions\/r\d+\/INTEGRATION_RECEIPT\.json$/.test(release.receiptPath)) throw new Error('Invalid reviewed release receipt');
+    const releasePath = fs.existsSync(new URL('./content/APPROVED_RELEASE.json', import.meta.url))
+      ? './content/APPROVED_RELEASE.json' : './content/pilots/APPROVED_RELEASE.json';
+    const release = JSON.parse(readBytes(releasePath));
+    if (!/^content\/(?:pilots\/revisions\/r\d+|editorial\/full-r\d+)\/INTEGRATION_RECEIPT\.json$/.test(release.receiptPath)) throw new Error('Invalid reviewed release receipt');
     if (hash(readBytes(`./${release.receiptPath}`)) !== release.receiptSha256) throw new Error('Reviewed receipt changed');
     const payloadBytes = readBytes('./src/guide/approved.json');
     if (hash(payloadBytes) !== release.payloadSha256) throw new Error('Public content changed after reviewed integration');
+    for (const file of release.renderer ?? []) {
+      if (hash(readBytes(`./${file.path}`)) !== file.sha256) throw new Error(`Reviewed presentation changed: ${file.path}`);
+    }
     const payload = JSON.parse(payloadBytes);
     const images = [...payload.scenes, ...payload.entries.map(entry => entry.illustration).filter(Boolean)];
     for (const src of new Set(images.map(image => image.src))) {

@@ -1,0 +1,99 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-languages",
+        "kind": "perspective",
+        "title": "The languages in your family’s day",
+        "summary": "Davies describes different ways a multilingual family can make its languages part of everyday life: through particular people, or through familiar places and times.",
+        "cue": "Your household or caregivers may use more than one language.",
+        "detail": [
+          "One example has adults speaking their own mother tongues with the child and an agreed language together. Another uses different languages in different settings. These are alternatives families can consider, not a demand to use both.",
+          "The useful focus is the language children share with real people in daily life. The book’s family anecdote illustrates an arrangement; it does not establish a fluency timetable."
+        ],
+        "references": [
+          {
+            "id": "toddler-languages.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Bilingualism",
+            "locator": "One Person One Language, Domains of Use and a multilingual-family example",
+            "pdfPages": [
+              {
+                "start": 182,
+                "end": 183
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.toddler-languages",
+        "entryId": "toddler-languages",
+        "ageId": "12-18",
+        "topicIds": [
+          "connection-feelings",
+          "play-discovery"
+        ],
+        "ageContext": {
+          "bookAge": "The multilingual arrangements are not assigned a fixed age; the discussion addresses toddler families.",
+          "readiness": "Different people, places or times in the family use different languages.",
+          "note": "Age and readiness sources: The Montessori Toddler, PDF pp. 14."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          },
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 182–183"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "25dec5de301f34b1003ba52ff593e3ae13bc0f8d2e3327e2f7e90b88318f8e6a",
+  "artContextSha256": null,
+  "publicProjectionSha256": "1d69ec8a4699de5ee5a27b321430c368c8ae20ed494bd1bff2d37149c0566205",
+  "provenance": {
+    "revision": "r04",
+    "placementDraft": {
+      "path": "content/6-18/drafts/editorial-r03/04.json",
+      "sha256": "08355b5f46c91d41026b565353944e89670fdefc1ebdece4a45b321515d2cb48"
+    },
+    "canonical": {
+      "entryId": "toddler-languages",
+      "canonicalEntrySha256": "133cde8e6a04e472b3747ee8828431e4c02ffc65fbf080ae337cc8326dac6668",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/49",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/49"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

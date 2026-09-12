@@ -1,0 +1,98 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-meal-cleanup",
+        "kind": "invitation",
+        "title": "Share a little of the cleanup",
+        "summary": "At a meal already underway, offer a cloth and let your baby join a small part of wiping. You can finish what still needs doing.",
+        "cue": "Your baby is interested in the cloth or in your wiping movement.",
+        "detail": [
+          "The authors describe a cloth for hands and mouth and a little shared table wiping. Their eight-month-old example is imperfect, with the adult still doing cleanup.",
+          "This is participation in an ordinary moment, not a task your baby needs to finish."
+        ],
+        "references": [
+          {
+            "id": "baby-meal-cleanup.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Eating / Tools for eating",
+            "locator": "Cloth and eight-month table-wiping example with adult cleanup",
+            "pdfPages": [
+              {
+                "start": 190,
+                "end": 190
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "9-12.baby-meal-cleanup",
+        "entryId": "baby-meal-cleanup",
+        "ageId": "9-12",
+        "topicIds": [
+          "everyday-care",
+          "play-discovery"
+        ],
+        "ageContext": {
+          "bookAge": "The book gives an eight-month table-wiping example with imperfect results.",
+          "readiness": "Interest in a cloth or the adult’s wiping during an existing meal."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "9–12 months",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          },
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF p. 190"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "71ba1e2fc630e7c469843b34561836690b5ff60ec5dc07c5e93c1827531a1790",
+  "artContextSha256": null,
+  "publicProjectionSha256": "0e504b2f303db147754af45ac660ba279c4323affce2af7b0acd06dc96e30549",
+  "provenance": {
+    "revision": "r01",
+    "placementDraft": {
+      "path": "content/6-18/drafts/baby-care/draft-r02.json",
+      "sha256": "0bd13710c5b9c91a33379d0c1ca8e7cc0b9447d2207b6ca6b286c7a692e71826"
+    },
+    "canonical": {
+      "entryId": "baby-meal-cleanup",
+      "canonicalEntrySha256": "33aa5c0c16d6380b2f10e9aae6554836619cd7d6e8374ba764e2e1ca0e723038",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/21",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/21"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

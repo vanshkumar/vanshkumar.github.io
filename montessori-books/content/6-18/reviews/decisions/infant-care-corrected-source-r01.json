@@ -1,0 +1,30 @@
+{
+  "id": "infant-care-corrected-source-r01",
+  "date": "2026-09-12",
+  "reviewer": {
+    "task": "/root/trial_source",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "retainedReads": [
+    {
+      "path": "content/6-18/reviews/infant-care-a-source-r01.json"
+    },
+    {
+      "path": "content/editorial/shared-foundations-source-r01.json"
+    }
+  ],
+  "readLogs": [],
+  "decisions": [
+    {
+      "placementIds": [
+        "12-18.infant-nighttime-needs",
+        "18-24.infant-nighttime-needs",
+        "24-36.infant-nighttime-needs"
+      ],
+      "verdict": "pass",
+      "assessment": "Removing the two later activity-progression notes leaves the supported daytime discussion of recurring needs, preverbal participation and continuing nighttime help intact across all three contexts.",
+      "issues": []
+    }
+  ]
+}

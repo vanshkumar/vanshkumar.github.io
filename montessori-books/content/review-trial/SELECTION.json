@@ -1,0 +1,29 @@
+{
+  "revision": "content/birth-6/revisions/r01",
+  "entryIds": [
+    "early-newborn-conversation",
+    "early-steady-toy",
+    "baby-language",
+    "baby-songs",
+    "baby-diaper-conversation"
+  ],
+  "placementIds": [
+    "0-3.early-newborn-conversation",
+    "3-6.early-steady-toy",
+    "6-9.early-steady-toy",
+    "9-12.early-steady-toy",
+    "3-6.baby-language",
+    "0-3.baby-songs",
+    "3-6.baby-songs",
+    "0-3.baby-diaper-conversation",
+    "3-6.baby-diaper-conversation"
+  ],
+  "inputManifest": {
+    "path": "content/review-trial/INPUTS-r01.json",
+    "sha256": "0179b424c7b32d424181f28554df0349b29ae1519666db64b5b455c2b10fff51"
+  },
+  "supersedesReceipt": {
+    "path": "content/review-trial/INPUTS-r01-RECEIPT.json",
+    "reason": "Correct legacy hard-coded verification date; identical content, selection and independent reviews."
+  }
+}

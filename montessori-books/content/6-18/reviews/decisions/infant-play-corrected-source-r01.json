@@ -1,0 +1,116 @@
+{
+  "id": "infant-play-corrected-source-r01",
+  "date": "2026-09-12",
+  "reviewer": {
+    "task": "/root/trial_source",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "retainedReads": [
+    {
+      "path": "content/birth-6/reviews/trial-source-r01.json",
+      "sha256": "8c0a342169282b2084f716265922d266b26920c5a723a30a838c4bc5e38186f8",
+      "readLogIds": [
+        "source-conversation",
+        "source-framing"
+      ]
+    },
+    {
+      "path": "content/6-18/reviews/infant-language-movement-source-r01.json",
+      "sha256": "f7c60c69abf3300b1a604b5076c5806045e096c53ffd8cf81e7eb8726186c6f2",
+      "readLogIds": [
+        "baby-visual-301"
+      ]
+    },
+    {
+      "path": "content/6-18/reviews/infant-hand-play-source-r01.json",
+      "sha256": "31f972c4ccf30674182d72b1cebf7604e5950cb0fd59e0f9379590773520a2b4",
+      "readLogIds": [
+        "baby-visual-303",
+        "toddler-visual-246",
+        "toddler-text-39"
+      ]
+    }
+  ],
+  "readLogs": [],
+  "decisions": [
+    {
+      "placementIds": [
+        "9-12.baby-languages",
+        "12-18.baby-languages"
+      ],
+      "verdict": "pass",
+      "assessment": "Removing the activity-skills note leaves family-language arrangements conditioned on the family\u2019s people, places and routines, consistent with the original bilingualism discussion.",
+      "readLogIds": [
+        "source-conversation"
+      ],
+      "issues": [],
+      "reuseBody": true
+    },
+    {
+      "placementIds": [
+        "6-9.infant-rings-and-posts",
+        "9-12.infant-rings-and-posts",
+        "12-18.infant-rings-and-posts",
+        "18-24.infant-rings-and-posts",
+        "24-36.infant-rings-and-posts"
+      ],
+      "verdict": "pass",
+      "assessment": "The revised summary, topic rows and body preserve the source\u2019s mouthing, finish, component-size and secure-attachment conditions alongside adult supervision.",
+      "readLogIds": [
+        "source-framing",
+        "toddler-text-39"
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "9-12.infant-pegs-and-cubes",
+        "12-18.infant-pegs-and-cubes",
+        "18-24.infant-pegs-and-cubes",
+        "24-36.infant-pegs-and-cubes"
+      ],
+      "verdict": "pass",
+      "assessment": "The revised public surfaces add the original material suitability conditions while retaining the distinct illustrated-grid and appendix age presentations.",
+      "readLogIds": [
+        "source-framing",
+        "toddler-text-39"
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "12-18.infant-slot-posting",
+        "18-24.infant-slot-posting",
+        "24-36.infant-slot-posting"
+      ],
+      "verdict": "pass",
+      "assessment": "The correction makes the original mouthing, finish, size and attachment conditions explicit without changing the separately attributed posting-age examples.",
+      "readLogIds": [
+        "source-framing",
+        "toddler-text-39"
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "12-18.infant-opening-and-keys",
+        "18-24.infant-opening-and-keys",
+        "24-36.infant-opening-and-keys"
+      ],
+      "verdict": "pass",
+      "assessment": "The correction accurately distinguishes Baby\u2019s furniture key with string and separate lock-and-key basket from Toddler\u2019s secured-key row and preserves the original material suitability conditions.",
+      "readLogIds": [
+        "source-framing",
+        "baby-visual-301",
+        "baby-visual-303",
+        "toddler-visual-246",
+        "toddler-text-39"
+      ],
+      "issues": [],
+      "resolves": [
+        "infant-opening-and-keys-source-material-distinction"
+      ]
+    }
+  ]
+}

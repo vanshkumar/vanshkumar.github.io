@@ -1,0 +1,256 @@
+{
+  "id": "infant-care-corrected-tone-r01",
+  "workflow": "lean-v1",
+  "reviewer": {
+    "task": "/root/trial_tone",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-12",
+  "scope": "Explicit grouped source-topic decisions; exact age contexts reviewed.",
+  "renderedSurfaces": {
+    "path": "content/6-18/revisions/r05/RENDERED_SURFACES.json",
+    "sha256": "ad0138c53722cdc134eb416e3712496a79fa8f19853cb879f60a4316f0dc3453"
+  },
+  "decisionInput": {
+    "path": "content/6-18/reviews/decisions/infant-care-corrected-tone-r01.json",
+    "sha256": "c474ffc44040ef217c7db1f337e4c1a9adbb9d91aa286a9b135f5dbb79479552"
+  },
+  "readingBasis": [
+    {
+      "path": "content/6-18/reviews/infant-care-a-tone-r01.json",
+      "sha256": "8df41207aaab44aff336bb71f9a00e2cd0e3fb082117f471d7328f156253b810"
+    }
+  ],
+  "retainedReads": [
+    {
+      "path": "content/6-18/reviews/decisions/infant-care-a-tone-r01.json",
+      "readLogIds": [
+        "ica-tone-toddler-text-119",
+        "ica-tone-toddler-text-156",
+        "ica-tone-toddler-text-157",
+        "ica-tone-toddler-text-158"
+      ],
+      "sha256": "f091b7169d442e43975fa14ed800a75d48442c65ef000dce65f45d7ef8d096a6"
+    },
+    {
+      "path": "content/editorial/shared-foundations-tone-r01.json",
+      "readLogIds": [
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "sha256": "3b3fa4276e310d06d9ba6319fbd26b28664a8c56af908e09551d8be7774b2d74"
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "ica-tone-toddler-text-119",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 119
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/119.txt",
+      "notes": "Preverbal problem-solving participation with adult-supplied possibilities."
+    },
+    {
+      "id": "ica-tone-toddler-text-156",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 156,
+          "end": 156
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/156.txt",
+      "notes": "Toddler sleep, family arrangements and individual variation."
+    },
+    {
+      "id": "ica-tone-toddler-text-157",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 157,
+          "end": 157
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/157.txt",
+      "notes": "Needed help, no crying alone and extra support during illness or teething."
+    },
+    {
+      "id": "ica-tone-toddler-text-158",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 158,
+          "end": 158
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/158.txt",
+      "notes": "Neutral daytime discussion of recurring night requests and specialist help."
+    },
+    {
+      "id": "sf-tone-toddler-text-14",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/14.txt",
+      "notes": "Read the toddler scope note and surrounding acceptance of the child and imperfect parents."
+    },
+    {
+      "id": "sf-tone-toddler-visual-14",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/14.png",
+      "notes": "Inspected the full original page and the closing note defining toddler as around one to three years."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "infant-care-corrected-tone-r01.12-18.infant-nighttime-needs",
+      "entryId": "infant-nighttime-needs",
+      "placementId": "12-18.infant-nighttime-needs",
+      "snapshotPath": "content/6-18/revisions/r05/snapshots/12-18.infant-nighttime-needs.json",
+      "snapshotFileSha256": "f320932cf79db8a67c1f481613f371ca0404c837c2cfd70e0518de9bdee64477",
+      "textPlacementSha256": "9b23299214107a3e44f5a9c20793a1a21ae578f9f2ce47f7f6ddb2fc304e1618",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14",
+        "ica-tone-toddler-text-119",
+        "ica-tone-toddler-text-156",
+        "ica-tone-toddler-text-157",
+        "ica-tone-toddler-text-158"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 119,
+              "end": 119
+            },
+            {
+              "start": 156,
+              "end": 158
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Removing the activity-progression notes keeps all three contexts about a recurring family care need, with supported participation and no expectation of managing the night alone."
+      },
+      "administrativeReadLinks": []
+    },
+    {
+      "id": "infant-care-corrected-tone-r01.18-24.infant-nighttime-needs",
+      "entryId": "infant-nighttime-needs",
+      "placementId": "18-24.infant-nighttime-needs",
+      "snapshotPath": "content/6-18/revisions/r05/snapshots/18-24.infant-nighttime-needs.json",
+      "snapshotFileSha256": "3dc89b1dd629830ca107aa210fe55f0a72177041ea1e87f84ad81fed56300149",
+      "textPlacementSha256": "46314d45e920076384bf823799fab74d8b66f4f3c9f67fe02273bcc7907f76f8",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14",
+        "ica-tone-toddler-text-119",
+        "ica-tone-toddler-text-156",
+        "ica-tone-toddler-text-157",
+        "ica-tone-toddler-text-158"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 119,
+              "end": 119
+            },
+            {
+              "start": 156,
+              "end": 158
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Removing the activity-progression notes keeps all three contexts about a recurring family care need, with supported participation and no expectation of managing the night alone."
+      },
+      "administrativeReadLinks": []
+    },
+    {
+      "id": "infant-care-corrected-tone-r01.24-36.infant-nighttime-needs",
+      "entryId": "infant-nighttime-needs",
+      "placementId": "24-36.infant-nighttime-needs",
+      "snapshotPath": "content/6-18/revisions/r05/snapshots/24-36.infant-nighttime-needs.json",
+      "snapshotFileSha256": "084d4ea9f626346e55bc53d6b3ca93c4899024b5606a38d58a894097fcf10ec9",
+      "textPlacementSha256": "0e1fccefc2cf16ed6b1cf13ac1f50c2faf575976b38f08124f8f285e3f84bc34",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14",
+        "ica-tone-toddler-text-119",
+        "ica-tone-toddler-text-156",
+        "ica-tone-toddler-text-157",
+        "ica-tone-toddler-text-158"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 119,
+              "end": 119
+            },
+            {
+              "start": 156,
+              "end": 158
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Removing the activity-progression notes keeps all three contexts about a recurring family care need, with supported participation and no expectation of managing the night alone."
+      },
+      "administrativeReadLinks": []
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-sleep-support",
+        "kind": "perspective",
+        "title": "Sleep with the help they need",
+        "summary": "The authors begin with this baby’s tired signs and the help they need, in a safe, comfortable sleep setting. A short familiar routine can offer connection; falling asleep is not a performance.",
+        "cue": "Your baby is winding down or needs support settling.",
+        "detail": [
+          "A few familiar words, a song or a short book are among the connecting moments they describe. The adult notices and responds, while the baby is the one who falls asleep.",
+          "They describe gradually changing help when both baby and adult are ready, and explicitly say it is okay if feeding or rocking is currently part of settling. Their broader discussion also acknowledges night waking during the first year.",
+          "The book’s sleep-surface recommendations contain tensions with its own safety box; this account concerns responsive support and does not choose a sleeping arrangement."
+        ],
+        "references": [
+          {
+            "id": "baby-sleep-support.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Sleeping / Observation; Routine; Help; Increasing independence",
+            "locator": "Individuality, connecting routine, assistance and both-baby-and-adult readiness",
+            "pdfPages": [
+              {
+                "start": 193,
+                "end": 197
+              }
+            ]
+          },
+          {
+            "id": "baby-sleep-support.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Things that can help nurture baby’s sleep",
+            "locator": "Realistic first-year night-waking expectations",
+            "pdfPages": [
+              {
+                "start": 200,
+                "end": 201
+              }
+            ]
+          },
+          {
+            "id": "baby-sleep-support.ref.3",
+            "sourceId": "baby-2021",
+            "section": "SIDS guidelines for sleep; Sleeping area; Topponcino; Co-sleeping",
+            "locator": "Source sleep-surface conditions and unresolved conflicting examples",
+            "pdfPages": [
+              {
+                "start": 76,
+                "end": 76
+              },
+              {
+                "start": 197,
+                "end": 200
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.baby-sleep-support",
+        "entryId": "baby-sleep-support",
+        "ageId": "12-18",
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "First-year progression, with continued observation as the baby gets older; no fixed ending age.",
+          "readiness": "Current tired signs and the amount of settling help this child and adult need."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 193–197"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 200–201"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 76, 197–200"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "10a3a72af2d2a1c0246842249580d22ec6b205dbe1d3726f7b25c98b9dfd984c",
+  "artContextSha256": null,
+  "publicProjectionSha256": "9fcb7fe8472b751d0d37cbc1b03fe0bddb3b664c037091e53cc690ede424dcde",
+  "provenance": {
+    "revision": "r01",
+    "placementDraft": {
+      "path": "content/6-18/drafts/baby-care/draft-r02.json",
+      "sha256": "0bd13710c5b9c91a33379d0c1ca8e7cc0b9447d2207b6ca6b286c7a692e71826"
+    },
+    "canonical": {
+      "entryId": "baby-sleep-support",
+      "canonicalEntrySha256": "0a8654cd8887e95ca8d741f978f830aa8d0b91d99f1916dcc8d3ef7b3a9bbe64",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/23",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/23"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

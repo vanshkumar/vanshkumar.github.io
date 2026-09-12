@@ -1,0 +1,131 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-space-to-explore",
+        "kind": "perspective",
+        "title": "The room changes as they move",
+        "summary": "As a baby reaches farther or begins to crawl, the authors describe adapting the space to what is now reachable, with hazards removed or secured and stable supports for self-initiated pulling up.",
+        "cue": "Your baby can reach, open or lean on something that was out of reach before.",
+        "detail": [
+          "Their “yes space,” a term they credit to Magda Gerber and RIE, is an area prepared around what the baby can actually do. They describe secure furniture, inaccessible cords and chemicals, and objects suitable for mouthing.",
+          "One adapted area can serve a family; the whole home need not be transformed at once. Low, heavy furniture appears among their examples once the baby begins pulling up."
+        ],
+        "references": [
+          {
+            "id": "baby-space-to-explore.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Create “yes” spaces",
+            "locator": "Bounded area, actual reach and named precautions",
+            "pdfPages": [
+              {
+                "start": 66,
+                "end": 67
+              }
+            ]
+          },
+          {
+            "id": "baby-space-to-explore.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Movement activities / 6 to 9 months",
+            "locator": "Expanding movement area and stable pull-up furniture",
+            "pdfPages": [
+              {
+                "start": 157,
+                "end": 159
+              }
+            ]
+          },
+          {
+            "id": "baby-space-to-explore.ref.3",
+            "sourceId": "baby-2021",
+            "section": "Activities list for babies / Ottoman; Low heavy table",
+            "locator": "Furniture examples for self-initiated pulling up",
+            "pdfPages": [
+              {
+                "start": 299,
+                "end": 301
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "9-12.baby-space-to-explore",
+        "entryId": "baby-space-to-explore",
+        "ageId": "9-12",
+        "topicIds": [
+          "home-that-helps",
+          "play-discovery"
+        ],
+        "ageContext": {
+          "bookAge": "No fixed age for adapting reach; the home chapter also discusses the young toddler.",
+          "readiness": "Reaching, opening, crawling or pulling up has changed what the child can access.",
+          "note": "Age and readiness sources: The Montessori Baby, PDF pp. 70, 81–83."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "9–12 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "home-that-helps",
+            "label": "A home that helps"
+          },
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 66–67"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 157–159"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 299–301"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "13a15a6458c921f203047f4ee80421838343402f3b0d4b2de9018d5c8f891965",
+  "artContextSha256": null,
+  "publicProjectionSha256": "01b7a829925b143be715be0cc7f174c0cf76e66f8ad922752cb58348a2742d8d",
+  "provenance": {
+    "revision": "r03",
+    "placementDraft": {
+      "path": "content/6-18/drafts/editorial-r03/02.json",
+      "sha256": "1d5860acf671c24090b0c5b86bd1297bc7b12db5b77e1663b7f75425506a115e"
+    },
+    "canonical": {
+      "entryId": "baby-space-to-explore",
+      "canonicalEntrySha256": "3bdb7c451f91bc1efbccd1b770abd47e928b621c32c74e2105acbe788b11183e",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/13",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/13"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

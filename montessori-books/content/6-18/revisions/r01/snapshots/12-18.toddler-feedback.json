@@ -1,0 +1,110 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-feedback",
+        "kind": "perspective",
+        "title": "Tell them what you noticed",
+        "summary": "Specific words can share your interest: a line on the page, a careful movement, or the help your child offered. Davies also makes room for your own delight.",
+        "cue": "Your child looks to you after doing something, or you want to acknowledge their effort.",
+        "detail": [
+          "The book suggests describing the action instead of giving it a general grade. A warm “I’m excited for you” is among Davies’s examples; this is not a rule to hide affection.",
+          "She distinguishes an action from a fixed identity. Describing what happened today leaves more room than calling a child “the clever one,” “the clumsy one,” or “the shy one.”",
+          "During absorbed activity, you can wait until the child seeks a response rather than interrupting every step."
+        ],
+        "references": [
+          {
+            "id": "toddler-feedback.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Give our child feedback / Roles and labels",
+            "locator": "Specific action descriptions, expressed warmth, action-level words and fixed labels",
+            "pdfPages": [
+              {
+                "start": 111,
+                "end": 113
+              }
+            ]
+          },
+          {
+            "id": "toddler-feedback.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "General principles",
+            "locator": "Wait during concentration, respond when child looks for feedback",
+            "pdfPages": [
+              {
+                "start": 37,
+                "end": 37
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.toddler-feedback",
+        "entryId": "toddler-feedback",
+        "ageId": "12-18",
+        "topicIds": [
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "No fixed age; the feedback and label discussion addresses toddlers.",
+          "readiness": "The child looks for a response, or an adult wants to share what they noticed."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 111–113"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 37"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "6332f99c1c11b29eb2ad8f536861dc3e968c4f863fb17a7a3d457632655c74df",
+  "artContextSha256": null,
+  "publicProjectionSha256": "6ce8451f286bca327b1ea7fedf05c105c8110297c068ff25193387d0df202191",
+  "provenance": {
+    "revision": "r01",
+    "placementDraft": {
+      "path": "content/6-18/drafts/toddler-overlap/draft-r01.json",
+      "sha256": "06e6c8d90ca191b9b0b33fb44151f57b10e874a7cf5cf95d94e4bdbed879d4bc"
+    },
+    "canonical": {
+      "entryId": "toddler-feedback",
+      "canonicalEntrySha256": "23377ce93fd0fed1d0521b307d258709d6049bb153df6a9569bbab151e43c8ad",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/47",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/47"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

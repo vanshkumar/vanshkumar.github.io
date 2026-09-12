@@ -1,0 +1,234 @@
+{
+  "author": "/root/s6_toddler_overlap_author",
+  "workflow": "lean-v1",
+  "sourceFingerprints": [
+    {
+      "sourceId": "toddler-2019",
+      "path": "The Montessori Toddler - Simone Davies _Worldfreebooks.com_.pdf",
+      "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b",
+      "physicalPages": 257
+    },
+    {
+      "sourceId": "baby-2021",
+      "path": "the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+      "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f",
+      "physicalPages": 310
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "toddler-overlap.read.toddler-text-r01",
+      "reader": "/root/s6_toddler_overlap_author",
+      "date": "2026-09-12",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        },
+        {
+          "start": 29,
+          "end": 29
+        },
+        {
+          "start": 33,
+          "end": 39
+        },
+        {
+          "start": 43,
+          "end": 50
+        },
+        {
+          "start": 53,
+          "end": 58
+        },
+        {
+          "start": 60,
+          "end": 60
+        },
+        {
+          "start": 64,
+          "end": 64
+        },
+        {
+          "start": 66,
+          "end": 66
+        },
+        {
+          "start": 68,
+          "end": 72
+        },
+        {
+          "start": 75,
+          "end": 80
+        },
+        {
+          "start": 82,
+          "end": 85
+        },
+        {
+          "start": 97,
+          "end": 104
+        },
+        {
+          "start": 111,
+          "end": 113
+        },
+        {
+          "start": 119,
+          "end": 127
+        },
+        {
+          "start": 129,
+          "end": 139
+        },
+        {
+          "start": 145,
+          "end": 183
+        }
+      ],
+      "mode": "unverified-recovered-author-note",
+      "method": "Fresh pypdf extraction from fingerprinted original, complete page text actually read in bounded tool outputs.",
+      "description": "New-age context and needed original units: toddler scope; activity qualification; coordination; arts/language; home; participation; feedback; cooperation/limits; daily care and changes; toddler social situations. This is not a full-book reread or a new review of frozen pilot bodies."
+    },
+    {
+      "id": "toddler-overlap.read.toddler-visual-r01",
+      "reader": "/root/s6_toddler_overlap_author",
+      "date": "2026-09-12",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 51,
+          "end": 52
+        },
+        {
+          "start": 59,
+          "end": 60
+        },
+        {
+          "start": 63,
+          "end": 64
+        },
+        {
+          "start": 245,
+          "end": 254
+        }
+      ],
+      "mode": "unverified-recovered-author-note",
+      "method": "Individual original PDF page renders opened at a readable 1850-pixel long edge.",
+      "description": "All 66 chart bullets on51–52; all columns/107 rows on245–254; coordination photographs59 with full captions60; practical photographs63 with full captions64. Read all labels and continuation boundaries. Rendered but unopened files do not receive credit."
+    },
+    {
+      "id": "toddler-overlap.read.baby-overlap-text-r01",
+      "reader": "/root/s6_toddler_overlap_author",
+      "date": "2026-09-12",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 74,
+          "end": 74
+        },
+        {
+          "start": 165,
+          "end": 168
+        },
+        {
+          "start": 209,
+          "end": 209
+        },
+        {
+          "start": 217,
+          "end": 219
+        },
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "unverified-recovered-author-note",
+      "method": "Fresh pypdf extraction from original, selected complete page text actually read.",
+      "description": "Fine-motor9–12 unit167–168 and adjacent context165–166; original younger behavior217–219, bathroom74 and diaper-awareness209; appendix age-guideline paragraph294. No full Baby bibliography reread; no apparatus/falls advice adopted."
+    },
+    {
+      "id": "toddler-overlap.read.baby-overlap-visual-r01",
+      "reader": "/root/s6_toddler_overlap_author",
+      "date": "2026-09-12",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 175,
+          "end": 175
+        },
+        {
+          "start": 303,
+          "end": 303
+        }
+      ],
+      "mode": "unverified-recovered-author-note",
+      "method": "Individual original PDF page renders opened at readable scale.",
+      "description": "Read6–9 versus9–12 inventory boundary on175 and all four columns of303, particularly12+ puzzle row. Source variants retained rather than averaged."
+    }
+  ],
+  "bodyReads": {
+    "registryRevision": "r08",
+    "entryIds": [
+      "toddler-pouring",
+      "toddler-drawing",
+      "toddler-shoes",
+      "toddler-puzzles",
+      "toddler-fitting-and-turning",
+      "toddler-sorting",
+      "toddler-music",
+      "toddler-books",
+      "toddler-conversation",
+      "toddler-objects-and-pictures",
+      "toddler-paint-and-chalk",
+      "toddler-glue-and-mold",
+      "toddler-outside-noticing",
+      "toddler-room-to-move",
+      "toddler-wipe-and-dust",
+      "toddler-laundry",
+      "toddler-plants-and-flowers",
+      "toddler-food-preparation",
+      "toddler-table-together",
+      "toddler-getting-dressed",
+      "toddler-coat-flip",
+      "toddler-care-connection",
+      "toddler-nose-and-hair",
+      "toddler-daily-rhythm",
+      "toddler-family-rituals",
+      "toddler-meals",
+      "toddler-food-on-floor",
+      "toddler-sleep",
+      "toddler-teeth",
+      "toddler-toileting",
+      "toddler-pacifier-change",
+      "toddler-transitions",
+      "toddler-words-that-help",
+      "toddler-solving-together",
+      "toddler-waiting-outside-home",
+      "toddler-clear-limits",
+      "toddler-big-feelings",
+      "toddler-make-amends",
+      "toddler-new-sibling",
+      "toddler-sibling-conflict",
+      "toddler-taking-turns",
+      "toddler-joining-in",
+      "toddler-wanted-hugs",
+      "toddler-hitting",
+      "toddler-throwing",
+      "toddler-close-by",
+      "toddler-waiting-to-speak",
+      "toddler-feedback",
+      "toddler-screens",
+      "toddler-languages",
+      "toddler-shelf-and-rotation",
+      "toddler-spaces-for-different-ages",
+      "toddler-art-has-a-place",
+      "toddler-everyday-play",
+      "toddler-handwashing",
+      "toddler-small-job-on-an-errand"
+    ],
+    "description": "Personally inspected all56 full approved public bodies once. Existing source/tone body approvals are retained inputs, not my judgments."
+  }
+}

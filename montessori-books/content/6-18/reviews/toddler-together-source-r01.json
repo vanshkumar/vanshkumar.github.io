@@ -1,0 +1,2938 @@
+{
+  "id": "toddler-together-source-r01",
+  "workflow": "lean-v1",
+  "reviewer": {
+    "task": "/root/trial_source",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-12",
+  "scope": "Explicit grouped source-topic decisions; exact age contexts reviewed.",
+  "renderedSurfaces": {
+    "path": "content/6-18/revisions/r04/RENDERED_SURFACES.json",
+    "sha256": "31ea16f430bf234914ac3f39b3016aca6e9cf4fc3fb4510318c9cf1253b1487d"
+  },
+  "decisionInput": {
+    "path": "content/6-18/reviews/decisions/toddler-together-source-r01.json",
+    "sha256": "514a6d73e51296da33a244032932b858d3e37f8b1c13b1d37927eaf47964c473"
+  },
+  "readingBasis": [],
+  "retainedReads": [
+    {
+      "path": "content/editorial/toddler-care-source-r01.json",
+      "sha256": "d55d38fdfedb7ff8657992091433906794cda64aa7eb1bb1d58cde1d4c426042",
+      "readLogIds": [
+        "toddler-text-101",
+        "toddler-text-102",
+        "toddler-text-109",
+        "toddler-text-121",
+        "toddler-text-122",
+        "toddler-text-129",
+        "toddler-text-130",
+        "toddler-text-131",
+        "toddler-text-132",
+        "toddler-text-133",
+        "toddler-text-145",
+        "toddler-text-146",
+        "toddler-text-147",
+        "toddler-text-148",
+        "toddler-text-159",
+        "toddler-text-160",
+        "toddler-text-161",
+        "toddler-text-162",
+        "toddler-text-163",
+        "toddler-text-164",
+        "toddler-text-172",
+        "toddler-text-173",
+        "toddler-visual-121",
+        "toddler-visual-146",
+        "toddler-visual-149"
+      ]
+    },
+    {
+      "path": "content/editorial/toddler-limits-source-r01.json",
+      "sha256": "b2705f8fd8b89c3de7d53b4aea723a5a706242c9c5d493185af2660c11d026c1",
+      "readLogIds": [
+        "toddler-text-111",
+        "toddler-text-112",
+        "toddler-text-113",
+        "toddler-text-140",
+        "toddler-text-141",
+        "toddler-text-142",
+        "toddler-text-174",
+        "toddler-text-175",
+        "toddler-text-176",
+        "toddler-text-179",
+        "toddler-text-180",
+        "toddler-visual-142"
+      ]
+    },
+    {
+      "path": "content/editorial/shared-foundations-source-r01.json",
+      "sha256": "1d9f6e2ea3edbf5594ac4ad92589b1d5863aadce74efbe07bdbba5789f4031df",
+      "readLogIds": [
+        "baby-text-33",
+        "baby-text-34",
+        "baby-text-35",
+        "baby-text-36",
+        "baby-text-37",
+        "baby-text-99",
+        "baby-text-100",
+        "baby-text-101",
+        "baby-text-102",
+        "baby-text-103",
+        "baby-text-104",
+        "baby-text-222",
+        "baby-text-223",
+        "baby-text-224",
+        "baby-text-241",
+        "baby-text-242",
+        "toddler-text-14",
+        "toddler-text-29",
+        "toddler-text-33",
+        "toddler-text-34",
+        "toddler-text-35",
+        "toddler-text-36",
+        "toddler-text-83",
+        "toddler-text-84",
+        "toddler-text-85",
+        "toddler-text-110",
+        "toddler-text-189",
+        "toddler-text-192",
+        "toddler-text-193",
+        "toddler-text-194",
+        "toddler-text-197",
+        "toddler-text-198"
+      ]
+    },
+    {
+      "path": "content/editorial/toddler-practical-source-r01.json",
+      "sha256": "fab3b278ce7a96666548b447a336bac4ad1b335b3b29539590ee9eac521c72d3",
+      "readLogIds": [
+        "toddler-text-42",
+        "toddler-text-48",
+        "toddler-text-49",
+        "toddler-text-50",
+        "toddler-text-64",
+        "toddler-text-77",
+        "toddler-text-78",
+        "toddler-text-123",
+        "toddler-text-124",
+        "toddler-text-125",
+        "toddler-text-126",
+        "toddler-text-149",
+        "toddler-text-250",
+        "toddler-visual-63",
+        "toddler-visual-64",
+        "toddler-visual-77",
+        "toddler-visual-78",
+        "toddler-visual-250"
+      ]
+    },
+    {
+      "path": "content/6-18/reviews/infant-care-a-source-r01.json",
+      "sha256": "9d1fe2cb25cf0de5761d83da2d9fc077162983e7466cabcafeff3bd49fa076af",
+      "readLogIds": [
+        "text-180",
+        "text-181",
+        "text-182",
+        "text-183",
+        "text-184",
+        "text-185",
+        "text-194",
+        "text-195",
+        "text-196",
+        "text-197",
+        "text-213",
+        "text-214",
+        "visual-76",
+        "toddler-text-14",
+        "toddler-text-39",
+        "baby-text-71",
+        "baby-text-81",
+        "baby-text-82",
+        "baby-text-100",
+        "baby-text-186",
+        "baby-text-187",
+        "baby-text-188",
+        "baby-text-189",
+        "baby-text-190",
+        "baby-text-191",
+        "baby-text-192",
+        "baby-text-193",
+        "baby-text-198",
+        "baby-text-199",
+        "baby-text-200",
+        "baby-text-201",
+        "baby-text-202",
+        "baby-text-203",
+        "baby-text-204",
+        "toddler-text-119",
+        "toddler-text-120",
+        "toddler-text-152",
+        "toddler-text-153",
+        "toddler-text-154",
+        "toddler-text-155",
+        "toddler-text-156",
+        "toddler-text-157",
+        "toddler-text-158",
+        "baby-visual-200",
+        "baby-visual-201",
+        "baby-visual-202",
+        "baby-visual-204"
+      ]
+    },
+    {
+      "path": "content/editorial/toddler-play-language-source-r01.json",
+      "sha256": "2a2e397d8c632d050ec1fd976cd5e28d4d54dcc42401787b009aef920aafd449",
+      "readLogIds": [
+        "toddler-text-26",
+        "toddler-text-40",
+        "toddler-text-47",
+        "toddler-text-55",
+        "toddler-text-56",
+        "toddler-text-57",
+        "toddler-text-58",
+        "toddler-text-62",
+        "toddler-text-68",
+        "toddler-text-69",
+        "toddler-text-70",
+        "toddler-text-71",
+        "toddler-text-72",
+        "toddler-text-80",
+        "toddler-text-82",
+        "toddler-text-97",
+        "toddler-text-98",
+        "toddler-text-99",
+        "toddler-text-100",
+        "toddler-text-103",
+        "toddler-text-104",
+        "toddler-text-134",
+        "toddler-text-135",
+        "toddler-text-136",
+        "toddler-text-137",
+        "toddler-text-138",
+        "toddler-text-139",
+        "toddler-text-181",
+        "toddler-text-182",
+        "toddler-text-183",
+        "toddler-visual-26",
+        "toddler-visual-56",
+        "toddler-visual-61",
+        "toddler-visual-67",
+        "toddler-visual-80",
+        "toddler-visual-138"
+      ]
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "toddler-text-101",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 101,
+          "end": 101
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/101.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-102",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 102,
+          "end": 102
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/102.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-109",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 109,
+          "end": 109
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/109.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-121",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 121,
+          "end": 121
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/121.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-122",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 122,
+          "end": 122
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/122.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-129",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 129,
+          "end": 129
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/129.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-130",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 130,
+          "end": 130
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/130.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-131",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 131,
+          "end": 131
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/131.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-132",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 132,
+          "end": 132
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/132.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-133",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 133,
+          "end": 133
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/133.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-145",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 145,
+          "end": 145
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/145.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-146",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 146,
+          "end": 146
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/146.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-147",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 147,
+          "end": 147
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/147.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-148",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 148,
+          "end": 148
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/148.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-159",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 159,
+          "end": 159
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/159.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-160",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 160,
+          "end": 160
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/160.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-161",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 161,
+          "end": 161
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/161.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-162",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 162,
+          "end": 162
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/162.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-163",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 163,
+          "end": 163
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/163.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-164",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 164,
+          "end": 164
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/164.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-172",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 172,
+          "end": 172
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/172.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-text-173",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 173,
+          "end": 173
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/173.txt",
+      "notes": "Personally read complete original page with relevant daily-care, preparation, respectful handling or change context."
+    },
+    {
+      "id": "toddler-visual-121",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 121,
+          "end": 121
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/121.png",
+      "notes": "Personally inspected complete original checklist, sample rhythm or coat-flip illustration and numbered instructions."
+    },
+    {
+      "id": "toddler-visual-146",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 146,
+          "end": 146
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/146.png",
+      "notes": "Personally inspected complete original checklist, sample rhythm or coat-flip illustration and numbered instructions."
+    },
+    {
+      "id": "toddler-visual-149",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 149,
+          "end": 149
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/149.png",
+      "notes": "Personally inspected complete original checklist, sample rhythm or coat-flip illustration and numbered instructions."
+    },
+    {
+      "id": "toddler-text-111",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 111,
+          "end": 111
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/111.txt",
+      "notes": "Personally read complete original page and relevant continuation for feedback, limits, conflict or staying close."
+    },
+    {
+      "id": "toddler-text-112",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 112,
+          "end": 112
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/112.txt",
+      "notes": "Personally read complete original page and relevant continuation for feedback, limits, conflict or staying close."
+    },
+    {
+      "id": "toddler-text-113",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 113,
+          "end": 113
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/113.txt",
+      "notes": "Personally read complete original page and relevant continuation for feedback, limits, conflict or staying close."
+    },
+    {
+      "id": "toddler-text-140",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 140,
+          "end": 140
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/140.txt",
+      "notes": "Personally read complete original page and relevant continuation for feedback, limits, conflict or staying close."
+    },
+    {
+      "id": "toddler-text-141",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 141,
+          "end": 141
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/141.txt",
+      "notes": "Personally read complete original page and relevant continuation for feedback, limits, conflict or staying close."
+    },
+    {
+      "id": "toddler-text-142",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 142,
+          "end": 142
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/142.txt",
+      "notes": "Personally read complete original page and relevant continuation for feedback, limits, conflict or staying close."
+    },
+    {
+      "id": "toddler-text-174",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 174,
+          "end": 174
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/174.txt",
+      "notes": "Personally read complete original page and relevant continuation for feedback, limits, conflict or staying close."
+    },
+    {
+      "id": "toddler-text-175",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 175,
+          "end": 175
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/175.txt",
+      "notes": "Personally read complete original page and relevant continuation for feedback, limits, conflict or staying close."
+    },
+    {
+      "id": "toddler-text-176",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 176,
+          "end": 176
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/176.txt",
+      "notes": "Personally read complete original page and relevant continuation for feedback, limits, conflict or staying close."
+    },
+    {
+      "id": "toddler-text-179",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 179,
+          "end": 179
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/179.txt",
+      "notes": "Personally read complete original page and relevant continuation for feedback, limits, conflict or staying close."
+    },
+    {
+      "id": "toddler-text-180",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 180,
+          "end": 180
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/180.txt",
+      "notes": "Personally read complete original page and relevant continuation for feedback, limits, conflict or staying close."
+    },
+    {
+      "id": "toddler-visual-142",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 142,
+          "end": 142
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/142.png",
+      "notes": "Personally inspected the complete original limits checklist, including age-and-ability fit and comfort."
+    },
+    {
+      "id": "baby-text-33",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 33,
+          "end": 33
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/33.txt",
+      "notes": "Read the observation opening and its general infant-development context."
+    },
+    {
+      "id": "baby-text-34",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 34,
+          "end": 34
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/34.txt",
+      "notes": "Read the observation continuation and early-month example."
+    },
+    {
+      "id": "baby-text-35",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 35,
+          "end": 35
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/35.txt",
+      "notes": "Read the full-page observation checklist, including reflexive and intentional movements and communication."
+    },
+    {
+      "id": "baby-text-36",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 36,
+          "end": 36
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/36.txt",
+      "notes": "Read the observation checklist continuation through infant care and independence."
+    },
+    {
+      "id": "baby-text-37",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 37,
+          "end": 37
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/37.txt",
+      "notes": "Read self-observation, informal observation and the prepared-environment opening."
+    },
+    {
+      "id": "baby-text-99",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 99,
+          "end": 99
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/99.txt",
+      "notes": "Read the respect, touch and ability discussion for the first year."
+    },
+    {
+      "id": "baby-text-100",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 100,
+          "end": 100
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/100.txt",
+      "notes": "Read collaboration from newborn through later infancy, proportionate help and individual pace."
+    },
+    {
+      "id": "baby-text-101",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 101,
+          "end": 101
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/101.txt",
+      "notes": "Read safe activity, effort, needed assistance and concentration."
+    },
+    {
+      "id": "baby-text-102",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 102,
+          "end": 102
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/102.txt",
+      "notes": "Read the pace and processing-time subsection and the respect-unit conclusion."
+    },
+    {
+      "id": "baby-text-103",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 103,
+          "end": 103
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/103.txt",
+      "notes": "Read the boundaries opening, from-birth scope, safety and ability conditions."
+    },
+    {
+      "id": "baby-text-104",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 104,
+          "end": 104
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/104.txt",
+      "notes": "Read the boundaries continuation, adult responsibility and teaching acceptable actions."
+    },
+    {
+      "id": "baby-text-222",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 222,
+          "end": 222
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/222.txt",
+      "notes": "Read the daily-task opening and its explicit first-six-to-eight-weeks context."
+    },
+    {
+      "id": "baby-text-223",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 223,
+          "end": 223
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/223.txt",
+      "notes": "Read daily tasks beyond the early weeks and the budget-discussion opening."
+    },
+    {
+      "id": "baby-text-224",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 224,
+          "end": 224
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/224.txt",
+      "notes": "Read the complete budget continuation, including using and adapting existing resources."
+    },
+    {
+      "id": "baby-text-241",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 241,
+          "end": 241
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/241.txt",
+      "notes": "Read the full page, including the opening of Doing our best."
+    },
+    {
+      "id": "baby-text-242",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 242,
+          "end": 242
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/242.txt",
+      "notes": "Read the Doing our best continuation and conclusion, including capacity after little sleep."
+    },
+    {
+      "id": "toddler-text-14",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/14.txt",
+      "notes": "Read the full page and the explicit definition of toddler as around one to three years."
+    },
+    {
+      "id": "toddler-text-29",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 29,
+          "end": 29
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/29.txt",
+      "notes": "Read individual development, respect and the complete observation principle."
+    },
+    {
+      "id": "toddler-text-33",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 33,
+          "end": 33
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/33.txt",
+      "notes": "Read activity choice, indicative ages and fitting the child’s current interest."
+    },
+    {
+      "id": "toddler-text-34",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 34,
+          "end": 34
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/34.txt",
+      "notes": "Read activity characteristics, partial participation and suitable challenge."
+    },
+    {
+      "id": "toddler-text-35",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 35,
+          "end": 35
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/35.txt",
+      "notes": "Read repeated partial activity and the opening on showing activities and offering needed help."
+    },
+    {
+      "id": "toddler-text-36",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 36,
+          "end": 36
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/36.txt",
+      "notes": "Read the showing-an-activity continuation, alternatives to direct help and general-principles opening."
+    },
+    {
+      "id": "toddler-text-83",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 83,
+          "end": 83
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/83.txt",
+      "notes": "Read family culture, making the home cozy and adapting the home to save work."
+    },
+    {
+      "id": "toddler-text-84",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 84,
+          "end": 84
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/84.txt",
+      "notes": "Read the home-setup continuation, shared spaces and small-space opening."
+    },
+    {
+      "id": "toddler-text-85",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 85,
+          "end": 85
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/85.txt",
+      "notes": "Read the small-space continuation and conclusion on gradual home changes."
+    },
+    {
+      "id": "toddler-text-110",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 110,
+          "end": 110
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/110.txt",
+      "notes": "Read the complete feelings-versus-behavior unit and protection of child, others and adult."
+    },
+    {
+      "id": "toddler-text-189",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 189,
+          "end": 189
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/189.txt",
+      "notes": "Read the learning-mind-set unit, individual differences and seeking support."
+    },
+    {
+      "id": "toddler-text-192",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 192,
+          "end": 192
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/192.txt",
+      "notes": "Read the complete observation unit, including informal observation when hands are full."
+    },
+    {
+      "id": "toddler-text-193",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 193,
+          "end": 193
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/193.txt",
+      "notes": "Read the Slow down opening and its toddler, older-child and family scope."
+    },
+    {
+      "id": "toddler-text-194",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 194,
+          "end": 194
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/194.txt",
+      "notes": "Read the Slow down continuation and conclusion, with processing time, help and occasional hurry."
+    },
+    {
+      "id": "toddler-text-197",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 197,
+          "end": 197
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/197.txt",
+      "notes": "Read the life-and-choices opening, including constraints that cannot be changed."
+    },
+    {
+      "id": "toddler-text-198",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 198,
+          "end": 198
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/198.txt",
+      "notes": "Read the life-and-choices continuation, work and financial constraints, and practical alternatives."
+    },
+    {
+      "id": "toddler-text-42",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 42,
+          "end": 42
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/42.txt",
+      "notes": "Complete original page; relevant practical-care or cooperation unit and continuation read."
+    },
+    {
+      "id": "toddler-text-48",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 48,
+          "end": 48
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/48.txt",
+      "notes": "Complete original page; relevant practical-care or cooperation unit and continuation read."
+    },
+    {
+      "id": "toddler-text-49",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 49,
+          "end": 49
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/49.txt",
+      "notes": "Complete original page; relevant practical-care or cooperation unit and continuation read."
+    },
+    {
+      "id": "toddler-text-50",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 50,
+          "end": 50
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/50.txt",
+      "notes": "Complete original page; relevant practical-care or cooperation unit and continuation read."
+    },
+    {
+      "id": "toddler-text-64",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 64,
+          "end": 64
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/64.txt",
+      "notes": "Complete original page; relevant practical-care or cooperation unit and continuation read."
+    },
+    {
+      "id": "toddler-text-77",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 77,
+          "end": 77
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/77.txt",
+      "notes": "Complete original page; relevant practical-care or cooperation unit and continuation read."
+    },
+    {
+      "id": "toddler-text-78",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 78,
+          "end": 78
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/78.txt",
+      "notes": "Complete original page; relevant practical-care or cooperation unit and continuation read."
+    },
+    {
+      "id": "toddler-text-123",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 123,
+          "end": 123
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/123.txt",
+      "notes": "Complete original page; relevant practical-care or cooperation unit and continuation read."
+    },
+    {
+      "id": "toddler-text-124",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 124,
+          "end": 124
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/124.txt",
+      "notes": "Complete original page; relevant practical-care or cooperation unit and continuation read."
+    },
+    {
+      "id": "toddler-text-125",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 125,
+          "end": 125
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/125.txt",
+      "notes": "Complete original page; relevant practical-care or cooperation unit and continuation read."
+    },
+    {
+      "id": "toddler-text-126",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 126,
+          "end": 126
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/126.txt",
+      "notes": "Complete original page; relevant practical-care or cooperation unit and continuation read."
+    },
+    {
+      "id": "toddler-text-149",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 149,
+          "end": 149
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/149.txt",
+      "notes": "Complete original page; relevant practical-care or cooperation unit and continuation read."
+    },
+    {
+      "id": "toddler-text-250",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 250,
+          "end": 250
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/250.txt",
+      "notes": "Complete original page; relevant practical-care or cooperation unit and continuation read."
+    },
+    {
+      "id": "toddler-visual-63",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 63,
+          "end": 63
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/63.png",
+      "notes": "Inspected full original photograph/caption page or meaningful material, age and readiness table rows."
+    },
+    {
+      "id": "toddler-visual-64",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 64,
+          "end": 64
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/64.png",
+      "notes": "Inspected full original photograph/caption page or meaningful material, age and readiness table rows."
+    },
+    {
+      "id": "toddler-visual-77",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 77,
+          "end": 77
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/77.png",
+      "notes": "Inspected full original photograph/caption page or meaningful material, age and readiness table rows."
+    },
+    {
+      "id": "toddler-visual-78",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 78,
+          "end": 78
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/78.png",
+      "notes": "Inspected full original photograph/caption page or meaningful material, age and readiness table rows."
+    },
+    {
+      "id": "toddler-visual-250",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 250,
+          "end": 250
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/250.png",
+      "notes": "Inspected full original photograph/caption page or meaningful material, age and readiness table rows."
+    },
+    {
+      "id": "text-180",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 180,
+          "end": 180
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/180.txt",
+      "notes": "Read the daily-rhythm opening and newborn example."
+    },
+    {
+      "id": "text-181",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 181,
+          "end": 181
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/181.txt",
+      "notes": "Read changing infant rhythms, observation, transitions and caregiver context."
+    },
+    {
+      "id": "text-182",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 182,
+          "end": 182
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/182.txt",
+      "notes": "Read the rhythm conclusion, family rituals and the first-year feeding opening."
+    },
+    {
+      "id": "text-183",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 183,
+          "end": 183
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/183.txt",
+      "notes": "Read breastfeeding and bottle-feeding connection and support context."
+    },
+    {
+      "id": "text-184",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 184,
+          "end": 184
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/184.txt",
+      "notes": "Read feeding alternatives, difficulties, specialist support and relationship context."
+    },
+    {
+      "id": "text-185",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 185,
+          "end": 185
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/185.txt",
+      "notes": "Read hunger signals, responsive milk feeding and newborn feeding-rhythm discussion."
+    },
+    {
+      "id": "text-194",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 194,
+          "end": 194
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/194.txt",
+      "notes": "Read tired signs for new babies and short sleep routines."
+    },
+    {
+      "id": "text-195",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 195,
+          "end": 195
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/195.txt",
+      "notes": "Read connection and help for young infants around sleep."
+    },
+    {
+      "id": "text-196",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 196,
+          "end": 196
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/196.txt",
+      "notes": "Read needed assistance and gradual change in the early months."
+    },
+    {
+      "id": "text-197",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 197,
+          "end": 197
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/197.txt",
+      "notes": "Read the sleep-support continuation, including feeding or rocking and mutual readiness."
+    },
+    {
+      "id": "text-213",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 213,
+          "end": 213
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/213.txt",
+      "notes": "Read the pacifier unit, including youngest-baby communication and limited-use alternatives."
+    },
+    {
+      "id": "text-214",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 214,
+          "end": 214
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/214.txt",
+      "notes": "Read the pacifier continuation through the next section heading."
+    },
+    {
+      "id": "visual-76",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 76,
+          "end": 76
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/76.png",
+      "notes": "Inspected the original full-page safe-sleep box and its pacifier item."
+    },
+    {
+      "id": "toddler-text-39",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 39,
+          "end": 39
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/39.txt",
+      "notes": "Complete principles 7–10: modify challenge, return to earlier activities, household alternatives and supervision."
+    },
+    {
+      "id": "baby-text-71",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 71,
+          "end": 71
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/71.txt",
+      "notes": "Complete eating-area alternatives and surrounding page."
+    },
+    {
+      "id": "baby-text-81",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 81,
+          "end": 81
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/81.txt",
+      "notes": "Young-toddler home introduction and kitchen participation, continued on 82."
+    },
+    {
+      "id": "baby-text-82",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 82,
+          "end": 82
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/82.txt",
+      "notes": "Complete kitchen continuation and surrounding young-toddler home context."
+    },
+    {
+      "id": "baby-text-100~becd2b3b275f",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 100,
+          "end": 100
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/100.txt",
+      "notes": "Reread collaboration examples, including seven-month fork use and individual rhythms.",
+      "originalReadLogId": "baby-text-100"
+    },
+    {
+      "id": "baby-text-186",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 186,
+          "end": 186
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/186.txt",
+      "notes": "Full page ending with first-solid-food introduction; continued on 187."
+    },
+    {
+      "id": "baby-text-187",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 187,
+          "end": 187
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/187.txt",
+      "notes": "Complete six-month-plus-readiness condition and first-year exploration discussion."
+    },
+    {
+      "id": "baby-text-188",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 188,
+          "end": 188
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/188.txt",
+      "notes": "Full food exploration, choking/first-aid box and beginning of eating-place unit."
+    },
+    {
+      "id": "baby-text-189",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 189,
+          "end": 189
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/189.txt",
+      "notes": "Complete eating-place continuation and beginning of eating-tools unit."
+    },
+    {
+      "id": "baby-text-190",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 190,
+          "end": 190
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/190.txt",
+      "notes": "Complete utensils, glass, adult assistance and cleanup discussion."
+    },
+    {
+      "id": "baby-text-191",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 191,
+          "end": 191
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/191.txt",
+      "notes": "Full feeding tips and observation prompts, continued on 192."
+    },
+    {
+      "id": "baby-text-192",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 192,
+          "end": 192
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/192.txt",
+      "notes": "Observation continuation and personal weaning discussion, continued on 193."
+    },
+    {
+      "id": "baby-text-193",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 193,
+          "end": 193
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/193.txt",
+      "notes": "Weaning conclusion and opening of sleep principles."
+    },
+    {
+      "id": "baby-text-198",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 198,
+          "end": 198
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/198.txt",
+      "notes": "Full sleeping-area continuation and freedom-of-movement discussion."
+    },
+    {
+      "id": "baby-text-199",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 199,
+          "end": 199
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/199.txt",
+      "notes": "Sleep clothing continuation, topponcino, pacifier subsection and wake-window introduction."
+    },
+    {
+      "id": "baby-text-200",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 200,
+          "end": 200
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/200.txt",
+      "notes": "Wake-window table, co-sleeping and sleep-support recap."
+    },
+    {
+      "id": "baby-text-201",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 201,
+          "end": 201
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/201.txt",
+      "notes": "Recap continuation and full beginning of night-waking question."
+    },
+    {
+      "id": "baby-text-202",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 202,
+          "end": 202
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/202.txt",
+      "notes": "Night-waking continuation and resettling question."
+    },
+    {
+      "id": "baby-text-203",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 203,
+          "end": 203
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/203.txt",
+      "notes": "Complete intervening sleep-question context and unsettled-baby question."
+    },
+    {
+      "id": "baby-text-204",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 204,
+          "end": 204
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/204.txt",
+      "notes": "Unsettled-baby continuation and complete four/eight/twelve-month sleep-change discussion."
+    },
+    {
+      "id": "toddler-text-119",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 119
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/119.txt",
+      "notes": "Complete problem-solving unit including preverbal contribution."
+    },
+    {
+      "id": "toddler-text-120",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 120,
+          "end": 120
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/120.txt",
+      "notes": "Complete adjacent checklist subsection."
+    },
+    {
+      "id": "toddler-text-152",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 152,
+          "end": 152
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/152.txt",
+      "notes": "Complete eating introduction and adult-role unit."
+    },
+    {
+      "id": "toddler-text-153",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 153,
+          "end": 153
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/153.txt",
+      "notes": "Complete eating-place, timing and food-choice discussion."
+    },
+    {
+      "id": "toddler-text-154",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 154,
+          "end": 154
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/154.txt",
+      "notes": "Complete glass, food amount and cutlery discussion; food-battles opening."
+    },
+    {
+      "id": "toddler-text-155",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 155,
+          "end": 155
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/155.txt",
+      "notes": "Complete food-battles continuation and medical qualification, followed by throwing-food discussion."
+    },
+    {
+      "id": "toddler-text-156",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 156,
+          "end": 156
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/156.txt",
+      "notes": "Complete sleeping introduction and sleeping-place discussion."
+    },
+    {
+      "id": "toddler-text-157",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 157,
+          "end": 157
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/157.txt",
+      "notes": "Complete settling support and beginning of night-waking discussion."
+    },
+    {
+      "id": "toddler-text-158",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 158,
+          "end": 158
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/158.txt",
+      "notes": "Complete night-waking continuation, neutral daytime discussion and specialist qualification."
+    },
+    {
+      "id": "baby-visual-200",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 200,
+          "end": 200
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/200.png",
+      "notes": "Full wake-window table and surrounding co-sleeping/recap context."
+    },
+    {
+      "id": "baby-visual-201",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 201,
+          "end": 201
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/201.png",
+      "notes": "Full recap and night-waking question layout."
+    },
+    {
+      "id": "baby-visual-202",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 202,
+          "end": 202
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/202.png",
+      "notes": "Full night-waking continuation and separate resettling question."
+    },
+    {
+      "id": "baby-visual-204",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 204,
+          "end": 204
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/204.png",
+      "notes": "Full sleep-change question with four/eight/twelve-month examples."
+    },
+    {
+      "id": "toddler-text-26",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 26,
+          "end": 26
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/26.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-40",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 40,
+          "end": 40
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/40.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-47",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 47,
+          "end": 47
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/47.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-55",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 55,
+          "end": 55
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/55.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-56",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 56,
+          "end": 56
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/56.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-57",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 57,
+          "end": 57
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/57.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-58",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 58,
+          "end": 58
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/58.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-62",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 62,
+          "end": 62
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/62.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-68",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 68,
+          "end": 68
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/68.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-69",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 69,
+          "end": 69
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/69.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-70",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 70,
+          "end": 70
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/70.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-71",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 71,
+          "end": 71
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/71.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-72",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 72,
+          "end": 72
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/72.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-80",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 80,
+          "end": 80
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/80.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-82",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 82,
+          "end": 82
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/82.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-97",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 97,
+          "end": 97
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/97.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-98",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 98,
+          "end": 98
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/98.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-99",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 99,
+          "end": 99
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/99.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-100",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 100,
+          "end": 100
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/100.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-103",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 103,
+          "end": 103
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/103.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-104",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 104,
+          "end": 104
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/104.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-134",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 134,
+          "end": 134
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/134.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-135",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 135,
+          "end": 135
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/135.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-136",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 136,
+          "end": 136
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/136.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-137",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 137,
+          "end": 137
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/137.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-138",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 138,
+          "end": 138
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/138.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-139",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 139,
+          "end": 139
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/139.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-181",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 181,
+          "end": 181
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/181.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-182",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 182,
+          "end": 182
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/182.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-text-183",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 183,
+          "end": 183
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/183.txt",
+      "notes": "Personally read complete original page in its relevant language, movement, home or connection unit."
+    },
+    {
+      "id": "toddler-visual-26",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 26,
+          "end": 26
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/26.png",
+      "notes": "Personally inspected the complete original table, diagram or photographed materials and their source context."
+    },
+    {
+      "id": "toddler-visual-56",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 56,
+          "end": 56
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/56.png",
+      "notes": "Personally inspected the complete original table, diagram or photographed materials and their source context."
+    },
+    {
+      "id": "toddler-visual-61",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 61,
+          "end": 61
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/61.png",
+      "notes": "Personally inspected the complete original table, diagram or photographed materials and their source context."
+    },
+    {
+      "id": "toddler-visual-67",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 67,
+          "end": 67
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/67.png",
+      "notes": "Personally inspected the complete original table, diagram or photographed materials and their source context."
+    },
+    {
+      "id": "toddler-visual-80",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 80,
+          "end": 80
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/80.png",
+      "notes": "Personally inspected the complete original table, diagram or photographed materials and their source context."
+    },
+    {
+      "id": "toddler-visual-138",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 138,
+          "end": 138
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/138.png",
+      "notes": "Personally inspected the complete original table, diagram or photographed materials and their source context."
+    },
+    {
+      "id": "toddler-text-127",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 127,
+          "end": 127
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/127.txt",
+      "notes": "Read the complete bonus write-a-note passage, including moderation, pictures for prereaders and acknowledgment of concerns."
+    },
+    {
+      "id": "toddler-text-165",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 165,
+          "end": 165
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/165.txt",
+      "notes": "Read preparation, introduction and first-weeks sibling passages, including optional involvement, simple routines and individual attention."
+    },
+    {
+      "id": "toddler-text-166",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 166,
+          "end": 166
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/166.txt",
+      "notes": "Read continuation on difficult sibling feelings, immediate protection, special time and the opening sibling-conflict example."
+    },
+    {
+      "id": "toddler-text-167",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 167,
+          "end": 167
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/167.txt",
+      "notes": "Read the complete continuation on adult leadership, observation, rough-play consent and helping children hear each other."
+    },
+    {
+      "id": "toddler-text-168",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 168,
+          "end": 168
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/168.txt",
+      "notes": "Read protection during harm, calming before solutions, explicit preverbal participation and respectful sibling relationships."
+    },
+    {
+      "id": "toddler-text-169",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 169,
+          "end": 169
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/169.txt",
+      "notes": "Read the complete individual-needs versus equal-attention continuation and the transition to useful skills."
+    },
+    {
+      "id": "toddler-text-170",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 170,
+          "end": 170
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/170.txt",
+      "notes": "Read the full opening sharing unit, including possessiveness, parallel play, earlier peer-experience alternatives and protected ongoing activity."
+    },
+    {
+      "id": "toddler-text-171",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 171,
+          "end": 171
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/171.txt",
+      "notes": "Read the sharing continuation, around-two-and-a-half shared play, public courtesy, visitors and the opening adult-interruption passage."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "toddler-together-source-r01.12-18.toddler-joining-in",
+      "entryId": "toddler-joining-in",
+      "placementId": "12-18.toddler-joining-in",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.toddler-joining-in.json",
+      "snapshotFileSha256": "0622b1752273da500f59386881b709df3bb8884a95a5fd6646535be491656ef0",
+      "textPlacementSha256": "d666f6b0b39d56be54a467b002ea5f8c9b1b3e8554036477ce513b68f18f2b64",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-text-14",
+        "toddler-text-172",
+        "toddler-text-173",
+        "toddler-text-180"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both new age contexts preserve watching beside an available adult, optional practice and gradual participation without requiring a young toddler to speak or join."
+      },
+      "bodyReview": {
+        "entryId": "toddler-joining-in",
+        "canonicalEntrySha256": "1adce28cdec488a04a0752f5ccf5e1b1938b3160d329a02af7decda2840ab874",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "administrativeReadLinks": [
+        {
+          "id": "toddler-text-14",
+          "sourceId": "toddler-2019",
+          "page": 14
+        },
+        {
+          "id": "toddler-text-172",
+          "sourceId": "toddler-2019",
+          "page": 172
+        },
+        {
+          "id": "toddler-text-173",
+          "sourceId": "toddler-2019",
+          "page": 173
+        },
+        {
+          "id": "toddler-text-180",
+          "sourceId": "toddler-2019",
+          "page": 180
+        }
+      ]
+    },
+    {
+      "id": "toddler-together-source-r01.12-18.toddler-new-sibling",
+      "entryId": "toddler-new-sibling",
+      "placementId": "12-18.toddler-new-sibling",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.toddler-new-sibling.json",
+      "snapshotFileSha256": "6ab971dcaeba14eb214caf3a00ea36b50e8caf07a32a2e9bb67a3946c0013273",
+      "textPlacementSha256": "cd940585edad0bdf579b388fba3795f9f6b0002913c068b783d6976010e27436",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-text-14",
+        "toddler-text-164",
+        "toddler-text-165",
+        "toddler-text-166"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both contexts retain the sibling unit’s closeness, optional involvement, acceptance of difficult feelings and immediate adult protection without assigning a fixed toddler age."
+      },
+      "bodyReview": {
+        "entryId": "toddler-new-sibling",
+        "canonicalEntrySha256": "889892a0aaaa4b916474be371354b041511e72e312289fa7d715e1975a06afaa",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "administrativeReadLinks": [
+        {
+          "id": "toddler-text-14",
+          "sourceId": "toddler-2019",
+          "page": 14
+        },
+        {
+          "id": "toddler-text-164",
+          "sourceId": "toddler-2019",
+          "page": 164
+        },
+        {
+          "id": "toddler-text-165",
+          "sourceId": "toddler-2019",
+          "page": 165
+        },
+        {
+          "id": "toddler-text-166",
+          "sourceId": "toddler-2019",
+          "page": 166
+        }
+      ]
+    },
+    {
+      "id": "toddler-together-source-r01.12-18.toddler-sibling-conflict",
+      "entryId": "toddler-sibling-conflict",
+      "placementId": "12-18.toddler-sibling-conflict",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.toddler-sibling-conflict.json",
+      "snapshotFileSha256": "86ccbfd1a56e134f4df596af50b2a3f72394863bb7172cec047df22a5695558e",
+      "textPlacementSha256": "fce9ba599001cee0ba9dc3c1c4137ac124f2892c94eeef6cf908bb81c15c26d8",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-text-14",
+        "toddler-text-119",
+        "toddler-text-166",
+        "toddler-text-167",
+        "toddler-text-168",
+        "toddler-text-169"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both contexts preserve neutral support, protection from harm and adult-provided ideas for younger or preverbal children, without requiring equal attention or a close sibling friendship."
+      },
+      "bodyReview": {
+        "entryId": "toddler-sibling-conflict",
+        "canonicalEntrySha256": "cfb1879e2c3bf75e381f1306636747dbda290dc69e90652be5dcc6cf28e04a46",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "administrativeReadLinks": [
+        {
+          "id": "toddler-text-14",
+          "sourceId": "toddler-2019",
+          "page": 14
+        },
+        {
+          "id": "toddler-text-119",
+          "sourceId": "toddler-2019",
+          "page": 119
+        },
+        {
+          "id": "toddler-text-166",
+          "sourceId": "toddler-2019",
+          "page": 166
+        },
+        {
+          "id": "toddler-text-167",
+          "sourceId": "toddler-2019",
+          "page": 167
+        },
+        {
+          "id": "toddler-text-168",
+          "sourceId": "toddler-2019",
+          "page": 168
+        },
+        {
+          "id": "toddler-text-169",
+          "sourceId": "toddler-2019",
+          "page": 169
+        }
+      ]
+    },
+    {
+      "id": "toddler-together-source-r01.12-18.toddler-solving-together",
+      "entryId": "toddler-solving-together",
+      "placementId": "12-18.toddler-solving-together",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.toddler-solving-together.json",
+      "snapshotFileSha256": "62daa278aa243ae3181a91f6309dabf89091ad5fec0bb357d47fe11ff496cf47",
+      "textPlacementSha256": "9161a0b4976fd04e740d790da54c6a9e5ae32491d89acb7f97cffc78404fd4a3",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-text-14",
+        "toddler-text-119",
+        "toddler-text-127",
+        "toddler-text-133"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both contexts allow gestures and adult-supplied solutions for younger toddlers while retaining the source’s acknowledgment, collaborative problem solving and immediate safety limits."
+      },
+      "bodyReview": {
+        "entryId": "toddler-solving-together",
+        "canonicalEntrySha256": "2ef72e8dc7513d63c4ee9fb0c1dbac49fc5c565b290ae3a7e9a8b324a08cd3fd",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "administrativeReadLinks": [
+        {
+          "id": "toddler-text-14",
+          "sourceId": "toddler-2019",
+          "page": 14
+        },
+        {
+          "id": "toddler-text-119",
+          "sourceId": "toddler-2019",
+          "page": 119
+        },
+        {
+          "id": "toddler-text-127",
+          "sourceId": "toddler-2019",
+          "page": 127
+        },
+        {
+          "id": "toddler-text-133",
+          "sourceId": "toddler-2019",
+          "page": 133
+        }
+      ]
+    },
+    {
+      "id": "toddler-together-source-r01.12-18.toddler-taking-turns",
+      "entryId": "toddler-taking-turns",
+      "placementId": "12-18.toddler-taking-turns",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.toddler-taking-turns.json",
+      "snapshotFileSha256": "921875d0725244f017df7b358769fe01c578df0572bb73d7ea740235a185dd8d",
+      "textPlacementSha256": "d79f9469e351142235e1d34872a308f8ac609e742c7aac11d7bfca8f41bcda8a",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-text-14",
+        "toddler-text-170",
+        "toddler-text-171"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both contexts retain the distinction between mainly parallel play before about two and a half and possible shared play later, with supported waiting, protected ongoing use and public courtesy."
+      },
+      "bodyReview": {
+        "entryId": "toddler-taking-turns",
+        "canonicalEntrySha256": "106daab36f2765ff8778aee7541014ed0274e9fd1545bbeeb5676a00a4712f07",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "administrativeReadLinks": [
+        {
+          "id": "toddler-text-14",
+          "sourceId": "toddler-2019",
+          "page": 14
+        },
+        {
+          "id": "toddler-text-170",
+          "sourceId": "toddler-2019",
+          "page": 170
+        },
+        {
+          "id": "toddler-text-171",
+          "sourceId": "toddler-2019",
+          "page": 171
+        }
+      ]
+    },
+    {
+      "id": "toddler-together-source-r01.12-18.toddler-waiting-outside-home",
+      "entryId": "toddler-waiting-outside-home",
+      "placementId": "12-18.toddler-waiting-outside-home",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.toddler-waiting-outside-home.json",
+      "snapshotFileSha256": "c1512dabf2b04afe38ffd9d9f2933c74002796cebbb669ab1f6f48a7fdfd5612",
+      "textPlacementSha256": "a9d2f1859d58326ed4166768cdaeb0c2e6653ebbfc677e6cb4c9b435c8609f43",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-text-14",
+        "toddler-text-125",
+        "toddler-text-126",
+        "toddler-text-181"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both contexts preserve shared attention, preparation and opportunities for movement in public places without inventing a length of time a toddler should wait."
+      },
+      "bodyReview": {
+        "entryId": "toddler-waiting-outside-home",
+        "canonicalEntrySha256": "60c9b0bc354e7f6f01231d6f0c2132a1410a5b6c9aa482cdc7d2325ef1de32b8",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "administrativeReadLinks": [
+        {
+          "id": "toddler-text-14",
+          "sourceId": "toddler-2019",
+          "page": 14
+        },
+        {
+          "id": "toddler-text-125",
+          "sourceId": "toddler-2019",
+          "page": 125
+        },
+        {
+          "id": "toddler-text-126",
+          "sourceId": "toddler-2019",
+          "page": 126
+        },
+        {
+          "id": "toddler-text-181",
+          "sourceId": "toddler-2019",
+          "page": 181
+        }
+      ]
+    },
+    {
+      "id": "toddler-together-source-r01.12-18.toddler-waiting-to-speak",
+      "entryId": "toddler-waiting-to-speak",
+      "placementId": "12-18.toddler-waiting-to-speak",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.toddler-waiting-to-speak.json",
+      "snapshotFileSha256": "f930d128629034a53364376717a21e4eb5dee6503856b7e6f6fc16ea0c99c859",
+      "textPlacementSha256": "864a1937ed11d0f990b59c467f9e74ed11fb3b97e7ee16e29f7c626ad5531bcb",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-text-14",
+        "toddler-text-133",
+        "toddler-text-171",
+        "toddler-text-172"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both contexts preserve the optional shoulder-hand signal, adult acknowledgment and response at an appropriate pause while keeping urgent help outside the waiting convention."
+      },
+      "bodyReview": {
+        "entryId": "toddler-waiting-to-speak",
+        "canonicalEntrySha256": "34a000fd97b7b0999edc2e7d23943d581a5e82347bdb9b1d11f77fcb1e46af94",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "administrativeReadLinks": [
+        {
+          "id": "toddler-text-14",
+          "sourceId": "toddler-2019",
+          "page": 14
+        },
+        {
+          "id": "toddler-text-133",
+          "sourceId": "toddler-2019",
+          "page": 133
+        },
+        {
+          "id": "toddler-text-171",
+          "sourceId": "toddler-2019",
+          "page": 171
+        },
+        {
+          "id": "toddler-text-172",
+          "sourceId": "toddler-2019",
+          "page": 172
+        }
+      ]
+    },
+    {
+      "id": "toddler-together-source-r01.12-18.toddler-wanted-hugs",
+      "entryId": "toddler-wanted-hugs",
+      "placementId": "12-18.toddler-wanted-hugs",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.toddler-wanted-hugs.json",
+      "snapshotFileSha256": "5dbb79d68f1d1f9a2bd310ff60006d154aa46f409339a4dbef6399beff43e171",
+      "textPlacementSha256": "48c7b982bb10539f61eaf3e2b4786f853e530851f1359cb0e27a19305c036242",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-text-14",
+        "toddler-text-131",
+        "toddler-text-132",
+        "toddler-text-133",
+        "toddler-text-173"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both contexts preserve attention to welcome or withdrawal during ordinary affection alongside the adult’s responsibility for necessary gentle care and immediate protection."
+      },
+      "bodyReview": {
+        "entryId": "toddler-wanted-hugs",
+        "canonicalEntrySha256": "562c08420ebb31e1d21e8dfa3c6079482e06e346ee9146a3285e7d6b51a46aa4",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "administrativeReadLinks": [
+        {
+          "id": "toddler-text-14",
+          "sourceId": "toddler-2019",
+          "page": 14
+        },
+        {
+          "id": "toddler-text-131",
+          "sourceId": "toddler-2019",
+          "page": 131
+        },
+        {
+          "id": "toddler-text-132",
+          "sourceId": "toddler-2019",
+          "page": 132
+        },
+        {
+          "id": "toddler-text-133",
+          "sourceId": "toddler-2019",
+          "page": 133
+        },
+        {
+          "id": "toddler-text-173",
+          "sourceId": "toddler-2019",
+          "page": 173
+        }
+      ]
+    }
+  ]
+}

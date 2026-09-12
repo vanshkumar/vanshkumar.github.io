@@ -1,0 +1,114 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-dressing",
+        "kind": "invitation",
+        "title": "Getting dressed together",
+        "summary": "Name the clothes and invite your baby to join in—a reach toward a shirt or an arm into a sleeve—with help as needed.",
+        "cue": "While you are changing your baby’s clothes.",
+        "detail": [
+          "Tell your baby what you are about to do. You can offer two suitable tops and notice where they look or reach, or hold a sleeve ready and see whether they join in.",
+          "Use gentle hands and leave time for a response. Some days you will do more of the dressing; participation is an invitation, and necessary care can still go ahead gently."
+        ],
+        "references": [
+          {
+            "id": "baby-dressing.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Clothing / When dressing; When they refuse to get dressed",
+            "locator": "Choices, small participation, gentle touch and necessary-care limit",
+            "pdfPages": [
+              {
+                "start": 207,
+                "end": 210
+              }
+            ]
+          },
+          {
+            "id": "baby-dressing.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Respect / Collaboration",
+            "locator": "9-month sleeve example and help proportionate to need",
+            "pdfPages": [
+              {
+                "start": 100,
+                "end": 100
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "9-12.baby-dressing",
+        "entryId": "baby-dressing",
+        "ageId": "9-12",
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "Nine-month sleeve example; the clothing chapter also describes later sock removal and carrying pants once walking.",
+          "readiness": "A look, reach, arm movement or other supported participation during dressing."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "9–12 months",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 207–210"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF p. 100"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "f74e656458e85c0dd347f3980f2b0e38b806a1809c89974ed9951047345218ee",
+  "artContextSha256": null,
+  "publicProjectionSha256": "a8e478eee0b199866ef34014576c71e93ab17c494e26be59e8408c8951ee20a0",
+  "provenance": {
+    "revision": "r06",
+    "placementDraft": {
+      "path": "content/6-18/drafts/editorial-r03/02.json",
+      "sha256": "1d5860acf671c24090b0c5b86bd1297bc7b12db5b77e1663b7f75425506a115e"
+    },
+    "canonical": {
+      "entryId": "baby-dressing",
+      "canonicalEntrySha256": "59c4ff2aefc7407d12d794eb7fef8dbe8c04aa43242f6897b13574fe7d4a1012",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/14",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/14"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

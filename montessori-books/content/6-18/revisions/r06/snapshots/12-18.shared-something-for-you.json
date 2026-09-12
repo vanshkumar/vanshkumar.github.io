@@ -1,0 +1,122 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "shared-something-for-you",
+        "kind": "invitation",
+        "title": "Something you enjoy beyond parenting",
+        "summary": "Leave a little room for something you enjoy: a book unrelated to parenting, some music, or a conversation with a friend. The books offer personal possibilities to choose from.",
+        "cue": "When most of your reading, conversations, and time have become about parenting.",
+        "detail": [
+          "Both books make room for the adult’s own interests and learning. You can choose something you already enjoy, or something you would like to return to.",
+          "Their morning and evening practices are personal examples. Davies explicitly offers a routine with the children when time alone before everyone wakes is not possible.",
+          "The Baby authors introduce their calm ideas as things that helped them; Davies says her practices may not fit every family. There is room to choose what suits your life."
+        ],
+        "principle": {
+          "id": "principle.adult-capacity-and-repair",
+          "text": "An adult’s own interests and enjoyment deserve space in family life."
+        },
+        "references": [
+          {
+            "id": "shared.ref.baby.adult-interests",
+            "sourceId": "baby-2021",
+            "section": "Intellectual preparation; 49 ideas for staying calm",
+            "locator": "Interests beyond parenting, personal framing, friendship, books and music enjoyment",
+            "pdfPages": [
+              {
+                "start": 235,
+                "end": 236
+              },
+              {
+                "start": 239,
+                "end": 241
+              }
+            ]
+          },
+          {
+            "id": "shared.ref.toddler.adult-interests",
+            "sourceId": "toddler-2019",
+            "section": "Preparation of the adult; Cultivate a learning mind-set; Start and end the day right; Fill our emotional bucket",
+            "locator": "Nonuniversal practices, own rich life, flexible rituals with children and adult connection",
+            "pdfPages": [
+              {
+                "start": 187,
+                "end": 187
+              },
+              {
+                "start": 189,
+                "end": 190
+              },
+              {
+                "start": 192,
+                "end": 193
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.shared-something-for-you",
+        "entryId": "shared-something-for-you",
+        "ageId": "12-18",
+        "topicIds": [
+          "you-family"
+        ]
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "What’s underneath",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "you-family",
+            "label": "For you & your family"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 235–236, 239–241"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 187, 189–190, 192–193"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "2a12bf378b447b904d1cf624bab1b414ab6bc444667051318cc6218addfffff0",
+  "artContextSha256": null,
+  "publicProjectionSha256": "4b810489544763a597bb87f287ac1eb06a94d79c9cb94492e0ff3df65b5b9e5a",
+  "provenance": {
+    "revision": "r06",
+    "placementDraft": {
+      "path": "content/6-18/drafts/shared-placements/draft-r01.json",
+      "sha256": "be9ae97ea203dbd01c5f3b346415ee8eff0b483d023b3203be5e24246645ca2f"
+    },
+    "canonical": {
+      "entryId": "shared-something-for-you",
+      "canonicalEntrySha256": "6488f1305c07855fd68a21f8e981aa8d73906cf4df29ee9903458c02fdc9b9c3",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/shared/draft-r02.json",
+        "sha256": "04720cdd2997dc461a619234d74bea952b2fd3c388a49b326dc282f065f39b06",
+        "jsonPointer": "/entries/7",
+        "author": "/root/shared_pilot_draft",
+        "provenancePointer": "/provenance/7"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

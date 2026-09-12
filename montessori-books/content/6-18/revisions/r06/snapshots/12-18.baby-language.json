@@ -1,0 +1,134 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-language",
+        "kind": "invitation",
+        "title": "A conversation with your baby",
+        "actionLabel": "Listen",
+        "invitation": "Answer their sound, then leave a little room for the reply.",
+        "summary": "Answer a sound, smile or gesture, then pause. Your baby’s next response can guide the conversation.",
+        "cue": "Your baby is watching your face or experimenting with sounds.",
+        "detail": [
+          "Come where your baby can see your face. Say something, listen, and leave a little space for their sound or movement. You can echo a sound, smile back, or put a few words to what seems to interest them.",
+          "Raspberries, bubbles and changes in volume are part of the vocal play the authors describe. There is no need to ask for a particular sound or word.",
+          "For families who choose baby signs, the book suggests pairing a few familiar spoken words with signs, such as “milk” or “done.” Its age labels differ between sections; the authors’ wider guidance is to notice the baby’s response and interest."
+        ],
+        "references": [
+          {
+            "id": "baby-language.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Language activities / 3 to 6 months; 6 to 9 months",
+            "locator": "Reciprocal conversation, vocal exploration and optional signs",
+            "pdfPages": [
+              {
+                "start": 133,
+                "end": 135
+              }
+            ]
+          },
+          {
+            "id": "baby-language.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Language in the first year",
+            "locator": "7–9 month signs row; observing communication",
+            "pdfPages": [
+              {
+                "start": 138,
+                "end": 138
+              }
+            ]
+          },
+          {
+            "id": "baby-language.ref.3",
+            "sourceId": "baby-2021",
+            "section": "Introduction to activities",
+            "locator": "Ages as guidelines and individual interest",
+            "pdfPages": [
+              {
+                "start": 119,
+                "end": 120
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.baby-language",
+        "entryId": "baby-language",
+        "ageId": "12-18",
+        "topicIds": [
+          "play-discovery",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "Conversation appears at 3–6 months and continues through 9–12 and 12 months+. Signs are introduced in 3–6 prose, with 7–9 in the recap.",
+          "readiness": "Attention to a face, sounds or gestures; a response need not be a word.",
+          "note": "The activity may continue while it fits your child’s interest and current skills; the source ages are guides. Age and readiness sources: The Montessori Baby, PDF pp. 136–137."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 133–135"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF p. 138"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 119–120"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "f07f551aa3a6258f7d061d2d26983915a9e46ca3d0625faf0c58d24cc9d2fed1",
+  "artContextSha256": null,
+  "publicProjectionSha256": "8a1e5fdc2b3445617cf91928a14343f04d37cceff44cd98deeddf159050e387f",
+  "provenance": {
+    "revision": "r06",
+    "placementDraft": {
+      "path": "content/6-18/drafts/editorial-r04/01.json",
+      "sha256": "714957507ce3bb904cf57c87d0d0c0be87dc234ad7163e25fa5a4ef019dcfb22"
+    },
+    "canonical": {
+      "entryId": "baby-language",
+      "canonicalEntrySha256": "f73c743dcacd0fd6b178539e6918812d6c35fc28ca65b123b6455686166e2213",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/1",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/1"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

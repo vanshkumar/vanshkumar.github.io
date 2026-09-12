@@ -1,0 +1,1344 @@
+{
+  "id": "shared-foundations-tone-r01",
+  "workflow": "lean-v1",
+  "reviewer": {
+    "task": "/root/trial_tone",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-12",
+  "scope": "Explicit grouped source-topic decisions; exact age contexts reviewed.",
+  "renderedSurfaces": {
+    "path": "content/birth-6/revisions/r03/RENDERED_SURFACES.json",
+    "sha256": "ebfa5bcd326ce713d494f89e69d7d3a4692cd70ffd5c877fec46e66b230aa190"
+  },
+  "decisionInput": {
+    "path": "content/birth-6/reviews/decisions/shared-foundations-tone-r01.json",
+    "sha256": "35cd6447c3a6aff0cf22b1134be85f3c0ac346fd99da716eb5745e858e8609e3"
+  },
+  "readingBasis": [],
+  "retainedReads": [
+    {
+      "path": "content/birth-6/reviews/trial-tone-r01.json",
+      "sha256": "ebcca701f4e592e85a60b3587c5c7d57fef12089b76bf1930b98a5b0a5840490",
+      "readLogIds": [
+        "tone-framing"
+      ]
+    },
+    {
+      "path": "content/birth-6/reviews/early-care-a-tone-r01.json",
+      "sha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+      "readLogIds": [
+        "eca-tone-text-110",
+        "eca-tone-text-111"
+      ]
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "tone-framing",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 123
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/review-trial/source-framing.txt",
+      "notes": "Read the guidance on individual pace, observation, child control, suitable materials, frustration, and parent role."
+    },
+    {
+      "id": "eca-tone-text-110",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 110,
+          "end": 110
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/110.txt",
+      "notes": "Read acknowledgment, comfort, the no-danger condition on stepping away, and early undifferentiated crying."
+    },
+    {
+      "id": "eca-tone-text-111",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 111,
+          "end": 111
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/111.txt",
+      "notes": "Read changing crying signals, responding to needs, and proportionate help."
+    },
+    {
+      "id": "sf-tone-baby-text-33",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 33,
+          "end": 33
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/33.txt",
+      "notes": "Read the opening observation guidance and its purpose in understanding an individual baby."
+    },
+    {
+      "id": "sf-tone-baby-text-34",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 34,
+          "end": 34
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/34.txt",
+      "notes": "Read help guided by observation and the infant observation example."
+    },
+    {
+      "id": "sf-tone-baby-text-35",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 35,
+          "end": 35
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/35.txt",
+      "notes": "Read the observation checklist, including reflexive movement, sounds and expression."
+    },
+    {
+      "id": "sf-tone-baby-text-36",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 36,
+          "end": 36
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/36.txt",
+      "notes": "Read the continuing checklist across care, interests, relationships and adult responses."
+    },
+    {
+      "id": "sf-tone-baby-text-37",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 37,
+          "end": 37
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/37.txt",
+      "notes": "Read informal observation, self-observation and people within the prepared environment."
+    },
+    {
+      "id": "sf-tone-baby-text-99",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 99,
+          "end": 99
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/99.txt",
+      "notes": "Read respectful handling, bodily agency and trust before the collaboration examples."
+    },
+    {
+      "id": "sf-tone-baby-text-100",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 100,
+          "end": 100
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/100.txt",
+      "notes": "Read collaboration from newborn responses onward and respect for individual timelines."
+    },
+    {
+      "id": "sf-tone-baby-text-101",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 101,
+          "end": 101
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/101.txt",
+      "notes": "Read safe activity, effort, needed assistance and protecting concentration."
+    },
+    {
+      "id": "sf-tone-baby-text-102",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 102,
+          "end": 102
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/102.txt",
+      "notes": "Read the complete pace and processing-time guidance."
+    },
+    {
+      "id": "sf-tone-baby-text-103",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 103,
+          "end": 103
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/103.txt",
+      "notes": "Read boundaries from birth within safety and ability, with attention to communicated needs."
+    },
+    {
+      "id": "sf-tone-baby-text-104",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 104,
+          "end": 104
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/104.txt",
+      "notes": "Read adult responsibility, repeated guidance and adapting the surroundings."
+    },
+    {
+      "id": "sf-tone-baby-text-222",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 222,
+          "end": 222
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/222.txt",
+      "notes": "Read the beginning of daily-task guidance, including the first six to eight weeks."
+    },
+    {
+      "id": "sf-tone-baby-text-223",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 223,
+          "end": 223
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/223.txt",
+      "notes": "Read ordinary work beyond the early weeks, rest and budget guidance."
+    },
+    {
+      "id": "sf-tone-baby-text-224",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 224,
+          "end": 224
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/224.txt",
+      "notes": "Read the budget continuation and adapting existing resources as the child grows."
+    },
+    {
+      "id": "sf-tone-baby-text-241",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 241,
+          "end": 241
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/241.txt",
+      "notes": "Read adult-capacity suggestions and the beginning of Doing our best."
+    },
+    {
+      "id": "sf-tone-baby-text-242",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 242,
+          "end": 242
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/242.txt",
+      "notes": "Read the complete changing-capacity and connection-over-perfection conclusion."
+    },
+    {
+      "id": "sf-tone-toddler-text-14",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/14.txt",
+      "notes": "Read the toddler scope note and surrounding acceptance of the child and imperfect parents."
+    },
+    {
+      "id": "sf-tone-toddler-text-29",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 29,
+          "end": 29
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/29.txt",
+      "notes": "Read individual timelines, respectful limits and observation for deciding when to help."
+    },
+    {
+      "id": "sf-tone-toddler-text-33",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 33,
+          "end": 33
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/33.txt",
+      "notes": "Read activity ages as indications and choosing by the child's interest."
+    },
+    {
+      "id": "sf-tone-toddler-text-34",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 34,
+          "end": 34
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/34.txt",
+      "notes": "Read partial participation, suitable challenge and repetition."
+    },
+    {
+      "id": "sf-tone-toddler-text-35",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 35,
+          "end": 35
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/35.txt",
+      "notes": "Read repeating one part, freedom of choice and stepping in when frustrated."
+    },
+    {
+      "id": "sf-tone-toddler-text-83",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 83,
+          "end": 83
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/83.txt",
+      "notes": "Read family culture, warmth and making the home reduce work."
+    },
+    {
+      "id": "sf-tone-toddler-text-84",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 84,
+          "end": 84
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/84.txt",
+      "notes": "Read shared and small spaces, including adapting one area."
+    },
+    {
+      "id": "sf-tone-toddler-text-85",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 85,
+          "end": 85
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/85.txt",
+      "notes": "Read the small-space continuation and gradual changes."
+    },
+    {
+      "id": "sf-tone-toddler-text-108",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 108,
+          "end": 108
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/108.txt",
+      "notes": "Read acceptance and seeing activity from the toddler's perspective."
+    },
+    {
+      "id": "sf-tone-toddler-text-109",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 109,
+          "end": 109
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/109.txt",
+      "notes": "Read acceptance of individuality and tentative translation of a need."
+    },
+    {
+      "id": "sf-tone-toddler-text-110",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 110,
+          "end": 110
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/110.txt",
+      "notes": "Read protective limits for the child, other people and the adult."
+    },
+    {
+      "id": "sf-tone-toddler-text-189",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 189,
+          "end": 189
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/189.txt",
+      "notes": "Read learning about differences and seeking needed support."
+    },
+    {
+      "id": "sf-tone-toddler-text-192",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 192,
+          "end": 192
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/192.txt",
+      "notes": "Read observation without writing when hands are full and adult emotional needs."
+    },
+    {
+      "id": "sf-tone-toddler-text-193",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 193,
+          "end": 193
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/193.txt",
+      "notes": "Read the opening slower-day framing and personal examples."
+    },
+    {
+      "id": "sf-tone-toddler-text-194",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 194,
+          "end": 194
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/194.txt",
+      "notes": "Read processing time, proportionate help and room for occasional hurry."
+    },
+    {
+      "id": "sf-tone-toddler-text-197",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 197,
+          "end": 197
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/197.txt",
+      "notes": "Read the opening family-choice discussion and acknowledgment of unchangeable circumstances."
+    },
+    {
+      "id": "sf-tone-toddler-text-198",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 198,
+          "end": 198
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/198.txt",
+      "notes": "Read work and money constraints, ordinary-time possibilities and accepting mistakes."
+    },
+    {
+      "id": "sf-tone-toddler-visual-14",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/14.png",
+      "notes": "Inspected the full original page and the closing note defining toddler as around one to three years."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "shared-foundations-tone-r01.0-3.shared-observe",
+      "entryId": "shared-observe",
+      "placementId": "0-3.shared-observe",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-observe.json",
+      "snapshotFileSha256": "1626f33c3954bbe5b8d7cd7a36cb504f8209ee94bf9ebe950f3421dd30ac5f5b",
+      "textPlacementSha256": "b4a7d112cb379665c878323ea967d07476d5704d4434c29497bb3e4e2598bee8",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-baby-text-33",
+        "sf-tone-baby-text-34",
+        "sf-tone-baby-text-35",
+        "sf-tone-baby-text-36",
+        "sf-tone-baby-text-37",
+        "sf-tone-toddler-text-29",
+        "sf-tone-toddler-text-192",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 33,
+              "end": 37
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 29,
+              "end": 29
+            },
+            {
+              "start": 192,
+              "end": 192
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The new age contexts support ordinary observation of each child, with optional notes and help or protection available rather than requiring particular skills or uninterrupted watching."
+      },
+      "bodyReview": {
+        "entryId": "shared-observe",
+        "canonicalEntrySha256": "be586cb71ff0fed0a1e9904aa80691945c86bee712e7f2a83fe5779cbf93741d",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-foundations-tone-r01.3-6.shared-observe",
+      "entryId": "shared-observe",
+      "placementId": "3-6.shared-observe",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-observe.json",
+      "snapshotFileSha256": "fc57d66296b182824c295937d8f2de1dd5835acba067ecabceafc1c235797589",
+      "textPlacementSha256": "d2077a73259bc51e0066889805056423d22d66bdc497c06c464723fbe434e570",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-baby-text-33",
+        "sf-tone-baby-text-34",
+        "sf-tone-baby-text-35",
+        "sf-tone-baby-text-36",
+        "sf-tone-baby-text-37",
+        "sf-tone-toddler-text-29",
+        "sf-tone-toddler-text-192",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 33,
+              "end": 37
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 29,
+              "end": 29
+            },
+            {
+              "start": 192,
+              "end": 192
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The new age contexts support ordinary observation of each child, with optional notes and help or protection available rather than requiring particular skills or uninterrupted watching."
+      },
+      "bodyReview": {
+        "entryId": "shared-observe",
+        "canonicalEntrySha256": "be586cb71ff0fed0a1e9904aa80691945c86bee712e7f2a83fe5779cbf93741d",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-foundations-tone-r01.0-3.shared-follow-readiness",
+      "entryId": "shared-follow-readiness",
+      "placementId": "0-3.shared-follow-readiness",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-follow-readiness.json",
+      "snapshotFileSha256": "55b2138341fa22983b58a2eabc119391a8ab8a985e8111d9c196572c994e0948",
+      "textPlacementSha256": "3eff404fb89c2f1a724906d7c863a618af74f68894dc18222ec2277b2d5effd3",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "sf-tone-toddler-text-29",
+        "sf-tone-toddler-text-33",
+        "sf-tone-toddler-text-189",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 29,
+              "end": 29
+            },
+            {
+              "start": 33,
+              "end": 33
+            },
+            {
+              "start": 189,
+              "end": 189
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Across the new ages, choosing by present interest remains distinct from a skill target and the unchanged summary keeps developmental support available."
+      },
+      "bodyReview": {
+        "entryId": "shared-follow-readiness",
+        "canonicalEntrySha256": "faf6b70472402cf68b23e4a7351c5c38613801bc3e0185ccc02f79c63b6b762f",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-foundations-tone-r01.3-6.shared-follow-readiness",
+      "entryId": "shared-follow-readiness",
+      "placementId": "3-6.shared-follow-readiness",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-follow-readiness.json",
+      "snapshotFileSha256": "87676ff37016752113a9f5e1a656b6b51107bda9ec067c5aebe30eff5d19df7f",
+      "textPlacementSha256": "15576b12b51c3c23109411026171e568ddb87ff8c38f3f0acd20ed99a8f193e6",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "sf-tone-toddler-text-29",
+        "sf-tone-toddler-text-33",
+        "sf-tone-toddler-text-189",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 29,
+              "end": 29
+            },
+            {
+              "start": 33,
+              "end": 33
+            },
+            {
+              "start": 189,
+              "end": 189
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Across the new ages, choosing by present interest remains distinct from a skill target and the unchanged summary keeps developmental support available."
+      },
+      "bodyReview": {
+        "entryId": "shared-follow-readiness",
+        "canonicalEntrySha256": "faf6b70472402cf68b23e4a7351c5c38613801bc3e0185ccc02f79c63b6b762f",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-foundations-tone-r01.0-3.shared-participation-help",
+      "entryId": "shared-participation-help",
+      "placementId": "0-3.shared-participation-help",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-participation-help.json",
+      "snapshotFileSha256": "bd9f62671de207aa51f91479cd6a5515722ec65a466280e62e7eb5ec10e784f1",
+      "textPlacementSha256": "e82dddde85d0b48b652dee3bbf8c5c1cd20683821b4c63194f70bda3eedd006b",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-baby-text-99",
+        "sf-tone-baby-text-100",
+        "sf-tone-baby-text-101",
+        "sf-tone-toddler-text-34",
+        "sf-tone-toddler-text-35",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 99,
+              "end": 101
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 34,
+              "end": 35
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The early context makes a small response sufficient participation, while all five placements retain shared effort, available help and the adult's room to help more on a rushed day."
+      },
+      "bodyReview": {
+        "entryId": "shared-participation-help",
+        "canonicalEntrySha256": "179d1031c809beab7faf2065ff47caa85c7c1bf73df76bdbe05e296c1fe2b4c4",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-foundations-tone-r01.3-6.shared-participation-help",
+      "entryId": "shared-participation-help",
+      "placementId": "3-6.shared-participation-help",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-participation-help.json",
+      "snapshotFileSha256": "779ae1c8b42dbd2a01dbad8ba4cea744e648e2f456674b44fe031f4ce850ea69",
+      "textPlacementSha256": "cf5836fad33bf03c8d592dfec0d4ea3c7238ea0f971cc1bb7746ad4a3077a1be",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-baby-text-99",
+        "sf-tone-baby-text-100",
+        "sf-tone-baby-text-101",
+        "sf-tone-toddler-text-34",
+        "sf-tone-toddler-text-35",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 99,
+              "end": 101
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 34,
+              "end": 35
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The early context makes a small response sufficient participation, while all five placements retain shared effort, available help and the adult's room to help more on a rushed day."
+      },
+      "bodyReview": {
+        "entryId": "shared-participation-help",
+        "canonicalEntrySha256": "179d1031c809beab7faf2065ff47caa85c7c1bf73df76bdbe05e296c1fe2b4c4",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-foundations-tone-r01.0-3.shared-feelings-limits",
+      "entryId": "shared-feelings-limits",
+      "placementId": "0-3.shared-feelings-limits",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-feelings-limits.json",
+      "snapshotFileSha256": "53e29a0b146dd27dfce6c78c7fcc4187fbb657559e7f9aba37348f0dafc61dde",
+      "textPlacementSha256": "c70ef2ae9dfd10a036b8bdac4ba64c9488fd778f5e130fa389ada639f1a3ddfc",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-baby-text-103",
+        "sf-tone-baby-text-104",
+        "eca-tone-text-110",
+        "eca-tone-text-111",
+        "sf-tone-toddler-text-108",
+        "sf-tone-toddler-text-109",
+        "sf-tone-toddler-text-110",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 103,
+              "end": 104
+            },
+            {
+              "start": 110,
+              "end": 111
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 108,
+              "end": 110
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The infant context explicitly assigns safety and responding to needs to the adult, and all ages preserve feelings without requiring compliance or certainty about the child's meaning."
+      },
+      "bodyReview": {
+        "entryId": "shared-feelings-limits",
+        "canonicalEntrySha256": "07c45c4884b3cd9d73a3c14bb041d30f4880d0c839ad31ab67918540724bdabf",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-foundations-tone-r01.3-6.shared-feelings-limits",
+      "entryId": "shared-feelings-limits",
+      "placementId": "3-6.shared-feelings-limits",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-feelings-limits.json",
+      "snapshotFileSha256": "d77988a9b3d1e8eb80f761e4908478736e2db634458a2edcf25de0d5787517a9",
+      "textPlacementSha256": "d4dbffbae7d4b1bdec91a6062935180739889564f4b7fb7603c740d7aa30483d",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-baby-text-103",
+        "sf-tone-baby-text-104",
+        "eca-tone-text-110",
+        "eca-tone-text-111",
+        "sf-tone-toddler-text-108",
+        "sf-tone-toddler-text-109",
+        "sf-tone-toddler-text-110",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 103,
+              "end": 104
+            },
+            {
+              "start": 110,
+              "end": 111
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 108,
+              "end": 110
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The infant context explicitly assigns safety and responding to needs to the adult, and all ages preserve feelings without requiring compliance or certainty about the child's meaning."
+      },
+      "bodyReview": {
+        "entryId": "shared-feelings-limits",
+        "canonicalEntrySha256": "07c45c4884b3cd9d73a3c14bb041d30f4880d0c839ad31ab67918540724bdabf",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-foundations-tone-r01.0-3.shared-time-to-explore",
+      "entryId": "shared-time-to-explore",
+      "placementId": "0-3.shared-time-to-explore",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-time-to-explore.json",
+      "snapshotFileSha256": "2163ae0c9caf0786721195a66fe587f30e511278ba5a9253550fdaf60373ae75",
+      "textPlacementSha256": "bdfef14e29ee6a09b01b83046df0e54ee669aab67dafdc33e11d5758ef3a1a4f",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-baby-text-101",
+        "sf-tone-baby-text-102",
+        "sf-tone-toddler-text-34",
+        "sf-tone-toddler-text-35",
+        "sf-tone-toddler-text-194",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 101,
+              "end": 102
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 34,
+              "end": 35
+            },
+            {
+              "start": 194,
+              "end": 194
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Looking and small movements count as early exploration, while each placement keeps repetition conditional on safe interest and preserves help, care and warm interaction."
+      },
+      "bodyReview": {
+        "entryId": "shared-time-to-explore",
+        "canonicalEntrySha256": "8904cbdc1e74829188d73117b0eb343cce29beb2384e3cfb6e5517ff674eda33",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-foundations-tone-r01.3-6.shared-time-to-explore",
+      "entryId": "shared-time-to-explore",
+      "placementId": "3-6.shared-time-to-explore",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-time-to-explore.json",
+      "snapshotFileSha256": "5b2b097f0e42e0474a06061ce5a01e9cb9fb9f45c7ed9a5b1f98e267a66809b8",
+      "textPlacementSha256": "6827392fa3fbebfa17c651e607002fc4f4d195baceffa31180ad0484c06067d7",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-baby-text-101",
+        "sf-tone-baby-text-102",
+        "sf-tone-toddler-text-34",
+        "sf-tone-toddler-text-35",
+        "sf-tone-toddler-text-194",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 101,
+              "end": 102
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 34,
+              "end": 35
+            },
+            {
+              "start": 194,
+              "end": 194
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Looking and small movements count as early exploration, while each placement keeps repetition conditional on safe interest and preserves help, care and warm interaction."
+      },
+      "bodyReview": {
+        "entryId": "shared-time-to-explore",
+        "canonicalEntrySha256": "8904cbdc1e74829188d73117b0eb343cce29beb2384e3cfb6e5517ff674eda33",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-foundations-tone-r01.0-3.shared-home-fits-family",
+      "entryId": "shared-home-fits-family",
+      "placementId": "0-3.shared-home-fits-family",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-home-fits-family.json",
+      "snapshotFileSha256": "8765ac9119f4af84b1da67d1747a19397a8887b1f8b3085113d86d1159f11370",
+      "textPlacementSha256": "e7d0b21ebb9f97ccfe2313cd4b10d9a6c87ec2d02bfde2a24f2bd35d1c8ac412",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-baby-text-37",
+        "sf-tone-baby-text-223",
+        "sf-tone-baby-text-224",
+        "sf-tone-toddler-text-83",
+        "sf-tone-toddler-text-84",
+        "sf-tone-toddler-text-85",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 37,
+              "end": 37
+            },
+            {
+              "start": 223,
+              "end": 224
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 83,
+              "end": 85
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The new contexts keep changes responsive to the household and interested child, with existing resources, culture and gradual adjustments sufficient at every browsing age."
+      },
+      "bodyReview": {
+        "entryId": "shared-home-fits-family",
+        "canonicalEntrySha256": "fb7f30238d159ef3395035a56b71356f237faaaa4369ad932effe544ff0625d0",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-foundations-tone-r01.3-6.shared-home-fits-family",
+      "entryId": "shared-home-fits-family",
+      "placementId": "3-6.shared-home-fits-family",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-home-fits-family.json",
+      "snapshotFileSha256": "63fa14d50c58697b446b72c72cbbb951baf4412e8d806cc6f61cf21d8b61c3d5",
+      "textPlacementSha256": "46eb8536a1cf106f93973de1297280ff710e13ea9ccaf5baee646314ee2d3ff6",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-baby-text-37",
+        "sf-tone-baby-text-223",
+        "sf-tone-baby-text-224",
+        "sf-tone-toddler-text-83",
+        "sf-tone-toddler-text-84",
+        "sf-tone-toddler-text-85",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 37,
+              "end": 37
+            },
+            {
+              "start": 223,
+              "end": 224
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 83,
+              "end": 85
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The new contexts keep changes responsive to the household and interested child, with existing resources, culture and gradual adjustments sufficient at every browsing age."
+      },
+      "bodyReview": {
+        "entryId": "shared-home-fits-family",
+        "canonicalEntrySha256": "fb7f30238d159ef3395035a56b71356f237faaaa4369ad932effe544ff0625d0",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-foundations-tone-r01.0-3.shared-less-crowded-day",
+      "entryId": "shared-less-crowded-day",
+      "placementId": "0-3.shared-less-crowded-day",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-less-crowded-day.json",
+      "snapshotFileSha256": "158628b94c03f0c2cfbff0ad31611b10b91c80cc2f8eb80b6394249b8a640850",
+      "textPlacementSha256": "873a05adcd3b477c5984aacb1ce206922898c58f05c5fb812c7bc119e9f2afee",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-baby-text-222",
+        "sf-tone-baby-text-223",
+        "sf-tone-baby-text-224",
+        "sf-tone-baby-text-241",
+        "sf-tone-baby-text-242",
+        "sf-tone-toddler-text-193",
+        "sf-tone-toddler-text-194",
+        "sf-tone-toddler-text-197",
+        "sf-tone-toddler-text-198",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 222,
+              "end": 224
+            },
+            {
+              "start": 241,
+              "end": 242
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 193,
+              "end": 194
+            },
+            {
+              "start": 197,
+              "end": 198
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Early care and toddler contexts preserve day-specific capacity and real commitments, presenting ordinary moments together as possibilities rather than a schedule or measure of parental effort."
+      },
+      "bodyReview": {
+        "entryId": "shared-less-crowded-day",
+        "canonicalEntrySha256": "bb2335181b6e1faf055f9c5e195b5ff504f5cd3a5890e36da19f30a50f552e70",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-foundations-tone-r01.3-6.shared-less-crowded-day",
+      "entryId": "shared-less-crowded-day",
+      "placementId": "3-6.shared-less-crowded-day",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-less-crowded-day.json",
+      "snapshotFileSha256": "8f5c7eb9def0cb7df6f033cf8524a151b8d9ac1c4246aa16c97cea1dd8b1bf13",
+      "textPlacementSha256": "0ad8ad90819047afb46402fcc761476da2158f529f21e8ce0947636eae944b5b",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-baby-text-222",
+        "sf-tone-baby-text-223",
+        "sf-tone-baby-text-224",
+        "sf-tone-baby-text-241",
+        "sf-tone-baby-text-242",
+        "sf-tone-toddler-text-193",
+        "sf-tone-toddler-text-194",
+        "sf-tone-toddler-text-197",
+        "sf-tone-toddler-text-198",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 222,
+              "end": 224
+            },
+            {
+              "start": 241,
+              "end": 242
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 193,
+              "end": 194
+            },
+            {
+              "start": 197,
+              "end": 198
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Early care and toddler contexts preserve day-specific capacity and real commitments, presenting ordinary moments together as possibilities rather than a schedule or measure of parental effort."
+      },
+      "bodyReview": {
+        "entryId": "shared-less-crowded-day",
+        "canonicalEntrySha256": "bb2335181b6e1faf055f9c5e195b5ff504f5cd3a5890e36da19f30a50f552e70",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    }
+  ]
+}

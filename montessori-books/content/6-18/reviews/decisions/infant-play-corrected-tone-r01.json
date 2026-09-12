@@ -1,0 +1,210 @@
+{
+  "id": "infant-play-corrected-tone-r01",
+  "date": "2026-09-12",
+  "reviewer": {
+    "task": "/root/trial_tone",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "retainedReads": [
+    {
+      "path": "content/6-18/reviews/decisions/infant-language-movement-tone-r01.json",
+      "sha256": "eab9b0bba53fe5809ab1772dda6b086f2eb18d3d2c1b4f009548720709e4e8f6",
+      "readLogIds": [
+        "ilm-tone-text-139"
+      ]
+    },
+    {
+      "path": "content/6-18/reviews/decisions/infant-hand-play-tone-r01.json",
+      "sha256": "ea50aa2f2293a79a09f351f2ab7920c2a318ba615d56ccfe8ac3b1c50de08fe4",
+      "readLogIds": [
+        "ihp-tone-baby-text-120",
+        "ihp-tone-baby-visual-301",
+        "ihp-tone-baby-visual-303",
+        "ihp-tone-toddler-text-39",
+        "ihp-tone-toddler-visual-246"
+      ]
+    }
+  ],
+  "readLogs": [],
+  "decisions": [
+    {
+      "placementIds": [
+        "9-12.baby-languages",
+        "12-18.baby-languages"
+      ],
+      "verdict": "pass",
+      "assessment": "Removing the generic activity condition restores family people, places and resources as the context for language arrangements.",
+      "readLogIds": [
+        "ilm-tone-text-139"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 139,
+              "end": 139
+            }
+          ]
+        }
+      ],
+      "issues": [],
+      "reuseBody": true
+    },
+    {
+      "placementIds": [
+        "6-9.infant-rings-and-posts",
+        "9-12.infant-rings-and-posts",
+        "12-18.infant-rings-and-posts",
+        "18-24.infant-rings-and-posts",
+        "24-36.infant-rings-and-posts"
+      ],
+      "verdict": "pass",
+      "assessment": "The summary and body now retain the Baby material conditions while ring removal, later variants and matching remain optional.",
+      "readLogIds": [
+        "ihp-tone-baby-text-120",
+        "ihp-tone-toddler-text-39"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 120,
+              "end": 120
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            }
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "9-12.infant-pegs-and-cubes",
+        "12-18.infant-pegs-and-cubes",
+        "18-24.infant-pegs-and-cubes",
+        "24-36.infant-pegs-and-cubes"
+      ],
+      "verdict": "pass",
+      "assessment": "The added material conditions qualify supervision without changing the invitation to remove or place only an interesting piece.",
+      "readLogIds": [
+        "ihp-tone-baby-text-120",
+        "ihp-tone-toddler-text-39"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 120,
+              "end": 120
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            }
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "12-18.infant-slot-posting",
+        "18-24.infant-slot-posting",
+        "24-36.infant-slot-posting"
+      ],
+      "verdict": "pass",
+      "assessment": "The flat-piece example now keeps the Baby material conditions visible alongside supervision and the freedom to pause.",
+      "readLogIds": [
+        "ihp-tone-baby-text-120",
+        "ihp-tone-toddler-text-39"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 120,
+              "end": 120
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            }
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "12-18.infant-opening-and-keys",
+        "18-24.infant-opening-and-keys",
+        "24-36.infant-opening-and-keys"
+      ],
+      "verdict": "pass",
+      "assessment": "The revised invitation keeps material suitability and each source’s separate key arrangement visible without asking families to construct a setup.",
+      "readLogIds": [
+        "ihp-tone-baby-text-120",
+        "ihp-tone-baby-visual-301",
+        "ihp-tone-baby-visual-303",
+        "ihp-tone-toddler-text-39",
+        "ihp-tone-toddler-visual-246"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 120,
+              "end": 120
+            },
+            {
+              "start": 301,
+              "end": 301
+            },
+            {
+              "start": 303,
+              "end": 303
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 246,
+              "end": 246
+            }
+          ]
+        }
+      ],
+      "issues": []
+    }
+  ]
+}

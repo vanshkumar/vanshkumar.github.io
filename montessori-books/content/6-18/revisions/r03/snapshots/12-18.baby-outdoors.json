@@ -1,0 +1,114 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-outdoors",
+        "kind": "invitation",
+        "title": "Pause to watch and listen outside",
+        "summary": "During time outdoors, pause over the leaves, birds or passing life your baby notices. A few names and some quiet can be enough.",
+        "cue": "Something outside holds their gaze or makes them turn to listen.",
+        "detail": [
+          "The authors describe the movement of leaves and the sounds of birds as things a baby can enjoy. We can name a tree, dog or vehicle, then leave room to look and listen together."
+        ],
+        "references": [
+          {
+            "id": "baby-outdoors.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Room by room / Outside",
+            "locator": "Watching leaves, talking on walks and quiet listening",
+            "pdfPages": [
+              {
+                "start": 75,
+                "end": 75
+              }
+            ]
+          },
+          {
+            "id": "baby-outdoors.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Other activities / The outdoors",
+            "locator": "Nature observation and vocabulary",
+            "pdfPages": [
+              {
+                "start": 171,
+                "end": 171
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.baby-outdoors",
+        "entryId": "baby-outdoors",
+        "ageId": "12-18",
+        "topicIds": [
+          "play-discovery",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "The outdoors passage begins from the first month and continues into walking; no endpoint for noticing/naming.",
+          "readiness": "The baby attends to outdoor sights and sounds.",
+          "note": "The activity may continue while it fits your child’s interest and current skills; the source ages are guides."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF p. 75"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF p. 171"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "f34e1eb7141f566728d8a84f28823a0aea04c836f85a8b84dc7f13e4bd7de327",
+  "artContextSha256": null,
+  "publicProjectionSha256": "127cadaa4436918ea1d30d1d0a3f4c39b65199b8599d712029bbd141380c8c96",
+  "provenance": {
+    "revision": "r03",
+    "placementDraft": {
+      "path": "content/6-18/drafts/editorial-r03/01.json",
+      "sha256": "61a49bf9e1a943bfb5e9ce6c43274455ef78f110be8ea45e504f9f6d3aeb79f8"
+    },
+    "canonical": {
+      "entryId": "baby-outdoors",
+      "canonicalEntrySha256": "4b9fef68743252e8349ab4fcb7c0d9a06df63691606e1ad282391ac35a410846",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/6",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/6"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

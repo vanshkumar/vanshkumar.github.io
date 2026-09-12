@@ -1,0 +1,114 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-waiting-outside-home",
+        "kind": "everyday-situation",
+        "title": "When waiting asks too much",
+        "summary": "A waiting room or café can leave little room for a toddler’s movement and conversation. Davies suggests preparing something to share and adjusting what you expect of the visit.",
+        "cue": "Your child is restless while the adults need to wait.",
+        "detail": [
+          "Her examples include favorite books, watching the activity outside an airport window, or a small walk together while waiting in a café.",
+          "The adult may need to be available for the child instead of reading or making a call. What helps can change during the visit; the aim is to support the child through the wait."
+        ],
+        "references": [
+          {
+            "id": "toddler-waiting-outside-home.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Managing expectations",
+            "locator": "Waiting rooms/cafés/travel, movement, shared noticing and preparation",
+            "pdfPages": [
+              {
+                "start": 125,
+                "end": 126
+              }
+            ]
+          },
+          {
+            "id": "toddler-waiting-outside-home.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "Screen time / What to do instead",
+            "locator": "Books, shared activity and café walk",
+            "pdfPages": [
+              {
+                "start": 181,
+                "end": 181
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "24-36.toddler-waiting-outside-home",
+        "entryId": "toddler-waiting-outside-home",
+        "ageId": "24-36",
+        "topicIds": [
+          "connection-feelings",
+          "everyday-care"
+        ],
+        "ageContext": {
+          "readiness": "Your child is restless while the adults need to wait.",
+          "note": "Age and readiness sources: The Montessori Toddler, PDF pp. 14."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "2–3 years",
+        "kindLabel": "An everyday situation",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          },
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 125–126"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 181"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "e9c4a975305d3f2cfb828baea9221013a4add564a9dc82d97efd8d67e6eaeb63",
+  "artContextSha256": null,
+  "publicProjectionSha256": "3665e8df5889ed907b9134bff18ca12e9d468313476ff19ffed8e7f84abaf5b4",
+  "provenance": {
+    "revision": "r03",
+    "placementDraft": {
+      "path": "content/18-36/drafts/editorial-r02/31.json",
+      "sha256": "bab1969e2cba983a089b3163f76b2b266f5a01de749735f18d5b4bb008e7ba19"
+    },
+    "canonical": {
+      "entryId": "toddler-waiting-outside-home",
+      "canonicalEntrySha256": "60c9b0bc354e7f6f01231d6f0c2132a1410a5b6c9aa482cdc7d2325ef1de32b8",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/34",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/34"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

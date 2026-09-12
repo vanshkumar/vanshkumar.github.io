@@ -1,0 +1,122 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-hand-discovery",
+        "kind": "perspective",
+        "title": "What their hands are finding out",
+        "summary": "The authors describe grasping, turning and passing objects between hands as exploration. Their examples depend on objects and every component being suitable for mouthing.",
+        "cue": "Your baby is reaching for an object, turning it, or moving it from one hand to the other.",
+        "detail": [
+          "A familiar object can offer a new experience as a baby’s hand movements change. The book describes differences in texture, shape and weight, and a rotating drum that answers a hand movement with motion and sound.",
+          "The authors also notice babies exploring the basket or container itself. They leave room for this interest, within the same limits on safe finishes, size and securely attached parts. Natural materials alone do not establish suitability."
+        ],
+        "references": [
+          {
+            "id": "baby-hand-discovery.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Movement activities / Grasping materials; 6 to 9 months",
+            "locator": "Developing grasp, two-hand transfer, rotating drum and interest in containers",
+            "pdfPages": [
+              {
+                "start": 154,
+                "end": 155
+              },
+              {
+                "start": 159,
+                "end": 162
+              }
+            ]
+          },
+          {
+            "id": "baby-hand-discovery.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Choosing activities; Mouthing; Visitor note",
+            "locator": "Mouthing-safe materials, secure parts and removing unsafe objects",
+            "pdfPages": [
+              {
+                "start": 120,
+                "end": 120
+              },
+              {
+                "start": 221,
+                "end": 222
+              },
+              {
+                "start": 258,
+                "end": 258
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "3-6.baby-hand-discovery",
+        "entryId": "baby-hand-discovery",
+        "ageId": "3-6",
+        "topicIds": [
+          "play-discovery"
+        ],
+        "ageContext": {
+          "bookAge": "3 to 6 months for reaching and grasping; two-hand transfer and rotating drum are discussed at 6 to 9 months.",
+          "readiness": "The baby studies their hands, reaches, bats or begins manipulating an object.",
+          "note": "The early examples involve reaching and grasping; two-hand transfer and the drum are later examples in the book."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "3–6 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 154–155, 159–162"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 120, 221–222, 258"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "76fef69cf987e4be09848f45a706c60191645fbe0fbbaa408c0e85f793e5e65d",
+  "artContextSha256": null,
+  "publicProjectionSha256": "91aa4dc8aa7cd1cf0836d609ab434953df38e21111926cdfd24398273532f68d",
+  "provenance": {
+    "revision": "r03",
+    "placementDraft": {
+      "path": "content/birth-6/drafts/editorial-r03/02.json",
+      "sha256": "840bf66474bf4fe56dd8210072a6c83bacb24892db8b8d77ce29ef15e98c2908"
+    },
+    "canonical": {
+      "entryId": "baby-hand-discovery",
+      "canonicalEntrySha256": "3dfd23555603fb0fa13f5d28988780fb3bf6aae4e18c7529560225aea0d5107c",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/7",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/7"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

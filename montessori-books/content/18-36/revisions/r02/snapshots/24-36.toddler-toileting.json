@@ -1,0 +1,95 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-toileting",
+        "kind": "perspective",
+        "title": "Toileting without a race",
+        "summary": "Davies describes learning to use the toilet as gradual and led by readiness, without a set age or forcing. She includes a doctor’s check when a medical issue is suspected.",
+        "cue": "Your child may pull at a wet or soiled diaper, seek privacy while pooping, or tell you they have peed or pooped.",
+        "detail": [
+          "Davies includes these observations among possible signs of readiness, without setting a deadline. Managing clothes is one of the smaller skills the book describes along the way.",
+          "Davies prepares familiar places for clean and soiled clothes and uses matter-of-fact language when a child is wet. Her offers of the potty remain qualified by not interrupting absorbed play and not forcing the child to use it.",
+          "The source also discusses overnight changes and stool withholding. Those passages are separate from readiness; she says to check with a doctor if a medical issue is suspected."
+        ],
+        "references": [
+          {
+            "id": "toddler-toileting.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Dealing with changes / Toileting",
+            "locator": "Complete gradual-learning unit, signs instead of ages, setup, no-force/refusal and medical qualification",
+            "pdfPages": [
+              {
+                "start": 160,
+                "end": 163
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "24-36.toddler-toileting",
+        "entryId": "toddler-toileting",
+        "ageId": "24-36",
+        "topicIds": [
+          "everyday-care"
+        ],
+        "ageContext": {
+          "bookAge": "The book gives readiness signs rather than a toilet-learning age.",
+          "readiness": "Your child may pull at a wet or soiled diaper, seek privacy while pooping, or tell you they have peed or pooped.",
+          "note": "This age band does not mean your child should be using the toilet. Age and readiness sources: The Montessori Toddler, PDF pp. 14."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "2–3 years",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 160–163"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "ab1eb4c82bed3f41cf3f461ab34ef424dd5e2b34d4fd34d21098fe2c3ecf4c88",
+  "artContextSha256": null,
+  "publicProjectionSha256": "3196fd58c1449d277be1312fd68fbc6bf10955f7b327cb4c6c8c09af98c428b9",
+  "provenance": {
+    "revision": "r02",
+    "placementDraft": {
+      "path": "content/18-36/drafts/editorial-r02/31.json",
+      "sha256": "bab1969e2cba983a089b3163f76b2b266f5a01de749735f18d5b4bb008e7ba19"
+    },
+    "canonical": {
+      "entryId": "toddler-toileting",
+      "canonicalEntrySha256": "eb7ce212e75e59a1c699384be80d8c520a2ad8c9916d5509d9f6ac569eb2975e",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/29",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/29"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

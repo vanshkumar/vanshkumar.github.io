@@ -1,0 +1,155 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-shoes",
+        "kind": "invitation",
+        "title": "A place for shoes",
+        "actionLabel": "Shoes",
+        "invitation": "A familiar basket and one small part of getting ready.",
+        "summary": "A reachable basket gives shoes a familiar home. Invite your child to fetch them or put them away with you.",
+        "cue": "Notice whether your child looks for their shoes or wants to help when you leave or come home.",
+        "detail": [
+          "Choose a consistent place your child can reach. A seat nearby can make putting shoes on and taking them off easier to join.",
+          "Show the small movements slowly. Fetching one shoe or returning it to the basket may be their part today; you can carry the other. On another day, more help may be welcome."
+        ],
+        "steps": [
+          "Keep shoes in one reachable basket or on a shelf.",
+          "Invite your child to bring a shoe when you get ready.",
+          "Show where it belongs when you return, and put the shoes away together."
+        ],
+        "references": [
+          {
+            "id": "toddler-shoes.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Practical life activities by age",
+            "locator": "12 to 18 months: Fetch shoes and help put toys away",
+            "pdfPages": [
+              {
+                "start": 51,
+                "end": 51
+              }
+            ]
+          },
+          {
+            "id": "toddler-shoes.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "Room by room / Entrance",
+            "locator": "Reachable shoe basket or shelf and low seat",
+            "pdfPages": [
+              {
+                "start": 76,
+                "end": 76
+              }
+            ]
+          },
+          {
+            "id": "toddler-shoes.ref.3",
+            "sourceId": "toddler-2019",
+            "section": "Getting dressed and leaving the house",
+            "locator": "Predictable coat/shoe storage and a place to sit",
+            "pdfPages": [
+              {
+                "start": 149,
+                "end": 149
+              }
+            ]
+          },
+          {
+            "id": "toddler-shoes.ref.4",
+            "sourceId": "toddler-2019",
+            "section": "How to show the child an activity / General principles",
+            "locator": "Slow precise demonstration and adult modeling/shared return; help without insistence",
+            "pdfPages": [
+              {
+                "start": 35,
+                "end": 38
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "24-36.toddler-shoes",
+        "entryId": "toddler-shoes",
+        "ageId": "24-36",
+        "topicIds": [
+          "everyday-care",
+          "home-that-helps"
+        ],
+        "ageContext": {
+          "bookAge": "Fetching shoes appears at 12 to 18 months; the chart adds other activities at 18 months to 3 years.",
+          "readiness": "Interest in fetching or returning shoes; reachable storage and a seat support participation.",
+          "note": "Age and readiness sources: The Montessori Toddler, PDF pp. 48–50, 52."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "2–3 years",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "Age, interest & context",
+          "Try it together",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          },
+          {
+            "id": "home-that-helps",
+            "label": "A home that helps"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 51"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 76"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 149"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 35–38"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "2635859224758c6d7052d1f690e699896913c19fd825d7bdcd26069898407042",
+  "artContextSha256": null,
+  "publicProjectionSha256": "cdbf9d3ee125ffb88d7e325b40cd2f83cda2ce43b4f6523edb1d05f3ec9127c6",
+  "provenance": {
+    "revision": "r03",
+    "placementDraft": {
+      "path": "content/18-36/drafts/editorial-r02/16.json",
+      "sha256": "6f305efa8d5da1c82e3e4342541848980a6d11733014761aab21749a3ec6b117"
+    },
+    "canonical": {
+      "entryId": "toddler-shoes",
+      "canonicalEntrySha256": "3b01d2c3293fa7ac94f7915532762ceb6a1165922c561b20021658e478b890dc",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/2",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/2"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

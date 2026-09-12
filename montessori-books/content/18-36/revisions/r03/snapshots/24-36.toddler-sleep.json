@@ -1,0 +1,94 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-sleep",
+        "kind": "perspective",
+        "title": "What bedtime asks of your family",
+        "summary": "Davies frames sleep as a personal family question, with a familiar bedtime sequence and the help the child needs. She advises specialist help when continuing difficulties affect the child or family.",
+        "cue": "You may be considering whether the current bedtime or sleeping arrangement is working for everyone.",
+        "detail": [
+          "Her bedtime discussion makes space for ordinary care, books, and conversation before sleep. She explicitly rejects leaving a child to cry alone and notes that illness or teething may call for additional support.",
+          "The chapter also describes particular settling methods, sleeping spaces, and changes to feeding at night. Those passages depend on more than a toddler’s age and are not a general bedtime recipe.",
+          "Her closing advice is to see a sleep specialist when persistent difficulty affects the well-being of the child or family."
+        ],
+        "references": [
+          {
+            "id": "toddler-sleep.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Daily care / Sleeping",
+            "locator": "Complete sleep unit, family choice, bedtime/help, illness/teething, no crying alone and specialist closing note",
+            "pdfPages": [
+              {
+                "start": 156,
+                "end": 158
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "24-36.toddler-sleep",
+        "entryId": "toddler-sleep",
+        "ageId": "24-36",
+        "topicIds": [
+          "everyday-care"
+        ],
+        "ageContext": {
+          "readiness": "You may be considering whether the current bedtime or sleeping arrangement is working for everyone.",
+          "note": "Age and readiness sources: The Montessori Toddler, PDF pp. 14."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "2–3 years",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 156–158"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "e7113f13c428785a412fc04e6805fe73e222a2991abe708eea0420843de21164",
+  "artContextSha256": null,
+  "publicProjectionSha256": "159bfb31109373e56c2779915648ea53292f598e228ed2635e03bcddb49d7f20",
+  "provenance": {
+    "revision": "r03",
+    "placementDraft": {
+      "path": "content/18-36/drafts/editorial-r02/31.json",
+      "sha256": "bab1969e2cba983a089b3163f76b2b266f5a01de749735f18d5b4bb008e7ba19"
+    },
+    "canonical": {
+      "entryId": "toddler-sleep",
+      "canonicalEntrySha256": "647ca5ee387d84d06f9bad1196867bd51588a70117b449a683f398e3960f590f",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/27",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/27"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

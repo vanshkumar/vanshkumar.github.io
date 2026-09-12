@@ -1,0 +1,130 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-rolling-balls",
+        "kind": "perspective",
+        "title": "An object that rolls just a little",
+        "summary": "Once a baby starts slithering, the authors describe a ball or rattle that rolls slowly and stays within a manageable distance, with mouthing-safe materials and secure parts.",
+        "cue": "Your baby is interested in moving toward something and trying to retrieve it.",
+        "detail": [
+          "The book later describes baskets of balls with different textures and weights. A ball can be held and turned as well as followed; the baby’s chosen exploration matters.",
+          "The authors keep the challenge close enough to invite effort without discouraging frustration. Their appendix uses different age labels for different objects, including a creeping-readiness condition for the basket of balls."
+        ],
+        "references": [
+          {
+            "id": "baby-rolling-balls.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Movement activities / Slow-rolling object; 6 to 9 months",
+            "locator": "Slithering readiness, manageable rolling and basket of balls",
+            "pdfPages": [
+              {
+                "start": 156,
+                "end": 159
+              }
+            ]
+          },
+          {
+            "id": "baby-rolling-balls.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Activities list for babies / Knitted ball; Cylinder with bell; Basket of balls",
+            "locator": "Different object ages and creeping readiness",
+            "pdfPages": [
+              {
+                "start": 299,
+                "end": 300
+              }
+            ]
+          },
+          {
+            "id": "baby-rolling-balls.ref.3",
+            "sourceId": "baby-2021",
+            "section": "Choosing activities",
+            "locator": "Mouthing, secured components and effort/frustration",
+            "pdfPages": [
+              {
+                "start": 120,
+                "end": 120
+              },
+              {
+                "start": 121,
+                "end": 122
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "3-6.baby-rolling-balls",
+        "entryId": "baby-rolling-balls",
+        "ageId": "3-6",
+        "topicIds": [
+          "play-discovery"
+        ],
+        "ageContext": {
+          "bookAge": "The 3 to 6 months section uses “when our baby starts slithering”; the knitted-ball appendix row says 5 to 7+ months.",
+          "readiness": "The baby has begun slithering and is interested in reaching or moving toward an object.",
+          "note": "Slithering is the condition for this example, not an expectation for this band. The appendix’s other rolling objects have later ages."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "3–6 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 156–159"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 299–300"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 120, 121–122"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "5f5990ece59dceb2c9b87e9ee87cb212f8eb1fa0be348e38057e3e937a44a6eb",
+  "artContextSha256": null,
+  "publicProjectionSha256": "69ba682b95a46ac99b28bbe2c67ba4448d8809288981c194cd94ef0da1364ee6",
+  "provenance": {
+    "revision": "r03",
+    "placementDraft": {
+      "path": "content/birth-6/drafts/editorial-r03/02.json",
+      "sha256": "840bf66474bf4fe56dd8210072a6c83bacb24892db8b8d77ce29ef15e98c2908"
+    },
+    "canonical": {
+      "entryId": "baby-rolling-balls",
+      "canonicalEntrySha256": "b83de48e1bca1b3850da9c3b081967551b26aed3eba6d5fcbde50fe37ff7d378",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/9",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/9"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

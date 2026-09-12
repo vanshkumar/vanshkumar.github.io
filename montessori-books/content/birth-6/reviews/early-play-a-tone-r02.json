@@ -1,0 +1,529 @@
+{
+  "id": "early-play-a-tone-r02",
+  "workflow": "lean-v1",
+  "reviewer": {
+    "task": "/root/trial_tone",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-12",
+  "scope": "Explicit grouped source-topic decisions; exact age contexts reviewed.",
+  "renderedSurfaces": {
+    "path": "content/birth-6/revisions/r02/RENDERED_SURFACES.json",
+    "sha256": "55b602cb78915a128f1993c60e9bc96276aa8e649bf4e8b0d4257f95831180e7"
+  },
+  "decisionInput": {
+    "path": "content/birth-6/reviews/decisions/early-play-a-tone-r02.json",
+    "sha256": "305fcee62c651eb82aae7472af1e92ef28806d1a777a92e984fb724eeaee93ff"
+  },
+  "readingBasis": [
+    {
+      "path": "content/birth-6/reviews/early-play-a-tone-r01.json",
+      "sha256": "d3c16582e54860a60e26af4a4fc78333e4f5700be1a9df00699805cc80ddc61a"
+    }
+  ],
+  "retainedReads": [
+    {
+      "path": "content/birth-6/reviews/early-play-a-tone-r01.json",
+      "sha256": "d3c16582e54860a60e26af4a4fc78333e4f5700be1a9df00699805cc80ddc61a",
+      "readLogIds": [
+        "epa-tone-text-144",
+        "epa-tone-text-145",
+        "epa-tone-text-150",
+        "epa-tone-text-151",
+        "epa-tone-text-152",
+        "epa-tone-text-290",
+        "epa-tone-visual-144",
+        "epa-tone-visual-145",
+        "epa-tone-visual-290"
+      ]
+    },
+    {
+      "path": "content/birth-6/reviews/trial-tone-r01.json",
+      "sha256": "ebcca701f4e592e85a60b3587c5c7d57fef12089b76bf1930b98a5b0a5840490",
+      "readLogIds": [
+        "tone-monthly",
+        "tone-sitting",
+        "tone-visual-287",
+        "tone-visual-288",
+        "tone-visual-289",
+        "tone-visual-299"
+      ]
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "epa-tone-text-144",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 144,
+          "end": 144
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/144.txt",
+      "notes": "Read early holding and snuggling, readiness for more mat time, and the movement restrictions."
+    },
+    {
+      "id": "epa-tone-text-145",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 145,
+          "end": 145
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/145.txt",
+      "notes": "Read early awake mat time and gentle transitions from being held."
+    },
+    {
+      "id": "epa-tone-text-150",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 150,
+          "end": 150
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/150.txt",
+      "notes": "Read the baby's view, awake movement-area context, full and alert condition, and responses to distress."
+    },
+    {
+      "id": "epa-tone-text-151",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 151,
+          "end": 151
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/151.txt",
+      "notes": "Read attention and stopping cues, mobile rotation, hand shadows, tree shadows, and early observation prompts."
+    },
+    {
+      "id": "epa-tone-text-152",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 152,
+          "end": 152
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/152.txt",
+      "notes": "Read the 0–3 observation continuation and the 3–6 transition into hand interest and voluntary grasp."
+    },
+    {
+      "id": "epa-tone-text-290",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 290,
+          "end": 290
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/290.txt",
+      "notes": "Read the Months 5–6 discovery-basket listing, proportionate help, and the following Months 7–9 boundary."
+    },
+    {
+      "id": "epa-tone-visual-144",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 144,
+          "end": 144
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/baby/tone-grasp-144.png",
+      "notes": "Inspected the 0–3 grasping diagram and the early holding and mat-readiness context."
+    },
+    {
+      "id": "epa-tone-visual-145",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 145,
+          "end": 145
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/baby/tone-grasp-145.png",
+      "notes": "Inspected the intentional-grasp and later transfer illustrations with their age-section boundaries."
+    },
+    {
+      "id": "epa-tone-visual-290",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 290,
+          "end": 290
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/baby/290.png",
+      "notes": "Inspected discovery baskets within the continuing Months 5–6 table and the subsequent Months 7–9 heading."
+    },
+    {
+      "id": "tone-monthly",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 286,
+          "end": 289
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/review-trial/source-monthly.txt",
+      "notes": "Read early care connection, continuing gentle handling, parent rest and help, and the transitions between monthly sections."
+    },
+    {
+      "id": "tone-sitting",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 158,
+          "end": 160
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/review-trial/source-sitting.txt",
+      "notes": "Read the movement context and the encouragement to wait for self-initiated sitting."
+    },
+    {
+      "id": "tone-visual-287",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 287,
+          "end": 287
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/review-trial/baby-287.png",
+      "notes": "Inspected continuing early care, time for conversation responses, and the boundary introducing Months 3 to 4."
+    },
+    {
+      "id": "tone-visual-288",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 288,
+          "end": 288
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/review-trial/baby-288.png",
+      "notes": "Inspected care as connection, face and voice interest, musical quiet, and parent capacity in the Months 3 to 4 table."
+    },
+    {
+      "id": "tone-visual-289",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 289,
+          "end": 289
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/review-trial/baby-289.png",
+      "notes": "Inspected continuing permission to handle, emerging vocal and movement interest, and the boundary introducing Months 5 to 6."
+    },
+    {
+      "id": "tone-visual-299",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 299,
+          "end": 299
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/review-trial/baby-299.png",
+      "notes": "Inspected the suction-cup toy row's alternative age and sitting cue, fixed-base description, and batting, reaching, and grasping actions."
+    },
+    {
+      "id": "tone-framing",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 123
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/review-trial/source-framing.txt",
+      "notes": "Read the guidance on individual pace, observation, child control, suitable materials, frustration, and parent role."
+    },
+    {
+      "id": "tone-activities-framing",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/review-trial/source-activities.txt",
+      "notes": "Read the appendix instruction to use ages as guidelines and follow individual interests and developing skills."
+    },
+    {
+      "id": "epa-tone-text-155",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 155,
+          "end": 155
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/155.txt",
+      "notes": "Read grasping variation, mouth suitability, free floor movement, and the authors' awake-positioning discussion."
+    },
+    {
+      "id": "epa-tone-text-156",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 156,
+          "end": 156
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/156.txt",
+      "notes": "Read comfort adjustments, nearby interest, and the slow-rolling object's slithering condition."
+    },
+    {
+      "id": "epa-tone-text-157",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 157,
+          "end": 157
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/157.txt",
+      "notes": "Read the 3–6 observation prompts and the transition into the 6–9 movement discussion."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "early-play-a-tone-r02.0-3.early-shadows",
+      "entryId": "early-shadows",
+      "placementId": "0-3.early-shadows",
+      "snapshotPath": "content/birth-6/revisions/r02/snapshots/0-3.early-shadows.json",
+      "snapshotFileSha256": "52f9ee8d4841ca90e538fe549f3df0b9c3f846c8e370f1b3a6402201e498b843",
+      "textPlacementSha256": "afae45c2e52458f48782036c7660f27d95b61b0fa03f6c819b2bf6a99cc82513",
+      "artContextSha256": null,
+      "readLogIds": [
+        "epa-tone-text-150",
+        "epa-tone-text-151",
+        "epa-tone-text-152",
+        "tone-monthly",
+        "tone-visual-287",
+        "tone-visual-288",
+        "tone-visual-289"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 150,
+              "end": 152
+            },
+            {
+              "start": 287,
+              "end": 289
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The added monthly-summary reference reads naturally and makes the continuing visual-watching context traceable without changing the invitation or its stopping cues."
+      }
+    },
+    {
+      "id": "early-play-a-tone-r02.3-6.early-shadows",
+      "entryId": "early-shadows",
+      "placementId": "3-6.early-shadows",
+      "snapshotPath": "content/birth-6/revisions/r02/snapshots/3-6.early-shadows.json",
+      "snapshotFileSha256": "6ace41d137a5138f32efdda0203a0af98f73c4e8407b34e63984a23b3b2930bb",
+      "textPlacementSha256": "2773ca722f86f8d6983a85d3fff46b2110394b35a5abbcdf89731fdb30ab53ec",
+      "artContextSha256": null,
+      "readLogIds": [
+        "epa-tone-text-150",
+        "epa-tone-text-151",
+        "epa-tone-text-152",
+        "tone-monthly",
+        "tone-visual-287",
+        "tone-visual-288",
+        "tone-visual-289"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 150,
+              "end": 152
+            },
+            {
+              "start": 287,
+              "end": 289
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The added monthly-summary reference reads naturally and makes the continuing visual-watching context traceable without changing the invitation or its stopping cues."
+      }
+    },
+    {
+      "id": "early-play-a-tone-r02.0-3.baby-movement",
+      "entryId": "baby-movement",
+      "placementId": "0-3.baby-movement",
+      "snapshotPath": "content/birth-6/revisions/r02/snapshots/0-3.baby-movement.json",
+      "snapshotFileSha256": "89dc7299ce574494a3fb8bf6ce6079ddd87a4967dea5928aa8d6aa3c9c78de9d",
+      "textPlacementSha256": "dafb11dd93c7bfa9df09cbc7d954ef8404a11638775456ded6184d7badfe218a",
+      "artContextSha256": null,
+      "readLogIds": [
+        "epa-tone-text-144",
+        "epa-tone-text-145",
+        "epa-tone-visual-144",
+        "epa-tone-visual-145",
+        "tone-framing",
+        "tone-activities-framing",
+        "epa-tone-text-155",
+        "epa-tone-text-156",
+        "epa-tone-text-157"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 144,
+              "end": 145
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The added age-context citation identifies the early holding and mat-time passages while leaving comfort and current interest as the basis for the reader's choice."
+      },
+      "bodyReview": {
+        "entryId": "baby-movement",
+        "canonicalEntrySha256": "ad2f99ea61a19b42cfae1dcb274f6924ef45dda8a4c1dc224b5b337163e59b5f",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "early-play-a-tone-r02.3-6.baby-movement",
+      "entryId": "baby-movement",
+      "placementId": "3-6.baby-movement",
+      "snapshotPath": "content/birth-6/revisions/r02/snapshots/3-6.baby-movement.json",
+      "snapshotFileSha256": "1396edca95b2f7f57344f6bc12bd1ac3417b9f8068b17e1e11d4c4af4279eeb9",
+      "textPlacementSha256": "992f1554b131ce5d33c7c313bd83b0e09787dfd106624de03e1467321b9eedd0",
+      "artContextSha256": null,
+      "readLogIds": [
+        "epa-tone-text-144",
+        "epa-tone-text-145",
+        "epa-tone-visual-144",
+        "epa-tone-visual-145",
+        "tone-framing",
+        "tone-activities-framing",
+        "epa-tone-text-155",
+        "epa-tone-text-156",
+        "epa-tone-text-157"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 144,
+              "end": 145
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The added age-context citation identifies the early holding and mat-time passages while leaving comfort and current interest as the basis for the reader's choice."
+      },
+      "bodyReview": {
+        "entryId": "baby-movement",
+        "canonicalEntrySha256": "ad2f99ea61a19b42cfae1dcb274f6924ef45dda8a4c1dc224b5b337163e59b5f",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "early-play-a-tone-r02.3-6.baby-treasure-baskets",
+      "entryId": "baby-treasure-baskets",
+      "placementId": "3-6.baby-treasure-baskets",
+      "snapshotPath": "content/birth-6/revisions/r02/snapshots/3-6.baby-treasure-baskets.json",
+      "snapshotFileSha256": "5810f4d5b4128af5c8dee7f7111dde3d8d4291d6045dbc797b3c290203528111",
+      "textPlacementSha256": "663662ba35d1a231214d389ab3d2c3f2619444387a70c559f6f879f7227b6d34",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-sitting",
+        "tone-monthly",
+        "tone-visual-289",
+        "tone-visual-299",
+        "epa-tone-text-290",
+        "epa-tone-visual-290",
+        "tone-framing",
+        "tone-activities-framing"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 159,
+              "end": 160
+            },
+            {
+              "start": 289,
+              "end": 290
+            },
+            {
+              "start": 299,
+              "end": 299
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The earlier-summary citation is clearly labeled and does not weaken the independent-sitting condition or merge the separate familiar-toy basket example."
+      },
+      "bodyReview": {
+        "entryId": "baby-treasure-baskets",
+        "canonicalEntrySha256": "f25eab09d61589304616896faf4837643f49046236ee21fc4a9c4dc372a89cb6",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    }
+  ]
+}

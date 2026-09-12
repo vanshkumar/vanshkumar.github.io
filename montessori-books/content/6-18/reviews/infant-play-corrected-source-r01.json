@@ -1,0 +1,843 @@
+{
+  "id": "infant-play-corrected-source-r01",
+  "workflow": "lean-v1",
+  "reviewer": {
+    "task": "/root/trial_source",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-12",
+  "scope": "Explicit grouped source-topic decisions; exact age contexts reviewed.",
+  "renderedSurfaces": {
+    "path": "content/6-18/revisions/r04/RENDERED_SURFACES.json",
+    "sha256": "31ea16f430bf234914ac3f39b3016aca6e9cf4fc3fb4510318c9cf1253b1487d"
+  },
+  "decisionInput": {
+    "path": "content/6-18/reviews/decisions/infant-play-corrected-source-r01.json",
+    "sha256": "d3b6afc9453e4821592da8b8905cc872c83b17fe01cc4ce0eb7d48e209aa68c3"
+  },
+  "readingBasis": [
+    {
+      "path": "content/6-18/reviews/infant-language-movement-source-r01.json",
+      "sha256": "f7c60c69abf3300b1a604b5076c5806045e096c53ffd8cf81e7eb8726186c6f2"
+    },
+    {
+      "path": "content/6-18/reviews/infant-hand-play-source-r01.json",
+      "sha256": "31f972c4ccf30674182d72b1cebf7604e5950cb0fd59e0f9379590773520a2b4"
+    }
+  ],
+  "retainedReads": [
+    {
+      "path": "content/birth-6/reviews/trial-source-r01.json",
+      "sha256": "8c0a342169282b2084f716265922d266b26920c5a723a30a838c4bc5e38186f8",
+      "readLogIds": [
+        "source-conversation",
+        "source-framing"
+      ]
+    },
+    {
+      "path": "content/6-18/reviews/infant-language-movement-source-r01.json",
+      "sha256": "f7c60c69abf3300b1a604b5076c5806045e096c53ffd8cf81e7eb8726186c6f2",
+      "readLogIds": [
+        "baby-visual-301"
+      ]
+    },
+    {
+      "path": "content/6-18/reviews/infant-hand-play-source-r01.json",
+      "sha256": "31f972c4ccf30674182d72b1cebf7604e5950cb0fd59e0f9379590773520a2b4",
+      "readLogIds": [
+        "baby-visual-303",
+        "toddler-visual-246",
+        "toddler-text-39"
+      ]
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "source-conversation",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 129,
+          "end": 139
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/review-trial/source-conversation.txt",
+      "notes": "Read original language units and continuations; newborn conversation, early shared music, 3–6 vocal play and differing sign ages."
+    },
+    {
+      "id": "source-framing",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 123
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/review-trial/source-framing.txt",
+      "notes": "Read activity-age guidelines, current interest, mouthing suitability, secure components and frustration qualifications."
+    },
+    {
+      "id": "baby-visual-301",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 301,
+          "end": 301
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/301.png",
+      "notes": "Full activity table, including stable sitting, rings, spinning top, posting boxes, keys and weighted stable wagon."
+    },
+    {
+      "id": "baby-visual-303",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 303,
+          "end": 303
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/303.png",
+      "notes": "Full activity table, including opening/closing, peg box, cubes, separate locks/keys and slot posting."
+    },
+    {
+      "id": "toddler-visual-246",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 246,
+          "end": 246
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/246.png",
+      "notes": "Full appendix table, including 12+ rings/pegs/cubes/opening rows and around-13+ key attached to string."
+    },
+    {
+      "id": "toddler-text-39",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 39,
+          "end": 39
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/39.txt",
+      "notes": "Complete principles 7–10: modify challenge, return to earlier activities, household alternatives and supervision."
+    },
+    {
+      "id": "source-sitting",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 158,
+          "end": 160
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/review-trial/source-sitting.txt",
+      "notes": "Read sitting passage and continuations; the authors favor waiting for self-initiated sitting."
+    },
+    {
+      "id": "baby-text-167",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 167,
+          "end": 167
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/167.txt",
+      "notes": "Full fine-motor section including posting, pliable materials, nesting and rings."
+    },
+    {
+      "id": "baby-text-168",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 168,
+          "end": 168
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/168.txt",
+      "notes": "Complete fine-motor continuation and 9–12-month observation prompts."
+    },
+    {
+      "id": "baby-text-169",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 169,
+          "end": 169
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/169.txt",
+      "notes": "Complete movement-observation continuation."
+    },
+    {
+      "id": "baby-visual-302",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 302,
+          "end": 302
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/302.png",
+      "notes": "Full activity table, including cabinet drawers, basket rings, napkin rings and graded-ring row."
+    },
+    {
+      "id": "baby-text-294",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/294.txt",
+      "notes": "Reread complete appendix introduction for later continuing placements, plus preceding climbing continuation."
+    },
+    {
+      "id": "toddler-text-43",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 43,
+          "end": 43
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/43.txt",
+      "notes": "Full eye-hand coordination and threading unit, including removing rings, grading and eventual color matching."
+    },
+    {
+      "id": "toddler-text-246",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 246,
+          "end": 246
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/246.txt",
+      "notes": "Full activity-table text: graded rings, opening/closing, pegs, cubes and locks/keys among surrounding rows."
+    },
+    {
+      "id": "toddler-text-248",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 248,
+          "end": 248
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/248.txt",
+      "notes": "Full activity-table text: horizontal and serpentine dowels and three colored pegs among surrounding rows."
+    },
+    {
+      "id": "toddler-visual-248",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 248,
+          "end": 248
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/248.png",
+      "notes": "Full appendix table, including separate horizontal, serpentine and colored-peg age/material rows."
+    },
+    {
+      "id": "baby-visual-175",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 175,
+          "end": 175
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/175.png",
+      "notes": "Full movement-activity illustration, including the 9–12-month heading continued on 176."
+    },
+    {
+      "id": "baby-visual-176",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 176,
+          "end": 176
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/176.png",
+      "notes": "Full continuation: push balls with hands, drawer box, peg box, wagon, stacker and three cubes on dowel."
+    },
+    {
+      "id": "toddler-text-44",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 44,
+          "end": 44
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/44.txt",
+      "notes": "Full posting, opening/closing, pegboard and nuts/bolts units."
+    },
+    {
+      "id": "toddler-text-60",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 60,
+          "end": 60
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/60.txt",
+      "notes": "Full numbered explanations accompanying activity photograph, including posting from around 16 months."
+    },
+    {
+      "id": "toddler-visual-59",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 59,
+          "end": 59
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/59.png",
+      "notes": "Full numbered activity photograph, especially coin-slot box and its pieces."
+    },
+    {
+      "id": "toddler-visual-60",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 60,
+          "end": 60
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/60.png",
+      "notes": "Full caption page connecting numbered photographs with their age labels."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "infant-play-corrected-source-r01.9-12.baby-languages",
+      "entryId": "baby-languages",
+      "placementId": "9-12.baby-languages",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/9-12.baby-languages.json",
+      "snapshotFileSha256": "95dffcacd37768b985b3eee53eacc9b272ca8cd265d8ff777b30f3031da293b7",
+      "textPlacementSha256": "b7c03fa1c0b8dba213548cec3d7859d78ef684a260a255c282dc527a5932e6dc",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-conversation"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Removing the activity-skills note leaves family-language arrangements conditioned on the family’s people, places and routines, consistent with the original bilingualism discussion."
+      },
+      "bodyReview": {
+        "entryId": "baby-languages",
+        "canonicalEntrySha256": "dc1bdf8a7b5b6a9c212e898a5c01614ccc19a32b933cfaf7d63d978047d38ba2",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-play-corrected-source-r01.12-18.baby-languages",
+      "entryId": "baby-languages",
+      "placementId": "12-18.baby-languages",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.baby-languages.json",
+      "snapshotFileSha256": "1a515cce45f900165ffdf4a07025c38902bbdcba19dab56909222ccee57157ec",
+      "textPlacementSha256": "bfb0f4cef15e0cc0660aa4d58f516421dc3ee4f6c1b9ecc62f829b285e8e7acb",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-conversation"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Removing the activity-skills note leaves family-language arrangements conditioned on the family’s people, places and routines, consistent with the original bilingualism discussion."
+      },
+      "bodyReview": {
+        "entryId": "baby-languages",
+        "canonicalEntrySha256": "dc1bdf8a7b5b6a9c212e898a5c01614ccc19a32b933cfaf7d63d978047d38ba2",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-play-corrected-source-r01.6-9.infant-rings-and-posts",
+      "entryId": "infant-rings-and-posts",
+      "placementId": "6-9.infant-rings-and-posts",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/6-9.infant-rings-and-posts.json",
+      "snapshotFileSha256": "dc1ee250844097257be0ffd081bb0b60666ef24bae3df589aedcba66f919e0bd",
+      "textPlacementSha256": "04bd66ca492705f286365252ae31ba13bbb0aee8939492978787328b78fdec27",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-framing",
+        "toddler-text-39",
+        "source-sitting",
+        "baby-text-167",
+        "baby-text-168",
+        "baby-text-169",
+        "baby-visual-301",
+        "baby-visual-302",
+        "baby-text-294",
+        "toddler-text-43",
+        "toddler-text-246",
+        "toddler-text-248",
+        "toddler-visual-246",
+        "toddler-visual-248"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The revised summary, topic rows and body preserve the source’s mouthing, finish, component-size and secure-attachment conditions alongside adult supervision."
+      }
+    },
+    {
+      "id": "infant-play-corrected-source-r01.9-12.infant-rings-and-posts",
+      "entryId": "infant-rings-and-posts",
+      "placementId": "9-12.infant-rings-and-posts",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/9-12.infant-rings-and-posts.json",
+      "snapshotFileSha256": "81fc9fe8fa7fc5010090cfce601b4de4b456584286a0153ca83f803b07ca2e3d",
+      "textPlacementSha256": "af278b98e2751333675dc68307b617aea068a2e0035756f4443d98cf830a6c3a",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-framing",
+        "toddler-text-39",
+        "source-sitting",
+        "baby-text-167",
+        "baby-text-168",
+        "baby-text-169",
+        "baby-visual-301",
+        "baby-visual-302",
+        "baby-text-294",
+        "toddler-text-43",
+        "toddler-text-246",
+        "toddler-text-248",
+        "toddler-visual-246",
+        "toddler-visual-248"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The revised summary, topic rows and body preserve the source’s mouthing, finish, component-size and secure-attachment conditions alongside adult supervision."
+      }
+    },
+    {
+      "id": "infant-play-corrected-source-r01.12-18.infant-rings-and-posts",
+      "entryId": "infant-rings-and-posts",
+      "placementId": "12-18.infant-rings-and-posts",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.infant-rings-and-posts.json",
+      "snapshotFileSha256": "a78032b978a05294efa286e24ace233aeeaa5deda946cd677aec14b7e5717f20",
+      "textPlacementSha256": "72711f77eca2cd1475ce9ae71ed92f010c434b2eb19a73c57811d3216a8ed5f7",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-framing",
+        "toddler-text-39",
+        "source-sitting",
+        "baby-text-167",
+        "baby-text-168",
+        "baby-text-169",
+        "baby-visual-301",
+        "baby-visual-302",
+        "baby-text-294",
+        "toddler-text-43",
+        "toddler-text-246",
+        "toddler-text-248",
+        "toddler-visual-246",
+        "toddler-visual-248"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The revised summary, topic rows and body preserve the source’s mouthing, finish, component-size and secure-attachment conditions alongside adult supervision."
+      }
+    },
+    {
+      "id": "infant-play-corrected-source-r01.18-24.infant-rings-and-posts",
+      "entryId": "infant-rings-and-posts",
+      "placementId": "18-24.infant-rings-and-posts",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/18-24.infant-rings-and-posts.json",
+      "snapshotFileSha256": "305cbf69ebdf09471b3fd1b7f3341c07d8ba513305ff29a8f072852bcc307c0c",
+      "textPlacementSha256": "4ff6adcae19c8210de5056b5d0327abdb01c7102b12b0c2143c70d34fa7c4882",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-framing",
+        "toddler-text-39",
+        "source-sitting",
+        "baby-text-167",
+        "baby-text-168",
+        "baby-text-169",
+        "baby-visual-301",
+        "baby-visual-302",
+        "baby-text-294",
+        "toddler-text-43",
+        "toddler-text-246",
+        "toddler-text-248",
+        "toddler-visual-246",
+        "toddler-visual-248"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The revised summary, topic rows and body preserve the source’s mouthing, finish, component-size and secure-attachment conditions alongside adult supervision."
+      }
+    },
+    {
+      "id": "infant-play-corrected-source-r01.24-36.infant-rings-and-posts",
+      "entryId": "infant-rings-and-posts",
+      "placementId": "24-36.infant-rings-and-posts",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/24-36.infant-rings-and-posts.json",
+      "snapshotFileSha256": "3920c1e6619e472ba0dcbc699d6bb8f07ac64691fa8ed169852bd58a4742806f",
+      "textPlacementSha256": "860abd8fb5e194ed5e7d836e303a0b13d2c0ddf379f30f378c73006bff8b9aed",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-framing",
+        "toddler-text-39",
+        "source-sitting",
+        "baby-text-167",
+        "baby-text-168",
+        "baby-text-169",
+        "baby-visual-301",
+        "baby-visual-302",
+        "baby-text-294",
+        "toddler-text-43",
+        "toddler-text-246",
+        "toddler-text-248",
+        "toddler-visual-246",
+        "toddler-visual-248"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The revised summary, topic rows and body preserve the source’s mouthing, finish, component-size and secure-attachment conditions alongside adult supervision."
+      }
+    },
+    {
+      "id": "infant-play-corrected-source-r01.9-12.infant-pegs-and-cubes",
+      "entryId": "infant-pegs-and-cubes",
+      "placementId": "9-12.infant-pegs-and-cubes",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/9-12.infant-pegs-and-cubes.json",
+      "snapshotFileSha256": "0553dd95a3d1089900a516b6092d1154a7a7bf85d3ad8f20db79e57a44b38780",
+      "textPlacementSha256": "a81cdc8e2a70040abb457fe0a1b0dd8c29d2d0642e6ac7876dd03972841cfa1a",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-framing",
+        "toddler-text-39",
+        "baby-text-167",
+        "baby-text-168",
+        "baby-text-169",
+        "baby-visual-175",
+        "baby-visual-176",
+        "baby-visual-303",
+        "baby-text-294",
+        "toddler-text-246",
+        "toddler-visual-246"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The revised public surfaces add the original material suitability conditions while retaining the distinct illustrated-grid and appendix age presentations."
+      }
+    },
+    {
+      "id": "infant-play-corrected-source-r01.12-18.infant-pegs-and-cubes",
+      "entryId": "infant-pegs-and-cubes",
+      "placementId": "12-18.infant-pegs-and-cubes",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.infant-pegs-and-cubes.json",
+      "snapshotFileSha256": "598c3f3d585cc75940d82b5fca3198ae80c0319dba2fa7b4fc9129c0c061a2a5",
+      "textPlacementSha256": "3bccedc70be07bfc8a02099205203fd8e2e73042c9d074819e13759506af4497",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-framing",
+        "toddler-text-39",
+        "baby-text-167",
+        "baby-text-168",
+        "baby-text-169",
+        "baby-visual-175",
+        "baby-visual-176",
+        "baby-visual-303",
+        "baby-text-294",
+        "toddler-text-246",
+        "toddler-visual-246"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The revised public surfaces add the original material suitability conditions while retaining the distinct illustrated-grid and appendix age presentations."
+      }
+    },
+    {
+      "id": "infant-play-corrected-source-r01.18-24.infant-pegs-and-cubes",
+      "entryId": "infant-pegs-and-cubes",
+      "placementId": "18-24.infant-pegs-and-cubes",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/18-24.infant-pegs-and-cubes.json",
+      "snapshotFileSha256": "3b0438e5a7866512b7bccc1455c5b24d2d6743309474b95426d1ee3fdb8d1d05",
+      "textPlacementSha256": "d2fd96623761df740f46bbd37bbf3262fc1b2ed881f6e6ec9cae8ad6b10dcd98",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-framing",
+        "toddler-text-39",
+        "baby-text-167",
+        "baby-text-168",
+        "baby-text-169",
+        "baby-visual-175",
+        "baby-visual-176",
+        "baby-visual-303",
+        "baby-text-294",
+        "toddler-text-246",
+        "toddler-visual-246"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The revised public surfaces add the original material suitability conditions while retaining the distinct illustrated-grid and appendix age presentations."
+      }
+    },
+    {
+      "id": "infant-play-corrected-source-r01.24-36.infant-pegs-and-cubes",
+      "entryId": "infant-pegs-and-cubes",
+      "placementId": "24-36.infant-pegs-and-cubes",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/24-36.infant-pegs-and-cubes.json",
+      "snapshotFileSha256": "ef93471a5bdb8c03ac7af31cbd85f089e74d8658228c5ae49ebe3c4b3e84af21",
+      "textPlacementSha256": "bfb2558987d4634dfda2ea205eb57a722c03c8925d1ab50c05a8282b81ed9b84",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-framing",
+        "toddler-text-39",
+        "baby-text-167",
+        "baby-text-168",
+        "baby-text-169",
+        "baby-visual-175",
+        "baby-visual-176",
+        "baby-visual-303",
+        "baby-text-294",
+        "toddler-text-246",
+        "toddler-visual-246"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The revised public surfaces add the original material suitability conditions while retaining the distinct illustrated-grid and appendix age presentations."
+      }
+    },
+    {
+      "id": "infant-play-corrected-source-r01.12-18.infant-slot-posting",
+      "entryId": "infant-slot-posting",
+      "placementId": "12-18.infant-slot-posting",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.infant-slot-posting.json",
+      "snapshotFileSha256": "3ff34525200f0f9603f6e104a1d1a4744a4f2396f722f317f82656bf29d7745d",
+      "textPlacementSha256": "4b5c641d0f836e7aa32e3b1eba056156305ca36bc6fca0ac5891186c6004e826",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-framing",
+        "toddler-text-39",
+        "baby-text-167",
+        "baby-text-168",
+        "baby-text-169",
+        "baby-visual-303",
+        "baby-text-294",
+        "toddler-text-44",
+        "toddler-text-60",
+        "toddler-visual-59",
+        "toddler-visual-60"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The correction makes the original mouthing, finish, size and attachment conditions explicit without changing the separately attributed posting-age examples."
+      }
+    },
+    {
+      "id": "infant-play-corrected-source-r01.18-24.infant-slot-posting",
+      "entryId": "infant-slot-posting",
+      "placementId": "18-24.infant-slot-posting",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/18-24.infant-slot-posting.json",
+      "snapshotFileSha256": "c4a7a0889e70090fa7c31bc64c75c3ba0b3c4d277c554f6e03ecb0160fb2d80a",
+      "textPlacementSha256": "994d11e8e9a4b867a729d3cfd9449897220abc46cab72d25e9b6352acf435776",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-framing",
+        "toddler-text-39",
+        "baby-text-167",
+        "baby-text-168",
+        "baby-text-169",
+        "baby-visual-303",
+        "baby-text-294",
+        "toddler-text-44",
+        "toddler-text-60",
+        "toddler-visual-59",
+        "toddler-visual-60"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The correction makes the original mouthing, finish, size and attachment conditions explicit without changing the separately attributed posting-age examples."
+      }
+    },
+    {
+      "id": "infant-play-corrected-source-r01.24-36.infant-slot-posting",
+      "entryId": "infant-slot-posting",
+      "placementId": "24-36.infant-slot-posting",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/24-36.infant-slot-posting.json",
+      "snapshotFileSha256": "722dd5681d0a4654e15e5e8506398718730ccb73261254aed80ed0e994baf9d5",
+      "textPlacementSha256": "63cc318f3d5c7ac437ff9203fd59222982f458e1c2bff0668b93b22efc44b99f",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-framing",
+        "toddler-text-39",
+        "baby-text-167",
+        "baby-text-168",
+        "baby-text-169",
+        "baby-visual-303",
+        "baby-text-294",
+        "toddler-text-44",
+        "toddler-text-60",
+        "toddler-visual-59",
+        "toddler-visual-60"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The correction makes the original mouthing, finish, size and attachment conditions explicit without changing the separately attributed posting-age examples."
+      }
+    },
+    {
+      "id": "infant-play-corrected-source-r01.12-18.infant-opening-and-keys",
+      "entryId": "infant-opening-and-keys",
+      "placementId": "12-18.infant-opening-and-keys",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.infant-opening-and-keys.json",
+      "snapshotFileSha256": "0b8ca2d63cc01b13382b131ecf98e869b835ad9382cb2e22667a3bee94f7c43c",
+      "textPlacementSha256": "b6a0208c79506c1ae40285eba9fde8625fd2b12f66ef8c72384c30edeca6964b",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-framing",
+        "baby-visual-301",
+        "baby-visual-303",
+        "toddler-visual-246",
+        "toddler-text-39",
+        "baby-text-294",
+        "toddler-text-44",
+        "toddler-text-246"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The correction accurately distinguishes Baby’s furniture key with string and separate lock-and-key basket from Toddler’s secured-key row and preserves the original material suitability conditions."
+      },
+      "resolves": [
+        "infant-opening-and-keys-source-material-distinction"
+      ]
+    },
+    {
+      "id": "infant-play-corrected-source-r01.18-24.infant-opening-and-keys",
+      "entryId": "infant-opening-and-keys",
+      "placementId": "18-24.infant-opening-and-keys",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/18-24.infant-opening-and-keys.json",
+      "snapshotFileSha256": "b9136555bb64839b0502cd70f016ac0668c3299661fc989c043820a0e16601b3",
+      "textPlacementSha256": "5aac147b9be05f93846ff87663daf8023b252e31615cf4fb85ee717bfb88864d",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-framing",
+        "baby-visual-301",
+        "baby-visual-303",
+        "toddler-visual-246",
+        "toddler-text-39",
+        "baby-text-294",
+        "toddler-text-44",
+        "toddler-text-246"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The correction accurately distinguishes Baby’s furniture key with string and separate lock-and-key basket from Toddler’s secured-key row and preserves the original material suitability conditions."
+      },
+      "resolves": [
+        "infant-opening-and-keys-source-material-distinction"
+      ]
+    },
+    {
+      "id": "infant-play-corrected-source-r01.24-36.infant-opening-and-keys",
+      "entryId": "infant-opening-and-keys",
+      "placementId": "24-36.infant-opening-and-keys",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/24-36.infant-opening-and-keys.json",
+      "snapshotFileSha256": "b9465d873cb3cd5e1e5e474bfbf071127e6b3b68c7efc8c1c5857ab55d23eef7",
+      "textPlacementSha256": "b1706021970482b28a2141a6054579e993aa0aa97cd1da61aeb6d412bb715f58",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-framing",
+        "baby-visual-301",
+        "baby-visual-303",
+        "toddler-visual-246",
+        "toddler-text-39",
+        "baby-text-294",
+        "toddler-text-44",
+        "toddler-text-246"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The correction accurately distinguishes Baby’s furniture key with string and separate lock-and-key basket from Toddler’s secured-key row and preserves the original material suitability conditions."
+      },
+      "resolves": [
+        "infant-opening-and-keys-source-material-distinction"
+      ]
+    }
+  ]
+}

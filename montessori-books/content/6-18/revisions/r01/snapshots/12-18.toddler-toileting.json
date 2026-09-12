@@ -1,0 +1,95 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-toileting",
+        "kind": "perspective",
+        "title": "Toileting without a race",
+        "summary": "Davies describes learning to use the toilet as gradual and led by readiness, without a set age or forcing. She includes a doctor’s check when a medical issue is suspected.",
+        "cue": "Your child may pull at a wet or soiled diaper, seek privacy while pooping, or tell you they have peed or pooped.",
+        "detail": [
+          "Davies includes these observations among possible signs of readiness, without setting a deadline. Managing clothes is one of the smaller skills the book describes along the way.",
+          "Davies prepares familiar places for clean and soiled clothes and uses matter-of-fact language when a child is wet. Her offers of the potty remain qualified by not interrupting absorbed play and not forcing the child to use it.",
+          "The source also discusses overnight changes and stool withholding. Those passages are separate from readiness; she says to check with a doctor if a medical issue is suspected."
+        ],
+        "references": [
+          {
+            "id": "toddler-toileting.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Dealing with changes / Toileting",
+            "locator": "Complete gradual-learning unit, signs instead of ages, setup, no-force/refusal and medical qualification",
+            "pdfPages": [
+              {
+                "start": 160,
+                "end": 163
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.toddler-toileting",
+        "entryId": "toddler-toileting",
+        "ageId": "12-18",
+        "topicIds": [
+          "everyday-care"
+        ],
+        "ageContext": {
+          "bookAge": "Davies explicitly gives no fixed age for toileting readiness.",
+          "readiness": "Possible signs include pulling at a wet diaper, seeking privacy, or communicating about pee or poop.",
+          "note": "The toddler placement offers readiness context; it is not an expectation to use the toilet at 12–18 months."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 160–163"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "64de3dbc3fb16b4f8ac3ad14ee344f004f45e08a7a55e17594a6a42e865a7a03",
+  "artContextSha256": null,
+  "publicProjectionSha256": "f2bbe7cbb7326c976a778aa5f2d50fbf291ca69642808eadd45e74c5c1b312d1",
+  "provenance": {
+    "revision": "r01",
+    "placementDraft": {
+      "path": "content/6-18/drafts/toddler-overlap/draft-r01.json",
+      "sha256": "06e6c8d90ca191b9b0b33fb44151f57b10e874a7cf5cf95d94e4bdbed879d4bc"
+    },
+    "canonical": {
+      "entryId": "toddler-toileting",
+      "canonicalEntrySha256": "eb7ce212e75e59a1c699384be80d8c520a2ad8c9916d5509d9f6ac569eb2975e",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/29",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/29"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "infant-care-corrected-tone-r01",
+  "date": "2026-09-12",
+  "reviewer": {
+    "task": "/root/trial_tone",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "retainedReads": [
+    {
+      "path": "content/6-18/reviews/decisions/infant-care-a-tone-r01.json",
+      "readLogIds": [
+        "ica-tone-toddler-text-119",
+        "ica-tone-toddler-text-156",
+        "ica-tone-toddler-text-157",
+        "ica-tone-toddler-text-158"
+      ]
+    },
+    {
+      "path": "content/editorial/shared-foundations-tone-r01.json",
+      "readLogIds": [
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ]
+    }
+  ],
+  "readLogs": [],
+  "decisions": [
+    {
+      "placementIds": [
+        "12-18.infant-nighttime-needs",
+        "18-24.infant-nighttime-needs",
+        "24-36.infant-nighttime-needs"
+      ],
+      "verdict": "pass",
+      "assessment": "Removing the activity-progression notes keeps all three contexts about a recurring family care need, with supported participation and no expectation of managing the night alone.",
+      "contextReferences": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 119,
+              "end": 119
+            },
+            {
+              "start": 156,
+              "end": 158
+            }
+          ]
+        }
+      ],
+      "issues": []
+    }
+  ]
+}

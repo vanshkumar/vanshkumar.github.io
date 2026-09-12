@@ -1,0 +1,98 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-care-resistance",
+        "kind": "everyday-situation",
+        "title": "When they pull away from care",
+        "summary": "If your baby resists dressing or a change, notice what they may be asking for. When care cannot wait, explain and proceed as gently as possible.",
+        "cue": "Your baby twists away, protests or wants to keep playing.",
+        "detail": [
+          "The authors consider timing, a wish to participate, or a feeling about being handled. If there is time, a pause to finish play, a small choice, or a song shared for connection may help.",
+          "A guess can stay a guess: “You’re pulling away. Would you like a moment?” The baby need not agree for their feeling to matter.",
+          "Sometimes the change still needs to happen. The book describes acknowledging the difficulty, saying what comes next and using gentle hands while meeting the physical need."
+        ],
+        "references": [
+          {
+            "id": "baby-care-resistance.ref.1",
+            "sourceId": "baby-2021",
+            "section": "When they refuse to get dressed or have a diaper changed",
+            "locator": "Complete five considerations and necessary-care continuation",
+            "pdfPages": [
+              {
+                "start": 209,
+                "end": 210
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "3-6.baby-care-resistance",
+        "entryId": "baby-care-resistance",
+        "ageId": "3-6",
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "note": "A protest does not have to mean readiness for an older baby’s next step."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "3–6 months",
+        "kindLabel": "An everyday situation",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 209–210"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "bf515565990e1c4ac1fb6cab47dc5f5affa82cfc22489b7de8503ffc30ef1ec4",
+  "artContextSha256": null,
+  "publicProjectionSha256": "2356e8c8c3f4b277e04293a14a4a7e7dbb5b6e40d1d19194a06136f7c865b33e",
+  "provenance": {
+    "revision": "r03",
+    "placementDraft": {
+      "path": "content/birth-6/drafts/editorial-r03/03.json",
+      "sha256": "88c4cec77831ab7889d0f1e26be1dea70afedeb8955b6113f2086e9a9127e2a9"
+    },
+    "canonical": {
+      "entryId": "baby-care-resistance",
+      "canonicalEntrySha256": "4d36e198fd45b15a8dee03e1641735fb4d131067fc9b3e2454100e9f4df8bae8",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/16",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/16"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

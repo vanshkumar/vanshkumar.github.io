@@ -1,0 +1,135 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-first-containers",
+        "kind": "perspective",
+        "title": "Taking things out of a container",
+        "summary": "The authors describe taking an object out of a container before learning to place it back. Their main examples are grouped at 9–12 months, with some earlier appendix ages, and require mouthing-safe pieces with secure parts.",
+        "cue": "Your baby is interested in removing objects, releasing them, or finding where they fit.",
+        "detail": [
+          "A wooden egg in a matching cup or a cube in a box gives a baby something to remove and, later, return. A posting box adds a different experience: a ball goes through a hole and reappears in its tray.",
+          "Rings may first be taken off a holder before being put back. The appendix’s rocking-base example requires stable sitting; the later stable-base version builds on the preceding skill.",
+          "The main discussion groups these examples at 9–12 months, while the appendix starts some at 7–9+ or around 8+ months. These are possibilities to revisit as interest and control grow, not a set to complete at this age."
+        ],
+        "references": [
+          {
+            "id": "baby-first-containers.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Movement activities / 9 to 12 months / Fine-motor development",
+            "locator": "Precise-fit objects, posting box and removing rings before placement",
+            "pdfPages": [
+              {
+                "start": 167,
+                "end": 167
+              }
+            ]
+          },
+          {
+            "id": "baby-first-containers.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Activities list for babies / Egg and cup; Box with cube; Tray and ball; Rings and peg",
+            "locator": "Own-row age and readiness conditions",
+            "pdfPages": [
+              {
+                "start": 300,
+                "end": 301
+              }
+            ]
+          },
+          {
+            "id": "baby-first-containers.ref.3",
+            "sourceId": "baby-2021",
+            "section": "Choosing activities; Appendix introduction",
+            "locator": "Mouthing/parts, frustration and age guidelines",
+            "pdfPages": [
+              {
+                "start": 120,
+                "end": 120
+              },
+              {
+                "start": 121,
+                "end": 122
+              },
+              {
+                "start": 294,
+                "end": 294
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "9-12.baby-first-containers",
+        "entryId": "baby-first-containers",
+        "ageId": "9-12",
+        "topicIds": [
+          "play-discovery"
+        ],
+        "ageContext": {
+          "bookAge": "Main discussion: 9–12 months; appendix egg/cube between 7 and 9+ months, tray box around 8+, rocking rings once sitting stably around 8–11; stable rings 8–12 dependent on preceding skill.",
+          "readiness": "Interest in removing, intentionally releasing and later replacing objects; stable independent sitting for the seated ring activity.",
+          "note": "The activity may continue while it fits your child’s interest and current skills; the source ages are guides."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "9–12 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF p. 167"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 300–301"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 120, 121–122, 294"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "d6b1e78b306d0762d2f52f458aa5516a1dbb690ea7df17e46751843f79d1dac2",
+  "artContextSha256": null,
+  "publicProjectionSha256": "da5b7b6d2a6616f22151d644225187015bc872ffac9480589fabb3703c2f0c1f",
+  "provenance": {
+    "revision": "r02",
+    "placementDraft": {
+      "path": "content/6-18/drafts/baby-play/draft-r03.json",
+      "sha256": "d7e9ed69c12763e82ba9463c8c44c063a3d45a8128c4375a0f488d8f0e0bfce2"
+    },
+    "canonical": {
+      "entryId": "baby-first-containers",
+      "canonicalEntrySha256": "9ff4f1eb70cd2c3657214e1e1e694da50397ccb67409b9d2c59e2b85a40f076c",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/10",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/10"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "shared-family-separation",
+        "kind": "perspective",
+        "title": "When parents live apart",
+        "summary": "Both books recognize families whose parents live in different homes. Their preference for contact with both parents is explicitly qualified by the child’s safety.",
+        "cue": "For understanding the books’ perspective on separated family life.",
+        "detail": [
+          "The Baby authors acknowledge that separation may not have been chosen and that staying together can be unhappy or dangerous. Davies describes the possibility of a workable arrangement, while making the child’s safety the first priority and excluding contact where there is a psychological or physical reason against it.",
+          "Both books ask adults to keep their conflict off the child and find adult support for their own difficulties. The child is not asked to carry the disagreement between parents.",
+          "In The Montessori Toddler, Davies also emphasizes predictability and factual, age-appropriate updates about changes, without giving the child all the adult details."
+        ],
+        "principle": {
+          "id": "principle.family-respect-and-context",
+          "text": "Family circumstances differ; the child’s safety qualifies continued contact."
+        },
+        "references": [
+          {
+            "id": "shared.ref.baby.family-separation",
+            "sourceId": "baby-2021",
+            "section": "Being a single parent or co-parent",
+            "locator": "Family forms, unchosen/unhappy/dangerous circumstances, adult support and explicit contact-safety exception",
+            "pdfPages": [
+              {
+                "start": 247,
+                "end": 247
+              }
+            ]
+          },
+          {
+            "id": "shared.ref.toddler.family-separation",
+            "sourceId": "toddler-2019",
+            "section": "Divorce does not have to be a dirty word",
+            "locator": "Complete two-page discussion: contact safety, stability, factual updates and keeping adult conflict off the child",
+            "pdfPages": [
+              {
+                "start": 210,
+                "end": 211
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "9-12.shared-family-separation",
+        "entryId": "shared-family-separation",
+        "ageId": "9-12",
+        "topicIds": [
+          "you-family"
+        ]
+      },
+      "displayContext": {
+        "ageLabel": "9–12 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "What’s underneath",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "you-family",
+            "label": "For you & your family"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF p. 247"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 210–211"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "bb1ff18679174771bf45d94e048116241e18083697f11618228834eaf0d5a5fd",
+  "artContextSha256": null,
+  "publicProjectionSha256": "e47e70f377e6cdb3099913bd7982bcc9d0d74e0900779fab45dd8ab77450db43",
+  "provenance": {
+    "revision": "r01",
+    "placementDraft": {
+      "path": "content/6-18/drafts/shared-placements/draft-r01.json",
+      "sha256": "be9ae97ea203dbd01c5f3b346415ee8eff0b483d023b3203be5e24246645ca2f"
+    },
+    "canonical": {
+      "entryId": "shared-family-separation",
+      "canonicalEntrySha256": "b255f1ce2d259ca26c350df871ab3dea2e699506a8713f9f30360205b3b5c015",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/shared/draft-r02.json",
+        "sha256": "04720cdd2997dc461a619234d74bea952b2fd3c388a49b326dc282f065f39b06",
+        "jsonPointer": "/entries/13",
+        "author": "/root/shared_pilot_draft",
+        "provenancePointer": "/provenance/13"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "early-newborn-conversation",
+        "kind": "invitation",
+        "title": "Begin with your voice",
+        "actionLabel": "Talk",
+        "invitation": "Say a few words, then wait for a sound or gesture.",
+        "summary": "Use your baby’s name and tell them what is happening. Pause so a sound or gesture can become part of the conversation.",
+        "cue": "You are holding or caring for your baby, with a moment to talk and listen.",
+        "detail": [
+          "A bath about to begin, the part of the body being washed, or the room you are entering can give you something to talk about. Use the words you know and speak gently.",
+          "Let your baby see your face. After saying something, wait and notice their response. You might echo a sound or answer a gesture, then leave another pause. The book treats these early exchanges as conversation.",
+          "If your baby has an older sibling, another conversation can begin while that child plays: with the baby awake, talk about what their sibling is doing."
+        ],
+        "references": [
+          {
+            "id": "early-newborn-conversation.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Language activities / 0 to 3 months / Speak to our baby",
+            "locator": "Names, everyday narration, conversational pause and response",
+            "pdfPages": [
+              {
+                "start": 129,
+                "end": 130
+              }
+            ]
+          },
+          {
+            "id": "early-newborn-conversation.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Activities list for babies / Self-expression",
+            "locator": "From shortly after birth; sounds, expressions and adult responsiveness",
+            "pdfPages": [
+              {
+                "start": 296,
+                "end": 296
+              }
+            ]
+          },
+          {
+            "id": "early-newborn-conversation.ref.3",
+            "sourceId": "baby-2021",
+            "section": "Other situations / Siblings / Preparing an older sibling",
+            "locator": "Talking with an awake baby about an older sibling’s play",
+            "pdfPages": [
+              {
+                "start": 226,
+                "end": 226
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "0-3.early-newborn-conversation",
+        "entryId": "early-newborn-conversation",
+        "ageId": "0-3",
+        "topicIds": [
+          "play-discovery",
+          "connection-feelings"
+        ],
+        "openingOrder": 1,
+        "ageContext": {
+          "bookAge": "0 to 3 months; from shortly after birth.",
+          "readiness": "An ordinary moment of holding or care, with time for a sound or gesture.",
+          "note": "Early exchanges can include quiet pauses; no particular response is required."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "0–3 months",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "openingCTA": "Try this together",
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 129–130"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF p. 296"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF p. 226"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "a9ea0d059a972a68cf43c7fd1f4d95f5d3f2602c36f9e4e6cc96feac6e6cc89f",
+  "artContextSha256": null,
+  "publicProjectionSha256": "0551e0618e4558c4aea8b9208dda3f69d70672cf0f7233ed01866f4bf4b3f887",
+  "provenance": {
+    "revision": "r03",
+    "placementDraft": {
+      "path": "content/birth-6/drafts/editorial-r03/02.json",
+      "sha256": "840bf66474bf4fe56dd8210072a6c83bacb24892db8b8d77ce29ef15e98c2908"
+    },
+    "canonical": null,
+    "mode": "text-only-contribution"
+  }
+}

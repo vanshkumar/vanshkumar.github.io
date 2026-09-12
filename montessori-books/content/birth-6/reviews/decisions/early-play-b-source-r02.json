@@ -1,0 +1,39 @@
+{
+  "id": "early-play-b-source-r02",
+  "date": "2026-09-12",
+  "reviewer": {
+    "task": "/root/trial_source",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "readLogs": [],
+  "decisions": [
+    {
+      "placementIds": [
+        "0-3.baby-naming",
+        "3-6.baby-naming"
+      ],
+      "reuseBody": true,
+      "verdict": "pass",
+      "assessment": "The actual age-context note now exposes Baby PDF 130 for early naming, alongside the existing reference to the later examples.",
+      "readLogIds": [],
+      "resolves": [
+        "baby-naming.early-age-reference"
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "3-6.baby-choices-within-reach"
+      ],
+      "reuseBody": true,
+      "verdict": "pass",
+      "assessment": "The actual age-context note now exposes Baby PDF 156 and 299 for the early movement and familiar-toy-basket ages.",
+      "readLogIds": [],
+      "resolves": [
+        "baby-choices-within-reach.early-age-reference"
+      ],
+      "issues": []
+    }
+  ]
+}

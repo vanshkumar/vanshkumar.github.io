@@ -1,0 +1,131 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-daily-rhythm",
+        "kind": "everyday-situation",
+        "title": "A familiar order to the day",
+        "summary": "A recognizable sequence can help your child know what comes next. Davies allows the rhythm to follow the child and the family, without keeping every minute fixed.",
+        "cue": "Transitions may be harder when the day unfolds differently from what your child expects.",
+        "detail": [
+          "Look at the order your days already tend to follow. A few pictures of the morning or bedtime steps can help you and your child look together at what comes next.",
+          "Davies suggests making that picture list with the child. Drawings or photographs can work, and movable pictures can leave room to vary the order.",
+          "Her example day is one family rhythm, not a timetable. When a day changes, she suggests anticipating that the difference may be difficult and offering preparation and understanding."
+        ],
+        "references": [
+          {
+            "id": "toddler-daily-rhythm.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Making a checklist with our child",
+            "locator": "Picture checklist, movable order and illustrative morning/night lists",
+            "pdfPages": [
+              {
+                "start": 120,
+                "end": 121
+              }
+            ]
+          },
+          {
+            "id": "toddler-daily-rhythm.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "Managing expectations",
+            "locator": "Daily rhythm without fixed schedule",
+            "pdfPages": [
+              {
+                "start": 126,
+                "end": 126
+              }
+            ]
+          },
+          {
+            "id": "toddler-daily-rhythm.ref.3",
+            "sourceId": "toddler-2019",
+            "section": "Daily care / Daily rhythm",
+            "locator": "Following energy/interests, changes and example day",
+            "pdfPages": [
+              {
+                "start": 145,
+                "end": 146
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "24-36.toddler-daily-rhythm",
+        "entryId": "toddler-daily-rhythm",
+        "ageId": "24-36",
+        "topicIds": [
+          "everyday-care",
+          "home-that-helps"
+        ],
+        "ageContext": {
+          "readiness": "Transitions may be harder when the day unfolds differently from what your child expects.",
+          "note": "Age and readiness sources: The Montessori Toddler, PDF pp. 14."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "2–3 years",
+        "kindLabel": "An everyday situation",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          },
+          {
+            "id": "home-that-helps",
+            "label": "A home that helps"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 120–121"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 126"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 145–146"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "01c3dba613dcf3ddeb1a10c6eff1849725267b490652662810a7fd06b10cee97",
+  "artContextSha256": null,
+  "publicProjectionSha256": "43240bba6a550d1d9558a2f7aab0a75da024d8340125ff36f24078000161d28f",
+  "provenance": {
+    "revision": "r03",
+    "placementDraft": {
+      "path": "content/18-36/drafts/editorial-r02/31.json",
+      "sha256": "bab1969e2cba983a089b3163f76b2b266f5a01de749735f18d5b4bb008e7ba19"
+    },
+    "canonical": {
+      "entryId": "toddler-daily-rhythm",
+      "canonicalEntrySha256": "cc34d21e0811c77b0507a19a645937bc9921c6e85d89ec4ed8d12cf75cb1a5d5",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/23",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/23"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

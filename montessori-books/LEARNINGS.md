@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-12] — Retained reading ancestry**
+- Observation: The adult-life source review referenced a previous raw decision file whose PDF 39 reading was itself retained from another review. The compiler initially reported the page unread even though the reviewer had read and explicitly retained it.
+- Action: Follow explicitly declared same-reviewer/role reading ancestry, hash every link and preserve distinct log declarations with colliding local IDs. Do not ask the reviewer to repeat original reading just to repair this administrative join.
+- Confidence: high
+
 **[2026-09-10] — Pilot source-age separation**
 - Observation: Toddler PDF 71 discusses unaged home play, while PDF 103–104 places its separate pretend-play discussion around 2½ and later. Combining these in the 18–24 pilot implied an earlier expectation.
 - Action: Keep the home-play subject separate from the later creativity context in titles, cues, references, and public age notes.
@@ -69,6 +74,11 @@
 
 ## Patterns and Preferences
 
+**[2026-09-12] — Consolidated editorial trial**
+- Observation: Two independent xhigh reviewers passed five saved entries across nine new placements without corrections. Interning repeated references and omitting operational metadata reduced the packet from 67,592 to 48,525 bytes, but both reviewers still needed recovery reads after oversized combined output was truncated. No actual token counter was exposed.
+- Action: Keep one editor and two reviewers for related topic batches, with saved authors paused. Read one entry or source unit per bounded tool output; avoid concatenating the whole packet and multiple units. Retain the explicit partial-review receipt so nine passes cannot approve the other 104 contribution targets. Treat byte counts as payload measurements, not demonstrated token savings; this trial ends pending user assessment.
+- Confidence: high
+
 **[2026-09-10] — Population review cost**
 - Observation: The two-age pilot produced eight frozen revisions and 40 review reports. Fresh reviewers repeatedly read overlapping source units, and minor corrections triggered additional reviews. The user paused the next three tasks for excessive token usage, resumed under lean-v1, then paused again because usage remained too high. The revised workflow has not demonstrated acceptable cost.
 - Action: Keep all population tasks and subagents paused until explicitly authorized. Preserve saved work. On a future restart, account for total active-agent and reasoning cost as well as repeated reading; do not assume retained reviewers and generated metadata alone solve the problem. Continue reusing approved bodies, bounded source packets and consolidated corrections.
@@ -100,6 +110,11 @@
 - Confidence: high
 
 ## What Has Failed
+
+**[2026-09-12] — Generated transparency in the age scenes**
+- Observation: Three new age-scene image-generation attempts painted checkerboards into opaque PNGs instead of supplying alpha. Pure-white corrections rendered cleanly with the existing scene multiply style; the shoe close-up needed the same blend scoped to that image.
+- Action: Inspect actual image pixels and alpha metadata before selecting an asset. Keep the accepted pilot assets unchanged; use the inspected white-paper outputs and scoped blend for the six new assets rather than treating a transparency prompt as proof of transparency.
+- Confidence: high
 
 **[2026-09-10] — Action labels on the home illustration**
 - Observation: Replacing numbered hotspots with underlined action words on cream backgrounds, removing the sidebar number column, and increasing supporting text legibility received 8/10 after an 8.2/10 baseline. The final critic still described the labels as pasted on and interpreted Listen as labeling the window despite its leader line.

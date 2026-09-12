@@ -1,0 +1,115 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-conversation",
+        "kind": "invitation",
+        "title": "Leave room for their reply",
+        "summary": "Your toddler can join a conversation through sounds, gestures, and words. Pause, listen, and respond to what they are trying to share.",
+        "cue": "They may point, repeat a sound, show you something, or begin a sentence.",
+        "detail": [
+          "In an ordinary moment, name what you are doing or what your child notices. If you do not know the name of a bird or vehicle, you can find out together.",
+          "Give them time instead of finishing their sentence. If the meaning is unclear, invite them to show you. You can use the full word naturally in your response without making them repeat it.",
+          "Davies suggests coming to the child’s level and showing interest with your body and speech; the appendix qualifies eye contact by cultural appropriateness. Moments of silence belong in the day too."
+        ],
+        "references": [
+          {
+            "id": "toddler-conversation.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Language",
+            "locator": "Rich vocabulary; conversations, self-expression and silence",
+            "pdfPages": [
+              {
+                "start": 55,
+                "end": 58
+              }
+            ]
+          },
+          {
+            "id": "toddler-conversation.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "List of Montessori activities for toddlers",
+            "locator": "Self-expression, including cultural qualification for eye contact",
+            "pdfPages": [
+              {
+                "start": 245,
+                "end": 245
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "24-36.toddler-conversation",
+        "entryId": "toddler-conversation",
+        "ageId": "24-36",
+        "topicIds": [
+          "play-discovery",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "All ages in the appendix; sounds, phrases, and sentences are different forms of participation.",
+          "readiness": "The child wants to share through sounds, gestures, or speech; wait and listen without finishing for them."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "2–3 years",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 55–58"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 245"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "16050a1fe2c84252223e797984434e2484f8ff84507e02ef065afc73437eaf69",
+  "artContextSha256": null,
+  "publicProjectionSha256": "0c99d17a9baa4914a70a45645d323b21c10269516b5b2dde802427f1ad2595f8",
+  "provenance": {
+    "revision": "r01",
+    "placementDraft": {
+      "path": "content/18-36/placements/play-reuse-r02.json",
+      "sha256": "6216065d3787cd9143a4cf00d81889f56eb73a77690495619f0aa10916f9e4f2"
+    },
+    "canonical": {
+      "entryId": "toddler-conversation",
+      "canonicalEntrySha256": "0875458cc97af55f3a5913da543c129a6d96262903d755a8c3d2a5458a972468",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/8",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/8"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

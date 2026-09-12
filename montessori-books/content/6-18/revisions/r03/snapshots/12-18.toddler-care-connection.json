@@ -1,0 +1,131 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-care-connection",
+        "kind": "perspective",
+        "title": "The conversation inside everyday care",
+        "summary": "Davies treats dressing, washing, diapering, and meals as moments to be with a child. She keeps respectful touch and communication within necessary care.",
+        "cue": "There may be a glance, gesture, sound, or small part of the routine your child wants to join.",
+        "detail": [
+          "She describes talking about what is happening, listening even before words, and allowing the child a turn in the exchange. An ordinary care moment can include a smile and shared attention.",
+          "Her respect for a child’s say in touch sits alongside the adult’s responsibility for necessary care and protection. She describes gentle help and brief explanation when care must happen."
+        ],
+        "references": [
+          {
+            "id": "toddler-care-connection.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Daily care",
+            "locator": "Moments of care = moments of connection",
+            "pdfPages": [
+              {
+                "start": 145,
+                "end": 145
+              }
+            ]
+          },
+          {
+            "id": "toddler-care-connection.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "Skills for introverted toddlers / Respectful contact",
+            "locator": "Check in before touch and ask whether help is wanted",
+            "pdfPages": [
+              {
+                "start": 173,
+                "end": 173
+              }
+            ]
+          },
+          {
+            "id": "toddler-care-connection.ref.3",
+            "sourceId": "toddler-2019",
+            "section": "Setting limits",
+            "locator": "Gentle handling, brief explanation, necessary care and immediate danger",
+            "pdfPages": [
+              {
+                "start": 131,
+                "end": 133
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.toddler-care-connection",
+        "entryId": "toddler-care-connection",
+        "ageId": "12-18",
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "No fixed age; daily care is described for toddlers, including children without words.",
+          "readiness": "A glance, gesture, sound or small turn during necessary care.",
+          "note": "Age and readiness sources: The Montessori Toddler, PDF pp. 14."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 145"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 173"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 131–133"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "c21e1d3754ee1c1a57ff33b436139c68fb8036c860ad5f72fd18a4212bf9c9e1",
+  "artContextSha256": null,
+  "publicProjectionSha256": "1be614bc02a80196657c4c0bfae72f1547d55c4aebe1721e7eb04e872b96a053",
+  "provenance": {
+    "revision": "r03",
+    "placementDraft": {
+      "path": "content/6-18/drafts/editorial-r03/04.json",
+      "sha256": "08355b5f46c91d41026b565353944e89670fdefc1ebdece4a45b321515d2cb48"
+    },
+    "canonical": {
+      "entryId": "toddler-care-connection",
+      "canonicalEntrySha256": "a76ca88bdb93746f570b9db3a9f58dc9c9d8b8a116eb4edec98140129580b8dd",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/21",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/21"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

@@ -1,0 +1,846 @@
+{
+  "id": "early-play-b-tone-r01",
+  "workflow": "lean-v1",
+  "reviewer": {
+    "task": "/root/trial_tone",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-12",
+  "scope": "Explicit grouped source-topic decisions; exact age contexts reviewed.",
+  "renderedSurfaces": {
+    "path": "content/birth-6/revisions/r01/RENDERED_SURFACES.json",
+    "sha256": "47f5ef2bd8a94e69f9101d68a5509181550a5c1d5f12bec82a2b85d2be516341"
+  },
+  "decisionInput": {
+    "path": "content/birth-6/reviews/decisions/early-play-b-tone-r01.json",
+    "sha256": "3ae2a563e13f246ab49a3ef9991323798276dd355368678405c113f53276e92a"
+  },
+  "readingBasis": [],
+  "retainedReads": [
+    {
+      "path": "content/birth-6/reviews/trial-tone-r01.json",
+      "sha256": "ebcca701f4e592e85a60b3587c5c7d57fef12089b76bf1930b98a5b0a5840490",
+      "readLogIds": [
+        "tone-framing",
+        "tone-conversation",
+        "tone-visual-295",
+        "tone-visual-299",
+        "tone-sitting",
+        "tone-monthly",
+        "tone-visual-287",
+        "tone-visual-288"
+      ]
+    },
+    {
+      "path": "content/birth-6/reviews/early-play-a-tone-r01.json",
+      "sha256": "d3c16582e54860a60e26af4a4fc78333e4f5700be1a9df00699805cc80ddc61a",
+      "readLogIds": [
+        "epa-tone-text-156",
+        "epa-tone-text-157"
+      ]
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "tone-framing",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 123
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/review-trial/source-framing.txt",
+      "notes": "Read the guidance on individual pace, observation, child control, suitable materials, frustration, and parent role."
+    },
+    {
+      "id": "tone-conversation",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 129,
+          "end": 135
+        },
+        {
+          "start": 138,
+          "end": 138
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/review-trial/source-conversation.txt",
+      "notes": "Read early conversation, shared music, vocal exploration, both sign-age presentations, and observation prompts."
+    },
+    {
+      "id": "tone-visual-295",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 295,
+          "end": 295
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/review-trial/baby-295.png",
+      "notes": "Inspected the all-ages music and rhythmic-language rows, singing from birth, active listening, and short rhymes with movements."
+    },
+    {
+      "id": "tone-visual-299",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 299,
+          "end": 299
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/review-trial/baby-299.png",
+      "notes": "Inspected the suction-cup toy row's alternative age and sitting cue, fixed-base description, and batting, reaching, and grasping actions."
+    },
+    {
+      "id": "tone-sitting",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 158,
+          "end": 160
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/review-trial/source-sitting.txt",
+      "notes": "Read the movement context and the encouragement to wait for self-initiated sitting."
+    },
+    {
+      "id": "tone-monthly",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 286,
+          "end": 289
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/review-trial/source-monthly.txt",
+      "notes": "Read early care connection, continuing gentle handling, parent rest and help, and the transitions between monthly sections."
+    },
+    {
+      "id": "tone-visual-287",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 287,
+          "end": 287
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/review-trial/baby-287.png",
+      "notes": "Inspected continuing early care, time for conversation responses, and the boundary introducing Months 3 to 4."
+    },
+    {
+      "id": "tone-visual-288",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 288,
+          "end": 288
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/review-trial/baby-288.png",
+      "notes": "Inspected care as connection, face and voice interest, musical quiet, and parent capacity in the Months 3 to 4 table."
+    },
+    {
+      "id": "epa-tone-text-156",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 156,
+          "end": 156
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/156.txt",
+      "notes": "Read comfort adjustments, nearby interest, and the slow-rolling object's slithering condition."
+    },
+    {
+      "id": "epa-tone-text-157",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 157,
+          "end": 157
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/157.txt",
+      "notes": "Read the 3–6 observation prompts and the transition into the 6–9 movement discussion."
+    },
+    {
+      "id": "epb-tone-text-41",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 41,
+          "end": 41
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/41.txt",
+      "notes": "Read the family-inclusion framing and invitation to adapt principles to available caregivers and family circumstances."
+    },
+    {
+      "id": "epb-tone-text-66",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 66,
+          "end": 66
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/66.txt",
+      "notes": "Read pictures at baby height, few visible choices, gradual independence, and the introduction to prepared exploration spaces."
+    },
+    {
+      "id": "epb-tone-text-67",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 67,
+          "end": 67
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/67.txt",
+      "notes": "Read adapting actual access, using one prepared area when needed, free movement from birth, and the named precautions."
+    },
+    {
+      "id": "epb-tone-text-74",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 74,
+          "end": 74
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/74.txt",
+      "notes": "Read familiar pictures, simple decoration, personal handmade elements, and allowance for bolder family style."
+    },
+    {
+      "id": "epb-tone-text-124",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 124,
+          "end": 124
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/124.txt",
+      "notes": "Read alert and comfortable activity timing, quiet nonparticipation, and following the baby's initiative."
+    },
+    {
+      "id": "epb-tone-text-139",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 139,
+          "end": 139
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/139.txt",
+      "notes": "Read the multilingual family arrangements, infancy framing, and separate literacy and vocabulary claims."
+    },
+    {
+      "id": "epb-tone-text-171",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 171,
+          "end": 171
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/171.txt",
+      "notes": "Read the from-first-month outdoor context and its distinct looking, grasping, movement, and vocabulary examples."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "early-play-b-tone-r01.0-3.early-read-aloud",
+      "entryId": "early-read-aloud",
+      "placementId": "0-3.early-read-aloud",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.early-read-aloud.json",
+      "snapshotFileSha256": "9d910c7e632716030f1570a27c9ef0f920e96767d656186c8a4e8c139ad4b3c4",
+      "textPlacementSha256": "a44ec1f23d0d0c78bd4dad3bd4b0aa019b17bbd85a7c8a43d6ae8cc1eff3b52a",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "tone-conversation",
+        "epb-tone-text-124"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 123,
+              "end": 124
+            },
+            {
+              "start": 130,
+              "end": 132
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The read-aloud invitation respects the adult's own reading interest and the baby's comfort while keeping early listening distinct from later book handling."
+      }
+    },
+    {
+      "id": "early-play-b-tone-r01.3-6.early-read-aloud",
+      "entryId": "early-read-aloud",
+      "placementId": "3-6.early-read-aloud",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.early-read-aloud.json",
+      "snapshotFileSha256": "dc37a1d93d36c30118dbe9a6f30dcb3d99df10ecea2e1e6c7bdddf91845d77bd",
+      "textPlacementSha256": "35576a84973f0eccf98023c7160564b18bb0e103a281c3864c0fd9dc15422c08",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "tone-conversation",
+        "epb-tone-text-124"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 123,
+              "end": 124
+            },
+            {
+              "start": 130,
+              "end": 132
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The read-aloud invitation respects the adult's own reading interest and the baby's comfort while keeping early listening distinct from later book handling."
+      }
+    },
+    {
+      "id": "early-play-b-tone-r01.0-3.baby-books",
+      "entryId": "baby-books",
+      "placementId": "0-3.baby-books",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.baby-books.json",
+      "snapshotFileSha256": "66350aa3f3dd78fbc607c73015e61c87bd28e92fb8d3f87c6b8a559f090535f4",
+      "textPlacementSha256": "d55a3e5fdb19db829d2fa6918300f8294fa0971d4334a4b391fc3e3f67db5ee3",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-conversation",
+        "tone-visual-295"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 130,
+              "end": 132
+            },
+            {
+              "start": 134,
+              "end": 134
+            },
+            {
+              "start": 295,
+              "end": 295
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The early age notes make looking and listening sufficient and keep page turning optional, preserving the reused invitation to follow interest without finishing a book."
+      },
+      "bodyReview": {
+        "entryId": "baby-books",
+        "canonicalEntrySha256": "7b6eec01204593538719b0258d43cd48cb540082c9005b04f3c326fd54abb198",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "early-play-b-tone-r01.3-6.baby-books",
+      "entryId": "baby-books",
+      "placementId": "3-6.baby-books",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-books.json",
+      "snapshotFileSha256": "0fc85ac16f7bf7c8e2e1e4c32ef139a48a5cd8127a512f20adc2b7416705b3b2",
+      "textPlacementSha256": "20de0791556fb6ee19309dfecd6664d68d35931524c0052676ddab96f0e47baf",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-conversation",
+        "tone-visual-295"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 130,
+              "end": 132
+            },
+            {
+              "start": 134,
+              "end": 134
+            },
+            {
+              "start": 295,
+              "end": 295
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The early age notes make looking and listening sufficient and keep page turning optional, preserving the reused invitation to follow interest without finishing a book."
+      },
+      "bodyReview": {
+        "entryId": "baby-books",
+        "canonicalEntrySha256": "7b6eec01204593538719b0258d43cd48cb540082c9005b04f3c326fd54abb198",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "early-play-b-tone-r01.0-3.baby-naming",
+      "entryId": "baby-naming",
+      "placementId": "0-3.baby-naming",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.baby-naming.json",
+      "snapshotFileSha256": "1b816371607fea35535b24f2d306893938efe8bed5ad782bcc4ff50f3e289a80",
+      "textPlacementSha256": "3ac07ebedbb2f8ccf965130b5d3b5251155a16aa1a6a9a8ed225ecb1efb7db1b",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "tone-conversation"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 120
+            },
+            {
+              "start": 130,
+              "end": 130
+            },
+            {
+              "start": 135,
+              "end": 135
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The placements identify the later source examples while keeping early naming responsive to existing attention and free of word-repetition expectations."
+      },
+      "bodyReview": {
+        "entryId": "baby-naming",
+        "canonicalEntrySha256": "d57795253de38f3e04089e3d609fc4bfe8fdf60ea1798cef83bff278b6dcb965",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "early-play-b-tone-r01.3-6.baby-naming",
+      "entryId": "baby-naming",
+      "placementId": "3-6.baby-naming",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-naming.json",
+      "snapshotFileSha256": "a9859e9eabc5a618172174372dd85850bc1a6ab086d427d2e76c84dd6d6a145e",
+      "textPlacementSha256": "ea7b3ede0534b332c0dcd0da2668b8897e8021588ac8e94e988ce479b489f861",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "tone-conversation"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 120
+            },
+            {
+              "start": 130,
+              "end": 130
+            },
+            {
+              "start": 135,
+              "end": 135
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The placements identify the later source examples while keeping early naming responsive to existing attention and free of word-repetition expectations."
+      },
+      "bodyReview": {
+        "entryId": "baby-naming",
+        "canonicalEntrySha256": "d57795253de38f3e04089e3d609fc4bfe8fdf60ea1798cef83bff278b6dcb965",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "early-play-b-tone-r01.0-3.baby-outdoors",
+      "entryId": "baby-outdoors",
+      "placementId": "0-3.baby-outdoors",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.baby-outdoors.json",
+      "snapshotFileSha256": "413ba689b933a03f89b4fea579820d36bf4c55981c891d7285ca723a99a3174c",
+      "textPlacementSha256": "af0e9b47c78517735ef954873bff89050a59686946abe5da9e0cdc4c2d8e8874",
+      "artContextSha256": null,
+      "readLogIds": [
+        "epb-tone-text-171"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 171,
+              "end": 171
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The early outdoor context invites shared looking and listening without importing the source's later grasping, walking, or equipment examples."
+      },
+      "bodyReview": {
+        "entryId": "baby-outdoors",
+        "canonicalEntrySha256": "4b9fef68743252e8349ab4fcb7c0d9a06df63691606e1ad282391ac35a410846",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "early-play-b-tone-r01.3-6.baby-outdoors",
+      "entryId": "baby-outdoors",
+      "placementId": "3-6.baby-outdoors",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-outdoors.json",
+      "snapshotFileSha256": "162bac64b69d865bc2bc80e8676120be4b0394359016594a295a13600b63700b",
+      "textPlacementSha256": "7ca2101d0f0aca4a36f43145f8afea27cf91e00be0e779e8a14810f0cc6ac0cf",
+      "artContextSha256": null,
+      "readLogIds": [
+        "epb-tone-text-171"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 171,
+              "end": 171
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The early outdoor context invites shared looking and listening without importing the source's later grasping, walking, or equipment examples."
+      },
+      "bodyReview": {
+        "entryId": "baby-outdoors",
+        "canonicalEntrySha256": "4b9fef68743252e8349ab4fcb7c0d9a06df63691606e1ad282391ac35a410846",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "early-play-b-tone-r01.0-3.baby-languages",
+      "entryId": "baby-languages",
+      "placementId": "0-3.baby-languages",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.baby-languages.json",
+      "snapshotFileSha256": "0ee7086ee9f997b7e9371fe05befe776ce63b3b32856057bab3bd9e3667c67c2",
+      "textPlacementSha256": "73bc1b6b79b681d23df16662fcd52c7080cf7ec324b90ec16870df363c952c81",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-conversation",
+        "epb-tone-text-139",
+        "epb-tone-text-41"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 41,
+              "end": 41
+            },
+            {
+              "start": 130,
+              "end": 130
+            },
+            {
+              "start": 139,
+              "end": 139
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The infancy placements present multilingual arrangements as family choices that fit available people and resources, without prescribing a schedule or promising language performance."
+      },
+      "bodyReview": {
+        "entryId": "baby-languages",
+        "canonicalEntrySha256": "dc1bdf8a7b5b6a9c212e898a5c01614ccc19a32b933cfaf7d63d978047d38ba2",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "early-play-b-tone-r01.3-6.baby-languages",
+      "entryId": "baby-languages",
+      "placementId": "3-6.baby-languages",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-languages.json",
+      "snapshotFileSha256": "345c559b1b7f006190d18910db1df6bf84cb268114d174c37f468901c876ca35",
+      "textPlacementSha256": "ee7b64bdeb1fe9997a109fbf854db0106402fb93123c15c2049eaea41ababf38",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-conversation",
+        "epb-tone-text-139",
+        "epb-tone-text-41"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 41,
+              "end": 41
+            },
+            {
+              "start": 130,
+              "end": 130
+            },
+            {
+              "start": 139,
+              "end": 139
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The infancy placements present multilingual arrangements as family choices that fit available people and resources, without prescribing a schedule or promising language performance."
+      },
+      "bodyReview": {
+        "entryId": "baby-languages",
+        "canonicalEntrySha256": "dc1bdf8a7b5b6a9c212e898a5c01614ccc19a32b933cfaf7d63d978047d38ba2",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "early-play-b-tone-r01.3-6.baby-choices-within-reach",
+      "entryId": "baby-choices-within-reach",
+      "placementId": "3-6.baby-choices-within-reach",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-choices-within-reach.json",
+      "snapshotFileSha256": "4d3d50fe0529ffc79c40e0c87c0574b5e7965ce77f71ba54ff1b482f43c09279",
+      "textPlacementSha256": "b81ffe6a11384a9d7ae83a306c02b3900b63c6759bf470fb1579a6a36fb35e69",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "epa-tone-text-156",
+        "tone-visual-299",
+        "epb-tone-text-66"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 66,
+              "end": 66
+            },
+            {
+              "start": 122,
+              "end": 123
+            },
+            {
+              "start": 156,
+              "end": 156
+            },
+            {
+              "start": 299,
+              "end": 299
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The emerging-choice context preserves a small accessible selection and adult restoration without turning infant exploration into tidying or retrieval tasks."
+      },
+      "bodyReview": {
+        "entryId": "baby-choices-within-reach",
+        "canonicalEntrySha256": "45424d8504436568c1018f797350c2733693210947c881cae4b25cadc1ac3343",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "early-play-b-tone-r01.0-3.baby-photos-at-eye-level",
+      "entryId": "baby-photos-at-eye-level",
+      "placementId": "0-3.baby-photos-at-eye-level",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/0-3.baby-photos-at-eye-level.json",
+      "snapshotFileSha256": "f73708b2194ae246c7a76705896902fb1c1a93a5595d017e63d6f4556950aaf8",
+      "textPlacementSha256": "c61143781e4d97790e0f3385d0c9a44c548c1c0e3fa9ee9c83e8227271bbba32",
+      "artContextSha256": null,
+      "readLogIds": [
+        "epb-tone-text-66",
+        "epb-tone-text-74"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 66,
+              "end": 66
+            },
+            {
+              "start": 74,
+              "end": 74
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The new placements focus on the baby's actual view and familiar pictures, with room for family style and no recognition or display-building expectation."
+      },
+      "bodyReview": {
+        "entryId": "baby-photos-at-eye-level",
+        "canonicalEntrySha256": "4b3f1aa84ddfd2616b3033c57d0c31996f589e9d3f1d6400e05e6653df7cd486",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "early-play-b-tone-r01.3-6.baby-photos-at-eye-level",
+      "entryId": "baby-photos-at-eye-level",
+      "placementId": "3-6.baby-photos-at-eye-level",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-photos-at-eye-level.json",
+      "snapshotFileSha256": "edf222ee22d88cae77134efa1d00f6c4d1f17e587b69d2594e2414e13cd967b1",
+      "textPlacementSha256": "34e411986288fc8378f545dc45282faa788f6db59d19a3db062b1b9f34e767e3",
+      "artContextSha256": null,
+      "readLogIds": [
+        "epb-tone-text-66",
+        "epb-tone-text-74"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 66,
+              "end": 66
+            },
+            {
+              "start": 74,
+              "end": 74
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The new placements focus on the baby's actual view and familiar pictures, with room for family style and no recognition or display-building expectation."
+      },
+      "bodyReview": {
+        "entryId": "baby-photos-at-eye-level",
+        "canonicalEntrySha256": "4b3f1aa84ddfd2616b3033c57d0c31996f589e9d3f1d6400e05e6653df7cd486",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "early-play-b-tone-r01.3-6.baby-space-to-explore",
+      "entryId": "baby-space-to-explore",
+      "placementId": "3-6.baby-space-to-explore",
+      "snapshotPath": "content/birth-6/revisions/r01/snapshots/3-6.baby-space-to-explore.json",
+      "snapshotFileSha256": "330a84aeca980ba6dde1746b1037a55efc2fc4c960907c93c8c5eb34354af1af",
+      "textPlacementSha256": "fe987810d9d5cec924512020655ec131ff38154b6ce961547a327e8cefd2ba0a",
+      "artContextSha256": null,
+      "readLogIds": [
+        "epb-tone-text-66",
+        "epb-tone-text-67",
+        "epa-tone-text-157",
+        "tone-sitting",
+        "tone-monthly",
+        "tone-visual-287",
+        "tone-visual-288"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 66,
+              "end": 67
+            },
+            {
+              "start": 157,
+              "end": 159
+            },
+            {
+              "start": 287,
+              "end": 288
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The added readiness note anchors adaptation to present reach and makes the reused crawling and pulling-up examples conditional, while preserving the option of preparing one area."
+      },
+      "bodyReview": {
+        "entryId": "baby-space-to-explore",
+        "canonicalEntrySha256": "3bdb7c451f91bc1efbccd1b770abd47e928b621c32c74e2105acbe788b11183e",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "id": "early-play-a-tone-r02",
+  "date": "2026-09-12",
+  "reviewer": {
+    "task": "/root/trial_tone",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "retainedReads": [
+    {
+      "path": "content/birth-6/reviews/early-play-a-tone-r01.json",
+      "sha256": "d3c16582e54860a60e26af4a4fc78333e4f5700be1a9df00699805cc80ddc61a",
+      "readLogIds": [
+        "epa-tone-text-144",
+        "epa-tone-text-145",
+        "epa-tone-text-150",
+        "epa-tone-text-151",
+        "epa-tone-text-152",
+        "epa-tone-text-290",
+        "epa-tone-visual-144",
+        "epa-tone-visual-145",
+        "epa-tone-visual-290"
+      ]
+    },
+    {
+      "path": "content/birth-6/reviews/trial-tone-r01.json",
+      "sha256": "ebcca701f4e592e85a60b3587c5c7d57fef12089b76bf1930b98a5b0a5840490",
+      "readLogIds": [
+        "tone-monthly",
+        "tone-sitting",
+        "tone-visual-287",
+        "tone-visual-288",
+        "tone-visual-289",
+        "tone-visual-299"
+      ]
+    }
+  ],
+  "readLogs": [],
+  "decisions": [
+    {
+      "placementIds": [
+        "0-3.early-shadows",
+        "3-6.early-shadows"
+      ],
+      "verdict": "pass",
+      "assessment": "The added monthly-summary reference reads naturally and makes the continuing visual-watching context traceable without changing the invitation or its stopping cues.",
+      "readLogIds": [
+        "epa-tone-text-150",
+        "epa-tone-text-151",
+        "epa-tone-text-152",
+        "tone-monthly",
+        "tone-visual-287",
+        "tone-visual-288",
+        "tone-visual-289"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 150,
+              "end": 152
+            },
+            {
+              "start": 287,
+              "end": 289
+            }
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "0-3.baby-movement",
+        "3-6.baby-movement"
+      ],
+      "reuseBody": true,
+      "verdict": "pass",
+      "assessment": "The added age-context citation identifies the early holding and mat-time passages while leaving comfort and current interest as the basis for the reader's choice.",
+      "readLogIds": [
+        "epa-tone-text-144",
+        "epa-tone-text-145",
+        "epa-tone-visual-144",
+        "epa-tone-visual-145"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 144,
+              "end": 145
+            }
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "3-6.baby-treasure-baskets"
+      ],
+      "reuseBody": true,
+      "verdict": "pass",
+      "assessment": "The earlier-summary citation is clearly labeled and does not weaken the independent-sitting condition or merge the separate familiar-toy basket example.",
+      "readLogIds": [
+        "tone-sitting",
+        "tone-monthly",
+        "tone-visual-289",
+        "tone-visual-299",
+        "epa-tone-text-290",
+        "epa-tone-visual-290"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 159,
+              "end": 160
+            },
+            {
+              "start": 289,
+              "end": 290
+            },
+            {
+              "start": 299,
+              "end": 299
+            }
+          ]
+        }
+      ],
+      "issues": []
+    }
+  ]
+}

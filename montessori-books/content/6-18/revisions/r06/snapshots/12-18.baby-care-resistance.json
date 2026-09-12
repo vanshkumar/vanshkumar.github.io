@@ -1,0 +1,99 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-care-resistance",
+        "kind": "everyday-situation",
+        "title": "When they pull away from care",
+        "summary": "If your baby resists dressing or a change, notice what they may be asking for. When care cannot wait, explain and proceed as gently as possible.",
+        "cue": "Your baby twists away, protests or wants to keep playing.",
+        "detail": [
+          "The authors consider timing, a wish to participate, or a feeling about being handled. If there is time, a pause to finish play, a small choice, or a song shared for connection may help.",
+          "A guess can stay a guess: “You’re pulling away. Would you like a moment?” The baby need not agree for their feeling to matter.",
+          "Sometimes the change still needs to happen. The book describes acknowledging the difficulty, saying what comes next and using gentle hands while meeting the physical need."
+        ],
+        "references": [
+          {
+            "id": "baby-care-resistance.ref.1",
+            "sourceId": "baby-2021",
+            "section": "When they refuse to get dressed or have a diaper changed",
+            "locator": "Complete five considerations and necessary-care continuation",
+            "pdfPages": [
+              {
+                "start": 209,
+                "end": 210
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.baby-care-resistance",
+        "entryId": "baby-care-resistance",
+        "ageId": "12-18",
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "No numerical age; the examples include an older baby and a walking child.",
+          "readiness": "The child resists dressing or a diaper change; timing, participation or feelings may matter."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "An everyday situation",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 209–210"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "f29134aa769fbe0c8db4a6ccf85d895bea5caf1c420028967b7f48f50d618375",
+  "artContextSha256": null,
+  "publicProjectionSha256": "d3d981dae99ece63f1d099b07d76a87124a655ae157d8dc303287138f1587a99",
+  "provenance": {
+    "revision": "r06",
+    "placementDraft": {
+      "path": "content/6-18/drafts/editorial-r03/02.json",
+      "sha256": "1d5860acf671c24090b0c5b86bd1297bc7b12db5b77e1663b7f75425506a115e"
+    },
+    "canonical": {
+      "entryId": "baby-care-resistance",
+      "canonicalEntrySha256": "4d36e198fd45b15a8dee03e1641735fb4d131067fc9b3e2454100e9f4df8bae8",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/16",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/16"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

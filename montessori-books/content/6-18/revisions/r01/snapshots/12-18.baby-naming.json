@@ -1,0 +1,99 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-naming",
+        "kind": "invitation",
+        "title": "Name what caught their attention",
+        "summary": "When your baby turns toward a sound or studies something nearby, give it a name and leave room for them to listen.",
+        "cue": "Their gaze settles on an object, or they turn when a familiar sound begins.",
+        "detail": [
+          "A barking dog, a ringing phone or a spoon in your hand can start the conversation. Use the name you know and a few ordinary words about what is happening.",
+          "Follow the interest already there. The authors’ examples are shared noticing, not a request for the baby to repeat the word."
+        ],
+        "references": [
+          {
+            "id": "baby-naming.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Language activities / 6 to 9 months",
+            "locator": "Naming the ringing phone, barking dog and spoon in response to attention",
+            "pdfPages": [
+              {
+                "start": 135,
+                "end": 135
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.baby-naming",
+        "entryId": "baby-naming",
+        "ageId": "12-18",
+        "topicIds": [
+          "play-discovery",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "Naming is described at 6–9 months, pointing at 9–12, and rich everyday vocabulary at 12 months+.",
+          "readiness": "Baby attends or points to something; adult names what is already interesting.",
+          "note": "The activity may continue while it fits your child’s interest and current skills; the source ages are guides."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF p. 135"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "47267e0e5f6fd25072cce491baf5b8d3898f96fe0f2c37e990eeefd67d124eb6",
+  "artContextSha256": null,
+  "publicProjectionSha256": "594645a48f530396189a1116e78df35f14833d56af36372f2f36af51ce5c741c",
+  "provenance": {
+    "revision": "r01",
+    "placementDraft": {
+      "path": "content/6-18/drafts/baby-play/draft-r03.json",
+      "sha256": "d7e9ed69c12763e82ba9463c8c44c063a3d45a8128c4375a0f488d8f0e0bfce2"
+    },
+    "canonical": {
+      "entryId": "baby-naming",
+      "canonicalEntrySha256": "d57795253de38f3e04089e3d609fc4bfe8fdf60ea1798cef83bff278b6dcb965",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/3",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/3"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

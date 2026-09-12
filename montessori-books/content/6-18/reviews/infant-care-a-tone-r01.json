@@ -1,0 +1,1688 @@
+{
+  "id": "infant-care-a-tone-r01",
+  "workflow": "lean-v1",
+  "reviewer": {
+    "task": "/root/trial_tone",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-12",
+  "scope": "Explicit grouped source-topic decisions; exact age contexts reviewed.",
+  "renderedSurfaces": {
+    "path": "content/6-18/revisions/r03/RENDERED_SURFACES.json",
+    "sha256": "d9f89961e42f76704f4b6dbd555e0a9dc53cd8d40bd4d2326c0e7b4a3c7299f6"
+  },
+  "decisionInput": {
+    "path": "content/6-18/reviews/decisions/infant-care-a-tone-r01.json",
+    "sha256": "f091b7169d442e43975fa14ed800a75d48442c65ef000dce65f45d7ef8d096a6"
+  },
+  "readingBasis": [],
+  "retainedReads": [
+    {
+      "path": "content/birth-6/reviews/early-care-a-tone-r01.json",
+      "sha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+      "readLogIds": [
+        "eca-tone-text-180",
+        "eca-tone-text-181",
+        "eca-tone-text-182",
+        "eca-tone-text-183",
+        "eca-tone-text-184",
+        "eca-tone-text-185",
+        "eca-tone-text-194",
+        "eca-tone-text-195",
+        "eca-tone-text-196",
+        "eca-tone-text-197",
+        "eca-tone-text-213",
+        "eca-tone-text-214",
+        "eca-tone-visual-76"
+      ]
+    },
+    {
+      "path": "content/editorial/shared-foundations-tone-r01.json",
+      "sha256": "3b3fa4276e310d06d9ba6319fbd26b28664a8c56af908e09551d8be7774b2d74",
+      "readLogIds": [
+        "sf-tone-baby-text-100",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ]
+    },
+    {
+      "path": "content/6-18/reviews/decisions/infant-hand-play-tone-r01.json",
+      "sha256": "ea50aa2f2293a79a09f351f2ab7920c2a318ba615d56ccfe8ac3b1c50de08fe4",
+      "readLogIds": [
+        "ihp-tone-toddler-text-39"
+      ]
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "eca-tone-text-180",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 180,
+          "end": 180
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/180.txt",
+      "notes": "Read difficult-to-interpret cues, the usual rhythm, and the specific newborn example."
+    },
+    {
+      "id": "eca-tone-text-181",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 181,
+          "end": 181
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/181.txt",
+      "notes": "Read the older-infant variations, explicit rhythm-versus-schedule distinction, family changes, and caregiver coordination."
+    },
+    {
+      "id": "eca-tone-text-182",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 182,
+          "end": 182
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/182.txt",
+      "notes": "Read family rituals, the first-year eating introduction, and the early-week milk-feeding context."
+    },
+    {
+      "id": "eca-tone-text-183",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 183,
+          "end": 183
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/183.txt",
+      "notes": "Read inclusion of primary caregivers and partners in milk feeding and the breastfeeding connection discussion."
+    },
+    {
+      "id": "eca-tone-text-184",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 184,
+          "end": 184
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/184.txt",
+      "notes": "Read feeding choices, difficulties, specialist help, grief, and connection across breast or bottle feeding."
+    },
+    {
+      "id": "eca-tone-text-185",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 185,
+          "end": 185
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/185.txt",
+      "notes": "Read the hunger possibilities, newborn feeding on demand, changing rhythm, and other needs behind crying."
+    },
+    {
+      "id": "eca-tone-text-194",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 194,
+          "end": 194
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/194.txt",
+      "notes": "Read newborn tired signs, help needs, and a short connecting sleep routine."
+    },
+    {
+      "id": "eca-tone-text-195",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 195,
+          "end": 195
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/195.txt",
+      "notes": "Read support while falling asleep and observation of the individual baby's sleep."
+    },
+    {
+      "id": "eca-tone-text-196",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 196,
+          "end": 196
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/196.txt",
+      "notes": "Read help as needed, unsettled sleep, and early dependence."
+    },
+    {
+      "id": "eca-tone-text-197",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 197,
+          "end": 197
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/197.txt",
+      "notes": "Read gradual independence, permission for current rocking or feeding, and both-adult-and-baby readiness."
+    },
+    {
+      "id": "eca-tone-text-213",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 213,
+          "end": 213
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/213.txt",
+      "notes": "Read the youngest-baby pacifier discussion, acknowledgment of SIDS evidence, and limited-use permission."
+    },
+    {
+      "id": "eca-tone-text-214",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 214,
+          "end": 214
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/214.txt",
+      "notes": "Read the pacifier discussion's continuation and its boundary into sharing."
+    },
+    {
+      "id": "eca-tone-visual-76",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 76,
+          "end": 76
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/baby/76.png",
+      "notes": "Inspected the complete safety box and its pacifier-at-naps-and-bedtime qualification in the original page layout."
+    },
+    {
+      "id": "sf-tone-baby-text-100",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 100,
+          "end": 100
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/100.txt",
+      "notes": "Read collaboration from newborn responses onward and respect for individual timelines."
+    },
+    {
+      "id": "sf-tone-toddler-text-14",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/14.txt",
+      "notes": "Read the toddler scope note and surrounding acceptance of the child and imperfect parents."
+    },
+    {
+      "id": "sf-tone-toddler-visual-14",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/14.png",
+      "notes": "Inspected the full original page and the closing note defining toddler as around one to three years."
+    },
+    {
+      "id": "ihp-tone-toddler-text-39",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 39,
+          "end": 39
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/39.txt",
+      "notes": "Adjusting challenge, using available household materials and calm adult supervision."
+    },
+    {
+      "id": "ica-tone-baby-text-71",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 71,
+          "end": 71
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/71.txt",
+      "notes": "Eating-area alternatives and fitted seating."
+    },
+    {
+      "id": "ica-tone-baby-text-81",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 81,
+          "end": 81
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/81.txt",
+      "notes": "Young-toddler kitchen participation and stable-standing condition."
+    },
+    {
+      "id": "ica-tone-baby-text-82",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 82,
+          "end": 82
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/82.txt",
+      "notes": "Continuation of young-toddler home and meal arrangements."
+    },
+    {
+      "id": "ica-tone-baby-text-186",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 186,
+          "end": 186
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/186.txt",
+      "notes": "Introducing-food heading and distinction between early interest and starting."
+    },
+    {
+      "id": "ica-tone-baby-text-187",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 187,
+          "end": 187
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/187.txt",
+      "notes": "Six-month-plus-readiness condition and gradual food exploration."
+    },
+    {
+      "id": "ica-tone-baby-text-188",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 188,
+          "end": 188
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/188.txt",
+      "notes": "Manageable food, choking/first-aid context and steady sitting for low furniture."
+    },
+    {
+      "id": "ica-tone-baby-text-189",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 189,
+          "end": 189
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/189.txt",
+      "notes": "Shared family meals, tool choices, breakage alternatives and supported fork use."
+    },
+    {
+      "id": "ica-tone-baby-text-190",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 190,
+          "end": 190
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/190.txt",
+      "notes": "Coordinated utensil/glass help, manageable dimensions and shared cleanup."
+    },
+    {
+      "id": "ica-tone-baby-text-191",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 191,
+          "end": 191
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/191.txt",
+      "notes": "Feeding roles, tentative finished signal and observations."
+    },
+    {
+      "id": "ica-tone-baby-text-192",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 192,
+          "end": 192
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/192.txt",
+      "notes": "Personal weaning decisions and observation of eating."
+    },
+    {
+      "id": "ica-tone-baby-text-193",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 193,
+          "end": 193
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/193.txt",
+      "notes": "Individual sleep and parent-capacity framing after weaning discussion."
+    },
+    {
+      "id": "ica-tone-baby-text-201",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 201,
+          "end": 201
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/201.txt",
+      "notes": "Realistic first-year sleep expectations and varied possible waking needs."
+    },
+    {
+      "id": "ica-tone-baby-text-202",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 202,
+          "end": 202
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/202.txt",
+      "notes": "Continued waking discussion and responsive help with settling."
+    },
+    {
+      "id": "ica-tone-baby-text-204",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 204,
+          "end": 204
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/204.txt",
+      "notes": "Four/eight/twelve-month sleep examples and temporary additional collaboration."
+    },
+    {
+      "id": "ica-tone-toddler-text-119",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 119
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/119.txt",
+      "notes": "Preverbal problem-solving participation with adult-supplied possibilities."
+    },
+    {
+      "id": "ica-tone-toddler-text-152",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 152,
+          "end": 152
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/152.txt",
+      "notes": "Meal connection and adult/child roles."
+    },
+    {
+      "id": "ica-tone-toddler-text-153",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 153,
+          "end": 153
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/153.txt",
+      "notes": "Family arrangements, leaving the table and keeping food/cutlery there."
+    },
+    {
+      "id": "ica-tone-toddler-text-154",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 154,
+          "end": 154
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/154.txt",
+      "notes": "Young-toddler utensil learning and help."
+    },
+    {
+      "id": "ica-tone-toddler-text-155",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 155,
+          "end": 155
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/155.txt",
+      "notes": "Eating concerns and professional-support qualification."
+    },
+    {
+      "id": "ica-tone-toddler-text-156",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 156,
+          "end": 156
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/156.txt",
+      "notes": "Toddler sleep, family arrangements and individual variation."
+    },
+    {
+      "id": "ica-tone-toddler-text-157",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 157,
+          "end": 157
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/157.txt",
+      "notes": "Needed help, no crying alone and extra support during illness or teething."
+    },
+    {
+      "id": "ica-tone-toddler-text-158",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 158,
+          "end": 158
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/158.txt",
+      "notes": "Neutral daytime discussion of recurring night requests and specialist help."
+    },
+    {
+      "id": "ica-tone-baby-visual-188",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 188,
+          "end": 188
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/baby/188.png",
+      "notes": "Full page shows food examples beside choking/first-aid box and distinct seating-readiness passage."
+    },
+    {
+      "id": "ica-tone-baby-visual-204",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 204,
+          "end": 204
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/baby/204.png",
+      "notes": "Question-and-answer layout groups the four/eight/twelve-month examples with additional support and readiness to change help."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "infant-care-a-tone-r01.9-12.baby-feeding-connection",
+      "entryId": "baby-feeding-connection",
+      "placementId": "9-12.baby-feeding-connection",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.baby-feeding-connection.json",
+      "snapshotFileSha256": "2f7b70cd1c8705f7db11b1cfeaf591e64348721a6b83561be70ef1f8a2d2ac4e",
+      "textPlacementSha256": "6be046d0c19f093edd1afd356e23d62cb2e9bdf532e1d5203825b4453ffddc59",
+      "artContextSha256": null,
+      "readLogIds": [
+        "eca-tone-text-182",
+        "eca-tone-text-183",
+        "eca-tone-text-184",
+        "eca-tone-text-185",
+        "ica-tone-baby-text-192",
+        "ica-tone-baby-text-193"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 182,
+              "end": 185
+            },
+            {
+              "start": 192,
+              "end": 193
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The later placements preserve connection across feeding arrangements without requiring a family to continue or stop milk feeding."
+      },
+      "bodyReview": {
+        "entryId": "baby-feeding-connection",
+        "canonicalEntrySha256": "a5792ab355d43f1012026836a540d8ad0e9c08d9d264707311024a260e3026fa",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.12-18.baby-feeding-connection",
+      "entryId": "baby-feeding-connection",
+      "placementId": "12-18.baby-feeding-connection",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.baby-feeding-connection.json",
+      "snapshotFileSha256": "48204f9ec3581c8a768f978174bb6c032970e31545e0a1a844dc167f8461cea3",
+      "textPlacementSha256": "baff036d6ef4b172fe2406aea27fa291dfdd28f90c17e60b87b41fc24b03a019",
+      "artContextSha256": null,
+      "readLogIds": [
+        "eca-tone-text-182",
+        "eca-tone-text-183",
+        "eca-tone-text-184",
+        "eca-tone-text-185",
+        "ica-tone-baby-text-192",
+        "ica-tone-baby-text-193"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 182,
+              "end": 185
+            },
+            {
+              "start": 192,
+              "end": 193
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The later placements preserve connection across feeding arrangements without requiring a family to continue or stop milk feeding."
+      },
+      "bodyReview": {
+        "entryId": "baby-feeding-connection",
+        "canonicalEntrySha256": "a5792ab355d43f1012026836a540d8ad0e9c08d9d264707311024a260e3026fa",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.9-12.baby-solids-perspective",
+      "entryId": "baby-solids-perspective",
+      "placementId": "9-12.baby-solids-perspective",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.baby-solids-perspective.json",
+      "snapshotFileSha256": "01b6c74529449fea9b58e869b1aaf06add7ca5acb0d04b087c1bb0c387e7fb68",
+      "textPlacementSha256": "5690a6e6fc59dc0c7b8f52d355d34ecfb8f1865ed41f1a68b74dc59fa355bb0f",
+      "artContextSha256": null,
+      "readLogIds": [
+        "ica-tone-baby-text-186",
+        "ica-tone-baby-text-187",
+        "ica-tone-baby-text-188",
+        "ica-tone-baby-text-189",
+        "ica-tone-baby-text-190",
+        "ica-tone-baby-visual-188"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 186,
+              "end": 190
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The first-food presentation remains within the source’s exploratory year and keeps starting readiness, baby pace and choking context visible."
+      },
+      "bodyReview": {
+        "entryId": "baby-solids-perspective",
+        "canonicalEntrySha256": "420fad449875509346e7fb703e1c3090fb8a2b9204a9bc3a3bb99d5a592a46de",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.9-12.baby-eating-place",
+      "entryId": "baby-eating-place",
+      "placementId": "9-12.baby-eating-place",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.baby-eating-place.json",
+      "snapshotFileSha256": "6823c3aa4c35628a677652f967617ca24b0419ecb334fbcbaf3ea94c4feec98c",
+      "textPlacementSha256": "866ca73bcd9736508112eb242cceb57a05a98b44c7fefd0d00cd563208048138",
+      "artContextSha256": null,
+      "readLogIds": [
+        "ica-tone-baby-text-71",
+        "ica-tone-baby-text-81",
+        "ica-tone-baby-text-82",
+        "ica-tone-baby-text-188",
+        "ica-tone-baby-text-189"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 71,
+              "end": 71
+            },
+            {
+              "start": 81,
+              "end": 82
+            },
+            {
+              "start": 188,
+              "end": 189
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The continuing meal settings retain steady sitting and furniture fit while allowing the family-table alternative."
+      },
+      "bodyReview": {
+        "entryId": "baby-eating-place",
+        "canonicalEntrySha256": "926fc1cff90a5fd3908df5e1f11a667b9f1d0fb333b361cbac328478f0d4c109",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.12-18.baby-eating-place",
+      "entryId": "baby-eating-place",
+      "placementId": "12-18.baby-eating-place",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.baby-eating-place.json",
+      "snapshotFileSha256": "e95f368d4698a4e0ce736aa18440faf850f7d45459660f8cfe52c6d86c098d64",
+      "textPlacementSha256": "8a98596d98b2f88929aadb1664914be69722beb88fa93bc4369affc732c7587c",
+      "artContextSha256": null,
+      "readLogIds": [
+        "ica-tone-baby-text-71",
+        "ica-tone-baby-text-81",
+        "ica-tone-baby-text-82",
+        "ica-tone-baby-text-188",
+        "ica-tone-baby-text-189"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 71,
+              "end": 71
+            },
+            {
+              "start": 81,
+              "end": 82
+            },
+            {
+              "start": 188,
+              "end": 189
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The continuing meal settings retain steady sitting and furniture fit while allowing the family-table alternative."
+      },
+      "bodyReview": {
+        "entryId": "baby-eating-place",
+        "canonicalEntrySha256": "926fc1cff90a5fd3908df5e1f11a667b9f1d0fb333b361cbac328478f0d4c109",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.9-12.baby-eating-amount",
+      "entryId": "baby-eating-amount",
+      "placementId": "9-12.baby-eating-amount",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.baby-eating-amount.json",
+      "snapshotFileSha256": "323377862bca080d0eb98b20c829c771a7c0d2e11bf6114db55535c241fcf27a",
+      "textPlacementSha256": "ee10cf47177e52fd08a70a6582bce54cb56ed0861d6cdd6f31c9c9d82114ac97",
+      "artContextSha256": null,
+      "readLogIds": [
+        "ica-tone-baby-text-190",
+        "ica-tone-baby-text-191",
+        "ica-tone-baby-text-192"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 190,
+              "end": 192
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The child’s amount choice and the tentative meaning of thrown food remain intact in the later-age context."
+      },
+      "bodyReview": {
+        "entryId": "baby-eating-amount",
+        "canonicalEntrySha256": "04918cee80578c151d573ab290f16e05ac6ad2f2ca34b5b9b61f6516d47f7399",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.12-18.baby-eating-amount",
+      "entryId": "baby-eating-amount",
+      "placementId": "12-18.baby-eating-amount",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.baby-eating-amount.json",
+      "snapshotFileSha256": "51283022ea3b072cb7d13ddf478b07101c67d794fb9a4f9eec7224eaaa74ff68",
+      "textPlacementSha256": "87c4281798168dae48e32633080d0416fa8f1ec3d4e0aaf758d4580a34626c4f",
+      "artContextSha256": null,
+      "readLogIds": [
+        "ica-tone-baby-text-190",
+        "ica-tone-baby-text-191",
+        "ica-tone-baby-text-192"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 190,
+              "end": 192
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The child’s amount choice and the tentative meaning of thrown food remain intact in the later-age context."
+      },
+      "bodyReview": {
+        "entryId": "baby-eating-amount",
+        "canonicalEntrySha256": "04918cee80578c151d573ab290f16e05ac6ad2f2ca34b5b9b61f6516d47f7399",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.9-12.baby-meal-cleanup",
+      "entryId": "baby-meal-cleanup",
+      "placementId": "9-12.baby-meal-cleanup",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.baby-meal-cleanup.json",
+      "snapshotFileSha256": "816b9de183215dd56a1241426e9d1f72e3b1af6d18e90b1e5932c415e641832a",
+      "textPlacementSha256": "71ba1e2fc630e7c469843b34561836690b5ff60ec5dc07c5e93c1827531a1790",
+      "artContextSha256": null,
+      "readLogIds": [
+        "ica-tone-baby-text-190"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 190,
+              "end": 190
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The earlier wiping example stays a shared invitation with the adult completing necessary cleanup."
+      },
+      "bodyReview": {
+        "entryId": "baby-meal-cleanup",
+        "canonicalEntrySha256": "33aa5c0c16d6380b2f10e9aae6554836619cd7d6e8374ba764e2e1ca0e723038",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.12-18.baby-meal-cleanup",
+      "entryId": "baby-meal-cleanup",
+      "placementId": "12-18.baby-meal-cleanup",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.baby-meal-cleanup.json",
+      "snapshotFileSha256": "f8cee1900c47cab08c6ac356c4e7400278fca5eed386a30be32b8628f0ff8d74",
+      "textPlacementSha256": "86973bdcad030baf73a6f456d51072eff84e675cbc42ac6a01a5e4752ee9a96d",
+      "artContextSha256": null,
+      "readLogIds": [
+        "ica-tone-baby-text-190"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 190,
+              "end": 190
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The earlier wiping example stays a shared invitation with the adult completing necessary cleanup."
+      },
+      "bodyReview": {
+        "entryId": "baby-meal-cleanup",
+        "canonicalEntrySha256": "33aa5c0c16d6380b2f10e9aae6554836619cd7d6e8374ba764e2e1ca0e723038",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.6-9.infant-eating-tools",
+      "entryId": "infant-eating-tools",
+      "placementId": "6-9.infant-eating-tools",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/6-9.infant-eating-tools.json",
+      "snapshotFileSha256": "ed78bfffab9cdea32168066d5839555b1f48f6e35461549a8a6258615260afa9",
+      "textPlacementSha256": "334b1b515b279c67af75c4943980ead2457dc9c7731d8806528a8b10f7a338ce",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-baby-text-100",
+        "ica-tone-baby-text-186",
+        "ica-tone-baby-text-187",
+        "ica-tone-baby-text-188",
+        "ica-tone-baby-text-189",
+        "ica-tone-baby-text-190",
+        "ica-tone-baby-visual-188",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14",
+        "ihp-tone-toddler-text-39",
+        "ica-tone-toddler-text-152",
+        "ica-tone-toddler-text-153",
+        "ica-tone-toddler-text-154",
+        "ica-tone-toddler-text-155"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 100,
+              "end": 100
+            },
+            {
+              "start": 186,
+              "end": 190
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 152,
+              "end": 155
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The separate infant and toddler examples allow supported participation while preserving manageable tools, food readiness and practical eating qualifications."
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.9-12.infant-eating-tools",
+      "entryId": "infant-eating-tools",
+      "placementId": "9-12.infant-eating-tools",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.infant-eating-tools.json",
+      "snapshotFileSha256": "a276ab4c749d084303036ca8857fe18e6ccfa47828ea06e48d1d3406476b6b5c",
+      "textPlacementSha256": "94b008a123eff1a0c6a17a4ab55e33060e6681252fe2a9393154b1622a36343c",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-baby-text-100",
+        "ica-tone-baby-text-186",
+        "ica-tone-baby-text-187",
+        "ica-tone-baby-text-188",
+        "ica-tone-baby-text-189",
+        "ica-tone-baby-text-190",
+        "ica-tone-baby-visual-188",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14",
+        "ihp-tone-toddler-text-39",
+        "ica-tone-toddler-text-152",
+        "ica-tone-toddler-text-153",
+        "ica-tone-toddler-text-154",
+        "ica-tone-toddler-text-155"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 100,
+              "end": 100
+            },
+            {
+              "start": 186,
+              "end": 190
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 152,
+              "end": 155
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The separate infant and toddler examples allow supported participation while preserving manageable tools, food readiness and practical eating qualifications."
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.12-18.infant-eating-tools",
+      "entryId": "infant-eating-tools",
+      "placementId": "12-18.infant-eating-tools",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.infant-eating-tools.json",
+      "snapshotFileSha256": "c0c8ee2db1dc597702d4e603f354310bd4fe46d7e3af5e38dded7561d1e79cab",
+      "textPlacementSha256": "af2775f0f03a749abbc3f36ebec9d56d4087a4222537d02aaa96d7b790c6f6f5",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-baby-text-100",
+        "ica-tone-baby-text-186",
+        "ica-tone-baby-text-187",
+        "ica-tone-baby-text-188",
+        "ica-tone-baby-text-189",
+        "ica-tone-baby-text-190",
+        "ica-tone-baby-visual-188",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14",
+        "ihp-tone-toddler-text-39",
+        "ica-tone-toddler-text-152",
+        "ica-tone-toddler-text-153",
+        "ica-tone-toddler-text-154",
+        "ica-tone-toddler-text-155"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 100,
+              "end": 100
+            },
+            {
+              "start": 186,
+              "end": 190
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 152,
+              "end": 155
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The separate infant and toddler examples allow supported participation while preserving manageable tools, food readiness and practical eating qualifications."
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.18-24.infant-eating-tools",
+      "entryId": "infant-eating-tools",
+      "placementId": "18-24.infant-eating-tools",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/18-24.infant-eating-tools.json",
+      "snapshotFileSha256": "82b148628af0aa3ecaa7e04af630ab2f335ef6592cf10460bf1fe2f2afdec12e",
+      "textPlacementSha256": "f7f5062769440ce8fe56f3ca1dfed4324faa821619fec5ecc117a5868af161db",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-baby-text-100",
+        "ica-tone-baby-text-186",
+        "ica-tone-baby-text-187",
+        "ica-tone-baby-text-188",
+        "ica-tone-baby-text-189",
+        "ica-tone-baby-text-190",
+        "ica-tone-baby-visual-188",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14",
+        "ihp-tone-toddler-text-39",
+        "ica-tone-toddler-text-152",
+        "ica-tone-toddler-text-153",
+        "ica-tone-toddler-text-154",
+        "ica-tone-toddler-text-155"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 100,
+              "end": 100
+            },
+            {
+              "start": 186,
+              "end": 190
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 152,
+              "end": 155
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The separate infant and toddler examples allow supported participation while preserving manageable tools, food readiness and practical eating qualifications."
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.24-36.infant-eating-tools",
+      "entryId": "infant-eating-tools",
+      "placementId": "24-36.infant-eating-tools",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/24-36.infant-eating-tools.json",
+      "snapshotFileSha256": "d933b0746ada2e7205c8a6d16a0eb315e9cd688a7c7f163e855179a965d258aa",
+      "textPlacementSha256": "3cab3d8610dd8485f69238ca7a4728f8c71d62a4de0fbe8d0d88c2260435aeef",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-baby-text-100",
+        "ica-tone-baby-text-186",
+        "ica-tone-baby-text-187",
+        "ica-tone-baby-text-188",
+        "ica-tone-baby-text-189",
+        "ica-tone-baby-text-190",
+        "ica-tone-baby-visual-188",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14",
+        "ihp-tone-toddler-text-39",
+        "ica-tone-toddler-text-152",
+        "ica-tone-toddler-text-153",
+        "ica-tone-toddler-text-154",
+        "ica-tone-toddler-text-155"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 100,
+              "end": 100
+            },
+            {
+              "start": 186,
+              "end": 190
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 152,
+              "end": 155
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The separate infant and toddler examples allow supported participation while preserving manageable tools, food readiness and practical eating qualifications."
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.9-12.baby-daily-rhythm",
+      "entryId": "baby-daily-rhythm",
+      "placementId": "9-12.baby-daily-rhythm",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.baby-daily-rhythm.json",
+      "snapshotFileSha256": "23b8cef5e69c2fa65ad61ce73a438be7b5812938e777bd6b432864d9694a663c",
+      "textPlacementSha256": "1f7db592f3fbca9c3dcb93238fdb4bbe323376c4bce69802083c5e6312724b7b",
+      "artContextSha256": null,
+      "readLogIds": [
+        "eca-tone-text-180",
+        "eca-tone-text-181",
+        "eca-tone-text-182"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 180,
+              "end": 182
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The continuing rhythm follows the child’s and family’s changing day without making the sequence a prescribed timetable."
+      },
+      "bodyReview": {
+        "entryId": "baby-daily-rhythm",
+        "canonicalEntrySha256": "b89e657fd3eceec72cea57c6f533a524b433f16728c56b2fa2cd26d165c77332",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.12-18.baby-daily-rhythm",
+      "entryId": "baby-daily-rhythm",
+      "placementId": "12-18.baby-daily-rhythm",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.baby-daily-rhythm.json",
+      "snapshotFileSha256": "3145e2f16fcf9561a7091e9a50d94468f195be972e693a67074367e8341bfdb3",
+      "textPlacementSha256": "a3672e7b27398e179369a07a928154e26e799ea8d04728ee3a7eb24aa0928f49",
+      "artContextSha256": null,
+      "readLogIds": [
+        "eca-tone-text-180",
+        "eca-tone-text-181",
+        "eca-tone-text-182"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 180,
+              "end": 182
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The continuing rhythm follows the child’s and family’s changing day without making the sequence a prescribed timetable."
+      },
+      "bodyReview": {
+        "entryId": "baby-daily-rhythm",
+        "canonicalEntrySha256": "b89e657fd3eceec72cea57c6f533a524b433f16728c56b2fa2cd26d165c77332",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.9-12.baby-sleep-support",
+      "entryId": "baby-sleep-support",
+      "placementId": "9-12.baby-sleep-support",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.baby-sleep-support.json",
+      "snapshotFileSha256": "3287b3f1f3399597046456437811767aa02973e79731e222a7e1296b0c9e7f54",
+      "textPlacementSha256": "13caace1835dd50cdb327accf81508883d44633587556d123d770e4bb309d7d5",
+      "artContextSha256": null,
+      "readLogIds": [
+        "ica-tone-baby-text-193",
+        "eca-tone-text-194",
+        "eca-tone-text-195",
+        "eca-tone-text-196",
+        "eca-tone-text-197",
+        "eca-tone-visual-76"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 76,
+              "end": 76
+            },
+            {
+              "start": 193,
+              "end": 197
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The new ages preserve help that suits both child and adult without imposing independent settling or resolving the frozen body’s sleep-surface tensions."
+      },
+      "bodyReview": {
+        "entryId": "baby-sleep-support",
+        "canonicalEntrySha256": "0a8654cd8887e95ca8d741f978f830aa8d0b91d99f1916dcc8d3ef7b3a9bbe64",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.12-18.baby-sleep-support",
+      "entryId": "baby-sleep-support",
+      "placementId": "12-18.baby-sleep-support",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.baby-sleep-support.json",
+      "snapshotFileSha256": "05bf96962a0bd3827e512162937600759b32feeb34327f1af24d0370fcccca99",
+      "textPlacementSha256": "10a3a72af2d2a1c0246842249580d22ec6b205dbe1d3726f7b25c98b9dfd984c",
+      "artContextSha256": null,
+      "readLogIds": [
+        "ica-tone-baby-text-193",
+        "eca-tone-text-194",
+        "eca-tone-text-195",
+        "eca-tone-text-196",
+        "eca-tone-text-197",
+        "eca-tone-visual-76"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 76,
+              "end": 76
+            },
+            {
+              "start": 193,
+              "end": 197
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The new ages preserve help that suits both child and adult without imposing independent settling or resolving the frozen body’s sleep-surface tensions."
+      },
+      "bodyReview": {
+        "entryId": "baby-sleep-support",
+        "canonicalEntrySha256": "0a8654cd8887e95ca8d741f978f830aa8d0b91d99f1916dcc8d3ef7b3a9bbe64",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.9-12.baby-sleep-changes",
+      "entryId": "baby-sleep-changes",
+      "placementId": "9-12.baby-sleep-changes",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.baby-sleep-changes.json",
+      "snapshotFileSha256": "d6bfed9ce14cd3011835c51e34cfc05af03f2fccc88486f62ad77af16eb8d3cb",
+      "textPlacementSha256": "dae1578cc2490942cdfd095dae5f34f1ec49a4e964512764a2714796357ac8ad",
+      "artContextSha256": null,
+      "readLogIds": [
+        "ica-tone-baby-text-201",
+        "ica-tone-baby-text-202",
+        "ica-tone-baby-text-204",
+        "ica-tone-baby-visual-204"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 201,
+              "end": 202
+            },
+            {
+              "start": 204,
+              "end": 204
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The twelve-month context remains one possible sleep change and allows more help without a recovery deadline."
+      },
+      "bodyReview": {
+        "entryId": "baby-sleep-changes",
+        "canonicalEntrySha256": "a6df5ec4cbb1778383c29e7909549d0479041636adefd0ceddc77d4f749c716a",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.12-18.baby-sleep-changes",
+      "entryId": "baby-sleep-changes",
+      "placementId": "12-18.baby-sleep-changes",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.baby-sleep-changes.json",
+      "snapshotFileSha256": "a2f5e1729868bd11a6c1f8e5af7315fa40c1b8f364afadabf4f1ba464319e530",
+      "textPlacementSha256": "c4797d715790bf881aeb6699f80cf17e0112b517836f803f8edd443b765d4875",
+      "artContextSha256": null,
+      "readLogIds": [
+        "ica-tone-baby-text-201",
+        "ica-tone-baby-text-202",
+        "ica-tone-baby-text-204",
+        "ica-tone-baby-visual-204"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 201,
+              "end": 202
+            },
+            {
+              "start": 204,
+              "end": 204
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The twelve-month context remains one possible sleep change and allows more help without a recovery deadline."
+      },
+      "bodyReview": {
+        "entryId": "baby-sleep-changes",
+        "canonicalEntrySha256": "a6df5ec4cbb1778383c29e7909549d0479041636adefd0ceddc77d4f749c716a",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.9-12.baby-pacifier",
+      "entryId": "baby-pacifier",
+      "placementId": "9-12.baby-pacifier",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.baby-pacifier.json",
+      "snapshotFileSha256": "cbbbccd852ef3ca629cdfd92320ecc096edde6e7c9b26ef1efca83be58ce083d",
+      "textPlacementSha256": "cfe7c84d60e5c5b2d99c4438c9b0b6d8d3fee6cd5bf1b9fc91048c6839e5dac6",
+      "artContextSha256": null,
+      "readLogIds": [
+        "eca-tone-text-213",
+        "eca-tone-text-214",
+        "eca-tone-visual-76"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 76,
+              "end": 76
+            },
+            {
+              "start": 213,
+              "end": 214
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The late-infancy context keeps the authors’ limited-use permission and sleep acknowledgment visible without converting their preference into a removal instruction."
+      },
+      "bodyReview": {
+        "entryId": "baby-pacifier",
+        "canonicalEntrySha256": "b6fb7ad16a00a12109903b336417857b207aef7899f37a1c24cd004c343a5b21",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.12-18.infant-nighttime-needs",
+      "entryId": "infant-nighttime-needs",
+      "placementId": "12-18.infant-nighttime-needs",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.infant-nighttime-needs.json",
+      "snapshotFileSha256": "c31488823d980128355881509a5942651ce44c2c1864a16c1b4af069c357352a",
+      "textPlacementSha256": "9b23299214107a3e44f5a9c20793a1a21ae578f9f2ce47f7f6ddb2fc304e1618",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14",
+        "ica-tone-toddler-text-119",
+        "ica-tone-toddler-text-156",
+        "ica-tone-toddler-text-157",
+        "ica-tone-toddler-text-158"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 119,
+              "end": 119
+            },
+            {
+              "start": 156,
+              "end": 158
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The daytime conversation permits preverbal participation and adult-led possibilities while retaining nighttime support and specialist help."
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.18-24.infant-nighttime-needs",
+      "entryId": "infant-nighttime-needs",
+      "placementId": "18-24.infant-nighttime-needs",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/18-24.infant-nighttime-needs.json",
+      "snapshotFileSha256": "64004fcc102eeddda713e7e7a4810de50caa1765838163756089bde8db64d910",
+      "textPlacementSha256": "f4b27b7c6a6a4e7d2cc1e5da8199c6979c4158b5431890da5a6db8eaf6e3be33",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14",
+        "ica-tone-toddler-text-119",
+        "ica-tone-toddler-text-156",
+        "ica-tone-toddler-text-157",
+        "ica-tone-toddler-text-158"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 119,
+              "end": 119
+            },
+            {
+              "start": 156,
+              "end": 158
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "ica-tone-nighttime-activity-note",
+            "status": "open",
+            "severity": "minor",
+            "message": "The note says an earlier example can remain interesting and need not move to a harder variant because of the browse age; the source describes a family care conversation about recurring night needs, with no graded activity or earlier starting example.",
+            "requestedChange": "Remove the two generic activity-progression sentences from these notes, preserving the citation, or replace them with brief wording about discussing an ongoing need at a calm daytime moment."
+          }
+        ],
+        "assessment": "The body preserves responsive support, but the later-age note misframes recurring night needs as an activity with harder variants."
+      }
+    },
+    {
+      "id": "infant-care-a-tone-r01.24-36.infant-nighttime-needs",
+      "entryId": "infant-nighttime-needs",
+      "placementId": "24-36.infant-nighttime-needs",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/24-36.infant-nighttime-needs.json",
+      "snapshotFileSha256": "e42e77ae6ff7ab09e53fbcf0a95b5ed23341b5fc12e2de11fa52090409973487",
+      "textPlacementSha256": "040529cb2a875b0944b02cb03ca73bd281b5747fa764b7b31de9fb4b8441ed28",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14",
+        "ica-tone-toddler-text-119",
+        "ica-tone-toddler-text-156",
+        "ica-tone-toddler-text-157",
+        "ica-tone-toddler-text-158"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 119,
+              "end": 119
+            },
+            {
+              "start": 156,
+              "end": 158
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "ica-tone-nighttime-activity-note",
+            "status": "open",
+            "severity": "minor",
+            "message": "The note says an earlier example can remain interesting and need not move to a harder variant because of the browse age; the source describes a family care conversation about recurring night needs, with no graded activity or earlier starting example.",
+            "requestedChange": "Remove the two generic activity-progression sentences from these notes, preserving the citation, or replace them with brief wording about discussing an ongoing need at a calm daytime moment."
+          }
+        ],
+        "assessment": "The body preserves responsive support, but the later-age note misframes recurring night needs as an activity with harder variants."
+      }
+    }
+  ]
+}

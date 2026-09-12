@@ -1,0 +1,107 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "early-read-aloud",
+        "kind": "invitation",
+        "title": "Read a little of your book aloud",
+        "actionLabel": "Read",
+        "invitation": "Read a little aloud from something you enjoy.",
+        "summary": "In the first few months, a book you want to read can become something to share: read it aloud with your baby nearby.",
+        "cue": "You have something you would enjoy reading and your baby is awake and comfortable.",
+        "detail": [
+          "Davies and Uzodike describe early reading as a chance to hear the sounds and rhythm of language. The book does not have to be a baby book; you can read from one that interests you.",
+          "Simple picture books are another option. If a picture catches your baby’s attention, you can describe it or stay with that page."
+        ],
+        "references": [
+          {
+            "id": "early-read-aloud.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Language activities / 0 to 3 months / Speak to our baby; Tips for choosing books in the first year",
+            "locator": "Reading an adult-interest book aloud in the first few months; simple picture books and following interest",
+            "pdfPages": [
+              {
+                "start": 130,
+                "end": 132
+              }
+            ]
+          },
+          {
+            "id": "early-read-aloud.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Our role is to prepare the environment, not to entertain; When to offer activities to our baby",
+            "locator": "Awake, comfortable, alert context for activities",
+            "pdfPages": [
+              {
+                "start": 123,
+                "end": 124
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "3-6.early-read-aloud",
+        "entryId": "early-read-aloud",
+        "ageId": "3-6",
+        "topicIds": [
+          "play-discovery",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "The first few months, within the 0 to 3 months discussion.",
+          "readiness": "Your baby is awake and comfortable while you read aloud nearby.",
+          "note": "This is an early way to share your reading; simple picture books can join it as interest changes."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "3–6 months",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 130–132"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 123–124"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "35576a84973f0eccf98023c7160564b18bb0e103a281c3864c0fd9dc15422c08",
+  "artContextSha256": null,
+  "publicProjectionSha256": "8dab87b70dd20fed1a425d9db29c5a137d5057d65cfe38dc0e02f331dd70f499",
+  "provenance": {
+    "revision": "r02",
+    "placementDraft": {
+      "path": "content/birth-6/drafts/activities-r02.json",
+      "sha256": "53fb89b6bb15d2c805a30daf7dacc090830a0c89d37c052d807c5f4a9aefa4ec"
+    },
+    "canonical": null,
+    "mode": "text-only-contribution"
+  }
+}

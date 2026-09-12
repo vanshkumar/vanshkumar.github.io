@@ -1,0 +1,23 @@
+{
+  "editor": "/root",
+  "date": "2026-09-12",
+  "status": "Actual image and presentation reviews pending",
+  "scenes": [
+    {"id":"home-newborn-conversation","ageId":"0-3","layout":"open-left","sourceId":"baby-2021","src":"art/home-newborn-conversation.webp","alt":"An adult sits on a mat, cradling a newborn along both arms with a hand supporting the head, and looks toward the baby's face.","width":1536,"height":1024,"caption":"A pause together."},
+    {"id":"home-held-conversation","ageId":"3-6","layout":"open-left","sourceId":"baby-2021","src":"art/home-held-conversation.webp","alt":"An adult holds an awake baby close, supporting the body and upper back, with their faces turned toward each other.","width":1536,"height":1024,"caption":"A face, a voice, and time together."},
+    {"id":"home-peekaboo","ageId":"9-12","layout":"open-left","sourceId":"baby-2021","src":"art/home-peekaboo.webp","alt":"An adult opens their hands beside their face as a baby, resting on their front on a mat, looks toward them.","width":1536,"height":1024,"caption":"The familiar surprise of finding you."},
+    {"id":"home-fetching-shoe","ageId":"12-18","layout":"open-left","sourceId":"toddler-2019","src":"art/home-fetching-shoe.webp","alt":"A child sits beside a basket and holds a shoe while an adult kneels nearby with an open hand.","width":1536,"height":1024,"caption":"A small part in getting ready."},
+    {"id":"home-window-cleaning","ageId":"24-36","layout":"open-left","sourceId":"toddler-2019","src":"art/home-window-cleaning.webp","alt":"A child stands on the floor using a small squeegee on a low window while an adult kneels beside them with a cloth.","width":1536,"height":1024,"caption":"A little window cleaning, together."}
+  ],
+  "illustrations": [
+    {"entryId":"toddler-getting-dressed","src":"art/home-shoe-help.webp","alt":"An adult holds the back of a shoe as a child's socked foot goes inside.","width":1536,"height":1024,"caption":"A little help can leave room for their part."}
+  ],
+  "sourceContext": [
+    {"id":"home-newborn-conversation","sourceId":"baby-2021","pdfPages":[{"start":17,"end":22},{"start":128,"end":132},{"start":143,"end":146}],"note":"Holding with head/body support and responsive newborn conversation. No carrying or sleep procedure."},
+    {"id":"home-held-conversation","sourceId":"baby-2021","pdfPages":[{"start":128,"end":135},{"start":143,"end":146}],"note":"Actual still image shows held face-to-face interaction. Original generation intent mentioned song; that is not a claim about the depicted sound. Judge visible body/head support across the age band."},
+    {"id":"home-peekaboo","sourceId":"baby-2021","pdfPages":[{"start":135,"end":137},{"start":153,"end":156}],"note":"Peekaboo and freely moving baby context. Baby depicted on their front to avoid implying adult-propped sitting. Not a posture or tummy-time prescription."},
+    {"id":"home-fetching-shoe","sourceId":"toddler-2019","pdfPages":[{"start":35,"end":38},{"start":51,"end":52},{"start":76,"end":78},{"start":148,"end":151}],"note":"Participation in fetching shoes and shared dressing; no independent dressing expectation."},
+    {"id":"home-window-cleaning","sourceId":"toddler-2019","pdfPages":[{"start":33,"end":39},{"start":48,"end":52},{"start":252,"end":252}],"note":"Shared practical life and window cleaning. Inspect actual floor position, water/tool details and child/adult roles."},
+    {"id":"toddler-getting-dressed","sourceId":"toddler-2019","pdfPages":[{"start":78,"end":78},{"start":101,"end":102},{"start":148,"end":151}],"note":"Actual shoe assistance is already described in the unchanged approved body. Review new image/caption/alt with all three age contexts."}
+  ]
+}

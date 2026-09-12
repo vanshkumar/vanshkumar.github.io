@@ -1,0 +1,110 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-hitting",
+        "kind": "everyday-situation",
+        "title": "Stop the hurt, then understand the moment",
+        "summary": "Davies keeps an adult close enough to stop hitting, biting, or pushing. Understanding the feeling goes alongside protecting everyone; repair waits until calm.",
+        "cue": "There has been physical conflict, or you have noticed situations where it is becoming likely.",
+        "detail": [
+          "Her first response is to stop the harmful action and move children apart when needed. Acknowledging a feeling does not mean allowing the action to continue.",
+          "At a calmer time, notice patterns: what was happening, who was nearby, how noisy or crowded it was, and how the adults responded. Davies offers these as clues for adjusting support, not proof of a child’s motive.",
+          "After calm, she helps the child check on the other person and models making amends. Laughter does not change the protective limit or prove why the child acted."
+        ],
+        "references": [
+          {
+            "id": "toddler-hitting.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "A hitting/biting/pushing/throwing phase",
+            "locator": "Protection, observation categories, adjustments, response, repair and laughter",
+            "pdfPages": [
+              {
+                "start": 174,
+                "end": 176
+              }
+            ]
+          },
+          {
+            "id": "toddler-hitting.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "Dealing with tantrums / Making amends",
+            "locator": "Available comfort, safety and calm before repair",
+            "pdfPages": [
+              {
+                "start": 134,
+                "end": 139
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "24-36.toddler-hitting",
+        "entryId": "toddler-hitting",
+        "ageId": "24-36",
+        "topicIds": [
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "readiness": "There has been physical conflict, or you have noticed situations where it is becoming likely.",
+          "note": "Age and readiness sources: The Montessori Toddler, PDF pp. 14."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "2–3 years",
+        "kindLabel": "An everyday situation",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 174–176"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 134–139"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "0fa4a674a931fe1c2cfe3345726e70e0cec5ceb9cefa44251c2b345983dd3d59",
+  "artContextSha256": null,
+  "publicProjectionSha256": "3c05d5e8f242291bdf8a161b730b0a5bcc4bf7c9835fd214281be2fa3874460c",
+  "provenance": {
+    "revision": "r03",
+    "placementDraft": {
+      "path": "content/18-36/drafts/editorial-r02/31.json",
+      "sha256": "bab1969e2cba983a089b3163f76b2b266f5a01de749735f18d5b4bb008e7ba19"
+    },
+    "canonical": {
+      "entryId": "toddler-hitting",
+      "canonicalEntrySha256": "dc38fd730049674da1233106116db74244907b06d9f6ea5fc54dfe7cb0602e66",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/43",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/43"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

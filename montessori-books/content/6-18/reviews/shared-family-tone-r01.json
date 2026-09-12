@@ -1,0 +1,1593 @@
+{
+  "id": "shared-family-tone-r01",
+  "workflow": "lean-v1",
+  "reviewer": {
+    "task": "/root/trial_tone",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-12",
+  "scope": "Explicit grouped source-topic decisions; exact age contexts reviewed.",
+  "renderedSurfaces": {
+    "path": "content/6-18/revisions/r03/RENDERED_SURFACES.json",
+    "sha256": "d9f89961e42f76704f4b6dbd555e0a9dc53cd8d40bd4d2326c0e7b4a3c7299f6"
+  },
+  "decisionInput": {
+    "path": "content/6-18/reviews/decisions/shared-family-tone-r01.json",
+    "sha256": "0f7849768963821cdf03f034f8d273913cffd45361f01abccaf4f51108e4f862"
+  },
+  "readingBasis": [],
+  "retainedReads": [
+    {
+      "path": "content/editorial/shared-foundations-tone-r01.json",
+      "sha256": "3b3fa4276e310d06d9ba6319fbd26b28664a8c56af908e09551d8be7774b2d74",
+      "readLogIds": [
+        "sf-tone-baby-text-241",
+        "sf-tone-baby-text-242",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14",
+        "sf-tone-toddler-text-189",
+        "sf-tone-toddler-text-192",
+        "sf-tone-toddler-text-193",
+        "sf-tone-toddler-text-194",
+        "sf-tone-toddler-text-198"
+      ]
+    },
+    {
+      "path": "content/birth-6/reviews/early-care-a-tone-r01.json",
+      "sha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+      "readLogIds": [
+        "eca-tone-text-110",
+        "eca-tone-text-111"
+      ]
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "sf-tone-baby-text-241",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 241,
+          "end": 241
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/241.txt",
+      "notes": "Read adult-capacity suggestions and the beginning of Doing our best."
+    },
+    {
+      "id": "sf-tone-baby-text-242",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 242,
+          "end": 242
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/242.txt",
+      "notes": "Read the complete changing-capacity and connection-over-perfection conclusion."
+    },
+    {
+      "id": "sf-tone-toddler-text-14",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/14.txt",
+      "notes": "Read the toddler scope note and surrounding acceptance of the child and imperfect parents."
+    },
+    {
+      "id": "sf-tone-toddler-visual-14",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/14.png",
+      "notes": "Inspected the full original page and the closing note defining toddler as around one to three years."
+    },
+    {
+      "id": "sf-tone-toddler-text-189",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 189,
+          "end": 189
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/189.txt",
+      "notes": "Read learning about differences and seeking needed support."
+    },
+    {
+      "id": "sf-tone-toddler-text-192",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 192,
+          "end": 192
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/192.txt",
+      "notes": "Read observation without writing when hands are full and adult emotional needs."
+    },
+    {
+      "id": "sf-tone-toddler-text-193",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 193,
+          "end": 193
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/193.txt",
+      "notes": "Read the opening slower-day framing and personal examples."
+    },
+    {
+      "id": "sf-tone-toddler-text-194",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 194,
+          "end": 194
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/194.txt",
+      "notes": "Read processing time, proportionate help and room for occasional hurry."
+    },
+    {
+      "id": "sf-tone-toddler-text-198",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 198,
+          "end": 198
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/198.txt",
+      "notes": "Read work and money constraints, ordinary-time possibilities and accepting mistakes."
+    },
+    {
+      "id": "eca-tone-text-110",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 110,
+          "end": 110
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/110.txt",
+      "notes": "Read acknowledgment, comfort, the no-danger condition on stepping away, and early undifferentiated crying."
+    },
+    {
+      "id": "eca-tone-text-111",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 111,
+          "end": 111
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/111.txt",
+      "notes": "Read changing crying signals, responding to needs, and proportionate help."
+    },
+    {
+      "id": "sfa-tone-baby-text-112",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 112,
+          "end": 112
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/112.txt",
+      "notes": "Read the modeling continuation, acknowledging difficult feelings and avoiding performance demands."
+    },
+    {
+      "id": "sfa-tone-baby-text-235",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 235,
+          "end": 235
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/235.txt",
+      "notes": "Read preparation of the adult, early depletion and selective learning beyond parenting."
+    },
+    {
+      "id": "sfa-tone-baby-text-236",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 236,
+          "end": 236
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/236.txt",
+      "notes": "Read physical needs, rest and permission to ask for help even in the beginning."
+    },
+    {
+      "id": "sfa-tone-baby-text-237",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 237,
+          "end": 237
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/237.txt",
+      "notes": "Read first-month support and the limits on access to paid help."
+    },
+    {
+      "id": "sfa-tone-baby-text-238",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 238,
+          "end": 238
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/238.txt",
+      "notes": "Read professional support for postpartum depression, self-trust and forgiveness."
+    },
+    {
+      "id": "sfa-tone-baby-text-239",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 239,
+          "end": 239
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/239.txt",
+      "notes": "Read nonjudgmental self-reflection and the personal framing of the calm ideas."
+    },
+    {
+      "id": "sfa-tone-baby-text-240",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 240,
+          "end": 240
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/240.txt",
+      "notes": "Read the continuing personal choices for rest, company and enjoyment."
+    },
+    {
+      "id": "sfa-tone-baby-text-244",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 244,
+          "end": 244
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/244.txt",
+      "notes": "Read isolation, diverse support networks and relationships beyond parenting."
+    },
+    {
+      "id": "sfa-tone-baby-text-245",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 245,
+          "end": 245
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/245.txt",
+      "notes": "Read practical help, an optional visitor-help list and different shared-care arrangements."
+    },
+    {
+      "id": "sfa-tone-baby-text-246",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 246,
+          "end": 246
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/246.txt",
+      "notes": "Read early partner support and the opening grandparent/caregiver discussion."
+    },
+    {
+      "id": "sfa-tone-baby-text-247",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 247,
+          "end": 247
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/247.txt",
+      "notes": "Read caregiver differences and the complete single-parent/co-parent passage with the safety exception."
+    },
+    {
+      "id": "sfa-tone-baby-text-248",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 248,
+          "end": 248
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/248.txt",
+      "notes": "Read everyday disagreements and the opening information-sharing discussion."
+    },
+    {
+      "id": "sfa-tone-baby-text-249",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 249,
+          "end": 249
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/249.txt",
+      "notes": "Read priorities, kind requests and the other adult's needs."
+    },
+    {
+      "id": "sfa-tone-baby-text-250",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 250,
+          "end": 250
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/250.txt",
+      "notes": "Read the voluntary conversation and mutual problem-solving examples."
+    },
+    {
+      "id": "sfa-tone-baby-text-251",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 251,
+          "end": 251
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/251.txt",
+      "notes": "Read space to defer a conversation, shared values and regular parenting chats."
+    },
+    {
+      "id": "sfa-tone-baby-text-252",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 252,
+          "end": 252
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/252.txt",
+      "notes": "Read practical planning, listening and appreciation without requiring identical approaches."
+    },
+    {
+      "id": "sfa-tone-baby-text-253",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 253,
+          "end": 253
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/253.txt",
+      "notes": "Read appreciation and caregiver differences, then care-choice framing through the first three years."
+    },
+    {
+      "id": "sfa-tone-baby-text-254",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 254,
+          "end": 254
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/254.txt",
+      "notes": "Read responsive, consistent care, the first-three-years context and availability/budget qualifications."
+    },
+    {
+      "id": "sfa-tone-baby-text-255",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 255,
+          "end": 255
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/255.txt",
+      "notes": "Read warmth, assessing the present setting and possible alternatives within real options."
+    },
+    {
+      "id": "sfa-tone-toddler-text-187",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 187,
+          "end": 187
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/187.txt",
+      "notes": "Read the nonperfection and nonuniversal personal-practice framing."
+    },
+    {
+      "id": "sfa-tone-toddler-text-188",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 188,
+          "end": 188
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/188.txt",
+      "notes": "Read adult needs, trusted help, respite and doctor support for depression."
+    },
+    {
+      "id": "sfa-tone-toddler-text-190",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 190,
+          "end": 190
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/190.txt",
+      "notes": "Read morning practices that can include the children and adaptable personal examples."
+    },
+    {
+      "id": "sfa-tone-toddler-text-199",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 199,
+          "end": 199
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/199.txt",
+      "notes": "Read acceptance of present capacity and self-awareness of adult limits."
+    },
+    {
+      "id": "sfa-tone-toddler-text-200",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 200,
+          "end": 200
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/200.txt",
+      "notes": "Read later reflection, compassion and continued practice."
+    },
+    {
+      "id": "sfa-tone-toddler-text-203",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 203,
+          "end": 203
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/203.txt",
+      "notes": "Read the range of family forms and the place of adult feelings."
+    },
+    {
+      "id": "sfa-tone-toddler-text-204",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 204,
+          "end": 204
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/204.txt",
+      "notes": "Read adult needs and relationships, followed by the parent-preference introduction."
+    },
+    {
+      "id": "sfa-tone-toddler-text-205",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 205,
+          "end": 205
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/205.txt",
+      "notes": "Read different family needs and the nonconditional weekend-planning example."
+    },
+    {
+      "id": "sfa-tone-toddler-text-206",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 206,
+          "end": 206
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/206.txt",
+      "notes": "Read the planning continuation, trusted caregivers and the opening family-on-board guidance."
+    },
+    {
+      "id": "sfa-tone-toddler-text-207",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 207,
+          "end": 207
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/207.txt",
+      "notes": "Read voluntary learning, respect for adults and shared values with different relationships."
+    },
+    {
+      "id": "sfa-tone-toddler-text-208",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 208,
+          "end": 208
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/208.txt",
+      "notes": "Read caregiver participation guided by the child's interests and the caregiver's own interests."
+    },
+    {
+      "id": "sfa-tone-toddler-text-209",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 209,
+          "end": 209
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/209.txt",
+      "notes": "Read common values, acceptance and the start of the voluntary listening exercise."
+    },
+    {
+      "id": "sfa-tone-toddler-text-210",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 210,
+          "end": 210
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/210.txt",
+      "notes": "Read mutual requests and the opening separation discussion with child safety first."
+    },
+    {
+      "id": "sfa-tone-toddler-text-211",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 211,
+          "end": 211
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/211.txt",
+      "notes": "Read stability, factual age-appropriate updates and keeping adult conflict off the child."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "shared-family-tone-r01.9-12.shared-adult-needs-support",
+      "entryId": "shared-adult-needs-support",
+      "placementId": "9-12.shared-adult-needs-support",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.shared-adult-needs-support.json",
+      "snapshotFileSha256": "c9160c7da2a81ca1c4f4f340a1bdbfff3dfa25471877136ceb6a4b3db9b72788",
+      "textPlacementSha256": "5559c0335d40186892cf051a41db3fb2615717d2677f71023c474933811883ac",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sfa-tone-baby-text-235",
+        "sfa-tone-baby-text-236",
+        "sfa-tone-baby-text-237",
+        "sfa-tone-baby-text-238",
+        "sfa-tone-baby-text-244",
+        "sfa-tone-baby-text-245",
+        "sfa-tone-baby-text-246",
+        "sfa-tone-toddler-text-187",
+        "sfa-tone-toddler-text-188",
+        "sf-tone-toddler-text-192",
+        "sf-tone-toddler-text-193",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 235,
+              "end": 238
+            },
+            {
+              "start": 244,
+              "end": 246
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 187,
+              "end": 188
+            },
+            {
+              "start": 192,
+              "end": 193
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The early-month and toddler contexts keep practical help and adult rest available without requiring paid support, while the summary preserves professional help for depression."
+      },
+      "bodyReview": {
+        "entryId": "shared-adult-needs-support",
+        "canonicalEntrySha256": "9eb3d6c99388c760b335570260180e97d59b9e2ae1e5ad17b41e2be4e28a90fb",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-tone-r01.12-18.shared-adult-needs-support",
+      "entryId": "shared-adult-needs-support",
+      "placementId": "12-18.shared-adult-needs-support",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.shared-adult-needs-support.json",
+      "snapshotFileSha256": "53a77ce2dd47c1e7598153ebdb6a1d0c182cbb5cea725cf179ba1487776aed6f",
+      "textPlacementSha256": "6473f2acbe58c6cb65a092eaa8e4aace88e95dede91e334f7a17ceaa4801e531",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sfa-tone-baby-text-235",
+        "sfa-tone-baby-text-236",
+        "sfa-tone-baby-text-237",
+        "sfa-tone-baby-text-238",
+        "sfa-tone-baby-text-244",
+        "sfa-tone-baby-text-245",
+        "sfa-tone-baby-text-246",
+        "sfa-tone-toddler-text-187",
+        "sfa-tone-toddler-text-188",
+        "sf-tone-toddler-text-192",
+        "sf-tone-toddler-text-193",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 235,
+              "end": 238
+            },
+            {
+              "start": 244,
+              "end": 246
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 187,
+              "end": 188
+            },
+            {
+              "start": 192,
+              "end": 193
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The early-month and toddler contexts keep practical help and adult rest available without requiring paid support, while the summary preserves professional help for depression."
+      },
+      "bodyReview": {
+        "entryId": "shared-adult-needs-support",
+        "canonicalEntrySha256": "9eb3d6c99388c760b335570260180e97d59b9e2ae1e5ad17b41e2be4e28a90fb",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-tone-r01.9-12.shared-adult-pause",
+      "entryId": "shared-adult-pause",
+      "placementId": "9-12.shared-adult-pause",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.shared-adult-pause.json",
+      "snapshotFileSha256": "03cce2ec0f4e341273324c506f0e43a0f62e3dfbea421280cf4c2622715a3b55",
+      "textPlacementSha256": "55dd824e370c9a88d48f751ac4f3d4372e20b56a848c9506f489c758a472202f",
+      "artContextSha256": null,
+      "readLogIds": [
+        "eca-tone-text-110",
+        "eca-tone-text-111",
+        "sfa-tone-baby-text-238",
+        "sfa-tone-baby-text-239",
+        "sfa-tone-baby-text-240",
+        "sf-tone-baby-text-241",
+        "sfa-tone-toddler-text-187",
+        "sfa-tone-toddler-text-199",
+        "sfa-tone-toddler-text-200",
+        "sf-tone-toddler-text-194",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 110,
+              "end": 111
+            },
+            {
+              "start": 238,
+              "end": 241
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 187,
+              "end": 187
+            },
+            {
+              "start": 194,
+              "end": 194
+            },
+            {
+              "start": 199,
+              "end": 200
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "All new placements retain a responsive pause rather than a fixed delay, explicitly excluding immediate danger and leaving room for later reflection without self-judgment."
+      },
+      "bodyReview": {
+        "entryId": "shared-adult-pause",
+        "canonicalEntrySha256": "f76130da96f90ba217443bf341dcbcffc5213bee068e55820607ee1aa78d87d5",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-tone-r01.12-18.shared-adult-pause",
+      "entryId": "shared-adult-pause",
+      "placementId": "12-18.shared-adult-pause",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.shared-adult-pause.json",
+      "snapshotFileSha256": "71bcec524bbd47c71c08041eb577e97d4691422a30850d3cfc0d77266a33f58f",
+      "textPlacementSha256": "35ad8541d8ce116a8b9cfb139249774f4fe3f76654d4159b1f50e7aed710b99f",
+      "artContextSha256": null,
+      "readLogIds": [
+        "eca-tone-text-110",
+        "eca-tone-text-111",
+        "sfa-tone-baby-text-238",
+        "sfa-tone-baby-text-239",
+        "sfa-tone-baby-text-240",
+        "sf-tone-baby-text-241",
+        "sfa-tone-toddler-text-187",
+        "sfa-tone-toddler-text-199",
+        "sfa-tone-toddler-text-200",
+        "sf-tone-toddler-text-194",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 110,
+              "end": 111
+            },
+            {
+              "start": 238,
+              "end": 241
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 187,
+              "end": 187
+            },
+            {
+              "start": 194,
+              "end": 194
+            },
+            {
+              "start": 199,
+              "end": 200
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "All new placements retain a responsive pause rather than a fixed delay, explicitly excluding immediate danger and leaving room for later reflection without self-judgment."
+      },
+      "bodyReview": {
+        "entryId": "shared-adult-pause",
+        "canonicalEntrySha256": "f76130da96f90ba217443bf341dcbcffc5213bee068e55820607ee1aa78d87d5",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-tone-r01.9-12.shared-caregiver-common-ground",
+      "entryId": "shared-caregiver-common-ground",
+      "placementId": "9-12.shared-caregiver-common-ground",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.shared-caregiver-common-ground.json",
+      "snapshotFileSha256": "328c6c2ce63376c858953914bf6ec0eaf273a02e4d57a3288272e906fbb55299",
+      "textPlacementSha256": "ad963584926aaac603c78c5597b0c0eafd71ec0cf9b6dc728307128fc0c04a31",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sfa-tone-baby-text-246",
+        "sfa-tone-baby-text-247",
+        "sfa-tone-baby-text-248",
+        "sfa-tone-baby-text-249",
+        "sfa-tone-baby-text-250",
+        "sfa-tone-baby-text-251",
+        "sfa-tone-baby-text-252",
+        "sfa-tone-baby-text-253",
+        "sfa-tone-toddler-text-206",
+        "sfa-tone-toddler-text-207",
+        "sfa-tone-toddler-text-208",
+        "sfa-tone-toddler-text-209",
+        "sfa-tone-toddler-text-210",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 246,
+              "end": 253
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 206,
+              "end": 210
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The age contexts keep this a conversation about everyday differences with trusted caregivers, preserving voluntary requests, mutual listening and appreciation of distinct caring relationships."
+      },
+      "bodyReview": {
+        "entryId": "shared-caregiver-common-ground",
+        "canonicalEntrySha256": "da1c89367248409bc919f6f899ddd6a1f7e35934150e9d2d05418d04401b2943",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-tone-r01.12-18.shared-caregiver-common-ground",
+      "entryId": "shared-caregiver-common-ground",
+      "placementId": "12-18.shared-caregiver-common-ground",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.shared-caregiver-common-ground.json",
+      "snapshotFileSha256": "e722bf1f1e834e1921ed61238d1c9c0a5a651d7006ac49d5f3fe0c5101658231",
+      "textPlacementSha256": "34a987d261cd87ac093581b38a470b436d70b5035f01db06b77589276a10a449",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sfa-tone-baby-text-246",
+        "sfa-tone-baby-text-247",
+        "sfa-tone-baby-text-248",
+        "sfa-tone-baby-text-249",
+        "sfa-tone-baby-text-250",
+        "sfa-tone-baby-text-251",
+        "sfa-tone-baby-text-252",
+        "sfa-tone-baby-text-253",
+        "sfa-tone-toddler-text-206",
+        "sfa-tone-toddler-text-207",
+        "sfa-tone-toddler-text-208",
+        "sfa-tone-toddler-text-209",
+        "sfa-tone-toddler-text-210",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 246,
+              "end": 253
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 206,
+              "end": 210
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The age contexts keep this a conversation about everyday differences with trusted caregivers, preserving voluntary requests, mutual listening and appreciation of distinct caring relationships."
+      },
+      "bodyReview": {
+        "entryId": "shared-caregiver-common-ground",
+        "canonicalEntrySha256": "da1c89367248409bc919f6f899ddd6a1f7e35934150e9d2d05418d04401b2943",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-tone-r01.9-12.shared-choosing-care",
+      "entryId": "shared-choosing-care",
+      "placementId": "9-12.shared-choosing-care",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.shared-choosing-care.json",
+      "snapshotFileSha256": "5ce4301f86933c67cd990708e288c47decfcd4ee405dcd80c2b2e41152b580d6",
+      "textPlacementSha256": "de84d1b70a8e11bb4bdbb01c529c849981b934b0231742a0068f06fe468d27ce",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sfa-tone-baby-text-253",
+        "sfa-tone-baby-text-254",
+        "sfa-tone-baby-text-255"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 253,
+              "end": 255
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The older placements make the Baby source's first-three-years scope explicit, while every age keeps warmth, consistency and the family's available options central without requiring a Montessori setting."
+      },
+      "bodyReview": {
+        "entryId": "shared-choosing-care",
+        "canonicalEntrySha256": "b00e2d2966250d488c4f275a1a1d133e8828f24c547c3eab94de72ae7c0ce2ad",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-tone-r01.12-18.shared-choosing-care",
+      "entryId": "shared-choosing-care",
+      "placementId": "12-18.shared-choosing-care",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.shared-choosing-care.json",
+      "snapshotFileSha256": "50fe835f2acd0229116abf79876a31732da782631a0cb2e06346bebe88cbbbf7",
+      "textPlacementSha256": "0b1891b71b455336d23a47395e365440673b88240f794924203948d819d43cc8",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sfa-tone-baby-text-253",
+        "sfa-tone-baby-text-254",
+        "sfa-tone-baby-text-255"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 253,
+              "end": 255
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The older placements make the Baby source's first-three-years scope explicit, while every age keeps warmth, consistency and the family's available options central without requiring a Montessori setting."
+      },
+      "bodyReview": {
+        "entryId": "shared-choosing-care",
+        "canonicalEntrySha256": "b00e2d2966250d488c4f275a1a1d133e8828f24c547c3eab94de72ae7c0ce2ad",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-tone-r01.9-12.shared-family-needs",
+      "entryId": "shared-family-needs",
+      "placementId": "9-12.shared-family-needs",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.shared-family-needs.json",
+      "snapshotFileSha256": "ae441cc9a148fc755e1fb3d5e5a0b100afd1967e405384496c5311bc729944c1",
+      "textPlacementSha256": "e2ab24206b520ef87e2577dd753ebf76d84b88b40a7770b462d49d3cd61b4857",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sfa-tone-baby-text-244",
+        "sfa-tone-baby-text-245",
+        "sfa-tone-baby-text-246",
+        "sfa-tone-baby-text-247",
+        "sfa-tone-baby-text-251",
+        "sfa-tone-baby-text-252",
+        "sfa-tone-baby-text-253",
+        "sfa-tone-toddler-text-203",
+        "sfa-tone-toddler-text-204",
+        "sfa-tone-toddler-text-205",
+        "sfa-tone-toddler-text-206",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 244,
+              "end": 247
+            },
+            {
+              "start": 251,
+              "end": 253
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 203,
+              "end": 206
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The new contexts assign planning to the adults and retain different family forms, nonconditional attention to the child's needs and a workable rather than perfect outcome."
+      },
+      "bodyReview": {
+        "entryId": "shared-family-needs",
+        "canonicalEntrySha256": "2b681012f29bec4ea9bf3a5b2b09969d0e7af714bdfbc5c6d2adeeb85a1faf75",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-tone-r01.12-18.shared-family-needs",
+      "entryId": "shared-family-needs",
+      "placementId": "12-18.shared-family-needs",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.shared-family-needs.json",
+      "snapshotFileSha256": "90e84a402ffb4c9beb87e81004a817d3016ed4e44e3d9880c622afc2fe1231d2",
+      "textPlacementSha256": "9f95bee3285b779d2b0ae4a6f1d07c511b25449d844ff5097726d2df52c526b8",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sfa-tone-baby-text-244",
+        "sfa-tone-baby-text-245",
+        "sfa-tone-baby-text-246",
+        "sfa-tone-baby-text-247",
+        "sfa-tone-baby-text-251",
+        "sfa-tone-baby-text-252",
+        "sfa-tone-baby-text-253",
+        "sfa-tone-toddler-text-203",
+        "sfa-tone-toddler-text-204",
+        "sfa-tone-toddler-text-205",
+        "sfa-tone-toddler-text-206",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 244,
+              "end": 247
+            },
+            {
+              "start": 251,
+              "end": 253
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 203,
+              "end": 206
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The new contexts assign planning to the adults and retain different family forms, nonconditional attention to the child's needs and a workable rather than perfect outcome."
+      },
+      "bodyReview": {
+        "entryId": "shared-family-needs",
+        "canonicalEntrySha256": "2b681012f29bec4ea9bf3a5b2b09969d0e7af714bdfbc5c6d2adeeb85a1faf75",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-tone-r01.9-12.shared-family-separation",
+      "entryId": "shared-family-separation",
+      "placementId": "9-12.shared-family-separation",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.shared-family-separation.json",
+      "snapshotFileSha256": "70530345a625e3e4d59babce3fc2abd3ddd62c29a69688ab46efc9eca06345d3",
+      "textPlacementSha256": "bb1ff18679174771bf45d94e048116241e18083697f11618228834eaf0d5a5fd",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sfa-tone-baby-text-247",
+        "sfa-tone-toddler-text-210",
+        "sfa-tone-toddler-text-211",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 247,
+              "end": 247
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 210,
+              "end": 211
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Across the new ages the summary preserves safety as the qualification for parental contact, while adult support and age-appropriate updates keep the child from carrying the conflict."
+      },
+      "bodyReview": {
+        "entryId": "shared-family-separation",
+        "canonicalEntrySha256": "b255f1ce2d259ca26c350df871ab3dea2e699506a8713f9f30360205b3b5c015",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-tone-r01.12-18.shared-family-separation",
+      "entryId": "shared-family-separation",
+      "placementId": "12-18.shared-family-separation",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.shared-family-separation.json",
+      "snapshotFileSha256": "438a0f2e8ab45f19a423810d92bac0e2a6607383fb02281a4083f74ade0fef64",
+      "textPlacementSha256": "3a4bc01f18a7cde28a28fa08c66002cc33a10b4d6eb9d80df43fa7ea9ef428cd",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sfa-tone-baby-text-247",
+        "sfa-tone-toddler-text-210",
+        "sfa-tone-toddler-text-211",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 247,
+              "end": 247
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 210,
+              "end": 211
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Across the new ages the summary preserves safety as the qualification for parental contact, while adult support and age-appropriate updates keep the child from carrying the conflict."
+      },
+      "bodyReview": {
+        "entryId": "shared-family-separation",
+        "canonicalEntrySha256": "b255f1ce2d259ca26c350df871ab3dea2e699506a8713f9f30360205b3b5c015",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-tone-r01.9-12.shared-repair",
+      "entryId": "shared-repair",
+      "placementId": "9-12.shared-repair",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.shared-repair.json",
+      "snapshotFileSha256": "f9fdd664de78221eb05a0e9f86c1d091a923c0242e3bb6d21e831cee6c1ac545",
+      "textPlacementSha256": "bd3b3df77482dbd6f9739227db008179adfd55681c359327f0faee34e2762811",
+      "artContextSha256": null,
+      "readLogIds": [
+        "eca-tone-text-111",
+        "sfa-tone-baby-text-112",
+        "sfa-tone-baby-text-238",
+        "sfa-tone-baby-text-239",
+        "sfa-tone-toddler-text-187",
+        "sfa-tone-toddler-text-200",
+        "sf-tone-toddler-text-198",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 111,
+              "end": 112
+            },
+            {
+              "start": 238,
+              "end": 239
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 187,
+              "end": 187
+            },
+            {
+              "start": 198,
+              "end": 198
+            },
+            {
+              "start": 200,
+              "end": 200
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The baby context requires no spoken response, and each placement keeps apology and another attempt focused on the adult's actions without blame or an expectation of perfect parenting."
+      },
+      "bodyReview": {
+        "entryId": "shared-repair",
+        "canonicalEntrySha256": "bd229463b295f6eff67d11e194bbbad311a8409c8e8b4b423419af5b1ce73f45",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-tone-r01.12-18.shared-repair",
+      "entryId": "shared-repair",
+      "placementId": "12-18.shared-repair",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.shared-repair.json",
+      "snapshotFileSha256": "318b0c2afce73c62b86875dad56283755d3c315a759fe3c10fdc4c309122b6c0",
+      "textPlacementSha256": "954efdb475482c2dbcaa5c9cc5731cbf397e4a246df380949070807337ed377e",
+      "artContextSha256": null,
+      "readLogIds": [
+        "eca-tone-text-111",
+        "sfa-tone-baby-text-112",
+        "sfa-tone-baby-text-238",
+        "sfa-tone-baby-text-239",
+        "sfa-tone-toddler-text-187",
+        "sfa-tone-toddler-text-200",
+        "sf-tone-toddler-text-198",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 111,
+              "end": 112
+            },
+            {
+              "start": 238,
+              "end": 239
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 187,
+              "end": 187
+            },
+            {
+              "start": 198,
+              "end": 198
+            },
+            {
+              "start": 200,
+              "end": 200
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The baby context requires no spoken response, and each placement keeps apology and another attempt focused on the adult's actions without blame or an expectation of perfect parenting."
+      },
+      "bodyReview": {
+        "entryId": "shared-repair",
+        "canonicalEntrySha256": "bd229463b295f6eff67d11e194bbbad311a8409c8e8b4b423419af5b1ce73f45",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-tone-r01.9-12.shared-something-for-you",
+      "entryId": "shared-something-for-you",
+      "placementId": "9-12.shared-something-for-you",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.shared-something-for-you.json",
+      "snapshotFileSha256": "f9a37cc08dd4c45d72a89fbdbdddbe2ce14193cdcb45984dc616d1f1f2021662",
+      "textPlacementSha256": "16f9f14254e74576ac41821ff2a30eddefa58427484b29b575a617aee4e65f86",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sfa-tone-baby-text-235",
+        "sfa-tone-baby-text-236",
+        "sfa-tone-baby-text-239",
+        "sfa-tone-baby-text-240",
+        "sf-tone-baby-text-241",
+        "sf-tone-baby-text-242",
+        "sfa-tone-toddler-text-187",
+        "sfa-tone-toddler-text-190",
+        "sf-tone-toddler-text-189",
+        "sf-tone-toddler-text-192",
+        "sf-tone-toddler-text-193",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 235,
+              "end": 236
+            },
+            {
+              "start": 239,
+              "end": 242
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 187,
+              "end": 187
+            },
+            {
+              "start": 189,
+              "end": 190
+            },
+            {
+              "start": 192,
+              "end": 193
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The new contexts make adult enjoyment available during family life while preserving personal choice and routines that can include children when time alone is unavailable."
+      },
+      "bodyReview": {
+        "entryId": "shared-something-for-you",
+        "canonicalEntrySha256": "6488f1305c07855fd68a21f8e981aa8d73906cf4df29ee9903458c02fdc9b9c3",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-tone-r01.12-18.shared-something-for-you",
+      "entryId": "shared-something-for-you",
+      "placementId": "12-18.shared-something-for-you",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.shared-something-for-you.json",
+      "snapshotFileSha256": "f06c2e7b9d372fabe3da43b13f04fd57cc482eb016f8042c5cd6d9c46bd12448",
+      "textPlacementSha256": "2a12bf378b447b904d1cf624bab1b414ab6bc444667051318cc6218addfffff0",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sfa-tone-baby-text-235",
+        "sfa-tone-baby-text-236",
+        "sfa-tone-baby-text-239",
+        "sfa-tone-baby-text-240",
+        "sf-tone-baby-text-241",
+        "sf-tone-baby-text-242",
+        "sfa-tone-toddler-text-187",
+        "sfa-tone-toddler-text-190",
+        "sf-tone-toddler-text-189",
+        "sf-tone-toddler-text-192",
+        "sf-tone-toddler-text-193",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-visual-14"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 235,
+              "end": 236
+            },
+            {
+              "start": 239,
+              "end": 242
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 187,
+              "end": 187
+            },
+            {
+              "start": 189,
+              "end": 190
+            },
+            {
+              "start": 192,
+              "end": 193
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The new contexts make adult enjoyment available during family life while preserving personal choice and routines that can include children when time alone is unavailable."
+      },
+      "bodyReview": {
+        "entryId": "shared-something-for-you",
+        "canonicalEntrySha256": "6488f1305c07855fd68a21f8e981aa8d73906cf4df29ee9903458c02fdc9b9c3",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    }
+  ]
+}

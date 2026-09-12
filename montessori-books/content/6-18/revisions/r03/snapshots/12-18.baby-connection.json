@@ -1,0 +1,140 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-connection",
+        "kind": "invitation",
+        "title": "Let them know before a pickup",
+        "actionLabel": "Connect",
+        "invitation": "When a pickup can wait, let them know and pause for their response.",
+        "summary": "When a pickup can wait, come into view, say what you have in mind, and pause for a response. Necessary care or protection still calls for gentle action.",
+        "cue": "You are about to pick your baby up, and there is time to make it an exchange.",
+        "detail": [
+          "Come where your baby can see you and let them know you would like to pick them up. Wait and notice their expression or movement. If they turn away and the pickup can wait, give them more time.",
+          "Their response is something to listen to, not a certain yes-or-no signal. When care, comfort or protection is needed, the authors describe telling the baby what is happening and acting gently."
+        ],
+        "references": [
+          {
+            "id": "baby-connection.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Respect",
+            "locator": "Ask before handling, attend to gesture and allow processing time",
+            "pdfPages": [
+              {
+                "start": 98,
+                "end": 100
+              },
+              {
+                "start": 102,
+                "end": 102
+              }
+            ]
+          },
+          {
+            "id": "baby-connection.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Kind and clear boundaries; Responsive parenting; When our baby cries",
+            "locator": "Safety limits, prompt care and telling baby before comforting pickup",
+            "pdfPages": [
+              {
+                "start": 103,
+                "end": 103
+              },
+              {
+                "start": 109,
+                "end": 111
+              }
+            ]
+          },
+          {
+            "id": "baby-connection.ref.3",
+            "sourceId": "baby-2021",
+            "section": "When they refuse to get dressed or have a diaper changed",
+            "locator": "Necessary care may proceed gently with communication",
+            "pdfPages": [
+              {
+                "start": 209,
+                "end": 210
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.baby-connection",
+        "entryId": "baby-connection",
+        "ageId": "12-18",
+        "topicIds": [
+          "connection-feelings",
+          "everyday-care"
+        ],
+        "ageContext": {
+          "bookAge": "From birth; no upper age is given for respectful handling.",
+          "readiness": "A pickup can wait, so there is time to announce it and attend to the response."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          },
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 98–100, 102"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 103, 109–111"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 209–210"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "880682ce0d540e937f51ace3efdfee5a6ce5628508c17131df1a7a7e7d8b705e",
+  "artContextSha256": null,
+  "publicProjectionSha256": "26839373842451b300ae8150c04dcdcd2927e866316bfd32fba0926072804603",
+  "provenance": {
+    "revision": "r03",
+    "placementDraft": {
+      "path": "content/6-18/drafts/editorial-r03/02.json",
+      "sha256": "1d5860acf671c24090b0c5b86bd1297bc7b12db5b77e1663b7f75425506a115e"
+    },
+    "canonical": {
+      "entryId": "baby-connection",
+      "canonicalEntrySha256": "94cd17cb3bb058e59df59718625347eb704e287b8d5fdd40637ff157154269d6",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/2",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/2"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

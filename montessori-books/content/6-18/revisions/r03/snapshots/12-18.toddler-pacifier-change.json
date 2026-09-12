@@ -1,0 +1,110 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-pacifier-change",
+        "kind": "perspective",
+        "title": "When your family considers a pacifier change",
+        "summary": "When discussing a young toddler’s pacifier, Davies describes telling the child that a change is coming and giving extra support. The discussion is her approach, not a deadline for this age.",
+        "cue": "A family may be considering a change and wondering how to include the child.",
+        "detail": [
+          "The book describes a gradual move toward less use and asks the adult to notice whether the child is seeking engagement, closeness, or help settling. Those possibilities are invitations to observe, not certain explanations.",
+          "Davies also describes planning the later bedtime change with the child. Her sleep chapter retains support rather than crying alone, and specialist help when persistent difficulties affect the child or family."
+        ],
+        "references": [
+          {
+            "id": "toddler-pacifier-change.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Dealing with changes / Saying goodbye to pacifiers",
+            "locator": "Informing child, gradual planned change, possible needs and extra support",
+            "pdfPages": [
+              {
+                "start": 163,
+                "end": 164
+              }
+            ]
+          },
+          {
+            "id": "toddler-pacifier-change.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "Daily care / Sleeping",
+            "locator": "Connected sleep discussion; support, no crying alone and specialist help",
+            "pdfPages": [
+              {
+                "start": 156,
+                "end": 158
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.toddler-pacifier-change",
+        "entryId": "toddler-pacifier-change",
+        "ageId": "12-18",
+        "topicIds": [
+          "everyday-care"
+        ],
+        "ageContext": {
+          "bookAge": "The passage discusses a young toddler who still uses a pacifier; it does not set a new change deadline.",
+          "readiness": "A family is considering a change and wants to include and support the child.",
+          "note": "Age and readiness sources: The Montessori Toddler, PDF pp. 14."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 163–164"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 156–158"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "3671c8866c5d14306e4a1a0d6bf488cd93fe812337842d7aa824808bb5daddf7",
+  "artContextSha256": null,
+  "publicProjectionSha256": "42f22e66eeabd9940a46a7f44abc662979fce2ed38fa08bfc3653fd37162bf8f",
+  "provenance": {
+    "revision": "r03",
+    "placementDraft": {
+      "path": "content/6-18/drafts/editorial-r03/04.json",
+      "sha256": "08355b5f46c91d41026b565353944e89670fdefc1ebdece4a45b321515d2cb48"
+    },
+    "canonical": {
+      "entryId": "toddler-pacifier-change",
+      "canonicalEntrySha256": "bef99d80e4182f9ac74590eed99713fb1e265cb35409b7848c7b5eeb3d309b82",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/30",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/30"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

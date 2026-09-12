@@ -1,0 +1,99 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-daily-rhythm",
+        "kind": "perspective",
+        "title": "Your baby’s daily rhythm",
+        "summary": "The authors look for a baby’s changing rhythm of feeding, play and sleep, with familiar cues for transitions. Their pattern is a guide to noticing, not a timetable.",
+        "cue": "You are trying to understand what your baby needs next.",
+        "detail": [
+          "Their usual wake–feed–play–sleep sequence varies as the baby grows. Sometimes play comes before a feed, and travel or changes at home can shift what is familiar.",
+          "A repeated phrase or song can signal what is coming. The authors suggest coordinating with other caregivers where possible, while keeping the baby’s own cues in view.",
+          "Family rituals can be part of that familiar world too: a regular park visit, a special breakfast or a celebration from one or more family cultures. The baby can be included before they can contribute much themselves."
+        ],
+        "references": [
+          {
+            "id": "baby-daily-rhythm.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Daily rhythm; Rituals",
+            "locator": "Variable infant rhythm, familiar transition cues and optional family rituals",
+            "pdfPages": [
+              {
+                "start": 180,
+                "end": 182
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "9-12.baby-daily-rhythm",
+        "entryId": "baby-daily-rhythm",
+        "ageId": "9-12",
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "Starts with newborn rhythms and explicitly continues as the child becomes a young toddler.",
+          "readiness": "The baby’s current feeding, play, sleep and family transitions."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "9–12 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 180–182"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "1f7db592f3fbca9c3dcb93238fdb4bbe323376c4bce69802083c5e6312724b7b",
+  "artContextSha256": null,
+  "publicProjectionSha256": "00bcfca3f267d6e13c3f0253985a17d9e94649b0f00bcaa862df3eab3abde494",
+  "provenance": {
+    "revision": "r06",
+    "placementDraft": {
+      "path": "content/6-18/drafts/editorial-r03/02.json",
+      "sha256": "1d5860acf671c24090b0c5b86bd1297bc7b12db5b77e1663b7f75425506a115e"
+    },
+    "canonical": {
+      "entryId": "baby-daily-rhythm",
+      "canonicalEntrySha256": "b89e657fd3eceec72cea57c6f533a524b433f16728c56b2fa2cd26d165c77332",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/22",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/22"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

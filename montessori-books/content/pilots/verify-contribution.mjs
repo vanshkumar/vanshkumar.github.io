@@ -3,11 +3,18 @@ import fs from 'node:fs';
 import {digest} from './review-snapshot.mjs';
 import {loadFrozen,read,hash,write,location} from './contribution-core.mjs';
 import {mechanicallyEqual,requiredReferences,assertReadCoverage} from './lean-review.mjs';
-const [directory,...reviewPaths]=process.argv.slice(2);
+const [directory,...args]=process.argv.slice(2);
+const batchIndex=args.indexOf('--batch');
+const batchPath=batchIndex<0?null:args[batchIndex+1];
+if(batchIndex>=0&&(!batchPath||!batchPath.startsWith('content/')||batchPath.split('/').includes('..')||!batchPath.endsWith('.json')))throw Error('Explicit local batch manifest required');
+const reviewPaths=batchIndex<0?args:args.filter((_,i)=>i!==batchIndex&&i!==batchIndex+1);
 const config=location(directory),{payload,manifest}=loadFrozen(directory);
+const batch=batchPath?read(batchPath):null;
+if(batch&&(!Array.isArray(batch.placementIds)||!batch.placementIds.length||new Set(batch.placementIds).size!==batch.placementIds.length||batch.placementIds.some(id=>!manifest.targetPlacementIds.includes(id))))throw Error('Invalid or unknown batch placements');
+if(batch&&batch.revision!==directory)throw Error('Batch revision mismatch');
 const currentRenderingPath=`${directory}/RENDERED_SURFACES.json`,currentRendering=read(currentRenderingPath);
 if(currentRendering.mode!==manifest.mode||currentRendering.surfaces.length!==manifest.snapshots.length)throw Error('Missing complete current rendering');
-const output=`${directory}/CONTRIBUTION_RECEIPT.json`;
+const output=batchPath?batchPath.replace(/\.json$/,'-RECEIPT.json'):`${directory}/CONTRIBUTION_RECEIPT.json`;
 if(fs.existsSync(output))throw Error('Immutable contribution already verified');
 if(reviewPaths.length<2)throw Error('Explicit source and tone reports required, oldest to newest');
 const authors=new Set(manifest.sources.map(s=>s.author.task));
@@ -23,8 +30,9 @@ const records=reviewPaths.flatMap(file=>{
  if(rendering.mode!=='text-only-contribution')throw Error(`Wrong review mode: ${file}`);
  return bundle.reviews.map(review=>({file,fileSha256:hash(file),bundle,review,rendering}));
 });
-const receipt={revision:manifest.revision,owner:manifest.owner,mode:manifest.mode,verifiedOn:'2026-09-10',manifest:{path:`${directory}/MANIFEST.json`,sha256:hash(`${directory}/MANIFEST.json`)},payload:{path:`${directory}/payload.json`,sha256:hash(`${directory}/payload.json`)},renderedSurfaces:{path:currentRenderingPath,sha256:hash(currentRenderingPath)},registry:manifest.registry,components:[],publication:false,artwork:'Pending actual-image and combination review by Task 8; this receipt approves neither images nor composition.'};
-for(const item of manifest.snapshots){
+const receipt={revision:manifest.revision,owner:manifest.owner,mode:manifest.mode,verifiedOn:new Date().toISOString().slice(0,10),manifest:{path:`${directory}/MANIFEST.json`,sha256:hash(`${directory}/MANIFEST.json`)},payload:{path:`${directory}/payload.json`,sha256:hash(`${directory}/payload.json`)},renderedSurfaces:{path:currentRenderingPath,sha256:hash(currentRenderingPath)},registry:manifest.registry,components:[],publication:false,artwork:'Pending actual-image and combination review by Task 8; this receipt approves neither images nor composition.'};
+if(batch)Object.assign(receipt,{contributionComplete:false,selection:{path:batchPath,sha256:hash(batchPath)},unreviewedPlacementCount:manifest.snapshots.length-batch.placementIds.length});
+for(const item of manifest.snapshots.filter(item=>!batch||batch.placementIds.includes(item.placementId))){
  const snapshot=read(item.path),entry=payload.entries.find(e=>e.id===item.entryId),approvals={};
  for(const role of ['source','tone']){
   const record=[...records].reverse().find(r=>r.bundle.reviewer.role===role&&r.review.placementId===item.placementId&&r.review.entryId===item.entryId&&r.review.textPlacement?.verdict&&

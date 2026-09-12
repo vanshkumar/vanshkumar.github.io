@@ -1,0 +1,134 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "shared-follow-readiness",
+        "kind": "perspective",
+        "title": "Choose activities that fit your child",
+        "summary": "The books use activity ages as guides. They suggest choosing by your child’s present interest and effort, while keeping support available if you have concerns about development.",
+        "cue": "When an age label makes you wonder whether an activity is a fit.",
+        "detail": [
+          "Look at what your child is trying, what holds their attention, and how they respond to a challenge. The books suggest setting aside an activity that is too easy or discouragingly difficult and returning to it when it is a better fit.",
+          "Their purpose is to support a child’s own development. The Baby authors explicitly say to seek support for developmental concerns and explain that specialist guidance is beyond their book. Davies likewise includes learning about differences and getting needed support."
+        ],
+        "principle": {
+          "id": "principle.follow-readiness",
+          "text": "Use ages to find possibilities and observation to consider the fit."
+        },
+        "references": [
+          {
+            "id": "shared.ref.baby.readiness",
+            "sourceId": "baby-2021",
+            "section": "Introduction to activities; Physical disabilities or neurological differences; Activities list for babies",
+            "locator": "Age guidelines, interest/challenge, support for concerns and limits of specialist coverage",
+            "pdfPages": [
+              {
+                "start": 119,
+                "end": 122
+              },
+              {
+                "start": 230,
+                "end": 230
+              },
+              {
+                "start": 294,
+                "end": 294
+              }
+            ]
+          },
+          {
+            "id": "shared.ref.toddler.readiness",
+            "sourceId": "toddler-2019",
+            "section": "Individual development; Montessori activities for the whole child; Cultivate a learning mind-set",
+            "locator": "Individual timelines, indicative activity ages, suitable challenge and support for differences",
+            "pdfPages": [
+              {
+                "start": 29,
+                "end": 29
+              },
+              {
+                "start": 33,
+                "end": 35
+              },
+              {
+                "start": 189,
+                "end": 189
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "9-12.shared-follow-readiness",
+        "entryId": "shared-follow-readiness",
+        "ageId": "9-12",
+        "topicIds": [
+          "play-discovery",
+          "you-family"
+        ],
+        "ageContext": {
+          "note": "General guidance for choosing activities by interest, rather than a skill expected at this age."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "9–12 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "What’s underneath",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          },
+          {
+            "id": "you-family",
+            "label": "For you & your family"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 119–122, 230, 294"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 29, 33–35, 189"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "87084d57f2a36e0e9854ee98a44b85b9526643e36211fbffcad6f9d1747fc2fa",
+  "artContextSha256": null,
+  "publicProjectionSha256": "c38664788c7e12c4fea3a298187ed56a29b615e9cf9ee7988ebe3cd7f68285f2",
+  "provenance": {
+    "revision": "r01",
+    "placementDraft": {
+      "path": "content/6-18/drafts/shared-placements/draft-r01.json",
+      "sha256": "be9ae97ea203dbd01c5f3b346415ee8eff0b483d023b3203be5e24246645ca2f"
+    },
+    "canonical": {
+      "entryId": "shared-follow-readiness",
+      "canonicalEntrySha256": "faf6b70472402cf68b23e4a7351c5c38613801bc3e0185ccc02f79c63b6b762f",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/shared/draft-r02.json",
+        "sha256": "04720cdd2997dc461a619234d74bea952b2fd3c388a49b326dc282f065f39b06",
+        "jsonPointer": "/entries/1",
+        "author": "/root/shared_pilot_draft",
+        "provenancePointer": "/provenance/1"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

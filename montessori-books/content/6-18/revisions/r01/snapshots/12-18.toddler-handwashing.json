@@ -1,0 +1,158 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-handwashing",
+        "kind": "perspective",
+        "title": "A part in washing hands",
+        "summary": "Davies includes handwashing among the care routines toddlers can join, with help as their skills grow. The child does not have to manage every part.",
+        "cue": "Your child may want a turn with the soap, the towel, or a movement they have watched you make.",
+        "detail": [
+          "Her sink example keeps soap and a towel with the routine. She pairs handwashing with other gradually shared care, such as hair brushing and nose wiping.",
+          "The book also describes a separate handwashing table for a child who wants to repeat washing at the sink and can carry a jug. That is a different setup, not something every family needs to create. Ordinary washing together can offer a part to join."
+        ],
+        "references": [
+          {
+            "id": "toddler-handwashing.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Practical life activities by age",
+            "locator": "Handwashing in the earlier chart retained through the later toddler column",
+            "pdfPages": [
+              {
+                "start": 51,
+                "end": 52
+              }
+            ]
+          },
+          {
+            "id": "toddler-handwashing.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "Practical life / Illustrated examples",
+            "locator": "Care of self with gradually increasing participation",
+            "pdfPages": [
+              {
+                "start": 64,
+                "end": 64
+              }
+            ]
+          },
+          {
+            "id": "toddler-handwashing.ref.3",
+            "sourceId": "toddler-2019",
+            "section": "List of Montessori activities for toddlers",
+            "locator": "14+ months: washing hands at sink, soap and towel",
+            "pdfPages": [
+              {
+                "start": 247,
+                "end": 247
+              }
+            ]
+          },
+          {
+            "id": "toddler-handwashing.ref.4",
+            "sourceId": "toddler-2019",
+            "section": "List of Montessori activities for toddlers",
+            "locator": "Separate handwashing table: 18+ months, able to carry a jug, and interested in repeating sink handwashing",
+            "pdfPages": [
+              {
+                "start": 250,
+                "end": 250
+              }
+            ]
+          },
+          {
+            "id": "toddler-handwashing.ref.5",
+            "sourceId": "toddler-2019",
+            "section": "Activity characteristics and general principles",
+            "locator": "Partial participation, slow showing and help",
+            "pdfPages": [
+              {
+                "start": 34,
+                "end": 39
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.toddler-handwashing",
+        "entryId": "toddler-handwashing",
+        "ageId": "12-18",
+        "topicIds": [
+          "everyday-care"
+        ],
+        "ageContext": {
+          "bookAge": "Handwashing:12–18 months in the chart and 14+ months at the sink in the appendix. The separate table setup is 18+ months with jug-carrying readiness.",
+          "readiness": "The child wants a turn with soap, towel or a familiar washing movement.",
+          "note": "Ordinary supported handwashing is the early context. The repeating handwashing-table setup has its own later conditions."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 51–52"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 64"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 247"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 250"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 34–39"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "68a712de157aeb15e55bae07923cbfb183ec0ea0baa9b52c4885e97526118c7b",
+  "artContextSha256": null,
+  "publicProjectionSha256": "7aefa310f42b46a273e733b097ec3c601a8efaed374639b01b8e391be30dc230",
+  "provenance": {
+    "revision": "r01",
+    "placementDraft": {
+      "path": "content/6-18/drafts/toddler-overlap/draft-r01.json",
+      "sha256": "06e6c8d90ca191b9b0b33fb44151f57b10e874a7cf5cf95d94e4bdbed879d4bc"
+    },
+    "canonical": {
+      "entryId": "toddler-handwashing",
+      "canonicalEntrySha256": "5e47a5d4c0f136bfb4f932e4518461577bf745bb67ee7ec4bbfc0e12ad3ea40b",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/54",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/54"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

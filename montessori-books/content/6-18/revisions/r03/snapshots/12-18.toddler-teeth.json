@@ -1,0 +1,126 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-teeth",
+        "kind": "perspective",
+        "title": "Joining in with brushing teeth",
+        "summary": "Davies treats brushing as necessary care, with chances for the child to take part and gentle help from an adult. This is her application of Montessori principles, not official Montessori dental guidance.",
+        "cue": "Your child may want to hold the brush, choose part of the routine, or resist help.",
+        "detail": [
+          "Her examples include choosing a toothbrush, deciding when within the bath routine to brush, and brushing alongside an adult. She treats brushing as necessary care while looking for ways the child can take part.",
+          "The adult remains involved: the appendix offers a child the first turn and the adult a turn to finish. The chapter emphasizes gentle, respectful assistance."
+        ],
+        "references": [
+          {
+            "id": "toddler-teeth.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Daily care / Brushing teeth",
+            "locator": "No official guidelines, choices/modeling, necessary care and gentle assistance",
+            "pdfPages": [
+              {
+                "start": 159,
+                "end": 159
+              }
+            ]
+          },
+          {
+            "id": "toddler-teeth.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "List of Montessori activities for toddlers",
+            "locator": "14+ months: child begins, adult offers to finish",
+            "pdfPages": [
+              {
+                "start": 247,
+                "end": 247
+              }
+            ]
+          },
+          {
+            "id": "toddler-teeth.ref.3",
+            "sourceId": "toddler-2019",
+            "section": "Practical life activities by age",
+            "locator": "12–18 months: brush teeth with assistance",
+            "pdfPages": [
+              {
+                "start": 51,
+                "end": 51
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.toddler-teeth",
+        "entryId": "toddler-teeth",
+        "ageId": "12-18",
+        "topicIds": [
+          "everyday-care"
+        ],
+        "ageContext": {
+          "bookAge": "Brushing with assistance:12–18 months in the chart; child starts/adult finishes:14+ months in the appendix.",
+          "readiness": "A child may want a part in brushing or may resist necessary care.",
+          "note": "Age and readiness sources: The Montessori Toddler, PDF pp. 14."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 159"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 247"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 51"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "b4c715eddf10fa9cff249d1ee63ea4049e5616da8710eafd6407e8d4271f6ceb",
+  "artContextSha256": null,
+  "publicProjectionSha256": "969684eb4d818702739fc0e82ddf034e9fb8a9f7a7e4a0da2620b14c7119a293",
+  "provenance": {
+    "revision": "r03",
+    "placementDraft": {
+      "path": "content/6-18/drafts/editorial-r03/04.json",
+      "sha256": "08355b5f46c91d41026b565353944e89670fdefc1ebdece4a45b321515d2cb48"
+    },
+    "canonical": {
+      "entryId": "toddler-teeth",
+      "canonicalEntrySha256": "e7c625930b31127df375d9bc0028045e2124acf28d9f8ba5cbdc67aaa927b0a9",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/28",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/28"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

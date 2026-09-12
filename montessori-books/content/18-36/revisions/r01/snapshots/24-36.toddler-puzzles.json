@@ -1,0 +1,157 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-puzzles",
+        "kind": "invitation",
+        "title": "Take a puzzle apart, and try a piece",
+        "summary": "A simple puzzle can be interesting before your child can put it back together. Offer a manageable challenge and help them repeat the part they enjoy.",
+        "cue": "Notice whether they are lifting pieces out, turning them, or trying to fit one into the base.",
+        "detail": [
+          "Davies begins with simple knob puzzles. If your child mostly removes the pieces, you can replace them so there is another chance to take them out.",
+          "When a piece becomes frustrating, offer to show a slow turn or give a small cue, then see how they continue. A harder puzzle can wait. Supervise any activity with small parts."
+        ],
+        "references": [
+          {
+            "id": "toddler-puzzles.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Eye-hand coordination / Puzzles",
+            "locator": "Taking apart, simple knob puzzles and gradually increasing difficulty",
+            "pdfPages": [
+              {
+                "start": 45,
+                "end": 46
+              }
+            ]
+          },
+          {
+            "id": "toddler-puzzles.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "Eye-hand coordination / Illustrated examples",
+            "locator": "No.1 peg puzzle and age caption",
+            "pdfPages": [
+              {
+                "start": 59,
+                "end": 60
+              }
+            ]
+          },
+          {
+            "id": "toddler-puzzles.ref.3",
+            "sourceId": "toddler-2019",
+            "section": "List of Montessori activities for toddlers",
+            "locator": "12–14+ months: Puzzles",
+            "pdfPages": [
+              {
+                "start": 246,
+                "end": 246
+              }
+            ]
+          },
+          {
+            "id": "toddler-puzzles.ref.4",
+            "sourceId": "toddler-2019",
+            "section": "Building concentration / Dealing with frustration",
+            "locator": "Small demonstration or verbal cue; declined help and trying later",
+            "pdfPages": [
+              {
+                "start": 177,
+                "end": 178
+              }
+            ]
+          },
+          {
+            "id": "toddler-puzzles.ref.5",
+            "sourceId": "toddler-2019",
+            "section": "General principles",
+            "locator": "Adapt challenge; supervise small parts",
+            "pdfPages": [
+              {
+                "start": 39,
+                "end": 39
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "24-36.toddler-puzzles",
+        "entryId": "toddler-puzzles",
+        "ageId": "24-36",
+        "topicIds": [
+          "play-discovery"
+        ],
+        "ageContext": {
+          "bookAge": "The appendix begins knobbed puzzles at 12–14+ months; the chapter adds difficulty from about 18 months.",
+          "readiness": "Interest in removing or fitting pieces; the challenge can be simplified and the adult can help."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "2–3 years",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 45–46"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 59–60"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 246"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 177–178"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 39"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "2c7a0811311ddc445c93fad04f7839ca6170cbea986d436eee4456cdaa699fe8",
+  "artContextSha256": null,
+  "publicProjectionSha256": "200f6c5687fd0f444ca77ba299893c9cc02d55b4dc3f43ec478d0021d2f878fc",
+  "provenance": {
+    "revision": "r01",
+    "placementDraft": {
+      "path": "content/18-36/placements/play-reuse-r02.json",
+      "sha256": "6216065d3787cd9143a4cf00d81889f56eb73a77690495619f0aa10916f9e4f2"
+    },
+    "canonical": {
+      "entryId": "toddler-puzzles",
+      "canonicalEntrySha256": "df7e45529a65f89beb0fb5ad2ee63ba73d517d88b4f133acffe1525448299800",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/3",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/3"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

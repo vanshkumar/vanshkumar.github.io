@@ -1,0 +1,173 @@
+{
+  "revision": "content/6-18/revisions/r04",
+  "name": "infant-play-corrected",
+  "entryIds": [
+    "baby-languages",
+    "infant-rings-and-posts",
+    "infant-pegs-and-cubes",
+    "infant-slot-posting",
+    "infant-opening-and-keys"
+  ],
+  "placementIds": [
+    "9-12.baby-languages",
+    "12-18.baby-languages",
+    "6-9.infant-rings-and-posts",
+    "9-12.infant-rings-and-posts",
+    "12-18.infant-rings-and-posts",
+    "18-24.infant-rings-and-posts",
+    "24-36.infant-rings-and-posts",
+    "9-12.infant-pegs-and-cubes",
+    "12-18.infant-pegs-and-cubes",
+    "18-24.infant-pegs-and-cubes",
+    "24-36.infant-pegs-and-cubes",
+    "12-18.infant-slot-posting",
+    "18-24.infant-slot-posting",
+    "24-36.infant-slot-posting",
+    "12-18.infant-opening-and-keys",
+    "18-24.infant-opening-and-keys",
+    "24-36.infant-opening-and-keys"
+  ],
+  "packets": [
+    {
+      "id": "baby-languages",
+      "path": "tmp/editorial/infant-play-corrected/baby-languages.json",
+      "sha256": "f61580208e4a1e8e142001a351f5322feee283da88bffa12bccaa43697ca82c2",
+      "bytes": 10346,
+      "placementIds": [
+        "9-12.baby-languages",
+        "12-18.baby-languages"
+      ],
+      "sourcePages": {
+        "baby": [
+          41,
+          130,
+          139
+        ]
+      }
+    },
+    {
+      "id": "infant-rings-and-posts",
+      "path": "tmp/editorial/infant-play-corrected/infant-rings-and-posts.json",
+      "sha256": "03d01f3c514a71374a24cdc89369249e46a1b32527ecf74cd1fe8d848f5eb963",
+      "bytes": 24264,
+      "placementIds": [
+        "6-9.infant-rings-and-posts",
+        "9-12.infant-rings-and-posts",
+        "12-18.infant-rings-and-posts",
+        "18-24.infant-rings-and-posts",
+        "24-36.infant-rings-and-posts"
+      ],
+      "sourcePages": {
+        "baby": [
+          119,
+          120,
+          121,
+          122,
+          159,
+          167,
+          168,
+          169,
+          294,
+          301,
+          302
+        ],
+        "toddler": [
+          39,
+          43,
+          246,
+          248
+        ]
+      }
+    },
+    {
+      "id": "infant-pegs-and-cubes",
+      "path": "tmp/editorial/infant-play-corrected/infant-pegs-and-cubes.json",
+      "sha256": "1621684c82f458d4ef8dd381f47158df11772ab620f4ce390a4ab580064b83e7",
+      "bytes": 18795,
+      "placementIds": [
+        "9-12.infant-pegs-and-cubes",
+        "12-18.infant-pegs-and-cubes",
+        "18-24.infant-pegs-and-cubes",
+        "24-36.infant-pegs-and-cubes"
+      ],
+      "sourcePages": {
+        "baby": [
+          119,
+          120,
+          121,
+          122,
+          167,
+          168,
+          169,
+          175,
+          176,
+          294,
+          303
+        ],
+        "toddler": [
+          39,
+          246
+        ]
+      }
+    },
+    {
+      "id": "infant-slot-posting",
+      "path": "tmp/editorial/infant-play-corrected/infant-slot-posting.json",
+      "sha256": "f2b61efacaeb835f99f2298072a35a5d3edee6830482151c71d809254a77476f",
+      "bytes": 15838,
+      "placementIds": [
+        "12-18.infant-slot-posting",
+        "18-24.infant-slot-posting",
+        "24-36.infant-slot-posting"
+      ],
+      "sourcePages": {
+        "baby": [
+          119,
+          120,
+          121,
+          122,
+          167,
+          168,
+          169,
+          294,
+          303
+        ],
+        "toddler": [
+          39,
+          44,
+          59,
+          60
+        ]
+      }
+    },
+    {
+      "id": "infant-opening-and-keys",
+      "path": "tmp/editorial/infant-play-corrected/infant-opening-and-keys.json",
+      "sha256": "7292c4f98d3b816433bbd5873cd3be91dc1abf15b700f78823f193554456d1d9",
+      "bytes": 15744,
+      "placementIds": [
+        "12-18.infant-opening-and-keys",
+        "18-24.infant-opening-and-keys",
+        "24-36.infant-opening-and-keys"
+      ],
+      "sourcePages": {
+        "baby": [
+          119,
+          120,
+          121,
+          122,
+          294,
+          301,
+          303
+        ],
+        "toddler": [
+          39,
+          44,
+          246
+        ]
+      }
+    }
+  ],
+  "sourcePageDirectory": "tmp/editorial/sources",
+  "publication": false
+}

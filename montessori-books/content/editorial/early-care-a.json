@@ -1,0 +1,196 @@
+{
+  "revision": "content/birth-6/revisions/r03",
+  "name": "early-care-a",
+  "entryIds": [
+    "early-newborn-surroundings",
+    "baby-feeding-connection",
+    "early-feeding-cues",
+    "baby-daily-rhythm",
+    "baby-sleep-support",
+    "baby-pacifier",
+    "baby-crying",
+    "early-connection-in-nicu"
+  ],
+  "placementIds": [
+    "0-3.early-newborn-surroundings",
+    "0-3.baby-feeding-connection",
+    "3-6.baby-feeding-connection",
+    "0-3.early-feeding-cues",
+    "3-6.early-feeding-cues",
+    "6-9.early-feeding-cues",
+    "9-12.early-feeding-cues",
+    "0-3.baby-daily-rhythm",
+    "3-6.baby-daily-rhythm",
+    "0-3.baby-sleep-support",
+    "3-6.baby-sleep-support",
+    "0-3.baby-pacifier",
+    "3-6.baby-pacifier",
+    "0-3.baby-crying",
+    "3-6.baby-crying",
+    "0-3.early-connection-in-nicu",
+    "3-6.early-connection-in-nicu"
+  ],
+  "packets": [
+    {
+      "id": "early-newborn-surroundings",
+      "path": "tmp/editorial/early-care-a/early-newborn-surroundings.json",
+      "sha256": "0ab1a20050a76c59545d9aeecbc64257aaced31404007b47dc868d06d5f9dda2",
+      "bytes": 9546,
+      "placementIds": [
+        "0-3.early-newborn-surroundings"
+      ],
+      "sourcePages": {
+        "baby": [
+          54,
+          55,
+          56,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ]
+      }
+    },
+    {
+      "id": "baby-feeding-connection",
+      "path": "tmp/editorial/early-care-a/baby-feeding-connection.json",
+      "sha256": "1576e71965c682b2b110a2878d1988a9a91b504034b57576bc96a906d36ea963",
+      "bytes": 9409,
+      "placementIds": [
+        "0-3.baby-feeding-connection",
+        "3-6.baby-feeding-connection"
+      ],
+      "sourcePages": {
+        "baby": [
+          41,
+          182,
+          183,
+          184,
+          185
+        ]
+      }
+    },
+    {
+      "id": "early-feeding-cues",
+      "path": "tmp/editorial/early-care-a/early-feeding-cues.json",
+      "sha256": "bc9206b3aef60de972760f6e2b9e082b639553390a93da11e3f1cca8c683e725",
+      "bytes": 17821,
+      "placementIds": [
+        "0-3.early-feeding-cues",
+        "3-6.early-feeding-cues",
+        "6-9.early-feeding-cues",
+        "9-12.early-feeding-cues"
+      ],
+      "sourcePages": {
+        "baby": [
+          109,
+          110,
+          111,
+          182,
+          183,
+          184,
+          185,
+          186
+        ]
+      }
+    },
+    {
+      "id": "baby-daily-rhythm",
+      "path": "tmp/editorial/early-care-a/baby-daily-rhythm.json",
+      "sha256": "a193179bdb2eab3a20290dc65f0efa8fc57d14bd76a57c884e752e92475d7cc1",
+      "bytes": 6943,
+      "placementIds": [
+        "0-3.baby-daily-rhythm",
+        "3-6.baby-daily-rhythm"
+      ],
+      "sourcePages": {
+        "baby": [
+          180,
+          181,
+          182
+        ]
+      }
+    },
+    {
+      "id": "baby-sleep-support",
+      "path": "tmp/editorial/early-care-a/baby-sleep-support.json",
+      "sha256": "774ec42f8f3b42a3187844cb253e5873f784853ca31136380bc81133003ec505",
+      "bytes": 10595,
+      "placementIds": [
+        "0-3.baby-sleep-support",
+        "3-6.baby-sleep-support"
+      ],
+      "sourcePages": {
+        "baby": [
+          76,
+          193,
+          194,
+          195,
+          196,
+          197,
+          198,
+          199,
+          200,
+          201
+        ]
+      }
+    },
+    {
+      "id": "baby-pacifier",
+      "path": "tmp/editorial/early-care-a/baby-pacifier.json",
+      "sha256": "1051c79b38572796c47b968a7d23388ebe62041d9023c97d23eb224230efcc4d",
+      "bytes": 8006,
+      "placementIds": [
+        "0-3.baby-pacifier",
+        "3-6.baby-pacifier"
+      ],
+      "sourcePages": {
+        "baby": [
+          76,
+          132,
+          199,
+          213,
+          214
+        ]
+      }
+    },
+    {
+      "id": "baby-crying",
+      "path": "tmp/editorial/early-care-a/baby-crying.json",
+      "sha256": "025d293420f998ee42277847be8dd7dff6fd8628a4518da9154e0580b0f11dac",
+      "bytes": 9521,
+      "placementIds": [
+        "0-3.baby-crying",
+        "3-6.baby-crying"
+      ],
+      "sourcePages": {
+        "baby": [
+          109,
+          110,
+          111,
+          215,
+          216
+        ]
+      }
+    },
+    {
+      "id": "early-connection-in-nicu",
+      "path": "tmp/editorial/early-care-a/early-connection-in-nicu.json",
+      "sha256": "2ff62f38b819d1b02a118172d0f1cf21c3f17b7e8a8ec3f64763515f9a3a7ad6",
+      "bytes": 10304,
+      "placementIds": [
+        "0-3.early-connection-in-nicu",
+        "3-6.early-connection-in-nicu"
+      ],
+      "sourcePages": {
+        "baby": [
+          229
+        ]
+      }
+    }
+  ],
+  "sourcePageDirectory": "tmp/editorial/sources",
+  "publication": false
+}

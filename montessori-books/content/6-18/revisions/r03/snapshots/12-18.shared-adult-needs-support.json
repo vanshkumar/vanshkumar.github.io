@@ -1,0 +1,130 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "shared-adult-needs-support",
+        "kind": "perspective",
+        "title": "Rest and support for you",
+        "summary": "Both books include food, rest, and support for the adult as part of family life. They describe asking for help when depleted, and seeking a doctor’s help for depression.",
+        "cue": "When looking after everyone else is leaving little room for you.",
+        "detail": [
+          "The authors describe practical help as well as emotional company. A trusted friend, relative, partner if you have one, or another caregiver may be able to share some of the work. Paid help is one possibility when it is accessible.",
+          "In The Montessori Baby, help can mean a meal or a household task so you can spend time with your baby. The authors suggest a visible list of useful jobs for visitors who want to help, especially when you are too tired to work out what to ask for.",
+          "The Baby authors direct readers struggling with postpartum depression toward a doctor or trusted health professional. Davies also describes getting a doctor’s help when feeling depressed. These help-seeking passages sit alongside the books’ ordinary ideas for rest and support."
+        ],
+        "principle": {
+          "id": "principle.adult-capacity-and-repair",
+          "text": "Care for the adult is part of caring for the family."
+        },
+        "references": [
+          {
+            "id": "shared.ref.baby.adult-support",
+            "sourceId": "baby-2021",
+            "section": "Preparation of the adult; We don’t walk alone; It’s okay to ask for help",
+            "locator": "Adult needs, practical/emotional support, paid-help limits, depression help and visible household-help list",
+            "pdfPages": [
+              {
+                "start": 234,
+                "end": 238
+              },
+              {
+                "start": 241,
+                "end": 241
+              },
+              {
+                "start": 244,
+                "end": 246
+              }
+            ]
+          },
+          {
+            "id": "shared.ref.toddler.adult-support",
+            "sourceId": "toddler-2019",
+            "section": "Preparation of the adult; Physical self-care; Fill our emotional bucket; Parents are people, too; Grandparents and caregivers",
+            "locator": "Personal-practice framing, trusted help, doctor support for depression, wider networks and parent respite",
+            "pdfPages": [
+              {
+                "start": 187,
+                "end": 188
+              },
+              {
+                "start": 192,
+                "end": 193
+              },
+              {
+                "start": 203,
+                "end": 204
+              },
+              {
+                "start": 209,
+                "end": 209
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.shared-adult-needs-support",
+        "entryId": "shared-adult-needs-support",
+        "ageId": "12-18",
+        "topicIds": [
+          "you-family"
+        ]
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "What’s underneath",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "you-family",
+            "label": "For you & your family"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 234–238, 241, 244–246"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 187–188, 192–193, 203–204, 209"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "6473f2acbe58c6cb65a092eaa8e4aace88e95dede91e334f7a17ceaa4801e531",
+  "artContextSha256": null,
+  "publicProjectionSha256": "0107eced2936e9a8e8cd035cb85204854d40b9478f348c4ab4fdd70193ff4962",
+  "provenance": {
+    "revision": "r03",
+    "placementDraft": {
+      "path": "content/6-18/drafts/shared-placements/draft-r01.json",
+      "sha256": "be9ae97ea203dbd01c5f3b346415ee8eff0b483d023b3203be5e24246645ca2f"
+    },
+    "canonical": {
+      "entryId": "shared-adult-needs-support",
+      "canonicalEntrySha256": "9eb3d6c99388c760b335570260180e97d59b9e2ae1e5ad17b41e2be4e28a90fb",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/shared/draft-r02.json",
+        "sha256": "04720cdd2997dc461a619234d74bea952b2fd3c388a49b326dc282f065f39b06",
+        "jsonPointer": "/entries/6",
+        "author": "/root/shared_pilot_draft",
+        "provenancePointer": "/provenance/6"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "revision": "content/birth-6/revisions/r02",
+  "name": "early-play-a-corrected",
+  "entryIds": [
+    "early-shadows",
+    "baby-movement",
+    "baby-treasure-baskets"
+  ],
+  "placementIds": [
+    "0-3.early-shadows",
+    "3-6.early-shadows",
+    "0-3.baby-movement",
+    "3-6.baby-movement",
+    "3-6.baby-treasure-baskets"
+  ],
+  "packets": [
+    {
+      "id": "early-shadows",
+      "path": "tmp/editorial/early-play-a-corrected/early-shadows.json",
+      "sha256": "f8f8af78c0697b87f9635f8b7fd487f88e989eb615497d784f836e312840b741",
+      "bytes": 9694,
+      "placementIds": [
+        "0-3.early-shadows",
+        "3-6.early-shadows"
+      ],
+      "sourcePages": {
+        "baby": [
+          150,
+          151,
+          152,
+          287,
+          288,
+          289
+        ]
+      }
+    },
+    {
+      "id": "baby-movement",
+      "path": "tmp/editorial/early-play-a-corrected/baby-movement.json",
+      "sha256": "6c5ea5bffe69a7aa114de7c6e5ab821d4d9171afd4d45759b36efd83a807bf14",
+      "bytes": 14562,
+      "placementIds": [
+        "0-3.baby-movement",
+        "3-6.baby-movement"
+      ],
+      "sourcePages": {
+        "baby": [
+          107,
+          108,
+          119,
+          120,
+          126,
+          144,
+          145,
+          155,
+          156,
+          157,
+          158,
+          159,
+          162,
+          294
+        ]
+      }
+    },
+    {
+      "id": "baby-treasure-baskets",
+      "path": "tmp/editorial/early-play-a-corrected/baby-treasure-baskets.json",
+      "sha256": "c4415cd56c8757b0503692c33b12cfaf73da5808bbc9498f800dc49c8805d58a",
+      "bytes": 7784,
+      "placementIds": [
+        "3-6.baby-treasure-baskets"
+      ],
+      "sourcePages": {
+        "baby": [
+          120,
+          159,
+          160,
+          290,
+          294,
+          299
+        ]
+      }
+    }
+  ],
+  "sourcePageDirectory": "tmp/editorial/sources",
+  "publication": false
+}

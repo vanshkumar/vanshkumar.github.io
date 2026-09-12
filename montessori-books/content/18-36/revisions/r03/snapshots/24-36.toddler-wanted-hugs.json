@@ -1,0 +1,109 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-wanted-hugs",
+        "kind": "everyday-situation",
+        "title": "A hug can be offered",
+        "summary": "Offer affection and notice whether it is welcome. Davies gives children a say in ordinary touch while keeping the adult’s responsibility to protect them.",
+        "cue": "A child pulls away from a hug, or your enthusiastic toddler approaches another child.",
+        "detail": [
+          "When a child withdraws, you can help the other child notice: they may not want a hug just now. Davies suggests checking rather than demanding affection.",
+          "She applies the same respect to adults offering hugs or elective help. Necessary care and immediate protection still call for gentle adult action; a child’s refusal does not remove that responsibility."
+        ],
+        "references": [
+          {
+            "id": "toddler-wanted-hugs.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Skills for introverted toddlers / Respectful contact",
+            "locator": "Peer withdrawal, offered hugs and the child’s say in touch",
+            "pdfPages": [
+              {
+                "start": 173,
+                "end": 173
+              }
+            ]
+          },
+          {
+            "id": "toddler-wanted-hugs.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "Setting limits",
+            "locator": "Necessary gentle care and immediate protective action",
+            "pdfPages": [
+              {
+                "start": 131,
+                "end": 133
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "24-36.toddler-wanted-hugs",
+        "entryId": "toddler-wanted-hugs",
+        "ageId": "24-36",
+        "topicIds": [
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "readiness": "A child pulls away from a hug, or your enthusiastic toddler approaches another child.",
+          "note": "Age and readiness sources: The Montessori Toddler, PDF pp. 14."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "2–3 years",
+        "kindLabel": "An everyday situation",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 173"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 131–133"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "e1a254ea4083691771d8f542585510b7e1f3ec4a61b089e57bf5914f3f633a7e",
+  "artContextSha256": null,
+  "publicProjectionSha256": "ab5ff685871f4cb4e660e200f0c8a154a3140b7649eba0a404e4e5c6110cb558",
+  "provenance": {
+    "revision": "r03",
+    "placementDraft": {
+      "path": "content/18-36/drafts/editorial-r02/31.json",
+      "sha256": "bab1969e2cba983a089b3163f76b2b266f5a01de749735f18d5b4bb008e7ba19"
+    },
+    "canonical": {
+      "entryId": "toddler-wanted-hugs",
+      "canonicalEntrySha256": "562c08420ebb31e1d21e8dfa3c6079482e06e346ee9146a3285e7d6b51a46aa4",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/42",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/42"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

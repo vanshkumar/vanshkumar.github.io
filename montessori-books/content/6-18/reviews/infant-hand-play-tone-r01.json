@@ -1,0 +1,3194 @@
+{
+  "id": "infant-hand-play-tone-r01",
+  "workflow": "lean-v1",
+  "reviewer": {
+    "task": "/root/trial_tone",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-12",
+  "scope": "Explicit grouped source-topic decisions; exact age contexts reviewed.",
+  "renderedSurfaces": {
+    "path": "content/6-18/revisions/r03/RENDERED_SURFACES.json",
+    "sha256": "d9f89961e42f76704f4b6dbd555e0a9dc53cd8d40bd4d2326c0e7b4a3c7299f6"
+  },
+  "decisionInput": {
+    "path": "content/6-18/reviews/decisions/infant-hand-play-tone-r01.json",
+    "sha256": "ea50aa2f2293a79a09f351f2ab7920c2a318ba615d56ccfe8ac3b1c50de08fe4"
+  },
+  "readingBasis": [],
+  "retainedReads": [
+    {
+      "path": "content/birth-6/reviews/trial-tone-r01.json",
+      "sha256": "ebcca701f4e592e85a60b3587c5c7d57fef12089b76bf1930b98a5b0a5840490",
+      "readLogIds": [
+        "tone-framing",
+        "tone-sitting",
+        "tone-visual-299"
+      ]
+    },
+    {
+      "path": "content/birth-6/reviews/early-play-a-tone-r01.json",
+      "sha256": "d3c16582e54860a60e26af4a4fc78333e4f5700be1a9df00699805cc80ddc61a",
+      "readLogIds": [
+        "epa-tone-text-154",
+        "epa-tone-text-155",
+        "epa-tone-text-156",
+        "epa-tone-text-157",
+        "epa-tone-text-161"
+      ]
+    },
+    {
+      "path": "content/6-18/reviews/decisions/infant-language-movement-tone-r01.json",
+      "sha256": "eab9b0bba53fe5809ab1772dda6b086f2eb18d3d2c1b4f009548720709e4e8f6",
+      "readLogIds": [
+        "ilm-tone-text-162",
+        "ilm-tone-text-163",
+        "ilm-tone-text-164",
+        "ilm-tone-text-167",
+        "ilm-tone-text-168",
+        "ilm-tone-text-169",
+        "ilm-tone-text-293",
+        "ilm-tone-text-294"
+      ]
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "tone-framing",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 123
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/review-trial/source-framing.txt",
+      "notes": "Read the guidance on individual pace, observation, child control, suitable materials, frustration, and parent role."
+    },
+    {
+      "id": "tone-sitting",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 158,
+          "end": 160
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/review-trial/source-sitting.txt",
+      "notes": "Read the movement context and the encouragement to wait for self-initiated sitting."
+    },
+    {
+      "id": "tone-visual-299",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 299,
+          "end": 299
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/review-trial/baby-299.png",
+      "notes": "Inspected the suction-cup toy row's alternative age and sitting cue, fixed-base description, and batting, reaching, and grasping actions."
+    },
+    {
+      "id": "epa-tone-text-154",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 154,
+          "end": 154
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/154.txt",
+      "notes": "Read attachment strength, the differing bell and ring interactions, and independent rattle-retrieval readiness."
+    },
+    {
+      "id": "epa-tone-text-155",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 155,
+          "end": 155
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/155.txt",
+      "notes": "Read grasping variation, mouth suitability, free floor movement, and the authors' awake-positioning discussion."
+    },
+    {
+      "id": "epa-tone-text-156",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 156,
+          "end": 156
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/156.txt",
+      "notes": "Read comfort adjustments, nearby interest, and the slow-rolling object's slithering condition."
+    },
+    {
+      "id": "epa-tone-text-157",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 157,
+          "end": 157
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/157.txt",
+      "notes": "Read the 3–6 observation prompts and the transition into the 6–9 movement discussion."
+    },
+    {
+      "id": "epa-tone-text-161",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 161,
+          "end": 161
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/161.txt",
+      "notes": "Read the rotating-drum, seated forward-reaching mobile, and independent container-exploration examples."
+    },
+    {
+      "id": "ilm-tone-text-162",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 162,
+          "end": 162
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/162.txt",
+      "notes": "Read the 6–9-month observation unit and the heading/framing for 9–12 months."
+    },
+    {
+      "id": "ilm-tone-text-163",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 163,
+          "end": 163
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/163.txt",
+      "notes": "Read self-initiated cruising and the complete push-wagon introduction."
+    },
+    {
+      "id": "ilm-tone-text-164",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 164,
+          "end": 164
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/164.txt",
+      "notes": "Read supervised stairs, help learning descent and individual walking timing."
+    },
+    {
+      "id": "ilm-tone-text-167",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 167,
+          "end": 167
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/167.txt",
+      "notes": "Read the complete fine-motor discussion on posting, fitting, rings and material suitability."
+    },
+    {
+      "id": "ilm-tone-text-168",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 168,
+          "end": 168
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/168.txt",
+      "notes": "Read taking puzzle pieces out, drawers, and the 9–12-month observation unit."
+    },
+    {
+      "id": "ilm-tone-text-169",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 169,
+          "end": 169
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/169.txt",
+      "notes": "Read the observation continuation and adapting support to the individual baby."
+    },
+    {
+      "id": "ilm-tone-text-293",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 293,
+          "end": 293
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/293.txt",
+      "notes": "Read the monthly care, movement and wagon context with its shorter pull-up wording."
+    },
+    {
+      "id": "ilm-tone-text-294",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/294.txt",
+      "notes": "Reread the monthly climbing continuation and the activity list's guideline-age framing."
+    },
+    {
+      "id": "ihp-tone-baby-text-120",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 120,
+          "end": 120
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/120.txt",
+      "notes": "Material choice separately covers mouthing-safe finishes, object/component size and secure parts."
+    },
+    {
+      "id": "ihp-tone-toddler-text-39",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 39,
+          "end": 39
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/39.txt",
+      "notes": "Adjusting challenge, using available household materials and calm adult supervision."
+    },
+    {
+      "id": "ihp-tone-toddler-text-43",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 43,
+          "end": 43
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/43.txt",
+      "notes": "Ring removal before replacement, later matching, and distinct threading movements."
+    },
+    {
+      "id": "ihp-tone-toddler-text-44",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 44,
+          "end": 44
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/44.txt",
+      "notes": "Increasingly precise posting, opening and closing, lockboxes and hand movements."
+    },
+    {
+      "id": "ihp-tone-toddler-text-60",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 60,
+          "end": 60
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/60.txt",
+      "notes": "Photograph captions distinguish posting from around 16 months and opening/closing from 18 months."
+    },
+    {
+      "id": "ihp-tone-toddler-text-246",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 246,
+          "end": 246
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/246.txt",
+      "notes": "Appendix rows for graded rings, peg box, cubes, opening/closing and locks with an attached key."
+    },
+    {
+      "id": "ihp-tone-toddler-text-248",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 248,
+          "end": 248
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/248.txt",
+      "notes": "Appendix ages and descriptions for horizontal/serpentine dowels and colored pegs."
+    },
+    {
+      "id": "ihp-tone-baby-visual-175",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 175,
+          "end": 175
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/baby/175.png",
+      "notes": "Illustrated movement grid establishes the 9–12-month heading continued on the next page."
+    },
+    {
+      "id": "ihp-tone-baby-visual-176",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 176,
+          "end": 176
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/baby/176.png",
+      "notes": "Illustrated 9–12-month grid includes hand-pushed balls, peg box and cubes on a dowel."
+    },
+    {
+      "id": "ihp-tone-baby-visual-300",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 300,
+          "end": 300
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/baby/300.png",
+      "notes": "Distinct egg/cube, tray-box, creeping basket, stair and ball-tracker age/readiness rows."
+    },
+    {
+      "id": "ihp-tone-baby-visual-301",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 301,
+          "end": 301
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/baby/301.png",
+      "notes": "Stable-sitting and prior-skill ring rows; spinning top, drawer boxes, push balls and attached furniture key."
+    },
+    {
+      "id": "ihp-tone-baby-visual-302",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 302,
+          "end": 302
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/baby/302.png",
+      "notes": "Cabinet/drawer, basket-ring, napkin-ring and graded-ring rows with separate age labels."
+    },
+    {
+      "id": "ihp-tone-baby-visual-303",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 303,
+          "end": 303
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/baby/303.png",
+      "notes": "12+ peg/cube/opening rows and separate around-13+ locks and slotted-box rows."
+    },
+    {
+      "id": "ihp-tone-toddler-visual-59",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 59,
+          "end": 59
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/59.png",
+      "notes": "Numbered photographs connect the coin-slot box and other hand activities to their captions."
+    },
+    {
+      "id": "ihp-tone-toddler-visual-60",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 60,
+          "end": 60
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/60.png",
+      "notes": "Full caption page confirms the photograph-specific posting and opening/closing ages."
+    },
+    {
+      "id": "ihp-tone-toddler-visual-246",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 246,
+          "end": 246
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/246.png",
+      "notes": "Full table preserves separate 12+ material rows and around-13+ strongly attached key row."
+    },
+    {
+      "id": "ihp-tone-toddler-visual-248",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 248,
+          "end": 248
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/248.png",
+      "notes": "Full table preserves the distinct horizontal, serpentine and colored-ring age rows."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "infant-hand-play-tone-r01.6-9.infant-ball-tracker",
+      "entryId": "infant-ball-tracker",
+      "placementId": "6-9.infant-ball-tracker",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/6-9.infant-ball-tracker.json",
+      "snapshotFileSha256": "cad279eb019b43cdcaeb58628ce99f9d79c98ab33cc5f79eab51293f6b711c2b",
+      "textPlacementSha256": "29e85b45d761cc001af793b2443fb46d8ba566424428938992bfc06ffaed8f90",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ilm-tone-text-163",
+        "ilm-tone-text-164",
+        "ihp-tone-baby-visual-300"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 163,
+              "end": 164
+            },
+            {
+              "start": 300,
+              "end": 300
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Watching remains a valid interest while the standing version keeps its independent pull-up and controlled-lowering conditions at every placement."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.9-12.infant-ball-tracker",
+      "entryId": "infant-ball-tracker",
+      "placementId": "9-12.infant-ball-tracker",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.infant-ball-tracker.json",
+      "snapshotFileSha256": "b93543594d17e7faf6f9dc356bb21314cb9c649ddd51756a5849f162e88ffdee",
+      "textPlacementSha256": "17fedd382993bc4589708074e09231eb599c7cb1ba95cb3a8d8e6ee99182f08b",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ilm-tone-text-163",
+        "ilm-tone-text-164",
+        "ihp-tone-baby-visual-300"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 163,
+              "end": 164
+            },
+            {
+              "start": 300,
+              "end": 300
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Watching remains a valid interest while the standing version keeps its independent pull-up and controlled-lowering conditions at every placement."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.12-18.infant-ball-tracker",
+      "entryId": "infant-ball-tracker",
+      "placementId": "12-18.infant-ball-tracker",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.infant-ball-tracker.json",
+      "snapshotFileSha256": "12deb2c763fd1936a62ed43184135c12bfcc143c1eabc91202c8ba07870cb0da",
+      "textPlacementSha256": "4c4ed1fe8db0c96ea0f4ca9b89688343f77f887e4c16db483e5446487fd160fb",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ilm-tone-text-163",
+        "ilm-tone-text-164",
+        "ihp-tone-baby-visual-300"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 163,
+              "end": 164
+            },
+            {
+              "start": 300,
+              "end": 300
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Watching remains a valid interest while the standing version keeps its independent pull-up and controlled-lowering conditions at every placement."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.18-24.infant-ball-tracker",
+      "entryId": "infant-ball-tracker",
+      "placementId": "18-24.infant-ball-tracker",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/18-24.infant-ball-tracker.json",
+      "snapshotFileSha256": "1c1dc6f4bf9badf8394dc8d35f8a108c7ad4262621ec0cbeb7abcdd3048e3320",
+      "textPlacementSha256": "84eccb6f4b1e170f6a0f9a83d3a9f1ee897fa7e44024baac7221650712c4db6b",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ilm-tone-text-163",
+        "ilm-tone-text-164",
+        "ihp-tone-baby-visual-300"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 163,
+              "end": 164
+            },
+            {
+              "start": 300,
+              "end": 300
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Watching remains a valid interest while the standing version keeps its independent pull-up and controlled-lowering conditions at every placement."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.24-36.infant-ball-tracker",
+      "entryId": "infant-ball-tracker",
+      "placementId": "24-36.infant-ball-tracker",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/24-36.infant-ball-tracker.json",
+      "snapshotFileSha256": "ab18baacbef49249d1a3dbefb87eb0fc07b7e516ac7b577fb48bbc1a1decf5a0",
+      "textPlacementSha256": "d2888923d73ceac1ad5daaf8e8bde4817ccaedcde81dbc478c00ec02f5cb5890",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ilm-tone-text-163",
+        "ilm-tone-text-164",
+        "ihp-tone-baby-visual-300"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 163,
+              "end": 164
+            },
+            {
+              "start": 300,
+              "end": 300
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Watching remains a valid interest while the standing version keeps its independent pull-up and controlled-lowering conditions at every placement."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.9-12.infant-posting-drawer",
+      "entryId": "infant-posting-drawer",
+      "placementId": "9-12.infant-posting-drawer",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.infant-posting-drawer.json",
+      "snapshotFileSha256": "a0a39a0b014be8c19550eabfc58db10289199feab6839e705131b432659b985f",
+      "textPlacementSha256": "80957bf699d65f40e009fb8008ea6bd5479c28b677bcb98ea0e23a19c0f46c10",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ilm-tone-text-167",
+        "ilm-tone-text-168",
+        "ihp-tone-baby-visual-301"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 167,
+              "end": 168
+            },
+            {
+              "start": 301,
+              "end": 301
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The drawer and knitted-ball versions preserve their separate ages and allow the child to repeat one interesting part of retrieving a ball."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.12-18.infant-posting-drawer",
+      "entryId": "infant-posting-drawer",
+      "placementId": "12-18.infant-posting-drawer",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.infant-posting-drawer.json",
+      "snapshotFileSha256": "6dda784e154d22d09502b74f9b434cb8ed5a7206217f69b70fc4b1fbbfee83a0",
+      "textPlacementSha256": "4da8dff8c83c5e1ef4fa298c102b5a3583d7f057eb38137caf834bc3c2f8eed5",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ilm-tone-text-167",
+        "ilm-tone-text-168",
+        "ihp-tone-baby-visual-301"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 167,
+              "end": 168
+            },
+            {
+              "start": 301,
+              "end": 301
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The drawer and knitted-ball versions preserve their separate ages and allow the child to repeat one interesting part of retrieving a ball."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.18-24.infant-posting-drawer",
+      "entryId": "infant-posting-drawer",
+      "placementId": "18-24.infant-posting-drawer",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/18-24.infant-posting-drawer.json",
+      "snapshotFileSha256": "ba9215756d7d1cbc09131532df1a44850a78d1627530a15df9cafb945c37ef2a",
+      "textPlacementSha256": "315361e13d6369cba791b9cb5549d622cdfb7af033b2557684e3a14cf5ea518d",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ilm-tone-text-167",
+        "ilm-tone-text-168",
+        "ihp-tone-baby-visual-301"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 167,
+              "end": 168
+            },
+            {
+              "start": 301,
+              "end": 301
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The drawer and knitted-ball versions preserve their separate ages and allow the child to repeat one interesting part of retrieving a ball."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.24-36.infant-posting-drawer",
+      "entryId": "infant-posting-drawer",
+      "placementId": "24-36.infant-posting-drawer",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/24-36.infant-posting-drawer.json",
+      "snapshotFileSha256": "971c30bdb63d926a745f6dcaa2da76d23b429f25ca4c1ed4e332f6a5666a21f2",
+      "textPlacementSha256": "6c70231c69f95407e3bf1945c644565fb855dd9c4ae2302917ecccd784efd5f7",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ilm-tone-text-167",
+        "ilm-tone-text-168",
+        "ihp-tone-baby-visual-301"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 167,
+              "end": 168
+            },
+            {
+              "start": 301,
+              "end": 301
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The drawer and knitted-ball versions preserve their separate ages and allow the child to repeat one interesting part of retrieving a ball."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.9-12.infant-push-through-balls",
+      "entryId": "infant-push-through-balls",
+      "placementId": "9-12.infant-push-through-balls",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.infant-push-through-balls.json",
+      "snapshotFileSha256": "4890794f9853d669f70b61d5fedb872addb522b4aff39cc25928b13a379330ee",
+      "textPlacementSha256": "bfce06eb5d571a3b7a931a352b710f249219125394a21afd3c7e6dbe781d575b",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ihp-tone-baby-visual-175",
+        "ihp-tone-baby-visual-176",
+        "ihp-tone-baby-visual-301",
+        "ilm-tone-text-293"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 175,
+              "end": 176
+            },
+            {
+              "start": 293,
+              "end": 293
+            },
+            {
+              "start": 301,
+              "end": 301
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The hand-pushing invitation retains material suitability and permits a single push while exposing both the illustrated and appendix ages."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.12-18.infant-push-through-balls",
+      "entryId": "infant-push-through-balls",
+      "placementId": "12-18.infant-push-through-balls",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.infant-push-through-balls.json",
+      "snapshotFileSha256": "2b242da6d3286d5d1ac03f23d3940e61813a49899bf2d036b24610ac61ed8249",
+      "textPlacementSha256": "91d1e00841e7affd2e2a6ac00196da9aee1b93b4aa1038b2c6ffd3c016254921",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ihp-tone-baby-visual-175",
+        "ihp-tone-baby-visual-176",
+        "ihp-tone-baby-visual-301",
+        "ilm-tone-text-293"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 175,
+              "end": 176
+            },
+            {
+              "start": 293,
+              "end": 293
+            },
+            {
+              "start": 301,
+              "end": 301
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The hand-pushing invitation retains material suitability and permits a single push while exposing both the illustrated and appendix ages."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.18-24.infant-push-through-balls",
+      "entryId": "infant-push-through-balls",
+      "placementId": "18-24.infant-push-through-balls",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/18-24.infant-push-through-balls.json",
+      "snapshotFileSha256": "e83c31681e41650c5ff51fcd09a66be11bc02eafd7a574912062e903f14539a1",
+      "textPlacementSha256": "acac5cf1e186c9f7e33b569053ea81dfa92badebfd8dfba38e1a02874ddb4e03",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ihp-tone-baby-visual-175",
+        "ihp-tone-baby-visual-176",
+        "ihp-tone-baby-visual-301",
+        "ilm-tone-text-293"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 175,
+              "end": 176
+            },
+            {
+              "start": 293,
+              "end": 293
+            },
+            {
+              "start": 301,
+              "end": 301
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The hand-pushing invitation retains material suitability and permits a single push while exposing both the illustrated and appendix ages."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.24-36.infant-push-through-balls",
+      "entryId": "infant-push-through-balls",
+      "placementId": "24-36.infant-push-through-balls",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/24-36.infant-push-through-balls.json",
+      "snapshotFileSha256": "7a8136c93a971d1d153929722b15f6e235d7239406469c096914fef1d1edcac5",
+      "textPlacementSha256": "776fc6e1a1a58921409f16229c72fbeba0778d3d6390c175e0c8a08b7ab97be3",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ihp-tone-baby-visual-175",
+        "ihp-tone-baby-visual-176",
+        "ihp-tone-baby-visual-301",
+        "ilm-tone-text-293"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 175,
+              "end": 176
+            },
+            {
+              "start": 293,
+              "end": 293
+            },
+            {
+              "start": 301,
+              "end": 301
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The hand-pushing invitation retains material suitability and permits a single push while exposing both the illustrated and appendix ages."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.9-12.infant-press-and-squeeze",
+      "entryId": "infant-press-and-squeeze",
+      "placementId": "9-12.infant-press-and-squeeze",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.infant-press-and-squeeze.json",
+      "snapshotFileSha256": "bfc9adfd448e01f5f9ca643f8f20f447ff845378f162bb833e51509946df28f9",
+      "textPlacementSha256": "798a3b43da1ac2cd73a6f5f1b2294a809eee800ea3504debe5f88537b04654bb",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ilm-tone-text-167"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 167,
+              "end": 167
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Different hand movements remain optional and the dough example retains the source’s instruction to set it aside when eating continues."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.12-18.infant-press-and-squeeze",
+      "entryId": "infant-press-and-squeeze",
+      "placementId": "12-18.infant-press-and-squeeze",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.infant-press-and-squeeze.json",
+      "snapshotFileSha256": "c09c5045c002af16d1ae193bf2336b95bc68488818dc8eea7a773a3f08a0b886",
+      "textPlacementSha256": "5cb5565bb6ca850dd2645cff0ebd3badabe90ba17415f0f40c639b3b347550fb",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ilm-tone-text-167"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 167,
+              "end": 167
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Different hand movements remain optional and the dough example retains the source’s instruction to set it aside when eating continues."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.9-12.infant-drawer-to-explore",
+      "entryId": "infant-drawer-to-explore",
+      "placementId": "9-12.infant-drawer-to-explore",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.infant-drawer-to-explore.json",
+      "snapshotFileSha256": "4e988a005d3d4c3cf3785311615e49f222bfcc0a996d42c66840502724ed8009",
+      "textPlacementSha256": "2f2f9131f194a8476be175bab2e893c83ac65eaf8051661a14ef888bf205d3e3",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "tone-sitting",
+        "ilm-tone-text-168",
+        "ihp-tone-baby-visual-302"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 158,
+              "end": 158
+            },
+            {
+              "start": 168,
+              "end": 168
+            },
+            {
+              "start": 302,
+              "end": 302
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The ordinary household invitation keeps adult choice, increasing standing stability and secured space visible without requiring a new setup."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.12-18.infant-drawer-to-explore",
+      "entryId": "infant-drawer-to-explore",
+      "placementId": "12-18.infant-drawer-to-explore",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.infant-drawer-to-explore.json",
+      "snapshotFileSha256": "8254d18267760c55e08d2254b8f8bf48d07029f1308d15a0d741e0f9fb18280e",
+      "textPlacementSha256": "129c1322f0104ef657dda996f028d4018c9d75b3fe4b7c77a3a9bee729746307",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "tone-sitting",
+        "ilm-tone-text-168",
+        "ihp-tone-baby-visual-302"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 158,
+              "end": 158
+            },
+            {
+              "start": 168,
+              "end": 168
+            },
+            {
+              "start": 302,
+              "end": 302
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The ordinary household invitation keeps adult choice, increasing standing stability and secured space visible without requiring a new setup."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.18-24.infant-drawer-to-explore",
+      "entryId": "infant-drawer-to-explore",
+      "placementId": "18-24.infant-drawer-to-explore",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/18-24.infant-drawer-to-explore.json",
+      "snapshotFileSha256": "8fed3ad55537704cf83acc78b4b011e5d000c581c4beabf63a449efd2fd1cfd7",
+      "textPlacementSha256": "576ffc2520db10496f76df8df623cdcd9d05eb9f39e80109a30344ebc9102cb6",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "tone-sitting",
+        "ilm-tone-text-168",
+        "ihp-tone-baby-visual-302"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 158,
+              "end": 158
+            },
+            {
+              "start": 168,
+              "end": 168
+            },
+            {
+              "start": 302,
+              "end": 302
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The ordinary household invitation keeps adult choice, increasing standing stability and secured space visible without requiring a new setup."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.24-36.infant-drawer-to-explore",
+      "entryId": "infant-drawer-to-explore",
+      "placementId": "24-36.infant-drawer-to-explore",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/24-36.infant-drawer-to-explore.json",
+      "snapshotFileSha256": "921c3858c28e340aa8f0b047683a5e22d10a8a73828a10d8c7ea8cf0a4646e3f",
+      "textPlacementSha256": "76f1dba8a25ea405da26e4fabdb6e268539a928a3d0a55635f0800474422dd99",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "tone-sitting",
+        "ilm-tone-text-168",
+        "ihp-tone-baby-visual-302"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 158,
+              "end": 158
+            },
+            {
+              "start": 168,
+              "end": 168
+            },
+            {
+              "start": 302,
+              "end": 302
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The ordinary household invitation keeps adult choice, increasing standing stability and secured space visible without requiring a new setup."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.6-9.infant-spinning-top",
+      "entryId": "infant-spinning-top",
+      "placementId": "6-9.infant-spinning-top",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/6-9.infant-spinning-top.json",
+      "snapshotFileSha256": "8126d9b4d08a4d5cc56fc3fef83b2249f9c82555f958b9033dd81f0b84a2190d",
+      "textPlacementSha256": "ee829de72aa2ad34025f4799b093adc0c7bda654b493cf01348c557ba9ec2eb6",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ihp-tone-baby-visual-301"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 301,
+              "end": 301
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Following the top is sufficient participation and operating the handle remains a later possibility without a deadline."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.9-12.infant-spinning-top",
+      "entryId": "infant-spinning-top",
+      "placementId": "9-12.infant-spinning-top",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.infant-spinning-top.json",
+      "snapshotFileSha256": "7a0b72f4bb985f3d78beb91034ed9332ab39be60ca514d2eadbd21b87bb28fc1",
+      "textPlacementSha256": "bb9fec27d48c845c670ac09041bd5beb628edada10f9a9a0626336ffb4328e0c",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ihp-tone-baby-visual-301"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 301,
+              "end": 301
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Following the top is sufficient participation and operating the handle remains a later possibility without a deadline."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.12-18.infant-spinning-top",
+      "entryId": "infant-spinning-top",
+      "placementId": "12-18.infant-spinning-top",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.infant-spinning-top.json",
+      "snapshotFileSha256": "d4e3fea57a84230f0515c54c53937b54414ba3e8986ff240ea2479c794816549",
+      "textPlacementSha256": "ba2c1a1f02dfbde3d43b3689f714e9a48c4b25324dc8664d74a4e06cbd832e23",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ihp-tone-baby-visual-301"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 301,
+              "end": 301
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Following the top is sufficient participation and operating the handle remains a later possibility without a deadline."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.18-24.infant-spinning-top",
+      "entryId": "infant-spinning-top",
+      "placementId": "18-24.infant-spinning-top",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/18-24.infant-spinning-top.json",
+      "snapshotFileSha256": "58cb5c33524402381763c25f85d789530a3a02b3c48393cc482cc94f3aac2100",
+      "textPlacementSha256": "7785b28d34c840ff25dbaaa1ae841478c136eb2f5cf95b4dc5604cce31934801",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ihp-tone-baby-visual-301"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 301,
+              "end": 301
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Following the top is sufficient participation and operating the handle remains a later possibility without a deadline."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.24-36.infant-spinning-top",
+      "entryId": "infant-spinning-top",
+      "placementId": "24-36.infant-spinning-top",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/24-36.infant-spinning-top.json",
+      "snapshotFileSha256": "54a9fb4401e2bbdbc85b5af6ea01e2fb00dd7515ab4ebd5ccc60d87447fc48f9",
+      "textPlacementSha256": "3bf3525c1a2af4b81535c5d962794da8f0d8af01e48ae5178260c89bd27477ef",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ihp-tone-baby-visual-301"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 301,
+              "end": 301
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Following the top is sufficient participation and operating the handle remains a later possibility without a deadline."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.9-12.baby-hand-discovery",
+      "entryId": "baby-hand-discovery",
+      "placementId": "9-12.baby-hand-discovery",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.baby-hand-discovery.json",
+      "snapshotFileSha256": "26b3672b22f240bd67c11632c4e45a90c831122a69a1d9e5cbc5c40b8391572d",
+      "textPlacementSha256": "d3e4f3f05cc9495ae5b06dd369eba69d9339318ec400a6d1473677cc1008ba31",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "tone-sitting",
+        "epa-tone-text-154",
+        "epa-tone-text-155",
+        "epa-tone-text-161",
+        "ilm-tone-text-162",
+        "ilm-tone-text-167",
+        "ilm-tone-text-168",
+        "ilm-tone-text-169"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 154,
+              "end": 155
+            },
+            {
+              "start": 159,
+              "end": 162
+            },
+            {
+              "start": 167,
+              "end": 169
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The new age context preserves changing hand exploration and mouthing suitability without turning transfer or grasp into an achievement."
+      },
+      "bodyReview": {
+        "entryId": "baby-hand-discovery",
+        "canonicalEntrySha256": "3dfd23555603fb0fa13f5d28988780fb3bf6aae4e18c7529560225aea0d5107c",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.12-18.baby-hand-discovery",
+      "entryId": "baby-hand-discovery",
+      "placementId": "12-18.baby-hand-discovery",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.baby-hand-discovery.json",
+      "snapshotFileSha256": "008f5e08136c5dffcf7aae9e516dad56e39899ce5fbf2723bf6b0fcba6eb7f16",
+      "textPlacementSha256": "9934468b4c518cb21c7bcf3add420d6cb3427a794609d79a3c1d24a1cb329fe1",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "tone-sitting",
+        "epa-tone-text-154",
+        "epa-tone-text-155",
+        "epa-tone-text-161",
+        "ilm-tone-text-162",
+        "ilm-tone-text-167",
+        "ilm-tone-text-168",
+        "ilm-tone-text-169"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 154,
+              "end": 155
+            },
+            {
+              "start": 159,
+              "end": 162
+            },
+            {
+              "start": 167,
+              "end": 169
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The new age context preserves changing hand exploration and mouthing suitability without turning transfer or grasp into an achievement."
+      },
+      "bodyReview": {
+        "entryId": "baby-hand-discovery",
+        "canonicalEntrySha256": "3dfd23555603fb0fa13f5d28988780fb3bf6aae4e18c7529560225aea0d5107c",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.9-12.baby-treasure-baskets",
+      "entryId": "baby-treasure-baskets",
+      "placementId": "9-12.baby-treasure-baskets",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.baby-treasure-baskets.json",
+      "snapshotFileSha256": "6761c0dc1b2e891b10d568c5c9c7731924fa270ba00e68ee4da5c29f889eb8a5",
+      "textPlacementSha256": "9757b202152d03d5ce768e969c81260f8e5c31ba31eb05e095efbf0fc025c7aa",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "tone-sitting",
+        "tone-visual-299"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 159,
+              "end": 160
+            },
+            {
+              "start": 299,
+              "end": 299
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The later placements preserve the independently reached sitting condition and distinguish the simpler lying-or-sitting familiar-object basket."
+      },
+      "bodyReview": {
+        "entryId": "baby-treasure-baskets",
+        "canonicalEntrySha256": "f25eab09d61589304616896faf4837643f49046236ee21fc4a9c4dc372a89cb6",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.12-18.baby-treasure-baskets",
+      "entryId": "baby-treasure-baskets",
+      "placementId": "12-18.baby-treasure-baskets",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.baby-treasure-baskets.json",
+      "snapshotFileSha256": "49b376d146411c549db89e0bd606751e9926535613061aaaac0344dbbe282c45",
+      "textPlacementSha256": "6d3bb095d022ba26658e1e68d9abe9099bfa2111e784552af188e19a09ece891",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "tone-sitting",
+        "tone-visual-299"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 159,
+              "end": 160
+            },
+            {
+              "start": 299,
+              "end": 299
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The later placements preserve the independently reached sitting condition and distinguish the simpler lying-or-sitting familiar-object basket."
+      },
+      "bodyReview": {
+        "entryId": "baby-treasure-baskets",
+        "canonicalEntrySha256": "f25eab09d61589304616896faf4837643f49046236ee21fc4a9c4dc372a89cb6",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.9-12.baby-rolling-balls",
+      "entryId": "baby-rolling-balls",
+      "placementId": "9-12.baby-rolling-balls",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.baby-rolling-balls.json",
+      "snapshotFileSha256": "af95625874a35b4329dd6563b640579864737c8123237843f11e08fc804553e0",
+      "textPlacementSha256": "1b2a8a3691ab9c6ddce083e16118e8ed76b9a5f708d0c8e2ab9674f60d141d4d",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "epa-tone-text-156",
+        "epa-tone-text-157",
+        "tone-sitting",
+        "ilm-tone-text-164",
+        "tone-visual-299",
+        "ihp-tone-baby-visual-300"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 156,
+              "end": 159
+            },
+            {
+              "start": 164,
+              "end": 164
+            },
+            {
+              "start": 299,
+              "end": 300
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The continuing invitation preserves slithering and creeping context while allowing the child to handle a ball instead of following it."
+      },
+      "bodyReview": {
+        "entryId": "baby-rolling-balls",
+        "canonicalEntrySha256": "b83de48e1bca1b3850da9c3b081967551b26aed3eba6d5fcbde50fe37ff7d378",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.12-18.baby-rolling-balls",
+      "entryId": "baby-rolling-balls",
+      "placementId": "12-18.baby-rolling-balls",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.baby-rolling-balls.json",
+      "snapshotFileSha256": "6f16dd98df330865b0ad0dc85ee654c8f8d361644b4031c0a3effb97c82ae432",
+      "textPlacementSha256": "256f0ff29dad117ad2666c534eeea6a81f14f58aad89a81355c82ff36092a9bd",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "epa-tone-text-156",
+        "epa-tone-text-157",
+        "tone-sitting",
+        "ilm-tone-text-164",
+        "tone-visual-299",
+        "ihp-tone-baby-visual-300"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 156,
+              "end": 159
+            },
+            {
+              "start": 164,
+              "end": 164
+            },
+            {
+              "start": 299,
+              "end": 300
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The continuing invitation preserves slithering and creeping context while allowing the child to handle a ball instead of following it."
+      },
+      "bodyReview": {
+        "entryId": "baby-rolling-balls",
+        "canonicalEntrySha256": "b83de48e1bca1b3850da9c3b081967551b26aed3eba6d5fcbde50fe37ff7d378",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.9-12.baby-first-containers",
+      "entryId": "baby-first-containers",
+      "placementId": "9-12.baby-first-containers",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.baby-first-containers.json",
+      "snapshotFileSha256": "9d4d73f8d7935d9481909b0b03ff3f7a3ca9af6d85bf43955950ab99f6ecde5d",
+      "textPlacementSha256": "d6b1e78b306d0762d2f52f458aa5516a1dbb690ea7df17e46751843f79d1dac2",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ilm-tone-text-167",
+        "ihp-tone-baby-visual-300",
+        "ihp-tone-baby-visual-301"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 167,
+              "end": 167
+            },
+            {
+              "start": 300,
+              "end": 301
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The new placements retain the distinct appendix ages and stable-sitting conditions while treating removing and replacing as possibilities to revisit."
+      },
+      "bodyReview": {
+        "entryId": "baby-first-containers",
+        "canonicalEntrySha256": "9ff4f1eb70cd2c3657214e1e1e694da50397ccb67409b9d2c59e2b85a40f076c",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.12-18.baby-first-containers",
+      "entryId": "baby-first-containers",
+      "placementId": "12-18.baby-first-containers",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.baby-first-containers.json",
+      "snapshotFileSha256": "5afeb92ee9b04fe519cd8f105edd228b4680f177e3f0bc1ef1ae7bbfad851cf6",
+      "textPlacementSha256": "65eb7a0c0481ae4424e748e18e2097bf797ad77beee4e3db2628f9489786c20e",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ilm-tone-text-167",
+        "ihp-tone-baby-visual-300",
+        "ihp-tone-baby-visual-301"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 167,
+              "end": 167
+            },
+            {
+              "start": 300,
+              "end": 301
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The new placements retain the distinct appendix ages and stable-sitting conditions while treating removing and replacing as possibilities to revisit."
+      },
+      "bodyReview": {
+        "entryId": "baby-first-containers",
+        "canonicalEntrySha256": "9ff4f1eb70cd2c3657214e1e1e694da50397ccb67409b9d2c59e2b85a40f076c",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.6-9.infant-rings-and-posts",
+      "entryId": "infant-rings-and-posts",
+      "placementId": "6-9.infant-rings-and-posts",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/6-9.infant-rings-and-posts.json",
+      "snapshotFileSha256": "7ad6d17d97987cf04b32c196c1b14131fc46f2910894de3853c260116fd682f3",
+      "textPlacementSha256": "53156a061d772f2dfe94dd833e61521c61cded91ef3f46bd9743cf028c1cafd2",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "tone-sitting",
+        "ilm-tone-text-167",
+        "ilm-tone-text-168",
+        "ilm-tone-text-169",
+        "ihp-tone-baby-text-120",
+        "ihp-tone-baby-visual-301",
+        "ihp-tone-baby-visual-302",
+        "ihp-tone-toddler-text-39",
+        "ihp-tone-toddler-text-43",
+        "ihp-tone-toddler-text-246",
+        "ihp-tone-toddler-text-248",
+        "ihp-tone-toddler-visual-246",
+        "ihp-tone-toddler-visual-248"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 159,
+              "end": 159
+            },
+            {
+              "start": 167,
+              "end": 169
+            },
+            {
+              "start": 301,
+              "end": 302
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 43,
+              "end": 43
+            },
+            {
+              "start": 246,
+              "end": 246
+            },
+            {
+              "start": 248,
+              "end": 248
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "ihp-tone-rings-materials",
+            "status": "open",
+            "severity": "major",
+            "message": "The summary names adult supervision and the readiness text says materials suited to the child, but the ring and napkin-ring examples never expose Baby PDF120’s distinct mouthing, size and secure-component conditions, including in the 6–9-month presentation.",
+            "requestedChange": "Keep the invitation brief, but make mouthing-safe materials, suitable object/component size and securely attached parts explicit alongside supervision in the summary and reader body."
+          }
+        ],
+        "assessment": "The variants respect individual timing and partial participation, but their infant presentation leaves material suitability too generic."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.9-12.infant-rings-and-posts",
+      "entryId": "infant-rings-and-posts",
+      "placementId": "9-12.infant-rings-and-posts",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.infant-rings-and-posts.json",
+      "snapshotFileSha256": "5e1bd910633f22ddbf7708c80403c5ebf7bc0b288192bfc483115348664e0b61",
+      "textPlacementSha256": "73c8fac01fc302f581d622ab8a5f34f6d71cca620d229e4ba03ee89db9ae7229",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "tone-sitting",
+        "ilm-tone-text-167",
+        "ilm-tone-text-168",
+        "ilm-tone-text-169",
+        "ihp-tone-baby-text-120",
+        "ihp-tone-baby-visual-301",
+        "ihp-tone-baby-visual-302",
+        "ihp-tone-toddler-text-39",
+        "ihp-tone-toddler-text-43",
+        "ihp-tone-toddler-text-246",
+        "ihp-tone-toddler-text-248",
+        "ihp-tone-toddler-visual-246",
+        "ihp-tone-toddler-visual-248"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 159,
+              "end": 159
+            },
+            {
+              "start": 167,
+              "end": 169
+            },
+            {
+              "start": 301,
+              "end": 302
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 43,
+              "end": 43
+            },
+            {
+              "start": 246,
+              "end": 246
+            },
+            {
+              "start": 248,
+              "end": 248
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "ihp-tone-rings-materials",
+            "status": "open",
+            "severity": "major",
+            "message": "The summary names adult supervision and the readiness text says materials suited to the child, but the ring and napkin-ring examples never expose Baby PDF120’s distinct mouthing, size and secure-component conditions, including in the 6–9-month presentation.",
+            "requestedChange": "Keep the invitation brief, but make mouthing-safe materials, suitable object/component size and securely attached parts explicit alongside supervision in the summary and reader body."
+          }
+        ],
+        "assessment": "The variants respect individual timing and partial participation, but their infant presentation leaves material suitability too generic."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.12-18.infant-rings-and-posts",
+      "entryId": "infant-rings-and-posts",
+      "placementId": "12-18.infant-rings-and-posts",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.infant-rings-and-posts.json",
+      "snapshotFileSha256": "c5805d4cd0e5523fb60e790bc970481b8980bc5d75370e667d6769fe12cf457a",
+      "textPlacementSha256": "7e70c3e1b32cd059a3a90dac10f47ae049e9cc1cba59d58e145095d9d8c8dda6",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "tone-sitting",
+        "ilm-tone-text-167",
+        "ilm-tone-text-168",
+        "ilm-tone-text-169",
+        "ihp-tone-baby-text-120",
+        "ihp-tone-baby-visual-301",
+        "ihp-tone-baby-visual-302",
+        "ihp-tone-toddler-text-39",
+        "ihp-tone-toddler-text-43",
+        "ihp-tone-toddler-text-246",
+        "ihp-tone-toddler-text-248",
+        "ihp-tone-toddler-visual-246",
+        "ihp-tone-toddler-visual-248"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 159,
+              "end": 159
+            },
+            {
+              "start": 167,
+              "end": 169
+            },
+            {
+              "start": 301,
+              "end": 302
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 43,
+              "end": 43
+            },
+            {
+              "start": 246,
+              "end": 246
+            },
+            {
+              "start": 248,
+              "end": 248
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "ihp-tone-rings-materials",
+            "status": "open",
+            "severity": "major",
+            "message": "The summary names adult supervision and the readiness text says materials suited to the child, but the ring and napkin-ring examples never expose Baby PDF120’s distinct mouthing, size and secure-component conditions, including in the 6–9-month presentation.",
+            "requestedChange": "Keep the invitation brief, but make mouthing-safe materials, suitable object/component size and securely attached parts explicit alongside supervision in the summary and reader body."
+          }
+        ],
+        "assessment": "The variants respect individual timing and partial participation, but their infant presentation leaves material suitability too generic."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.18-24.infant-rings-and-posts",
+      "entryId": "infant-rings-and-posts",
+      "placementId": "18-24.infant-rings-and-posts",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/18-24.infant-rings-and-posts.json",
+      "snapshotFileSha256": "bd8c28cda1accb534d68105739eac24d0bf60f7b723925a40e94154d53a47d3a",
+      "textPlacementSha256": "4f4884c588e01dabb3da6de32507afed5b861628c5368c8af873103601ae8c53",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "tone-sitting",
+        "ilm-tone-text-167",
+        "ilm-tone-text-168",
+        "ilm-tone-text-169",
+        "ihp-tone-baby-text-120",
+        "ihp-tone-baby-visual-301",
+        "ihp-tone-baby-visual-302",
+        "ihp-tone-toddler-text-39",
+        "ihp-tone-toddler-text-43",
+        "ihp-tone-toddler-text-246",
+        "ihp-tone-toddler-text-248",
+        "ihp-tone-toddler-visual-246",
+        "ihp-tone-toddler-visual-248"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 159,
+              "end": 159
+            },
+            {
+              "start": 167,
+              "end": 169
+            },
+            {
+              "start": 301,
+              "end": 302
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 43,
+              "end": 43
+            },
+            {
+              "start": 246,
+              "end": 246
+            },
+            {
+              "start": 248,
+              "end": 248
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "ihp-tone-rings-materials",
+            "status": "open",
+            "severity": "major",
+            "message": "The summary names adult supervision and the readiness text says materials suited to the child, but the ring and napkin-ring examples never expose Baby PDF120’s distinct mouthing, size and secure-component conditions, including in the 6–9-month presentation.",
+            "requestedChange": "Keep the invitation brief, but make mouthing-safe materials, suitable object/component size and securely attached parts explicit alongside supervision in the summary and reader body."
+          }
+        ],
+        "assessment": "The variants respect individual timing and partial participation, but their infant presentation leaves material suitability too generic."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.24-36.infant-rings-and-posts",
+      "entryId": "infant-rings-and-posts",
+      "placementId": "24-36.infant-rings-and-posts",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/24-36.infant-rings-and-posts.json",
+      "snapshotFileSha256": "b104489671c146137469125492051e2f198ebe09a9fcdc2f7633cb2427e2befb",
+      "textPlacementSha256": "6fb63d270399be3829a6a08701f2f5a29637ea8a1a918b36af09746b2766bcef",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "tone-sitting",
+        "ilm-tone-text-167",
+        "ilm-tone-text-168",
+        "ilm-tone-text-169",
+        "ihp-tone-baby-text-120",
+        "ihp-tone-baby-visual-301",
+        "ihp-tone-baby-visual-302",
+        "ihp-tone-toddler-text-39",
+        "ihp-tone-toddler-text-43",
+        "ihp-tone-toddler-text-246",
+        "ihp-tone-toddler-text-248",
+        "ihp-tone-toddler-visual-246",
+        "ihp-tone-toddler-visual-248"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 159,
+              "end": 159
+            },
+            {
+              "start": 167,
+              "end": 169
+            },
+            {
+              "start": 301,
+              "end": 302
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 43,
+              "end": 43
+            },
+            {
+              "start": 246,
+              "end": 246
+            },
+            {
+              "start": 248,
+              "end": 248
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "ihp-tone-rings-materials",
+            "status": "open",
+            "severity": "major",
+            "message": "The summary names adult supervision and the readiness text says materials suited to the child, but the ring and napkin-ring examples never expose Baby PDF120’s distinct mouthing, size and secure-component conditions, including in the 6–9-month presentation.",
+            "requestedChange": "Keep the invitation brief, but make mouthing-safe materials, suitable object/component size and securely attached parts explicit alongside supervision in the summary and reader body."
+          }
+        ],
+        "assessment": "The variants respect individual timing and partial participation, but their infant presentation leaves material suitability too generic."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.9-12.infant-pegs-and-cubes",
+      "entryId": "infant-pegs-and-cubes",
+      "placementId": "9-12.infant-pegs-and-cubes",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/9-12.infant-pegs-and-cubes.json",
+      "snapshotFileSha256": "820293adb07c2f8860fa630c0bd487287f26e7c8925c4d3638b81fb59bd195f1",
+      "textPlacementSha256": "99bba643fd42564abce6135870518963ec2c11de14644df11029492677f3f2e0",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ilm-tone-text-167",
+        "ilm-tone-text-168",
+        "ilm-tone-text-169",
+        "ihp-tone-baby-text-120",
+        "ihp-tone-baby-visual-175",
+        "ihp-tone-baby-visual-176",
+        "ihp-tone-baby-visual-303",
+        "ihp-tone-toddler-text-39",
+        "ihp-tone-toddler-text-246",
+        "ihp-tone-toddler-visual-246"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 167,
+              "end": 169
+            },
+            {
+              "start": 175,
+              "end": 176
+            },
+            {
+              "start": 303,
+              "end": 303
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 246,
+              "end": 246
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "ihp-tone-pegs-materials",
+            "status": "open",
+            "severity": "major",
+            "message": "The body says small parts need supervision, while manageable materials is the only suitability cue; Baby PDF120 separately requires mouthing-safe materials, appropriate object/component size and secure parts for these baby examples.",
+            "requestedChange": "Keep the invitation brief, but make mouthing-safe materials, suitable object/component size and securely attached parts explicit alongside supervision in the summary and reader body."
+          }
+        ],
+        "assessment": "The age disagreement and freedom to remove only one piece are clear, but the small-parts wording reduces the source’s material conditions to supervision."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.12-18.infant-pegs-and-cubes",
+      "entryId": "infant-pegs-and-cubes",
+      "placementId": "12-18.infant-pegs-and-cubes",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.infant-pegs-and-cubes.json",
+      "snapshotFileSha256": "0056fafa3c038b2aa263c161b4bb61d596eccc7c1e42565f52dfd9af21d7a356",
+      "textPlacementSha256": "4d5d35f598317226b1dd80570dc833a1d1f5876d41aa6c928180268d8daf8861",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ilm-tone-text-167",
+        "ilm-tone-text-168",
+        "ilm-tone-text-169",
+        "ihp-tone-baby-text-120",
+        "ihp-tone-baby-visual-175",
+        "ihp-tone-baby-visual-176",
+        "ihp-tone-baby-visual-303",
+        "ihp-tone-toddler-text-39",
+        "ihp-tone-toddler-text-246",
+        "ihp-tone-toddler-visual-246"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 167,
+              "end": 169
+            },
+            {
+              "start": 175,
+              "end": 176
+            },
+            {
+              "start": 303,
+              "end": 303
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 246,
+              "end": 246
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "ihp-tone-pegs-materials",
+            "status": "open",
+            "severity": "major",
+            "message": "The body says small parts need supervision, while manageable materials is the only suitability cue; Baby PDF120 separately requires mouthing-safe materials, appropriate object/component size and secure parts for these baby examples.",
+            "requestedChange": "Keep the invitation brief, but make mouthing-safe materials, suitable object/component size and securely attached parts explicit alongside supervision in the summary and reader body."
+          }
+        ],
+        "assessment": "The age disagreement and freedom to remove only one piece are clear, but the small-parts wording reduces the source’s material conditions to supervision."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.18-24.infant-pegs-and-cubes",
+      "entryId": "infant-pegs-and-cubes",
+      "placementId": "18-24.infant-pegs-and-cubes",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/18-24.infant-pegs-and-cubes.json",
+      "snapshotFileSha256": "ea947892550466c28bf93c0379c21e451b517b9a681596d22d500aff9c5933e9",
+      "textPlacementSha256": "34b54bcba766e1b0786a7ab526b97eb30a110c14e609673b539c4e91ffecbbff",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ilm-tone-text-167",
+        "ilm-tone-text-168",
+        "ilm-tone-text-169",
+        "ihp-tone-baby-text-120",
+        "ihp-tone-baby-visual-175",
+        "ihp-tone-baby-visual-176",
+        "ihp-tone-baby-visual-303",
+        "ihp-tone-toddler-text-39",
+        "ihp-tone-toddler-text-246",
+        "ihp-tone-toddler-visual-246"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 167,
+              "end": 169
+            },
+            {
+              "start": 175,
+              "end": 176
+            },
+            {
+              "start": 303,
+              "end": 303
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 246,
+              "end": 246
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "ihp-tone-pegs-materials",
+            "status": "open",
+            "severity": "major",
+            "message": "The body says small parts need supervision, while manageable materials is the only suitability cue; Baby PDF120 separately requires mouthing-safe materials, appropriate object/component size and secure parts for these baby examples.",
+            "requestedChange": "Keep the invitation brief, but make mouthing-safe materials, suitable object/component size and securely attached parts explicit alongside supervision in the summary and reader body."
+          }
+        ],
+        "assessment": "The age disagreement and freedom to remove only one piece are clear, but the small-parts wording reduces the source’s material conditions to supervision."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.24-36.infant-pegs-and-cubes",
+      "entryId": "infant-pegs-and-cubes",
+      "placementId": "24-36.infant-pegs-and-cubes",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/24-36.infant-pegs-and-cubes.json",
+      "snapshotFileSha256": "a7a33b3a92895f3a2b7f52f2774ef822bb446cbf2f6bcedf7b6cfc9d23aca461",
+      "textPlacementSha256": "c07416e3f3073c376b9a091807f705327a0d22809111ce8038c1f10099281758",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ilm-tone-text-167",
+        "ilm-tone-text-168",
+        "ilm-tone-text-169",
+        "ihp-tone-baby-text-120",
+        "ihp-tone-baby-visual-175",
+        "ihp-tone-baby-visual-176",
+        "ihp-tone-baby-visual-303",
+        "ihp-tone-toddler-text-39",
+        "ihp-tone-toddler-text-246",
+        "ihp-tone-toddler-visual-246"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 167,
+              "end": 169
+            },
+            {
+              "start": 175,
+              "end": 176
+            },
+            {
+              "start": 303,
+              "end": 303
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 246,
+              "end": 246
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "ihp-tone-pegs-materials",
+            "status": "open",
+            "severity": "major",
+            "message": "The body says small parts need supervision, while manageable materials is the only suitability cue; Baby PDF120 separately requires mouthing-safe materials, appropriate object/component size and secure parts for these baby examples.",
+            "requestedChange": "Keep the invitation brief, but make mouthing-safe materials, suitable object/component size and securely attached parts explicit alongside supervision in the summary and reader body."
+          }
+        ],
+        "assessment": "The age disagreement and freedom to remove only one piece are clear, but the small-parts wording reduces the source’s material conditions to supervision."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.12-18.infant-slot-posting",
+      "entryId": "infant-slot-posting",
+      "placementId": "12-18.infant-slot-posting",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.infant-slot-posting.json",
+      "snapshotFileSha256": "ed2d7fd1f84fc1bd28fbf9a3dd68f8f7d5c0bc7e7db827fd8dd3c13139089863",
+      "textPlacementSha256": "207274258d6f67af38940da51cf5e98ab1b8d7f8aa4b10daeefd4f1c26421f59",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ilm-tone-text-167",
+        "ilm-tone-text-168",
+        "ilm-tone-text-169",
+        "ihp-tone-baby-text-120",
+        "ihp-tone-baby-visual-303",
+        "ihp-tone-toddler-text-39",
+        "ihp-tone-toddler-text-44",
+        "ihp-tone-toddler-text-60",
+        "ihp-tone-toddler-visual-59",
+        "ihp-tone-toddler-visual-60"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 167,
+              "end": 169
+            },
+            {
+              "start": 303,
+              "end": 303
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 44,
+              "end": 44
+            },
+            {
+              "start": 59,
+              "end": 60
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "ihp-tone-slot-materials",
+            "status": "open",
+            "severity": "major",
+            "message": "The reader gets a poker-chip-sized example and repeated supervision wording, but suitable materials remains undefined and Baby PDF120’s mouthing, size and secure-part conditions disappear from the practical invitation.",
+            "requestedChange": "Keep the invitation brief, but make mouthing-safe materials, suitable object/component size and securely attached parts explicit alongside supervision in the summary and reader body."
+          }
+        ],
+        "assessment": "The separate posting ages and optional latch preserve agency, but the concrete chip example lacks the Baby book’s material qualifications."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.18-24.infant-slot-posting",
+      "entryId": "infant-slot-posting",
+      "placementId": "18-24.infant-slot-posting",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/18-24.infant-slot-posting.json",
+      "snapshotFileSha256": "29e23ee22e12bc7a43db5fa7f0ba2ca3ef14dc5e7ef9dda26e3efbc82dfc9bd4",
+      "textPlacementSha256": "022e5a67ec4a0b3bec0f7d46640bcd273237e6f7fcca93c72032679f001dca1d",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ilm-tone-text-167",
+        "ilm-tone-text-168",
+        "ilm-tone-text-169",
+        "ihp-tone-baby-text-120",
+        "ihp-tone-baby-visual-303",
+        "ihp-tone-toddler-text-39",
+        "ihp-tone-toddler-text-44",
+        "ihp-tone-toddler-text-60",
+        "ihp-tone-toddler-visual-59",
+        "ihp-tone-toddler-visual-60"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 167,
+              "end": 169
+            },
+            {
+              "start": 303,
+              "end": 303
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 44,
+              "end": 44
+            },
+            {
+              "start": 59,
+              "end": 60
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "ihp-tone-slot-materials",
+            "status": "open",
+            "severity": "major",
+            "message": "The reader gets a poker-chip-sized example and repeated supervision wording, but suitable materials remains undefined and Baby PDF120’s mouthing, size and secure-part conditions disappear from the practical invitation.",
+            "requestedChange": "Keep the invitation brief, but make mouthing-safe materials, suitable object/component size and securely attached parts explicit alongside supervision in the summary and reader body."
+          }
+        ],
+        "assessment": "The separate posting ages and optional latch preserve agency, but the concrete chip example lacks the Baby book’s material qualifications."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.24-36.infant-slot-posting",
+      "entryId": "infant-slot-posting",
+      "placementId": "24-36.infant-slot-posting",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/24-36.infant-slot-posting.json",
+      "snapshotFileSha256": "920db8a86952f82d3a9e9809956be3bb7259e14957815db72d6caf6b151867d6",
+      "textPlacementSha256": "e9bdfa378c3add86ff9651af02bebcedd662502fbf395cfd3691950fcd2b2e74",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ilm-tone-text-167",
+        "ilm-tone-text-168",
+        "ilm-tone-text-169",
+        "ihp-tone-baby-text-120",
+        "ihp-tone-baby-visual-303",
+        "ihp-tone-toddler-text-39",
+        "ihp-tone-toddler-text-44",
+        "ihp-tone-toddler-text-60",
+        "ihp-tone-toddler-visual-59",
+        "ihp-tone-toddler-visual-60"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 167,
+              "end": 169
+            },
+            {
+              "start": 303,
+              "end": 303
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 44,
+              "end": 44
+            },
+            {
+              "start": 59,
+              "end": 60
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "ihp-tone-slot-materials",
+            "status": "open",
+            "severity": "major",
+            "message": "The reader gets a poker-chip-sized example and repeated supervision wording, but suitable materials remains undefined and Baby PDF120’s mouthing, size and secure-part conditions disappear from the practical invitation.",
+            "requestedChange": "Keep the invitation brief, but make mouthing-safe materials, suitable object/component size and securely attached parts explicit alongside supervision in the summary and reader body."
+          }
+        ],
+        "assessment": "The separate posting ages and optional latch preserve agency, but the concrete chip example lacks the Baby book’s material qualifications."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.12-18.infant-opening-and-keys",
+      "entryId": "infant-opening-and-keys",
+      "placementId": "12-18.infant-opening-and-keys",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/12-18.infant-opening-and-keys.json",
+      "snapshotFileSha256": "70adca0c4498ec335ba2ff914228bd8def4c09e4c52643da34ca7c6c2d1d70df",
+      "textPlacementSha256": "8eead1e034c023070c3e63efbad5a469d4eeaa06bce4c5c9944f5c131146c865",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ihp-tone-baby-text-120",
+        "ihp-tone-baby-visual-301",
+        "ihp-tone-baby-visual-303",
+        "ihp-tone-toddler-text-39",
+        "ihp-tone-toddler-text-44",
+        "ihp-tone-toddler-text-246",
+        "ihp-tone-toddler-visual-246"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 301,
+              "end": 301
+            },
+            {
+              "start": 303,
+              "end": 303
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 44,
+              "end": 44
+            },
+            {
+              "start": 246,
+              "end": 246
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "ihp-tone-keys-materials",
+            "status": "open",
+            "severity": "major",
+            "message": "Choosing and supervising materials is the only qualification for the lid, clasp and key examples; Baby PDF120’s material/part conditions are absent, and the furniture-key and Toddler lock-and-key examples lose their explicit attachment detail.",
+            "requestedChange": "Keep the invitation brief, but make mouthing-safe materials, suitable object/component size and securely attached parts explicit alongside supervision in the summary and reader body. Also preserve the source-specific secured-key detail from Baby PDF301 and Toddler PDF246 when describing those examples, without adding a homemade setup protocol."
+          }
+        ],
+        "assessment": "The closures remain optional and manageable, but their concise presentation omits the source’s key attachment and material conditions."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.18-24.infant-opening-and-keys",
+      "entryId": "infant-opening-and-keys",
+      "placementId": "18-24.infant-opening-and-keys",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/18-24.infant-opening-and-keys.json",
+      "snapshotFileSha256": "ddd624acb9b9280027413fe034dbe0ed7acff58a1072ebd7022ce5ffb0d040d9",
+      "textPlacementSha256": "3857c4273bf33c698825cd2954282d1ef91e1fbc1fb1d416e57ca4d326780594",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ihp-tone-baby-text-120",
+        "ihp-tone-baby-visual-301",
+        "ihp-tone-baby-visual-303",
+        "ihp-tone-toddler-text-39",
+        "ihp-tone-toddler-text-44",
+        "ihp-tone-toddler-text-246",
+        "ihp-tone-toddler-visual-246"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 301,
+              "end": 301
+            },
+            {
+              "start": 303,
+              "end": 303
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 44,
+              "end": 44
+            },
+            {
+              "start": 246,
+              "end": 246
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "ihp-tone-keys-materials",
+            "status": "open",
+            "severity": "major",
+            "message": "Choosing and supervising materials is the only qualification for the lid, clasp and key examples; Baby PDF120’s material/part conditions are absent, and the furniture-key and Toddler lock-and-key examples lose their explicit attachment detail.",
+            "requestedChange": "Keep the invitation brief, but make mouthing-safe materials, suitable object/component size and securely attached parts explicit alongside supervision in the summary and reader body. Also preserve the source-specific secured-key detail from Baby PDF301 and Toddler PDF246 when describing those examples, without adding a homemade setup protocol."
+          }
+        ],
+        "assessment": "The closures remain optional and manageable, but their concise presentation omits the source’s key attachment and material conditions."
+      }
+    },
+    {
+      "id": "infant-hand-play-tone-r01.24-36.infant-opening-and-keys",
+      "entryId": "infant-opening-and-keys",
+      "placementId": "24-36.infant-opening-and-keys",
+      "snapshotPath": "content/6-18/revisions/r03/snapshots/24-36.infant-opening-and-keys.json",
+      "snapshotFileSha256": "31e7a0853730f1d110ff737d0e0ba16ca0d57ea01f0456c8fc0e6fe624c7dba4",
+      "textPlacementSha256": "d9592055bce896fdaac3d58ce3abbc8922398b6a3d8d3fc75c25127fab5fd0b3",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone-framing",
+        "ilm-tone-text-294",
+        "ihp-tone-baby-text-120",
+        "ihp-tone-baby-visual-301",
+        "ihp-tone-baby-visual-303",
+        "ihp-tone-toddler-text-39",
+        "ihp-tone-toddler-text-44",
+        "ihp-tone-toddler-text-246",
+        "ihp-tone-toddler-visual-246"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 119,
+              "end": 122
+            },
+            {
+              "start": 294,
+              "end": 294
+            },
+            {
+              "start": 301,
+              "end": 301
+            },
+            {
+              "start": 303,
+              "end": 303
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 44,
+              "end": 44
+            },
+            {
+              "start": 246,
+              "end": 246
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "ihp-tone-keys-materials",
+            "status": "open",
+            "severity": "major",
+            "message": "Choosing and supervising materials is the only qualification for the lid, clasp and key examples; Baby PDF120’s material/part conditions are absent, and the furniture-key and Toddler lock-and-key examples lose their explicit attachment detail.",
+            "requestedChange": "Keep the invitation brief, but make mouthing-safe materials, suitable object/component size and securely attached parts explicit alongside supervision in the summary and reader body. Also preserve the source-specific secured-key detail from Baby PDF301 and Toddler PDF246 when describing those examples, without adding a homemade setup protocol."
+          }
+        ],
+        "assessment": "The closures remain optional and manageable, but their concise presentation omits the source’s key attachment and material conditions."
+      }
+    }
+  ]
+}

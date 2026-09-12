@@ -1,0 +1,131 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "shared-time-to-explore",
+        "kind": "invitation",
+        "title": "Leave room for another try",
+        "summary": "When your child is safely absorbed, give them room to watch, repeat, or stay with one part of an activity. Stay available when they need you.",
+        "cue": "When you are tempted to move things along because the same action is happening again.",
+        "detail": [
+          "A quiet moment can hold plenty of interest. Watch the child’s attention rather than using your own sense of boredom to decide when to change activities.",
+          "Both books describe children repeating one part of an activity. They also suggest allowing a moment to take in what you have said or shown before repeating it yourself.",
+          "This room for concentration includes noticing when your child is frustrated or needs care. It can sit alongside warm interaction and shared moments through the day."
+        ],
+        "principle": {
+          "id": "principle.time-for-exploration",
+          "text": "Watching, repetition, and partial participation all deserve time."
+        },
+        "references": [
+          {
+            "id": "shared.ref.baby.exploration-time",
+            "sourceId": "baby-2021",
+            "section": "Respect the baby’s pace; Going slow; Introduction to activities",
+            "locator": "Safe concentration, processing time, quiet interest, repeated effort, care needs and moments of connection",
+            "pdfPages": [
+              {
+                "start": 101,
+                "end": 102
+              },
+              {
+                "start": 114,
+                "end": 115
+              },
+              {
+                "start": 121,
+                "end": 126
+              }
+            ]
+          },
+          {
+            "id": "shared.ref.toddler.exploration-time",
+            "sourceId": "toddler-2019",
+            "section": "Individual development; What makes an activity Montessori?; General principles; Slow down",
+            "locator": "Watching/repetition, partial activity, focus, frustration/help, material supervision and processing time",
+            "pdfPages": [
+              {
+                "start": 29,
+                "end": 29
+              },
+              {
+                "start": 34,
+                "end": 39
+              },
+              {
+                "start": 194,
+                "end": 194
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.shared-time-to-explore",
+        "entryId": "shared-time-to-explore",
+        "ageId": "12-18",
+        "topicIds": [
+          "play-discovery",
+          "connection-feelings"
+        ]
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "What’s underneath",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 101–102, 114–115, 121–126"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 29, 34–39, 194"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "4d49959b516eab11fd3a37f4118c33f798acd761f5fa9d55da96bf1462d8942c",
+  "artContextSha256": null,
+  "publicProjectionSha256": "e0011ebf35d70bc0f4e84173d2938b067bf15fb41bf01bae555e26982b79d6d5",
+  "provenance": {
+    "revision": "r02",
+    "placementDraft": {
+      "path": "content/6-18/drafts/shared-placements/draft-r01.json",
+      "sha256": "be9ae97ea203dbd01c5f3b346415ee8eff0b483d023b3203be5e24246645ca2f"
+    },
+    "canonical": {
+      "entryId": "shared-time-to-explore",
+      "canonicalEntrySha256": "8904cbdc1e74829188d73117b0eb343cce29beb2384e3cfb6e5517ff674eda33",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/shared/draft-r02.json",
+        "sha256": "04720cdd2997dc461a619234d74bea952b2fd3c388a49b326dc282f065f39b06",
+        "jsonPointer": "/entries/3",
+        "author": "/root/shared_pilot_draft",
+        "provenancePointer": "/provenance/3"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

@@ -1,0 +1,2871 @@
+{
+  "id": "toddler-play-language-tone-r01",
+  "workflow": "lean-v1",
+  "reviewer": {
+    "task": "/root/trial_tone",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-12",
+  "scope": "Explicit grouped source-topic decisions; exact age contexts reviewed.",
+  "renderedSurfaces": {
+    "path": "content/6-18/revisions/r04/RENDERED_SURFACES.json",
+    "sha256": "31ea16f430bf234914ac3f39b3016aca6e9cf4fc3fb4510318c9cf1253b1487d"
+  },
+  "decisionInput": {
+    "path": "content/6-18/reviews/decisions/toddler-play-language-tone-r01.json",
+    "sha256": "546c02f7090e2c5093f464b34a975d0d8fdf364b368c15b10c45eb4fb93718d5"
+  },
+  "readingBasis": [],
+  "retainedReads": [
+    {
+      "path": "content/editorial/shared-foundations-tone-r01.json",
+      "sha256": "3b3fa4276e310d06d9ba6319fbd26b28664a8c56af908e09551d8be7774b2d74",
+      "readLogIds": [
+        "sf-tone-baby-text-33",
+        "sf-tone-baby-text-34",
+        "sf-tone-baby-text-35",
+        "sf-tone-baby-text-36",
+        "sf-tone-baby-text-37",
+        "sf-tone-baby-text-99",
+        "sf-tone-baby-text-100",
+        "sf-tone-baby-text-101",
+        "sf-tone-baby-text-102",
+        "sf-tone-baby-text-103",
+        "sf-tone-baby-text-104",
+        "sf-tone-baby-text-222",
+        "sf-tone-baby-text-223",
+        "sf-tone-baby-text-224",
+        "sf-tone-baby-text-241",
+        "sf-tone-baby-text-242",
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-text-29",
+        "sf-tone-toddler-text-33",
+        "sf-tone-toddler-text-34",
+        "sf-tone-toddler-text-35",
+        "sf-tone-toddler-text-83",
+        "sf-tone-toddler-text-84",
+        "sf-tone-toddler-text-85",
+        "sf-tone-toddler-text-108",
+        "sf-tone-toddler-text-109",
+        "sf-tone-toddler-text-110",
+        "sf-tone-toddler-text-189",
+        "sf-tone-toddler-text-192",
+        "sf-tone-toddler-text-193",
+        "sf-tone-toddler-text-194",
+        "sf-tone-toddler-text-197",
+        "sf-tone-toddler-text-198",
+        "sf-tone-toddler-visual-14"
+      ]
+    },
+    {
+      "path": "content/6-18/reviews/decisions/infant-hand-play-tone-r01.json",
+      "sha256": "ea50aa2f2293a79a09f351f2ab7920c2a318ba615d56ccfe8ac3b1c50de08fe4",
+      "readLogIds": [
+        "ihp-tone-baby-text-120",
+        "ihp-tone-toddler-text-39",
+        "ihp-tone-toddler-text-43",
+        "ihp-tone-toddler-text-44",
+        "ihp-tone-toddler-text-60",
+        "ihp-tone-toddler-text-246",
+        "ihp-tone-toddler-text-248",
+        "ihp-tone-baby-visual-175",
+        "ihp-tone-baby-visual-176",
+        "ihp-tone-baby-visual-300",
+        "ihp-tone-baby-visual-301",
+        "ihp-tone-baby-visual-302",
+        "ihp-tone-baby-visual-303",
+        "ihp-tone-toddler-visual-59",
+        "ihp-tone-toddler-visual-60",
+        "ihp-tone-toddler-visual-246",
+        "ihp-tone-toddler-visual-248"
+      ]
+    },
+    {
+      "path": "content/editorial/toddler-hand-art-tone-r01.json",
+      "sha256": "2256072fc2aa980869cb1b540952e136789b6d21a8f243d6953e82b6ab9252ee",
+      "readLogIds": [
+        "tha-tone-toddler-text-36",
+        "tha-tone-toddler-text-37",
+        "tha-tone-toddler-text-38",
+        "tha-tone-toddler-text-45",
+        "tha-tone-toddler-text-46",
+        "tha-tone-toddler-text-51",
+        "tha-tone-toddler-text-52",
+        "tha-tone-toddler-text-53",
+        "tha-tone-toddler-text-54",
+        "tha-tone-toddler-text-66",
+        "tha-tone-toddler-text-75",
+        "tha-tone-toddler-text-76",
+        "tha-tone-toddler-text-79",
+        "tha-tone-toddler-text-150",
+        "tha-tone-toddler-text-151",
+        "tha-tone-toddler-text-177",
+        "tha-tone-toddler-text-178",
+        "tha-tone-toddler-text-245",
+        "tha-tone-toddler-text-247",
+        "tha-tone-toddler-text-249",
+        "tha-tone-toddler-text-251",
+        "tha-tone-toddler-text-253",
+        "tha-tone-toddler-visual-51",
+        "tha-tone-toddler-visual-52",
+        "tha-tone-toddler-visual-65",
+        "tha-tone-toddler-visual-66",
+        "tha-tone-toddler-visual-245",
+        "tha-tone-toddler-visual-247",
+        "tha-tone-toddler-visual-249",
+        "tha-tone-toddler-visual-251",
+        "tha-tone-toddler-visual-253"
+      ]
+    },
+    {
+      "path": "content/editorial/toddler-practical-tone-r01.json",
+      "sha256": "77eaee437365a280d50d2689e7015a8d0747f3a1821893e578dbef02ee126cd5",
+      "readLogIds": [
+        "tp-tone-toddler-text-42",
+        "tp-tone-toddler-text-48",
+        "tp-tone-toddler-text-49",
+        "tp-tone-toddler-text-50",
+        "tp-tone-toddler-text-64",
+        "tp-tone-toddler-text-77",
+        "tp-tone-toddler-text-78",
+        "tp-tone-toddler-text-80",
+        "tp-tone-toddler-text-99",
+        "tp-tone-toddler-text-100",
+        "tp-tone-toddler-text-123",
+        "tp-tone-toddler-text-124",
+        "tp-tone-toddler-text-125",
+        "tp-tone-toddler-text-149",
+        "tp-tone-toddler-text-250",
+        "tp-tone-toddler-visual-63",
+        "tp-tone-toddler-visual-64",
+        "tp-tone-toddler-visual-250"
+      ]
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "sf-tone-baby-text-33",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 33,
+          "end": 33
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/33.txt",
+      "notes": "Read the opening observation guidance and its purpose in understanding an individual baby."
+    },
+    {
+      "id": "sf-tone-baby-text-34",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 34,
+          "end": 34
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/34.txt",
+      "notes": "Read help guided by observation and the infant observation example."
+    },
+    {
+      "id": "sf-tone-baby-text-35",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 35,
+          "end": 35
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/35.txt",
+      "notes": "Read the observation checklist, including reflexive movement, sounds and expression."
+    },
+    {
+      "id": "sf-tone-baby-text-36",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 36,
+          "end": 36
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/36.txt",
+      "notes": "Read the continuing checklist across care, interests, relationships and adult responses."
+    },
+    {
+      "id": "sf-tone-baby-text-37",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 37,
+          "end": 37
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/37.txt",
+      "notes": "Read informal observation, self-observation and people within the prepared environment."
+    },
+    {
+      "id": "sf-tone-baby-text-99",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 99,
+          "end": 99
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/99.txt",
+      "notes": "Read respectful handling, bodily agency and trust before the collaboration examples."
+    },
+    {
+      "id": "sf-tone-baby-text-100",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 100,
+          "end": 100
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/100.txt",
+      "notes": "Read collaboration from newborn responses onward and respect for individual timelines."
+    },
+    {
+      "id": "sf-tone-baby-text-101",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 101,
+          "end": 101
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/101.txt",
+      "notes": "Read safe activity, effort, needed assistance and protecting concentration."
+    },
+    {
+      "id": "sf-tone-baby-text-102",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 102,
+          "end": 102
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/102.txt",
+      "notes": "Read the complete pace and processing-time guidance."
+    },
+    {
+      "id": "sf-tone-baby-text-103",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 103,
+          "end": 103
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/103.txt",
+      "notes": "Read boundaries from birth within safety and ability, with attention to communicated needs."
+    },
+    {
+      "id": "sf-tone-baby-text-104",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 104,
+          "end": 104
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/104.txt",
+      "notes": "Read adult responsibility, repeated guidance and adapting the surroundings."
+    },
+    {
+      "id": "sf-tone-baby-text-222",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 222,
+          "end": 222
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/222.txt",
+      "notes": "Read the beginning of daily-task guidance, including the first six to eight weeks."
+    },
+    {
+      "id": "sf-tone-baby-text-223",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 223,
+          "end": 223
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/223.txt",
+      "notes": "Read ordinary work beyond the early weeks, rest and budget guidance."
+    },
+    {
+      "id": "sf-tone-baby-text-224",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 224,
+          "end": 224
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/224.txt",
+      "notes": "Read the budget continuation and adapting existing resources as the child grows."
+    },
+    {
+      "id": "sf-tone-baby-text-241",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 241,
+          "end": 241
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/241.txt",
+      "notes": "Read adult-capacity suggestions and the beginning of Doing our best."
+    },
+    {
+      "id": "sf-tone-baby-text-242",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 242,
+          "end": 242
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/242.txt",
+      "notes": "Read the complete changing-capacity and connection-over-perfection conclusion."
+    },
+    {
+      "id": "sf-tone-toddler-text-14",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/14.txt",
+      "notes": "Read the toddler scope note and surrounding acceptance of the child and imperfect parents."
+    },
+    {
+      "id": "sf-tone-toddler-text-29",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 29,
+          "end": 29
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/29.txt",
+      "notes": "Read individual timelines, respectful limits and observation for deciding when to help."
+    },
+    {
+      "id": "sf-tone-toddler-text-33",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 33,
+          "end": 33
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/33.txt",
+      "notes": "Read activity ages as indications and choosing by the child's interest."
+    },
+    {
+      "id": "sf-tone-toddler-text-34",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 34,
+          "end": 34
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/34.txt",
+      "notes": "Read partial participation, suitable challenge and repetition."
+    },
+    {
+      "id": "sf-tone-toddler-text-35",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 35,
+          "end": 35
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/35.txt",
+      "notes": "Read repeating one part, freedom of choice and stepping in when frustrated."
+    },
+    {
+      "id": "sf-tone-toddler-text-83",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 83,
+          "end": 83
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/83.txt",
+      "notes": "Read family culture, warmth and making the home reduce work."
+    },
+    {
+      "id": "sf-tone-toddler-text-84",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 84,
+          "end": 84
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/84.txt",
+      "notes": "Read shared and small spaces, including adapting one area."
+    },
+    {
+      "id": "sf-tone-toddler-text-85",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 85,
+          "end": 85
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/85.txt",
+      "notes": "Read the small-space continuation and gradual changes."
+    },
+    {
+      "id": "sf-tone-toddler-text-108",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 108,
+          "end": 108
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/108.txt",
+      "notes": "Read acceptance and seeing activity from the toddler's perspective."
+    },
+    {
+      "id": "sf-tone-toddler-text-109",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 109,
+          "end": 109
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/109.txt",
+      "notes": "Read acceptance of individuality and tentative translation of a need."
+    },
+    {
+      "id": "sf-tone-toddler-text-110",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 110,
+          "end": 110
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/110.txt",
+      "notes": "Read protective limits for the child, other people and the adult."
+    },
+    {
+      "id": "sf-tone-toddler-text-189",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 189,
+          "end": 189
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/189.txt",
+      "notes": "Read learning about differences and seeking needed support."
+    },
+    {
+      "id": "sf-tone-toddler-text-192",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 192,
+          "end": 192
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/192.txt",
+      "notes": "Read observation without writing when hands are full and adult emotional needs."
+    },
+    {
+      "id": "sf-tone-toddler-text-193",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 193,
+          "end": 193
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/193.txt",
+      "notes": "Read the opening slower-day framing and personal examples."
+    },
+    {
+      "id": "sf-tone-toddler-text-194",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 194,
+          "end": 194
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/194.txt",
+      "notes": "Read processing time, proportionate help and room for occasional hurry."
+    },
+    {
+      "id": "sf-tone-toddler-text-197",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 197,
+          "end": 197
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/197.txt",
+      "notes": "Read the opening family-choice discussion and acknowledgment of unchangeable circumstances."
+    },
+    {
+      "id": "sf-tone-toddler-text-198",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 198,
+          "end": 198
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/198.txt",
+      "notes": "Read work and money constraints, ordinary-time possibilities and accepting mistakes."
+    },
+    {
+      "id": "sf-tone-toddler-visual-14",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/14.png",
+      "notes": "Inspected the full original page and the closing note defining toddler as around one to three years."
+    },
+    {
+      "id": "ihp-tone-baby-text-120",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 120,
+          "end": 120
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/120.txt",
+      "notes": "Material choice separately covers mouthing-safe finishes, object/component size and secure parts."
+    },
+    {
+      "id": "ihp-tone-toddler-text-39",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 39,
+          "end": 39
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/39.txt",
+      "notes": "Adjusting challenge, using available household materials and calm adult supervision."
+    },
+    {
+      "id": "ihp-tone-toddler-text-43",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 43,
+          "end": 43
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/43.txt",
+      "notes": "Ring removal before replacement, later matching, and distinct threading movements."
+    },
+    {
+      "id": "ihp-tone-toddler-text-44",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 44,
+          "end": 44
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/44.txt",
+      "notes": "Increasingly precise posting, opening and closing, lockboxes and hand movements."
+    },
+    {
+      "id": "ihp-tone-toddler-text-60",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 60,
+          "end": 60
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/60.txt",
+      "notes": "Photograph captions distinguish posting from around 16 months and opening/closing from 18 months."
+    },
+    {
+      "id": "ihp-tone-toddler-text-246",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 246,
+          "end": 246
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/246.txt",
+      "notes": "Appendix rows for graded rings, peg box, cubes, opening/closing and locks with an attached key."
+    },
+    {
+      "id": "ihp-tone-toddler-text-248",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 248,
+          "end": 248
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/248.txt",
+      "notes": "Appendix ages and descriptions for horizontal/serpentine dowels and colored pegs."
+    },
+    {
+      "id": "ihp-tone-baby-visual-175",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 175,
+          "end": 175
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/baby/175.png",
+      "notes": "Illustrated movement grid establishes the 9–12-month heading continued on the next page."
+    },
+    {
+      "id": "ihp-tone-baby-visual-176",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 176,
+          "end": 176
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/baby/176.png",
+      "notes": "Illustrated 9–12-month grid includes hand-pushed balls, peg box and cubes on a dowel."
+    },
+    {
+      "id": "ihp-tone-baby-visual-300",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 300,
+          "end": 300
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/baby/300.png",
+      "notes": "Distinct egg/cube, tray-box, creeping basket, stair and ball-tracker age/readiness rows."
+    },
+    {
+      "id": "ihp-tone-baby-visual-301",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 301,
+          "end": 301
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/baby/301.png",
+      "notes": "Stable-sitting and prior-skill ring rows; spinning top, drawer boxes, push balls and attached furniture key."
+    },
+    {
+      "id": "ihp-tone-baby-visual-302",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 302,
+          "end": 302
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/baby/302.png",
+      "notes": "Cabinet/drawer, basket-ring, napkin-ring and graded-ring rows with separate age labels."
+    },
+    {
+      "id": "ihp-tone-baby-visual-303",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 303,
+          "end": 303
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/baby/303.png",
+      "notes": "12+ peg/cube/opening rows and separate around-13+ locks and slotted-box rows."
+    },
+    {
+      "id": "ihp-tone-toddler-visual-59",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 59,
+          "end": 59
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/59.png",
+      "notes": "Numbered photographs connect the coin-slot box and other hand activities to their captions."
+    },
+    {
+      "id": "ihp-tone-toddler-visual-60",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 60,
+          "end": 60
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/60.png",
+      "notes": "Full caption page confirms the photograph-specific posting and opening/closing ages."
+    },
+    {
+      "id": "ihp-tone-toddler-visual-246",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 246,
+          "end": 246
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/246.png",
+      "notes": "Full table preserves separate 12+ material rows and around-13+ strongly attached key row."
+    },
+    {
+      "id": "ihp-tone-toddler-visual-248",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 248,
+          "end": 248
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/248.png",
+      "notes": "Full table preserves the distinct horizontal, serpentine and colored-ring age rows."
+    },
+    {
+      "id": "tha-tone-toddler-text-36",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 36,
+          "end": 36
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/36.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-37",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 37,
+          "end": 37
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/37.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-38",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 38,
+          "end": 38
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/38.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-45",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 45,
+          "end": 45
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/45.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-46",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 46,
+          "end": 46
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/46.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-51",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 51,
+          "end": 51
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/51.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-52",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 52,
+          "end": 52
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/52.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-53",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 53,
+          "end": 53
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/53.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-54",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 54,
+          "end": 54
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/54.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-66",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 66,
+          "end": 66
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/66.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-75",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 75,
+          "end": 75
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/75.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-76",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 76,
+          "end": 76
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/76.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-79",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 79,
+          "end": 79
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/79.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-150",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 150,
+          "end": 150
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/150.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-151",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 151,
+          "end": 151
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/151.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-177",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 177,
+          "end": 177
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/177.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-178",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 178,
+          "end": 178
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/178.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-245",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 245,
+          "end": 245
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/245.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-247",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 247,
+          "end": 247
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/247.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-249",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 249,
+          "end": 249
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/249.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-251",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 251,
+          "end": 251
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/251.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-text-253",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 253,
+          "end": 253
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/253.txt",
+      "notes": "Read the full original page for activity framing, help, materials and applicable age context."
+    },
+    {
+      "id": "tha-tone-toddler-visual-51",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 51,
+          "end": 51
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/sorting-051.png",
+      "notes": "Inspected the full original page, including the age column or photograph and caption context."
+    },
+    {
+      "id": "tha-tone-toddler-visual-52",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 52,
+          "end": 52
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/sorting-052.png",
+      "notes": "Inspected the full original page, including the age column or photograph and caption context."
+    },
+    {
+      "id": "tha-tone-toddler-visual-65",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 65,
+          "end": 65
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/65.png",
+      "notes": "Inspected the full original page, including the age column or photograph and caption context."
+    },
+    {
+      "id": "tha-tone-toddler-visual-66",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 66,
+          "end": 66
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/66.png",
+      "notes": "Inspected the full original page, including the age column or photograph and caption context."
+    },
+    {
+      "id": "tha-tone-toddler-visual-245",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 245,
+          "end": 245
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/245.png",
+      "notes": "Inspected the full original page, including the age column or photograph and caption context."
+    },
+    {
+      "id": "tha-tone-toddler-visual-247",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 247,
+          "end": 247
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/247.png",
+      "notes": "Inspected the full original page, including the age column or photograph and caption context."
+    },
+    {
+      "id": "tha-tone-toddler-visual-249",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 249,
+          "end": 249
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/249.png",
+      "notes": "Inspected the full original page, including the age column or photograph and caption context."
+    },
+    {
+      "id": "tha-tone-toddler-visual-251",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 251,
+          "end": 251
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/251.png",
+      "notes": "Inspected the full original page, including the age column or photograph and caption context."
+    },
+    {
+      "id": "tha-tone-toddler-visual-253",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 253,
+          "end": 253
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/253.png",
+      "notes": "Inspected the full original page, including the age column or photograph and caption context."
+    },
+    {
+      "id": "tp-tone-toddler-text-42",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 42,
+          "end": 42
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/42.txt",
+      "notes": "Read the full original page for shared daily work, family capacity, assistance and applicable age or material qualifications."
+    },
+    {
+      "id": "tp-tone-toddler-text-48",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 48,
+          "end": 48
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/48.txt",
+      "notes": "Read the full original page for shared daily work, family capacity, assistance and applicable age or material qualifications."
+    },
+    {
+      "id": "tp-tone-toddler-text-49",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 49,
+          "end": 49
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/49.txt",
+      "notes": "Read the full original page for shared daily work, family capacity, assistance and applicable age or material qualifications."
+    },
+    {
+      "id": "tp-tone-toddler-text-50",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 50,
+          "end": 50
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/50.txt",
+      "notes": "Read the full original page for shared daily work, family capacity, assistance and applicable age or material qualifications."
+    },
+    {
+      "id": "tp-tone-toddler-text-64",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 64,
+          "end": 64
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/64.txt",
+      "notes": "Read the full original page for shared daily work, family capacity, assistance and applicable age or material qualifications."
+    },
+    {
+      "id": "tp-tone-toddler-text-77",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 77,
+          "end": 77
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/77.txt",
+      "notes": "Read the full original page for shared daily work, family capacity, assistance and applicable age or material qualifications."
+    },
+    {
+      "id": "tp-tone-toddler-text-78",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 78,
+          "end": 78
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/78.txt",
+      "notes": "Read the full original page for shared daily work, family capacity, assistance and applicable age or material qualifications."
+    },
+    {
+      "id": "tp-tone-toddler-text-80",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 80,
+          "end": 80
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/80.txt",
+      "notes": "Read the full original page for shared daily work, family capacity, assistance and applicable age or material qualifications."
+    },
+    {
+      "id": "tp-tone-toddler-text-99",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 99,
+          "end": 99
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/99.txt",
+      "notes": "Read the full original page for shared daily work, family capacity, assistance and applicable age or material qualifications."
+    },
+    {
+      "id": "tp-tone-toddler-text-100",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 100,
+          "end": 100
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/100.txt",
+      "notes": "Read the full original page for shared daily work, family capacity, assistance and applicable age or material qualifications."
+    },
+    {
+      "id": "tp-tone-toddler-text-123",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 123,
+          "end": 123
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/123.txt",
+      "notes": "Read the full original page for shared daily work, family capacity, assistance and applicable age or material qualifications."
+    },
+    {
+      "id": "tp-tone-toddler-text-124",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 124,
+          "end": 124
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/124.txt",
+      "notes": "Read the full original page for shared daily work, family capacity, assistance and applicable age or material qualifications."
+    },
+    {
+      "id": "tp-tone-toddler-text-125",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 125,
+          "end": 125
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/125.txt",
+      "notes": "Read the full original page for shared daily work, family capacity, assistance and applicable age or material qualifications."
+    },
+    {
+      "id": "tp-tone-toddler-text-149",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 149,
+          "end": 149
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/149.txt",
+      "notes": "Read the full original page for shared daily work, family capacity, assistance and applicable age or material qualifications."
+    },
+    {
+      "id": "tp-tone-toddler-text-250",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 250,
+          "end": 250
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/250.txt",
+      "notes": "Read the full original page for shared daily work, family capacity, assistance and applicable age or material qualifications."
+    },
+    {
+      "id": "tp-tone-toddler-visual-63",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 63,
+          "end": 63
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/63.png",
+      "notes": "Inspected the complete original photograph/caption page or appendix table with its age and material columns."
+    },
+    {
+      "id": "tp-tone-toddler-visual-64",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 64,
+          "end": 64
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/64.png",
+      "notes": "Inspected the complete original photograph/caption page or appendix table with its age and material columns."
+    },
+    {
+      "id": "tp-tone-toddler-visual-250",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 250,
+          "end": 250
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/250.png",
+      "notes": "Inspected the complete original photograph/caption page or appendix table with its age and material columns."
+    },
+    {
+      "id": "tpl-tone-toddler-text-26",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 26,
+          "end": 26
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/26.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-40",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 40,
+          "end": 40
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/40.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-47",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 47,
+          "end": 47
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/47.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-55",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 55,
+          "end": 55
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/55.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-56",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 56,
+          "end": 56
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/56.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-57",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 57,
+          "end": 57
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/57.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-58",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 58,
+          "end": 58
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/58.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-62",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 62,
+          "end": 62
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/62.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-68",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 68,
+          "end": 68
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/68.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-69",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 69,
+          "end": 69
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/69.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-70",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 70,
+          "end": 70
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/70.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-71",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 71,
+          "end": 71
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/71.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-72",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 72,
+          "end": 72
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/72.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-82",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 82,
+          "end": 82
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/82.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-97",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 97,
+          "end": 97
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/97.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-98",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 98,
+          "end": 98
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/98.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-103",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 103,
+          "end": 103
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/103.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-104",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 104,
+          "end": 104
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/104.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-134",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 134,
+          "end": 134
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/134.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-135",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 135,
+          "end": 135
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/135.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-136",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 136,
+          "end": 136
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/136.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-137",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 137,
+          "end": 137
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/137.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-138",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 138,
+          "end": 138
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/138.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-139",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 139,
+          "end": 139
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/139.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-181",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 181,
+          "end": 181
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/181.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-182",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 182,
+          "end": 182
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/182.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-text-183",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 183,
+          "end": 183
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/183.txt",
+      "notes": "Read the full original page for child-led interest, family capacity, source age distinctions and the applicable language, movement or connection framing."
+    },
+    {
+      "id": "tpl-tone-toddler-visual-26",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 26,
+          "end": 26
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/26.png",
+      "notes": "Inspected the complete original table or illustrated/caption context, including age and readiness qualifications."
+    },
+    {
+      "id": "tpl-tone-toddler-visual-56",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 56,
+          "end": 56
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/56.png",
+      "notes": "Inspected the complete original table or illustrated/caption context, including age and readiness qualifications."
+    },
+    {
+      "id": "tpl-tone-toddler-visual-61",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 61,
+          "end": 61
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/61.png",
+      "notes": "Inspected the complete original table or illustrated/caption context, including age and readiness qualifications."
+    },
+    {
+      "id": "tpl-tone-toddler-visual-62",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 62,
+          "end": 62
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/62.png",
+      "notes": "Inspected the complete original table or illustrated/caption context, including age and readiness qualifications."
+    },
+    {
+      "id": "tpl-tone-toddler-visual-67",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 67,
+          "end": 67
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/67.png",
+      "notes": "Inspected the complete original table or illustrated/caption context, including age and readiness qualifications."
+    },
+    {
+      "id": "tpl-tone-toddler-visual-68",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 68,
+          "end": 68
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/68.png",
+      "notes": "Inspected the complete original table or illustrated/caption context, including age and readiness qualifications."
+    },
+    {
+      "id": "tpl-tone-toddler-visual-138",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 138,
+          "end": 138
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "tmp/editorial/sources/toddler/138.png",
+      "notes": "Inspected the complete original table or illustrated/caption context, including age and readiness qualifications."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "toddler-play-language-tone-r01.12-18.toddler-books",
+      "entryId": "toddler-books",
+      "placementId": "12-18.toddler-books",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.toddler-books.json",
+      "snapshotFileSha256": "e20a89b1b037a374060d32fbc3eb5b4df373c398c99cc36628ab645aac4e16d5",
+      "textPlacementSha256": "5dce0602d3908cdae4b938c750c79f9a3b5f8361a574d503c003bcf427ef595e",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-toddler-text-14",
+        "tpl-tone-toddler-text-57",
+        "tpl-tone-toddler-text-58",
+        "tp-tone-toddler-text-80",
+        "tha-tone-toddler-text-245"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 57,
+              "end": 58
+            },
+            {
+              "start": 80,
+              "end": 80
+            },
+            {
+              "start": 245,
+              "end": 245
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both contexts let book length and handling follow interest while preserving repeated reading, adult enjoyment and the book’s flexible treatment of pretend stories."
+      },
+      "bodyReview": {
+        "entryId": "toddler-books",
+        "canonicalEntrySha256": "4964c571d3f7f81a9e94cab706a6c5f1ab74b5f06c475897da5a445e8a07229b",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "administrativeReadLinks": [
+        {
+          "id": "sf-tone-toddler-text-14",
+          "sourceId": "toddler-2019",
+          "page": 14
+        },
+        {
+          "id": "tpl-tone-toddler-text-57",
+          "sourceId": "toddler-2019",
+          "page": 57
+        },
+        {
+          "id": "tpl-tone-toddler-text-58",
+          "sourceId": "toddler-2019",
+          "page": 58
+        },
+        {
+          "id": "tp-tone-toddler-text-80",
+          "sourceId": "toddler-2019",
+          "page": 80
+        },
+        {
+          "id": "tha-tone-toddler-text-245",
+          "sourceId": "toddler-2019",
+          "page": 245
+        }
+      ]
+    },
+    {
+      "id": "toddler-play-language-tone-r01.12-18.toddler-conversation",
+      "entryId": "toddler-conversation",
+      "placementId": "12-18.toddler-conversation",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.toddler-conversation.json",
+      "snapshotFileSha256": "e4a3340f67b35914508691f6614bbf3d86637d18bd7a2a21260ce3f34a7909bd",
+      "textPlacementSha256": "f6592ec5ba1ddbf8a2b39aa44dadeb780266dfa6a98ddefa71c55569d6731822",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-toddler-text-14",
+        "tpl-tone-toddler-text-55",
+        "tpl-tone-toddler-text-56",
+        "tpl-tone-toddler-text-57",
+        "tpl-tone-toddler-text-58",
+        "tha-tone-toddler-text-245"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 55,
+              "end": 58
+            },
+            {
+              "start": 245,
+              "end": 245
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Sounds and gestures remain valid conversation in both ages, with silence, unhurried replies and culturally qualified eye contact preserved."
+      },
+      "bodyReview": {
+        "entryId": "toddler-conversation",
+        "canonicalEntrySha256": "0875458cc97af55f3a5913da543c129a6d96262903d755a8c3d2a5458a972468",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "administrativeReadLinks": [
+        {
+          "id": "sf-tone-toddler-text-14",
+          "sourceId": "toddler-2019",
+          "page": 14
+        },
+        {
+          "id": "tpl-tone-toddler-text-55",
+          "sourceId": "toddler-2019",
+          "page": 55
+        },
+        {
+          "id": "tpl-tone-toddler-text-56",
+          "sourceId": "toddler-2019",
+          "page": 56
+        },
+        {
+          "id": "tpl-tone-toddler-text-57",
+          "sourceId": "toddler-2019",
+          "page": 57
+        },
+        {
+          "id": "tpl-tone-toddler-text-58",
+          "sourceId": "toddler-2019",
+          "page": 58
+        },
+        {
+          "id": "tha-tone-toddler-text-245",
+          "sourceId": "toddler-2019",
+          "page": 245
+        }
+      ]
+    },
+    {
+      "id": "toddler-play-language-tone-r01.12-18.toddler-everyday-play",
+      "entryId": "toddler-everyday-play",
+      "placementId": "12-18.toddler-everyday-play",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.toddler-everyday-play.json",
+      "snapshotFileSha256": "0e0aa0db19a4f1d7d306ce7cc790326f3c3fea46c42da2b6f2fc73775d48f450",
+      "textPlacementSha256": "be4539a26eec0ca3e0cd2516f871fb1995ee78570d97e26d76a0974c421af1bb",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-text-33",
+        "ihp-tone-toddler-text-39",
+        "tpl-tone-toddler-text-71",
+        "tpl-tone-toddler-text-72",
+        "tpl-tone-toddler-text-103",
+        "tpl-tone-toddler-text-104"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 33,
+              "end": 33
+            },
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 71,
+              "end": 72
+            },
+            {
+              "start": 103,
+              "end": 104
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The new contexts distinguish familiar exploration from the later pretend-play discussion, while existing favorites remain sufficient and school materials need not be duplicated."
+      },
+      "bodyReview": {
+        "entryId": "toddler-everyday-play",
+        "canonicalEntrySha256": "55df76379be43cfe04dffac4fd075110e443f776396f4cd6e54da59bd1a4a8a9",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "administrativeReadLinks": [
+        {
+          "id": "sf-tone-toddler-text-14",
+          "sourceId": "toddler-2019",
+          "page": 14
+        },
+        {
+          "id": "sf-tone-toddler-text-33",
+          "sourceId": "toddler-2019",
+          "page": 33
+        },
+        {
+          "id": "ihp-tone-toddler-text-39",
+          "sourceId": "toddler-2019",
+          "page": 39
+        },
+        {
+          "id": "tpl-tone-toddler-text-71",
+          "sourceId": "toddler-2019",
+          "page": 71
+        },
+        {
+          "id": "tpl-tone-toddler-text-72",
+          "sourceId": "toddler-2019",
+          "page": 72
+        },
+        {
+          "id": "tpl-tone-toddler-text-103",
+          "sourceId": "toddler-2019",
+          "page": 103
+        },
+        {
+          "id": "tpl-tone-toddler-text-104",
+          "sourceId": "toddler-2019",
+          "page": 104
+        }
+      ]
+    },
+    {
+      "id": "toddler-play-language-tone-r01.12-18.toddler-languages",
+      "entryId": "toddler-languages",
+      "placementId": "12-18.toddler-languages",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.toddler-languages.json",
+      "snapshotFileSha256": "1976b9598918c0d63718d7351b214f77999ec5a8cd16cd2fb0f25992a24400f5",
+      "textPlacementSha256": "25dec5de301f34b1003ba52ff593e3ae13bc0f8d2e3327e2f7e90b88318f8e6a",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-toddler-text-14",
+        "tpl-tone-toddler-text-182",
+        "tpl-tone-toddler-text-183"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 182,
+              "end": 183
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both contexts keep multilingual arrangements tied to the family’s actual people and routines, with alternatives and the absence of a fluency timetable preserved."
+      },
+      "bodyReview": {
+        "entryId": "toddler-languages",
+        "canonicalEntrySha256": "133cde8e6a04e472b3747ee8828431e4c02ffc65fbf080ae337cc8326dac6668",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "administrativeReadLinks": [
+        {
+          "id": "sf-tone-toddler-text-14",
+          "sourceId": "toddler-2019",
+          "page": 14
+        },
+        {
+          "id": "tpl-tone-toddler-text-182",
+          "sourceId": "toddler-2019",
+          "page": 182
+        },
+        {
+          "id": "tpl-tone-toddler-text-183",
+          "sourceId": "toddler-2019",
+          "page": 183
+        }
+      ]
+    },
+    {
+      "id": "toddler-play-language-tone-r01.12-18.toddler-music",
+      "entryId": "toddler-music",
+      "placementId": "12-18.toddler-music",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.toddler-music.json",
+      "snapshotFileSha256": "5f9ba29e6156dda147848b9ff56e9c6143b6d6eeaba7cc6fa02afc3d3d488918",
+      "textPlacementSha256": "388ae1abeacf98a1161b842482d8406337ea61e051a0a8914238a01573ba9b71",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-toddler-text-14",
+        "tha-tone-toddler-text-46",
+        "tpl-tone-toddler-text-47",
+        "tha-tone-toddler-text-245"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 46,
+              "end": 47
+            },
+            {
+              "start": 245,
+              "end": 245
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Shared enjoyment, responding to the child and listening remain sufficient participation without musical skill or performance expectations."
+      },
+      "bodyReview": {
+        "entryId": "toddler-music",
+        "canonicalEntrySha256": "a094cce0575fb3f071254fc8cafda4a3ebe047dba057bc038f4a9767c96b4c0b",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "administrativeReadLinks": [
+        {
+          "id": "sf-tone-toddler-text-14",
+          "sourceId": "toddler-2019",
+          "page": 14
+        },
+        {
+          "id": "tha-tone-toddler-text-46",
+          "sourceId": "toddler-2019",
+          "page": 46
+        },
+        {
+          "id": "tpl-tone-toddler-text-47",
+          "sourceId": "toddler-2019",
+          "page": 47
+        },
+        {
+          "id": "tha-tone-toddler-text-245",
+          "sourceId": "toddler-2019",
+          "page": 245
+        }
+      ]
+    },
+    {
+      "id": "toddler-play-language-tone-r01.12-18.toddler-objects-and-pictures",
+      "entryId": "toddler-objects-and-pictures",
+      "placementId": "12-18.toddler-objects-and-pictures",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.toddler-objects-and-pictures.json",
+      "snapshotFileSha256": "c0e382dfc4929c98d55ca663c1364c119fb8599215677fde115f7e13d257927f",
+      "textPlacementSha256": "8e2eec1be125cea709c84889ee186322765c9a0bcb057b624d29084460f172e5",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-toddler-text-14",
+        "ihp-tone-toddler-text-39",
+        "tpl-tone-toddler-text-55",
+        "tpl-tone-toddler-text-56",
+        "tpl-tone-toddler-text-57",
+        "tpl-tone-toddler-visual-67",
+        "tpl-tone-toddler-text-68",
+        "ihp-tone-toddler-text-246",
+        "tha-tone-toddler-text-251"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 39,
+              "end": 39
+            },
+            {
+              "start": 55,
+              "end": 57
+            },
+            {
+              "start": 67,
+              "end": 68
+            },
+            {
+              "start": 246,
+              "end": 246
+            },
+            {
+              "start": 251,
+              "end": 251
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The age variants preserve exploration before matching, identical before similar pictures and no naming test within either browse band."
+      },
+      "bodyReview": {
+        "entryId": "toddler-objects-and-pictures",
+        "canonicalEntrySha256": "373eb7a0c92491420382e4ddc4937f5d2f30593c440998ce7a2c0d0fe4ee9347",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "administrativeReadLinks": [
+        {
+          "id": "sf-tone-toddler-text-14",
+          "sourceId": "toddler-2019",
+          "page": 14
+        },
+        {
+          "id": "ihp-tone-toddler-text-39",
+          "sourceId": "toddler-2019",
+          "page": 39
+        },
+        {
+          "id": "tpl-tone-toddler-text-55",
+          "sourceId": "toddler-2019",
+          "page": 55
+        },
+        {
+          "id": "tpl-tone-toddler-text-56",
+          "sourceId": "toddler-2019",
+          "page": 56
+        },
+        {
+          "id": "tpl-tone-toddler-text-57",
+          "sourceId": "toddler-2019",
+          "page": 57
+        },
+        {
+          "id": "tpl-tone-toddler-visual-67",
+          "sourceId": "toddler-2019",
+          "page": 67
+        },
+        {
+          "id": "tpl-tone-toddler-text-68",
+          "sourceId": "toddler-2019",
+          "page": 68
+        },
+        {
+          "id": "ihp-tone-toddler-text-246",
+          "sourceId": "toddler-2019",
+          "page": 246
+        },
+        {
+          "id": "tha-tone-toddler-text-251",
+          "sourceId": "toddler-2019",
+          "page": 251
+        }
+      ]
+    },
+    {
+      "id": "toddler-play-language-tone-r01.12-18.toddler-outside-noticing",
+      "entryId": "toddler-outside-noticing",
+      "placementId": "12-18.toddler-outside-noticing",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.toddler-outside-noticing.json",
+      "snapshotFileSha256": "c4a022da71121ea446fb073af5f25318e77b027bca022a81bcfc984adcbc7418",
+      "textPlacementSha256": "5177d199575d360a97cae22ea665292ab45fb87f514b298ddfbf3e323202a202",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-toddler-text-14",
+        "tpl-tone-toddler-text-69",
+        "tpl-tone-toddler-text-70",
+        "tp-tone-toddler-text-80",
+        "tpl-tone-toddler-text-97",
+        "tpl-tone-toddler-text-98",
+        "tp-tone-toddler-text-99",
+        "tp-tone-toddler-text-100"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 69,
+              "end": 70
+            },
+            {
+              "start": 80,
+              "end": 80
+            },
+            {
+              "start": 97,
+              "end": 100
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both contexts invite small discoveries without a lesson or required outing, while time and alternatives for families without outdoor space remain visible."
+      },
+      "bodyReview": {
+        "entryId": "toddler-outside-noticing",
+        "canonicalEntrySha256": "7b60f40267daeb0c86559abe2c8717820362f77605bdbac5837d98d5d4f95653",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "administrativeReadLinks": [
+        {
+          "id": "sf-tone-toddler-text-14",
+          "sourceId": "toddler-2019",
+          "page": 14
+        },
+        {
+          "id": "tpl-tone-toddler-text-69",
+          "sourceId": "toddler-2019",
+          "page": 69
+        },
+        {
+          "id": "tpl-tone-toddler-text-70",
+          "sourceId": "toddler-2019",
+          "page": 70
+        },
+        {
+          "id": "tp-tone-toddler-text-80",
+          "sourceId": "toddler-2019",
+          "page": 80
+        },
+        {
+          "id": "tpl-tone-toddler-text-97",
+          "sourceId": "toddler-2019",
+          "page": 97
+        },
+        {
+          "id": "tpl-tone-toddler-text-98",
+          "sourceId": "toddler-2019",
+          "page": 98
+        },
+        {
+          "id": "tp-tone-toddler-text-99",
+          "sourceId": "toddler-2019",
+          "page": 99
+        },
+        {
+          "id": "tp-tone-toddler-text-100",
+          "sourceId": "toddler-2019",
+          "page": 100
+        }
+      ]
+    },
+    {
+      "id": "toddler-play-language-tone-r01.12-18.toddler-room-to-move",
+      "entryId": "toddler-room-to-move",
+      "placementId": "12-18.toddler-room-to-move",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.toddler-room-to-move.json",
+      "snapshotFileSha256": "376f2fff79c65a01bf0b7cf189b3034a64f0dd2199902c26ab9c5d990c1d8e97",
+      "textPlacementSha256": "6fea49848b3a4cc1c2d303aae76e50134a779092a0c438fbbacfa4e3f021ab40",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-toddler-text-14",
+        "tpl-tone-toddler-text-26",
+        "sf-tone-toddler-text-33",
+        "tha-tone-toddler-text-46",
+        "tpl-tone-toddler-text-47",
+        "tpl-tone-toddler-text-62",
+        "tha-tone-toddler-text-247",
+        "ihp-tone-toddler-text-248"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 26,
+              "end": 26
+            },
+            {
+              "start": 33,
+              "end": 33
+            },
+            {
+              "start": 46,
+              "end": 47
+            },
+            {
+              "start": 62,
+              "end": 62
+            },
+            {
+              "start": 247,
+              "end": 248
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The age variants keep the child’s chosen movement central and do not make the equipment list or its differing readiness conditions a set of achievements."
+      },
+      "bodyReview": {
+        "entryId": "toddler-room-to-move",
+        "canonicalEntrySha256": "0b8728f50870a1a73d222bd1d3b0658a9917f699668af7d0bdd662591ae79096",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "administrativeReadLinks": [
+        {
+          "id": "sf-tone-toddler-text-14",
+          "sourceId": "toddler-2019",
+          "page": 14
+        },
+        {
+          "id": "tpl-tone-toddler-text-26",
+          "sourceId": "toddler-2019",
+          "page": 26
+        },
+        {
+          "id": "sf-tone-toddler-text-33",
+          "sourceId": "toddler-2019",
+          "page": 33
+        },
+        {
+          "id": "tha-tone-toddler-text-46",
+          "sourceId": "toddler-2019",
+          "page": 46
+        },
+        {
+          "id": "tpl-tone-toddler-text-47",
+          "sourceId": "toddler-2019",
+          "page": 47
+        },
+        {
+          "id": "tpl-tone-toddler-text-62",
+          "sourceId": "toddler-2019",
+          "page": 62
+        },
+        {
+          "id": "tha-tone-toddler-text-247",
+          "sourceId": "toddler-2019",
+          "page": 247
+        },
+        {
+          "id": "ihp-tone-toddler-text-248",
+          "sourceId": "toddler-2019",
+          "page": 248
+        }
+      ]
+    },
+    {
+      "id": "toddler-play-language-tone-r01.12-18.toddler-screens",
+      "entryId": "toddler-screens",
+      "placementId": "12-18.toddler-screens",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.toddler-screens.json",
+      "snapshotFileSha256": "92648b8edb971957aab864d059c162590680eddb038f58cc69705e9347d257b3",
+      "textPlacementSha256": "6370c36f34a29ad8539a35e1c583150330323bfe0b8d125e14c3d84e4d9de989",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-toddler-text-14",
+        "tpl-tone-toddler-text-134",
+        "tpl-tone-toddler-text-135",
+        "tpl-tone-toddler-text-136",
+        "tpl-tone-toddler-text-137",
+        "tpl-tone-toddler-text-138",
+        "tpl-tone-toddler-text-139",
+        "tpl-tone-toddler-text-181",
+        "tpl-tone-toddler-text-182"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 134,
+              "end": 139
+            },
+            {
+              "start": 181,
+              "end": 182
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The new contexts preserve an attributed Montessori perspective and family anecdote, with practical alternatives and connection rather than guilt or promised outcomes."
+      },
+      "bodyReview": {
+        "entryId": "toddler-screens",
+        "canonicalEntrySha256": "8aab757b441257d7eb5da4df25452023675b23e4d86496eda3109cc5a4e84068",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "administrativeReadLinks": [
+        {
+          "id": "sf-tone-toddler-text-14",
+          "sourceId": "toddler-2019",
+          "page": 14
+        },
+        {
+          "id": "tpl-tone-toddler-text-134",
+          "sourceId": "toddler-2019",
+          "page": 134
+        },
+        {
+          "id": "tpl-tone-toddler-text-135",
+          "sourceId": "toddler-2019",
+          "page": 135
+        },
+        {
+          "id": "tpl-tone-toddler-text-136",
+          "sourceId": "toddler-2019",
+          "page": 136
+        },
+        {
+          "id": "tpl-tone-toddler-text-137",
+          "sourceId": "toddler-2019",
+          "page": 137
+        },
+        {
+          "id": "tpl-tone-toddler-text-138",
+          "sourceId": "toddler-2019",
+          "page": 138
+        },
+        {
+          "id": "tpl-tone-toddler-text-139",
+          "sourceId": "toddler-2019",
+          "page": 139
+        },
+        {
+          "id": "tpl-tone-toddler-text-181",
+          "sourceId": "toddler-2019",
+          "page": 181
+        },
+        {
+          "id": "tpl-tone-toddler-text-182",
+          "sourceId": "toddler-2019",
+          "page": 182
+        }
+      ]
+    },
+    {
+      "id": "toddler-play-language-tone-r01.12-18.toddler-shelf-and-rotation",
+      "entryId": "toddler-shelf-and-rotation",
+      "placementId": "12-18.toddler-shelf-and-rotation",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.toddler-shelf-and-rotation.json",
+      "snapshotFileSha256": "01d5dfb2f3217261e9ee7704a708bca0f0e2ef6b51fe913f2c25cbab88e4d55c",
+      "textPlacementSha256": "e984a85c619d05ede0ee2501785b27da7e3152a35a983d83161002a576a1bf49",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-toddler-text-14",
+        "sf-tone-toddler-text-33",
+        "sf-tone-toddler-text-34",
+        "sf-tone-toddler-text-35",
+        "tha-tone-toddler-text-36",
+        "tha-tone-toddler-text-37",
+        "tha-tone-toddler-text-38",
+        "ihp-tone-toddler-text-39",
+        "tpl-tone-toddler-text-40",
+        "tha-tone-toddler-text-75",
+        "tpl-tone-toddler-text-82",
+        "tha-tone-toddler-text-177",
+        "tha-tone-toddler-text-178"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 33,
+              "end": 40
+            },
+            {
+              "start": 75,
+              "end": 75
+            },
+            {
+              "start": 82,
+              "end": 82
+            },
+            {
+              "start": 177,
+              "end": 178
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The contexts preserve interest-led choices, shared return and adult modeling without requiring a rotation schedule or a complete work cycle."
+      },
+      "bodyReview": {
+        "entryId": "toddler-shelf-and-rotation",
+        "canonicalEntrySha256": "42d024dde481c6ae844a61b307b76af4b22d3c8ef4c5c95452c38251727c1d46",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "administrativeReadLinks": [
+        {
+          "id": "sf-tone-toddler-text-14",
+          "sourceId": "toddler-2019",
+          "page": 14
+        },
+        {
+          "id": "sf-tone-toddler-text-33",
+          "sourceId": "toddler-2019",
+          "page": 33
+        },
+        {
+          "id": "sf-tone-toddler-text-34",
+          "sourceId": "toddler-2019",
+          "page": 34
+        },
+        {
+          "id": "sf-tone-toddler-text-35",
+          "sourceId": "toddler-2019",
+          "page": 35
+        },
+        {
+          "id": "tha-tone-toddler-text-36",
+          "sourceId": "toddler-2019",
+          "page": 36
+        },
+        {
+          "id": "tha-tone-toddler-text-37",
+          "sourceId": "toddler-2019",
+          "page": 37
+        },
+        {
+          "id": "tha-tone-toddler-text-38",
+          "sourceId": "toddler-2019",
+          "page": 38
+        },
+        {
+          "id": "ihp-tone-toddler-text-39",
+          "sourceId": "toddler-2019",
+          "page": 39
+        },
+        {
+          "id": "tpl-tone-toddler-text-40",
+          "sourceId": "toddler-2019",
+          "page": 40
+        },
+        {
+          "id": "tha-tone-toddler-text-75",
+          "sourceId": "toddler-2019",
+          "page": 75
+        },
+        {
+          "id": "tpl-tone-toddler-text-82",
+          "sourceId": "toddler-2019",
+          "page": 82
+        },
+        {
+          "id": "tha-tone-toddler-text-177",
+          "sourceId": "toddler-2019",
+          "page": 177
+        },
+        {
+          "id": "tha-tone-toddler-text-178",
+          "sourceId": "toddler-2019",
+          "page": 178
+        }
+      ]
+    },
+    {
+      "id": "toddler-play-language-tone-r01.12-18.toddler-spaces-for-different-ages",
+      "entryId": "toddler-spaces-for-different-ages",
+      "placementId": "12-18.toddler-spaces-for-different-ages",
+      "snapshotPath": "content/6-18/revisions/r04/snapshots/12-18.toddler-spaces-for-different-ages.json",
+      "snapshotFileSha256": "4478f1d8bcfac2564cf4a54a482d0aff1de2a82ece1ea92d8e9628f78065670f",
+      "textPlacementSha256": "4364bc0cb2b36f4345027458bc9a0f2dac76636ef9a4f4c9fdbd19ac84e7b4f4",
+      "artContextSha256": null,
+      "readLogIds": [
+        "sf-tone-toddler-text-14",
+        "tha-tone-toddler-text-76",
+        "sf-tone-toddler-text-83",
+        "sf-tone-toddler-text-84",
+        "sf-tone-toddler-text-85"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 76,
+              "end": 76
+            },
+            {
+              "start": 83,
+              "end": 85
+            }
+          ]
+        }
+      ],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both ages retain genuinely inaccessible small parts, personal space and adaptable arrangements without turning privacy into exclusion during distress."
+      },
+      "bodyReview": {
+        "entryId": "toddler-spaces-for-different-ages",
+        "canonicalEntrySha256": "38af447c5b7fde6344600ca96c75b45fcd62241dd82bbef5da695611fce8f70c",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "administrativeReadLinks": [
+        {
+          "id": "sf-tone-toddler-text-14",
+          "sourceId": "toddler-2019",
+          "page": 14
+        },
+        {
+          "id": "tha-tone-toddler-text-76",
+          "sourceId": "toddler-2019",
+          "page": 76
+        },
+        {
+          "id": "sf-tone-toddler-text-83",
+          "sourceId": "toddler-2019",
+          "page": 83
+        },
+        {
+          "id": "sf-tone-toddler-text-84",
+          "sourceId": "toddler-2019",
+          "page": 84
+        },
+        {
+          "id": "sf-tone-toddler-text-85",
+          "sourceId": "toddler-2019",
+          "page": 85
+        }
+      ]
+    }
+  ]
+}

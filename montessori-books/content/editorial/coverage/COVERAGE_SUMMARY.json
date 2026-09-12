@@ -1,0 +1,413 @@
+{
+  "sourceIdeas": 1309,
+  "sourceLedgers": [
+    {
+      "path": "research/baby/COVERAGE_LEDGER.jsonl",
+      "sha256": "b30e5c55e2364af2762aa7af49a5e752908bdb3481779e61fc39762a05432a0f",
+      "ideas": 617
+    },
+    {
+      "path": "research/toddler/COVERAGE_LEDGER.jsonl",
+      "sha256": "dff004b408d6a74d83b41560d5aaf0fda7e3ec7c819a03b11605344e7b2074e2",
+      "ideas": 692
+    }
+  ],
+  "inputs": [
+    {
+      "path": "content/pilots/revisions/r08/COVERAGE_RECONCILIATION.jsonl",
+      "sha256": "cf1435414b381e48706c4259f5f6e480ab15ecbdd207edbfb6fa641aeaaa8d2d",
+      "records": 1309,
+      "state": "pilot-stage"
+    },
+    {
+      "path": "tmp/birth-6/root/coverage-working.json",
+      "sha256": "0ab7375b73f2f1bab586539e73348880d6efd1156fdb6d58eae83042d4ccec76",
+      "records": 2659,
+      "state": "draft"
+    },
+    {
+      "path": "tmp/birth-6/root/coverage-pending.json",
+      "sha256": "ae6f92fbd750902abfd6f4b6095c976e5ff535004d9c04e971ca7ed4e8d724df",
+      "records": 331,
+      "state": "pending"
+    },
+    {
+      "path": "content/birth-6/authoring/activities-COVERAGE_SUGGESTIONS-r01.json",
+      "sha256": "99c8a69e16f419feaa39c68e4eacc783f8862ff65d4ed770cfde3a830e7b3efa",
+      "records": 19,
+      "state": "suggestion"
+    },
+    {
+      "path": "content/birth-6/authoring/care-coverage-decisions-r01.json",
+      "sha256": "12a610c5566c0d62cc7299f91e7a30b0201c11922b095d14b16b68c3cb09a35b",
+      "records": 39,
+      "state": "draft"
+    },
+    {
+      "path": "content/6-18/drafts/baby-play/COVERAGE-r03.jsonl",
+      "sha256": "7e7a6e1e25f1972ad697789e3ebfb9787aba7d3b13596b6079b99b5831f56592",
+      "records": 715,
+      "state": "draft"
+    },
+    {
+      "path": "content/6-18/drafts/shared-placements/COVERAGE_PARENT_INTENTS.jsonl",
+      "sha256": "c533a95c87d03cc408dfa12eab8db580402f3aeb4af427bbcb35cc42c0db8ab6",
+      "records": 621,
+      "state": "draft"
+    },
+    {
+      "path": "content/6-18/drafts/baby-care/draft-r02.json",
+      "sha256": "0bd13710c5b9c91a33379d0c1ca8e7cc0b9447d2207b6ca6b286c7a692e71826",
+      "records": 5,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/source-work/play-COVERAGE-r01.jsonl",
+      "sha256": "01da0f445a58e27fbf9c4d94b712e58412263dfa5f8a1ef5d9089806fc0bfd73",
+      "records": 812,
+      "state": "draft"
+    },
+    {
+      "path": "content/18-36/source-work/care-author/COVERAGE-r02.jsonl",
+      "sha256": "a14ea9da6e692f2cdfd68e881c07cfcf6748d8dfeff51ca47240d4b5fb99593b",
+      "records": 311,
+      "state": "draft"
+    },
+    {
+      "path": "content/18-36/source-work/family-author/COVERAGE-r02.jsonl",
+      "sha256": "9b7995aefb478fb5795e65ac552d0da625f1125f9d0a085bc5fb83a2d6876668",
+      "records": 161,
+      "state": "draft"
+    },
+    {
+      "path": "content/18-36/source-work/root-context-decisions-r01.json",
+      "sha256": "58dcbd80a2a27a5c15c4d15789a4256da6216829eafaab9c2765229329a1e869",
+      "records": 43,
+      "state": "draft"
+    },
+    {
+      "path": "content/18-36/source-work/root-family-MAPPING-r01.json",
+      "sha256": "d98967efd3ce12ab1f5d7258ac069721f52968f56391213d90eca97569d6827f",
+      "records": 3,
+      "state": "suggestion"
+    },
+    {
+      "path": "content/18-36/source-work/root-no-performance-MAPPING-r01.json",
+      "sha256": "e62b0611b5b62dff68096e504c084053db0690e2d211324cae175bd9fa3b779a",
+      "records": 1,
+      "state": "suggestion"
+    },
+    {
+      "path": "content/editorial/COVERAGE_DECISIONS-r01.json",
+      "sha256": "f67b64c69634e3459486af2d932da39c5643e28f95f19366b12bc2f635a92e60",
+      "records": 43,
+      "state": "editor-decision"
+    },
+    {
+      "path": "content/editorial/COVERAGE_DECISIONS-r02.json",
+      "sha256": "aac6f12d6071e22a2fd0e627cd5bf93d5d8bc6c879398606d99f9b2fdba40346",
+      "records": 49,
+      "state": "editor-decision"
+    },
+    {
+      "path": "content/editorial/COVERAGE_DECISIONS-r03.json",
+      "sha256": "62c847dee8910032a94a07d831bc5bfe286f0d89c06b571fb854651d6710a9f0",
+      "records": 1,
+      "state": "editor-decision"
+    },
+    {
+      "path": "content/birth-6/drafts/editorial-r03/01.json",
+      "sha256": "4086f5ec0ad39d10f898b68b3b85515a2ce73ebff722bdf9a44edbba90abb59f",
+      "records": 0,
+      "state": "provenance"
+    },
+    {
+      "path": "content/birth-6/drafts/editorial-r03/02.json",
+      "sha256": "840bf66474bf4fe56dd8210072a6c83bacb24892db8b8d77ce29ef15e98c2908",
+      "records": 7,
+      "state": "provenance"
+    },
+    {
+      "path": "content/birth-6/drafts/editorial-r03/03.json",
+      "sha256": "88c4cec77831ab7889d0f1e26be1dea70afedeb8955b6113f2086e9a9127e2a9",
+      "records": 8,
+      "state": "provenance"
+    },
+    {
+      "path": "content/6-18/drafts/editorial-r04/01.json",
+      "sha256": "714957507ce3bb904cf57c87d0d0c0be87dc234ad7163e25fa5a4ef019dcfb22",
+      "records": 11,
+      "state": "provenance"
+    },
+    {
+      "path": "content/6-18/drafts/editorial-r03/02.json",
+      "sha256": "1d5860acf671c24090b0c5b86bd1297bc7b12db5b77e1663b7f75425506a115e",
+      "records": 5,
+      "state": "provenance"
+    },
+    {
+      "path": "content/6-18/drafts/shared-placements/draft-r01.json",
+      "sha256": "be9ae97ea203dbd01c5f3b346415ee8eff0b483d023b3203be5e24246645ca2f",
+      "records": 0,
+      "state": "provenance"
+    },
+    {
+      "path": "content/6-18/drafts/editorial-r06/04.json",
+      "sha256": "2c463b099f5983e0af9b61eb94440f98bc55c085594348a28db0d2e6e6d9ddab",
+      "records": 5,
+      "state": "provenance"
+    },
+    {
+      "path": "content/6-18/drafts/editorial-r04/05.json",
+      "sha256": "8cd0b4810a7b81ba7aa1bac049b9c86c6a88536693af2f46b318d17a29d47058",
+      "records": 4,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/entries/later-jigsaw-pieces/r02.json",
+      "sha256": "378eb2f344b0571858b082e10cc6a40b828fd1caa04ce413d4a042e09a9e2931",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/entries/later-mystery-bag/r01.json",
+      "sha256": "f56554044586156f4f7307c75404657caa10088bdf1f371a3fd3a855c0c4927e",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/entries/later-remember-together/r01.json",
+      "sha256": "d95658c0cbc9d5d92a905f296572ada4465097150d1cee5218e2e76d64af821f",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/entries/later-scissor-snips/r01.json",
+      "sha256": "565134048312adcecb625c65b8b509f1e71f60aa208e4e1592d7f7a12a3da095",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/entries/later-first-sewing/r01.json",
+      "sha256": "610edff1b438d66c39c5bc2f45de55cf66f4c16ba731f5221555abcef8503d1d",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/entries/later-grade-nuts-bolts/r01.json",
+      "sha256": "517a786af0979167ae8a88bff5124f0c6eff1528921947c3b57b3e696bb5a758",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/entries/later-elastic-patterns/r01.json",
+      "sha256": "b907c114f3107ed6bee0008b57728486a69ae450b8ea8f0979faa56784c28a3d",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/entries/later-dishes-together/r01.json",
+      "sha256": "1b89f582faa67f39a32b29bce83cbed3623eda401552300116849ac4222a1ebf",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/entries/later-window-cleaning/r01.json",
+      "sha256": "19b8feadd54a7228a32456029d51cce7c896b9d41e8be9c0ea1d012895a2d8ba",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/entries/later-washing-cloths/r01.json",
+      "sha256": "71d72d379d23d7212e7973ed0b9ac1cbad41fa9dd0a0845863a7d3af6e3f79ea",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/entries/later-baking-together/r01.json",
+      "sha256": "a8759689d00f4e5d1fed051fa3ff3b244001337ed4cf90c2376c91ad5ce7fa29",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/entries/later-scrub-table/r01.json",
+      "sha256": "31f8c723867284525a2fb4220aa94347cf40cd6969500e0fd7d42735d720f7b2",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/entries/later-polishing-things/r01.json",
+      "sha256": "0304e706dde7de3f6bf0a12d922f8fe03c9b96d872fc7917b172b4400a602933",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/entries/later-passing-toys-on/r01.json",
+      "sha256": "193e973f04051858ab9a8a6e01022723fb71ad1f1bbbb291d3d3b742cd3d3a40",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/entries/later-pedal-tricycle/r02.json",
+      "sha256": "a1ebe28cae2e657e1ef5b38c815a496f47f5721074ec9cc8afbb7bd2ee994018",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/drafts/editorial-r02/16.json",
+      "sha256": "6f305efa8d5da1c82e3e4342541848980a6d11733014761aab21749a3ec6b117",
+      "records": 24,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/shared/family-getting-to-know-baby/r01.json",
+      "sha256": "04aa766b6ebbfa5a348d9a9e53d407ca4062b1335acb0ac38690d8a770e1f4a0",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/shared/family-selecting-parenting-advice/r01.json",
+      "sha256": "122334acf4b155803cf8dd91906f17e23320ebc6b5a428aec6dec7c6124d4710",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/shared/family-being-present/r02.json",
+      "sha256": "fb47bfe3d55147b0fd5a73daf11a1f668a81acc8fb2a014164f20341662034f5",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/shared/family-honest-kind-words/r01.json",
+      "sha256": "c22911e4b6350bb72ead5df6e122398b2281e91fc448467a10ae47d65179f42e",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/shared/family-adult-limits/r01.json",
+      "sha256": "5281fa8454bc6b4fce961bc991e83e0af6e1d0df1a1d895e42db542208195d31",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/shared/family-time-as-a-gift/r01.json",
+      "sha256": "f30b89482d88752316a6ccba499cf756afac6cb5262cce5ac06a75523ef6e632",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/shared/family-twins-as-individuals/r01.json",
+      "sha256": "1b7a692267e8889985672c633bfd2af605f8ff61f423d726ba6ab19e56be7f2a",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/shared/family-familiar-people/r01.json",
+      "sha256": "8b49e14652004cfaf6b9a2e57780485e46c71e632f2e0c56a06e9ec45d6a6011",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/shared/family-preferring-one-parent/r01.json",
+      "sha256": "c1c690c8bb16358d0cc92bbfee05fc8f80e2258f56d30a630609684bdae32bfa",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/shared/family-listening-to-each-other/r01.json",
+      "sha256": "246dabd083b2ce69509e29142569631edcd238507bd59c1d37cef48249577fd8",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/drafts/editorial-r02/27.json",
+      "sha256": "c0bee188118fccb6b6e8e4400a73a8bb664f8fcb28a11415384346c44fec3de6",
+      "records": 0,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/entries/later-washing-together/r01.json",
+      "sha256": "14e78ba65df992ad5e471fda34882ba92bbe517a191e0a0de256d6ba338674d7",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/entries/later-playing-together/r01.json",
+      "sha256": "dcce504c52afccbe72343e0c5d95c0e63b4c69f3aec4ca1b3f6fdb13be583de4",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/entries/later-calm-place-context/r01.json",
+      "sha256": "71eb32e662cfa0cfe8273f352b67940e2a600f7b4b70fa5a02345c6cee3111b3",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/drafts/editorial-r02/31.json",
+      "sha256": "bab1969e2cba983a089b3163f76b2b266f5a01de749735f18d5b4bb008e7ba19",
+      "records": 0,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/shared/family-declining-help/r01.json",
+      "sha256": "a84e13c59f5e2f52b54af5676b1cc39852d128d3b6e5f67b0af22762625f1665",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/drafts/editorial-r02/33.json",
+      "sha256": "33fbedb1a200e74817f112899c917ebb799189843fb7ac5b3b64d53aef2b4a1e",
+      "records": 0,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/drafts/editorial-r02/34.json",
+      "sha256": "c026667b04c9574c54eeff687bed820f2340433517129d031a32ad2aa332b15c",
+      "records": 0,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/shared/family-baby-screen-perspective/r01.json",
+      "sha256": "37e31f6b6374df00b761762f35df2ac2542e5af0923bd604a5c9306e8b959216",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/shared/family-interests-without-gender-labels/r01.json",
+      "sha256": "7aedbdd7738d5ab092347fd04ae6f07a7cef0139f8c75f59b3f47b6250ab741d",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/shared/family-starting-preschool/r02.json",
+      "sha256": "b7b73e7bc8c3c00fe18e270cc4ccad1343a1c85be1b36ad9969a8f2ed7248278",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/drafts/editorial-r02/38.json",
+      "sha256": "4bf4a091663da0b0401d766c2ac58a09d7a7f80d8898a2224f210dc874b7950c",
+      "records": 0,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/shared/family-watching-without-a-demonstration/r01.json",
+      "sha256": "67d5dd8986d54df2d8100c79f4d8990b2966cf02415501c40158ab03de16c316",
+      "records": 1,
+      "state": "provenance"
+    },
+    {
+      "path": "content/18-36/shared/placements/root-no-performance-r01.json",
+      "sha256": "1ea503dcbaf45dbb913989abc112079ec7b5d55c2f62aabb76373e42b3884c5b",
+      "records": 0,
+      "state": "provenance"
+    }
+  ],
+  "mappingRecords": 7417,
+  "ageCellsWithoutExplicitMapping": 3205,
+  "possibleConflictCells": 1073,
+  "unknownSourceIds": [],
+  "publication": false,
+  "boundary": "Raw historical editorial queue. Stage omissions and differing valid targets are retained, not treated as missing content. RESOLVED_COVERAGE.jsonl contains the editor-selected meanings; actual age qualifications remain in AGE_PLACEMENT_INDEX.json. This queue is never an approval."
+}

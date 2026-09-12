@@ -1,0 +1,87 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "early-car-seat-care",
+        "kind": "perspective",
+        "title": "Gentle care when the car seat is needed",
+        "summary": "The authors call car seats essential for safety, even though seats limit a baby’s movement. They describe telling the baby what is happening and using gentle hands during this necessary care.",
+        "cue": "You are preparing to place your baby in a car seat.",
+        "detail": [
+          "The book suggests attending to hunger and a needed diaper change before the trip. It treats being placed in the seat as something the adult can explain to the baby.",
+          "Participation grows with what the baby can do. The authors give offering an arm as one possibility, while the adult remains responsible for the care."
+        ],
+        "references": [
+          {
+            "id": "early-car-seat-care.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Traveling in the car",
+            "locator": "Essential restraint, gentle explanation and participation appropriate to the baby",
+            "pdfPages": [
+              {
+                "start": 211,
+                "end": 212
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "9-12.early-car-seat-care",
+        "entryId": "early-car-seat-care",
+        "ageId": "9-12",
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "readiness": "Any participation follows what your baby can do; the adult provides the necessary care."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "9–12 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 211–212"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "6b3ad97ec2eadcfd768f13be5ce3889c50b4ccb8517015765aa516d5be2f993d",
+  "artContextSha256": null,
+  "publicProjectionSha256": "41ac9da38a5479779306b9d0f561d7beb449a0985eaf6dc504a3788dcdb2fede",
+  "provenance": {
+    "revision": "r02",
+    "placementDraft": {
+      "path": "content/birth-6/drafts/care-r01.json",
+      "sha256": "26593e72e36d37bd0a30292301c2cdd4de2c1afebed740fffbfa42850831d572"
+    },
+    "canonical": null,
+    "mode": "text-only-contribution"
+  }
+}

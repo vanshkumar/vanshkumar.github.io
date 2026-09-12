@@ -1,0 +1,115 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-screens",
+        "kind": "perspective",
+        "title": "Davies’s approach to screens",
+        "summary": "Davies favors firsthand play, conversation, and shared activity over screens for toddlers. She presents this as part of her Montessori approach and describes her own family’s choices.",
+        "cue": "You may be considering what fills waiting time or sits in the background at home.",
+        "detail": [
+          "Her practical examples include books or a shared activity when out, a walk to see what is happening nearby, and noticing adults’ own screen use.",
+          "Her account also includes occasional selected programs when her children were young. It is not a minute-by-minute plan, and her family’s later computer skills are an anecdote, not a promised result.",
+          "For upset feelings, she returns to the support and connection described in her limits chapter."
+        ],
+        "references": [
+          {
+            "id": "toddler-screens.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Screen time",
+            "locator": "Screen alternatives, adults’ own screen use and Davies’s family experience",
+            "pdfPages": [
+              {
+                "start": 181,
+                "end": 182
+              }
+            ]
+          },
+          {
+            "id": "toddler-screens.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "Dealing with tantrums",
+            "locator": "Support and connection during distress",
+            "pdfPages": [
+              {
+                "start": 134,
+                "end": 139
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.toddler-screens",
+        "entryId": "toddler-screens",
+        "ageId": "12-18",
+        "topicIds": [
+          "play-discovery",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "No fixed age; Davies describes toddler screen choices and separately recounts later childhood.",
+          "readiness": "The adult is considering screens, background noise or alternatives during ordinary family time."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 181–182"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 134–139"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "72a8156c7b158777496994eaeed4f09a07e76537d7c60568974d14e6df89dc63",
+  "artContextSha256": null,
+  "publicProjectionSha256": "7be582951c8795a7b5245f6d35165b2bd57666f6914439ec3bc6194bf78094c2",
+  "provenance": {
+    "revision": "r01",
+    "placementDraft": {
+      "path": "content/6-18/drafts/toddler-overlap/draft-r01.json",
+      "sha256": "06e6c8d90ca191b9b0b33fb44151f57b10e874a7cf5cf95d94e4bdbed879d4bc"
+    },
+    "canonical": {
+      "entryId": "toddler-screens",
+      "canonicalEntrySha256": "8aab757b441257d7eb5da4df25452023675b23e4d86496eda3109cc5a4e84068",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/48",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/48"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

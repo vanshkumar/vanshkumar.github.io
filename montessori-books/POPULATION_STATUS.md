@@ -2,6 +2,44 @@
 
 The coordinating task owns this file. Approved scope: POPULATION_PLAN.md.
 
+PAUSED at user request — 2026-09-12 16:47 UTC. This continuation began at
+15:07 UTC (about 100 minutes of elapsed work). Both retained reviewers are stopped;
+the three older population tasks remain paused. Do not resume without authorization.
+
+The combined draft contains 174 bodies and 645 age placements, including 115
+unchanged pilot pairs. All 530 new placements have source passes. Tone decisions
+are saved for 437 of them; the final 15 adult/family bodies across 93 placements
+remain. The latest toddler-together tone decisions are saved but not expanded yet.
+All focused text corrections have both passes; no known open content defect.
+
+All 1,309 source ideas have a resolved allocation, reason and valid target where
+applicable. Source variants, context-only material and deliberate omissions remain
+explicit. Six new illustrations are generated and previewed in actual layouts;
+source review passed all 18 new image/context combinations, including desktop and
+phone screenshots. Independent tone review of those images remains.
+
+Birth–6 r03 has its complete 113-placement text receipt. Current 6–18 r06 and
+18–36 r03 still need their final receipts. The final integration helper is written
+but has not been run; no full release, final build or final runtime QA yet.
+The application still contains only the approved pilot payload. New assets and
+a narrowly scoped illustration style are saved but not integrated into that data.
+See content/editorial/PAUSED-2026-09-12.md for exact restart steps and estimate.
+
+The remaining entries below are historical checkpoints, superseded by this run.
+
+Latest checkpoint — 2026-09-12: the user-approved consolidated trial completed.
+One editor and two independent xhigh reviewers handled five entries / nine
+placements. Both roles passed all nine, with no corrections. The separate batch
+receipt approves only those text placements; 104 birth–6 contribution targets
+remain outside it. No app integration or art was performed. All reviewers have
+finished, the three population tasks remain paused, and work stops here for the
+user's assessment. See content/review-trial/HANDOFF.md and METRICS.json.
+
+POPULATION_WORKFLOW.md now specifies one editorial queue across ages. The saved
+coverage mappings are joined against all 1,309 source ideas; unresolved age
+applicability and overlapping draft decisions remain visible. Do not restart the
+three old author pipelines on a future continuation.
+
 | Task | Status | Task ID | Handoff |
 | --- | --- | --- | --- |
 | 1 Editorial foundation | Complete; independent xhigh audit passed | 01a08dac-df6b-7bf3-916c-0309711ed166 | research/foundation/HANDOFF.md |

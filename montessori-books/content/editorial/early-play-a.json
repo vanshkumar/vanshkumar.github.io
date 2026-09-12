@@ -1,0 +1,219 @@
+{
+  "revision": "content/birth-6/revisions/r01",
+  "name": "early-play-a",
+  "entryIds": [
+    "early-visual-mobiles",
+    "early-shadows",
+    "early-tactile-mobiles",
+    "early-grasping-reflex",
+    "baby-movement",
+    "baby-hand-discovery",
+    "baby-rolling-balls",
+    "baby-treasure-baskets"
+  ],
+  "placementIds": [
+    "0-3.early-visual-mobiles",
+    "3-6.early-visual-mobiles",
+    "0-3.early-shadows",
+    "3-6.early-shadows",
+    "3-6.early-tactile-mobiles",
+    "6-9.early-tactile-mobiles",
+    "0-3.early-grasping-reflex",
+    "0-3.baby-movement",
+    "3-6.baby-movement",
+    "3-6.baby-hand-discovery",
+    "3-6.baby-rolling-balls",
+    "3-6.baby-treasure-baskets"
+  ],
+  "packets": [
+    {
+      "id": "early-visual-mobiles",
+      "path": "tmp/editorial/early-play-a/early-visual-mobiles.json",
+      "sha256": "70f42fd55a0da0a6d40b32a446ea5edbed3c9690145107554d54b3e04d2daf0c",
+      "bytes": 11346,
+      "placementIds": [
+        "0-3.early-visual-mobiles",
+        "3-6.early-visual-mobiles"
+      ],
+      "sourcePages": {
+        "baby": [
+          146,
+          147,
+          148,
+          149,
+          150,
+          151,
+          152,
+          153,
+          296,
+          297
+        ]
+      }
+    },
+    {
+      "id": "early-shadows",
+      "path": "tmp/editorial/early-play-a/early-shadows.json",
+      "sha256": "fb697fd87a4ec08647602c92963a1704cc3fbcb498f095025765cda0c7edd725",
+      "bytes": 9227,
+      "placementIds": [
+        "0-3.early-shadows",
+        "3-6.early-shadows"
+      ],
+      "sourcePages": {
+        "baby": [
+          150,
+          151,
+          152,
+          287,
+          288,
+          289
+        ]
+      }
+    },
+    {
+      "id": "early-tactile-mobiles",
+      "path": "tmp/editorial/early-play-a/early-tactile-mobiles.json",
+      "sha256": "0789710efada4819aff7e935e65ef7d4b472dd5b99c56eee1572b9a2956b05c7",
+      "bytes": 11233,
+      "placementIds": [
+        "3-6.early-tactile-mobiles",
+        "6-9.early-tactile-mobiles"
+      ],
+      "sourcePages": {
+        "baby": [
+          120,
+          121,
+          122,
+          152,
+          153,
+          154,
+          155,
+          159,
+          160,
+          161,
+          298
+        ]
+      }
+    },
+    {
+      "id": "early-grasping-reflex",
+      "path": "tmp/editorial/early-play-a/early-grasping-reflex.json",
+      "sha256": "73ad63c30063acd420458aa69e75d0aa55a0b27b8e2b35831ace4aa1977b5cfc",
+      "bytes": 6565,
+      "placementIds": [
+        "0-3.early-grasping-reflex"
+      ],
+      "sourcePages": {
+        "baby": [
+          119,
+          120,
+          144,
+          145,
+          146,
+          152,
+          153,
+          154,
+          294
+        ]
+      }
+    },
+    {
+      "id": "baby-movement",
+      "path": "tmp/editorial/early-play-a/baby-movement.json",
+      "sha256": "43140b9c6d6d161d70a8f4a6c299e500cdb9d37e1e26a741d9f63b2eeee1d0b0",
+      "bytes": 14241,
+      "placementIds": [
+        "0-3.baby-movement",
+        "3-6.baby-movement"
+      ],
+      "sourcePages": {
+        "baby": [
+          107,
+          108,
+          119,
+          120,
+          126,
+          144,
+          145,
+          155,
+          156,
+          157,
+          158,
+          159,
+          162,
+          294
+        ]
+      }
+    },
+    {
+      "id": "baby-hand-discovery",
+      "path": "tmp/editorial/early-play-a/baby-hand-discovery.json",
+      "sha256": "d379191e4930552b0bd924aebebe0bf3ca5bebb5555b07bf2b1d73dedfc97509",
+      "bytes": 7301,
+      "placementIds": [
+        "3-6.baby-hand-discovery"
+      ],
+      "sourcePages": {
+        "baby": [
+          120,
+          121,
+          122,
+          152,
+          153,
+          154,
+          155,
+          159,
+          160,
+          161,
+          162,
+          221,
+          222,
+          258
+        ]
+      }
+    },
+    {
+      "id": "baby-rolling-balls",
+      "path": "tmp/editorial/early-play-a/baby-rolling-balls.json",
+      "sha256": "1092520d4265a1013a0d30053321320958fd9334af14beccc44fc0ae3cbf7fd2",
+      "bytes": 7644,
+      "placementIds": [
+        "3-6.baby-rolling-balls"
+      ],
+      "sourcePages": {
+        "baby": [
+          120,
+          121,
+          122,
+          156,
+          157,
+          158,
+          159,
+          299,
+          300
+        ]
+      }
+    },
+    {
+      "id": "baby-treasure-baskets",
+      "path": "tmp/editorial/early-play-a/baby-treasure-baskets.json",
+      "sha256": "1f7fb18d020cccf9502faa279b87ffd98294deb7dc1eefe2645a2c10802240e3",
+      "bytes": 7588,
+      "placementIds": [
+        "3-6.baby-treasure-baskets"
+      ],
+      "sourcePages": {
+        "baby": [
+          120,
+          159,
+          160,
+          290,
+          294,
+          299
+        ]
+      }
+    }
+  ],
+  "sourcePageDirectory": "tmp/editorial/sources",
+  "publication": false
+}

@@ -1,0 +1,146 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-wipe-and-dust",
+        "kind": "invitation",
+        "title": "Wiping and dusting together",
+        "summary": "Offer a cloth for wiping or dusting alongside you, with help when your child needs it.",
+        "cue": "Notice your child copying a wiping or sweeping movement or asking to join you.",
+        "detail": [
+          "Keep the cloth or hand mitt where the task happens, with help ready. For an interested child, Davies also describes a manageable broom and dustpan, with a marked place to gather the dirt.",
+          "The point is joining the work. It will often be slower and less thorough, and you can stop before either of you feels overwhelmed. Returning the cloth can be a shared last step."
+        ],
+        "references": [
+          {
+            "id": "toddler-wipe-and-dust.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Practical life",
+            "locator": "Cleaning, one/two steps under 2, cleanup materials and stopping before overwhelmed",
+            "pdfPages": [
+              {
+                "start": 48,
+                "end": 50
+              }
+            ]
+          },
+          {
+            "id": "toddler-wipe-and-dust.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "Practical life activities by age",
+            "locator": "Wiping spills",
+            "pdfPages": [
+              {
+                "start": 51,
+                "end": 51
+              }
+            ]
+          },
+          {
+            "id": "toddler-wipe-and-dust.ref.3",
+            "sourceId": "toddler-2019",
+            "section": "List of Montessori activities for toddlers",
+            "locator": "Sweeping and dusting rows",
+            "pdfPages": [
+              {
+                "start": 249,
+                "end": 249
+              }
+            ]
+          },
+          {
+            "id": "toddler-wipe-and-dust.ref.4",
+            "sourceId": "toddler-2019",
+            "section": "General principles",
+            "locator": "Shared putting away",
+            "pdfPages": [
+              {
+                "start": 37,
+                "end": 38
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "24-36.toddler-wipe-and-dust",
+        "entryId": "toddler-wipe-and-dust",
+        "ageId": "24-36",
+        "topicIds": [
+          "play-discovery",
+          "home-that-helps"
+        ],
+        "ageContext": {
+          "bookAge": "Dusting and sweeping at 16–18+ months in the appendix; the home chart continues them at 18 months to 3 years.",
+          "readiness": "Interest in wiping or copying household work; keep help and cleaning tools manageable."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "2–3 years",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          },
+          {
+            "id": "home-that-helps",
+            "label": "A home that helps"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 48–50"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 51"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 249"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 37–38"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "25da2cda3eb35c4a9bfcf17a4906b90c9207c9eee52dfd9e408caf6ed2759332",
+  "artContextSha256": null,
+  "publicProjectionSha256": "b964fb22abaa9ff2e975a26d2b4408fcc7bd952f5a9a82153c0532767c612551",
+  "provenance": {
+    "revision": "r01",
+    "placementDraft": {
+      "path": "content/18-36/placements/play-reuse-r02.json",
+      "sha256": "6216065d3787cd9143a4cf00d81889f56eb73a77690495619f0aa10916f9e4f2"
+    },
+    "canonical": {
+      "entryId": "toddler-wipe-and-dust",
+      "canonicalEntrySha256": "23ce094bc8854dee6119d823a1edc14eea07af51a0678551aafd382d26518830",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/toddler/draft-r07.json",
+        "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+        "jsonPointer": "/entries/14",
+        "author": "/root/toddler_pilot_draft",
+        "provenancePointer": "/provenance/14"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

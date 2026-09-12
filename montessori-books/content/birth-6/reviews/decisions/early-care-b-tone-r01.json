@@ -1,0 +1,394 @@
+{
+  "id": "early-care-b-tone-r01",
+  "date": "2026-09-12",
+  "reviewer": {
+    "task": "/root/trial_tone",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "retainedReads": [
+    {
+      "path": "content/birth-6/reviews/trial-tone-r01.json",
+      "sha256": "ebcca701f4e592e85a60b3587c5c7d57fef12089b76bf1930b98a5b0a5840490",
+      "readLogIds": [
+        "tone-care",
+        "tone-monthly-start",
+        "tone-monthly",
+        "tone-visual-286",
+        "tone-visual-287",
+        "tone-visual-288",
+        "tone-visual-289"
+      ]
+    },
+    {
+      "path": "content/birth-6/reviews/early-care-a-tone-r01.json",
+      "sha256": "1eb722fcde4fc17db731824e162db0dbb116ac2c9a8ebb756037ec3bb7e30822",
+      "readLogIds": [
+        "eca-tone-text-58",
+        "eca-tone-text-59",
+        "eca-tone-text-60",
+        "eca-tone-text-109",
+        "eca-tone-text-110",
+        "eca-tone-text-111",
+        "eca-tone-text-214",
+        "eca-tone-text-215",
+        "eca-tone-text-216"
+      ]
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "ecb-tone-text-107",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 107,
+          "end": 107
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/107.txt",
+      "notes": "Read movement freedom from birth and the broader context preceding clothing."
+    },
+    {
+      "id": "ecb-tone-text-108",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 108,
+          "end": 108
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/108.txt",
+      "notes": "Read the complete clothing guidance and individual-pace qualification."
+    },
+    {
+      "id": "ecb-tone-text-207",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 207,
+          "end": 207
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/207.txt",
+      "notes": "Read the physical-care clothing unit and choices offered even to a young baby."
+    },
+    {
+      "id": "ecb-tone-text-211",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 211,
+          "end": 211
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/211.txt",
+      "notes": "Read bathing support and prepared supplies, then necessary car-seat care and age-scaled participation."
+    },
+    {
+      "id": "ecb-tone-text-212",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 212,
+          "end": 212
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/212.txt",
+      "notes": "Read the complete baby-wearing unit, the car-care continuation and the opening teething qualification."
+    },
+    {
+      "id": "ecb-tone-text-213",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 213,
+          "end": 213
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/213.txt",
+      "notes": "Reread the teething continuation, including comfort and care of newly emerged teeth."
+    }
+  ],
+  "decisions": [
+    {
+      "placementIds": [
+        "0-3.baby-connection",
+        "3-6.baby-connection"
+      ],
+      "reuseBody": true,
+      "verdict": "pass",
+      "assessment": "The early-age context invites attention to any response without treating it as consent or making necessary comfort, care or protection wait.",
+      "readLogIds": [
+        "tone-care",
+        "tone-monthly-start",
+        "tone-monthly",
+        "tone-visual-286",
+        "tone-visual-287",
+        "tone-visual-288",
+        "tone-visual-289",
+        "eca-tone-text-109",
+        "eca-tone-text-110",
+        "eca-tone-text-111"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 109,
+              "end": 111
+            },
+            {
+              "start": 209,
+              "end": 210
+            },
+            {
+              "start": 285,
+              "end": 289
+            }
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "0-3.baby-dressing",
+        "3-6.baby-dressing"
+      ],
+      "reuseBody": true,
+      "verdict": "pass",
+      "assessment": "Looking or moving remains a sufficient part in dressing, and the sleeve example is explicitly optional while gentle necessary care can proceed.",
+      "readLogIds": [
+        "ecb-tone-text-207",
+        "tone-care"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 207,
+              "end": 210
+            }
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "0-3.baby-care-resistance",
+        "3-6.baby-care-resistance"
+      ],
+      "reuseBody": true,
+      "verdict": "pass",
+      "assessment": "The new context keeps interpretations tentative and preserves gentle necessary care without treating an early protest as readiness for an older baby's skills.",
+      "readLogIds": [
+        "tone-care"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 209,
+              "end": 210
+            }
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "3-6.baby-sharing"
+      ],
+      "reuseBody": true,
+      "verdict": "pass",
+      "assessment": "The holding condition makes this an actual object encounter, with the adult supporting either child's ongoing turn and no expectation that the baby understands sharing.",
+      "readLogIds": [
+        "eca-tone-text-214",
+        "eca-tone-text-215",
+        "tone-monthly",
+        "tone-visual-287",
+        "tone-visual-288"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 214,
+              "end": 215
+            },
+            {
+              "start": 287,
+              "end": 288
+            }
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "0-3.early-movement-friendly-clothes",
+        "3-6.early-movement-friendly-clothes",
+        "6-9.early-movement-friendly-clothes",
+        "9-12.early-movement-friendly-clothes",
+        "12-18.early-movement-friendly-clothes"
+      ],
+      "verdict": "pass",
+      "assessment": "Comfort and the baby's current movements guide practical clothing examples, which remain the authors' preferences without a shopping requirement or movement deadline.",
+      "readLogIds": [
+        "ecb-tone-text-107",
+        "ecb-tone-text-108",
+        "ecb-tone-text-207",
+        "tone-care"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 107,
+              "end": 108
+            },
+            {
+              "start": 207,
+              "end": 208
+            }
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "0-3.early-bathing-together",
+        "3-6.early-bathing-together",
+        "6-9.early-bathing-together",
+        "9-12.early-bathing-together",
+        "12-18.early-bathing-together"
+      ],
+      "verdict": "pass",
+      "assessment": "The summary retains continuous newborn head support while the body presents prepared, gentle care and communication without imposing bath frequency or a baby's response.",
+      "readLogIds": [
+        "tone-care",
+        "ecb-tone-text-211"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 210,
+              "end": 211
+            }
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "0-3.early-car-seat-care",
+        "3-6.early-car-seat-care",
+        "6-9.early-car-seat-care",
+        "9-12.early-car-seat-care",
+        "12-18.early-car-seat-care"
+      ],
+      "verdict": "pass",
+      "assessment": "Essential restraint and adult responsibility remain clear in the short summary, while offering an arm is a possibility scaled to the baby's actual ability.",
+      "readLogIds": [
+        "ecb-tone-text-211",
+        "ecb-tone-text-212"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 211,
+              "end": 212
+            }
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "0-3.early-carrying-and-floor-time",
+        "3-6.early-carrying-and-floor-time",
+        "6-9.early-carrying-and-floor-time",
+        "9-12.early-carrying-and-floor-time",
+        "12-18.early-carrying-and-floor-time"
+      ],
+      "verdict": "pass",
+      "assessment": "Closeness, adult practical needs and awake movement coexist, with crawling and first-step examples tied to their appearance rather than the browsing age.",
+      "readLogIds": [
+        "eca-tone-text-58",
+        "eca-tone-text-59",
+        "eca-tone-text-60",
+        "ecb-tone-text-212"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 58,
+              "end": 60
+            },
+            {
+              "start": 212,
+              "end": 212
+            }
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "3-6.early-teething",
+        "6-9.early-teething",
+        "9-12.early-teething",
+        "12-18.early-teething"
+      ],
+      "verdict": "pass",
+      "assessment": "Teething is presented as variable and situational, with modest comfort examples, no tooth deadline and explicit access to medical advice for prolonged crying or pain.",
+      "readLogIds": [
+        "ecb-tone-text-212",
+        "ecb-tone-text-213",
+        "eca-tone-text-215",
+        "eca-tone-text-216"
+      ],
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 212,
+              "end": 213
+            },
+            {
+              "start": 215,
+              "end": 216
+            }
+          ]
+        }
+      ],
+      "issues": []
+    }
+  ]
+}

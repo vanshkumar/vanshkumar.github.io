@@ -1,0 +1,36 @@
+{
+  "revision": "content/6-18/revisions/r05",
+  "name": "infant-care-corrected",
+  "entryIds": [
+    "infant-nighttime-needs"
+  ],
+  "placementIds": [
+    "12-18.infant-nighttime-needs",
+    "18-24.infant-nighttime-needs",
+    "24-36.infant-nighttime-needs"
+  ],
+  "packets": [
+    {
+      "id": "infant-nighttime-needs",
+      "path": "tmp/editorial/infant-care-corrected/infant-nighttime-needs.json",
+      "sha256": "0f574a6ece97e4ddae400ba889e24076898de252473da39d76a63305dc379bf9",
+      "bytes": 11591,
+      "placementIds": [
+        "12-18.infant-nighttime-needs",
+        "18-24.infant-nighttime-needs",
+        "24-36.infant-nighttime-needs"
+      ],
+      "sourcePages": {
+        "toddler": [
+          14,
+          119,
+          156,
+          157,
+          158
+        ]
+      }
+    }
+  ],
+  "sourcePageDirectory": "tmp/editorial/sources",
+  "publication": false
+}

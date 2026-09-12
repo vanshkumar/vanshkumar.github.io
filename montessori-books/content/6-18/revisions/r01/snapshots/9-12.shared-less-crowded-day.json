@@ -1,0 +1,135 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "shared-less-crowded-day",
+        "kind": "perspective",
+        "title": "A slower moment in a busy day",
+        "summary": "Both books invite adults to reconsider what can wait and notice opportunities for connection in everyday routines, within real commitments.",
+        "cue": "When the day feels crowded and every activity seems to need its own time.",
+        "detail": [
+          "Look at what matters to your family and what could be simplified or postponed. In The Montessori Baby, doing your best changes with the day, including how much rest you have had.",
+          "Davies acknowledges work, money, and circumstances that cannot simply be changed. She describes finding opportunities during everyday routines or on a weekend, rather than requiring the same day from every family.",
+          "A meal, a conversation, or some time together can be part of family life you are already living. The books’ examples offer possibilities, not a schedule to complete."
+        ],
+        "principle": {
+          "id": "principle.time-for-exploration",
+          "text": "Everyday routines can offer time together."
+        },
+        "references": [
+          {
+            "id": "shared.ref.baby.adult-time",
+            "sourceId": "baby-2021",
+            "section": "Going slow; What do we do when we need to get through our daily tasks?; 49 ideas for staying calm; Doing our best",
+            "locator": "Ordinary shared time, adult daily work, fewer commitments and day-specific capacity",
+            "pdfPages": [
+              {
+                "start": 114,
+                "end": 115
+              },
+              {
+                "start": 222,
+                "end": 223
+              },
+              {
+                "start": 239,
+                "end": 242
+              }
+            ]
+          },
+          {
+            "id": "shared.ref.toddler.adult-time",
+            "sourceId": "toddler-2019",
+            "section": "Time; Include the child in daily life; Go slow; Slow down; Take responsibility for our life and choices",
+            "locator": "Working-family examples, occasional hurry, real constraints and reconsidering commitments",
+            "pdfPages": [
+              {
+                "start": 96,
+                "end": 96
+              },
+              {
+                "start": 99,
+                "end": 102
+              },
+              {
+                "start": 193,
+                "end": 194
+              },
+              {
+                "start": 197,
+                "end": 198
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "9-12.shared-less-crowded-day",
+        "entryId": "shared-less-crowded-day",
+        "ageId": "9-12",
+        "topicIds": [
+          "you-family",
+          "everyday-care"
+        ]
+      },
+      "displayContext": {
+        "ageLabel": "9–12 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "What’s underneath",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "you-family",
+            "label": "For you & your family"
+          },
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 114–115, 222–223, 239–242"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 96, 99–102, 193–194, 197–198"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "4b5c59eb092d367aeeefbfe2fbe0349a0f4ebae5e753533c4a6036c870950490",
+  "artContextSha256": null,
+  "publicProjectionSha256": "0404db94f4702f4ac2a48ba341b56a279486d0cbc27371c5a0c98123fff88739",
+  "provenance": {
+    "revision": "r01",
+    "placementDraft": {
+      "path": "content/6-18/drafts/shared-placements/draft-r01.json",
+      "sha256": "be9ae97ea203dbd01c5f3b346415ee8eff0b483d023b3203be5e24246645ca2f"
+    },
+    "canonical": {
+      "entryId": "shared-less-crowded-day",
+      "canonicalEntrySha256": "bb2335181b6e1faf055f9c5e195b5ff504f5cd3a5890e36da19f30a50f552e70",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/shared/draft-r02.json",
+        "sha256": "04720cdd2997dc461a619234d74bea952b2fd3c388a49b326dc282f065f39b06",
+        "jsonPointer": "/entries/8",
+        "author": "/root/shared_pilot_draft",
+        "provenancePointer": "/provenance/8"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

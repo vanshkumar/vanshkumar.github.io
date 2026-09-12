@@ -1,0 +1,195 @@
+{
+  "id": "early-play-b-source-r02",
+  "workflow": "lean-v1",
+  "reviewer": {
+    "task": "/root/trial_source",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-12",
+  "scope": "Explicit grouped source-topic decisions; exact age contexts reviewed.",
+  "renderedSurfaces": {
+    "path": "content/birth-6/revisions/r03/RENDERED_SURFACES.json",
+    "sha256": "ebfa5bcd326ce713d494f89e69d7d3a4692cd70ffd5c877fec46e66b230aa190"
+  },
+  "decisionInput": {
+    "path": "content/birth-6/reviews/decisions/early-play-b-source-r02.json",
+    "sha256": "0bfcf9669f9215722ee2546cd69bcbdafcfdb2e3363d7559cd641b917f6b1fad"
+  },
+  "readingBasis": [
+    {
+      "path": "content/birth-6/reviews/early-play-b-source-r01.json",
+      "sha256": "85a270e03834a93fac55b4827a9f2b68e0afeb81baaf611cba9908c4a9c43535"
+    }
+  ],
+  "retainedReads": [],
+  "readLogs": [
+    {
+      "id": "source-conversation",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 129,
+          "end": 139
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/review-trial/source-conversation.txt",
+      "notes": "Read original language units and continuations; newborn conversation, early shared music, 3–6 vocal play and differing sign ages."
+    },
+    {
+      "id": "source-framing",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 123
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/review-trial/source-framing.txt",
+      "notes": "Read activity-age guidelines, current interest, mouthing suitability, secure components and frustration qualifications."
+    },
+    {
+      "id": "text-155",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 155,
+          "end": 155
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/155.txt",
+      "notes": "Read grasping-material continuation and 3–6-month gross-motor/tummy-time discussion."
+    },
+    {
+      "id": "text-156",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 156,
+          "end": 156
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/156.txt",
+      "notes": "Read tummy-time comfort continuation and slow-rolling-object slithering condition."
+    },
+    {
+      "id": "visual-299",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 299,
+          "end": 299
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/review-trial/baby-299.png",
+      "notes": "Read the complete suction-cup toy row: around 5+ months or once sitting; clear ball with tiny balls on a rubber suction stand; batting and reaching without the material moving away."
+    },
+    {
+      "id": "text-66",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 66,
+          "end": 66
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/66.txt",
+      "notes": "Read home tips and yes-space opening, including low visible art and preparation for increasing independence."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "early-play-b-source-r02.0-3.baby-naming",
+      "entryId": "baby-naming",
+      "placementId": "0-3.baby-naming",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.baby-naming.json",
+      "snapshotFileSha256": "622a3824d65cd1b41cac7e1fa77133c19deaedbc58a0d3e12402293ba8807171",
+      "textPlacementSha256": "66489bbe0ceedbb489531fe00e60d1456c0ec282fb1c2223a558d18ec6dff8ec",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-conversation",
+        "source-framing"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The actual age-context note now exposes Baby PDF 130 for early naming, alongside the existing reference to the later examples."
+      },
+      "bodyReview": {
+        "entryId": "baby-naming",
+        "canonicalEntrySha256": "d57795253de38f3e04089e3d609fc4bfe8fdf60ea1798cef83bff278b6dcb965",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "resolves": [
+        "baby-naming.early-age-reference"
+      ]
+    },
+    {
+      "id": "early-play-b-source-r02.3-6.baby-naming",
+      "entryId": "baby-naming",
+      "placementId": "3-6.baby-naming",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-naming.json",
+      "snapshotFileSha256": "976a93ba90bc2f73a6842e7578399df2c1ba88e501a8d29fe14f0c45cd452b91",
+      "textPlacementSha256": "24a3ea04ba218a82a1c1de578b2aafa7aabe57824470037bd91c5d58b5cd6a1f",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-conversation",
+        "source-framing"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The actual age-context note now exposes Baby PDF 130 for early naming, alongside the existing reference to the later examples."
+      },
+      "bodyReview": {
+        "entryId": "baby-naming",
+        "canonicalEntrySha256": "d57795253de38f3e04089e3d609fc4bfe8fdf60ea1798cef83bff278b6dcb965",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "resolves": [
+        "baby-naming.early-age-reference"
+      ]
+    },
+    {
+      "id": "early-play-b-source-r02.3-6.baby-choices-within-reach",
+      "entryId": "baby-choices-within-reach",
+      "placementId": "3-6.baby-choices-within-reach",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.baby-choices-within-reach.json",
+      "snapshotFileSha256": "287f8e5ac494aac90ff416e1d3e22fc665404106e9dbf6510ca031c3d291c0f8",
+      "textPlacementSha256": "9f25dcbdfc75aa7cdcf6c522fc7d71408d93cfbb4d4fa8553bd3543721e2acbd",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-framing",
+        "text-155",
+        "text-156",
+        "visual-299",
+        "text-66"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The actual age-context note now exposes Baby PDF 156 and 299 for the early movement and familiar-toy-basket ages."
+      },
+      "bodyReview": {
+        "entryId": "baby-choices-within-reach",
+        "canonicalEntrySha256": "45424d8504436568c1018f797350c2733693210947c881cae4b25cadc1ac3343",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "resolves": [
+        "baby-choices-within-reach.early-age-reference"
+      ]
+    }
+  ]
+}

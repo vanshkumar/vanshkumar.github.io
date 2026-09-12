@@ -1,0 +1,32 @@
+{
+  "id": "toddler-hand-corrected-source-r01",
+  "date": "2026-09-12",
+  "reviewer": {
+    "task": "/root/trial_source",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "retainedReads": [
+    {
+      "path": "content/editorial/toddler-hand-art-source-r01.json"
+    },
+    {
+      "path": "content/6-18/reviews/infant-hand-play-source-r01.json"
+    }
+  ],
+  "readLogs": [],
+  "decisions": [
+    {
+      "placementIds": [
+        "12-18.toddler-fitting-and-turning"
+      ],
+      "reuseBody": true,
+      "verdict": "pass",
+      "assessment": "The added public photo-and-caption locator and structured source-age reference expose Toddler PDF 59–60 for the distinct from-18-month opening-and-closing example while retaining the earlier appendix ages and approved body.",
+      "resolves": [
+        "toddler-fitting-and-turning-photo-reference"
+      ],
+      "issues": []
+    }
+  ]
+}

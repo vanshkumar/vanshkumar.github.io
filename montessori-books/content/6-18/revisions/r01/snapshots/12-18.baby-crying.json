@@ -1,0 +1,114 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-crying",
+        "kind": "perspective",
+        "title": "Hear the message in the crying",
+        "summary": "The authors treat crying as communication: acknowledge it, stay responsive and offer comfort. Trying to understand the need goes alongside care, not ahead of needed help.",
+        "cue": "Your baby is crying and you are trying to understand what they need.",
+        "detail": [
+          "They describe acknowledging a cry and responding with presence or holding when needed. Feelings can be heard without asking the baby to stop crying or insisting that everything is fine.",
+          "In their discussion of prolonged crying and pain, the authors include medical advice and sharing observations with a doctor or pediatrician. They also recognize how tiring this can be and the value of support for the adult."
+        ],
+        "references": [
+          {
+            "id": "baby-crying.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Responsive parenting; When our baby cries",
+            "locator": "Prompt response, acknowledgment, comfort and no-danger boundary",
+            "pdfPages": [
+              {
+                "start": 109,
+                "end": 111
+              }
+            ]
+          },
+          {
+            "id": "baby-crying.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Colic and reflux",
+            "locator": "Medical advice and support when crying is prolonged or painful",
+            "pdfPages": [
+              {
+                "start": 215,
+                "end": 216
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "12-18.baby-crying",
+        "entryId": "baby-crying",
+        "ageId": "12-18",
+        "topicIds": [
+          "connection-feelings",
+          "everyday-care"
+        ],
+        "ageContext": {
+          "bookAge": "Responsive crying care begins from birth; the dedicated care section gives no upper age for responding or seeking help.",
+          "readiness": "The child is crying; care and comfort remain responsive while the adult seeks to understand."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "12–18 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          },
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 109–111"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 215–216"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "6912aa71fb4b27b2b4719c6d6f53bc1a67bcea7528328b82fbcea7582a0baeab",
+  "artContextSha256": null,
+  "publicProjectionSha256": "dba6e05cadab9da4f4a88b203e3b43dd394664ac7f2e2d611a18f58b21afb7c4",
+  "provenance": {
+    "revision": "r01",
+    "placementDraft": {
+      "path": "content/6-18/drafts/baby-care/draft-r02.json",
+      "sha256": "0bd13710c5b9c91a33379d0c1ca8e7cc0b9447d2207b6ca6b286c7a692e71826"
+    },
+    "canonical": {
+      "entryId": "baby-crying",
+      "canonicalEntrySha256": "24d7f3701fa5c3d1c8b2f49010050baac3a804a2c691d00a35da88218457d99a",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/26",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/26"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

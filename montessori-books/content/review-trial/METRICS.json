@@ -1,0 +1,58 @@
+{
+  "startedAt": "2026-09-12T14:50:27+00:00",
+  "completedValidationAt": "2026-09-12T15:02:19.137703+00:00",
+  "elapsedSecondsThroughValidation": 712,
+  "reviewerInvocations": 2,
+  "reviewerFollowupTurns": 0,
+  "correctionRounds": 0,
+  "roles": {
+    "source": {
+      "reviewer": "/root/trial_source",
+      "groupedDecisions": 5,
+      "placementPasses": 9,
+      "decisionBytes": 11458,
+      "compiledReportBytes": 19450
+    },
+    "tone": {
+      "reviewer": "/root/trial_tone",
+      "groupedDecisions": 5,
+      "placementPasses": 9,
+      "decisionBytes": 8974,
+      "compiledReportBytes": 20561
+    }
+  },
+  "rawPacketBytes": 67592,
+  "compactPacketBytes": 48525,
+  "sourceTextBytesAvailable": 70995,
+  "sourceImagesAvailable": 9,
+  "reviewerDecisionBytes": 20432,
+  "compiledReportBytes": 40011,
+  "actualTokens": null,
+  "tokenCounterAvailability": "No task or agent token counter exposed. Byte sizes are payload measurements, not tokens or total model input/output. Mandatory instruction reads, reasoning, tool descriptions, repeated output and editor coordination are additional unmetered cost.",
+  "reviewerSelfReportedCalls": {
+    "source": "Approximately 14 top-level calls: 13 shell operations and nine image views.",
+    "tone": "Approximately nine orchestration calls / 23 underlying tool calls, plus a status message."
+  },
+  "recoveryReads": "Both reviewers reported initial output truncation followed by targeted recovery reads.",
+  "checks": [
+    "Compact packet preserves actual rendered text/deltas, references, placements and substantive age evidence.",
+    "All frozen inputs, renderer and registered bodies verified by existing loadFrozen gate.",
+    "Two distinct xhigh reviewers and original-page read coverage verified for all nine selected placements.",
+    "Full contribution verifier rejected the nine-placement reports as insufficient for the other 104 placements.",
+    "Public approved payload unchanged.",
+    "Targeted git diff whitespace check passed."
+  ],
+  "limitations": [
+    "No measured before/after token comparison.",
+    "Trial is small and had no substantive corrections; harder later batches may cost more.",
+    "Global ledger is an imported editorial queue, not a completed semantic coverage audit.",
+    "No artwork, application integration, build or browser work performed."
+  ],
+  "completedAt": "2026-09-12T15:04:11.016582+00:00",
+  "elapsedSecondsTotal": 824,
+  "finalReceipt": {
+    "path": "content/review-trial/SELECTION-RECEIPT.json",
+    "sha256": "4035f2a20f6c40d72b109471bc4c6989979c1a156f51322ae8edbd5bed730914"
+  },
+  "status": "Complete; all work paused pending user assessment"
+}

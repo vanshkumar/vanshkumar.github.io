@@ -1,0 +1,473 @@
+{
+  "id": "early-play-a-source-r02",
+  "workflow": "lean-v1",
+  "reviewer": {
+    "task": "/root/trial_source",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-12",
+  "scope": "Explicit grouped source-topic decisions; exact age contexts reviewed.",
+  "renderedSurfaces": {
+    "path": "content/birth-6/revisions/r02/RENDERED_SURFACES.json",
+    "sha256": "55b602cb78915a128f1993c60e9bc96276aa8e649bf4e8b0d4257f95831180e7"
+  },
+  "decisionInput": {
+    "path": "content/birth-6/reviews/decisions/early-play-a-source-r02.json",
+    "sha256": "c1d152370adf2eaf9d439553c8b1328c0ec74c4296ff0971581cf7ca4d7be1a7"
+  },
+  "readingBasis": [
+    {
+      "path": "content/birth-6/reviews/early-play-a-source-r01.json",
+      "sha256": "b06b903a18ac4ade27fc2239a7d641972d610fbc4d5e71682bb9dc88e0043e8f"
+    }
+  ],
+  "retainedReads": [
+    {
+      "path": "content/birth-6/reviews/early-play-a-source-r01.json",
+      "sha256": "b06b903a18ac4ade27fc2239a7d641972d610fbc4d5e71682bb9dc88e0043e8f",
+      "readLogIds": [
+        "text-144",
+        "text-145",
+        "visual-144",
+        "visual-145",
+        "text-290",
+        "visual-290"
+      ]
+    },
+    {
+      "path": "content/birth-6/reviews/trial-source-r01.json",
+      "sha256": "8c0a342169282b2084f716265922d266b26920c5a723a30a838c4bc5e38186f8",
+      "readLogIds": [
+        "source-monthly",
+        "visual-287",
+        "visual-288",
+        "visual-289"
+      ]
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "text-144",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 144,
+          "end": 144
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/144.txt",
+      "notes": "Read 0–3-month opening: first-month holding, subdued surroundings and readiness to spend more time on the mat."
+    },
+    {
+      "id": "text-145",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 145,
+          "end": 145
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/145.txt",
+      "notes": "Read movement-mat passage: awake freedom of movement in the second month; preceding grasping illustration inspected separately."
+    },
+    {
+      "id": "visual-144",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 144,
+          "end": 144
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/144.png",
+      "notes": "Inspected 0–3-month reflex grasp/hand-observation row and heading boundary."
+    },
+    {
+      "id": "visual-145",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 145,
+          "end": 145
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/145.png",
+      "notes": "Inspected 3–6 intentional-grasp/manipulation row and later transfer/release rows."
+    },
+    {
+      "id": "text-290",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 290,
+          "end": 290
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/290.txt",
+      "notes": "Read Months 5–6 continuation: discovery baskets appear under Activities for our baby, before Months 7–9."
+    },
+    {
+      "id": "visual-290",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 290,
+          "end": 290
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/290.png",
+      "notes": "Confirmed discovery-basket bullet belongs to Months 5–6 Activities for our baby, with Months 7–9 starting below."
+    },
+    {
+      "id": "source-monthly",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 286,
+          "end": 289
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/review-trial/source-monthly.txt",
+      "notes": "Read early-month connection during care and its continuation in months 3–4."
+    },
+    {
+      "id": "visual-287",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 287,
+          "end": 287
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/review-trial/baby-287.png",
+      "notes": "Confirmed continuation of first-month care and the Months 3 to 4 heading."
+    },
+    {
+      "id": "visual-288",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 288,
+          "end": 288
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/review-trial/baby-288.png",
+      "notes": "Confirmed months 3–4 Bond with our baby column: unhurried care, shared music, silence and interest in faces."
+    },
+    {
+      "id": "visual-289",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 289,
+          "end": 289
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/review-trial/baby-289.png",
+      "notes": "Read monthly care continuation and boundary before Months 5 to 6."
+    },
+    {
+      "id": "text-150",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 150,
+          "end": 150
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/150.txt",
+      "notes": "Read looking-mobile conditions: awake movement area, full/alert baby, placement adjustments and discomfort."
+    },
+    {
+      "id": "text-151",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 151,
+          "end": 151
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/151.txt",
+      "notes": "Read stopping cues, rotation, hand shadows, trees, high-contrast pictures and observation prompts."
+    },
+    {
+      "id": "text-152",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 152,
+          "end": 152
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/152.txt",
+      "notes": "Read observation continuation and 3–6-month fine-motor opening distinguishing reflex grasp from reaching."
+    },
+    {
+      "id": "text-155",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 155,
+          "end": 155
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/155.txt",
+      "notes": "Read grasping-material continuation and 3–6-month gross-motor/tummy-time discussion."
+    },
+    {
+      "id": "text-156",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 156,
+          "end": 156
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/156.txt",
+      "notes": "Read tummy-time comfort continuation and slow-rolling-object slithering condition."
+    },
+    {
+      "id": "source-extra-157",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 157,
+          "end": 157
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/review-trial/source-extra-157.txt",
+      "notes": "Confirmed 6 to 9 months and Gross-motor skills headings preceding the sitting passage."
+    },
+    {
+      "id": "source-framing",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 123
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/review-trial/source-framing.txt",
+      "notes": "Read activity-age guidelines, current interest, mouthing suitability, secure components and frustration qualifications."
+    },
+    {
+      "id": "source-activities",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/review-trial/source-activities.txt",
+      "notes": "Read appendix introduction: ages are guidelines, with activities selected by individual interests and developing skills."
+    },
+    {
+      "id": "source-sitting",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 158,
+          "end": 160
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/review-trial/source-sitting.txt",
+      "notes": "Read sitting passage and continuations; the authors favor waiting for self-initiated sitting."
+    },
+    {
+      "id": "visual-299",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 299,
+          "end": 299
+        }
+      ],
+      "mode": "full-page-visual",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/review-trial/baby-299.png",
+      "notes": "Read the complete suction-cup toy row: around 5+ months or once sitting; clear ball with tiny balls on a rubber suction stand; batting and reaching without the material moving away."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "early-play-a-source-r02.0-3.early-shadows",
+      "entryId": "early-shadows",
+      "placementId": "0-3.early-shadows",
+      "snapshotPath": "content/birth-6/revisions/r02/snapshots/0-3.early-shadows.json",
+      "snapshotFileSha256": "52f9ee8d4841ca90e538fe549f3df0b9c3f846c8e370f1b3a6402201e498b843",
+      "textPlacementSha256": "afae45c2e52458f48782036c7660f27d95b61b0fa03f6c819b2bf6a99cc82513",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-monthly",
+        "visual-287",
+        "visual-288",
+        "visual-289",
+        "text-150",
+        "text-151",
+        "text-152"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The added Months 3 to 4 reference visibly exposes PDF 287–289 and supports the existing continued-watching age statement."
+      },
+      "resolves": [
+        "early-shadows.age-reference"
+      ]
+    },
+    {
+      "id": "early-play-a-source-r02.3-6.early-shadows",
+      "entryId": "early-shadows",
+      "placementId": "3-6.early-shadows",
+      "snapshotPath": "content/birth-6/revisions/r02/snapshots/3-6.early-shadows.json",
+      "snapshotFileSha256": "6ace41d137a5138f32efdda0203a0af98f73c4e8407b34e63984a23b3b2930bb",
+      "textPlacementSha256": "2773ca722f86f8d6983a85d3fff46b2110394b35a5abbcdf89731fdb30ab53ec",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-monthly",
+        "visual-287",
+        "visual-288",
+        "visual-289",
+        "text-150",
+        "text-151",
+        "text-152"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The added Months 3 to 4 reference visibly exposes PDF 287–289 and supports the existing continued-watching age statement."
+      },
+      "resolves": [
+        "early-shadows.age-reference"
+      ]
+    },
+    {
+      "id": "early-play-a-source-r02.0-3.baby-movement",
+      "entryId": "baby-movement",
+      "placementId": "0-3.baby-movement",
+      "snapshotPath": "content/birth-6/revisions/r02/snapshots/0-3.baby-movement.json",
+      "snapshotFileSha256": "89dc7299ce574494a3fb8bf6ce6079ddd87a4967dea5928aa8d6aa3c9c78de9d",
+      "textPlacementSha256": "dafb11dd93c7bfa9df09cbc7d954ef8404a11638775456ded6184d7badfe218a",
+      "artContextSha256": null,
+      "readLogIds": [
+        "text-144",
+        "text-145",
+        "visual-144",
+        "visual-145",
+        "text-155",
+        "text-156",
+        "source-extra-157",
+        "source-framing",
+        "source-activities"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The visible age-context citation now identifies PDF 144–145 for early holding and mat time while retaining comfort and current-interest qualifications."
+      },
+      "bodyReview": {
+        "entryId": "baby-movement",
+        "canonicalEntrySha256": "ad2f99ea61a19b42cfae1dcb274f6924ef45dda8a4c1dc224b5b337163e59b5f",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "resolves": [
+        "baby-movement.early-age-reference"
+      ]
+    },
+    {
+      "id": "early-play-a-source-r02.3-6.baby-movement",
+      "entryId": "baby-movement",
+      "placementId": "3-6.baby-movement",
+      "snapshotPath": "content/birth-6/revisions/r02/snapshots/3-6.baby-movement.json",
+      "snapshotFileSha256": "1396edca95b2f7f57344f6bc12bd1ac3417b9f8068b17e1e11d4c4af4279eeb9",
+      "textPlacementSha256": "992f1554b131ce5d33c7c313bd83b0e09787dfd106624de03e1467321b9eedd0",
+      "artContextSha256": null,
+      "readLogIds": [
+        "text-144",
+        "text-145",
+        "visual-144",
+        "visual-145",
+        "text-155",
+        "text-156",
+        "source-extra-157",
+        "source-framing",
+        "source-activities"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The visible age-context citation now identifies PDF 144–145 for early holding and mat time while retaining comfort and current-interest qualifications."
+      },
+      "bodyReview": {
+        "entryId": "baby-movement",
+        "canonicalEntrySha256": "ad2f99ea61a19b42cfae1dcb274f6924ef45dda8a4c1dc224b5b337163e59b5f",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "resolves": [
+        "baby-movement.early-age-reference"
+      ]
+    },
+    {
+      "id": "early-play-a-source-r02.3-6.baby-treasure-baskets",
+      "entryId": "baby-treasure-baskets",
+      "placementId": "3-6.baby-treasure-baskets",
+      "snapshotPath": "content/birth-6/revisions/r02/snapshots/3-6.baby-treasure-baskets.json",
+      "snapshotFileSha256": "5810f4d5b4128af5c8dee7f7111dde3d8d4291d6045dbc797b3c290203528111",
+      "textPlacementSha256": "663662ba35d1a231214d389ab3d2c3f2619444387a70c559f6f879f7227b6d34",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source-monthly",
+        "visual-289",
+        "text-290",
+        "visual-290",
+        "source-sitting",
+        "source-framing",
+        "source-activities",
+        "visual-299"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The visible Months 5 to 6 citation now exposes PDF 289–290 while preserving independent sitting and the separate familiar-toy-basket example."
+      },
+      "bodyReview": {
+        "entryId": "baby-treasure-baskets",
+        "canonicalEntrySha256": "f25eab09d61589304616896faf4837643f49046236ee21fc4a9c4dc372a89cb6",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "resolves": [
+        "baby-treasure-baskets.early-age-reference"
+      ]
+    }
+  ]
+}

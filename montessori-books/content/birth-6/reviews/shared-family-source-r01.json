@@ -1,0 +1,1136 @@
+{
+  "id": "shared-family-source-r01",
+  "workflow": "lean-v1",
+  "reviewer": {
+    "task": "/root/trial_source",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-12",
+  "scope": "Explicit grouped source-topic decisions; exact age contexts reviewed.",
+  "renderedSurfaces": {
+    "path": "content/birth-6/revisions/r03/RENDERED_SURFACES.json",
+    "sha256": "ebfa5bcd326ce713d494f89e69d7d3a4692cd70ffd5c877fec46e66b230aa190"
+  },
+  "decisionInput": {
+    "path": "content/birth-6/reviews/decisions/shared-family-source-r01.json",
+    "sha256": "4471df2951a72f92a7954185e0894a544145b6c5845c7dec5abc859fb4be4633"
+  },
+  "readingBasis": [],
+  "retainedReads": [
+    {
+      "path": "content/editorial/shared-foundations-source-r01.json",
+      "sha256": "1d9f6e2ea3edbf5594ac4ad92589b1d5863aadce74efbe07bdbba5789f4031df",
+      "readLogIds": [
+        "baby-text-241",
+        "baby-text-242",
+        "toddler-text-14",
+        "toddler-text-189",
+        "toddler-text-192",
+        "toddler-text-193",
+        "toddler-text-194",
+        "toddler-text-198"
+      ]
+    },
+    {
+      "path": "content/birth-6/reviews/early-care-a-source-r01.json",
+      "sha256": "0d325aa2894b1d7bbe8dce3abf0d717494e16e1a3fee58efbb1776118b8ade98",
+      "readLogIds": [
+        "text-110",
+        "text-111"
+      ]
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "baby-text-241",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 241,
+          "end": 241
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/241.txt",
+      "notes": "Read the full page, including the opening of Doing our best."
+    },
+    {
+      "id": "baby-text-242",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 242,
+          "end": 242
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/242.txt",
+      "notes": "Read the Doing our best continuation and conclusion, including capacity after little sleep."
+    },
+    {
+      "id": "toddler-text-14",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/14.txt",
+      "notes": "Read the full page and the explicit definition of toddler as around one to three years."
+    },
+    {
+      "id": "toddler-text-189",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 189,
+          "end": 189
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/189.txt",
+      "notes": "Read the learning-mind-set unit, individual differences and seeking support."
+    },
+    {
+      "id": "toddler-text-192",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 192,
+          "end": 192
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/192.txt",
+      "notes": "Read the complete observation unit, including informal observation when hands are full."
+    },
+    {
+      "id": "toddler-text-193",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 193,
+          "end": 193
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/193.txt",
+      "notes": "Read the Slow down opening and its toddler, older-child and family scope."
+    },
+    {
+      "id": "toddler-text-194",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 194,
+          "end": 194
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/194.txt",
+      "notes": "Read the Slow down continuation and conclusion, with processing time, help and occasional hurry."
+    },
+    {
+      "id": "toddler-text-198",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 198,
+          "end": 198
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/198.txt",
+      "notes": "Read the life-and-choices continuation, work and financial constraints, and practical alternatives."
+    },
+    {
+      "id": "text-110",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 110,
+          "end": 110
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/110.txt",
+      "notes": "Read the crying discussion, including care, acknowledgment and early undifferentiated cries."
+    },
+    {
+      "id": "text-111",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 111,
+          "end": 111
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/111.txt",
+      "notes": "Read the crying continuation, differentiated early-month signals and response qualifications."
+    },
+    {
+      "id": "baby-text-112",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 112,
+          "end": 112
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/112.txt",
+      "notes": "Read the modeling continuation on apology, alternative actions and adult feelings."
+    },
+    {
+      "id": "baby-text-234",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 234,
+          "end": 234
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/234.txt",
+      "notes": "Read the adult-role opening and Preparing ourselves heading."
+    },
+    {
+      "id": "baby-text-235",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 235,
+          "end": 235
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/235.txt",
+      "notes": "Read adult needs, early-day demands and intellectual preparation."
+    },
+    {
+      "id": "baby-text-236",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 236,
+          "end": 236
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/236.txt",
+      "notes": "Read interests beyond parenting, physical preparation, rest and help in the beginning."
+    },
+    {
+      "id": "baby-text-237",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 237,
+          "end": 237
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/237.txt",
+      "notes": "Read early-month support, accessible paid help and emotional preparation."
+    },
+    {
+      "id": "baby-text-238",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 238,
+          "end": 238
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/238.txt",
+      "notes": "Read the preparation continuation, postpartum-depression support and self-forgiveness opening."
+    },
+    {
+      "id": "baby-text-239",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 239,
+          "end": 239
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/239.txt",
+      "notes": "Read the self-trust and reflection conclusion and personal framing of calm ideas."
+    },
+    {
+      "id": "baby-text-240",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 240,
+          "end": 240
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/240.txt",
+      "notes": "Read the calm-ideas continuation, including adult friendship, interests and rest."
+    },
+    {
+      "id": "baby-text-244",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 244,
+          "end": 244
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/244.txt",
+      "notes": "Read the support-network opening and different sources of practical and emotional company."
+    },
+    {
+      "id": "baby-text-245",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 245,
+          "end": 245
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/245.txt",
+      "notes": "Read asking for help, the visible job list and early partner participation."
+    },
+    {
+      "id": "baby-text-246",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 246,
+          "end": 246
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/246.txt",
+      "notes": "Read partner support and the grandparents-and-caregivers opening."
+    },
+    {
+      "id": "baby-text-247",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 247,
+          "end": 247
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/247.txt",
+      "notes": "Read the caregiver continuation and complete single-parent/co-parent unit with safety qualification."
+    },
+    {
+      "id": "baby-text-248",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 248,
+          "end": 248
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/248.txt",
+      "notes": "Read the common-ground opening and ways of sharing information."
+    },
+    {
+      "id": "baby-text-249",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 249,
+          "end": 249
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/249.txt",
+      "notes": "Read priorities, kind requests and the communication-unit opening."
+    },
+    {
+      "id": "baby-text-250",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 250,
+          "end": 250
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/250.txt",
+      "notes": "Read listening, agreed conversation and requests rather than demands."
+    },
+    {
+      "id": "baby-text-251",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 251,
+          "end": 251
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/251.txt",
+      "notes": "Read communication continuation, shared values and regular parenting-chat opening."
+    },
+    {
+      "id": "baby-text-252",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 252,
+          "end": 252
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/252.txt",
+      "notes": "Read regular conversations, understanding others and appreciation."
+    },
+    {
+      "id": "baby-text-253",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 253,
+          "end": 253
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/253.txt",
+      "notes": "Read the common-ground conclusion and care-choice opening, including programs through age three."
+    },
+    {
+      "id": "baby-text-254",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 254,
+          "end": 254
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/254.txt",
+      "notes": "Read responsive and consistent caregivers, first-three-years continuity and availability limits."
+    },
+    {
+      "id": "baby-text-255",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 255,
+          "end": 255
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/baby/255.txt",
+      "notes": "Read the care-choice conclusion, present-setting assessment, warmth and possible alternatives."
+    },
+    {
+      "id": "toddler-text-187",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 187,
+          "end": 187
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/187.txt",
+      "notes": "Read adult preparation as personal practice, with mistakes and another attempt."
+    },
+    {
+      "id": "toddler-text-188",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 188,
+          "end": 188
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/188.txt",
+      "notes": "Read physical self-care, trusted help and doctor support for depression."
+    },
+    {
+      "id": "toddler-text-190",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 190,
+          "end": 190
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/190.txt",
+      "notes": "Read the morning-and-evening-routine continuation, including routines with children."
+    },
+    {
+      "id": "toddler-text-199",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 199,
+          "end": 199
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/199.txt",
+      "notes": "Read self-acceptance and the self-awareness opening."
+    },
+    {
+      "id": "toddler-text-200",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 200,
+          "end": 200
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/200.txt",
+      "notes": "Read later reflection, self-compassion and the Keep practicing conclusion."
+    },
+    {
+      "id": "toddler-text-203",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 203,
+          "end": 203
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/203.txt",
+      "notes": "Read the family-context opening and its multiple family forms."
+    },
+    {
+      "id": "toddler-text-204",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 204,
+          "end": 204
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/204.txt",
+      "notes": "Read adult needs and the surrounding family-relationship discussion."
+    },
+    {
+      "id": "toddler-text-205",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 205,
+          "end": 205
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/205.txt",
+      "notes": "Read shared family needs and the nonconditional weekend-plan example."
+    },
+    {
+      "id": "toddler-text-206",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 206,
+          "end": 206
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/206.txt",
+      "notes": "Read the family-plan continuation, working with others and Getting family on board opening."
+    },
+    {
+      "id": "toddler-text-207",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 207,
+          "end": 207
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/207.txt",
+      "notes": "Read voluntary information-sharing, shared values and differing caregiver relationships."
+    },
+    {
+      "id": "toddler-text-208",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 208,
+          "end": 208
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/208.txt",
+      "notes": "Read the grandparents-and-caregivers unit opening and examples."
+    },
+    {
+      "id": "toddler-text-209",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 209,
+          "end": 209
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/209.txt",
+      "notes": "Read the caregiver continuation and voluntary conflict-conversation opening."
+    },
+    {
+      "id": "toddler-text-210",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 210,
+          "end": 210
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/210.txt",
+      "notes": "Read the conflict-conversation conclusion and separation opening with contact-safety conditions."
+    },
+    {
+      "id": "toddler-text-211",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 211,
+          "end": 211
+        }
+      ],
+      "mode": "full-text",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/tmp/editorial/sources/toddler/211.txt",
+      "notes": "Read the complete separation continuation, stability, age-appropriate updates and adult support."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "shared-family-source-r01.0-3.shared-adult-needs-support",
+      "entryId": "shared-adult-needs-support",
+      "placementId": "0-3.shared-adult-needs-support",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-adult-needs-support.json",
+      "snapshotFileSha256": "b9d82164c3888107c8dedf90c934a65709105bb156c7bb595cf187f1fbf72015",
+      "textPlacementSha256": "9035edf452d59223677135bfd2e69a6ae59dc667137c9f41886a1e6ae8fc9408",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-text-234",
+        "baby-text-235",
+        "baby-text-236",
+        "baby-text-237",
+        "baby-text-238",
+        "baby-text-239",
+        "baby-text-244",
+        "baby-text-245",
+        "baby-text-246",
+        "toddler-text-14",
+        "toddler-text-187",
+        "toddler-text-188",
+        "toddler-text-192",
+        "toddler-text-193"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The early-month and wider adult-support passages support every new context while preserving practical help, resource limits and professional support for depression."
+      },
+      "bodyReview": {
+        "entryId": "shared-adult-needs-support",
+        "canonicalEntrySha256": "9eb3d6c99388c760b335570260180e97d59b9e2ae1e5ad17b41e2be4e28a90fb",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-source-r01.3-6.shared-adult-needs-support",
+      "entryId": "shared-adult-needs-support",
+      "placementId": "3-6.shared-adult-needs-support",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-adult-needs-support.json",
+      "snapshotFileSha256": "2e72671e73cae3601a62c4f47b32502f4e9fdf30319f71a7d54d122404e4f0df",
+      "textPlacementSha256": "835aaea786b4f77ffb3da39b84a49e1fc68f8662a2c3ce3d882554f7310754e6",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-text-234",
+        "baby-text-235",
+        "baby-text-236",
+        "baby-text-237",
+        "baby-text-238",
+        "baby-text-239",
+        "baby-text-244",
+        "baby-text-245",
+        "baby-text-246",
+        "toddler-text-14",
+        "toddler-text-187",
+        "toddler-text-188",
+        "toddler-text-192",
+        "toddler-text-193"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The early-month and wider adult-support passages support every new context while preserving practical help, resource limits and professional support for depression."
+      },
+      "bodyReview": {
+        "entryId": "shared-adult-needs-support",
+        "canonicalEntrySha256": "9eb3d6c99388c760b335570260180e97d59b9e2ae1e5ad17b41e2be4e28a90fb",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-source-r01.0-3.shared-adult-pause",
+      "entryId": "shared-adult-pause",
+      "placementId": "0-3.shared-adult-pause",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-adult-pause.json",
+      "snapshotFileSha256": "24d856c4674cd2fc5d3711c37035db25eb7d8074bec40756374920e16e7b2040",
+      "textPlacementSha256": "2acd4872b5a581dfab7ee6174664cafdd2f7bb8732ed37de5b80b8654879ae4f",
+      "artContextSha256": null,
+      "readLogIds": [
+        "text-110",
+        "text-111",
+        "toddler-text-14",
+        "toddler-text-187",
+        "toddler-text-194",
+        "toddler-text-199",
+        "toddler-text-200"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The infant and toddler passages support each age context because the unchanged body keeps the pause responsive, excludes immediate danger and imposes no fixed delay."
+      },
+      "bodyReview": {
+        "entryId": "shared-adult-pause",
+        "canonicalEntrySha256": "f76130da96f90ba217443bf341dcbcffc5213bee068e55820607ee1aa78d87d5",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-source-r01.3-6.shared-adult-pause",
+      "entryId": "shared-adult-pause",
+      "placementId": "3-6.shared-adult-pause",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-adult-pause.json",
+      "snapshotFileSha256": "920ed0c0d6fa1afb85b578c9596f6c7d192856c6534081bbe77cdb9add853fec",
+      "textPlacementSha256": "6cf5ae08a662fd49a4fd3f7a49f687e7dac724bc0e1abdea61d5b14c82f195dc",
+      "artContextSha256": null,
+      "readLogIds": [
+        "text-110",
+        "text-111",
+        "toddler-text-14",
+        "toddler-text-187",
+        "toddler-text-194",
+        "toddler-text-199",
+        "toddler-text-200"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The infant and toddler passages support each age context because the unchanged body keeps the pause responsive, excludes immediate danger and imposes no fixed delay."
+      },
+      "bodyReview": {
+        "entryId": "shared-adult-pause",
+        "canonicalEntrySha256": "f76130da96f90ba217443bf341dcbcffc5213bee068e55820607ee1aa78d87d5",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-source-r01.0-3.shared-caregiver-common-ground",
+      "entryId": "shared-caregiver-common-ground",
+      "placementId": "0-3.shared-caregiver-common-ground",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-caregiver-common-ground.json",
+      "snapshotFileSha256": "0c7fd920e4f927e5065a4423d7d18fb92e210e6d10fbffb45a93416363c83b78",
+      "textPlacementSha256": "2404b4b73179df81af97077a539b746d4fc08fed2820446159b347a0da6df105",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-text-246",
+        "baby-text-247",
+        "baby-text-248",
+        "baby-text-249",
+        "baby-text-250",
+        "baby-text-251",
+        "baby-text-252",
+        "baby-text-253",
+        "toddler-text-14",
+        "toddler-text-206",
+        "toddler-text-207",
+        "toddler-text-208",
+        "toddler-text-209",
+        "toddler-text-210"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The adult-conversation passages apply across all five ages and retain willing conversation, shared priorities and room for differing trusted caregivers."
+      },
+      "bodyReview": {
+        "entryId": "shared-caregiver-common-ground",
+        "canonicalEntrySha256": "da1c89367248409bc919f6f899ddd6a1f7e35934150e9d2d05418d04401b2943",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-source-r01.3-6.shared-caregiver-common-ground",
+      "entryId": "shared-caregiver-common-ground",
+      "placementId": "3-6.shared-caregiver-common-ground",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-caregiver-common-ground.json",
+      "snapshotFileSha256": "822695be34f740daab46b350dcc129df1718fed3adbc67f3a68bfb0677f20797",
+      "textPlacementSha256": "5c59e5aa5a58677f67f18d8fef82058706da8fd1e1ab06cd606f49d6845ec9d7",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-text-246",
+        "baby-text-247",
+        "baby-text-248",
+        "baby-text-249",
+        "baby-text-250",
+        "baby-text-251",
+        "baby-text-252",
+        "baby-text-253",
+        "toddler-text-14",
+        "toddler-text-206",
+        "toddler-text-207",
+        "toddler-text-208",
+        "toddler-text-209",
+        "toddler-text-210"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The adult-conversation passages apply across all five ages and retain willing conversation, shared priorities and room for differing trusted caregivers."
+      },
+      "bodyReview": {
+        "entryId": "shared-caregiver-common-ground",
+        "canonicalEntrySha256": "da1c89367248409bc919f6f899ddd6a1f7e35934150e9d2d05418d04401b2943",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-source-r01.0-3.shared-choosing-care",
+      "entryId": "shared-choosing-care",
+      "placementId": "0-3.shared-choosing-care",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-choosing-care.json",
+      "snapshotFileSha256": "78a752eeef931a7a3cb5f64b605046c810c78881c643993516111b900a4132df",
+      "textPlacementSha256": "07bf2ceb113e76b274944372a7400a3075d4dd4ad63e0ea775b922742ca79e36",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-text-253",
+        "baby-text-254",
+        "baby-text-255"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The care-choice discussion explicitly spans infancy through the first three years and supports all six placements with warmth, continuity, availability and present-setting limits intact."
+      },
+      "bodyReview": {
+        "entryId": "shared-choosing-care",
+        "canonicalEntrySha256": "b00e2d2966250d488c4f275a1a1d133e8828f24c547c3eab94de72ae7c0ce2ad",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-source-r01.3-6.shared-choosing-care",
+      "entryId": "shared-choosing-care",
+      "placementId": "3-6.shared-choosing-care",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-choosing-care.json",
+      "snapshotFileSha256": "5b4c53c273c1525448626c23c67032b5590fb80ce9316088a6be5fe68ea29541",
+      "textPlacementSha256": "32127ffb536ffba46320bd240cebc6589982ad884640e8cf5cb9b1670cf24920",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-text-253",
+        "baby-text-254",
+        "baby-text-255"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The care-choice discussion explicitly spans infancy through the first three years and supports all six placements with warmth, continuity, availability and present-setting limits intact."
+      },
+      "bodyReview": {
+        "entryId": "shared-choosing-care",
+        "canonicalEntrySha256": "b00e2d2966250d488c4f275a1a1d133e8828f24c547c3eab94de72ae7c0ce2ad",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-source-r01.0-3.shared-family-needs",
+      "entryId": "shared-family-needs",
+      "placementId": "0-3.shared-family-needs",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-family-needs.json",
+      "snapshotFileSha256": "54b9b7e7c775be8cdcea5afc1b8d0ee1a22edf75d39a5ab428b1a2ccaf820eaa",
+      "textPlacementSha256": "67aae94fb42d550c6878b9b4e9401313682d029486c4ed2cc5bec8f4378955fb",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-text-244",
+        "baby-text-245",
+        "baby-text-246",
+        "baby-text-247",
+        "baby-text-251",
+        "baby-text-252",
+        "baby-text-253",
+        "toddler-text-14",
+        "toddler-text-203",
+        "toddler-text-204",
+        "toddler-text-205",
+        "toddler-text-206"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The early-week and later family passages support all five contexts as adult planning that includes varied family arrangements and the needs of both children and adults."
+      },
+      "bodyReview": {
+        "entryId": "shared-family-needs",
+        "canonicalEntrySha256": "2b681012f29bec4ea9bf3a5b2b09969d0e7af714bdfbc5c6d2adeeb85a1faf75",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-source-r01.3-6.shared-family-needs",
+      "entryId": "shared-family-needs",
+      "placementId": "3-6.shared-family-needs",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-family-needs.json",
+      "snapshotFileSha256": "a150865d1748d7d8ac7048b2f5623d24a25055f93abbf384a4271853e3e49bdd",
+      "textPlacementSha256": "a1a81395351f6c8dc453f0b58d12298587ce1d6853b55411ec8682bcf5e19b7e",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-text-244",
+        "baby-text-245",
+        "baby-text-246",
+        "baby-text-247",
+        "baby-text-251",
+        "baby-text-252",
+        "baby-text-253",
+        "toddler-text-14",
+        "toddler-text-203",
+        "toddler-text-204",
+        "toddler-text-205",
+        "toddler-text-206"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The early-week and later family passages support all five contexts as adult planning that includes varied family arrangements and the needs of both children and adults."
+      },
+      "bodyReview": {
+        "entryId": "shared-family-needs",
+        "canonicalEntrySha256": "2b681012f29bec4ea9bf3a5b2b09969d0e7af714bdfbc5c6d2adeeb85a1faf75",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-source-r01.0-3.shared-family-separation",
+      "entryId": "shared-family-separation",
+      "placementId": "0-3.shared-family-separation",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-family-separation.json",
+      "snapshotFileSha256": "16ed172bc3570c106dc9a952ab45e20879740495b1bc1b1943e4964ab9b831ce",
+      "textPlacementSha256": "b9423857ff0fd1a622361071657d359f8ea23f42cddc53eafdb100bf77983f53",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-text-247",
+        "toddler-text-14",
+        "toddler-text-210",
+        "toddler-text-211"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both books support the new separated-family contexts while the actual summary retains the child-safety condition on contact and keeps adult conflict off the child."
+      },
+      "bodyReview": {
+        "entryId": "shared-family-separation",
+        "canonicalEntrySha256": "b255f1ce2d259ca26c350df871ab3dea2e699506a8713f9f30360205b3b5c015",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-source-r01.3-6.shared-family-separation",
+      "entryId": "shared-family-separation",
+      "placementId": "3-6.shared-family-separation",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-family-separation.json",
+      "snapshotFileSha256": "81b991781b60bc67a50a875829461f70b0c344b108af60aed87aa63fb95b03ad",
+      "textPlacementSha256": "6c3d6f65d326f853295a936989aa2c8ab91a2df0bafd10b362676aa8c56c47eb",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-text-247",
+        "toddler-text-14",
+        "toddler-text-210",
+        "toddler-text-211"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both books support the new separated-family contexts while the actual summary retains the child-safety condition on contact and keeps adult conflict off the child."
+      },
+      "bodyReview": {
+        "entryId": "shared-family-separation",
+        "canonicalEntrySha256": "b255f1ce2d259ca26c350df871ab3dea2e699506a8713f9f30360205b3b5c015",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-source-r01.0-3.shared-repair",
+      "entryId": "shared-repair",
+      "placementId": "0-3.shared-repair",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-repair.json",
+      "snapshotFileSha256": "10c502e9f07e5223ab15a8d038546aa39ff3fc11db23a8e511c925bf73395cf3",
+      "textPlacementSha256": "e903821d2d8d54bc514888665f7223a7c933bd75dcd88decd4eeb682619f5fde",
+      "artContextSha256": null,
+      "readLogIds": [
+        "text-111",
+        "baby-text-112",
+        "baby-text-238",
+        "baby-text-239",
+        "toddler-text-14",
+        "toddler-text-187",
+        "toddler-text-198",
+        "toddler-text-200"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Baby modeling and toddler apology passages support all five placements as responsibility for the adult’s actions without requiring a spoken response or assigning blame to the child."
+      },
+      "bodyReview": {
+        "entryId": "shared-repair",
+        "canonicalEntrySha256": "bd229463b295f6eff67d11e194bbbad311a8409c8e8b4b423419af5b1ce73f45",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-source-r01.3-6.shared-repair",
+      "entryId": "shared-repair",
+      "placementId": "3-6.shared-repair",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-repair.json",
+      "snapshotFileSha256": "842a6a092560def93248f27ee9ade408cd9ca995ab3ea0bd83895c3648416d48",
+      "textPlacementSha256": "a7e7b3c3daa5b0e7caaee70dd38efcb0af35f43a44959ae902f0ec1c6e02a026",
+      "artContextSha256": null,
+      "readLogIds": [
+        "text-111",
+        "baby-text-112",
+        "baby-text-238",
+        "baby-text-239",
+        "toddler-text-14",
+        "toddler-text-187",
+        "toddler-text-198",
+        "toddler-text-200"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Baby modeling and toddler apology passages support all five placements as responsibility for the adult’s actions without requiring a spoken response or assigning blame to the child."
+      },
+      "bodyReview": {
+        "entryId": "shared-repair",
+        "canonicalEntrySha256": "bd229463b295f6eff67d11e194bbbad311a8409c8e8b4b423419af5b1ce73f45",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-source-r01.0-3.shared-something-for-you",
+      "entryId": "shared-something-for-you",
+      "placementId": "0-3.shared-something-for-you",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/0-3.shared-something-for-you.json",
+      "snapshotFileSha256": "a802b2811e1dc447d7069ad928f2ad2390ee1fcc33c35b85cbe28a29cf5c1047",
+      "textPlacementSha256": "59858d2777450a2297b5c83b36da853582bb2cdfd487b520516b9a943db8b413",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-text-235",
+        "baby-text-236",
+        "baby-text-239",
+        "baby-text-240",
+        "baby-text-241",
+        "baby-text-242",
+        "toddler-text-14",
+        "toddler-text-187",
+        "toddler-text-189",
+        "toddler-text-190",
+        "toddler-text-192",
+        "toddler-text-193"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The adult-interest passages apply throughout the new age contexts, and the unchanged invitation preserves personal choice and adaptable routines with children."
+      },
+      "bodyReview": {
+        "entryId": "shared-something-for-you",
+        "canonicalEntrySha256": "6488f1305c07855fd68a21f8e981aa8d73906cf4df29ee9903458c02fdc9b9c3",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    },
+    {
+      "id": "shared-family-source-r01.3-6.shared-something-for-you",
+      "entryId": "shared-something-for-you",
+      "placementId": "3-6.shared-something-for-you",
+      "snapshotPath": "content/birth-6/revisions/r03/snapshots/3-6.shared-something-for-you.json",
+      "snapshotFileSha256": "1860a56269d5805456ba6f1455ff9db046f2da700b246b942106f7226d3e392c",
+      "textPlacementSha256": "964a6ae96a17ecba738d38c907ca06aadd1b471f347ecb1c4575f5742715e8c4",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-text-235",
+        "baby-text-236",
+        "baby-text-239",
+        "baby-text-240",
+        "baby-text-241",
+        "baby-text-242",
+        "toddler-text-14",
+        "toddler-text-187",
+        "toddler-text-189",
+        "toddler-text-190",
+        "toddler-text-192",
+        "toddler-text-193"
+      ],
+      "contextReferences": [],
+      "artContext": null,
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The adult-interest passages apply throughout the new age contexts, and the unchanged invitation preserves personal choice and adaptable routines with children."
+      },
+      "bodyReview": {
+        "entryId": "shared-something-for-you",
+        "canonicalEntrySha256": "6488f1305c07855fd68a21f8e981aa8d73906cf4df29ee9903458c02fdc9b9c3",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      }
+    }
+  ]
+}

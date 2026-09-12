@@ -259,6 +259,11 @@
 
 ## Patterns and Preferences
 
+**[2026-09-12] — Matching body and title margins**
+- Observation: The user approved body text aligned with the title after previewing Now; the previous inset came from the shared article grid's 36rem text track.
+- Action: Keep the text track and trailing article sections at the full article width, superseding the earlier narrower-prose preference.
+- Confidence: high
+
 **[2026-09-06] — Class of 2027 TJ follow-up**
 - Observation: The user requested checks every two months for Class of 2027 PSAT/National Merit data and updates to the linked TJ admissions analysis when usable data is released.
 - Action: Use the task's recurring monitor to update `tj-psat-analysis` and prepare matching post changes from source-backed school counts; match this cohort to the fall 2025 PSAT and 2025–26 Grade 11 enrollment, and surface meaningful findings rather than unchanged check-ins.

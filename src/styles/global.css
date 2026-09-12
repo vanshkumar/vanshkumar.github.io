@@ -1623,7 +1623,7 @@ h3,
   display: grid;
   grid-template-columns:
     [wide-start] minmax(0, 1fr)
-    [text-start] min(36rem, 100%)
+    [text-start] minmax(0, 100%)
     [text-end] minmax(0, 1fr)
     [wide-end];
 }
@@ -1650,7 +1650,7 @@ h3,
 .article > .section,
 .article > .log-nav,
 .article > .content-updated {
-  max-width: 36rem;
+  max-width: 100%;
   margin-right: auto;
   margin-left: auto;
 }

@@ -10,15 +10,7 @@ I don't want to write much here because I don't want to spoil the main idea. Hig
 
 If you really want a spoiler of the core idea, I have two very long quotes from the book which capture it. I would recommend just reading the book, though.
 
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 ---
 
@@ -52,11 +44,11 @@ If you really want a spoiler of the core idea, I have two very long quotes from 
 >
 > *I* is not the working mind, you see. For Amanda Bates to say “I do not exist” would be nonsense; but when the processes beneath say the same thing, they are merely reporting that the parasites have died. They are only saying that they are free.
 
-<br>
+<br><br>
 
 ---
 
-<br>
+<br><br>
 
 > But beneath the unthreatening, superficial question of what consciousness *is* floats the more functional question of what it’s good for. It’s telling to note that the nonconscious mind usually works so well on its own that it actually employs a gatekeeper to *prevent* the conscious self from interfering in daily operations.[^102][^103][^104] (If the rest of your brain *were* conscious, it would probably regard you as the pointy-haired boss from *Dilbert*.) Sentience isn’t even necessary to develop a “theory of mind”: you don’t need to be self-reflective in order to track *others’* intentions[^97]. Norretranders declared outright that “Consciousness is a fraud.”[^105]
 >

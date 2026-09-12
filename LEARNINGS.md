@@ -431,6 +431,11 @@
 
 ## What Has Failed
 
+**[2026-09-12] — Repeated standalone line breaks**
+- Observation: Blindsight's blank-line-separated `<br>` tags render as direct children of the article's CSS grid; Astro instead wraps consecutive `<br><br><br>` on one line in a paragraph, where they participate in normal line layout.
+- Action: For multiple authored empty lines, keep consecutive `<br>` tags on one line with a blank line before and after, rather than separating individual tags with blank lines.
+- Confidence: high
+
 **[2026-09-11] — Quote paragraph spacing**
 - Observation: Impact's quote has valid blank `>` lines between paragraphs, but `.prose blockquote > * { margin: 0; }` removes their visual spacing; the regular `.prose > p + p` rule only reaches direct prose children.
 - Action: Restore spacing between adjacent paragraphs inside standard blockquotes with a scoped sibling rule, excluding `.callout` when preserving callout styling.

@@ -11,9 +11,9 @@ exclude_modified_update: true
 I read this great article a couple weeks ago from [Experimental History](https://open.substack.com/pub/experimentalhistory), titled [Underrated ways to change the world](https://substack.com/inbox/post/151872212), which resonated a lot with me. I strongly recommend reading the article, but the basic idea is summarized in the quote below:
 
 > We get stuck here because we assume that there are only two paths to improving the world. Option #1 is to go high_-status_: get rich so you can blast problems with your billions of bucks, or get into office so you can ban all the bad things and mandate all the good things. Only a fortunate few are powerful enough to do anything, of course, so most of the people attempting to improve the world through the high-status route will end up either begging our overlords to do the right thing, or trying to drum up the votes necessary to replace them.
-> 
+
 > Option #2 is to go high-_sacrifice_: sell everything you have and spend your life earning $7/hr to scrub the toilets in an orphanage. Only a virtuous few will have the saintliness necessary to live such a life, of course, so most of the people attempting to improve the world through the high-sacrifice path will end up writing checks to the martyrs on the front lines.
-> 
+
 > These paths aren’t wrong. They’re just too narrow. Money, power, and selflessness are all useful tools in the right hands, but the world is messed up in all sorts of ways that can’t be legislated against, bought off, or undone with a hunger strike. When we focus on just two avenues for making the world better, we exclude almost everybody, leaving most of us with a kind of constipated altruism—we’ve got the urge to do good, but nothing comes out.
 
 I do feel like lately I’ve been stuck to some degree in the overly narrow framing described in this article. Friends know that I’m interested in working on something with a positive social impact, but I do feel like discussions invariably fall into one of the two options described above, usually Option #1.

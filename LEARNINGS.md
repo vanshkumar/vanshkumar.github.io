@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-11] — Property edits and modification dates**
+- Observation: The installed modified-date plugin's `useKeyupEvents` mode listens to CodeMirror input/delete/move transactions instead of broad editor-change events. Its event registration happens at plugin load; direct YAML typing still qualifies as an edit.
+- Action: Enable this mode to avoid Properties-panel and external-edit date churn, then reload the plugin or Obsidian. Use the per-note exclusion flag when all automatic date updates must stop.
+- Confidence: high
+
 **[2026-09-11] — Locking imported post dates**
 - Observation: The vault's `frontmatter-modified-date` Obsidian plugin rewrites `lastmod` after edits, but its configured `excludeField` is `exclude_modified_update` and a truthy value skips the update.
 - Action: To preserve an imported post's historical modification date, set `exclude_modified_update: true` alongside its explicit `lastmod`; remove the flag to resume automatic updates.

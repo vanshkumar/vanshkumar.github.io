@@ -1,0 +1,105 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-dressing",
+        "kind": "invitation",
+        "title": "Getting dressed together",
+        "summary": "Name the clothes and invite your baby to join in—a reach toward a shirt or an arm into a sleeve—with help as needed.",
+        "cue": "While you are changing your baby’s clothes.",
+        "detail": [
+          "Tell your baby what you are about to do. You can offer two suitable tops and notice where they look or reach, or hold a sleeve ready and see whether they join in.",
+          "Use gentle hands and leave time for a response. Some days you will do more of the dressing; participation is an invitation, and necessary care can still go ahead gently."
+        ],
+        "references": [
+          {
+            "id": "baby-dressing.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Clothing / When dressing; When they refuse to get dressed",
+            "locator": "Choices, small participation, gentle touch and necessary-care limit",
+            "pdfPages": [
+              {
+                "start": 207,
+                "end": 210
+              }
+            ]
+          },
+          {
+            "id": "baby-dressing.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Respect / Collaboration",
+            "locator": "9-month sleeve example and help proportionate to need",
+            "pdfPages": [
+              {
+                "start": 100,
+                "end": 100
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "6-9.baby-dressing",
+        "entryId": "baby-dressing",
+        "ageId": "6-9",
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "Infant-wide dressing passage; the collaboration chapter gives a 9-month sleeve example.",
+          "readiness": "A gaze, reach, arm or leg movement; adult help fits the moment.",
+          "note": "The age group is a way to browse; follow the interest or situation described here."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "6–9 months",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 207–210"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF p. 100"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "c63059951c5acccdaaca267be34dadf818395c500149d39e8b817ca0c6c67f8a",
+  "artContextSha256": null,
+  "publicProjectionSha256": "365fcfb0508caa2e216b75893e90be54bbefc9b9401d4f9384029044890d9fb0",
+  "provenance": {
+    "draft": {
+      "path": "content/pilots/drafts/baby/draft-r03.json",
+      "sha256": "b89870e427766f0891c3bc44e5213d70026bf5b62c934e9bff7e5bb20349e7c3"
+    },
+    "revision": "r05",
+    "evidenceFile": "content/pilots/drafts/baby/draft-r03.json",
+    "note": "Full private provenance and actual author read logs remain in this immutable draft and its handoff."
+  }
+}

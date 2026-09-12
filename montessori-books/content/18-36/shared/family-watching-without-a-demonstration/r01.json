@@ -1,0 +1,125 @@
+{
+  "author": {
+    "task": "/root",
+    "reasoning": "xhigh"
+  },
+  "entries": [
+    {
+      "id": "family-watching-without-a-demonstration",
+      "kind": "perspective",
+      "title": "Enjoy a new skill without a demonstration",
+      "summary": "Both books suggest noticing what a child chooses to do instead of asking them to perform a new skill on cue. Naming what interests them and sharing curiosity can keep the exchange going.",
+      "cue": "When you want to show someone what your child has been trying.",
+      "detail": [
+        "Davies recalls asking her son to demonstrate things for relatives, then deciding to stop these tests and watch for what he showed in his own time. Her story offers a way to enjoy a child’s discoveries without needing a performance.",
+        "In The Montessori Toddler, she distinguishes a test with one expected answer from a question that invites curiosity. She makes an exception when she is certain the child knows an answer and is excited to share it, which she describes as usually starting around three. The child’s interest matters in that example."
+      ],
+      "references": [
+        {
+          "id": "family-watching-without-a-demonstration.baby",
+          "sourceId": "baby-2021",
+          "section": "Being their guide / Removing obstacles",
+          "locator": "Davies’s recollection of asking her son to demonstrate skills",
+          "pdfPages": [
+            {
+              "start": 111,
+              "end": 113
+            }
+          ]
+        },
+        {
+          "id": "family-watching-without-a-demonstration.toddler",
+          "sourceId": "toddler-2019",
+          "section": "General principles / Avoid quizzing the child",
+          "locator": "Observation and curiosity in place of tests, with the eager-child exception around three",
+          "pdfPages": [
+            {
+              "start": 36,
+              "end": 39
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "entryId": "family-watching-without-a-demonstration",
+      "author": "/root",
+      "revision": "r01",
+      "date": "2026-09-10",
+      "sourceIdeaIds": [
+        "baby.idea.ch05-remove-obstacles-no-performance",
+        "toddler.activities.idea.avoid-quizzing"
+      ],
+      "evidenceIds": [
+        "baby.ev.ch05-remove-obstacles-no-performance",
+        "toddler.activities.ev.avoid-quizzing"
+      ],
+      "researchEvidence": [
+        {
+          "id": "baby.ev.ch05-remove-obstacles-no-performance",
+          "revision": "1",
+          "path": "research/baby/EVIDENCE.jsonl",
+          "fileSha256": "aa71ee9471e24b77c6d71901cd6d8b84756aea23b0299ba1cb74c197d1206129",
+          "recordSha256": "230e5ac7a12bbfbaae56407bb2cce0bdf6645818192b8e978f62e20fea6f38f7"
+        },
+        {
+          "id": "toddler.activities.ev.avoid-quizzing",
+          "revision": "2026-09-10-r1-452663b60d6a",
+          "path": "research/toddler/EVIDENCE.jsonl",
+          "fileSha256": "ad7d7b0132a4f1389d41f1f393ec01d88cab415c54913dc6a198bd2e24123440",
+          "recordSha256": "77ef65936aba09e5b6c24059ec0922e8878e183434f9216892f7a2b12cda18ac"
+        }
+      ],
+      "actualReadLogIds": [
+        "t7.root.no-performance.baby",
+        "t7.root.no-performance.toddler"
+      ],
+      "actualReadLogPaths": [
+        "content/18-36/source-work/root-no-performance-READ_LOG-r01.json"
+      ],
+      "fullSourceReferences": [
+        {
+          "id": "family-watching-without-a-demonstration.baby",
+          "sourceId": "baby-2021",
+          "section": "Being their guide / Removing obstacles",
+          "locator": "Davies’s recollection of asking her son to demonstrate skills",
+          "pdfPages": [
+            {
+              "start": 111,
+              "end": 113
+            }
+          ]
+        },
+        {
+          "id": "family-watching-without-a-demonstration.toddler",
+          "sourceId": "toddler-2019",
+          "section": "General principles / Avoid quizzing the child",
+          "locator": "Observation and curiosity in place of tests, with the eager-child exception around three",
+          "pdfPages": [
+            {
+              "start": 36,
+              "end": 39
+            }
+          ]
+        }
+      ],
+      "sourceFingerprints": [
+        {
+          "sourceId": "baby-2021",
+          "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+        },
+        {
+          "sourceId": "toddler-2019",
+          "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b"
+        }
+      ],
+      "editorialQualifications": [
+        "Preserve Davies’s retrospective anecdote; no promised confidence outcome and no blanket ban on questions. Around-three eager-answer exception remains explicit, not a new age test."
+      ],
+      "heldDetails": [],
+      "illustrationImplications": "No image needed; never show a child performing for an evaluative adult audience."
+    }
+  ]
+}

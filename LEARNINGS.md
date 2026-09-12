@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-11] — Empty Post scaffold**
+- Observation: A frontmatter-only `vault/Inscrutable exhortations.md` with an `essays` tag, stable slug, title, and date passes the site build and canonical writing verification.
+- Action: For title-and-date-only Post creation, leave the Markdown body empty for the user's writing; no placeholder prose is required.
+- Confidence: high
+
 **[2026-09-10] — Billy Budd Shelf cover source**
 - Observation: The Shelf entry for *Billy Budd and the Piazza Tales* uses the combined Barnes & Noble Classics volume (ISBN 9781593082536); its matching 321×500 cover is available from `https://covers.openlibrary.org/b/isbn/9781593082536-L.jpg?default=false`.
 - Action: Keep this combined volume as one Shelf entry and use its matching cover when refreshing `vault/assets/shelf/billy-budd-and-the-piazza-tales.jpg`.

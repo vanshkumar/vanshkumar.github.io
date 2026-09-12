@@ -1,0 +1,2684 @@
+{
+  "author": {
+    "task": "/root/t7_care_connection_author",
+    "date": "2026-09-10",
+    "reasoning": "xhigh",
+    "workflow": "lean-v1"
+  },
+  "reuse": [
+    {
+      "entryId": "toddler-getting-dressed",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "c4fdaaf63f5547951ce6f4a25a77b68d1bea42913b74af31c5f1e312c32e7a46"
+    },
+    {
+      "entryId": "toddler-coat-flip",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "4d3f420a30cd09c502d1c9e732d69eb726f19073b0915306618cf4fbb9087f62"
+    },
+    {
+      "entryId": "toddler-care-connection",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "a76ca88bdb93746f570b9db3a9f58dc9c9d8b8a116eb4edec98140129580b8dd"
+    },
+    {
+      "entryId": "toddler-nose-and-hair",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "3137e8d035d3550e27bbc1a29ed5bdb6d19002c67d965222ff9a03278f4a2321"
+    },
+    {
+      "entryId": "toddler-daily-rhythm",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "cc34d21e0811c77b0507a19a645937bc9921c6e85d89ec4ed8d12cf75cb1a5d5"
+    },
+    {
+      "entryId": "toddler-family-rituals",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "7c12477669efcda6cc5b521602a3cc4aea26c525c9adb0df90916ddf87964c63"
+    },
+    {
+      "entryId": "toddler-meals",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "c285c57db897ca799eeaf2fe78bda31f31f5d9567d979f66d4ec94b838f21ba2"
+    },
+    {
+      "entryId": "toddler-food-on-floor",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "37b807e3a20eb6506aeb976108dbd23d97457159b91e59388d229854cbc0e662"
+    },
+    {
+      "entryId": "toddler-sleep",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "647ca5ee387d84d06f9bad1196867bd51588a70117b449a683f398e3960f590f"
+    },
+    {
+      "entryId": "toddler-teeth",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "e7c625930b31127df375d9bc0028045e2124acf28d9f8ba5cbdc67aaa927b0a9"
+    },
+    {
+      "entryId": "toddler-toileting",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "eb7ce212e75e59a1c699384be80d8c520a2ad8c9916d5509d9f6ac569eb2975e"
+    },
+    {
+      "entryId": "toddler-pacifier-change",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "bef99d80e4182f9ac74590eed99713fb1e265cb35409b7848c7b5eeb3d309b82"
+    },
+    {
+      "entryId": "toddler-transitions",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "fc128c1f151d8c9b69fed49c54a8771269862f360aca0b63da408a86a2c4fa0c"
+    },
+    {
+      "entryId": "toddler-words-that-help",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "3543cf4d3f0da3c3e0efdb9856f538d1b192783f91ce42d9a4acbbed519fa9c2"
+    },
+    {
+      "entryId": "toddler-solving-together",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "2ef72e8dc7513d63c4ee9fb0c1dbac49fc5c565b290ae3a7e9a8b324a08cd3fd"
+    },
+    {
+      "entryId": "toddler-waiting-outside-home",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "60c9b0bc354e7f6f01231d6f0c2132a1410a5b6c9aa482cdc7d2325ef1de32b8"
+    },
+    {
+      "entryId": "toddler-clear-limits",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "3ad0f4c7e8e7f7f53d5b5f78cd7bbd8804392ca920cfb8af11759d44faf3dee0"
+    },
+    {
+      "entryId": "toddler-big-feelings",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "ba42bfc7da559fe1ca577b16a81a8196f7063305c144ffc940f81f39e77e7bd3"
+    },
+    {
+      "entryId": "toddler-make-amends",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "595be97301dc2356584142e99e6e5479676023e4883f2f88dc65f0392d00ed21"
+    },
+    {
+      "entryId": "toddler-new-sibling",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "889892a0aaaa4b916474be371354b041511e72e312289fa7d715e1975a06afaa"
+    },
+    {
+      "entryId": "toddler-sibling-conflict",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "cfb1879e2c3bf75e381f1306636747dbda290dc69e90652be5dcc6cf28e04a46"
+    },
+    {
+      "entryId": "toddler-taking-turns",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "106daab36f2765ff8778aee7541014ed0274e9fd1545bbeeb5676a00a4712f07"
+    },
+    {
+      "entryId": "toddler-joining-in",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "1adce28cdec488a04a0752f5ccf5e1b1938b3160d329a02af7decda2840ab874"
+    },
+    {
+      "entryId": "toddler-wanted-hugs",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "562c08420ebb31e1d21e8dfa3c6079482e06e346ee9146a3285e7d6b51a46aa4"
+    },
+    {
+      "entryId": "toddler-hitting",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "dc38fd730049674da1233106116db74244907b06d9f6ea5fc54dfe7cb0602e66"
+    },
+    {
+      "entryId": "toddler-throwing",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "5b9720b604042d2bb14182c6018b4f37ac87186746c76cd23d1429870f25472f"
+    },
+    {
+      "entryId": "toddler-close-by",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "9c340d3a91239a5e759221b2e4d2a703c4db90fa1d1484aa1dabf7c46d3c34c2"
+    },
+    {
+      "entryId": "toddler-waiting-to-speak",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "34a000fd97b7b0999edc2e7d23943d581a5e82347bdb9b1d11f77fcb1e46af94"
+    },
+    {
+      "entryId": "toddler-feedback",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "23377ce93fd0fed1d0521b307d258709d6049bb153df6a9569bbab151e43c8ad"
+    },
+    {
+      "entryId": "toddler-screens",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "8aab757b441257d7eb5da4df25452023675b23e4d86496eda3109cc5a4e84068"
+    },
+    {
+      "entryId": "toddler-languages",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "133cde8e6a04e472b3747ee8828431e4c02ffc65fbf080ae337cc8326dac6668"
+    },
+    {
+      "entryId": "toddler-handwashing",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "5e47a5d4c0f136bfb4f932e4518461577bf745bb67ee7ec4bbfc0e12ad3ea40b"
+    }
+  ],
+  "placements": [
+    {
+      "id": "24-36.toddler-getting-dressed",
+      "entryId": "toddler-getting-dressed",
+      "ageId": "24-36",
+      "topicIds": [
+        "everyday-care",
+        "connection-feelings",
+        "home-that-helps"
+      ],
+      "ageContext": {
+        "readiness": "They may reach for their clothes, resist help, or ask you to do something they managed yesterday.",
+        "bookAge": "The chart includes these care activities through 3 years, with help as skills grow."
+      }
+    },
+    {
+      "id": "24-36.toddler-coat-flip",
+      "entryId": "toddler-coat-flip",
+      "ageId": "24-36",
+      "topicIds": [
+        "everyday-care",
+        "play-discovery"
+      ],
+      "ageContext": {
+        "readiness": "Notice an interest in getting a coat on; choose a moment when you are not rushing out.",
+        "bookAge": "The chart includes these care activities through 3 years, with help as skills grow."
+      }
+    },
+    {
+      "id": "24-36.toddler-care-connection",
+      "entryId": "toddler-care-connection",
+      "ageId": "24-36",
+      "topicIds": [
+        "everyday-care",
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "There may be a glance, gesture, sound, or small part of the routine your child wants to join."
+      }
+    },
+    {
+      "id": "24-36.toddler-nose-and-hair",
+      "entryId": "toddler-nose-and-hair",
+      "ageId": "24-36",
+      "topicIds": [
+        "everyday-care",
+        "home-that-helps"
+      ],
+      "ageContext": {
+        "readiness": "Notice whether your child reaches for the tissue or brush, or watches you use one.",
+        "bookAge": "The chart includes these care activities through 3 years, with help as skills grow."
+      }
+    },
+    {
+      "id": "24-36.toddler-daily-rhythm",
+      "entryId": "toddler-daily-rhythm",
+      "ageId": "24-36",
+      "topicIds": [
+        "everyday-care",
+        "home-that-helps"
+      ],
+      "ageContext": {
+        "readiness": "Transitions may be harder when the day unfolds differently from what your child expects."
+      }
+    },
+    {
+      "id": "24-36.toddler-family-rituals",
+      "entryId": "toddler-family-rituals",
+      "ageId": "24-36",
+      "topicIds": [
+        "everyday-care",
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "Notice which ordinary moments your family already repeats and enjoys."
+      }
+    },
+    {
+      "id": "24-36.toddler-meals",
+      "entryId": "toddler-meals",
+      "ageId": "24-36",
+      "topicIds": [
+        "everyday-care",
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "Meals may have become tense, or you may be wondering how much your toddler can join."
+      }
+    },
+    {
+      "id": "24-36.toddler-food-on-floor",
+      "entryId": "toddler-food-on-floor",
+      "ageId": "24-36",
+      "topicIds": [
+        "everyday-care",
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "Food is being dropped or thrown, and you are trying to understand what happens next."
+      }
+    },
+    {
+      "id": "24-36.toddler-sleep",
+      "entryId": "toddler-sleep",
+      "ageId": "24-36",
+      "topicIds": [
+        "everyday-care"
+      ],
+      "ageContext": {
+        "readiness": "You may be considering whether the current bedtime or sleeping arrangement is working for everyone."
+      }
+    },
+    {
+      "id": "24-36.toddler-teeth",
+      "entryId": "toddler-teeth",
+      "ageId": "24-36",
+      "topicIds": [
+        "everyday-care"
+      ],
+      "ageContext": {
+        "readiness": "Your child may want to hold the brush, choose part of the routine, or resist help."
+      }
+    },
+    {
+      "id": "24-36.toddler-toileting",
+      "entryId": "toddler-toileting",
+      "ageId": "24-36",
+      "topicIds": [
+        "everyday-care"
+      ],
+      "ageContext": {
+        "readiness": "Your child may pull at a wet or soiled diaper, seek privacy while pooping, or tell you they have peed or pooped.",
+        "bookAge": "The book gives readiness signs rather than a toilet-learning age.",
+        "note": "This age band does not mean your child should be using the toilet."
+      }
+    },
+    {
+      "id": "24-36.toddler-pacifier-change",
+      "entryId": "toddler-pacifier-change",
+      "ageId": "24-36",
+      "topicIds": [
+        "everyday-care"
+      ],
+      "ageContext": {
+        "readiness": "A family may be considering a change and wondering how to include the child.",
+        "bookAge": "Davies discusses a young toddler who still uses a pacifier.",
+        "note": "This family-change perspective sets no deadline for a 2–3-year-old."
+      }
+    },
+    {
+      "id": "24-36.toddler-transitions",
+      "entryId": "toddler-transitions",
+      "ageId": "24-36",
+      "topicIds": [
+        "everyday-care",
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "Leaving the park or stopping a puzzle may be difficult even when the next thing is familiar."
+      }
+    },
+    {
+      "id": "24-36.toddler-words-that-help",
+      "entryId": "toddler-words-that-help",
+      "ageId": "24-36",
+      "topicIds": [
+        "connection-feelings",
+        "everyday-care"
+      ],
+      "ageContext": {
+        "readiness": "You have asked more than once, and your child has not yet begun."
+      }
+    },
+    {
+      "id": "24-36.toddler-solving-together",
+      "entryId": "toddler-solving-together",
+      "ageId": "24-36",
+      "topicIds": [
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "Two people want different things, or the same difficulty keeps returning."
+      }
+    },
+    {
+      "id": "24-36.toddler-waiting-outside-home",
+      "entryId": "toddler-waiting-outside-home",
+      "ageId": "24-36",
+      "topicIds": [
+        "connection-feelings",
+        "everyday-care"
+      ],
+      "ageContext": {
+        "readiness": "Your child is restless while the adults need to wait."
+      }
+    },
+    {
+      "id": "24-36.toddler-clear-limits",
+      "entryId": "toddler-clear-limits",
+      "ageId": "24-36",
+      "topicIds": [
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "You may notice a rule changing from one moment to the next, or realize a limit needs to be clearer."
+      }
+    },
+    {
+      "id": "24-36.toddler-big-feelings",
+      "entryId": "toddler-big-feelings",
+      "ageId": "24-36",
+      "topicIds": [
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "Your child is overwhelmed by a disappointment, frustration, or a limit."
+      }
+    },
+    {
+      "id": "24-36.toddler-make-amends",
+      "entryId": "toddler-make-amends",
+      "ageId": "24-36",
+      "topicIds": [
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "Someone has been hurt, belongings were damaged, or a mess needs attention after a difficult moment."
+      }
+    },
+    {
+      "id": "24-36.toddler-new-sibling",
+      "entryId": "toddler-new-sibling",
+      "ageId": "24-36",
+      "topicIds": [
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "Your toddler may want closeness, want to help, or want little to do with the baby."
+      }
+    },
+    {
+      "id": "24-36.toddler-sibling-conflict",
+      "entryId": "toddler-sibling-conflict",
+      "ageId": "24-36",
+      "topicIds": [
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "Two children want the same object, or their play is becoming uncomfortable for one of them."
+      }
+    },
+    {
+      "id": "24-36.toddler-taking-turns",
+      "entryId": "toddler-taking-turns",
+      "ageId": "24-36",
+      "topicIds": [
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "One child is using something another child wants.",
+        "bookAge": "Davies describes mainly parallel play before 2½ and possible interest in playing together around 2½.",
+        "note": "Watch whether company is welcome; the ages do not require a child to share or play together."
+      }
+    },
+    {
+      "id": "24-36.toddler-joining-in",
+      "entryId": "toddler-joining-in",
+      "ageId": "24-36",
+      "topicIds": [
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "They may watch from beside you instead of going straight into the group."
+      }
+    },
+    {
+      "id": "24-36.toddler-wanted-hugs",
+      "entryId": "toddler-wanted-hugs",
+      "ageId": "24-36",
+      "topicIds": [
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "A child pulls away from a hug, or your enthusiastic toddler approaches another child."
+      }
+    },
+    {
+      "id": "24-36.toddler-hitting",
+      "entryId": "toddler-hitting",
+      "ageId": "24-36",
+      "topicIds": [
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "There has been physical conflict, or you have noticed situations where it is becoming likely."
+      }
+    },
+    {
+      "id": "24-36.toddler-throwing",
+      "entryId": "toddler-throwing",
+      "ageId": "24-36",
+      "topicIds": [
+        "connection-feelings",
+        "play-discovery"
+      ],
+      "ageContext": {
+        "readiness": "Objects are being pushed from a table or thrown around the room."
+      }
+    },
+    {
+      "id": "24-36.toddler-close-by",
+      "entryId": "toddler-close-by",
+      "ageId": "24-36",
+      "topicIds": [
+        "connection-feelings",
+        "everyday-care"
+      ],
+      "ageContext": {
+        "readiness": "Your child wants to stay beside you, follows you, or asks you to do something together."
+      }
+    },
+    {
+      "id": "24-36.toddler-waiting-to-speak",
+      "entryId": "toddler-waiting-to-speak",
+      "ageId": "24-36",
+      "topicIds": [
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "Your toddler wants to speak while you are in a conversation."
+      }
+    },
+    {
+      "id": "24-36.toddler-feedback",
+      "entryId": "toddler-feedback",
+      "ageId": "24-36",
+      "topicIds": [
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "Your child looks to you after doing something, or you want to acknowledge their effort."
+      }
+    },
+    {
+      "id": "24-36.toddler-screens",
+      "entryId": "toddler-screens",
+      "ageId": "24-36",
+      "topicIds": [
+        "play-discovery",
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "You may be considering what fills waiting time or sits in the background at home."
+      }
+    },
+    {
+      "id": "24-36.toddler-languages",
+      "entryId": "toddler-languages",
+      "ageId": "24-36",
+      "topicIds": [
+        "connection-feelings",
+        "play-discovery"
+      ],
+      "ageContext": {
+        "readiness": "Your household or caregivers may use more than one language."
+      }
+    },
+    {
+      "id": "24-36.toddler-handwashing",
+      "entryId": "toddler-handwashing",
+      "ageId": "24-36",
+      "topicIds": [
+        "everyday-care"
+      ],
+      "ageContext": {
+        "readiness": "Your child may want a turn with the soap, the towel, or a movement they have watched you make.",
+        "bookAge": "The chart includes these care activities through 3 years, with help as skills grow."
+      }
+    }
+  ],
+  "placementEvidence": [
+    {
+      "placementId": "24-36.toddler-getting-dressed",
+      "sourceAge": {
+        "statement": "The chart continues earlier activities and adds examples for 18 months to 3 years; activity ages are indications.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Some at-home practical life activities by age",
+            "locator": "Earlier activities continue; 18 months to 3 years bathroom and clothing examples",
+            "pdfPages": [
+              {
+                "start": 51,
+                "end": 52
+              }
+            ]
+          },
+          {
+            "sourceId": "toddler-2019",
+            "section": "Montessori activities for the whole child",
+            "locator": "Activity ages as indications; follow attention",
+            "pdfPages": [
+              {
+                "start": 33,
+                "end": 33
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.clothing-choice",
+          "toddler.activities.ev.dressing",
+          "toddler.care.ev.departure-limit",
+          "toddler.care.ev.dressing-scaffold",
+          "toddler.care.ev.manageable-clothes",
+          "toddler.core.ev.autonomy",
+          "toddler.core.ev.bedroom-dressing",
+          "toddler.core.ev.observe-clothing"
+        ]
+      },
+      "readiness": {
+        "statement": "Observe current help needs, allow an offered step, and help on days the child does not want to dress themselves",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Getting dressed and leaving the house",
+            "locator": "Observe current help needs, allow an offered step, and help on days the child does not want to dress themselves",
+            "pdfPages": [
+              {
+                "start": 150,
+                "end": 150
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.clothing-choice",
+          "toddler.activities.ev.dressing",
+          "toddler.care.ev.departure-limit",
+          "toddler.care.ev.dressing-scaffold",
+          "toddler.care.ev.manageable-clothes",
+          "toddler.core.ev.autonomy",
+          "toddler.core.ev.bedroom-dressing",
+          "toddler.core.ev.observe-clothing"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-getting-dressed",
+        "canonicalEntrySha256": "c4fdaaf63f5547951ce6f4a25a77b68d1bea42913b74af31c5f1e312c32e7a46",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-coat-flip",
+      "sourceAge": {
+        "statement": "The chart continues earlier activities and adds examples for 18 months to 3 years; activity ages are indications.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Some at-home practical life activities by age",
+            "locator": "Earlier activities continue; 18 months to 3 years bathroom and clothing examples",
+            "pdfPages": [
+              {
+                "start": 51,
+                "end": 52
+              }
+            ]
+          },
+          {
+            "sourceId": "toddler-2019",
+            "section": "Montessori activities for the whole child",
+            "locator": "Activity ages as indications; follow attention",
+            "pdfPages": [
+              {
+                "start": 33,
+                "end": 33
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.dressing",
+          "toddler.care.ev.coat-flip",
+          "toddler.care.ev.dressing-scaffold"
+        ]
+      },
+      "readiness": {
+        "statement": "Unhurried practice at putting on a coat; exact movement is already in the approved body",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Getting dressed and leaving the house",
+            "locator": "Unhurried practice at putting on a coat; exact movement is already in the approved body",
+            "pdfPages": [
+              {
+                "start": 149,
+                "end": 149
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.dressing",
+          "toddler.care.ev.coat-flip",
+          "toddler.care.ev.dressing-scaffold"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-coat-flip",
+        "canonicalEntrySha256": "4d3f420a30cd09c502d1c9e732d69eb726f19073b0915306618cf4fbb9087f62",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-care-connection",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.bath-toys",
+          "toddler.activities.ev.bed-help",
+          "toddler.activities.ev.face-wash",
+          "toddler.activities.ev.fetch-diaper",
+          "toddler.activities.ev.towel",
+          "toddler.care.ev.care-connection",
+          "toddler.care.ev.care-reflection",
+          "toddler.care.ev.contact-consent",
+          "toddler.care.ev.kind-follow-through",
+          "toddler.core.ev.bathroom"
+        ]
+      },
+      "readiness": {
+        "statement": "Communication and respectful touch within daily care",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Daily care",
+            "locator": "Communication and respectful touch within daily care",
+            "pdfPages": [
+              {
+                "start": 145,
+                "end": 145
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.bath-toys",
+          "toddler.activities.ev.bed-help",
+          "toddler.activities.ev.face-wash",
+          "toddler.activities.ev.fetch-diaper",
+          "toddler.activities.ev.towel",
+          "toddler.care.ev.care-connection",
+          "toddler.care.ev.care-reflection",
+          "toddler.care.ev.contact-consent",
+          "toddler.care.ev.kind-follow-through",
+          "toddler.core.ev.bathroom"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-care-connection",
+        "canonicalEntrySha256": "a76ca88bdb93746f570b9db3a9f58dc9c9d8b8a116eb4edec98140129580b8dd",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-nose-and-hair",
+      "sourceAge": {
+        "statement": "The chart continues earlier activities and adds examples for 18 months to 3 years; activity ages are indications.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Some at-home practical life activities by age",
+            "locator": "Earlier activities continue; 18 months to 3 years bathroom and clothing examples",
+            "pdfPages": [
+              {
+                "start": 51,
+                "end": 52
+              }
+            ]
+          },
+          {
+            "sourceId": "toddler-2019",
+            "section": "Montessori activities for the whole child",
+            "locator": "Activity ages as indications; follow attention",
+            "pdfPages": [
+              {
+                "start": 33,
+                "end": 33
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.hair",
+          "toddler.activities.ev.nose",
+          "toddler.core.ev.bathroom",
+          "toddler.core.ev.tour-self-care"
+        ]
+      },
+      "readiness": {
+        "statement": "Earlier hair-brushing activity retained alongside 18-month-to-3-year nose blowing",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Some at-home practical life activities by age",
+            "locator": "Earlier hair-brushing activity retained alongside 18-month-to-3-year nose blowing",
+            "pdfPages": [
+              {
+                "start": 51,
+                "end": 52
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.hair",
+          "toddler.activities.ev.nose",
+          "toddler.core.ev.bathroom",
+          "toddler.core.ev.tour-self-care"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-nose-and-hair",
+        "canonicalEntrySha256": "3137e8d035d3550e27bbc1a29ed5bdb6d19002c67d965222ff9a03278f4a2321",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-daily-rhythm",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.daily-rhythm",
+          "toddler.care.ev.picture-checklist",
+          "toddler.care.ev.rhythm-cooperation",
+          "toddler.core.ev.order-consistency",
+          "toddler.core.ev.sensitive-order",
+          "toddler.family.ev.table-checklist"
+        ]
+      },
+      "readiness": {
+        "statement": "Following toddler energy and interests, recognizing changes and communicating during care",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Daily care / Daily rhythm",
+            "locator": "Following toddler energy and interests, recognizing changes and communicating during care",
+            "pdfPages": [
+              {
+                "start": 145,
+                "end": 145
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.daily-rhythm",
+          "toddler.care.ev.picture-checklist",
+          "toddler.care.ev.rhythm-cooperation",
+          "toddler.core.ev.order-consistency",
+          "toddler.core.ev.sensitive-order",
+          "toddler.family.ev.table-checklist"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-daily-rhythm",
+        "canonicalEntrySha256": "cc34d21e0811c77b0507a19a645937bc9921c6e85d89ec4ed8d12cf75cb1a5d5",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-family-rituals",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.visitors-help",
+          "toddler.activities.ev.volunteer",
+          "toddler.care.ev.family-rituals"
+        ]
+      },
+      "readiness": {
+        "statement": "Ordinary weekly and seasonal rituals within the family’s cultures",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Daily care / Rituals",
+            "locator": "Ordinary weekly and seasonal rituals within the family’s cultures",
+            "pdfPages": [
+              {
+                "start": 147,
+                "end": 147
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.visitors-help",
+          "toddler.activities.ev.volunteer",
+          "toddler.care.ev.family-rituals"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-family-rituals",
+        "canonicalEntrySha256": "7c12477669efcda6cc5b521602a3cc4aea26c525c9adb0df90916ddf87964c63",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-meals",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.snack-access",
+          "toddler.care.ev.appetite-assurance",
+          "toddler.care.ev.cutlery-participation",
+          "toddler.care.ev.eating-roles",
+          "toddler.care.ev.eating-seats",
+          "toddler.care.ev.food-battle-reset",
+          "toddler.care.ev.meal-rhythm-foods",
+          "toddler.care.ev.table-eating",
+          "toddler.core.ev.kitchen-drinks-snacks",
+          "toddler.core.ev.observe-eating"
+        ]
+      },
+      "readiness": {
+        "statement": "Toddler shared meals, supported participation, adult provision and child pace",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Daily care / Eating",
+            "locator": "Toddler shared meals, supported participation, adult provision and child pace",
+            "pdfPages": [
+              {
+                "start": 152,
+                "end": 152
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.snack-access",
+          "toddler.care.ev.appetite-assurance",
+          "toddler.care.ev.cutlery-participation",
+          "toddler.care.ev.eating-roles",
+          "toddler.care.ev.eating-seats",
+          "toddler.care.ev.food-battle-reset",
+          "toddler.care.ev.meal-rhythm-foods",
+          "toddler.care.ev.table-eating",
+          "toddler.core.ev.kitchen-drinks-snacks",
+          "toddler.core.ev.observe-eating"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-meals",
+        "canonicalEntrySha256": "c285c57db897ca799eeaf2fe78bda31f31f5d9567d979f66d4ec94b838f21ba2",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-food-on-floor",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.eating-roles",
+          "toddler.care.ev.food-throwing"
+        ]
+      },
+      "readiness": {
+        "statement": "Possible finished signal, continued-throwing limit and medical note",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Daily care / Eating",
+            "locator": "Possible finished signal, continued-throwing limit and medical note",
+            "pdfPages": [
+              {
+                "start": 155,
+                "end": 155
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.eating-roles",
+          "toddler.care.ev.food-throwing"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-food-on-floor",
+        "canonicalEntrySha256": "37b807e3a20eb6506aeb976108dbd23d97457159b91e59388d229854cbc0e662",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-sleep",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.bedtime-sequence",
+          "toddler.care.ev.night-feeding-change",
+          "toddler.care.ev.night-problem-solving",
+          "toddler.care.ev.sleep-association-claims",
+          "toddler.care.ev.sleep-chair-method",
+          "toddler.care.ev.sleep-family-choice",
+          "toddler.care.ev.sleep-space",
+          "toddler.core.ev.bedroom-sleep",
+          "toddler.core.ev.observe-sleep"
+        ]
+      },
+      "readiness": {
+        "statement": "Toddler-family choice of sleep arrangement; source’s separate earlier nap/bed examples do not create a new 2–3-year requirement",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Daily care / Sleeping",
+            "locator": "Toddler-family choice of sleep arrangement; source’s separate earlier nap/bed examples do not create a new 2–3-year requirement",
+            "pdfPages": [
+              {
+                "start": 156,
+                "end": 156
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.bedtime-sequence",
+          "toddler.care.ev.night-feeding-change",
+          "toddler.care.ev.night-problem-solving",
+          "toddler.care.ev.sleep-association-claims",
+          "toddler.care.ev.sleep-chair-method",
+          "toddler.care.ev.sleep-family-choice",
+          "toddler.care.ev.sleep-space",
+          "toddler.core.ev.bedroom-sleep",
+          "toddler.core.ev.observe-sleep"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-sleep",
+        "canonicalEntrySha256": "647ca5ee387d84d06f9bad1196867bd51588a70117b449a683f398e3960f590f",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-teeth",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.teeth",
+          "toddler.care.ev.teeth-cooperation",
+          "toddler.care.ev.teeth-resistance-handling"
+        ]
+      },
+      "readiness": {
+        "statement": "Toddler participation with gentle adult help and necessary care",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Daily care / Brushing teeth",
+            "locator": "Toddler participation with gentle adult help and necessary care",
+            "pdfPages": [
+              {
+                "start": 159,
+                "end": 159
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.teeth",
+          "toddler.care.ev.teeth-cooperation",
+          "toddler.care.ev.teeth-resistance-handling"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-teeth",
+        "canonicalEntrySha256": "e7c625930b31127df375d9bc0028045e2124acf28d9f8ba5cbdc67aaa927b0a9",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-toileting",
+      "sourceAge": {
+        "statement": "Davies explicitly gives signs of readiness instead of ages.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          },
+          {
+            "sourceId": "toddler-2019",
+            "section": "Dealing with changes / Toileting",
+            "locator": "Explicit signs of readiness instead of ages",
+            "pdfPages": [
+              {
+                "start": 161,
+                "end": 161
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.toileting-night",
+          "toddler.care.ev.toileting-readiness",
+          "toddler.care.ev.toileting-refusal",
+          "toddler.care.ev.toileting-rhythm",
+          "toddler.care.ev.toileting-setup",
+          "toddler.care.ev.toileting-withholding"
+        ]
+      },
+      "readiness": {
+        "statement": "Explicit signs of readiness instead of ages",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Dealing with changes / Toileting",
+            "locator": "Explicit signs of readiness instead of ages",
+            "pdfPages": [
+              {
+                "start": 161,
+                "end": 161
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.toileting-night",
+          "toddler.care.ev.toileting-readiness",
+          "toddler.care.ev.toileting-refusal",
+          "toddler.care.ev.toileting-rhythm",
+          "toddler.care.ev.toileting-setup",
+          "toddler.care.ev.toileting-withholding"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. Readiness, not birthday, controls relevance.",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-toileting",
+        "canonicalEntrySha256": "eb7ce212e75e59a1c699384be80d8c520a2ad8c9916d5509d9f6ac569eb2975e",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-pacifier-change",
+      "sourceAge": {
+        "statement": "The passage describes a young toddler still using a pacifier and refers to phasing out within the first year as Montessori practice, not an individually assessed deadline.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          },
+          {
+            "sourceId": "toddler-2019",
+            "section": "Dealing with changes / Saying goodbye to pacifiers",
+            "locator": "Young toddler still using a pacifier; announcing a change and observing possible needs",
+            "pdfPages": [
+              {
+                "start": 163,
+                "end": 163
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.pacifier-alternatives",
+          "toddler.care.ev.pacifier-transition",
+          "toddler.care.ev.sleep-family-choice"
+        ]
+      },
+      "readiness": {
+        "statement": "Young toddler still using a pacifier; announcing a change and observing possible needs",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Dealing with changes / Saying goodbye to pacifiers",
+            "locator": "Young toddler still using a pacifier; announcing a change and observing possible needs",
+            "pdfPages": [
+              {
+                "start": 163,
+                "end": 163
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.pacifier-alternatives",
+          "toddler.care.ev.pacifier-transition",
+          "toddler.care.ev.sleep-family-choice"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-pacifier-change",
+        "canonicalEntrySha256": "bef99d80e4182f9ac74590eed99713fb1e265cb35409b7848c7b5eeb3d309b82",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-transitions",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.bounded-choices",
+          "toddler.care.ev.cooperation-recap",
+          "toddler.care.ev.invite-help",
+          "toddler.care.ev.kind-follow-through",
+          "toddler.care.ev.transition-agreement",
+          "toddler.care.ev.wait-for-finish",
+          "toddler.core.ev.processing-language-mastery",
+          "toddler.family.ev.table-playful-choice"
+        ]
+      },
+      "readiness": {
+        "statement": "Preparing an ending, checking hearing and saving unfinished work, without assuming clock-time understanding",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Cultivating cooperation",
+            "locator": "Preparing an ending, checking hearing and saving unfinished work, without assuming clock-time understanding",
+            "pdfPages": [
+              {
+                "start": 123,
+                "end": 123
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.bounded-choices",
+          "toddler.care.ev.cooperation-recap",
+          "toddler.care.ev.invite-help",
+          "toddler.care.ev.kind-follow-through",
+          "toddler.care.ev.transition-agreement",
+          "toddler.care.ev.wait-for-finish",
+          "toddler.core.ev.processing-language-mastery",
+          "toddler.family.ev.table-playful-choice"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-transitions",
+        "canonicalEntrySha256": "fc128c1f151d8c9b69fed49c54a8771269862f360aca0b63da408a86a2c4fa0c",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-words-that-help",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.concise-information",
+          "toddler.care.ev.cooperation-recap",
+          "toddler.care.ev.humor",
+          "toddler.care.ev.no-phase",
+          "toddler.care.ev.positive-language",
+          "toddler.care.ev.processing-time",
+          "toddler.care.ev.show-action",
+          "toddler.care.ev.yes-with-boundary",
+          "toddler.core.ev.autonomy",
+          "toddler.family.ev.table-one-word",
+          "toddler.family.ev.table-show-location"
+        ]
+      },
+      "readiness": {
+        "statement": "Brief information, a familiar word, and the source’s choice-refusal note",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Cultivating cooperation",
+            "locator": "Brief information, a familiar word, and the source’s choice-refusal note",
+            "pdfPages": [
+              {
+                "start": 122,
+                "end": 122
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.concise-information",
+          "toddler.care.ev.cooperation-recap",
+          "toddler.care.ev.humor",
+          "toddler.care.ev.no-phase",
+          "toddler.care.ev.positive-language",
+          "toddler.care.ev.processing-time",
+          "toddler.care.ev.show-action",
+          "toddler.care.ev.yes-with-boundary",
+          "toddler.core.ev.autonomy",
+          "toddler.family.ev.table-one-word",
+          "toddler.family.ev.table-show-location"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-words-that-help",
+        "canonicalEntrySha256": "3543cf4d3f0da3c3e0efdb9856f538d1b192783f91ce42d9a4acbbed519fa9c2",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-solving-together",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.acknowledgment-notebook",
+          "toddler.care.ev.adult-guide-limits",
+          "toddler.care.ev.danger-intervention",
+          "toddler.care.ev.problem-solving",
+          "toddler.care.ev.written-note"
+        ]
+      },
+      "readiness": {
+        "statement": "Preverbal and young-toddler contributions with adult leadership",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Problem solving with our toddlers",
+            "locator": "Preverbal and young-toddler contributions with adult leadership",
+            "pdfPages": [
+              {
+                "start": 119,
+                "end": 119
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.acknowledgment-notebook",
+          "toddler.care.ev.adult-guide-limits",
+          "toddler.care.ev.danger-intervention",
+          "toddler.care.ev.problem-solving",
+          "toddler.care.ev.written-note"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-solving-together",
+        "canonicalEntrySha256": "2ef72e8dc7513d63c4ee9fb0c1dbac49fc5c565b290ae3a7e9a8b324a08cd3fd",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-waiting-outside-home",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.public-expectations"
+        ]
+      },
+      "readiness": {
+        "statement": "Toddler movement/communication in waiting rooms, cafes and travel; feasible shared attention",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Managing expectations",
+            "locator": "Toddler movement/communication in waiting rooms, cafes and travel; feasible shared attention",
+            "pdfPages": [
+              {
+                "start": 125,
+                "end": 125
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.public-expectations"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-waiting-outside-home",
+        "canonicalEntrySha256": "60c9b0bc354e7f6f01231d6f0c2132a1410a5b6c9aa482cdc7d2325ef1de32b8",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-clear-limits",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.explore-with-limits",
+          "toddler.care.ev.consistency",
+          "toddler.care.ev.cooperation-foundation",
+          "toddler.care.ev.early-limits",
+          "toddler.care.ev.house-rules",
+          "toddler.care.ev.limit-checklist",
+          "toddler.care.ev.limits-with-love",
+          "toddler.care.ev.logical-consequence",
+          "toddler.core.ev.freedom-limits",
+          "toddler.core.ev.respect"
+        ]
+      },
+      "readiness": {
+        "statement": "Explicit age-and-ability fit and revisability in the limits checklist",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Setting limits",
+            "locator": "Explicit age-and-ability fit and revisability in the limits checklist",
+            "pdfPages": [
+              {
+                "start": 142,
+                "end": 142
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.explore-with-limits",
+          "toddler.care.ev.consistency",
+          "toddler.care.ev.cooperation-foundation",
+          "toddler.care.ev.early-limits",
+          "toddler.care.ev.house-rules",
+          "toddler.care.ev.limit-checklist",
+          "toddler.care.ev.limits-with-love",
+          "toddler.care.ev.logical-consequence",
+          "toddler.core.ev.freedom-limits",
+          "toddler.core.ev.respect"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-clear-limits",
+        "canonicalEntrySha256": "3ad0f4c7e8e7f7f53d5b5f78cd7bbd8804392ca920cfb8af11759d44faf3dee0",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-big-feelings",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.allow-feelings",
+          "toddler.care.ev.danger-intervention",
+          "toddler.care.ev.guess-feelings",
+          "toddler.care.ev.reconnect",
+          "toddler.care.ev.sportscasting",
+          "toddler.care.ev.tantrum-brain-analogy",
+          "toddler.care.ev.tantrum-support",
+          "toddler.core.ev.distress-guidance",
+          "toddler.core.ev.infographic-reframing",
+          "toddler.core.ev.observe-emotional",
+          "toddler.family.ev.table-allow-feelings",
+          "toddler.family.ev.table-perspective"
+        ]
+      },
+      "readiness": {
+        "statement": "Toddler tantrum support, optional cuddles and adult availability",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Acknowledge negative feelings / Dealing with tantrums",
+            "locator": "Toddler tantrum support, optional cuddles and adult availability",
+            "pdfPages": [
+              {
+                "start": 135,
+                "end": 135
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.allow-feelings",
+          "toddler.care.ev.danger-intervention",
+          "toddler.care.ev.guess-feelings",
+          "toddler.care.ev.reconnect",
+          "toddler.care.ev.sportscasting",
+          "toddler.care.ev.tantrum-brain-analogy",
+          "toddler.care.ev.tantrum-support",
+          "toddler.core.ev.distress-guidance",
+          "toddler.core.ev.infographic-reframing",
+          "toddler.core.ev.observe-emotional",
+          "toddler.family.ev.table-allow-feelings",
+          "toddler.family.ev.table-perspective"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-big-feelings",
+        "canonicalEntrySha256": "ba42bfc7da559fe1ca577b16a81a8196f7063305c144ffc940f81f39e77e7bd3",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-make-amends",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.make-amends",
+          "toddler.care.ev.reconnect",
+          "toddler.core.ev.mistakes-repair",
+          "toddler.family.ev.table-amends"
+        ]
+      },
+      "readiness": {
+        "statement": "Adult-supported repair after calm; young children need modeling",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Reconnecting once they are calm / Helping them make amends",
+            "locator": "Adult-supported repair after calm; young children need modeling",
+            "pdfPages": [
+              {
+                "start": 137,
+                "end": 139
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.make-amends",
+          "toddler.care.ev.reconnect",
+          "toddler.core.ev.mistakes-repair",
+          "toddler.family.ev.table-amends"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-make-amends",
+        "canonicalEntrySha256": "595be97301dc2356584142e99e6e5479676023e4883f2f88dc65f0392d00ed21",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-new-sibling",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.new-sibling-context",
+          "toddler.care.ev.sibling-before-arrival",
+          "toddler.care.ev.sibling-feelings-safety",
+          "toddler.care.ev.sibling-special-time",
+          "toddler.family.ev.table-gentle-baby"
+        ]
+      },
+      "readiness": {
+        "statement": "Toddler experience after a new baby arrives, feelings and immediate protection",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Dealing with changes / Siblings",
+            "locator": "Toddler experience after a new baby arrives, feelings and immediate protection",
+            "pdfPages": [
+              {
+                "start": 165,
+                "end": 166
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.new-sibling-context",
+          "toddler.care.ev.sibling-before-arrival",
+          "toddler.care.ev.sibling-feelings-safety",
+          "toddler.care.ev.sibling-special-time",
+          "toddler.family.ev.table-gentle-baby"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-new-sibling",
+        "canonicalEntrySha256": "889892a0aaaa4b916474be371354b041511e72e312289fa7d715e1975a06afaa",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-sibling-conflict",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.large-family-framing",
+          "toddler.care.ev.sibling-conflict",
+          "toddler.care.ev.sibling-individual",
+          "toddler.care.ev.sibling-positive",
+          "toddler.family.ev.table-sibling-individual",
+          "toddler.family.ev.table-sibling-neutral"
+        ]
+      },
+      "readiness": {
+        "statement": "Two-year-old example, both perspectives and proportional adult support",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Siblings",
+            "locator": "Two-year-old example, both perspectives and proportional adult support",
+            "pdfPages": [
+              {
+                "start": 166,
+                "end": 166
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.large-family-framing",
+          "toddler.care.ev.sibling-conflict",
+          "toddler.care.ev.sibling-individual",
+          "toddler.care.ev.sibling-positive",
+          "toddler.family.ev.table-sibling-individual",
+          "toddler.family.ev.table-sibling-neutral"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-sibling-conflict",
+        "canonicalEntrySha256": "cfb1879e2c3bf75e381f1306636747dbda290dc69e90652be5dcc6cf28e04a46",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-taking-turns",
+      "sourceAge": {
+        "statement": "Before 2.5 years, mainly parallel play; around 2.5, possible interest in playing together; earlier sharing may occur with siblings or regular peer contact.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          },
+          {
+            "sourceId": "toddler-2019",
+            "section": "Useful skills for our toddlers to learn / Sharing",
+            "locator": "Parallel play before 2.5; possible shared play around 2.5; home turns and public exception",
+            "pdfPages": [
+              {
+                "start": 170,
+                "end": 171
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.sharing-development",
+          "toddler.care.ev.sharing-public",
+          "toddler.care.ev.sharing-turns",
+          "toddler.care.ev.sharing-visitors",
+          "toddler.family.ev.table-turn-taking"
+        ]
+      },
+      "readiness": {
+        "statement": "Parallel play before 2.5; possible shared play around 2.5; home turns and public exception",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Useful skills for our toddlers to learn / Sharing",
+            "locator": "Parallel play before 2.5; possible shared play around 2.5; home turns and public exception",
+            "pdfPages": [
+              {
+                "start": 170,
+                "end": 171
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.sharing-development",
+          "toddler.care.ev.sharing-public",
+          "toddler.care.ev.sharing-turns",
+          "toddler.care.ev.sharing-visitors",
+          "toddler.family.ev.table-turn-taking"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-taking-turns",
+        "canonicalEntrySha256": "106daab36f2765ff8778aee7541014ed0274e9fd1545bbeeb5676a00a4712f07",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-joining-in",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.clingy-understanding",
+          "toddler.care.ev.introvert-acceptance",
+          "toddler.care.ev.introvert-skills",
+          "toddler.core.ev.observe-social",
+          "toddler.core.ev.sensitive-manners"
+        ]
+      },
+      "readiness": {
+        "statement": "Unfamiliar social settings, supported practice and time to watch",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Skills for introverted toddlers",
+            "locator": "Unfamiliar social settings, supported practice and time to watch",
+            "pdfPages": [
+              {
+                "start": 172,
+                "end": 173
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.clingy-understanding",
+          "toddler.care.ev.introvert-acceptance",
+          "toddler.care.ev.introvert-skills",
+          "toddler.core.ev.observe-social",
+          "toddler.core.ev.sensitive-manners"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-joining-in",
+        "canonicalEntrySha256": "1adce28cdec488a04a0752f5ccf5e1b1938b3160d329a02af7decda2840ab874",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-wanted-hugs",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.contact-consent",
+          "toddler.care.ev.danger-intervention",
+          "toddler.care.ev.kind-follow-through",
+          "toddler.core.ev.respect"
+        ]
+      },
+      "readiness": {
+        "statement": "Child withdraws from offered affection; check if touch is wanted",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Skills for introverted toddlers / Respectful contact",
+            "locator": "Child withdraws from offered affection; check if touch is wanted",
+            "pdfPages": [
+              {
+                "start": 173,
+                "end": 173
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.contact-consent",
+          "toddler.care.ev.danger-intervention",
+          "toddler.care.ev.kind-follow-through",
+          "toddler.core.ev.respect"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-wanted-hugs",
+        "canonicalEntrySha256": "562c08420ebb31e1d21e8dfa3c6079482e06e346ee9146a3285e7d6b51a46aa4",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-hitting",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.hitting-laughter",
+          "toddler.care.ev.hitting-observe",
+          "toddler.care.ev.hitting-prevention",
+          "toddler.care.ev.hitting-response",
+          "toddler.family.ev.table-ground-rule",
+          "toddler.family.ev.table-kind-limit"
+        ]
+      },
+      "readiness": {
+        "statement": "Toddler communication and adult proximity to stop harm; observed context",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "A hitting/biting/pushing/throwing phase",
+            "locator": "Toddler communication and adult proximity to stop harm; observed context",
+            "pdfPages": [
+              {
+                "start": 174,
+                "end": 174
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.hitting-laughter",
+          "toddler.care.ev.hitting-observe",
+          "toddler.care.ev.hitting-prevention",
+          "toddler.care.ev.hitting-response",
+          "toddler.family.ev.table-ground-rule",
+          "toddler.family.ev.table-kind-limit"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-hitting",
+        "canonicalEntrySha256": "dc38fd730049674da1233106116db74244907b06d9f6ea5fc54dfe7cb0602e66",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-throwing",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.explore-with-limits",
+          "toddler.care.ev.logical-consequence",
+          "toddler.care.ev.throwing-phase"
+        ]
+      },
+      "readiness": {
+        "statement": "Throwing interest, protecting people/belongings and different outlets",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "A hitting/biting/pushing/throwing phase / And throwing?",
+            "locator": "Throwing interest, protecting people/belongings and different outlets",
+            "pdfPages": [
+              {
+                "start": 176,
+                "end": 176
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.explore-with-limits",
+          "toddler.care.ev.logical-consequence",
+          "toddler.care.ev.throwing-phase"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-throwing",
+        "canonicalEntrySha256": "5b9720b604042d2bb14182c6018b4f37ac87186746c76cd23d1429870f25472f",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-close-by",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.clingy-context",
+          "toddler.care.ev.clingy-daily-life",
+          "toddler.care.ev.clingy-understanding",
+          "toddler.family.ev.goodbye",
+          "toddler.family.ev.parent-preference",
+          "toddler.family.ev.school-preparation"
+        ]
+      },
+      "readiness": {
+        "statement": "Toddlers still need supervision, may want company and can join supported shared play or work",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "When our child is clingy",
+            "locator": "Toddlers still need supervision, may want company and can join supported shared play or work",
+            "pdfPages": [
+              {
+                "start": 179,
+                "end": 179
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.clingy-context",
+          "toddler.care.ev.clingy-daily-life",
+          "toddler.care.ev.clingy-understanding",
+          "toddler.family.ev.goodbye",
+          "toddler.family.ev.parent-preference",
+          "toddler.family.ev.school-preparation"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-close-by",
+        "canonicalEntrySha256": "9c340d3a91239a5e759221b2e4d2a703c4db90fa1d1484aa1dabf7c46d3c34c2",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-waiting-to-speak",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.danger-intervention",
+          "toddler.care.ev.interrupt-adult"
+        ]
+      },
+      "readiness": {
+        "statement": "Actual hand-on-shoulder signal, acknowledgment and response at an appropriate pause",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Learning how to interrupt an adult",
+            "locator": "Actual hand-on-shoulder signal, acknowledgment and response at an appropriate pause",
+            "pdfPages": [
+              {
+                "start": 172,
+                "end": 172
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.danger-intervention",
+          "toddler.care.ev.interrupt-adult"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-waiting-to-speak",
+        "canonicalEntrySha256": "34a000fd97b7b0999edc2e7d23943d581a5e82347bdb9b1d11f77fcb1e46af94",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-feedback",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.core.ev.connection-recap",
+          "toddler.core.ev.feedback",
+          "toddler.core.ev.labels",
+          "toddler.core.ev.praise-rationale",
+          "toddler.family.ev.table-feedback",
+          "toddler.family.ev.table-labels"
+        ]
+      },
+      "readiness": {
+        "statement": "Action descriptions and expressed adult delight",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Give our child feedback / Roles and labels",
+            "locator": "Action descriptions and expressed adult delight",
+            "pdfPages": [
+              {
+                "start": 112,
+                "end": 112
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.core.ev.connection-recap",
+          "toddler.core.ev.feedback",
+          "toddler.core.ev.labels",
+          "toddler.core.ev.praise-rationale",
+          "toddler.family.ev.table-feedback",
+          "toddler.family.ev.table-labels"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-feedback",
+        "canonicalEntrySha256": "23377ce93fd0fed1d0521b307d258709d6049bb153df6a9569bbab151e43c8ad",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-screens",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.screens-older-context",
+          "toddler.care.ev.screens-perspective",
+          "toddler.care.ev.screens-reported-claims"
+        ]
+      },
+      "readiness": {
+        "statement": "Toddler-firsthand-experience framing, family examples and separately identified school-age arrangement",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Screen time",
+            "locator": "Toddler-firsthand-experience framing, family examples and separately identified school-age arrangement",
+            "pdfPages": [
+              {
+                "start": 181,
+                "end": 181
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.screens-older-context",
+          "toddler.care.ev.screens-perspective",
+          "toddler.care.ev.screens-reported-claims"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-screens",
+        "canonicalEntrySha256": "8aab757b441257d7eb5da4df25452023675b23e4d86496eda3109cc5a4e84068",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-languages",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years old; this passage gives no narrower age.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "What we need to know about toddlers",
+            "locator": "Final note: toddler means around 1 to 3 years old",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.bilingual-arrangements",
+          "toddler.care.ev.bilingual-development-claims",
+          "toddler.care.ev.bilingual-exposure-threshold"
+        ]
+      },
+      "readiness": {
+        "statement": "More than one language at home and people-based arrangements",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Bilingualism",
+            "locator": "More than one language at home and people-based arrangements",
+            "pdfPages": [
+              {
+                "start": 182,
+                "end": 182
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.bilingual-arrangements",
+          "toddler.care.ev.bilingual-development-claims",
+          "toddler.care.ev.bilingual-exposure-threshold"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-languages",
+        "canonicalEntrySha256": "133cde8e6a04e472b3747ee8828431e4c02ffc65fbf080ae337cc8326dac6668",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    },
+    {
+      "placementId": "24-36.toddler-handwashing",
+      "sourceAge": {
+        "statement": "The chart continues earlier activities and adds examples for 18 months to 3 years; activity ages are indications.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Some at-home practical life activities by age",
+            "locator": "Earlier activities continue; 18 months to 3 years bathroom and clothing examples",
+            "pdfPages": [
+              {
+                "start": 51,
+                "end": 52
+              }
+            ]
+          },
+          {
+            "sourceId": "toddler-2019",
+            "section": "Montessori activities for the whole child",
+            "locator": "Activity ages as indications; follow attention",
+            "pdfPages": [
+              {
+                "start": 33,
+                "end": 33
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.handwashing-sink",
+          "toddler.activities.ev.handwashing-table",
+          "toddler.activities.ev.washing-cloths",
+          "toddler.activities.ev.washing-dishes",
+          "toddler.core.ev.bathroom"
+        ]
+      },
+      "readiness": {
+        "statement": "Assisted handwashing retained from earlier toddler activities",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Some at-home practical life activities by age",
+            "locator": "Assisted handwashing retained from earlier toddler activities",
+            "pdfPages": [
+              {
+                "start": 51,
+                "end": 52
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.handwashing-sink",
+          "toddler.activities.ev.handwashing-table",
+          "toddler.activities.ev.washing-cloths",
+          "toddler.activities.ev.washing-dishes",
+          "toddler.core.ev.bathroom"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The exact approved body addresses this toddler situation within the book’s around-1-to-3 scope. At 2–3 it retains participation with help, individual context and the original sensitive qualifications; it does not impose a new capability. ",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "toddler-handwashing",
+        "canonicalEntrySha256": "5e47a5d4c0f136bfb4f932e4518461577bf745bb67ee7ec4bbfc0e12ad3ea40b",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "artworkImplications": "Text-only new age; no scene or illustration is approved by this contribution.",
+      "retainedBodyBoundary": "The exact r08 body and its complete qualifications are preserved by canonical digest. These references identify only the new age/readiness/context judgment; the entire previously approved bibliography is not newly required under lean-v1."
+    }
+  ],
+  "editorialRevision": {
+    "revision": "r02",
+    "previousPath": "content/18-36/placements/care-frozen-reuse-r01.json",
+    "scope": "Private placement source-span precision only; public placements, reuse digests and canonical bodies are byte-for-byte equivalent JSON values. Retain needed later ages/readiness, while avoiding repeated old bibliography requirements."
+  }
+}

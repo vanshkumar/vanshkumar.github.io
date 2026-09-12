@@ -1,0 +1,790 @@
+{
+  "id": "baby-care-source-r05",
+  "reviewer": {
+    "task": "/root/baby_care_source_r05",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Fresh independent source review of exactly five changed Baby care entries in r05: all ten topic rows, five full readings, frozen text/age/topic/reference metadata and corresponding draft-r03 fields/provenance. All five are unillustrated, non-opening 6–9 month placements.",
+  "manifest": {
+    "path": "content/pilots/revisions/r05/MANIFEST.json",
+    "sha256": "ae7dfd0ce44392a8c040bb9b9df38ca991d9b37aab24caf8655d52cf1e1a663c"
+  },
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r05/RENDERED_SURFACES.json",
+    "sha256": "b2b0183e437c4abf4c8dddd18ca4ac94be9075abd517d635779d2b946fe0f77b"
+  },
+  "renderer": {
+    "path": "src/HomeStudy.jsx",
+    "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c"
+  },
+  "draft": {
+    "path": "content/pilots/drafts/baby/draft-r03.json",
+    "sha256": "b89870e427766f0891c3bc44e5213d70026bf5b62c934e9bff7e5bb20349e7c3"
+  },
+  "sourceVerification": {
+    "sourceId": "baby-2021",
+    "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+    "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f",
+    "bytes": 10117663,
+    "physicalPages": 310,
+    "pagination": "One-based physical PDF pages; no printed-page equivalence asserted."
+  },
+  "reviewMethod": "Original PDF fingerprint verified. Complete relevant original text was personally read, with readable original full-page visuals for cited pages and meaningful boxes, tables, illustrations and material cross-references. Prior reviewer records were not read. The author’s provenance was inspected as a map, not accepted as source proof. Source-only sensitivity review; no independent clinical verification and no external clinical guidance imported. This record evaluates only the exact components named below.",
+  "identityChecks": "All five snapshot file hashes, canonical textPlacement hashes and canonical publicProjection hashes recomputed successfully; frozen entry/placement fields match the corresponding fields in the exact draft; all topic rows and full rendered texts were read alongside HomeStudy’s TopicBrowser and EntryReading behavior.",
+  "readLogs": [
+    {
+      "id": "baby-care-source-r05.read.daily.text",
+      "reader": "/root/baby_care_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 180,
+          "end": 182
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original text for Daily rhythm and Rituals, including all newborn/older-baby examples, play-before-feed variation, changing family circumstances, transition cues, working caregivers and as-much-as-possible coordination, the external research recommendation, and the boundary into Eating. The external title was not imported as evidence."
+    },
+    {
+      "id": "baby-care-source-r05.read.daily.visual",
+      "reader": "/root/baby_care_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 180,
+          "end": 182
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read the original Daily rhythm and Rituals pages in full, including the continued age examples and ritual list. Confirmed the explicit non-schedule qualification and where the Eating section begins.",
+      "renderMethod": "Readable 1500-pixel full-page PNGs rendered directly from the verified original PDF with Poppler and personally inspected; no contact sheets.",
+      "pageRenderEvidence": [
+        {
+          "pdfPage": 180,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-180.png",
+          "sha256": "44845d3b9d6fd4c478769e8a6874ac0bd425828b3a580420ced487d04b1c958a"
+        },
+        {
+          "pdfPage": 181,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-181.png",
+          "sha256": "951119d3d6861346f4657bf138a6477dad8fa943cb5d73224e78528c1d14c166"
+        },
+        {
+          "pdfPage": 182,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-182.png",
+          "sha256": "9ff4ee7c130430954c545f7bc54aa451f3152b965859b77ae4eb223b95574fd1"
+        }
+      ]
+    },
+    {
+      "id": "baby-care-source-r05.read.eating.text",
+      "reader": "/root/baby_care_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 182,
+          "end": 193
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete original Eating unit through its ending and book recommendations: first-year collaboration; breast/bottle context and family options; support for breastfeeding difficulties; hunger and feed rhythms; burping and adjacent concerns; the complete solids-readiness passage across 186–187; sensory/language points and Montanaro quotation; baby-led food examples and entire choking/first-aid box; Where to eat through 189; all Tools for eating through 190; all five More tips and observation-box continuation through 192; weaning context through 193. Also read the adjacent sleep opener on 193; no claim of completing the sleeping chapter or importing external care guidance."
+    },
+    {
+      "id": "baby-care-source-r05.read.eating.visual",
+      "reader": "/root/baby_care_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 182,
+          "end": 193
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read all twelve original pages at readable size, including the food-interest/readiness continuation, full choking safety box and its first-aid/update recommendation, meal/utensil illustration, seating and tools boundaries, complete five-item tips list, observation box across 191–192, and book-recommendation box. This inspection establishes book representation only, not clinical or equipment verification.",
+      "renderMethod": "Readable 1500-pixel full-page PNGs rendered directly from the verified original PDF with Poppler and personally inspected; no contact sheets.",
+      "pageRenderEvidence": [
+        {
+          "pdfPage": 182,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-182.png",
+          "sha256": "9ff4ee7c130430954c545f7bc54aa451f3152b965859b77ae4eb223b95574fd1"
+        },
+        {
+          "pdfPage": 183,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-183.png",
+          "sha256": "43bbe67422c574c4806717eaca909af8416eadb86f87307643b2c4b836c322da"
+        },
+        {
+          "pdfPage": 184,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-184.png",
+          "sha256": "19fcd02f5d1e6188b9c4b125bf938004be753b07f9fce8c657e65876a69cf40f"
+        },
+        {
+          "pdfPage": 185,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-185.png",
+          "sha256": "f42d0e33e7d0b4b11155556a41c0471ea0e30c455b18c0f093ff68701cd0c02b"
+        },
+        {
+          "pdfPage": 186,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-186.png",
+          "sha256": "20895aeb3760f01b5567c3da536e6b1bdf0a2d957555515b4cf8606400a92205"
+        },
+        {
+          "pdfPage": 187,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-187.png",
+          "sha256": "60d62d4357eba0bee1cb3aa7e4dc7ce0583185950e4fb1e9aeb9c5bdd13bc09d"
+        },
+        {
+          "pdfPage": 188,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-188.png",
+          "sha256": "e9422fef9571007f8591c93e2d5619889679f0b001b0060c6d885d5dce628b25"
+        },
+        {
+          "pdfPage": 189,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-189.png",
+          "sha256": "d76640f1d6123f63852a7b6866f6085fd8ea0d9509e9d22e46e4922e86034159"
+        },
+        {
+          "pdfPage": 190,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-190.png",
+          "sha256": "f673eb5ed441ed102889816efa4eaa42c3dbd6fb262bbe67108c37cdada6fa62"
+        },
+        {
+          "pdfPage": 191,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-191.png",
+          "sha256": "0207c98eb15e3820de17b92a3f39fdfdc2dbd3c399f82728be22d1894a6fa845"
+        },
+        {
+          "pdfPage": 192,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-192.png",
+          "sha256": "3164554de1a34f37e58a929deb6e966a3376a67aa05702b9666ce831cd8fb424"
+        },
+        {
+          "pdfPage": 193,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-193.png",
+          "sha256": "32dff79b86637bbaedcc8d40407f29930cbc3a41984537ce513d296f2df78117"
+        }
+      ]
+    },
+    {
+      "id": "baby-care-source-r05.read.dressing.text",
+      "reader": "/root/baby_care_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 207,
+          "end": 210
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the full original Clothing and When dressing text, all choice and participation examples and the jacket anecdote; all intervening Diapering text; and the full When they refuse to get dressed or have a diaper changed unit including its continuation, time/participation/connection considerations and gentle necessary-care exception. Read the bathing-section boundary without using its handling instructions."
+    },
+    {
+      "id": "baby-care-source-r05.read.dressing.visual",
+      "reader": "/root/baby_care_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 207,
+          "end": 210
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read the four original pages in full, checking the two-top choice across 207–208, infant-wide participation wording, and the complete refusal list and necessary-care paragraphs across 209–210.",
+      "renderMethod": "Readable 1500-pixel full-page PNGs rendered directly from the verified original PDF with Poppler and personally inspected; no contact sheets.",
+      "pageRenderEvidence": [
+        {
+          "pdfPage": 207,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-207.png",
+          "sha256": "27c8dd03311076efb810099de9baef30611cc81be3d1a0e169e80ed7acfaf22c"
+        },
+        {
+          "pdfPage": 208,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-208.png",
+          "sha256": "52d8b8a78880e18b1a4d3811cd36254664274538029636afbcd9c99af7afc0b4"
+        },
+        {
+          "pdfPage": 209,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-209.png",
+          "sha256": "33dc7fbada7361ce17a322c0532402a7cc70301ae7af03904a46f3565bd37f22"
+        },
+        {
+          "pdfPage": 210,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-210.png",
+          "sha256": "fec5866aedc99eba91ba3234a4066db1bd642bfc7bbbdb12b608889565122598"
+        }
+      ]
+    },
+    {
+      "id": "baby-care-source-r05.read.respect.text",
+      "reader": "/root/baby_care_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 98,
+          "end": 104
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read original pages containing the complete Respect unit and Having kind and clear boundaries unit: body respect, gentleness, collaboration examples including the nine-month sleeve, proportionate help, individuality, rhythms, attention and the full Alternatives to praise box, pace, choices, safety limits, tentative food-throwing interpretation, and positive-language box. The preceding acceptance ending and following concentration heading were read as boundaries."
+    },
+    {
+      "id": "baby-care-source-r05.read.respect.visual",
+      "reader": "/root/baby_care_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 100,
+          "end": 104
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read full original pages containing the nine-month sleeve and proportionate-help paragraph, individuality/rhythm context, the complete praise box across 101–102, pace and choices, and the limits/positive-language material across 103–104.",
+      "renderMethod": "Readable 1500-pixel full-page PNGs rendered directly from the verified original PDF with Poppler and personally inspected; no contact sheets.",
+      "pageRenderEvidence": [
+        {
+          "pdfPage": 100,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-100.png",
+          "sha256": "6977b902ab7cd6d9ac7096f744fccdfb3d356680771cb0bfbcf6322975ee94ec"
+        },
+        {
+          "pdfPage": 101,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-101.png",
+          "sha256": "6609ffaa385218ee68c628bf28e5911b2f43d2f26df126effef060e260570707"
+        },
+        {
+          "pdfPage": 102,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-102.png",
+          "sha256": "76ab21dc2f3f7832d032b3b1b5b0fb46ac9ab298177b0dfd14c74ca55dc26a63"
+        },
+        {
+          "pdfPage": 103,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-103.png",
+          "sha256": "129192376b11eb66c4d4ead0611ad7772c7e062b8ea8f9755c295242ff081a08"
+        },
+        {
+          "pdfPage": 104,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-104.png",
+          "sha256": "55174480dc92e38fdf98a8ef451e89542628e9ae3bd81040e89613de2998f23a"
+        }
+      ]
+    },
+    {
+      "id": "baby-care-source-r05.read.responsive.text",
+      "reader": "/root/baby_care_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 109,
+          "end": 111
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the original attachment-tip box and continuation, prompt/respectful caregiving, and complete When our baby cries discussion and checklist through 111, including danger/comfort/need conditions. Read the beginning of Being their guide on 111 but do not claim that separate unit complete."
+    },
+    {
+      "id": "baby-care-source-r05.read.responsive.visual",
+      "reader": "/root/baby_care_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 109,
+          "end": 111
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read the original attachment box across 109–110 and crying text/checklist through 111 at readable size to confirm that respectful participation coexists with appropriate care and comfort.",
+      "renderMethod": "Readable 1500-pixel full-page PNGs rendered directly from the verified original PDF with Poppler and personally inspected; no contact sheets.",
+      "pageRenderEvidence": [
+        {
+          "pdfPage": 109,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-109.png",
+          "sha256": "ebdbed240a328d145952014d1745f6700abf80f6da9d8414e61c424600b807ee"
+        },
+        {
+          "pdfPage": 110,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-110.png",
+          "sha256": "41a6e500f493ec7150fbd0e5dc7f77c1cad96e50fe8e84b88c969198fbe21881"
+        },
+        {
+          "pdfPage": 111,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-111.png",
+          "sha256": "fc80a2181b868681a7598413345cd5159064b07ed4d0243d8b6e63c9d7093199"
+        }
+      ]
+    },
+    {
+      "id": "baby-care-source-r05.read.home.text",
+      "reader": "/root/baby_care_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 65,
+          "end": 73
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read original home-setup context, complete tips and yes-space/container discussion, starter-set list, observe/store/rotate discussion and room-by-room text through 73. For meal seating, followed the complete Eating area table unit on 71 and its exact tray-less high-chair baby-attachment alternative alongside the earlier general high-chair preference on 67; noted actual fit rather than required purchases or dimensions."
+    },
+    {
+      "id": "baby-care-source-r05.read.home.visual",
+      "reader": "/root/baby_care_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 66,
+          "end": 68
+        },
+        {
+          "start": 71,
+          "end": 71
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read original setup tips, container-preference context and complete illustrated starter-set list across 66–68; read the full Eating area table cell on 71, preserving sitting, feet flat on the floor, family feasibility, and baby attachment or similar. Unrelated sleep cross-references are not used to support the reviewed meal entry.",
+      "renderMethod": "Readable 1500-pixel full-page PNGs rendered directly from the verified original PDF with Poppler and personally inspected; no contact sheets.",
+      "pageRenderEvidence": [
+        {
+          "pdfPage": 66,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-66.png",
+          "sha256": "6fe64d36a487803afec9dc89cbf7b223e2e6e8b81227cc3ac0f34b7848fe90cb"
+        },
+        {
+          "pdfPage": 67,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-67.png",
+          "sha256": "008d911673c6582ab5c521e9b718014f54729ad1f4e16476d2ebd4e1b6ef961d"
+        },
+        {
+          "pdfPage": 68,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-68.png",
+          "sha256": "97ffdfa826d608d783305d1c9d1c218968e4417743f25e1ff3c216ade922c700"
+        },
+        {
+          "pdfPage": 71,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-71.png",
+          "sha256": "f6aff868c71eaf2fad66d8343f5356c85ced2cd7d499d01d64190d390f9e69c7"
+        }
+      ]
+    },
+    {
+      "id": "baby-care-source-r05.read.movement.text",
+      "reader": "/root/baby_care_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 157,
+          "end": 162
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original 6-to-9-month movement section from its heading through the observation box: gross-motor context, child-sized furniture, sitting distinction, fine-motor progression and full food/utensil paragraph on 161, continuing through 162. Food is purposeful hand use, not a toy; motor examples do not establish feeding readiness. Read the following age heading as boundary."
+    },
+    {
+      "id": "baby-care-source-r05.read.movement.visual",
+      "reader": "/root/baby_care_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 157,
+          "end": 158
+        },
+        {
+          "start": 161,
+          "end": 162
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read original age heading, boxed observations, childproofing box and furniture illustration/context; read page 161 including its food paragraph between the unrelated drum/mobile illustrations and the full 6–9 observation box on 162. No numerical readiness, food size or equipment claim was inferred from those pictures.",
+      "renderMethod": "Readable 1500-pixel full-page PNGs rendered directly from the verified original PDF with Poppler and personally inspected; no contact sheets.",
+      "pageRenderEvidence": [
+        {
+          "pdfPage": 157,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-157.png",
+          "sha256": "d0725217e77104721ab7430bc758c42d6379c9a42a80af224bf884a6cb3fd49c"
+        },
+        {
+          "pdfPage": 158,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-158.png",
+          "sha256": "ec336234da8e1c49d290b477d71cd71ce1c4e371ce4e3b2d69513f3f88e37edb"
+        },
+        {
+          "pdfPage": 161,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-161.png",
+          "sha256": "32309e698a5417cb84b4a3eeb33723448f3f6d69d500c13e1d6d61869ecc8460"
+        },
+        {
+          "pdfPage": 162,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-162.png",
+          "sha256": "25a724f07ac44e97eb116d0a4e3a1756b94a67cb7b83a7c44049964b54b9790c"
+        }
+      ]
+    },
+    {
+      "id": "baby-care-source-r05.read.language.text",
+      "reader": "/root/baby_care_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 135,
+          "end": 138
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read original pages containing the complete 6–9 and 9–12 language units, including the conditional food-throwing example on 136, continuation into 12-month language discussion and full first-year summary/observation boxes. The 9–12 language example supplements the first-year eating passage; it is not a new start-age for interpreting an already-eating baby."
+    },
+    {
+      "id": "baby-care-source-r05.read.language.visual",
+      "reader": "/root/baby_care_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 136,
+          "end": 138
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read original page 136 with the complete 9–12 subsection and its if-they-seem-done condition, and the language-summary and observation boxes across 137–138. No language milestone is imported into the 6–9 care entry.",
+      "renderMethod": "Readable 1500-pixel full-page PNGs rendered directly from the verified original PDF with Poppler and personally inspected; no contact sheets.",
+      "pageRenderEvidence": [
+        {
+          "pdfPage": 136,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-136.png",
+          "sha256": "ef51c635d279a6e8a96ff298dc831d85b104c14705a20239f7c7658a29adb944"
+        },
+        {
+          "pdfPage": 137,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-137.png",
+          "sha256": "cd2784268f6b5a09f30359c3f7fa22c80251e49145ca28cbe8c2e81dd78f7401"
+        },
+        {
+          "pdfPage": 138,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-138.png",
+          "sha256": "8e9ef31b8e8d5d5c0fd73520c8ae1e70d1b36f01c310889070fca89e2a14ccd4"
+        }
+      ]
+    },
+    {
+      "id": "baby-care-source-r05.read.age.text",
+      "reader": "/root/baby_care_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 120
+        },
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read original activity introduction and age-guideline/support-for-concerns framing on 119, its choice-list continuation and accompanying text on 120, and the appendix opening on 294. These are context for the editorial browsing note; they do not override specific feeding or seating conditions. No full activity-list or full material-selection-unit reading is claimed."
+    },
+    {
+      "id": "baby-care-source-r05.read.age.visual",
+      "reader": "/root/baby_care_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 120
+        },
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read original pages with the activity-purpose box and choice-box continuation, explicit individual pace/support paragraph, and the appendix guideline paragraph. Confirmed the appendix heading is separate from the preceding movement table continuation.",
+      "renderMethod": "Readable 1500-pixel full-page PNGs rendered directly from the verified original PDF with Poppler and personally inspected; no contact sheets.",
+      "pageRenderEvidence": [
+        {
+          "pdfPage": 119,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-119.png",
+          "sha256": "44330a176d3e57827f0a2f0350aee5e77706c3761db5c094789fd76888ace553"
+        },
+        {
+          "pdfPage": 120,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-120.png",
+          "sha256": "d8a2f1462f85ea1f20b7ba987e2ad5e1d5c39080ba5ed26d95539f8eab809670"
+        },
+        {
+          "pdfPage": 294,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-294.png",
+          "sha256": "c3eb1dcfbdd96ffb722fd1561b957bcee1b1dcc43bc162f8d5c61e18f05ff855"
+        }
+      ]
+    },
+    {
+      "id": "baby-care-source-r05.read.seating-crossrefs.text",
+      "reader": "/root/baby_care_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 87,
+          "end": 88
+        },
+        {
+          "start": 92,
+          "end": 92
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete Zach imagined-interview box across 87–88, including its four-month assisted-sitting first-meal anecdote and family-table continuation, and the full feeding-area caption on 92. These are specific anecdotal/photo examples, not a replacement for the dedicated six-month-plus-readiness or steady-sitting conditions. The approximate furniture measurements and photo are not imported into public copy."
+    },
+    {
+      "id": "baby-care-source-r05.read.seating-crossrefs.visual",
+      "reader": "/root/baby_care_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 87,
+          "end": 88
+        },
+        {
+          "start": 92,
+          "end": 92
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read the two-page original imagined-interview box and inspected page 92’s full photo/caption at readable size. The photographed feet and approximate measurements do not establish universal fit or readiness; the public entry uses the explicit conditions on 71 and 188 instead.",
+      "renderMethod": "Readable 1500-pixel full-page PNGs rendered directly from the verified original PDF with Poppler and personally inspected; no contact sheets.",
+      "pageRenderEvidence": [
+        {
+          "pdfPage": 87,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-87.png",
+          "sha256": "d8af80095e3102fd8a7686e1d331d832afd8453ead5a9159d6b2c2004a3d82b8"
+        },
+        {
+          "pdfPage": 88,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-88.png",
+          "sha256": "bad3fd8e05b3428224656182636d3db8b7a0d11d1df2512aa1ebaacbfd4c8593"
+        },
+        {
+          "pdfPage": 92,
+          "path": "tmp/pilot-reviews/baby-care-source-r05/page-92.png",
+          "sha256": "a13d1ce1abcb5eb1b203883c8015e057fa7da49c1bd883b7468e31aa54d0f22c"
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "baby-care-source-r05.6-9.baby-dressing",
+      "entryId": "baby-dressing",
+      "placementId": "6-9.baby-dressing",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/6-9.baby-dressing.json",
+      "snapshotFileSha256": "4208ff19dff81374d69e2c4ad58903348b7d45a995375d7cd6fc7b79cf2d9dea",
+      "textPlacementSha256": "c63059951c5acccdaaca267be34dadf818395c500149d39e8b817ca0c6c67f8a",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-care-source-r05.read.dressing.text",
+        "baby-care-source-r05.read.dressing.visual",
+        "baby-care-source-r05.read.respect.text",
+        "baby-care-source-r05.read.respect.visual",
+        "baby-care-source-r05.read.responsive.text",
+        "baby-care-source-r05.read.responsive.visual",
+        "baby-care-source-r05.read.age.text",
+        "baby-care-source-r05.read.age.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both Everyday care and Connection & feelings rows retain a small invitation with help, rather than treating a reach or sleeve movement as an expected achievement. The full reading’s two suitable tops, gaze/reach, sleeve invitation, advance communication, pause and gentle hands are supported by 207–208 and 100. The nine-month sleeve example remains explicitly an example within infant-wide dressing, making the 6–9 placement conditional on the small participation actually available. The necessary-care sentence retains the refusal section’s adult responsibility alongside communication and gentleness; the entry does not reproduce a lifting, positioning or dressing protocol. Public references and locators identify the correct physical PDF spans."
+      },
+      "artContext": null,
+      "surfacesRead": {
+        "opening": null,
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "fullEntry": true,
+        "referenceLabels": true,
+        "renderer": "src/HomeStudy.jsx"
+      }
+    },
+    {
+      "id": "baby-care-source-r05.6-9.baby-solids-perspective",
+      "entryId": "baby-solids-perspective",
+      "placementId": "6-9.baby-solids-perspective",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/6-9.baby-solids-perspective.json",
+      "snapshotFileSha256": "7c728f56e5ee47ba1fafb5dabdefa0d426ec10e9177f09db0fbf168d76714b49",
+      "textPlacementSha256": "a7f38e2a3774731a0abe22bbfe6de625f74f609766cd55ee395afaff6534693b",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-care-source-r05.read.eating.text",
+        "baby-care-source-r05.read.eating.visual",
+        "baby-care-source-r05.read.movement.text",
+        "baby-care-source-r05.read.movement.visual",
+        "baby-care-source-r05.read.age.text",
+        "baby-care-source-r05.read.age.visual",
+        "baby-care-source-r05.read.seating-crossrefs.text",
+        "baby-care-source-r05.read.seating-crossrefs.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both Everyday care and Play & discovery rows carry their own explicit six-month-plus-readiness condition and mention choking precautions and first aid. This matches the complete 186–188 passage, rather than promoting earlier interest into permission to start solids. The full reading’s smell, texture, naming, preparation, baby pace and proportionate assistance are supported by 187 and 189–190, with purposeful hand use on 161. Its narrow attributed account does not give food sizes, menus, utensil techniques, an emergency procedure, nutrition replacement claims or independent safety assurances. The age context separates interest from readiness and does not derive feeding permission from the movement chapter. The full choking box and material contextual examples were read; the omissions do not turn this perspective into a care protocol. All reference spans and the 6–9 placement are supported."
+      },
+      "artContext": null,
+      "surfacesRead": {
+        "opening": null,
+        "topicIds": [
+          "everyday-care",
+          "play-discovery"
+        ],
+        "fullEntry": true,
+        "referenceLabels": true,
+        "renderer": "src/HomeStudy.jsx"
+      }
+    },
+    {
+      "id": "baby-care-source-r05.6-9.baby-eating-place",
+      "entryId": "baby-eating-place",
+      "placementId": "6-9.baby-eating-place",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/6-9.baby-eating-place.json",
+      "snapshotFileSha256": "d1b30b584bbe7ca7d47ca5afc5aa4515bf3796eb20a0214dddb0b4584c14487b",
+      "textPlacementSha256": "382df5326410471d9fde142c8f588b4f4cc0711c221fbbb07b0aa95f0fd012df",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-care-source-r05.read.eating.text",
+        "baby-care-source-r05.read.eating.visual",
+        "baby-care-source-r05.read.home.text",
+        "baby-care-source-r05.read.home.visual",
+        "baby-care-source-r05.read.movement.text",
+        "baby-care-source-r05.read.movement.visual",
+        "baby-care-source-r05.read.age.text",
+        "baby-care-source-r05.read.age.visual",
+        "baby-care-source-r05.read.seating-crossrefs.text",
+        "baby-care-source-r05.read.seating-crossrefs.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both Everyday care and A home that helps rows preserve steady sitting and feet reaching the floor for the low-table example, plus the baby attachment or similar for the tray-less family-table alternative. The complete Where to eat passage on 188–189 and Eating area table cell on 71 support optional snacks/meals, stability and social participation; 67 supports the accurately qualified earlier general high-chair preference. The 6–8 age is an attributed example, while actual sitting and fit remain the conditions for this 6–9 placement. The four-month assisted-sitting anecdote on 87 and photo/approximate dimensions on 92 remain distinct context and have not overridden the dedicated conditions. No specific equipment fit, purchase or positioning protocol is introduced. The public references are precise and correctly labeled as PDF pages."
+      },
+      "artContext": null,
+      "surfacesRead": {
+        "opening": null,
+        "topicIds": [
+          "everyday-care",
+          "home-that-helps"
+        ],
+        "fullEntry": true,
+        "referenceLabels": true,
+        "renderer": "src/HomeStudy.jsx"
+      }
+    },
+    {
+      "id": "baby-care-source-r05.6-9.baby-eating-amount",
+      "entryId": "baby-eating-amount",
+      "placementId": "6-9.baby-eating-amount",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/6-9.baby-eating-amount.json",
+      "snapshotFileSha256": "25a0778ad4abeeecd8cb351026a69a9e77bf952b7d921d404e27e6f8203661ff",
+      "textPlacementSha256": "b4aff0e8203b702d2155dd812038ed8d27cd796f8b0454c7cc18937b16702e24",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-care-source-r05.read.eating.text",
+        "baby-care-source-r05.read.eating.visual",
+        "baby-care-source-r05.read.respect.text",
+        "baby-care-source-r05.read.respect.visual",
+        "baby-care-source-r05.read.language.text",
+        "baby-care-source-r05.read.language.visual",
+        "baby-care-source-r05.read.age.text",
+        "baby-care-source-r05.read.age.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both Everyday care and Connection & feelings rows attribute the amount perspective to the authors and retain throwing food as a possible sign of being finished. The full reading supports the adult’s food/place responsibility and the baby’s amount choice from 191, with no extra mouthful or distracting into eating. Asking and helping end the meal are conditional on what is happening, consistent with 191 and the explicit if-they-seem-done language on 136. Neither the source’s possible 5–10 minute duration nor an automatic plate-removal rule is introduced. The first-year eating context supports 6–9 retrieval; the separately labeled 9–12 language reference is supplementary wording rather than a claim that a particular language skill is already due. This is a narrow description of the book’s perspective, without a nutrition assessment or new clinical claim."
+      },
+      "artContext": null,
+      "surfacesRead": {
+        "opening": null,
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "fullEntry": true,
+        "referenceLabels": true,
+        "renderer": "src/HomeStudy.jsx"
+      }
+    },
+    {
+      "id": "baby-care-source-r05.6-9.baby-daily-rhythm",
+      "entryId": "baby-daily-rhythm",
+      "placementId": "6-9.baby-daily-rhythm",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/6-9.baby-daily-rhythm.json",
+      "snapshotFileSha256": "62057ee319c9fd66ffa9923640de69d4af17b054749caad07851790bab82b94c",
+      "textPlacementSha256": "26f3917ae2028700a6537e4747874a51c62470451274a05302595d5c0f7040ef",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-care-source-r05.read.daily.text",
+        "baby-care-source-r05.read.daily.visual",
+        "baby-care-source-r05.read.eating.text",
+        "baby-care-source-r05.read.eating.visual",
+        "baby-care-source-r05.read.respect.text",
+        "baby-care-source-r05.read.respect.visual",
+        "baby-care-source-r05.read.responsive.text",
+        "baby-care-source-r05.read.responsive.visual",
+        "baby-care-source-r05.read.age.text",
+        "baby-care-source-r05.read.age.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both Everyday care and Connection & feelings rows attribute the changing feeding/play/sleep pattern and explicitly identify it as a guide to noticing rather than a timetable. The complete Daily rhythm and Rituals units on 180–182 support the variable wake–feed–play–sleep example, play before a feed, growth and household/travel changes, familiar phrase/song cues, and coordinating with caregivers where possible. Optional park/breakfast/cultural ritual examples and early inclusion are supported without promising a developmental or health outcome. The 6–9 placement remains infant-wide situational guidance; no wake window, feed interval, forced sequence, sleeping setup or transport-sleep example is imported. The single public reference fully covers the selected claims."
+      },
+      "artContext": null,
+      "surfacesRead": {
+        "opening": null,
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "fullEntry": true,
+        "referenceLabels": true,
+        "renderer": "src/HomeStudy.jsx"
+      }
+    }
+  ],
+  "counts": {
+    "entries": 5,
+    "placements": 5,
+    "topicRows": 10,
+    "fullReadings": 5,
+    "textPass": 5,
+    "textRevise": 0,
+    "textHold": 0,
+    "openIssues": 0,
+    "artComponents": 0,
+    "originalPagesFullTextLogged": 53,
+    "originalPagesFullPageVisualLogged": 43
+  },
+  "notes": [
+    "This is a source review only; it makes no release decision.",
+    "No shared app, draft, research or learning file was edited. No novel project-specific learning beyond the existing source/context entries was identified."
+  ]
+}

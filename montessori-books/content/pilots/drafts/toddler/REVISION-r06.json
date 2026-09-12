@@ -1,0 +1,74 @@
+{
+  "revision": "r06",
+  "editor": "/root",
+  "date": "2026-09-10",
+  "previousDraft": {
+    "path": "content/pilots/drafts/toddler/draft-r05.json",
+    "sha256": "b1632aafa09d8a3a50afec143f44fcb47e7ace8909ff47d2aa3f17a6f3e726fe"
+  },
+  "findingReports": [
+    {
+      "path": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+      "sha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f"
+    }
+  ],
+  "changes": [
+    {
+      "entryId": "toddler-meals",
+      "beforeEntrySha256": "321aade15591c5fae597bbefd79abd52fbb3f685bdefa7df7730cfda526f3647",
+      "afterEntrySha256": "c285c57db897ca799eeaf2fe78bda31f31f5d9567d979f66d4ec94b838f21ba2",
+      "changedFields": [
+        "detail",
+        "references"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "toddler-daily-care-tone-r04.meals.audit-language"
+      ]
+    },
+    {
+      "entryId": "toddler-food-on-floor",
+      "beforeEntrySha256": "4f0ab0f3b3c09ca7a8452c6ee10839cc6c5a9d8f8d6019e73e027e25291cc1db",
+      "afterEntrySha256": "37b807e3a20eb6506aeb976108dbd23d97457159b91e59388d229854cbc0e662",
+      "changedFields": [
+        "detail"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "toddler-daily-care-tone-r04.food-floor.clear-plate-action"
+      ]
+    },
+    {
+      "entryId": "toddler-teeth",
+      "beforeEntrySha256": "050ec2264922703a525174c836e906d0e43f41120b88fedc5da757bf6655d2e9",
+      "afterEntrySha256": "e7c625930b31127df375d9bc0028045e2124acf28d9f8ba5cbdc67aaa927b0a9",
+      "changedFields": [
+        "summary"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "toddler-daily-care-tone-r04.teeth.short-necessary-care"
+      ]
+    },
+    {
+      "entryId": "toddler-pacifier-change",
+      "beforeEntrySha256": "4b0d4b74c95c1211f65e65d0d9d978e41b73f3989f4544a1fc617b68389d4158",
+      "afterEntrySha256": "bef99d80e4182f9ac74590eed99713fb1e265cb35409b7848c7b5eeb3d309b82",
+      "changedFields": [
+        "title"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "toddler-daily-care-tone-r04.pacifier.identifiable-title"
+      ]
+    }
+  ],
+  "status": "Proposed exact corrections; affected independent source and tone reviews pending",
+  "editorReadLogs": [
+    {
+      "path": "content/pilots/editorial/ROOT_READ_LOG-toddler-r06.json",
+      "sha256": "2e61ee9c05e20086d315c6b8eba9400b5d44576b73da91cf65f1b9139dae9405"
+    }
+  ],
+  "readBoundary": "Original author provenance and read logs remain intact. Limited additional editor original-source reads are separately logged; no independent approval by the editor is claimed."
+}

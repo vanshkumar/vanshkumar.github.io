@@ -1,0 +1,64 @@
+{
+  "revision": "r04",
+  "editor": "/root",
+  "date": "2026-09-10",
+  "previousDraft": {
+    "path": "content/pilots/drafts/baby/draft-r03.json",
+    "sha256": "b89870e427766f0891c3bc44e5213d70026bf5b62c934e9bff7e5bb20349e7c3"
+  },
+  "findingReports": [
+    {
+      "path": "content/pilots/reviews/final/baby-play-source-r04.json",
+      "sha256": "009c7d34064448b02c5523c660237ed79da18a9ea14d38f5f6b61af897161254"
+    },
+    {
+      "path": "content/pilots/reviews/final/baby-sleep-connection-tone-r03.json",
+      "sha256": "8f8ea2d1322a3a748f9745ef7c597db18988cada2f3fa7093944184e43c86bd5"
+    }
+  ],
+  "changes": [
+    {
+      "entryId": "baby-first-containers",
+      "beforeEntrySha256": "115ae9ddeacb928376878bdacd74fa836f4d721ba3f22dea39acbe362a28f679",
+      "afterEntrySha256": "9ff4f1eb70cd2c3657214e1e1e694da50397ccb67409b9d2c59e2b85a40f076c",
+      "changedFields": [
+        "detail"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "baby-play-source-r04.first-containers.wooden-egg"
+      ]
+    },
+    {
+      "entryId": "baby-pacifier",
+      "beforeEntrySha256": "203a81d7230bdf6f75adc32898e62aee5517416cd05c507b026b785d373a975a",
+      "afterEntrySha256": "203a81d7230bdf6f75adc32898e62aee5517416cd05c507b026b785d373a975a",
+      "changedFields": [],
+      "placementChanged": true,
+      "issueIds": [
+        "baby-sleep-connection-tone-r03.pacifier-age-context"
+      ]
+    },
+    {
+      "entryId": "baby-sharing",
+      "beforeEntrySha256": "0e63ae10ea5c285aa7102c22bbef076c1e838896fc68883401238898c3d36d2e",
+      "afterEntrySha256": "4e7d06d1d8858c0750593af9d0b12ddcf418d9a1aad78ef673bf5d9a587297b4",
+      "changedFields": [
+        "title",
+        "summary"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "baby-sleep-connection-tone-r03.sharing-turn-agency"
+      ]
+    }
+  ],
+  "status": "Proposed exact corrections; affected independent source and tone reviews pending",
+  "editorReadLogs": [
+    {
+      "path": "content/pilots/editorial/ROOT_READ_LOG-baby-r04.json",
+      "sha256": "1284b736ea8d5868999b92542aefd135e789cfd6aa24aa4ae119564b34d78ee2"
+    }
+  ],
+  "readBoundary": "Original author provenance and read logs remain intact. Limited additional editor original-source reads are separately logged; no independent approval by the editor is claimed."
+}

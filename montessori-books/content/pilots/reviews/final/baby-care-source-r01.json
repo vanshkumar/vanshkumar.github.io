@@ -1,0 +1,593 @@
+{
+  "id": "baby-care-source-r01",
+  "reviewer": {
+    "task": "/root/baby_care_source_r01",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Exactly the ten baby-care placements at 6–9 months in REVIEW_BATCHES.json, frozen r01 projections and their actual rendered opening/topic/detail/age/reference surfaces. Text and illustrated-opening art are separate source judgments; this review does not claim publication or operational/medical safety approval.",
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r01/RENDERED_SURFACES.json",
+    "sha256": "b7aa504ea50d67f7dd55c061ab4b187595df074d5da6aef47b9751d2af4ada8f"
+  },
+  "reviewedInputs": {
+    "manifest": {
+      "path": "content/pilots/revisions/r01/MANIFEST.json",
+      "sha256": "2448b86ccaf96f1f4c40d6b83b0065490f306b9d85900ebd5b42fb367f9d7e4f"
+    },
+    "draft": {
+      "path": "content/pilots/drafts/baby/draft-r01.json",
+      "sha256": "2b3f7085ab35dbd07574a3606deb46a38a586ad57a5d257d8b26b4dd0d098183"
+    },
+    "renderer": [
+      {
+        "path": "src/HomeStudy.jsx",
+        "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c"
+      },
+      {
+        "path": "src/guide/catalog.js",
+        "sha256": "d8d30a17c5f1b1c99ed68764f3f412cf99b48f55d09bf528313f0df1439da71c"
+      }
+    ],
+    "originalSource": {
+      "sourceId": "baby-2021",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+      "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+    }
+  },
+  "method": "Read the project and parent repo LEARNINGS.md, foundation charter/contract/manifest/topics/tone examples and review format. Read only the ten relevant public projections, their rendered strings and the renderer/catalog. Independently read original PDF text and full-page renders; author/private provenance was consulted afterwards only as a pointer to source tensions. No other source/tone reviewer output was inspected. Source holds were treated as evidence questions and evaluated against the exact narrower public wording.",
+  "readLogs": [
+    {
+      "id": "source.baby-care-r01.framing",
+      "reader": "/root/baby_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 18,
+          "end": 21
+        }
+      ],
+      "mode": "full-text",
+      "description": "Actual complete original PDF-page text read: collaboration with available help, little required equipment, respectful conversation, individual babies and the authors' Montessori/RIE basis. These pages are contextual framing; no full-chapter reading is claimed."
+    },
+    {
+      "id": "source.baby-care-r01.observation-and-early-food",
+      "reader": "/root/baby_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 32,
+          "end": 37
+        }
+      ],
+      "mode": "full-text",
+      "description": "Actual complete original PDF-page text read: early food-interest wording across 32–33, complete Observation section with adult self-observation, assistance, communication and everyday care; page 37 begins Prepared environment. Early interest is distinguished from the later dedicated solids condition."
+    },
+    {
+      "id": "source.baby-care-r01.family-inclusion",
+      "reader": "/root/baby_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 41,
+          "end": 41
+        }
+      ],
+      "mode": "full-text",
+      "description": "Actual complete original PDF-page text read, including the opening family-inclusion paragraph covering different primary caregivers, co-parents, non-breastfeeding families, adoptive parents and return to outside work. Prenatal continuation is context only."
+    },
+    {
+      "id": "source.baby-care-r01.home-care-context",
+      "reader": "/root/baby_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 66,
+          "end": 74
+        }
+      ],
+      "mode": "full-text",
+      "description": "Actual complete original PDF-page text read: home tips, yes-space and container framing, room-by-room movement/eating/changing areas, steady sitting, feet flat on floor, family-table high chair with baby attachment or similar, raised-surface hand-on-baby condition, ready supplies, and neighboring room qualifications. Sleep/DIY details are not adopted as public instructions."
+    },
+    {
+      "id": "source.baby-care-r01.tour-qualification",
+      "reader": "/root/baby_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 87,
+          "end": 94
+        }
+      ],
+      "mode": "full-text",
+      "description": "Actual complete original PDF-page text read: entire imagined Zach home interview (87–88) and complete Nicole home tour (89–94). Read the four-month assisted-sitting first-meal anecdote and the feeding-area dimensions/caption as situated examples, not readiness or fitting rules."
+    },
+    {
+      "id": "source.baby-care-r01.respect-responsive-care",
+      "reader": "/root/baby_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 96,
+          "end": 114
+        }
+      ],
+      "mode": "full-text",
+      "description": "Actual complete original PDF-page text read: Trust and Acceptance context; complete Respect, kind/clear boundaries, concentration, freedom of movement, attachment/response, crying, guide and connection-checklist material through Going slow. Preserved the distinctions between tentative gesture interpretation, ordinary waiting, prompt response, needed comfort/protection, help and non-interruption. Deterministic trust/attachment outcomes are not adopted."
+    },
+    {
+      "id": "source.baby-care-r01.activities-and-help",
+      "reader": "/root/baby_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 127
+        }
+      ],
+      "mode": "full-text",
+      "description": "Actual complete original PDF-page text read: the activity introduction through the end of Further notes, including guideline ages, support for developmental concerns, material/choking considerations, whole-object/components, effort versus frustration, nearby help, participation, infant cleanup limits, and clothing for movement. Generating an extract alone was not counted as reading."
+    },
+    {
+      "id": "source.baby-care-r01.language-meal-context",
+      "reader": "/root/baby_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 135,
+          "end": 137
+        }
+      ],
+      "mode": "full-text",
+      "description": "Actual complete original PDF-page text read, including the whole 9–12-month language subsection on 136 with its tentative finished-meal example and the adjacent 6–9 and 12+ context. The later-age language example is corroborating context; infant-wide Eating remains the primary basis for the 6–9 placement."
+    },
+    {
+      "id": "source.baby-care-r01.movement-framing",
+      "reader": "/root/baby_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 140,
+          "end": 145
+        }
+      ],
+      "mode": "full-text",
+      "description": "Actual complete original PDF-page text read: movement framing, individual-timeline qualification, removing obstacles and the movement-mat introduction; the extraction-sparse grasping graphic on 144–145 was separately read visually. No neurological outcome or timetable is adopted."
+    },
+    {
+      "id": "source.baby-care-r01.movement-and-food",
+      "reader": "/root/baby_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 150,
+          "end": 163
+        }
+      ],
+      "mode": "full-text",
+      "description": "Actual complete original PDF-page text read: nearby mobile/alertness context, entire 3–6 and 6–9 movement units, tummy-time disagreement and the authors' own position, discomfort/necessary-pickup qualification, slow rolling objects, floor exploration, self-sitting distinction, balls, adult observation and food/utensil hand-use context on 161. Page 163 is adjacent later-age context only; no later-age procedure is imported."
+    },
+    {
+      "id": "source.baby-care-r01.rhythm-and-eating",
+      "reader": "/root/baby_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 180,
+          "end": 193
+        }
+      ],
+      "mode": "full-text",
+      "description": "Actual complete original PDF-page text read: full Daily rhythm and Rituals units and complete Eating unit through its ending on 193. Includes feeding arrangements, difficulties/specialist support and grief; early interest versus six-month-plus-readiness condition; entire food list and choking/first-aid/update box; where to eat; full tools/help/cleanup section; all five More tips and observation continuation; personal weaning context. Page 193 also contains the sleep opening, not a claim to full sleep-section coverage."
+    },
+    {
+      "id": "source.baby-care-r01.dressing-diaper-resistance",
+      "reader": "/root/baby_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 207,
+          "end": 210
+        }
+      ],
+      "mode": "full-text",
+      "description": "Actual complete original PDF-page text read: complete Clothing/When dressing, Diapering with its continuation and readiness-specific examples, and all five resistance considerations plus the necessary-care continuation. Read privacy, correct body words, gentle handling, limited choices, time for response, possible standing/potty interest, songs as connection and meeting a physical need despite protest. Bathing starts at the end of 210; no complete bathing read is claimed."
+    },
+    {
+      "id": "source.baby-care-r01.age-guidelines",
+      "reader": "/root/baby_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-text",
+      "description": "Actual complete original PDF-page text read, including the activity-list guideline paragraph and the preceding table continuation; no activity ages were inferred from a neighboring row."
+    },
+    {
+      "id": "source.baby-care-r01.home-layout-visual",
+      "reader": "/root/baby_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 68,
+          "end": 73
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Actual readable full original PDF-page visuals inspected at 130 dpi, including the starter-set picture and all captions, the room-by-room column hierarchy and continuation pages. The eating-area high-chair attachment phrase on 71 and hand-on-baby raised-height condition on 73 were read in their actual layout. This is not a furniture/sleep safety certification."
+    },
+    {
+      "id": "source.baby-care-r01.tour-visual",
+      "reader": "/root/baby_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 89,
+          "end": 94
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Actual readable full original PDF-page visuals inspected at 130 dpi: all six tour photos with complete captions. The feeding photograph on 92 shows feet lifted off the floor despite its caption about reaching the ground, so neither picture nor approximate dimensions establish fit; no depicted setup is operationally approved."
+    },
+    {
+      "id": "source.baby-care-r01.connection-visual",
+      "reader": "/root/baby_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 110,
+          "end": 110
+        },
+        {
+          "start": 113,
+          "end": 113
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Actual readable full original PDF-page visuals inspected at 130 dpi, including the connection-box continuation, crying text, guide-list continuation, framing text and decorative hand/tray illustrations."
+    },
+    {
+      "id": "source.baby-care-r01.movement-visual",
+      "reader": "/root/baby_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 144,
+          "end": 145
+        },
+        {
+          "start": 158,
+          "end": 159
+        },
+        {
+          "start": 161,
+          "end": 161
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Actual readable full original PDF-page visuals inspected at 130 dpi: complete grasping-stage graphic and labels across 144–145, childproofing callout and low-chair/table drawings across 158–159, and full 161 text with glitter-drum and patchwork-ball illustrations. These are context for the actual art and food hand-use passage, not inferred chronological obligations."
+    },
+    {
+      "id": "source.baby-care-r01.eating-visual",
+      "reader": "/root/baby_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 183,
+          "end": 183
+        },
+        {
+          "start": 188,
+          "end": 192
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Actual readable full original PDF-page visuals inspected at 130 dpi: both feeding illustrations on 183, full choking box and Where to eat on 188, seated eating drawing and tools on 189, help/cleanup on 190, five tips and complete observation callout across 191–192, and personal-weaning text. The 189 drawing does not show feet or establish chair fit."
+    },
+    {
+      "id": "source.baby-care-r01.age-guidelines-visual",
+      "reader": "/root/baby_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Actual readable full original PDF page inspected at 130 dpi to confirm the guideline paragraph belongs to the new Activities list heading, separate from the preceding table continuation."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "baby-care-source-r01.6-9.baby-connection",
+      "entryId": "baby-connection",
+      "placementId": "6-9.baby-connection",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-connection.json",
+      "snapshotFileSha256": "5c819ea17a46b6b9588aa3343b1800780bba3ebc0a7a05ecf0fd47fdd78d1ddc",
+      "textPlacementSha256": "fe9a5141a93859549c9ff4238f17b3dd290a31bc54b59189c42268b46c19a273",
+      "artContextSha256": "469f2ea988d2104f4243497affee46a04e0079a2905e5970472f91dbf2530cd6",
+      "readLogIds": [
+        "source.baby-care-r01.framing",
+        "source.baby-care-r01.respect-responsive-care",
+        "source.baby-care-r01.dressing-diaper-resistance",
+        "source.baby-care-r01.activities-and-help",
+        "source.baby-care-r01.home-care-context",
+        "source.baby-care-r01.movement-framing",
+        "source.baby-care-r01.movement-and-food",
+        "source.baby-care-r01.home-layout-visual",
+        "source.baby-care-r01.connection-visual",
+        "source.baby-care-r01.movement-visual",
+        "source.baby-care-r01.age-guidelines",
+        "source.baby-care-r01.age-guidelines-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The exact opening invitation and cue limit waiting to a pickup that can wait; its Try this together CTA therefore offers a bounded ordinary exchange. Both topic summaries independently retain necessary care/protection. Detail preserves attention to expression/movement without certain assent detection, extra time only when possible, and gentle action for care, comfort or protection, consistent with 99, 103, 109–111 and 209–210 read together. The from-birth/first-year wording and 6–9 browsing context are supported; no timed pause, lifting maneuver, promised cooperation or trust deadline is introduced."
+      },
+      "artContext": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Independently inspected the exact 1536×1024 public asset with its frozen alt, caption, pickup title, can-wait invitation/cue and Try this together CTA. The image shows an awake, engaged baby prone on a flat mat reaching toward a large soft-looking ball, with a seated caregiver close by, hands open and not lifting or positioning the baby. The alt accurately describes the visible scene. The caption follows the child's attention; it does not label the ball as a required object or the pose as a skill due by this age. The source supports nearby responsive presence, space for the baby's own activity and noticing discomfort/needed help. Together with the explicit can-wait text, the image is illustrative context for a respectful exchange, not a demonstration of a pickup, assent detection, a prescribed tummy-time routine or a sleep setup. No age or material-safety certification is inferred from the picture.",
+        "assetReads": [
+          {
+            "src": "art/home-paper-baby.webp",
+            "sha256": "fb09c915ce18725df3f0ef1818fc0072116d2d97c6dbc45eb7578dda55dbc922",
+            "mode": "actual-image-visual",
+            "description": "Actual original WEBP visually inspected at full 1536×1024 presentation via view_image: baby awake on tummy, one hand grounded and the other reaching toward the large orange textured ball; caregiver seated cross-legged beside the baby with open palms; exposed feet, no seat/propping/lifting contact, and open background around a flat blue mat. Checked against the exact snapshot alt/caption and actual rendered opening prose/CTA."
+          }
+        ]
+      }
+    },
+    {
+      "id": "baby-care-source-r01.6-9.baby-dressing",
+      "entryId": "baby-dressing",
+      "placementId": "6-9.baby-dressing",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-dressing.json",
+      "snapshotFileSha256": "2e73ef81f9f2c0bfe0c2d49b44e471b85157ba18ac65f6558a69f7a0dd330993",
+      "textPlacementSha256": "b8b632bc319c71c40ad1d4946e306ea44610bed65ec90fe56eb8547fc7246f5b",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby-care-r01.respect-responsive-care",
+        "source.baby-care-r01.dressing-diaper-resistance",
+        "source.baby-care-r01.activities-and-help",
+        "source.baby-care-r01.age-guidelines"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both topic rows offer naming and a small possible part with help. The detail faithfully paraphrases the two-top gaze/reach choice on 207–208 and sleeve collaboration on 100, while retaining gentle hands, response time and necessary care. The public age context explicitly identifies the nine-month sleeve example separately from the infant-wide passage, and labels 6–9 as browsing. Small participation remains optional; the copy makes no promise that a baby will cooperate and adds no clothing, posture or dressing-equipment procedure."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-care-source-r01.6-9.baby-diaper-conversation",
+      "entryId": "baby-diaper-conversation",
+      "placementId": "6-9.baby-diaper-conversation",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-diaper-conversation.json",
+      "snapshotFileSha256": "d45a6153b9c64d017e33151d6fd921c5fcc6b2db74cfaeed131d27ca3740787d",
+      "textPlacementSha256": "5b417fbe3727cda76a412881def01baacccb0d96e291bb67fe9aa0c944cbd0fb",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby-care-r01.dressing-diaper-resistance",
+        "source.baby-care-r01.home-care-context",
+        "source.baby-care-r01.home-layout-visual",
+        "source.baby-care-r01.respect-responsive-care"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The two topic summaries address communication within a needed change, rather than prescribing a changing technique. Detail retains the source's privacy, neutral language/gestures, correct bodily naming, response/participation and adult responsibility. Its only raised-surface mention is attributed to the home passage and retains the explicit always-one-hand condition with supplies ready. The age/context text describes needed care and a small possible response, not independent completion. The excluded standing-change, wiping and toileting techniques are not needed to make this narrow conversation summary accurate."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-care-source-r01.6-9.baby-care-resistance",
+      "entryId": "baby-care-resistance",
+      "placementId": "6-9.baby-care-resistance",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-care-resistance.json",
+      "snapshotFileSha256": "2a19f32d5f440a51eebbca1a35ca8366642837983c704d9facaaf6be97bec430",
+      "textPlacementSha256": "ea31c1040fad61d32ea56b5b6eefdccef33c6986a9c2cc7983630f7d37acee92",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby-care-r01.dressing-diaper-resistance",
+        "source.baby-care-r01.respect-responsive-care"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The exact two topic rows retain tentative interpretation and the needed-care override independently. Detail reflects all five source considerations at a suitably narrow level: possible next participation, involvement/choice, timing around unfinished play, song/humor as connection and a guess about feelings. The quoted example is an original tentative paraphrase, not a claim of verbatim source wording. The final paragraph retains objective communication, gentle hands and meeting the physical need despite disagreement. Nothing assumes that protest proves a motive or that care waits indefinitely; no standing/potty technique is introduced at 6–9."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-care-source-r01.6-9.baby-feeding-connection",
+      "entryId": "baby-feeding-connection",
+      "placementId": "6-9.baby-feeding-connection",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-feeding-connection.json",
+      "snapshotFileSha256": "dcd347aad426a96fc18c9246665405ea0dab127c6d7f77e67342589bc161cec3",
+      "textPlacementSha256": "c51ece72eb4b6eb117163310fce8332c49915693eb02abe5f006bca36f1b5169",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby-care-r01.family-inclusion",
+        "source.baby-care-r01.rhythm-and-eating",
+        "source.baby-care-r01.eating-visual",
+        "source.baby-care-r01.respect-responsive-care"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both topic summaries explicitly describe the authors' view and retain choices, difficulty and support. Detail is supported by the feeding text and breast/bottle illustrations on 183–184, including different primary caregivers, connection while holding/looking, specialist help and possible grief. The first-year context with early-week examples is accurately distinguished from the editorial 6–9 band. It does not recast breastfeeding as the only route to relationship or give latch, burping, milk-sourcing, allergy, frequency or waking-to-feed instructions. This pass is for that narrow relational account, not feeding safety or efficacy."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-care-source-r01.6-9.baby-solids-perspective",
+      "entryId": "baby-solids-perspective",
+      "placementId": "6-9.baby-solids-perspective",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-solids-perspective.json",
+      "snapshotFileSha256": "50dfb63b8687f8b1e739134408aafd8459510d08e2ff17527b8708508b8bf70f",
+      "textPlacementSha256": "f79ae4d1025e485a8a1f803726b3129fb0239cb971d869b62bb000fee0944466",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby-care-r01.observation-and-early-food",
+        "source.baby-care-r01.tour-qualification",
+        "source.baby-care-r01.tour-visual",
+        "source.baby-care-r01.rhythm-and-eating",
+        "source.baby-care-r01.eating-visual",
+        "source.baby-care-r01.movement-and-food",
+        "source.baby-care-r01.movement-visual",
+        "source.baby-care-r01.activities-and-help",
+        "source.baby-care-r01.age-guidelines",
+        "source.baby-care-r01.age-guidelines-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The exact short summary attributes the account and retains six months plus readiness; its general references to manageable food and the baby's pace do not specify foods, preparation or a self-feeding procedure. Detail faithfully connects sensory food exploration, naming and purposeful hand use while locating practical examples beside choking precautions and first-aid learning. Public age/readiness text explicitly says age or reaching alone does not settle readiness. The earlier 32–33 wording and the four-month assisted-sitting tour anecdote on 87 do not displace the dedicated 186–188 condition. No nutritional sufficiency, milk-replacement, grasp milestone or emergency protocol is implied. This is a narrow source-description pass."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-care-source-r01.6-9.baby-eating-place",
+      "entryId": "baby-eating-place",
+      "placementId": "6-9.baby-eating-place",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-eating-place.json",
+      "snapshotFileSha256": "9dc3f039bc387cdb83d5309e2c23421e79336c0bd192e5182beb79e01fadbcbf",
+      "textPlacementSha256": "e78e97dad4e744ae2b4731820627314224997425f5fbd0e94142ebeb86c3846c",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby-care-r01.home-care-context",
+        "source.baby-care-r01.home-layout-visual",
+        "source.baby-care-r01.tour-qualification",
+        "source.baby-care-r01.tour-visual",
+        "source.baby-care-r01.rhythm-and-eating",
+        "source.baby-care-r01.eating-visual",
+        "source.baby-care-r01.movement-and-food",
+        "source.baby-care-r01.movement-visual",
+        "source.baby-care-r01.activities-and-help"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "baby-care-source-r01.baby-eating-place.high-chair-attachment",
+            "severity": "major",
+            "field": "publicProjection.textPlacement.entry.summary; entry.detail[1]; placement.ageContext.readiness",
+            "surface": "6-9.baby-eating-place topic summaries in everyday-care and home-that-helps, plus the full entry's summary, furniture alternative and age/readiness context",
+            "finding": "The public summary offers a tray-less high chair at the family table without the baby attachment (or similar) specified in the complete Eating area row on Baby PDF 71. PDF 189 abbreviates that alternative, but does not retract the fuller equipment qualification. Neither the detail nor the generic individual furniture fit readiness phrase restores it. The abbreviated description therefore broadens the specific infant-seating option described by the source.",
+            "requiredCorrection": "Wherever the high-chair alternative is named publicly, retain the book's baby attachment (or similar) qualification in attributed prose, including the standalone topic summary. Alternatively, narrow those surfaces to the authors' family-meal participation perspective without naming a high-chair configuration. Keep the existing steady-sitting and floor-reaching fit condition for the low table, and avoid adding fitting or assembly instructions. Submit the exact replacement text for re-review.",
+            "sourceRefs": [
+              {
+                "sourceId": "baby-2021",
+                "pdfPages": [
+                  {
+                    "start": 71,
+                    "end": 71
+                  },
+                  {
+                    "start": 188,
+                    "end": 189
+                  }
+                ],
+                "section": "Room by room / Kitchen / Eating area; Eating / Where to eat",
+                "locator": "High-chair baby attachment or similar on 71, followed by the abbreviated family-table alternative on 189"
+              }
+            ],
+            "status": "open"
+          }
+        ],
+        "assessment": "The low-table description correctly retains steady sitting, feet reaching the floor, the approximate 6–8-month source example and family choice about which meals occur there. The 6–9 placement is presented as browsing, and the draft does not adopt the four-month tour anecdote, approximate dimensions or photograph as proof of readiness/fit. However, the high-chair alternative loses the baby-attachment-or-similar condition in the room-by-room source it cites. Attribution and the general phrase individual furniture fit do not supply that specific missing condition on either topic summary or the detail view. A narrow correction can preserve the useful family-table perspective."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-care-source-r01.6-9.baby-eating-amount",
+      "entryId": "baby-eating-amount",
+      "placementId": "6-9.baby-eating-amount",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-eating-amount.json",
+      "snapshotFileSha256": "394f7646d5ab1a90081c8f2971ec1d767de1bcf31fd5ed3e718b74e872179994",
+      "textPlacementSha256": "92c1b65aebd65f6eaeb24f784c9311f64f0398c241f2ae5556e57447ffd9f94c",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby-care-r01.rhythm-and-eating",
+        "source.baby-care-r01.eating-visual",
+        "source.baby-care-r01.language-meal-context",
+        "source.baby-care-r01.respect-responsive-care"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The two topic summaries attribute the food-amount perspective and treat throwing as a possible sign of being finished, independently avoiding an automatic rule. The full entry accurately keeps the adult's food/place responsibility, the child's amount, no pressing or distraction, and ending the meal only when it fits the observation. Its reference to a brief eating-time example is explicitly not a time limit. The 9–12 language passage is corroboration, with the dedicated infant eating unit supporting this 6–9 context; no later-age performance claim, nutritional assessment or fixed intake is imported."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-care-source-r01.6-9.baby-meal-cleanup",
+      "entryId": "baby-meal-cleanup",
+      "placementId": "6-9.baby-meal-cleanup",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-meal-cleanup.json",
+      "snapshotFileSha256": "492d850eb489a72b5adc62086c90b1ef45521bbaad4c7cea07e5722bff7ebd5e",
+      "textPlacementSha256": "304e0e341e7c2bb62376b368fe8830dd0d0cd43db33c5b7c3c0116d17713bb1a",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby-care-r01.rhythm-and-eating",
+        "source.baby-care-r01.eating-visual",
+        "source.baby-care-r01.activities-and-help",
+        "source.baby-care-r01.respect-responsive-care",
+        "source.baby-care-r01.age-guidelines"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both topic rows anchor the invitation in a meal already underway and offer a cloth for a small shared part while the adult finishes. This matches the full tools/cleanup passage on 190 with help retained from its context. The eight-month example is visibly identified as a source example, while interest/coordination and the browsing note avoid a deadline. The detail does not turn wiping into required independent cleanup or import later toddler/preschool work. This ordinary participation invitation does not prescribe food, seating, utensil or sanitation methods."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-care-source-r01.6-9.baby-daily-rhythm",
+      "entryId": "baby-daily-rhythm",
+      "placementId": "6-9.baby-daily-rhythm",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-daily-rhythm.json",
+      "snapshotFileSha256": "2503420c802194c6f6777f1bd902f13a356c93cf6a044a23a777d73571441049",
+      "textPlacementSha256": "0fcc405432f87b24eb4234ded5c1e48fe6b1b92f95745fcaac47122bd58927a4",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby-care-r01.rhythm-and-eating",
+        "source.baby-care-r01.respect-responsive-care",
+        "source.baby-care-r01.observation-and-early-food",
+        "source.baby-care-r01.family-inclusion"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both topic summaries explicitly frame the changing feeding/play/sleep rhythm as the authors' guide to noticing, not a timetable. The exact detail preserves the general sequence alongside variation, play before feeding, travel/home changes and the baby's own cues. Repeated words/songs and coordination with caregivers remain qualified possibilities. The family park, breakfast and cultural-ritual examples are supported by 182 without requiring the infant to contribute. The public age context remains infant-wide and variable; no sleep-transport example, frequency quota, fixed sequence or health-outcome claim is adopted."
+      },
+      "artContext": null
+    }
+  ]
+}

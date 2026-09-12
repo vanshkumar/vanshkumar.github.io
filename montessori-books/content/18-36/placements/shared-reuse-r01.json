@@ -1,0 +1,1388 @@
+{
+  "author": {
+    "task": "/root",
+    "reasoning": "xhigh",
+    "scope": "Task7 frozen shared placements only"
+  },
+  "workflow": "lean-v1",
+  "reuse": [
+    {
+      "entryId": "shared-observe",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "be586cb71ff0fed0a1e9904aa80691945c86bee712e7f2a83fe5779cbf93741d"
+    },
+    {
+      "entryId": "shared-follow-readiness",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "faf6b70472402cf68b23e4a7351c5c38613801bc3e0185ccc02f79c63b6b762f"
+    },
+    {
+      "entryId": "shared-participation-help",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "179d1031c809beab7faf2065ff47caa85c7c1bf73df76bdbe05e296c1fe2b4c4"
+    },
+    {
+      "entryId": "shared-time-to-explore",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "8904cbdc1e74829188d73117b0eb343cce29beb2384e3cfb6e5517ff674eda33"
+    },
+    {
+      "entryId": "shared-feelings-limits",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "07c45c4884b3cd9d73a3c14bb041d30f4880d0c839ad31ab67918540724bdabf"
+    },
+    {
+      "entryId": "shared-home-fits-family",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "fb7f30238d159ef3395035a56b71356f237faaaa4369ad932effe544ff0625d0"
+    },
+    {
+      "entryId": "shared-adult-needs-support",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "9eb3d6c99388c760b335570260180e97d59b9e2ae1e5ad17b41e2be4e28a90fb"
+    },
+    {
+      "entryId": "shared-something-for-you",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "6488f1305c07855fd68a21f8e981aa8d73906cf4df29ee9903458c02fdc9b9c3"
+    },
+    {
+      "entryId": "shared-less-crowded-day",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "bb2335181b6e1faf055f9c5e195b5ff504f5cd3a5890e36da19f30a50f552e70"
+    },
+    {
+      "entryId": "shared-adult-pause",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "f76130da96f90ba217443bf341dcbcffc5213bee068e55820607ee1aa78d87d5"
+    },
+    {
+      "entryId": "shared-repair",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "bd229463b295f6eff67d11e194bbbad311a8409c8e8b4b423419af5b1ce73f45"
+    },
+    {
+      "entryId": "shared-family-needs",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "2b681012f29bec4ea9bf3a5b2b09969d0e7af714bdfbc5c6d2adeeb85a1faf75"
+    },
+    {
+      "entryId": "shared-caregiver-common-ground",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "da1c89367248409bc919f6f899ddd6a1f7e35934150e9d2d05418d04401b2943"
+    },
+    {
+      "entryId": "shared-family-separation",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "b255f1ce2d259ca26c350df871ab3dea2e699506a8713f9f30360205b3b5c015"
+    },
+    {
+      "entryId": "shared-choosing-care",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "b00e2d2966250d488c4f275a1a1d133e8828f24c547c3eab94de72ae7c0ce2ad"
+    }
+  ],
+  "placements": [
+    {
+      "id": "24-36.shared-observe",
+      "entryId": "shared-observe",
+      "ageId": "24-36",
+      "topicIds": [
+        "you-family",
+        "play-discovery"
+      ],
+      "ageContext": {
+        "note": "General guidance for family life with a toddler; no skill is expected at this age."
+      }
+    },
+    {
+      "id": "24-36.shared-follow-readiness",
+      "entryId": "shared-follow-readiness",
+      "ageId": "24-36",
+      "topicIds": [
+        "play-discovery",
+        "you-family"
+      ],
+      "ageContext": {
+        "note": "General guidance for family life with a toddler; no skill is expected at this age."
+      }
+    },
+    {
+      "id": "24-36.shared-participation-help",
+      "entryId": "shared-participation-help",
+      "ageId": "24-36",
+      "topicIds": [
+        "everyday-care",
+        "play-discovery",
+        "you-family"
+      ],
+      "ageContext": {
+        "note": "General guidance for family life with a toddler; no skill is expected at this age."
+      }
+    },
+    {
+      "id": "24-36.shared-time-to-explore",
+      "entryId": "shared-time-to-explore",
+      "ageId": "24-36",
+      "topicIds": [
+        "play-discovery",
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "note": "General guidance for family life with a toddler; no skill is expected at this age."
+      }
+    },
+    {
+      "id": "24-36.shared-feelings-limits",
+      "entryId": "shared-feelings-limits",
+      "ageId": "24-36",
+      "topicIds": [
+        "connection-feelings",
+        "you-family"
+      ],
+      "ageContext": {
+        "note": "General guidance for family life with a toddler; no skill is expected at this age."
+      }
+    },
+    {
+      "id": "24-36.shared-home-fits-family",
+      "entryId": "shared-home-fits-family",
+      "ageId": "24-36",
+      "topicIds": [
+        "home-that-helps",
+        "you-family"
+      ],
+      "ageContext": {
+        "note": "General guidance for family life with a toddler; no skill is expected at this age."
+      }
+    },
+    {
+      "id": "24-36.shared-adult-needs-support",
+      "entryId": "shared-adult-needs-support",
+      "ageId": "24-36",
+      "topicIds": [
+        "you-family"
+      ],
+      "ageContext": {
+        "note": "General guidance for family life with a toddler; no skill is expected at this age."
+      }
+    },
+    {
+      "id": "24-36.shared-something-for-you",
+      "entryId": "shared-something-for-you",
+      "ageId": "24-36",
+      "topicIds": [
+        "you-family"
+      ],
+      "ageContext": {
+        "note": "General guidance for family life with a toddler; no skill is expected at this age."
+      }
+    },
+    {
+      "id": "24-36.shared-less-crowded-day",
+      "entryId": "shared-less-crowded-day",
+      "ageId": "24-36",
+      "topicIds": [
+        "you-family",
+        "everyday-care"
+      ],
+      "ageContext": {
+        "note": "General guidance for family life with a toddler; no skill is expected at this age."
+      }
+    },
+    {
+      "id": "24-36.shared-adult-pause",
+      "entryId": "shared-adult-pause",
+      "ageId": "24-36",
+      "topicIds": [
+        "you-family",
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "note": "General guidance for family life with a toddler; no skill is expected at this age."
+      }
+    },
+    {
+      "id": "24-36.shared-repair",
+      "entryId": "shared-repair",
+      "ageId": "24-36",
+      "topicIds": [
+        "you-family",
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "note": "General guidance for family life with a toddler; no skill is expected at this age."
+      }
+    },
+    {
+      "id": "24-36.shared-family-needs",
+      "entryId": "shared-family-needs",
+      "ageId": "24-36",
+      "topicIds": [
+        "you-family"
+      ],
+      "ageContext": {
+        "note": "General guidance for family life with a toddler; no skill is expected at this age."
+      }
+    },
+    {
+      "id": "24-36.shared-caregiver-common-ground",
+      "entryId": "shared-caregiver-common-ground",
+      "ageId": "24-36",
+      "topicIds": [
+        "you-family",
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "note": "General guidance for family life with a toddler; no skill is expected at this age."
+      }
+    },
+    {
+      "id": "24-36.shared-family-separation",
+      "entryId": "shared-family-separation",
+      "ageId": "24-36",
+      "topicIds": [
+        "you-family"
+      ],
+      "ageContext": {
+        "note": "General guidance for family life with a toddler; no skill is expected at this age."
+      }
+    },
+    {
+      "id": "18-24.shared-choosing-care",
+      "entryId": "shared-choosing-care",
+      "ageId": "18-24",
+      "topicIds": [
+        "you-family"
+      ],
+      "ageContext": {
+        "note": "A perspective from The Montessori Baby on choosing care; its discussion includes the first three years."
+      }
+    },
+    {
+      "id": "24-36.shared-choosing-care",
+      "entryId": "shared-choosing-care",
+      "ageId": "24-36",
+      "topicIds": [
+        "you-family"
+      ],
+      "ageContext": {
+        "note": "A perspective from The Montessori Baby on choosing care; its discussion includes the first three years."
+      }
+    }
+  ],
+  "placementEvidence": [
+    {
+      "placementId": "24-36.shared-observe",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years; this general guidance has no narrower age requirement.",
+        "references": [
+          {
+            "id": "t7.placement.toddler-scope",
+            "sourceId": "toddler-2019",
+            "section": "Why I love toddlers",
+            "locator": "Closing note defining toddler scope",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.core.ev.observation-foundation",
+          "toddler.core.ev.observation",
+          "toddler.family.ev.observation"
+        ]
+      },
+      "readiness": {
+        "statement": "When you are unsure what your child is interested in or how much help they need.",
+        "references": [
+          {
+            "id": "t7.placement.shared-observe",
+            "sourceId": "toddler-2019",
+            "section": "Observation",
+            "locator": "Watching the individual child and deciding when help is needed",
+            "pdfPages": [
+              {
+                "start": 29,
+                "end": 29
+              },
+              {
+                "start": 192,
+                "end": 192
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.core.ev.observation-foundation",
+          "toddler.core.ev.observation",
+          "toddler.family.ev.observation"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "This adult/family or general-principle situation remains relevant within the book’s toddler scope at2–3 years; the exact frozen body is unchanged.",
+        "authorReadLogIds": [
+          "t7.root.shared-placement.toddler"
+        ]
+      },
+      "retainedBody": {
+        "registryPath": "content/pilots/CANONICAL_REGISTRY.json",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5",
+        "canonicalEntrySha256": "be586cb71ff0fed0a1e9904aa80691945c86bee712e7f2a83fe5779cbf93741d"
+      },
+      "heldDetails": []
+    },
+    {
+      "placementId": "24-36.shared-follow-readiness",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years; this general guidance has no narrower age requirement.",
+        "references": [
+          {
+            "id": "t7.placement.toddler-scope",
+            "sourceId": "toddler-2019",
+            "section": "Why I love toddlers",
+            "locator": "Closing note defining toddler scope",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.core.ev.individual-timeline",
+          "toddler.activities.ev.age-framing",
+          "toddler.family.ev.learning-mindset"
+        ]
+      },
+      "readiness": {
+        "statement": "When an age label makes you wonder whether an activity is a fit.",
+        "references": [
+          {
+            "id": "t7.placement.shared-follow-readiness",
+            "sourceId": "toddler-2019",
+            "section": "Individual development; Montessori activities for the whole child; Cultivate a learning mind-set",
+            "locator": "Indicative ages, individual interest and support for differences",
+            "pdfPages": [
+              {
+                "start": 29,
+                "end": 29
+              },
+              {
+                "start": 33,
+                "end": 33
+              },
+              {
+                "start": 189,
+                "end": 189
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.core.ev.individual-timeline",
+          "toddler.activities.ev.age-framing",
+          "toddler.family.ev.learning-mindset"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "This adult/family or general-principle situation remains relevant within the book’s toddler scope at2–3 years; the exact frozen body is unchanged.",
+        "authorReadLogIds": [
+          "t7.root.shared-placement.toddler"
+        ]
+      },
+      "retainedBody": {
+        "registryPath": "content/pilots/CANONICAL_REGISTRY.json",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5",
+        "canonicalEntrySha256": "faf6b70472402cf68b23e4a7351c5c38613801bc3e0185ccc02f79c63b6b762f"
+      },
+      "heldDetails": []
+    },
+    {
+      "placementId": "24-36.shared-participation-help",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years; this general guidance has no narrower age requirement.",
+        "references": [
+          {
+            "id": "t7.placement.toddler-scope",
+            "sourceId": "toddler-2019",
+            "section": "Why I love toddlers",
+            "locator": "Closing note defining toddler scope",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.core.ev.independence-purpose",
+          "toddler.core.ev.daily-participation",
+          "toddler.core.ev.help-on-rushed-day",
+          "toddler.core.ev.scaffold-help",
+          "toddler.core.ev.offering-help",
+          "toddler.family.ev.guide"
+        ]
+      },
+      "readiness": {
+        "statement": "When your child is interested in joining in or working something out.",
+        "references": [
+          {
+            "id": "t7.placement.shared-participation-help",
+            "sourceId": "toddler-2019",
+            "section": "What makes an activity Montessori?; How to show the child an activity",
+            "locator": "Partial participation and help with frustration",
+            "pdfPages": [
+              {
+                "start": 34,
+                "end": 34
+              },
+              {
+                "start": 35,
+                "end": 35
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.core.ev.independence-purpose",
+          "toddler.core.ev.daily-participation",
+          "toddler.core.ev.help-on-rushed-day",
+          "toddler.core.ev.scaffold-help",
+          "toddler.core.ev.offering-help",
+          "toddler.family.ev.guide"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "This adult/family or general-principle situation remains relevant within the book’s toddler scope at2–3 years; the exact frozen body is unchanged.",
+        "authorReadLogIds": [
+          "t7.root.shared-placement.toddler"
+        ]
+      },
+      "retainedBody": {
+        "registryPath": "content/pilots/CANONICAL_REGISTRY.json",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5",
+        "canonicalEntrySha256": "179d1031c809beab7faf2065ff47caa85c7c1bf73df76bdbe05e296c1fe2b4c4"
+      },
+      "heldDetails": []
+    },
+    {
+      "placementId": "24-36.shared-time-to-explore",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years; this general guidance has no narrower age requirement.",
+        "references": [
+          {
+            "id": "t7.placement.toddler-scope",
+            "sourceId": "toddler-2019",
+            "section": "Why I love toddlers",
+            "locator": "Closing note defining toddler scope",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.core.ev.individual-timeline",
+          "toddler.activities.ev.partial-repetition",
+          "toddler.activities.ev.protect-focus",
+          "toddler.family.ev.slow-response"
+        ]
+      },
+      "readiness": {
+        "statement": "When you are tempted to move things along because the same action is happening again.",
+        "references": [
+          {
+            "id": "t7.placement.shared-time-to-explore",
+            "sourceId": "toddler-2019",
+            "section": "What makes an activity Montessori?; How to show the child an activity; Slow down",
+            "locator": "Repeated parts, processing time and adult help",
+            "pdfPages": [
+              {
+                "start": 34,
+                "end": 34
+              },
+              {
+                "start": 35,
+                "end": 35
+              },
+              {
+                "start": 194,
+                "end": 194
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.core.ev.individual-timeline",
+          "toddler.activities.ev.partial-repetition",
+          "toddler.activities.ev.protect-focus",
+          "toddler.family.ev.slow-response"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "This adult/family or general-principle situation remains relevant within the book’s toddler scope at2–3 years; the exact frozen body is unchanged.",
+        "authorReadLogIds": [
+          "t7.root.shared-placement.toddler"
+        ]
+      },
+      "retainedBody": {
+        "registryPath": "content/pilots/CANONICAL_REGISTRY.json",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5",
+        "canonicalEntrySha256": "8904cbdc1e74829188d73117b0eb343cce29beb2384e3cfb6e5517ff674eda33"
+      },
+      "heldDetails": []
+    },
+    {
+      "placementId": "24-36.shared-feelings-limits",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years; this general guidance has no narrower age requirement.",
+        "references": [
+          {
+            "id": "t7.placement.toddler-scope",
+            "sourceId": "toddler-2019",
+            "section": "Why I love toddlers",
+            "locator": "Closing note defining toddler scope",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.core.ev.acceptance",
+          "toddler.core.ev.translation",
+          "toddler.core.ev.feelings-limits"
+        ]
+      },
+      "readiness": {
+        "statement": "When your child is upset about a boundary.",
+        "references": [
+          {
+            "id": "t7.placement.shared-feelings-limits",
+            "sourceId": "toddler-2019",
+            "section": "Allow all feelings, but not all behavior",
+            "locator": "Protecting the child, others and the adult while understanding feelings",
+            "pdfPages": [
+              {
+                "start": 110,
+                "end": 110
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.core.ev.acceptance",
+          "toddler.core.ev.translation",
+          "toddler.core.ev.feelings-limits"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "This adult/family or general-principle situation remains relevant within the book’s toddler scope at2–3 years; the exact frozen body is unchanged.",
+        "authorReadLogIds": [
+          "t7.root.shared-placement.toddler"
+        ]
+      },
+      "retainedBody": {
+        "registryPath": "content/pilots/CANONICAL_REGISTRY.json",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5",
+        "canonicalEntrySha256": "07c45c4884b3cd9d73a3c14bb041d30f4880d0c839ad31ab67918540724bdabf"
+      },
+      "heldDetails": []
+    },
+    {
+      "placementId": "24-36.shared-home-fits-family",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years; this general guidance has no narrower age requirement.",
+        "references": [
+          {
+            "id": "t7.placement.toddler-scope",
+            "sourceId": "toddler-2019",
+            "section": "Why I love toddlers",
+            "locator": "Closing note defining toddler scope",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.core.ev.home-character",
+          "toddler.core.ev.home-helper",
+          "toddler.core.ev.small-space",
+          "toddler.core.ev.home-recap",
+          "toddler.core.ev.rich-environment",
+          "toddler.family.ev.home-helper"
+        ]
+      },
+      "readiness": {
+        "statement": "When setting up the home starts to feel like another large project.",
+        "references": [
+          {
+            "id": "t7.placement.shared-home-fits-family",
+            "sourceId": "toddler-2019",
+            "section": "Making it cozy; Setting up our home to save us work; Sharing spaces; Small spaces",
+            "locator": "Family culture, space and gradual adjustments",
+            "pdfPages": [
+              {
+                "start": 83,
+                "end": 83
+              },
+              {
+                "start": 84,
+                "end": 84
+              },
+              {
+                "start": 85,
+                "end": 85
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.core.ev.home-character",
+          "toddler.core.ev.home-helper",
+          "toddler.core.ev.small-space",
+          "toddler.core.ev.home-recap",
+          "toddler.core.ev.rich-environment",
+          "toddler.family.ev.home-helper"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "This adult/family or general-principle situation remains relevant within the book’s toddler scope at2–3 years; the exact frozen body is unchanged.",
+        "authorReadLogIds": [
+          "t7.root.shared-placement.toddler"
+        ]
+      },
+      "retainedBody": {
+        "registryPath": "content/pilots/CANONICAL_REGISTRY.json",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5",
+        "canonicalEntrySha256": "fb7f30238d159ef3395035a56b71356f237faaaa4369ad932effe544ff0625d0"
+      },
+      "heldDetails": []
+    },
+    {
+      "placementId": "24-36.shared-adult-needs-support",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years; this general guidance has no narrower age requirement.",
+        "references": [
+          {
+            "id": "t7.placement.toddler-scope",
+            "sourceId": "toddler-2019",
+            "section": "Why I love toddlers",
+            "locator": "Closing note defining toddler scope",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.family.ev.adult-framing",
+          "toddler.family.ev.physical-self-care",
+          "toddler.family.ev.emotional-buckets",
+          "toddler.family.ev.family-forms",
+          "toddler.family.ev.adult-needs",
+          "toddler.family.ev.presence-gifts"
+        ]
+      },
+      "readiness": {
+        "statement": "When looking after everyone else is leaving little room for you.",
+        "references": [
+          {
+            "id": "t7.placement.shared-adult-needs-support",
+            "sourceId": "toddler-2019",
+            "section": "Preparation of the adult; Physical self-care; Fill our emotional bucket and our child’s",
+            "locator": "Personal practices, available help and depression support",
+            "pdfPages": [
+              {
+                "start": 187,
+                "end": 187
+              },
+              {
+                "start": 188,
+                "end": 188
+              },
+              {
+                "start": 192,
+                "end": 192
+              },
+              {
+                "start": 193,
+                "end": 193
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.family.ev.adult-framing",
+          "toddler.family.ev.physical-self-care",
+          "toddler.family.ev.emotional-buckets",
+          "toddler.family.ev.family-forms",
+          "toddler.family.ev.adult-needs",
+          "toddler.family.ev.presence-gifts"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "This adult/family or general-principle situation remains relevant within the book’s toddler scope at2–3 years; the exact frozen body is unchanged.",
+        "authorReadLogIds": [
+          "t7.root.shared-placement.toddler"
+        ]
+      },
+      "retainedBody": {
+        "registryPath": "content/pilots/CANONICAL_REGISTRY.json",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5",
+        "canonicalEntrySha256": "9eb3d6c99388c760b335570260180e97d59b9e2ae1e5ad17b41e2be4e28a90fb"
+      },
+      "heldDetails": []
+    },
+    {
+      "placementId": "24-36.shared-something-for-you",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years; this general guidance has no narrower age requirement.",
+        "references": [
+          {
+            "id": "t7.placement.toddler-scope",
+            "sourceId": "toddler-2019",
+            "section": "Why I love toddlers",
+            "locator": "Closing note defining toddler scope",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.family.ev.adult-framing",
+          "toddler.family.ev.learning-mindset",
+          "toddler.family.ev.rituals",
+          "toddler.family.ev.emotional-buckets"
+        ]
+      },
+      "readiness": {
+        "statement": "When most of your reading, conversations, and time have become about parenting.",
+        "references": [
+          {
+            "id": "t7.placement.shared-something-for-you",
+            "sourceId": "toddler-2019",
+            "section": "Preparation of the adult; Cultivate a learning mind-set; Start and end the day right; Fill our emotional bucket and our child’s",
+            "locator": "Adult interests and adaptable personal examples",
+            "pdfPages": [
+              {
+                "start": 187,
+                "end": 187
+              },
+              {
+                "start": 189,
+                "end": 189
+              },
+              {
+                "start": 190,
+                "end": 190
+              },
+              {
+                "start": 192,
+                "end": 192
+              },
+              {
+                "start": 193,
+                "end": 193
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.family.ev.adult-framing",
+          "toddler.family.ev.learning-mindset",
+          "toddler.family.ev.rituals",
+          "toddler.family.ev.emotional-buckets"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "This adult/family or general-principle situation remains relevant within the book’s toddler scope at2–3 years; the exact frozen body is unchanged.",
+        "authorReadLogIds": [
+          "t7.root.shared-placement.toddler"
+        ]
+      },
+      "retainedBody": {
+        "registryPath": "content/pilots/CANONICAL_REGISTRY.json",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5",
+        "canonicalEntrySha256": "6488f1305c07855fd68a21f8e981aa8d73906cf4df29ee9903458c02fdc9b9c3"
+      },
+      "heldDetails": []
+    },
+    {
+      "placementId": "24-36.shared-less-crowded-day",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years; this general guidance has no narrower age requirement.",
+        "references": [
+          {
+            "id": "t7.placement.toddler-scope",
+            "sourceId": "toddler-2019",
+            "section": "Why I love toddlers",
+            "locator": "Closing note defining toddler scope",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.core.ev.unhurried-time",
+          "toddler.core.ev.go-slow",
+          "toddler.core.ev.help-on-rushed-day",
+          "toddler.family.ev.slow-response",
+          "toddler.family.ev.ownership"
+        ]
+      },
+      "readiness": {
+        "statement": "When the day feels crowded and every activity seems to need its own time.",
+        "references": [
+          {
+            "id": "t7.placement.shared-less-crowded-day",
+            "sourceId": "toddler-2019",
+            "section": "Slow down; Take responsibility for our life and choices",
+            "locator": "Slower moments with toddler and family, including real constraints",
+            "pdfPages": [
+              {
+                "start": 193,
+                "end": 193
+              },
+              {
+                "start": 194,
+                "end": 194
+              },
+              {
+                "start": 197,
+                "end": 197
+              },
+              {
+                "start": 198,
+                "end": 198
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.core.ev.unhurried-time",
+          "toddler.core.ev.go-slow",
+          "toddler.core.ev.help-on-rushed-day",
+          "toddler.family.ev.slow-response",
+          "toddler.family.ev.ownership"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "This adult/family or general-principle situation remains relevant within the book’s toddler scope at2–3 years; the exact frozen body is unchanged.",
+        "authorReadLogIds": [
+          "t7.root.shared-placement.toddler"
+        ]
+      },
+      "retainedBody": {
+        "registryPath": "content/pilots/CANONICAL_REGISTRY.json",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5",
+        "canonicalEntrySha256": "bb2335181b6e1faf055f9c5e195b5ff504f5cd3a5890e36da19f30a50f552e70"
+      },
+      "heldDetails": []
+    },
+    {
+      "placementId": "24-36.shared-adult-pause",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years; this general guidance has no narrower age requirement.",
+        "references": [
+          {
+            "id": "t7.placement.toddler-scope",
+            "sourceId": "toddler-2019",
+            "section": "Why I love toddlers",
+            "locator": "Closing note defining toddler scope",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.family.ev.observation",
+          "toddler.family.ev.slow-response",
+          "toddler.family.ev.self-awareness"
+        ]
+      },
+      "readiness": {
+        "statement": "When you notice a strong reaction rising in an ordinary moment.",
+        "references": [
+          {
+            "id": "t7.placement.shared-adult-pause",
+            "sourceId": "toddler-2019",
+            "section": "Preparation of the adult; Slow down; Self-awareness",
+            "locator": "Immediate-danger exception and adult reflection",
+            "pdfPages": [
+              {
+                "start": 187,
+                "end": 187
+              },
+              {
+                "start": 194,
+                "end": 194
+              },
+              {
+                "start": 199,
+                "end": 199
+              },
+              {
+                "start": 200,
+                "end": 200
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.family.ev.observation",
+          "toddler.family.ev.slow-response",
+          "toddler.family.ev.self-awareness"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "This adult/family or general-principle situation remains relevant within the book’s toddler scope at2–3 years; the exact frozen body is unchanged.",
+        "authorReadLogIds": [
+          "t7.root.shared-placement.toddler"
+        ]
+      },
+      "retainedBody": {
+        "registryPath": "content/pilots/CANONICAL_REGISTRY.json",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5",
+        "canonicalEntrySha256": "f76130da96f90ba217443bf341dcbcffc5213bee068e55820607ee1aa78d87d5"
+      },
+      "heldDetails": []
+    },
+    {
+      "placementId": "24-36.shared-repair",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years; this general guidance has no narrower age requirement.",
+        "references": [
+          {
+            "id": "t7.placement.toddler-scope",
+            "sourceId": "toddler-2019",
+            "section": "Why I love toddlers",
+            "locator": "Closing note defining toddler scope",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.family.ev.adult-framing",
+          "toddler.family.ev.repair",
+          "toddler.family.ev.enough",
+          "toddler.family.ev.practice"
+        ]
+      },
+      "readiness": {
+        "statement": "After you have lost patience or let someone down.",
+        "references": [
+          {
+            "id": "t7.placement.shared-repair",
+            "sourceId": "toddler-2019",
+            "section": "Preparation of the adult; Learn from our mistakes; Keep practicing",
+            "locator": "Adult responsibility, apology and another attempt",
+            "pdfPages": [
+              {
+                "start": 187,
+                "end": 187
+              },
+              {
+                "start": 198,
+                "end": 198
+              },
+              {
+                "start": 200,
+                "end": 200
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.family.ev.adult-framing",
+          "toddler.family.ev.repair",
+          "toddler.family.ev.enough",
+          "toddler.family.ev.practice"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "This adult/family or general-principle situation remains relevant within the book’s toddler scope at2–3 years; the exact frozen body is unchanged.",
+        "authorReadLogIds": [
+          "t7.root.shared-placement.toddler"
+        ]
+      },
+      "retainedBody": {
+        "registryPath": "content/pilots/CANONICAL_REGISTRY.json",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5",
+        "canonicalEntrySha256": "bd229463b295f6eff67d11e194bbbad311a8409c8e8b4b423419af5b1ce73f45"
+      },
+      "heldDetails": []
+    },
+    {
+      "placementId": "24-36.shared-family-needs",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years; this general guidance has no narrower age requirement.",
+        "references": [
+          {
+            "id": "t7.placement.toddler-scope",
+            "sourceId": "toddler-2019",
+            "section": "Why I love toddlers",
+            "locator": "Closing note defining toddler scope",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.family.ev.family-forms",
+          "toddler.family.ev.adult-needs",
+          "toddler.family.ev.everyone-needs",
+          "toddler.family.ev.family-practice"
+        ]
+      },
+      "readiness": {
+        "statement": "When family plans seem to leave someone’s needs out.",
+        "references": [
+          {
+            "id": "t7.placement.shared-family-needs",
+            "sourceId": "toddler-2019",
+            "section": "What about everyone else?; Parents are people, too; The key to working together as a family",
+            "locator": "Different family forms and a conversation about everyone’s needs",
+            "pdfPages": [
+              {
+                "start": 203,
+                "end": 203
+              },
+              {
+                "start": 204,
+                "end": 204
+              },
+              {
+                "start": 205,
+                "end": 205
+              },
+              {
+                "start": 206,
+                "end": 206
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.family.ev.family-forms",
+          "toddler.family.ev.adult-needs",
+          "toddler.family.ev.everyone-needs",
+          "toddler.family.ev.family-practice"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "This adult/family or general-principle situation remains relevant within the book’s toddler scope at2–3 years; the exact frozen body is unchanged.",
+        "authorReadLogIds": [
+          "t7.root.shared-placement.toddler"
+        ]
+      },
+      "retainedBody": {
+        "registryPath": "content/pilots/CANONICAL_REGISTRY.json",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5",
+        "canonicalEntrySha256": "2b681012f29bec4ea9bf3a5b2b09969d0e7af714bdfbc5c6d2adeeb85a1faf75"
+      },
+      "heldDetails": []
+    },
+    {
+      "placementId": "24-36.shared-caregiver-common-ground",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years; this general guidance has no narrower age requirement.",
+        "references": [
+          {
+            "id": "t7.placement.toddler-scope",
+            "sourceId": "toddler-2019",
+            "section": "Why I love toddlers",
+            "locator": "Closing note defining toddler scope",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.family.ev.share-with-family",
+          "toddler.family.ev.respect-other-adults",
+          "toddler.family.ev.caregiver-starts",
+          "toddler.family.ev.active-listening",
+          "toddler.family.ev.caregiver-common-ground",
+          "toddler.family.ev.presence-gifts"
+        ]
+      },
+      "readiness": {
+        "statement": "When you and another trusted caregiver want to talk about different approaches.",
+        "references": [
+          {
+            "id": "t7.placement.shared-caregiver-common-ground",
+            "sourceId": "toddler-2019",
+            "section": "Getting family on board; Grandparents and caregivers; When there is conflict in the family",
+            "locator": "Shared values, voluntary conversation and caregiver differences",
+            "pdfPages": [
+              {
+                "start": 206,
+                "end": 206
+              },
+              {
+                "start": 207,
+                "end": 207
+              },
+              {
+                "start": 208,
+                "end": 208
+              },
+              {
+                "start": 209,
+                "end": 209
+              },
+              {
+                "start": 210,
+                "end": 210
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.family.ev.share-with-family",
+          "toddler.family.ev.respect-other-adults",
+          "toddler.family.ev.caregiver-starts",
+          "toddler.family.ev.active-listening",
+          "toddler.family.ev.caregiver-common-ground",
+          "toddler.family.ev.presence-gifts"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "This adult/family or general-principle situation remains relevant within the book’s toddler scope at2–3 years; the exact frozen body is unchanged.",
+        "authorReadLogIds": [
+          "t7.root.shared-placement.toddler"
+        ]
+      },
+      "retainedBody": {
+        "registryPath": "content/pilots/CANONICAL_REGISTRY.json",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5",
+        "canonicalEntrySha256": "da1c89367248409bc919f6f899ddd6a1f7e35934150e9d2d05418d04401b2943"
+      },
+      "heldDetails": []
+    },
+    {
+      "placementId": "24-36.shared-family-separation",
+      "sourceAge": {
+        "statement": "Davies uses toddler for children around 1 to 3 years; this general guidance has no narrower age requirement.",
+        "references": [
+          {
+            "id": "t7.placement.toddler-scope",
+            "sourceId": "toddler-2019",
+            "section": "Why I love toddlers",
+            "locator": "Closing note defining toddler scope",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.family.ev.family-contact"
+        ]
+      },
+      "readiness": {
+        "statement": "For understanding the books’ perspective on separated family life.",
+        "references": [
+          {
+            "id": "t7.placement.shared-family-separation",
+            "sourceId": "toddler-2019",
+            "section": "Divorce does not have to be a dirty word",
+            "locator": "Complete separation discussion with contact-safety exception",
+            "pdfPages": [
+              {
+                "start": 210,
+                "end": 210
+              },
+              {
+                "start": 211,
+                "end": 211
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.family.ev.family-contact"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "This adult/family or general-principle situation remains relevant within the book’s toddler scope at2–3 years; the exact frozen body is unchanged.",
+        "authorReadLogIds": [
+          "t7.root.shared-placement.toddler"
+        ]
+      },
+      "retainedBody": {
+        "registryPath": "content/pilots/CANONICAL_REGISTRY.json",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5",
+        "canonicalEntrySha256": "b255f1ce2d259ca26c350df871ab3dea2e699506a8713f9f30360205b3b5c015"
+      },
+      "heldDetails": []
+    },
+    {
+      "placementId": "18-24.shared-choosing-care",
+      "sourceAge": {
+        "statement": "Baby describes an infant community around16 months until3 years and caregiver continuity in the first3 years, with8–24 months singled out by the source.",
+        "references": [
+          {
+            "id": "t7.placement.baby-care-choice",
+            "sourceId": "baby-2021",
+            "section": "What to look for in a day care or caregiver; What if the day care has different values than at home?",
+            "locator": "Caregiver relationships, first three years and available family options",
+            "pdfPages": [
+              {
+                "start": 253,
+                "end": 255
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.care-choice-realities",
+          "baby.ev.caregiver-quality-continuity"
+        ]
+      },
+      "readiness": {
+        "statement": "When you need or want someone else to care for your baby.",
+        "references": [
+          {
+            "id": "t7.placement.baby-care-choice",
+            "sourceId": "baby-2021",
+            "section": "What to look for in a day care or caregiver; What if the day care has different values than at home?",
+            "locator": "Caregiver relationships, first three years and available family options",
+            "pdfPages": [
+              {
+                "start": 253,
+                "end": 255
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.care-choice-realities",
+          "baby.ev.caregiver-quality-continuity"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The source explicitly discusses care into the third year. This is a Baby-attributed care-choice perspective, preserving its baby wording and availability limits; no childcare setup or developmental deadline is added.",
+        "authorReadLogIds": [
+          "t7.root.shared-placement.baby-care"
+        ]
+      },
+      "retainedBody": {
+        "registryPath": "content/pilots/CANONICAL_REGISTRY.json",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5",
+        "canonicalEntrySha256": "b00e2d2966250d488c4f275a1a1d133e8828f24c547c3eab94de72ae7c0ce2ad"
+      },
+      "heldDetails": []
+    },
+    {
+      "placementId": "24-36.shared-choosing-care",
+      "sourceAge": {
+        "statement": "Baby describes an infant community around16 months until3 years and caregiver continuity in the first3 years, with8–24 months singled out by the source.",
+        "references": [
+          {
+            "id": "t7.placement.baby-care-choice",
+            "sourceId": "baby-2021",
+            "section": "What to look for in a day care or caregiver; What if the day care has different values than at home?",
+            "locator": "Caregiver relationships, first three years and available family options",
+            "pdfPages": [
+              {
+                "start": 253,
+                "end": 255
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.care-choice-realities",
+          "baby.ev.caregiver-quality-continuity"
+        ]
+      },
+      "readiness": {
+        "statement": "When you need or want someone else to care for your baby.",
+        "references": [
+          {
+            "id": "t7.placement.baby-care-choice",
+            "sourceId": "baby-2021",
+            "section": "What to look for in a day care or caregiver; What if the day care has different values than at home?",
+            "locator": "Caregiver relationships, first three years and available family options",
+            "pdfPages": [
+              {
+                "start": 253,
+                "end": 255
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.care-choice-realities",
+          "baby.ev.caregiver-quality-continuity"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The source explicitly discusses care into the third year. This is a Baby-attributed care-choice perspective, preserving its baby wording and availability limits; no childcare setup or developmental deadline is added.",
+        "authorReadLogIds": [
+          "t7.root.shared-placement.baby-care"
+        ]
+      },
+      "retainedBody": {
+        "registryPath": "content/pilots/CANONICAL_REGISTRY.json",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5",
+        "canonicalEntrySha256": "b00e2d2966250d488c4f275a1a1d133e8828f24c547c3eab94de72ae7c0ce2ad"
+      },
+      "heldDetails": []
+    }
+  ],
+  "authorReadLogs": {
+    "path": "content/18-36/source-work/shared-placement-READ_LOG-r01.json",
+    "sha256": "5406c5bef2bda651dc196619a24acafb53d5f3782ea7f703dcb06afff6e4dd00"
+  },
+  "sourceFingerprints": [
+    {
+      "sourceId": "toddler-2019",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/The Montessori Toddler - Simone Davies _Worldfreebooks.com_.pdf",
+      "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b"
+    },
+    {
+      "sourceId": "baby-2021",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+      "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+[
+  {
+    "id": "baby.read.main.closing-text",
+    "reader": "/root",
+    "reasoning": "xhigh",
+    "date": "2026-09-10",
+    "sourceId": "baby-2021",
+    "pdfPages": [
+      {
+        "start": 243,
+        "end": 281
+      },
+      {
+        "start": 283,
+        "end": 294
+      },
+      {
+        "start": 303,
+        "end": 310
+      }
+    ],
+    "mode": "full-text",
+    "description": "Complete page text read in bounded batches via supplied extraction cache. Empty image text was not treated as read; pp295–303 activity rows read visually in separate log. Includes navigation and backmatter, without treating them as new advice."
+  },
+  {
+    "id": "baby.read.main.closing-layout",
+    "reader": "/root",
+    "reasoning": "xhigh",
+    "date": "2026-09-10",
+    "sourceId": "baby-2021",
+    "pdfPages": [
+      {
+        "start": 243,
+        "end": 310
+      }
+    ],
+    "mode": "visual",
+    "description": "Original Poppler pages rendered at 1200px height. Full-page originals closely inspected for pp243,247,254–255,257–258,264–265,284–305. Remaining pages inspected in 2x3 contact sheets for full-page layout, photographs, captions, continuations and nontext material; their extracted text was separately read. Contact sheets are layout/photograph inventory, not small-text reading."
+  },
+  {
+    "id": "baby.read.main.appendix-rows",
+    "reader": "/root",
+    "reasoning": "xhigh",
+    "date": "2026-09-10",
+    "sourceId": "baby-2021",
+    "pdfPages": [
+      {
+        "start": 295,
+        "end": 305
+      }
+    ],
+    "mode": "visual",
+    "description": "All four columns of every activity row pp295–303 read from individual original-page renders, including exact age/readiness, materials, cautions and development column. Reflex definitions/table pp304–305 inspected with split 12-month row (Moro at foot of304, Tonic neck at305)."
+  },
+  {
+    "id": "baby.read.main.context-text",
+    "reader": "/root",
+    "reasoning": "xhigh",
+    "date": "2026-09-10",
+    "sourceId": "baby-2021",
+    "pdfPages": [
+      {
+        "start": 119,
+        "end": 127
+      },
+      {
+        "start": 147,
+        "end": 151
+      },
+      {
+        "start": 214,
+        "end": 218
+      },
+      {
+        "start": 229,
+        "end": 230
+      }
+    ],
+    "mode": "full-text",
+    "description": "Complete extracted pages read for activity age/material/effort qualification; visual-mobile destination and conditions; visitor-note colic/reflux destination215–216 and behavior context; adoption destination229–230. Other portions on boundary pages are read, but this does not claim completion of neighboring sections."
+  },
+  {
+    "id": "baby.read.main.navigation",
+    "reader": "/root",
+    "reasoning": "xhigh",
+    "date": "2026-09-10",
+    "sourceId": "baby-2021",
+    "pdfPages": [
+      {
+        "start": 1,
+        "end": 310
+      }
+    ],
+    "mode": "navigation-only",
+    "description": "Programmatic keyword search across cached pages for mobile, colic/reflex and related named destinations, plus first-line inventory243–310. Only short hit/heading snippets read at that stage; not full-book research coverage. Complete actual text and visual reads are separately logged."
+  }
+]

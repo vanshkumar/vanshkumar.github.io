@@ -1,0 +1,119 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-languages",
+        "kind": "perspective",
+        "title": "More than one language in family life",
+        "summary": "The authors describe familiar people, places and routines as ways a baby can meet more than one language. Their examples offer different arrangements for different families.",
+        "cue": "More than one language is part of your baby’s family or community.",
+        "detail": [
+          "One example gives each caregiver a language to use with the baby. Another connects languages with particular places or times, such as home, outings or weekends.",
+          "Books, play and conversation with people who speak a language are further possibilities. These arrangements need to fit the people and resources a family has."
+        ],
+        "references": [
+          {
+            "id": "baby-languages.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Language activities / Conversation; Bilingualism",
+            "locator": "Caregiver-language and place/time approaches",
+            "pdfPages": [
+              {
+                "start": 130,
+                "end": 130
+              },
+              {
+                "start": 139,
+                "end": 139
+              }
+            ]
+          },
+          {
+            "id": "baby-languages.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Family inclusion",
+            "locator": "Opening paragraph: principles adapted to individual families",
+            "pdfPages": [
+              {
+                "start": 41,
+                "end": 41
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "3-6.baby-languages",
+        "entryId": "baby-languages",
+        "ageId": "3-6",
+        "topicIds": [
+          "play-discovery",
+          "you-family"
+        ],
+        "ageContext": {
+          "bookAge": "Infancy; the 0 to 3 months language section includes multilingual family speech.",
+          "readiness": "More than one language is part of the baby’s family or community.",
+          "note": "The book offers different arrangements for different families."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "3–6 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          },
+          {
+            "id": "you-family",
+            "label": "For you & your family"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 130, 139"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF p. 41"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "ee7b64bdeb1fe9997a109fbf854db0106402fb93123c15c2049eaea41ababf38",
+  "artContextSha256": null,
+  "publicProjectionSha256": "b7831407d5dd6c93f42e5db33d0bfaa22ae6a4dc1cae2c32c31b3216808bea1a",
+  "provenance": {
+    "revision": "r01",
+    "placementDraft": {
+      "path": "content/birth-6/drafts/activities-r01.json",
+      "sha256": "2c76e99fbc0896c792f407ca3f549e6d443e76f596d9b6486cde64dc5f2bfe11"
+    },
+    "canonical": {
+      "entryId": "baby-languages",
+      "canonicalEntrySha256": "dc1bdf8a7b5b6a9c212e898a5c01614ccc19a32b933cfaf7d63d978047d38ba2",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/29",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/29"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-feedback",
+        "kind": "perspective",
+        "title": "Tell them what you noticed",
+        "summary": "Specific words can share your interest: a line on the page, a careful movement, or the help your child offered. Davies also makes room for your own delight.",
+        "cue": "Your child looks to you after doing something, or you want to acknowledge their effort.",
+        "detail": [
+          "The book suggests describing the action instead of giving it a general grade. A warm “I’m excited for you” is among Davies’s examples; this is not a rule to hide affection.",
+          "She distinguishes an action from a fixed identity. Describing what happened today leaves more room than calling a child “the clever one,” “the clumsy one,” or “the shy one.”",
+          "During absorbed activity, you can wait until the child seeks a response rather than interrupting every step."
+        ],
+        "references": [
+          {
+            "id": "toddler-feedback.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Give our child feedback / Roles and labels",
+            "locator": "Specific action descriptions, expressed warmth, action-level words and fixed labels",
+            "pdfPages": [
+              {
+                "start": 111,
+                "end": 113
+              }
+            ]
+          },
+          {
+            "id": "toddler-feedback.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "General principles",
+            "locator": "Wait during concentration, respond when child looks for feedback",
+            "pdfPages": [
+              {
+                "start": 37,
+                "end": 37
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "18-24.toddler-feedback",
+        "entryId": "toddler-feedback",
+        "ageId": "18-24",
+        "topicIds": [
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "Davies discusses toddlers of around 1–3 years.",
+          "readiness": "Use this when the situation arises; there is no expected starting age."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "18–24 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 111–113"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 37"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "68e3c69d8f39d395b8473e6ef5791b9255093ab90169b0f347bd201341aaec84",
+  "artContextSha256": null,
+  "publicProjectionSha256": "6590b9335b0394e167a4514a35949e0b06475b7fda5d92eff429728e92a4adaa",
+  "provenance": {
+    "draft": {
+      "path": "content/pilots/drafts/toddler/draft-r03.json",
+      "sha256": "2ce363ad170f62611828f2ca3d3a34cb8f634ade4421f8321513340301351198"
+    },
+    "revision": "r03",
+    "evidenceFile": "content/pilots/drafts/toddler/draft-r03.json",
+    "note": "Full private provenance and actual author read logs remain in this immutable draft and its handoff."
+  }
+}

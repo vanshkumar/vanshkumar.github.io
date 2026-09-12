@@ -1,0 +1,1815 @@
+{
+  "reviewVersion": 1,
+  "id": "prototype-tone-review.2026-09-10",
+  "reviewer": {
+    "identity": "Codex independent spirit/tone reviewer",
+    "task": "/root/prototype_tone_review",
+    "role": "spirit-tone",
+    "reasoning": "xhigh",
+    "date": "2026-09-10",
+    "independence": "Fresh reviewer; not the content author or source reviewer. No other prototype review output read and no verdict coordination."
+  },
+  "scope": "Independent, bounded spirit/tone review of all six frozen prototype entries in the listed 6-9 and 18-24 opening/topic/detail presentations, plus the exact scene/context components. Authorized while full-book research is pending. This is not pilot completion, source approval, age evidence approval, medical verification or publication approval.",
+  "baseline": {
+    "path": "content/pilots/PROTOTYPE_BASELINE.json",
+    "fileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+    "capturedOn": "2026-09-10",
+    "componentHashVerification": "All six text-placement, art-context and public-projection digests independently recomputed using review-snapshot.mjs stableJSON/digest and matched. Both asset byte hashes matched.",
+    "draftAndRendererContext": [
+      {
+        "path": "src/content.js",
+        "sha256": "73a023d71b537d9fcb9017ef5018be44a869f11068882ddeddcebecc010da77e"
+      },
+      {
+        "path": "src/guide/prototype.js",
+        "sha256": "b421543943380f9a6357831ceeb45bc36e06d118dab1c08cf02fd7abb1915173"
+      },
+      {
+        "path": "src/HomeStudy.jsx",
+        "sha256": "fac2bbb16457687333b2d3ac7718d5ad1590094265c11956947ce661af9a7cd6"
+      },
+      {
+        "path": "src/home.css",
+        "sha256": "55de72c5b21d2f1a3ead85c5975febd09ac3135fcbc2219e6672a13f4786a6e1"
+      }
+    ]
+  },
+  "inputsRead": [
+    "LEARNINGS.md",
+    "POPULATION_PLAN.md",
+    "research/foundation/EDITORIAL_CHARTER.md",
+    "research/foundation/EVIDENCE_CONTRACT.md",
+    "research/foundation/SOURCE_MANIFEST.md",
+    "research/foundation/TOPICS.md",
+    "research/foundation/TONE_EXAMPLES.md",
+    "content/pilots/CONTRACT.md",
+    "research/INTEGRATION_PREFLIGHT.md",
+    "content/pilots/review-snapshot.mjs",
+    "src/HomeStudy.jsx",
+    "/Users/vanshkumar/.codex/plugins/cache/openai-primary-runtime/pdf/26.904.11930/skills/pdf/SKILL.md"
+  ],
+  "methods": {
+    "sources": "Read fresh extracted complete page text from the original fingerprinted PDFs, then inspect original-page renders; no foundation note substituted for original passages.",
+    "presentation": "Inspected the complete exact frozen reader fields and their actual source-renderer projection in HomeStudy.jsx (hash matched the baseline). The opening displays invitation plus cue; a topic row displays kind/title/summary only; detail displays summary/cue/steps/principle/references, and no ageContext exists for these prototypes. Reviewed each opening and every listed topic under its actual age label.",
+    "visual": "Inspected the two original assets, their metadata, and accepted round-16 screenshot. Original-page renders/contact sheets stay in ignored tmp/pilots-tone-review/.",
+    "limits": "No browser used, per assignment. Only the accepted Baby/Reach opening was inspected as a rendered app screenshot; all other reader surface reviews were exact-field plus matching renderer-code inspections, not newly captured screenshots or a runtime layout/navigation audit. No full-book research coverage or complete pilot balance claimed.",
+    "tools": "Bundled Python with pypdf/Pillow and bundled Poppler for original-page reading/visual QA; bundled Node for offline hash verification. No PDF/art edits."
+  },
+  "sourceFingerprints": [
+    {
+      "sourceId": "baby-2021",
+      "path": "the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+      "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f",
+      "physicalPageCount": 310
+    },
+    {
+      "sourceId": "toddler-2019",
+      "path": "The Montessori Toddler - Simone Davies _Worldfreebooks.com_.pdf",
+      "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b",
+      "physicalPageCount": 257
+    }
+  ],
+  "sourceReadLogs": [
+    {
+      "id": "tone.baby.framing.text",
+      "reader": "/root/prototype_tone_review",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 18,
+          "end": 21
+        },
+        {
+          "start": 33,
+          "end": 37
+        },
+        {
+          "start": 119,
+          "end": 120
+        },
+        {
+          "start": 238,
+          "end": 241
+        },
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-text",
+      "materialExamined": "Complete page text read directly from fresh pypdf extraction of the original PDF. Read collaboration, available help, no required purchases, individual timelines, observation including the adult, activity choice and material cautions, adult fallibility and help-seeking, and appendix age-guideline framing. These discontinuous pages do not constitute full-chapter or full-book coverage. Neighboring deterministic developmental and reassurance claims were read as context, not adopted as public promises."
+    },
+    {
+      "id": "tone.baby.entries.text",
+      "reader": "/root/prototype_tone_review",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 99,
+          "end": 100
+        },
+        {
+          "start": 107,
+          "end": 108
+        },
+        {
+          "start": 114,
+          "end": 114
+        },
+        {
+          "start": 126,
+          "end": 126
+        },
+        {
+          "start": 133,
+          "end": 135
+        },
+        {
+          "start": 157,
+          "end": 162
+        }
+      ],
+      "mode": "full-text",
+      "materialExamined": "Complete cited-page text read from the original PDF: respect for the body and collaboration; freedom of movement with its specific propping/lying distinction; connection checklist; help when stuck; conversational turns and naming everyday sounds; movement observation, ball examples, environment qualifications, and the transition to 9-12-month claims on page 162."
+    },
+    {
+      "id": "tone.baby.supplement.text",
+      "reader": "/root/prototype_tone_review",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 102,
+          "end": 104
+        },
+        {
+          "start": 115,
+          "end": 115
+        },
+        {
+          "start": 125,
+          "end": 125
+        }
+      ],
+      "mode": "full-text",
+      "materialExamined": "Complete additional original pages read to check genuine choice versus adult limits, protective intervention, the fuller slow-pace framing, warmth outside concentrated play, and attention to tired/hungry/overstimulated/soiled needs. No clinical advice was inferred from these passages."
+    },
+    {
+      "id": "tone.baby.visual",
+      "reader": "/root/prototype_tone_review",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 18,
+          "end": 18
+        },
+        {
+          "start": 19,
+          "end": 19
+        },
+        {
+          "start": 20,
+          "end": 20
+        },
+        {
+          "start": 21,
+          "end": 21
+        },
+        {
+          "start": 33,
+          "end": 33
+        },
+        {
+          "start": 34,
+          "end": 34
+        },
+        {
+          "start": 35,
+          "end": 35
+        },
+        {
+          "start": 36,
+          "end": 36
+        },
+        {
+          "start": 37,
+          "end": 37
+        },
+        {
+          "start": 99,
+          "end": 99
+        },
+        {
+          "start": 100,
+          "end": 100
+        },
+        {
+          "start": 102,
+          "end": 102
+        },
+        {
+          "start": 103,
+          "end": 103
+        },
+        {
+          "start": 104,
+          "end": 104
+        },
+        {
+          "start": 107,
+          "end": 107
+        },
+        {
+          "start": 108,
+          "end": 108
+        },
+        {
+          "start": 114,
+          "end": 114
+        },
+        {
+          "start": 115,
+          "end": 115
+        },
+        {
+          "start": 119,
+          "end": 119
+        },
+        {
+          "start": 120,
+          "end": 120
+        },
+        {
+          "start": 125,
+          "end": 125
+        },
+        {
+          "start": 126,
+          "end": 126
+        },
+        {
+          "start": 133,
+          "end": 133
+        },
+        {
+          "start": 134,
+          "end": 134
+        },
+        {
+          "start": 135,
+          "end": 135
+        },
+        {
+          "start": 157,
+          "end": 157
+        },
+        {
+          "start": 158,
+          "end": 158
+        },
+        {
+          "start": 159,
+          "end": 159
+        },
+        {
+          "start": 160,
+          "end": 160
+        },
+        {
+          "start": 161,
+          "end": 161
+        },
+        {
+          "start": 162,
+          "end": 162
+        },
+        {
+          "start": 238,
+          "end": 238
+        },
+        {
+          "start": 239,
+          "end": 239
+        },
+        {
+          "start": 240,
+          "end": 240
+        },
+        {
+          "start": 241,
+          "end": 241
+        },
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "visual",
+      "materialExamined": "Original pages rendered with bundled Poppler and all full-page layouts inspected in six labeled contact sheets plus the supplemental sheet. Checked callouts, continuation boundaries, illustrations and activity/observation lists against the text read. Page 108 also inspected as an individual 850x1100 render. Contact-sheet inspection is visual/context checking, not a substitute claim of reading small text visually. Page 294 examined for the activity-list guideline heading and its separation from the preceding table continuation."
+    },
+    {
+      "id": "tone.toddler.framing.text",
+      "reader": "/root/prototype_tone_review",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 12,
+          "end": 12
+        },
+        {
+          "start": 17,
+          "end": 19
+        },
+        {
+          "start": 28,
+          "end": 29
+        },
+        {
+          "start": 33,
+          "end": 39
+        },
+        {
+          "start": 83,
+          "end": 85
+        },
+        {
+          "start": 99,
+          "end": 102
+        },
+        {
+          "start": 187,
+          "end": 187
+        },
+        {
+          "start": 195,
+          "end": 195
+        },
+        {
+          "start": 198,
+          "end": 198
+        }
+      ],
+      "mode": "full-text",
+      "materialExamined": "Complete original-page text read: Montessori as relationship and guidance; no perfect parent/classroom/activity quota; individual differences; activity choice and partial repetition; help and kind limits; no required purchase list; family spaces, limited time, adult capacity, mistakes and repair. The definitive motive/outcome claims on page 18 and elsewhere were recognized as source rhetoric, not added to these entries."
+    },
+    {
+      "id": "tone.toddler.entries.text",
+      "reader": "/root/prototype_tone_review",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 49,
+          "end": 54
+        },
+        {
+          "start": 75,
+          "end": 76
+        },
+        {
+          "start": 251,
+          "end": 251
+        }
+      ],
+      "mode": "full-text",
+      "materialExamined": "Complete original-page text read: practical-life setup, adult clean-up capacity, one/two child steps under age two, small amounts of liquid, fetching shoes, art process and non-prescriptive demonstrations, descriptive encouragement, separate adult paper, adaptable home spaces, basket OR shelf for shoes, and the full appendix table including the 18+ pouring row. Page 51 explicitly retains earlier activities in later age groups; page 251 gives 18+ for pouring while page 51 lists a pouring example at 12-18. This discrepancy is an age-source question for the source/evidence work, not a reason to invent a deadline."
+    },
+    {
+      "id": "tone.toddler.visual",
+      "reader": "/root/prototype_tone_review",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 12,
+          "end": 12
+        },
+        {
+          "start": 17,
+          "end": 17
+        },
+        {
+          "start": 18,
+          "end": 18
+        },
+        {
+          "start": 19,
+          "end": 19
+        },
+        {
+          "start": 28,
+          "end": 28
+        },
+        {
+          "start": 29,
+          "end": 29
+        },
+        {
+          "start": 33,
+          "end": 33
+        },
+        {
+          "start": 34,
+          "end": 34
+        },
+        {
+          "start": 35,
+          "end": 35
+        },
+        {
+          "start": 36,
+          "end": 36
+        },
+        {
+          "start": 37,
+          "end": 37
+        },
+        {
+          "start": 38,
+          "end": 38
+        },
+        {
+          "start": 39,
+          "end": 39
+        },
+        {
+          "start": 49,
+          "end": 49
+        },
+        {
+          "start": 50,
+          "end": 50
+        },
+        {
+          "start": 51,
+          "end": 51
+        },
+        {
+          "start": 52,
+          "end": 52
+        },
+        {
+          "start": 53,
+          "end": 53
+        },
+        {
+          "start": 54,
+          "end": 54
+        },
+        {
+          "start": 74,
+          "end": 74
+        },
+        {
+          "start": 75,
+          "end": 75
+        },
+        {
+          "start": 76,
+          "end": 76
+        },
+        {
+          "start": 83,
+          "end": 83
+        },
+        {
+          "start": 84,
+          "end": 84
+        },
+        {
+          "start": 85,
+          "end": 85
+        },
+        {
+          "start": 99,
+          "end": 99
+        },
+        {
+          "start": 100,
+          "end": 100
+        },
+        {
+          "start": 101,
+          "end": 101
+        },
+        {
+          "start": 102,
+          "end": 102
+        },
+        {
+          "start": 187,
+          "end": 187
+        },
+        {
+          "start": 195,
+          "end": 195
+        },
+        {
+          "start": 198,
+          "end": 198
+        },
+        {
+          "start": 251,
+          "end": 251
+        }
+      ],
+      "mode": "visual",
+      "materialExamined": "Original pages rendered with bundled Poppler and all full-page layouts inspected in six labeled contact sheets plus the supplemental sheet. Verified table-column/row boundaries, sidebar framing and small printed folios on cited pages. Page 74 is an illustration of a small table/chair, not a blank source page; it was inspected visually and is not claimed as full-text reading. Page 251 also inspected separately at 778x1100 to read the pouring row, its 18+ age, material alternatives and food-preparation column."
+    },
+    {
+      "id": "tone.toddler.cited-folios.visual",
+      "reader": "/root/prototype_tone_review",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 35,
+          "end": 36
+        },
+        {
+          "start": 51,
+          "end": 51
+        },
+        {
+          "start": 53,
+          "end": 54
+        },
+        {
+          "start": 75,
+          "end": 76
+        },
+        {
+          "start": 251,
+          "end": 251
+        }
+      ],
+      "mode": "visual",
+      "materialExamined": "Visible printed folios checked in original-page renders: physical 35=26, 36=27, 51=42, 53=44, 54=45, 75=66, 76=67, 251=242. This bounded tone inspection does not replace the separate source review or the final structured reference conversion."
+    }
+  ],
+  "visualInspections": [
+    {
+      "path": "public/art/home-paper-baby.webp",
+      "sha256": "fb09c915ce18725df3f0ef1818fc0072116d2d97c6dbc45eb7578dda55dbc922",
+      "inspection": "Inspected original 1536x1024 transparent artwork: baby reaching toward a large ball while lying on a mat, warm caregiver nearby with open hands, no hand-over-hand control. No apparatus, score, forced completed movement or isolated child. The image cannot establish how the baby entered the depicted position."
+    },
+    {
+      "path": "public/art/home-paper-toddler.webp",
+      "sha256": "6590e3b468d918f375cf5fd7ea2362b45e511f0d41c0b1a7113b2b5b6ae2d422",
+      "inspection": "Inspected original 1536x1024 transparent artwork: toddler independently holding a pitcher and cup at a low table; caregiver nearby; cloth on table; crayons on shelf top, paper on middle shelf, shoe basket ON bottom shelf. This is a calm moment, not evidence that all toddlers must pour without spilling."
+    },
+    {
+      "path": "tmp/design-critique/round-16.png",
+      "sha256": "a97d5d57820c47fb1d94185c26961b481e122ed3e56fda3fed8f2d90c9fe0ec7",
+      "inspection": "Inspected accepted 1280x1000 Baby/Reach home screenshot. Confirmed integrated title, numbered choices, visible invitation and cue, category, action CTA, age selector, generic art caption and footer. The Follow your child’s pace text is in collapsed About this companion, not visible in this screenshot."
+    }
+  ],
+  "sharedFramingAssessment": {
+    "verdict": "pass-for-bounded-tone-scope",
+    "finding": "A home within reach, the generic illustration caption and the start-with-what-you-have footer invite participation without a required room aesthetic. Three numbered choices are navigation rather than a three-activity quota. Original summaries/inspired-by wording is honest about the companion but insufficient for the movement entry’s specific sensitive instructions. The age label gives no explicit deadline, while interest/help/no-response/no-fastening qualifications do substantive work in the entries.",
+    "optionalPilotImprovement": "Make age-as-browsing and follow-interest guidance visible near age selection rather than relying only on the collapsed colophon. Do not add a promise that every developmental concern will resolve with time. The full pilots still need substantive adult/family content; six starting prototypes cannot stand in for that coverage."
+  },
+  "reviews": [
+    {
+      "id": "prototype-tone.2026-09-10.6-9.baby-movement",
+      "reviewer": {
+        "identity": "Codex independent spirit/tone reviewer",
+        "task": "/root/prototype_tone_review",
+        "role": "spirit-tone",
+        "reasoning": "xhigh",
+        "date": "2026-09-10",
+        "independence": "Fresh reviewer; not the content author or source reviewer. No other prototype review output read and no verdict coordination."
+      },
+      "entryId": "baby-movement",
+      "placementId": "6-9.baby-movement",
+      "ageId": "6-9",
+      "ageLabel": "6–9 months",
+      "openingOrder": 1,
+      "topicIds": [
+        "play-discovery"
+      ],
+      "snapshot": {
+        "path": "content/pilots/PROTOTYPE_BASELINE.json",
+        "fileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "jsonPointer": "/snapshots/0"
+      },
+      "draft": {
+        "path": "src/content.js",
+        "revision": "legacy-prototype preserved in the 2026-09-10 baseline",
+        "fileSha256": "73a023d71b537d9fcb9017ef5018be44a869f11068882ddeddcebecc010da77e",
+        "authority": "Exact reader projection is the frozen snapshot, not a mutable future src/content.js revision."
+      },
+      "textPlacementSha256": "e67c9fd3559b114970e0967e2417ff7b8ab11f3a534bef5f278167ce552b4c31",
+      "artContextSha256": "8b58ddf2fd4ea58f6d00fd89f35c0e31d78c510ddd8a8d68e0de1fee456e7806",
+      "publicProjectionSha256": "ebe48d8b8bc009a24ce053b1ba826817ce344d94d36408b70318226b426eca6d",
+      "actualSourceReadLogIds": [
+        "tone.baby.framing.text",
+        "tone.baby.entries.text",
+        "tone.baby.supplement.text",
+        "tone.baby.visual"
+      ],
+      "verdict": "revise",
+      "textPlacement": {
+        "component": "text-placement",
+        "componentSha256": "e67c9fd3559b114970e0967e2417ff7b8ab11f3a534bef5f278167ce552b4c31",
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "tone.baby-movement.descriptive-framing",
+            "severity": "high",
+            "status": "open",
+            "surfaces": [
+              "opening",
+              "topic:play-discovery",
+              "entry-detail"
+            ],
+            "fields": [
+              "entry.kind",
+              "entry.invitation",
+              "entry.summary",
+              "entry.steps",
+              "entry.principle.text",
+              "displayContext.openingCTA",
+              "displayContext.headings"
+            ],
+            "finding": "Positioning/movement is safety-sensitive under the editorial charter. The public imperative setup and positioning language, together with Try this together/Try it together, function as companion-issued care instructions. A reference at the end or a private evidence caveat does not make this a descriptive summary of the authors’ view.",
+            "sourceReadLogIds": [
+              "tone.baby.entries.text",
+              "tone.baby.supplement.text",
+              "tone.baby.visual"
+            ],
+            "sourceContext": [
+              {
+                "sourceId": "baby-2021",
+                "pdfPages": [
+                  {
+                    "start": 107,
+                    "end": 108
+                  },
+                  {
+                    "start": 119,
+                    "end": 120
+                  },
+                  {
+                    "start": 125,
+                    "end": 126
+                  },
+                  {
+                    "start": 157,
+                    "end": 162
+                  }
+                ]
+              }
+            ],
+            "suggestedRevision": "Recast the public entry as a book perspective, with an opening and topic summary that explicitly describe the authors’ approach. Remove the imperative care checklist and use an appropriate Read more CTA/kind presentation. A reviewable opening direction is: The authors describe observing the movements a baby already uses and adjusting the space and help around them. This is proposed wording, not an approved replacement. Preserve the book’s individual-pace and help qualifications in public detail; do not append outside positioning or material advice.",
+            "resolution": null,
+            "reReview": null
+          },
+          {
+            "id": "tone.baby-movement.overbroad-position-rule",
+            "severity": "high",
+            "status": "open",
+            "surfaces": [
+              "entry-detail",
+              "opening-art-context"
+            ],
+            "fields": [
+              "entry.principle.text"
+            ],
+            "finding": "The instruction about not putting a baby into positions they cannot yet reach themselves broadens a qualified discussion into an absolute rule. It can imply that ordinary lying on the tummy/back or being held must also wait for independent entry into those positions, and can make the depicted tummy position read as an achievement requirement. The original page specifically discusses propping into sitting/standing and separately describes lying on the back or stomach when not held.",
+            "sourceReadLogIds": [
+              "tone.baby.entries.text",
+              "tone.baby.visual"
+            ],
+            "sourceContext": [
+              {
+                "sourceId": "baby-2021",
+                "pdfPages": [
+                  {
+                    "start": 107,
+                    "end": 108
+                  },
+                  {
+                    "start": 159,
+                    "end": 159
+                  }
+                ]
+              }
+            ],
+            "suggestedRevision": "In descriptive prose, preserve the distinction rather than the broad prohibition: The authors distinguish lying on the back or tummy from propping a baby into sitting or standing before they can get there independently. Retain context that help is available; do not convert this suggested summary back into a positioning command. The source reviewer must review the exact revised wording and reference.",
+            "resolution": null,
+            "reReview": null
+          }
+        ],
+        "surfaceAssessments": {
+          "opening": {
+            "reviewedFields": [
+              "title",
+              "category",
+              "actionLabel",
+              "invitation",
+              "cue",
+              "openingCTA",
+              "ageLabel",
+              "scene caption",
+              "footer",
+              "colophon visibility"
+            ],
+            "assessment": "The observation question, nearby adult, and focus on current movement are respectful. However, the imperative floor-space invitation, Reach label, active tummy scene and Try this together CTA collectively read as movement guidance issued by the companion. Descriptive framing is needed on this short surface, not only in the full reading."
+          },
+          "topics": [
+            {
+              "topicId": "play-discovery",
+              "label": "Play & discovery",
+              "reviewedFields": [
+                "kindLabel",
+                "title",
+                "summary",
+                "ageLabel",
+                "footer",
+                "colophon visibility"
+              ],
+              "assessment": "Play & discovery is a sensible retrieval topic, but Make room for your baby’s own movement is still a direct movement instruction without descriptive source framing. No independent developmental deadline is stated; the broad body-position prohibition in detail remains material."
+            }
+          ],
+          "entryDetail": {
+            "reviewedFields": [
+              "kind",
+              "kindLabel",
+              "title",
+              "summary",
+              "cue",
+              "steps[0]",
+              "steps[1]",
+              "steps[2]",
+              "principle.text",
+              "references[0].sourceId",
+              "references[0].section",
+              "references[0].legacyPageLabel",
+              "referenceLabels",
+              "headings",
+              "referenceNote",
+              "placement",
+              "ageContext absence"
+            ],
+            "assessment": "The entry preserves observing current abilities and offering help when frustrated, with no repetitions target or guaranteed outcome. Revise the broad position rule and imperative care structure. Do not erase the specific helpful observation/help relationship when rewriting."
+          },
+          "directEntryAndTopicBackLinks": "The direct entry and each listed topic use the same canonical full text; return labels supply navigation, not new activity claims. All listed age/topic presentations were reviewed; no unlisted age reuse is approved."
+        },
+        "checks": {
+          "agencyAndParticipation": "The child chooses the direction/interest. This survives in the proposed revision.",
+          "ageAndDeadline": "6-9 is a browsing selection; current movement is acknowledged rather than a crawling deadline. In revised descriptive copy, preserve the authors’ no-speeding-development frame; do not convert the belly pose into a required ability. There is no public ageContext in the frozen placement.",
+          "familyFeasibilityAndShopping": "No required purchase or dedicated room; nearby presence and modest floor space. Help should remain available in the rewrite rather than becoming a fixed small allotment.",
+          "safetySensitiveTreatment": "Requires descriptive-only revision for positioning/movement. No outside safety protocol supplied by this review.",
+          "helpAndLimits": "Checked available help, necessary limits and absence of demands for independent completion against the page logs and per-surface assessment. No implication that respectful guidance means neglecting a child’s need for help was accepted.",
+          "performanceAndInventedReassurance": "No scores, schedules, streaks, required shopping, parental grades, guaranteed developmental outcomes or generic every-child-will-get-there reassurance in this frozen entry. The pouring topic manageability claim and movement position rule are separately raised where applicable.",
+          "referencePresentation": "Inspected exact labels and section/page strings. Reader-facing prototype references are end-of-entry provenance; they are not an attribution mechanism for every preceding imperative and cannot repair a missing public qualification."
+        },
+        "resolution": null,
+        "reReview": null
+      },
+      "artContext": {
+        "component": "art-context",
+        "componentSha256": "8b58ddf2fd4ea58f6d00fd89f35c0e31d78c510ddd8a8d68e0de1fee456e7806",
+        "verdict": "revise",
+        "scene": {
+          "id": "home-paper-baby",
+          "ageId": "6-9",
+          "layout": "open-left",
+          "sourceId": "baby-2021",
+          "src": "art/home-paper-baby.webp",
+          "alt": "An illustrated home: a baby on their tummy reaches toward a soft ball on a mat, with a caregiver sitting beside them.",
+          "width": 1536,
+          "height": 1024,
+          "caption": "Follow what catches their attention."
+        },
+        "assets": [
+          {
+            "src": "art/home-paper-baby.webp",
+            "sha256": "fb09c915ce18725df3f0ef1818fc0072116d2d97c6dbc45eb7578dda55dbc922"
+          }
+        ],
+        "boundTextPlacementSha256": "e67c9fd3559b114970e0967e2417ff7b8ab11f3a534bef5f278167ce552b4c31",
+        "assessment": "Warm, available adult and an unforced reach fit the source spirit. No anatomical, purchasing or performance defect identified in the bitmap. The exact art-plus-text component is nevertheless revise: its active tummy scene makes the current care/propping rule actionable. This verdict does not require new art; correct the text and renew art-context review for the resulting hash.",
+        "issues": [
+          {
+            "id": "tone.baby-movement.descriptive-framing",
+            "severity": "high",
+            "status": "open",
+            "surfaces": [
+              "opening",
+              "topic:play-discovery",
+              "entry-detail"
+            ],
+            "fields": [
+              "entry.kind",
+              "entry.invitation",
+              "entry.summary",
+              "entry.steps",
+              "entry.principle.text",
+              "displayContext.openingCTA",
+              "displayContext.headings"
+            ],
+            "finding": "Positioning/movement is safety-sensitive under the editorial charter. The public imperative setup and positioning language, together with Try this together/Try it together, function as companion-issued care instructions. A reference at the end or a private evidence caveat does not make this a descriptive summary of the authors’ view.",
+            "sourceReadLogIds": [
+              "tone.baby.entries.text",
+              "tone.baby.supplement.text",
+              "tone.baby.visual"
+            ],
+            "sourceContext": [
+              {
+                "sourceId": "baby-2021",
+                "pdfPages": [
+                  {
+                    "start": 107,
+                    "end": 108
+                  },
+                  {
+                    "start": 119,
+                    "end": 120
+                  },
+                  {
+                    "start": 125,
+                    "end": 126
+                  },
+                  {
+                    "start": 157,
+                    "end": 162
+                  }
+                ]
+              }
+            ],
+            "suggestedRevision": "Recast the public entry as a book perspective, with an opening and topic summary that explicitly describe the authors’ approach. Remove the imperative care checklist and use an appropriate Read more CTA/kind presentation. A reviewable opening direction is: The authors describe observing the movements a baby already uses and adjusting the space and help around them. This is proposed wording, not an approved replacement. Preserve the book’s individual-pace and help qualifications in public detail; do not append outside positioning or material advice.",
+            "resolution": null,
+            "reReview": null
+          },
+          {
+            "id": "tone.baby-movement.overbroad-position-rule",
+            "severity": "high",
+            "status": "open",
+            "surfaces": [
+              "entry-detail",
+              "opening-art-context"
+            ],
+            "fields": [
+              "entry.principle.text"
+            ],
+            "finding": "The instruction about not putting a baby into positions they cannot yet reach themselves broadens a qualified discussion into an absolute rule. It can imply that ordinary lying on the tummy/back or being held must also wait for independent entry into those positions, and can make the depicted tummy position read as an achievement requirement. The original page specifically discusses propping into sitting/standing and separately describes lying on the back or stomach when not held.",
+            "sourceReadLogIds": [
+              "tone.baby.entries.text",
+              "tone.baby.visual"
+            ],
+            "sourceContext": [
+              {
+                "sourceId": "baby-2021",
+                "pdfPages": [
+                  {
+                    "start": 107,
+                    "end": 108
+                  },
+                  {
+                    "start": 159,
+                    "end": 159
+                  }
+                ]
+              }
+            ],
+            "suggestedRevision": "In descriptive prose, preserve the distinction rather than the broad prohibition: The authors distinguish lying on the back or tummy from propping a baby into sitting or standing before they can get there independently. Retain context that help is available; do not convert this suggested summary back into a positioning command. The source reviewer must review the exact revised wording and reference.",
+            "resolution": null,
+            "reReview": null
+          }
+        ],
+        "keyMomentIllustration": null,
+        "resolution": null,
+        "reReview": null
+      }
+    },
+    {
+      "id": "prototype-tone.2026-09-10.6-9.baby-language",
+      "reviewer": {
+        "identity": "Codex independent spirit/tone reviewer",
+        "task": "/root/prototype_tone_review",
+        "role": "spirit-tone",
+        "reasoning": "xhigh",
+        "date": "2026-09-10",
+        "independence": "Fresh reviewer; not the content author or source reviewer. No other prototype review output read and no verdict coordination."
+      },
+      "entryId": "baby-language",
+      "placementId": "6-9.baby-language",
+      "ageId": "6-9",
+      "ageLabel": "6–9 months",
+      "openingOrder": 2,
+      "topicIds": [
+        "play-discovery"
+      ],
+      "snapshot": {
+        "path": "content/pilots/PROTOTYPE_BASELINE.json",
+        "fileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "jsonPointer": "/snapshots/1"
+      },
+      "draft": {
+        "path": "src/content.js",
+        "revision": "legacy-prototype preserved in the 2026-09-10 baseline",
+        "fileSha256": "73a023d71b537d9fcb9017ef5018be44a869f11068882ddeddcebecc010da77e",
+        "authority": "Exact reader projection is the frozen snapshot, not a mutable future src/content.js revision."
+      },
+      "textPlacementSha256": "00bdc6bc9376439798adcb8fa48fa27a165e99c2206dc051787b504dd45a1447",
+      "artContextSha256": "3492ca2e8cc9516de111e703aca541880d76fb65cc1f125871b7f70ee7601d8d",
+      "publicProjectionSha256": "b55c3d02c18782a1b853b5bb43e88a46eaae014e472f0104d3f43423e1ecf2db",
+      "actualSourceReadLogIds": [
+        "tone.baby.framing.text",
+        "tone.baby.entries.text",
+        "tone.baby.visual"
+      ],
+      "verdict": "pass",
+      "textPlacement": {
+        "component": "text-placement",
+        "componentSha256": "00bdc6bc9376439798adcb8fa48fa27a165e99c2206dc051787b504dd45a1447",
+        "verdict": "pass",
+        "issues": [],
+        "surfaceAssessments": {
+          "opening": {
+            "reviewedFields": [
+              "title",
+              "category",
+              "actionLabel",
+              "invitation",
+              "cue",
+              "openingCTA",
+              "ageLabel",
+              "scene caption",
+              "footer",
+              "colophon visibility"
+            ],
+            "assessment": "Listen and Give that sound a name follow an observed sound. The visible cue includes gestures and an explicit absence of a response requirement; leaving room for a reply is not a request to perform. The generic scene does not prescribe a sound-making toy."
+          },
+          "topics": [
+            {
+              "topicId": "play-discovery",
+              "label": "Play & discovery",
+              "reviewedFields": [
+                "kindLabel",
+                "title",
+                "summary",
+                "ageLabel",
+                "footer",
+                "colophon visibility"
+              ],
+              "assessment": "The title/summary invite sharing words around a sound the baby already notices; leave space for their response allows a response rather than demanding one. No quiz, recognition test or claim that a six-month-old must name/answer is introduced on this shorter surface."
+            }
+          ],
+          "entryDetail": {
+            "reviewedFields": [
+              "kind",
+              "kindLabel",
+              "title",
+              "summary",
+              "cue",
+              "steps[0]",
+              "steps[1]",
+              "steps[2]",
+              "principle.text",
+              "references[0].sourceId",
+              "references[0].section",
+              "references[0].legacyPageLabel",
+              "referenceLabels",
+              "headings",
+              "referenceNote",
+              "placement",
+              "ageContext absence"
+            ],
+            "assessment": "The sequence notices an everyday sound, names it, and responds only if the exchange continues. The principle explains reciprocal participation without an output target. No need to reproduce the book’s age-linked vocal-development predictions or its broader hearing-monitoring discussion in this narrow conversation invitation; the entry does not purport to screen hearing or reassure about developmental concerns."
+          },
+          "directEntryAndTopicBackLinks": "The direct entry and each listed topic use the same canonical full text; return labels supply navigation, not new activity claims. All listed age/topic presentations were reviewed; no unlisted age reuse is approved."
+        },
+        "checks": {
+          "agencyAndParticipation": "Baby’s attention starts the exchange; a look, movement or sound can count, and no response is required.",
+          "ageAndDeadline": "The label is consistent with the source’s naming-sounds section at PDF 135, while conversational turns continue earlier material. Public cues allow varied responses; no deadline or progress guarantee. No ageContext is present; the full pilot still needs its evidence rationale.",
+          "familyFeasibilityAndShopping": "Everyday sound and a few words require no purchase, specially prepared room, lesson length or performance of constant narration.",
+          "safetySensitiveTreatment": "This is an ordinary reciprocal-communication invitation, not hearing/developmental assessment or physical care instruction. No new sensitive advice identified.",
+          "helpAndLimits": "Checked available help, necessary limits and absence of demands for independent completion against the page logs and per-surface assessment. No implication that respectful guidance means neglecting a child’s need for help was accepted.",
+          "performanceAndInventedReassurance": "No scores, schedules, streaks, required shopping, parental grades, guaranteed developmental outcomes or generic every-child-will-get-there reassurance in this frozen entry. The pouring topic manageability claim and movement position rule are separately raised where applicable.",
+          "referencePresentation": "Inspected exact labels and section/page strings. Reader-facing prototype references are end-of-entry provenance; they are not an attribution mechanism for every preceding imperative and cannot repair a missing public qualification."
+        },
+        "resolution": null,
+        "reReview": null
+      },
+      "artContext": {
+        "component": "art-context",
+        "componentSha256": "3492ca2e8cc9516de111e703aca541880d76fb65cc1f125871b7f70ee7601d8d",
+        "verdict": "pass",
+        "scene": {
+          "id": "home-paper-baby",
+          "ageId": "6-9",
+          "layout": "open-left",
+          "sourceId": "baby-2021",
+          "src": "art/home-paper-baby.webp",
+          "alt": "An illustrated home: a baby on their tummy reaches toward a soft ball on a mat, with a caregiver sitting beside them.",
+          "width": 1536,
+          "height": 1024,
+          "caption": "Follow what catches their attention."
+        },
+        "assets": [
+          {
+            "src": "art/home-paper-baby.webp",
+            "sha256": "fb09c915ce18725df3f0ef1818fc0072116d2d97c6dbc45eb7578dda55dbc922"
+          }
+        ],
+        "boundTextPlacementSha256": "00bdc6bc9376439798adcb8fa48fa27a165e99c2206dc051787b504dd45a1447",
+        "assessment": "Pass as a shared age scene, not a literal sound-naming demonstration. The baby can attend to something while an adult is available, and the caption follows attention. No visual demand for eye contact or a verbal reply. The tummy/ball pose does not become a prescribed setup in this entry’s current wording.",
+        "issues": [],
+        "keyMomentIllustration": null,
+        "resolution": null,
+        "reReview": null
+      }
+    },
+    {
+      "id": "prototype-tone.2026-09-10.6-9.baby-connection",
+      "reviewer": {
+        "identity": "Codex independent spirit/tone reviewer",
+        "task": "/root/prototype_tone_review",
+        "role": "spirit-tone",
+        "reasoning": "xhigh",
+        "date": "2026-09-10",
+        "independence": "Fresh reviewer; not the content author or source reviewer. No other prototype review output read and no verdict coordination."
+      },
+      "entryId": "baby-connection",
+      "placementId": "6-9.baby-connection",
+      "ageId": "6-9",
+      "ageLabel": "6–9 months",
+      "openingOrder": 3,
+      "topicIds": [
+        "connection-feelings",
+        "everyday-care"
+      ],
+      "snapshot": {
+        "path": "content/pilots/PROTOTYPE_BASELINE.json",
+        "fileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "jsonPointer": "/snapshots/2"
+      },
+      "draft": {
+        "path": "src/content.js",
+        "revision": "legacy-prototype preserved in the 2026-09-10 baseline",
+        "fileSha256": "73a023d71b537d9fcb9017ef5018be44a869f11068882ddeddcebecc010da77e",
+        "authority": "Exact reader projection is the frozen snapshot, not a mutable future src/content.js revision."
+      },
+      "textPlacementSha256": "3616b3660520d85fa0b1a4e8c205c506884f329925a15587e42a0ee031e51966",
+      "artContextSha256": "8f7be6cb7adcd609a64f6e29b09dfcaceed887617221af740e05479e594e279c",
+      "publicProjectionSha256": "52c80831ef97ed4b01c7045652fa2c712f7acd8d26e6a9b253a9bbff42cf1ccb",
+      "actualSourceReadLogIds": [
+        "tone.baby.framing.text",
+        "tone.baby.entries.text",
+        "tone.baby.supplement.text",
+        "tone.baby.visual"
+      ],
+      "verdict": "pass",
+      "textPlacement": {
+        "component": "text-placement",
+        "componentSha256": "3616b3660520d85fa0b1a4e8c205c506884f329925a15587e42a0ee031e51966",
+        "verdict": "pass",
+        "issues": [],
+        "surfaceAssessments": {
+          "opening": {
+            "reviewedFields": [
+              "title",
+              "category",
+              "actionLabel",
+              "invitation",
+              "cue",
+              "openingCTA",
+              "ageLabel",
+              "scene caption",
+              "footer",
+              "colophon visibility"
+            ],
+            "assessment": "The word unhurried is already in the short invitation, so the pause is not a universal command to postpone every pickup. Observable expressions/posture preserve participation without diagnosing the baby’s inner state or asking for a particular answer."
+          },
+          "topics": [
+            {
+              "topicId": "connection-feelings",
+              "label": "Connection & feelings",
+              "reviewedFields": [
+                "kindLabel",
+                "title",
+                "summary",
+                "ageLabel",
+                "footer",
+                "colophon visibility"
+              ],
+              "assessment": "The summary frames an ordinary pickup as a small exchange, with gentle approach, an announced intention and noticing a response. It does not order waiting for permission or promise a secure attachment. The title’s pause is understandable in this relational setting."
+            },
+            {
+              "topicId": "everyday-care",
+              "label": "Everyday care",
+              "reviewedFields": [
+                "kindLabel",
+                "title",
+                "summary",
+                "ageLabel",
+                "footer",
+                "colophon visibility"
+              ],
+              "assessment": "In a care topic, the short summary still does not instruct delay or condition necessary care on a yes. In full detail, when pickup can wait and necessary care/immediate protection do not need to wait preserve the adult’s responsibility. Keep those public phrases together in future revisions."
+            }
+          ],
+          "entryDetail": {
+            "reviewedFields": [
+              "kind",
+              "kindLabel",
+              "title",
+              "summary",
+              "cue",
+              "steps[0]",
+              "steps[1]",
+              "steps[2]",
+              "principle.text",
+              "references[0].sourceId",
+              "references[0].section",
+              "references[0].legacyPageLabel",
+              "referenceLabels",
+              "headings",
+              "referenceNote",
+              "placement",
+              "ageContext absence"
+            ],
+            "assessment": "The invitation is about communication and participation, not the mechanics of lifting. When pickup can wait makes the response meaningful without treating the baby’s gesture as an absolute veto. The public principle explicitly preserves necessary care and immediate protection. There is no demand for perfect slowness or blame for ordinary necessary care."
+          },
+          "directEntryAndTopicBackLinks": "The direct entry and each listed topic use the same canonical full text; return labels supply navigation, not new activity claims. All listed age/topic presentations were reviewed; no unlisted age reuse is approved."
+        },
+        "checks": {
+          "agencyAndParticipation": "The baby’s response changes the interaction when there is a real choice, and the adult remains responsible for care and limits.",
+          "ageAndDeadline": "This is a reusable relational principle applied to the 6-9 browsing band; no age-specific ability or response is demanded. The final evidence placement must still distinguish broad book framing from editorial grouping.",
+          "familyFeasibilityAndShopping": "An ordinary interaction, not a new task or a long ritual. Explicitly excludes care that cannot wait, respecting family constraints.",
+          "safetySensitiveTreatment": "The public copy limits the invitation to unhurried moments and retains an immediate-protection exception. It supplies no lifting posture/technique and no instruction to wait during necessary care. This bounded relational entry passes tone; that is not independent safety validation.",
+          "helpAndLimits": "Checked available help, necessary limits and absence of demands for independent completion against the page logs and per-surface assessment. No implication that respectful guidance means neglecting a child’s need for help was accepted.",
+          "performanceAndInventedReassurance": "No scores, schedules, streaks, required shopping, parental grades, guaranteed developmental outcomes or generic every-child-will-get-there reassurance in this frozen entry. The pouring topic manageability claim and movement position rule are separately raised where applicable.",
+          "referencePresentation": "Inspected exact labels and section/page strings. Reader-facing prototype references are end-of-entry provenance; they are not an attribution mechanism for every preceding imperative and cannot repair a missing public qualification."
+        },
+        "resolution": null,
+        "reReview": null
+      },
+      "artContext": {
+        "component": "art-context",
+        "componentSha256": "8f7be6cb7adcd609a64f6e29b09dfcaceed887617221af740e05479e594e279c",
+        "verdict": "pass",
+        "scene": {
+          "id": "home-paper-baby",
+          "ageId": "6-9",
+          "layout": "open-left",
+          "sourceId": "baby-2021",
+          "src": "art/home-paper-baby.webp",
+          "alt": "An illustrated home: a baby on their tummy reaches toward a soft ball on a mat, with a caregiver sitting beside them.",
+          "width": 1536,
+          "height": 1024,
+          "caption": "Follow what catches their attention."
+        },
+        "assets": [
+          {
+            "src": "art/home-paper-baby.webp",
+            "sha256": "fb09c915ce18725df3f0ef1818fc0072116d2d97c6dbc45eb7578dda55dbc922"
+          }
+        ],
+        "boundTextPlacementSha256": "3616b3660520d85fa0b1a4e8c205c506884f329925a15587e42a0ee031e51966",
+        "assessment": "Pass as a shared age scene: the adult is near and available with open hands; the child remains engaged with the ball rather than being forced to smile, make eye contact or be lifted. The image is not labeled as a literal pickup technique. No new holding mechanics are inferred from it.",
+        "issues": [],
+        "keyMomentIllustration": null,
+        "resolution": null,
+        "reReview": null
+      }
+    },
+    {
+      "id": "prototype-tone.2026-09-10.18-24.toddler-pouring",
+      "reviewer": {
+        "identity": "Codex independent spirit/tone reviewer",
+        "task": "/root/prototype_tone_review",
+        "role": "spirit-tone",
+        "reasoning": "xhigh",
+        "date": "2026-09-10",
+        "independence": "Fresh reviewer; not the content author or source reviewer. No other prototype review output read and no verdict coordination."
+      },
+      "entryId": "toddler-pouring",
+      "placementId": "18-24.toddler-pouring",
+      "ageId": "18-24",
+      "ageLabel": "18–24 months",
+      "openingOrder": 1,
+      "topicIds": [
+        "play-discovery"
+      ],
+      "snapshot": {
+        "path": "content/pilots/PROTOTYPE_BASELINE.json",
+        "fileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "jsonPointer": "/snapshots/3"
+      },
+      "draft": {
+        "path": "src/content.js",
+        "revision": "legacy-prototype preserved in the 2026-09-10 baseline",
+        "fileSha256": "73a023d71b537d9fcb9017ef5018be44a869f11068882ddeddcebecc010da77e",
+        "authority": "Exact reader projection is the frozen snapshot, not a mutable future src/content.js revision."
+      },
+      "textPlacementSha256": "e1cc51dfa7548fc1a081a5cdfb95644f61a943e2f91367a5531e325c6ac9a420",
+      "artContextSha256": "0d4f84e1c55dce4e4dc2f4f0261d0590585512924c70c60f607555110ddedb61",
+      "publicProjectionSha256": "0483a6fa97ea9bf96230c568cb61748b2714647ed3641788873ffb8bfb699cd9",
+      "actualSourceReadLogIds": [
+        "tone.toddler.framing.text",
+        "tone.toddler.entries.text",
+        "tone.toddler.visual",
+        "tone.toddler.cited-folios.visual"
+      ],
+      "verdict": "revise",
+      "textPlacement": {
+        "component": "text-placement",
+        "componentSha256": "e1cc51dfa7548fc1a081a5cdfb95644f61a943e2f91367a5531e325c6ac9a420",
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "tone.toddler-pouring.topic-readiness",
+            "severity": "medium",
+            "status": "open",
+            "surfaces": [
+              "topic:play-discovery",
+              "entry-summary"
+            ],
+            "fields": [
+              "entry.summary",
+              "placement.ageContext"
+            ],
+            "finding": "The topic list shows only the title and summary. There, a small pitcher and cup are said to give YOUR toddler a manageable way to pour, under the 18-24-month label. The meaningful qualification in the cue (interest and ability to manage the pitcher) is absent on this surface. This changes an observed possibility into a general assurance of suitability for the selected age.",
+            "sourceReadLogIds": [
+              "tone.toddler.framing.text",
+              "tone.toddler.entries.text"
+            ],
+            "sourceContext": [
+              {
+                "sourceId": "toddler-2019",
+                "pdfPages": [
+                  {
+                    "start": 29,
+                    "end": 29
+                  },
+                  {
+                    "start": 33,
+                    "end": 36
+                  },
+                  {
+                    "start": 49,
+                    "end": 51
+                  },
+                  {
+                    "start": 251,
+                    "end": 251
+                  }
+                ]
+              }
+            ],
+            "suggestedRevision": "Carry interest and manageability into the summary itself. Proposed direction: If your toddler is interested in pouring, a small pitcher they can manage offers a way to take part, with you nearby to help. Preserve the cue, low quantity of water, readiness adjustment and help; do not make pouring neatly or independently an 18-24-month expectation. This replacement requires fresh review.",
+            "resolution": null,
+            "reReview": null
+          }
+        ],
+        "surfaceAssessments": {
+          "opening": {
+            "reviewedFields": [
+              "title",
+              "category",
+              "actionLabel",
+              "invitation",
+              "cue",
+              "openingCTA",
+              "ageLabel",
+              "scene caption",
+              "footer",
+              "colophon visibility"
+            ],
+            "assessment": "The short materials list and demonstration are paired with a visible cue that says interest and ability to manage the pitcher. Cloth for spills and nearby help keep careful from becoming a spotless-result requirement. No timed practice or independence quota."
+          },
+          "topics": [
+            {
+              "topicId": "play-discovery",
+              "label": "Play & discovery",
+              "reviewedFields": [
+                "kindLabel",
+                "title",
+                "summary",
+                "ageLabel",
+                "footer",
+                "colophon visibility"
+              ],
+              "assessment": "Revise. The title and summary are shown without the cue. Manageable is asserted for the selected toddler although actual interest and ability are conditions elsewhere. Put that qualification into the summary rather than relying on the full entry or private age evidence."
+            }
+          ],
+          "entryDetail": {
+            "reviewedFields": [
+              "kind",
+              "kindLabel",
+              "title",
+              "summary",
+              "cue",
+              "steps[0]",
+              "steps[1]",
+              "steps[2]",
+              "principle.text",
+              "references[0].sourceId",
+              "references[0].section",
+              "references[0].legacyPageLabel",
+              "referenceLabels",
+              "headings",
+              "referenceNote",
+              "placement",
+              "ageContext absence"
+            ],
+            "assessment": "The nearby adult, limited water, repetition and help are useful. Steps principally describe the adult’s setup/model/invitation; they do not require an under-two child to perform a three-step routine unaided. Follow their interest and spills are part of learning preserve exploration. Amend the opening summary of the detail as for the topic surface."
+          },
+          "directEntryAndTopicBackLinks": "The direct entry and each listed topic use the same canonical full text; return labels supply navigation, not new activity claims. All listed age/topic presentations were reviewed; no unlisted age reuse is approved."
+        },
+        "checks": {
+          "agencyAndParticipation": "Child interest is stated in the cue and principle; repetition is allowed. It must also qualify the topic summary’s manageability assurance.",
+          "ageAndDeadline": "The 18-24 label needs actual interest/manageability at the point where suitability is asserted. Appendix page 251 uses 18+; practical-life page 51 includes an earlier pouring example and keeps earlier activities available later. Do not turn either source age into an achievement deadline.",
+          "familyFeasibilityAndShopping": "Small quantity and a cloth are realistic, help remains available. Optional improvement: connect participation to an actual household moment and the adult’s available time rather than presenting a prescribed practice session.",
+          "safetySensitiveTreatment": "The frozen cup/pitcher invitation makes no hydration, feeding, breakable-material or independent medical-safety claim. This review adds no water, material or feeding protocol. If the final entry adds drinking/feeding or specific material safety guidance, reopen descriptive-only review.",
+          "helpAndLimits": "Checked available help, necessary limits and absence of demands for independent completion against the page logs and per-surface assessment. No implication that respectful guidance means neglecting a child’s need for help was accepted.",
+          "performanceAndInventedReassurance": "No scores, schedules, streaks, required shopping, parental grades, guaranteed developmental outcomes or generic every-child-will-get-there reassurance in this frozen entry. The pouring topic manageability claim and movement position rule are separately raised where applicable.",
+          "referencePresentation": "Inspected exact labels and section/page strings. Reader-facing prototype references are end-of-entry provenance; they are not an attribution mechanism for every preceding imperative and cannot repair a missing public qualification."
+        },
+        "resolution": null,
+        "reReview": null
+      },
+      "artContext": {
+        "component": "art-context",
+        "componentSha256": "0d4f84e1c55dce4e4dc2f4f0261d0590585512924c70c60f607555110ddedb61",
+        "verdict": "revise",
+        "scene": {
+          "id": "home-paper-toddler",
+          "ageId": "18-24",
+          "layout": "above-scene",
+          "sourceId": "toddler-2019",
+          "src": "art/home-paper-toddler.webp",
+          "alt": "An illustrated home: a toddler stands at a low table pouring water with a caregiver nearby. Paper and crayons wait on a low shelf, and shoes sit in a basket beside it.",
+          "width": 1536,
+          "height": 1024,
+          "caption": "Follow what catches their attention."
+        },
+        "assets": [
+          {
+            "src": "art/home-paper-toddler.webp",
+            "sha256": "6590e3b468d918f375cf5fd7ea2362b45e511f0d41c0b1a7113b2b5b6ae2d422"
+          }
+        ],
+        "boundTextPlacementSha256": "e1cc51dfa7548fc1a081a5cdfb95644f61a943e2f91367a5531e325c6ac9a420",
+        "assessment": "No forced hand control or perfect-parent demand in the bitmap: the caregiver is available and a cloth is visible. A fluent pour illustrates a possible moment rather than a required outcome when read with the cue. Exact component needs revision because it includes the readiness-losing summary, and the alt text incorrectly locates the shoe basket. New illustration is not required.",
+        "issues": [
+          {
+            "id": "tone.toddler-pouring.topic-readiness",
+            "severity": "medium",
+            "status": "open",
+            "surfaces": [
+              "topic:play-discovery",
+              "entry-summary"
+            ],
+            "fields": [
+              "entry.summary",
+              "placement.ageContext"
+            ],
+            "finding": "The topic list shows only the title and summary. There, a small pitcher and cup are said to give YOUR toddler a manageable way to pour, under the 18-24-month label. The meaningful qualification in the cue (interest and ability to manage the pitcher) is absent on this surface. This changes an observed possibility into a general assurance of suitability for the selected age.",
+            "sourceReadLogIds": [
+              "tone.toddler.framing.text",
+              "tone.toddler.entries.text"
+            ],
+            "sourceContext": [
+              {
+                "sourceId": "toddler-2019",
+                "pdfPages": [
+                  {
+                    "start": 29,
+                    "end": 29
+                  },
+                  {
+                    "start": 33,
+                    "end": 36
+                  },
+                  {
+                    "start": 49,
+                    "end": 51
+                  },
+                  {
+                    "start": 251,
+                    "end": 251
+                  }
+                ]
+              }
+            ],
+            "suggestedRevision": "Carry interest and manageability into the summary itself. Proposed direction: If your toddler is interested in pouring, a small pitcher they can manage offers a way to take part, with you nearby to help. Preserve the cue, low quantity of water, readiness adjustment and help; do not make pouring neatly or independently an 18-24-month expectation. This replacement requires fresh review.",
+            "resolution": null,
+            "reReview": null
+          },
+          {
+            "id": "tone.toddler-scene.alt-location",
+            "severity": "low",
+            "status": "open",
+            "surfaces": [
+              "opening-art-context",
+              "screen-reader-scene-description"
+            ],
+            "fields": [
+              "artContext.scene.alt"
+            ],
+            "finding": "The alt text places the shoe basket beside the low shelf; the frozen image places it on the shelf’s bottom level. The reachable-materials context is part of the public meaning and should be described accurately to a reader who cannot see the scene.",
+            "sourceReadLogIds": [
+              "tone.toddler.visual"
+            ],
+            "asset": "public/art/home-paper-toddler.webp",
+            "suggestedRevision": "Correct the scene metadata without changing the illustration. Proposed alt: A toddler pours from a small pitcher into a cup at a low table while a caregiver sits nearby. A cloth lies on the table; crayons, paper, and a basket of shoes are arranged on a low shelf. Re-snapshot every opening using this shared scene and renew its art-context review.",
+            "resolution": null,
+            "reReview": null
+          }
+        ],
+        "keyMomentIllustration": null,
+        "resolution": null,
+        "reReview": null
+      }
+    },
+    {
+      "id": "prototype-tone.2026-09-10.18-24.toddler-drawing",
+      "reviewer": {
+        "identity": "Codex independent spirit/tone reviewer",
+        "task": "/root/prototype_tone_review",
+        "role": "spirit-tone",
+        "reasoning": "xhigh",
+        "date": "2026-09-10",
+        "independence": "Fresh reviewer; not the content author or source reviewer. No other prototype review output read and no verdict coordination."
+      },
+      "entryId": "toddler-drawing",
+      "placementId": "18-24.toddler-drawing",
+      "ageId": "18-24",
+      "ageLabel": "18–24 months",
+      "openingOrder": 2,
+      "topicIds": [
+        "play-discovery"
+      ],
+      "snapshot": {
+        "path": "content/pilots/PROTOTYPE_BASELINE.json",
+        "fileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "jsonPointer": "/snapshots/4"
+      },
+      "draft": {
+        "path": "src/content.js",
+        "revision": "legacy-prototype preserved in the 2026-09-10 baseline",
+        "fileSha256": "73a023d71b537d9fcb9017ef5018be44a869f11068882ddeddcebecc010da77e",
+        "authority": "Exact reader projection is the frozen snapshot, not a mutable future src/content.js revision."
+      },
+      "textPlacementSha256": "3995b20b735f72eef95e5080b6b3c897d80e9c46b207daaec9af413b48fcb6db",
+      "artContextSha256": "0947ad318020a78b0a74d68cb9ddf112b95089692924c7355e929701f70615c6",
+      "publicProjectionSha256": "90b86c6feb033140939635050e3791d2962b7125e9b885d5eea3f7eef9a4a742",
+      "actualSourceReadLogIds": [
+        "tone.toddler.framing.text",
+        "tone.toddler.entries.text",
+        "tone.toddler.visual",
+        "tone.toddler.cited-folios.visual"
+      ],
+      "verdict": "revise",
+      "textPlacement": {
+        "component": "text-placement",
+        "componentSha256": "3995b20b735f72eef95e5080b6b3c897d80e9c46b207daaec9af413b48fcb6db",
+        "verdict": "pass",
+        "issues": [],
+        "surfaceAssessments": {
+          "opening": {
+            "reviewedFields": [
+              "title",
+              "category",
+              "actionLabel",
+              "invitation",
+              "cue",
+              "openingCTA",
+              "ageLabel",
+              "scene caption",
+              "footer",
+              "colophon visibility"
+            ],
+            "assessment": "Draw/Let the lines wander and scribbles are the discovery do not ask for an attractive product. A few crayons is a modest offer, and the visible cue follows actual interest in making marks."
+          },
+          "topics": [
+            {
+              "topicId": "play-discovery",
+              "label": "Play & discovery",
+              "reviewedFields": [
+                "kindLabel",
+                "title",
+                "summary",
+                "ageLabel",
+                "footer",
+                "colophon visibility"
+              ],
+              "assessment": "The summary promises an opportunity to discover marks, not a level of competence. It remains meaningful without a detailed cue because it leaves the marks open-ended and sets no product or accuracy criterion."
+            }
+          ],
+          "entryDetail": {
+            "reviewedFields": [
+              "kind",
+              "kindLabel",
+              "title",
+              "summary",
+              "cue",
+              "steps[0]",
+              "steps[1]",
+              "steps[2]",
+              "principle.text",
+              "references[0].sourceId",
+              "references[0].section",
+              "references[0].legacyPageLabel",
+              "referenceLabels",
+              "headings",
+              "referenceNote",
+              "placement",
+              "ageContext absence"
+            ],
+            "assessment": "Separate adult paper, a loose-line model and descriptive response retain the original art framing. The adult does not draw on the child’s work, ask what it is, improve it, or require a copy. When they seek a response does not outlaw warmth; it leaves concentrated work alone while permitting acknowledgment."
+          },
+          "directEntryAndTopicBackLinks": "The direct entry and each listed topic use the same canonical full text; return labels supply navigation, not new activity claims. All listed age/topic presentations were reviewed; no unlisted age reuse is approved."
+        },
+        "checks": {
+          "agencyAndParticipation": "Marks and the page belong to the child; no need to improve them or make a named picture.",
+          "ageAndDeadline": "18-24 is not paired with a finished-product, grip or representational-drawing milestone. The source discusses young toddlers broadly; the editorial band still needs its evidence rationale outside this tone pass.",
+          "familyFeasibilityAndShopping": "Paper and a few drawing tools; no brand, beeswax requirement, purchase hierarchy or demand for a lesson duration. The demonstration is small and can be shared alongside the child.",
+          "safetySensitiveTreatment": "No cutting, sewing, paint-ingestion or material-safety protocol has been added from the surrounding arts section. The narrow mark-making invitation does not borrow the 18-month scissors age. Source specificity of chunky crayons remains for the independent source reviewer.",
+          "helpAndLimits": "Checked available help, necessary limits and absence of demands for independent completion against the page logs and per-surface assessment. No implication that respectful guidance means neglecting a child’s need for help was accepted.",
+          "performanceAndInventedReassurance": "No scores, schedules, streaks, required shopping, parental grades, guaranteed developmental outcomes or generic every-child-will-get-there reassurance in this frozen entry. The pouring topic manageability claim and movement position rule are separately raised where applicable.",
+          "referencePresentation": "Inspected exact labels and section/page strings. Reader-facing prototype references are end-of-entry provenance; they are not an attribution mechanism for every preceding imperative and cannot repair a missing public qualification."
+        },
+        "resolution": null,
+        "reReview": null
+      },
+      "artContext": {
+        "component": "art-context",
+        "componentSha256": "0947ad318020a78b0a74d68cb9ddf112b95089692924c7355e929701f70615c6",
+        "verdict": "revise",
+        "scene": {
+          "id": "home-paper-toddler",
+          "ageId": "18-24",
+          "layout": "above-scene",
+          "sourceId": "toddler-2019",
+          "src": "art/home-paper-toddler.webp",
+          "alt": "An illustrated home: a toddler stands at a low table pouring water with a caregiver nearby. Paper and crayons wait on a low shelf, and shoes sit in a basket beside it.",
+          "width": 1536,
+          "height": 1024,
+          "caption": "Follow what catches their attention."
+        },
+        "assets": [
+          {
+            "src": "art/home-paper-toddler.webp",
+            "sha256": "6590e3b468d918f375cf5fd7ea2362b45e511f0d41c0b1a7113b2b5b6ae2d422"
+          }
+        ],
+        "boundTextPlacementSha256": "3995b20b735f72eef95e5080b6b3c897d80e9c46b207daaec9af413b48fcb6db",
+        "assessment": "The shelf supplies indicate availability; no completed picture to reproduce is shown. The pouring action remains an age-scene background, not a claim that drawing requires pouring. Warm nearby adult and paper/crayons fit the spirit. Revise only the inaccurate shared scene alt location; no bitmap replacement requested.",
+        "issues": [
+          {
+            "id": "tone.toddler-scene.alt-location",
+            "severity": "low",
+            "status": "open",
+            "surfaces": [
+              "opening-art-context",
+              "screen-reader-scene-description"
+            ],
+            "fields": [
+              "artContext.scene.alt"
+            ],
+            "finding": "The alt text places the shoe basket beside the low shelf; the frozen image places it on the shelf’s bottom level. The reachable-materials context is part of the public meaning and should be described accurately to a reader who cannot see the scene.",
+            "sourceReadLogIds": [
+              "tone.toddler.visual"
+            ],
+            "asset": "public/art/home-paper-toddler.webp",
+            "suggestedRevision": "Correct the scene metadata without changing the illustration. Proposed alt: A toddler pours from a small pitcher into a cup at a low table while a caregiver sits nearby. A cloth lies on the table; crayons, paper, and a basket of shoes are arranged on a low shelf. Re-snapshot every opening using this shared scene and renew its art-context review.",
+            "resolution": null,
+            "reReview": null
+          }
+        ],
+        "keyMomentIllustration": null,
+        "resolution": null,
+        "reReview": null
+      }
+    },
+    {
+      "id": "prototype-tone.2026-09-10.18-24.toddler-shoes",
+      "reviewer": {
+        "identity": "Codex independent spirit/tone reviewer",
+        "task": "/root/prototype_tone_review",
+        "role": "spirit-tone",
+        "reasoning": "xhigh",
+        "date": "2026-09-10",
+        "independence": "Fresh reviewer; not the content author or source reviewer. No other prototype review output read and no verdict coordination."
+      },
+      "entryId": "toddler-shoes",
+      "placementId": "18-24.toddler-shoes",
+      "ageId": "18-24",
+      "ageLabel": "18–24 months",
+      "openingOrder": 3,
+      "topicIds": [
+        "home-that-helps",
+        "everyday-care"
+      ],
+      "snapshot": {
+        "path": "content/pilots/PROTOTYPE_BASELINE.json",
+        "fileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "jsonPointer": "/snapshots/5"
+      },
+      "draft": {
+        "path": "src/content.js",
+        "revision": "legacy-prototype preserved in the 2026-09-10 baseline",
+        "fileSha256": "73a023d71b537d9fcb9017ef5018be44a869f11068882ddeddcebecc010da77e",
+        "authority": "Exact reader projection is the frozen snapshot, not a mutable future src/content.js revision."
+      },
+      "textPlacementSha256": "ddb0b7cb37a491fe059e0a39f7cbd6ea3f0ac674fc2803fd58478845f376f63c",
+      "artContextSha256": "2bfd2dd79f29fa23e378094853646c52ed908844f57ff09ada610f4ab09d2015",
+      "publicProjectionSha256": "26eb0b75b507692b14fc9b49179f03b811390b86ebf130662f58c921e7dab6bd",
+      "actualSourceReadLogIds": [
+        "tone.toddler.framing.text",
+        "tone.toddler.entries.text",
+        "tone.toddler.visual",
+        "tone.toddler.cited-folios.visual"
+      ],
+      "verdict": "revise",
+      "textPlacement": {
+        "component": "text-placement",
+        "componentSha256": "ddb0b7cb37a491fe059e0a39f7cbd6ea3f0ac674fc2803fd58478845f376f63c",
+        "verdict": "pass",
+        "issues": [],
+        "surfaceAssessments": {
+          "opening": {
+            "reviewedFields": [
+              "title",
+              "category",
+              "actionLabel",
+              "invitation",
+              "cue",
+              "openingCTA",
+              "ageLabel",
+              "scene caption",
+              "footer",
+              "colophon visibility"
+            ],
+            "assessment": "Put away is balanced by fetch or return a shoe, so the choice reads as participation rather than a demand to tidy independently. One reachable home has a clear practical purpose."
+          },
+          "topics": [
+            {
+              "topicId": "home-that-helps",
+              "label": "A home that helps",
+              "reviewedFields": [
+                "kindLabel",
+                "title",
+                "summary",
+                "ageLabel",
+                "footer",
+                "colophon visibility"
+              ],
+              "assessment": "The predictable, reachable place serves the child’s participation rather than aesthetic order or an ideal Montessori room. The summary does not require a particular furniture set or completing the arrival routine alone."
+            },
+            {
+              "topicId": "everyday-care",
+              "label": "Everyday care",
+              "reviewedFields": [
+                "kindLabel",
+                "title",
+                "summary",
+                "ageLabel",
+                "footer",
+                "colophon visibility"
+              ],
+              "assessment": "The same summary fits arriving/leaving with family. Take part avoids promising the child can get ready independently; full copy explicitly permits help and does not require fastening."
+            }
+          ],
+          "entryDetail": {
+            "reviewedFields": [
+              "kind",
+              "kindLabel",
+              "title",
+              "summary",
+              "cue",
+              "steps[0]",
+              "steps[1]",
+              "steps[2]",
+              "principle.text",
+              "references[0].sourceId",
+              "references[0].section",
+              "references[0].legacyPageLabel",
+              "referenceLabels",
+              "headings",
+              "referenceNote",
+              "placement",
+              "ageContext absence"
+            ],
+            "assessment": "The entry presents one small contribution and preserves help with the difficult part. Fetching/returning is enough does not grade the child; it counters the much harder expectation of fastening unaided. No requirement to finish faster, be helpful on demand, or reproduce a showroom."
+          },
+          "directEntryAndTopicBackLinks": "The direct entry and each listed topic use the same canonical full text; return labels supply navigation, not new activity claims. All listed age/topic presentations were reviewed; no unlisted age reuse is approved."
+        },
+        "checks": {
+          "agencyAndParticipation": "The child is invited to join a routine, with partial participation and adult help rather than compulsory self-sufficiency.",
+          "ageAndDeadline": "The earlier 12-18 fetch-shoes example is retained for later children by the source’s own framing. The public entry does not require fastening, introduce a by-age claim, or make the 18-24 range a deadline.",
+          "familyFeasibilityAndShopping": "A reachable consistent place and one shoe are feasible; help is named. Optional improvement: preserve the source’s basket-or-shelf alternative explicitly so the illustrative basket cannot feel like the only acceptable setup.",
+          "safetySensitiveTreatment": "This is an arrangement/participation invitation, not footwear fit, fall prevention or dressing safety advice. No sensitive protocol added.",
+          "helpAndLimits": "Checked available help, necessary limits and absence of demands for independent completion against the page logs and per-surface assessment. No implication that respectful guidance means neglecting a child’s need for help was accepted.",
+          "performanceAndInventedReassurance": "No scores, schedules, streaks, required shopping, parental grades, guaranteed developmental outcomes or generic every-child-will-get-there reassurance in this frozen entry. The pouring topic manageability claim and movement position rule are separately raised where applicable.",
+          "referencePresentation": "Inspected exact labels and section/page strings. Reader-facing prototype references are end-of-entry provenance; they are not an attribution mechanism for every preceding imperative and cannot repair a missing public qualification."
+        },
+        "resolution": null,
+        "reReview": null
+      },
+      "artContext": {
+        "component": "art-context",
+        "componentSha256": "2bfd2dd79f29fa23e378094853646c52ed908844f57ff09ada610f4ab09d2015",
+        "verdict": "revise",
+        "scene": {
+          "id": "home-paper-toddler",
+          "ageId": "18-24",
+          "layout": "above-scene",
+          "sourceId": "toddler-2019",
+          "src": "art/home-paper-toddler.webp",
+          "alt": "An illustrated home: a toddler stands at a low table pouring water with a caregiver nearby. Paper and crayons wait on a low shelf, and shoes sit in a basket beside it.",
+          "width": 1536,
+          "height": 1024,
+          "caption": "Follow what catches their attention."
+        },
+        "assets": [
+          {
+            "src": "art/home-paper-toddler.webp",
+            "sha256": "6590e3b468d918f375cf5fd7ea2362b45e511f0d41c0b1a7113b2b5b6ae2d422"
+          }
+        ],
+        "boundTextPlacementSha256": "ddb0b7cb37a491fe059e0a39f7cbd6ea3f0ac674fc2803fd58478845f376f63c",
+        "assessment": "The shoe basket is low and accessible, and shoes are not being fastened as a hidden 18-24-month benchmark. The adult and child are in a shared household scene. Revise the alt text to put the basket on the lower shelf as actually shown. No new furniture or art is required.",
+        "issues": [
+          {
+            "id": "tone.toddler-scene.alt-location",
+            "severity": "low",
+            "status": "open",
+            "surfaces": [
+              "opening-art-context",
+              "screen-reader-scene-description"
+            ],
+            "fields": [
+              "artContext.scene.alt"
+            ],
+            "finding": "The alt text places the shoe basket beside the low shelf; the frozen image places it on the shelf’s bottom level. The reachable-materials context is part of the public meaning and should be described accurately to a reader who cannot see the scene.",
+            "sourceReadLogIds": [
+              "tone.toddler.visual"
+            ],
+            "asset": "public/art/home-paper-toddler.webp",
+            "suggestedRevision": "Correct the scene metadata without changing the illustration. Proposed alt: A toddler pours from a small pitcher into a cup at a low table while a caregiver sits nearby. A cloth lies on the table; crayons, paper, and a basket of shoes are arranged on a low shelf. Re-snapshot every opening using this shared scene and renew its art-context review.",
+            "resolution": null,
+            "reReview": null
+          }
+        ],
+        "keyMomentIllustration": null,
+        "resolution": null,
+        "reReview": null
+      }
+    }
+  ],
+  "summary": {
+    "textPlacement": {
+      "pass": [
+        "baby-language",
+        "baby-connection",
+        "toddler-drawing",
+        "toddler-shoes"
+      ],
+      "revise": [
+        "baby-movement",
+        "toddler-pouring"
+      ],
+      "hold": []
+    },
+    "artContext": {
+      "pass": [
+        "baby-language",
+        "baby-connection"
+      ],
+      "revise": [
+        "baby-movement",
+        "toddler-pouring",
+        "toddler-drawing",
+        "toddler-shoes"
+      ],
+      "hold": []
+    },
+    "requiredChanges": [
+      "Recast baby-movement as descriptive book perspective and restore the specific propping/lying distinction.",
+      "Carry toddler-pouring’s interest/manageability qualification into its standalone topic summary.",
+      "Correct the toddler scene alt text to reflect the shoe basket on the lower shelf; renew all three toddler opening art-context hashes/reviews."
+    ],
+    "publicationState": "Unapproved. Tone passes apply only to the exact bounded components listed here. Independent source review, final evidence/reference/age treatment, full-research handoffs and reviewed pilots remain separate gates. Revised components need exact new snapshots and fresh affected reviews."
+  },
+  "learningsForCoordinator": [
+    {
+      "date": "2026-09-10",
+      "taskType": "Prototype spirit/tone review",
+      "observation": "In this HomeStudy renderer, topic rows show kind/title/summary without cue or ageContext. The pouring summary loses a readiness condition that is visible on its opening and full entry even though one textPlacement hash binds all those fields.",
+      "action": "When reviewing later canonical entries, inspect each topic title/summary as a standalone age presentation; retain any suitability condition in that summary when its wording asserts manageability.",
+      "confidence": "high"
+    }
+  ],
+  "ownership": "Only this JSON review and optional same-name Markdown are durable outputs. Original source PDFs, app files, baseline, shared documentation, other reviews and research directories were not edited. Coordinator owns any shared LEARNINGS update."
+}

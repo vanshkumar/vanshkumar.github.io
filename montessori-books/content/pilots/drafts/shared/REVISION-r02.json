@@ -1,0 +1,87 @@
+{
+  "revision": "r02",
+  "editor": "/root",
+  "date": "2026-09-10",
+  "previousDraft": {
+    "path": "content/pilots/drafts/shared/draft-r01.json",
+    "sha256": "f79e45730e30d50d59563bb78aaef23270bee632b47cbbf1b51147ac99c30eb2"
+  },
+  "findingReport": {
+    "path": "content/pilots/reviews/final/shared-tone-r01.json",
+    "sha256": "89ac5400bf823bb4a697989967ebff8957d04d922da9d66920c2074e49306d34"
+  },
+  "changes": [
+    {
+      "entryId": "shared-follow-readiness",
+      "beforeEntrySha256": "c77d7dd99bcadd7205a0ee2bbd312b534517e8d0f0b87fba1537990bc7ae8939",
+      "afterEntrySha256": "faf6b70472402cf68b23e4a7351c5c38613801bc3e0185ccc02f79c63b6b762f",
+      "issueIds": [
+        "shared-tone-r01.title-activity-choice"
+      ],
+      "changedFields": [
+        "title"
+      ]
+    },
+    {
+      "entryId": "shared-participation-help",
+      "beforeEntrySha256": "cc526939adb6d71d47e0db6165a2498811d19948636b51d6f0253ce7130dbaeb",
+      "afterEntrySha256": "179d1031c809beab7faf2065ff47caa85c7c1bf73df76bdbe05e296c1fe2b4c4",
+      "issueIds": [
+        "shared-tone-r01.title-joining-in",
+        "shared-tone-r01.public-locator-editor-note"
+      ],
+      "changedFields": [
+        "title",
+        "references"
+      ]
+    },
+    {
+      "entryId": "shared-home-fits-family",
+      "beforeEntrySha256": "78c97f141c71eb23c1f357cffd8ab8b81cc09881c52b9141a20cf90718ffd391",
+      "afterEntrySha256": "fb7f30238d159ef3395035a56b71356f237faaaa4369ad932effe544ff0625d0",
+      "issueIds": [
+        "shared-tone-r01.public-locator-idea25"
+      ],
+      "changedFields": [
+        "references"
+      ]
+    },
+    {
+      "entryId": "shared-adult-needs-support",
+      "beforeEntrySha256": "86ccfe36670fa805886d338dec495ce548b36b3878cb6274c5b6875f5add9581",
+      "afterEntrySha256": "9eb3d6c99388c760b335570260180e97d59b9e2ae1e5ad17b41e2be4e28a90fb",
+      "issueIds": [
+        "shared-tone-r01.title-rest-support"
+      ],
+      "changedFields": [
+        "title"
+      ]
+    },
+    {
+      "entryId": "shared-something-for-you",
+      "beforeEntrySha256": "0ae1e3e256f04463bd757935a59aa06c50a038496f6d76cc4377e52e41c134ca",
+      "afterEntrySha256": "6488f1305c07855fd68a21f8e981aa8d73906cf4df29ee9903458c02fdc9b9c3",
+      "issueIds": [
+        "shared-tone-r01.title-interests-beyond-parenting"
+      ],
+      "changedFields": [
+        "title"
+      ]
+    },
+    {
+      "entryId": "shared-less-crowded-day",
+      "beforeEntrySha256": "63b3c119baf99f1fd2f35d14ef0646c16f564dd86be188eb07a232dd1dd75662",
+      "afterEntrySha256": "bb2335181b6e1faf055f9c5e195b5ff504f5cd3a5890e36da19f30a50f552e70",
+      "issueIds": [
+        "shared-tone-r01.repeated-room-day"
+      ],
+      "changedFields": [
+        "title",
+        "summary",
+        "principle"
+      ]
+    }
+  ],
+  "status": "Proposed readability corrections; exact affected source and tone re-reviews pending",
+  "readBoundary": "Original author provenance/read logs are retained. The editor read the public draft and independent findings; no new personal original-PDF read is claimed."
+}

@@ -1,0 +1,421 @@
+{
+  "id": "toddler-family-connection-source-r05",
+  "reviewer": {
+    "task": "/root/pilot_toddler_family_source_r05",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Independent source review of exactly the eight toddler-family-connection entries in REVIEW_BATCHES.json, each in its 18-24-month placement, against the r05 frozen snapshots, both applicable topic rows and complete rendered detail surfaces. No opening or art component exists for these placements. Personally examined src/HomeStudy.jsx and its catalog, independently read the original cited pages and relevant complete source units, and did not read other reviewer reports or earlier verdicts. The source PDF fingerprint is d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b (257 physical pages). Author input content/pilots/drafts/toddler/draft-r05.json SHA-256 b1632aafa09d8a3a50afec143f44fcb47e7ace8909ff47d2aa3f17a6f3e726fe was verified. Manifest content/pilots/revisions/r05/MANIFEST.json SHA-256 ae7dfd0ce44392a8c040bb9b9df38ca991d9b37aab24caf8655d52cf1e1a663c; payload.json SHA-256 d49f556630411e3d49a869688a0691dc32f93fdca6aa4edbb597bd47d9045c55. All selected snapshot file/component/projection hashes were recomputed and their public entry/placement data matched the frozen payload. These are source-component verdicts only.",
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r05/RENDERED_SURFACES.json",
+    "sha256": "b2b0183e437c4abf4c8dddd18ca4ac94be9075abd517d635779d2b946fe0f77b",
+    "renderer": [
+      {
+        "path": "src/HomeStudy.jsx",
+        "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c"
+      },
+      {
+        "path": "src/home.css",
+        "sha256": "55de72c5b21d2f1a3ead85c5975febd09ac3135fcbc2219e6672a13f4786a6e1"
+      },
+      {
+        "path": "src/styles.css",
+        "sha256": "503e980cdf9ba4728adf678bb27bc4cd4095d1ae131c3c02181cc4b9a4df22ce"
+      },
+      {
+        "path": "src/guide/catalog.js",
+        "sha256": "d8d30a17c5f1b1c99ed68764f3f412cf99b48f55d09bf528313f0df1439da71c"
+      },
+      {
+        "path": "src/concepts.js",
+        "sha256": "cb086bcc98ad4fde98677a03cb42a849ae5993405dd886a71e7642ca079a3e4a"
+      }
+    ]
+  },
+  "readLogs": [
+    {
+      "id": "source.toddler-family-connection-r05.framing",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 11,
+          "end": 19
+        },
+        {
+          "start": 29,
+          "end": 29
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete original-PDF text of the introduction and individual development/respect/observation page, extracted directly from the fingerprinted 257-page source. PDF 14 explicitly defines toddlers as around 1 to 3 years; PDF 29 separates individual timelines, respect and adult responsibility. PDF 19 frames the book as inspiration rather than a requirement to do every activity or be a perfect parent."
+    },
+    {
+      "id": "source.toddler-family-connection-r05.activity-context",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 33,
+          "end": 39
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete original-PDF text of activity ages, what makes an activity Montessori, presentations and all ten general principles. Includes the PDF 37 focus/feedback/frustration distinction, repetition despite a waiting sibling, and the later limits on harmful use and supervision."
+    },
+    {
+      "id": "source.toddler-family-connection-r05.acceptance-feedback",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 108,
+          "end": 114
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete accepting-the-child unit through its closing practice section: perspective, translating, feelings versus behavior, feedback instead of praise, the three feedback alternatives, roles and labels. Read the named influences as book context, not independent outside evidence. PDF 112 includes both action descriptions and the adult expressing delight; PDF 113 distinguishes fixed labels from descriptions of conduct."
+    },
+    {
+      "id": "source.toddler-family-connection-r05.problem-solving",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 118,
+          "end": 121
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete original-page text of the cooperation framing, problem solving with toddlers and its checklist continuation/example. PDF 119 explicitly preserves adult leadership, preverbal participation, adult-generated ideas and informal solutions; PDF 120-121 remain context rather than instructions added to this batch."
+    },
+    {
+      "id": "source.toddler-family-connection-r05.cooperation-context",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 123,
+          "end": 128
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the original-page text of advance agreement, helpful language, managing expectations, waiting until a task is finished, processing time, rhythm, notes and the cooperation summary. The cafe/restaurant examples support the limited outing context without turning it into a guarantee of cooperation."
+    },
+    {
+      "id": "source.toddler-family-connection-r05.limits-context",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 129,
+          "end": 142
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete original-PDF setting-limits unit through its closing checklist. Includes family-specific house rules; gentle necessary handling and short explanations; immediate protection; accepting feelings; offered rather than assumed cuddles; the PDF 136 urgent-departure exception; reconnection and amends; PDF 138 anticipatory triggers, safety, older-child calm-space scope and repair; and age/ability in the final checklist. No outside care guidance was used."
+    },
+    {
+      "id": "source.toddler-family-connection-r05.siblings",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 164,
+          "end": 169
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read all original-page text from the Siblings opener through the final labels cross-reference, including the preceding pacifier continuation on PDF 164, new-baby preparation and arrival, optional toddler participation, feeding-time connection, anger and immediate protection, individual time, neutral support, all six intervention levels, the toddler truck anecdote, positive interactions without required friendship and need-based rather than equal treatment. Prenatal and unrelated pacifier material was read as context, not added to the public entry."
+    },
+    {
+      "id": "source.toddler-family-connection-r05.sharing-contact",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 170,
+          "end": 173
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete original sharing and introverted-toddler units, including the intervening interrupting-an-adult passage. Read the 14-16-month example, mostly parallel play before 2.5 years and experience qualification, school/home turns, protective intervention, public-space exception and visitors; then acceptance, non-comparison, preparation, watching, all supported social-practice examples, peer withdrawal and adults checking before contact."
+    },
+    {
+      "id": "source.toddler-family-connection-r05.closeness",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 179,
+          "end": 180
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete original When our child is clingy unit, including possible contexts, normal toddler supervision and limited independent-play expectations, closeness and gradual exploration, shared daily life, feelings, short visits, orientation tours, telling a child when leaving, early arrival and the flower-petal/personal-family analogy."
+    },
+    {
+      "id": "source.toddler-family-connection-r05.screens-languages",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 181,
+          "end": 184
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original Screen time and Bilingualism units plus the chapter conclusion. Included the external-research claims as Davies presents them, practical alternatives, her early occasional-program account versus the later 6+ school/home arrangement and supervision, later computer-competence anecdote, source-recommendation callouts, consistency, OPOL and Domains of Use, family anecdote, literacy-goal-specific exposure statement and language-development claims. None was independently medical/developmentally verified or silently imported as outside guidance."
+    },
+    {
+      "id": "source.toddler-family-connection-r05.visual-framing-feedback",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        },
+        {
+          "start": 29,
+          "end": 29
+        },
+        {
+          "start": 36,
+          "end": 37
+        },
+        {
+          "start": 110,
+          "end": 113
+        },
+        {
+          "start": 119,
+          "end": 121
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read readable full-page PNG renders generated from the original PDF, not thumbnails. Checked the age-definition note and respect/individual-development page, SHOW callout and full concentration passage, translator illustration and feelings/behavior split, full feedback alternatives and roles/labels page, and problem-solving text plus the complete illustrated morning/night checklist. Decorative illustrations add no unextracted instructions. Visible folios agree with these physical pages; public references in this batch use PDF pages only."
+    },
+    {
+      "id": "source.toddler-family-connection-r05.visual-limits",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 128,
+          "end": 128
+        },
+        {
+          "start": 131,
+          "end": 133
+        },
+        {
+          "start": 138,
+          "end": 138
+        },
+        {
+          "start": 142,
+          "end": 142
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read readable original full-page renders of the cooperation recap, house rules and kind/clear-action continuation, immediate safety and handling examples, the complete four-part tantrum panel (including triggers and older-child scope), and every heading/item in the final limits checklist. This checked list structure and qualifications, not merely the presence of page images."
+    },
+    {
+      "id": "source.toddler-family-connection-r05.visual-family-language",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 164,
+          "end": 164
+        },
+        {
+          "start": 170,
+          "end": 170
+        },
+        {
+          "start": 173,
+          "end": 173
+        },
+        {
+          "start": 180,
+          "end": 183
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read readable original full-page renders of the sibling boundary, sharing opener and age/experience paragraph, the complete contact/social-practice page, the closeness continuation, and both screens and bilingualism pages including the separated recommendation callouts. Checked that the 6+ screen continuation is distinct from early occasional programs and that Domains of Use continues onto PDF 183. Public references remain physical-PDF references, with no inferred printed ranges."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "toddler-family-connection-source-r05.18-24.toddler-new-sibling",
+      "entryId": "toddler-new-sibling",
+      "placementId": "18-24.toddler-new-sibling",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-new-sibling.json",
+      "snapshotFileSha256": "7a0e4db4aa01f67e08cad5822d7614b07fd48e461583b48c1bed99a324f308e3",
+      "textPlacementSha256": "ccfd4383170c11a904b46215d97bcd6866ef925cabfb3a89d907f4c57f90930d",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.toddler-family-connection-r05.framing",
+        "source.toddler-family-connection-r05.siblings",
+        "source.toddler-family-connection-r05.acceptance-feedback",
+        "source.toddler-family-connection-r05.limits-context",
+        "source.toddler-family-connection-r05.visual-family-language",
+        "source.toddler-family-connection-r05.visual-limits"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The title, cue and topic summary preserve several possible toddler responses to a new baby, with immediate protection already in the short surface. All three detail paragraphs track PDF 165-166: simple early weeks and available help, books/toys during feeding, optional fetching of a diaper, ordinary individual time, acknowledged anger and stopping hitting immediately. The source discussion on PDF 164-169 was read in full; the entry does not universalize the earlier analogy or prenatal examples. The displayed PDF 164-166 reference and locator lead to the correct material. The general toddler age statement matches PDF 14, while the 18-24-month placement remains a situational browsing context."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-family-connection-source-r05.18-24.toddler-sibling-conflict",
+      "entryId": "toddler-sibling-conflict",
+      "placementId": "18-24.toddler-sibling-conflict",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-sibling-conflict.json",
+      "snapshotFileSha256": "745c4749f703c694bdfda126ef92765639feb2c660af91ad9749c2efed92eb5e",
+      "textPlacementSha256": "9ff3c1e2fa284dd701e82643328dc05bead178c577448edf0cdb0d92cc82d6a3",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.toddler-family-connection-r05.framing",
+        "source.toddler-family-connection-r05.siblings",
+        "source.toddler-family-connection-r05.problem-solving",
+        "source.toddler-family-connection-r05.acceptance-feedback",
+        "source.toddler-family-connection-r05.limits-context",
+        "source.toddler-family-connection-r05.visual-framing-feedback",
+        "source.toddler-family-connection-r05.visual-limits"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The topic summary makes neutral support compatible with stopping harm and giving needed help. The detail retains visible presence for a minor disagreement, intervention as the situation becomes unsafe, and problem solving after calm; it also preserves differing individual needs and does not require close sibling friendship. PDF 119 and 168 explicitly support adult-led ideas and preverbal participation, so the 18-24-month placement does not ask a young toddler to conduct a verbal negotiation. The cited PDF 166-169 and 119 spans and rendered locators are accurate. The full sibling discussion supplies the proportionate-help context without importing the truck anecdote as an expected result."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-family-connection-source-r05.18-24.toddler-taking-turns",
+      "entryId": "toddler-taking-turns",
+      "placementId": "18-24.toddler-taking-turns",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-taking-turns.json",
+      "snapshotFileSha256": "f27602097be0644d9405fadb8f2f093449201501175ee2054ada97545c28be23",
+      "textPlacementSha256": "6222332da6387fe9b4643a716abd87aec0b636730685d4c0d648b4e2177c9269",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.toddler-family-connection-r05.framing",
+        "source.toddler-family-connection-r05.activity-context",
+        "source.toddler-family-connection-r05.sharing-contact",
+        "source.toddler-family-connection-r05.limits-context",
+        "source.toddler-family-connection-r05.visual-framing-feedback",
+        "source.toddler-family-connection-r05.visual-family-language"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The title and topic summary support both the child using an activity and the child waiting, and the public-place exception is visible before opening detail. Detail follows the complete PDF 170-171 unit: unhurried home repetition, noticing whether another child is welcome, words and protective help, a clear public turn ending and putting valued toys away before visitors by agreement. The age block accurately attributes mostly parallel play before 2.5 years and experience-related variation to Davies and explicitly avoids a sharing milestone. Reading PDF 33-39 confirms the repetition/focus context and its limits. The PDF reference and all rendered topic/detail surfaces retain these distinctions."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-family-connection-source-r05.18-24.toddler-joining-in",
+      "entryId": "toddler-joining-in",
+      "placementId": "18-24.toddler-joining-in",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-joining-in.json",
+      "snapshotFileSha256": "39f060a22ffc022c0da4ecea75c0fbe21d3b84b9cd49393ec9ab7399cee0d2b7",
+      "textPlacementSha256": "d1341d5eb0afc3afe892a50834c7bb5fff9e366f38f7d113a555c925dd95c5c7",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.toddler-family-connection-r05.framing",
+        "source.toddler-family-connection-r05.sharing-contact",
+        "source.toddler-family-connection-r05.closeness",
+        "source.toddler-family-connection-r05.acceptance-feedback",
+        "source.toddler-family-connection-r05.visual-family-language",
+        "source.toddler-family-connection-r05.visual-framing-feedback"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The summary allows staying near the adult in an unfamiliar group without trying to change the child. The cue and detail faithfully combine the complete introversion unit with the complete closeness unit: preparation, watching beside the adult, a tour, supported greeting/assertive words, avoiding comparison, early arrival and a shorter visit. These are offered possibilities, not required social performance or a promise that the child will join. The social-setting context prevents the nearby-adult invitation from becoming a blanket instruction to leave a toddler alone. PDF 172-173 and 180 reference labels and locators are correct, and the toddler-wide age note is distinct from this editorial placement."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-family-connection-source-r05.18-24.toddler-wanted-hugs",
+      "entryId": "toddler-wanted-hugs",
+      "placementId": "18-24.toddler-wanted-hugs",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-wanted-hugs.json",
+      "snapshotFileSha256": "6f504e37cfb2e57c5e08e4fecd758b5cbf6fd802cf87432cc125e6abe356f0d2",
+      "textPlacementSha256": "1420c27f740ae5b6bdc4f15bffb0f6b3c11e882979ba38d905e0724a4b4b02e6",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.toddler-family-connection-r05.framing",
+        "source.toddler-family-connection-r05.sharing-contact",
+        "source.toddler-family-connection-r05.acceptance-feedback",
+        "source.toddler-family-connection-r05.limits-context",
+        "source.toddler-family-connection-r05.visual-framing-feedback",
+        "source.toddler-family-connection-r05.visual-limits",
+        "source.toddler-family-connection-r05.visual-family-language"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The short surface limits the claim to ordinary touch and retains adult protection. Detail accurately represents PDF 173 on noticing withdrawal, checking whether a hug is wanted and asking before elective help, while PDF 131-133 supplies gentle necessary handling and immediate protection when a child does not agree. The entry therefore does not turn the contact passage into a veto over necessary care or import a new care procedure. Full respect/acceptance and limits context was read, including the offered-cuddle distinction. Both PDF references and their locators support the rendered wording; there is no age-specific consent milestone in the 18-24-month placement."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-family-connection-source-r05.18-24.toddler-feedback",
+      "entryId": "toddler-feedback",
+      "placementId": "18-24.toddler-feedback",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-feedback.json",
+      "snapshotFileSha256": "d2d83ed895d9a70e687d5f248a90650c4e17a0c6720e12d25e0618f26b04e83d",
+      "textPlacementSha256": "68e3c69d8f39d395b8473e6ef5791b9255093ab90169b0f347bd201341aaec84",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.toddler-family-connection-r05.framing",
+        "source.toddler-family-connection-r05.activity-context",
+        "source.toddler-family-connection-r05.acceptance-feedback",
+        "source.toddler-family-connection-r05.visual-framing-feedback"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The topic summary offers concrete observations and retains the adult’s delight. Detail preserves the distinction between describing an action and giving a general evaluation or fixed identity, along with the source’s positive action words and expressions of feeling. The brief excited-for-you example faithfully paraphrases the corresponding PDF 112 expression. The full PDF 111-113 unit was checked in its acceptance context and PDF 37 in its complete activity context: waiting during absorbed work is specific to concentration, while the entry’s cue makes seeking a response visible. The summary does not instruct constant interruption or emotional withdrawal. The displayed references support the claims, and the age block does not turn feedback into a developmental target."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-family-connection-source-r05.18-24.toddler-screens",
+      "entryId": "toddler-screens",
+      "placementId": "18-24.toddler-screens",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-screens.json",
+      "snapshotFileSha256": "25747de635eceeaccaa87ee8393f0bd69a7058a84192c1cb345087a9f5f8d3e1",
+      "textPlacementSha256": "029a759c4e1f4e5bb80d55b5e125f386e4c47098b036051bf1706ba5c523079a",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.toddler-family-connection-r05.framing",
+        "source.toddler-family-connection-r05.screens-languages",
+        "source.toddler-family-connection-r05.limits-context",
+        "source.toddler-family-connection-r05.cooperation-context",
+        "source.toddler-family-connection-r05.visual-limits",
+        "source.toddler-family-connection-r05.visual-family-language"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both topic rows use the same accurately attributed perspective: Davies favors firsthand experience and describes family choices. The detail stays within the practical examples in PDF 181-182, retains occasional selected programs as personal history and explicitly denies a promised later computer-skill result. It does not recast the later 6+ supervised arrangement as a toddler recommendation. The broad sentence about support and connection accurately follows the book’s chapter-6 cross-reference without issuing an abbreviated tantrum protocol; that full limits/tantrum context, including protection and urgent-departure exceptions, was read. The source’s external health/development claims are not repeated as verified facts. The two references, age context and both topic placements preserve this scope."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-family-connection-source-r05.18-24.toddler-languages",
+      "entryId": "toddler-languages",
+      "placementId": "18-24.toddler-languages",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-languages.json",
+      "snapshotFileSha256": "004bd799bb7008454b4030635f36d8a8e84e265731e74ed78b0953c527ded724",
+      "textPlacementSha256": "d23066459606803613943b91acc01bf6184587a782e8e63b25af444afc781f1d",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.toddler-family-connection-r05.framing",
+        "source.toddler-family-connection-r05.screens-languages",
+        "source.toddler-family-connection-r05.visual-family-language"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both topic summaries and the detail faithfully present OPOL and Domains of Use as possible everyday family arrangements, with particular people or familiar times/settings rather than an obligation to implement both. The agreed family language and adults’ mother tongues match PDF 182, and the place/time alternative matches the PDF 183 continuation. The actual family example remains an illustration rather than a fluency timetable. The complete section was read, including adult consistency, literacy-goal-specific exposure and development claims; the entry makes no guaranteed acquisition, numerical vocabulary, prescribed exposure or delayed-development claim that would require those qualifications to be carried as instructions. The PDF 182-183 reference is accurate. Toddler-wide context is retained in the 18-24-month placement."
+      },
+      "artContext": null
+    }
+  ]
+}

@@ -1,0 +1,2963 @@
+{
+  "author": {
+    "task": "/root/task5-birth6-shared-placement",
+    "reasoning": "xhigh"
+  },
+  "workflow": "lean-v1",
+  "reuse": [
+    {
+      "entryId": "shared-observe",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "be586cb71ff0fed0a1e9904aa80691945c86bee712e7f2a83fe5779cbf93741d"
+    },
+    {
+      "entryId": "shared-follow-readiness",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "faf6b70472402cf68b23e4a7351c5c38613801bc3e0185ccc02f79c63b6b762f"
+    },
+    {
+      "entryId": "shared-participation-help",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "179d1031c809beab7faf2065ff47caa85c7c1bf73df76bdbe05e296c1fe2b4c4"
+    },
+    {
+      "entryId": "shared-time-to-explore",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "8904cbdc1e74829188d73117b0eb343cce29beb2384e3cfb6e5517ff674eda33"
+    },
+    {
+      "entryId": "shared-feelings-limits",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "07c45c4884b3cd9d73a3c14bb041d30f4880d0c839ad31ab67918540724bdabf"
+    },
+    {
+      "entryId": "shared-home-fits-family",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "fb7f30238d159ef3395035a56b71356f237faaaa4369ad932effe544ff0625d0"
+    },
+    {
+      "entryId": "shared-adult-needs-support",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "9eb3d6c99388c760b335570260180e97d59b9e2ae1e5ad17b41e2be4e28a90fb"
+    },
+    {
+      "entryId": "shared-something-for-you",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "6488f1305c07855fd68a21f8e981aa8d73906cf4df29ee9903458c02fdc9b9c3"
+    },
+    {
+      "entryId": "shared-less-crowded-day",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "bb2335181b6e1faf055f9c5e195b5ff504f5cd3a5890e36da19f30a50f552e70"
+    },
+    {
+      "entryId": "shared-adult-pause",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "f76130da96f90ba217443bf341dcbcffc5213bee068e55820607ee1aa78d87d5"
+    },
+    {
+      "entryId": "shared-repair",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "bd229463b295f6eff67d11e194bbbad311a8409c8e8b4b423419af5b1ce73f45"
+    },
+    {
+      "entryId": "shared-family-needs",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "2b681012f29bec4ea9bf3a5b2b09969d0e7af714bdfbc5c6d2adeeb85a1faf75"
+    },
+    {
+      "entryId": "shared-caregiver-common-ground",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "da1c89367248409bc919f6f899ddd6a1f7e35934150e9d2d05418d04401b2943"
+    },
+    {
+      "entryId": "shared-family-separation",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "b255f1ce2d259ca26c350df871ab3dea2e699506a8713f9f30360205b3b5c015"
+    },
+    {
+      "entryId": "shared-choosing-care",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "b00e2d2966250d488c4f275a1a1d133e8828f24c547c3eab94de72ae7c0ce2ad"
+    }
+  ],
+  "placements": [
+    {
+      "id": "0-3.shared-observe",
+      "entryId": "shared-observe",
+      "ageId": "0-3",
+      "topicIds": [
+        "you-family",
+        "play-discovery"
+      ],
+      "ageContext": {
+        "readiness": "When you want to understand your baby’s sounds, movements, or interests.",
+        "note": "General guidance for observing your baby; it does not ask for a particular skill."
+      }
+    },
+    {
+      "id": "3-6.shared-observe",
+      "entryId": "shared-observe",
+      "ageId": "3-6",
+      "topicIds": [
+        "you-family",
+        "play-discovery"
+      ],
+      "ageContext": {
+        "readiness": "When you want to understand your baby’s sounds, movements, or interests.",
+        "note": "General guidance for observing your baby; it does not ask for a particular skill."
+      }
+    },
+    {
+      "id": "0-3.shared-follow-readiness",
+      "entryId": "shared-follow-readiness",
+      "ageId": "0-3",
+      "topicIds": [
+        "play-discovery",
+        "you-family"
+      ],
+      "ageContext": {
+        "readiness": "Choose by current interest and effort.",
+        "note": "Activity ages are guides; this is help with choosing, not a skill to reach."
+      }
+    },
+    {
+      "id": "3-6.shared-follow-readiness",
+      "entryId": "shared-follow-readiness",
+      "ageId": "3-6",
+      "topicIds": [
+        "play-discovery",
+        "you-family"
+      ],
+      "ageContext": {
+        "readiness": "Choose by current interest and effort.",
+        "note": "Activity ages are guides; this is help with choosing, not a skill to reach."
+      }
+    },
+    {
+      "id": "0-3.shared-participation-help",
+      "entryId": "shared-participation-help",
+      "ageId": "0-3",
+      "topicIds": [
+        "everyday-care",
+        "play-discovery",
+        "you-family"
+      ],
+      "ageContext": {
+        "readiness": "Notice a small response or effort and the help your baby needs.",
+        "note": "Participation can be a response during care; it does not require doing a task alone."
+      }
+    },
+    {
+      "id": "3-6.shared-participation-help",
+      "entryId": "shared-participation-help",
+      "ageId": "3-6",
+      "topicIds": [
+        "everyday-care",
+        "play-discovery",
+        "you-family"
+      ],
+      "ageContext": {
+        "readiness": "Notice a small response or effort and the help your baby needs.",
+        "note": "Participation can be a response during care; it does not require doing a task alone."
+      }
+    },
+    {
+      "id": "0-3.shared-time-to-explore",
+      "entryId": "shared-time-to-explore",
+      "ageId": "0-3",
+      "topicIds": [
+        "play-discovery",
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "When your baby is safely interested in looking, moving, or trying again.",
+        "note": "Looking and small movements can be exploration, too."
+      }
+    },
+    {
+      "id": "3-6.shared-time-to-explore",
+      "entryId": "shared-time-to-explore",
+      "ageId": "3-6",
+      "topicIds": [
+        "play-discovery",
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "When your baby is safely interested in looking, moving, or trying again.",
+        "note": "Looking and small movements can be exploration, too."
+      }
+    },
+    {
+      "id": "0-3.shared-feelings-limits",
+      "entryId": "shared-feelings-limits",
+      "ageId": "0-3",
+      "topicIds": [
+        "connection-feelings",
+        "you-family"
+      ],
+      "ageContext": {
+        "readiness": "When a necessary boundary or care situation brings distress.",
+        "note": "The adult keeps things safe and responds to needs; this is not an expectation that a young baby can remember a rule."
+      }
+    },
+    {
+      "id": "3-6.shared-feelings-limits",
+      "entryId": "shared-feelings-limits",
+      "ageId": "3-6",
+      "topicIds": [
+        "connection-feelings",
+        "you-family"
+      ],
+      "ageContext": {
+        "readiness": "When a necessary boundary or care situation brings distress.",
+        "note": "The adult keeps things safe and responds to needs; this is not an expectation that a young baby can remember a rule."
+      }
+    },
+    {
+      "id": "0-3.shared-home-fits-family",
+      "entryId": "shared-home-fits-family",
+      "ageId": "0-3",
+      "topicIds": [
+        "home-that-helps",
+        "you-family"
+      ],
+      "ageContext": {
+        "readiness": "When considering a change to your home.",
+        "note": "General guidance for the home you share with your baby."
+      }
+    },
+    {
+      "id": "3-6.shared-home-fits-family",
+      "entryId": "shared-home-fits-family",
+      "ageId": "3-6",
+      "topicIds": [
+        "home-that-helps",
+        "you-family"
+      ],
+      "ageContext": {
+        "readiness": "When considering a change to your home.",
+        "note": "General guidance for the home you share with your baby."
+      }
+    },
+    {
+      "id": "0-3.shared-adult-needs-support",
+      "entryId": "shared-adult-needs-support",
+      "ageId": "0-3",
+      "topicIds": [
+        "you-family"
+      ],
+      "ageContext": {
+        "readiness": "When care leaves little room for your own needs.",
+        "note": "These are possibilities for adult support during the early months."
+      }
+    },
+    {
+      "id": "3-6.shared-adult-needs-support",
+      "entryId": "shared-adult-needs-support",
+      "ageId": "3-6",
+      "topicIds": [
+        "you-family"
+      ],
+      "ageContext": {
+        "readiness": "When care leaves little room for your own needs.",
+        "note": "These are possibilities for adult support during the early months."
+      }
+    },
+    {
+      "id": "0-3.shared-something-for-you",
+      "entryId": "shared-something-for-you",
+      "ageId": "0-3",
+      "topicIds": [
+        "you-family"
+      ],
+      "ageContext": {
+        "readiness": "When you would like time with an interest or person beyond parenting.",
+        "note": "Adult interests remain part of family life during the baby months."
+      }
+    },
+    {
+      "id": "3-6.shared-something-for-you",
+      "entryId": "shared-something-for-you",
+      "ageId": "3-6",
+      "topicIds": [
+        "you-family"
+      ],
+      "ageContext": {
+        "readiness": "When you would like time with an interest or person beyond parenting.",
+        "note": "Adult interests remain part of family life during the baby months."
+      }
+    },
+    {
+      "id": "0-3.shared-less-crowded-day",
+      "entryId": "shared-less-crowded-day",
+      "ageId": "0-3",
+      "topicIds": [
+        "you-family",
+        "everyday-care"
+      ],
+      "ageContext": {
+        "readiness": "When daily work and time with your baby compete.",
+        "note": "The book includes both the early weeks and everyday life beyond them."
+      }
+    },
+    {
+      "id": "3-6.shared-less-crowded-day",
+      "entryId": "shared-less-crowded-day",
+      "ageId": "3-6",
+      "topicIds": [
+        "you-family",
+        "everyday-care"
+      ],
+      "ageContext": {
+        "readiness": "When daily work and time with your baby compete.",
+        "note": "The book includes both the early weeks and everyday life beyond them."
+      }
+    },
+    {
+      "id": "0-3.shared-adult-pause",
+      "entryId": "shared-adult-pause",
+      "ageId": "0-3",
+      "topicIds": [
+        "you-family",
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "When your baby’s crying brings up a strong reaction and they are not in danger.",
+        "note": "A pause is part of remaining responsive, with immediate danger an exception."
+      }
+    },
+    {
+      "id": "3-6.shared-adult-pause",
+      "entryId": "shared-adult-pause",
+      "ageId": "3-6",
+      "topicIds": [
+        "you-family",
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "When your baby’s crying brings up a strong reaction and they are not in danger.",
+        "note": "A pause is part of remaining responsive, with immediate danger an exception."
+      }
+    },
+    {
+      "id": "0-3.shared-repair",
+      "entryId": "shared-repair",
+      "ageId": "0-3",
+      "topicIds": [
+        "you-family",
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "After something you said or did feels wrong to you.",
+        "note": "Repair concerns the adult’s actions and does not require a spoken response from the baby."
+      }
+    },
+    {
+      "id": "3-6.shared-repair",
+      "entryId": "shared-repair",
+      "ageId": "3-6",
+      "topicIds": [
+        "you-family",
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "After something you said or did feels wrong to you.",
+        "note": "Repair concerns the adult’s actions and does not require a spoken response from the baby."
+      }
+    },
+    {
+      "id": "0-3.shared-family-needs",
+      "entryId": "shared-family-needs",
+      "ageId": "0-3",
+      "topicIds": [
+        "you-family"
+      ],
+      "ageContext": {
+        "readiness": "When care, practical work, and different people’s needs need attention.",
+        "note": "This is an adult conversation about family life, with no child skill required."
+      }
+    },
+    {
+      "id": "3-6.shared-family-needs",
+      "entryId": "shared-family-needs",
+      "ageId": "3-6",
+      "topicIds": [
+        "you-family"
+      ],
+      "ageContext": {
+        "readiness": "When care, practical work, and different people’s needs need attention.",
+        "note": "This is an adult conversation about family life, with no child skill required."
+      }
+    },
+    {
+      "id": "0-3.shared-caregiver-common-ground",
+      "entryId": "shared-caregiver-common-ground",
+      "ageId": "0-3",
+      "topicIds": [
+        "you-family",
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "For everyday differences with another trusted caregiver.",
+        "note": "The adults can talk about care while your baby is still very young."
+      }
+    },
+    {
+      "id": "3-6.shared-caregiver-common-ground",
+      "entryId": "shared-caregiver-common-ground",
+      "ageId": "3-6",
+      "topicIds": [
+        "you-family",
+        "connection-feelings"
+      ],
+      "ageContext": {
+        "readiness": "For everyday differences with another trusted caregiver.",
+        "note": "The adults can talk about care while your baby is still very young."
+      }
+    },
+    {
+      "id": "0-3.shared-family-separation",
+      "entryId": "shared-family-separation",
+      "ageId": "0-3",
+      "topicIds": [
+        "you-family"
+      ],
+      "ageContext": {
+        "readiness": "When parents live in different homes.",
+        "note": "A perspective on family circumstances, with the child’s safety retained."
+      }
+    },
+    {
+      "id": "3-6.shared-family-separation",
+      "entryId": "shared-family-separation",
+      "ageId": "3-6",
+      "topicIds": [
+        "you-family"
+      ],
+      "ageContext": {
+        "readiness": "When parents live in different homes.",
+        "note": "A perspective on family circumstances, with the child’s safety retained."
+      }
+    },
+    {
+      "id": "0-3.shared-choosing-care",
+      "entryId": "shared-choosing-care",
+      "ageId": "0-3",
+      "topicIds": [
+        "you-family"
+      ],
+      "ageContext": {
+        "readiness": "When you need or want someone else to care for your baby.",
+        "note": "The book discusses baby care within the options a family has."
+      }
+    },
+    {
+      "id": "3-6.shared-choosing-care",
+      "entryId": "shared-choosing-care",
+      "ageId": "3-6",
+      "topicIds": [
+        "you-family"
+      ],
+      "ageContext": {
+        "readiness": "When you need or want someone else to care for your baby.",
+        "note": "The book discusses baby care within the options a family has."
+      }
+    }
+  ],
+  "placementEvidence": [
+    {
+      "placementId": "0-3.shared-observe",
+      "sourceAge": {
+        "statement": "No fixed starting age; the book discusses observation of babies.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.observe",
+            "sourceId": "baby-2021",
+            "section": "Observation",
+            "locator": "Observation of a particular baby, including sounds and informal observation",
+            "pdfPages": [
+              {
+                "start": 33,
+                "end": 37
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.particular-baby-before-comparison",
+          "baby.ev.watch-to-know-baby",
+          "baby.ev.sensitive-period-interest",
+          "baby.ev.observe-baby",
+          "baby.ev.sleep-observation-anecdote",
+          "baby.ev.observation-domains",
+          "baby.ev.unobtrusive-observation",
+          "baby.ev.principles-practice-prompts",
+          "baby.ev.ch05-individuality-observation",
+          "baby.ev.ch05-remove-obstacles-no-performance",
+          "baby.ev.ch05-labels-and-gender",
+          "baby.ev.ch05-practice-reflection",
+          "baby.ev.ch06-practice-prompts",
+          "baby.ev.twins-individuals",
+          "baby.ev.care-practice-prompts",
+          "baby.ev.story-nz",
+          "baby.ev.story-uk",
+          "baby.ev.story-usa",
+          "baby.ev.story-japan",
+          "baby.ev.story-spain",
+          "baby.ev.story-nigeria",
+          "baby.ev.story-netherlands"
+        ]
+      },
+      "readiness": {
+        "statement": "When you want to understand your baby’s sounds, movements, or interests.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.observe",
+            "sourceId": "baby-2021",
+            "section": "Observation",
+            "locator": "Observation of a particular baby, including sounds and informal observation",
+            "pdfPages": [
+              {
+                "start": 33,
+                "end": 37
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.particular-baby-before-comparison",
+          "baby.ev.watch-to-know-baby",
+          "baby.ev.sensitive-period-interest",
+          "baby.ev.observe-baby",
+          "baby.ev.sleep-observation-anecdote",
+          "baby.ev.observation-domains",
+          "baby.ev.unobtrusive-observation",
+          "baby.ev.principles-practice-prompts",
+          "baby.ev.ch05-individuality-observation",
+          "baby.ev.ch05-remove-obstacles-no-performance",
+          "baby.ev.ch05-labels-and-gender",
+          "baby.ev.ch05-practice-reflection",
+          "baby.ev.ch06-practice-prompts",
+          "baby.ev.twins-individuals",
+          "baby.ev.care-practice-prompts",
+          "baby.ev.story-nz",
+          "baby.ev.story-uk",
+          "baby.ev.story-usa",
+          "baby.ev.story-japan",
+          "baby.ev.story-spain",
+          "baby.ev.story-nigeria",
+          "baby.ev.story-netherlands"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 0-3 months. General guidance for observing your baby; it does not ask for a particular skill.",
+        "authorReadLogIds": [
+          "birth6.root.read.observe"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-observe",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "be586cb71ff0fed0a1e9904aa80691945c86bee712e7f2a83fe5779cbf93741d"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "3-6.shared-observe",
+      "sourceAge": {
+        "statement": "No fixed starting age; the book discusses observation of babies.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.observe",
+            "sourceId": "baby-2021",
+            "section": "Observation",
+            "locator": "Observation of a particular baby, including sounds and informal observation",
+            "pdfPages": [
+              {
+                "start": 33,
+                "end": 37
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.particular-baby-before-comparison",
+          "baby.ev.watch-to-know-baby",
+          "baby.ev.sensitive-period-interest",
+          "baby.ev.observe-baby",
+          "baby.ev.sleep-observation-anecdote",
+          "baby.ev.observation-domains",
+          "baby.ev.unobtrusive-observation",
+          "baby.ev.principles-practice-prompts",
+          "baby.ev.ch05-individuality-observation",
+          "baby.ev.ch05-remove-obstacles-no-performance",
+          "baby.ev.ch05-labels-and-gender",
+          "baby.ev.ch05-practice-reflection",
+          "baby.ev.ch06-practice-prompts",
+          "baby.ev.twins-individuals",
+          "baby.ev.care-practice-prompts",
+          "baby.ev.story-nz",
+          "baby.ev.story-uk",
+          "baby.ev.story-usa",
+          "baby.ev.story-japan",
+          "baby.ev.story-spain",
+          "baby.ev.story-nigeria",
+          "baby.ev.story-netherlands"
+        ]
+      },
+      "readiness": {
+        "statement": "When you want to understand your baby’s sounds, movements, or interests.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.observe",
+            "sourceId": "baby-2021",
+            "section": "Observation",
+            "locator": "Observation of a particular baby, including sounds and informal observation",
+            "pdfPages": [
+              {
+                "start": 33,
+                "end": 37
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.particular-baby-before-comparison",
+          "baby.ev.watch-to-know-baby",
+          "baby.ev.sensitive-period-interest",
+          "baby.ev.observe-baby",
+          "baby.ev.sleep-observation-anecdote",
+          "baby.ev.observation-domains",
+          "baby.ev.unobtrusive-observation",
+          "baby.ev.principles-practice-prompts",
+          "baby.ev.ch05-individuality-observation",
+          "baby.ev.ch05-remove-obstacles-no-performance",
+          "baby.ev.ch05-labels-and-gender",
+          "baby.ev.ch05-practice-reflection",
+          "baby.ev.ch06-practice-prompts",
+          "baby.ev.twins-individuals",
+          "baby.ev.care-practice-prompts",
+          "baby.ev.story-nz",
+          "baby.ev.story-uk",
+          "baby.ev.story-usa",
+          "baby.ev.story-japan",
+          "baby.ev.story-spain",
+          "baby.ev.story-nigeria",
+          "baby.ev.story-netherlands"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 3-6 months. General guidance for observing your baby; it does not ask for a particular skill.",
+        "authorReadLogIds": [
+          "birth6.root.read.observe"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-observe",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "be586cb71ff0fed0a1e9904aa80691945c86bee712e7f2a83fe5779cbf93741d"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "0-3.shared-follow-readiness",
+      "sourceAge": {
+        "statement": "Activity ages are guidelines; no fixed starting age for this principle.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.follow-readiness",
+            "sourceId": "baby-2021",
+            "section": "Introduction to activities",
+            "locator": "Guideline ages, individual development, help for concerns and choosing a suitable challenge",
+            "pdfPages": [
+              {
+                "start": 119,
+                "end": 122
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.unique-timelines-introduction",
+          "baby.ev.ch06-activity-purpose-and-age",
+          "baby.ev.individual-differences-support",
+          "baby.ev.ch06-appendix-age-guideline",
+          "baby.ev.app-age-guideline"
+        ]
+      },
+      "readiness": {
+        "statement": "Choose by current interest and effort.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.follow-readiness",
+            "sourceId": "baby-2021",
+            "section": "Introduction to activities",
+            "locator": "Guideline ages, individual development, help for concerns and choosing a suitable challenge",
+            "pdfPages": [
+              {
+                "start": 119,
+                "end": 122
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.unique-timelines-introduction",
+          "baby.ev.ch06-activity-purpose-and-age",
+          "baby.ev.individual-differences-support",
+          "baby.ev.ch06-appendix-age-guideline",
+          "baby.ev.app-age-guideline"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 0-3 months. Activity ages are guides; this is help with choosing, not a skill to reach.",
+        "authorReadLogIds": [
+          "birth6.root.read.follow-readiness"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-follow-readiness",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "faf6b70472402cf68b23e4a7351c5c38613801bc3e0185ccc02f79c63b6b762f"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "3-6.shared-follow-readiness",
+      "sourceAge": {
+        "statement": "Activity ages are guidelines; no fixed starting age for this principle.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.follow-readiness",
+            "sourceId": "baby-2021",
+            "section": "Introduction to activities",
+            "locator": "Guideline ages, individual development, help for concerns and choosing a suitable challenge",
+            "pdfPages": [
+              {
+                "start": 119,
+                "end": 122
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.unique-timelines-introduction",
+          "baby.ev.ch06-activity-purpose-and-age",
+          "baby.ev.individual-differences-support",
+          "baby.ev.ch06-appendix-age-guideline",
+          "baby.ev.app-age-guideline"
+        ]
+      },
+      "readiness": {
+        "statement": "Choose by current interest and effort.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.follow-readiness",
+            "sourceId": "baby-2021",
+            "section": "Introduction to activities",
+            "locator": "Guideline ages, individual development, help for concerns and choosing a suitable challenge",
+            "pdfPages": [
+              {
+                "start": 119,
+                "end": 122
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.unique-timelines-introduction",
+          "baby.ev.ch06-activity-purpose-and-age",
+          "baby.ev.individual-differences-support",
+          "baby.ev.ch06-appendix-age-guideline",
+          "baby.ev.app-age-guideline"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 3-6 months. Activity ages are guides; this is help with choosing, not a skill to reach.",
+        "authorReadLogIds": [
+          "birth6.root.read.follow-readiness"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-follow-readiness",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "faf6b70472402cf68b23e4a7351c5c38613801bc3e0185ccc02f79c63b6b762f"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "0-3.shared-participation-help",
+      "sourceAge": {
+        "statement": "The collaboration examples explicitly include newborns and a three-month-old.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.participation-help",
+            "sourceId": "baby-2021",
+            "section": "Respect our baby",
+            "locator": "Collaboration examples from newborn and three months, proportionate help and safe effort",
+            "pdfPages": [
+              {
+                "start": 99,
+                "end": 101
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.dependence-collaboration-independence",
+          "baby.ev.adult-child-environment",
+          "baby.ev.small-problems-and-help",
+          "baby.ev.ch05-collaboration",
+          "baby.ev.ch05-protect-safe-effort",
+          "baby.ev.ch05-guide-and-repair",
+          "baby.ev.ch06-exploration-and-effort",
+          "baby.ev.ch06-just-enough-help",
+          "baby.ev.adult-guiding-role"
+        ]
+      },
+      "readiness": {
+        "statement": "Notice a small response or effort and the help your baby needs.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.participation-help",
+            "sourceId": "baby-2021",
+            "section": "Respect our baby",
+            "locator": "Collaboration examples from newborn and three months, proportionate help and safe effort",
+            "pdfPages": [
+              {
+                "start": 99,
+                "end": 101
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.dependence-collaboration-independence",
+          "baby.ev.adult-child-environment",
+          "baby.ev.small-problems-and-help",
+          "baby.ev.ch05-collaboration",
+          "baby.ev.ch05-protect-safe-effort",
+          "baby.ev.ch05-guide-and-repair",
+          "baby.ev.ch06-exploration-and-effort",
+          "baby.ev.ch06-just-enough-help",
+          "baby.ev.adult-guiding-role"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 0-3 months. Participation can be a response during care; it does not require doing a task alone.",
+        "authorReadLogIds": [
+          "birth6.root.read.participation-help"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-participation-help",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "179d1031c809beab7faf2065ff47caa85c7c1bf73df76bdbe05e296c1fe2b4c4"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "3-6.shared-participation-help",
+      "sourceAge": {
+        "statement": "The collaboration examples explicitly include newborns and a three-month-old.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.participation-help",
+            "sourceId": "baby-2021",
+            "section": "Respect our baby",
+            "locator": "Collaboration examples from newborn and three months, proportionate help and safe effort",
+            "pdfPages": [
+              {
+                "start": 99,
+                "end": 101
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.dependence-collaboration-independence",
+          "baby.ev.adult-child-environment",
+          "baby.ev.small-problems-and-help",
+          "baby.ev.ch05-collaboration",
+          "baby.ev.ch05-protect-safe-effort",
+          "baby.ev.ch05-guide-and-repair",
+          "baby.ev.ch06-exploration-and-effort",
+          "baby.ev.ch06-just-enough-help",
+          "baby.ev.adult-guiding-role"
+        ]
+      },
+      "readiness": {
+        "statement": "Notice a small response or effort and the help your baby needs.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.participation-help",
+            "sourceId": "baby-2021",
+            "section": "Respect our baby",
+            "locator": "Collaboration examples from newborn and three months, proportionate help and safe effort",
+            "pdfPages": [
+              {
+                "start": 99,
+                "end": 101
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.dependence-collaboration-independence",
+          "baby.ev.adult-child-environment",
+          "baby.ev.small-problems-and-help",
+          "baby.ev.ch05-collaboration",
+          "baby.ev.ch05-protect-safe-effort",
+          "baby.ev.ch05-guide-and-repair",
+          "baby.ev.ch06-exploration-and-effort",
+          "baby.ev.ch06-just-enough-help",
+          "baby.ev.adult-guiding-role"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 3-6 months. Participation can be a response during care; it does not require doing a task alone.",
+        "authorReadLogIds": [
+          "birth6.root.read.participation-help"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-participation-help",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "179d1031c809beab7faf2065ff47caa85c7c1bf73df76bdbe05e296c1fe2b4c4"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "0-3.shared-time-to-explore",
+      "sourceAge": {
+        "statement": "No numerical age for safe exploration and processing time.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.time-to-explore",
+            "sourceId": "baby-2021",
+            "section": "Respect our baby",
+            "locator": "Safe effort, concentration and time to respond",
+            "pdfPages": [
+              {
+                "start": 101,
+                "end": 102
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.not-full-time-entertainer",
+          "baby.ev.boxes-simple-and-uninterrupted",
+          "baby.ev.repetition-without-assuming-boredom",
+          "baby.ev.ch05-protect-safe-effort",
+          "baby.ev.ch05-praise-alternatives",
+          "baby.ev.ch05-tarry-time",
+          "baby.ev.ch05-concentration-conditions",
+          "baby.ev.ch05-slowing-opportunities",
+          "baby.ev.ch06-exploration-and-effort",
+          "baby.ev.ch06-play-adult-role"
+        ]
+      },
+      "readiness": {
+        "statement": "When your baby is safely interested in looking, moving, or trying again.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.time-to-explore",
+            "sourceId": "baby-2021",
+            "section": "Respect our baby",
+            "locator": "Safe effort, concentration and time to respond",
+            "pdfPages": [
+              {
+                "start": 101,
+                "end": 102
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.not-full-time-entertainer",
+          "baby.ev.boxes-simple-and-uninterrupted",
+          "baby.ev.repetition-without-assuming-boredom",
+          "baby.ev.ch05-protect-safe-effort",
+          "baby.ev.ch05-praise-alternatives",
+          "baby.ev.ch05-tarry-time",
+          "baby.ev.ch05-concentration-conditions",
+          "baby.ev.ch05-slowing-opportunities",
+          "baby.ev.ch06-exploration-and-effort",
+          "baby.ev.ch06-play-adult-role"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 0-3 months. Looking and small movements can be exploration, too.",
+        "authorReadLogIds": [
+          "birth6.root.read.time-to-explore"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-time-to-explore",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "8904cbdc1e74829188d73117b0eb343cce29beb2384e3cfb6e5517ff674eda33"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "3-6.shared-time-to-explore",
+      "sourceAge": {
+        "statement": "No numerical age for safe exploration and processing time.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.time-to-explore",
+            "sourceId": "baby-2021",
+            "section": "Respect our baby",
+            "locator": "Safe effort, concentration and time to respond",
+            "pdfPages": [
+              {
+                "start": 101,
+                "end": 102
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.not-full-time-entertainer",
+          "baby.ev.boxes-simple-and-uninterrupted",
+          "baby.ev.repetition-without-assuming-boredom",
+          "baby.ev.ch05-protect-safe-effort",
+          "baby.ev.ch05-praise-alternatives",
+          "baby.ev.ch05-tarry-time",
+          "baby.ev.ch05-concentration-conditions",
+          "baby.ev.ch05-slowing-opportunities",
+          "baby.ev.ch06-exploration-and-effort",
+          "baby.ev.ch06-play-adult-role"
+        ]
+      },
+      "readiness": {
+        "statement": "When your baby is safely interested in looking, moving, or trying again.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.time-to-explore",
+            "sourceId": "baby-2021",
+            "section": "Respect our baby",
+            "locator": "Safe effort, concentration and time to respond",
+            "pdfPages": [
+              {
+                "start": 101,
+                "end": 102
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.not-full-time-entertainer",
+          "baby.ev.boxes-simple-and-uninterrupted",
+          "baby.ev.repetition-without-assuming-boredom",
+          "baby.ev.ch05-protect-safe-effort",
+          "baby.ev.ch05-praise-alternatives",
+          "baby.ev.ch05-tarry-time",
+          "baby.ev.ch05-concentration-conditions",
+          "baby.ev.ch05-slowing-opportunities",
+          "baby.ev.ch06-exploration-and-effort",
+          "baby.ev.ch06-play-adult-role"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 3-6 months. Looking and small movements can be exploration, too.",
+        "authorReadLogIds": [
+          "birth6.root.read.time-to-explore"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-time-to-explore",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "8904cbdc1e74829188d73117b0eb343cce29beb2384e3cfb6e5517ff674eda33"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "0-3.shared-feelings-limits",
+      "sourceAge": {
+        "statement": "The authors explicitly place freedom within safety and ability limits from birth.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.feelings-limits",
+            "sourceId": "baby-2021",
+            "section": "Having kind and clear boundaries; When our baby cries",
+            "locator": "Adult safety responsibility, freedom within ability, acknowledging crying and responding to needs",
+            "pdfPages": [
+              {
+                "start": 103,
+                "end": 104
+              },
+              {
+                "start": 110,
+                "end": 111
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-kind-limits",
+          "baby.ev.ch05-crying-response",
+          "baby.ev.behavior-understand-and-limit",
+          "baby.ev.early-tantrum-support",
+          "baby.ev.behavior-pattern-observation",
+          "baby.ev.behavior-environment-prevention",
+          "baby.ev.sibling-feelings-and-limits",
+          "baby.ev.calm-guide-perspective"
+        ]
+      },
+      "readiness": {
+        "statement": "When a necessary boundary or care situation brings distress.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.feelings-limits",
+            "sourceId": "baby-2021",
+            "section": "Having kind and clear boundaries; When our baby cries",
+            "locator": "Adult safety responsibility, freedom within ability, acknowledging crying and responding to needs",
+            "pdfPages": [
+              {
+                "start": 103,
+                "end": 104
+              },
+              {
+                "start": 110,
+                "end": 111
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-kind-limits",
+          "baby.ev.ch05-crying-response",
+          "baby.ev.behavior-understand-and-limit",
+          "baby.ev.early-tantrum-support",
+          "baby.ev.behavior-pattern-observation",
+          "baby.ev.behavior-environment-prevention",
+          "baby.ev.sibling-feelings-and-limits",
+          "baby.ev.calm-guide-perspective"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 0-3 months. The adult keeps things safe and responds to needs; this is not an expectation that a young baby can remember a rule.",
+        "authorReadLogIds": [
+          "birth6.root.read.feelings-limits"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-feelings-limits",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "07c45c4884b3cd9d73a3c14bb041d30f4880d0c839ad31ab67918540724bdabf"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "3-6.shared-feelings-limits",
+      "sourceAge": {
+        "statement": "The authors explicitly place freedom within safety and ability limits from birth.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.feelings-limits",
+            "sourceId": "baby-2021",
+            "section": "Having kind and clear boundaries; When our baby cries",
+            "locator": "Adult safety responsibility, freedom within ability, acknowledging crying and responding to needs",
+            "pdfPages": [
+              {
+                "start": 103,
+                "end": 104
+              },
+              {
+                "start": 110,
+                "end": 111
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-kind-limits",
+          "baby.ev.ch05-crying-response",
+          "baby.ev.behavior-understand-and-limit",
+          "baby.ev.early-tantrum-support",
+          "baby.ev.behavior-pattern-observation",
+          "baby.ev.behavior-environment-prevention",
+          "baby.ev.sibling-feelings-and-limits",
+          "baby.ev.calm-guide-perspective"
+        ]
+      },
+      "readiness": {
+        "statement": "When a necessary boundary or care situation brings distress.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.feelings-limits",
+            "sourceId": "baby-2021",
+            "section": "Having kind and clear boundaries; When our baby cries",
+            "locator": "Adult safety responsibility, freedom within ability, acknowledging crying and responding to needs",
+            "pdfPages": [
+              {
+                "start": 103,
+                "end": 104
+              },
+              {
+                "start": 110,
+                "end": 111
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-kind-limits",
+          "baby.ev.ch05-crying-response",
+          "baby.ev.behavior-understand-and-limit",
+          "baby.ev.early-tantrum-support",
+          "baby.ev.behavior-pattern-observation",
+          "baby.ev.behavior-environment-prevention",
+          "baby.ev.sibling-feelings-and-limits",
+          "baby.ev.calm-guide-perspective"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 3-6 months. The adult keeps things safe and responds to needs; this is not an expectation that a young baby can remember a rule.",
+        "authorReadLogIds": [
+          "birth6.root.read.feelings-limits"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-feelings-limits",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "07c45c4884b3cd9d73a3c14bb041d30f4880d0c839ad31ab67918540724bdabf"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "0-3.shared-home-fits-family",
+      "sourceAge": {
+        "statement": "No fixed age for arranging family surroundings; this is baby-wide guidance.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.home-fits-family",
+            "sourceId": "baby-2021",
+            "section": "Prepared environment; How can you do Montessori on a budget?",
+            "locator": "People in the environment and using existing resources",
+            "pdfPages": [
+              {
+                "start": 37,
+                "end": 37
+              },
+              {
+                "start": 223,
+                "end": 224
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.montessori-without-purchases",
+          "baby.ev.environment-includes-people",
+          "baby.ev.intentional-home-spaces",
+          "baby.ev.less-stuff-home",
+          "baby.ev.starter-set-is-not-required-shopping",
+          "baby.ev.small-space-adaptation",
+          "baby.ev.make-room-and-limit-incoming-stuff",
+          "baby.ev.home-belonging-culture-and-change",
+          "baby.ev.zach-tour-family-adaptation",
+          "baby.ev.nicole-tour-context",
+          "baby.ev.budget-montessori",
+          "baby.ev.calm-home-order",
+          "baby.ev.story-nz",
+          "baby.ev.story-uk",
+          "baby.ev.story-usa",
+          "baby.ev.story-japan",
+          "baby.ev.story-spain",
+          "baby.ev.story-nigeria",
+          "baby.ev.story-netherlands"
+        ]
+      },
+      "readiness": {
+        "statement": "When considering a change to your home.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.home-fits-family",
+            "sourceId": "baby-2021",
+            "section": "Prepared environment; How can you do Montessori on a budget?",
+            "locator": "People in the environment and using existing resources",
+            "pdfPages": [
+              {
+                "start": 37,
+                "end": 37
+              },
+              {
+                "start": 223,
+                "end": 224
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.montessori-without-purchases",
+          "baby.ev.environment-includes-people",
+          "baby.ev.intentional-home-spaces",
+          "baby.ev.less-stuff-home",
+          "baby.ev.starter-set-is-not-required-shopping",
+          "baby.ev.small-space-adaptation",
+          "baby.ev.make-room-and-limit-incoming-stuff",
+          "baby.ev.home-belonging-culture-and-change",
+          "baby.ev.zach-tour-family-adaptation",
+          "baby.ev.nicole-tour-context",
+          "baby.ev.budget-montessori",
+          "baby.ev.calm-home-order",
+          "baby.ev.story-nz",
+          "baby.ev.story-uk",
+          "baby.ev.story-usa",
+          "baby.ev.story-japan",
+          "baby.ev.story-spain",
+          "baby.ev.story-nigeria",
+          "baby.ev.story-netherlands"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 0-3 months. General guidance for the home you share with your baby.",
+        "authorReadLogIds": [
+          "birth6.root.read.home-fits-family"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-home-fits-family",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "fb7f30238d159ef3395035a56b71356f237faaaa4369ad932effe544ff0625d0"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "3-6.shared-home-fits-family",
+      "sourceAge": {
+        "statement": "No fixed age for arranging family surroundings; this is baby-wide guidance.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.home-fits-family",
+            "sourceId": "baby-2021",
+            "section": "Prepared environment; How can you do Montessori on a budget?",
+            "locator": "People in the environment and using existing resources",
+            "pdfPages": [
+              {
+                "start": 37,
+                "end": 37
+              },
+              {
+                "start": 223,
+                "end": 224
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.montessori-without-purchases",
+          "baby.ev.environment-includes-people",
+          "baby.ev.intentional-home-spaces",
+          "baby.ev.less-stuff-home",
+          "baby.ev.starter-set-is-not-required-shopping",
+          "baby.ev.small-space-adaptation",
+          "baby.ev.make-room-and-limit-incoming-stuff",
+          "baby.ev.home-belonging-culture-and-change",
+          "baby.ev.zach-tour-family-adaptation",
+          "baby.ev.nicole-tour-context",
+          "baby.ev.budget-montessori",
+          "baby.ev.calm-home-order",
+          "baby.ev.story-nz",
+          "baby.ev.story-uk",
+          "baby.ev.story-usa",
+          "baby.ev.story-japan",
+          "baby.ev.story-spain",
+          "baby.ev.story-nigeria",
+          "baby.ev.story-netherlands"
+        ]
+      },
+      "readiness": {
+        "statement": "When considering a change to your home.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.home-fits-family",
+            "sourceId": "baby-2021",
+            "section": "Prepared environment; How can you do Montessori on a budget?",
+            "locator": "People in the environment and using existing resources",
+            "pdfPages": [
+              {
+                "start": 37,
+                "end": 37
+              },
+              {
+                "start": 223,
+                "end": 224
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.montessori-without-purchases",
+          "baby.ev.environment-includes-people",
+          "baby.ev.intentional-home-spaces",
+          "baby.ev.less-stuff-home",
+          "baby.ev.starter-set-is-not-required-shopping",
+          "baby.ev.small-space-adaptation",
+          "baby.ev.make-room-and-limit-incoming-stuff",
+          "baby.ev.home-belonging-culture-and-change",
+          "baby.ev.zach-tour-family-adaptation",
+          "baby.ev.nicole-tour-context",
+          "baby.ev.budget-montessori",
+          "baby.ev.calm-home-order",
+          "baby.ev.story-nz",
+          "baby.ev.story-uk",
+          "baby.ev.story-usa",
+          "baby.ev.story-japan",
+          "baby.ev.story-spain",
+          "baby.ev.story-nigeria",
+          "baby.ev.story-netherlands"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 3-6 months. General guidance for the home you share with your baby.",
+        "authorReadLogIds": [
+          "birth6.root.read.home-fits-family"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-home-fits-family",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "fb7f30238d159ef3395035a56b71356f237faaaa4369ad932effe544ff0625d0"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "0-3.shared-adult-needs-support",
+      "sourceAge": {
+        "statement": "The book specifically includes the early days and first few months.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.adult-needs-support",
+            "sourceId": "baby-2021",
+            "section": "Preparation of the adult; We don’t walk alone",
+            "locator": "Adult needs, support in first months, doctor support and practical help",
+            "pdfPages": [
+              {
+                "start": 235,
+                "end": 238
+              },
+              {
+                "start": 244,
+                "end": 246
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.wonder-and-adult-exhaustion",
+          "baby.ev.post-caesarean-support",
+          "baby.ev.postpartum-support-and-help",
+          "baby.ev.practical-postpartum-support",
+          "baby.ev.adult-feeding-place",
+          "baby.ev.sleep-adult-stress",
+          "baby.ev.adult-needs-belong",
+          "baby.ev.adult-basic-care",
+          "baby.ev.adult-support-system",
+          "baby.ev.adult-depression-support",
+          "baby.ev.adult-preparation-box",
+          "baby.ev.calm-care-swap",
+          "baby.ev.calm-receiving-care",
+          "baby.ev.calm-rest",
+          "baby.ev.calm-nourishment",
+          "baby.ev.calm-get-help",
+          "baby.ev.village-connections",
+          "baby.ev.visible-help-list",
+          "baby.ev.village-professionals",
+          "baby.ev.grandparent-support-context"
+        ]
+      },
+      "readiness": {
+        "statement": "When care leaves little room for your own needs.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.adult-needs-support",
+            "sourceId": "baby-2021",
+            "section": "Preparation of the adult; We don’t walk alone",
+            "locator": "Adult needs, support in first months, doctor support and practical help",
+            "pdfPages": [
+              {
+                "start": 235,
+                "end": 238
+              },
+              {
+                "start": 244,
+                "end": 246
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.wonder-and-adult-exhaustion",
+          "baby.ev.post-caesarean-support",
+          "baby.ev.postpartum-support-and-help",
+          "baby.ev.practical-postpartum-support",
+          "baby.ev.adult-feeding-place",
+          "baby.ev.sleep-adult-stress",
+          "baby.ev.adult-needs-belong",
+          "baby.ev.adult-basic-care",
+          "baby.ev.adult-support-system",
+          "baby.ev.adult-depression-support",
+          "baby.ev.adult-preparation-box",
+          "baby.ev.calm-care-swap",
+          "baby.ev.calm-receiving-care",
+          "baby.ev.calm-rest",
+          "baby.ev.calm-nourishment",
+          "baby.ev.calm-get-help",
+          "baby.ev.village-connections",
+          "baby.ev.visible-help-list",
+          "baby.ev.village-professionals",
+          "baby.ev.grandparent-support-context"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 0-3 months. These are possibilities for adult support during the early months.",
+        "authorReadLogIds": [
+          "birth6.root.read.adult-needs-support"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-adult-needs-support",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "9eb3d6c99388c760b335570260180e97d59b9e2ae1e5ad17b41e2be4e28a90fb"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "3-6.shared-adult-needs-support",
+      "sourceAge": {
+        "statement": "The book specifically includes the early days and first few months.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.adult-needs-support",
+            "sourceId": "baby-2021",
+            "section": "Preparation of the adult; We don’t walk alone",
+            "locator": "Adult needs, support in first months, doctor support and practical help",
+            "pdfPages": [
+              {
+                "start": 235,
+                "end": 238
+              },
+              {
+                "start": 244,
+                "end": 246
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.wonder-and-adult-exhaustion",
+          "baby.ev.post-caesarean-support",
+          "baby.ev.postpartum-support-and-help",
+          "baby.ev.practical-postpartum-support",
+          "baby.ev.adult-feeding-place",
+          "baby.ev.sleep-adult-stress",
+          "baby.ev.adult-needs-belong",
+          "baby.ev.adult-basic-care",
+          "baby.ev.adult-support-system",
+          "baby.ev.adult-depression-support",
+          "baby.ev.adult-preparation-box",
+          "baby.ev.calm-care-swap",
+          "baby.ev.calm-receiving-care",
+          "baby.ev.calm-rest",
+          "baby.ev.calm-nourishment",
+          "baby.ev.calm-get-help",
+          "baby.ev.village-connections",
+          "baby.ev.visible-help-list",
+          "baby.ev.village-professionals",
+          "baby.ev.grandparent-support-context"
+        ]
+      },
+      "readiness": {
+        "statement": "When care leaves little room for your own needs.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.adult-needs-support",
+            "sourceId": "baby-2021",
+            "section": "Preparation of the adult; We don’t walk alone",
+            "locator": "Adult needs, support in first months, doctor support and practical help",
+            "pdfPages": [
+              {
+                "start": 235,
+                "end": 238
+              },
+              {
+                "start": 244,
+                "end": 246
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.wonder-and-adult-exhaustion",
+          "baby.ev.post-caesarean-support",
+          "baby.ev.postpartum-support-and-help",
+          "baby.ev.practical-postpartum-support",
+          "baby.ev.adult-feeding-place",
+          "baby.ev.sleep-adult-stress",
+          "baby.ev.adult-needs-belong",
+          "baby.ev.adult-basic-care",
+          "baby.ev.adult-support-system",
+          "baby.ev.adult-depression-support",
+          "baby.ev.adult-preparation-box",
+          "baby.ev.calm-care-swap",
+          "baby.ev.calm-receiving-care",
+          "baby.ev.calm-rest",
+          "baby.ev.calm-nourishment",
+          "baby.ev.calm-get-help",
+          "baby.ev.village-connections",
+          "baby.ev.visible-help-list",
+          "baby.ev.village-professionals",
+          "baby.ev.grandparent-support-context"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 3-6 months. These are possibilities for adult support during the early months.",
+        "authorReadLogIds": [
+          "birth6.root.read.adult-needs-support"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-adult-needs-support",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "9eb3d6c99388c760b335570260180e97d59b9e2ae1e5ad17b41e2be4e28a90fb"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "0-3.shared-something-for-you",
+      "sourceAge": {
+        "statement": "No fixed child age for the adult’s own interests.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.something-for-you",
+            "sourceId": "baby-2021",
+            "section": "Intellectual preparation; 49 ideas for staying calm",
+            "locator": "Adult interests and personal, optional practices",
+            "pdfPages": [
+              {
+                "start": 235,
+                "end": 236
+              },
+              {
+                "start": 239,
+                "end": 242
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.adult-selective-learning",
+          "baby.ev.adult-memory-and-presence",
+          "baby.ev.calm-personal-time",
+          "baby.ev.calm-movement-nature",
+          "baby.ev.calm-small-pleasures",
+          "baby.ev.calm-friendship",
+          "baby.ev.calm-music",
+          "baby.ev.calm-frequency-claim",
+          "baby.ev.adult-closing-prompts"
+        ]
+      },
+      "readiness": {
+        "statement": "When you would like time with an interest or person beyond parenting.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.something-for-you",
+            "sourceId": "baby-2021",
+            "section": "Intellectual preparation; 49 ideas for staying calm",
+            "locator": "Adult interests and personal, optional practices",
+            "pdfPages": [
+              {
+                "start": 235,
+                "end": 236
+              },
+              {
+                "start": 239,
+                "end": 242
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.adult-selective-learning",
+          "baby.ev.adult-memory-and-presence",
+          "baby.ev.calm-personal-time",
+          "baby.ev.calm-movement-nature",
+          "baby.ev.calm-small-pleasures",
+          "baby.ev.calm-friendship",
+          "baby.ev.calm-music",
+          "baby.ev.calm-frequency-claim",
+          "baby.ev.adult-closing-prompts"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 0-3 months. Adult interests remain part of family life during the baby months.",
+        "authorReadLogIds": [
+          "birth6.root.read.something-for-you"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-something-for-you",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "6488f1305c07855fd68a21f8e981aa8d73906cf4df29ee9903458c02fdc9b9c3"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "3-6.shared-something-for-you",
+      "sourceAge": {
+        "statement": "No fixed child age for the adult’s own interests.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.something-for-you",
+            "sourceId": "baby-2021",
+            "section": "Intellectual preparation; 49 ideas for staying calm",
+            "locator": "Adult interests and personal, optional practices",
+            "pdfPages": [
+              {
+                "start": 235,
+                "end": 236
+              },
+              {
+                "start": 239,
+                "end": 242
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.adult-selective-learning",
+          "baby.ev.adult-memory-and-presence",
+          "baby.ev.calm-personal-time",
+          "baby.ev.calm-movement-nature",
+          "baby.ev.calm-small-pleasures",
+          "baby.ev.calm-friendship",
+          "baby.ev.calm-music",
+          "baby.ev.calm-frequency-claim",
+          "baby.ev.adult-closing-prompts"
+        ]
+      },
+      "readiness": {
+        "statement": "When you would like time with an interest or person beyond parenting.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.something-for-you",
+            "sourceId": "baby-2021",
+            "section": "Intellectual preparation; 49 ideas for staying calm",
+            "locator": "Adult interests and personal, optional practices",
+            "pdfPages": [
+              {
+                "start": 235,
+                "end": 236
+              },
+              {
+                "start": 239,
+                "end": 242
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.adult-selective-learning",
+          "baby.ev.adult-memory-and-presence",
+          "baby.ev.calm-personal-time",
+          "baby.ev.calm-movement-nature",
+          "baby.ev.calm-small-pleasures",
+          "baby.ev.calm-friendship",
+          "baby.ev.calm-music",
+          "baby.ev.calm-frequency-claim",
+          "baby.ev.adult-closing-prompts"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 3-6 months. Adult interests remain part of family life during the baby months.",
+        "authorReadLogIds": [
+          "birth6.root.read.something-for-you"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-something-for-you",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "6488f1305c07855fd68a21f8e981aa8d73906cf4df29ee9903458c02fdc9b9c3"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "0-3.shared-less-crowded-day",
+      "sourceAge": {
+        "statement": "The section explicitly includes the first six to eight weeks and beyond.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.less-crowded-day",
+            "sourceId": "baby-2021",
+            "section": "What do we do when we need to get through our daily tasks?",
+            "locator": "First six to eight weeks, continuing daily work and ordinary moments together",
+            "pdfPages": [
+              {
+                "start": 222,
+                "end": 224
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-slowing-opportunities",
+          "baby.ev.calm-personal-time",
+          "baby.ev.calm-agency",
+          "baby.ev.doing-best-today"
+        ]
+      },
+      "readiness": {
+        "statement": "When daily work and time with your baby compete.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.less-crowded-day",
+            "sourceId": "baby-2021",
+            "section": "What do we do when we need to get through our daily tasks?",
+            "locator": "First six to eight weeks, continuing daily work and ordinary moments together",
+            "pdfPages": [
+              {
+                "start": 222,
+                "end": 224
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-slowing-opportunities",
+          "baby.ev.calm-personal-time",
+          "baby.ev.calm-agency",
+          "baby.ev.doing-best-today"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 0-3 months. The book includes both the early weeks and everyday life beyond them.",
+        "authorReadLogIds": [
+          "birth6.root.read.less-crowded-day"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-less-crowded-day",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "bb2335181b6e1faf055f9c5e195b5ff504f5cd3a5890e36da19f30a50f552e70"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "3-6.shared-less-crowded-day",
+      "sourceAge": {
+        "statement": "The section explicitly includes the first six to eight weeks and beyond.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.less-crowded-day",
+            "sourceId": "baby-2021",
+            "section": "What do we do when we need to get through our daily tasks?",
+            "locator": "First six to eight weeks, continuing daily work and ordinary moments together",
+            "pdfPages": [
+              {
+                "start": 222,
+                "end": 224
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-slowing-opportunities",
+          "baby.ev.calm-personal-time",
+          "baby.ev.calm-agency",
+          "baby.ev.doing-best-today"
+        ]
+      },
+      "readiness": {
+        "statement": "When daily work and time with your baby compete.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.less-crowded-day",
+            "sourceId": "baby-2021",
+            "section": "What do we do when we need to get through our daily tasks?",
+            "locator": "First six to eight weeks, continuing daily work and ordinary moments together",
+            "pdfPages": [
+              {
+                "start": 222,
+                "end": 224
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-slowing-opportunities",
+          "baby.ev.calm-personal-time",
+          "baby.ev.calm-agency",
+          "baby.ev.doing-best-today"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 3-6 months. The book includes both the early weeks and everyday life beyond them.",
+        "authorReadLogIds": [
+          "birth6.root.read.less-crowded-day"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-less-crowded-day",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "bb2335181b6e1faf055f9c5e195b5ff504f5cd3a5890e36da19f30a50f552e70"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "0-3.shared-adult-pause",
+      "sourceAge": {
+        "statement": "Baby crying from the beginning; no minimum age for adult reflection.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.adult-pause",
+            "sourceId": "baby-2021",
+            "section": "When our baby cries",
+            "locator": "No-danger condition, acknowledgment, presence, comfort and response",
+            "pdfPages": [
+              {
+                "start": 110,
+                "end": 111
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-crying-response",
+          "baby.ev.adult-self-observation",
+          "baby.ev.calm-attention-reflection",
+          "baby.ev.calm-pause"
+        ]
+      },
+      "readiness": {
+        "statement": "When your baby’s crying brings up a strong reaction and they are not in danger.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.adult-pause",
+            "sourceId": "baby-2021",
+            "section": "When our baby cries",
+            "locator": "No-danger condition, acknowledgment, presence, comfort and response",
+            "pdfPages": [
+              {
+                "start": 110,
+                "end": 111
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-crying-response",
+          "baby.ev.adult-self-observation",
+          "baby.ev.calm-attention-reflection",
+          "baby.ev.calm-pause"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 0-3 months. A pause is part of remaining responsive, with immediate danger an exception.",
+        "authorReadLogIds": [
+          "birth6.root.read.adult-pause"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-adult-pause",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "f76130da96f90ba217443bf341dcbcffc5213bee068e55820607ee1aa78d87d5"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "3-6.shared-adult-pause",
+      "sourceAge": {
+        "statement": "Baby crying from the beginning; no minimum age for adult reflection.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.adult-pause",
+            "sourceId": "baby-2021",
+            "section": "When our baby cries",
+            "locator": "No-danger condition, acknowledgment, presence, comfort and response",
+            "pdfPages": [
+              {
+                "start": 110,
+                "end": 111
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-crying-response",
+          "baby.ev.adult-self-observation",
+          "baby.ev.calm-attention-reflection",
+          "baby.ev.calm-pause"
+        ]
+      },
+      "readiness": {
+        "statement": "When your baby’s crying brings up a strong reaction and they are not in danger.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.adult-pause",
+            "sourceId": "baby-2021",
+            "section": "When our baby cries",
+            "locator": "No-danger condition, acknowledgment, presence, comfort and response",
+            "pdfPages": [
+              {
+                "start": 110,
+                "end": 111
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-crying-response",
+          "baby.ev.adult-self-observation",
+          "baby.ev.calm-attention-reflection",
+          "baby.ev.calm-pause"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 3-6 months. A pause is part of remaining responsive, with immediate danger an exception.",
+        "authorReadLogIds": [
+          "birth6.root.read.adult-pause"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-adult-pause",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "f76130da96f90ba217443bf341dcbcffc5213bee068e55820607ee1aa78d87d5"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "0-3.shared-repair",
+      "sourceAge": {
+        "statement": "No minimum age; the authors describe apologizing to a baby.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.repair",
+            "sourceId": "baby-2021",
+            "section": "Being their guide; Self-trust and forgiveness",
+            "locator": "Adult apology and learning from mistakes while caring for a baby",
+            "pdfPages": [
+              {
+                "start": 111,
+                "end": 112
+              },
+              {
+                "start": 238,
+                "end": 239
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-guide-and-repair",
+          "baby.ev.adult-self-trust-forgiveness",
+          "baby.ev.doing-best-today",
+          "baby.ev.calm-repair-compassion"
+        ]
+      },
+      "readiness": {
+        "statement": "After something you said or did feels wrong to you.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.repair",
+            "sourceId": "baby-2021",
+            "section": "Being their guide; Self-trust and forgiveness",
+            "locator": "Adult apology and learning from mistakes while caring for a baby",
+            "pdfPages": [
+              {
+                "start": 111,
+                "end": 112
+              },
+              {
+                "start": 238,
+                "end": 239
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-guide-and-repair",
+          "baby.ev.adult-self-trust-forgiveness",
+          "baby.ev.doing-best-today",
+          "baby.ev.calm-repair-compassion"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 0-3 months. Repair concerns the adult’s actions and does not require a spoken response from the baby.",
+        "authorReadLogIds": [
+          "birth6.root.read.repair"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-repair",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "bd229463b295f6eff67d11e194bbbad311a8409c8e8b4b423419af5b1ce73f45"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "3-6.shared-repair",
+      "sourceAge": {
+        "statement": "No minimum age; the authors describe apologizing to a baby.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.repair",
+            "sourceId": "baby-2021",
+            "section": "Being their guide; Self-trust and forgiveness",
+            "locator": "Adult apology and learning from mistakes while caring for a baby",
+            "pdfPages": [
+              {
+                "start": 111,
+                "end": 112
+              },
+              {
+                "start": 238,
+                "end": 239
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-guide-and-repair",
+          "baby.ev.adult-self-trust-forgiveness",
+          "baby.ev.doing-best-today",
+          "baby.ev.calm-repair-compassion"
+        ]
+      },
+      "readiness": {
+        "statement": "After something you said or did feels wrong to you.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.repair",
+            "sourceId": "baby-2021",
+            "section": "Being their guide; Self-trust and forgiveness",
+            "locator": "Adult apology and learning from mistakes while caring for a baby",
+            "pdfPages": [
+              {
+                "start": 111,
+                "end": 112
+              },
+              {
+                "start": 238,
+                "end": 239
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-guide-and-repair",
+          "baby.ev.adult-self-trust-forgiveness",
+          "baby.ev.doing-best-today",
+          "baby.ev.calm-repair-compassion"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 3-6 months. Repair concerns the adult’s actions and does not require a spoken response from the baby.",
+        "authorReadLogIds": [
+          "birth6.root.read.repair"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-repair",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "bd229463b295f6eff67d11e194bbbad311a8409c8e8b4b423419af5b1ce73f45"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "0-3.shared-family-needs",
+      "sourceAge": {
+        "statement": "The source explicitly includes family arrangements in the early weeks after birth.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.family-needs",
+            "sourceId": "baby-2021",
+            "section": "We don’t walk alone; Working with our partner; Getting on the same page",
+            "locator": "Different care arrangements, early-week support, check-ins and practical parenting chats",
+            "pdfPages": [
+              {
+                "start": 244,
+                "end": 247
+              },
+              {
+                "start": 251,
+                "end": 253
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.family-forms-are-included",
+          "baby.ev.partner-unique-bond",
+          "baby.ev.adoptive-symbiosis",
+          "baby.ev.daily-tasks-with-baby",
+          "baby.ev.siblings-transition-frame",
+          "baby.ev.sibling-arrival-and-participation",
+          "baby.ev.sibling-caring-anecdote",
+          "baby.ev.one-to-one-sibling-time",
+          "baby.ev.larger-family-adult-perspective",
+          "baby.ev.adoptive-family-bonding",
+          "baby.ev.partners-practical-connection",
+          "baby.ev.partners-check-in",
+          "baby.ev.caregiver-shared-values",
+          "baby.ev.parenting-chats",
+          "baby.ev.working-together-practice"
+        ]
+      },
+      "readiness": {
+        "statement": "When care, practical work, and different people’s needs need attention.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.family-needs",
+            "sourceId": "baby-2021",
+            "section": "We don’t walk alone; Working with our partner; Getting on the same page",
+            "locator": "Different care arrangements, early-week support, check-ins and practical parenting chats",
+            "pdfPages": [
+              {
+                "start": 244,
+                "end": 247
+              },
+              {
+                "start": 251,
+                "end": 253
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.family-forms-are-included",
+          "baby.ev.partner-unique-bond",
+          "baby.ev.adoptive-symbiosis",
+          "baby.ev.daily-tasks-with-baby",
+          "baby.ev.siblings-transition-frame",
+          "baby.ev.sibling-arrival-and-participation",
+          "baby.ev.sibling-caring-anecdote",
+          "baby.ev.one-to-one-sibling-time",
+          "baby.ev.larger-family-adult-perspective",
+          "baby.ev.adoptive-family-bonding",
+          "baby.ev.partners-practical-connection",
+          "baby.ev.partners-check-in",
+          "baby.ev.caregiver-shared-values",
+          "baby.ev.parenting-chats",
+          "baby.ev.working-together-practice"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 0-3 months. This is an adult conversation about family life, with no child skill required.",
+        "authorReadLogIds": [
+          "birth6.root.read.family-needs"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-family-needs",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "2b681012f29bec4ea9bf3a5b2b09969d0e7af714bdfbc5c6d2adeeb85a1faf75"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "3-6.shared-family-needs",
+      "sourceAge": {
+        "statement": "The source explicitly includes family arrangements in the early weeks after birth.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.family-needs",
+            "sourceId": "baby-2021",
+            "section": "We don’t walk alone; Working with our partner; Getting on the same page",
+            "locator": "Different care arrangements, early-week support, check-ins and practical parenting chats",
+            "pdfPages": [
+              {
+                "start": 244,
+                "end": 247
+              },
+              {
+                "start": 251,
+                "end": 253
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.family-forms-are-included",
+          "baby.ev.partner-unique-bond",
+          "baby.ev.adoptive-symbiosis",
+          "baby.ev.daily-tasks-with-baby",
+          "baby.ev.siblings-transition-frame",
+          "baby.ev.sibling-arrival-and-participation",
+          "baby.ev.sibling-caring-anecdote",
+          "baby.ev.one-to-one-sibling-time",
+          "baby.ev.larger-family-adult-perspective",
+          "baby.ev.adoptive-family-bonding",
+          "baby.ev.partners-practical-connection",
+          "baby.ev.partners-check-in",
+          "baby.ev.caregiver-shared-values",
+          "baby.ev.parenting-chats",
+          "baby.ev.working-together-practice"
+        ]
+      },
+      "readiness": {
+        "statement": "When care, practical work, and different people’s needs need attention.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.family-needs",
+            "sourceId": "baby-2021",
+            "section": "We don’t walk alone; Working with our partner; Getting on the same page",
+            "locator": "Different care arrangements, early-week support, check-ins and practical parenting chats",
+            "pdfPages": [
+              {
+                "start": 244,
+                "end": 247
+              },
+              {
+                "start": 251,
+                "end": 253
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.family-forms-are-included",
+          "baby.ev.partner-unique-bond",
+          "baby.ev.adoptive-symbiosis",
+          "baby.ev.daily-tasks-with-baby",
+          "baby.ev.siblings-transition-frame",
+          "baby.ev.sibling-arrival-and-participation",
+          "baby.ev.sibling-caring-anecdote",
+          "baby.ev.one-to-one-sibling-time",
+          "baby.ev.larger-family-adult-perspective",
+          "baby.ev.adoptive-family-bonding",
+          "baby.ev.partners-practical-connection",
+          "baby.ev.partners-check-in",
+          "baby.ev.caregiver-shared-values",
+          "baby.ev.parenting-chats",
+          "baby.ev.working-together-practice"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 3-6 months. This is an adult conversation about family life, with no child skill required.",
+        "authorReadLogIds": [
+          "birth6.root.read.family-needs"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-family-needs",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "2b681012f29bec4ea9bf3a5b2b09969d0e7af714bdfbc5c6d2adeeb85a1faf75"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "0-3.shared-caregiver-common-ground",
+      "sourceAge": {
+        "statement": "Baby-caregiver relationships; no minimum child age for adult conversation.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.caregiver-common-ground",
+            "sourceId": "baby-2021",
+            "section": "Working with grandparents and other caregivers; Getting on the same page",
+            "locator": "Caregiver differences, requests, values, listening and appreciation",
+            "pdfPages": [
+              {
+                "start": 246,
+                "end": 253
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.grandparent-support-context",
+          "baby.ev.caregiver-information",
+          "baby.ev.caregiver-priorities",
+          "baby.ev.caregiver-feelings-needs",
+          "baby.ev.caregiver-shared-values",
+          "baby.ev.caregiver-curiosity-appreciation"
+        ]
+      },
+      "readiness": {
+        "statement": "For everyday differences with another trusted caregiver.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.caregiver-common-ground",
+            "sourceId": "baby-2021",
+            "section": "Working with grandparents and other caregivers; Getting on the same page",
+            "locator": "Caregiver differences, requests, values, listening and appreciation",
+            "pdfPages": [
+              {
+                "start": 246,
+                "end": 253
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.grandparent-support-context",
+          "baby.ev.caregiver-information",
+          "baby.ev.caregiver-priorities",
+          "baby.ev.caregiver-feelings-needs",
+          "baby.ev.caregiver-shared-values",
+          "baby.ev.caregiver-curiosity-appreciation"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 0-3 months. The adults can talk about care while your baby is still very young.",
+        "authorReadLogIds": [
+          "birth6.root.read.caregiver-common-ground"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-caregiver-common-ground",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "da1c89367248409bc919f6f899ddd6a1f7e35934150e9d2d05418d04401b2943"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "3-6.shared-caregiver-common-ground",
+      "sourceAge": {
+        "statement": "Baby-caregiver relationships; no minimum child age for adult conversation.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.caregiver-common-ground",
+            "sourceId": "baby-2021",
+            "section": "Working with grandparents and other caregivers; Getting on the same page",
+            "locator": "Caregiver differences, requests, values, listening and appreciation",
+            "pdfPages": [
+              {
+                "start": 246,
+                "end": 253
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.grandparent-support-context",
+          "baby.ev.caregiver-information",
+          "baby.ev.caregiver-priorities",
+          "baby.ev.caregiver-feelings-needs",
+          "baby.ev.caregiver-shared-values",
+          "baby.ev.caregiver-curiosity-appreciation"
+        ]
+      },
+      "readiness": {
+        "statement": "For everyday differences with another trusted caregiver.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.caregiver-common-ground",
+            "sourceId": "baby-2021",
+            "section": "Working with grandparents and other caregivers; Getting on the same page",
+            "locator": "Caregiver differences, requests, values, listening and appreciation",
+            "pdfPages": [
+              {
+                "start": 246,
+                "end": 253
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.grandparent-support-context",
+          "baby.ev.caregiver-information",
+          "baby.ev.caregiver-priorities",
+          "baby.ev.caregiver-feelings-needs",
+          "baby.ev.caregiver-shared-values",
+          "baby.ev.caregiver-curiosity-appreciation"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 3-6 months. The adults can talk about care while your baby is still very young.",
+        "authorReadLogIds": [
+          "birth6.root.read.caregiver-common-ground"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-caregiver-common-ground",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "da1c89367248409bc919f6f899ddd6a1f7e35934150e9d2d05418d04401b2943"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "0-3.shared-family-separation",
+      "sourceAge": {
+        "statement": "The passage addresses babies whose parents live apart; no minimum age.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.family-separation",
+            "sourceId": "baby-2021",
+            "section": "Being a single parent or co-parent",
+            "locator": "Different family homes, adult support and explicit safety exception",
+            "pdfPages": [
+              {
+                "start": 247,
+                "end": 247
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.family-forms-contact"
+        ]
+      },
+      "readiness": {
+        "statement": "When parents live in different homes.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.family-separation",
+            "sourceId": "baby-2021",
+            "section": "Being a single parent or co-parent",
+            "locator": "Different family homes, adult support and explicit safety exception",
+            "pdfPages": [
+              {
+                "start": 247,
+                "end": 247
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.family-forms-contact"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 0-3 months. A perspective on family circumstances, with the child’s safety retained.",
+        "authorReadLogIds": [
+          "birth6.root.read.family-separation"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-family-separation",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "b255f1ce2d259ca26c350df871ab3dea2e699506a8713f9f30360205b3b5c015"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "3-6.shared-family-separation",
+      "sourceAge": {
+        "statement": "The passage addresses babies whose parents live apart; no minimum age.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.family-separation",
+            "sourceId": "baby-2021",
+            "section": "Being a single parent or co-parent",
+            "locator": "Different family homes, adult support and explicit safety exception",
+            "pdfPages": [
+              {
+                "start": 247,
+                "end": 247
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.family-forms-contact"
+        ]
+      },
+      "readiness": {
+        "statement": "When parents live in different homes.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.family-separation",
+            "sourceId": "baby-2021",
+            "section": "Being a single parent or co-parent",
+            "locator": "Different family homes, adult support and explicit safety exception",
+            "pdfPages": [
+              {
+                "start": 247,
+                "end": 247
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.family-forms-contact"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 3-6 months. A perspective on family circumstances, with the child’s safety retained.",
+        "authorReadLogIds": [
+          "birth6.root.read.family-separation"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-family-separation",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "b255f1ce2d259ca26c350df871ab3dea2e699506a8713f9f30360205b3b5c015"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "0-3.shared-choosing-care",
+      "sourceAge": {
+        "statement": "Babies whose parents need or want care; no minimum age in the care-choice discussion.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.choosing-care",
+            "sourceId": "baby-2021",
+            "section": "What to look for in a day care or caregiver; What if the day care has different values than at home?",
+            "locator": "Warm, responsive care, family options and present-setting fit",
+            "pdfPages": [
+              {
+                "start": 253,
+                "end": 255
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.care-choice-realities",
+          "baby.ev.nido-community-labels",
+          "baby.ev.caregiver-quality-continuity",
+          "baby.ev.childcare-setup-list"
+        ]
+      },
+      "readiness": {
+        "statement": "When you need or want someone else to care for your baby.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.choosing-care",
+            "sourceId": "baby-2021",
+            "section": "What to look for in a day care or caregiver; What if the day care has different values than at home?",
+            "locator": "Warm, responsive care, family options and present-setting fit",
+            "pdfPages": [
+              {
+                "start": 253,
+                "end": 255
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.care-choice-realities",
+          "baby.ev.nido-community-labels",
+          "baby.ev.caregiver-quality-continuity",
+          "baby.ev.childcare-setup-list"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 0-3 months. The book discusses baby care within the options a family has.",
+        "authorReadLogIds": [
+          "birth6.root.read.choosing-care"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-choosing-care",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "b00e2d2966250d488c4f275a1a1d133e8828f24c547c3eab94de72ae7c0ce2ad"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    },
+    {
+      "placementId": "3-6.shared-choosing-care",
+      "sourceAge": {
+        "statement": "Babies whose parents need or want care; no minimum age in the care-choice discussion.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.choosing-care",
+            "sourceId": "baby-2021",
+            "section": "What to look for in a day care or caregiver; What if the day care has different values than at home?",
+            "locator": "Warm, responsive care, family options and present-setting fit",
+            "pdfPages": [
+              {
+                "start": 253,
+                "end": 255
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.care-choice-realities",
+          "baby.ev.nido-community-labels",
+          "baby.ev.caregiver-quality-continuity",
+          "baby.ev.childcare-setup-list"
+        ]
+      },
+      "readiness": {
+        "statement": "When you need or want someone else to care for your baby.",
+        "references": [
+          {
+            "id": "birth6.shared.ref.choosing-care",
+            "sourceId": "baby-2021",
+            "section": "What to look for in a day care or caregiver; What if the day care has different values than at home?",
+            "locator": "Warm, responsive care, family options and present-setting fit",
+            "pdfPages": [
+              {
+                "start": 253,
+                "end": 255
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.care-choice-realities",
+          "baby.ev.nido-community-labels",
+          "baby.ev.caregiver-quality-continuity",
+          "baby.ev.childcare-setup-list"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Surface this unchanged, applicable guidance in 3-6 months. The book discusses baby care within the options a family has.",
+        "authorReadLogIds": [
+          "birth6.root.read.choosing-care"
+        ]
+      },
+      "bodyReuse": {
+        "entryId": "shared-choosing-care",
+        "registryRevision": "r08",
+        "canonicalEntrySha256": "b00e2d2966250d488c4f275a1a1d133e8828f24c547c3eab94de72ae7c0ce2ad"
+      },
+      "artworkImplications": "Topic placement only; no new image or art approval."
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "birth6.root.read.observe",
+      "reader": "/root/task5-birth6-shared-placement",
+      "date": "2026-09-11",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 33,
+          "end": 37
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text for observation of a particular baby, including sounds and informal observation. Existing canonical body retains its prior approved digest."
+    },
+    {
+      "id": "birth6.root.read.follow-readiness",
+      "reader": "/root/task5-birth6-shared-placement",
+      "date": "2026-09-11",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 122
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text for guideline ages, individual development, help for concerns and choosing a suitable challenge. Existing canonical body retains its prior approved digest."
+    },
+    {
+      "id": "birth6.root.read.participation-help",
+      "reader": "/root/task5-birth6-shared-placement",
+      "date": "2026-09-11",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 99,
+          "end": 101
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text for collaboration examples from newborn and three months, proportionate help and safe effort. Existing canonical body retains its prior approved digest."
+    },
+    {
+      "id": "birth6.root.read.time-to-explore",
+      "reader": "/root/task5-birth6-shared-placement",
+      "date": "2026-09-11",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 101,
+          "end": 102
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text for safe effort, concentration and time to respond. Existing canonical body retains its prior approved digest."
+    },
+    {
+      "id": "birth6.root.read.feelings-limits",
+      "reader": "/root/task5-birth6-shared-placement",
+      "date": "2026-09-11",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 103,
+          "end": 104
+        },
+        {
+          "start": 110,
+          "end": 111
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text for adult safety responsibility, freedom within ability, acknowledging crying and responding to needs. Existing canonical body retains its prior approved digest."
+    },
+    {
+      "id": "birth6.root.read.home-fits-family",
+      "reader": "/root/task5-birth6-shared-placement",
+      "date": "2026-09-11",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 37,
+          "end": 37
+        },
+        {
+          "start": 223,
+          "end": 224
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text for people in the environment and using existing resources. Existing canonical body retains its prior approved digest."
+    },
+    {
+      "id": "birth6.root.read.adult-needs-support",
+      "reader": "/root/task5-birth6-shared-placement",
+      "date": "2026-09-11",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 235,
+          "end": 238
+        },
+        {
+          "start": 244,
+          "end": 246
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text for adult needs, support in first months, doctor support and practical help. Existing canonical body retains its prior approved digest."
+    },
+    {
+      "id": "birth6.root.read.something-for-you",
+      "reader": "/root/task5-birth6-shared-placement",
+      "date": "2026-09-11",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 235,
+          "end": 236
+        },
+        {
+          "start": 239,
+          "end": 242
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text for adult interests and personal, optional practices. Existing canonical body retains its prior approved digest."
+    },
+    {
+      "id": "birth6.root.read.less-crowded-day",
+      "reader": "/root/task5-birth6-shared-placement",
+      "date": "2026-09-11",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 222,
+          "end": 224
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text for first six to eight weeks, continuing daily work and ordinary moments together. Existing canonical body retains its prior approved digest."
+    },
+    {
+      "id": "birth6.root.read.adult-pause",
+      "reader": "/root/task5-birth6-shared-placement",
+      "date": "2026-09-11",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 110,
+          "end": 111
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text for no-danger condition, acknowledgment, presence, comfort and response. Existing canonical body retains its prior approved digest."
+    },
+    {
+      "id": "birth6.root.read.repair",
+      "reader": "/root/task5-birth6-shared-placement",
+      "date": "2026-09-11",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 111,
+          "end": 112
+        },
+        {
+          "start": 238,
+          "end": 239
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text for adult apology and learning from mistakes while caring for a baby. Existing canonical body retains its prior approved digest."
+    },
+    {
+      "id": "birth6.root.read.family-needs",
+      "reader": "/root/task5-birth6-shared-placement",
+      "date": "2026-09-11",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 244,
+          "end": 247
+        },
+        {
+          "start": 251,
+          "end": 253
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text for different care arrangements, early-week support, check-ins and practical parenting chats. Existing canonical body retains its prior approved digest."
+    },
+    {
+      "id": "birth6.root.read.caregiver-common-ground",
+      "reader": "/root/task5-birth6-shared-placement",
+      "date": "2026-09-11",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 246,
+          "end": 253
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text for caregiver differences, requests, values, listening and appreciation. Existing canonical body retains its prior approved digest."
+    },
+    {
+      "id": "birth6.root.read.family-separation",
+      "reader": "/root/task5-birth6-shared-placement",
+      "date": "2026-09-11",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 247,
+          "end": 247
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text for different family homes, adult support and explicit safety exception. Existing canonical body retains its prior approved digest."
+    },
+    {
+      "id": "birth6.root.read.choosing-care",
+      "reader": "/root/task5-birth6-shared-placement",
+      "date": "2026-09-11",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 253,
+          "end": 255
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text for warm, responsive care, family options and present-setting fit. Existing canonical body retains its prior approved digest."
+    }
+  ],
+  "sourceInputs": {
+    "registry": {
+      "path": "content/pilots/CANONICAL_REGISTRY.json",
+      "sha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+    },
+    "pdf": {
+      "sourceId": "baby-2021",
+      "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+    },
+    "note": "Frozen body approval is inherited by digest. These actual reads support new placement judgments, not a new review of the complete body bibliography."
+  }
+}

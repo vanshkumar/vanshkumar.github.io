@@ -1,0 +1,381 @@
+{
+  "id": "toddler-family-connection-tone-r05",
+  "reviewer": {
+    "task": "/root/pilot_toddler_family_tone",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Renewed independent tone judgment of exactly toddler-screens and toddler-languages at their frozen r05 18–24-month placements, including complete public entries, age/display metadata, both topic rows and actual rendered detail text. Both are unillustrated and have no opening surface. Only this reviewer’s own r02 report was consulted. This report renews tone judgment and resolves the three named earlier findings; it makes no source-role or release claim.",
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r05/RENDERED_SURFACES.json",
+    "sha256": "b2b0183e437c4abf4c8dddd18ca4ac94be9075abd517d635779d2b946fe0f77b"
+  },
+  "inputVerification": {
+    "manifest": {
+      "path": "content/pilots/revisions/r05/MANIFEST.json",
+      "sha256": "ae7dfd0ce44392a8c040bb9b9df38ca991d9b37aab24caf8655d52cf1e1a663c"
+    },
+    "payload": {
+      "path": "content/pilots/revisions/r05/payload.json",
+      "sha256": "d49f556630411e3d49a869688a0691dc32f93fdca6aa4edbb597bd47d9045c55"
+    },
+    "draft": {
+      "path": "content/pilots/drafts/toddler/draft-r05.json",
+      "sha256": "b1632aafa09d8a3a50afec143f44fcb47e7ace8909ff47d2aa3f17a6f3e726fe",
+      "authorTask": "/root/toddler_pilot_draft",
+      "revisionEditorTask": "/root"
+    },
+    "renderer": {
+      "path": "src/HomeStudy.jsx",
+      "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c",
+      "matchesFrozenManifestAndR02": true
+    },
+    "source": {
+      "sourceId": "toddler-2019",
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/The Montessori Toddler - Simone Davies _Worldfreebooks.com_.pdf",
+      "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b",
+      "bytes": 7036292,
+      "physicalPdfPages": 257,
+      "matchesSourceManifestAndPriorPersonallyReadFile": true
+    },
+    "verification": "Both snapshot file hashes, text component hashes and public projection hashes checked. Selected entries equal the authored draft and frozen payload; selected placements equal the frozen payload. Both saved HTML documents reproduce the personally read rendered entry text. The complete public-projection comparison shows only the screen title and the two first-reference locators changed from r02."
+  },
+  "readingContinuity": {
+    "priorReport": {
+      "path": "content/pilots/reviews/final/toddler-family-connection-tone-r02.json",
+      "sha256": "fe4ad0607c57e7a4afff44c1c4eb1f79cfc03b357e4d9037afe8a3d3dd5e16c7",
+      "reviewerTask": "/root/pilot_toddler_family_tone"
+    },
+    "retainedReadLogIds": [
+      "toddler-family-connection-tone-r02.read.framing",
+      "toddler-family-connection-tone-r02.read.framing-visual",
+      "toddler-family-connection-tone-r02.read.limits",
+      "toddler-family-connection-tone-r02.read.limits-visual",
+      "toddler-family-connection-tone-r02.read.screens-languages",
+      "toddler-family-connection-tone-r02.read.screens-languages-visual"
+    ],
+    "additionalOriginalPagesReadInThisRenewal": [],
+    "basis": "Reuse is limited to this reviewer’s own actual original-PDF reads, with record-level links below. The source bytes are unchanged, citations and body qualifications are unchanged, and the replacements introduce no new source claim or context requirement. Current public prose, provenance and rendered surfaces were personally reassessed in full; the prior verdict was not carried forward automatically."
+  },
+  "readLogs": [
+    {
+      "id": "toddler-family-connection-tone-r02.read.framing",
+      "reader": "/root/pilot_toddler_family_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        },
+        {
+          "start": 17,
+          "end": 17
+        },
+        {
+          "start": 29,
+          "end": 29
+        },
+        {
+          "start": 33,
+          "end": 39
+        },
+        {
+          "start": 187,
+          "end": 189
+        },
+        {
+          "start": 195,
+          "end": 195
+        },
+        {
+          "start": 198,
+          "end": 198
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text extracted from the fingerprinted PDF: approximate toddler scope; accepting the child and acting as guide; individual timelines and respect; full activity characteristics, demonstration and general principles with repetition, help, frustration, household resources and supervision; adult imperfection, support and help-seeking; guide availability; family constraints and repair. These are exact pages read, not a claim to have read all of chapter 8.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-family-connection-tone-r02.json",
+        "sha256": "fe4ad0607c57e7a4afff44c1c4eb1f79cfc03b357e4d9037afe8a3d3dd5e16c7",
+        "readLogId": "toddler-family-connection-tone-r02.read.framing",
+        "readLogRecordSha256": "036992a957964dd6cc612254e5f9fad2b16f3498bbe278d7fe78c7ed193073f2"
+      },
+      "reuseStatement": "This reviewer personally performed this original-source reading during r02. The exact source fingerprint is unchanged. This is retained reading evidence, not a new page read or another reviewer’s work."
+    },
+    {
+      "id": "toddler-family-connection-tone-r02.read.framing-visual",
+      "reader": "/root/pilot_toddler_family_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 17,
+          "end": 17
+        },
+        {
+          "start": 33,
+          "end": 33
+        },
+        {
+          "start": 36,
+          "end": 36
+        },
+        {
+          "start": 188,
+          "end": 189
+        },
+        {
+          "start": 195,
+          "end": 195
+        },
+        {
+          "start": 198,
+          "end": 198
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read readable full-page Poppler renders, including the SHOW callout on PDF 36, guide callout on 195, adult support and repair text, and accompanying original illustrations. These source visuals are context evidence, not app-art approvals.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-family-connection-tone-r02.json",
+        "sha256": "fe4ad0607c57e7a4afff44c1c4eb1f79cfc03b357e4d9037afe8a3d3dd5e16c7",
+        "readLogId": "toddler-family-connection-tone-r02.read.framing-visual",
+        "readLogRecordSha256": "0104504e6ce0e5cf743c21706dde1bce94ad3cd0ce9b7f3c50b46d04ec34ef0d"
+      },
+      "reuseStatement": "This reviewer personally performed this original-source reading during r02. The exact source fingerprint is unchanged. This is retained reading evidence, not a new page read or another reviewer’s work."
+    },
+    {
+      "id": "toddler-family-connection-tone-r02.read.limits",
+      "reader": "/root/pilot_toddler_family_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 128,
+          "end": 142
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original pages: cooperation summary on 128 and the whole Setting limits part from 129 through the checklist on 142. Includes kind handling, necessary care, immediate danger, uncertainty in naming feelings, welcomed or declined hugs, the full tantrum sequence, the time-pressure exception on 136, voluntary older-child calm-space context, reconnection, amends, anticipatory subsection on 138, adult mistakes and boundaries. No source care protocol or older-child procedure is added to these entries.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-family-connection-tone-r02.json",
+        "sha256": "fe4ad0607c57e7a4afff44c1c4eb1f79cfc03b357e4d9037afe8a3d3dd5e16c7",
+        "readLogId": "toddler-family-connection-tone-r02.read.limits",
+        "readLogRecordSha256": "d487137df20f1c4ac3bb51912fda9d8febdb2a1d9ba759b92f1f39a3e7b25b95"
+      },
+      "reuseStatement": "This reviewer personally performed this original-source reading during r02. The exact source fingerprint is unchanged. This is retained reading evidence, not a new page read or another reviewer’s work."
+    },
+    {
+      "id": "toddler-family-connection-tone-r02.read.limits-visual",
+      "reader": "/root/pilot_toddler_family_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 128,
+          "end": 128
+        },
+        {
+          "start": 130,
+          "end": 130
+        },
+        {
+          "start": 138,
+          "end": 138
+        },
+        {
+          "start": 142,
+          "end": 142
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read the original full-page cooperation summary, limits page and illustration, all subsections of the structured tantrum summary on 138 including triggers and older children, and the complete limits checklist on 142. These readable original layouts were inspected separately from text extraction.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-family-connection-tone-r02.json",
+        "sha256": "fe4ad0607c57e7a4afff44c1c4eb1f79cfc03b357e4d9037afe8a3d3dd5e16c7",
+        "readLogId": "toddler-family-connection-tone-r02.read.limits-visual",
+        "readLogRecordSha256": "f5aeb8df61898ba1c23dc3cb45d5cd576ac07d725ebaf02beec9f9491d819c8c"
+      },
+      "reuseStatement": "This reviewer personally performed this original-source reading during r02. The exact source fingerprint is unchanged. This is retained reading evidence, not a new page read or another reviewer’s work."
+    },
+    {
+      "id": "toddler-family-connection-tone-r02.read.screens-languages",
+      "reader": "/root/pilot_toddler_family_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 181,
+          "end": 183
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read all original text of the complete Screen time and Bilingualism units. Includes firsthand-experience preference, external claims as reported by the book, alternatives and adult modeling, occasional programs, school-age supervised-use continuation and personal computer-skills anecdote; both language arrangements, multilingual-neighbor continuation, adult consistency, asserted exposure percentage, vocabulary comparison, no-delay and mother-tongue assertions, and both book-resource callouts. No external source was substituted and no reported outcome is treated as an individual guarantee.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-family-connection-tone-r02.json",
+        "sha256": "fe4ad0607c57e7a4afff44c1c4eb1f79cfc03b357e4d9037afe8a3d3dd5e16c7",
+        "readLogId": "toddler-family-connection-tone-r02.read.screens-languages",
+        "readLogRecordSha256": "cd62f660673d37b51e80832d3c53ba35c0643b26a7a93d0db915a0c195417eee"
+      },
+      "reuseStatement": "This reviewer personally performed this original-source reading during r02. The exact source fingerprint is unchanged. This is retained reading evidence, not a new page read or another reviewer’s work."
+    },
+    {
+      "id": "toddler-family-connection-tone-r02.read.screens-languages-visual",
+      "reader": "/root/pilot_toddler_family_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 182,
+          "end": 183
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read both complete original rendered pages, including the screen personal-experience continuation and its distinct recommended-book callout, the bilingualism heading and neighbor anecdote, Domains of Use, asserted outcomes and the final recommended-book callout. Confirmed that the screen callout belongs above the Bilingualism heading, rather than following its example as extraction order suggests.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-family-connection-tone-r02.json",
+        "sha256": "fe4ad0607c57e7a4afff44c1c4eb1f79cfc03b357e4d9037afe8a3d3dd5e16c7",
+        "readLogId": "toddler-family-connection-tone-r02.read.screens-languages-visual",
+        "readLogRecordSha256": "435209e6626eb8aa27a44167c6f3c23281348648eb2437b75cb879430d6f3a39"
+      },
+      "reuseStatement": "This reviewer personally performed this original-source reading during r02. The exact source fingerprint is unchanged. This is retained reading evidence, not a new page read or another reviewer’s work."
+    }
+  ],
+  "renderedReads": [
+    {
+      "placementId": "18-24.toddler-screens",
+      "path": "tmp/pilot-review/r05/18-24.toddler-screens.entry.html",
+      "sha256": "2f4a8a337bc9620c07ddd764eb5ab31e47c9e5f7dc8c48138cec7dc72bae84cc",
+      "mode": "actual-server-rendered-text",
+      "description": "Personally read all r05 topic-row and full entry text in frozen RENDERED_SURFACES.json, including age/context and Back to the books. Reinspected the unchanged topic/detail renderer and confirmed the saved rendered HTML text matches. No browser screenshot or opening/art inspection is claimed."
+    },
+    {
+      "placementId": "18-24.toddler-languages",
+      "path": "tmp/pilot-review/r05/18-24.toddler-languages.entry.html",
+      "sha256": "90077aa14d28562e0527359856faf36418bdb45fe2b10d12a282e17b79f03424",
+      "mode": "actual-server-rendered-text",
+      "description": "Personally read all r05 topic-row and full entry text in frozen RENDERED_SURFACES.json, including age/context and Back to the books. Reinspected the unchanged topic/detail renderer and confirmed the saved rendered HTML text matches. No browser screenshot or opening/art inspection is claimed."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "toddler-family-connection-tone-r05.18-24.toddler-screens",
+      "entryId": "toddler-screens",
+      "placementId": "18-24.toddler-screens",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-screens.json",
+      "snapshotFileSha256": "25747de635eceeaccaa87ee8393f0bd69a7058a84192c1cb345087a9f5f8d3e1",
+      "textPlacementSha256": "029a759c4e1f4e5bb80d55b5e125f386e4c47098b036051bf1706ba5c523079a",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-family-connection-tone-r02.read.framing",
+        "toddler-family-connection-tone-r02.read.framing-visual",
+        "toddler-family-connection-tone-r02.read.screens-languages",
+        "toddler-family-connection-tone-r02.read.screens-languages-visual",
+        "toddler-family-connection-tone-r02.read.limits",
+        "toddler-family-connection-tone-r02.read.limits-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass after personally reassessing the whole current entry, both actual topic rows, complete detail text, public references and 18–24-month context. “Davies’s approach to screens” now names the subject plainly while maintaining attribution; it is recognizable in both Play & discovery and Connection & feelings. The summary presents a Montessori preference and family choices, without a universal developmental claim. Detail offers ordinary books, a shared activity, a walk and adult example as possibilities, preserves occasional selected programs and treats later computer skills as anecdote. Its brief distress reference does not add a care protocol or require a particular calming result. The broad book age is separate from a starting-age expectation. The first reference now uses plain navigation language and retains the full source span. No new performance pressure, fixed screen quota, shopping requirement or lost source qualification appears. Both of my r02 issues are resolved for this exact replacement component."
+      },
+      "artContext": null,
+      "resolvesIssueIds": [
+        "tone.toddler-screens.recognizable-title",
+        "tone.toddler-screens.reader-reference"
+      ]
+    },
+    {
+      "id": "toddler-family-connection-tone-r05.18-24.toddler-languages",
+      "entryId": "toddler-languages",
+      "placementId": "18-24.toddler-languages",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-languages.json",
+      "snapshotFileSha256": "004bd799bb7008454b4030635f36d8a8e84e265731e74ed78b0953c527ded724",
+      "textPlacementSha256": "d23066459606803613943b91acc01bf6184587a782e8e63b25af444afc781f1d",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-family-connection-tone-r02.read.framing",
+        "toddler-family-connection-tone-r02.read.framing-visual",
+        "toddler-family-connection-tone-r02.read.screens-languages",
+        "toddler-family-connection-tone-r02.read.screens-languages-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass after personally reassessing the whole current entry, both actual topic rows, complete detail text, public reference and 18–24-month context. The recognizable family-language title and summary describe people, places and times rather than a fluency target. The full prose preserves two alternative family arrangements and a real-person focus, while keeping the multilingual-family example separate from a promised result. It does not impose the book’s exposure percentage, a vocabulary count, effortless acquisition, a universal no-delay reassurance, or a prerequisite claim. The age context remains an editorial browsing aid with no expected start. The revised locator names the two approaches and example in ordinary book-navigation language; the private evaluation of asserted outcomes no longer reaches the reader reference. My r02 locator issue is resolved for this exact replacement component."
+      },
+      "artContext": null,
+      "resolvesIssueIds": [
+        "tone.toddler-languages.reader-reference"
+      ]
+    }
+  ],
+  "resolutions": [
+    {
+      "issueId": "tone.toddler-screens.recognizable-title",
+      "status": "resolved",
+      "priorReport": {
+        "path": "content/pilots/reviews/final/toddler-family-connection-tone-r02.json",
+        "sha256": "fe4ad0607c57e7a4afff44c1c4eb1f79cfc03b357e4d9037afe8a3d3dd5e16c7"
+      },
+      "priorReviewId": "toddler-family-connection-tone-r02.18-24.toddler-screens",
+      "replacementReviewId": "toddler-family-connection-tone-r05.18-24.toddler-screens",
+      "placementId": "18-24.toddler-screens",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-screens.json",
+      "snapshotFileSha256": "25747de635eceeaccaa87ee8393f0bd69a7058a84192c1cb345087a9f5f8d3e1",
+      "textPlacementSha256": "029a759c4e1f4e5bb80d55b5e125f386e4c47098b036051bf1706ba5c523079a",
+      "field": "entry.title",
+      "replacement": "Davies’s approach to screens",
+      "assessment": "The actual headings in both topic rows and in detail now identify screens and Davies’s perspective directly. The replacement removes the vague “leave room for” formulation without introducing a command or outcome claim."
+    },
+    {
+      "issueId": "tone.toddler-screens.reader-reference",
+      "status": "resolved",
+      "priorReport": {
+        "path": "content/pilots/reviews/final/toddler-family-connection-tone-r02.json",
+        "sha256": "fe4ad0607c57e7a4afff44c1c4eb1f79cfc03b357e4d9037afe8a3d3dd5e16c7"
+      },
+      "priorReviewId": "toddler-family-connection-tone-r02.18-24.toddler-screens",
+      "replacementReviewId": "toddler-family-connection-tone-r05.18-24.toddler-screens",
+      "placementId": "18-24.toddler-screens",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-screens.json",
+      "snapshotFileSha256": "25747de635eceeaccaa87ee8393f0bd69a7058a84192c1cb345087a9f5f8d3e1",
+      "textPlacementSha256": "029a759c4e1f4e5bb80d55b5e125f386e4c47098b036051bf1706ba5c523079a",
+      "field": "entry.references[0].locator",
+      "replacement": "Screen alternatives, adults’ own screen use and Davies’s family experience",
+      "assessment": "The actual Back to the books block now names the discussion a parent can find. The read-completeness/continuation wording remains outside public copy, and PDF pp. 181–182 are retained."
+    },
+    {
+      "issueId": "tone.toddler-languages.reader-reference",
+      "status": "resolved",
+      "priorReport": {
+        "path": "content/pilots/reviews/final/toddler-family-connection-tone-r02.json",
+        "sha256": "fe4ad0607c57e7a4afff44c1c4eb1f79cfc03b357e4d9037afe8a3d3dd5e16c7"
+      },
+      "priorReviewId": "toddler-family-connection-tone-r02.18-24.toddler-languages",
+      "replacementReviewId": "toddler-family-connection-tone-r05.18-24.toddler-languages",
+      "placementId": "18-24.toddler-languages",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-languages.json",
+      "snapshotFileSha256": "004bd799bb7008454b4030635f36d8a8e84e265731e74ed78b0953c527ded724",
+      "textPlacementSha256": "d23066459606803613943b91acc01bf6184587a782e8e63b25af444afc781f1d",
+      "field": "entry.references[0].locator",
+      "replacement": "One Person One Language, Domains of Use and a multilingual-family example",
+      "assessment": "The actual Back to the books block now identifies the two named arrangements and the family example. “Surrounding asserted outcomes” no longer appears there, and PDF pp. 182–183 are retained."
+    }
+  ],
+  "summary": {
+    "placements": 2,
+    "textPass": 2,
+    "textRevise": 0,
+    "textHold": 0,
+    "artContexts": 0,
+    "resolvedIssueIds": [
+      "tone.toddler-screens.recognizable-title",
+      "tone.toddler-screens.reader-reference",
+      "tone.toddler-languages.reader-reference"
+    ],
+    "openIssueIds": []
+  },
+  "learnings": []
+}

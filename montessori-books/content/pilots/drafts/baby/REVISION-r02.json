@@ -1,0 +1,105 @@
+{
+  "revision": "r02",
+  "editor": "/root",
+  "date": "2026-09-10",
+  "previousDraft": {
+    "path": "content/pilots/drafts/baby/draft-r01.json",
+    "sha256": "2b3f7085ab35dbd07574a3606deb46a38a586ad57a5d257d8b26b4dd0d098183"
+  },
+  "findingReports": [
+    {
+      "path": "content/pilots/reviews/final/baby-play-tone-r01.json",
+      "sha256": "40c61450d6d011954ae0184d95a2cfba2c2cfc871b4cd126ce349daae6135ad6"
+    },
+    {
+      "path": "content/pilots/reviews/final/baby-care-source-r01.json",
+      "sha256": "42b7078c901197dc848e19857c48bd1152dff9df3abe26f1ff3d21458651bd48"
+    }
+  ],
+  "changes": [
+    {
+      "entryId": "baby-language",
+      "beforeEntrySha256": "51ba84053b2bd1150669e6d97bb77625b5791ca8aec41a76680e035ab6200905",
+      "afterEntrySha256": "f73c743dcacd0fd6b178539e6918812d6c35fc28ca65b123b6455686166e2213",
+      "changedFields": [
+        "title"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "baby-play-tone-r01.baby-language.name-conversation-in-title"
+      ]
+    },
+    {
+      "entryId": "baby-treasure-baskets",
+      "beforeEntrySha256": "68a15f836285cdee019fbdca13dca0865d5e35ad674529bdf2a54038b8d9df2f",
+      "afterEntrySha256": "f25eab09d61589304616896faf4837643f49046236ee21fc4a9c4dc372a89cb6",
+      "changedFields": [
+        "title"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "baby-play-tone-r01.baby-treasure-baskets.name-basket-in-title"
+      ]
+    },
+    {
+      "entryId": "baby-first-containers",
+      "beforeEntrySha256": "27eb95adc79c9a8e9072afe283b9018d6b6c3fec69eb066ba6d08caa2cdf2733",
+      "afterEntrySha256": "115ae9ddeacb928376878bdacd74fa836f4d721ba3f22dea39acbe362a28f679",
+      "changedFields": [
+        "title",
+        "summary"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "baby-play-tone-r01.baby-first-containers.summary-needs-own-readiness-meaning",
+        "baby-play-tone-r01.baby-first-containers.name-container-subject-in-title"
+      ]
+    },
+    {
+      "entryId": "baby-photos-at-eye-level",
+      "beforeEntrySha256": "d09eef7e1bd34efd335712f297a2ebf668cef246d19d0f939c01dd181b07e0b3",
+      "afterEntrySha256": "4b3f1aa84ddfd2616b3033c57d0c31996f589e9d3f1d6400e05e6653df7cd486",
+      "changedFields": [
+        "title"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "baby-play-tone-r01.baby-photos-at-eye-level.name-photographs-in-title"
+      ]
+    },
+    {
+      "entryId": "baby-space-to-explore",
+      "beforeEntrySha256": "0ed213cab2aa8bea04dd2a644948304f270a5f19e18ad6be544807feee79b4aa",
+      "afterEntrySha256": "3bdb7c451f91bc1efbccd1b770abd47e928b621c32c74e2105acbe788b11183e",
+      "changedFields": [
+        "detail",
+        "references"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "baby-play-tone-r01.baby-space-to-explore.remove-unneeded-installation-comparison"
+      ]
+    },
+    {
+      "entryId": "baby-eating-place",
+      "beforeEntrySha256": "09f1f818bd441ace5e8438e61289458b1fc0abeda79f01466b80765d09bd8811",
+      "afterEntrySha256": "926fc1cff90a5fd3908df5e1f11a667b9f1d0fb333b361cbac328478f0d4c109",
+      "changedFields": [
+        "summary",
+        "detail"
+      ],
+      "placementChanged": true,
+      "issueIds": [
+        "baby-care-source-r01.baby-eating-place.high-chair-attachment"
+      ]
+    }
+  ],
+  "status": "Proposed exact corrections; affected source and tone re-reviews pending",
+  "editorReadLogs": [
+    {
+      "path": "content/pilots/editorial/ROOT_READ_LOG-r02.json",
+      "sha256": "72b649d27bf26a334066d3e9d4dd356e4e69aa81183514f75b0b8f12533772c3"
+    }
+  ],
+  "readBoundary": "Original author provenance/read logs remain intact. Limited additional editor original-source reads are separately logged; no whole-author-source reread or independent review by the editor is claimed."
+}

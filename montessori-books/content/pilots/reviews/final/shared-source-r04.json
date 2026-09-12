@@ -1,0 +1,758 @@
+{
+  "id": "shared-source-r04",
+  "reviewer": {
+    "task": "/root/pilot_shared_source_r04",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Independent source review of the exact r04 frozen text, age/topic placement, reference and actual HomeStudy-rendered topic/detail surfaces for the six named canonical shared entries in both 6–9 and 18–24 months (12 placements). Each age context was assessed separately. All selected snapshots have null art context and no opening-home surface. No other reviewer findings or prior verdicts were read. This report makes no release or independent medical-verification claim.",
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r04/RENDERED_SURFACES.json",
+    "sha256": "0668491aeb16e3ce020bee7f4f7b77d53b959c783dd69f78e98651c915831084"
+  },
+  "renderer": {
+    "path": "src/HomeStudy.jsx",
+    "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c",
+    "mode": "full-code",
+    "description": "Personally read HomeStudy, TopicBrowser and EntryReading; checked the exact selected rendered records against the frozen public wording. Every renderer file in the r04 manifest also retained its frozen byte hash at final verification."
+  },
+  "manifest": {
+    "path": "content/pilots/revisions/r04/MANIFEST.json",
+    "sha256": "234ee04ed80f67104fb62d1151ceba3b316a370e460380dcfff5fa99ec49ede9"
+  },
+  "payload": {
+    "path": "content/pilots/revisions/r04/payload.json",
+    "sha256": "e986e1da033f134efb24a870e5dac6ce77ff9f4caa4b621a9f7b7de76185c3af"
+  },
+  "authorInput": {
+    "path": "content/pilots/drafts/shared/draft-r02.json",
+    "sha256": "04720cdd2997dc461a619234d74bea952b2fd3c388a49b326dc282f065f39b06"
+  },
+  "sourceFiles": [
+    {
+      "sourceId": "baby-2021",
+      "path": "the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+      "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f",
+      "physicalPageCount": 310
+    },
+    {
+      "sourceId": "toddler-2019",
+      "path": "The Montessori Toddler - Simone Davies _Worldfreebooks.com_.pdf",
+      "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b",
+      "physicalPageCount": 257
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "source.baby.introduction",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 18,
+          "end": 21
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete text freshly extracted from the verified original PDF pages: collaboration and available help in infancy, the no-purchase statement, book purpose and individual differences. This is context reading, not a certification of the whole introductory chapter."
+    },
+    {
+      "id": "source.baby.observation-environment",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 33,
+          "end": 37
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the original-page text for Observation, the complete observation checklist through its continuation, and Prepared environment. Includes the people in the baby’s environment and adjusting surroundings as the baby grows."
+    },
+    {
+      "id": "source.baby.connection",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 98,
+          "end": 115
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text across Respect, kind/clear boundaries, concentration and movement context, attachment, crying, Being their guide, framing, the connection checklist and Going slow. Read the distinctions among effort, needed help, responsive presence and immediate danger; sensitive neighboring examples are context and are not new companion instructions."
+    },
+    {
+      "id": "source.baby.activities",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 126
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete original-page text of Introduction to activities through How to help if our baby is stuck or struggling, including choosing activities, object/material qualifications, suitable challenge, frustration, readiness, activity timing and the adult role. Read the additional material that begins on page 126, without claiming the continuation of Further notes was read."
+    },
+    {
+      "id": "source.baby.daily-life-budget",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 222,
+          "end": 224
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the original-page text of the complete daily-tasks and Montessori-on-a-budget units, including early and later infant participation, adult work/rest, ordinary connection, using existing resources and the qualified examples. The oral-development passage on page 222 was also read as neighboring context."
+    },
+    {
+      "id": "source.baby.differences",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 229,
+          "end": 230
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read original-page text of premature-baby and adoption context and the complete Physical disabilities or neurological differences unit on page 230, including the book’s scope limit, support, individual capability and the external-resource recommendation. The recommendation was inventoried, not imported as evidence."
+    },
+    {
+      "id": "source.baby.adult-family",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 234,
+          "end": 247
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read all original-page text of adult preparation through Doing our best, including the personal framing and all 49 calm ideas, then the Working together opener, We don’t walk alone, asking for help, partner and other-caregiver support, and page 247’s single-parent/co-parent safety exception. Includes postpartum-depression help on page 238, the doctor/friend item on page 241, resource limits and the visible household-help list on page 245."
+    },
+    {
+      "id": "source.baby.age-guidelines",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text including the Activities list for babies preface: ages are guidelines, activities follow current interests/skills, and too-hard/too-easy activities are removed. No individual appendix activity or age row is being inferred from this preface."
+    },
+    {
+      "id": "source.toddler.principles",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 27,
+          "end": 29
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text covering freedom and limits, independence/responsibility, individual development, respect and observation. The reading preserves safety, adult responsibility, individual timelines and help rather than treating independence as acceleration."
+    },
+    {
+      "id": "source.toddler.activities",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 33,
+          "end": 39
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text from Montessori activities for the whole child through all ten General principles to keep in mind: indicative ages, partial work cycles, suitable challenge, presentation/help, refusal of help, repetition, materials, modification, using existing resources and supervision qualifications."
+    },
+    {
+      "id": "source.toddler.home",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 82,
+          "end": 85
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read all original-page text of General principles for the home and The importance of the home environment: clutter, warmth/culture, reducing work, safety, shared/small spaces and gradual improvements. Age-specific furniture and setup examples remain context, not instructions carried into the baby placement."
+    },
+    {
+      "id": "source.toddler.curiosity-participation",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 95,
+          "end": 102
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text of curiosity’s five ingredients and the first five principles through Offering help. Covers physical/social environment, time, safe base, following the child with limits, practical participation, work/weekend constraints, occasional hurry, proportionate help and the frustration/rushed-day exception on page 102."
+    },
+    {
+      "id": "source.toddler.adult",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 187,
+          "end": 200
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete original-page text of Preparation of the adult through Keep practicing and its closing exercise. Includes nonuniversal personal framing, physical self-care and doctor support, learning/differences, morning routines with children, emotional support, slower pace, the immediate-danger exception, guide/home-helper principles, real constraints and choice, mistakes and adult limits."
+    },
+    {
+      "id": "source.toddler.family",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 203,
+          "end": 211
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete original-page text of What about everyone else? through the family chapter’s closing practice questions. Includes diverse family arrangements, adult needs, trusted caregivers, family differences, grandparents’ respite/support, conflict and the explicit child-safety qualification for parental contact on page 210."
+    },
+    {
+      "id": "source.baby.foundation-visual",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 21,
+          "end": 21
+        },
+        {
+          "start": 35,
+          "end": 35
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected readable, full original PDF pages rendered at 120 dpi: the introductory contrast-box layout on page 21 and the observation checklist/ring-stack illustration on page 35. Text continuations of the observation checklist on pages 36–37 were read in the full-text log; no numerical readiness was inferred from artwork."
+    },
+    {
+      "id": "source.baby.connection-visual",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 110,
+          "end": 110
+        },
+        {
+          "start": 113,
+          "end": 114
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected readable full original pages at 120 dpi: attachment continuation and crying/danger context with hands illustration; Being their guide continuation, framing and tray illustration; and the complete connection checklist with the start of Going slow."
+    },
+    {
+      "id": "source.baby.activities-differences-visual",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 119
+        },
+        {
+          "start": 229,
+          "end": 230
+        },
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected readable full original pages at 120 dpi: the activity-purpose/age/support callouts, the complete differences subsection and its book-recommendation panel, and the activity-list age-guidelines preface. Page 294’s preceding table fragment was distinguished from the new activity-list heading; no adjacent row supplied an age for these perspectives."
+    },
+    {
+      "id": "source.baby.daily-life-visual",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 222,
+          "end": 222
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected the readable original full page at 120 dpi, including the hands illustration, oral-development context and opening daily-tasks paragraphs. The daily-tasks and budget continuations were personally read in full-text mode on pages 223–224."
+    },
+    {
+      "id": "source.baby.adult-family-visual",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 239,
+          "end": 241
+        },
+        {
+          "start": 243,
+          "end": 243
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected readable full original pages at 120 dpi: adult reflection box, personal introduction and the entire 49-ideas list, including idea 25’s home purpose, music items and the doctor/friend qualification; also the Working together family illustration and section menu. These are original source inspections, not companion-art approvals."
+    },
+    {
+      "id": "source.toddler.activities-visual",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 28,
+          "end": 28
+        },
+        {
+          "start": 33,
+          "end": 33
+        },
+        {
+          "start": 36,
+          "end": 36
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected readable full original pages at 120 dpi: independence text/leaf illustration, activity ages/pencil illustration and the SHOW callout with its named attribution. Printed folios are visible, but the reviewed public references use physical PDF pages only."
+    },
+    {
+      "id": "source.toddler.home-visual",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 82,
+          "end": 82
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected the readable full original page at 120 dpi, including the clutter/rotation distinction and the separate Marie Kondo recommendation panel. The panel’s external title was not used as an additional source."
+    },
+    {
+      "id": "source.toddler.participation-visual",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 102,
+          "end": 102
+        },
+        {
+          "start": 195,
+          "end": 195
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected readable full original pages at 120 dpi: rushed-day help, mistakes and Offering help with refusal respected, and the complete Be the child’s guide passage and illustrated guide/boss/servant panel."
+    },
+    {
+      "id": "source.toddler.adult-visual",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 186,
+          "end": 186
+        },
+        {
+          "start": 188,
+          "end": 189
+        },
+        {
+          "start": 192,
+          "end": 192
+        },
+        {
+          "start": 194,
+          "end": 194
+        },
+        {
+          "start": 196,
+          "end": 196
+        },
+        {
+          "start": 198,
+          "end": 198
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected readable full original pages at 120 dpi: the adult-section tea/flowers illustration, physical self-care and doctor support, learning and morning-ritual boundary, observation and emotional-bucket boundary, slowing down with its immediate-danger exception, home-helper examples and blocks illustration, and real constraints/choice plus mistakes context. Read all visible page text and illustrations, not a contact sheet."
+    },
+    {
+      "id": "source.toddler.family-visual",
+      "reader": "/root/pilot_shared_source_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 202,
+          "end": 202
+        },
+        {
+          "start": 205,
+          "end": 205
+        },
+        {
+          "start": 208,
+          "end": 208
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected readable full original pages at 120 dpi: paired adult/child aprons and rolling pins on the image-only page 202, the family-needs page and figures, and the grandparent/caregiver page with separate-house/family figures. No age or required family form was inferred from these source illustrations."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "shared-source-r04.6-9.shared-follow-readiness",
+      "entryId": "shared-follow-readiness",
+      "placementId": "6-9.shared-follow-readiness",
+      "snapshotPath": "content/pilots/revisions/r04/snapshots/6-9.shared-follow-readiness.json",
+      "snapshotFileSha256": "2ba9f0626810359ba0bbc35b176347ba1dc6f179f34ecdb9ca62206f33b8a39e",
+      "textPlacementSha256": "bf479d3f6ac8ea759e3300af602bd5292df32c5997472044f6ad80e0dd409bc5",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby.observation-environment",
+        "source.baby.activities",
+        "source.baby.differences",
+        "source.baby.age-guidelines",
+        "source.toddler.principles",
+        "source.toddler.activities",
+        "source.toddler.adult",
+        "source.baby.foundation-visual",
+        "source.baby.activities-differences-visual",
+        "source.toddler.activities-visual",
+        "source.toddler.adult-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The title, cue, both topic summaries, detail and principle preserve observation, present interest/effort, suitable challenge and activity ages as guides. The short summary itself retains support for developmental concerns; Baby PDF 119 and 230 and Toddler PDF 189 support the detail’s help-seeking and scope statements. The cited age-guidelines passages at Baby PDF 294 and Toddler PDF 33 support removing activities that are too easy or hard; Baby PDF 121–122 supports trying again later. The rendered references and locators resolve to those exact units, and all public page labels correctly say PDF pages. At 6–9 months, the infant sources directly support the principle. The explicit Age, interest & context note identifies this as general activity-selection guidance, so placement supplies no six-to-nine-month milestone or skill requirement. Play & discovery and For you & your family both fit."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r04.18-24.shared-follow-readiness",
+      "entryId": "shared-follow-readiness",
+      "placementId": "18-24.shared-follow-readiness",
+      "snapshotPath": "content/pilots/revisions/r04/snapshots/18-24.shared-follow-readiness.json",
+      "snapshotFileSha256": "b0808a8c998642674ae20dc9d972ba681c2112ae48d25c59074427e7e4cf4831",
+      "textPlacementSha256": "08661cc56c9263d8cd45a2b79ea418e6acdc84ae0594b0604412bac6c58fe701",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby.observation-environment",
+        "source.baby.activities",
+        "source.baby.differences",
+        "source.baby.age-guidelines",
+        "source.toddler.principles",
+        "source.toddler.activities",
+        "source.toddler.adult",
+        "source.baby.foundation-visual",
+        "source.baby.activities-differences-visual",
+        "source.toddler.activities-visual",
+        "source.toddler.adult-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The title, cue, both topic summaries, detail and principle preserve observation, present interest/effort, suitable challenge and activity ages as guides. The short summary itself retains support for developmental concerns; Baby PDF 119 and 230 and Toddler PDF 189 support the detail’s help-seeking and scope statements. The cited age-guidelines passages at Baby PDF 294 and Toddler PDF 33 support removing activities that are too easy or hard; Baby PDF 121–122 supports trying again later. The rendered references and locators resolve to those exact units, and all public page labels correctly say PDF pages. At 18–24 months, Toddler’s individual-development and activity introduction directly support this selection principle; Baby is an attributed parallel source rather than an infant activity applied to a toddler. The explicit age-context note and both topic rows carry no achievement deadline."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r04.6-9.shared-participation-help",
+      "entryId": "shared-participation-help",
+      "placementId": "6-9.shared-participation-help",
+      "snapshotPath": "content/pilots/revisions/r04/snapshots/6-9.shared-participation-help.json",
+      "snapshotFileSha256": "2c19304e267d9092728e1ae062d995a5225efa6e20a4ddf10dd792177610111a",
+      "textPlacementSha256": "708c9174438d7e81a75acc0e82d8312ada0b32995281a46da052da13d8f19ac6",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby.introduction",
+        "source.baby.connection",
+        "source.baby.activities",
+        "source.toddler.principles",
+        "source.toddler.activities",
+        "source.toddler.curiosity-participation",
+        "source.toddler.adult",
+        "source.baby.connection-visual",
+        "source.baby.activities-differences-visual",
+        "source.toddler.activities-visual",
+        "source.toddler.participation-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The short surfaces accurately pair partial participation with an available adult. Detail retains observation, effort versus discouraging frustration, enough help to continue and another opportunity later; it does not require finishing a whole sequence alone or withhold needed help. Baby PDF 100–101, 111–113 and 126 and Toddler PDF 34–35, 101–102 and 195 support these distinctions. The rushed/time-or-patience example is correctly attributed to Davies and resolves to PDF 100–102. References use the correct books, PDF spans and identifiable local subjects. For 6–9 months, Baby PDF 100 explicitly includes infant collaboration, including its seven-month example, and the chapter distinguishes the baby’s activity from complete toddler work cycles. This entry remains a general perspective without importing any toddler task, setup or completion expectation. The everyday-care, discovery and family topic contexts preserve that meaning."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r04.18-24.shared-participation-help",
+      "entryId": "shared-participation-help",
+      "placementId": "18-24.shared-participation-help",
+      "snapshotPath": "content/pilots/revisions/r04/snapshots/18-24.shared-participation-help.json",
+      "snapshotFileSha256": "082053ed11f0162348f3d7fef0c501bae4e0ae60ba14681f504326bcb3506ae7",
+      "textPlacementSha256": "b567dacd9e70d485bce701bb5c8e09f850d4982859f6e2e731421a9a97f5a411",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby.introduction",
+        "source.baby.connection",
+        "source.baby.activities",
+        "source.toddler.principles",
+        "source.toddler.activities",
+        "source.toddler.curiosity-participation",
+        "source.toddler.adult",
+        "source.baby.connection-visual",
+        "source.baby.activities-differences-visual",
+        "source.toddler.activities-visual",
+        "source.toddler.participation-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The short surfaces accurately pair partial participation with an available adult. Detail retains observation, effort versus discouraging frustration, enough help to continue and another opportunity later; it does not require finishing a whole sequence alone or withhold needed help. Baby PDF 100–101, 111–113 and 126 and Toddler PDF 34–35, 101–102 and 195 support these distinctions. The rushed/time-or-patience example is correctly attributed to Davies and resolves to PDF 100–102. References use the correct books, PDF spans and identifiable local subjects. For 18–24 months, Toddler’s small part of an activity, shared daily tasks, offered assistance and frustrated-adult exception support the exact wording. The three topic contexts introduce no claim that a child of this age should already perform a particular task."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r04.6-9.shared-home-fits-family",
+      "entryId": "shared-home-fits-family",
+      "placementId": "6-9.shared-home-fits-family",
+      "snapshotPath": "content/pilots/revisions/r04/snapshots/6-9.shared-home-fits-family.json",
+      "snapshotFileSha256": "10cb159db43f62a40f7e8b90f52f9129a818021e21be811824baa1a4aaba33cd",
+      "textPlacementSha256": "cd605cb4991774260e16b15445570a39f4ede5d6fe7566b85f159ea125b0b012",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby.introduction",
+        "source.baby.observation-environment",
+        "source.baby.daily-life-budget",
+        "source.baby.adult-family",
+        "source.toddler.home",
+        "source.toddler.curiosity-participation",
+        "source.toddler.adult",
+        "source.baby.foundation-visual",
+        "source.baby.daily-life-visual",
+        "source.baby.adult-family-visual",
+        "source.toddler.home-visual",
+        "source.toddler.adult-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The title and both topic summaries faithfully express the books’ child/family purpose for the environment and absence of a required special-material collection. Baby PDF 19 and 223–224 directly support using what is available; PDF 37 includes people, and PDF 240 idea 25 supports arranging the home to reduce work. Toddler PDF 83–85 supports culture, character, small/shared homes and gradual adjustment; PDF 96 includes the social/adult environment and PDF 196 supports reducing repeated tidying. The conditional detail examples do not impose purchases, aesthetics or room dimensions. All rendered reference spans and locators are supported. At 6–9 months, Baby’s own environment and budget passages ground the entry. The public text carries no toddler-only storage, bunk-bed, cereal-serving or tidying instruction into infancy; easier access and participation remain conditional on the child. Home and family placements are appropriate."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r04.18-24.shared-home-fits-family",
+      "entryId": "shared-home-fits-family",
+      "placementId": "18-24.shared-home-fits-family",
+      "snapshotPath": "content/pilots/revisions/r04/snapshots/18-24.shared-home-fits-family.json",
+      "snapshotFileSha256": "d8aeddb49fe2814053bd36b98eb41a364a789cd8f4cebc86e3253c626c9af466",
+      "textPlacementSha256": "7f88dad814ce99daeaa81af515bd35eac7b445582307136d491ca981ee8c3cc7",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby.introduction",
+        "source.baby.observation-environment",
+        "source.baby.daily-life-budget",
+        "source.baby.adult-family",
+        "source.toddler.home",
+        "source.toddler.curiosity-participation",
+        "source.toddler.adult",
+        "source.baby.foundation-visual",
+        "source.baby.daily-life-visual",
+        "source.baby.adult-family-visual",
+        "source.toddler.home-visual",
+        "source.toddler.adult-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The title and both topic summaries faithfully express the books’ child/family purpose for the environment and absence of a required special-material collection. Baby PDF 19 and 223–224 directly support using what is available; PDF 37 includes people, and PDF 240 idea 25 supports arranging the home to reduce work. Toddler PDF 83–85 supports culture, character, small/shared homes and gradual adjustment; PDF 96 includes the social/adult environment and PDF 196 supports reducing repeated tidying. The conditional detail examples do not impose purchases, aesthetics or room dimensions. All rendered reference spans and locators are supported. At 18–24 months, the toddler home chapter directly supports the purpose and family adaptations, while the Baby material is clearly parallel general framing. No claim requires independent tidying or a particular furnishing at this age. The home and family topic rows retain the same conditional, practical meaning."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r04.6-9.shared-adult-needs-support",
+      "entryId": "shared-adult-needs-support",
+      "placementId": "6-9.shared-adult-needs-support",
+      "snapshotPath": "content/pilots/revisions/r04/snapshots/6-9.shared-adult-needs-support.json",
+      "snapshotFileSha256": "fb74ba081962492d6a8269a1362fc0088715c8b34132a5d05ad352611eaa875c",
+      "textPlacementSha256": "aeda8a6f2c803ce12edbe65566c6e27d44121e42a3205e52d3d2ed63a47b6c9c",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby.adult-family",
+        "source.toddler.adult",
+        "source.toddler.family",
+        "source.baby.adult-family-visual",
+        "source.toddler.adult-visual",
+        "source.toddler.family-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both the short summary and detail retain the books’ practical and emotional support and their separate doctor help for depression. Baby PDF 238 specifically supports postpartum-depression help through a doctor or trusted health professional; Toddler PDF 188 supports seeking a doctor’s help when feeling depressed. The entry does not diagnose, promise recovery or substitute ordinary rest for that help. Baby PDF 237 and 244–246 support trusted people, paid-help availability limits and the visible list of jobs; the list is correctly a way for visitors to help the household so a parent can be with the baby. The reference sections, locators and PDF labels identify the actual passages. At 6–9 months, this is adult/family support from the infant book, not an expectation of postpartum recovery by a date or a requirement to arrange separation. Its For you & your family summary carries the medical help-seeking qualification before the reader opens the detail. Trusted and optional support does not demand contact with an unsafe family member."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r04.18-24.shared-adult-needs-support",
+      "entryId": "shared-adult-needs-support",
+      "placementId": "18-24.shared-adult-needs-support",
+      "snapshotPath": "content/pilots/revisions/r04/snapshots/18-24.shared-adult-needs-support.json",
+      "snapshotFileSha256": "b30d1b27f254a69236ade91957639d6796c485eb66d38d8baf9cd20d2f320dcd",
+      "textPlacementSha256": "b9b9b2cfea5a68edce01922b8bb1dd3c3f655d95a2eb143d38c34c5fc0694854",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby.adult-family",
+        "source.toddler.adult",
+        "source.toddler.family",
+        "source.baby.adult-family-visual",
+        "source.toddler.adult-visual",
+        "source.toddler.family-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both the short summary and detail retain the books’ practical and emotional support and their separate doctor help for depression. Baby PDF 238 specifically supports postpartum-depression help through a doctor or trusted health professional; Toddler PDF 188 supports seeking a doctor’s help when feeling depressed. The entry does not diagnose, promise recovery or substitute ordinary rest for that help. Baby PDF 237 and 244–246 support trusted people, paid-help availability limits and the visible list of jobs; the list is correctly a way for visitors to help the household so a parent can be with the baby. The reference sections, locators and PDF labels identify the actual passages. At 18–24 months, Toddler’s physical self-care and parents-as-people passages independently support the adult focus. Baby’s postpartum discussion and household-help example stay expressly attributed to that book, without assigning postpartum depression to every toddler parent or prescribing a child-care routine. The family topic summary retains doctor help on its own."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r04.6-9.shared-something-for-you",
+      "entryId": "shared-something-for-you",
+      "placementId": "6-9.shared-something-for-you",
+      "snapshotPath": "content/pilots/revisions/r04/snapshots/6-9.shared-something-for-you.json",
+      "snapshotFileSha256": "16c2a4c7b8ad20abd2078f4d269a04770c55f0773733e0d595533a0a47d3f7a7",
+      "textPlacementSha256": "f5ad6ed6dd34334b739d469180269881dc96b1fd2658bf7a04262e40cce6ea12",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby.adult-family",
+        "source.toddler.adult",
+        "source.baby.adult-family-visual",
+        "source.toddler.adult-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The invitation and family-topic summary are ordinary optional enjoyment grounded in Baby PDF 235–236 and the personally framed list at PDF 239–241, and Toddler PDF 187, 189–190 and 192–193. Books unrelated to parenting, music and adult conversation are supported examples. The detail preserves Davies’s routine-with-children alternative and both books’ personal/nonuniversal framing. The entry makes no healing claim for music, requires no solitary morning schedule and does not present enjoyment as treatment for distress. The references and locators correctly support these meanings. For a parent browsing 6–9 months, this is an adult invitation with no infant activity or readiness demand. Its summary offers choices rather than a prescribed daily practice; the detail explicitly leaves room for a routine that includes children. The single family topic is apt."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r04.18-24.shared-something-for-you",
+      "entryId": "shared-something-for-you",
+      "placementId": "18-24.shared-something-for-you",
+      "snapshotPath": "content/pilots/revisions/r04/snapshots/18-24.shared-something-for-you.json",
+      "snapshotFileSha256": "39ff1795056c9915b3832818d3fd2a2032b32b722eb341a66c7fa1876ac6350d",
+      "textPlacementSha256": "3dd28d989f20ebbeb73f25a283791e4cc32dc0282dbc24058b42731b8b9f910b",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby.adult-family",
+        "source.toddler.adult",
+        "source.baby.adult-family-visual",
+        "source.toddler.adult-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The invitation and family-topic summary are ordinary optional enjoyment grounded in Baby PDF 235–236 and the personally framed list at PDF 239–241, and Toddler PDF 187, 189–190 and 192–193. Books unrelated to parenting, music and adult conversation are supported examples. The detail preserves Davies’s routine-with-children alternative and both books’ personal/nonuniversal framing. The entry makes no healing claim for music, requires no solitary morning schedule and does not present enjoyment as treatment for distress. The references and locators correctly support these meanings. For a parent browsing 18–24 months, Toddler’s own account directly supports preserving adult interests alongside family life, including morning practices with children. No independent-play, separation or toddler compliance requirement is implied by the title, summary, cue or detail."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r04.6-9.shared-less-crowded-day",
+      "entryId": "shared-less-crowded-day",
+      "placementId": "6-9.shared-less-crowded-day",
+      "snapshotPath": "content/pilots/revisions/r04/snapshots/6-9.shared-less-crowded-day.json",
+      "snapshotFileSha256": "a4c39cef5be9981c7e6734bb36ef74a103676a57f589ab8d26f5eb00b3aeddb9",
+      "textPlacementSha256": "3c91a650a717c229eb5afe70a66aeb5086a8af9a4fbe91168a83293c42221416",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby.connection",
+        "source.baby.daily-life-budget",
+        "source.baby.adult-family",
+        "source.toddler.curiosity-participation",
+        "source.toddler.adult",
+        "source.baby.connection-visual",
+        "source.baby.daily-life-visual",
+        "source.baby.adult-family-visual",
+        "source.toddler.participation-visual",
+        "source.toddler.adult-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The short summary preserves the ordinary-routine opportunity and real commitments. Baby PDF 114–115 and 222–223 support shared everyday connection; PDF 239–242 supports reconsidering commitments and day-dependent capacity after little sleep. Toddler PDF 96, 99–102 and 193–194 supports time together, working-family opportunities and occasional hurry; PDF 197–198 explicitly includes circumstances that cannot be changed and weekday/weekend possibilities. The detail’s attributions are accurate, the principle is modest, and all rendered references resolve. The text does not import pause-before-danger instructions, an hourly quota, required schedule or guaranteed cooperation. At 6–9 months, Baby’s daily-care and household-task discussion directly supports connection within the life already happening. Meals and conversation remain ordinary contexts, without feeding instructions or a claim that an infant performs a toddler chore. Family and Everyday care placements retain the adult’s real capacity."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r04.18-24.shared-less-crowded-day",
+      "entryId": "shared-less-crowded-day",
+      "placementId": "18-24.shared-less-crowded-day",
+      "snapshotPath": "content/pilots/revisions/r04/snapshots/18-24.shared-less-crowded-day.json",
+      "snapshotFileSha256": "3196be00d672bf4830e7c3f43814615892b23b5c45a3c1ddf450c2dcfa7d99b5",
+      "textPlacementSha256": "7223879ad3db5bcf26fa3dbda4eaa9d9a488fcafca1d0d66cd6f1fd6e9b9132d",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby.connection",
+        "source.baby.daily-life-budget",
+        "source.baby.adult-family",
+        "source.toddler.curiosity-participation",
+        "source.toddler.adult",
+        "source.baby.connection-visual",
+        "source.baby.daily-life-visual",
+        "source.baby.adult-family-visual",
+        "source.toddler.participation-visual",
+        "source.toddler.adult-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The short summary preserves the ordinary-routine opportunity and real commitments. Baby PDF 114–115 and 222–223 support shared everyday connection; PDF 239–242 supports reconsidering commitments and day-dependent capacity after little sleep. Toddler PDF 96, 99–102 and 193–194 supports time together, working-family opportunities and occasional hurry; PDF 197–198 explicitly includes circumstances that cannot be changed and weekday/weekend possibilities. The detail’s attributions are accurate, the principle is modest, and all rendered references resolve. The text does not import pause-before-danger instructions, an hourly quota, required schedule or guaranteed cooperation. At 18–24 months, Davies’s examples directly support toddler-family daily routines, weekend opportunities and limited weekday patience. The summary and detail allow priorities and timing to differ rather than expecting an identical slow day from every family. Both topic contexts preserve that qualification."
+      },
+      "artContext": null
+    }
+  ]
+}

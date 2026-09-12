@@ -1,0 +1,39 @@
+{
+  "revision": "r01",
+  "date": "2026-09-10",
+  "scope": "Mechanical source-ID/evidence/target resolution, not semantic coverage or source/tone approval",
+  "results": [
+    {
+      "book": "baby",
+      "ledgerPath": "research/baby/COVERAGE_LEDGER.jsonl",
+      "ledgerSha256": "b30e5c55e2364af2762aa7af49a5e752908bdb3481779e61fc39762a05432a0f",
+      "coveragePath": "content/pilots/drafts/baby/COVERAGE.jsonl",
+      "coverageSha256": "3b37b4e54775700c344a98c3909f3f8306330f7dc19fb1b5366ea63f6cd0a952",
+      "ideas": 617,
+      "errors": [
+        "Unknown entry:research/foundation/SOURCE_MANIFEST.md#baby-2021",
+        "Unknown entry:research/foundation/SOURCE_MANIFEST.md#baby-2021",
+        "Unknown entry:research/foundation/SOURCE_MANIFEST.md#baby-2021",
+        "Unknown entry:research/foundation/SOURCE_MANIFEST.md#baby-2021",
+        "Unknown entry:research/foundation/EDITORIAL_CHARTER.md",
+        "Unknown entry:research/foundation/EDITORIAL_CHARTER.md",
+        "Unknown entry:research/foundation/EDITORIAL_CHARTER.md"
+      ]
+    },
+    {
+      "book": "toddler",
+      "ledgerPath": "research/toddler/COVERAGE_LEDGER.jsonl",
+      "ledgerSha256": "dff004b408d6a74d83b41560d5aaf0fda7e3ec7c819a03b11605344e7b2074e2",
+      "coveragePath": "content/pilots/drafts/toddler/COVERAGE.jsonl",
+      "coverageSha256": "faf703ed37ca067b7ff2918dfa9eccbe19a2f2e9690429bda55b441fed70da3a",
+      "ideas": 692,
+      "errors": []
+    }
+  ],
+  "shared": {
+    "path": "content/pilots/drafts/shared/COVERAGE.jsonl",
+    "sha256": "af5fd78e1a97cd37862434551f99fa58dfadc6fe06277e32558da32648bdc056",
+    "rows": 153,
+    "note": "Overlapping source ideas, never added to the 1309-book-idea total."
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "author": {
+    "task": "/root",
+    "reasoning": "xhigh"
+  },
+  "entries": [
+    {
+      "id": "family-baby-screen-perspective",
+      "kind": "perspective",
+      "title": "The Baby book’s view of screens",
+      "summary": "The Montessori Baby recommends avoiding screens before age two and having little or none after two. The authors favor direct, sensory exploration over passive screen entertainment.",
+      "cue": "When you are considering the place of screens in family life.",
+      "detail": [
+        "The authors describe babies learning through their hands and mouths, with simple things to explore and time for their own discoveries. They also make room for quiet in everyday life.",
+        "Their screen recommendation appears in a discussion of concentration. It is the Baby authors’ position, alongside their preference for active experience; it is not a promise about how an individual child will develop."
+      ],
+      "references": [
+        {
+          "id": "family-baby-screen-perspective.ref",
+          "sourceId": "baby-2021",
+          "section": "Encouraging concentration / Avoid screens before age 2 and have little or no screens after age 2",
+          "locator": "Screen recommendation and direct sensory exploration",
+          "pdfPages": [
+            {
+              "start": 105,
+              "end": 107
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "entryId": "family-baby-screen-perspective",
+      "author": "/root",
+      "date": "2026-09-10",
+      "revision": "r01",
+      "sourceIdeaIds": [
+        "baby.idea.ch05-screen-position",
+        "baby.idea.screen-free-experience",
+        "baby.idea.boxes-real-world"
+      ],
+      "evidenceIds": [
+        "baby.ev.boxes-real-world",
+        "baby.ev.ch05-screen-position",
+        "baby.ev.screen-free-experience"
+      ],
+      "researchEvidence": [
+        {
+          "id": "baby.ev.boxes-real-world",
+          "revision": "1",
+          "recordSha256": "d114ef47efdf52acfdc58b0db83507df507f41afb8bd7e75e5f46ce2e3889a2d",
+          "path": "research/baby/EVIDENCE.jsonl",
+          "fileSha256": "aa71ee9471e24b77c6d71901cd6d8b84756aea23b0299ba1cb74c197d1206129",
+          "sourceIdeaIds": [
+            "baby.idea.boxes-real-world"
+          ]
+        },
+        {
+          "id": "baby.ev.ch05-screen-position",
+          "revision": "1",
+          "recordSha256": "0e8694d8b305024f7132ce879634e2fd6ae0ad798190567da0375b0a341ab395",
+          "path": "research/baby/EVIDENCE.jsonl",
+          "fileSha256": "aa71ee9471e24b77c6d71901cd6d8b84756aea23b0299ba1cb74c197d1206129",
+          "sourceIdeaIds": [
+            "baby.idea.ch05-screen-position"
+          ]
+        },
+        {
+          "id": "baby.ev.screen-free-experience",
+          "revision": "1:3b508b5f4c2bfccc",
+          "recordSha256": "e859f0582bc4a51ff529abcc0c3f7e16efd0d93eb83ca74f371de5089c865b3e",
+          "path": "research/baby/EVIDENCE.jsonl",
+          "fileSha256": "aa71ee9471e24b77c6d71901cd6d8b84756aea23b0299ba1cb74c197d1206129",
+          "sourceIdeaIds": [
+            "baby.idea.screen-free-experience"
+          ]
+        }
+      ],
+      "sourceLedgerInputs": [
+        {
+          "path": "research/baby/COVERAGE_LEDGER.jsonl",
+          "sha256": "b30e5c55e2364af2762aa7af49a5e752908bdb3481779e61fc39762a05432a0f"
+        },
+        {
+          "path": "research/toddler/COVERAGE_LEDGER.jsonl",
+          "sha256": "dff004b408d6a74d83b41560d5aaf0fda7e3ec7c819a03b11605344e7b2074e2"
+        }
+      ],
+      "actualReadLogIds": [
+        "t7.root.new-family.family-baby-screen-perspective"
+      ],
+      "actualReadLogPaths": [
+        "content/18-36/source-work/root-family-READ_LOG-r01.json"
+      ],
+      "fullSourceReferences": [
+        {
+          "id": "family-baby-screen-perspective.ref",
+          "sourceId": "baby-2021",
+          "section": "Encouraging concentration / Avoid screens before age 2 and have little or no screens after age 2",
+          "locator": "Screen recommendation and direct sensory exploration",
+          "pdfPages": [
+            {
+              "start": 105,
+              "end": 107
+            }
+          ]
+        }
+      ],
+      "contextRead": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 104,
+              "end": 107
+            }
+          ]
+        }
+      ],
+      "sourceFingerprints": [
+        {
+          "sourceId": "baby-2021",
+          "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+        },
+        {
+          "sourceId": "toddler-2019",
+          "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b"
+        }
+      ],
+      "editorialQualifications": [
+        "Do not promote the source’s causal attention/passivity assertions as established outcomes. No timers, exposure targets, monitoring or treatment advice."
+      ],
+      "heldDetails": [],
+      "omittedDetails": [
+        "Do not promote the source’s causal attention/passivity assertions as established outcomes. No timers, exposure targets, monitoring or treatment advice."
+      ],
+      "illustrationImplications": "No illustration needed. Do not imply child performance, demographic preferences, a screen setup, or an independence test. Any later image needs separate exact context review.",
+      "sensitivity": "Attributed source perspective; causal developmental assertions omitted."
+    }
+  ]
+}

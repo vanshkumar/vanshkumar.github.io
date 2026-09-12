@@ -1,0 +1,584 @@
+{
+  "id": "toddler-limits-source-r05",
+  "reviewer": {
+    "task": "/root/toddler_limits_source_r03",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Renewed independent SOURCE review of only the three changed toddler-limits placements in frozen r05: toddler-solving-together, toddler-big-feelings and toddler-throwing. All four actual topic rows and all three complete entry surfaces, including references, titles, age and topic context, were read. No artwork is present; this record makes no release claim.",
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r05/RENDERED_SURFACES.json",
+    "sha256": "b2b0183e437c4abf4c8dddd18ca4ac94be9075abd517d635779d2b946fe0f77b"
+  },
+  "manifest": {
+    "path": "content/pilots/revisions/r05/MANIFEST.json",
+    "sha256": "ae7dfd0ce44392a8c040bb9b9df38ca991d9b37aab24caf8655d52cf1e1a663c"
+  },
+  "renderer": {
+    "path": "src/HomeStudy.jsx",
+    "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c",
+    "basis": "Full renderer personally read for this reviewer’s r03 review; file fingerprint remains identical for r05. All five renderer-file hashes also match the r05 manifest."
+  },
+  "draft": {
+    "path": "content/pilots/drafts/toddler/draft-r05.json",
+    "sha256": "b1632aafa09d8a3a50afec143f44fcb47e7ace8909ff47d2aa3f17a6f3e726fe",
+    "basis": "Matching r05 public entry/placement fields verified against snapshots; the three entries’ private provenance, qualifications and age framing inspected. No research status was treated as a source verdict."
+  },
+  "originalSource": {
+    "sourceId": "toddler-2019",
+    "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/The Montessori Toddler - Simone Davies _Worldfreebooks.com_.pdf",
+    "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b",
+    "bytes": 7036292,
+    "physicalPdfPages": 257,
+    "fingerprintMatchesManifest": true
+  },
+  "priorOwnReadingRecord": {
+    "path": "content/pilots/reviews/final/toddler-limits-source-r03.json",
+    "sha256": "97c214f5b3ac5c4c0c63e0c8f6f4048b1915f3c6722d0ae434e47a81748c94f5",
+    "rule": "Only this reviewer’s own explicit original-page reads are preserved. Their source identity was reverified. Relevant complete original text units were re-read for r05; eight changed-claim original-page visuals were re-read. Prior review file and prior verdicts remain unchanged."
+  },
+  "independence": "No tone report or other reviewer’s findings were read for this renewal. Each complete r05 placement received an independent source decision; hashes and page-coverage checks provide identity/traceability rather than replacing source judgment.",
+  "hashVerification": "Three snapshot byte hashes, textPlacement component hashes and publicProjection hashes match the frozen manifest; matching r05 draft public entry/placement projections are identical; all renderer manifest hashes verified.",
+  "readLogs": [
+    {
+      "id": "source.toddler-limits-source-r03.scope.text",
+      "reader": "/root/toddler_limits_source_r03",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        },
+        {
+          "start": 29,
+          "end": 29
+        },
+        {
+          "start": 33,
+          "end": 33
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete original pages: the around 1 to 3 years scope note; individual development, respect, observation and adult intervention; indicative activity ages. The source scope is distinct from the editorial 18–24-month placement. Complete original-page text was personally read from fresh extraction of the fingerprint-verified PDF.",
+      "preservedOwnRead": {
+        "reportPath": "content/pilots/reviews/final/toddler-limits-source-r03.json",
+        "reportSha256": "97c214f5b3ac5c4c0c63e0c8f6f4048b1915f3c6722d0ae434e47a81748c94f5",
+        "readLogId": "source.toddler-limits-source-r03.scope.text",
+        "basis": "Same reviewer’s personally completed original full-text/full-page visual read; unchanged original PDF fingerprint reverified for r05. This preserves reading evidence, not a verdict on changed prose."
+      }
+    },
+    {
+      "id": "source.toddler-limits-source-r03.scope.visual",
+      "reader": "/root/toddler_limits_source_r03",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        },
+        {
+          "start": 29,
+          "end": 29
+        },
+        {
+          "start": 33,
+          "end": 33
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Complete original pages: the around 1 to 3 years scope note; individual development, respect, observation and adult intervention; indicative activity ages. The source scope is distinct from the editorial 18–24-month placement. Personally inspected readable 110-dpi complete original-page renders, including page hierarchy, folios, illustrations, callouts, boxes and list/table grouping; these are full-page reads, not contact-sheet inventory. No photographs occur on these inspected pages.",
+      "preservedOwnRead": {
+        "reportPath": "content/pilots/reviews/final/toddler-limits-source-r03.json",
+        "reportSha256": "97c214f5b3ac5c4c0c63e0c8f6f4048b1915f3c6722d0ae434e47a81748c94f5",
+        "readLogId": "source.toddler-limits-source-r03.scope.visual",
+        "basis": "Same reviewer’s personally completed original full-text/full-page visual read; unchanged original PDF fingerprint reverified for r05. This preserves reading evidence, not a verdict on changed prose."
+      }
+    },
+    {
+      "id": "source.toddler-limits-source-r03.acceptance.text",
+      "reader": "/root/toddler_limits_source_r03",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 108,
+          "end": 114
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete Accepting our child for who they are unit through its recap: significance, belonging, tentative translation, feelings versus permitted actions, feedback, labels and connection. Read the printed callout and complete practice box as well as prose. Complete original-page text was personally read from fresh extraction of the fingerprint-verified PDF.",
+      "preservedOwnRead": {
+        "reportPath": "content/pilots/reviews/final/toddler-limits-source-r03.json",
+        "reportSha256": "97c214f5b3ac5c4c0c63e0c8f6f4048b1915f3c6722d0ae434e47a81748c94f5",
+        "readLogId": "source.toddler-limits-source-r03.acceptance.text",
+        "basis": "Same reviewer’s personally completed original full-text/full-page visual read; unchanged original PDF fingerprint reverified for r05. This preserves reading evidence, not a verdict on changed prose."
+      }
+    },
+    {
+      "id": "source.toddler-limits-source-r03.acceptance.visual",
+      "reader": "/root/toddler_limits_source_r03",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 108,
+          "end": 114
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Complete Accepting our child for who they are unit through its recap: significance, belonging, tentative translation, feelings versus permitted actions, feedback, labels and connection. Read the printed callout and complete practice box as well as prose. Personally inspected readable 110-dpi complete original-page renders, including page hierarchy, folios, illustrations, callouts, boxes and list/table grouping; these are full-page reads, not contact-sheet inventory. No photographs occur on these inspected pages.",
+      "preservedOwnRead": {
+        "reportPath": "content/pilots/reviews/final/toddler-limits-source-r03.json",
+        "reportSha256": "97c214f5b3ac5c4c0c63e0c8f6f4048b1915f3c6722d0ae434e47a81748c94f5",
+        "readLogId": "source.toddler-limits-source-r03.acceptance.visual",
+        "basis": "Same reviewer’s personally completed original full-text/full-page visual read; unchanged original PDF fingerprint reverified for r05. This preserves reading evidence, not a verdict on changed prose."
+      }
+    },
+    {
+      "id": "source.toddler-limits-source-r03.cooperation.text",
+      "reader": "/root/toddler_limits_source_r03",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 117,
+          "end": 128
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete Cultivating cooperation unit: threats/bribes/punishments framing, child input and adult leadership, preverbal example, checklist continuation and illustrated morning/evening lists, age-appropriate choices and their exception, concise information, transition agreement and timer qualification, positive language, respectful tone, help, yes, humor and continuation, no-phase language, showing, waiting-room preparation, conditional waiting, processing and rhythm, moderate note use and acknowledgment notebook, and complete recap. Complete original-page text was personally read from fresh extraction of the fingerprint-verified PDF.",
+      "preservedOwnRead": {
+        "reportPath": "content/pilots/reviews/final/toddler-limits-source-r03.json",
+        "reportSha256": "97c214f5b3ac5c4c0c63e0c8f6f4048b1915f3c6722d0ae434e47a81748c94f5",
+        "readLogId": "source.toddler-limits-source-r03.cooperation.text",
+        "basis": "Same reviewer’s personally completed original full-text/full-page visual read; unchanged original PDF fingerprint reverified for r05. This preserves reading evidence, not a verdict on changed prose."
+      }
+    },
+    {
+      "id": "source.toddler-limits-source-r03.cooperation.visual",
+      "reader": "/root/toddler_limits_source_r03",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 117,
+          "end": 128
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Complete Cultivating cooperation unit: threats/bribes/punishments framing, child input and adult leadership, preverbal example, checklist continuation and illustrated morning/evening lists, age-appropriate choices and their exception, concise information, transition agreement and timer qualification, positive language, respectful tone, help, yes, humor and continuation, no-phase language, showing, waiting-room preparation, conditional waiting, processing and rhythm, moderate note use and acknowledgment notebook, and complete recap. Personally inspected readable 110-dpi complete original-page renders, including page hierarchy, folios, illustrations, callouts, boxes and list/table grouping; these are full-page reads, not contact-sheet inventory. No photographs occur on these inspected pages.",
+      "preservedOwnRead": {
+        "reportPath": "content/pilots/reviews/final/toddler-limits-source-r03.json",
+        "reportSha256": "97c214f5b3ac5c4c0c63e0c8f6f4048b1915f3c6722d0ae434e47a81748c94f5",
+        "readLogId": "source.toddler-limits-source-r03.cooperation.visual",
+        "basis": "Same reviewer’s personally completed original full-text/full-page visual read; unchanged original PDF fingerprint reverified for r05. This preserves reading evidence, not a verdict on changed prose."
+      }
+    },
+    {
+      "id": "source.toddler-limits-source-r03.limits.text",
+      "reader": "/root/toddler_limits_source_r03",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 129,
+          "end": 142
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete Setting limits unit through the full checklist: adult practice/support and repair, few house rules and mutual consent, neutral revisions, gentle necessary follow-through, directly related consequences and older-child anecdote, immediate protection, laughter, tentative feeling guesses, accepted/declined comfort, full tantrum support and public/time exceptions, rejection of ignoring, around-three calm-space context and continuation, calm-before-reconnection/repair, all four anticipatory recap triggers, over-three recap boundary, practical amends and modeled apology, early limits/changed mind, consistency/uncertainty and complete practice/checklist boxes. Complete original-page text was personally read from fresh extraction of the fingerprint-verified PDF.",
+      "preservedOwnRead": {
+        "reportPath": "content/pilots/reviews/final/toddler-limits-source-r03.json",
+        "reportSha256": "97c214f5b3ac5c4c0c63e0c8f6f4048b1915f3c6722d0ae434e47a81748c94f5",
+        "readLogId": "source.toddler-limits-source-r03.limits.text",
+        "basis": "Same reviewer’s personally completed original full-text/full-page visual read; unchanged original PDF fingerprint reverified for r05. This preserves reading evidence, not a verdict on changed prose."
+      }
+    },
+    {
+      "id": "source.toddler-limits-source-r03.limits.visual",
+      "reader": "/root/toddler_limits_source_r03",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 129,
+          "end": 142
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Complete Setting limits unit through the full checklist: adult practice/support and repair, few house rules and mutual consent, neutral revisions, gentle necessary follow-through, directly related consequences and older-child anecdote, immediate protection, laughter, tentative feeling guesses, accepted/declined comfort, full tantrum support and public/time exceptions, rejection of ignoring, around-three calm-space context and continuation, calm-before-reconnection/repair, all four anticipatory recap triggers, over-three recap boundary, practical amends and modeled apology, early limits/changed mind, consistency/uncertainty and complete practice/checklist boxes. Personally inspected readable 110-dpi complete original-page renders, including page hierarchy, folios, illustrations, callouts, boxes and list/table grouping; these are full-page reads, not contact-sheet inventory. No photographs occur on these inspected pages.",
+      "preservedOwnRead": {
+        "reportPath": "content/pilots/reviews/final/toddler-limits-source-r03.json",
+        "reportSha256": "97c214f5b3ac5c4c0c63e0c8f6f4048b1915f3c6722d0ae434e47a81748c94f5",
+        "readLogId": "source.toddler-limits-source-r03.limits.visual",
+        "basis": "Same reviewer’s personally completed original full-text/full-page visual read; unchanged original PDF fingerprint reverified for r05. This preserves reading evidence, not a verdict on changed prose."
+      }
+    },
+    {
+      "id": "source.toddler-limits-source-r03.consent.text",
+      "reader": "/root/toddler_limits_source_r03",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 172,
+          "end": 173
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete Skills for introverted toddlers unit across both original pages: acceptance, preparation, waiting beside the adult, supported skill practice, checking before hugs, and the child’s say in touch/handling. Used as handling and closeness context alongside the immediate protective limits. Complete original-page text was personally read from fresh extraction of the fingerprint-verified PDF.",
+      "preservedOwnRead": {
+        "reportPath": "content/pilots/reviews/final/toddler-limits-source-r03.json",
+        "reportSha256": "97c214f5b3ac5c4c0c63e0c8f6f4048b1915f3c6722d0ae434e47a81748c94f5",
+        "readLogId": "source.toddler-limits-source-r03.consent.text",
+        "basis": "Same reviewer’s personally completed original full-text/full-page visual read; unchanged original PDF fingerprint reverified for r05. This preserves reading evidence, not a verdict on changed prose."
+      }
+    },
+    {
+      "id": "source.toddler-limits-source-r03.consent.visual",
+      "reader": "/root/toddler_limits_source_r03",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 172,
+          "end": 173
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Complete Skills for introverted toddlers unit across both original pages: acceptance, preparation, waiting beside the adult, supported skill practice, checking before hugs, and the child’s say in touch/handling. Used as handling and closeness context alongside the immediate protective limits. Personally inspected readable 110-dpi complete original-page renders, including page hierarchy, folios, illustrations, callouts, boxes and list/table grouping; these are full-page reads, not contact-sheet inventory. No photographs occur on these inspected pages.",
+      "preservedOwnRead": {
+        "reportPath": "content/pilots/reviews/final/toddler-limits-source-r03.json",
+        "reportSha256": "97c214f5b3ac5c4c0c63e0c8f6f4048b1915f3c6722d0ae434e47a81748c94f5",
+        "readLogId": "source.toddler-limits-source-r03.consent.visual",
+        "basis": "Same reviewer’s personally completed original full-text/full-page visual read; unchanged original PDF fingerprint reverified for r05. This preserves reading evidence, not a verdict on changed prose."
+      }
+    },
+    {
+      "id": "source.toddler-limits-source-r03.hitting-throwing.text",
+      "reader": "/root/toddler_limits_source_r03",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 174,
+          "end": 176
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete hitting/biting/pushing/throwing unit: immediate close adult protection, every observation category, full prevention list including sensitive examples, consent-related examples, response and calm-before-amends continuations, laughter interpretation/adult-break example, and the complete throwing list including temporary wooden-toy removal and distinct outside/soft-indoor examples. Complete original-page text was personally read from fresh extraction of the fingerprint-verified PDF.",
+      "preservedOwnRead": {
+        "reportPath": "content/pilots/reviews/final/toddler-limits-source-r03.json",
+        "reportSha256": "97c214f5b3ac5c4c0c63e0c8f6f4048b1915f3c6722d0ae434e47a81748c94f5",
+        "readLogId": "source.toddler-limits-source-r03.hitting-throwing.text",
+        "basis": "Same reviewer’s personally completed original full-text/full-page visual read; unchanged original PDF fingerprint reverified for r05. This preserves reading evidence, not a verdict on changed prose."
+      }
+    },
+    {
+      "id": "source.toddler-limits-source-r03.hitting-throwing.visual",
+      "reader": "/root/toddler_limits_source_r03",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 174,
+          "end": 176
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Complete hitting/biting/pushing/throwing unit: immediate close adult protection, every observation category, full prevention list including sensitive examples, consent-related examples, response and calm-before-amends continuations, laughter interpretation/adult-break example, and the complete throwing list including temporary wooden-toy removal and distinct outside/soft-indoor examples. Personally inspected readable 110-dpi complete original-page renders, including page hierarchy, folios, illustrations, callouts, boxes and list/table grouping; these are full-page reads, not contact-sheet inventory. No photographs occur on these inspected pages.",
+      "preservedOwnRead": {
+        "reportPath": "content/pilots/reviews/final/toddler-limits-source-r03.json",
+        "reportSha256": "97c214f5b3ac5c4c0c63e0c8f6f4048b1915f3c6722d0ae434e47a81748c94f5",
+        "readLogId": "source.toddler-limits-source-r03.hitting-throwing.visual",
+        "basis": "Same reviewer’s personally completed original full-text/full-page visual read; unchanged original PDF fingerprint reverified for r05. This preserves reading evidence, not a verdict on changed prose."
+      }
+    },
+    {
+      "id": "source.toddler-limits-source-r03.notebook-cross-reference.text",
+      "reader": "/root/toddler_limits_source_r03",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 166,
+          "end": 166
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete original PDF166 read to follow the acknowledgment-notebook reuse in Make special time with each child: a concern can be recorded when the adult is unavailable and revisited during shared time. Also read its immediate gentle protection and supported sibling problem-solving context. The general acknowledgment description is already supported by the entry’s PDF127 reference; this is contextual corroboration, not a new care procedure. Complete original-page text was personally read from fresh extraction of the fingerprint-verified PDF.",
+      "preservedOwnRead": {
+        "reportPath": "content/pilots/reviews/final/toddler-limits-source-r03.json",
+        "reportSha256": "97c214f5b3ac5c4c0c63e0c8f6f4048b1915f3c6722d0ae434e47a81748c94f5",
+        "readLogId": "source.toddler-limits-source-r03.notebook-cross-reference.text",
+        "basis": "Same reviewer’s personally completed original full-text/full-page visual read; unchanged original PDF fingerprint reverified for r05. This preserves reading evidence, not a verdict on changed prose."
+      }
+    },
+    {
+      "id": "source.toddler-limits-source-r03.notebook-cross-reference.visual",
+      "reader": "/root/toddler_limits_source_r03",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 166,
+          "end": 166
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Complete original PDF166 read to follow the acknowledgment-notebook reuse in Make special time with each child: a concern can be recorded when the adult is unavailable and revisited during shared time. Also read its immediate gentle protection and supported sibling problem-solving context. The general acknowledgment description is already supported by the entry’s PDF127 reference; this is contextual corroboration, not a new care procedure. Personally inspected readable 110-dpi complete original-page renders, including page hierarchy, folios, illustrations, callouts, boxes and list/table grouping; these are full-page reads, not contact-sheet inventory. No photographs occur on these inspected pages.",
+      "preservedOwnRead": {
+        "reportPath": "content/pilots/reviews/final/toddler-limits-source-r03.json",
+        "reportSha256": "97c214f5b3ac5c4c0c63e0c8f6f4048b1915f3c6722d0ae434e47a81748c94f5",
+        "readLogId": "source.toddler-limits-source-r03.notebook-cross-reference.visual",
+        "basis": "Same reviewer’s personally completed original full-text/full-page visual read; unchanged original PDF fingerprint reverified for r05. This preserves reading evidence, not a verdict on changed prose."
+      }
+    },
+    {
+      "id": "source.toddler-limits-source-r05.cooperation.text",
+      "reader": "/root/toddler_limits_source_r03",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 117,
+          "end": 128
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally re-read every original-page word of the complete Cultivating cooperation unit for r05, including framing, adult leadership, the exact preverbal sibling/alternate-toy example, less-formal problem solving, checklist and pictured recap text, choices and exceptions, communications, waiting/processing and notes. Read via own prior fresh extraction after rechecking the original PDF fingerprint; the unchanged complete original visual reads are explicitly preserved separately."
+    },
+    {
+      "id": "source.toddler-limits-source-r05.limits.text",
+      "reader": "/root/toddler_limits_source_r03",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 129,
+          "end": 142
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally re-read every original-page word of the complete Setting limits unit for r05, including related consequences, immediate protection, tentative feelings, available/declined comfort, public and necessary-departure exceptions, ignoring rejection, around-three calm space with continuation, the over-three recap, support before discussion, conditional amends, all repair examples and modeled apology, consistency/changed mind and the full limits checklist. The unchanged complete original visual reads are explicitly preserved separately."
+    },
+    {
+      "id": "source.toddler-limits-source-r05.hitting-throwing.text",
+      "reader": "/root/toddler_limits_source_r03",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 174,
+          "end": 176
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally re-read complete original pages of the entire hitting/biting/pushing/throwing unit for r05: protection, every observation and prevention category, gentle response and calm-before-amends, laughter and adult-break context, then every throwing bullet. In particular, throwing outlets coexist with observing patterns and prevention of harm rather than proving the child’s motive."
+    },
+    {
+      "id": "source.toddler-limits-source-r05.notebook-cross-reference.text",
+      "reader": "/root/toddler_limits_source_r03",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 166,
+          "end": 166
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally re-read complete original PDF166 for r05, including the notebook for an adult who is unavailable, shared-time follow-up, gentle protection and supported sibling conflict. This corroborates the acknowledgment-note perspective from the cited PDF127 without authorizing a substitute for attention or immediate protection."
+    },
+    {
+      "id": "source.toddler-limits-source-r05.changed-claims.visual",
+      "reader": "/root/toddler_limits_source_r03",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 119
+        },
+        {
+          "start": 132,
+          "end": 133
+        },
+        {
+          "start": 135,
+          "end": 135
+        },
+        {
+          "start": 137,
+          "end": 139
+        },
+        {
+          "start": 176,
+          "end": 176
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally re-read eight readable 110-dpi complete original-page renders for r05. Checked the exact preverbal sibling-toy paragraph; directly related ball consequence and immediate danger; support and if-needed amends; reconnection, damage/cleanup examples and apology modeling; every PDF138 recap heading including over-three restriction; and the complete throwing list on PDF176. These are actual readable original visual inspections, not an image inventory. Complete visual context for other pages is preserved only from this same reviewer’s explicit r03 logs."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "toddler-limits-source-r05.18-24.toddler-solving-together",
+      "entryId": "toddler-solving-together",
+      "placementId": "18-24.toddler-solving-together",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-solving-together.json",
+      "snapshotFileSha256": "dc77c069a2f514dfd43fc9f7a487d6354c53f9df93dbb309e60cb1a22aa4ee1b",
+      "textPlacementSha256": "27499e5e2ff0d6f4fabf9a2c398e4abb413bec08719badf83d7cd83d3696e4cb",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.toddler-limits-source-r03.scope.text",
+        "source.toddler-limits-source-r03.scope.visual",
+        "source.toddler-limits-source-r03.acceptance.text",
+        "source.toddler-limits-source-r03.acceptance.visual",
+        "source.toddler-limits-source-r03.cooperation.text",
+        "source.toddler-limits-source-r03.cooperation.visual",
+        "source.toddler-limits-source-r03.limits.text",
+        "source.toddler-limits-source-r03.limits.visual",
+        "source.toddler-limits-source-r03.notebook-cross-reference.text",
+        "source.toddler-limits-source-r03.notebook-cross-reference.visual",
+        "source.toddler-limits-source-r05.cooperation.text",
+        "source.toddler-limits-source-r05.limits.text",
+        "source.toddler-limits-source-r05.notebook-cross-reference.text",
+        "source.toddler-limits-source-r05.changed-claims.visual"
+      ],
+      "priorOwnReview": {
+        "path": "content/pilots/reviews/final/toddler-limits-source-r03.json",
+        "sha256": "97c214f5b3ac5c4c0c63e0c8f6f4048b1915f3c6722d0ae434e47a81748c94f5",
+        "reviewId": "toddler-limits-source-r03.18-24.toddler-solving-together",
+        "relationship": "Prior immutable source judgment preserved; this is a new judgment of the complete exact r05 component."
+      },
+      "changedFieldsSinceOwnR03": [
+        "entry.title",
+        "entry.detail[0]"
+      ],
+      "reviewedSurfaces": {
+        "opening": null,
+        "topicRows": [
+          "connection-feelings"
+        ],
+        "fullEntry": true,
+        "ageTopicKindAndReferenceDisplay": true
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The new title and exact full detail preserve supported shared problem solving without treating a young toddler as the responsible decision maker. The rendered short row still makes adult-supplied ideas explicit. The crawling-sibling/alternate-toy example is the original PDF119 example, now shown concretely rather than implying a required verbal ability; gesture/action remains a possible contribution. The note remains occasional acknowledgment, a plan can be revisited, and adult leadership and immediate safety intervention remain explicit. The unchanged PDF119/127/133 references and 18–24-month presentation fit the complete original context and its general around-1–3 toddler scope. No developmental deadline or forced participation is added."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-limits-source-r05.18-24.toddler-big-feelings",
+      "entryId": "toddler-big-feelings",
+      "placementId": "18-24.toddler-big-feelings",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-big-feelings.json",
+      "snapshotFileSha256": "102632467ed375fa6096c5234dd4792c095496ac600f692028ed374e40142832",
+      "textPlacementSha256": "3ab7e65295210544d1b1d0f179a7cea6fd2b39dca0c5b17c9f23805414b6c667",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.toddler-limits-source-r03.scope.text",
+        "source.toddler-limits-source-r03.scope.visual",
+        "source.toddler-limits-source-r03.acceptance.text",
+        "source.toddler-limits-source-r03.acceptance.visual",
+        "source.toddler-limits-source-r03.limits.text",
+        "source.toddler-limits-source-r03.limits.visual",
+        "source.toddler-limits-source-r03.consent.text",
+        "source.toddler-limits-source-r03.consent.visual",
+        "source.toddler-limits-source-r05.limits.text",
+        "source.toddler-limits-source-r05.changed-claims.visual"
+      ],
+      "priorOwnReview": {
+        "path": "content/pilots/reviews/final/toddler-limits-source-r03.json",
+        "sha256": "97c214f5b3ac5c4c0c63e0c8f6f4048b1915f3c6722d0ae434e47a81748c94f5",
+        "reviewId": "toddler-limits-source-r03.18-24.toddler-big-feelings",
+        "relationship": "Prior immutable source judgment preserved; this is a new judgment of the complete exact r05 component."
+      },
+      "changedFieldsSinceOwnR03": [
+        "entry.summary",
+        "entry.references[0].locator"
+      ],
+      "reviewedSurfaces": {
+        "opening": null,
+        "topicRows": [
+          "connection-feelings"
+        ],
+        "fullEntry": true,
+        "ageTopicKindAndReferenceDisplay": true
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The exact topic row now makes help with amends conditional on someone being hurt or something being damaged; it does not suggest that having a difficult feeling itself requires restitution. This is supported by PDF135’s if-needed qualification and PDF137–139’s harm/damage and adult-help examples. Discussion after calm preserves reconnection while the full detail retains immediate protection, offered comfort without compelled touch, continued nearby availability, qualified trigger possibilities and gentle help when departure is necessary. The revised reference locator accurately describes the cited pages in ordinary language. Both original calm-space age variants remain excluded from this 18–24-month placement, with no waiting duration, diagnosis, required apology or new behavior protocol."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-limits-source-r05.18-24.toddler-throwing",
+      "entryId": "toddler-throwing",
+      "placementId": "18-24.toddler-throwing",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-throwing.json",
+      "snapshotFileSha256": "a548123762dbfc1457f5ffe1bfa5470c4c8c2bf878fae76882c72942d16df0bb",
+      "textPlacementSha256": "704a3ce5d7ad1f0d5e8bccc39094759a33149118ef511df8bf7a4d719d354eb0",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.toddler-limits-source-r03.scope.text",
+        "source.toddler-limits-source-r03.scope.visual",
+        "source.toddler-limits-source-r03.acceptance.text",
+        "source.toddler-limits-source-r03.acceptance.visual",
+        "source.toddler-limits-source-r03.hitting-throwing.text",
+        "source.toddler-limits-source-r03.hitting-throwing.visual",
+        "source.toddler-limits-source-r03.limits.text",
+        "source.toddler-limits-source-r03.limits.visual",
+        "source.toddler-limits-source-r05.hitting-throwing.text",
+        "source.toddler-limits-source-r05.limits.text",
+        "source.toddler-limits-source-r05.changed-claims.visual"
+      ],
+      "priorOwnReview": {
+        "path": "content/pilots/reviews/final/toddler-limits-source-r03.json",
+        "sha256": "97c214f5b3ac5c4c0c63e0c8f6f4048b1915f3c6722d0ae434e47a81748c94f5",
+        "reviewId": "toddler-limits-source-r03.18-24.toddler-throwing",
+        "relationship": "Prior immutable source judgment preserved; this is a new judgment of the complete exact r05 component."
+      },
+      "changedFieldsSinceOwnR03": [
+        "entry.detail[1]"
+      ],
+      "reviewedSurfaces": {
+        "opening": null,
+        "topicRows": [
+          "connection-feelings",
+          "play-discovery"
+        ],
+        "fullEntry": true,
+        "ageTopicKindAndReferenceDisplay": true
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both exact topic rows and the title frame a possible interest in throwing alongside observation, protecting people/belongings and an appropriate outlet. The revised full detail now explicitly describes outside and soft-indoor examples as possible outlets while the adult observes and keeps limits. That matches PDF176’s pattern-observation, prevention, temporary wooden-toy removal and opportunity/limit bullets without asserting a certain motive. PDF132’s directly related put-away/try-later consequence supports the limit context. The 18–24-month placement remains general toddler guidance; no phase-ending guarantee, equipment specification or blanket safety claim is introduced."
+      },
+      "artContext": null
+    }
+  ],
+  "counts": {
+    "placements": 3,
+    "topicRows": 4,
+    "fullEntries": 3,
+    "textPass": 3,
+    "textRevise": 0,
+    "textHold": 0,
+    "openIssues": 0,
+    "artContexts": 0,
+    "preservedOwnReadLogs": 14,
+    "newReadLogs": 5,
+    "uniqueOriginalPagesWithPreservedOwnFullTextAndVisualReads": 42,
+    "originalPagesReReadFullTextForR05": 30,
+    "originalPagesReReadFullPageVisualForR05": 8
+  }
+}

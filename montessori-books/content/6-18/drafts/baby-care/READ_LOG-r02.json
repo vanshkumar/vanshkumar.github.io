@@ -1,0 +1,220 @@
+{
+  "author": "/root/s6_baby_care_author",
+  "date": "2026-09-10",
+  "workflow": "lean-v1",
+  "logs": [
+    {
+      "id": "s6.baby-care.read.baby-home-text",
+      "reader": "/root/s6_baby_care_author",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 65,
+          "end": 88
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete cached original-page text in bounded tool outputs. Includes room-by-room conditions, full floor-bed questions and Zach narrative. Extraction is not claimed as a visual review.",
+      "sourceFingerprint": {
+        "path": "the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+        "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+      },
+      "artifacts": [
+        {
+          "path": "tmp/book-text/baby-pages.json",
+          "sha256": "cdeee5675f6c8895b29a9733204ad97bc59d9b85fe41c526b8fdd5a158c85214"
+        }
+      ]
+    },
+    {
+      "id": "s6.baby-care.read.baby-connection-text",
+      "reader": "/root/s6_baby_care_author",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 96,
+          "end": 120
+        },
+        {
+          "start": 122,
+          "end": 122
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text; truncated 105–107 was recovered in a separate complete output. Includes trust/acceptance, respect, boundaries, crying and entire connection/going-slow units; 119–120 and 122 are age/material and restoring-context reads.",
+      "sourceFingerprint": {
+        "path": "the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+        "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+      },
+      "artifacts": [
+        {
+          "path": "tmp/book-text/baby-pages.json",
+          "sha256": "cdeee5675f6c8895b29a9733204ad97bc59d9b85fe41c526b8fdd5a158c85214"
+        }
+      ]
+    },
+    {
+      "id": "s6.baby-care.read.baby-care-text",
+      "reader": "/root/s6_baby_care_author",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 179,
+          "end": 224
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text, in 179–190,191–206 and207–224 batches. Includes every eating/sleep/physical-care continuation and questions through budget.",
+      "sourceFingerprint": {
+        "path": "the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+        "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+      },
+      "artifacts": [
+        {
+          "path": "tmp/book-text/baby-pages.json",
+          "sha256": "cdeee5675f6c8895b29a9733204ad97bc59d9b85fe41c526b8fdd5a158c85214"
+        }
+      ]
+    },
+    {
+      "id": "s6.baby-care.read.baby-changing-visual",
+      "reader": "/root/s6_baby_care_author",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 73,
+          "end": 73
+        },
+        {
+          "start": 94,
+          "end": 94
+        }
+      ],
+      "mode": "visual",
+      "description": "Personally inspected readable original page73 and complete photo/caption94. Distinguishes child dressing stool from adult standing-change stool; photo is room setup, not a demonstrated standing change.",
+      "sourceFingerprint": {
+        "path": "the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+        "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+      },
+      "artifacts": [
+        {
+          "path": "tmp/baby-research/early/render/page-073.png",
+          "sha256": "e92793efb06bb7654a2e4723e41649649b425d5059108f45c15c5fac44d156dc"
+        },
+        {
+          "path": "tmp/baby-research/early/render/page-094.png",
+          "sha256": "0616d2c24160ad1eb79915ec1d3f998afaf7abab79311bfcba7f9c5635bc3859"
+        }
+      ]
+    },
+    {
+      "id": "s6.baby-care.read.baby-monthly-visual",
+      "reader": "/root/s6_baby_care_author",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 290,
+          "end": 294
+        }
+      ],
+      "mode": "visual",
+      "description": "Personally read all columns and continuation boundaries at legible scale:5–6 ending290,7–9 across290–292,10–12 across292–294 and the separate activity-age guideline294. No milestone or care schedule imported from compressed rows.",
+      "sourceFingerprint": {
+        "path": "the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+        "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+      },
+      "artifacts": [
+        {
+          "path": "tmp/baby-research/audit/page-290.png",
+          "sha256": "1c2b7f5436595719acdd3fb72c47ef81da77946af73f77e2d07e0c86bcab693c"
+        },
+        {
+          "path": "tmp/baby-research/audit/page-291.png",
+          "sha256": "8e71e1fced7d8217a0b8b858f86913cbfdc13dd557bb6bccab0dd3e76e2b33a4"
+        },
+        {
+          "path": "tmp/baby-research/audit/page-292.png",
+          "sha256": "84be8811a1e44ebbf903b362b0895ea85ec375304baf618a59a18e4f600e0cd9"
+        },
+        {
+          "path": "tmp/baby-research/audit/page-293.png",
+          "sha256": "68ef761a6399e91ed3c6f5914739b0615da17e7e1e74e21d467b99c6234942b3"
+        },
+        {
+          "path": "tmp/baby-research/audit/page-294.png",
+          "sha256": "ad1db330bb36b824925ae2578253d90233cff1a576e4caf801cc1b64cc9cccc3"
+        }
+      ]
+    },
+    {
+      "id": "s6.baby-care.read.toddler-eating-text",
+      "reader": "/root/s6_baby_care_author",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        },
+        {
+          "start": 33,
+          "end": 39
+        },
+        {
+          "start": 152,
+          "end": 155
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete Eating unit152–155, scope note14 and complete activities33–39 through small/sharp-object supervision. These are original text reads, not borrowed researcher logs.",
+      "sourceFingerprint": {
+        "path": "The Montessori Toddler - Simone Davies _Worldfreebooks.com_.pdf",
+        "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b"
+      },
+      "artifacts": [
+        {
+          "path": "tmp/book-text/toddler-pages.json",
+          "sha256": "d0ec666f733d6ba194786b2f57604ed62c6665d8bbc27b0a94b54d05709d48b4"
+        }
+      ]
+    },
+    {
+      "id": "s6.baby-care.read.baby-eating-sleep-visual",
+      "reader": "/root/s6_baby_care_author",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 189,
+          "end": 189
+        },
+        {
+          "start": 204,
+          "end": 204
+        }
+      ],
+      "mode": "visual",
+      "description": "Personally inspected original page189 eating illustration and entire surrounding text, and page204 full sleep-questions table including4,8,12-month examples. No seating fit inferred from the cropped eating illustration.",
+      "sourceFingerprint": {
+        "path": "the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+        "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+      },
+      "artifacts": [
+        {
+          "path": "tmp/baby-research/care/page-189.png",
+          "sha256": "3a43f033df221f50ecc54adc32ef10252448e7cf11c38c947a86638aaacbb0d2"
+        },
+        {
+          "path": "tmp/baby-research/care/page-204.png",
+          "sha256": "4527fcf463478d8de11b7500b4fca9ef672b0a6ea549ae3f5c29fb21f236a75c"
+        }
+      ]
+    }
+  ],
+  "limits": "Only listed original pages/modes were personally read. Research and pilot approvals are reused as context, never claimed as personal reads. No source or tone review awarded."
+}

@@ -1,0 +1,1446 @@
+{
+  "id": "shared-tone-r01",
+  "reviewer": {
+    "task": "/root/shared_tone_r01",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "15 shared canonical entries, all 29 exact r01 age placements and every listed topic row. Original cited pages and complete relevant source units read independently. No other source/tone review outputs read. Corpus-wide review limited to title-only topic lists for the targeted clarity/repetition scan. No shared art.",
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r01/RENDERED_SURFACES.json",
+    "sha256": "b7aa504ea50d67f7dd55c061ab4b187595df074d5da6aef47b9751d2af4ada8f"
+  },
+  "frozenInputs": {
+    "manifest": {
+      "path": "content/pilots/revisions/r01/MANIFEST.json",
+      "sha256": "2448b86ccaf96f1f4c40d6b83b0065490f306b9d85900ebd5b42fb367f9d7e4f"
+    },
+    "authorDraft": {
+      "path": "content/pilots/drafts/shared/draft-r01.json",
+      "sha256": "f79e45730e30d50d59563bb78aaef23270bee632b47cbbf1b51147ac99c30eb2"
+    },
+    "rendererReads": [
+      {
+        "path": "src/HomeStudy.jsx",
+        "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c"
+      },
+      {
+        "path": "src/guide/catalog.js",
+        "sha256": "d8d30a17c5f1b1c99ed68764f3f412cf99b48f55d09bf528313f0df1439da71c"
+      }
+    ]
+  },
+  "sourceFiles": [
+    {
+      "sourceId": "baby-2021",
+      "path": "the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+      "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+    },
+    {
+      "sourceId": "toddler-2019",
+      "path": "The Montessori Toddler - Simone Davies _Worldfreebooks.com_.pdf",
+      "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b"
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "shared-tone-r01.read.baby-principles",
+      "reader": "/root/shared_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 18,
+          "end": 21
+        },
+        {
+          "start": 29,
+          "end": 38
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete extracted text of these original PDF pages using a fresh pypdf extraction. This includes the overview, human-tendency context on these pages, the complete Observation unit and its checklist, informal and self-observation, Prepared environment and the practice box. Page 18 starts during an earlier overview paragraph; this is a page-read record, not a claim to have read the complete introduction or chapter."
+    },
+    {
+      "id": "shared-tone-r01.read.baby-relationship",
+      "reader": "/root/shared_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 96,
+          "end": 115
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read every original-page text in this range: Trust and its deterministic claims, Acceptance, Respect, the complete boundaries, concentration, movement, attachment and crying units, Being their guide, framing, the connection checklist, and the complete Going slow unit. Kept the full crying checklist, no-danger condition, responsive care, safe effort, and warm connection in view. No claim that sensitive setup examples are approved for use."
+    },
+    {
+      "id": "shared-tone-r01.read.baby-activities",
+      "reader": "/root/shared_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 128
+        },
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete activities introduction, choosing and presenting material, spontaneous exploration, the full further-notes continuation including clothing, and the opening age-guideline paragraph of the appendix directly from original PDF extraction. Also read all text on page 128, which starts the next language unit; not a complete read of that language unit. Read the care, frustration, supervision/material and developmental-concern qualifications as context, without treating them as new app procedures."
+    },
+    {
+      "id": "shared-tone-r01.read.baby-daily-differences",
+      "reader": "/root/shared_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 222,
+          "end": 224
+        },
+        {
+          "start": 229,
+          "end": 231
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the actual original text of these pages, including the complete daily-task and budget units, the premature-baby and adoptive-parent context on these pages, the complete Physical disabilities or neurological differences unit, its book recommendation and practice continuation. The entries use daily life and specialist-scope framing only; this log is not a claim to have read the whole chapter."
+    },
+    {
+      "id": "shared-tone-r01.read.baby-adult",
+      "reader": "/root/shared_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 234,
+          "end": 242
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete Preparation of the adult chapter body, all 49 personal calm ideas and their introduction, the self-observation box, help for postpartum depression and the separate depressed/burned-out item, self-forgiveness, Doing our best, and final practice questions. Retained the personal-example frame and no-perfection context; frequency/music-healing claims in the source were not imported into the reviewed copy."
+    },
+    {
+      "id": "shared-tone-r01.read.baby-family",
+      "reader": "/root/shared_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 244,
+          "end": 255
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the full original text from We do not walk alone through the complete daycare-different-values discussion. Includes all village/help lists, partner/grandparent units, the single/co-parent passage and safety exception, complete Getting on the same page discussion and conversation/regular-chat continuations, and the full daycare criteria with availability, cost and warmth qualifications. This is not a whole-book or entire-chapter certification beyond the named span."
+    },
+    {
+      "id": "shared-tone-r01.read.toddler-principles-activities",
+      "reader": "/root/shared_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 27,
+          "end": 39
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete original text on these pages: relevant principle units, individual development and observation, chapter transition, whole-child activities, complete What makes an activity Montessori and How to show units, and all ten General principles with the small-parts/sharp-object supervision qualification. Read the partial activity, frustration, child-choice and no-purchase context. Page 32 is blank in extraction; no substantive page claim relies on it."
+    },
+    {
+      "id": "shared-tone-r01.read.toddler-home",
+      "reader": "/root/shared_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 82,
+          "end": 85
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete original text of the home general-principles sequence: clutter, character/culture, saving work, shared spaces, small spaces and the concluding environment discussion. Included all list continuations and gradual-change framing; did not turn the source furniture examples into requirements."
+    },
+    {
+      "id": "shared-tone-r01.read.toddler-curiosity-acceptance",
+      "reader": "/root/shared_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 96,
+          "end": 111
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read all original text on these pages, including complete Time, safe-base and wonder units on the span; all seven curiosity principles and observation checklist; acceptance, translator and feelings/behavior units. Includes actual working-family and rushed-day exceptions, offering-help language, protective intervention, and tentative interpretation. Page 96 starts with ingredient 2 and page 111 begins a subsequent praise unit, so this is not a claim to have read the whole of chapter 5."
+    },
+    {
+      "id": "shared-tone-r01.read.toddler-adult",
+      "reader": "/root/shared_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 187,
+          "end": 201
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete Preparation of the adult chapter body from its explicit personal/nonuniversal and anti-perfection introduction through practice questions, plus the next chapter contents page. Read doctor support for depression, routines with children, presence, informal observation, adult interests, slow-down and immediate-danger exception, being a guide, home support, real constraints, apology, self-awareness and continued practice. No whole-book reading claim."
+    },
+    {
+      "id": "shared-tone-r01.read.toddler-family",
+      "reader": "/root/shared_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 203,
+          "end": 211
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete Working together chapter body and final practice box, including family forms, adult needs, preferring one parent, the nonconditional planning example, working with others, all caregiver suggestions, the complete active-listening exercise and tips, and both divorce pages with psychological/physical safety exceptions, factual updates and adult-conflict limits."
+    },
+    {
+      "id": "shared-tone-r01.read.baby-observation-visual",
+      "reader": "/root/shared_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 35,
+          "end": 37
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Inspected readable full-page PNGs rendered directly from the original PDF (page 35 at 100 dpi; 36–37 at 110 dpi). Checked the entire multi-page observation box, category continuation, self-observation and the transition to informal observation/prepared environment. Decorative stacking art did not provide an age or materials basis."
+    },
+    {
+      "id": "shared-tone-r01.read.baby-exploration-visual",
+      "reader": "/root/shared_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 114,
+          "end": 114
+        },
+        {
+          "start": 126,
+          "end": 126
+        },
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Inspected full original-page renders at 110 dpi. Read the connection checklist, help/frustration passage and boxed further-notes start, and the appendix transition/age-guideline paragraph at readable scale. Page 126 further-notes text continues to page 127, separately fully read in the text log."
+    },
+    {
+      "id": "shared-tone-r01.read.baby-adult-visual",
+      "reader": "/root/shared_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 238,
+          "end": 241
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Inspected readable full original-page renders at 110 dpi, including the help-seeking paragraph, preparation and self-observation boxes, personal introduction to all 49 ideas, items 1–49 across continuations, and the transition to Doing our best."
+    },
+    {
+      "id": "shared-tone-r01.read.baby-family-visual",
+      "reader": "/root/shared_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 247,
+          "end": 247
+        },
+        {
+          "start": 250,
+          "end": 250
+        },
+        {
+          "start": 254,
+          "end": 255
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Inspected full original-page renders at 110 dpi. Checked the complete single/co-parent safety paragraph, the structured request/conversation list and its continuation boundary, all daycare list content on 254–255 and the complete differing-values discussion. Remaining necessary continuations were read in the original-page full-text log."
+    },
+    {
+      "id": "shared-tone-r01.read.toddler-observation-visual",
+      "reader": "/root/shared_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 106,
+          "end": 106
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Inspected the full two-column observation checklist at readable 120 dpi, including all category headings, social/emotional distinctions and self-observation. Visible printed folio is 97; reviewed public references use PDF page numbering."
+    },
+    {
+      "id": "shared-tone-r01.read.toddler-adult-visual",
+      "reader": "/root/shared_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 188,
+          "end": 188
+        },
+        {
+          "start": 190,
+          "end": 190
+        },
+        {
+          "start": 194,
+          "end": 194
+        },
+        {
+          "start": 198,
+          "end": 198
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Inspected complete original-page renders at 110 dpi: physical self-care/depression help, alternative routines with children and list structure, slow-down continuation and immediate-danger exception, practical constraints and the apology unit. Visible folios are 179, 181, 185 and 189; reviewed public references use PDF page numbering."
+    },
+    {
+      "id": "shared-tone-r01.read.toddler-family-visual",
+      "reader": "/root/shared_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 205,
+          "end": 205
+        },
+        {
+          "start": 209,
+          "end": 211
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Inspected complete original-page renders at 110 dpi. Checked family-planning example and its continuation, caregiver list end, complete conflict-exercise continuation/tips, separation safety exception, next-page stability/updates/conflict qualifications and final practice box. Folios 196 and 200–202 are visible; reviewed references use PDF page numbering."
+    }
+  ],
+  "sharedFramingAssessment": "The common age navigation is browsing context, the footer reduces home/purchase pressure, and the colophon names original book summaries with references. Shared entries have no opening invitation or illustration. The shared copy avoids source age quotas, deterministic trust outcomes, prescribed adult routines and synthetic sensitive-care procedures. Necessary short-surface qualifications remain visible. Targeted title changes and two public reference-locator edits are recorded per affected placement; unflagged warm phrasing is intentionally retained.",
+  "titleOnlyCorpusScan": {
+    "scope": "All ten age/topic title lists in the r01 manifest; only titles and placement topic metadata read outside this shared batch. No other-entry prose or source/tone reviews read.",
+    "assessment": "Repeated room/space/part constructions reduce distinction in the long lists, but are not inherently defects. The shared feelings-and-limit and another-try titles still name a recognizable purpose. Corrections target missing activity/participation/support/enjoyment subjects and the repeated room phrasing within the busy-day entry; they do not require uniform technical headings or a blanket rewrite."
+  },
+  "reviews": [
+    {
+      "id": "shared-tone-r01.6-9.shared-observe",
+      "entryId": "shared-observe",
+      "placementId": "6-9.shared-observe",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-observe.json",
+      "snapshotFileSha256": "ff9266d084dbf91ad3f4396f14bb7a5e00c345502bbc1348e8d9e535d994e157",
+      "textPlacementSha256": "1f4d1e64dee7cb9befac7105b255d51a5760f24e4d3727eafd7887554049cade",
+      "artContextSha256": null,
+      "publicProjectionSha256": "a5e4c34f0e25f2d919149a665b7b68cd9882e9ff4b2ef85c5f0b059b71f996ab",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-principles",
+        "shared-tone-r01.read.baby-observation-visual",
+        "shared-tone-r01.read.toddler-principles-activities",
+        "shared-tone-r01.read.toddler-curiosity-acceptance",
+        "shared-tone-r01.read.toddler-adult",
+        "shared-tone-r01.read.toddler-observation-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The title names a simple action; the summary, cue and details offer factual noticing, optional notes, adult self-observation and available help without a diagnosis, test, schedule or silent-observer ideal. Both topic rows preserve the same meaning; the detail explicitly includes protection. The short summary does not ask the reader to delay care. The 6–9-month placement applies this shared adult/relationship perspective without a baby milestone or an imported toddler action. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "you-family",
+            "play-discovery"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-observe.entry.html",
+          "renderedEntrySha256": "cb0a377f18724e0db43c511ea1009f694825ed7f5346e031f6dabcca278d950f",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.18-24.shared-observe",
+      "entryId": "shared-observe",
+      "placementId": "18-24.shared-observe",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-observe.json",
+      "snapshotFileSha256": "880c619e6291410453dd8a2d78518f3771727c6ecb543f2aff011ee74f5ca734",
+      "textPlacementSha256": "c57fc57d97e1281ea6da427b9a194a2b5d52795eeb32338800d91ccfce43e88c",
+      "artContextSha256": null,
+      "publicProjectionSha256": "e8e2dd7976bca1a8f830fdeef2e59b98f2b97ba3550b1ce6004e6b4161680a2d",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-principles",
+        "shared-tone-r01.read.baby-observation-visual",
+        "shared-tone-r01.read.toddler-principles-activities",
+        "shared-tone-r01.read.toddler-curiosity-acceptance",
+        "shared-tone-r01.read.toddler-adult",
+        "shared-tone-r01.read.toddler-observation-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The title names a simple action; the summary, cue and details offer factual noticing, optional notes, adult self-observation and available help without a diagnosis, test, schedule or silent-observer ideal. Both topic rows preserve the same meaning; the detail explicitly includes protection. The short summary does not ask the reader to delay care. The 18–24-month placement retains this shared adult/relationship perspective without expecting a toddler skill or a completed task. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "you-family",
+            "play-discovery"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-observe.entry.html",
+          "renderedEntrySha256": "8043d5803d66de5b405faf3262e015713a874aa121b93f6a8be9d9da23676daa",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.6-9.shared-follow-readiness",
+      "entryId": "shared-follow-readiness",
+      "placementId": "6-9.shared-follow-readiness",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-follow-readiness.json",
+      "snapshotFileSha256": "6b4ea1ac806948ca5c1c55c410b385bb832c8ac029b92b19d29eb692cf5162ea",
+      "textPlacementSha256": "bf99c5b3b980ccf81b46c39013c8b3a713c353596fe7e8162dd717c0111d7d72",
+      "artContextSha256": null,
+      "publicProjectionSha256": "2bb4b95a2aca969b45da99c34c8591196e4e03c341dd67661e159475088f9f49",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-activities",
+        "shared-tone-r01.read.baby-exploration-visual",
+        "shared-tone-r01.read.baby-daily-differences",
+        "shared-tone-r01.read.toddler-principles-activities",
+        "shared-tone-r01.read.toddler-adult"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "shared-tone-r01.title-activity-choice",
+            "severity": "medium",
+            "field": "entry.title",
+            "surface": "Entry h2 and every play-discovery/you-family topic-row h3 at both reviewed ages",
+            "finding": "Choose for the child in front of you is warm but does not say what is being chosen. In the full topic lists, it can denote any parenting decision, while the useful subject is choosing activities by present interest/readiness. A reader scanning headings has to read the summary to identify this entry.",
+            "requiredCorrection": "Name activities or activity fit in the title while retaining the observational invitation, for example Choose activities for the child in front of you. Preserve the existing short-surface developmental-support qualification and flexible age note.",
+            "status": "open"
+          }
+        ],
+        "assessment": "The summary, age note, cue and detail clearly separate browsing ages from readiness and retain support for developmental concerns on the topic rows themselves. No speed, skill or achievement claim is added. The remaining issue is discoverability of activity choice in the title. The 6–9 months page explicitly says this is general activity-choice guidance, not a skill expected at the selected age. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "play-discovery",
+            "you-family"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-follow-readiness.entry.html",
+          "renderedEntrySha256": "cc4ed2b14adf57ceac505a15f6e850ea2d5058f751a28b19372e528891be8951",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.18-24.shared-follow-readiness",
+      "entryId": "shared-follow-readiness",
+      "placementId": "18-24.shared-follow-readiness",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-follow-readiness.json",
+      "snapshotFileSha256": "bdd73dacb8763ac688e498578b19d96a640717ab0dffd08443f60e20ceb9563d",
+      "textPlacementSha256": "ec2f213a16de40ba5330717ced7f72d2a388d35ed125c324556f9047e9ce7a0e",
+      "artContextSha256": null,
+      "publicProjectionSha256": "d85217a6ecc82d429c3599b377b91aec40c00b839aeec9e59a1f27de31c2310e",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-activities",
+        "shared-tone-r01.read.baby-exploration-visual",
+        "shared-tone-r01.read.baby-daily-differences",
+        "shared-tone-r01.read.toddler-principles-activities",
+        "shared-tone-r01.read.toddler-adult"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "shared-tone-r01.title-activity-choice",
+            "severity": "medium",
+            "field": "entry.title",
+            "surface": "Entry h2 and every play-discovery/you-family topic-row h3 at both reviewed ages",
+            "finding": "Choose for the child in front of you is warm but does not say what is being chosen. In the full topic lists, it can denote any parenting decision, while the useful subject is choosing activities by present interest/readiness. A reader scanning headings has to read the summary to identify this entry.",
+            "requiredCorrection": "Name activities or activity fit in the title while retaining the observational invitation, for example Choose activities for the child in front of you. Preserve the existing short-surface developmental-support qualification and flexible age note.",
+            "status": "open"
+          }
+        ],
+        "assessment": "The summary, age note, cue and detail clearly separate browsing ages from readiness and retain support for developmental concerns on the topic rows themselves. No speed, skill or achievement claim is added. The remaining issue is discoverability of activity choice in the title. The 18–24 months page explicitly says this is general activity-choice guidance, not a skill expected at the selected age. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "play-discovery",
+            "you-family"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-follow-readiness.entry.html",
+          "renderedEntrySha256": "e3dd8a0cdcd399759461b9f06568932e6d8d0dca6ca15594a451c37440c1c538",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.6-9.shared-participation-help",
+      "entryId": "shared-participation-help",
+      "placementId": "6-9.shared-participation-help",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-participation-help.json",
+      "snapshotFileSha256": "a07f4eeebfe7204a42a1e1a4bf6c500b281289f4bfe3b178b909f61a7daa87e0",
+      "textPlacementSha256": "d743743c63af326a857a399d11ca1a926baf91c3d5a5d9f68a6e51bc123a136a",
+      "artContextSha256": null,
+      "publicProjectionSha256": "886268f2025e415942851832a989a919a88d0b793cb15392c9622a4b3fcefe6f",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-relationship",
+        "shared-tone-r01.read.baby-activities",
+        "shared-tone-r01.read.baby-exploration-visual",
+        "shared-tone-r01.read.toddler-principles-activities",
+        "shared-tone-r01.read.toddler-curiosity-acceptance",
+        "shared-tone-r01.read.toddler-adult"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "shared-tone-r01.title-joining-in",
+            "severity": "medium",
+            "field": "entry.title",
+            "surface": "Entry h2 and every everyday-care/play-discovery/you-family topic-row h3 at both ages",
+            "finding": "A small part, with help omits the action of joining in and repeats the small-part construction beside specific dressing/cleaning entries in the full lists. For this general principle, the phrase could mean either a physical component or a portion of an activity; it does not identify shared participation as readily as the cue does.",
+            "requiredCorrection": "Name joining in or taking part in the title, for example Joining in, with help. Keep partial participation, frustration/help and the rushed-day exception in the body; do not invent a specific task or add a completion expectation.",
+            "status": "open"
+          },
+          {
+            "id": "shared-tone-r01.public-locator-editor-note",
+            "severity": "low",
+            "field": "entry.references[id=shared.ref.baby.participation].locator",
+            "surface": "Back to the books, Baby locator paragraph at both ages",
+            "finding": "The public locator ends with physical examples not reproduced. That describes the editor’s omission rather than helping a parent find or understand the book passage; frustration qualification is also editorial shorthand in this sentence.",
+            "requiredCorrection": "Replace this locator with plain source-navigation language such as Taking part, knowing when help is needed, and responding to frustration. Keep the same source references and retain omission/risk notes privately.",
+            "status": "open"
+          }
+        ],
+        "assessment": "The prose supports partial effort and available help, distinguishes effort from discouraging frustration, and permits more help when adult time or patience runs short. It avoids importing the cited physical-care examples or a toddler task into the baby placement. The title and one visible reference locator need the targeted readability corrections recorded here. The 6–9-month placement applies this shared adult/relationship perspective without a baby milestone or an imported toddler action. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "everyday-care",
+            "play-discovery",
+            "you-family"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-participation-help.entry.html",
+          "renderedEntrySha256": "f6a63aee9267de93f42eb15b66d2755761d4a28a78ba7f279048f4369b5dd767",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.18-24.shared-participation-help",
+      "entryId": "shared-participation-help",
+      "placementId": "18-24.shared-participation-help",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-participation-help.json",
+      "snapshotFileSha256": "58c9a4a4cd1b92c0f4ada98da97bd4510397aa321f6fc7eb3d4c4ed04f3e75f3",
+      "textPlacementSha256": "7d855c99519aa35fd9ee9bcec8a154dcb871c054b094d0932413cc9084b64fa4",
+      "artContextSha256": null,
+      "publicProjectionSha256": "d8c0beef7d41d95e6999bee96f7b5957d286852178b52e5d403e0d75b4b5a60b",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-relationship",
+        "shared-tone-r01.read.baby-activities",
+        "shared-tone-r01.read.baby-exploration-visual",
+        "shared-tone-r01.read.toddler-principles-activities",
+        "shared-tone-r01.read.toddler-curiosity-acceptance",
+        "shared-tone-r01.read.toddler-adult"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "shared-tone-r01.title-joining-in",
+            "severity": "medium",
+            "field": "entry.title",
+            "surface": "Entry h2 and every everyday-care/play-discovery/you-family topic-row h3 at both ages",
+            "finding": "A small part, with help omits the action of joining in and repeats the small-part construction beside specific dressing/cleaning entries in the full lists. For this general principle, the phrase could mean either a physical component or a portion of an activity; it does not identify shared participation as readily as the cue does.",
+            "requiredCorrection": "Name joining in or taking part in the title, for example Joining in, with help. Keep partial participation, frustration/help and the rushed-day exception in the body; do not invent a specific task or add a completion expectation.",
+            "status": "open"
+          },
+          {
+            "id": "shared-tone-r01.public-locator-editor-note",
+            "severity": "low",
+            "field": "entry.references[id=shared.ref.baby.participation].locator",
+            "surface": "Back to the books, Baby locator paragraph at both ages",
+            "finding": "The public locator ends with physical examples not reproduced. That describes the editor’s omission rather than helping a parent find or understand the book passage; frustration qualification is also editorial shorthand in this sentence.",
+            "requiredCorrection": "Replace this locator with plain source-navigation language such as Taking part, knowing when help is needed, and responding to frustration. Keep the same source references and retain omission/risk notes privately.",
+            "status": "open"
+          }
+        ],
+        "assessment": "The prose supports partial effort and available help, distinguishes effort from discouraging frustration, and permits more help when adult time or patience runs short. It avoids importing the cited physical-care examples or a toddler task into the baby placement. The title and one visible reference locator need the targeted readability corrections recorded here. The 18–24-month placement retains this shared adult/relationship perspective without expecting a toddler skill or a completed task. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "everyday-care",
+            "play-discovery",
+            "you-family"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-participation-help.entry.html",
+          "renderedEntrySha256": "137ee80c3e52af1a5a524da97b4331fea0cec902513bfeb076306bbd8850ff7c",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.6-9.shared-time-to-explore",
+      "entryId": "shared-time-to-explore",
+      "placementId": "6-9.shared-time-to-explore",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-time-to-explore.json",
+      "snapshotFileSha256": "c533462e4742b33056b2d3bdc9618bf76e8a29d81e5861d4d82d96622acc0af6",
+      "textPlacementSha256": "dfa84fdb187841e1833dd388ab8bab52d65cf0204e876642de27ab8f7f6e20c8",
+      "artContextSha256": null,
+      "publicProjectionSha256": "d392d824d031ac9a7d1b5980861023e48c6d7d39d66e7335d61806ea73dfc2c5",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-relationship",
+        "shared-tone-r01.read.baby-activities",
+        "shared-tone-r01.read.baby-exploration-visual",
+        "shared-tone-r01.read.toddler-principles-activities",
+        "shared-tone-r01.read.toddler-adult",
+        "shared-tone-r01.read.toddler-adult-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The another-try title identifies repetition sufficiently in these lists. The summary carries safely absorbed and adult availability before the reader opens it; the cue makes the relevant repeated action recognizable. Full detail preserves watching, processing time, frustration/care and warm interaction. The room metaphor works here and does not need a blanket rewrite. The 6–9-month placement applies this shared adult/relationship perspective without a baby milestone or an imported toddler action. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "play-discovery",
+            "connection-feelings"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-time-to-explore.entry.html",
+          "renderedEntrySha256": "7900304deb6767748cc19cda8615e10dc0a22e1c0aaf0275fc896c35789ea345",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.18-24.shared-time-to-explore",
+      "entryId": "shared-time-to-explore",
+      "placementId": "18-24.shared-time-to-explore",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-time-to-explore.json",
+      "snapshotFileSha256": "d18ed54c46b5d890db3e316b5de83cea808f8f834a0bd519f572245910623371",
+      "textPlacementSha256": "04a073983113287237516cd1c1eaf4f848eecae70eb7fb59e5aeecbc058cfcb3",
+      "artContextSha256": null,
+      "publicProjectionSha256": "257ea04fe41ae2930a5200295d8f3a40a721a75ff04fff7b3d0ce3e787ac61ca",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-relationship",
+        "shared-tone-r01.read.baby-activities",
+        "shared-tone-r01.read.baby-exploration-visual",
+        "shared-tone-r01.read.toddler-principles-activities",
+        "shared-tone-r01.read.toddler-adult",
+        "shared-tone-r01.read.toddler-adult-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The another-try title identifies repetition sufficiently in these lists. The summary carries safely absorbed and adult availability before the reader opens it; the cue makes the relevant repeated action recognizable. Full detail preserves watching, processing time, frustration/care and warm interaction. The room metaphor works here and does not need a blanket rewrite. The 18–24-month placement retains this shared adult/relationship perspective without expecting a toddler skill or a completed task. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "play-discovery",
+            "connection-feelings"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-time-to-explore.entry.html",
+          "renderedEntrySha256": "47761eb09851b081c83f59ab4820f7cce28df8106f2c14f1b1104ca9991c60bc",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.6-9.shared-feelings-limits",
+      "entryId": "shared-feelings-limits",
+      "placementId": "6-9.shared-feelings-limits",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-feelings-limits.json",
+      "snapshotFileSha256": "e98d350ccbc496c1d532651d9ac126b804de9e95501d5be33ec15837c141cfdb",
+      "textPlacementSha256": "a5a8956c3495ffa2b1d777a6330ffb275e9cdc17dd7860488232953cca9bdc36",
+      "artContextSha256": null,
+      "publicProjectionSha256": "7cfb8ac7ca3067846166e31621b41e4ddb7784d0594b2daf5cc690cb7df11d2c",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-relationship",
+        "shared-tone-r01.read.toddler-curiosity-acceptance",
+        "shared-tone-r01.read.toddler-principles-activities"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The title explicitly pairs feelings with limits. Both topic rows preserve adult protection alongside understanding; the full text accepts distress without promising to remove it and treats a possible need as tentative. No child blame, guaranteed cooperation, or fixed procedure is added. The public framing supports a perspective rather than a behavior quota. The 6–9-month placement applies this shared adult/relationship perspective without a baby milestone or an imported toddler action. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "connection-feelings",
+            "you-family"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-feelings-limits.entry.html",
+          "renderedEntrySha256": "18233905456833b218cb8209bed4b37343642fc102ee2d772ce5a6591c25fabe",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.18-24.shared-feelings-limits",
+      "entryId": "shared-feelings-limits",
+      "placementId": "18-24.shared-feelings-limits",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-feelings-limits.json",
+      "snapshotFileSha256": "e9da8d035ac0756f1d2a2ffeba9c3dc6b2751ae5f72792f62021647dab376e54",
+      "textPlacementSha256": "067eb2b7860fc804492ba83c04402d48dcc805acd58d6e416a622e8e10bf8f14",
+      "artContextSha256": null,
+      "publicProjectionSha256": "62d6145699c591e8ccbc13906a807e9dc74ba422c693caa792484b96518d07cf",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-relationship",
+        "shared-tone-r01.read.toddler-curiosity-acceptance",
+        "shared-tone-r01.read.toddler-principles-activities"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The title explicitly pairs feelings with limits. Both topic rows preserve adult protection alongside understanding; the full text accepts distress without promising to remove it and treats a possible need as tentative. No child blame, guaranteed cooperation, or fixed procedure is added. The public framing supports a perspective rather than a behavior quota. The 18–24-month placement retains this shared adult/relationship perspective without expecting a toddler skill or a completed task. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "connection-feelings",
+            "you-family"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-feelings-limits.entry.html",
+          "renderedEntrySha256": "3b813d2afb8042029756c2595a00797a31343f4b13717d566c9ca0fadc7a6e20",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.6-9.shared-home-fits-family",
+      "entryId": "shared-home-fits-family",
+      "placementId": "6-9.shared-home-fits-family",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-home-fits-family.json",
+      "snapshotFileSha256": "8dd46947781c41e01e7a0c0846bbc44b00e668b8fe1084efacc784143b313a3b",
+      "textPlacementSha256": "19a7e647353c9d4f387c0244de6a57d56d7e8f3e50041b00b569bb953700c4dd",
+      "artContextSha256": null,
+      "publicProjectionSha256": "051c360e35c2184704cb1e69a22c40e200473ba33c89f2d5dfabad6c407abbb9",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-principles",
+        "shared-tone-r01.read.baby-observation-visual",
+        "shared-tone-r01.read.baby-daily-differences",
+        "shared-tone-r01.read.baby-adult",
+        "shared-tone-r01.read.baby-adult-visual",
+        "shared-tone-r01.read.toddler-home",
+        "shared-tone-r01.read.toddler-curiosity-acceptance",
+        "shared-tone-r01.read.toddler-adult"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "shared-tone-r01.public-locator-idea25",
+            "severity": "low",
+            "field": "entry.references[id=shared.ref.baby.home-family].locator",
+            "surface": "Back to the books, Baby locator paragraph at both ages",
+            "finding": "The locator visibly says No-purchase framing ... idea25 home order. The compressed idea25 token and framing jargon read like an internal evidence note rather than reader navigation.",
+            "requiredCorrection": "Use ordinary language and a spaced reference to the numbered source item, for example Using what you have, people as part of the environment, and idea 25 on arranging the home to reduce work. Preserve exact PDF references.",
+            "status": "open"
+          }
+        ],
+        "assessment": "Title, summary and cue directly name the home/family problem and relieve purchase and aesthetic pressure. Details keep culture, shared/small spaces, relationships and practical purpose, without importing a furniture prescription. Only the compressed public Baby source locator needs correction. The 6–9-month placement applies this shared adult/relationship perspective without a baby milestone or an imported toddler action. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "home-that-helps",
+            "you-family"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-home-fits-family.entry.html",
+          "renderedEntrySha256": "3ffcd409e2cfca4b0e0260f89bcbf3e05593d4be594c105fe8797da8112adb58",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.18-24.shared-home-fits-family",
+      "entryId": "shared-home-fits-family",
+      "placementId": "18-24.shared-home-fits-family",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-home-fits-family.json",
+      "snapshotFileSha256": "5c316c3b31656803c5cb2919616381cb15a34ccad0972fe093a563990ce333ab",
+      "textPlacementSha256": "f5feca5b044349fb516fa219fd15c1d4f7e17853cb5fa954cd2d8bf02b62629b",
+      "artContextSha256": null,
+      "publicProjectionSha256": "39406cf619233c343d5a53c31388877f38f06e059eb6804ce01f5820e9ce4e45",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-principles",
+        "shared-tone-r01.read.baby-observation-visual",
+        "shared-tone-r01.read.baby-daily-differences",
+        "shared-tone-r01.read.baby-adult",
+        "shared-tone-r01.read.baby-adult-visual",
+        "shared-tone-r01.read.toddler-home",
+        "shared-tone-r01.read.toddler-curiosity-acceptance",
+        "shared-tone-r01.read.toddler-adult"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "shared-tone-r01.public-locator-idea25",
+            "severity": "low",
+            "field": "entry.references[id=shared.ref.baby.home-family].locator",
+            "surface": "Back to the books, Baby locator paragraph at both ages",
+            "finding": "The locator visibly says No-purchase framing ... idea25 home order. The compressed idea25 token and framing jargon read like an internal evidence note rather than reader navigation.",
+            "requiredCorrection": "Use ordinary language and a spaced reference to the numbered source item, for example Using what you have, people as part of the environment, and idea 25 on arranging the home to reduce work. Preserve exact PDF references.",
+            "status": "open"
+          }
+        ],
+        "assessment": "Title, summary and cue directly name the home/family problem and relieve purchase and aesthetic pressure. Details keep culture, shared/small spaces, relationships and practical purpose, without importing a furniture prescription. Only the compressed public Baby source locator needs correction. The 18–24-month placement retains this shared adult/relationship perspective without expecting a toddler skill or a completed task. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "home-that-helps",
+            "you-family"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-home-fits-family.entry.html",
+          "renderedEntrySha256": "4f784a88bd1fa82db86b2adab0cdec65e0dffbf7950008fccbca1bd9e1715cc6",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.6-9.shared-adult-needs-support",
+      "entryId": "shared-adult-needs-support",
+      "placementId": "6-9.shared-adult-needs-support",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-adult-needs-support.json",
+      "snapshotFileSha256": "4dd195603a0666c622daddd27fd18a715afabf9b5d7d3c967e7f4f0dd0f50fbf",
+      "textPlacementSha256": "19d08368366284ffc7da4b678e54541f2f454dfb3df9c122de9d4a28ab118e92",
+      "artContextSha256": null,
+      "publicProjectionSha256": "6e7ed9a444f8203a7a6cfd5ce07ebc55e17a9e1a103deeb896b606f4a501995b",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-adult",
+        "shared-tone-r01.read.baby-adult-visual",
+        "shared-tone-r01.read.baby-family",
+        "shared-tone-r01.read.toddler-adult",
+        "shared-tone-r01.read.toddler-adult-visual",
+        "shared-tone-r01.read.toddler-family",
+        "shared-tone-r01.read.toddler-family-visual"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "shared-tone-r01.title-rest-support",
+            "severity": "medium",
+            "field": "entry.title",
+            "surface": "Entry h2 and you-family topic-row h3 at both ages",
+            "finding": "Your needs belong here is encouraging but hard to distinguish from Make space for everyone’s needs and Keep something that is yours in the same list. It hides the specific subject of adult rest and practical/emotional help, including the useful help-seeking context.",
+            "requiredCorrection": "Name rest or support for the adult in the title, for example Rest and support for you. Preserve the doctor-help qualification already visible in the summary; do not turn the title into a treatment promise.",
+            "status": "open"
+          }
+        ],
+        "assessment": "The summary retains depression help from a doctor on the only topic-row surface, with full detail distinguishing each book’s help-seeking language. Practical help, trusted people and paid-help access are expressed as possibilities; adult needs are substantive, not a demand for calm. The title needs a clearer rest/support subject to distinguish it from adjacent family-needs entries. The 6–9-month placement applies this shared adult/relationship perspective without a baby milestone or an imported toddler action. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "you-family"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-adult-needs-support.entry.html",
+          "renderedEntrySha256": "492afed643950ecea3a61d57e177192c1db67141feaf826e55cc803ca06a501f",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.18-24.shared-adult-needs-support",
+      "entryId": "shared-adult-needs-support",
+      "placementId": "18-24.shared-adult-needs-support",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-adult-needs-support.json",
+      "snapshotFileSha256": "a76d4bc9ea7acb3b7ec70d2f9ac967f7c22e1462d18a2400dd87a726233808b3",
+      "textPlacementSha256": "f080dd1546142dae651d44903afcf10a4874e42a270c0fdcd93807812808f98c",
+      "artContextSha256": null,
+      "publicProjectionSha256": "7bf58bc5f32c57b60c101ca115baa8b6367bc8a873cfa48d92e3d32a5e9564cd",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-adult",
+        "shared-tone-r01.read.baby-adult-visual",
+        "shared-tone-r01.read.baby-family",
+        "shared-tone-r01.read.toddler-adult",
+        "shared-tone-r01.read.toddler-adult-visual",
+        "shared-tone-r01.read.toddler-family",
+        "shared-tone-r01.read.toddler-family-visual"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "shared-tone-r01.title-rest-support",
+            "severity": "medium",
+            "field": "entry.title",
+            "surface": "Entry h2 and you-family topic-row h3 at both ages",
+            "finding": "Your needs belong here is encouraging but hard to distinguish from Make space for everyone’s needs and Keep something that is yours in the same list. It hides the specific subject of adult rest and practical/emotional help, including the useful help-seeking context.",
+            "requiredCorrection": "Name rest or support for the adult in the title, for example Rest and support for you. Preserve the doctor-help qualification already visible in the summary; do not turn the title into a treatment promise.",
+            "status": "open"
+          }
+        ],
+        "assessment": "The summary retains depression help from a doctor on the only topic-row surface, with full detail distinguishing each book’s help-seeking language. Practical help, trusted people and paid-help access are expressed as possibilities; adult needs are substantive, not a demand for calm. The title needs a clearer rest/support subject to distinguish it from adjacent family-needs entries. The 18–24-month placement retains this shared adult/relationship perspective without expecting a toddler skill or a completed task. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "you-family"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-adult-needs-support.entry.html",
+          "renderedEntrySha256": "e098a875f6a18d5486d3d124c64977c496ceb13d6745c1604f39ce6c0434f620",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.6-9.shared-something-for-you",
+      "entryId": "shared-something-for-you",
+      "placementId": "6-9.shared-something-for-you",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-something-for-you.json",
+      "snapshotFileSha256": "dc8bcfe505df17649fec9eb5d89fd36c4dd1893e50c33769d6ca482790eb7ba8",
+      "textPlacementSha256": "69c984e98d9a706c512a384740e7ffcb55d161fce6c99f4767776f2b77bad9ed",
+      "artContextSha256": null,
+      "publicProjectionSha256": "4ae101b08f1689721883769681b371d5e6eb8226d7bb79b6d02f888a49b4073e",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-adult",
+        "shared-tone-r01.read.baby-adult-visual",
+        "shared-tone-r01.read.toddler-adult",
+        "shared-tone-r01.read.toddler-adult-visual"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "shared-tone-r01.title-interests-beyond-parenting",
+            "severity": "medium",
+            "field": "entry.title",
+            "surface": "Entry h2 and you-family topic-row h3 at both ages",
+            "finding": "Keep something that is yours can sound like keeping a possession or protecting territory. The actual invitation concerns enjoyment, friendship and interests beyond parenting, but none of those is named in the heading. In the family list it overlaps the adjacent needs/support language.",
+            "requiredCorrection": "Name enjoyment or interests beyond parenting, for example Something you enjoy beyond parenting. Keep the small, optional examples and the explicit nonuniversal/with-children qualifications.",
+            "status": "open"
+          }
+        ],
+        "assessment": "Summary and cue give feasible, recognizable examples of adult enjoyment; details retain the books’ personal-practice frame and routines that can include children. No morning schedule, required purchase, music-healing claim or promise of emotional recovery is added. The title needs to say that this concerns enjoyment or interests beyond parenting. The 6–9-month placement applies this shared adult/relationship perspective without a baby milestone or an imported toddler action. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "you-family"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-something-for-you.entry.html",
+          "renderedEntrySha256": "4090f918a20686360fda95a416bfb503d36aa8dc4363f40c182d971e9be7eda0",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.18-24.shared-something-for-you",
+      "entryId": "shared-something-for-you",
+      "placementId": "18-24.shared-something-for-you",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-something-for-you.json",
+      "snapshotFileSha256": "ee11fdcc4a6e8ad959a9df18db0129637f59ec4f8da832bf7ec6835f76044297",
+      "textPlacementSha256": "98734b8c544f304578e1adf515a27bb6be2a32fbea510d98dd042b322a9ad465",
+      "artContextSha256": null,
+      "publicProjectionSha256": "2325ff47c4f33d462b1869a74bcd97c130e48db57e3ee5f6ffbcb9c16a846e64",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-adult",
+        "shared-tone-r01.read.baby-adult-visual",
+        "shared-tone-r01.read.toddler-adult",
+        "shared-tone-r01.read.toddler-adult-visual"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "shared-tone-r01.title-interests-beyond-parenting",
+            "severity": "medium",
+            "field": "entry.title",
+            "surface": "Entry h2 and you-family topic-row h3 at both ages",
+            "finding": "Keep something that is yours can sound like keeping a possession or protecting territory. The actual invitation concerns enjoyment, friendship and interests beyond parenting, but none of those is named in the heading. In the family list it overlaps the adjacent needs/support language.",
+            "requiredCorrection": "Name enjoyment or interests beyond parenting, for example Something you enjoy beyond parenting. Keep the small, optional examples and the explicit nonuniversal/with-children qualifications.",
+            "status": "open"
+          }
+        ],
+        "assessment": "Summary and cue give feasible, recognizable examples of adult enjoyment; details retain the books’ personal-practice frame and routines that can include children. No morning schedule, required purchase, music-healing claim or promise of emotional recovery is added. The title needs to say that this concerns enjoyment or interests beyond parenting. The 18–24-month placement retains this shared adult/relationship perspective without expecting a toddler skill or a completed task. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "you-family"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-something-for-you.entry.html",
+          "renderedEntrySha256": "6c53ee92ccc9cb359f1e75bc9bd7af235a956a37f65c74d029a005f4bf6fbad2",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.6-9.shared-less-crowded-day",
+      "entryId": "shared-less-crowded-day",
+      "placementId": "6-9.shared-less-crowded-day",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-less-crowded-day.json",
+      "snapshotFileSha256": "69c7aa2368c20da9e533f64f4a2203f8012e70984527eee032dc163c60960850",
+      "textPlacementSha256": "892b4afd8ce42a9e7c3187771774819644af78845cb7aa95be85864e33ed29eb",
+      "artContextSha256": null,
+      "publicProjectionSha256": "d9e87913d3521c026b83b07bbf3b76e4528e2e5ad4e23571d5cb8e3da345c7a7",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-relationship",
+        "shared-tone-r01.read.baby-exploration-visual",
+        "shared-tone-r01.read.baby-daily-differences",
+        "shared-tone-r01.read.baby-adult",
+        "shared-tone-r01.read.baby-adult-visual",
+        "shared-tone-r01.read.toddler-curiosity-acceptance",
+        "shared-tone-r01.read.toddler-adult",
+        "shared-tone-r01.read.toddler-adult-visual"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "shared-tone-r01.repeated-room-day",
+            "severity": "low",
+            "field": "entry.title; entry.summary; entry.principle.text",
+            "surface": "Entry heading/summary/What’s underneath and every you-family/everyday-care topic row at both ages",
+            "finding": "This short entry repeats room in its title, summary and principle while the surrounding topic lists repeatedly use the same metaphor. Its concrete subject—slowing down and reconsidering commitments—gets less emphasis than the repeated reassurance. This is a targeted repetition issue, not a reason to remove all room phrasing elsewhere.",
+            "requiredCorrection": "Use a concrete title such as A slower moment in a busy day and remove at least one repeated room phrase from the summary/principle, naming ordinary routines or what can wait. Preserve the acknowledgment of real work, money and energy constraints and avoid a new time quota.",
+            "status": "open"
+          }
+        ],
+        "assessment": "The cue and details acknowledge work, money, rest and circumstances that cannot simply change, offering ordinary connection without a schedule or a completed activity. Those qualifications preserve the books’ real-life frame. Selective removal of the repeated room phrasing will make the concrete slower-day subject easier to scan without cooling the prose. The 6–9-month placement applies this shared adult/relationship perspective without a baby milestone or an imported toddler action. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "you-family",
+            "everyday-care"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-less-crowded-day.entry.html",
+          "renderedEntrySha256": "33976f7114560ec7052c62e7cc6a836420fbdd2066260178f1b674f9bc7074ab",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.18-24.shared-less-crowded-day",
+      "entryId": "shared-less-crowded-day",
+      "placementId": "18-24.shared-less-crowded-day",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-less-crowded-day.json",
+      "snapshotFileSha256": "a875b678940364a54445304b44bc1d227dec362d407c1abe82065e2666974567",
+      "textPlacementSha256": "a98972e7fbd539644d31fdcf94d6a17d5290cf0314148efc2628f4686d952013",
+      "artContextSha256": null,
+      "publicProjectionSha256": "6a4fc04a66434de46fc81215d935d1a417c31a3db96266c6e05a4c0d03dbe6ef",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-relationship",
+        "shared-tone-r01.read.baby-exploration-visual",
+        "shared-tone-r01.read.baby-daily-differences",
+        "shared-tone-r01.read.baby-adult",
+        "shared-tone-r01.read.baby-adult-visual",
+        "shared-tone-r01.read.toddler-curiosity-acceptance",
+        "shared-tone-r01.read.toddler-adult",
+        "shared-tone-r01.read.toddler-adult-visual"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "shared-tone-r01.repeated-room-day",
+            "severity": "low",
+            "field": "entry.title; entry.summary; entry.principle.text",
+            "surface": "Entry heading/summary/What’s underneath and every you-family/everyday-care topic row at both ages",
+            "finding": "This short entry repeats room in its title, summary and principle while the surrounding topic lists repeatedly use the same metaphor. Its concrete subject—slowing down and reconsidering commitments—gets less emphasis than the repeated reassurance. This is a targeted repetition issue, not a reason to remove all room phrasing elsewhere.",
+            "requiredCorrection": "Use a concrete title such as A slower moment in a busy day and remove at least one repeated room phrase from the summary/principle, naming ordinary routines or what can wait. Preserve the acknowledgment of real work, money and energy constraints and avoid a new time quota.",
+            "status": "open"
+          }
+        ],
+        "assessment": "The cue and details acknowledge work, money, rest and circumstances that cannot simply change, offering ordinary connection without a schedule or a completed activity. Those qualifications preserve the books’ real-life frame. Selective removal of the repeated room phrasing will make the concrete slower-day subject easier to scan without cooling the prose. The 18–24-month placement retains this shared adult/relationship perspective without expecting a toddler skill or a completed task. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "you-family",
+            "everyday-care"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-less-crowded-day.entry.html",
+          "renderedEntrySha256": "dc9ffd71c9eb40764f6a496b16a77408a4e6222b2b703a9cfb9ee0b08e2ac8c4",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.6-9.shared-adult-pause",
+      "entryId": "shared-adult-pause",
+      "placementId": "6-9.shared-adult-pause",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-adult-pause.json",
+      "snapshotFileSha256": "697a884e7a5d5f65a56513656417e9704a862d213a2898111a4b3807a241df06",
+      "textPlacementSha256": "4bbcc96736472be501fd8cbeeb84ef68208f1e2b4e3ff955fe5468bd41017868",
+      "artContextSha256": null,
+      "publicProjectionSha256": "17682c5143ec199c33a5630618f497590cd299ec51041ce1c9530bcfdadc910c",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-relationship",
+        "shared-tone-r01.read.baby-adult",
+        "shared-tone-r01.read.baby-adult-visual",
+        "shared-tone-r01.read.toddler-adult",
+        "shared-tone-r01.read.toddler-adult-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The summary itself twice retains the danger boundary; the ordinary-moment cue and full description keep the adult responsive to crying and needs. Attribution distinguishes the books’ examples from new instructions, and the prose explicitly refuses to turn counting into a fixed delay. Reflection remains a later possibility without an expectation of constant calm. The 6–9-month placement applies this shared adult/relationship perspective without a baby milestone or an imported toddler action. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "you-family",
+            "connection-feelings"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-adult-pause.entry.html",
+          "renderedEntrySha256": "7410c22eb0715cd0e6c6753340084bf6674b17fd70fe5d6bf5c6fa0667b9a5a3",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.18-24.shared-adult-pause",
+      "entryId": "shared-adult-pause",
+      "placementId": "18-24.shared-adult-pause",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-adult-pause.json",
+      "snapshotFileSha256": "73c4a99174247c2c4f239cef9874957cbff11d395e9d740123113ae0958f1b1d",
+      "textPlacementSha256": "09215191563e17c9dfe040c7aaf94c0598f5daf1ac1adbbab3d1766f2822fe18",
+      "artContextSha256": null,
+      "publicProjectionSha256": "0102fd352e0586e0e7f47dff0a6713147510e73a1f3fa329f2707aabce9ca3bf",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-relationship",
+        "shared-tone-r01.read.baby-adult",
+        "shared-tone-r01.read.baby-adult-visual",
+        "shared-tone-r01.read.toddler-adult",
+        "shared-tone-r01.read.toddler-adult-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The summary itself twice retains the danger boundary; the ordinary-moment cue and full description keep the adult responsive to crying and needs. Attribution distinguishes the books’ examples from new instructions, and the prose explicitly refuses to turn counting into a fixed delay. Reflection remains a later possibility without an expectation of constant calm. The 18–24-month placement retains this shared adult/relationship perspective without expecting a toddler skill or a completed task. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "you-family",
+            "connection-feelings"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-adult-pause.entry.html",
+          "renderedEntrySha256": "6cda9384c14946ccbd12822def9b83392977214442956b66a49e8374bbb4c6a2",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.6-9.shared-repair",
+      "entryId": "shared-repair",
+      "placementId": "6-9.shared-repair",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-repair.json",
+      "snapshotFileSha256": "4a6526eae5c0d2b7730057558059af551c9bacdc784aa9257d59effc20f70918",
+      "textPlacementSha256": "7146e4c8a3fe419123e89e52408912031b28aa465cf8b07f600777077465faf0",
+      "artContextSha256": null,
+      "publicProjectionSha256": "d6ab7d430f630c8b1a68b118c3e5a7cd247d795c463f049077828090ee85157c",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-relationship",
+        "shared-tone-r01.read.baby-adult",
+        "shared-tone-r01.read.baby-adult-visual",
+        "shared-tone-r01.read.toddler-adult",
+        "shared-tone-r01.read.toddler-adult-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The full and short surfaces name adult regret, responsibility, apology and another attempt without blaming the child or promising instant reconciliation. The cue specifies lost patience; the details give Baby support for repair even with a baby and preserve anti-perfection framing. The warm hard-moment title is made actionable by its immediate summary. The 6–9-month placement applies this shared adult/relationship perspective without a baby milestone or an imported toddler action. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "you-family",
+            "connection-feelings"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-repair.entry.html",
+          "renderedEntrySha256": "e7a56032156e915f49ba358462532eaab22e7522b1cd6973c5ac6cdf8ed462e5",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.18-24.shared-repair",
+      "entryId": "shared-repair",
+      "placementId": "18-24.shared-repair",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-repair.json",
+      "snapshotFileSha256": "4c53b218292fdbe54737eefdbc770faf8c78805033fc6eefbee509633170350f",
+      "textPlacementSha256": "27797b3dccd2005e521a87f4e60aa3b07570c164f89a205fb41088e7a3220bd7",
+      "artContextSha256": null,
+      "publicProjectionSha256": "e090cc69b175043b7d39b6232a537e3fa2e737e815e5025e2b0e65912050c52a",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-relationship",
+        "shared-tone-r01.read.baby-adult",
+        "shared-tone-r01.read.baby-adult-visual",
+        "shared-tone-r01.read.toddler-adult",
+        "shared-tone-r01.read.toddler-adult-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The full and short surfaces name adult regret, responsibility, apology and another attempt without blaming the child or promising instant reconciliation. The cue specifies lost patience; the details give Baby support for repair even with a baby and preserve anti-perfection framing. The warm hard-moment title is made actionable by its immediate summary. The 18–24-month placement retains this shared adult/relationship perspective without expecting a toddler skill or a completed task. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "you-family",
+            "connection-feelings"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-repair.entry.html",
+          "renderedEntrySha256": "924a5ba5fea1eab3a50bf782c5e3c7ea67e1b2fb350bbc58c5cb79e90b8e7bba",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.6-9.shared-family-needs",
+      "entryId": "shared-family-needs",
+      "placementId": "6-9.shared-family-needs",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-family-needs.json",
+      "snapshotFileSha256": "dcc7028a577f0d19c4291faef20476db23b2765df5df27b4e0ab4f72777e872f",
+      "textPlacementSha256": "0694af0a31dcab419a2b0ce1b0e3dbe58f9c1a87b2ea011d68f5cf5852a8d8c8",
+      "artContextSha256": null,
+      "publicProjectionSha256": "f9bd09ce1a48857894723885a473334c734965c0a2b50623d142b400fd702bc0",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-family",
+        "shared-tone-r01.read.baby-family-visual",
+        "shared-tone-r01.read.toddler-family",
+        "shared-tone-r01.read.toddler-family-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The invitation explicitly includes adult needs, regular conversation, practical work and a nonconditional child plan. Full detail says if you share care and names partner, friends or relatives according to who is present, with no promised perfect solution. The title names everyone’s needs and remains distinct in purpose once the neighboring adult-support title is clarified. The 6–9-month placement applies this shared adult/relationship perspective without a baby milestone or an imported toddler action. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "you-family"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-family-needs.entry.html",
+          "renderedEntrySha256": "9ce6c9c6c253dbb4157987baa6be7d001187a342cb805273713e2f79e29576cd",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.18-24.shared-family-needs",
+      "entryId": "shared-family-needs",
+      "placementId": "18-24.shared-family-needs",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-family-needs.json",
+      "snapshotFileSha256": "a302bb55a0cb5389033145611a4229fd13d069abe80cd9390a52180cf875bb7f",
+      "textPlacementSha256": "e85bdead3a9ccf0e1e16f0a771cb4d18897e1c6791b572a80b4507210779b1ff",
+      "artContextSha256": null,
+      "publicProjectionSha256": "de8dad2eab8cadb6e96602af93f85d86c830182a07c1bc1c6d2d2c9ca34d5197",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-family",
+        "shared-tone-r01.read.baby-family-visual",
+        "shared-tone-r01.read.toddler-family",
+        "shared-tone-r01.read.toddler-family-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The invitation explicitly includes adult needs, regular conversation, practical work and a nonconditional child plan. Full detail says if you share care and names partner, friends or relatives according to who is present, with no promised perfect solution. The title names everyone’s needs and remains distinct in purpose once the neighboring adult-support title is clarified. The 18–24-month placement retains this shared adult/relationship perspective without expecting a toddler skill or a completed task. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "you-family"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-family-needs.entry.html",
+          "renderedEntrySha256": "280f05c574bf7c20ce4fdaa10cc64a5cc193bdb256dcf393c76703fdc77b90e1",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.6-9.shared-caregiver-common-ground",
+      "entryId": "shared-caregiver-common-ground",
+      "placementId": "6-9.shared-caregiver-common-ground",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-caregiver-common-ground.json",
+      "snapshotFileSha256": "4b3cb160099568b8b063d184c8315cbc4e2e4ecec13f7b4382d180a77260082b",
+      "textPlacementSha256": "1f6651a5ffcaccd762bb8fa173d7b4c8e1dafa4c4713fc3376305da104b47149",
+      "artContextSha256": null,
+      "publicProjectionSha256": "f0c5346975fb2d359107c470640a83dc1cb4555b563b6c27c9b24cdca1596580",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-family",
+        "shared-tone-r01.read.baby-family-visual",
+        "shared-tone-r01.read.toddler-family",
+        "shared-tone-r01.read.toddler-family-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The title names caregiver disagreement; the short summary limits itself to everyday differences and the cue to a trusted caregiver who wants to talk. The body preserves voluntary timing, listening, alternative solutions, different caring styles and appreciation; it does not promise conversion to Montessori or universal reconciliation. The 6–9-month placement applies this shared adult/relationship perspective without a baby milestone or an imported toddler action. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "you-family",
+            "connection-feelings"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-caregiver-common-ground.entry.html",
+          "renderedEntrySha256": "8b33ed20d77b967b77af86526e26c8e0d8b417eb59ef65ca6ee5dfd4b7df0445",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.18-24.shared-caregiver-common-ground",
+      "entryId": "shared-caregiver-common-ground",
+      "placementId": "18-24.shared-caregiver-common-ground",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-caregiver-common-ground.json",
+      "snapshotFileSha256": "f2bc0042e9553f829e605a9e93577155a3a4a7b262870f76292f281b0d00c9bc",
+      "textPlacementSha256": "84f0aa12fcff56f510c2cba4ad24140cf5d20053bb8447b58cbc75975bc2a6f1",
+      "artContextSha256": null,
+      "publicProjectionSha256": "f90912bca906fbfb194b311745c6e846730e32973e4581340300fcad36fbf46a",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-family",
+        "shared-tone-r01.read.baby-family-visual",
+        "shared-tone-r01.read.toddler-family",
+        "shared-tone-r01.read.toddler-family-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The title names caregiver disagreement; the short summary limits itself to everyday differences and the cue to a trusted caregiver who wants to talk. The body preserves voluntary timing, listening, alternative solutions, different caring styles and appreciation; it does not promise conversion to Montessori or universal reconciliation. The 18–24-month placement retains this shared adult/relationship perspective without expecting a toddler skill or a completed task. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "you-family",
+            "connection-feelings"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-caregiver-common-ground.entry.html",
+          "renderedEntrySha256": "f93d68189adbe0018dfc08009e0a092387f68e2ef5afa22881ddc7187ed821d4",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.6-9.shared-family-separation",
+      "entryId": "shared-family-separation",
+      "placementId": "6-9.shared-family-separation",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-family-separation.json",
+      "snapshotFileSha256": "84b61ff09401468e774f4efcab397bf00f0def20ca898372aa54666799d1fc71",
+      "textPlacementSha256": "97f717b3e6c299a0cd61a2cb8a96cedf7c9aa9ef47e50e64e4df0d61968bcc39",
+      "artContextSha256": null,
+      "publicProjectionSha256": "a350781f05b7a7b012c5570b892db6ace7c284c0e23c71626ccb43246eeb33c5",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-family",
+        "shared-tone-r01.read.baby-family-visual",
+        "shared-tone-r01.read.toddler-family",
+        "shared-tone-r01.read.toddler-family-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The title directly names separated parents without stigma. The topic summary itself qualifies continued contact by child safety, and full detail retains psychological/physical reasons against contact, adult support, predictable/factual updates and keeping adult conflict off the child. The attributed perspective contains no legal or care procedure. The 6–9-month placement applies this shared adult/relationship perspective without a baby milestone or an imported toddler action. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "you-family"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-family-separation.entry.html",
+          "renderedEntrySha256": "dac4a249fdfae3c85c4ede288d70b8abc54ff5839f71e03967429bbd75f4b55b",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.18-24.shared-family-separation",
+      "entryId": "shared-family-separation",
+      "placementId": "18-24.shared-family-separation",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-family-separation.json",
+      "snapshotFileSha256": "3b345cbc235ab946a8731a28f62373c6f61271f6b4974b4a53f2b4f9e04bce7f",
+      "textPlacementSha256": "659413146cd5d7d36d268386790ca0e975a1afe4ef2156c17fa0a132fb9934c3",
+      "artContextSha256": null,
+      "publicProjectionSha256": "50695a1fcab196dfc4b72af6cae046468e7e816381cb0a26972dfabe5fe1fa10",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-family",
+        "shared-tone-r01.read.baby-family-visual",
+        "shared-tone-r01.read.toddler-family",
+        "shared-tone-r01.read.toddler-family-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The title directly names separated parents without stigma. The topic summary itself qualifies continued contact by child safety, and full detail retains psychological/physical reasons against contact, adult support, predictable/factual updates and keeping adult conflict off the child. The attributed perspective contains no legal or care procedure. The 18–24-month placement retains this shared adult/relationship perspective without expecting a toddler skill or a completed task. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "you-family"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-family-separation.entry.html",
+          "renderedEntrySha256": "a9adcd2b0080742e60eaf66ba43d058a0a75f50df3bfc3351d1b6b7925cbb546",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-tone-r01.6-9.shared-choosing-care",
+      "entryId": "shared-choosing-care",
+      "placementId": "6-9.shared-choosing-care",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-choosing-care.json",
+      "snapshotFileSha256": "b33c819ab577e69a6d18a1eefa4c88c90f008f7fd0835f2856f9b57d82dcd193",
+      "textPlacementSha256": "0530c00956518fbce507cbfe0cb4fff9fac470812f7e4cc68532c5609d8dab7b",
+      "artContextSha256": null,
+      "publicProjectionSha256": "bb3fd2f5a742becb9e5d405d4f033daf32b7cf09de9632cf24c31ad9001387d1",
+      "readLogIds": [
+        "shared-tone-r01.read.baby-family",
+        "shared-tone-r01.read.baby-family-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The title identifies care choice, while the summary and cue identify the baby-care setting and the authors’ real-options frame. Warmth, responsive/consistent relationships, availability/cost and judging the present setting survive in full detail. The text does not turn the source’s sleep, feeding or ratio criteria into a new selection checklist. The only reviewed placement is 6–9 months, which retains the Baby source’s baby-care scope; no toddler or newborn expansion is claimed. All listed topic rows, the exact rendered entry text, source labels, common headings, age control and footer/colophon were included.",
+        "surfacesRead": {
+          "opening": null,
+          "topicIds": [
+            "you-family"
+          ],
+          "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-choosing-care.entry.html",
+          "renderedEntrySha256": "e8b2f0a0c0d351fafa91bb92695a0bdedb0ad11b8e482c48905270a66694f55c",
+          "method": "Actual HomeStudy server-rendered HTML text and element structure checked against the frozen projection and RENDERED_SURFACES; no browser-layout or artwork approval claimed."
+        }
+      },
+      "artContext": null
+    }
+  ]
+}

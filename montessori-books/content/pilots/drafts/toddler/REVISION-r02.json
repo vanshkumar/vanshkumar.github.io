@@ -1,0 +1,38 @@
+{
+  "revision": "r02",
+  "editor": "/root",
+  "date": "2026-09-10",
+  "previousDraft": {
+    "path": "content/pilots/drafts/toddler/draft-r01.json",
+    "sha256": "72f53c79c4632037d1ab6f72aad0380fb9929e2201f65bbaac0808084ceb1edc"
+  },
+  "findingReports": [
+    {
+      "path": "content/pilots/reviews/final/toddler-practical-home-source-r01.json",
+      "sha256": "f214240d8eeb3e2f60a93627e38a17361d3c5836a106f54bc648030dd01ba19b"
+    }
+  ],
+  "changes": [
+    {
+      "entryId": "toddler-handwashing",
+      "beforeEntrySha256": "479d3c37308e3f5a2f541a583a506a3342ce346f653d74c96ba9ed91051ce0f3",
+      "afterEntrySha256": "5e47a5d4c0f136bfb4f932e4518461577bf745bb67ee7ec4bbfc0e12ad3ea40b",
+      "changedFields": [
+        "detail",
+        "references"
+      ],
+      "placementChanged": true,
+      "issueIds": [
+        "toddler-practical-home.source.handwashing.jug-readiness"
+      ]
+    }
+  ],
+  "status": "Proposed exact corrections; affected source and tone re-reviews pending",
+  "editorReadLogs": [
+    {
+      "path": "content/pilots/editorial/ROOT_READ_LOG-toddler-r02.json",
+      "sha256": "cb5e6d5144a985c639f14c5d563b47e2143a08c58761e899e1739c35b9a772cd"
+    }
+  ],
+  "readBoundary": "Original author provenance/read logs remain intact. Limited additional editor original-source reads are separately logged; no whole-author-source reread or independent review by the editor is claimed."
+}

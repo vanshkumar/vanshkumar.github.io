@@ -29,7 +29,10 @@ the selected age. Hash links work without a server-side SPA fallback, for exampl
   Toddler references include verified printed pages and physical PDF pages.
 - `src/concepts.js`: the ten random seeds, interpretations, and palette notes.
 - `src/main.jsx` and `src/styles.css`: shared controls and ten distinct layouts.
-- `public/art/`: four original generated illustrations, optimized to WebP.
+- `src/HomeStudy.jsx` and `src/home.css`: the refined second direction, with a
+  compact age selector, an open illustration for each populated age, and three
+  idea choices above a focused reading panel with an observation cue.
+- `public/art/`: eleven original generated illustrations and revisions, optimized to WebP.
   `ARTWORK.md` records the generation briefs. Images are conceptual; repeated
   crops in the comic study are a prototype treatment, not distinct instructional frames.
 

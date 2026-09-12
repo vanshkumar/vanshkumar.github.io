@@ -1,0 +1,77 @@
+{
+  "revision": "r03",
+  "editor": "/root",
+  "date": "2026-09-10",
+  "previousDraft": {
+    "path": "content/pilots/drafts/baby/draft-r02.json",
+    "sha256": "3231378dc6564ab6bcbe9cf75a4e3d2420cadfe15c5f995f8c026b6f7bef2ead"
+  },
+  "findingReports": [
+    {
+      "path": "content/pilots/reviews/final/baby-care-tone-r02.json",
+      "sha256": "191f3e9dd81e450bc42a25a94246089c33ed71bb6a7b227f482c9d507f6c52e7"
+    }
+  ],
+  "changes": [
+    {
+      "entryId": "baby-dressing",
+      "beforeEntrySha256": "d5311602937cabe79c265c2fc2ffa6483bd4384ad5941490d52292f96d8a992d",
+      "afterEntrySha256": "59c4ff2aefc7407d12d794eb7fef8dbe8c04aa43242f6897b13574fe7d4a1012",
+      "changedFields": [
+        "title",
+        "summary",
+        "cue"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "baby-care-tone-r02.dressing.repeated-generic-phrasing"
+      ]
+    },
+    {
+      "entryId": "baby-solids-perspective",
+      "beforeEntrySha256": "984a3891e3978c77304d37e0a783b7e71a37cd90b025d35ad7e8f1e79f9baf97",
+      "afterEntrySha256": "420fad449875509346e7fb703e1c3090fb8a2b9204a9bc3a3bb99d5a592a46de",
+      "changedFields": [
+        "title",
+        "summary"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "baby-care-tone-r02.solids.short-safety-context",
+        "baby-care-tone-r02.solids.abstract-title"
+      ]
+    },
+    {
+      "entryId": "baby-eating-amount",
+      "beforeEntrySha256": "4059993cc0dc5dfb2e0307704153df185a47485f062aadfd7c78da66977f7ab9",
+      "afterEntrySha256": "04918cee80578c151d573ab290f16e05ac6ad2f2ca34b5b9b61f6516d47f7399",
+      "changedFields": [
+        "detail"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "baby-care-tone-r02.eating-amount.unintroduced-example"
+      ]
+    },
+    {
+      "entryId": "baby-daily-rhythm",
+      "beforeEntrySha256": "0d1804d7544811bc5a00da7f8e7407970c688beddb00afc2472d2f9d42202a32",
+      "afterEntrySha256": "b89e657fd3eceec72cea57c6f533a524b433f16728c56b2fa2cd26d165c77332",
+      "changedFields": [
+        "title"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "baby-care-tone-r02.daily-rhythm.abstract-title"
+      ]
+    }
+  ],
+  "status": "Proposed exact corrections; affected independent source and tone reviews pending",
+  "editorReadLogs": [
+    {
+      "path": "content/pilots/editorial/ROOT_READ_LOG-baby-r03.json",
+      "sha256": "92615b38e7c85f70baa50a33f1414060760c68b136a25d4e6ba33c396d86c35f"
+    }
+  ],
+  "readBoundary": "Original author provenance and read logs remain intact. Limited additional editor original-source reads are separately logged; no independent approval by the editor is claimed."
+}

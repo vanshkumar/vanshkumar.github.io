@@ -1,0 +1,893 @@
+{
+  "id": "toddler-practical-home-tone-r02",
+  "reviewer": {
+    "task": "/root/toddler_practical_tone_r02",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Fresh independent tone review of all 13 exact frozen r02 toddler-practical-home placements at 18–24 months: 25 actual topic rows, 13 actual detail surfaces and both illustrated openings. No publication claim or scope reduction.",
+  "independence": "No source-review or other tone-review outputs were consulted before or during judgment. Matching draft/provenance was used only as input context, never as proof of a reviewer's own source reading.",
+  "batchId": "toddler-practical-home",
+  "entryIds": [
+    "toddler-pouring",
+    "toddler-shoes",
+    "toddler-wipe-and-dust",
+    "toddler-laundry",
+    "toddler-plants-and-flowers",
+    "toddler-food-preparation",
+    "toddler-table-together",
+    "toddler-nose-and-hair",
+    "toddler-shelf-and-rotation",
+    "toddler-spaces-for-different-ages",
+    "toddler-art-has-a-place",
+    "toddler-handwashing",
+    "toddler-small-job-on-an-errand"
+  ],
+  "manifest": {
+    "path": "content/pilots/revisions/r02/MANIFEST.json",
+    "sha256": "b95284165cf0d9c48216d63a25d5f2bf544557b513ff0304d9a0bac55f4235e1"
+  },
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r02/RENDERED_SURFACES.json",
+    "sha256": "186f8914b494c8a76ca9735f1d3f212273e9f43040683497e311f5e8cb92b048"
+  },
+  "rendererRead": {
+    "path": "src/HomeStudy.jsx",
+    "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c",
+    "description": "Read full actual renderer, including opening scene/invitation/cue, topic rows and EntryReading order; verified all five frozen renderer file hashes remain identical.",
+    "frozenRendererIdentities": [
+      {
+        "path": "src/HomeStudy.jsx",
+        "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c"
+      },
+      {
+        "path": "src/home.css",
+        "sha256": "55de72c5b21d2f1a3ead85c5975febd09ac3135fcbc2219e6672a13f4786a6e1"
+      },
+      {
+        "path": "src/styles.css",
+        "sha256": "503e980cdf9ba4728adf678bb27bc4cd4095d1ae131c3c02181cc4b9a4df22ce"
+      },
+      {
+        "path": "src/guide/catalog.js",
+        "sha256": "d8d30a17c5f1b1c99ed68764f3f412cf99b48f55d09bf528313f0df1439da71c"
+      },
+      {
+        "path": "src/concepts.js",
+        "sha256": "cb086bcc98ad4fde98677a03cb42a849ae5993405dd886a71e7642ca079a3e4a"
+      }
+    ]
+  },
+  "sourceIdentity": {
+    "sourceId": "toddler-2019",
+    "path": "The Montessori Toddler - Simone Davies _Worldfreebooks.com_.pdf",
+    "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b",
+    "bytes": 7036292,
+    "physicalPdfPages": 257,
+    "verifiedAgainst": "research/foundation/SOURCE_MANIFEST.md"
+  },
+  "readMethod": "Original PDF text extracted directly with bundled pypdf and personally read; original pages rendered with pdftoppm at 1500-pixel longest edge and read through view_image for logged full-page visual spans. All scratch work is under tmp/pilot-reviews/toddler-practical-tone-r02. Read-log spans represent actual own reads only; no page generation or another reader's coverage was counted.",
+  "readLogs": [
+    {
+      "id": "toddler-practical-home-tone-r02.read.identity",
+      "reader": "/root/toddler_practical_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 2,
+          "end": 3
+        },
+        {
+          "start": 14,
+          "end": 14
+        },
+        {
+          "start": 29,
+          "end": 29
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read original title/copyright text, the author's around 1–3 toddler-scope note, individual development, respect, and observation. File bytes, page count and fingerprint matched SOURCE_MANIFEST.md."
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.read.activities",
+      "reader": "/root/toddler_practical_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 33,
+          "end": 42
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete general activity framing, indicative ages, partial sequences and repetition, demonstration, freedom of choice, concentration and frustration/help, returning materials, acceptable exploration and intervention, adaptation, using available materials, small-part/sharp-object supervision, and setup examples. Complete page text was extracted directly from the original PDF with pypdf and read, including table-setting materials and conditions."
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.read.practical",
+      "reader": "/root/toddler_practical_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 48,
+          "end": 52
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete practical-life discussion and full two-page age chart, including one/two steps under two, slower shared work and supervision, cleanup capacity, stopping before overwhelmed, carrying laundry and supermarket participation, earlier activities continuing in later bands, and the distinct 3–4 column as context."
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.read.examples",
+      "reader": "/root/toddler_practical_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 63,
+          "end": 64
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read all seven numbered practical-life example captions and their original-page labels, including care of self, assisted apple work from two, setting the table, flowers and cleaning. The source photo page was also read visually, rather than treating its sparse number-only extraction as content coverage."
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.read.home",
+      "reader": "/root/toddler_practical_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 75,
+          "end": 85
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete home setup, room-by-room lists and their notes, the starter-equipment callout, clutter/storage, cozy/family home context, making the environment suitable, sharing spaces, small spaces and concluding purpose. This includes actual inaccessibility of older children's materials, access and readiness/supervision for sharp knives, limited jug liquid, shoes/seat, prepared art trays versus later gathering, and plants in limited outdoor space."
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.read.participation",
+      "reader": "/root/toddler_practical_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 97,
+          "end": 102
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete relevant follow-the-child, hands-on learning, daily-life participation, going slowly and help/scaffolding units, including real weekday time constraints, shared carrying, varying help, mistakes and offering help."
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.read.errands",
+      "reader": "/root/toddler_practical_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 122,
+          "end": 128
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete ways to involve the child, help-them-listen and managing-expectations units through the concluding cooperation summary. Read supermarket picture-list and checkout examples, limits of waiting, adult availability, movement, realistic expectations and processing time. Other techniques on these pages were retained as source context, not added to the entry."
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.read.privacy-not-punishment",
+      "reader": "/root/toddler_practical_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 129,
+          "end": 138
+        }
+      ],
+      "mode": "full-text",
+      "description": "Followed the shared-space detail's distinction from sending an upset toddler away into the original limits, feelings, tantrum, calm-space, reconnecting and repair sections, including their continuations and overview. Read immediate safety intervention, continuing presence/help, optional contact, time constraints, and the separate around/over-three calm-place context. No calm-space procedure was inferred for 18–24 months."
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.read.shoes-dressing",
+      "reader": "/root/toddler_practical_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 148,
+          "end": 151
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete getting-dressed/leaving-home unit: manageable clothes and shoes, predictable storage and a seat, coat-flip context, scaffolding and changing help needs, frustration, clothing refusal and the real need to leave. This supports participation without an independent-dressing expectation."
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.read.concentration",
+      "reader": "/root/toddler_practical_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 177,
+          "end": 178
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete concentration tips and frustration section: interest, repetition, fewer choices/storage, proportionate assistance, not relocating already-absorbed work, and accepting refusal of help."
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.read.appendix",
+      "reader": "/root/toddler_practical_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 244,
+          "end": 252
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read original appendix opener and complete pages of age/activity/material/development rows through the next age context. Relevant rows include walking-dependent wiping/watering, nose and hair care, leaves, dusting/sweeping, flowers, laundry cloths, seeds/outdoor care, distinct sink/table handwashing with jug/readiness condition, setting/clearing, food variants, pouring and later two-year work. Rows were read in full; small-part/knife conditions were read in the main activity and kitchen units."
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.read.identity-visual",
+      "reader": "/root/toddler_practical_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 2,
+          "end": 3
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read full-size original title and copyright page renders, including author, illustration credit, publisher, ISBN and first-printing statement; no metadata-only edition inference."
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.read.setup-visual",
+      "reader": "/root/toddler_practical_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 41,
+          "end": 42
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected both complete original pages at readable size: setup photo with all elements and the watercolor/table-setting photos with their complete captions. Verified all material grouping and the conditional knife clause."
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.read.practical-visual",
+      "reader": "/root/toddler_practical_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 51,
+          "end": 52
+        },
+        {
+          "start": 63,
+          "end": 64
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read readable full original-page renders of both age-chart pages and the complete seven-photo practical-life spread with all following numbered captions. Kept the 18-month-to-three and three-to-four columns separate; inspected actual care-of-self, apple tools, table setting, flowers and cleaning materials."
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.read.home-visual",
+      "reader": "/root/toddler_practical_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 74,
+          "end": 85
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read readable full original-page renders of the home illustration, eight setup tips, complete room-by-room tables and their notes, labeled starter illustration, and complete clutter/sharing/small-space context. Images/captions and column/list boundaries were inspected, not inferred from text extraction."
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.read.shoes-visual",
+      "reader": "/root/toddler_practical_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 149,
+          "end": 149
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected the complete original page, including hallway storage and seating text, the learning-to-dress passage and all three coat-flip drawings/captions as adjacent context. No coat-flip procedure is approved through this shoes review."
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.read.appendix-visual",
+      "reader": "/root/toddler_practical_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 245,
+          "end": 251
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read all seven original table pages at readable full-page size, following each age cell, material list and development column. Confirmed steady-walking watering, distinct leaf-care ages, precut stems, laundry cloths, table handwashing's jug/repetition condition, table-setting/clearing rows and pouring/food variants."
+    }
+  ],
+  "batchTonePatternAssessment": "Reviewed titles and short rows in this exact batch. The repeated small-part construction is most conspicuous in the cleaning title plus its immediate summary; recognizable-subject revisions are required for plants, shelf and errands. Room-for phrasing occurs in the shared-room summary but is not a repeated title pattern within this batch. No wider batch prose was used as review evidence.",
+  "reviews": [
+    {
+      "id": "toddler-practical-home-tone-r02.18-24.toddler-pouring",
+      "entryId": "toddler-pouring",
+      "placementId": "18-24.toddler-pouring",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-pouring.json",
+      "snapshotFileSha256": "f66a56519cb61f5ade69cb824ceceefc08f03faed08d7e576b471cfd575b9dcb",
+      "textPlacementSha256": "209c694405a71fcf9c0370c2e6d4d4ce93d3dd37729c09c4128adb947353ff2a",
+      "artContextSha256": "f6715446917a6a5932ed9e0dec4b9f38a4013271415b174904cee1449a73b29a",
+      "publicProjectionSha256": "bb3d5cdac0cae74ac69df19aaaee294393e8321e04a1f18270f421ba8445d01b",
+      "readLogIds": [
+        "toddler-practical-home-tone-r02.read.identity",
+        "toddler-practical-home-tone-r02.read.activities",
+        "toddler-practical-home-tone-r02.read.practical",
+        "toddler-practical-home-tone-r02.read.home",
+        "toddler-practical-home-tone-r02.read.appendix",
+        "toddler-practical-home-tone-r02.read.practical-visual",
+        "toddler-practical-home-tone-r02.read.home-visual",
+        "toddler-practical-home-tone-r02.read.appendix-visual"
+      ],
+      "renderedSurfaceCoverage": {
+        "opening": true,
+        "topicIds": [
+          "play-discovery",
+          "everyday-care"
+        ],
+        "detail": true,
+        "renderedEntryPath": "tmp/pilot-review/r02/18-24.toddler-pouring.entry.html"
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for the exact 18–24 opening, both topic rows and detail. A recognizable pouring title, manageable-jug interest cue, little liquid and nearby help make the invitation feasible. The text allows repetition of pouring or wiping without demanding completion, and keeps the differing source age labels visible as context rather than a deadline. It adds no feeding amount, utensil-purchase requirement or novel sensitive care recipe."
+      },
+      "artContext": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for this exact pouring opening, independently of the text decision. The actual asset shows a child standing at a low table, one hand tipping a small pitcher and the other steadying the cup, a cloth on the table and an attentive caregiver kneeling nearby. The source passages support manageable pouring with little liquid and help; neither the image nor current alt text claims two hands on the pitcher, independent feeding or a mandatory setup. The actual opening title/invitation/cue describe interest and help, matching that warm shared moment.",
+        "assetReads": [
+          {
+            "src": "art/home-paper-toddler.webp",
+            "path": "public/art/home-paper-toddler.webp",
+            "sha256": "6590e3b468d918f375cf5fd7ea2362b45e511f0d41c0b1a7113b2b5b6ae2d422",
+            "mode": "actual-image-visual",
+            "description": "Personally inspected the actual 1536×1024 WebP in full at readable size through view_image, including child/caregiver posture, the one-hand pitcher/other-hand cup gesture, nearby cloth, paper/crayons and bottom-tier shoe basket. Actual bytes matched the frozen art-context hash input; no prompt or alt text was substituted for image inspection."
+          }
+        ],
+        "openingContextRead": {
+          "path": "tmp/pilot-review/r02/18-24.toddler-pouring.opening.html",
+          "sha256": "6cd84869e6d298faa5b12f76d517a9def53cd5bb49d349678bf351ab6fb0436f",
+          "mode": "actual-rendered-html-and-image",
+          "description": "Read the actual frozen opening figure markup and full RENDERED_SURFACES opening text, and inspected the referenced asset. Read HomeStudy.jsx to verify how the selected headline, scene, caption, short invitation, cue and CTA are combined. This is not a claim of a separate browser screenshot review."
+        }
+      }
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.18-24.toddler-shoes",
+      "entryId": "toddler-shoes",
+      "placementId": "18-24.toddler-shoes",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-shoes.json",
+      "snapshotFileSha256": "ebee3b0eb2700c965e47572e8abe7759d82ca3aeb8cfb81ee84ac7164e8652d1",
+      "textPlacementSha256": "126780949194d38319719f2ccd4e30d0f56029c2b619b7fa8abfbc167da2884f",
+      "artContextSha256": "2267d78eefb5ce181cd9eb17b1d887867d4014064aab29138e08e1bd5e92b17f",
+      "publicProjectionSha256": "57916b8c6d9ac60b6541e62719e3afc57ae026ccde68ab4733eca67db491ba40",
+      "readLogIds": [
+        "toddler-practical-home-tone-r02.read.identity",
+        "toddler-practical-home-tone-r02.read.activities",
+        "toddler-practical-home-tone-r02.read.practical",
+        "toddler-practical-home-tone-r02.read.home",
+        "toddler-practical-home-tone-r02.read.participation",
+        "toddler-practical-home-tone-r02.read.shoes-dressing",
+        "toddler-practical-home-tone-r02.read.practical-visual",
+        "toddler-practical-home-tone-r02.read.home-visual",
+        "toddler-practical-home-tone-r02.read.shoes-visual"
+      ],
+      "renderedSurfaceCoverage": {
+        "opening": true,
+        "topicIds": [
+          "everyday-care",
+          "home-that-helps"
+        ],
+        "detail": true,
+        "renderedEntryPath": "tmp/pilot-review/r02/18-24.toddler-shoes.entry.html"
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for the exact 18–24 Shoes opening, both topic rows and detail. The title plainly names shoes; fetching and returning with help are enough, and the explicit note does not expect independent dressing. Reachable storage and an optional nearby seat serve an ordinary departure/arrival routine. The shared-help wording fits the source's varying willingness and need for help."
+      },
+      "artContext": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for this exact Shoes opening, independently of the text decision. The shared scene keeps the clearly visible basket of shoes on the bottom shelf within reach; the selected title is A place for shoes and the opening explains fetching/returning participation. The picture does not portray independent dressing or a child performing on demand. The nearby caregiver and ordinary shelf context fit the relational tone. The continuing pouring action is recognizable shared-scene context, while the alt text accurately identifies both actions/materials without pretending the picture shows putting shoes on.",
+        "assetReads": [
+          {
+            "src": "art/home-paper-toddler.webp",
+            "path": "public/art/home-paper-toddler.webp",
+            "sha256": "6590e3b468d918f375cf5fd7ea2362b45e511f0d41c0b1a7113b2b5b6ae2d422",
+            "mode": "actual-image-visual",
+            "description": "Personally inspected the actual 1536×1024 WebP in full at readable size through view_image, including child/caregiver posture, the one-hand pitcher/other-hand cup gesture, nearby cloth, paper/crayons and bottom-tier shoe basket. Actual bytes matched the frozen art-context hash input; no prompt or alt text was substituted for image inspection."
+          }
+        ],
+        "openingContextRead": {
+          "path": "tmp/pilot-review/r02/18-24.toddler-shoes.opening.html",
+          "sha256": "b222ba357358d620440626b55527596a472de691181661d55e88a898eef485d3",
+          "mode": "actual-rendered-html-and-image",
+          "description": "Read the actual frozen opening figure markup and full RENDERED_SURFACES opening text, and inspected the referenced asset. Read HomeStudy.jsx to verify how the selected headline, scene, caption, short invitation, cue and CTA are combined. This is not a claim of a separate browser screenshot review."
+        }
+      }
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.18-24.toddler-wipe-and-dust",
+      "entryId": "toddler-wipe-and-dust",
+      "placementId": "18-24.toddler-wipe-and-dust",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-wipe-and-dust.json",
+      "snapshotFileSha256": "4c426d148e9038993a392649d16bde5a533374c550f514fd0a9e44854822f2e4",
+      "textPlacementSha256": "09a87a91e0da297a91f5ee7e475cf50e5704563c792294f9298722c3bd388cda",
+      "artContextSha256": null,
+      "publicProjectionSha256": "40f96c57139629ba447409263634c6fb972d5f28fcdbbb2c17e528aa196049ae",
+      "readLogIds": [
+        "toddler-practical-home-tone-r02.read.identity",
+        "toddler-practical-home-tone-r02.read.activities",
+        "toddler-practical-home-tone-r02.read.practical",
+        "toddler-practical-home-tone-r02.read.appendix",
+        "toddler-practical-home-tone-r02.read.practical-visual",
+        "toddler-practical-home-tone-r02.read.appendix-visual"
+      ],
+      "renderedSurfaceCoverage": {
+        "opening": false,
+        "topicIds": [
+          "play-discovery",
+          "home-that-helps"
+        ],
+        "detail": true,
+        "renderedEntryPath": "tmp/pilot-review/r02/18-24.toddler-wipe-and-dust.entry.html"
+      },
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "toddler-practical-home-tone-r02.cleaning-small-part-repetition",
+            "severity": "low",
+            "field": "entry.title; entry.summary",
+            "surface": "Both topic rows and detail heading/summary",
+            "finding": "The adjacent title “A small part of cleaning” and summary ending “One small part of the work can be enough” repeat the same reassurance. In this batch, small-part language also appears in the Shoes opening, tissue/brush summary and other practical-life details. Here it substitutes twice for the concrete wiping/dusting subject.",
+            "requiredCorrection": "Name wiping or dusting in the title and remove the duplicated small-part reassurance from this short row, while preserving alongside-you participation and freedom to stop in the detail.",
+            "status": "open"
+          }
+        ],
+        "assessment": "Revise the repeated short-surface wording identified below. Otherwise the exact play/home placement makes wiping and dusting ordinary shared work: interest and manageable tools, lower expectations for the result, stopping before overwhelmed and shared return all respect child and adult."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.18-24.toddler-laundry",
+      "entryId": "toddler-laundry",
+      "placementId": "18-24.toddler-laundry",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-laundry.json",
+      "snapshotFileSha256": "b70ceedcad1f0edf8e6c757c13ddc63cc31aa845d8aca038a740d655aa439929",
+      "textPlacementSha256": "007b610f27bf865e9ff7e1eb45755559e2c06d7bf8b1be2f5689f3461570948c",
+      "artContextSha256": null,
+      "publicProjectionSha256": "90089a0f0387b9aa5ec40a4ab27e2a75c1a93d54dcd08882d9dabc07b51cc395",
+      "readLogIds": [
+        "toddler-practical-home-tone-r02.read.identity",
+        "toddler-practical-home-tone-r02.read.activities",
+        "toddler-practical-home-tone-r02.read.practical",
+        "toddler-practical-home-tone-r02.read.participation",
+        "toddler-practical-home-tone-r02.read.appendix",
+        "toddler-practical-home-tone-r02.read.practical-visual",
+        "toddler-practical-home-tone-r02.read.appendix-visual"
+      ],
+      "renderedSurfaceCoverage": {
+        "opening": false,
+        "topicIds": [
+          "play-discovery",
+          "everyday-care"
+        ],
+        "detail": true,
+        "renderedEntryPath": "tmp/pilot-review/r02/18-24.toddler-laundry.entry.html"
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass in both play and care rows and the full detail. Carrying one item is concrete, useful and readily shared; the story remains an author example rather than a skill deadline. Optional pegs appear only with a small-parts supervision qualification and need not be added to the carrying invitation. There is no duty to finish the laundry or produce a lasting-helper outcome."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.18-24.toddler-plants-and-flowers",
+      "entryId": "toddler-plants-and-flowers",
+      "placementId": "18-24.toddler-plants-and-flowers",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-plants-and-flowers.json",
+      "snapshotFileSha256": "c0f1a8a930ab0cae591e8a16f690ac74e29519d49d6780cac53cfa17fc433e97",
+      "textPlacementSha256": "42a87e87f4e86ced382ff1f286aa405c0b18d36c367370271202bf747433a675",
+      "artContextSha256": null,
+      "publicProjectionSha256": "91148484996fabfc5e2bc81cc5f1c10f5cc856da9cafbd75e85bc05f14367ffb",
+      "readLogIds": [
+        "toddler-practical-home-tone-r02.read.identity",
+        "toddler-practical-home-tone-r02.read.activities",
+        "toddler-practical-home-tone-r02.read.practical",
+        "toddler-practical-home-tone-r02.read.examples",
+        "toddler-practical-home-tone-r02.read.home",
+        "toddler-practical-home-tone-r02.read.appendix",
+        "toddler-practical-home-tone-r02.read.practical-visual",
+        "toddler-practical-home-tone-r02.read.home-visual",
+        "toddler-practical-home-tone-r02.read.appendix-visual"
+      ],
+      "renderedSurfaceCoverage": {
+        "opening": false,
+        "topicIds": [
+          "play-discovery",
+          "home-that-helps"
+        ],
+        "detail": true,
+        "renderedEntryPath": "tmp/pilot-review/r02/18-24.toddler-plants-and-flowers.entry.html"
+      },
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "toddler-practical-home-tone-r02.plants-recognizable-title",
+            "severity": "medium",
+            "field": "entry.title",
+            "surface": "play-discovery and home-that-helps row headings; detail heading",
+            "finding": "“Taking care of something growing” hides the plants/flowers subject behind “something.” A scanning reader cannot tell whether this is about plants, gardening or the child.",
+            "requiredCorrection": "Use a title that explicitly names plants and/or flowers, such as “Caring for plants and flowers.”",
+            "status": "open"
+          },
+          {
+            "id": "toddler-practical-home-tone-r02.watering-short-readiness",
+            "severity": "medium",
+            "field": "entry.summary",
+            "surface": "Both topic-row summaries and repeated detail summary",
+            "finding": "The short summary offers watering among toddler home-care possibilities but names only interest, manageable tools and adult help. The original watering row specifically adds walking steadily; that condition is visible only after opening the entry. The 18–24 age selection cannot supply it.",
+            "requiredCorrection": "Retain the steady-walking condition with the watering example in the short summary, or narrow that summary to examples whose necessary conditions it can state. Keep this as Davies's perspective rather than adding a new care procedure.",
+            "status": "open"
+          }
+        ],
+        "assessment": "Revise the abstract title and self-contained watering qualification identified below. The detail otherwise retains steady walking, precut stems, small-part/sharp-tool supervision, partial repetition and growing in pots without requiring a garden or a finished arrangement."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.18-24.toddler-food-preparation",
+      "entryId": "toddler-food-preparation",
+      "placementId": "18-24.toddler-food-preparation",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-food-preparation.json",
+      "snapshotFileSha256": "6f046532a0c60f9d59e997604fdd73c7c48bc2ef501cc7885629535deab6f459",
+      "textPlacementSha256": "7aed87823116c45f3bb259acd9f2f485e2cf66418dff6e8e824656e46e808725",
+      "artContextSha256": null,
+      "publicProjectionSha256": "7369d23c78673dbec274fe4a7e1e0c2a93aadb7cf6cfcfae83fccfe9fbe2d2b3",
+      "readLogIds": [
+        "toddler-practical-home-tone-r02.read.identity",
+        "toddler-practical-home-tone-r02.read.activities",
+        "toddler-practical-home-tone-r02.read.practical",
+        "toddler-practical-home-tone-r02.read.examples",
+        "toddler-practical-home-tone-r02.read.home",
+        "toddler-practical-home-tone-r02.read.participation",
+        "toddler-practical-home-tone-r02.read.appendix",
+        "toddler-practical-home-tone-r02.read.practical-visual",
+        "toddler-practical-home-tone-r02.read.home-visual",
+        "toddler-practical-home-tone-r02.read.appendix-visual"
+      ],
+      "renderedSurfaceCoverage": {
+        "opening": false,
+        "topicIds": [
+          "play-discovery",
+          "everyday-care"
+        ],
+        "detail": true,
+        "renderedEntryPath": "tmp/pilot-review/r02/18-24.toddler-food-preparation.entry.html"
+      },
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "toddler-practical-home-tone-r02.food-reader-facing-condition",
+            "severity": "medium",
+            "field": "entry.detail[2]",
+            "surface": "Detail prose, final paragraph",
+            "finding": "“Her sharp-tool supervision condition stays attached” sounds like an internal editorial note and does not actually tell the parent the condition. The neighboring “not a menu or an independent food-preparation expectation” also speaks in review categories instead of directly explaining the author's view. The short row's supervised-contribution wording is appropriate.",
+            "requiredCorrection": "Rewrite the paragraph as ordinary reader-facing source description. State that Davies requires supervision for activities with sharp tools and keeps sharp knives inaccessible until the child is ready and an adult can supervise; preserve shared participation and avoid adding cutting instructions or a care recipe.",
+            "status": "open"
+          }
+        ],
+        "assessment": "Revise the internal-review language in the final detail paragraph. The exact short rows are appropriately attributed and explicitly supervised; the concrete lettuce example and ability to leave preserve participation. The full detail distinguishes the two-year illustrated apple example from an earlier table and avoids presenting a food menu or independent cutting recipe."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.18-24.toddler-table-together",
+      "entryId": "toddler-table-together",
+      "placementId": "18-24.toddler-table-together",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-table-together.json",
+      "snapshotFileSha256": "9074cee51764a63577b7c136446deb57d6e5464a17b6a95eb4e558d469146a55",
+      "textPlacementSha256": "e44c364b18cbdfdd0a2c58e36a5f441508c1d1706ef2e96f1113e65e41ab50e7",
+      "artContextSha256": null,
+      "publicProjectionSha256": "cc4379f671554dcec8cc2c1976ba3ba52029f55ff54c1d135b79ba662772fcc1",
+      "readLogIds": [
+        "toddler-practical-home-tone-r02.read.identity",
+        "toddler-practical-home-tone-r02.read.activities",
+        "toddler-practical-home-tone-r02.read.practical",
+        "toddler-practical-home-tone-r02.read.examples",
+        "toddler-practical-home-tone-r02.read.home",
+        "toddler-practical-home-tone-r02.read.appendix",
+        "toddler-practical-home-tone-r02.read.setup-visual",
+        "toddler-practical-home-tone-r02.read.practical-visual",
+        "toddler-practical-home-tone-r02.read.home-visual",
+        "toddler-practical-home-tone-r02.read.appendix-visual"
+      ],
+      "renderedSurfaceCoverage": {
+        "opening": false,
+        "topicIds": [
+          "everyday-care",
+          "play-discovery"
+        ],
+        "detail": true,
+        "renderedEntryPath": "tmp/pilot-review/r02/18-24.toddler-table-together.entry.html"
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for both care/play topic rows and detail. The table is recognizable, carrying is limited to something manageable with an adult, and the optional picture guide does not become required equipment. The detailed two-handed carrying example and permission for one contribution preserve help and avoid an expectation to set the whole table."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.18-24.toddler-nose-and-hair",
+      "entryId": "toddler-nose-and-hair",
+      "placementId": "18-24.toddler-nose-and-hair",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-nose-and-hair.json",
+      "snapshotFileSha256": "3338aa0c744641b2a27bcb2435f3abcb4bb92eb20d9174d97353fed344c1f0b4",
+      "textPlacementSha256": "514f6b1f58a2c4baa9f346d922053997501a6ecbce020750ec0c63cf9a65eafa",
+      "artContextSha256": null,
+      "publicProjectionSha256": "3c62b65fdabf84104853f72e7ec6b3708d44c607eaeef93de18429ef6bacd3b1",
+      "readLogIds": [
+        "toddler-practical-home-tone-r02.read.identity",
+        "toddler-practical-home-tone-r02.read.activities",
+        "toddler-practical-home-tone-r02.read.practical",
+        "toddler-practical-home-tone-r02.read.examples",
+        "toddler-practical-home-tone-r02.read.appendix",
+        "toddler-practical-home-tone-r02.read.practical-visual",
+        "toddler-practical-home-tone-r02.read.appendix-visual"
+      ],
+      "renderedSurfaceCoverage": {
+        "opening": false,
+        "topicIds": [
+          "everyday-care",
+          "home-that-helps"
+        ],
+        "detail": true,
+        "renderedEntryPath": "tmp/pilot-review/r02/18-24.toddler-nose-and-hair.entry.html"
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for the care/home topic rows and detail. Tissue and brush are recognizable subjects; the text offers a turn, slow modeling and available help without claiming complete self-care or a hygiene outcome. It retains the source's mirror/tissue-disposal context and does not introduce illness guidance. Small-part phrasing here is understandable; the adjacent duplicated cleaning formulation is the batch repetition issue."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.18-24.toddler-shelf-and-rotation",
+      "entryId": "toddler-shelf-and-rotation",
+      "placementId": "18-24.toddler-shelf-and-rotation",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-shelf-and-rotation.json",
+      "snapshotFileSha256": "c2e43c952344057e52b42bf6d5d6de3f40df9bf43ef2c5585639b21a0619b2d0",
+      "textPlacementSha256": "30896f2ae55529d8c58028df5cadbac7142250db67c82dc6b753b15d1e964328",
+      "artContextSha256": null,
+      "publicProjectionSha256": "843c3dd015b819d51e8f09a2bc6648ccb8c03bf8d6d35cd30211279fc89c9052",
+      "readLogIds": [
+        "toddler-practical-home-tone-r02.read.identity",
+        "toddler-practical-home-tone-r02.read.activities",
+        "toddler-practical-home-tone-r02.read.home",
+        "toddler-practical-home-tone-r02.read.concentration",
+        "toddler-practical-home-tone-r02.read.setup-visual",
+        "toddler-practical-home-tone-r02.read.home-visual"
+      ],
+      "renderedSurfaceCoverage": {
+        "opening": false,
+        "topicIds": [
+          "home-that-helps",
+          "play-discovery"
+        ],
+        "detail": true,
+        "renderedEntryPath": "tmp/pilot-review/r02/18-24.toddler-shelf-and-rotation.entry.html"
+      },
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "toddler-practical-home-tone-r02.shelf-recognizable-title",
+            "severity": "medium",
+            "field": "entry.title",
+            "surface": "home-that-helps and play-discovery row headings; detail heading",
+            "finding": "“Keep the choices easy to see” does not name the activity shelf, materials or rotation. In a long topic list it could describe clothing, food or any decision rather than this entry's particular subject.",
+            "requiredCorrection": "Name activities, the shelf, or activity storage in the title. Preserve the existing interest-led few-choices explanation and absence of a fixed rotation schedule.",
+            "status": "open"
+          }
+        ],
+        "assessment": "Revise the generic title. The actual short rows otherwise explain few complete activities, visible pieces and a familiar return place. Detail is practical and flexible: store difficult/unused materials, follow interest, model return without interrupting concentration, and avoid a fixed number or rotation schedule."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.18-24.toddler-spaces-for-different-ages",
+      "entryId": "toddler-spaces-for-different-ages",
+      "placementId": "18-24.toddler-spaces-for-different-ages",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-spaces-for-different-ages.json",
+      "snapshotFileSha256": "817a65818c4b3405aea22754ff16b9d443c0b130efeb5423ff0c7eb2519947e1",
+      "textPlacementSha256": "9135465c153ef415ee425e412b30543c6dcd5a0ca211a08c0e747987314d6423",
+      "artContextSha256": null,
+      "publicProjectionSha256": "22ea7d6b091a8f5ad5594d24eaabedc38a44b291a91d18d761bd990edab6cb60",
+      "readLogIds": [
+        "toddler-practical-home-tone-r02.read.identity",
+        "toddler-practical-home-tone-r02.read.activities",
+        "toddler-practical-home-tone-r02.read.home",
+        "toddler-practical-home-tone-r02.read.privacy-not-punishment",
+        "toddler-practical-home-tone-r02.read.home-visual"
+      ],
+      "renderedSurfaceCoverage": {
+        "opening": false,
+        "topicIds": [
+          "home-that-helps",
+          "connection-feelings"
+        ],
+        "detail": true,
+        "renderedEntryPath": "tmp/pilot-review/r02/18-24.toddler-spaces-for-different-ages.entry.html"
+      },
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "toddler-practical-home-tone-r02.shared-room-short-boundary",
+            "severity": "medium",
+            "field": "entry.summary",
+            "surface": "home-that-helps and connection-feelings topic-row summaries; repeated detail summary",
+            "finding": "“Protecting materials and personal space” and “access does not have to match” describe the idea abstractly but omit what must be protected from access. The actual source condition—older children's small parts truly inaccessible to the younger child—appears only in the detail. The short row currently emphasizes protecting objects rather than expressing this concrete boundary.",
+            "requiredCorrection": "Make the summary self-contained by naming the younger child's lack of access to the older child's small parts, alongside personal places/privacy. Keep it attributed to Davies and avoid suggesting that merely placing things on a higher shelf guarantees inaccessibility.",
+            "status": "open"
+          }
+        ],
+        "assessment": "Revise the short summary to carry its concrete protective meaning. The full detail respects each child's belongings/privacy, explicitly keeps small parts inaccessible and treats smaller homes as workable. Its distinction from sending an upset toddler away is consistent with the separately read original feelings/calm-space context and does not turn an older-child calm-space example into an 18–24-month procedure."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.18-24.toddler-art-has-a-place",
+      "entryId": "toddler-art-has-a-place",
+      "placementId": "18-24.toddler-art-has-a-place",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-art-has-a-place.json",
+      "snapshotFileSha256": "821a7f8ad1f5184141e9effdaf527518ed6fc590f96ebb71f19f5c575f43d5d4",
+      "textPlacementSha256": "3f6cab8b3e292958c2286e4d42cb1a7c21b84e3066a01828ffbd4e10f7c0dc13",
+      "artContextSha256": null,
+      "publicProjectionSha256": "6a020b60262e04ea7879f789aac26b2c1f821d76e430bbf92a8c059d606939f5",
+      "readLogIds": [
+        "toddler-practical-home-tone-r02.read.identity",
+        "toddler-practical-home-tone-r02.read.activities",
+        "toddler-practical-home-tone-r02.read.home",
+        "toddler-practical-home-tone-r02.read.home-visual"
+      ],
+      "renderedSurfaceCoverage": {
+        "opening": false,
+        "topicIds": [
+          "home-that-helps",
+          "play-discovery"
+        ],
+        "detail": true,
+        "renderedEntryPath": "tmp/pilot-review/r02/18-24.toddler-art-has-a-place.entry.html"
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for the home/play rows and detail. The title explicitly names art despite its gentle phrasing. The summary and examples help families begin, dry, save selectively and put work away without treating every drawing as a product to preserve. The later around-three independent-gathering example stays separate from prepared toddler trays; no art-room or purchase standard is imposed."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.18-24.toddler-handwashing",
+      "entryId": "toddler-handwashing",
+      "placementId": "18-24.toddler-handwashing",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-handwashing.json",
+      "snapshotFileSha256": "052f925ead8609e78bf4bab243cf51e508dc3869ac7c914376854388ed6529a4",
+      "textPlacementSha256": "1064d49bb9da25043667e68625a4653f88a671a159dc797cd512a7067bd116aa",
+      "artContextSha256": null,
+      "publicProjectionSha256": "878c16bac9d3744e464724962b9cb759391bffeb3af529a05123661b3168ebe3",
+      "readLogIds": [
+        "toddler-practical-home-tone-r02.read.identity",
+        "toddler-practical-home-tone-r02.read.activities",
+        "toddler-practical-home-tone-r02.read.practical",
+        "toddler-practical-home-tone-r02.read.examples",
+        "toddler-practical-home-tone-r02.read.appendix",
+        "toddler-practical-home-tone-r02.read.practical-visual",
+        "toddler-practical-home-tone-r02.read.appendix-visual"
+      ],
+      "renderedSurfaceCoverage": {
+        "opening": false,
+        "topicIds": [
+          "everyday-care"
+        ],
+        "detail": true,
+        "renderedEntryPath": "tmp/pilot-review/r02/18-24.toddler-handwashing.entry.html"
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for the exact everyday-care row and detail. The short summary describes Davies's shared-care perspective and available help without turning it into a hygiene protocol. Full detail keeps sink and table variants separate, including carrying a jug and wanting to repeat sink washing, and does not require a specialized table or independent completion."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-practical-home-tone-r02.18-24.toddler-small-job-on-an-errand",
+      "entryId": "toddler-small-job-on-an-errand",
+      "placementId": "18-24.toddler-small-job-on-an-errand",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-small-job-on-an-errand.json",
+      "snapshotFileSha256": "690ab689405d1c5bc922e1bc384fb9b6952d4b6bf3e5dba0a73fec5f543b7f79",
+      "textPlacementSha256": "392b65d1bac834f743b73d98f7da585bbfe7df060dfc332b88b528fd045513bb",
+      "artContextSha256": null,
+      "publicProjectionSha256": "95048729501f3d22f9c7549fcb92487864212ab930271779dff56e7e1c9e6f45",
+      "readLogIds": [
+        "toddler-practical-home-tone-r02.read.identity",
+        "toddler-practical-home-tone-r02.read.activities",
+        "toddler-practical-home-tone-r02.read.practical",
+        "toddler-practical-home-tone-r02.read.errands",
+        "toddler-practical-home-tone-r02.read.practical-visual"
+      ],
+      "renderedSurfaceCoverage": {
+        "opening": false,
+        "topicIds": [
+          "everyday-care",
+          "play-discovery"
+        ],
+        "detail": true,
+        "renderedEntryPath": "tmp/pilot-review/r02/18-24.toddler-small-job-on-an-errand.entry.html"
+      },
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "toddler-practical-home-tone-r02.errand-recognizable-title",
+            "severity": "medium",
+            "field": "entry.title",
+            "surface": "everyday-care and play-discovery row headings; detail heading",
+            "finding": "“A small job on the way” leaves the recognizable subject unstated. The actual invitation is helping with shopping/errands, and the generic small-job wording blends with the surrounding participation titles.",
+            "requiredCorrection": "Explicitly name shopping or an errand in the title, retaining the concrete picture-list/checkout examples and the detail's realistic limits on keeping a toddler occupied.",
+            "status": "open"
+          }
+        ],
+        "assessment": "Revise the vague title. The row itself offers concrete shopping participation; the detail respects a manageable contribution and the adult's time, movement/connection during waits, and the fact that a task will not occupy a child through the entire outing. It does not promise cooperation."
+      },
+      "artContext": null
+    }
+  ],
+  "counts": {
+    "placements": 13,
+    "topicRows": 25,
+    "detailSurfaces": 13,
+    "openingSurfaces": 2,
+    "textPass": 7,
+    "textRevise": 6,
+    "textHold": 0,
+    "artPass": 2,
+    "artRevise": 0,
+    "artHold": 0,
+    "openIssues": 7,
+    "uniqueAssetBytesVisuallyRead": 1,
+    "fullTextPagesLogged": 70,
+    "fullPageVisualPagesLogged": 28
+  },
+  "limitations": "This tone report does not substitute for the independent source review or authorize publication. Art passes apply only to the exact current image bytes and each bound opening context; any changed public qualification, scene wording or asset requires affected review."
+}

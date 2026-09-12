@@ -1,0 +1,84 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-sleep",
+        "kind": "perspective",
+        "title": "What bedtime asks of your family",
+        "summary": "Davies frames sleep as a personal family question, with a familiar bedtime sequence and the help the child needs. She advises specialist help when continuing difficulties affect the child or family.",
+        "cue": "You may be considering whether the current bedtime or sleeping arrangement is working for everyone.",
+        "detail": [
+          "Her bedtime discussion makes space for ordinary care, books, and conversation before sleep. She explicitly rejects leaving a child to cry alone and notes that illness or teething may call for additional support.",
+          "The chapter also describes particular settling methods, sleeping spaces, and changes to feeding at night. Those passages depend on more than a toddler’s age and are not a general bedtime recipe.",
+          "Her closing advice is to see a sleep specialist when persistent difficulty affects the well-being of the child or family."
+        ],
+        "references": [
+          {
+            "id": "toddler-sleep.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Daily care / Sleeping",
+            "locator": "Complete sleep unit, family choice, bedtime/help, illness/teething, no crying alone and specialist closing note",
+            "pdfPages": [
+              {
+                "start": 156,
+                "end": 158
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "18-24.toddler-sleep",
+        "entryId": "toddler-sleep",
+        "ageId": "18-24",
+        "topicIds": [
+          "everyday-care"
+        ],
+        "ageContext": {
+          "bookAge": "Davies discusses toddlers of around 1–3 years.",
+          "readiness": "Use this when the situation arises; there is no expected starting age."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "18–24 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 156–158"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "f57fc3d7a2edc6ac53566b4f0bd87c7c3fe2137f7a1cfed259e5b0b096fdf2f5",
+  "artContextSha256": null,
+  "publicProjectionSha256": "e92b343eaa8ef2d8e145b70205fc1ae34db267d827357d4be35fb50baad91f6b",
+  "provenance": {
+    "draft": {
+      "path": "content/pilots/drafts/toddler/draft-r06.json",
+      "sha256": "dbbf4a6f7e915168d7f80d6200ee505065064622bd39b9008a8177d2ec8d7292"
+    },
+    "revision": "r06",
+    "evidenceFile": "content/pilots/drafts/toddler/draft-r06.json",
+    "note": "Full private provenance and actual author read logs remain in this immutable draft and its handoff."
+  }
+}

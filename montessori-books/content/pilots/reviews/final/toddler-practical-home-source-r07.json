@@ -1,0 +1,387 @@
+{
+  "id": "toddler-practical-home-source-r07",
+  "reviewer": {
+    "task": "/root/pilot_practical_source_r05",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Independent source re-review of the single exact r07 18–24.toddler-food-preparation placement, all its public contexts and the corrected detail[2]. No art component or release judgment.",
+  "manifest": {
+    "path": "content/pilots/revisions/r07/MANIFEST.json",
+    "sha256": "8ccd1512bf642f7983e8a88aa82aa1e69c48738600b35b2b9e9fb0d31fa096ec"
+  },
+  "authorDraft": {
+    "path": "content/pilots/drafts/toddler/draft-r07.json",
+    "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c"
+  },
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r07/RENDERED_SURFACES.json",
+    "sha256": "4d967d999c598c9e23897edc66ba504ce6e3b23ed28603128d6ec20b2b103451",
+    "selection": [
+      "18-24.toddler-food-preparation"
+    ]
+  },
+  "renderer": [
+    {
+      "path": "src/HomeStudy.jsx",
+      "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c"
+    },
+    {
+      "path": "src/home.css",
+      "sha256": "55de72c5b21d2f1a3ead85c5975febd09ac3135fcbc2219e6672a13f4786a6e1"
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "503e980cdf9ba4728adf678bb27bc4cd4095d1ae131c3c02181cc4b9a4df22ce"
+    },
+    {
+      "path": "src/guide/catalog.js",
+      "sha256": "d8d30a17c5f1b1c99ed68764f3f412cf99b48f55d09bf528313f0df1439da71c"
+    },
+    {
+      "path": "src/concepts.js",
+      "sha256": "cb086bcc98ad4fde98677a03cb42a849ae5993405dd886a71e7642ca079a3e4a"
+    }
+  ],
+  "sourceOriginal": {
+    "sourceId": "toddler-2019",
+    "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/The Montessori Toddler - Simone Davies _Worldfreebooks.com_.pdf",
+    "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b",
+    "physicalPdfPages": 257,
+    "identityVerifiedAgainst": "research/foundation/SOURCE_MANIFEST.md"
+  },
+  "priorOwnReview": {
+    "path": "content/pilots/reviews/final/toddler-practical-home-source-r05.json",
+    "sha256": "dcf23f679a5197ef078b74804fc55ba59c6ee2b949b39844097bcbbd01e0b03f",
+    "reviewId": "toddler-practical-home-source-r05.18-24.toddler-food-preparation",
+    "readLogIds": [
+      "toddler-practical-home-source-r05.read.scope",
+      "toddler-practical-home-source-r05.read.activities",
+      "toddler-practical-home-source-r05.read.practical-life",
+      "toddler-practical-home-source-r05.read.practical-life-visual",
+      "toddler-practical-home-source-r05.read.home",
+      "toddler-practical-home-source-r05.read.home-visual",
+      "toddler-practical-home-source-r05.read.daily-participation",
+      "toddler-practical-home-source-r05.read.activity-appendix",
+      "toddler-practical-home-source-r05.read.activity-appendix-visual"
+    ],
+    "use": "Retains only this same reviewer’s actual original reading and independent assessments of unchanged content; the new text/placement verdict follows review of the exact replacement and all current public surfaces."
+  },
+  "verifiedPublicChangesFromR05": [
+    "publicProjection.textPlacement.entry.detail[2]"
+  ],
+  "unchangedSurfaceChecks": [
+    "Both complete topic rows match r05 exactly.",
+    "The full rendered entry text differs only by replacement of entry.detail[2].",
+    "Placement, age context, source references, display context and null artContext match r05 exactly.",
+    "All renderer file hashes match the r07 manifest and the r05 renderer fingerprints."
+  ],
+  "method": "Applied the already-read PDF skill, REVIEW_FORMAT and source-only editorial charter. Reread local LEARNINGS in full. Read only the selected current entry and my own prior source review; no tone or other reviewer reports were consulted. Recomputed exact snapshot/component/projection, draft, source, renderer and rendered-surface hashes. Source logs distinguish my retained earlier complete original readings from fresh r07 readings. Cited original-page coverage is complete through the linked logs.",
+  "readLogs": [
+    {
+      "id": "toddler-practical-home-source-r05.read.scope",
+      "reader": "/root/pilot_practical_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        },
+        {
+          "start": 29,
+          "end": 29
+        },
+        {
+          "start": 33,
+          "end": 33
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete text directly extracted from the fingerprinted original PDF: toddler scope around 1–3 years, individual development/respect/observation, and the chapter opening that makes activity ages indications and follows attention rather than deadlines. No research-cache or author read claim is counted as my reading.",
+      "retainedFrom": {
+        "reportPath": "content/pilots/reviews/final/toddler-practical-home-source-r05.json",
+        "reportSha256": "dcf23f679a5197ef078b74804fc55ba59c6ee2b949b39844097bcbbd01e0b03f",
+        "readLogId": "toddler-practical-home-source-r05.read.scope"
+      },
+      "readingContinuity": "This is my actual original-source reading performed during r05, explicitly retained for unchanged claims/context. It is not a claim that I freshly reread this entire span in r07."
+    },
+    {
+      "id": "toddler-practical-home-source-r05.read.activities",
+      "reader": "/root/pilot_practical_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 34,
+          "end": 42
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read all original-page text for activity characteristics, partial flower-arranging sequences and repetition, demonstration, all ten general principles including help and small-part/sharp-object supervision, complete-set removal, shared return without breaking concentration, and the setup text and examples.",
+      "retainedFrom": {
+        "reportPath": "content/pilots/reviews/final/toddler-practical-home-source-r05.json",
+        "reportSha256": "dcf23f679a5197ef078b74804fc55ba59c6ee2b949b39844097bcbbd01e0b03f",
+        "readLogId": "toddler-practical-home-source-r05.read.activities"
+      },
+      "readingContinuity": "This is my actual original-source reading performed during r05, explicitly retained for unchanged claims/context. It is not a claim that I freshly reread this entire span in r07."
+    },
+    {
+      "id": "toddler-practical-home-source-r05.read.practical-life",
+      "reader": "/root/pilot_practical_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 48,
+          "end": 52
+        },
+        {
+          "start": 64,
+          "end": 64
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete practical-life unit, all tips/benefits and both age-chart pages, plus every numbered practical-life caption. Checked slower supervised shared work, under-two one/two-step participation, stopping before overwhelm, shopping examples, earlier-age carry-forward, care-of-self caption from 15 months, assisted apple preparation versus apple-cutting caption from 2 years, and flower/cleaning examples.",
+      "retainedFrom": {
+        "reportPath": "content/pilots/reviews/final/toddler-practical-home-source-r05.json",
+        "reportSha256": "dcf23f679a5197ef078b74804fc55ba59c6ee2b949b39844097bcbbd01e0b03f",
+        "readLogId": "toddler-practical-home-source-r05.read.practical-life"
+      },
+      "readingContinuity": "This is my actual original-source reading performed during r05, explicitly retained for unchanged claims/context. It is not a claim that I freshly reread this entire span in r07."
+    },
+    {
+      "id": "toddler-practical-home-source-r05.read.practical-life-visual",
+      "reader": "/root/pilot_practical_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 51,
+          "end": 52
+        },
+        {
+          "start": 63,
+          "end": 64
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read readable 1500-pixel original-page renders of the complete 12–18, 18 months–3 years and 3–4 years chart columns and the practical-life object photograph with all seven numbered captions. Verified that No. 2 photographs a peeler, apple cutter/corer and apple; adult assistance and the from-2-years age appear in the accompanying caption, not as an action pictured in the object photograph. Verified No. 6 flower/vase photograph and complete flower-arranging caption.",
+      "retainedFrom": {
+        "reportPath": "content/pilots/reviews/final/toddler-practical-home-source-r05.json",
+        "reportSha256": "dcf23f679a5197ef078b74804fc55ba59c6ee2b949b39844097bcbbd01e0b03f",
+        "readLogId": "toddler-practical-home-source-r05.read.practical-life-visual"
+      },
+      "readingContinuity": "This is my actual original-source reading performed during r05, explicitly retained for unchanged claims/context. It is not a claim that I freshly reread this entire span in r07."
+    },
+    {
+      "id": "toddler-practical-home-source-r05.read.home",
+      "reader": "/root/pilot_practical_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 75,
+          "end": 85
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read every original-page word in the complete Montessori-style-spaces opening, room-by-room unit (including kitchen, eating, bedroom, bathroom, arts, reading and outside notes), starter-set caption, clutter/cozy/home-helper/sharing/small-space principles, and importance of the home environment. Read the kitchen cutting-tool progression and separate storage/supervision note in full, as well as the actual-inaccessibility condition for older siblings’ materials and voluntary privacy context.",
+      "retainedFrom": {
+        "reportPath": "content/pilots/reviews/final/toddler-practical-home-source-r05.json",
+        "reportSha256": "dcf23f679a5197ef078b74804fc55ba59c6ee2b949b39844097bcbbd01e0b03f",
+        "readLogId": "toddler-practical-home-source-r05.read.home"
+      },
+      "readingContinuity": "This is my actual original-source reading performed during r05, explicitly retained for unchanged claims/context. It is not a claim that I freshly reread this entire span in r07."
+    },
+    {
+      "id": "toddler-practical-home-source-r05.read.home-visual",
+      "reader": "/root/pilot_practical_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 76,
+          "end": 81
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally examined readable 1500-pixel original-page renders in full, reading room labels, all associated bullets/sub-bullets, all safety and no-outside-space notes, and the complete illustrated starter-set panel. Confirmed that the kitchen hierarchy names nonserrated butter knives for soft foods, a crinkle cutter for firmer produce, then sharper knives with a cutting guide as children become preschoolers, with supervision; the closing note separately keeps sharp knives out of reach.",
+      "retainedFrom": {
+        "reportPath": "content/pilots/reviews/final/toddler-practical-home-source-r05.json",
+        "reportSha256": "dcf23f679a5197ef078b74804fc55ba59c6ee2b949b39844097bcbbd01e0b03f",
+        "readLogId": "toddler-practical-home-source-r05.read.home-visual"
+      },
+      "readingContinuity": "This is my actual original-source reading performed during r05, explicitly retained for unchanged claims/context. It is not a claim that I freshly reread this entire span in r07."
+    },
+    {
+      "id": "toddler-practical-home-source-r05.read.daily-participation",
+      "reader": "/root/pilot_practical_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 99,
+          "end": 102
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text for including the child in daily life, the continuation about adult time and weekday/weekend realities, going slowly, and the complete help-me-to-help-myself/skills/help unit. Confirmed tearing/rinsing lettuce, permission to wander off as interest ends, smaller contributions, and help when time or frustration limits participation.",
+      "retainedFrom": {
+        "reportPath": "content/pilots/reviews/final/toddler-practical-home-source-r05.json",
+        "reportSha256": "dcf23f679a5197ef078b74804fc55ba59c6ee2b949b39844097bcbbd01e0b03f",
+        "readLogId": "toddler-practical-home-source-r05.read.daily-participation"
+      },
+      "readingContinuity": "This is my actual original-source reading performed during r05, explicitly retained for unchanged claims/context. It is not a claim that I freshly reread this entire span in r07."
+    },
+    {
+      "id": "toddler-practical-home-source-r05.read.activity-appendix",
+      "reader": "/root/pilot_practical_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 244,
+          "end": 254
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete original activity-list appendix, including its opener, every row, all age/readiness columns and material descriptions through its final page. Checked the distinct sink/table handwashing variants, walking-conditioned table wiping, steady-walking watering row, leaf washing/plant dusting, 16–18+ sweeping/dusting, precut flowers, seeds/outdoor care, and all food-preparation variants and later-age rows. None of the later-age examples are advanced into the reviewed band.",
+      "retainedFrom": {
+        "reportPath": "content/pilots/reviews/final/toddler-practical-home-source-r05.json",
+        "reportSha256": "dcf23f679a5197ef078b74804fc55ba59c6ee2b949b39844097bcbbd01e0b03f",
+        "readLogId": "toddler-practical-home-source-r05.read.activity-appendix"
+      },
+      "readingContinuity": "This is my actual original-source reading performed during r05, explicitly retained for unchanged claims/context. It is not a claim that I freshly reread this entire span in r07."
+    },
+    {
+      "id": "toddler-practical-home-source-r05.read.activity-appendix-visual",
+      "reader": "/root/pilot_practical_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 244,
+          "end": 254
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read every complete original appendix page at readable 1500-pixel size, including all table columns and row boundaries. Verified 14+ and steady walking belongs to watering; 14+ sink handwashing has soap/towel; table handwashing is 18+ with jug-carrying and interest in repeating sink washing; flowers are already cut to length; sweeping/dusting are 16–18+; apple appendix is 18+ and distinct from the illustrated from-2-years caption. The complete appendix was read, not inferred from an extraction or contact sheet.",
+      "retainedFrom": {
+        "reportPath": "content/pilots/reviews/final/toddler-practical-home-source-r05.json",
+        "reportSha256": "dcf23f679a5197ef078b74804fc55ba59c6ee2b949b39844097bcbbd01e0b03f",
+        "readLogId": "toddler-practical-home-source-r05.read.activity-appendix-visual"
+      },
+      "readingContinuity": "This is my actual original-source reading performed during r05, explicitly retained for unchanged claims/context. It is not a claim that I freshly reread this entire span in r07."
+    },
+    {
+      "id": "toddler-practical-home-source-r07.read.corrected-passage-text",
+      "reader": "/root/pilot_practical_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 39,
+          "end": 39
+        },
+        {
+          "start": 77,
+          "end": 77
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally reread complete text directly from the original fingerprinted PDF on both pages for this r07 correction. Read the full kitchen cutting-tool hierarchy, the separate final sharp-knife storage/readiness/supervision note, all surrounding kitchen bullets, and the general principles page including small-part/sharp-object supervision. Earlier complete relevant units remain supported by my explicitly retained r05 logs."
+    },
+    {
+      "id": "toddler-practical-home-source-r07.read.corrected-passage-visual",
+      "reader": "/root/pilot_practical_source_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 39,
+          "end": 39
+        },
+        {
+          "start": 77,
+          "end": 77
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally examined newly rendered readable 1500-pixel full original pages 39 and 77 for r07. Read all visible words and nested bullet hierarchy, including nonserrated butter knives for soft foods, the crinkle-cutter example, the sharper-knife/cutting-guide/preschooler/supervision example, and the separate out-of-reach storage note. Renders are in the assigned r07 scratch folder; no app artwork is involved."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "toddler-practical-home-source-r07.18-24.toddler-food-preparation",
+      "entryId": "toddler-food-preparation",
+      "placementId": "18-24.toddler-food-preparation",
+      "snapshotPath": "content/pilots/revisions/r07/snapshots/18-24.toddler-food-preparation.json",
+      "snapshotFileSha256": "89c12a8fa588353996a50670061f7543c258991f8f47907d758b049175e953e0",
+      "textPlacementSha256": "8319fa5e2f7619ce75d76d7910f3dfc70ecfc30443a20df971e842d7075e0f18",
+      "artContextSha256": null,
+      "publicProjectionSha256": "2376cd42552cadd6e05af4f84f40d49643685db2b649d4a4dbaa3f9daf474005",
+      "readLogIds": [
+        "toddler-practical-home-source-r05.read.scope",
+        "toddler-practical-home-source-r05.read.activities",
+        "toddler-practical-home-source-r05.read.practical-life",
+        "toddler-practical-home-source-r05.read.practical-life-visual",
+        "toddler-practical-home-source-r05.read.home",
+        "toddler-practical-home-source-r05.read.home-visual",
+        "toddler-practical-home-source-r05.read.daily-participation",
+        "toddler-practical-home-source-r05.read.activity-appendix",
+        "toddler-practical-home-source-r05.read.activity-appendix-visual",
+        "toddler-practical-home-source-r07.read.corrected-passage-text",
+        "toddler-practical-home-source-r07.read.corrected-passage-visual"
+      ],
+      "surfacesReviewed": {
+        "openingText": null,
+        "topicIds": [
+          "play-discovery",
+          "everyday-care"
+        ],
+        "topicRows": true,
+        "fullEntry": true,
+        "publicAgeAndReferenceText": true,
+        "displayContext": true
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Read the exact complete r07 frozen entry, placement and display context, both rendered topic rows, full rendered entry text including age/context and all reference labels/locators, and the actual TopicBrowser/EntryReading renderer. Only detail[2] differs from the independently reviewed r05 public projection. The corrected paragraph preserves PDF 77’s sharp-tool scope and conditions as described in the resolution. The unchanged short surfaces retain Davies attribution, small supervised contributions and the supported rinsing/tearing-salad-leaves example. The full entry continues to preserve assistance, small-hand materials, wandering off when interest ends, low/dining-table alternatives and the distinction between the earlier assisted apple chart and the from-2-years illustrated caption. The source’s appendix variants and indicative ages remain explicitly accounted in my retained original readings. No new instructions, numerical amounts, milestone expectations, art claims or source-reference changes were introduced."
+      },
+      "artContext": null,
+      "resolvedIssueIds": [
+        "toddler-practical-home-source-r05.food-sharp-knife-progression"
+      ]
+    }
+  ],
+  "resolutions": [
+    {
+      "issueId": "toddler-practical-home-source-r05.food-sharp-knife-progression",
+      "priorReportPath": "content/pilots/reviews/final/toddler-practical-home-source-r05.json",
+      "priorReportSha256": "dcf23f679a5197ef078b74804fc55ba59c6ee2b949b39844097bcbbd01e0b03f",
+      "priorReviewId": "toddler-practical-home-source-r05.18-24.toddler-food-preparation",
+      "priorSnapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-food-preparation.json",
+      "priorSnapshotFileSha256": "5aa44b8f397d9d735f5d71cd06ae8ffbd613cb68ac1ff18b0835dd36b9774ea8",
+      "priorTextPlacementSha256": "7c6a5f40544938aa1f66578cf612f102acd34a12ba3a39f93daed79084d44d5a",
+      "status": "resolved-in-this-revision",
+      "affectedField": "publicProjection.textPlacement.entry.detail[2]",
+      "replacementText": "Davies requires supervision for activities with sharp tools. Her kitchen section keeps sharp knives out of reach and describes introducing sharper knives with a cutting guide as children become preschoolers, with supervision. Preparing food remains something to do together.",
+      "reviewedSnapshotPath": "content/pilots/revisions/r07/snapshots/18-24.toddler-food-preparation.json",
+      "reviewedTextPlacementSha256": "8319fa5e2f7619ce75d76d7910f3dfc70ecfc30443a20df971e842d7075e0f18",
+      "assessment": "The exact replacement independently preserves the separate sharp-knife out-of-reach storage instruction and identifies the source’s sharper-knives example as involving a cutting guide, preschoolers and supervision. It removes the previous general until-ready access condition. Attribution and descriptive treatment remain intact, and this older-child example is not presented as an invitation for the 18–24-month child. The supported salad-leaf topic summary and apple-example age distinction are retained. Original pages 39 and 77 were freshly reread in full text and readable full-page visual form before recording this resolution. The r05 report remains immutable."
+    }
+  ],
+  "verdictCounts": {
+    "pass": 1,
+    "revise": 0,
+    "hold": 0
+  },
+  "resolvedIssueIds": [
+    "toddler-practical-home-source-r05.food-sharp-knife-progression"
+  ],
+  "openIssueCount": 0,
+  "writingBoundary": "Only this new immutable report and its assigned ignored scratch directory were written. No app, draft, shared documentation, manifest, snapshot or earlier report was edited."
+}

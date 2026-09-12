@@ -1,0 +1,89 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-sharing",
+        "kind": "everyday-situation",
+        "title": "Sharing toys and taking turns",
+        "summary": "If another child wants what your baby is using, notice whether your baby seems ready to move on. If your baby seems to want to keep playing, you can explain that wish to the other child.",
+        "cue": "Two children want the same object.",
+        "detail": [
+          "The authors notice that a young baby may happily move to something else, or may want to hold on. Respond to what is happening rather than requiring either reaction.",
+          "When your baby reaches for another child’s object, the book models asking whether that child is finished. Waiting, watching or finding another object are possibilities while the turn continues."
+        ],
+        "references": [
+          {
+            "id": "baby-sharing.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Sharing",
+            "locator": "First-year exploration, tentative translation and reciprocal turn-taking",
+            "pdfPages": [
+              {
+                "start": 214,
+                "end": 215
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "6-9.baby-sharing",
+        "entryId": "baby-sharing",
+        "ageId": "6-9",
+        "topicIds": [
+          "connection-feelings",
+          "play-discovery"
+        ],
+        "ageContext": {
+          "bookAge": "First-year exploration; sharing/ownership concepts are discussed around 12–16 months.",
+          "readiness": "Two children’s current interest and whether the first child is still using the object.",
+          "note": "The age group is a way to browse; follow the interest or situation described here."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "6–9 months",
+        "kindLabel": "An everyday situation",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          },
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 214–215"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "a31ea7adeef848d7cbcee74cb49170c8f7ffafa9ec2ebc17df8fdf3f0d825471",
+  "artContextSha256": null,
+  "publicProjectionSha256": "9907e1de4b1fd77d0edb384187c991aadee4e00a08f95e3e2b74ac2d42bd8ad1",
+  "provenance": {
+    "draft": {
+      "path": "content/pilots/drafts/baby/draft-r04.json",
+      "sha256": "1124334c410bf59fc445f739fffbfbaf3fbd2850415721a39f427fc7a8213633"
+    },
+    "revision": "r06",
+    "evidenceFile": "content/pilots/drafts/baby/draft-r04.json",
+    "note": "Full private provenance and actual author read logs remain in this immutable draft and its handoff."
+  }
+}

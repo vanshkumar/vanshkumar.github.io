@@ -1,0 +1,196 @@
+{
+  "author": {
+    "task": "/root",
+    "reasoning": "xhigh"
+  },
+  "entries": [
+    {
+      "id": "family-starting-preschool",
+      "kind": "perspective",
+      "title": "When preschool is coming up",
+      "summary": "For families preparing for preschool or school, Davies describes familiar everyday participation, getting to know another caregiver, and adult help with social moments. These can be part of preparing for the change.",
+      "cue": "When your family has an upcoming preschool or school start.",
+      "detail": [
+        "Her everyday examples include a jacket, shoes, and a tissue. An adult can support the part the child is trying; these examples do not need to become a list of skills to pass before school.",
+        "If another caregiver is new, Davies suggests first spending time together reading or playing. Once the child is comfortable with that person, she describes short separations that can gradually become longer. She emphasizes telling the child when you leave, even when goodbye brings sadness. In her account of working with other caregivers, she also recalls using a brief, warm goodbye and offering a hug at reunion if her child wanted one.",
+        "At the playground, she describes translating a child’s meaning, helping them stand up for themselves when needed, and modeling care for other people. Preparing can include this adult support."
+      ],
+      "references": [
+        {
+          "id": "family-starting-preschool.ref",
+          "sourceId": "toddler-2019",
+          "section": "Getting ready for preschool/school",
+          "locator": "Everyday participation, a familiar caregiver and social support",
+          "pdfPages": [
+            {
+              "start": 213,
+              "end": 213
+            }
+          ]
+        },
+        {
+          "id": "family-starting-preschool.help",
+          "sourceId": "toddler-2019",
+          "section": "What makes an activity Montessori?; How to show the child an activity",
+          "locator": "Partial participation and help when frustrated",
+          "pdfPages": [
+            {
+              "start": 34,
+              "end": 35
+            }
+          ]
+        },
+        {
+          "id": "family-starting-preschool.goodbye",
+          "sourceId": "toddler-2019",
+          "section": "The key to working together as a family / Working with others",
+          "locator": "Davies’s short goodbye, letting the child know about leaving, and a wanted hug at reunion",
+          "pdfPages": [
+            {
+              "start": 206,
+              "end": 206
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "entryId": "family-starting-preschool",
+      "author": "/root",
+      "date": "2026-09-10",
+      "revision": "r02",
+      "sourceIdeaIds": [
+        "toddler.family.idea.school-preparation",
+        "toddler.family.idea.goodbye"
+      ],
+      "evidenceIds": [
+        "toddler.family.ev.school-preparation",
+        "toddler.family.ev.goodbye"
+      ],
+      "researchEvidence": [
+        {
+          "id": "toddler.family.ev.school-preparation",
+          "revision": "1",
+          "recordSha256": "3589e2dd46330fbefc0ae58d7a2cf01fba1287d147feca6acc1f1753984c5493",
+          "path": "research/toddler/EVIDENCE.jsonl",
+          "fileSha256": "ad7d7b0132a4f1389d41f1f393ec01d88cab415c54913dc6a198bd2e24123440",
+          "sourceIdeaIds": [
+            "toddler.family.idea.school-preparation"
+          ]
+        },
+        {
+          "id": "toddler.family.ev.goodbye",
+          "revision": "1",
+          "recordSha256": "2d4104de36dd18f00527c57ff1cd0799355fed015872b326af9151710368a568",
+          "path": "research/toddler/EVIDENCE.jsonl",
+          "fileSha256": "ad7d7b0132a4f1389d41f1f393ec01d88cab415c54913dc6a198bd2e24123440",
+          "sourceIdeaIds": [
+            "toddler.family.idea.goodbye"
+          ]
+        }
+      ],
+      "sourceLedgerInputs": [
+        {
+          "path": "research/baby/COVERAGE_LEDGER.jsonl",
+          "sha256": "b30e5c55e2364af2762aa7af49a5e752908bdb3481779e61fc39762a05432a0f"
+        },
+        {
+          "path": "research/toddler/COVERAGE_LEDGER.jsonl",
+          "sha256": "dff004b408d6a74d83b41560d5aaf0fda7e3ec7c819a03b11605344e7b2074e2"
+        }
+      ],
+      "actualReadLogIds": [
+        "t7.root.new-family.family-starting-preschool",
+        "t7.root.shared-placement.toddler"
+      ],
+      "actualReadLogPaths": [
+        "content/18-36/source-work/root-family-READ_LOG-r01.json",
+        "content/18-36/source-work/shared-placement-READ_LOG-r01.json"
+      ],
+      "fullSourceReferences": [
+        {
+          "id": "family-starting-preschool.ref",
+          "sourceId": "toddler-2019",
+          "section": "Getting ready for preschool/school",
+          "locator": "Everyday participation, a familiar caregiver and social support",
+          "pdfPages": [
+            {
+              "start": 213,
+              "end": 213
+            }
+          ]
+        },
+        {
+          "id": "family-starting-preschool.help",
+          "sourceId": "toddler-2019",
+          "section": "What makes an activity Montessori?; How to show the child an activity",
+          "locator": "Partial participation and help when frustrated",
+          "pdfPages": [
+            {
+              "start": 34,
+              "end": 35
+            }
+          ]
+        },
+        {
+          "id": "family-starting-preschool.goodbye",
+          "sourceId": "toddler-2019",
+          "section": "The key to working together as a family / Working with others",
+          "locator": "Davies’s short goodbye, letting the child know about leaving, and a wanted hug at reunion",
+          "pdfPages": [
+            {
+              "start": 206,
+              "end": 206
+            }
+          ]
+        }
+      ],
+      "contextRead": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 34,
+              "end": 35
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 213,
+              "end": 213
+            }
+          ]
+        }
+      ],
+      "sourceFingerprints": [
+        {
+          "sourceId": "baby-2021",
+          "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+        },
+        {
+          "sourceId": "toddler-2019",
+          "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b"
+        }
+      ],
+      "editorialQualifications": [
+        "No fixed separation timetable, promise of readiness, or requirement for independent care. The phonetic I-spy anecdote and older school classroom criteria are not promoted as toddler tasks.",
+        "The short goodbye and reunion hug remain Davies’s personal practice, with sadness allowed and the hug conditional on the child wanting it."
+      ],
+      "heldDetails": [],
+      "omittedDetails": [
+        "No fixed separation timetable, promise of readiness, or requirement for independent care. The phonetic I-spy anecdote and older school classroom criteria are not promoted as toddler tasks."
+      ],
+      "illustrationImplications": "No illustration needed. Do not imply child performance, demographic preferences, a screen setup, or an independence test. Any later image needs separate exact context review.",
+      "sensitivity": "Ordinary family transition; no prescribed separation schedule."
+    }
+  ],
+  "editorialRevision": {
+    "supersedes": "content/18-36/shared/family-starting-preschool/r01.json",
+    "reason": "Combine the source’s short-goodbye/wanted-reunion-hug variant into the upcoming-preschool situation before initial freeze."
+  }
+}

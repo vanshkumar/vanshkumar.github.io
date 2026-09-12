@@ -1,0 +1,63 @@
+{
+  "task": "Task5 birth–6",
+  "workflow": "lean-v1",
+  "inputs": [
+    {
+      "path": "POPULATION_WORKFLOW.md",
+      "sha256": "c556dc41584ee4de9f8d80d6f180f19a6400d84393045023e33be666ef1789bf"
+    },
+    {
+      "path": "content/pilots/CANONICAL_REGISTRY.json",
+      "sha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+    },
+    {
+      "path": "content/pilots/HANDOFF.md",
+      "sha256": "707efcdd31f714dddc1ce469350ecaac44bad2e61baa5350ef1156f6cc35fecc"
+    },
+    {
+      "path": "content/pilots/CONTRACT.md",
+      "sha256": "09b83f6385f9babee1224a9514890bc0c19488f14c2f03e9bf44ac1c7d520b4d"
+    },
+    {
+      "path": "content/pilots/POPULATION_ALLOCATION.md",
+      "sha256": "6c5788694f7d9d58e9896ebd9246c76bc5ddb4e24c5b38458556123218bbc6e6"
+    },
+    {
+      "path": "content/pilots/CONTRIBUTION_WORKFLOW.md",
+      "sha256": "99bb4179a9796cf296d1a07c7649d4b314e02ed0cf58a85a2ee130dd6359aa05"
+    },
+    {
+      "path": "research/baby/COVERAGE_LEDGER.jsonl",
+      "sha256": "b30e5c55e2364af2762aa7af49a5e752908bdb3481779e61fc39762a05432a0f"
+    },
+    {
+      "path": "research/baby/EVIDENCE.jsonl",
+      "sha256": "aa71ee9471e24b77c6d71901cd6d8b84756aea23b0299ba1cb74c197d1206129"
+    },
+    {
+      "path": "research/toddler/COVERAGE_LEDGER.jsonl",
+      "sha256": "dff004b408d6a74d83b41560d5aaf0fda7e3ec7c819a03b11605344e7b2074e2"
+    },
+    {
+      "path": "research/toddler/EVIDENCE.jsonl",
+      "sha256": "ad7d7b0132a4f1389d41f1f393ec01d88cab415c54913dc6a198bd2e24123440"
+    },
+    {
+      "path": "content/pilots/revisions/r08/COVERAGE_RECONCILIATION.jsonl",
+      "sha256": "cf1435414b381e48706c4259f5f6e480ab15ecbdd207edbfb6fa641aeaaa8d2d"
+    }
+  ],
+  "scope": {
+    "primaryAges": [
+      "0-3",
+      "3-6"
+    ],
+    "canonicalPrefixes": [
+      "early-"
+    ],
+    "frozenBodyReuse": "Exact r08 registry digest; no copied canonical bodies.",
+    "crossAgePlacements": "Every supported placement for new early IDs, topic-only outside primary ages."
+  },
+  "coverageMethod": "Reconcile the two completed source-order ledgers and frozen pilot decisions against this contribution’s concrete targets, source/age overrides, and named remaining allocations. Source research remains research; target review status comes from actual receipts. No repeated whole-book audit is claimed.",
+  "publication": false
+}

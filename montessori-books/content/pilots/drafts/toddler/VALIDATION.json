@@ -1,0 +1,58 @@
+{
+  "date": "2026-09-10",
+  "author": "/root/toddler_pilot_draft",
+  "role": "mechanical-author-check-only",
+  "verdict": "structure-and-trace-pass; independent source/tone reviews pending",
+  "entries": 56,
+  "placements": 56,
+  "evidenceRecords": 192,
+  "coverageRows": 692,
+  "coverageDispositions": {
+    "context-only": 245,
+    "combined": 330,
+    "excluded": 117
+  },
+  "entryKinds": {
+    "invitation": 17,
+    "perspective": 23,
+    "everyday-situation": 16
+  },
+  "topicPlacementCounts": {
+    "play-discovery": 26,
+    "everyday-care": 23,
+    "home-that-helps": 11,
+    "connection-feelings": 29
+  },
+  "originalReading": {
+    "fullTextPhysicalPages": 152,
+    "visuallyInspectedPhysicalPages": 30,
+    "unionPhysicalPages": 157,
+    "allPublicReferenceAndSelectedEvidenceClaimPagesCovered": true
+  },
+  "checks": [
+    "All public record fields allowlisted; optional steps nonempty when present",
+    "Three original opening IDs/order and separate labels/invitations retained",
+    "Pouring summary interest/manageability and shoe slow-show/return reference present",
+    "All public refs are structured physical PDF spans; no legacy strings or printed-page claims",
+    "Every exact evidence revision, source-idea list, source-file hash and canonical research-record hash verified",
+    "Every public reference and selected research claim page covered by actual author original read logs",
+    "Private source age/readiness evidence retained separately from editorial18–24 rationale",
+    "All692 source-order ideas accounted exactly once; targets and18–24 placements resolve",
+    "Baby-only school-choice shared ID not reused for Toddler",
+    "No artwork, app, research or runtime exports changed by this package"
+  ],
+  "files": {
+    "draft-r01.json": {
+      "path": "content/pilots/drafts/toddler/draft-r01.json",
+      "sha256": "72f53c79c4632037d1ab6f72aad0380fb9929e2201f65bbaac0808084ceb1edc"
+    },
+    "READ_LOG.json": {
+      "path": "content/pilots/drafts/toddler/READ_LOG.json",
+      "sha256": "fe504eee7ceedf8921cc262cc9e954ac0abf36756bcbedbb2ebb3ecda0729c23"
+    },
+    "COVERAGE.jsonl": {
+      "path": "content/pilots/drafts/toddler/COVERAGE.jsonl",
+      "sha256": "faf703ed37ca067b7ff2918dfa9eccbe19a2f2e9690429bda55b441fed70da3a"
+    }
+  }
+}

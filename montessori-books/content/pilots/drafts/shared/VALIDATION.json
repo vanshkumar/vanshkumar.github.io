@@ -1,0 +1,53 @@
+{
+  "date": "2026-09-10",
+  "author": "/root/shared_pilot_draft",
+  "verdict": "pass-for-draft-integrity-only",
+  "entries": 15,
+  "placements": 29,
+  "coverageRows": 153,
+  "coverageByBook": {
+    "baby-2021": 103,
+    "toddler-2019": 50
+  },
+  "coverageByDisposition": {
+    "combined": 99,
+    "context-only": 48,
+    "excluded": 6
+  },
+  "fullTextDistinctPages": {
+    "baby-2021": 57,
+    "toddler-2019": 53
+  },
+  "visualDistinctPages": {
+    "baby-2021": 18,
+    "toddler-2019": 17
+  },
+  "checks": [
+    "Public allowlists, required fields, kind/topic/age/placement IDs",
+    "All public citations covered by author original-page text reads",
+    "All selected research-evidence claim spans covered by author original-page text reads",
+    "Evidence revisions/record fingerprints, input files/source hashes and read-log IDs retained",
+    "Three-part age evidence for every placement with local source support",
+    "Unique coverage rows and concrete target resolution",
+    "No steps/art/opening order invented; no private provenance fields in public entries"
+  ],
+  "reviewBoundary": "No source or tone pass; no app rendering/approval claimed. Main and fresh independent reviewers own those next checks.",
+  "files": [
+    {
+      "path": "content/pilots/drafts/shared/draft-r01.json",
+      "sha256": "f79e45730e30d50d59563bb78aaef23270bee632b47cbbf1b51147ac99c30eb2"
+    },
+    {
+      "path": "content/pilots/drafts/shared/COVERAGE.jsonl",
+      "sha256": "af5fd78e1a97cd37862434551f99fa58dfadc6fe06277e32558da32648bdc056"
+    },
+    {
+      "path": "content/pilots/drafts/shared/READ_LOG.json",
+      "sha256": "796bd317bafdaf3b883d47b3831f4f8db0227a4077cfb1c828e52e4589bc22dc"
+    },
+    {
+      "path": "content/pilots/drafts/shared/INPUT_MANIFEST.json",
+      "sha256": "2871c69ea54daf2c6004e70b11cfbdab5d58c941b2baf5c83817785038bfc3b6"
+    }
+  ]
+}

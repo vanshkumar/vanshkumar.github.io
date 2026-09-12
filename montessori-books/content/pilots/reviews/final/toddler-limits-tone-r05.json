@@ -1,0 +1,460 @@
+{
+  "id": "toddler-limits-tone-r05",
+  "reviewer": {
+    "task": "/root/pilot_toddler_limits_tone",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Renewed independent tone judgment on exactly toddler-solving-together, toddler-big-feelings and toddler-throwing in their complete frozen r05 18–24-month public placements. Personally read all three whole entries, four actual topic rows, all age/context and reference text and the actual renderer. All opening text and art contexts are null. This is not a release claim.",
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r05/RENDERED_SURFACES.json",
+    "sha256": "b2b0183e437c4abf4c8dddd18ca4ac94be9075abd517d635779d2b946fe0f77b"
+  },
+  "inputIdentity": {
+    "manifest": {
+      "path": "content/pilots/revisions/r05/MANIFEST.json",
+      "sha256": "ae7dfd0ce44392a8c040bb9b9df38ca991d9b37aab24caf8655d52cf1e1a663c"
+    },
+    "payload": {
+      "path": "content/pilots/revisions/r05/payload.json",
+      "sha256": "d49f556630411e3d49a869688a0691dc32f93fdca6aa4edbb597bd47d9045c55"
+    },
+    "authoredDraft": {
+      "path": "content/pilots/drafts/toddler/draft-r05.json",
+      "sha256": "b1632aafa09d8a3a50afec143f44fcb47e7ace8909ff47d2aa3f17a6f3e726fe"
+    },
+    "renderer": {
+      "path": "src/HomeStudy.jsx",
+      "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c"
+    },
+    "checks": "Verified current author draft SHA against the assignment; verified selected snapshot-file hashes against MANIFEST and component-hash strings against snapshots; checked selected public entries against both the author draft and payload, placement metadata against payload, and summaries/titles against every assigned actual rendered row. The renderer hash remains the recorded r02/r05 renderer hash. Recomputed the original source PDF SHA; it is unchanged."
+  },
+  "independence": "The reviewer is the same independent r02 tone reviewer and did not author any replacement. I read my own prior report and personally completed source-read evidence only; I did not read any other or source reviewer’s reports. No unassigned companion bodies were reviewed in this renewal.",
+  "priorReview": {
+    "path": "content/pilots/reviews/final/toddler-limits-tone-r02.json",
+    "sha256": "c037df516aa36d79f0e7ecca02b4e60bcc87e2c06b8bfb2b908397cc4222c540",
+    "reviewerTask": "/root/pilot_toddler_limits_tone"
+  },
+  "sourceVerification": {
+    "sourceId": "toddler-2019",
+    "manifestPath": "research/foundation/SOURCE_MANIFEST.md",
+    "path": "The Montessori Toddler - Simone Davies _Worldfreebooks.com_.pdf",
+    "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b",
+    "bytes": 7036292,
+    "physicalPdfPages": 257,
+    "identityReadLogId": "tone.toddler-limits.identity-visual",
+    "publicPagination": "All assigned public references use physical PDF pages. No printed-page offsets were promoted into public references."
+  },
+  "readingContinuity": {
+    "priorReport": {
+      "path": "content/pilots/reviews/final/toddler-limits-tone-r02.json",
+      "sha256": "c037df516aa36d79f0e7ecca02b4e60bcc87e2c06b8bfb2b908397cc4222c540"
+    },
+    "description": "Retained only this reviewer’s actual original reading from r02 through explicit report/hash/readLogId links. That personally completed reading includes every cited page and the complete relevant cooperation, limits/tantrum/repair, hitting/throwing and adult-capacity contexts, with readable original visuals for meaningful recaps. The new concrete example is already in personally read PDF 119; other replacements narrow interpretation or restore a condition already covered by the prior readings. No additional original context was needed and no new source-page reread is claimed.",
+    "additionalOriginalReadLogIds": []
+  },
+  "readLogs": [
+    {
+      "id": "tone.toddler-limits.identity-visual",
+      "reader": "/root/pilot_toddler_limits_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 2,
+          "end": 3
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read readable 120-dpi renders of the original title and copyright pages: Simone Davies, Hiyoko Imai, Workman, copyright 2019, first printing February 2019, ISBN 978-1-5235-0689-7. The original file also matched SOURCE_MANIFEST size, page count and SHA-256.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-limits-tone-r02.json",
+        "sha256": "c037df516aa36d79f0e7ecca02b4e60bcc87e2c06b8bfb2b908397cc4222c540",
+        "readLogId": "tone.toddler-limits.identity-visual",
+        "reviewerTask": "/root/pilot_toddler_limits_tone"
+      },
+      "retentionNote": "Original source reading personally completed by this same reviewer during r02, explicitly retained for r05. This record does not claim a new reread in r05 or another reviewer’s reading."
+    },
+    {
+      "id": "tone.toddler-limits.scope-activity-text",
+      "reader": "/root/pilot_toddler_limits_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        },
+        {
+          "start": 27,
+          "end": 29
+        },
+        {
+          "start": 33,
+          "end": 39
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete text extracted directly from the verified original PDF: toddler scope around 1–3 years; freedom with limits, adult help and respect; individual development and factual observation; indicative activity ages; complete activity framing, demonstration, partial participation, concentration, frustration, available help, existing materials and supervision. Extract generation was followed by reading each complete page.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-limits-tone-r02.json",
+        "sha256": "c037df516aa36d79f0e7ecca02b4e60bcc87e2c06b8bfb2b908397cc4222c540",
+        "readLogId": "tone.toddler-limits.scope-activity-text",
+        "reviewerTask": "/root/pilot_toddler_limits_tone"
+      },
+      "retentionNote": "Original source reading personally completed by this same reviewer during r02, explicitly retained for r05. This record does not claim a new reread in r05 or another reviewer’s reading."
+    },
+    {
+      "id": "tone.toddler-limits.relationship-text",
+      "reader": "/root/pilot_toddler_limits_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 108,
+          "end": 114
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read all original-page text in the acceptance, perspective-taking, translating needs, feelings versus actions, feedback, roles/labels and connection recap context. These pages frame cooperation and limits; they do not independently approve any companion entry.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-limits-tone-r02.json",
+        "sha256": "c037df516aa36d79f0e7ecca02b4e60bcc87e2c06b8bfb2b908397cc4222c540",
+        "readLogId": "tone.toddler-limits.relationship-text",
+        "reviewerTask": "/root/pilot_toddler_limits_tone"
+      },
+      "retentionNote": "Original source reading personally completed by this same reviewer during r02, explicitly retained for r05. This record does not claim a new reread in r05 or another reviewer’s reading."
+    },
+    {
+      "id": "tone.toddler-limits.cooperation-text",
+      "reader": "/root/pilot_toddler_limits_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 117,
+          "end": 128
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete original cooperation unit: threats/bribes/punishments framing; toddler and preverbal problem solving; checklist and pictured checklist continuation; age-appropriate choices and leaving unsuitable suggestions aside; useful information/one word; transition agreement and occasional timer qualification; respectful and positive language; invitation to help; humor; necessary-transition language; showing action; waiting-room/café/travel expectations and preparation; waiting until finished when possible; processing-time anecdote; rhythm; moderate note use and acknowledgment notebook; complete recap.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-limits-tone-r02.json",
+        "sha256": "c037df516aa36d79f0e7ecca02b4e60bcc87e2c06b8bfb2b908397cc4222c540",
+        "readLogId": "tone.toddler-limits.cooperation-text",
+        "reviewerTask": "/root/pilot_toddler_limits_tone"
+      },
+      "retentionNote": "Original source reading personally completed by this same reviewer during r02, explicitly retained for r05. This record does not claim a new reread in r05 or another reviewer’s reading."
+    },
+    {
+      "id": "tone.toddler-limits.limits-text",
+      "reader": "/root/pilot_toddler_limits_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 129,
+          "end": 142
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete original limits unit, including practice/support and adult mistakes, few family rules, kind follow-through, related consequences, immediate protection, laughter, tentative feelings, sportscasting, complete tantrum support and continuation, the actual urgent-departure exception, non-ignoring, older-child calm-place context, reconnection, making amends when needed, complete four-part trigger/support/older-child/repair recap, modeling apology, early limits and changed mind, consistency, uncertainty, and the final limits checklist. Read the full pages, not only their cited subsections.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-limits-tone-r02.json",
+        "sha256": "c037df516aa36d79f0e7ecca02b4e60bcc87e2c06b8bfb2b908397cc4222c540",
+        "readLogId": "tone.toddler-limits.limits-text",
+        "reviewerTask": "/root/pilot_toddler_limits_tone"
+      },
+      "retentionNote": "Original source reading personally completed by this same reviewer during r02, explicitly retained for r05. This record does not claim a new reread in r05 or another reviewer’s reading."
+    },
+    {
+      "id": "tone.toddler-limits.hitting-throwing-text",
+      "reader": "/root/pilot_toddler_limits_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 174,
+          "end": 176
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete original hitting/biting/pushing/throwing unit: close adult protection before observation, all observation categories and prevention examples, separation and repair after calm, laughter and adult feelings, and the complete throwing subsection including patterns, vulnerable items, wooden objects, outdoor/soft indoor alternatives and clear limits. Sensitive food/teething/pressure suggestions were read as context, not imported or approved.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-limits-tone-r02.json",
+        "sha256": "c037df516aa36d79f0e7ecca02b4e60bcc87e2c06b8bfb2b908397cc4222c540",
+        "readLogId": "tone.toddler-limits.hitting-throwing-text",
+        "reviewerTask": "/root/pilot_toddler_limits_tone"
+      },
+      "retentionNote": "Original source reading personally completed by this same reviewer during r02, explicitly retained for r05. This record does not claim a new reread in r05 or another reviewer’s reading."
+    },
+    {
+      "id": "tone.toddler-limits.adult-capacity-text",
+      "reader": "/root/pilot_toddler_limits_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 187,
+          "end": 200
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete original adult-preparation chapter: rejection of perfect parenting and universal family prescriptions; physical care, practical help and doctor help for depression; learning and routines with continuations; presence and observation; emotional-bucket and slow-down framing including the immediate-danger exception; adult as available guide; home as helper; honesty and choices with the continuation about work, resources and family capacity; apology and repair; self-compassion, limits and continued practice. Used as tone context, not as an additional set of reviewed companion entries.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-limits-tone-r02.json",
+        "sha256": "c037df516aa36d79f0e7ecca02b4e60bcc87e2c06b8bfb2b908397cc4222c540",
+        "readLogId": "tone.toddler-limits.adult-capacity-text",
+        "reviewerTask": "/root/pilot_toddler_limits_tone"
+      },
+      "retentionNote": "Original source reading personally completed by this same reviewer during r02, explicitly retained for r05. This record does not claim a new reread in r05 or another reviewer’s reading."
+    },
+    {
+      "id": "tone.toddler-limits.cooperation-visual",
+      "reader": "/root/pilot_toddler_limits_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 121,
+          "end": 121
+        },
+        {
+          "start": 128,
+          "end": 128
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read the readable original illustrated morning/night checklists on PDF 121 and the complete five-part cooperation recap on PDF 128, including their headings, item relationships and decorative context. No checklist was turned into a required routine.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-limits-tone-r02.json",
+        "sha256": "c037df516aa36d79f0e7ecca02b4e60bcc87e2c06b8bfb2b908397cc4222c540",
+        "readLogId": "tone.toddler-limits.cooperation-visual",
+        "reviewerTask": "/root/pilot_toddler_limits_tone"
+      },
+      "retentionNote": "Original source reading personally completed by this same reviewer during r02, explicitly retained for r05. This record does not claim a new reread in r05 or another reviewer’s reading."
+    },
+    {
+      "id": "tone.toddler-limits.limits-visual",
+      "reader": "/root/pilot_toddler_limits_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 134,
+          "end": 142
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read readable full original-page renders for feelings, tantrum support/continuation, the time-limited departure exception, calm-place age boundaries, reconnection/repair, all four recap blocks on PDF 138, apology, changed-mind/consistency continuation, the practice panel and final limits checklist. Verified that the recap does not substitute for the fuller conditions.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-limits-tone-r02.json",
+        "sha256": "c037df516aa36d79f0e7ecca02b4e60bcc87e2c06b8bfb2b908397cc4222c540",
+        "readLogId": "tone.toddler-limits.limits-visual",
+        "reviewerTask": "/root/pilot_toddler_limits_tone"
+      },
+      "retentionNote": "Original source reading personally completed by this same reviewer during r02, explicitly retained for r05. This record does not claim a new reread in r05 or another reviewer’s reading."
+    },
+    {
+      "id": "tone.toddler-limits.hitting-throwing-visual",
+      "reader": "/root/pilot_toddler_limits_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 174,
+          "end": 176
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read all three readable original-page renders, including every observation/prevention bullet, response and laughter continuation, and the complete throwing list. The decorative hammer toy is book artwork and supplies no separate companion-art approval.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-limits-tone-r02.json",
+        "sha256": "c037df516aa36d79f0e7ecca02b4e60bcc87e2c06b8bfb2b908397cc4222c540",
+        "readLogId": "tone.toddler-limits.hitting-throwing-visual",
+        "reviewerTask": "/root/pilot_toddler_limits_tone"
+      },
+      "retentionNote": "Original source reading personally completed by this same reviewer during r02, explicitly retained for r05. This record does not claim a new reread in r05 or another reviewer’s reading."
+    }
+  ],
+  "surfaceRead": {
+    "mode": "actual-frozen-server-rendered-text",
+    "description": "Read each selected RENDERED_SURFACES entryText, topicRows.text and topicRows.html plus the complete snapshot public projection and src/HomeStudy.jsx. Whole-entry judgment was renewed before resolving the prior issues. No browser screenshot/layout review or app-art approval is claimed.",
+    "placementIds": [
+      "18-24.toddler-solving-together",
+      "18-24.toddler-big-feelings",
+      "18-24.toddler-throwing"
+    ],
+    "openingCount": 0,
+    "topicRowCount": 4,
+    "detailCount": 3,
+    "artContextCount": 0
+  },
+  "reviews": [
+    {
+      "id": "toddler-limits-tone-r05.18-24.toddler-solving-together",
+      "entryId": "toddler-solving-together",
+      "placementId": "18-24.toddler-solving-together",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-solving-together.json",
+      "snapshotFileSha256": "dc77c069a2f514dfd43fc9f7a487d6354c53f9df93dbb309e60cb1a22aa4ee1b",
+      "textPlacementSha256": "27499e5e2ff0d6f4fabf9a2c398e4abb413bec08719badf83d7cd83d3696e4cb",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone.toddler-limits.scope-activity-text",
+        "tone.toddler-limits.relationship-text",
+        "tone.toddler-limits.adult-capacity-text",
+        "tone.toddler-limits.cooperation-text",
+        "tone.toddler-limits.cooperation-visual",
+        "tone.toddler-limits.limits-text"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Renewed pass on the complete current Connection & feelings row and detail, including age/context and references. “Working out a disagreement together” identifies the situation, and the first paragraph supplies Davies’s concrete preverbal example of offering a crawling sibling another toy. The example is presented as hers, not a required child response. The short summary keeps the adult supplying most possibilities; the body retains adult leadership, necessary limits, revisiting an unhelpful plan, moderate note use and immediate protection. The 18–24-month placement is a browsing context, with no fluent-speech or independent-problem-solving deadline. TL-TONE-004 is resolved in this exact replacement."
+      },
+      "artContext": null,
+      "resolvedIssueIds": [
+        "TL-TONE-004"
+      ]
+    },
+    {
+      "id": "toddler-limits-tone-r05.18-24.toddler-big-feelings",
+      "entryId": "toddler-big-feelings",
+      "placementId": "18-24.toddler-big-feelings",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-big-feelings.json",
+      "snapshotFileSha256": "102632467ed375fa6096c5234dd4792c095496ac600f692028ed374e40142832",
+      "textPlacementSha256": "3ab7e65295210544d1b1d0f179a7cea6fd2b39dca0c5b17c9f23805414b6c667",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone.toddler-limits.scope-activity-text",
+        "tone.toddler-limits.relationship-text",
+        "tone.toddler-limits.adult-capacity-text",
+        "tone.toddler-limits.limits-text",
+        "tone.toddler-limits.limits-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Renewed pass on the complete current Connection & feelings row and detail, including the visible book references. The summary now conditions amends on someone being hurt or something being damaged, so a tantrum or disappointment alone does not become something to repair. It keeps calm before discussion, available comfort, declined touch and everyone’s safety. The body still describes possible triggers without diagnosing a child or promising prevention, and retains public-space and necessary-departure conditions. The locator now names recognizable book subjects. No mandatory cuddle, calm-place routine, child deadline or demand for perfect parental calm was added. TL-TONE-001 and TL-TONE-002 are resolved in this exact replacement."
+      },
+      "artContext": null,
+      "resolvedIssueIds": [
+        "TL-TONE-001",
+        "TL-TONE-002"
+      ]
+    },
+    {
+      "id": "toddler-limits-tone-r05.18-24.toddler-throwing",
+      "entryId": "toddler-throwing",
+      "placementId": "18-24.toddler-throwing",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-throwing.json",
+      "snapshotFileSha256": "a548123762dbfc1457f5ffe1bfa5470c4c8c2bf878fae76882c72942d16df0bb",
+      "textPlacementSha256": "704a3ce5d7ad1f0d5e8bccc39094759a33149118ef511df8bf7a4d719d354eb0",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone.toddler-limits.scope-activity-text",
+        "tone.toddler-limits.relationship-text",
+        "tone.toddler-limits.adult-capacity-text",
+        "tone.toddler-limits.hitting-throwing-text",
+        "tone.toddler-limits.hitting-throwing-visual",
+        "tone.toddler-limits.limits-text"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Renewed pass on both the Connection & feelings and Play & discovery rows and the complete detail/age/reference context. The final sentence describes possible outlets while the adult observes, removing the assumption about the child’s sought movement. The short summary continues to combine observation, protection and an outlet; the body retains the explicit wooden-object caution, moving vulnerable objects and the outdoor/soft-indoor distinction. The title identifies throwing, and the attributed perspective does not become a material-safety approval, behavior diagnosis or promised end to a phase. TL-TONE-003 is resolved in this exact replacement."
+      },
+      "artContext": null,
+      "resolvedIssueIds": [
+        "TL-TONE-003"
+      ]
+    }
+  ],
+  "resolutions": [
+    {
+      "issueId": "TL-TONE-004",
+      "status": "resolved-in-reviewed-replacement",
+      "priorReport": {
+        "path": "content/pilots/reviews/final/toddler-limits-tone-r02.json",
+        "sha256": "c037df516aa36d79f0e7ecca02b4e60bcc87e2c06b8bfb2b908397cc4222c540",
+        "reviewId": "toddler-limits-tone-r02.18-24.toddler-solving-together"
+      },
+      "currentReviewId": "toddler-limits-tone-r05.18-24.toddler-solving-together",
+      "placementId": "18-24.toddler-solving-together",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-solving-together.json",
+      "snapshotFileSha256": "dc77c069a2f514dfd43fc9f7a487d6354c53f9df93dbb309e60cb1a22aa4ee1b",
+      "textPlacementSha256": "27499e5e2ff0d6f4fabf9a2c398e4abb413bec08719badf83d7cd83d3696e4cb",
+      "field": "entry.title and entry.detail[0]",
+      "surface": "connection-feelings topic title and detail body",
+      "replacement": "Working out a disagreement together; a crawling sibling takes a toy, and Davies’s example is a toddler offering the sibling another toy.",
+      "assessment": "The title now names a disagreement, and the body makes preverbal participation concrete using the PDF 119 example this reviewer personally read. The parent still leads, may supply most ideas and can revisit a plan; the text does not require a toddler to solve conflict or accept an imposed formal process."
+    },
+    {
+      "issueId": "TL-TONE-001",
+      "status": "resolved-in-reviewed-replacement",
+      "priorReport": {
+        "path": "content/pilots/reviews/final/toddler-limits-tone-r02.json",
+        "sha256": "c037df516aa36d79f0e7ecca02b4e60bcc87e2c06b8bfb2b908397cc4222c540",
+        "reviewId": "toddler-limits-tone-r02.18-24.toddler-big-feelings"
+      },
+      "currentReviewId": "toddler-limits-tone-r05.18-24.toddler-big-feelings",
+      "placementId": "18-24.toddler-big-feelings",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-big-feelings.json",
+      "snapshotFileSha256": "102632467ed375fa6096c5234dd4792c095496ac600f692028ed374e40142832",
+      "textPlacementSha256": "3ab7e65295210544d1b1d0f179a7cea6fd2b39dca0c5b17c9f23805414b6c667",
+      "field": "entry.summary",
+      "surface": "connection-feelings topic row and repeated detail summary",
+      "replacement": "Discussion comes after calm, with help to make amends if someone was hurt or something was damaged.",
+      "assessment": "The harm/damage condition is present in the short surface itself. The surrounding whole entry continues to accept feelings, offer comfort without required touch, protect immediately and allow gentle adult help when the family must leave."
+    },
+    {
+      "issueId": "TL-TONE-002",
+      "status": "resolved-in-reviewed-replacement",
+      "priorReport": {
+        "path": "content/pilots/reviews/final/toddler-limits-tone-r02.json",
+        "sha256": "c037df516aa36d79f0e7ecca02b4e60bcc87e2c06b8bfb2b908397cc4222c540",
+        "reviewId": "toddler-limits-tone-r02.18-24.toddler-big-feelings"
+      },
+      "currentReviewId": "toddler-limits-tone-r05.18-24.toddler-big-feelings",
+      "placementId": "18-24.toddler-big-feelings",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-big-feelings.json",
+      "snapshotFileSha256": "102632467ed375fa6096c5234dd4792c095496ac600f692028ed374e40142832",
+      "textPlacementSha256": "3ab7e65295210544d1b1d0f179a7cea6fd2b39dca0c5b17c9f23805414b6c667",
+      "field": "entry.references[0].locator (toddler-big-feelings.ref.1)",
+      "surface": "detail page / Back to the books",
+      "replacement": "Comfort during tantrums, declined touch, tantrums in public or when leaving, and making amends when needed",
+      "assessment": "The actual rendered locator now gives recognizable source subjects. The previous editorial coverage shorthand is absent from the public reference; physical PDF pages remain 134–139. The private provenance may retain its older coverage locator without leaking it to this surface."
+    },
+    {
+      "issueId": "TL-TONE-003",
+      "status": "resolved-in-reviewed-replacement",
+      "priorReport": {
+        "path": "content/pilots/reviews/final/toddler-limits-tone-r02.json",
+        "sha256": "c037df516aa36d79f0e7ecca02b4e60bcc87e2c06b8bfb2b908397cc4222c540",
+        "reviewId": "toddler-limits-tone-r02.18-24.toddler-throwing"
+      },
+      "currentReviewId": "toddler-limits-tone-r05.18-24.toddler-throwing",
+      "placementId": "18-24.toddler-throwing",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-throwing.json",
+      "snapshotFileSha256": "a548123762dbfc1457f5ffe1bfa5470c4c8c2bf878fae76882c72942d16df0bb",
+      "textPlacementSha256": "704a3ce5d7ad1f0d5e8bccc39094759a33149118ef511df8bf7a4d719d354eb0",
+      "field": "entry.detail[1], final sentence",
+      "surface": "detail page / final body paragraph",
+      "replacement": "She offers these as possible outlets while the adult observes what is happening and keeps clear limits.",
+      "assessment": "Possible outlets are distinguished from certainty about an individual child’s motive. Observation, clear limits, protection and the wooden-object caution remain in the complete entry."
+    }
+  ],
+  "remainingIssueIds": [],
+  "counts": {
+    "entries": 3,
+    "placements": 3,
+    "pass": 3,
+    "revise": 0,
+    "hold": 0,
+    "resolvedPriorIssues": 4,
+    "openIssues": 0,
+    "artContexts": 0
+  },
+  "learnings": []
+}

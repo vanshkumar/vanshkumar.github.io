@@ -1,0 +1,64 @@
+{
+  "date": "2026-09-10",
+  "author": "/root/t7_care_connection_author",
+  "workflow": "lean-v1",
+  "status": "author-local-checks-pass; independent reviews pending",
+  "counts": {
+    "newCanonicalEntries": 4,
+    "newCanonicalPlacements": 7,
+    "frozenBodyReuses": 32,
+    "totalNewPlacements": 39,
+    "coverageRows": 311,
+    "originalSourceIdeas": 155,
+    "careSourceIdeas": 114,
+    "core89through116IdeasExcludingCreativity": 39,
+    "washingChartIdeas": 2
+  },
+  "checks": [
+    "All JSON parses; entry, placement, and coverage record IDs are unique.",
+    "Every authored placement has structured sourceAge/readiness references and actual author-read links.",
+    "Every public new-entry reference and every placement source span is covered by the actual author read log.",
+    "All 32 canonical reuse digests match the frozen registry; no frozen canonical body was copied into entries.",
+    "No authored pair duplicates an inherited r08 pilot pair.",
+    "No openingOrder, artwork, public export, app edit, build, commit or review pass was created."
+  ],
+  "files": [
+    {
+      "path": "content/18-36/placements/care-frozen-reuse-r01.json",
+      "sha256": "f9fd36b4ad9d7c9a5a481a4c7566df7bd02706c5702ea74c845588248da4146f"
+    },
+    {
+      "path": "content/18-36/entries/later-playing-together/r01.json",
+      "sha256": "dcce504c52afccbe72343e0c5d95c0e63b4c69f3aec4ca1b3f6fdb13be583de4"
+    },
+    {
+      "path": "content/18-36/entries/later-calm-place-context/r01.json",
+      "sha256": "71eb32e662cfa0cfe8273f352b67940e2a600f7b4b70fa5a02345c6cee3111b3"
+    },
+    {
+      "path": "content/18-36/entries/later-washing-together/r01.json",
+      "sha256": "14e78ba65df992ad5e471fda34882ba92bbe517a191e0a0de256d6ba338674d7"
+    },
+    {
+      "path": "content/18-36/shared/family-declining-help/r01.json",
+      "sha256": "a84e13c59f5e2f52b54af5676b1cc39852d128d3b6e5f67b0af22762625f1665"
+    },
+    {
+      "path": "content/18-36/shared/placements/care-declining-help-r01.json",
+      "sha256": "0c89a157435a68e055a5284f554f75c629d5e8c89bf221d28745795e7dce8aa6"
+    },
+    {
+      "path": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "sha256": "cea5af85bab74752991e745b9d9914c4896f60b4da978a569b18d0010ecab4e7"
+    },
+    {
+      "path": "content/18-36/source-work/care-author/COVERAGE-r02.jsonl",
+      "sha256": "a14ea9da6e692f2cdfd68e881c07cfcf6748d8dfeff51ca47240d4b5fb99593b"
+    }
+  ],
+  "limitations": [
+    "These are structural checks, not independent source/tone approval.",
+    "Root must freeze complete Task7 contribution and assign retained independent reviewers.",
+    "Task6 cutlery/nighttime canonical allocations remain to close against returned authored and reviewed targets."
+  ]
+}

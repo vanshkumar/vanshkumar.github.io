@@ -1,0 +1,753 @@
+{
+  "id": "baby-care-tone-r02",
+  "reviewer": {
+    "task": "/root/baby_care_tone_r02",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Independent tone/spirit review of the exact ten baby-care r02 frozen projections, all ten 6–9-month placements, their twenty actual topic rows, ten actual entry surfaces and the one baby-connection opening/art context. No other batch prose or prior reviewer output was read for judgment. Wider inspection was limited to titles for repeated wording.",
+  "manifest": {
+    "path": "content/pilots/revisions/r02/MANIFEST.json",
+    "sha256": "b95284165cf0d9c48216d63a25d5f2bf544557b513ff0304d9a0bac55f4235e1"
+  },
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r02/RENDERED_SURFACES.json",
+    "sha256": "186f8914b494c8a76ca9735f1d3f212273e9f43040683497e311f5e8cb92b048"
+  },
+  "renderer": {
+    "path": "src/HomeStudy.jsx",
+    "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c",
+    "inspection": "Read the actual component source, including the opening invitation/cue path, topic title/summary rows, EntryReading age/context/detail/references, scene alt/caption and shared footer/colophon."
+  },
+  "draft": {
+    "path": "content/pilots/drafts/baby/draft-r02.json",
+    "sha256": "3231378dc6564ab6bcbe9cf75a4e3d2420cadfe15c5f995f8c026b6f7bef2ead",
+    "inspection": "Read matching public fields through frozen snapshots and selected matching author provenance/qualifications to locate context; independent findings rely on my own original-PDF reads."
+  },
+  "sourceIdentity": {
+    "sourceId": "baby-2021",
+    "path": "the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+    "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f",
+    "pdfPageCount": 310,
+    "pagination": "One-based physical PDF pages; no inferred printed-page labels."
+  },
+  "independence": {
+    "authoringChanges": false,
+    "priorReviewerOutputsRead": false,
+    "otherBatchProseRead": false,
+    "widerTitleScan": "Title-only scan found repeated “room for” constructions and “small part” in wider entries. Only this batch receives verdicts. Within this batch, the stacked dressing title/summary/cue is the specific repetition finding."
+  },
+  "readLogs": [
+    {
+      "id": "baby-care-tone-r02.read.family",
+      "reader": "/root/baby_care_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 41,
+          "end": 41
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete original PDF page, including the inclusive opening for different primary caregivers, equal co-parents, breastfeeding choices, adoption and work. Prenatal continuation is context only."
+    },
+    {
+      "id": "baby-care-tone-r02.read.home",
+      "reader": "/root/baby_care_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 65,
+          "end": 74
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read all original-page text in this span: simple homes, setup and yes-space framing, room-by-room table including eating and changing areas, and their continuations. Relevant eating/changing table pages separately inspected visually. Unrelated sleep and bathroom details are context, not endorsed instructions."
+    },
+    {
+      "id": "baby-care-tone-r02.read.tour",
+      "reader": "/root/baby_care_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 87,
+          "end": 88
+        },
+        {
+          "start": 92,
+          "end": 92
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read both complete original pages of the imagined Zach home tour and the complete feeding-area photo caption. Noted the four-month assisted-sitting anecdote and approximate furniture dimensions; neither overrides the dedicated feeding/readiness passage."
+    },
+    {
+      "id": "baby-care-tone-r02.read.respect",
+      "reader": "/root/baby_care_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 96,
+          "end": 114
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete original pages covering trust and its deterministic framing, acceptance, all respect subsections, positive-language and concentration continuations, movement, attachment, responsive care, the complete crying unit, adult guidance, and connection/going-slow framing. Retained the necessary-care and protection context without importing outcome guarantees."
+    },
+    {
+      "id": "baby-care-tone-r02.read.activities",
+      "reader": "/root/baby_care_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 127
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete original introduction-to-activities and further-notes pages: individual timing and seeking support, safe materials, choice, concentration and frustration, availability of help, ordinary care as connection, and the clothing continuation on 127. Material/positioning particulars remain source context."
+    },
+    {
+      "id": "baby-care-tone-r02.read.language-context",
+      "reader": "/root/baby_care_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 135,
+          "end": 137
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete original pages, including the full 9-to-12-month positive-language subsection on 136 with tentative meal completion, plus adjacent age/language context. This does not transfer all developmental assertions to the 6-to-9-month placement."
+    },
+    {
+      "id": "baby-care-tone-r02.read.movement-context",
+      "reader": "/root/baby_care_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 139,
+          "end": 144
+        },
+        {
+          "start": 155,
+          "end": 164
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete original pages: general movement framing and qualifications; tummy-position discussion continued across 155-156; slow-rolling objects continued to 157; complete 6-to-9-month movement unit 157-162 including purposeful food handling on 161; and adjacent later-age context. Applied only relevant present, unforced movement and visible-ball context to the artwork. Incidental language and later-age assertions are not adoption of those claims."
+    },
+    {
+      "id": "baby-care-tone-r02.read.eating-rhythm",
+      "reader": "/root/baby_care_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 180,
+          "end": 193
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read every original-page word in 180-193: complete daily rhythm and rituals; the complete eating unit including breast/bottle connection, different caregivers, difficulty/grief/support, burping and allergy context, first-food age/readiness, choking/first-aid callout, low-table and family-table alternatives, tools/help/cleanup, amount and throwing, observation continuation, and weaning continuation. Sleep opening on 193 was read as adjacent context only."
+    },
+    {
+      "id": "baby-care-tone-r02.read.physical-care",
+      "reader": "/root/baby_care_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 207,
+          "end": 210
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read all original-page text across clothing, complete dressing and diapering discussions, all five resistance considerations, and necessary-care continuation with gentle communication. Beginning of bathing on 210 is adjacent context, not a bathing-unit review."
+    },
+    {
+      "id": "baby-care-tone-r02.read.adult-context",
+      "reader": "/root/baby_care_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 238,
+          "end": 242
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete original pages on joy/help-seeking, self-trust/forgiveness, nonjudgmental reflection, all 49 calm ideas and doing-our-best continuation. Used the availability of support and rejection of perfection as tone context; no new adult-care advice is created."
+    },
+    {
+      "id": "baby-care-tone-r02.read.age-guidelines",
+      "reader": "/root/baby_care_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete original page, including the appendix age-guideline paragraph and preceding continuation; its age-as-guideline statement is contextual, not permission for specific materials or care."
+    },
+    {
+      "id": "baby-care-tone-r02.read.home-visual",
+      "reader": "/root/baby_care_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 71,
+          "end": 71
+        },
+        {
+          "start": 73,
+          "end": 73
+        },
+        {
+          "start": 87,
+          "end": 87
+        },
+        {
+          "start": 92,
+          "end": 92
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read the complete original-page renders at readable size. Checked room-by-room Eating area and Changing area table structure, the explicitly imagined tour and its four-month anecdote, and the whole feeding-area photo/caption with approximate table/chair measurements. The depicted child and setup do not establish readiness."
+    },
+    {
+      "id": "baby-care-tone-r02.read.respect-visual",
+      "reader": "/root/baby_care_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 99,
+          "end": 99
+        },
+        {
+          "start": 114,
+          "end": 114
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected and read both complete original pages, including body-respect gestures and the grouped connection checklist plus Going slow text. A gesture is not promoted to certain permission."
+    },
+    {
+      "id": "baby-care-tone-r02.read.eating-visual",
+      "reader": "/root/baby_care_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 161,
+          "end": 161
+        },
+        {
+          "start": 188,
+          "end": 190
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read the complete readable original-page images. Checked the purposeful-food paragraph beside movement illustrations on 161, the visually distinct choking-safety/first-aid callout on 188, family-table/utensil image and tools section on 189, and assistance/cloth/cleanup continuation on 190. No emergency procedure or depicted equipment is republished by this review."
+    },
+    {
+      "id": "baby-care-tone-r02.read.care-visual",
+      "reader": "/root/baby_care_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 207,
+          "end": 210
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read complete original-page renders for clothing, dressing, diapering and all resistance considerations across 207-210, including their heading and list boundaries and the necessary-care continuation."
+    },
+    {
+      "id": "baby-care-tone-r02.read.movement-visual",
+      "reader": "/root/baby_care_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 156,
+          "end": 157
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read both complete original-page renders, including tummy-time discomfort/pickup qualification, slow-rolling-object continuation, observation callout and the 6-to-9-month opening. Applied to the exact scene as contextual imagery, without deriving a movement schedule or setup procedure."
+    },
+    {
+      "id": "baby-care-tone-r02.read.age-visual",
+      "reader": "/root/baby_care_tone_r02",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read the entire original-page render, including the appendix heading and full guideline paragraph; the table continuation above does not supply an age rule for this batch."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "baby-care-tone-r02.6-9.baby-connection",
+      "entryId": "baby-connection",
+      "placementId": "6-9.baby-connection",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/6-9.baby-connection.json",
+      "snapshotFileSha256": "323ed569082c1d77d2a1f28811e8d5436e5b2cc61061f47ac66d0f38b3b68c35",
+      "textPlacementSha256": "fe9a5141a93859549c9ff4238f17b3dd290a31bc54b59189c42268b46c19a273",
+      "artContextSha256": "469f2ea988d2104f4243497affee46a04e0079a2905e5970472f91dbf2530cd6",
+      "publicProjectionSha256": "61d01f88787a170e63170dcfec22dd4edccbcc0666801b1ef47cb6934da1b744",
+      "readLogIds": [
+        "baby-care-tone-r02.read.respect",
+        "baby-care-tone-r02.read.physical-care",
+        "baby-care-tone-r02.read.activities",
+        "baby-care-tone-r02.read.adult-context",
+        "baby-care-tone-r02.read.age-guidelines",
+        "baby-care-tone-r02.read.respect-visual",
+        "baby-care-tone-r02.read.care-visual",
+        "baby-care-tone-r02.read.age-visual",
+        "baby-care-tone-r02.read.home",
+        "baby-care-tone-r02.read.movement-context",
+        "baby-care-tone-r02.read.movement-visual"
+      ],
+      "surfacesReviewed": {
+        "ageId": "6-9",
+        "topicIds": [
+          "connection-feelings",
+          "everyday-care"
+        ],
+        "opening": true,
+        "topicRows": 2,
+        "entryDetail": true,
+        "renderedSurfaceRecordSha256": "e4dd05fe7290b6f2623d83f2181b16524b6427872622ab8cdd7180ec022f22b4"
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for the exact 6–9-month opening, both topic rows and full entry. The ordinary can-wait pickup condition is visible in the opening invitation and cue; the summary itself preserves necessary care/protection. Detail treats expression and movement as something to listen to rather than a certain yes/no test. “Connect” and “Try this together” invite an ordinary exchange without prescribing physical handling. Infant-wide age context is explicit and the prose keeps warmth alongside timely comfort."
+      },
+      "artContext": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for this exact baby-connection opening context. The large original illustration shows an awake baby prone on a floor mat, reaching toward a large softly textured ball, with a caregiver seated nearby, looking toward the baby and holding open hands. No one is lifting, forcing a limb, restraining the baby or testing a response. The image supplies a calm setting for the can-wait pickup invitation, not a depicted pickup technique. The title/cue and caption leave the baby’s current interest visible; the baby’s reach is toward the ball and is not read as certain permission. The sparse scene and no-different-home footer avoid a required-room or shopping standard. This tone judgment does not certify a real product’s material safety, the exact ball dimensions, or an individualized movement setup.",
+        "readLogIds": [
+          "baby-care-tone-r02.read.respect",
+          "baby-care-tone-r02.read.home",
+          "baby-care-tone-r02.read.activities",
+          "baby-care-tone-r02.read.movement-context",
+          "baby-care-tone-r02.read.respect-visual",
+          "baby-care-tone-r02.read.movement-visual"
+        ],
+        "assetReads": [
+          {
+            "src": "art/home-paper-baby.webp",
+            "sha256": "fb09c915ce18725df3f0ef1818fc0072116d2d97c6dbc45eb7578dda55dbc922",
+            "mode": "actual-image-visual",
+            "description": "Personally inspected the actual 1536×1024 public/art/home-paper-baby.webp image at full display size. Observed the prone, reaching baby, uncovered hands/feet, large ball, floor mat and seated caregiver’s open hands/gaze. Inspected image bytes, not a generation prompt; compared alt text, caption and the exact baby-connection opening copy."
+          }
+        ]
+      }
+    },
+    {
+      "id": "baby-care-tone-r02.6-9.baby-dressing",
+      "entryId": "baby-dressing",
+      "placementId": "6-9.baby-dressing",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/6-9.baby-dressing.json",
+      "snapshotFileSha256": "9ca3e24749b4b89a7b912d9437af11d9220faae3caa8d93729d7305203687fc7",
+      "textPlacementSha256": "b8b632bc319c71c40ad1d4946e306ea44610bed65ec90fe56eb8547fc7246f5b",
+      "artContextSha256": null,
+      "publicProjectionSha256": "f1523cc6df760005c3c2eae33f3e06949345fa5b2dd69be5611cee8b8a288c76",
+      "readLogIds": [
+        "baby-care-tone-r02.read.respect",
+        "baby-care-tone-r02.read.physical-care",
+        "baby-care-tone-r02.read.activities",
+        "baby-care-tone-r02.read.adult-context",
+        "baby-care-tone-r02.read.age-guidelines",
+        "baby-care-tone-r02.read.respect-visual",
+        "baby-care-tone-r02.read.care-visual",
+        "baby-care-tone-r02.read.age-visual"
+      ],
+      "surfacesReviewed": {
+        "ageId": "6-9",
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "opening": false,
+        "topicRows": 2,
+        "entryDetail": true,
+        "renderedSurfaceRecordSha256": "27df0cebaf256492d229b9ba58f143acc9f8602a52b7b460214e2019d2f58be4"
+      },
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "baby-care-tone-r02.dressing.repeated-generic-phrasing",
+            "severity": "low",
+            "field": "entry.title; entry.summary; entry.cue",
+            "surface": "6–9 months / Everyday care and Connection & feelings topic rows and detail header/context",
+            "finding": "The title says “a small part,” the summary immediately repeats “invite a small part,” and the cue adds “there is room for them to respond.” This stacks generic participation phrasing where the source offers concrete clothes, gaze, reaching and a sleeve. The same “small part” language recurs in this batch’s cleanup summary/age context, so the neighboring rows begin to sound templated.",
+            "requiredCorrection": "Keep dressing as the clearly named subject and the existing help/necessary-care qualifications. Reduce the repeated “small part”/“room for” wording by naming a concrete dressing interaction in the title or summary and making the cue an ordinary situation. No extra dressing steps are needed.",
+            "status": "open"
+          }
+        ],
+        "assessment": "The entry is useful and respectful in this exact age band: a gaze or reach can count, the nine-month sleeve example remains an example, and adult help plus necessary care remain available. Both topic rows are ordinary relational invitations rather than a positioning or dressing protocol. Revise the specified repeated generic phrasing to give the concrete dressing subject more of its own voice."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-care-tone-r02.6-9.baby-diaper-conversation",
+      "entryId": "baby-diaper-conversation",
+      "placementId": "6-9.baby-diaper-conversation",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/6-9.baby-diaper-conversation.json",
+      "snapshotFileSha256": "bbca88eb7cdeb341bf5dc25a8416ed7306ecd4e251287dc3e443dbb32216f54c",
+      "textPlacementSha256": "5b417fbe3727cda76a412881def01baacccb0d96e291bb67fe9aa0c944cbd0fb",
+      "artContextSha256": null,
+      "publicProjectionSha256": "fdf359cb8f35a6a72bba993fb2c33e7eac22431d80febcb2ad21eca866612d1b",
+      "readLogIds": [
+        "baby-care-tone-r02.read.respect",
+        "baby-care-tone-r02.read.physical-care",
+        "baby-care-tone-r02.read.home",
+        "baby-care-tone-r02.read.adult-context",
+        "baby-care-tone-r02.read.respect-visual",
+        "baby-care-tone-r02.read.care-visual",
+        "baby-care-tone-r02.read.home-visual"
+      ],
+      "surfacesReviewed": {
+        "ageId": "6-9",
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "opening": false,
+        "topicRows": 2,
+        "entryDetail": true,
+        "renderedSurfaceRecordSha256": "5bb12cd8215daede901bb217d42e6b7f9e7254487992564605fbbb0b5095d499"
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for both exact topic rows and full entry. The summary is about communication during an already-needed change; detail preserves privacy, neutral body language and the adult’s responsibility. The raised-surface statement is clearly attributed to the book and retains its always-hand-on-baby condition. No standing-change, wiping-direction or toilet-training procedure is synthesized, and participation is not an independent-completion test."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-care-tone-r02.6-9.baby-care-resistance",
+      "entryId": "baby-care-resistance",
+      "placementId": "6-9.baby-care-resistance",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/6-9.baby-care-resistance.json",
+      "snapshotFileSha256": "f225c14ac514e40c4211b62232098414ef867468ebcf1d9046c0220778d51a16",
+      "textPlacementSha256": "ea31c1040fad61d32ea56b5b6eefdccef33c6986a9c2cc7983630f7d37acee92",
+      "artContextSha256": null,
+      "publicProjectionSha256": "8ab8feb55797675960065f1b2eeee8f36f3de830f8a79eb1f6ec54583102b570",
+      "readLogIds": [
+        "baby-care-tone-r02.read.respect",
+        "baby-care-tone-r02.read.physical-care",
+        "baby-care-tone-r02.read.adult-context",
+        "baby-care-tone-r02.read.respect-visual",
+        "baby-care-tone-r02.read.care-visual"
+      ],
+      "surfacesReviewed": {
+        "ageId": "6-9",
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "opening": false,
+        "topicRows": 2,
+        "entryDetail": true,
+        "renderedSurfaceRecordSha256": "3ea86921a9cfe6eab1d8cec5582e85049719fdb96ac3293225155341a600260d"
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for both exact topic rows and full entry. Resistance is an observable protest, not a bad-child label; possible timing, participation and handling feelings remain guesses. The short summary itself allows necessary care to proceed gently. The offered words and optional pause/choice/song are grounded in the complete source unit, do not require a cooperative response and do not become an obligatory five-step checklist."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-care-tone-r02.6-9.baby-feeding-connection",
+      "entryId": "baby-feeding-connection",
+      "placementId": "6-9.baby-feeding-connection",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/6-9.baby-feeding-connection.json",
+      "snapshotFileSha256": "2142b109420d0653aebe9e8e0fc53f634eabc848a34c851c9e27b920e2001efa",
+      "textPlacementSha256": "c51ece72eb4b6eb117163310fce8332c49915693eb02abe5f006bca36f1b5169",
+      "artContextSha256": null,
+      "publicProjectionSha256": "147ddc88b26f2665dbf8564b0e40e9804753363d2dedee09620031350168c4ad",
+      "readLogIds": [
+        "baby-care-tone-r02.read.family",
+        "baby-care-tone-r02.read.respect",
+        "baby-care-tone-r02.read.eating-rhythm",
+        "baby-care-tone-r02.read.adult-context",
+        "baby-care-tone-r02.read.respect-visual",
+        "baby-care-tone-r02.read.eating-visual"
+      ],
+      "surfacesReviewed": {
+        "ageId": "6-9",
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "opening": false,
+        "topicRows": 2,
+        "entryDetail": true,
+        "renderedSurfaceRecordSha256": "5d7e4a513a9ec218f92aa3bd9cde0f2643bdf35c43a7e2665bc129ab4d7961c1"
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for both exact topic rows and full entry. The short row includes breast/bottle feeding, choice, difficulty and support. Detail includes different primary caregivers and grief when feeding differs from hopes without treating one feeding arrangement as the condition for a relationship. The invitation to notice remains a possibility, not a demand for constant gaze or a new latch/feeding regimen."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-care-tone-r02.6-9.baby-solids-perspective",
+      "entryId": "baby-solids-perspective",
+      "placementId": "6-9.baby-solids-perspective",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/6-9.baby-solids-perspective.json",
+      "snapshotFileSha256": "fb5bfb0a2ffe7b0de7167ab4b36aa9b577abc5082d07fd0a1c54b6a6c2acc7d0",
+      "textPlacementSha256": "f79ae4d1025e485a8a1f803726b3129fb0239cb971d869b62bb000fee0944466",
+      "artContextSha256": null,
+      "publicProjectionSha256": "d3137f80c27e5032aeb0d4dfa0d80b3c6b14ab401bf451479760ceb58d49dee7",
+      "readLogIds": [
+        "baby-care-tone-r02.read.eating-rhythm",
+        "baby-care-tone-r02.read.movement-context",
+        "baby-care-tone-r02.read.activities",
+        "baby-care-tone-r02.read.age-guidelines",
+        "baby-care-tone-r02.read.eating-visual",
+        "baby-care-tone-r02.read.movement-visual",
+        "baby-care-tone-r02.read.age-visual"
+      ],
+      "surfacesReviewed": {
+        "ageId": "6-9",
+        "topicIds": [
+          "everyday-care",
+          "play-discovery"
+        ],
+        "opening": false,
+        "topicRows": 2,
+        "entryDetail": true,
+        "renderedSurfaceRecordSha256": "7bb3eeef1142a2ae07887fea9a073fafe86ee998e7a2108270edb8b5e6d579b5"
+      },
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "baby-care-tone-r02.solids.short-safety-context",
+            "severity": "medium",
+            "field": "entry.summary",
+            "surface": "6–9 months / Everyday care and Play & discovery topic rows; repeated entry summary",
+            "finding": "The standalone row describes starting first foods, the six-month/readiness condition and “manageable food,” but leaves the source’s choking and first-aid qualification entirely in detail. Especially in Play & discovery, this reads as a complete, gently framed account of offering first foods without the sensitive context carried beside those examples on PDF 188. Attribution and the detail-only caution do not make the short surface self-contained.",
+            "requiredCorrection": "Keep the six-month-plus-readiness condition and descriptive attribution, and give the summary its own concise acknowledgment that the authors pair first-food exploration with choking precautions and learning first aid. Keep their emergency procedure and unreviewed feeding techniques out of the summary; do not substitute outside advice.",
+            "status": "open"
+          },
+          {
+            "id": "baby-care-tone-r02.solids.abstract-title",
+            "severity": "low",
+            "field": "entry.title",
+            "surface": "6–9 months / Everyday care and Play & discovery topic headings and detail title",
+            "finding": "“Food as a shared discovery” names an attitude toward food but obscures the actual parent subject: beginning solid foods. That distinction matters alongside the separate milk-feeding, seating and food-amount entries.",
+            "requiredCorrection": "Use a title that directly names first foods or starting solids while retaining the qualified, source-described perspective. The title should identify the subject without becoming an instruction to start.",
+            "status": "open"
+          }
+        ],
+        "assessment": "The full entry is carefully attributed, distinguishes interest from the six-month-plus-readiness condition, includes help matched to coordination, and keeps specific food sizes and emergency actions out. Its topic placement as purposeful discovery is defensible. Revise the standalone summary’s qualification and the title before granting a tone pass; detail alone cannot repair the short row."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-care-tone-r02.6-9.baby-eating-place",
+      "entryId": "baby-eating-place",
+      "placementId": "6-9.baby-eating-place",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/6-9.baby-eating-place.json",
+      "snapshotFileSha256": "732e7e734e31fb12e267448e5c599ff118739c7c59240397b59f280d08032af4",
+      "textPlacementSha256": "382df5326410471d9fde142c8f588b4f4cc0711c221fbbb07b0aa95f0fd012df",
+      "artContextSha256": null,
+      "publicProjectionSha256": "3147e9904fac430ecf81d41975e864878cf22da2ea7062a4e1ae2636e530b55e",
+      "readLogIds": [
+        "baby-care-tone-r02.read.eating-rhythm",
+        "baby-care-tone-r02.read.home",
+        "baby-care-tone-r02.read.tour",
+        "baby-care-tone-r02.read.eating-visual",
+        "baby-care-tone-r02.read.home-visual"
+      ],
+      "surfacesReviewed": {
+        "ageId": "6-9",
+        "topicIds": [
+          "everyday-care",
+          "home-that-helps"
+        ],
+        "opening": false,
+        "topicRows": 2,
+        "entryDetail": true,
+        "renderedSurfaceRecordSha256": "6ac28ddc076bf2660f38d2e5507a77a317a0ec3888042617d2e774545f42929f"
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for both exact topic rows and full entry. “A place at the meal” points to mealtime inclusion and the summary immediately identifies seating alternatives. The short surface preserves steady sitting/feet-to-floor and the baby-attachment condition; detail allows snacks or meals according to the family and explains the book’s high-chair preference/exception without insisting on a purchase. The tour anecdote/photo are not used to set readiness or dimensions. This is an attributed account of options, not fitting or construction instructions."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-care-tone-r02.6-9.baby-eating-amount",
+      "entryId": "baby-eating-amount",
+      "placementId": "6-9.baby-eating-amount",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/6-9.baby-eating-amount.json",
+      "snapshotFileSha256": "a503995f49ce57e4acaedb6de0ac70acc228aa8f79f528514d507c3c0a1f2677",
+      "textPlacementSha256": "92c1b65aebd65f6eaeb24f784c9311f64f0398c241f2ae5556e57447ffd9f94c",
+      "artContextSha256": null,
+      "publicProjectionSha256": "8215915f07e13be87ac67b4d7f0a30bc819dadbcfdda0a68ee62e7b3b651b6b1",
+      "readLogIds": [
+        "baby-care-tone-r02.read.eating-rhythm",
+        "baby-care-tone-r02.read.language-context",
+        "baby-care-tone-r02.read.respect",
+        "baby-care-tone-r02.read.adult-context",
+        "baby-care-tone-r02.read.eating-visual"
+      ],
+      "surfacesReviewed": {
+        "ageId": "6-9",
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "opening": false,
+        "topicRows": 2,
+        "entryDetail": true,
+        "renderedSurfaceRecordSha256": "1f8dbc86e8da0aa8219b27cf12825c9184f7aa0b43f09a8d588e632a4a038fa4"
+      },
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "baby-care-tone-r02.eating-amount.unintroduced-example",
+            "severity": "low",
+            "field": "entry.detail[1]",
+            "surface": "6–9 months / entry detail",
+            "finding": "“Their brief eating-time example is not a time limit” refers to an example that the reader has not been shown. This sounds like an internal review note and interrupts an otherwise clear, parent-useful account of watching for the end of a meal.",
+            "requiredCorrection": "Make the point stand on its own in ordinary language about following the baby’s interest without a fixed meal duration, or omit the dangling example sentence. Preserve the tentative interpretation of throwing and the rejection of pressure; do not introduce a new clock target.",
+            "status": "open"
+          }
+        ],
+        "assessment": "The title, both short rows and most detail are clear and respectful. How much belongs to the baby in the authors’ account; throwing is explicitly a possibility rather than a certain motive, and there is no automatic removal rule or intake target. Revise only the unintroduced time-example sentence so the detail reads as an explanation for the parent rather than an editorial note."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-care-tone-r02.6-9.baby-meal-cleanup",
+      "entryId": "baby-meal-cleanup",
+      "placementId": "6-9.baby-meal-cleanup",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/6-9.baby-meal-cleanup.json",
+      "snapshotFileSha256": "5a9a3bca99298af81f2782a0c6f08f827e1593084d71f522278520e9964eae0e",
+      "textPlacementSha256": "304e0e341e7c2bb62376b368fe8830dd0d0cd43db33c5b7c3c0116d17713bb1a",
+      "artContextSha256": null,
+      "publicProjectionSha256": "bc930bde5e42fd492ca011b7e850b06d4c477972668fcf35e903afa5ff541320",
+      "readLogIds": [
+        "baby-care-tone-r02.read.eating-rhythm",
+        "baby-care-tone-r02.read.respect",
+        "baby-care-tone-r02.read.activities",
+        "baby-care-tone-r02.read.age-guidelines",
+        "baby-care-tone-r02.read.adult-context",
+        "baby-care-tone-r02.read.eating-visual",
+        "baby-care-tone-r02.read.age-visual"
+      ],
+      "surfacesReviewed": {
+        "ageId": "6-9",
+        "topicIds": [
+          "everyday-care",
+          "play-discovery"
+        ],
+        "opening": false,
+        "topicRows": 2,
+        "entryDetail": true,
+        "renderedSurfaceRecordSha256": "4bffe04e5b851c3fd30c85612343a19ca84dcff4802154812722209fa9c7fa1a"
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for both exact topic rows and full entry. The cue asks for actual interest in the cloth/wiping, the eight-month example is labeled as the book’s example, and the adult can finish. This stays a small ordinary invitation in a meal already underway rather than a completion test or a new feeding setup. The “small part” phrase here has a concrete referent; the batch repetition is addressed narrowly at the stacked title/summary/cue wording in baby-dressing."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-care-tone-r02.6-9.baby-daily-rhythm",
+      "entryId": "baby-daily-rhythm",
+      "placementId": "6-9.baby-daily-rhythm",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/6-9.baby-daily-rhythm.json",
+      "snapshotFileSha256": "0c061753398571d9e30fdcb2e481733499969a0c2d6c8cca686ad3f77303071d",
+      "textPlacementSha256": "0fcc405432f87b24eb4234ded5c1e48fe6b1b92f95745fcaac47122bd58927a4",
+      "artContextSha256": null,
+      "publicProjectionSha256": "5159b1de1c9b8c6950a8c854a5f263d53539871c3af9a825bce0d7ea0e329d31",
+      "readLogIds": [
+        "baby-care-tone-r02.read.eating-rhythm",
+        "baby-care-tone-r02.read.respect",
+        "baby-care-tone-r02.read.adult-context"
+      ],
+      "surfacesReviewed": {
+        "ageId": "6-9",
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "opening": false,
+        "topicRows": 2,
+        "entryDetail": true,
+        "renderedSurfaceRecordSha256": "675007dd25809cdb9a449b12ee053e8e07c34d314c13f3496f119a5ff4cdbe80"
+      },
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "baby-care-tone-r02.daily-rhythm.abstract-title",
+            "severity": "low",
+            "field": "entry.title",
+            "surface": "6–9 months / Everyday care and Connection & feelings topic headings and detail title",
+            "finding": "“A familiar shape to the day” is a pleasant metaphor but does not name the parent subject as clearly as the body does: the baby’s daily rhythm and familiar transitions. It asks a browsing parent to decode the title before they can distinguish this entry from broader family or home guidance.",
+            "requiredCorrection": "Name daily rhythm, daily routines or the recurring feeding/play/rest pattern directly in the title. Keep the body’s variation, baby cues, practical caregiver limits and explicit rejection of a timetable.",
+            "status": "open"
+          }
+        ],
+        "assessment": "The summary and detail are a faithful, useful perspective: variable rhythm rather than timetable, no hours or feed/nap quota, small cues and coordination where possible, and family rituals without required performance. The infant-wide age context fits this placement. Revise the metaphorical title to make the daily-rhythm subject directly recognizable in both topic lists."
+      },
+      "artContext": null
+    }
+  ],
+  "counts": {
+    "entries": 10,
+    "placements": 10,
+    "topicRows": 20,
+    "openingSurfaces": 1,
+    "entrySurfaces": 10,
+    "textVerdicts": {
+      "pass": 6,
+      "revise": 4
+    },
+    "artVerdicts": {
+      "pass": 1
+    },
+    "openIssues": 5,
+    "fullTextOriginalPages": 85,
+    "fullPageVisualOriginalPages": 17,
+    "actualAssetReads": 1
+  },
+  "limitations": "This is a bounded tone/spirit component review, not publication approval or independent medical verification. Each stated read log records original pages personally read by this reviewer. Incidental neighboring page text is distinguished from a complete review of unrelated chapters. Source-only qualifications must remain in the affected visible surfaces after revision, and changed components require exact replacement review."
+}

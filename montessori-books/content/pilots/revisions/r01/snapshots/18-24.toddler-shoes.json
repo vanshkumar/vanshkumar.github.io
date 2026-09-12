@@ -1,0 +1,167 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-shoes",
+        "kind": "invitation",
+        "title": "A place for shoes",
+        "actionLabel": "Shoes",
+        "invitation": "A familiar basket and one small part of getting ready.",
+        "summary": "A reachable basket gives shoes a familiar home. Invite your child to fetch them or put them away with you.",
+        "cue": "Notice whether your child looks for their shoes or wants to help when you leave or come home.",
+        "detail": [
+          "Choose a consistent place your child can reach. A seat nearby can make putting shoes on and taking them off easier to join.",
+          "Show the small movements slowly. Fetching one shoe or returning it to the basket may be their part today; you can carry the other. On another day, more help may be welcome."
+        ],
+        "steps": [
+          "Keep shoes in one reachable basket or on a shelf.",
+          "Invite your child to bring a shoe when you get ready.",
+          "Show where it belongs when you return, and put the shoes away together."
+        ],
+        "references": [
+          {
+            "id": "toddler-shoes.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Practical life activities by age",
+            "locator": "12 to 18 months: Fetch shoes and help put toys away",
+            "pdfPages": [
+              {
+                "start": 51,
+                "end": 51
+              }
+            ]
+          },
+          {
+            "id": "toddler-shoes.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "Room by room / Entrance",
+            "locator": "Reachable shoe basket or shelf and low seat",
+            "pdfPages": [
+              {
+                "start": 76,
+                "end": 76
+              }
+            ]
+          },
+          {
+            "id": "toddler-shoes.ref.3",
+            "sourceId": "toddler-2019",
+            "section": "Getting dressed and leaving the house",
+            "locator": "Predictable coat/shoe storage and a place to sit",
+            "pdfPages": [
+              {
+                "start": 149,
+                "end": 149
+              }
+            ]
+          },
+          {
+            "id": "toddler-shoes.ref.4",
+            "sourceId": "toddler-2019",
+            "section": "How to show the child an activity / General principles",
+            "locator": "Slow precise demonstration and adult modeling/shared return; help without insistence",
+            "pdfPages": [
+              {
+                "start": 35,
+                "end": 38
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "18-24.toddler-shoes",
+        "entryId": "toddler-shoes",
+        "ageId": "18-24",
+        "topicIds": [
+          "everyday-care",
+          "home-that-helps"
+        ],
+        "openingOrder": 3,
+        "ageContext": {
+          "bookAge": "Fetching shoes appears in the 12–18 month chart; dressing participation continues through toddlerhood.",
+          "readiness": "Interest in joining the leaving or arriving routine.",
+          "note": "Fetching and returning are enough; independent dressing is not expected."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "18–24 months",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "Age, interest & context",
+          "Try it together",
+          "Back to the books"
+        ],
+        "openingCTA": "Try this together",
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          },
+          {
+            "id": "home-that-helps",
+            "label": "A home that helps"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 51"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 76"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 149"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 35–38"
+          }
+        ]
+      }
+    },
+    "artContext": {
+      "scene": {
+        "id": "home-paper-toddler",
+        "ageId": "18-24",
+        "layout": "above-scene",
+        "sourceId": "toddler-2019",
+        "src": "art/home-paper-toddler.webp",
+        "alt": "An illustrated home: a toddler pours water from a small pitcher into a cup at a low table, with a caregiver nearby and a cloth on the table. A low shelf holds crayons, paper, and a basket of shoes on its bottom tier.",
+        "width": 1536,
+        "height": 1024,
+        "caption": "Follow what catches their attention."
+      },
+      "illustration": null,
+      "assets": [
+        {
+          "src": "art/home-paper-toddler.webp",
+          "sha256": "6590e3b468d918f375cf5fd7ea2362b45e511f0d41c0b1a7113b2b5b6ae2d422"
+        }
+      ],
+      "textPlacementSha256": "126780949194d38319719f2ccd4e30d0f56029c2b619b7fa8abfbc167da2884f"
+    }
+  },
+  "textPlacementSha256": "126780949194d38319719f2ccd4e30d0f56029c2b619b7fa8abfbc167da2884f",
+  "artContextSha256": "2267d78eefb5ce181cd9eb17b1d887867d4014064aab29138e08e1bd5e92b17f",
+  "publicProjectionSha256": "57916b8c6d9ac60b6541e62719e3afc57ae026ccde68ab4733eca67db491ba40",
+  "provenance": {
+    "draft": {
+      "path": "content/pilots/drafts/toddler/draft-r01.json",
+      "sha256": "72f53c79c4632037d1ab6f72aad0380fb9929e2201f65bbaac0808084ceb1edc"
+    },
+    "revision": "r01",
+    "evidenceFile": "content/pilots/drafts/toddler/draft-r01.json",
+    "note": "Full private provenance and actual author read logs remain in this immutable draft and its handoff."
+  }
+}

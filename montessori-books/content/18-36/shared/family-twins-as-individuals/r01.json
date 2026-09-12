@@ -1,0 +1,158 @@
+{
+  "author": {
+    "task": "/root/t7_family_author",
+    "reasoning": "xhigh",
+    "date": "2026-09-10"
+  },
+  "entries": [
+    {
+      "id": "family-twins-as-individuals",
+      "kind": "perspective",
+      "title": "Get to know each twin",
+      "summary": "The Baby authors suggest using each child’s name and noticing their needs individually. Being the same age does not require treating the children as a single unit.",
+      "cue": "For families with twins, while getting to know what is particular to each child.",
+      "detail": [
+        "Look at what each child is interested in and what help each needs. The authors suggest calling them by their names, rather than referring to them only as “the twins.”",
+        "They also describe involving both children in daily life as their skills grow. Their examples invite participation and taking turns; they do not require buying two of every toy.",
+        "The chapter recognizes the practical work of caring for two children of the same age. For example, it explicitly says that simultaneous breastfeeding may be possible and is also okay if it is not manageable. This is an acknowledgment of family capacity, not a feeding instruction."
+      ],
+      "references": [
+        {
+          "id": "family.ref.twins",
+          "sourceId": "baby-2021",
+          "section": "Twins",
+          "locator": "Individual names and needs, gradual participation, toy turns and adult capacity",
+          "pdfPages": [
+            {
+              "start": 228,
+              "end": 229
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "entryId": "family-twins-as-individuals",
+      "revision": "r01",
+      "author": "/root/t7_family_author",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "state": "authored-awaiting-independent-source-and-tone-reviews",
+      "sourceIdeaIds": [
+        "baby.idea.twins-individuals"
+      ],
+      "evidenceIds": [
+        "baby.ev.twins-individuals"
+      ],
+      "sourceFingerprints": [
+        {
+          "sourceId": "baby-2021",
+          "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+          "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+        }
+      ],
+      "researchEvidence": [
+        {
+          "id": "baby.ev.twins-individuals",
+          "path": "research/baby/EVIDENCE.jsonl",
+          "line": 358,
+          "fileSha256": "aa71ee9471e24b77c6d71901cd6d8b84756aea23b0299ba1cb74c197d1206129",
+          "revision": "1:1477096e0e953582",
+          "recordSha256": "e434a9288da62122d8e3054ad99d9738e6d9539f8bfe2fca54bcbac9b45571d2",
+          "sourceIdeaIds": [
+            "baby.idea.twins-individuals"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "baby-2021",
+              "pdfPages": [
+                {
+                  "start": 228,
+                  "end": 229
+                }
+              ],
+              "section": "7 Putting it into practice / Twins / Book recommendation",
+              "locator": "The authors invite treating twins as individuals,using their names,observing each need and supporting participation,turn-taking and shared care",
+              "printedPages": null,
+              "printedVerification": "not-applicable",
+              "contextRead": [
+                {
+                  "pdfPages": [
+                    {
+                      "start": 188,
+                      "end": 192
+                    }
+                  ],
+                  "description": "Actually read adjacent/parent section or internal crossreference; see linked read log for extent."
+                },
+                {
+                  "pdfPages": [
+                    {
+                      "start": 108,
+                      "end": 111
+                    }
+                  ],
+                  "description": "Actually read adjacent/parent section or internal crossreference; see linked read log for extent."
+                }
+              ],
+              "readLogIds": [
+                "baby.read.care.text-186-192",
+                "baby.read.care.text-223-231",
+                "baby.read.care.context-attachment",
+                "baby.read.care.visual-layouts",
+                "baby.read.care.visual-feeding"
+              ]
+            }
+          ],
+          "qualifications": [
+            "No requirement for two of everything; no guarantee of convenient independence.",
+            "Tell waiting twin adult will be available soon; never imply unmet urgent needs should wait.",
+            "Simultaneous breastfeeding possible but explicitly okay if unmanageable.",
+            "After unsupported sitting,source facing each other at low table with armed chairs/feet flat; seating is separately sensitive.",
+            "External Stephanie Woo Raising Your Twins recommendation inventoried only."
+          ],
+          "ageBasis": {
+            "bookStated": "not-stated",
+            "ageLocator": null,
+            "readiness": "Sitting without support before opposite seating",
+            "readinessLocator": "Twins / Book recommendation",
+            "editorialBrowsingBands": [],
+            "placementRationale": "No band assigned in section research; later synthesis must retain source age/readiness separately."
+          },
+          "status": "research-ready",
+          "openQuestions": []
+        }
+      ],
+      "fullSourceReferences": [
+        {
+          "id": "family.ref.twins",
+          "sourceId": "baby-2021",
+          "section": "Twins",
+          "locator": "Individual names and needs, gradual participation, toy turns and adult capacity",
+          "pdfPages": [
+            {
+              "start": 228,
+              "end": 229
+            }
+          ]
+        }
+      ],
+      "actualReadLogIds": [
+        "t7.family.read.baby-family",
+        "t7.family.read.baby-visual"
+      ],
+      "actualReadLog": {
+        "path": "content/18-36/source-work/family-author/READ_LOG.json",
+        "sha256": "b9fc0dcf2d2408d17bde9efcf2a00f60c8f7b9a92582dcc1c78a7881d931cf73"
+      },
+      "editorialQualifications": "Shared adult/family perspective applies as twins grow. No assumption of identical abilities or needs, no expectation that newborns take deliberate turns, and no convenience guarantee.",
+      "heldDetails": [
+        "Specific weaning-table seating remains unselected and sensitive. The waiting-twin example is not an instruction to delay an urgent need. External book recommendation is an inventory item only."
+      ],
+      "illustrationImplications": "No image proposed. Family/adult perspective does not authorize infant posture, handling, food, equipment or child access to adult tools. Any later illustration needs exact age and action review.",
+      "reviews": []
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "author": {
+    "task": "/root/t7_care_connection_author",
+    "date": "2026-09-10",
+    "reasoning": "xhigh",
+    "workflow": "lean-v1"
+  },
+  "entries": [
+    {
+      "id": "family-declining-help",
+      "kind": "everyday-situation",
+      "title": "When your child turns down help",
+      "summary": "During an activity, an offer of help can be refused. Davies makes room for the frustration and anger that may follow, and for another chance to try later.",
+      "cue": "Your child is struggling with an activity but pushes away your hand or says they do not want help.",
+      "detail": [
+        "Davies suggests offering a small demonstration or a short cue when a child is about to give up. If they welcome it, the adult helps with that part and then sees how the child continues.",
+        "Sometimes the child refuses every offer and becomes angry. In the book’s account, that feeling is allowed too; the activity can wait for another attempt. The child need not accept a demonstration or finish the task now.",
+        "This discussion concerns an activity the child is exploring. Supervision still applies to small parts and sharp objects, and the adult’s responsibility for necessary care or immediate protection remains."
+      ],
+      "references": [
+        {
+          "id": "family-declining-help.ref.1",
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 177,
+              "end": 178
+            }
+          ],
+          "section": "Building concentration / Dealing with frustration",
+          "locator": "Interest, proportionate help, slow demonstration or verbal cue, refusal and another attempt"
+        },
+        {
+          "id": "family-declining-help.ref.2",
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            }
+          ],
+          "section": "Be careful with small parts and sharp objects",
+          "locator": "Supervision for activities with small parts or sharp objects"
+        },
+        {
+          "id": "family-declining-help.ref.3",
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 131,
+              "end": 133
+            }
+          ],
+          "section": "Setting limits / Follow through with kind and clear action",
+          "locator": "Necessary care and immediate protection remain adult responsibilities"
+        }
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "entryId": "family-declining-help",
+      "revision": "r01",
+      "author": "/root/t7_care_connection_author",
+      "date": "2026-09-10",
+      "workflow": "lean-v1",
+      "sourceFingerprint": {
+        "sourceId": "toddler-2019",
+        "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b",
+        "physicalPdfPages": 257
+      },
+      "sourceRefs": [
+        {
+          "id": "family-declining-help.ref.1",
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 177,
+              "end": 178
+            }
+          ],
+          "section": "Building concentration / Dealing with frustration",
+          "locator": "Interest, proportionate help, slow demonstration or verbal cue, refusal and another attempt"
+        },
+        {
+          "id": "family-declining-help.ref.2",
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            }
+          ],
+          "section": "Be careful with small parts and sharp objects",
+          "locator": "Supervision for activities with small parts or sharp objects"
+        },
+        {
+          "id": "family-declining-help.ref.3",
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 131,
+              "end": 133
+            }
+          ],
+          "section": "Setting limits / Follow through with kind and clear action",
+          "locator": "Necessary care and immediate protection remain adult responsibilities"
+        }
+      ],
+      "evidence": [
+        {
+          "id": "toddler.care.ev.kind-follow-through",
+          "revision": "1-fefe4fbbcfb3",
+          "file": "research/toddler/care-limits/EVIDENCE.jsonl",
+          "fileSha256": "0e890955c0b3f304057e914e0fadc83dcf391cfa79cb430a965e9d54b2aa2c9b",
+          "recordSha256": "e269d8b2321108584f901e5d21e66214b3389436a8a37365c389d406a1570063",
+          "recordHashMethod": "SHA256 of exact JSONL record bytes excluding trailing LF",
+          "sourceIdeaIds": [
+            "toddler.care.idea.kind-follow-through"
+          ],
+          "researchStatus": "research-ready",
+          "qualifications": [
+            "Examples include a diaper change, helping remove a thrown-food plate or leaving the park.",
+            "She describes gentle touch/handling, brief explanation, getting to the child’s level and first-person limit statements.",
+            "A known limit need not receive lengthy renegotiation each time; laughter does not remove the limit.",
+            "Food-specific qualifications155 and consent/safety interplay173-176 stay with reuse."
+          ],
+          "openQuestions": []
+        },
+        {
+          "id": "toddler.care.ev.danger-intervention",
+          "revision": "1-5b7498a63aa2",
+          "file": "research/toddler/care-limits/EVIDENCE.jsonl",
+          "fileSha256": "0e890955c0b3f304057e914e0fadc83dcf391cfa79cb430a965e9d54b2aa2c9b",
+          "recordSha256": "4a5a1e167e38876c2297071c6cbefd08ba26fc43af4a43af036a39903b5c4882",
+          "recordHashMethod": "SHA256 of exact JSONL record bytes excluding trailing LF",
+          "sourceIdeaIds": [
+            "toddler.care.idea.danger-intervention"
+          ],
+          "researchStatus": "research-ready",
+          "qualifications": [
+            "Examples include heat, outlets, road access, going too far unattended and climbing by windows.",
+            "If the child returns repeatedly, consider changing access or removing the hazard.",
+            "The source’s box-over-outlet, couch-before-wires and locked-room cabinet examples lack implementation specifications; they are not blanket home-safety approvals."
+          ],
+          "openQuestions": []
+        },
+        {
+          "id": "toddler.care.ev.concentration-interest",
+          "revision": "1-f73625c36e53",
+          "file": "research/toddler/care-limits/EVIDENCE.jsonl",
+          "fileSha256": "0e890955c0b3f304057e914e0fadc83dcf391cfa79cb430a965e9d54b2aa2c9b",
+          "recordSha256": "41c13a0c082ac2b659e6b94276cddec77b81e4a1e81ed4f0f6f20a25055bede0",
+          "recordHashMethod": "SHA256 of exact JSONL record bytes excluding trailing LF",
+          "sourceIdeaIds": [
+            "toddler.care.idea.concentration-interest"
+          ],
+          "researchStatus": "research-ready",
+          "qualifications": [
+            "Observe what is repeated; allow another turn and provide related challenge.",
+            "Offer fewer activities and rotate ones too easy/hard or persistently unused/thrown.",
+            "Respond when the child looks for adult contact; language-rich conversation can happen at other daily moments.",
+            "Give small help near giving up, then step back; a key/box example illustrates partial help.",
+            "A mat or table can support focus before work begins, but do not interrupt a child already concentrating at the shelf to move them.",
+            "Picking up small objects/collecting rocks examples retain supervision39."
+          ],
+          "openQuestions": []
+        },
+        {
+          "id": "toddler.care.ev.frustration-help",
+          "revision": "1-bc8eee562f7e",
+          "file": "research/toddler/care-limits/EVIDENCE.jsonl",
+          "fileSha256": "0e890955c0b3f304057e914e0fadc83dcf391cfa79cb430a965e9d54b2aa2c9b",
+          "recordSha256": "d50acb28e7d499c34909039ca6991cce9bae167c8e8ee80e5ee80e2d2f13a173",
+          "recordHashMethod": "SHA256 of exact JSONL record bytes excluding trailing LF",
+          "sourceIdeaIds": [
+            "toddler.care.idea.frustration-help"
+          ],
+          "researchStatus": "research-ready",
+          "qualifications": [
+            "Examples: slowly demonstrate turning a puzzle piece or suggest turning it.",
+            "The child may refuse help and feel angry; trying later is allowed.",
+            "Rosary-bead anecdote explains adult restraint, not a child activity.",
+            "Pausing does not apply to immediate danger194."
+          ],
+          "openQuestions": []
+        }
+      ],
+      "authorReadLogIds": [
+        "care-author.read.original-text.r01"
+      ],
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "qualifications": [
+        "The refusal concerns an explored activity, not all necessary care or protection. No need to complete the activity or accept a lesson in the moment. Frustration and anger are not failure; help stays available."
+      ],
+      "heldDetails": [],
+      "illustrationImplications": "No image required. Any future image must not imply the adult forces a hand into a task or withdraws needed care.",
+      "sensitivity": "Ordinary activity support with explicit care/protection boundary; no therapeutic claims.",
+      "priorMeaningSearch": {
+        "registryRevision": "r08",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5",
+        "comparedEntryIds": [
+          "shared-participation-help",
+          "toddler-puzzles",
+          "toddler-getting-dressed"
+        ],
+        "decision": "Those approved bodies retain offered partial help and practice, but not the complete activity-refusal, anger and later-attempt variant in Toddler178. Task7 coordinator assigned this single shared canonical body; Task6 confirmed no competing body."
+      }
+    }
+  ]
+}

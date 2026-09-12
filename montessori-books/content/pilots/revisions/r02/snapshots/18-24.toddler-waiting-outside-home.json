@@ -1,0 +1,104 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-waiting-outside-home",
+        "kind": "everyday-situation",
+        "title": "When waiting asks too much",
+        "summary": "A waiting room or café can leave little room for a toddler’s movement and conversation. Davies suggests preparing something to share and adjusting what you expect of the visit.",
+        "cue": "Your child is restless while the adults need to wait.",
+        "detail": [
+          "Her examples include favorite books, watching the activity outside an airport window, or a small walk together while waiting in a café.",
+          "The adult may need to be available for the child instead of reading or making a call. What helps can change during the visit; the aim is to support the child through the wait."
+        ],
+        "references": [
+          {
+            "id": "toddler-waiting-outside-home.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Managing expectations",
+            "locator": "Waiting rooms/cafés/travel, movement, shared noticing and preparation",
+            "pdfPages": [
+              {
+                "start": 125,
+                "end": 126
+              }
+            ]
+          },
+          {
+            "id": "toddler-waiting-outside-home.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "Screen time / What to do instead",
+            "locator": "Books, shared activity and café walk",
+            "pdfPages": [
+              {
+                "start": 181,
+                "end": 181
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "18-24.toddler-waiting-outside-home",
+        "entryId": "toddler-waiting-outside-home",
+        "ageId": "18-24",
+        "topicIds": [
+          "connection-feelings",
+          "everyday-care"
+        ],
+        "ageContext": {
+          "bookAge": "Davies discusses toddlers of around 1–3 years.",
+          "readiness": "Use this when the situation arises; there is no expected starting age."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "18–24 months",
+        "kindLabel": "An everyday situation",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          },
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 125–126"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 181"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "8923827937a53aa1f2b390bc7f13f6b3eae3d92f33f9f6e60e021a2603d1a1c1",
+  "artContextSha256": null,
+  "publicProjectionSha256": "e94f316e3d6937945ddad3513655fe7c4098224d55924c452e225ae39c4ad782",
+  "provenance": {
+    "draft": {
+      "path": "content/pilots/drafts/toddler/draft-r02.json",
+      "sha256": "f39ed756bf39cf2962b21557a05828838069d1037ca3c4fcca8e1667640f45b7"
+    },
+    "revision": "r02",
+    "evidenceFile": "content/pilots/drafts/toddler/draft-r02.json",
+    "note": "Full private provenance and actual author read logs remain in this immutable draft and its handoff."
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "author": {
+    "task": "/root",
+    "reasoning": "xhigh"
+  },
+  "entries": [
+    {
+      "id": "family-interests-without-gender-labels",
+      "kind": "perspective",
+      "title": "Let interests grow beyond gender labels",
+      "summary": "The Baby authors invite adults to offer language and opportunities that do not limit a child’s interests by gender. They suggest seeing each child as capable.",
+      "cue": "When choosing words, clothes, books, or things your child might explore.",
+      "detail": [
+        "Notice whether a quality or activity is being offered only to one gender. The book gives examples of caring boys, strong girls, boys interested in dolls, and girls interested in vehicles. These are possibilities, not interests a child has to show.",
+        "The authors also suggest describing a temporary difficulty instead of making it the child’s identity. What is happening in this moment need not become a label for who they are."
+      ],
+      "references": [
+        {
+          "id": "family-interests-without-gender-labels.ref",
+          "sourceId": "baby-2021",
+          "section": "Framing their view of the world",
+          "locator": "Gender, opportunities and descriptions of temporary struggles",
+          "pdfPages": [
+            {
+              "start": 113,
+              "end": 113
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "entryId": "family-interests-without-gender-labels",
+      "author": "/root",
+      "date": "2026-09-10",
+      "revision": "r01",
+      "sourceIdeaIds": [
+        "baby.idea.ch05-labels-and-gender"
+      ],
+      "evidenceIds": [
+        "baby.ev.ch05-labels-and-gender"
+      ],
+      "researchEvidence": [
+        {
+          "id": "baby.ev.ch05-labels-and-gender",
+          "revision": "1",
+          "recordSha256": "c72143f8f1849c900a8814230745b63691f60548b464fe33028f062e6e41ca2f",
+          "path": "research/baby/EVIDENCE.jsonl",
+          "fileSha256": "aa71ee9471e24b77c6d71901cd6d8b84756aea23b0299ba1cb74c197d1206129",
+          "sourceIdeaIds": [
+            "baby.idea.ch05-labels-and-gender"
+          ]
+        }
+      ],
+      "sourceLedgerInputs": [
+        {
+          "path": "research/baby/COVERAGE_LEDGER.jsonl",
+          "sha256": "b30e5c55e2364af2762aa7af49a5e752908bdb3481779e61fc39762a05432a0f"
+        },
+        {
+          "path": "research/toddler/COVERAGE_LEDGER.jsonl",
+          "sha256": "dff004b408d6a74d83b41560d5aaf0fda7e3ec7c819a03b11605344e7b2074e2"
+        }
+      ],
+      "actualReadLogIds": [
+        "t7.root.new-family.family-interests-without-gender-labels"
+      ],
+      "actualReadLogPaths": [
+        "content/18-36/source-work/root-family-READ_LOG-r01.json"
+      ],
+      "fullSourceReferences": [
+        {
+          "id": "family-interests-without-gender-labels.ref",
+          "sourceId": "baby-2021",
+          "section": "Framing their view of the world",
+          "locator": "Gender, opportunities and descriptions of temporary struggles",
+          "pdfPages": [
+            {
+              "start": 113,
+              "end": 113
+            }
+          ]
+        }
+      ],
+      "contextRead": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 111,
+              "end": 114
+            }
+          ]
+        }
+      ],
+      "sourceFingerprints": [
+        {
+          "sourceId": "baby-2021",
+          "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+        },
+        {
+          "sourceId": "toddler-2019",
+          "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b"
+        }
+      ],
+      "editorialQualifications": [
+        "Source brain-sex/differentiation timing assertion is separately excluded; this entry retains the adult language/opportunity perspective only."
+      ],
+      "heldDetails": [],
+      "omittedDetails": [
+        "Source brain-sex/differentiation timing assertion is separately excluded; this entry retains the adult language/opportunity perspective only."
+      ],
+      "illustrationImplications": "No illustration needed. Do not imply child performance, demographic preferences, a screen setup, or an independence test. Any later image needs separate exact context review.",
+      "sensitivity": "Attributed source perspective; causal developmental assertions omitted."
+    }
+  ]
+}

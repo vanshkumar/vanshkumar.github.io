@@ -1,0 +1,113 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "shared-observe",
+        "kind": "invitation",
+        "title": "Watch what is happening",
+        "summary": "Notice the movements, sounds, and repeated interests you can actually see. Observation can help you decide whether to make room, offer help, or change something nearby.",
+        "cue": "When you are unsure what your child is interested in or how much help they need.",
+        "detail": [
+          "Watch what your child reaches toward, returns to, or spends time exploring. Notice their expressions and sounds, and what happens around them. Try to describe these details before deciding what they mean.",
+          "You can do this while you are already together. Written notes are one option; both books also make room for simply watching when your hands are full.",
+          "Notice your own words and reactions, too. The books use observation to understand an individual child and respond to them, including stepping in when help or protection is needed."
+        ],
+        "principle": {
+          "id": "principle.observe-before-interpreting",
+          "text": "Start with what you can see, then consider what it might mean."
+        },
+        "references": [
+          {
+            "id": "shared.ref.baby.observation",
+            "sourceId": "baby-2021",
+            "section": "Montessori principles for babies / Observation",
+            "locator": "Observation purposes and complete checklist, including self-observation and informal observation",
+            "pdfPages": [
+              {
+                "start": 33,
+                "end": 37
+              }
+            ]
+          },
+          {
+            "id": "shared.ref.toddler.observation",
+            "sourceId": "toddler-2019",
+            "section": "Observation",
+            "locator": "Factual description, full observation checklist, help/protective intervention and optional writing",
+            "pdfPages": [
+              {
+                "start": 29,
+                "end": 29
+              },
+              {
+                "start": 105,
+                "end": 106
+              },
+              {
+                "start": 192,
+                "end": 192
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "18-24.shared-observe",
+        "entryId": "shared-observe",
+        "ageId": "18-24",
+        "topicIds": [
+          "you-family",
+          "play-discovery"
+        ]
+      },
+      "displayContext": {
+        "ageLabel": "18–24 months",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "What’s underneath",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "you-family",
+            "label": "For you & your family"
+          },
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 33–37"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 29, 105–106, 192"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "c57fc57d97e1281ea6da427b9a194a2b5d52795eeb32338800d91ccfce43e88c",
+  "artContextSha256": null,
+  "publicProjectionSha256": "e8e2dd7976bca1a8f830fdeef2e59b98f2b97ba3550b1ce6004e6b4161680a2d",
+  "provenance": {
+    "draft": {
+      "path": "content/pilots/drafts/shared/draft-r02.json",
+      "sha256": "04720cdd2997dc461a619234d74bea952b2fd3c388a49b326dc282f065f39b06"
+    },
+    "revision": "r04",
+    "evidenceFile": "content/pilots/drafts/shared/draft-r02.json",
+    "note": "Full private provenance and actual author read logs remain in this immutable draft and its handoff."
+  }
+}

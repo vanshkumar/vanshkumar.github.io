@@ -1,0 +1,249 @@
+{
+  "author": {
+    "task": "/root/t7_family_author",
+    "reasoning": "xhigh",
+    "date": "2026-09-10"
+  },
+  "entries": [
+    {
+      "id": "family-selecting-parenting-advice",
+      "kind": "perspective",
+      "title": "When parenting advice feels like too much",
+      "summary": "The Baby authors suggest choosing a few useful sources when parenting information becomes overwhelming. Both books pair learning with observing your own child and seeking support for questions about their development.",
+      "cue": "When another book, course, or opinion leaves you with more to keep up with.",
+      "detail": [
+        "Learning can begin with a question about the child in front of you. The Baby authors include observation alongside reading and other resources, and explicitly say that it is possible to limit how much information you take in.",
+        "Davies encourages learning about a child’s differences and getting the support they need. Courses, podcasts, and books are possibilities in her account; her adult-preparation chapter offers practices that may fit some families and not others.",
+        "Neither list has to become your reading assignment. The books also make room for learning about things you enjoy beyond parenting."
+      ],
+      "references": [
+        {
+          "id": "family.ref.select-advice",
+          "sourceId": "baby-2021",
+          "section": "Intellectual preparation",
+          "locator": "Learning through observation and selecting a few resources when choices overwhelm",
+          "pdfPages": [
+            {
+              "start": 235,
+              "end": 236
+            }
+          ]
+        },
+        {
+          "id": "family.ref.learning",
+          "sourceId": "toddler-2019",
+          "section": "Preparation of the adult; Cultivate a learning mind-set",
+          "locator": "Personal-practice framing, individual development, needed support and varied interests",
+          "pdfPages": [
+            {
+              "start": 187,
+              "end": 187
+            },
+            {
+              "start": 189,
+              "end": 189
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "entryId": "family-selecting-parenting-advice",
+      "revision": "r01",
+      "author": "/root/t7_family_author",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "state": "authored-awaiting-independent-source-and-tone-reviews",
+      "sourceIdeaIds": [
+        "baby.idea.adult-selective-learning",
+        "toddler.family.idea.learning-mindset"
+      ],
+      "evidenceIds": [
+        "baby.ev.adult-selective-learning",
+        "toddler.family.ev.learning-mindset"
+      ],
+      "sourceFingerprints": [
+        {
+          "sourceId": "baby-2021",
+          "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+          "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+        },
+        {
+          "sourceId": "toddler-2019",
+          "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/The Montessori Toddler - Simone Davies _Worldfreebooks.com_.pdf",
+          "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b"
+        }
+      ],
+      "researchEvidence": [
+        {
+          "id": "baby.ev.adult-selective-learning",
+          "path": "research/baby/EVIDENCE.jsonl",
+          "line": 365,
+          "fileSha256": "aa71ee9471e24b77c6d71901cd6d8b84756aea23b0299ba1cb74c197d1206129",
+          "revision": "1:e6135308d25be0fc",
+          "recordSha256": "5b5c0651903fe8ad272f0d7352d6f1dafae04521d0d90391f823f158b561e629",
+          "sourceIdeaIds": [
+            "baby.idea.adult-selective-learning"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "baby-2021",
+              "pdfPages": [
+                {
+                  "start": 235,
+                  "end": 236
+                }
+              ],
+              "section": "8 Preparation of the adult / Intellectual preparation",
+              "locator": "The authors encourage learning about development and observing one’s child while limiting overwhelming advice and making space for interests outside parenting",
+              "printedPages": null,
+              "printedVerification": "not-applicable",
+              "contextRead": [],
+              "readLogIds": [
+                "baby.read.care.text-232-242",
+                "baby.read.care.visual-layouts"
+              ]
+            }
+          ],
+          "qualifications": [
+            "Podcasts,seminars,workshops are examples; select a few resonant resources.",
+            "Instrument,sport or non-parenting reading are personal possibilities,not requirements or new cited source base."
+          ],
+          "ageBasis": {
+            "bookStated": "not-stated",
+            "ageLocator": null,
+            "readiness": "not-stated",
+            "readinessLocator": null,
+            "editorialBrowsingBands": [],
+            "placementRationale": "No band assigned in section research; later synthesis must retain source age/readiness separately."
+          },
+          "status": "research-ready",
+          "openQuestions": []
+        },
+        {
+          "id": "toddler.family.ev.learning-mindset",
+          "path": "research/toddler/EVIDENCE.jsonl",
+          "line": 330,
+          "fileSha256": "ad7d7b0132a4f1389d41f1f393ec01d88cab415c54913dc6a198bd2e24123440",
+          "revision": "1",
+          "recordSha256": "7e5ed6b0985ca87c185ba9ce69b8a69155d9d05a72a5c168079b5da0c351bcf8",
+          "sourceIdeaIds": [
+            "toddler.family.idea.learning-mindset"
+          ],
+          "sourceRefs": [
+            {
+              "sourceId": "toddler-2019",
+              "pdfPages": [
+                {
+                  "start": 189,
+                  "end": 189
+                }
+              ],
+              "section": "Chapter8: Being the adult / Cultivate a learning mind-set",
+              "locator": "Complete six-item learning list",
+              "printedPages": null,
+              "printedVerification": "not-yet-verified",
+              "contextRead": {
+                "pdfPages": [
+                  {
+                    "start": 187,
+                    "end": 187
+                  },
+                  {
+                    "start": 188,
+                    "end": 188
+                  },
+                  {
+                    "start": 227,
+                    "end": 228
+                  }
+                ],
+                "description": "These exact adjacent/parent/internal-target pages were read; physical PDF locators are authoritative."
+              },
+              "readLogIds": [
+                "toddler.family.read.text.187-194",
+                "toddler.family.read.visual.187-190",
+                "toddler.family.read.text.221-230",
+                "toddler.family.read.visual.227-230"
+              ]
+            }
+          ],
+          "qualifications": [
+            "Courses, books and intuition are suggestions, not substitutes for support or requirements.",
+            "The list explicitly preserves the adult’s own rich life."
+          ],
+          "ageBasis": {
+            "sourceAge": {
+              "wording": "not-stated",
+              "locator": null
+            },
+            "readiness": {
+              "wording": "not-stated",
+              "locator": null
+            },
+            "editorialBrowsingBands": [
+              "12-18",
+              "18-24",
+              "2-3"
+            ],
+            "placementRationale": "Adult/family candidate in the source toddler context; younger-age reuse requires Baby support and later editorial review.",
+            "sourceBookContext": {
+              "wording": "toddlers around 1 to 3 years",
+              "locator": "PDF14 final note",
+              "readLogIds": [
+                "toddler.family.read.context.additional"
+              ]
+            }
+          },
+          "status": "research-ready",
+          "openQuestions": []
+        }
+      ],
+      "fullSourceReferences": [
+        {
+          "id": "family.ref.select-advice",
+          "sourceId": "baby-2021",
+          "section": "Intellectual preparation",
+          "locator": "Learning through observation and selecting a few resources when choices overwhelm",
+          "pdfPages": [
+            {
+              "start": 235,
+              "end": 236
+            }
+          ]
+        },
+        {
+          "id": "family.ref.learning",
+          "sourceId": "toddler-2019",
+          "section": "Preparation of the adult; Cultivate a learning mind-set",
+          "locator": "Personal-practice framing, individual development, needed support and varied interests",
+          "pdfPages": [
+            {
+              "start": 187,
+              "end": 187
+            },
+            {
+              "start": 189,
+              "end": 189
+            }
+          ]
+        }
+      ],
+      "actualReadLogIds": [
+        "t7.family.read.baby-family",
+        "t7.family.read.toddler-family",
+        "t7.family.read.toddler-visual"
+      ],
+      "actualReadLog": {
+        "path": "content/18-36/source-work/family-author/READ_LOG.json",
+        "sha256": "b9fc0dcf2d2408d17bde9efcf2a00f60c8f7b9a92582dcc1c78a7881d931cf73"
+      },
+      "editorialQualifications": "Retains the otherwise missing limit on information, without discouraging needed professional help or importing the recommended external resources. Adult-interest overlap remains in shared-something-for-you.",
+      "heldDetails": [],
+      "illustrationImplications": "No image proposed. Family/adult perspective does not authorize infant posture, handling, food, equipment or child access to adult tools. Any later illustration needs exact age and action review.",
+      "reviews": []
+    }
+  ]
+}

@@ -1,0 +1,378 @@
+{
+  "id": "toddler-practical-home-tone-r07",
+  "reviewer": {
+    "task": "/root/pilot_practical_tone_r05",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Renewed independent tone judgment for exactly the corrected r07 toddler-food-preparation placement at 18–24 months, including both topic rows, full detail, age/context, references and shared visible copy. No art or opening surface.",
+  "independence": "This reviewer authored the prior independent r05 tone report and personally completed its linked original-page reads. No source-role or other reviewer report was read for this review, and no other reader’s evidence was borrowed.",
+  "manifest": {
+    "path": "content/pilots/revisions/r07/MANIFEST.json",
+    "sha256": "8ccd1512bf642f7983e8a88aa82aa1e69c48738600b35b2b9e9fb0d31fa096ec"
+  },
+  "authorInput": {
+    "path": "content/pilots/drafts/toddler/draft-r07.json",
+    "sha256": "4a706fa05e0b54b18f966ea72d52b14db6343c7720f725bbf35cee1b27060d2c",
+    "verification": "Matches assigned author fingerprint and manifest; selected public entry and placement projections match the r07 snapshot."
+  },
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r07/RENDERED_SURFACES.json",
+    "sha256": "4d967d999c598c9e23897edc66ba504ce6e3b23ed28603128d6ec20b2b103451",
+    "mode": "Actual HomeStudy server render; development-only visual-study navigation is present in this local review and omitted from production.",
+    "verification": "Personally read both selected topic-row texts and HTML and the complete selected rendered entry text; verified concordance with the snapshot."
+  },
+  "renderer": {
+    "path": "src/HomeStudy.jsx",
+    "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c",
+    "mode": "full-source-read",
+    "description": "Personally reread the full actual renderer in this r07 review, including TopicBrowser, EntryReading, age controls, shared headings, references, footer and colophon."
+  },
+  "rendererIdentityChecks": [
+    {
+      "path": "src/HomeStudy.jsx",
+      "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c",
+      "matchesManifest": true
+    },
+    {
+      "path": "src/home.css",
+      "sha256": "55de72c5b21d2f1a3ead85c5975febd09ac3135fcbc2219e6672a13f4786a6e1",
+      "matchesManifest": true
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "503e980cdf9ba4728adf678bb27bc4cd4095d1ae131c3c02181cc4b9a4df22ce",
+      "matchesManifest": true
+    },
+    {
+      "path": "src/guide/catalog.js",
+      "sha256": "d8d30a17c5f1b1c99ed68764f3f412cf99b48f55d09bf528313f0df1439da71c",
+      "matchesManifest": true
+    },
+    {
+      "path": "src/concepts.js",
+      "sha256": "cb086bcc98ad4fde98677a03cb42a849ae5993405dd886a71e7642ca079a3e4a",
+      "matchesManifest": true
+    }
+  ],
+  "sourceFile": {
+    "sourceId": "toddler-2019",
+    "path": "The Montessori Toddler - Simone Davies _Worldfreebooks.com_.pdf",
+    "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b",
+    "physicalPages": 257,
+    "verification": "Original PDF hash and physical-page count rechecked for r07; source is unchanged."
+  },
+  "priorPersonalReading": {
+    "path": "content/pilots/reviews/final/toddler-practical-home-tone-r05.json",
+    "sha256": "382052632725470525df5894eae5704a8b2da62a3d737337843764ce2cddd2b7",
+    "reviewId": "toddler-practical-home-tone-r05.18-24.toddler-food-preparation",
+    "readLogIds": [
+      "tone.toddler.practical-home-r05.framing",
+      "tone.toddler.practical-home-r05.adult-capacity",
+      "tone.toddler.practical-home-r05.practical-life",
+      "tone.toddler.practical-home-r05.practical-visual",
+      "tone.toddler.practical-home-r05.home",
+      "tone.toddler.practical-home-r05.home-visual",
+      "tone.toddler.practical-home-r05.daily-participation",
+      "tone.toddler.practical-home-r05.appendix",
+      "tone.toddler.practical-home-r05.appendix-visual"
+    ],
+    "use": "Retain only this reviewer’s original source reading. Tone judgment is renewed against the complete current r07 public surfaces."
+  },
+  "readLogs": [
+    {
+      "id": "tone.toddler.practical-home-r05.framing",
+      "reader": "/root/pilot_practical_tone_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 12,
+          "end": 12
+        },
+        {
+          "start": 19,
+          "end": 19
+        },
+        {
+          "start": 29,
+          "end": 29
+        },
+        {
+          "start": 33,
+          "end": 40
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text: starting with existing resources; no requirement to do every activity or maintain a perfect home; individual development; appendix ages as indications; activity characteristics, partial sequences and flower-arranging example; demonstration, choice, concentration, shared putting away, modifying materials, use what is available, small-part/sharp-object supervision and complete activity setup.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-practical-home-tone-r05.json",
+        "sha256": "382052632725470525df5894eae5704a8b2da62a3d737337843764ce2cddd2b7",
+        "readLogId": "tone.toddler.practical-home-r05.framing"
+      },
+      "retentionNote": "This same reviewer personally completed the original reading recorded here during r05. Retained reading evidence; no claim that these pages were all reread for r07."
+    },
+    {
+      "id": "tone.toddler.practical-home-r05.practical-life",
+      "reader": "/root/pilot_practical_tone_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 48,
+          "end": 52
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete practical-life unit, its continuation and two-page age chart: shared work is slower, supervision and help, manageable amounts, one or two steps under two, stop before overwhelmed, household and shopping examples, budget framing, age-group columns and their introduction.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-practical-home-tone-r05.json",
+        "sha256": "382052632725470525df5894eae5704a8b2da62a3d737337843764ce2cddd2b7",
+        "readLogId": "tone.toddler.practical-home-r05.practical-life"
+      },
+      "retentionNote": "This same reviewer personally completed the original reading recorded here during r05. Retained reading evidence; no claim that these pages were all reread for r07."
+    },
+    {
+      "id": "tone.toddler.practical-home-r05.practical-visual",
+      "reader": "/root/pilot_practical_tone_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 51,
+          "end": 52
+        },
+        {
+          "start": 63,
+          "end": 64
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected and read separate original-page renders at 1500 pixels high. Confirmed the 12–18-month versus 18-month–3-year and 3–4-year columns; the seven numbered practical-life photographs on PDF 63; and every corresponding explanation on PDF 64. Food photograph No. 2 shows a peeler, apple cutter and apple; its explanation gives adult assistance and apple cutting from two years. No. 6 shows cut flowers and a vase, with the facing explanation describing the jug/funnel/spill setup from 18 months. These are source-page inspections, not app-art approvals.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-practical-home-tone-r05.json",
+        "sha256": "382052632725470525df5894eae5704a8b2da62a3d737337843764ce2cddd2b7",
+        "readLogId": "tone.toddler.practical-home-r05.practical-visual"
+      },
+      "retentionNote": "This same reviewer personally completed the original reading recorded here during r05. Retained reading evidence; no claim that these pages were all reread for r07."
+    },
+    {
+      "id": "tone.toddler.practical-home-r05.home",
+      "reader": "/root/pilot_practical_tone_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 75,
+          "end": 85
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text for Montessori-style spaces, the room-by-room unit and every room, nonprescriptive adaptation and different household needs, kitchen access alternatives and sharp-knife qualification, indoor/pot gardening, starter-set caption, clutter, cozy and culturally personal homes, making life easier for adults, sharing and privacy, small spaces and the home-environment conclusion.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-practical-home-tone-r05.json",
+        "sha256": "382052632725470525df5894eae5704a8b2da62a3d737337843764ce2cddd2b7",
+        "readLogId": "tone.toddler.practical-home-r05.home"
+      },
+      "retentionNote": "This same reviewer personally completed the original reading recorded here during r05. Retained reading evidence; no claim that these pages were all reread for r07."
+    },
+    {
+      "id": "tone.toddler.practical-home-r05.home-visual",
+      "reader": "/root/pilot_practical_tone_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 74,
+          "end": 74
+        },
+        {
+          "start": 76,
+          "end": 81
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected and read separate readable original-page renders. Confirmed the table/chair/apple illustration on PDF 74; room headings, indentation and safety notes on PDF 76–80, including genuinely inaccessible older-child storage, kitchen table alternatives and the outside-space note; and all eight numbered starter-set illustrations and their caption on PDF 81. No visual was treated as a purchase requirement or used to infer an age.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-practical-home-tone-r05.json",
+        "sha256": "382052632725470525df5894eae5704a8b2da62a3d737337843764ce2cddd2b7",
+        "readLogId": "tone.toddler.practical-home-r05.home-visual"
+      },
+      "retentionNote": "This same reviewer personally completed the original reading recorded here during r05. Retained reading evidence; no claim that these pages were all reread for r07."
+    },
+    {
+      "id": "tone.toddler.practical-home-r05.daily-participation",
+      "reader": "/root/pilot_practical_tone_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 99,
+          "end": 102
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read all original-page text, including the complete Include the child in daily life unit, salad-leaf invitation and permission to leave, adult work/time/patience constraints, going slowly, proportionate help, small steps, acceptance, helping more when time or patience is limited, mistakes and offering assistance.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-practical-home-tone-r05.json",
+        "sha256": "382052632725470525df5894eae5704a8b2da62a3d737337843764ce2cddd2b7",
+        "readLogId": "tone.toddler.practical-home-r05.daily-participation"
+      },
+      "retentionNote": "This same reviewer personally completed the original reading recorded here during r05. Retained reading evidence; no claim that these pages were all reread for r07."
+    },
+    {
+      "id": "tone.toddler.practical-home-r05.adult-capacity",
+      "reader": "/root/pilot_practical_tone_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 187,
+          "end": 189
+        },
+        {
+          "start": 197,
+          "end": 198
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text, including nonperfect parenting and author practice rather than universal requirements; physical self-care and getting available help, including the book’s adult-depression qualification; learning and adult interests; and the complete responsibility-for-choices and learning-from-mistakes units across PDF 197–198. Used as tone framing, not as additional clinical advice.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-practical-home-tone-r05.json",
+        "sha256": "382052632725470525df5894eae5704a8b2da62a3d737337843764ce2cddd2b7",
+        "readLogId": "tone.toddler.practical-home-r05.adult-capacity"
+      },
+      "retentionNote": "This same reviewer personally completed the original reading recorded here during r05. Retained reading evidence; no claim that these pages were all reread for r07."
+    },
+    {
+      "id": "tone.toddler.practical-home-r05.appendix",
+      "reader": "/root/pilot_practical_tone_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 246,
+          "end": 251
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read all original-page text across these appendix pages, including complete age/material rows around table wiping, watering with steady walking, leaf washing/dusting, sweeping, dusting, flower arranging with stems cut to length, germinating seeds, outdoor care, and the distinct food-preparation examples and ages. Incidental handwashing rows were read as page context; no handwashing placement is reviewed.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-practical-home-tone-r05.json",
+        "sha256": "382052632725470525df5894eae5704a8b2da62a3d737337843764ce2cddd2b7",
+        "readLogId": "tone.toddler.practical-home-r05.appendix"
+      },
+      "retentionNote": "This same reviewer personally completed the original reading recorded here during r05. Retained reading evidence; no claim that these pages were all reread for r07."
+    },
+    {
+      "id": "tone.toddler.practical-home-r05.appendix-visual",
+      "reader": "/root/pilot_practical_tone_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 246,
+          "end": 251
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected and read each original appendix page separately at 1500 pixels high, preserving four-column row alignment. Confirmed watering 14+ months plus walking steadily, sweeping/dusting 16–18+ months, flowers/seeds 18+ months, already-cut flower stems, and food rows including the 18+ apple entry as distinct from PDF 64’s from-two-years explanation. These are personal full-page reads, not inherited researcher logs.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-practical-home-tone-r05.json",
+        "sha256": "382052632725470525df5894eae5704a8b2da62a3d737337843764ce2cddd2b7",
+        "readLogId": "tone.toddler.practical-home-r05.appendix-visual"
+      },
+      "retentionNote": "This same reviewer personally completed the original reading recorded here during r05. Retained reading evidence; no claim that these pages were all reread for r07."
+    },
+    {
+      "id": "tone.toddler.practical-home-r07.sharp-tool-context",
+      "reader": "/root/pilot_practical_tone_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 39,
+          "end": 39
+        },
+        {
+          "start": 77,
+          "end": 77
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally reread complete original PDF page text in this r07 review, covering adapting activities, using existing resources, supervision for small/sharp objects, the complete kitchen list, low/dining-table alternatives, the cutting-implements progression with sharper knives/cutting guide as preschoolers, and the final sharp-knife storage/readiness/supervision note."
+    },
+    {
+      "id": "tone.toddler.practical-home-r07.kitchen-visual",
+      "reader": "/root/pilot_practical_tone_r05",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 77,
+          "end": 77
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally rendered and read the original kitchen page at 1500 pixels high in this r07 review. Confirmed indentation and parent-child relationship of the Cutting implements bullets, preschooler timing, cutting guide, supervision and the separate final safety note."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "toddler-practical-home-tone-r07.18-24.toddler-food-preparation",
+      "entryId": "toddler-food-preparation",
+      "placementId": "18-24.toddler-food-preparation",
+      "snapshotPath": "content/pilots/revisions/r07/snapshots/18-24.toddler-food-preparation.json",
+      "snapshotFileSha256": "89c12a8fa588353996a50670061f7543c258991f8f47907d758b049175e953e0",
+      "textPlacementSha256": "8319fa5e2f7619ce75d76d7910f3dfc70ecfc30443a20df971e842d7075e0f18",
+      "artContextSha256": null,
+      "publicProjectionSha256": "2376cd42552cadd6e05af4f84f40d49643685db2b649d4a4dbaa3f9daf474005",
+      "readLogIds": [
+        "tone.toddler.practical-home-r05.framing",
+        "tone.toddler.practical-home-r05.practical-life",
+        "tone.toddler.practical-home-r05.practical-visual",
+        "tone.toddler.practical-home-r05.home",
+        "tone.toddler.practical-home-r05.home-visual",
+        "tone.toddler.practical-home-r05.daily-participation",
+        "tone.toddler.practical-home-r05.adult-capacity",
+        "tone.toddler.practical-home-r05.appendix",
+        "tone.toddler.practical-home-r05.appendix-visual",
+        "tone.toddler.practical-home-r07.sharp-tool-context",
+        "tone.toddler.practical-home-r07.kitchen-visual"
+      ],
+      "reviewedSurfaces": {
+        "opening": null,
+        "topicIds": [
+          "play-discovery",
+          "everyday-care"
+        ],
+        "detail": "Entire actual HomeStudy EntryReading public text, including all source references and age/display context"
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The short summary stands on its own as an attributed, supervised possibility with a concrete salad-leaf example. It creates no expectation to cut food, complete a meal or remain engaged. The cue and detail retain brief participation, adult help, leaving when interest ends and a low/dining-table alternative. The corrected final paragraph explicitly attributes sharper knives with a cutting guide to Davies’s preschooler context and retains supervision and out-of-reach storage; the general age/readiness text therefore does not become an authorization for sharper knives at 18–24 months. The separate apple example remains qualified by adult assistance and the from-two-years description, without prescribing a new cutting sequence. Warmth, manageable participation and help remain present alongside the necessary source qualifications, with no buying requirement, performance target, outside care advice or warning-sheet rewrite."
+      },
+      "artContext": null,
+      "priorReview": {
+        "path": "content/pilots/reviews/final/toddler-practical-home-tone-r05.json",
+        "sha256": "382052632725470525df5894eae5704a8b2da62a3d737337843764ce2cddd2b7",
+        "reviewId": "toddler-practical-home-tone-r05.18-24.toddler-food-preparation",
+        "relation": "Fresh exact-r07 tone judgment; prior pass does not substitute for review of changed wording."
+      }
+    }
+  ],
+  "verdictCounts": {
+    "textPlacement": {
+      "pass": 1,
+      "revise": 0,
+      "hold": 0
+    },
+    "artContext": {
+      "applicable": 0
+    }
+  },
+  "openIssueCount": 0,
+  "assessmentBoundary": "Exact r07 tone judgment only; source-role review and later modifications remain separate."
+}

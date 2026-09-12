@@ -1,0 +1,97 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-sharing",
+        "kind": "everyday-situation",
+        "title": "Sharing toys and taking turns",
+        "summary": "If another child wants what your baby is using, notice whether your baby seems ready to move on. If your baby seems to want to keep playing, you can explain that wish to the other child.",
+        "cue": "Two children want the same object.",
+        "detail": [
+          "The authors notice that a young baby may happily move to something else, or may want to hold on. Respond to what is happening rather than requiring either reaction.",
+          "When your baby reaches for another child’s object, the book models asking whether that child is finished. Waiting, watching or finding another object are possibilities while the turn continues."
+        ],
+        "references": [
+          {
+            "id": "baby-sharing.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Sharing",
+            "locator": "First-year exploration, tentative translation and reciprocal turn-taking",
+            "pdfPages": [
+              {
+                "start": 214,
+                "end": 215
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "3-6.baby-sharing",
+        "entryId": "baby-sharing",
+        "ageId": "3-6",
+        "topicIds": [
+          "connection-feelings",
+          "play-discovery"
+        ],
+        "ageContext": {
+          "readiness": "When your baby is holding something another child wants. Understanding sharing is not expected."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "3–6 months",
+        "kindLabel": "An everyday situation",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          },
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 214–215"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "341f3c3ba1fe5b4653598c64a56722560d31a89aa3500c53fe4ca0ec1c41e9b7",
+  "artContextSha256": null,
+  "publicProjectionSha256": "74b4d769c48db38acdd7cc4464dfc734f5d48e3ea617d140ddbd56eb3cd2a24b",
+  "provenance": {
+    "revision": "r01",
+    "placementDraft": {
+      "path": "content/birth-6/drafts/care-r01.json",
+      "sha256": "26593e72e36d37bd0a30292301c2cdd4de2c1afebed740fffbfa42850831d572"
+    },
+    "canonical": {
+      "entryId": "baby-sharing",
+      "canonicalEntrySha256": "4e7d06d1d8858c0750593af9d0b12ddcf418d9a1aad78ef673bf5d9a587297b4",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/28",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/28"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

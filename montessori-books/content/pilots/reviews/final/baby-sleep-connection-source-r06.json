@@ -1,0 +1,243 @@
+{
+  "id": "baby-sleep-connection-source-r06",
+  "reviewer": {
+    "task": "/root/pilot_baby_sleep_source_r06",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Independent source review of exactly 6-9.baby-pacifier and 6-9.baby-sharing in frozen r06: complete entry and placement projections, both topic rows for each entry, full rendered detail text, shared display framing, references, and actual HomeStudy renderer. Both placements are unillustrated and neither is an opening.",
+  "independence": "This reviewer is distinct from the draft author. No prior or other reviewer findings, reports, or verdicts were read before reaching this judgment. Complete text was personally read from fresh extraction of the fingerprinted original PDF, with readable original-page visual checks. Research caches and other readers' logs were not used as source-reading evidence. No outside care advice was introduced.",
+  "manifest": {
+    "path": "content/pilots/revisions/r06/MANIFEST.json",
+    "sha256": "a72d8cb63ccc81b90f6a24fd8a1742572bd14eeb7ca08de5b0508f02ab3c4731"
+  },
+  "authorDraft": {
+    "path": "content/pilots/drafts/baby/draft-r04.json",
+    "sha256": "1124334c410bf59fc445f739fffbfbaf3fbd2850415721a39f427fc7a8213633",
+    "authorTask": "/root/baby_pilot_draft",
+    "readScope": "Only the two assigned entries and their placements, plus author/file identity."
+  },
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r06/RENDERED_SURFACES.json",
+    "sha256": "6d02e4f0edc1fa01046ad3fce232dfd4bd85179955a4a51bd58996a6180e21e0",
+    "readScope": "The selected baby-pacifier and baby-sharing surface records: openingText null, both topicRows with HTML and text, and full entryText."
+  },
+  "renderer": [
+    {
+      "path": "src/HomeStudy.jsx",
+      "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c",
+      "inspection": "Complete source read, including TopicBrowser summary-only rows, EntryReading summary/cue/age/detail/reference order, image conditions, and shared public framing."
+    },
+    {
+      "path": "src/home.css",
+      "sha256": "55de72c5b21d2f1a3ead85c5975febd09ac3135fcbc2219e6672a13f4786a6e1",
+      "inspection": "File fingerprint verified against manifest."
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "503e980cdf9ba4728adf678bb27bc4cd4095d1ae131c3c02181cc4b9a4df22ce",
+      "inspection": "File fingerprint verified against manifest."
+    },
+    {
+      "path": "src/guide/catalog.js",
+      "sha256": "d8d30a17c5f1b1c99ed68764f3f412cf99b48f55d09bf528313f0df1439da71c",
+      "inspection": "Complete source read; book, topic, kind and PDF-page labels checked."
+    },
+    {
+      "path": "src/concepts.js",
+      "sha256": "cb086bcc98ad4fde98677a03cb42a849ae5993405dd886a71e7642ca079a3e4a",
+      "inspection": "File fingerprint verified against manifest; assigned age label read in frozen projection and rendered surface."
+    }
+  ],
+  "sourceIdentity": {
+    "sourceId": "baby-2021",
+    "path": "the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+    "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f",
+    "fileSizeBytes": 10117663,
+    "physicalPageCount": 310,
+    "verification": "Original file fingerprint and 310-page count independently recomputed; identity and PDF-only pagination agree with SOURCE_MANIFEST.md."
+  },
+  "readLogs": [
+    {
+      "id": "source.baby.r06.sleep-connection.framing",
+      "reader": "/root/pilot_baby_sleep_source_r06",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [{"start": 18, "end": 21}],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text: communication, appropriate help, dependence/collaboration/independence, attachment and crying, limited need for possessions, observation, how to read the book, authors' influences, and individual sleep/feed/development differences."
+    },
+    {
+      "id": "source.baby.r06.sleep-connection.respect",
+      "reader": "/root/pilot_baby_sleep_source_r06",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [{"start": 100, "end": 104}],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text: observation as respect, individual timelines and sleep differences, help when needed, choices, safe activity, kind boundaries, interpreting rather than diagnosing behavior, adult modeling and repetition."
+    },
+    {
+      "id": "source.baby.r06.sleep-connection.connection",
+      "reader": "/root/pilot_baby_sleep_source_r06",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [{"start": 109, "end": 114}],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text, including responsive caregiving, the complete When our baby cries unit and checklist, adult modeling and repair, the pacifier example in Removing obstacles on PDF 112, freedom from performing on cue, and connection/slow-care framing."
+    },
+    {
+      "id": "source.baby.r06.sleep-connection.ages",
+      "reader": "/root/pilot_baby_sleep_source_r06",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [{"start": 119, "end": 120}, {"start": 294, "end": 294}],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text: individual interests/development, age guidelines and support for developmental concerns, material-selection context, and the Activities list for babies opening. The activity-specific age disclaimer was not treated as independent evidence for a pacifier age or a sharing milestone."
+    },
+    {
+      "id": "source.baby.r06.sleep-connection.language",
+      "reader": "/root/pilot_baby_sleep_source_r06",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [{"start": 130, "end": 133}],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text, including reciprocal conversation; the Remove obstacles heading on PDF 131 and its complete continuation on PDF 132; the pacifier communication concern, limited-use and first-year reduction/removal suggestions; and the transition to 3 to 6 months."
+    },
+    {
+      "id": "source.baby.r06.sleep-connection.sleep-box-context",
+      "reader": "/root/pilot_baby_sleep_source_r06",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [{"start": 73, "end": 77}],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text, including the surrounding home-environment and observation material, every item in the SIDS guidelines for sleep box on PDF 76, and the following Floor bed questions page. Checked the nap/bedtime pacifier statement in its actual 2021 book context; no other sleep-environment instruction was imported into the reviewed entry."
+    },
+    {
+      "id": "source.baby.r06.sleep-connection.sleep-pacifier",
+      "reader": "/root/pilot_baby_sleep_source_r06",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [{"start": 192, "end": 199}],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text across the sleep chapter opening, family/baby variation and observation framing, the six sleep principles and their continuations, and the complete Consider going pacifier-free subsection. Followed that subsection's internal page-195 link by named destination to Using a pacifier at physical PDF 213–214; did not mistake the internal link number for a physical PDF page."
+    },
+    {
+      "id": "source.baby.r06.sleep-connection.pacifier-sharing-units",
+      "reader": "/root/pilot_baby_sleep_source_r06",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [{"start": 212, "end": 216}],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text. Includes the full Using a pacifier unit across PDF 213–214: general discouragement, communication and youngest-infant control, possible SIDS reduction, conditional limited use, first-year reduction/removal preference, complete alternative-soothing list, transition qualifications, and thumb/finger-sucking comparison. Also includes the full Sharing unit across PDF 214–215: first-year exploration versus 12–16-month ownership concepts, older-sibling context, tentative translation, reciprocal asking and the waiting/watching/alternative-object continuation. Adjacent section boundaries and their page continuations were read to distinguish these units from teething, colic/reflux and screen-time content."
+    },
+    {
+      "id": "source.baby.r06.sleep-connection.cited-pages-visual",
+      "reader": "/root/pilot_baby_sleep_source_r06",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [{"start": 76, "end": 76}, {"start": 131, "end": 132}, {"start": 199, "end": 199}, {"start": 213, "end": 215}],
+      "mode": "full-page-visual",
+      "description": "Personally inspected and read all text on readable 1400-pixel original-page renders. Confirmed the complete boxed SIDS list and pacifier item; Remove obstacles and Consider going pacifier-free headings; the Using a pacifier/Sharing boundary and complete pacifier list; and Sharing's continuation before Colic and reflux. No relevant caption or source illustration supplies an additional claim omitted by extraction."
+    },
+    {
+      "id": "source.baby.r06.sleep-connection.framing-visual",
+      "reader": "/root/pilot_baby_sleep_source_r06",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [{"start": 21, "end": 21}, {"start": 294, "end": 294}],
+      "mode": "full-page-visual",
+      "description": "Personally inspected readable complete original-page renders, including PDF 21's two bottom callouts and PDF 294's preceding table fragment, appendix boundary, full guideline paragraph and Babies up to 6 months heading. Kept the general guideline separate from age-specific source assertions."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "baby-sleep-connection-source-r06.6-9.baby-pacifier",
+      "entryId": "baby-pacifier",
+      "placementId": "6-9.baby-pacifier",
+      "snapshotPath": "content/pilots/revisions/r06/snapshots/6-9.baby-pacifier.json",
+      "snapshotFileSha256": "a091b40e42d70a1b1133788215fc85ae48968416e102fa9c0a10f82a4a57d7c6",
+      "textPlacementSha256": "e0793097a1ec211e3be3ae6dd30e8a55427b21293b3e9bd684e70769faba4f90",
+      "artContextSha256": null,
+      "publicProjectionSha256": "54ff023e5e1fd5d5d5b50cc27fdd6e61212fdaca2315c5ff1cdce2d43ae00e62",
+      "identityVerification": "Snapshot file hash recomputed; sorted-key public text and combined projection hashes independently recomputed and matched snapshot/manifest. Author draft and renderer fingerprints matched. No opening or illustration/art component is present.",
+      "readLogIds": [
+        "source.baby.r06.sleep-connection.framing",
+        "source.baby.r06.sleep-connection.respect",
+        "source.baby.r06.sleep-connection.connection",
+        "source.baby.r06.sleep-connection.ages",
+        "source.baby.r06.sleep-connection.language",
+        "source.baby.r06.sleep-connection.sleep-box-context",
+        "source.baby.r06.sleep-connection.sleep-pacifier",
+        "source.baby.r06.sleep-connection.pacifier-sharing-units",
+        "source.baby.r06.sleep-connection.cited-pages-visual",
+        "source.baby.r06.sleep-connection.framing-visual"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "baby-sleep-connection-source-r06.pacifier.reference-headings",
+            "severity": "low",
+            "field": "entry.references[id=baby-pacifier.ref.2].section",
+            "surfaces": ["EntryReading: Back to the books, second reference", "RENDERED_SURFACES entryText for 6-9.baby-pacifier"],
+            "finding": "The second public reference labels its source sections Language obstacles; Pacifier-free care; SIDS guidelines for sleep. The first two are editorial descriptions, whereas the original subsection headings are Remove obstacles (PDF 131, continuing through the cited pacifier text on PDF 132) and Consider going pacifier-free (PDF 199). The foundation source-reference contract requires the source subsection heading as printed, allowing normalized whitespace. The cited physical pages and underlying claims are correct; this is a narrow source-location label defect.",
+            "requiredCorrection": "Change this reference's section string to the original headings, for example Remove obstacles; Consider going pacifier-free; SIDS guidelines for sleep. Keep the current valid claim page spans and locator; no care-prose change is required by this finding. Freeze and review the changed reference projection before treating this issue as resolved.",
+            "sourcePages": [{"start": 76, "end": 76}, {"start": 131, "end": 132}, {"start": 199, "end": 199}],
+            "status": "open"
+          }
+        ],
+        "assessment": "The care prose is source-faithful. Both topic rows independently state the authors' discouragement of constant use alongside possible SIDS reduction and limited use for settling/sleep; neither row implies an absolute ban. Detail preserves the communication rationale, acknowledges an unsettled or sleep-bound baby, and explicitly dates the sleep-safety box to the 2021 book instead of presenting its list as independently current guidance. Attribution remains visible, there are no steps or added soothing/sleep instructions, and the 6–9-month placement is a browsing context rather than an age deadline. The complete source cessation discussion, preferred first-year timing, alternative-soothing list and thumb/finger comparison were read; this bounded entry offers no cessation plan and does not convert those suggestions into a new protocol. The only required correction is the second reference's subsection labels.",
+        "surfaceChecks": {
+          "topicRows": "Both everyday-care and connection-feelings rows were read verbatim and carry the same adequately qualified summary without relying on detail-only caveats.",
+          "detail": "Title, summary, cue, two detail paragraphs, age context and both displayed references were compared with all cited original pages and the relevant context.",
+          "ageAndActors": "Discussion concerns the authors' view of infant pacifier use. Nothing claims that every 6–9-month baby uses, needs, independently manages, or should stop using a pacifier by a fixed age.",
+          "references": "PDF-only pagination, title and claim spans are accurate; the original section-name correction is recorded as the sole open issue."
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-sleep-connection-source-r06.6-9.baby-sharing",
+      "entryId": "baby-sharing",
+      "placementId": "6-9.baby-sharing",
+      "snapshotPath": "content/pilots/revisions/r06/snapshots/6-9.baby-sharing.json",
+      "snapshotFileSha256": "976d7a5c635f598215d41f2aac91fed70c15e5cfda275c4c62fa8f5f39f5a2d7",
+      "textPlacementSha256": "a31ea7adeef848d7cbcee74cb49170c8f7ffafa9ec2ebc17df8fdf3f0d825471",
+      "artContextSha256": null,
+      "publicProjectionSha256": "9907e1de4b1fd77d0edb384187c991aadee4e00a08f95e3e2b74ac2d42bd8ad1",
+      "identityVerification": "Snapshot file hash recomputed; sorted-key public text and combined projection hashes independently recomputed and matched snapshot/manifest. Author draft and renderer fingerprints matched. No opening or illustration/art component is present.",
+      "readLogIds": [
+        "source.baby.r06.sleep-connection.framing",
+        "source.baby.r06.sleep-connection.respect",
+        "source.baby.r06.sleep-connection.connection",
+        "source.baby.r06.sleep-connection.ages",
+        "source.baby.r06.sleep-connection.pacifier-sharing-units",
+        "source.baby.r06.sleep-connection.cited-pages-visual",
+        "source.baby.r06.sleep-connection.framing-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The exact 6–9-month placement faithfully presents the adult's role in the complete Sharing unit. In both topic summaries the adult notices whether the baby seems ready to move on or seems to want to keep playing and explains that apparent wish; it does not instruct the adult to retrieve an object, force relinquishment, or announce an inferred feeling as fact. Detail keeps both first-year possibilities and the reciprocal case in which the baby reaches for another child's object. Asking if that child is finished and waiting/watching/finding another object preserve the PDF 215 continuation as possibilities, without promising immediate learning or cooperation. Public age context distinguishes first-year exploration from the source's discussion around 12–16 months, and its separate browsing note prevents the 6–9 label from becoming a sharing or ownership milestone. The Sharing heading and PDF 214–215 reference correctly identify the complete unit. No additional qualification is necessary to make these specific short and detail surfaces faithful.",
+        "surfaceChecks": {
+          "topicRows": "The identical connection-feelings and play-discovery summaries independently preserve observation and tentative translation. Neither asks a young baby to demonstrate a later ownership concept.",
+          "detail": "The full rendered title, cue, two detail paragraphs, age context and source label were read, including the continuation about the other child's still-active turn.",
+          "ageAndActors": "The caregiver interprets and models; the baby may keep playing or move on; the other child's current use also receives respect. The 12–16-month source context is not assigned as an achievement deadline.",
+          "references": "The source ID, actual Sharing heading and PDF-only 214–215 span are accurate."
+        }
+      },
+      "artContext": null
+    }
+  ],
+  "counts": {
+    "placementsReviewed": 2,
+    "textPass": 1,
+    "textRevise": 1,
+    "textHold": 0,
+    "openIssues": 1,
+    "artComponents": 0,
+    "uniqueOriginalPagesPersonallyReadInFullText": 40,
+    "uniqueOriginalPagesPersonallyReadAsFullPageVisuals": 9
+  }
+}

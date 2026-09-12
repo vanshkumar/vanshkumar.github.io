@@ -1,0 +1,105 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "toddler-conversation",
+        "kind": "invitation",
+        "title": "Leave room for their reply",
+        "summary": "Your toddler can join a conversation through sounds, gestures, and words. Pause, listen, and respond to what they are trying to share.",
+        "cue": "They may point, repeat a sound, show you something, or begin a sentence.",
+        "detail": [
+          "In an ordinary moment, name what you are doing or what your child notices. If you do not know the name of a bird or vehicle, you can find out together.",
+          "Give them time instead of finishing their sentence. If the meaning is unclear, invite them to show you. You can use the full word naturally in your response without making them repeat it.",
+          "Davies suggests coming to the child’s level and showing interest with your body and speech; the appendix qualifies eye contact by cultural appropriateness. Moments of silence belong in the day too."
+        ],
+        "references": [
+          {
+            "id": "toddler-conversation.ref.1",
+            "sourceId": "toddler-2019",
+            "section": "Language",
+            "locator": "Rich vocabulary; conversations, self-expression and silence",
+            "pdfPages": [
+              {
+                "start": 55,
+                "end": 58
+              }
+            ]
+          },
+          {
+            "id": "toddler-conversation.ref.2",
+            "sourceId": "toddler-2019",
+            "section": "List of Montessori activities for toddlers",
+            "locator": "Self-expression, including cultural qualification for eye contact",
+            "pdfPages": [
+              {
+                "start": 245,
+                "end": 245
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "18-24.toddler-conversation",
+        "entryId": "toddler-conversation",
+        "ageId": "18-24",
+        "topicIds": [
+          "play-discovery",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "Davies explicitly includes even a young toddler and nonverbal expression.",
+          "readiness": "Respond to the communication your child is using now."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "18–24 months",
+        "kindLabel": "A small invitation",
+        "headings": [
+          "A home within reach",
+          "Start by noticing",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF pp. 55–58"
+          },
+          {
+            "title": "The Montessori Toddler",
+            "pages": "PDF p. 245"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "b86823210601b26fca545a2e267a3e83e70ca8618c8c88674921c8e0d4ad7a69",
+  "artContextSha256": null,
+  "publicProjectionSha256": "3276584e8e933b85a2016f9fbd86078dec42a8ab2e9a4fe4f0d6d0c3fce4efbc",
+  "provenance": {
+    "draft": {
+      "path": "content/pilots/drafts/toddler/draft-r03.json",
+      "sha256": "2ce363ad170f62611828f2ca3d3a34cb8f634ade4421f8321513340301351198"
+    },
+    "revision": "r03",
+    "evidenceFile": "content/pilots/drafts/toddler/draft-r03.json",
+    "note": "Full private provenance and actual author read logs remain in this immutable draft and its handoff."
+  }
+}

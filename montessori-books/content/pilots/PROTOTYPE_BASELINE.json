@@ -1,0 +1,712 @@
+{
+  "capturedOn": "2026-09-10",
+  "purpose": "Unreviewed local prototype baseline before research-dependent pilot drafting",
+  "snapshots": [
+    {
+      "snapshotVersion": 1,
+      "publicProjection": {
+        "textPlacement": {
+          "entry": {
+            "id": "baby-movement",
+            "kind": "invitation",
+            "title": "Watch their next move",
+            "category": "Movement",
+            "actionLabel": "Reach",
+            "invitation": "Clear a little floor space. Stay close and watch what your baby reaches for.",
+            "summary": "Make room for your baby’s own movement, then notice what they are trying to reach or explore.",
+            "cue": "What catches their attention before they move? Do they keep experimenting, or begin asking for help?",
+            "steps": [
+              "Clear a safe space on the floor and stay nearby.",
+              "Let your baby move in the ways they currently use. Watch their hands, feet, and changes of direction.",
+              "If they become frustrated, offer a little help, then leave room for them to continue."
+            ],
+            "principle": {
+              "text": "Freedom of movement begins with observation. Prepare the space and respond to your baby’s current abilities, rather than putting them into positions they cannot yet reach themselves."
+            },
+            "references": [
+              {
+                "id": "baby-movement.prototype-reference",
+                "sourceId": "baby-2021",
+                "section": "Chapter 5, “Freedom of movement”; chapter 6, movement activities for 6–9 months and help when struggling.",
+                "legacyPageLabel": "PDF pp. 107–108, 126, 157–162. This PDF has no reliable printed-page equivalents."
+              }
+            ]
+          },
+          "placement": {
+            "id": "6-9.baby-movement",
+            "entryId": "baby-movement",
+            "ageId": "6-9",
+            "topicIds": [
+              "play-discovery"
+            ],
+            "openingOrder": 1
+          },
+          "displayContext": {
+            "ageLabel": "6–9 months",
+            "kindLabel": "A small invitation",
+            "headings": [
+              "A home within reach",
+              "Start by noticing",
+              "Try it together",
+              "What’s underneath",
+              "Back to the books"
+            ],
+            "openingCTA": "Try this together",
+            "footer": "You don’t need a different home. Start with what you have.",
+            "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+            "bookline": "A Montessori companion",
+            "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+            "topics": [
+              {
+                "id": "play-discovery",
+                "label": "Play & discovery"
+              }
+            ],
+            "referenceLabels": [
+              {
+                "title": "The Montessori Baby",
+                "pages": "PDF pp. 107–108, 126, 157–162. This PDF has no reliable printed-page equivalents."
+              }
+            ]
+          }
+        },
+        "artContext": {
+          "scene": {
+            "id": "home-paper-baby",
+            "ageId": "6-9",
+            "layout": "open-left",
+            "sourceId": "baby-2021",
+            "src": "art/home-paper-baby.webp",
+            "alt": "An illustrated home: a baby on their tummy reaches toward a soft ball on a mat, with a caregiver sitting beside them.",
+            "width": 1536,
+            "height": 1024,
+            "caption": "Follow what catches their attention."
+          },
+          "illustration": null,
+          "assets": [
+            {
+              "src": "art/home-paper-baby.webp",
+              "sha256": "fb09c915ce18725df3f0ef1818fc0072116d2d97c6dbc45eb7578dda55dbc922"
+            }
+          ],
+          "textPlacementSha256": "e67c9fd3559b114970e0967e2417ff7b8ab11f3a534bef5f278167ce552b4c31"
+        }
+      },
+      "textPlacementSha256": "e67c9fd3559b114970e0967e2417ff7b8ab11f3a534bef5f278167ce552b4c31",
+      "artContextSha256": "8b58ddf2fd4ea58f6d00fd89f35c0e31d78c510ddd8a8d68e0de1fee456e7806",
+      "publicProjectionSha256": "ebe48d8b8bc009a24ce053b1ba826817ce344d94d36408b70318226b426eca6d",
+      "provenance": {
+        "purpose": "Unreviewed prototype preservation; no source or tone approval",
+        "sourceFiles": [
+          {
+            "path": "src/content.js",
+            "sha256": "73a023d71b537d9fcb9017ef5018be44a869f11068882ddeddcebecc010da77e"
+          },
+          {
+            "path": "src/guide/prototype.js",
+            "sha256": "b421543943380f9a6357831ceeb45bc36e06d118dab1c08cf02fd7abb1915173"
+          },
+          {
+            "path": "src/HomeStudy.jsx",
+            "sha256": "fac2bbb16457687333b2d3ac7718d5ad1590094265c11956947ce661af9a7cd6"
+          },
+          {
+            "path": "src/home.css",
+            "sha256": "55de72c5b21d2f1a3ead85c5975febd09ac3135fcbc2219e6672a13f4786a6e1"
+          }
+        ],
+        "sourcePagesReadForThisGroundwork": []
+      }
+    },
+    {
+      "snapshotVersion": 1,
+      "publicProjection": {
+        "textPlacement": {
+          "entry": {
+            "id": "baby-language",
+            "kind": "invitation",
+            "title": "Give that sound a name",
+            "category": "Language",
+            "actionLabel": "Listen",
+            "invitation": "When a sound catches their attention, name it simply. Then leave room for a reply.",
+            "summary": "When your baby notices an everyday sound, share a few words about it and leave space for their response.",
+            "cue": "A turn toward a sound, a look at your face, a gesture, or a vocalization. Follow their interest; no response is required.",
+            "steps": [
+              "Notice your baby turning toward an everyday sound, such as a dog barking.",
+              "Name it simply: “A dog is barking.”",
+              "Pause for a look, movement, or sound. Respond if your baby continues the exchange."
+            ],
+            "principle": {
+              "text": "Language grows out of real experience and two-way communication. The pause gives your baby a part in the conversation without asking them to perform."
+            },
+            "references": [
+              {
+                "id": "baby-language.prototype-reference",
+                "sourceId": "baby-2021",
+                "section": "Chapter 6, language activities: “6 to 9 months”; ongoing conversational turn-taking from “3 to 6 months”.",
+                "legacyPageLabel": "PDF pp. 133–135. This PDF has no reliable printed-page equivalents."
+              }
+            ]
+          },
+          "placement": {
+            "id": "6-9.baby-language",
+            "entryId": "baby-language",
+            "ageId": "6-9",
+            "topicIds": [
+              "play-discovery"
+            ],
+            "openingOrder": 2
+          },
+          "displayContext": {
+            "ageLabel": "6–9 months",
+            "kindLabel": "A small invitation",
+            "headings": [
+              "A home within reach",
+              "Start by noticing",
+              "Try it together",
+              "What’s underneath",
+              "Back to the books"
+            ],
+            "openingCTA": "Try this together",
+            "footer": "You don’t need a different home. Start with what you have.",
+            "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+            "bookline": "A Montessori companion",
+            "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+            "topics": [
+              {
+                "id": "play-discovery",
+                "label": "Play & discovery"
+              }
+            ],
+            "referenceLabels": [
+              {
+                "title": "The Montessori Baby",
+                "pages": "PDF pp. 133–135. This PDF has no reliable printed-page equivalents."
+              }
+            ]
+          }
+        },
+        "artContext": {
+          "scene": {
+            "id": "home-paper-baby",
+            "ageId": "6-9",
+            "layout": "open-left",
+            "sourceId": "baby-2021",
+            "src": "art/home-paper-baby.webp",
+            "alt": "An illustrated home: a baby on their tummy reaches toward a soft ball on a mat, with a caregiver sitting beside them.",
+            "width": 1536,
+            "height": 1024,
+            "caption": "Follow what catches their attention."
+          },
+          "illustration": null,
+          "assets": [
+            {
+              "src": "art/home-paper-baby.webp",
+              "sha256": "fb09c915ce18725df3f0ef1818fc0072116d2d97c6dbc45eb7578dda55dbc922"
+            }
+          ],
+          "textPlacementSha256": "00bdc6bc9376439798adcb8fa48fa27a165e99c2206dc051787b504dd45a1447"
+        }
+      },
+      "textPlacementSha256": "00bdc6bc9376439798adcb8fa48fa27a165e99c2206dc051787b504dd45a1447",
+      "artContextSha256": "3492ca2e8cc9516de111e703aca541880d76fb65cc1f125871b7f70ee7601d8d",
+      "publicProjectionSha256": "b55c3d02c18782a1b853b5bb43e88a46eaae014e472f0104d3f43423e1ecf2db",
+      "provenance": {
+        "purpose": "Unreviewed prototype preservation; no source or tone approval",
+        "sourceFiles": [
+          {
+            "path": "src/content.js",
+            "sha256": "73a023d71b537d9fcb9017ef5018be44a869f11068882ddeddcebecc010da77e"
+          },
+          {
+            "path": "src/guide/prototype.js",
+            "sha256": "b421543943380f9a6357831ceeb45bc36e06d118dab1c08cf02fd7abb1915173"
+          },
+          {
+            "path": "src/HomeStudy.jsx",
+            "sha256": "fac2bbb16457687333b2d3ac7718d5ad1590094265c11956947ce661af9a7cd6"
+          },
+          {
+            "path": "src/home.css",
+            "sha256": "55de72c5b21d2f1a3ead85c5975febd09ac3135fcbc2219e6672a13f4786a6e1"
+          }
+        ],
+        "sourcePagesReadForThisGroundwork": []
+      }
+    },
+    {
+      "snapshotVersion": 1,
+      "publicProjection": {
+        "textPlacement": {
+          "entry": {
+            "id": "baby-connection",
+            "kind": "invitation",
+            "title": "A pause before pickup",
+            "category": "Connection",
+            "actionLabel": "Pause",
+            "invitation": "Come into view, tell them what you intend, and pause before an unhurried pickup.",
+            "summary": "Turn an ordinary pickup into a small exchange: approach gently, say what you intend, and notice your baby’s response.",
+            "cue": "Watch for changes in expression or posture: reaching, smiling, moving toward you, turning away, or drawing back.",
+            "steps": [
+              "Come where your baby can see you and extend your hands.",
+              "Say, “I’d like to pick you up,” then pause.",
+              "Notice their response and move slowly. When pickup can wait and they turn away, give them another moment."
+            ],
+            "principle": {
+              "text": "Respectful care makes your baby a participant in everyday interactions. This invitation is for unhurried moments; necessary care and immediate protection do not need to wait."
+            },
+            "references": [
+              {
+                "id": "baby-connection.prototype-reference",
+                "sourceId": "baby-2021",
+                "section": "Chapter 5, “Respect our baby’s body,” collaboration, and the connection checklist.",
+                "legacyPageLabel": "PDF pp. 99–100, 114. This PDF has no reliable printed-page equivalents."
+              }
+            ]
+          },
+          "placement": {
+            "id": "6-9.baby-connection",
+            "entryId": "baby-connection",
+            "ageId": "6-9",
+            "topicIds": [
+              "connection-feelings",
+              "everyday-care"
+            ],
+            "openingOrder": 3
+          },
+          "displayContext": {
+            "ageLabel": "6–9 months",
+            "kindLabel": "A small invitation",
+            "headings": [
+              "A home within reach",
+              "Start by noticing",
+              "Try it together",
+              "What’s underneath",
+              "Back to the books"
+            ],
+            "openingCTA": "Try this together",
+            "footer": "You don’t need a different home. Start with what you have.",
+            "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+            "bookline": "A Montessori companion",
+            "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+            "topics": [
+              {
+                "id": "connection-feelings",
+                "label": "Connection & feelings"
+              },
+              {
+                "id": "everyday-care",
+                "label": "Everyday care"
+              }
+            ],
+            "referenceLabels": [
+              {
+                "title": "The Montessori Baby",
+                "pages": "PDF pp. 99–100, 114. This PDF has no reliable printed-page equivalents."
+              }
+            ]
+          }
+        },
+        "artContext": {
+          "scene": {
+            "id": "home-paper-baby",
+            "ageId": "6-9",
+            "layout": "open-left",
+            "sourceId": "baby-2021",
+            "src": "art/home-paper-baby.webp",
+            "alt": "An illustrated home: a baby on their tummy reaches toward a soft ball on a mat, with a caregiver sitting beside them.",
+            "width": 1536,
+            "height": 1024,
+            "caption": "Follow what catches their attention."
+          },
+          "illustration": null,
+          "assets": [
+            {
+              "src": "art/home-paper-baby.webp",
+              "sha256": "fb09c915ce18725df3f0ef1818fc0072116d2d97c6dbc45eb7578dda55dbc922"
+            }
+          ],
+          "textPlacementSha256": "3616b3660520d85fa0b1a4e8c205c506884f329925a15587e42a0ee031e51966"
+        }
+      },
+      "textPlacementSha256": "3616b3660520d85fa0b1a4e8c205c506884f329925a15587e42a0ee031e51966",
+      "artContextSha256": "8f7be6cb7adcd609a64f6e29b09dfcaceed887617221af740e05479e594e279c",
+      "publicProjectionSha256": "52c80831ef97ed4b01c7045652fa2c712f7acd8d26e6a9b253a9bbff42cf1ccb",
+      "provenance": {
+        "purpose": "Unreviewed prototype preservation; no source or tone approval",
+        "sourceFiles": [
+          {
+            "path": "src/content.js",
+            "sha256": "73a023d71b537d9fcb9017ef5018be44a869f11068882ddeddcebecc010da77e"
+          },
+          {
+            "path": "src/guide/prototype.js",
+            "sha256": "b421543943380f9a6357831ceeb45bc36e06d118dab1c08cf02fd7abb1915173"
+          },
+          {
+            "path": "src/HomeStudy.jsx",
+            "sha256": "fac2bbb16457687333b2d3ac7718d5ad1590094265c11956947ce661af9a7cd6"
+          },
+          {
+            "path": "src/home.css",
+            "sha256": "55de72c5b21d2f1a3ead85c5975febd09ac3135fcbc2219e6672a13f4786a6e1"
+          }
+        ],
+        "sourcePagesReadForThisGroundwork": []
+      }
+    },
+    {
+      "snapshotVersion": 1,
+      "publicProjection": {
+        "textPlacement": {
+          "entry": {
+            "id": "toddler-pouring",
+            "kind": "invitation",
+            "title": "A little water, a careful pour",
+            "category": "Independence",
+            "actionLabel": "Pour",
+            "invitation": "A little water, a small pitcher, and a cloth for spills. Show one slow pour, then let them try.",
+            "summary": "A small pitcher and cup give your toddler a manageable way to practice pouring, with you nearby.",
+            "cue": "They are interested in pouring and can manage the pitcher. Adjust the amount of water and help to match what you observe.",
+            "steps": [
+              "Set a small pitcher containing a little water beside a cup on a low table. Keep a sponge or cloth ready.",
+              "Slowly show one pour, letting your toddler watch your hands.",
+              "Invite them to try. Stay nearby, allow repetition, and offer help with spills when needed."
+            ],
+            "principle": {
+              "text": "Practical life supports independence through child-sized tools, repetition, and manageable steps. The invitation follows their interest; spills are part of learning."
+            },
+            "references": [
+              {
+                "id": "toddler-pouring.prototype-reference",
+                "sourceId": "toddler-2019",
+                "section": "Appendix, “List of Montessori activities for toddlers” (pouring, 18+ months); chapters 3–4, demonstrations and a child-sized table.",
+                "legacyPageLabel": "Printed pp. 26–27, 42, 67, 242 / PDF pp. 35–36, 51, 76, 251."
+              }
+            ]
+          },
+          "placement": {
+            "id": "18-24.toddler-pouring",
+            "entryId": "toddler-pouring",
+            "ageId": "18-24",
+            "topicIds": [
+              "play-discovery"
+            ],
+            "openingOrder": 1
+          },
+          "displayContext": {
+            "ageLabel": "18–24 months",
+            "kindLabel": "A small invitation",
+            "headings": [
+              "A home within reach",
+              "Start by noticing",
+              "Try it together",
+              "What’s underneath",
+              "Back to the books"
+            ],
+            "openingCTA": "Try this together",
+            "footer": "You don’t need a different home. Start with what you have.",
+            "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+            "bookline": "A Montessori companion",
+            "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+            "topics": [
+              {
+                "id": "play-discovery",
+                "label": "Play & discovery"
+              }
+            ],
+            "referenceLabels": [
+              {
+                "title": "The Montessori Toddler",
+                "pages": "Printed pp. 26–27, 42, 67, 242 / PDF pp. 35–36, 51, 76, 251."
+              }
+            ]
+          }
+        },
+        "artContext": {
+          "scene": {
+            "id": "home-paper-toddler",
+            "ageId": "18-24",
+            "layout": "above-scene",
+            "sourceId": "toddler-2019",
+            "src": "art/home-paper-toddler.webp",
+            "alt": "An illustrated home: a toddler stands at a low table pouring water with a caregiver nearby. Paper and crayons wait on a low shelf, and shoes sit in a basket beside it.",
+            "width": 1536,
+            "height": 1024,
+            "caption": "Follow what catches their attention."
+          },
+          "illustration": null,
+          "assets": [
+            {
+              "src": "art/home-paper-toddler.webp",
+              "sha256": "6590e3b468d918f375cf5fd7ea2362b45e511f0d41c0b1a7113b2b5b6ae2d422"
+            }
+          ],
+          "textPlacementSha256": "e1cc51dfa7548fc1a081a5cdfb95644f61a943e2f91367a5531e325c6ac9a420"
+        }
+      },
+      "textPlacementSha256": "e1cc51dfa7548fc1a081a5cdfb95644f61a943e2f91367a5531e325c6ac9a420",
+      "artContextSha256": "0d4f84e1c55dce4e4dc2f4f0261d0590585512924c70c60f607555110ddedb61",
+      "publicProjectionSha256": "0483a6fa97ea9bf96230c568cb61748b2714647ed3641788873ffb8bfb699cd9",
+      "provenance": {
+        "purpose": "Unreviewed prototype preservation; no source or tone approval",
+        "sourceFiles": [
+          {
+            "path": "src/content.js",
+            "sha256": "73a023d71b537d9fcb9017ef5018be44a869f11068882ddeddcebecc010da77e"
+          },
+          {
+            "path": "src/guide/prototype.js",
+            "sha256": "b421543943380f9a6357831ceeb45bc36e06d118dab1c08cf02fd7abb1915173"
+          },
+          {
+            "path": "src/HomeStudy.jsx",
+            "sha256": "fac2bbb16457687333b2d3ac7718d5ad1590094265c11956947ce661af9a7cd6"
+          },
+          {
+            "path": "src/home.css",
+            "sha256": "55de72c5b21d2f1a3ead85c5975febd09ac3135fcbc2219e6672a13f4786a6e1"
+          }
+        ],
+        "sourcePagesReadForThisGroundwork": []
+      }
+    },
+    {
+      "snapshotVersion": 1,
+      "publicProjection": {
+        "textPlacement": {
+          "entry": {
+            "id": "toddler-drawing",
+            "kind": "invitation",
+            "title": "Let the lines wander",
+            "category": "Creativity",
+            "actionLabel": "Draw",
+            "invitation": "Set out paper and a few chunky crayons. Their scribbles are the discovery.",
+            "summary": "Offer paper and easy-to-grip crayons, then let your toddler discover the marks their hand can make.",
+            "cue": "They are interested in moving a drawing tool across paper. Dots, sweeping lines, and scribbles are all exploration.",
+            "steps": [
+              "Set out paper and a few chunky crayons that make clear marks.",
+              "On your own paper, slowly demonstrate a loose line or squiggle.",
+              "Let your toddler explore their page. When they seek a response, describe what you see."
+            ],
+            "principle": {
+              "text": "Creative work values movement and self-expression. There is no finished picture to copy and no need to improve their marks."
+            },
+            "references": [
+              {
+                "id": "toddler-drawing.prototype-reference",
+                "sourceId": "toddler-2019",
+                "section": "Chapter 3, “Arts and crafts.” Drawing tools, loose-line demonstrations, and descriptive feedback.",
+                "legacyPageLabel": "Printed pp. 44–45 / PDF pp. 53–54."
+              }
+            ]
+          },
+          "placement": {
+            "id": "18-24.toddler-drawing",
+            "entryId": "toddler-drawing",
+            "ageId": "18-24",
+            "topicIds": [
+              "play-discovery"
+            ],
+            "openingOrder": 2
+          },
+          "displayContext": {
+            "ageLabel": "18–24 months",
+            "kindLabel": "A small invitation",
+            "headings": [
+              "A home within reach",
+              "Start by noticing",
+              "Try it together",
+              "What’s underneath",
+              "Back to the books"
+            ],
+            "openingCTA": "Try this together",
+            "footer": "You don’t need a different home. Start with what you have.",
+            "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+            "bookline": "A Montessori companion",
+            "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+            "topics": [
+              {
+                "id": "play-discovery",
+                "label": "Play & discovery"
+              }
+            ],
+            "referenceLabels": [
+              {
+                "title": "The Montessori Toddler",
+                "pages": "Printed pp. 44–45 / PDF pp. 53–54."
+              }
+            ]
+          }
+        },
+        "artContext": {
+          "scene": {
+            "id": "home-paper-toddler",
+            "ageId": "18-24",
+            "layout": "above-scene",
+            "sourceId": "toddler-2019",
+            "src": "art/home-paper-toddler.webp",
+            "alt": "An illustrated home: a toddler stands at a low table pouring water with a caregiver nearby. Paper and crayons wait on a low shelf, and shoes sit in a basket beside it.",
+            "width": 1536,
+            "height": 1024,
+            "caption": "Follow what catches their attention."
+          },
+          "illustration": null,
+          "assets": [
+            {
+              "src": "art/home-paper-toddler.webp",
+              "sha256": "6590e3b468d918f375cf5fd7ea2362b45e511f0d41c0b1a7113b2b5b6ae2d422"
+            }
+          ],
+          "textPlacementSha256": "3995b20b735f72eef95e5080b6b3c897d80e9c46b207daaec9af413b48fcb6db"
+        }
+      },
+      "textPlacementSha256": "3995b20b735f72eef95e5080b6b3c897d80e9c46b207daaec9af413b48fcb6db",
+      "artContextSha256": "0947ad318020a78b0a74d68cb9ddf112b95089692924c7355e929701f70615c6",
+      "publicProjectionSha256": "90b86c6feb033140939635050e3791d2962b7125e9b885d5eea3f7eef9a4a742",
+      "provenance": {
+        "purpose": "Unreviewed prototype preservation; no source or tone approval",
+        "sourceFiles": [
+          {
+            "path": "src/content.js",
+            "sha256": "73a023d71b537d9fcb9017ef5018be44a869f11068882ddeddcebecc010da77e"
+          },
+          {
+            "path": "src/guide/prototype.js",
+            "sha256": "b421543943380f9a6357831ceeb45bc36e06d118dab1c08cf02fd7abb1915173"
+          },
+          {
+            "path": "src/HomeStudy.jsx",
+            "sha256": "fac2bbb16457687333b2d3ac7718d5ad1590094265c11956947ce661af9a7cd6"
+          },
+          {
+            "path": "src/home.css",
+            "sha256": "55de72c5b21d2f1a3ead85c5975febd09ac3135fcbc2219e6672a13f4786a6e1"
+          }
+        ],
+        "sourcePagesReadForThisGroundwork": []
+      }
+    },
+    {
+      "snapshotVersion": 1,
+      "publicProjection": {
+        "textPlacement": {
+          "entry": {
+            "id": "toddler-shoes",
+            "kind": "invitation",
+            "title": "A home for little shoes",
+            "category": "Home",
+            "actionLabel": "Put away",
+            "invitation": "Give shoes one reachable home. Invite your toddler to fetch or return a shoe.",
+            "summary": "Give shoes a predictable, reachable place so your toddler can take part in arriving home and getting ready to leave.",
+            "cue": "They notice their shoes or want to join the arrival routine. Is the basket easy for them to reach and use?",
+            "steps": [
+              "Place a small shoe basket in a consistent spot near the entrance.",
+              "Show where shoes belong, using slow movements.",
+              "Invite them to fetch or return a shoe. Help with whichever part is still difficult."
+            ],
+            "principle": {
+              "text": "A prepared environment supports independence and a sense of order. Fetching or returning a shoe is enough; fastening it independently is not required."
+            },
+            "references": [
+              {
+                "id": "toddler-shoes.prototype-reference",
+                "sourceId": "toddler-2019",
+                "section": "Chapter 4, “Setting up Montessori-style spaces” and “Entrance”; chapter 3, practical-life list.",
+                "legacyPageLabel": "Printed pp. 42, 66–67 / PDF pp. 51, 75–76."
+              }
+            ]
+          },
+          "placement": {
+            "id": "18-24.toddler-shoes",
+            "entryId": "toddler-shoes",
+            "ageId": "18-24",
+            "topicIds": [
+              "home-that-helps",
+              "everyday-care"
+            ],
+            "openingOrder": 3
+          },
+          "displayContext": {
+            "ageLabel": "18–24 months",
+            "kindLabel": "A small invitation",
+            "headings": [
+              "A home within reach",
+              "Start by noticing",
+              "Try it together",
+              "What’s underneath",
+              "Back to the books"
+            ],
+            "openingCTA": "Try this together",
+            "footer": "You don’t need a different home. Start with what you have.",
+            "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+            "bookline": "A Montessori companion",
+            "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+            "topics": [
+              {
+                "id": "home-that-helps",
+                "label": "A home that helps"
+              },
+              {
+                "id": "everyday-care",
+                "label": "Everyday care"
+              }
+            ],
+            "referenceLabels": [
+              {
+                "title": "The Montessori Toddler",
+                "pages": "Printed pp. 42, 66–67 / PDF pp. 51, 75–76."
+              }
+            ]
+          }
+        },
+        "artContext": {
+          "scene": {
+            "id": "home-paper-toddler",
+            "ageId": "18-24",
+            "layout": "above-scene",
+            "sourceId": "toddler-2019",
+            "src": "art/home-paper-toddler.webp",
+            "alt": "An illustrated home: a toddler stands at a low table pouring water with a caregiver nearby. Paper and crayons wait on a low shelf, and shoes sit in a basket beside it.",
+            "width": 1536,
+            "height": 1024,
+            "caption": "Follow what catches their attention."
+          },
+          "illustration": null,
+          "assets": [
+            {
+              "src": "art/home-paper-toddler.webp",
+              "sha256": "6590e3b468d918f375cf5fd7ea2362b45e511f0d41c0b1a7113b2b5b6ae2d422"
+            }
+          ],
+          "textPlacementSha256": "ddb0b7cb37a491fe059e0a39f7cbd6ea3f0ac674fc2803fd58478845f376f63c"
+        }
+      },
+      "textPlacementSha256": "ddb0b7cb37a491fe059e0a39f7cbd6ea3f0ac674fc2803fd58478845f376f63c",
+      "artContextSha256": "2bfd2dd79f29fa23e378094853646c52ed908844f57ff09ada610f4ab09d2015",
+      "publicProjectionSha256": "26eb0b75b507692b14fc9b49179f03b811390b86ebf130662f58c921e7dab6bd",
+      "provenance": {
+        "purpose": "Unreviewed prototype preservation; no source or tone approval",
+        "sourceFiles": [
+          {
+            "path": "src/content.js",
+            "sha256": "73a023d71b537d9fcb9017ef5018be44a869f11068882ddeddcebecc010da77e"
+          },
+          {
+            "path": "src/guide/prototype.js",
+            "sha256": "b421543943380f9a6357831ceeb45bc36e06d118dab1c08cf02fd7abb1915173"
+          },
+          {
+            "path": "src/HomeStudy.jsx",
+            "sha256": "fac2bbb16457687333b2d3ac7718d5ad1590094265c11956947ce661af9a7cd6"
+          },
+          {
+            "path": "src/home.css",
+            "sha256": "55de72c5b21d2f1a3ead85c5975febd09ac3135fcbc2219e6672a13f4786a6e1"
+          }
+        ],
+        "sourcePagesReadForThisGroundwork": []
+      }
+    }
+  ]
+}

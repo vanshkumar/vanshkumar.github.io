@@ -1,0 +1,944 @@
+{
+  "id": "toddler-play-source-r05",
+  "reviewer": {
+    "task": "/root/toddler_play_source_r02",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Renewed source review of the exact four changed nonart r05 toddler-play placements only: toddler-fitting-and-turning, toddler-outside-noticing, toddler-room-to-move and toddler-everyday-play; current 18–24-month metadata, five actual topic rows and four full rendered entries.",
+  "manifest": {
+    "path": "content/pilots/revisions/r05/MANIFEST.json",
+    "sha256": "ae7dfd0ce44392a8c040bb9b9df38ca991d9b37aab24caf8655d52cf1e1a663c"
+  },
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r05/RENDERED_SURFACES.json",
+    "sha256": "b2b0183e437c4abf4c8dddd18ca4ac94be9075abd517d635779d2b946fe0f77b"
+  },
+  "renderer": [
+    {
+      "path": "src/HomeStudy.jsx",
+      "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c"
+    },
+    {
+      "path": "src/home.css",
+      "sha256": "55de72c5b21d2f1a3ead85c5975febd09ac3135fcbc2219e6672a13f4786a6e1"
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "503e980cdf9ba4728adf678bb27bc4cd4095d1ae131c3c02181cc4b9a4df22ce"
+    },
+    {
+      "path": "src/guide/catalog.js",
+      "sha256": "d8d30a17c5f1b1c99ed68764f3f412cf99b48f55d09bf528313f0df1439da71c"
+    },
+    {
+      "path": "src/concepts.js",
+      "sha256": "cb086bcc98ad4fde98677a03cb42a849ae5993405dd886a71e7642ca079a3e4a"
+    }
+  ],
+  "authoredDraft": {
+    "path": "content/pilots/drafts/toddler/draft-r05.json",
+    "sha256": "b1632aafa09d8a3a50afec143f44fcb47e7ace8909ff47d2aa3f17a6f3e726fe",
+    "scope": "Matching four entry/placement objects verified identical to snapshots; matching author provenance, retained evidence/qualifications/age basis and r05 editorial amendment metadata inspected. Historical private evidence fields are not substituted for the current public projection."
+  },
+  "sourceFingerprint": {
+    "sourceId": "toddler-2019",
+    "path": "The Montessori Toddler - Simone Davies _Worldfreebooks.com_.pdf",
+    "bytes": 7036292,
+    "pages": 257,
+    "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b",
+    "matchesSourceManifest": true
+  },
+  "priorReview": {
+    "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+    "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934"
+  },
+  "readLogPolicy": "Only this reviewer’s own actual r02 source reads are retained, with explicit immutable prior-report links. Six separate logs record actual r05 rereading; no extraction generation, author reads or other reviewers’ reads count as personal reading. All four projections are nonart; no art pass is inferred or renewed.",
+  "readLogs": [
+    {
+      "id": "toddler-play-source-r02.read.scope",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        },
+        {
+          "start": 25,
+          "end": 30
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete extracted text of these original PDF pages: approximate 1–3-year toddler scope; sensitive-period explanation and full timing table; freedom with safety limits; independence; individual development; respect; observation and intervention. No developmental benefit or deterministic timing assertion is adopted as independent fact.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+        "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934",
+        "readLogId": "toddler-play-source-r02.read.scope"
+      },
+      "retentionNote": "This same named reviewer personally completed this original-page reading in r02. The source fingerprint is unchanged. It is retained as actual prior reading, not asserted to be newly reread for r05."
+    },
+    {
+      "id": "toddler-play-source-r02.read.activity-framing",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 31,
+          "end": 42
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read every page of the complete chapter opening, activity characteristics, partial repetition, showing an activity, ten general principles, and setup examples. This includes choosing manageable challenge, responding to frustration or declined help, waiting for a child to look for feedback, available materials, supervision for small parts/sharp objects, and all setup text. Sparse photograph pages were also read visually in a separate log.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+        "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934",
+        "readLogId": "toddler-play-source-r02.read.activity-framing"
+      },
+      "retentionNote": "This same named reviewer personally completed this original-page reading in r02. The source fingerprint is unchanged. It is retained as actual prior reading, not asserted to be newly reread for r05."
+    },
+    {
+      "id": "toddler-play-source-r02.read.timing-table-visual",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 26,
+          "end": 26
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read the complete original sensitive-period table and its heading-level unique-timing qualification; inspected every row and the movement acquisition/refinement wording.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+        "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934",
+        "readLogId": "toddler-play-source-r02.read.timing-table-visual"
+      },
+      "retentionNote": "This same named reviewer personally completed this original-page reading in r02. The source fingerprint is unchanged. It is retained as actual prior reading, not asserted to be newly reread for r05."
+    },
+    {
+      "id": "toddler-play-source-r02.read.hand-unit",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 43,
+          "end": 46
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete eye-hand unit through the jigsaw continuation, including threading stages, posting, opening/closing, nuts/bolts, sorting, mystery bags and puzzles. Preserved distinction between removing pieces and fitting them, broad sorting around 18 months, and later or variant material examples.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+        "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934",
+        "readLogId": "toddler-play-source-r02.read.hand-unit"
+      },
+      "retentionNote": "This same named reviewer personally completed this original-page reading in r02. The source fingerprint is unchanged. It is retained as actual prior reading, not asserted to be newly reread for r05."
+    },
+    {
+      "id": "toddler-play-source-r02.read.hand-photos",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 59,
+          "end": 60
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected all eight original material photographs and read the complete facing caption page: five-piece small-knob puzzle around 18 months; posting; nuts/bolts; mystery bags; threading; opening/closing from 18 months; small-button sorting from 2 years; elastic pegboard. This is full-page reading, not a contact-sheet inventory.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+        "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934",
+        "readLogId": "toddler-play-source-r02.read.hand-photos"
+      },
+      "retentionNote": "This same named reviewer personally completed this original-page reading in r02. The source fingerprint is unchanged. It is retained as actual prior reading, not asserted to be newly reread for r05."
+    },
+    {
+      "id": "toddler-play-source-r02.read.music-movement",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 46,
+          "end": 47
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete music and movement unit, with its preceding puzzle continuation: adult enjoyment without performance proficiency, copying rhythm/movement, music as its own activity, instruments, cultural dances and action songs, indoor space qualification, outdoor movement, and the author’s climbing-wall example.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+        "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934",
+        "readLogId": "toddler-play-source-r02.read.music-movement"
+      },
+      "retentionNote": "This same named reviewer personally completed this original-page reading in r02. The source fingerprint is unchanged. It is retained as actual prior reading, not asserted to be newly reread for r05."
+    },
+    {
+      "id": "toddler-play-source-r02.read.music-movement-photos",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 61,
+          "end": 62
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected all original instruments, nature objects, balls, balance bike and slide photographs and read the complete captions. Preserved assistance for younger toddlers, ball-play outdoor-space rationale, differing age/readiness descriptions, and the balance-bike caption’s size/around-2-years wording.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+        "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934",
+        "readLogId": "toddler-play-source-r02.read.music-movement-photos"
+      },
+      "retentionNote": "This same named reviewer personally completed this original-page reading in r02. The source fingerprint is unchanged. It is retained as actual prior reading, not asserted to be newly reread for r05."
+    },
+    {
+      "id": "toddler-play-source-r02.read.outdoors-unit",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 69,
+          "end": 70
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete outdoors/nature unit, including the opening quotation, all ten numbered ideas, quiet/noticing passages and the water-play bonus. The reviewed ordinary noticing invitation does not adopt weather imperatives, water play, collection recipes or climbing procedures.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+        "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934",
+        "readLogId": "toddler-play-source-r02.read.outdoors-unit"
+      },
+      "retentionNote": "This same named reviewer personally completed this original-page reading in r02. The source fingerprint is unchanged. It is retained as actual prior reading, not asserted to be newly reread for r05."
+    },
+    {
+      "id": "toddler-play-source-r02.read.home-play-unit",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 71,
+          "end": 72
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete non-Montessori-toys/home-play unit and concluding chapter page: existing favorites, optional open-ended toys, home/classroom distinction, imaginative daily-life scenarios, school-material duplication exception, everyday participation, outdoors, creativity and rest.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+        "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934",
+        "readLogId": "toddler-play-source-r02.read.home-play-unit"
+      },
+      "retentionNote": "This same named reviewer personally completed this original-page reading in r02. The source fingerprint is unchanged. It is retained as actual prior reading, not asserted to be newly reread for r05."
+    },
+    {
+      "id": "toddler-play-source-r02.read.home-play-heading",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 71,
+          "end": 71
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read the complete original page and its illustrated footer. Verified that the actual heading is What about non-Montessori toys? and that the paragraph about home open-ended play is unaged within the toddler chapter.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+        "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934",
+        "readLogId": "toddler-play-source-r02.read.home-play-heading"
+      },
+      "retentionNote": "This same named reviewer personally completed this original-page reading in r02. The source fingerprint is unchanged. It is retained as actual prior reading, not asserted to be newly reread for r05."
+    },
+    {
+      "id": "toddler-play-source-r02.read.home-setup-context",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 73,
+          "end": 80
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the home chapter opener and complete setup/room-by-room unit through the outside note. Checked nonprescriptive adaptation, low shelves and child-manageable furniture, shoe basket/shelf, accessible art materials, small-jug/spill-cloth examples, reading covers, and alternatives without outdoor space. Neighboring care descriptions were read as context and not converted into extra advice.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+        "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934",
+        "readLogId": "toddler-play-source-r02.read.home-setup-context"
+      },
+      "retentionNote": "This same named reviewer personally completed this original-page reading in r02. The source fingerprint is unchanged. It is retained as actual prior reading, not asserted to be newly reread for r05."
+    },
+    {
+      "id": "toddler-play-source-r02.read.home-tables-visual",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 75,
+          "end": 80
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read all original full-page setup and room tables at readable size: eight setup tips, entrance/living room, kitchen safety note, dining/bedroom, bathroom/art, reading/outside. Verified shoe basket/shelf and low art access, small jug/cloth context, few visible book covers and the no-outdoor-space note.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+        "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934",
+        "readLogId": "toddler-play-source-r02.read.home-tables-visual"
+      },
+      "retentionNote": "This same named reviewer personally completed this original-page reading in r02. The source fingerprint is unchanged. It is retained as actual prior reading, not asserted to be newly reread for r05."
+    },
+    {
+      "id": "toddler-play-source-r02.read.curiosity-context",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 95,
+          "end": 107
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete curiosity ingredients/principles unit: secure base, following interest with limits, hands-on discovery, adult time constraints, going slowly, proportionate help, complete imagination/fantasy and artistic-creativity sections, observation and the complete observation list. This includes the around-2.5+ pretend-play framing on PDF 103, not merely its art continuation on PDF 104.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+        "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934",
+        "readLogId": "toddler-play-source-r02.read.curiosity-context"
+      },
+      "retentionNote": "This same named reviewer personally completed this original-page reading in r02. The source fingerprint is unchanged. It is retained as actual prior reading, not asserted to be newly reread for r05."
+    },
+    {
+      "id": "toddler-play-source-r02.read.curiosity-visual",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 103,
+          "end": 103
+        },
+        {
+          "start": 106,
+          "end": 106
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read the complete original imagination/fantasy page, including the around-2.5+ pretend-play statement and exact examples, and the complete multi-column observation list. Confirmed that PDF 104 is the artistic-creativity continuation rather than the location of the pretend-play interpretation.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+        "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934",
+        "readLogId": "toddler-play-source-r02.read.curiosity-visual"
+      },
+      "retentionNote": "This same named reviewer personally completed this original-page reading in r02. The source fingerprint is unchanged. It is retained as actual prior reading, not asserted to be newly reread for r05."
+    },
+    {
+      "id": "toddler-play-source-r02.read.concentration-frustration",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 176,
+          "end": 179
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read every word on these original pages: adjacent throwing context, complete concentration and frustration units on PDF 177–178, and the following closeness page. Preserved help offered rather than imposed, a small puzzle-turn demonstration/verbal cue, possible refusal/anger and trying another time. The rosary anecdote is adult context, not a child material.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+        "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934",
+        "readLogId": "toddler-play-source-r02.read.concentration-frustration"
+      },
+      "retentionNote": "This same named reviewer personally completed this original-page reading in r02. The source fingerprint is unchanged. It is retained as actual prior reading, not asserted to be newly reread for r05."
+    },
+    {
+      "id": "toddler-play-source-r02.read.intervention-boundary",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 192,
+          "end": 195
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete pages covering observation, emotional-bucket context, the full slow-down unit and child-as-guide framing. Checked the explicit immediate-danger exception on PDF 194 so a pause or concentration principle cannot imply delaying protection.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+        "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934",
+        "readLogId": "toddler-play-source-r02.read.intervention-boundary"
+      },
+      "retentionNote": "This same named reviewer personally completed this original-page reading in r02. The source fingerprint is unchanged. It is retained as actual prior reading, not asserted to be newly reread for r05."
+    },
+    {
+      "id": "toddler-play-source-r02.read.appendix",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 244,
+          "end": 254
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete activity appendix from its opener through its final row. Checked exact age/readiness labels and every material row, including scribbling, chalk, easel paint, rings, puzzles, closures, matching, clay, watercolor, sorting, vocabulary, later equipment and the 3+ building-material rows. The appendix does not replace fuller chapter qualifications.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+        "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934",
+        "readLogId": "toddler-play-source-r02.read.appendix"
+      },
+      "retentionNote": "This same named reviewer personally completed this original-page reading in r02. The source fingerprint is unchanged. It is retained as actual prior reading, not asserted to be newly reread for r05."
+    },
+    {
+      "id": "toddler-play-source-r02.read.appendix-tables",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 245,
+          "end": 254
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read all ten original full-page appendix tables at readable 1500-pixel height. Verified each age cell and row boundary, including standing unaided for easel paint; one color of thick paint in a cup; 12–14+ puzzles; 14+ identical/similar cards; clay around 16 to 18+; four-of-each sorting example; gluing up to six large shapes; and explicit 3+ entries. No thumbnail or extract-generation action is counted as this reading.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+        "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934",
+        "readLogId": "toddler-play-source-r02.read.appendix-tables"
+      },
+      "retentionNote": "This same named reviewer personally completed this original-page reading in r02. The source fingerprint is unchanged. It is retained as actual prior reading, not asserted to be newly reread for r05."
+    },
+    {
+      "id": "toddler-play-source-r05.read.general-and-hand",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 33,
+          "end": 39
+        },
+        {
+          "start": 43,
+          "end": 47
+        }
+      ],
+      "mode": "full-text",
+      "description": "For this r05 renewal, personally reread the complete original-page text through my own r02 extraction of the unchanged fingerprinted PDF. Includes the activity chapter age qualification, complete general principles and limits/supervision, hand chapter through its puzzle continuation, and full music/movement unit. Checked partial participation, graded challenge, household-object limitations, hand movements and space-permitting indoor/outdoor movement against the exact replacements."
+    },
+    {
+      "id": "toddler-play-source-r05.read.outdoors-and-home-play",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 69,
+          "end": 72
+        },
+        {
+          "start": 80,
+          "end": 80
+        }
+      ],
+      "mode": "full-text",
+      "description": "For r05, personally reread complete original-page text: entire outdoors/nature list and qualifications, entire non-Montessori-toy home discussion and chapter conclusion, and complete room-by-room final page including its outside row and no-outdoor-space note. Did not convert neighboring collection, water, equipment or weather examples into the narrow noticing invitation."
+    },
+    {
+      "id": "toddler-play-source-r05.read.timing-and-curiosity",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 26,
+          "end": 26
+        },
+        {
+          "start": 95,
+          "end": 107
+        }
+      ],
+      "mode": "full-text",
+      "description": "For r05, personally reread the complete original-page text of the sensitive-period table and timing qualification, and the entire curiosity unit: trust, rich environment, time, safety, wonder, all seven principles including complete imagination/fantasy/pretend and artistic creativity subsections, observation and recap. PDF 103 around-2.5+ author framing is distinct from the unaged PDF 71 home-play discussion and from the current editorial 18–24 band."
+    },
+    {
+      "id": "toddler-play-source-r05.read.home-and-pretend-visual",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 71,
+          "end": 71
+        },
+        {
+          "start": 80,
+          "end": 80
+        },
+        {
+          "start": 103,
+          "end": 103
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "For r05, personally opened and read these complete original-page renders at readable 1500-pixel page height. Verified PDF 71 actual heading, unaged toy list and home/school distinction; PDF 80 entire outside-table row and concluding access note; PDF 103 complete creativity page including exact Around 2.5+ years wording and full surrounding imagination/fantasy and materials paragraphs. These are full-page readings, not thumbnail inventory."
+    },
+    {
+      "id": "toddler-play-source-r05.read.hand-and-movement-visual",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 26,
+          "end": 26
+        },
+        {
+          "start": 60,
+          "end": 60
+        },
+        {
+          "start": 62,
+          "end": 62
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "For r05, personally read every row/column or caption on these complete original-page renders at readable 1500-pixel page height: full sensitive-period timing table, all eight hand-activity captions including the from-18-month opening/closing variant, and all eight music/movement captions including toddler-wide outdoor ball space and differing equipment readiness/ages. Existing personally read r02 opposite photo pages remain explicitly linked."
+    },
+    {
+      "id": "toddler-play-source-r05.read.appendix-visual",
+      "reader": "/root/toddler_play_source_r02",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 246,
+          "end": 248
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "For r05, personally read every row and column on complete readable original appendix pages 246–248, not only matching activity rows. Checked 12+ opening/closing versus chapter-caption variant, ring/peg/bin/posting labels, different disc and ring labels, and all movement/equipment readiness and age conditions including riding and jumping. Full appendix context remains linked to my own prior complete read."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "toddler-play-source-r05.18-24.toddler-fitting-and-turning",
+      "entryId": "toddler-fitting-and-turning",
+      "placementId": "18-24.toddler-fitting-and-turning",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-fitting-and-turning.json",
+      "snapshotFileSha256": "8373fb97fd2aed11d17a49d40b62cab5050aff221430d24ccda53c0a0d8e1ffc",
+      "textPlacementSha256": "20856911eef9c18d921ffefa28ffe7852e0cae693454f4cd7f948dda9f7eb8d0",
+      "artContextSha256": null,
+      "publicProjectionSha256": "f98f6433b91491ebeadb020e8c84b1182b505d27c7da9f2389dd1b8314c57e4b",
+      "readLogIds": [
+        "toddler-play-source-r02.read.scope",
+        "toddler-play-source-r02.read.activity-framing",
+        "toddler-play-source-r02.read.timing-table-visual",
+        "toddler-play-source-r02.read.intervention-boundary",
+        "toddler-play-source-r02.read.hand-unit",
+        "toddler-play-source-r02.read.hand-photos",
+        "toddler-play-source-r02.read.appendix",
+        "toddler-play-source-r02.read.appendix-tables",
+        "toddler-play-source-r02.read.concentration-frustration",
+        "toddler-play-source-r05.read.general-and-hand",
+        "toddler-play-source-r05.read.hand-and-movement-visual",
+        "toddler-play-source-r05.read.appendix-visual"
+      ],
+      "reviewedSurfaces": {
+        "opening": false,
+        "topicIds": [
+          "play-discovery"
+        ],
+        "topicRowCount": 1,
+        "topicRowsTextAndHtml": true,
+        "entryText": true,
+        "ageLabel": "18–24 months",
+        "allAgeContextFields": true,
+        "rendererPath": "src/HomeStudy.jsx",
+        "renderedSurfaceSha256": "9c3ae0c341fbea8a75d7c49c19c850cbfb86e88de79c079f8f9064db61686405"
+      },
+      "citedPageCoverage": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 43,
+              "end": 45
+            }
+          ],
+          "referenceId": "toddler-fitting-and-turning.ref.1"
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 246,
+              "end": 248
+            }
+          ],
+          "referenceId": "toddler-fitting-and-turning.ref.2"
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 33,
+              "end": 39
+            }
+          ],
+          "referenceId": "toddler-fitting-and-turning.ref.3"
+        }
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The revised topic row states a narrow attributed perspective on fitting, releasing, turning and two-hand movements. Its new final sentence directs attention to the movement the child repeats; it does not prescribe access to arbitrary lids or small objects. The full entry retains rings/shapes/sliding and bin-box examples, taking apart before replacing, later color/size matching, source-supported simplification of a shape sorter, nonrequired materials and explicit small-part supervision. The age context keeps distinct labels and closure variants rather than turning 18–24 into a deadline or a blanket household-closure approval. No new sensitive setup or developmental outcome claim is introduced."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-play-source-r05.18-24.toddler-outside-noticing",
+      "entryId": "toddler-outside-noticing",
+      "placementId": "18-24.toddler-outside-noticing",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-outside-noticing.json",
+      "snapshotFileSha256": "7d7bcdc0062b947356ce85842e330be04282aea331746787f5f091a83c07bfa0",
+      "textPlacementSha256": "c936cacfc208da3ded11013ef0799f8b143d98dc92f09c32258ca0745db95b37",
+      "artContextSha256": null,
+      "publicProjectionSha256": "0a177b34619c822f9e2923310f9fdeda285b931b2a317e26b4c86be81f0f32b8",
+      "readLogIds": [
+        "toddler-play-source-r02.read.scope",
+        "toddler-play-source-r02.read.activity-framing",
+        "toddler-play-source-r02.read.timing-table-visual",
+        "toddler-play-source-r02.read.intervention-boundary",
+        "toddler-play-source-r02.read.outdoors-unit",
+        "toddler-play-source-r02.read.home-setup-context",
+        "toddler-play-source-r02.read.home-tables-visual",
+        "toddler-play-source-r02.read.curiosity-context",
+        "toddler-play-source-r02.read.curiosity-visual",
+        "toddler-play-source-r02.read.concentration-frustration",
+        "toddler-play-source-r05.read.general-and-hand",
+        "toddler-play-source-r05.read.outdoors-and-home-play",
+        "toddler-play-source-r05.read.timing-and-curiosity",
+        "toddler-play-source-r05.read.home-and-pretend-visual"
+      ],
+      "reviewedSurfaces": {
+        "opening": false,
+        "topicIds": [
+          "play-discovery"
+        ],
+        "topicRowCount": 1,
+        "topicRowsTextAndHtml": true,
+        "entryText": true,
+        "ageLabel": "18–24 months",
+        "allAgeContextFields": true,
+        "rendererPath": "src/HomeStudy.jsx",
+        "renderedSurfaceSha256": "96e5ca8171825510063ee67c243072f79fad8d6815636b5ac694e1463aaf9ae7"
+      },
+      "citedPageCoverage": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 69,
+              "end": 70
+            }
+          ],
+          "referenceId": "toddler-outside-noticing.ref.1"
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 80,
+              "end": 80
+            }
+          ],
+          "referenceId": "toddler-outside-noticing.ref.2"
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 97,
+              "end": 100
+            }
+          ],
+          "referenceId": "toddler-outside-noticing.ref.3"
+        }
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The topic invitation stays within looking/listening at ordinary outdoor discoveries. The new readiness sentence now describes stopping, pointing, listening and looking with the adult, matching the invitation and the source’s interest-led noticing. The full entry preserves optional time, the child’s pace, quiet shared looking, wondering/finding out together and possibilities beyond a private garden. General indicative-age context is supported by the complete activity unit retained here. No touching/collecting recipe, water activity, weather imperative, climbing instruction or numerical readiness requirement is added."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-play-source-r05.18-24.toddler-room-to-move",
+      "entryId": "toddler-room-to-move",
+      "placementId": "18-24.toddler-room-to-move",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-room-to-move.json",
+      "snapshotFileSha256": "534eb16cfc6c6178d924df72f1363d1808591a954eda21b1df65b21945cc98ab",
+      "textPlacementSha256": "ee78ac848e776d2fa76678ee9ddec3e92427d35fd5abd0aaaeb232e9198fd6d9",
+      "artContextSha256": null,
+      "publicProjectionSha256": "26f015978359bbee4270b07feef2253530a94113fa2a60170f6ddc454a6d83a2",
+      "readLogIds": [
+        "toddler-play-source-r02.read.scope",
+        "toddler-play-source-r02.read.activity-framing",
+        "toddler-play-source-r02.read.timing-table-visual",
+        "toddler-play-source-r02.read.intervention-boundary",
+        "toddler-play-source-r02.read.music-movement",
+        "toddler-play-source-r02.read.music-movement-photos",
+        "toddler-play-source-r02.read.appendix",
+        "toddler-play-source-r02.read.appendix-tables",
+        "toddler-play-source-r02.read.curiosity-context",
+        "toddler-play-source-r02.read.curiosity-visual",
+        "toddler-play-source-r02.read.concentration-frustration",
+        "toddler-play-source-r05.read.general-and-hand",
+        "toddler-play-source-r05.read.timing-and-curiosity",
+        "toddler-play-source-r05.read.hand-and-movement-visual",
+        "toddler-play-source-r05.read.appendix-visual"
+      ],
+      "reviewedSurfaces": {
+        "opening": false,
+        "topicIds": [
+          "play-discovery"
+        ],
+        "topicRowCount": 1,
+        "topicRowsTextAndHtml": true,
+        "entryText": true,
+        "ageLabel": "18–24 months",
+        "allAgeContextFields": true,
+        "rendererPath": "src/HomeStudy.jsx",
+        "renderedSurfaceSha256": "e6020b7ad3884b311351899e8e51da33f512cedee1bde04161c46d05e94b4069"
+      },
+      "citedPageCoverage": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 46,
+              "end": 47
+            }
+          ],
+          "referenceId": "toddler-room-to-move.ref.1"
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 62,
+              "end": 62
+            }
+          ],
+          "referenceId": "toddler-room-to-move.ref.2"
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 26,
+              "end": 26
+            }
+          ],
+          "referenceId": "toddler-room-to-move.ref.3"
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 33,
+              "end": 33
+            }
+          ],
+          "referenceId": "toddler-room-to-move.ref.4"
+        }
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The attributed topic row links everyday movement with current movement rather than a skill target. The revised age/readiness text follows the child’s current movements and available space. Full detail retains space-permitting indoor movement, outdoors and the source’s outdoor-space rationale for ball rolling/kicking. Longer equipment possibilities remain descriptive context with explicitly differing ages/readiness; chapter/photo/appendix bike timing is not silently merged into a progression. No apparatus construction, elevation, riding setup or adult-positioning instruction is introduced."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-play-source-r05.18-24.toddler-everyday-play",
+      "entryId": "toddler-everyday-play",
+      "placementId": "18-24.toddler-everyday-play",
+      "snapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-everyday-play.json",
+      "snapshotFileSha256": "b9ab02b1b6a7628f632ecf90bdb04ee2267eb199491e306d4472f206a8d90aa8",
+      "textPlacementSha256": "f71f6f3d6bd1017c2d337c363a457427c70c50bf1a1b031cac75c2bb4ad75908",
+      "artContextSha256": null,
+      "publicProjectionSha256": "bbf5b5295832ea24dbc4040f8f5547bebcecea4b90371e0579b80c475a6622a8",
+      "readLogIds": [
+        "toddler-play-source-r02.read.scope",
+        "toddler-play-source-r02.read.activity-framing",
+        "toddler-play-source-r02.read.timing-table-visual",
+        "toddler-play-source-r02.read.intervention-boundary",
+        "toddler-play-source-r02.read.home-play-unit",
+        "toddler-play-source-r02.read.home-play-heading",
+        "toddler-play-source-r02.read.curiosity-context",
+        "toddler-play-source-r02.read.curiosity-visual",
+        "toddler-play-source-r02.read.appendix",
+        "toddler-play-source-r02.read.appendix-tables",
+        "toddler-play-source-r02.read.concentration-frustration",
+        "toddler-play-source-r05.read.general-and-hand",
+        "toddler-play-source-r05.read.outdoors-and-home-play",
+        "toddler-play-source-r05.read.timing-and-curiosity",
+        "toddler-play-source-r05.read.home-and-pretend-visual"
+      ],
+      "reviewedSurfaces": {
+        "opening": false,
+        "topicIds": [
+          "play-discovery",
+          "home-that-helps"
+        ],
+        "topicRowCount": 2,
+        "topicRowsTextAndHtml": true,
+        "entryText": true,
+        "ageLabel": "18–24 months",
+        "allAgeContextFields": true,
+        "rendererPath": "src/HomeStudy.jsx",
+        "renderedSurfaceSha256": "9bf3b64e75b60da05c77051faa2eb0a56f1fd93c9c837e411e5cab93faafc2b4"
+      },
+      "citedPageCoverage": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 71,
+              "end": 72
+            }
+          ],
+          "referenceId": "toddler-everyday-play.ref.1"
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 103,
+              "end": 104
+            }
+          ],
+          "referenceId": "toddler-everyday-play.ref.2"
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 39,
+              "end": 39
+            }
+          ],
+          "referenceId": "toddler-everyday-play.ref.3"
+        }
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Both actual topic rows, in Play & discovery and A home that helps, remain a narrow unaged home-play perspective about existing favorites. The current cue concerns exploring a familiar toy, with no present-age pretend-play expectation. In the full page, the age context and first detail paragraph separately identify the creativity discussion’s around-2½-years-and-later framing. The explicit note says it is later context rather than an expectation for an 18–24-month-old. The home/school distinction, optional toy examples and small-part supervision remain visible. PDF 71’s section title and the corrected PDF 103–104 creativity reference are accurate. My two r02 findings are resolved on this exact replacement; no fantasy prohibition, psychological guarantee or detailed 3+ block activity is introduced."
+      },
+      "artContext": null,
+      "resolvedPriorIssueIds": [
+        "toddler-play-source-r02.everyday-play.pretend-context",
+        "toddler-play-source-r02.everyday-play.reference-heading"
+      ]
+    }
+  ],
+  "resolutions": [
+    {
+      "issueId": "toddler-play-source-r02.everyday-play.pretend-context",
+      "status": "resolved",
+      "priorReview": {
+        "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+        "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934",
+        "reviewId": "toddler-play-source-r02.18-24.toddler-everyday-play"
+      },
+      "replacementReviewId": "toddler-play-source-r05.18-24.toddler-everyday-play",
+      "replacementSnapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-everyday-play.json",
+      "replacementSnapshotFileSha256": "b9ab02b1b6a7628f632ecf90bdb04ee2267eb199491e306d4472f206a8d90aa8",
+      "replacementTextPlacementSha256": "f71f6f3d6bd1017c2d337c363a457427c70c50bf1a1b031cac75c2bb4ad75908",
+      "readLogIds": [
+        "toddler-play-source-r02.read.scope",
+        "toddler-play-source-r02.read.activity-framing",
+        "toddler-play-source-r02.read.timing-table-visual",
+        "toddler-play-source-r02.read.intervention-boundary",
+        "toddler-play-source-r02.read.home-play-unit",
+        "toddler-play-source-r02.read.home-play-heading",
+        "toddler-play-source-r02.read.curiosity-context",
+        "toddler-play-source-r02.read.curiosity-visual",
+        "toddler-play-source-r02.read.appendix",
+        "toddler-play-source-r02.read.appendix-tables",
+        "toddler-play-source-r02.read.concentration-frustration",
+        "toddler-play-source-r05.read.general-and-hand",
+        "toddler-play-source-r05.read.outdoors-and-home-play",
+        "toddler-play-source-r05.read.timing-and-curiosity",
+        "toddler-play-source-r05.read.home-and-pretend-visual"
+      ],
+      "adjudication": "Resolved after reading the exact r05 topic rows, cue, age context, detail and references against complete PDF 71–72 and 103–104 plus curiosity/general context. The cue no longer describes current pretend enactment. BookAge and detail[0] explicitly place the separate processing-experience/pretend discussion around 2½ years and later; ageContext.note explicitly distinguishes this later source context from an 18–24-month expectation. The source reference now includes PDF 103–104 with an age-specific locator. Both topic rows remain unaged, optional home-play summaries."
+    },
+    {
+      "issueId": "toddler-play-source-r02.everyday-play.reference-heading",
+      "status": "resolved",
+      "priorReview": {
+        "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+        "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934",
+        "reviewId": "toddler-play-source-r02.18-24.toddler-everyday-play"
+      },
+      "replacementReviewId": "toddler-play-source-r05.18-24.toddler-everyday-play",
+      "replacementSnapshotPath": "content/pilots/revisions/r05/snapshots/18-24.toddler-everyday-play.json",
+      "replacementSnapshotFileSha256": "b9ab02b1b6a7628f632ecf90bdb04ee2267eb199491e306d4472f206a8d90aa8",
+      "replacementTextPlacementSha256": "f71f6f3d6bd1017c2d337c363a457427c70c50bf1a1b031cac75c2bb4ad75908",
+      "readLogIds": [
+        "toddler-play-source-r02.read.scope",
+        "toddler-play-source-r02.read.activity-framing",
+        "toddler-play-source-r02.read.timing-table-visual",
+        "toddler-play-source-r02.read.intervention-boundary",
+        "toddler-play-source-r02.read.home-play-unit",
+        "toddler-play-source-r02.read.home-play-heading",
+        "toddler-play-source-r02.read.curiosity-context",
+        "toddler-play-source-r02.read.curiosity-visual",
+        "toddler-play-source-r02.read.appendix",
+        "toddler-play-source-r02.read.appendix-tables",
+        "toddler-play-source-r02.read.concentration-frustration",
+        "toddler-play-source-r05.read.general-and-hand",
+        "toddler-play-source-r05.read.outdoors-and-home-play",
+        "toddler-play-source-r05.read.timing-and-curiosity",
+        "toddler-play-source-r05.read.home-and-pretend-visual"
+      ],
+      "adjudication": "Resolved after reading the exact r05 reference section and its actual rendered Back to the books text against the complete readable original PDF 71 page. The current heading is What about non-Montessori toys? and the span remains PDF 71–72."
+    }
+  ],
+  "counts": {
+    "textPlacements": 4,
+    "textPass": 4,
+    "textRevise": 0,
+    "textHold": 0,
+    "artContexts": 0,
+    "openIssues": 0,
+    "ownPriorIssuesResolved": 2,
+    "actualTopicRows": 5,
+    "actualFullEntries": 4,
+    "r05FullTextPagesReread": 31,
+    "r05FullPageVisualPagesReread": 9,
+    "retainedOwnReadLogs": 18
+  },
+  "reviewBoundary": "Source verdicts concern only these exact frozen r05 components and actual rendered contexts. My r02 report remains immutable. No other role review files were opened. No app, draft, shared-document or research content was edited. This report makes no publication claim."
+}

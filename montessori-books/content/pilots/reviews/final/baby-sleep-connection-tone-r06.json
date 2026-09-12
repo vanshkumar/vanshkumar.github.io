@@ -1,0 +1,658 @@
+{
+  "id": "baby-sleep-connection-tone-r06",
+  "reviewer": {
+    "task": "/root/baby_sleep_tone_r03",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Exact frozen projections and actual rendered surfaces",
+  "batchId": "baby-sleep-connection",
+  "revision": "r06",
+  "entryIds": [
+    "baby-pacifier",
+    "baby-sharing"
+  ],
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r06/RENDERED_SURFACES.json",
+    "sha256": "6d02e4f0edc1fa01046ad3fce232dfd4bd85179955a4a51bd58996a6180e21e0"
+  },
+  "manifest": {
+    "path": "content/pilots/revisions/r06/MANIFEST.json",
+    "sha256": "a72d8cb63ccc81b90f6a24fd8a1742572bd14eeb7ca08de5b0508f02ab3c4731"
+  },
+  "draftContext": {
+    "path": "content/pilots/drafts/baby/draft-r04.json",
+    "sha256": "1124334c410bf59fc445f739fffbfbaf3fbd2850415721a39f427fc7a8213633",
+    "readScope": "Personally read only the matching two complete public entries and placements in draft-r04. Exact public records match the frozen r06 text placement. No other-role reports were consulted."
+  },
+  "rendererVerification": [
+    {
+      "path": "src/HomeStudy.jsx",
+      "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c",
+      "readMode": "Retained complete own r03 source reading; current bytes verified unchanged",
+      "matchesFrozenManifest": true
+    },
+    {
+      "path": "src/home.css",
+      "sha256": "55de72c5b21d2f1a3ead85c5975febd09ac3135fcbc2219e6672a13f4786a6e1",
+      "readMode": "Current file identity verified against frozen r06 manifest",
+      "matchesFrozenManifest": true
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "503e980cdf9ba4728adf678bb27bc4cd4095d1ae131c3c02181cc4b9a4df22ce",
+      "readMode": "Current file identity verified against frozen r06 manifest",
+      "matchesFrozenManifest": true
+    },
+    {
+      "path": "src/guide/catalog.js",
+      "sha256": "d8d30a17c5f1b1c99ed68764f3f412cf99b48f55d09bf528313f0df1439da71c",
+      "readMode": "Current file identity verified against frozen r06 manifest",
+      "matchesFrozenManifest": true
+    },
+    {
+      "path": "src/concepts.js",
+      "sha256": "cb086bcc98ad4fde98677a03cb42a849ae5993405dd886a71e7642ca079a3e4a",
+      "readMode": "Current file identity verified against frozen r06 manifest",
+      "matchesFrozenManifest": true
+    }
+  ],
+  "originalSourceVerification": {
+    "sourceId": "baby-2021",
+    "path": "the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+    "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f",
+    "physicalPdfPageCount": 310,
+    "pagination": "Physical PDF page numbers; no dependable printed-page labels asserted.",
+    "verification": "Original root PDF matched SOURCE_MANIFEST; page count checked with pypdf. Full text was extracted per original page and personally read. Readable full-page PNGs were rendered with pdftoppm and personally inspected through view_image.",
+    "r06Verification": "Recomputed root PDF SHA-256 and pypdf physical page count (310); identity is unchanged. Fresh original extraction and six actual original-page visual rereads are logged separately from retained personal full-unit reads."
+  },
+  "priorOwnReview": {
+    "path": "content/pilots/reviews/final/baby-sleep-connection-tone-r03.json",
+    "sha256": "8f8ea2d1322a3a748f9745ef7c597db18988cada2f3fa7093944184e43c86bd5",
+    "preservedUnchanged": true,
+    "retainedReadingRule": "Only explicitly linked actual source readings by this same reviewer are retained. Earlier issue records remain immutable; resolutions apply only to the exact new component hashes reviewed here."
+  },
+  "independence": "Own tone re-review of only baby-pacifier and baby-sharing at 6–9 months. Reached the new judgments from exact r06 replacements, actual four topic rows/two full entries, the original cited source and explicitly retained own complete-context readings. No other reviewer’s report was read. No source-role approval or artwork approval is implied.",
+  "reviewLimits": "Source-only tone/spirit judgment, not clinical validation or publication authorization. The two art contexts are separately null. No verdict is renewed for the other five batch entries by this record.",
+  "counts": {
+    "placements": 2,
+    "textPass": 2,
+    "textRevise": 0,
+    "textHold": 0,
+    "openIssues": 0,
+    "priorOwnIssuesResolved": 2,
+    "topicRowsRead": 4,
+    "fullEntriesRead": 2,
+    "openingSurfaces": 0,
+    "nullArtContexts": 2,
+    "uniqueFreshFullTextPagesRead": 6,
+    "uniqueFreshFullPageVisualsRead": 6,
+    "uniqueRetainedOwnFullTextPagesRead": 93,
+    "uniqueRetainedOwnFullPageVisualsRead": 52
+  },
+  "readLogs": [
+    {
+      "id": "tone.baby.orientation.text",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 18,
+          "end": 21
+        },
+        {
+          "start": 33,
+          "end": 37
+        },
+        {
+          "start": 41,
+          "end": 41
+        },
+        {
+          "start": 119,
+          "end": 120
+        },
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete original-page text: introductory purpose and variation, the full observation unit with its nap anecdote and observation practice, the family-arrangement note, activity/age-interest framing and appendix age context. These are contextual reads, not substitutes for each cited subject unit.",
+      "retainedFrom": {
+        "reviewPath": "content/pilots/reviews/final/baby-sleep-connection-tone-r03.json",
+        "reviewSha256": "8f8ea2d1322a3a748f9745ef7c597db18988cada2f3fa7093944184e43c86bd5",
+        "readLogId": "tone.baby.orientation.text",
+        "reviewerTask": "/root/baby_sleep_tone_r03"
+      },
+      "readOccurrence": "Retained actual personal original-source read from this reviewer’s r03 review; not a claim of a fresh r06 full-unit reread."
+    },
+    {
+      "id": "tone.baby.sleep.text",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 54,
+          "end": 60
+        },
+        {
+          "start": 70,
+          "end": 79
+        },
+        {
+          "start": 193,
+          "end": 207
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text. Read the symbiotic-period/home-transition context, including the topponcino material and continuation; the sleep-space discussion, the full SIDS box on PDF 76, and all floor-bed questions and continuations through PDF 79; and the full sleeping discussion and every sleep question from PDF 193 through the adult-support continuation on PDF 206. Read PDF 207 as the following boundary page. Followed the meaningful source cross-references and compared the sleep-arrangement examples against the book’s own safety box. The new subject starting after sleep is only a boundary read, not a claim to review its whole unit.",
+      "retainedFrom": {
+        "reviewPath": "content/pilots/reviews/final/baby-sleep-connection-tone-r03.json",
+        "reviewSha256": "8f8ea2d1322a3a748f9745ef7c597db18988cada2f3fa7093944184e43c86bd5",
+        "readLogId": "tone.baby.sleep.text",
+        "reviewerTask": "/root/baby_sleep_tone_r03"
+      },
+      "readOccurrence": "Retained actual personal original-source read from this reviewer’s r03 review; not a claim of a fresh r06 full-unit reread."
+    },
+    {
+      "id": "tone.baby.responsive.text",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 96,
+          "end": 114
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read every original page in the trust, acceptance, respect, attachment and responsive-crying context, including the complete crying unit on PDF 109–111 and its conditional adult-calming passage. Read all continuations through PDF 114. This preserves the source’s actual emphasis on responsiveness, care, feelings and adult help.",
+      "retainedFrom": {
+        "reviewPath": "content/pilots/reviews/final/baby-sleep-connection-tone-r03.json",
+        "reviewSha256": "8f8ea2d1322a3a748f9745ef7c597db18988cada2f3fa7093944184e43c86bd5",
+        "readLogId": "tone.baby.responsive.text",
+        "reviewerTask": "/root/baby_sleep_tone_r03"
+      },
+      "readOccurrence": "Retained actual personal original-source read from this reviewer’s r03 review; not a claim of a fresh r06 full-unit reread."
+    },
+    {
+      "id": "tone.baby.language.text",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 127,
+          "end": 140
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete original-page text spanning the whole language discussion on PDF 128–139, with its descriptions of communication, adult speech, obstacles, materials, the multiple-language example on PDF 130, and the full bilingualism answer on PDF 139. Read the boundary pages 127 and 140 too. Kept the book’s preferred arrangement, alternative arrangements, exposure assertions and communication context visible to the review rather than relying on an isolated bilingualism paragraph.",
+      "retainedFrom": {
+        "reviewPath": "content/pilots/reviews/final/baby-sleep-connection-tone-r03.json",
+        "reviewSha256": "8f8ea2d1322a3a748f9745ef7c597db18988cada2f3fa7093944184e43c86bd5",
+        "readLogId": "tone.baby.language.text",
+        "reviewerTask": "/root/baby_sleep_tone_r03"
+      },
+      "readOccurrence": "Retained actual personal original-source read from this reviewer’s r03 review; not a claim of a fresh r06 full-unit reread."
+    },
+    {
+      "id": "tone.baby.questions.text",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 213,
+          "end": 222
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text of the pacifier question on PDF 213–214, sharing on PDF 214–215, colic/reflux and adult-support discussion on PDF 215–216, and separation on PDF 220–221, including their starts and continuations. Also read the intervening and following boundary text on PDF 217–219 and 222. This log does not claim that all incidental neighboring questions were relevant to these seven entries.",
+      "retainedFrom": {
+        "reviewPath": "content/pilots/reviews/final/baby-sleep-connection-tone-r03.json",
+        "reviewSha256": "8f8ea2d1322a3a748f9745ef7c597db18988cada2f3fa7093944184e43c86bd5",
+        "readLogId": "tone.baby.questions.text",
+        "reviewerTask": "/root/baby_sleep_tone_r03"
+      },
+      "readOccurrence": "Retained actual personal original-source read from this reviewer’s r03 review; not a claim of a fresh r06 full-unit reread."
+    },
+    {
+      "id": "tone.baby.adult.text",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 238,
+          "end": 242
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text on support, self-trust and forgiveness, preparation of the adult, nonjudgmental reflection, all 49 calm ideas across their continued box, and the complete doing-our-best continuation and practice. Used this as tone context for adult constraints, repair and the absence of a perfection test; did not adopt its incidental health or care methods.",
+      "retainedFrom": {
+        "reviewPath": "content/pilots/reviews/final/baby-sleep-connection-tone-r03.json",
+        "reviewSha256": "8f8ea2d1322a3a748f9745ef7c597db18988cada2f3fa7093944184e43c86bd5",
+        "readLogId": "tone.baby.adult.text",
+        "reviewerTask": "/root/baby_sleep_tone_r03"
+      },
+      "readOccurrence": "Retained actual personal original-source read from this reviewer’s r03 review; not a claim of a fresh r06 full-unit reread."
+    },
+    {
+      "id": "tone.baby.orientation.visual",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 35,
+          "end": 37
+        },
+        {
+          "start": 41,
+          "end": 41
+        },
+        {
+          "start": 119,
+          "end": 119
+        },
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally viewed and read these six readable full original-page renders, including observation anecdotes/practice, the family note and age/appendix layout. These are actual page inspections, not a generated-image inventory.",
+      "retainedFrom": {
+        "reviewPath": "content/pilots/reviews/final/baby-sleep-connection-tone-r03.json",
+        "reviewSha256": "8f8ea2d1322a3a748f9745ef7c597db18988cada2f3fa7093944184e43c86bd5",
+        "readLogId": "tone.baby.orientation.visual",
+        "reviewerTask": "/root/baby_sleep_tone_r03"
+      },
+      "readOccurrence": "Retained actual personal original-source read from this reviewer’s r03 review; not a claim of a fresh r06 full-unit reread."
+    },
+    {
+      "id": "tone.baby.sleep.visual",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 56,
+          "end": 56
+        },
+        {
+          "start": 60,
+          "end": 60
+        },
+        {
+          "start": 71,
+          "end": 72
+        },
+        {
+          "start": 76,
+          "end": 79
+        },
+        {
+          "start": 193,
+          "end": 206
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally viewed and read these 22 readable full original pages: the topponcino image/caption and surrounding claims on PDF 56; the practice box and transition on PDF 60; sleep-space pages and the complete safety box; all floor-bed question continuations; and every page of the sleeping discussion and questions through PDF 206. Inspected the sleep tables, question layouts, boxes, illustrations and captions in context. The numbering gap in PDF 76 is present in the original. No sleep arrangement was clinically validated by this inspection.",
+      "retainedFrom": {
+        "reviewPath": "content/pilots/reviews/final/baby-sleep-connection-tone-r03.json",
+        "reviewSha256": "8f8ea2d1322a3a748f9745ef7c597db18988cada2f3fa7093944184e43c86bd5",
+        "readLogId": "tone.baby.sleep.visual",
+        "reviewerTask": "/root/baby_sleep_tone_r03"
+      },
+      "readOccurrence": "Retained actual personal original-source read from this reviewer’s r03 review; not a claim of a fresh r06 full-unit reread."
+    },
+    {
+      "id": "tone.baby.responsive.visual",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 101,
+          "end": 102
+        },
+        {
+          "start": 104,
+          "end": 104
+        },
+        {
+          "start": 109,
+          "end": 111
+        },
+        {
+          "start": 114,
+          "end": 114
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally viewed and read these seven readable full original pages, including response/relationship material, the complete crying unit and its conditional adult pause, and the concluding practice/relationship context. Visual layout was read alongside the complete PDF 96–114 text.",
+      "retainedFrom": {
+        "reviewPath": "content/pilots/reviews/final/baby-sleep-connection-tone-r03.json",
+        "reviewSha256": "8f8ea2d1322a3a748f9745ef7c597db18988cada2f3fa7093944184e43c86bd5",
+        "readLogId": "tone.baby.responsive.visual",
+        "reviewerTask": "/root/baby_sleep_tone_r03"
+      },
+      "readOccurrence": "Retained actual personal original-source read from this reviewer’s r03 review; not a claim of a fresh r06 full-unit reread."
+    },
+    {
+      "id": "tone.baby.language.visual",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 129,
+          "end": 130
+        },
+        {
+          "start": 132,
+          "end": 132
+        },
+        {
+          "start": 137,
+          "end": 139
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally viewed and read these six readable full original pages, including the language-response chart, multilingual family example, the communication obstacles/pacifier passage, language material images/captions and the complete bilingualism answer. The entire surrounding language unit was read in full-text mode separately.",
+      "retainedFrom": {
+        "reviewPath": "content/pilots/reviews/final/baby-sleep-connection-tone-r03.json",
+        "reviewSha256": "8f8ea2d1322a3a748f9745ef7c597db18988cada2f3fa7093944184e43c86bd5",
+        "readLogId": "tone.baby.language.visual",
+        "reviewerTask": "/root/baby_sleep_tone_r03"
+      },
+      "readOccurrence": "Retained actual personal original-source read from this reviewer’s r03 review; not a claim of a fresh r06 full-unit reread."
+    },
+    {
+      "id": "tone.baby.questions.visual",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 213,
+          "end": 216
+        },
+        {
+          "start": 220,
+          "end": 221
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally viewed and read these six readable full original pages: all pacifier/sharing/colic starts and continuations, and the complete separation answer. Checked list and question boundaries so that the sharing and pacifier text was not detached from its qualifications.",
+      "retainedFrom": {
+        "reviewPath": "content/pilots/reviews/final/baby-sleep-connection-tone-r03.json",
+        "reviewSha256": "8f8ea2d1322a3a748f9745ef7c597db18988cada2f3fa7093944184e43c86bd5",
+        "readLogId": "tone.baby.questions.visual",
+        "reviewerTask": "/root/baby_sleep_tone_r03"
+      },
+      "readOccurrence": "Retained actual personal original-source read from this reviewer’s r03 review; not a claim of a fresh r06 full-unit reread."
+    },
+    {
+      "id": "tone.baby.adult.visual",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 238,
+          "end": 242
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally viewed and read all five readable full original-page renders, including the preparation and observation boxes, all 49 ideas across the three-page continuation, the doing-our-best passage, practice box and closing quotation. A prior oversized image return was not counted; these pages were subsequently displayed and read in small batches.",
+      "retainedFrom": {
+        "reviewPath": "content/pilots/reviews/final/baby-sleep-connection-tone-r03.json",
+        "reviewSha256": "8f8ea2d1322a3a748f9745ef7c597db18988cada2f3fa7093944184e43c86bd5",
+        "readLogId": "tone.baby.adult.visual",
+        "reviewerTask": "/root/baby_sleep_tone_r03"
+      },
+      "readOccurrence": "Retained actual personal original-source read from this reviewer’s r03 review; not a claim of a fresh r06 full-unit reread."
+    },
+    {
+      "id": "tone.baby.r06.cited-refresh.text",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 76,
+          "end": 76
+        },
+        {
+          "start": 132,
+          "end": 132
+        },
+        {
+          "start": 199,
+          "end": 199
+        },
+        {
+          "start": 213,
+          "end": 215
+        }
+      ],
+      "mode": "full-text",
+      "description": "Freshly reread the complete original text of all six physical pages directly from the SHA-verified root PDF during this r06 adjudication. This includes the full pacifier question and its continuation, the whole sharing question and its continuation, and every cited cross-reference: the complete 2021 sleep-safety box, language-obstacle/pacifier passage, and pacifier-free sleep passage. Retained linked personal reads supply the full language, sleep, responsive-care, observation, adult and age context. Incidental boundary prose on these complete pages is not a claim that its whole separate subject was freshly reread."
+    },
+    {
+      "id": "tone.baby.r06.cited-refresh.visual",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 76,
+          "end": 76
+        },
+        {
+          "start": 132,
+          "end": 132
+        },
+        {
+          "start": 199,
+          "end": 199
+        },
+        {
+          "start": 213,
+          "end": 215
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Freshly viewed and read six readable full original-page renders during r06: physical PDF 76, 132, 199, 213, 214 and 215. Inspected the complete safety box, language/book box boundary, sleep passage and table boundary, and the pacifier/sharing starts and continuations. Used the original renders produced by this reviewer for the verified unchanged PDF during r03; displayed each page again in batches of three. These inspections are separate from retained full-unit visual readings.",
+      "pageRenders": [
+        {
+          "pdfPage": 76,
+          "path": "tmp/pilot-reviews/baby-sleep-tone-r03/baby-076.png",
+          "sha256": "a58f1807c7efe7275b13d7cd92c570984db3e0924dc23ba10c6623262f9cc50a"
+        },
+        {
+          "pdfPage": 132,
+          "path": "tmp/pilot-reviews/baby-sleep-tone-r03/baby-132.png",
+          "sha256": "c51a84117050535434bd647b0b75dbadb716170d8bcfdda3f967f4961ce7be76"
+        },
+        {
+          "pdfPage": 199,
+          "path": "tmp/pilot-reviews/baby-sleep-tone-r03/baby-199.png",
+          "sha256": "c801818d7b778f1589a85535a2aba74d0188bd6b4f2a231b15bfaa88a6dee28a"
+        },
+        {
+          "pdfPage": 213,
+          "path": "tmp/pilot-reviews/baby-sleep-tone-r03/baby-213.png",
+          "sha256": "db793801780bcbd33933d60f001c340ffdeeefbdf26af803b5808f5603c91755"
+        },
+        {
+          "pdfPage": 214,
+          "path": "tmp/pilot-reviews/baby-sleep-tone-r03/baby-214.png",
+          "sha256": "0cba4b36f4980a53834a39555956877433ca6f8b2325341b592cb02876b48834"
+        },
+        {
+          "pdfPage": 215,
+          "path": "tmp/pilot-reviews/baby-sleep-tone-r03/baby-215.png",
+          "sha256": "6a9aafb81eeb7fd9bf7f96e00d7cc31a3c65b05f8bed155e41d382bd5a8806e5"
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "baby-sleep-connection-tone-r06.6-9.baby-pacifier",
+      "entryId": "baby-pacifier",
+      "placementId": "6-9.baby-pacifier",
+      "snapshotPath": "content/pilots/revisions/r06/snapshots/6-9.baby-pacifier.json",
+      "snapshotFileSha256": "a091b40e42d70a1b1133788215fc85ae48968416e102fa9c0a10f82a4a57d7c6",
+      "textPlacementSha256": "e0793097a1ec211e3be3ae6dd30e8a55427b21293b3e9bd684e70769faba4f90",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone.baby.orientation.text",
+        "tone.baby.orientation.visual",
+        "tone.baby.adult.text",
+        "tone.baby.adult.visual",
+        "tone.baby.questions.text",
+        "tone.baby.questions.visual",
+        "tone.baby.language.text",
+        "tone.baby.language.visual",
+        "tone.baby.sleep.text",
+        "tone.baby.sleep.visual",
+        "tone.baby.r06.cited-refresh.text",
+        "tone.baby.r06.cited-refresh.visual"
+      ],
+      "citedPagesRead": [
+        {
+          "referenceId": "baby-pacifier.ref.1",
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 213,
+              "end": 214
+            }
+          ]
+        },
+        {
+          "referenceId": "baby-pacifier.ref.2",
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 132,
+              "end": 132
+            },
+            {
+              "start": 199,
+              "end": 199
+            },
+            {
+              "start": 76,
+              "end": 76
+            }
+          ]
+        }
+      ],
+      "sourceContextRead": "The full original subject unit and all cited cross-references were freshly reread in complete-text and readable full-page-visual modes for this r06 review. Explicitly linked own r03 actual readings retain full relevant continuations and wider context; no other reader’s work is used as personal evidence.",
+      "renderedSurfaceReads": {
+        "mode": "actual-server-rendered-text-and-row-html",
+        "topicRows": [
+          {
+            "topicId": "everyday-care",
+            "textSha256": "f19dff7cbbc21e7a93c416bba19d65289f75d3d82f8663b7a57a06b68628adc9",
+            "htmlSha256": "6419b49e20de0503ddcc14cfd62b79f4ac5f2e20cdefa90de6796bfde51ad446",
+            "description": "Freshly read the actual complete r06 kind/title/summary row text and HTML as its own short surface."
+          },
+          {
+            "topicId": "connection-feelings",
+            "textSha256": "f19dff7cbbc21e7a93c416bba19d65289f75d3d82f8663b7a57a06b68628adc9",
+            "htmlSha256": "b33a59334e80a61a32e13c9c7522a06cfa86e358a98c55e043da53e7d6514694",
+            "description": "Freshly read the actual complete r06 kind/title/summary row text and HTML as its own short surface."
+          }
+        ],
+        "entryTextSha256": "db715b14e39fe47c2753f6dae5e3774b32e4edbb2f09fc12eefde873060822f4",
+        "entryDescription": "Freshly read the complete actual r06 entryText: browse ages, kind, title, summary, everyday cue, all public age/readiness context, every detail paragraph, references/labels and shared footer/colophon. Compared with the exact r06 projection and matching draft-r04 records; HomeStudy renderer identity remains identical to the personally read r03 renderer.",
+        "openingText": null
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for this exact r06 text and placement. The revised public bookAge sentence directly identifies infancy and the communication, settling and sleep context. It no longer talks about this summary’s editorial omission or raises an unnamed removal-age preference. The recognizable title and both actual short topic rows still present the authors’ discouragement of constant use alongside their possible SIDS-risk reduction and limited settling/sleep allowance. The full entry stays measured and source-attributed without a removal deadline, invented method, parental blame or implied clinical validation. Its family-situation cue and age-browse qualification remain natural and useful."
+      },
+      "issueResolutions": [
+        {
+          "issueId": "baby-sleep-connection-tone-r03.pacifier-age-context",
+          "status": "resolved",
+          "priorReviewPath": "content/pilots/reviews/final/baby-sleep-connection-tone-r03.json",
+          "priorReviewSha256": "8f8ea2d1322a3a748f9745ef7c597db18988cada2f3fa7093944184e43c86bd5",
+          "priorReviewId": "baby-sleep-connection-tone-r03.6-9.baby-pacifier",
+          "priorTextPlacementSha256": "885b68c609a2b7bad2ba472a4369a52c1d264f959ca74f8e6bf787687ad9e18d",
+          "affectedFields": [
+            "publicProjection.textPlacement.placement.ageContext.bookAge"
+          ],
+          "replacement": "Discussion of pacifier use during infancy, including communication, settling and sleep.",
+          "replacementTextPlacementSha256": "e0793097a1ec211e3be3ae6dd30e8a55427b21293b3e9bd684e70769faba4f90",
+          "resolution": "Resolved after reading the exact replacement in the r06 snapshot, matching draft-r04 placement and actual complete rendered entry. Direct infant context replaces editorial-process wording, and no unnamed removal age or deadline is left dangling. Rechecked both unchanged short topic rows and the full entry against the complete original pacifier discussion, every cited cross-reference and retained full source context."
+        }
+      ],
+      "artContext": null
+    },
+    {
+      "id": "baby-sleep-connection-tone-r06.6-9.baby-sharing",
+      "entryId": "baby-sharing",
+      "placementId": "6-9.baby-sharing",
+      "snapshotPath": "content/pilots/revisions/r06/snapshots/6-9.baby-sharing.json",
+      "snapshotFileSha256": "976d7a5c635f598215d41f2aac91fed70c15e5cfda275c4c62fa8f5f39f5a2d7",
+      "textPlacementSha256": "a31ea7adeef848d7cbcee74cb49170c8f7ffafa9ec2ebc17df8fdf3f0d825471",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone.baby.orientation.text",
+        "tone.baby.orientation.visual",
+        "tone.baby.adult.text",
+        "tone.baby.adult.visual",
+        "tone.baby.questions.text",
+        "tone.baby.questions.visual",
+        "tone.baby.responsive.text",
+        "tone.baby.responsive.visual",
+        "tone.baby.r06.cited-refresh.text",
+        "tone.baby.r06.cited-refresh.visual"
+      ],
+      "citedPagesRead": [
+        {
+          "referenceId": "baby-sharing.ref.1",
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 214,
+              "end": 215
+            }
+          ]
+        }
+      ],
+      "sourceContextRead": "The full original subject unit and all cited cross-references were freshly reread in complete-text and readable full-page-visual modes for this r06 review. Explicitly linked own r03 actual readings retain full relevant continuations and wider context; no other reader’s work is used as personal evidence.",
+      "renderedSurfaceReads": {
+        "mode": "actual-server-rendered-text-and-row-html",
+        "topicRows": [
+          {
+            "topicId": "connection-feelings",
+            "textSha256": "aad6c335d38a8f423e667171d9500f71561ed1b1890eb3cff5c20b3aa496634b",
+            "htmlSha256": "0a8b9b51e746653c83694311d3e26d96a10d95261fdafe4968ed61918c40de90",
+            "description": "Freshly read the actual complete r06 kind/title/summary row text and HTML as its own short surface."
+          },
+          {
+            "topicId": "play-discovery",
+            "textSha256": "aad6c335d38a8f423e667171d9500f71561ed1b1890eb3cff5c20b3aa496634b",
+            "htmlSha256": "d26485cd377db2333c5bb01b61656535b7c6b4e1f69a0ae0f82f7411729783fd",
+            "description": "Freshly read the actual complete r06 kind/title/summary row text and HTML as its own short surface."
+          }
+        ],
+        "entryTextSha256": "e78d7cbec5c075db0c120ca5c20a68cd85aa176c99e889366add7786ae396068",
+        "entryDescription": "Freshly read the complete actual r06 entryText: browse ages, kind, title, summary, everyday cue, all public age/readiness context, every detail paragraph, references/labels and shared footer/colophon. Compared with the exact r06 projection and matching draft-r04 records; HomeStudy renderer identity remains identical to the personally read r03 renderer.",
+        "openingText": null
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for this exact r06 text and placement. “Sharing toys and taking turns” now clearly names the subject. Each actual short row explicitly identifies the baby using the object, allows the baby to be ready to move on, and tentatively names the baby’s wish to keep playing before explaining it to the other child. “That wish” now has a clear immediate referent; there is no ambiguous “them” and no instruction to lengthen a turn. The full detail retains both possible reactions and the reciprocal asking/waiting situation without forcing sharing or holding on. The first-year and around-12–16-month context appropriately qualifies the 6–9-month browse placement. The result is concrete, respectful and useful on its own short surface."
+      },
+      "issueResolutions": [
+        {
+          "issueId": "baby-sleep-connection-tone-r03.sharing-turn-agency",
+          "status": "resolved",
+          "priorReviewPath": "content/pilots/reviews/final/baby-sleep-connection-tone-r03.json",
+          "priorReviewSha256": "8f8ea2d1322a3a748f9745ef7c597db18988cada2f3fa7093944184e43c86bd5",
+          "priorReviewId": "baby-sleep-connection-tone-r03.6-9.baby-sharing",
+          "priorTextPlacementSha256": "1334f55b4b26e844b87e8053ee61fcc263e56c43c6d0932a852163caea88d646",
+          "affectedFields": [
+            "publicProjection.textPlacement.entry.title",
+            "publicProjection.textPlacement.entry.summary"
+          ],
+          "replacement": {
+            "title": "Sharing toys and taking turns",
+            "summary": "If another child wants what your baby is using, notice whether your baby seems ready to move on. If your baby seems to want to keep playing, you can explain that wish to the other child."
+          },
+          "replacementTextPlacementSha256": "a31ea7adeef848d7cbcee74cb49170c8f7ffafa9ec2ebc17df8fdf3f0d825471",
+          "resolution": "Resolved after reading the exact new title and summary together in both r06 topic rows and the full entry, and comparing with the full original sharing unit including its PDF 215 continuation. The baby’s actual interest and the other child are explicit; tentative interpretation and moving on are present in each short row. The new subject title removes the implied adult aim of prolonging the turn."
+        }
+      ],
+      "artContext": null
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "revision": "r01",
+  "date": "2026-09-10",
+  "scope": "Mechanical source-ID/evidence/target resolution, not semantic coverage or source/tone approval",
+  "results": [
+    {
+      "book": "baby",
+      "ledgerPath": "research/baby/COVERAGE_LEDGER.jsonl",
+      "ledgerSha256": "b30e5c55e2364af2762aa7af49a5e752908bdb3481779e61fc39762a05432a0f",
+      "coveragePath": "content/pilots/drafts/baby/COVERAGE.jsonl",
+      "coverageSha256": "3b37b4e54775700c344a98c3909f3f8306330f7dc19fb1b5366ea63f6cd0a952",
+      "ideas": 617,
+      "errors": []
+    },
+    {
+      "book": "toddler",
+      "ledgerPath": "research/toddler/COVERAGE_LEDGER.jsonl",
+      "ledgerSha256": "dff004b408d6a74d83b41560d5aaf0fda7e3ec7c819a03b11605344e7b2074e2",
+      "coveragePath": "content/pilots/drafts/toddler/COVERAGE.jsonl",
+      "coverageSha256": "faf703ed37ca067b7ff2918dfa9eccbe19a2f2e9690429bda55b441fed70da3a",
+      "ideas": 692,
+      "errors": []
+    }
+  ],
+  "shared": {
+    "path": "content/pilots/drafts/shared/COVERAGE.jsonl",
+    "sha256": "af5fd78e1a97cd37862434551f99fa58dfadc6fe06277e32558da32648bdc056",
+    "rows": 153,
+    "note": "Overlapping source ideas, never added to the 1309-book-idea total."
+  },
+  "contextTargets": [
+    {
+      "sourceIdeaId": "baby.idea.author-experience-and-scope",
+      "target": "research/foundation/SOURCE_MANIFEST.md#baby-2021",
+      "reason": "Authorship, historical influence and use-of-book framing remain private source lineage; they are not additional caregiver tasks."
+    },
+    {
+      "sourceIdeaId": "baby.idea.training-and-influences",
+      "target": "research/foundation/SOURCE_MANIFEST.md#baby-2021",
+      "reason": "Authorship, historical influence and use-of-book framing remain private source lineage; they are not additional caregiver tasks."
+    },
+    {
+      "sourceIdeaId": "baby.idea.education-as-experience",
+      "target": "research/foundation/SOURCE_MANIFEST.md#baby-2021",
+      "reason": "Authorship, historical influence and use-of-book framing remain private source lineage; they are not additional caregiver tasks."
+    },
+    {
+      "sourceIdeaId": "baby.idea.history-context",
+      "target": "research/foundation/SOURCE_MANIFEST.md#baby-2021",
+      "reason": "Authorship, historical influence and use-of-book framing remain private source lineage; they are not additional caregiver tasks."
+    },
+    {
+      "sourceIdeaId": "baby.idea.planes-first",
+      "target": "research/foundation/EDITORIAL_CHARTER.md",
+      "reason": "Broad developmental-plane and peace framing remains private editorial context. It does not add a six-month activity or promised family outcome."
+    },
+    {
+      "sourceIdeaId": "baby.idea.planes-practice",
+      "target": "research/foundation/EDITORIAL_CHARTER.md",
+      "reason": "Broad developmental-plane and peace framing remains private editorial context. It does not add a six-month activity or promised family outcome."
+    },
+    {
+      "sourceIdeaId": "baby.idea.peace-family-values",
+      "target": "research/foundation/EDITORIAL_CHARTER.md",
+      "reason": "Broad developmental-plane and peace framing remains private editorial context. It does not add a six-month activity or promised family outcome."
+    }
+  ],
+  "correction": {
+    "priorCheckPath": "content/pilots/revisions/r01/COVERAGE_INTEGRITY.json",
+    "priorCheckSha256": "f7655c132c0c3000474d7ce5dc9c1bc71e34b6fa383614cce66f1f9629df323b",
+    "finding": "The first checker treated7 valid context-only foundation references as reader entry IDs. Each target file exists; their original context-only reasons were read. This changes validation classification only, not a source row or public entry."
+  },
+  "verdict": "mechanical-integrity-pass; independent exact source/tone reviews still pending"
+}

@@ -1,0 +1,234 @@
+{
+  "author": {
+    "task": "/root/t7_care_connection_author",
+    "date": "2026-09-10",
+    "reasoning": "xhigh",
+    "workflow": "lean-v1"
+  },
+  "placements": [
+    {
+      "id": "12-18.family-declining-help",
+      "entryId": "family-declining-help",
+      "ageId": "12-18",
+      "topicIds": [
+        "connection-feelings",
+        "you-family",
+        "play-discovery"
+      ],
+      "ageContext": {
+        "bookAge": "Davies gives no fixed age for this situation within the toddler years.",
+        "readiness": "Relevant when your child is exploring an activity, struggling, and declining offered help.",
+        "note": "The amount of help and the form of the child’s refusal may differ; this is not a test of independence."
+      }
+    },
+    {
+      "id": "18-24.family-declining-help",
+      "entryId": "family-declining-help",
+      "ageId": "18-24",
+      "topicIds": [
+        "connection-feelings",
+        "you-family",
+        "play-discovery"
+      ],
+      "ageContext": {
+        "bookAge": "Davies gives no fixed age for this situation within the toddler years.",
+        "readiness": "Relevant when your child is exploring an activity, struggling, and declining offered help.",
+        "note": "The amount of help and the form of the child’s refusal may differ; this is not a test of independence."
+      }
+    },
+    {
+      "id": "24-36.family-declining-help",
+      "entryId": "family-declining-help",
+      "ageId": "24-36",
+      "topicIds": [
+        "connection-feelings",
+        "you-family",
+        "play-discovery"
+      ],
+      "ageContext": {
+        "bookAge": "Davies gives no fixed age for this situation within the toddler years.",
+        "readiness": "Relevant when your child is exploring an activity, struggling, and declining offered help.",
+        "note": "The amount of help and the form of the child’s refusal may differ; this is not a test of independence."
+      }
+    }
+  ],
+  "placementEvidence": [
+    {
+      "placementId": "12-18.family-declining-help",
+      "sourceAge": {
+        "statement": "No fixed age in PDF177–178; Davies defines toddler as around 1 to 3 in PDF14.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ],
+            "section": "What we need to know about toddlers",
+            "locator": "Final toddler-age note"
+          },
+          {
+            "sourceId": "toddler-2019",
+            "pdfPages": [
+              {
+                "start": 177,
+                "end": 178
+              }
+            ],
+            "section": "Building concentration / Dealing with frustration",
+            "locator": "Interest, proportionate help, slow demonstration or verbal cue, refusal and another attempt"
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.frustration-help"
+        ]
+      },
+      "readiness": {
+        "statement": "The child is struggling in an activity, may be about to give up, and refuses offered help; a response need not be verbal.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "pdfPages": [
+              {
+                "start": 177,
+                "end": 178
+              }
+            ],
+            "section": "Building concentration / Dealing with frustration",
+            "locator": "Interest, proportionate help, slow demonstration or verbal cue, refusal and another attempt"
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.frustration-help"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The source situation applies within the book’s toddler scope at this age. The entry supports the caregiver’s response to observed refusal, rather than requiring a particular motor or verbal skill. All three supported toddler bands share the same body.",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json"
+    },
+    {
+      "placementId": "18-24.family-declining-help",
+      "sourceAge": {
+        "statement": "No fixed age in PDF177–178; Davies defines toddler as around 1 to 3 in PDF14.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ],
+            "section": "What we need to know about toddlers",
+            "locator": "Final toddler-age note"
+          },
+          {
+            "sourceId": "toddler-2019",
+            "pdfPages": [
+              {
+                "start": 177,
+                "end": 178
+              }
+            ],
+            "section": "Building concentration / Dealing with frustration",
+            "locator": "Interest, proportionate help, slow demonstration or verbal cue, refusal and another attempt"
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.frustration-help"
+        ]
+      },
+      "readiness": {
+        "statement": "The child is struggling in an activity, may be about to give up, and refuses offered help; a response need not be verbal.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "pdfPages": [
+              {
+                "start": 177,
+                "end": 178
+              }
+            ],
+            "section": "Building concentration / Dealing with frustration",
+            "locator": "Interest, proportionate help, slow demonstration or verbal cue, refusal and another attempt"
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.frustration-help"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The source situation applies within the book’s toddler scope at this age. The entry supports the caregiver’s response to observed refusal, rather than requiring a particular motor or verbal skill. All three supported toddler bands share the same body.",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json"
+    },
+    {
+      "placementId": "24-36.family-declining-help",
+      "sourceAge": {
+        "statement": "No fixed age in PDF177–178; Davies defines toddler as around 1 to 3 in PDF14.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "pdfPages": [
+              {
+                "start": 14,
+                "end": 14
+              }
+            ],
+            "section": "What we need to know about toddlers",
+            "locator": "Final toddler-age note"
+          },
+          {
+            "sourceId": "toddler-2019",
+            "pdfPages": [
+              {
+                "start": 177,
+                "end": 178
+              }
+            ],
+            "section": "Building concentration / Dealing with frustration",
+            "locator": "Interest, proportionate help, slow demonstration or verbal cue, refusal and another attempt"
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.frustration-help"
+        ]
+      },
+      "readiness": {
+        "statement": "The child is struggling in an activity, may be about to give up, and refuses offered help; a response need not be verbal.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "pdfPages": [
+              {
+                "start": 177,
+                "end": 178
+              }
+            ],
+            "section": "Building concentration / Dealing with frustration",
+            "locator": "Interest, proportionate help, slow demonstration or verbal cue, refusal and another attempt"
+          }
+        ],
+        "evidenceIds": [
+          "toddler.care.ev.frustration-help"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "The source situation applies within the book’s toddler scope at this age. The entry supports the caregiver’s response to observed refusal, rather than requiring a particular motor or verbal skill. All three supported toddler bands share the same body.",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01"
+        ]
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "status": "Working batch allocation; final immutable snapshot manifest controls actual review scope.",
+  "roles": [
+    "source",
+    "tone"
+  ],
+  "rule": "Each batch has fresh distinct xhigh source and tone reviewers; each exact placement gets its own verdict. Original full relevant source units, not a whole-corpus context dump.",
+  "batches": [
+    {
+      "id": "baby-play",
+      "entryIds": [
+        "baby-movement",
+        "baby-language",
+        "baby-naming",
+        "baby-books",
+        "baby-songs",
+        "baby-outdoors",
+        "baby-hand-discovery",
+        "baby-treasure-baskets",
+        "baby-rolling-balls",
+        "baby-first-containers",
+        "baby-choices-within-reach",
+        "baby-photos-at-eye-level",
+        "baby-space-to-explore"
+      ],
+      "sourceUnits": "Complete relevant movement, language, material, home, general activity and appendix units; preserve age/readiness differences."
+    },
+    {
+      "id": "baby-care",
+      "entryIds": [
+        "baby-connection",
+        "baby-dressing",
+        "baby-diaper-conversation",
+        "baby-care-resistance",
+        "baby-feeding-connection",
+        "baby-solids-perspective",
+        "baby-eating-place",
+        "baby-eating-amount",
+        "baby-meal-cleanup",
+        "baby-daily-rhythm"
+      ],
+      "sourceUnits": "Complete respectful care, feeding, solids/meals, adult help and rhythm context; source-only sensitive care descriptions."
+    },
+    {
+      "id": "baby-sleep-connection",
+      "entryIds": [
+        "baby-sleep-support",
+        "baby-sleep-changes",
+        "baby-pacifier",
+        "baby-crying",
+        "baby-separation",
+        "baby-sharing",
+        "baby-languages"
+      ],
+      "sourceUnits": "Complete sleep, pacifier, crying, separation, sharing and family language units; do not detach qualifications."
+    },
+    {
+      "id": "shared",
+      "entryIds": [
+        "shared-observe",
+        "shared-follow-readiness",
+        "shared-participation-help",
+        "shared-time-to-explore",
+        "shared-feelings-limits",
+        "shared-home-fits-family",
+        "shared-adult-needs-support",
+        "shared-something-for-you",
+        "shared-less-crowded-day",
+        "shared-adult-pause",
+        "shared-repair",
+        "shared-family-needs",
+        "shared-caregiver-common-ground",
+        "shared-family-separation",
+        "shared-choosing-care"
+      ],
+      "sourceUnits": "Both books: complete observation, activity, adult preparation, support, family and separation units; review both age placements individually."
+    },
+    {
+      "id": "toddler-play",
+      "entryIds": [
+        "toddler-drawing",
+        "toddler-puzzles",
+        "toddler-fitting-and-turning",
+        "toddler-sorting",
+        "toddler-music",
+        "toddler-books",
+        "toddler-conversation",
+        "toddler-objects-and-pictures",
+        "toddler-paint-and-chalk",
+        "toddler-glue-and-mold",
+        "toddler-outside-noticing",
+        "toddler-room-to-move",
+        "toddler-everyday-play"
+      ],
+      "sourceUnits": "Complete relevant hand, music/movement, art, language, outdoors, home-play and appendix units, with general activity framing and concentration/frustration context."
+    },
+    {
+      "id": "toddler-practical-home",
+      "entryIds": [
+        "toddler-pouring",
+        "toddler-shoes",
+        "toddler-wipe-and-dust",
+        "toddler-laundry",
+        "toddler-plants-and-flowers",
+        "toddler-food-preparation",
+        "toddler-table-together",
+        "toddler-nose-and-hair",
+        "toddler-shelf-and-rotation",
+        "toddler-spaces-for-different-ages",
+        "toddler-art-has-a-place",
+        "toddler-handwashing",
+        "toddler-small-job-on-an-errand"
+      ],
+      "sourceUnits": "Complete relevant practical-life, room-by-room, care-of-self, home organization, errands/cooperation, concentration and appendix units. Pouring and shoes are illustrated openings."
+    },
+    {
+      "id": "toddler-daily-care",
+      "entryIds": [
+        "toddler-getting-dressed",
+        "toddler-coat-flip",
+        "toddler-care-connection",
+        "toddler-daily-rhythm",
+        "toddler-family-rituals",
+        "toddler-meals",
+        "toddler-food-on-floor",
+        "toddler-sleep",
+        "toddler-teeth",
+        "toddler-toileting",
+        "toddler-pacifier-change"
+      ],
+      "sourceUnits": "Complete dressing and coat flip, daily care/rhythm/rituals, meals, sleep, teeth, toileting and pacifier units. Preserve care qualifications and source-only framing."
+    },
+    {
+      "id": "toddler-limits",
+      "entryIds": [
+        "toddler-transitions",
+        "toddler-words-that-help",
+        "toddler-solving-together",
+        "toddler-waiting-outside-home",
+        "toddler-clear-limits",
+        "toddler-big-feelings",
+        "toddler-make-amends",
+        "toddler-hitting",
+        "toddler-throwing",
+        "toddler-close-by",
+        "toddler-waiting-to-speak"
+      ],
+      "sourceUnits": "Complete cooperation, limits, tantrum/repair, hitting/throwing, closeness and interruption units; include relevant waiting context and actual time/protection exceptions."
+    },
+    {
+      "id": "toddler-family-connection",
+      "entryIds": [
+        "toddler-new-sibling",
+        "toddler-sibling-conflict",
+        "toddler-taking-turns",
+        "toddler-joining-in",
+        "toddler-wanted-hugs",
+        "toddler-feedback",
+        "toddler-screens",
+        "toddler-languages"
+      ],
+      "sourceUnits": "Complete sibling, sharing, introversion/respectful contact, feedback/labels, screens and bilingualism units; include safety/limits and source anecdote qualifications."
+    }
+  ]
+}

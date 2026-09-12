@@ -1,0 +1,781 @@
+{
+  "id": "baby-play-tone-r01",
+  "reviewer": {
+    "task": "/root/baby_play_tone_r01",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Independent spirit/tone review of the exact 13 baby-play placements in the 6–9-month browsing band, against author-frozen r01 snapshots, their complete short/full rendered text and age/topic context, the actual renderer, and original Baby source context. Movement and language opening artwork receives separate verdicts. No other placement or final publication status is reviewed.",
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r01/RENDERED_SURFACES.json",
+    "sha256": "b7aa504ea50d67f7dd55c061ab4b187595df074d5da6aef47b9751d2af4ada8f"
+  },
+  "inputs": {
+    "manifest": {
+      "path": "content/pilots/revisions/r01/MANIFEST.json",
+      "sha256": "2448b86ccaf96f1f4c40d6b83b0065490f306b9d85900ebd5b42fb367f9d7e4f"
+    },
+    "authorDraft": {
+      "path": "content/pilots/drafts/baby/draft-r01.json",
+      "sha256": "2b3f7085ab35dbd07574a3606deb46a38a586ad57a5d257d8b26b4dd0d098183"
+    },
+    "rendererReads": [
+      {
+        "path": "src/HomeStudy.jsx",
+        "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c"
+      },
+      {
+        "path": "src/home.css",
+        "sha256": "55de72c5b21d2f1a3ead85c5975febd09ac3135fcbc2219e6672a13f4786a6e1"
+      },
+      {
+        "path": "src/guide/catalog.js",
+        "sha256": "d8d30a17c5f1b1c99ed68764f3f412cf99b48f55d09bf528313f0df1439da71c"
+      }
+    ],
+    "originalSource": {
+      "sourceId": "baby-2021",
+      "path": "the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+      "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+    }
+  },
+  "surfaceReview": {
+    "method": "Read exact, entry-ID-filtered r01 openingText, every included topicRows text/markup and entryText in bounded groups, together with all 13 snapshot public projections and actual HomeStudy.jsx, home.css and catalog.js. Read the assigned draft’s selected public entry/placement content and checked immutable file/component identity. This is rendered-text/renderer inspection plus actual-image inspection, not a claim to have run live-browser visual QA.",
+    "checked": "Titles; action labels and opening invitations where present; summaries; cues; all detail paragraphs; source-age, readiness and editorial-age wording; kind and topic labels; every assigned topic row; both assigned openings; displayed headings, book-reference labels and note; Read more/Try this together/Explore more and return navigation; footer and colophon. The common framing describes possibilities and references without a parent score, outcome promise or instruction to reproduce the illustration.",
+    "titleOnlyWiderContext": "Compared titles only in the 6–9 play, connection and home topic lists for recognizable subjects and repeated room-for/small-part phrasing. The specific repeated “Leave room for” titles are noted on baby-language. No wider entry-body review or blanket title rewrite is claimed.",
+    "independence": "Read both project and parent-repository LEARNINGS.md in full, the assigned foundation documents and REVIEW_FORMAT.md. Did not consult current source-review or other tone-review files. Original PDF text and readable page images were read by this reviewer; author/research summaries were not substituted for source reading."
+  },
+  "readLogs": [
+    {
+      "id": "baby-play-tone-r01.source.home-text",
+      "reader": "/root/baby_play_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 64,
+          "end": 83
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete original-page text directly extracted from the Baby PDF in bounded, untruncated page groups: home chapter opening, preparation tips and yes spaces, observing/storing/rotating, room-by-room discussion including display and outdoors, older-sibling and small-space contexts with continuation, and the following young-toddler context. Only the baby-play claims are reviewed here."
+    },
+    {
+      "id": "baby-play-tone-r01.source.agency-text",
+      "reader": "/root/baby_play_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 98,
+          "end": 108
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete original-page text for the surrounding respect, body, choice, assistance, limits, concentration and freedom-of-movement context. The complete freedom-of-movement unit is on PDF pp. 107–108. Adjacent opening or closing fragments are not represented as complete reviews of those other topics."
+    },
+    {
+      "id": "baby-play-tone-r01.source.activities-text",
+      "reader": "/root/baby_play_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 118,
+          "end": 127
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete original-page text, including the chapter navigation on p. 118 and the full introductory activity unit on pp. 119–127: individual development and support, choosing materials, safe objects and secured parts, challenge versus frustration, adult restoration, presentation, repetition and proportionate help."
+    },
+    {
+      "id": "baby-play-tone-r01.source.language-text",
+      "reader": "/root/baby_play_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 128,
+          "end": 139
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the full original language section, including its age subsections, language-rich surroundings, reading and real pictures, conversation and pauses, sounds and signs, songs, real naming, summary text and the adjacent bilingualism context. Layout and image-text obligations on selected pages are logged separately."
+    },
+    {
+      "id": "baby-play-tone-r01.source.movement-text",
+      "reader": "/root/baby_play_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 140,
+          "end": 169
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete original-page text for the full movement section and all its age subsections: mobiles and grasping materials, awake back/tummy movement and comfort, slithering/crawling, support and independent sitting, discovery baskets, the 6–9-month observation box, later gross-motor and fine-motor examples, and help after falls. Figures and table-like callouts were also checked visually as separately logged; this is not a claim that text extraction captured image text."
+    },
+    {
+      "id": "baby-play-tone-r01.source.music-outdoors-text",
+      "reader": "/root/baby_play_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 170,
+          "end": 171
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete original music and outdoors units, including short periods of music versus continuous background sound, instruments as examples, outdoor observation and vocabulary, material and surface qualifications, and the complete closing practice box."
+    },
+    {
+      "id": "baby-play-tone-r01.source.first-year-summary-text",
+      "reader": "/root/baby_play_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 172,
+          "end": 174
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete extractable original-page text in the first-year developmental summary and its continuation. The movement-activity illustration spanning pp. 174–175 was read visually in a separate log, not inferred from the extract."
+    },
+    {
+      "id": "baby-play-tone-r01.source.mouthing-text",
+      "reader": "/root/baby_play_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 220,
+          "end": 222
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete original-page text around the full touching/mouthing question: heading on p. 221 and answer on p. 222, with the preceding separation context. The next daily-tasks opening is incidental; no complete daily-tasks review is claimed."
+    },
+    {
+      "id": "baby-play-tone-r01.source.visitor-letter-text",
+      "reader": "/root/baby_play_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 257,
+          "end": 259
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete original-page text containing the entire visitor letter on pp. 257–258, including conversation, quiet concentration, available comfort and help, ordinary family connection, and removal of unsafe mouthing objects. The following chapter opening on p. 259 was also read; it does not enlarge the review scope."
+    },
+    {
+      "id": "baby-play-tone-r01.source.appendix-introduction-text",
+      "reader": "/root/baby_play_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete original appendix introduction and its age-as-guidance framing. Extracts of pp. 295–302 were empty and are not logged as full-text reads; those actual table pages were read as full-page visuals below."
+    },
+    {
+      "id": "baby-play-tone-r01.source.home-visual",
+      "reader": "/root/baby_play_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 66,
+          "end": 66
+        },
+        {
+          "start": 68,
+          "end": 70
+        },
+        {
+          "start": 74,
+          "end": 75
+        },
+        {
+          "start": 79,
+          "end": 80
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Inspected readable individual original-page renders, including the preparation list and independence/yes-space wording, storage and rotation, room photographs and captions, eye-level pictures and personal decoration, outdoors, and sibling access distinctions. Read full pages, not a contact sheet."
+    },
+    {
+      "id": "baby-play-tone-r01.source.activities-visual",
+      "reader": "/root/baby_play_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 120,
+          "end": 120
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read the full rendered original page and all choosing-activities criteria, including mouthing, safe finishes, whole-object/component size and securely attached parts, natural materials and useful challenge."
+    },
+    {
+      "id": "baby-play-tone-r01.source.language-visual",
+      "reader": "/root/baby_play_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 132,
+          "end": 132
+        },
+        {
+          "start": 137,
+          "end": 138
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read full original-page renders for the remaining books discussion and callout, later language context, and the language-development summary layout. Checked that age labels and the sign-language summary were attached to their own content."
+    },
+    {
+      "id": "baby-play-tone-r01.source.movement-visual",
+      "reader": "/root/baby_play_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 144,
+          "end": 145
+        },
+        {
+          "start": 155,
+          "end": 155
+        },
+        {
+          "start": 159,
+          "end": 162
+        },
+        {
+          "start": 165,
+          "end": 167
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Inspected readable individual full-page renders of mobile/material illustrations and adjacent text, the 3–6-month fine/gross-motor transition, independent sitting and discovery-basket pages, hand-exploration and observation callouts, the gross-motor illustration continuing from p. 165 onto p. 166, the complete falls box, and the later fine-motor container/ring discussion. This preserves visual grouping and continuation boundaries."
+    },
+    {
+      "id": "baby-play-tone-r01.source.music-outdoors-visual",
+      "reader": "/root/baby_play_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 170,
+          "end": 171
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read full rendered original music and outdoors pages, including the final quiet-music qualification, nature/material context and complete practice box."
+    },
+    {
+      "id": "baby-play-tone-r01.source.movement-summary-visual",
+      "reader": "/root/baby_play_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 174,
+          "end": 175
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read both full original-page renders of the movement-activity illustration, including the age headings at page/row boundaries and the 3–6, 6–9 and 9–12-month continuation. Used with the main prose and appendix rather than treating a nearby illustration heading as a new readiness rule."
+    },
+    {
+      "id": "baby-play-tone-r01.source.mouthing-visual",
+      "reader": "/root/baby_play_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 221,
+          "end": 222
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read the actual heading/answer continuation across the full original pages, including the mouthing illustration and all answer text; the source passage is descriptive context, not independently verified clinical guidance."
+    },
+    {
+      "id": "baby-play-tone-r01.source.visitor-letter-visual",
+      "reader": "/root/baby_play_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 257,
+          "end": 258
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read the whole boxed visitor letter across both original pages, including its continuation, small print, illustrations and closing practice box. The safe-mouthing sentence is part of the whole relationship/help context."
+    },
+    {
+      "id": "baby-play-tone-r01.source.appendix-tables-visual",
+      "reader": "/root/baby_play_tone_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 294,
+          "end": 302
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read every full original page at readable resolution from the appendix introduction through p. 302. Read all activity, description, age and development columns, including books/music/self-expression; early grasping materials; familiar-toy basket lying or sitting; knitted ball and cylinder with bell; pull-up and creeping qualifications; egg/cube/tray rows; rocking-base rings requiring stable sitting; the later stable-base dependency; and adjacent later ring variants. Empty text extraction was not used as a substitute for these actual visual reads."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "baby-play-tone-r01.6-9.baby-movement",
+      "entryId": "baby-movement",
+      "placementId": "6-9.baby-movement",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-movement.json",
+      "snapshotFileSha256": "d2403fa01e4ace2d078942e629326eae034a734f5a75c39ec22afd71db019625",
+      "textPlacementSha256": "4548aa833d63e48eda79a6d12788068e9193fe3b9526258278e80ede71cb463b",
+      "artContextSha256": "e48ae313b5f423e0284102d727f50dd2d54f61729a42ac8ebdfa5696b1546a4f",
+      "readLogIds": [
+        "baby-play-tone-r01.source.home-text",
+        "baby-play-tone-r01.source.agency-text",
+        "baby-play-tone-r01.source.activities-text",
+        "baby-play-tone-r01.source.movement-text",
+        "baby-play-tone-r01.source.first-year-summary-text",
+        "baby-play-tone-r01.source.home-visual",
+        "baby-play-tone-r01.source.activities-visual",
+        "baby-play-tone-r01.source.movement-visual",
+        "baby-play-tone-r01.source.movement-summary-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass across the opening, both topic rows and full entry. The title names movement, and the short summary independently preserves awake movement initiated by the baby, nearby help and the narrow meaning of propping into sitting or standing before the baby can get there. The detail correctly keeps the authors’ awake back/tummy discussion and changes of position or being picked up for discomfort; it does not make self-initiation a reason to withhold comfort. The observation cue, effort/frustration distinction, proportionate help and developmental-support language retain the full source framing. The 6–9 browsing label and visible source-age/readiness context do not become deadlines. “Read more” fits the perspective rather than recasting it as an exercise."
+      },
+      "artContext": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass independently of the text verdict. The actual illustration’s awake prone reach, nearby soft ball and available caregiver are consistent with the original awake back/tummy and comfort/help context; the narrow caution about propping into sitting or standing does not prohibit the illustrated posture. The caption “Follow what catches their attention,” descriptive alt text, movement invitation and observation cue frame the scene as the baby’s exploration rather than a performance or room to reproduce. The image does not add an apparatus instruction.",
+        "assetReads": [
+          {
+            "src": "art/home-paper-baby.webp",
+            "sha256": "fb09c915ce18725df3f0ef1818fc0072116d2d97c6dbc45eb7578dda55dbc922",
+            "mode": "actual-image-visual",
+            "description": "Viewed the actual full home-paper-baby.webp asset. An awake baby lies on their tummy on a blue mat, head and chest lifted, reaching toward a soft orange ball while the other hand supports them. A caregiver sits beside the mat with open empty hands and an attentive expression. No adult is moving the baby into position, and no sitting/standing prop, restraint, dangling apparatus or visible small loose component is depicted. Read the exact scene caption, alt text and each opening’s adjacent title, invitation, cue and CTA separately."
+          }
+        ]
+      }
+    },
+    {
+      "id": "baby-play-tone-r01.6-9.baby-language",
+      "entryId": "baby-language",
+      "placementId": "6-9.baby-language",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-language.json",
+      "snapshotFileSha256": "d49b690f6b73ee5bce3f37b77396c645ede89070e92381f80e900b328450f080",
+      "textPlacementSha256": "3c98445d881dbcf4909130a4d217e4493174b5d5ffa36aec76f321c8d4303acb",
+      "artContextSha256": "19407b3c81a3fe79e91529a42bf59d66f4a24b8351e61c88eed1da0218c2dcbc",
+      "readLogIds": [
+        "baby-play-tone-r01.source.agency-text",
+        "baby-play-tone-r01.source.activities-text",
+        "baby-play-tone-r01.source.language-text",
+        "baby-play-tone-r01.source.language-visual",
+        "baby-play-tone-r01.source.activities-visual",
+        "baby-play-tone-r01.source.movement-text",
+        "baby-play-tone-r01.source.movement-visual",
+        "baby-play-tone-r01.source.appendix-introduction-text",
+        "baby-play-tone-r01.source.appendix-tables-visual",
+        "baby-play-tone-r01.source.visitor-letter-text",
+        "baby-play-tone-r01.source.visitor-letter-visual"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "baby-play-tone-r01.baby-language.name-conversation-in-title",
+            "severity": "low",
+            "field": "publicProjection.textPlacement.entry.title",
+            "surface": [
+              "6-9 openingText title",
+              "6-9/play-discovery topic row title",
+              "6-9/connection-feelings topic row title",
+              "entryText title"
+            ],
+            "finding": "“Leave room for a reply” uses the same opening stem as “Leave room for another try” in both topic lists. Together with the nearby room-for formulations, it makes this sound-and-gesture conversation idea less distinct when scanning. The summary is specific and reciprocal; the title does not carry that specificity.",
+            "requiredCorrection": "Give the title a recognizable conversation or baby-sound subject and distinguish it from the other leave-room title. Preserve the pause for a reply and the existing acceptance of smiles, gestures and sounds; do not turn the idea into eliciting words.",
+            "status": "open"
+          }
+        ],
+        "assessment": "Revise the title only as specified. The opening invitation, short summary, observation cue and full conversation passage otherwise preserve warm reciprocity and room for the baby’s own sounds, gestures and smiles. No word or imitation is demanded. The source-age discussion makes the differing signs labels visible and leaves signing optional alongside speech. “Listen” and “Try this together” suit the small invitation without turning it into a language test. The age band remains a browsing context and both topic rows retain the same useful short meaning."
+      },
+      "artContext": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass independently of the title revision. In this opening the same actual awake baby/caregiver illustration accompanies listening and responding to the baby’s sounds or gestures. The caregiver’s attentive presence and the baby’s self-directed reach are compatible with a responsive relationship; the text and caption do not claim that a particular movement demonstrates language progress. The alt text accurately describes the scene without inventing speech or signing, and the illustration adds no demand for a word, eye contact, posture or equipment.",
+        "assetReads": [
+          {
+            "src": "art/home-paper-baby.webp",
+            "sha256": "fb09c915ce18725df3f0ef1818fc0072116d2d97c6dbc45eb7578dda55dbc922",
+            "mode": "actual-image-visual",
+            "description": "Viewed the actual full home-paper-baby.webp asset. An awake baby lies on their tummy on a blue mat, head and chest lifted, reaching toward a soft orange ball while the other hand supports them. A caregiver sits beside the mat with open empty hands and an attentive expression. No adult is moving the baby into position, and no sitting/standing prop, restraint, dangling apparatus or visible small loose component is depicted. Read the exact scene caption, alt text and each opening’s adjacent title, invitation, cue and CTA separately."
+          }
+        ]
+      }
+    },
+    {
+      "id": "baby-play-tone-r01.6-9.baby-naming",
+      "entryId": "baby-naming",
+      "placementId": "6-9.baby-naming",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-naming.json",
+      "snapshotFileSha256": "0d3a2232a959ce785f32379c563beed5c5a58a9e39570da5cc50cc6a6325271d",
+      "textPlacementSha256": "2db605a5b5af859f454d1af723b32594e0c56c2974cfbf16356d6dba399fee02",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-play-tone-r01.source.agency-text",
+        "baby-play-tone-r01.source.activities-text",
+        "baby-play-tone-r01.source.language-text",
+        "baby-play-tone-r01.source.language-visual",
+        "baby-play-tone-r01.source.visitor-letter-text",
+        "baby-play-tone-r01.source.visitor-letter-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass. The title, short summary and cue all start with something the baby has already noticed. The detail makes ordinary language concrete through nearby objects and sounds, while naming remains a response to interest rather than a request to repeat, identify correctly or perform. The full language context supports this warm conversational use of real words. Both topic placements fit, the displayed invitation language remains light, and the source-age/readiness context does not add a vocabulary deadline."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-play-tone-r01.6-9.baby-books",
+      "entryId": "baby-books",
+      "placementId": "6-9.baby-books",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-books.json",
+      "snapshotFileSha256": "f2686d197c4a6c828e9444d118086db44761d3b9205ed1066a5ed3e09619190f",
+      "textPlacementSha256": "cb7e1adcba7347f1a15e07241bf53ea8cf73cba035dd8b35cf6e3fbfe997445f",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-play-tone-r01.source.agency-text",
+        "baby-play-tone-r01.source.activities-text",
+        "baby-play-tone-r01.source.language-text",
+        "baby-play-tone-r01.source.language-visual",
+        "baby-play-tone-r01.source.appendix-introduction-text",
+        "baby-play-tone-r01.source.appendix-tables-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass. The recognizable page-focused title, summary and full entry preserve shared reading as following the baby’s interest, including returning to a page, moving backward and stopping without finishing. Familiar pictures, sturdy board books and a family-photo book remain examples rather than a shopping list or a prescribed sequence. The cue and age context attend to looking, holding and turning rather than a reading skill target. Both play and connection topic rows carry that meaning on their own; the full reading unit and appendix all-ages framing support the placement."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-play-tone-r01.6-9.baby-songs",
+      "entryId": "baby-songs",
+      "placementId": "6-9.baby-songs",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-songs.json",
+      "snapshotFileSha256": "9da3293eafd94040a0e496289cfc1691baa0752e064d36dd0dc556fa5e9188a8",
+      "textPlacementSha256": "718433f5af17a2541dbd295c53c1894f86030f0ce5dc7dffacbbe0aa7ee76656",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-play-tone-r01.source.agency-text",
+        "baby-play-tone-r01.source.activities-text",
+        "baby-play-tone-r01.source.language-text",
+        "baby-play-tone-r01.source.language-visual",
+        "baby-play-tone-r01.source.music-outdoors-text",
+        "baby-play-tone-r01.source.music-outdoors-visual",
+        "baby-play-tone-r01.source.appendix-introduction-text",
+        "baby-play-tone-r01.source.appendix-tables-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass. Song is immediately recognizable in the title and short summary. The invitation and detail keep this an ordinary shared moment: a familiar song, short rhyme or piece of music, room to notice the baby’s response, and quiet between musical moments. Variations in voice, tempo or gesture remain possibilities, not required stimulation or evidence of progress. The music and language contexts support both topic placements and the first-year age context. No instrument, equipment or finished response is made necessary."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-play-tone-r01.6-9.baby-outdoors",
+      "entryId": "baby-outdoors",
+      "placementId": "6-9.baby-outdoors",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-outdoors.json",
+      "snapshotFileSha256": "2181a2e0b8e43d8e671227d0dcfc9f415e619d62cdcb53a8c20b8c0475aa5df6",
+      "textPlacementSha256": "abdd0091c7487302570b51929938af24d4ced848aa79eb2b20eff58cae1a517d",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-play-tone-r01.source.home-text",
+        "baby-play-tone-r01.source.home-visual",
+        "baby-play-tone-r01.source.agency-text",
+        "baby-play-tone-r01.source.activities-text",
+        "baby-play-tone-r01.source.language-text",
+        "baby-play-tone-r01.source.music-outdoors-text",
+        "baby-play-tone-r01.source.music-outdoors-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass. The title, summary and cue name watching and listening outside and follow what the baby already notices. The detail makes leaves, birds and passing everyday life useful subjects for quiet noticing and words. It does not import the source’s broader transport, outdoor placement, walking-surface or grasping-material examples as new setup advice. Both play and connection rows stand alone as ordinary invitations. Source age and the baby’s interest remain separate from the 6–9 browsing band, with no expectation that an outing produce a particular response."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-play-tone-r01.6-9.baby-hand-discovery",
+      "entryId": "baby-hand-discovery",
+      "placementId": "6-9.baby-hand-discovery",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-hand-discovery.json",
+      "snapshotFileSha256": "ed3f2516467e85a56c14cc5e52a9d78df275757c35cc0d146a8a8a714efb6164",
+      "textPlacementSha256": "d41a19dec28ba15c50fdadea85226fb71067beeac1533f4655fdb3ad14ec84e0",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-play-tone-r01.source.agency-text",
+        "baby-play-tone-r01.source.activities-text",
+        "baby-play-tone-r01.source.activities-visual",
+        "baby-play-tone-r01.source.movement-text",
+        "baby-play-tone-r01.source.movement-visual",
+        "baby-play-tone-r01.source.mouthing-text",
+        "baby-play-tone-r01.source.mouthing-visual",
+        "baby-play-tone-r01.source.visitor-letter-text",
+        "baby-play-tone-r01.source.visitor-letter-visual",
+        "baby-play-tone-r01.source.appendix-introduction-text",
+        "baby-play-tone-r01.source.appendix-tables-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass. The title identifies the hands’ exploration; summary and full entry make grasping, turning and transferring understandable without promising a later skill. Every object and component being suitable for mouthing is retained on the short surface, and the detail makes clear that natural materials alone do not establish suitability. Exploring a drum, an object or the basket itself remains the baby’s discovery. The cue and age context follow present movement and interest, and the discussion of dropped objects and help does not turn concentration into adult withdrawal. The material and mouthing passages were read with their relationship context."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-play-tone-r01.6-9.baby-treasure-baskets",
+      "entryId": "baby-treasure-baskets",
+      "placementId": "6-9.baby-treasure-baskets",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-treasure-baskets.json",
+      "snapshotFileSha256": "730593f58efeb4d588a8284b3ff879f3f527260ef148533b3dc0f3554e34466d",
+      "textPlacementSha256": "aeb90804e6f4094c1d2be4bd1e1194fa3656160c5dcdac01d88e98585d6e5c07",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-play-tone-r01.source.agency-text",
+        "baby-play-tone-r01.source.activities-text",
+        "baby-play-tone-r01.source.activities-visual",
+        "baby-play-tone-r01.source.movement-text",
+        "baby-play-tone-r01.source.movement-visual",
+        "baby-play-tone-r01.source.mouthing-text",
+        "baby-play-tone-r01.source.visitor-letter-text",
+        "baby-play-tone-r01.source.appendix-introduction-text",
+        "baby-play-tone-r01.source.appendix-tables-visual"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "baby-play-tone-r01.baby-treasure-baskets.name-basket-in-title",
+            "severity": "low",
+            "field": "publicProjection.textPlacement.entry.title",
+            "surface": [
+              "6-9/play-discovery topic row title",
+              "6-9/home-that-helps topic row title",
+              "entryText title"
+            ],
+            "finding": "“A few things to choose from” does not identify a basket and is difficult to distinguish from the separate visible-choices idea in the same lists. The source-supported subject is discovery with a basket; that becomes recognizable only in the summary.",
+            "requiredCorrection": "Name the discovery or treasure basket in the title using ordinary words. Keep the summary’s independent-sitting and safe-material conditions and the detail’s distinction from the familiar-toy basket that can be explored lying or sitting.",
+            "status": "open"
+          }
+        ],
+        "assessment": "Revise the title for subject clarity. The summary and full entry otherwise preserve the key distinctions visible in the original prose and appendix: independent sitting for the discovery-basket example, varied but individually suitable objects with secure parts, and the separate familiar-toy basket that can be explored lying or sitting without propping. Brief naming does not displace concentration, and a few examples do not become a shopping or completion requirement. The observation cue, visible source ages and readiness language make the placement understandable in both play and home lists."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-play-tone-r01.6-9.baby-rolling-balls",
+      "entryId": "baby-rolling-balls",
+      "placementId": "6-9.baby-rolling-balls",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-rolling-balls.json",
+      "snapshotFileSha256": "1e47dfb1ff9efa08fc3c2e12ce7b16603a643ebf3dd005316cb2cae25829b73c",
+      "textPlacementSha256": "f7e60f97b99c1e96b92f75f74b2d3700a3cfd2c5979bf6de713a32ddeb16a241",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-play-tone-r01.source.agency-text",
+        "baby-play-tone-r01.source.activities-text",
+        "baby-play-tone-r01.source.activities-visual",
+        "baby-play-tone-r01.source.movement-text",
+        "baby-play-tone-r01.source.movement-visual",
+        "baby-play-tone-r01.source.first-year-summary-text",
+        "baby-play-tone-r01.source.movement-summary-visual",
+        "baby-play-tone-r01.source.appendix-introduction-text",
+        "baby-play-tone-r01.source.appendix-tables-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass. The title names the rolling object and the summary independently links the invitation to current slithering, manageable movement of the object and mouthing-safe materials with secure parts. The detail leaves room to hold or turn the object instead of following it and attends to effort becoming frustration. It distinguishes the appendix’s later creeping context rather than assuming every child in the 6–9 band should crawl. The source’s ball and bell-cylinder examples remain descriptive possibilities, not a training program, shopping requirement or demand to chase."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-play-tone-r01.6-9.baby-first-containers",
+      "entryId": "baby-first-containers",
+      "placementId": "6-9.baby-first-containers",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-first-containers.json",
+      "snapshotFileSha256": "c53303a837f12f370d165548f1d4678540d13609f7def52aef288ecdab7c1434",
+      "textPlacementSha256": "b7d877363eab8c3156e35d31ec3cdcf9d03f63e89cf01868e25bff3689e58462",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-play-tone-r01.source.agency-text",
+        "baby-play-tone-r01.source.activities-text",
+        "baby-play-tone-r01.source.activities-visual",
+        "baby-play-tone-r01.source.movement-text",
+        "baby-play-tone-r01.source.movement-visual",
+        "baby-play-tone-r01.source.first-year-summary-text",
+        "baby-play-tone-r01.source.movement-summary-visual",
+        "baby-play-tone-r01.source.appendix-introduction-text",
+        "baby-play-tone-r01.source.appendix-tables-visual"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "baby-play-tone-r01.baby-first-containers.summary-needs-own-readiness-meaning",
+            "severity": "medium",
+            "field": "publicProjection.textPlacement.entry.summary",
+            "surface": [
+              "6-9/play-discovery topic row summary",
+              "entryText leading summary"
+            ],
+            "finding": "The short summary introduces container and ring examples but only says they “have different age and sitting conditions.” It leaves the actual condition unspecified in the standalone 6–9-month topic row. The appendix’s rocking-base ring row requires stable sitting and its later stable-base example depends on the preceding skill; these meanings are present only in the full detail and age context. A notice that conditions exist is not itself the needed qualification.",
+            "requiredCorrection": "Make the short summary useful on its own: if it continues to include the ring examples, state the relevant stable-sitting condition and preserve the later skill dependency where applicable. Alternatively, narrow the short summary to the container experience and reserve rings for their explicitly qualified full discussion. Preserve mouthing-safe pieces, secure parts, the difference between source ages and the browsing band, and the absence of a completion target.",
+            "status": "open"
+          },
+          {
+            "id": "baby-play-tone-r01.baby-first-containers.name-container-subject-in-title",
+            "severity": "low",
+            "field": "publicProjection.textPlacement.entry.title",
+            "surface": [
+              "6-9/play-discovery topic row title",
+              "entryText title"
+            ],
+            "finding": "“Taking out, then putting in” names a sequence but leaves out the objects or containers that make the idea recognizable among the play entries. A reader must inspect the summary to know what kind of exploration the title describes.",
+            "requiredCorrection": "Include the container or fitting-object subject in the title while retaining the useful remove-before-return meaning. Do not turn the title into a prescribed exercise or a promise of successful insertion.",
+            "status": "open"
+          }
+        ],
+        "assessment": "Revise the short summary’s unspecified readiness conditions and the title’s missing subject. The full detail and age context do preserve removing before returning, distinct egg/cube/posting experiences, stable sitting for rocking-base rings, the subsequent stable-base dependency, the main prose’s 9–12 placement and the appendix’s differing row ages. The cue follows interest in removing or releasing, and the closing wording avoids a set to complete. Those strengths cannot supply the standalone topic row with the condition it only alludes to; the corrected short surface needs its own useful meaning."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-play-tone-r01.6-9.baby-choices-within-reach",
+      "entryId": "baby-choices-within-reach",
+      "placementId": "6-9.baby-choices-within-reach",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-choices-within-reach.json",
+      "snapshotFileSha256": "e6c689efc4d92ba2d6cfbf189e901c2e03927380489e2b0bacbd86f25730b5db",
+      "textPlacementSha256": "18515ae6d479ccde80f4bb9bb26f30dcfad622e092d708a25f4088f1423120c3",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-play-tone-r01.source.home-text",
+        "baby-play-tone-r01.source.home-visual",
+        "baby-play-tone-r01.source.agency-text",
+        "baby-play-tone-r01.source.activities-text",
+        "baby-play-tone-r01.source.activities-visual",
+        "baby-play-tone-r01.source.movement-text",
+        "baby-play-tone-r01.source.movement-visual",
+        "baby-play-tone-r01.source.appendix-introduction-text",
+        "baby-play-tone-r01.source.appendix-tables-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass. The title states a recognizable arrangement action and is sufficiently distinct from a basket activity. The short summary makes current favorites, visibility, reach and changing interests the reason for arranging materials. The full entry offers an existing shelf or basket without a purchase standard and explicitly keeps restoration with the adult rather than requiring an infant to put one thing away before another. The shared-room distinction between accessible baby-suitable objects and older children’s small parts is preserved. The cue and first-year/example-specific age context follow current access and choice rather than a tidy-room score. Both home and play rows fit."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-play-tone-r01.6-9.baby-photos-at-eye-level",
+      "entryId": "baby-photos-at-eye-level",
+      "placementId": "6-9.baby-photos-at-eye-level",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-photos-at-eye-level.json",
+      "snapshotFileSha256": "b44a7b25f059ef3843df29dddbb80b26fcd8e459c0536275627b171fb68fdb49",
+      "textPlacementSha256": "c02bcc26b54d89df695c317237c87a2291e41327dbfa3868320a0e41cb1da566",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-play-tone-r01.source.home-text",
+        "baby-play-tone-r01.source.home-visual",
+        "baby-play-tone-r01.source.agency-text",
+        "baby-play-tone-r01.source.activities-text",
+        "baby-play-tone-r01.source.language-text",
+        "baby-play-tone-r01.source.language-visual"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "baby-play-tone-r01.baby-photos-at-eye-level.name-photographs-in-title",
+            "severity": "low",
+            "field": "publicProjection.textPlacement.entry.title",
+            "surface": [
+              "6-9/home-that-helps topic row title",
+              "6-9/play-discovery topic row title",
+              "entryText title"
+            ],
+            "finding": "“Let familiar faces meet their gaze” is warm but indirect: it can suggest an encounter with people or eye contact, while this entry is about photographs and pictures visible from the baby’s position. The subject is unnecessarily hidden behind the metaphor.",
+            "requiredCorrection": "Name familiar photographs or pictures in the title and retain the baby’s viewing position as the useful context. Keep the existing freedom to use personal images and simple arrangements; do not imply required eye contact, a prescribed visual style or a display to buy.",
+            "status": "open"
+          }
+        ],
+        "assessment": "Revise the indirect title. The summary, cue and full discussion otherwise translate the original home pages into a useful, modest possibility: familiar photographs or pictures the baby can see from their actual position. Personal, handmade and family images remain welcome, without a neutral-room aesthetic, elaborate display or shopping pressure. The material is presented as home context rather than a developmental exercise. The readiness-only age context does not invent a book age, and both home and play topic summaries carry the intended visual-interest meaning."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-play-tone-r01.6-9.baby-space-to-explore",
+      "entryId": "baby-space-to-explore",
+      "placementId": "6-9.baby-space-to-explore",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-space-to-explore.json",
+      "snapshotFileSha256": "87a3a7e3b14290af5488e7817ccc1b33bae21b1104fb8789b82e5feed13e3ffc",
+      "textPlacementSha256": "4bf2db5085c17d54b4e63bc7b3f4b3ed4a039f3755d9a6e0de1381a3e15d146e",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-play-tone-r01.source.home-text",
+        "baby-play-tone-r01.source.home-visual",
+        "baby-play-tone-r01.source.agency-text",
+        "baby-play-tone-r01.source.activities-text",
+        "baby-play-tone-r01.source.activities-visual",
+        "baby-play-tone-r01.source.movement-text",
+        "baby-play-tone-r01.source.movement-visual",
+        "baby-play-tone-r01.source.appendix-introduction-text",
+        "baby-play-tone-r01.source.appendix-tables-visual"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "baby-play-tone-r01.baby-space-to-explore.remove-unneeded-installation-comparison",
+            "severity": "low",
+            "field": "publicProjection.textPlacement.entry.detail[2]",
+            "surface": [
+              "entryText final detail paragraph"
+            ],
+            "finding": "The closing paragraph abruptly introduces wall-bar measurements that the preceding entry has not described, then says the differing source examples do not establish an installation plan. The difference is real in the original main prose and appendix, but here the paragraph reads like an internal source-comparison note and makes an apparatus newly salient without helping the reader understand the ordinary room adjustments in this entry.",
+            "requiredCorrection": "Keep the parent-facing discussion centered on the described changes to access, hazards and stable supports. Omit the isolated wall-bar comparison from this entry, or retain a source-only boundary only if it is directly needed to interpret an example actually described. Preserve the discrepancy in private evidence and do not replace it with installation instructions or a reconciled measurement.",
+            "status": "open"
+          }
+        ],
+        "assessment": "Revise the final detail paragraph’s unneeded wall-bar comparison. The title and short summary otherwise explain the recognizable subject of a room changing with the baby’s reach and movement. The prose retains adult responsibility for removing or securing hazards, stable support for the baby’s own pull-up attempts, the source’s attribution of a yes space to Gerber/RIE, and the practicality of adapting one area of a family home. It does not promote a furnished room as a parenting standard or prescribe faster movement. The age/readiness context and both topic rows retain current movement as the basis for change."
+      },
+      "artContext": null
+    }
+  ]
+}

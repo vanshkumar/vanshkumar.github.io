@@ -1,0 +1,150 @@
+{
+  "revision": "r05",
+  "editor": "/root",
+  "date": "2026-09-10",
+  "previousDraft": {
+    "path": "content/pilots/drafts/toddler/draft-r04.json",
+    "sha256": "b633e1c7a02b8da1fe2a7d761fa7a7b055a73d29a3da705ee21171af085711af"
+  },
+  "findingReports": [
+    {
+      "path": "content/pilots/reviews/final/toddler-play-tone-r02.json",
+      "sha256": "6c52ec7b0791057dd7e4091c0e8338f75cc007e784c1aab360f030106aa3e721"
+    },
+    {
+      "path": "content/pilots/reviews/final/toddler-play-source-r02.json",
+      "sha256": "f780a4fcd5ef4b4353508fd9a165ab20bf2d1d471055c20fee14e3b86c7c9934"
+    },
+    {
+      "path": "content/pilots/reviews/final/toddler-family-connection-tone-r02.json",
+      "sha256": "fe4ad0607c57e7a4afff44c1c4eb1f79cfc03b357e4d9037afe8a3d3dd5e16c7"
+    },
+    {
+      "path": "content/pilots/reviews/final/toddler-limits-tone-r02.json",
+      "sha256": "c037df516aa36d79f0e7ecca02b4e60bcc87e2c06b8bfb2b908397cc4222c540"
+    }
+  ],
+  "changes": [
+    {
+      "entryId": "toddler-fitting-and-turning",
+      "beforeEntrySha256": "2e7ab68a80ff6319b1d685ce3823aefbba6710b760f52f188c8eec8337cb25af",
+      "afterEntrySha256": "3843680bd21cbd0066fe9a4b41a2e83022b81c413112d84cfdacde422a47b2eb",
+      "changedFields": [
+        "title"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "toddler-play-tone-r02.fitting-title"
+      ]
+    },
+    {
+      "entryId": "toddler-outside-noticing",
+      "beforeEntrySha256": "7b60f40267daeb0c86559abe2c8717820362f77605bdbac5837d98d5d4f95653",
+      "afterEntrySha256": "7b60f40267daeb0c86559abe2c8717820362f77605bdbac5837d98d5d4f95653",
+      "changedFields": [],
+      "placementChanged": true,
+      "issueIds": [
+        "toddler-play-tone-r02.outside-materials-context"
+      ]
+    },
+    {
+      "entryId": "toddler-room-to-move",
+      "beforeEntrySha256": "0b8728f50870a1a73d222bd1d3b0658a9917f699668af7d0bdd662591ae79096",
+      "afterEntrySha256": "0b8728f50870a1a73d222bd1d3b0658a9917f699668af7d0bdd662591ae79096",
+      "changedFields": [],
+      "placementChanged": true,
+      "issueIds": [
+        "toddler-play-tone-r02.movement-materials-context"
+      ]
+    },
+    {
+      "entryId": "toddler-everyday-play",
+      "beforeEntrySha256": "5a34cb6a9e3cba7234ee8fca46594c127e538d7c2aeeb38c51f0a536b1c2028a",
+      "afterEntrySha256": "55df76379be43cfe04dffac4fd075110e443f776396f4cd6e54da59bd1a4a8a9",
+      "changedFields": [
+        "cue",
+        "detail",
+        "references"
+      ],
+      "placementChanged": true,
+      "issueIds": [
+        "toddler-play-tone-r02.pretend-reference",
+        "toddler-play-source-r02.everyday-play.pretend-context",
+        "toddler-play-source-r02.everyday-play.reference-heading"
+      ]
+    },
+    {
+      "entryId": "toddler-screens",
+      "beforeEntrySha256": "7f221e4136b8be6eabb0c324727aed1498dcb1f8a5e4e6a50f074e5ee1af403c",
+      "afterEntrySha256": "8aab757b441257d7eb5da4df25452023675b23e4d86496eda3109cc5a4e84068",
+      "changedFields": [
+        "title",
+        "references"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "tone.toddler-screens.recognizable-title",
+        "tone.toddler-screens.reader-reference"
+      ]
+    },
+    {
+      "entryId": "toddler-languages",
+      "beforeEntrySha256": "1bb7324919993c9e9a3a748ed31c4d766a15171b9a1da6eb86ee2e066c93eff0",
+      "afterEntrySha256": "133cde8e6a04e472b3747ee8828431e4c02ffc65fbf080ae337cc8326dac6668",
+      "changedFields": [
+        "references"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "tone.toddler-languages.reader-reference"
+      ]
+    },
+    {
+      "entryId": "toddler-solving-together",
+      "beforeEntrySha256": "a613d53066868e0e31d0b4bcff0b863886677b0184ae8307cecb3ec5457ee778",
+      "afterEntrySha256": "2ef72e8dc7513d63c4ee9fb0c1dbac49fc5c565b290ae3a7e9a8b324a08cd3fd",
+      "changedFields": [
+        "title",
+        "detail"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "TL-TONE-004"
+      ]
+    },
+    {
+      "entryId": "toddler-big-feelings",
+      "beforeEntrySha256": "c3502b2f27ce4d93352c6ff2690b7a68b77692a332a3b9e3285fabe5e25a0b81",
+      "afterEntrySha256": "ba42bfc7da559fe1ca577b16a81a8196f7063305c144ffc940f81f39e77e7bd3",
+      "changedFields": [
+        "summary",
+        "references"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "TL-TONE-001",
+        "TL-TONE-002"
+      ]
+    },
+    {
+      "entryId": "toddler-throwing",
+      "beforeEntrySha256": "035ab08cdd12b5ed1f8b3b6fc797d081f4b7d1f2664bb59fc6cefbb7d266af07",
+      "afterEntrySha256": "5b9720b604042d2bb14182c6018b4f37ac87186746c76cd23d1429870f25472f",
+      "changedFields": [
+        "detail"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "TL-TONE-003"
+      ]
+    }
+  ],
+  "status": "Proposed exact corrections; affected independent source and tone reviews pending",
+  "editorReadLogs": [
+    {
+      "path": "content/pilots/editorial/ROOT_READ_LOG-toddler-r05.json",
+      "sha256": "fec915187778ae6cc97a03c1bcc6512b1def9105d2274ea3f56d087f06e2e5f8"
+    }
+  ],
+  "readBoundary": "Original author provenance and read logs remain intact. Limited additional editor original-source reads are separately logged; no independent approval by the editor is claimed."
+}

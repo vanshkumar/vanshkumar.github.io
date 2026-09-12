@@ -1,0 +1,95 @@
+{
+  "purpose": "Foundation contract demonstration only; not app copy or publication approval",
+  "contractVersion": 1,
+  "sectionExample": {
+    "id": "foundation.baby.appendix.activities-introduction",
+    "sourceId": "baby-2021",
+    "heading": "Activities list for babies",
+    "hierarchy": ["Appendices", "Activities list for babies", "Opening paragraph only"],
+    "pdfPages": [{ "start": 294, "end": 294 }],
+    "scope": "Only the self-contained introductory paragraph; the surrounding appendix and activity rows are not a completed section register",
+    "readState": "read",
+    "readLogIds": ["foundation.read.baby-294", "foundation.visual.baby-294"],
+    "visualObligations": [{ "description": "Check relationship of paragraph to prior table border and following age heading", "status": "resolved", "readLogId": "foundation.visual.baby-294" }],
+    "outgoingCrossReferences": [],
+    "ideaIds": ["foundation.idea.activity-ages-are-guides"]
+  },
+  "readLog": {
+    "id": "foundation.read.baby-294",
+    "reader": "foundation-main (/root)",
+    "date": "2026-09-10",
+    "sourceId": "baby-2021",
+    "pdfPages": [{ "start": 294, "end": 294 }],
+    "mode": "full-text",
+    "description": "Read complete extracted page text and visually checked the activity-list opening. The preceding table continuation is present but is not used to support this claim.",
+    "visualReadLogId": "foundation.visual.baby-294"
+  },
+  "visualReadLog": {
+    "id": "foundation.visual.baby-294",
+    "reader": "foundation-main (/root)",
+    "date": "2026-09-10",
+    "sourceId": "baby-2021",
+    "pdfPages": [{ "start": 294, "end": 294 }],
+    "mode": "visual",
+    "description": "Full rendered page inspected: the age-guideline paragraph is below the preceding table's border, under Activities list for babies and above Babies up to 6 months. This paragraph is not part of the preceding age row."
+  },
+  "coverageExample": {
+    "id": "foundation.idea.activity-ages-are-guides",
+    "sectionIds": ["foundation.baby.appendix.activities-introduction"],
+    "sourceIdea": "Activity ages orient selection; a baby's interests and developing skills guide which activities to offer and retain.",
+    "sourceRefs": ["foundation.ref.baby-294-activity-list-opening"],
+    "evidenceIds": ["foundation.ev.activity-ages-are-guides"],
+    "topicCandidates": ["play-discovery"],
+    "disposition": "context-only",
+    "reason": "This framing informs age placement and activity selection across the companion; it does not require a separate activity entry.",
+    "targetIds": ["principle.follow-readiness"],
+    "openQuestions": [],
+    "state": "accounted-for-in-this-bounded-example"
+  },
+  "evidenceExample": {
+    "id": "foundation.ev.activity-ages-are-guides",
+    "sourceIdeaIds": ["foundation.idea.activity-ages-are-guides"],
+    "researcher": "foundation-main (/root)",
+    "revision": "1",
+    "claim": "The authors describe the activity-list ages as guidelines and base selection on individual interests and skills being developed; attention and difficulty inform whether an activity remains available.",
+    "sourceRefs": [
+      {
+        "id": "foundation.ref.baby-294-activity-list-opening",
+        "sourceId": "baby-2021",
+        "pdfPages": [{ "start": 294, "end": 294 }],
+        "section": "Appendices / Activities list for babies",
+        "locator": "Introductory paragraph immediately before Babies up to 6 months",
+        "printedPages": null,
+        "printedVerification": { "status": "not-applicable", "reason": "Reflowed Baby file has no dependable printed-page equivalent" },
+        "contextRead": [
+          { "pdfPages": [{ "start": 294, "end": 294 }], "description": "Complete self-contained opening paragraph and surrounding headings/border; activity rows on later pages not read in this example" }
+        ],
+        "readLogIds": ["foundation.read.baby-294", "foundation.visual.baby-294"]
+      }
+    ],
+    "qualifications": [
+      "This is a general framing paragraph, not evidence for the materials, steps, or readiness of any particular activity.",
+      "The age heading following the paragraph does not limit the framing paragraph to babies under six months."
+    ],
+    "ageBasis": {
+      "bookStatedAge": { "status": "not-stated", "wording": null, "note": "The cited general paragraph qualifies ages in the list rather than prescribing an age for an activity" },
+      "readinessOrInterest": { "paraphrase": "Individual interests and skills currently developing; attention and degree of difficulty", "sourceRefId": "foundation.ref.baby-294-activity-list-opening" },
+      "editorialBrowsingBands": [],
+      "editorialRationale": "Reusable age-selection principle. Later content authors must supply activity-specific evidence before assigning browsing bands."
+    },
+    "kindCandidates": ["perspective"],
+    "topicCandidates": { "primary": "play-discovery", "secondary": [] },
+    "sharedPrincipleCandidates": ["principle.follow-readiness"],
+    "sensitivity": { "status": "none-identified", "note": "This record concerns selection framing only and does not authorize practical instructions from the neighboring table." },
+    "crossReferences": { "followed": [], "outstanding": [], "note": "The cited paragraph is self-contained; the full Baby task must inspect the activity list, including image-based pages." },
+    "overlapAndTension": "Reconcile with the Baby activity introduction and Toddler individual-development/activity framing during whole-book research; those sources are not silently added to this single-source example.",
+    "illustrationImplications": "none",
+    "openQuestions": [],
+    "status": "research-ready"
+  },
+  "publication": {
+    "status": "not-applicable-foundation-example",
+    "sourceReview": null,
+    "toneReview": null
+  }
+}

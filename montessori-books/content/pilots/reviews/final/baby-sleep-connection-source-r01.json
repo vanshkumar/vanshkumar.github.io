@@ -1,0 +1,430 @@
+{
+  "id": "baby-sleep-connection-source-r01",
+  "reviewer": {
+    "task": "/root/baby_sleep_source_r01",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Exactly seven frozen r01 Baby sleep/connection placements at 6–9 months, with individual judgment of all 13 actual topic rows, full entry surfaces, public age/cue/source context and null art components. This source review does not determine publication status.",
+  "manifest": {
+    "path": "content/pilots/revisions/r01/MANIFEST.json",
+    "sha256": "2448b86ccaf96f1f4c40d6b83b0065490f306b9d85900ebd5b42fb367f9d7e4f"
+  },
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r01/RENDERED_SURFACES.json",
+    "sha256": "b7aa504ea50d67f7dd55c061ab4b187595df074d5da6aef47b9751d2af4ada8f"
+  },
+  "sourceFiles": [
+    {
+      "sourceId": "baby-2021",
+      "path": "the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+      "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f",
+      "physicalPages": 310,
+      "verification": "Recomputed original file SHA-256 and counted original pages with pypdf; Baby references use physical PDF pages only."
+    }
+  ],
+  "rendererReads": [
+    {
+      "path": "src/HomeStudy.jsx",
+      "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c",
+      "method": "full-file text read",
+      "description": "Checked actual topic rows versus entry detail, public age/cue/reference rendering and shared labels. No opening or entry artwork exists for these seven placements."
+    },
+    {
+      "path": "src/guide/catalog.js",
+      "sha256": "d8d30a17c5f1b1c99ed68764f3f412cf99b48f55d09bf528313f0df1439da71c",
+      "method": "full-file text read",
+      "description": "Checked actual topic rows versus entry detail, public age/cue/reference rendering and shared labels. No opening or entry artwork exists for these seven placements."
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "baby-sleep-connection-source-r01.sleep-full-text",
+      "reader": "/root/baby_sleep_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 193,
+          "end": 206
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete original Sleeping unit, from its opening through the final stressed-parent answer and book recommendation, in bounded untruncated pypdf text outputs. Includes all six principles, both observation-box pages, routine continuation, available comfort, feeding/rocking qualification, adult and baby readiness, floor-bed/topponcino/co-sleeping examples, wake-window and nurturing-sleep boxes, every common-question row and its continuations, and adult support. No external referenced sleep resource was imported."
+    },
+    {
+      "id": "baby-sleep-connection-source-r01.sleep-setting-context-text",
+      "reader": "/root/baby_sleep_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 71,
+          "end": 79
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete original pages containing the Bedroom/Sleeping area discussion, its continuation, the SIDS box and full Floor bed questions table through its last row. Surrounding household text on these pages was also read. Checked the book’s own firm/separate infant surface and soft-object cautions against its floor-bed, co-sleeping, underlay and soft-surface examples; the competing examples were not reconciled into a setup."
+    },
+    {
+      "id": "baby-sleep-connection-source-r01.sleep-boxes-and-tables-visual",
+      "reader": "/root/baby_sleep_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 71,
+          "end": 72
+        },
+        {
+          "start": 76,
+          "end": 79
+        },
+        {
+          "start": 195,
+          "end": 196
+        },
+        {
+          "start": 199,
+          "end": 206
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Individually inspected readable original full-page PNG renders at 1500 pixels high, not a contact sheet. Verified bedroom bullet boundaries; complete 2021 SIDS box including the source’s skipped item number 6; full floor-bed question rows and continuations; both observation-box pages; wake-window rows, attribution and continuation; sleep-summary box; and every common sleep question/answer row through the adult-support ending. The original layout places the floor-bed cross-reference at the end of PDF 204 while its question label appears at the top of PDF 205."
+    },
+    {
+      "id": "baby-sleep-connection-source-r01.sleep-observation-cross-reference",
+      "reader": "/root/baby_sleep_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 34,
+          "end": 36
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read original pages containing the complete Junnifa nap-observation anecdote across PDF 34–35, followed by the observation categories through PDF 36. Followed the explicit sleep-question cross-reference in PDF 202. The anecdote remains anecdotal context; neither its room transfer nor its observed nap duration is promoted in the seven entries."
+    },
+    {
+      "id": "baby-sleep-connection-source-r01.connection-context-text",
+      "reader": "/root/baby_sleep_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 98,
+          "end": 114
+        },
+        {
+          "start": 119,
+          "end": 120
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read original bounded page text for the surrounding respect, individual rhythms, boundaries, concentration, movement, attachment, responsive-parenting, crying and guiding discussion. This includes the complete A secure attachment unit at PDF 108–110, complete When our baby cries unit at PDF 110–111 and its checklist, and the no-danger condition on the adult pause. Read PDF 119–120 for individual development, age guidelines and support for concerns; no activity-material prescriptions from those pages are used here."
+    },
+    {
+      "id": "baby-sleep-connection-source-r01.crying-and-readiness-visual",
+      "reader": "/root/baby_sleep_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 109,
+          "end": 111
+        },
+        {
+          "start": 119,
+          "end": 119
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Individually read full-page 1500-pixel original renders of the attachment callout and continuation, complete crying passage and checklist, and the introduction’s age/readiness qualification. Confirmed that the brief checklist does not replace the surrounding no-danger, prompt-response and available-holding prose."
+    },
+    {
+      "id": "baby-sleep-connection-source-r01.pacifier-sharing-colic-text",
+      "reader": "/root/baby_sleep_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 212,
+          "end": 216
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete original Using a pacifier, Sharing and Colic and reflux units, including every continuation and adjacent boundary text. Checked limited pacifier use and SIDS acknowledgment, first-year removal preference, replacement-technique list and thumb/finger discussion; first-year exploratory sharing and the separate 12–16-month ownership example; and the full medical-help plus adult-support continuation for prolonged crying or pain. The adjacent teething/baby-wearing/screen text was read as context, not imported as care advice."
+    },
+    {
+      "id": "baby-sleep-connection-source-r01.pacifier-sharing-colic-visual",
+      "reader": "/root/baby_sleep_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 213,
+          "end": 216
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read each original full-page 1500-pixel render, confirming the pacifier list continues on PDF 214, Sharing continues onto PDF 215, and the colic/reflux adult-support paragraph continues on PDF 216 before the next heading. Reviewed actual paragraph and list grammar, not extraction snippets."
+    },
+    {
+      "id": "baby-sleep-connection-source-r01.language-full-text",
+      "reader": "/root/baby_sleep_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 128,
+          "end": 139
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete original Language activities unit in bounded outputs, including the infancy framing, entire 0–3-month conversation passage with its multilingual paragraph and cross-reference, all later age subsections, both language-summary pages and the complete Bilingualism section. Checked the caregiver-language option alongside place/time alternatives, real people reading/playing/conversing, the source’s 30-percent literacy-language claim and no-delay assertion. The latter claims are not adopted by this draft."
+    },
+    {
+      "id": "baby-sleep-connection-source-r01.language-layout-visual",
+      "reader": "/root/baby_sleep_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 129,
+          "end": 129
+        },
+        {
+          "start": 132,
+          "end": 132
+        },
+        {
+          "start": 139,
+          "end": 139
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Individually read full-page original 1500-pixel renders for the first-year language callout and 0–3 heading; complete pacifier-language paragraphs and their separate book-choice box; and all Bilingualism paragraphs with the final external-book recommendation. Confirmed that caregiver-language and Domains of Use are distinct alternatives and that the quota and developmental assertion are separate claims."
+    },
+    {
+      "id": "baby-sleep-connection-source-r01.family-inclusion-text",
+      "reader": "/root/baby_sleep_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 41,
+          "end": 41
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete original PDF 41. The opening paragraph explicitly extends the book to varied family constellations and adaptation of principles; the following prenatal discussion was read but is outside this entry’s scope."
+    },
+    {
+      "id": "baby-sleep-connection-source-r01.closeness-separation-text",
+      "reader": "/root/baby_sleep_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 219,
+          "end": 222
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete original pages encompassing the full What if the baby is clingy...separation anxiety unit at PDF 220–221, including the variable amount of help, all six separation examples, 6–16-month wording and cross-references. Adjacent behavior and mouthing paragraphs were read for boundaries, not imported into the goodbye entry."
+    },
+    {
+      "id": "baby-sleep-connection-source-r01.caregiver-goodbye-text",
+      "reader": "/root/baby_sleep_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 253,
+          "end": 258
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read original pages containing complete What to look for in a day care or caregiver, What if the day care has different values, Saying goodbye to our baby and the neighboring visitor note. Retained warm trusted care and resource limits as context. Checked all goodbye qualifications: clear departure/return words, predictable connecting example, time for hugging when possible, necessary departure on other days, honest goodbye, support for the caregiver after departure, and the continuation onto PDF 257. Read the entire visitor note and its continuation, rather than borrowing its short crying lines without context."
+    },
+    {
+      "id": "baby-sleep-connection-source-r01.separation-goodbye-visual",
+      "reader": "/root/baby_sleep_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 220,
+          "end": 221
+        },
+        {
+          "start": 256,
+          "end": 258
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Individually read original full pages at 1500 pixels high: complete closeness/separation numbered list and its cross-references; complete goodbye discussion and next-page continuation; visitor-note box through PDF 258, including its comfort/crying material and ending. No source artwork is used by these entries."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "baby-sleep-connection-source-r01.6-9.baby-sleep-support",
+      "entryId": "baby-sleep-support",
+      "placementId": "6-9.baby-sleep-support",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-sleep-support.json",
+      "snapshotFileSha256": "f9bd21466be666596ca7f5c5d1da8ed72634b3e80b5b0c6b5a0dddf18f1cd3aa",
+      "textPlacementSha256": "7c8b4a8c7e41771afff8c63237a33821ba36e51b497cd43d05e3e88a4474808d",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-sleep-connection-source-r01.sleep-full-text",
+        "baby-sleep-connection-source-r01.sleep-setting-context-text",
+        "baby-sleep-connection-source-r01.sleep-boxes-and-tables-visual",
+        "baby-sleep-connection-source-r01.sleep-observation-cross-reference",
+        "baby-sleep-connection-source-r01.connection-context-text",
+        "baby-sleep-connection-source-r01.crying-and-readiness-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for the exact title, cue, both Everyday care and Connection & feelings rows, full detail and 6–9-month presentation. The short summary independently attributes noticing tired signs, needed help and a short connecting routine; it does not select a sleep surface or require independent settling. The detail’s words/song/book examples, the adult’s supportive role, the baby’s act of falling asleep, permission for present feeding or rocking, gradual change when both are ready and first-year waking are supported by PDF 193–197 and 200–201. The public detail openly retains the book’s internal sleep-surface tension, corroborated against PDF 76 and 197–200; this is not a detail-only repair of an unsafe short setup because neither topic row contains a setup. The age field remains first-year context with no settling deadline. Broader held source material can support this narrow faithful description without approving timed waiting, milk changes, sleep-crutch causality or a sleeping arrangement."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-sleep-connection-source-r01.6-9.baby-sleep-changes",
+      "entryId": "baby-sleep-changes",
+      "placementId": "6-9.baby-sleep-changes",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-sleep-changes.json",
+      "snapshotFileSha256": "f692e1c43136d27346ca025ddf3e5f61b097096528271c7e3fe77757405f0dfe",
+      "textPlacementSha256": "0114b7f37d6d8d24f3f6312ef3735ac4a333d6c0a3ada9e3f0051b5ece0b085f",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-sleep-connection-source-r01.sleep-full-text",
+        "baby-sleep-connection-source-r01.sleep-setting-context-text",
+        "baby-sleep-connection-source-r01.sleep-boxes-and-tables-visual",
+        "baby-sleep-connection-source-r01.sleep-observation-cross-reference",
+        "baby-sleep-connection-source-r01.connection-context-text"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for the exact title, cue, Everyday care row, full detail and age context. The topic row independently frames developmental explanations as possibilities and keeps needed support beside observation. PDF 201–202 supplies multiple possible circumstances and the baby’s response; PDF 204 supplies the 4-, 8- and 12-month examples and a return to collaboration with later readiness-based change. The draft’s around-eight-month example overlaps 6–9 without turning crawling or sleep recovery into a requirement. Its two detail paragraphs preserve temporary extra help and observation before reducing it; they do not assert a universal cause, guaranteed recovery date or sleep protocol. Omission of the table’s separate milk-dilution, night-water, room-change and seven-night procedures does not alter this narrower descriptive claim."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-sleep-connection-source-r01.6-9.baby-pacifier",
+      "entryId": "baby-pacifier",
+      "placementId": "6-9.baby-pacifier",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-pacifier.json",
+      "snapshotFileSha256": "42873ba8581f9acaaecf857a0a7a7cf3485477f89967265ed9821fcfd6552da0",
+      "textPlacementSha256": "885b68c609a2b7bad2ba472a4369a52c1d264f959ca74f8e6bf787687ad9e18d",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-sleep-connection-source-r01.pacifier-sharing-colic-text",
+        "baby-sleep-connection-source-r01.pacifier-sharing-colic-visual",
+        "baby-sleep-connection-source-r01.language-full-text",
+        "baby-sleep-connection-source-r01.language-layout-visual",
+        "baby-sleep-connection-source-r01.sleep-full-text",
+        "baby-sleep-connection-source-r01.sleep-setting-context-text",
+        "baby-sleep-connection-source-r01.sleep-boxes-and-tables-visual",
+        "baby-sleep-connection-source-r01.connection-context-text"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for the title, cue, both Everyday care and Connection & feelings rows, full detail and infant-wide placement. Each topic row carries all three necessary parts itself: discouragement of constant use, the book’s possible SIDS-risk reduction acknowledgment, and permission for limited settling/sleep use. PDF 213–214 supports that qualified position, PDF 132 supports the communication-opportunity concern, PDF 199 adds the pacifier-free preference and cross-reference, and the original PDF 76 box explicitly includes considering use at naps and bedtime. The detail identifies the box as the book’s 2021 account; no current-guideline or independent medical claim is made. Baby’s first-year removal preference is deliberately not converted into a deadline, and no different source’s removal age or replacement techniques are blended into this Baby-only perspective. The narrower opportunity wording avoids turning the authors’ communication concern into a diagnosis or developmental guarantee."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-sleep-connection-source-r01.6-9.baby-crying",
+      "entryId": "baby-crying",
+      "placementId": "6-9.baby-crying",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-crying.json",
+      "snapshotFileSha256": "0541733e20be1616eb8afd63bac3174d41c7ab77e85d2ae04d0ff0efcf8b1408",
+      "textPlacementSha256": "39b5491e662df3b4fa50abb11ef02cc154ce99c0ba5e60571d29f0568581957d",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-sleep-connection-source-r01.connection-context-text",
+        "baby-sleep-connection-source-r01.crying-and-readiness-visual",
+        "baby-sleep-connection-source-r01.pacifier-sharing-colic-text",
+        "baby-sleep-connection-source-r01.pacifier-sharing-colic-visual",
+        "baby-sleep-connection-source-r01.caregiver-goodbye-text",
+        "baby-sleep-connection-source-r01.separation-goodbye-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for the title, cue, both Connection & feelings and Everyday care rows, full detail and infant-wide context. The short rows themselves join crying-as-communication with responsiveness, comfort and needed help, without requiring a pause, silence or an inferred diagnosis before care. PDF 109–111 supports acknowledgment, prompt appropriate response, presence/holding as needed and allowing feelings rather than dismissing them. The full detail retains the medical-advice/doctor-or-pediatrician context and adult support from the complete PDF 215–216 continuation. It does not turn the source’s early-colic timing into an expectation for a 6–9-month baby, repeat causal medical lists, offer body-pressure/prone techniques or imply that observing replaces help. The source’s no-danger condition was reviewed; because the draft gives no stepping-away procedure, its summary’s no-delay boundary is a faithful narrower account."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-sleep-connection-source-r01.6-9.baby-separation",
+      "entryId": "baby-separation",
+      "placementId": "6-9.baby-separation",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-separation.json",
+      "snapshotFileSha256": "151a1665b9a4147f5cca9debf547de332f1ae00bf388871aef1792cd3aed8940",
+      "textPlacementSha256": "f3cd596c537172ea552de44f17554f78e3e763648137d6ba3725a26fa34bb764",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-sleep-connection-source-r01.closeness-separation-text",
+        "baby-sleep-connection-source-r01.caregiver-goodbye-text",
+        "baby-sleep-connection-source-r01.separation-goodbye-visual",
+        "baby-sleep-connection-source-r01.connection-context-text",
+        "baby-sleep-connection-source-r01.crying-and-readiness-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for the title, cue, both Connection & feelings and Everyday care rows, detail and age/readiness context. Each short row independently conditions departure on a trusted caregiver and retains the child’s feelings alongside the adult’s need to leave. The complete PDF 220–221 and 256–257 units support caregiver familiarity while the parent is present, departure/return words, a recognizable connecting goodbye, an unhurried hug when time permits, necessary departure on other days and an honest goodbye. The detail retains support for the caregiver and avoids a tear-free guarantee. The source’s approximately 6–16-month separation-anxiety span is accurately visible and distinct from the editorial 6–9 band. The text does not import a timed separation program, a familiar-scent sleeping object, a parenting-blame causal claim or distress tracking."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-sleep-connection-source-r01.6-9.baby-sharing",
+      "entryId": "baby-sharing",
+      "placementId": "6-9.baby-sharing",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-sharing.json",
+      "snapshotFileSha256": "522eaa29e5a7c793b1ff9061a72a4cdf4b1048ac811ef0f994bd75924e25f825",
+      "textPlacementSha256": "1334f55b4b26e844b87e8053ee61fcc263e56c43c6d0932a852163caea88d646",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-sleep-connection-source-r01.pacifier-sharing-colic-text",
+        "baby-sleep-connection-source-r01.pacifier-sharing-colic-visual",
+        "baby-sleep-connection-source-r01.connection-context-text"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for the title, cue, both Connection & feelings and Play & discovery rows, full detail and age context. The short condition that the baby is still using the object supports protecting an ongoing turn rather than requiring a child to hold on. The full source at PDF 214–215 describes a young baby often moving on, sometimes holding on, tentative adult translation and reciprocal asking before taking. The draft retains those alternatives and the other child’s continuing interest, including watching, waiting or choosing another object. Its age field correctly separates first-year exploratory interactions from the later approximately 12–16-month sharing/ownership discussion. There is no requirement that a 6–9-month baby understand ownership, voluntarily share on command or finish a prescribed activity."
+      },
+      "artContext": null
+    },
+    {
+      "id": "baby-sleep-connection-source-r01.6-9.baby-languages",
+      "entryId": "baby-languages",
+      "placementId": "6-9.baby-languages",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.baby-languages.json",
+      "snapshotFileSha256": "ded4c7484f7c45a4aa6edb9bd92de6827797518b9b91f2dceb6ecb2b99e798c6",
+      "textPlacementSha256": "b33882e8664c343a81792410323d6daa3f5d9707d676b81ac8630d70d09997e1",
+      "artContextSha256": null,
+      "readLogIds": [
+        "baby-sleep-connection-source-r01.language-full-text",
+        "baby-sleep-connection-source-r01.language-layout-visual",
+        "baby-sleep-connection-source-r01.family-inclusion-text",
+        "baby-sleep-connection-source-r01.connection-context-text",
+        "baby-sleep-connection-source-r01.crying-and-readiness-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for the title, cue, both Connection & feelings and Play & discovery rows, full detail and infancy placement. The short summaries describe several family arrangements without presenting one as compulsory or promising a developmental outcome. PDF 130 and the complete PDF 139 section support caregiver-language and place/time approaches, plus reading, play and language-speaking people; PDF 41 supports adaptation to the family. The draft’s home, outings and weekend examples faithfully condense the source examples. It does not turn the source’s separate 30-percent literacy-language statement into an exposure quota, claim effortless acquisition, guarantee no language delay, or dismiss concerns. Infancy is supported without a numerical starting deadline; later language-age examples remain context rather than tests for the 6–9-month reader."
+      },
+      "artContext": null
+    }
+  ]
+}

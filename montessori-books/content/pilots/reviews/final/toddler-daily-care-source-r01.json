@@ -1,0 +1,880 @@
+{
+  "id": "toddler-daily-care-source-r01",
+  "reviewer": {
+    "task": "/root/toddler_care_source_r01",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Only the 11 toddler-daily-care r01 entries and their exact 18–24 month placements, frozen public text/age/topic/reference projections and actual HomeStudy-rendered surfaces. No publication decision and no artwork component.",
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r01/RENDERED_SURFACES.json",
+    "sha256": "b7aa504ea50d67f7dd55c061ab4b187595df074d5da6aef47b9751d2af4ada8f"
+  },
+  "frozenInputs": {
+    "manifest": {
+      "path": "content/pilots/revisions/r01/MANIFEST.json",
+      "sha256": "2448b86ccaf96f1f4c40d6b83b0065490f306b9d85900ebd5b42fb367f9d7e4f"
+    },
+    "draft": {
+      "path": "content/pilots/drafts/toddler/draft-r01.json",
+      "sha256": "72f53c79c4632037d1ab6f72aad0380fb9929e2201f65bbaac0808084ceb1edc"
+    },
+    "renderer": [
+      {
+        "path": "src/HomeStudy.jsx",
+        "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c"
+      },
+      {
+        "path": "src/home.css",
+        "sha256": "55de72c5b21d2f1a3ead85c5975febd09ac3135fcbc2219e6672a13f4786a6e1"
+      },
+      {
+        "path": "src/styles.css",
+        "sha256": "503e980cdf9ba4728adf678bb27bc4cd4095d1ae131c3c02181cc4b9a4df22ce"
+      },
+      {
+        "path": "src/guide/catalog.js",
+        "sha256": "d8d30a17c5f1b1c99ed68764f3f412cf99b48f55d09bf528313f0df1439da71c"
+      },
+      {
+        "path": "src/concepts.js",
+        "sha256": "cb086bcc98ad4fde98677a03cb42a849ae5993405dd886a71e7642ca079a3e4a"
+      }
+    ]
+  },
+  "originalSource": {
+    "sourceId": "toddler-2019",
+    "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/The Montessori Toddler - Simone Davies _Worldfreebooks.com_.pdf",
+    "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b",
+    "physicalPdfPages": 257,
+    "authority": "Original supplied PDF identified by research/foundation/SOURCE_MANIFEST.md. This reviewer independently read the logged original pages; author and research evidence are pointers only."
+  },
+  "reviewMethod": "Reviewed each exact title, summary, cue, detail paragraph, available step, age/context sentence and public source reference, each listed topic row, and the HomeStudy/catalog rendering behavior. Complete text reads used bounded outputs extracted directly from the original PDF; chart/callout/diagram reads used individually viewed readable full pages. Passing source components do not certify medical accuracy or approve omitted source procedures.",
+  "readLogs": [
+    {
+      "id": "toddler-daily-care-source-r01.read.scope-and-activity",
+      "reader": "/root/toddler_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        },
+        {
+          "start": 29,
+          "end": 29
+        },
+        {
+          "start": 33,
+          "end": 40
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete text extracted directly from the fingerprinted original PDF in bounded outputs. Includes the around 1–3 years scope note; individual development, respect and observation; indicative activity ages; partial sequences, choice and repetition; the complete slow demonstration section and SHOW callout text; help, freedom to leave, materials limits, adaptation, available resources and supervision; activity setup. These are context for the exact toddler placements, not new care methods."
+    },
+    {
+      "id": "toddler-daily-care-source-r01.read.practical-life",
+      "reader": "/root/toddler_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 48,
+          "end": 52
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete Practical life unit and both age-chart pages, including process and supervision, one or two steps for under-twos, existing-resource framing, continuation of earlier activities, assisted brushing/dressing at 12–18 months, coat in the 18 months–3 years column, and the separate 3–4 years column. No age was inherited across columns."
+    },
+    {
+      "id": "toddler-daily-care-source-r01.read.room-by-room",
+      "reader": "/root/toddler_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 77,
+          "end": 79
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete original pages with full kitchen, eating-area, bedroom and bathroom rows and their notes. Checked reachable seasonal clothing and its alternatives, the actual eating setting, bedroom safety qualification and bathroom context; no unmentioned room setup was added to these entries."
+    },
+    {
+      "id": "toddler-daily-care-source-r01.read.participation-and-help",
+      "reader": "/root/toddler_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 99,
+          "end": 102
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read daily-life participation and adult time constraints, going slowly, complete Help me to help myself, small-step shoe examples, time boundaries, friendly handling of mistakes and Offering help. Used the departure passage to qualify ordinary wanted-help language."
+    },
+    {
+      "id": "toddler-daily-care-source-r01.read.perspective-and-translation",
+      "reader": "/root/toddler_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 108,
+          "end": 110
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete acceptance, perspective and Be their translator units, including the tentative all-finished food question, with the immediately following explicit limit and protection distinction."
+    },
+    {
+      "id": "toddler-daily-care-source-r01.read.checklists-and-expectations",
+      "reader": "/root/toddler_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 122
+        },
+        {
+          "start": 125,
+          "end": 128
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read problem solving and the complete picture-checklist unit and both illustrated checklists; choice qualification; complete Managing expectations unit, including preparedness, waiting where possible, processing time and nonfixed daily rhythm; following note section and cooperation summary. The concrete day and checklists are examples, not an imposed timetable."
+    },
+    {
+      "id": "toddler-daily-care-source-r01.read.limits",
+      "reader": "/root/toddler_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 129,
+          "end": 142
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete Setting limits part from opening through final checklist. Includes family boundaries, kind clear action for necessary diaper care and food throwing, gentle handling with brief explanation, immediate danger, feelings and consent to comforting touch, tantrum and dressing exceptions, nearby support when touch is refused, age-limited calm-space context, repair, early limits, adult upset and consistency. Read all sections and callout text, including the anticipatory subsection on PDF 138."
+    },
+    {
+      "id": "toddler-daily-care-source-r01.read.daily-care-rhythm-rituals",
+      "reader": "/root/toddler_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 145,
+          "end": 148
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete daily-care opening, care-as-connection, daily-rhythm discussion and example day, and full Rituals unit across its continuation on PDF 148. Includes child energy/interests, preparations for changed days, weekly and seasonal examples, mixed cultural traditions, inexpensive low-key personal celebrations and togetherness over perfection."
+    },
+    {
+      "id": "toddler-daily-care-source-r01.read.dressing",
+      "reader": "/root/toddler_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 148,
+          "end": 151
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete Getting dressed and leaving the house unit: clothing choices and restrictions, hallway organization, the numbered coat-flip text, quiet practice opportunities, incremental help at frustration, optional nearby availability, varying wishes for help, full diaper note, departure time boundary, gentle sportscasting and not threatening abandonment. The exact coat diagram was separately inspected visually."
+    },
+    {
+      "id": "toddler-daily-care-source-r01.read.eating",
+      "reader": "/root/toddler_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 152,
+          "end": 155
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete Eating unit directly from the original, including what/when/where and how-much roles, family and snack seating, food/cutlery staying at the table, schedule and milk claims, appetite assurances, cutlery help, full food-battles/reset procedure and its continuation, complete doctor note, and both food-throwing and intentional-water-spilling passages. The review distinguishes narrow retained descriptions from omitted prescriptions and guarantees."
+    },
+    {
+      "id": "toddler-daily-care-source-r01.read.sleep",
+      "reader": "/root/toddler_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 156,
+          "end": 158
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete Sleeping unit: family choice, nap/hour and bed-age statements, sleep environment and light claims, bedtime sequence, help and crying-alone qualification, full chair progression, illness/teething support, the night-waking continuation, personal anecdotes, feeding changes, blanket/practice examples and final sleep-specialist qualification. No source method is approved by omission or by association with a passing narrow summary."
+    },
+    {
+      "id": "toddler-daily-care-source-r01.read.teeth",
+      "reader": "/root/toddler_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 159,
+          "end": 159
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete Brushing teeth unit, including no official Montessori guidelines, bath-timing and toothbrush choices, necessary-care qualification, adult finishing help, modeling and singing, the distinction from distraction and the complete gentle-assistance closing script."
+    },
+    {
+      "id": "toddler-daily-care-source-r01.read.appendix-context",
+      "reader": "/root/toddler_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 245,
+          "end": 248
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete original-page text of the appendix rows on PDF 245–248, including the full self-care rows on PDF 247 and their individual ages, columns and materials. Specifically checked 14+ months dressing and brushing teeth, the child-start/adult-offer-to-finish sequence, and that walking-steadily belongs to watering plants rather than the brushing row. Adjacent pages established row boundaries and continuations."
+    },
+    {
+      "id": "toddler-daily-care-source-r01.read.toileting",
+      "reader": "/root/toddler_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 160,
+          "end": 163
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete Toileting unit including small clothing skills, potty offers without force, exact five readiness examples instead of ages, bathroom setup, neutral wet-clothing language, reminders outside absorbed activity, overnight changes, full stool-withholding passage and doctor qualification, refusal without force and the intentional-floor-peeing discussion. The source does not list generic bathroom interest as a readiness example."
+    },
+    {
+      "id": "toddler-daily-care-source-r01.read.pacifier",
+      "reader": "/root/toddler_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 163,
+          "end": 164
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete Saying goodbye to pacifiers unit including first-year framing and the young-toddler case, informing the child, sleep-only first stage, tentative needs, complete replacement-ideas list, later bedtime plan, short-time assurance, extra-support and sleep-crutch wording, and explicit internal reference to Sleeping. Followed that reference through the complete PDF 156–158 unit."
+    },
+    {
+      "id": "toddler-daily-care-source-r01.read.respectful-contact",
+      "reader": "/root/toddler_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 171,
+          "end": 174
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete Skills for introverted toddlers section on PDF 172–173 with surrounding text: acceptance, preparation, supported practice, child-to-child unwanted hugs and the final paragraph on checking in before touch/help. The following physical-behavior page reinforces immediate protection; the complete limits unit supplies the necessary-care exception."
+    },
+    {
+      "id": "toddler-daily-care-source-r01.read.coat-diagram",
+      "reader": "/root/toddler_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 149,
+          "end": 149
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Viewed a readable 1600-pixel full original PDF page, not a contact sheet or reused artwork. Read all text and inspected all three numbered coat-flip panels. The first two panels show an open coat with its inside presented upward, hood/label end beside the child; hands enter the sleeves and the coat lifts overhead before sliding down. This orientation is visually supplied in the book but absent from the draft text-only steps. Visible folio 140 was inspected; app references remain PDF-only."
+    },
+    {
+      "id": "toddler-daily-care-source-r01.read.activity-chart-visuals",
+      "reader": "/root/toddler_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 36,
+          "end": 36
+        },
+        {
+          "start": 51,
+          "end": 52
+        },
+        {
+          "start": 78,
+          "end": 78
+        },
+        {
+          "start": 247,
+          "end": 247
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Viewed readable 1800-pixel full original pages individually. Read the complete SHOW callout and surrounding text; both practical-life age columns and the introductory continuation rule; all eating-area and bedroom rows including safety note; complete four-column appendix page with the brushing-teeth, dressing and other self-care rows and their own age labels. No cropped-row or thumbnail inference."
+    },
+    {
+      "id": "toddler-daily-care-source-r01.read.rhythm-and-limits-visuals",
+      "reader": "/root/toddler_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 121,
+          "end": 121
+        },
+        {
+          "start": 138,
+          "end": 138
+        },
+        {
+          "start": 142,
+          "end": 142
+        },
+        {
+          "start": 146,
+          "end": 146
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Viewed and read each readable 1800-pixel full original page: all morning/night checklist items; every tantrum-chart subsection, including triggers and refusal of a cuddle; full limits checklist; and every line of the example toddler day. The headings and grouping confirm examples, help/protection and separate older-child qualifications."
+    },
+    {
+      "id": "toddler-daily-care-source-r01.read.sensitive-page-visuals",
+      "reader": "/root/toddler_care_source_r01",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 155,
+          "end": 155
+        },
+        {
+          "start": 157,
+          "end": 159
+        },
+        {
+          "start": 161,
+          "end": 164
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Viewed each readable 1800-pixel full original page individually and read its complete contents. Verified the eating medical note and throwing-food section boundary; full sleep method, illness/teething and specialist continuation; entire teeth unit; exact readiness bullets, bathroom and stool-withholding context, no-force refusal paragraph and complete pacifier list/continuation. Visuals supplement, rather than replace, the full-unit text reads."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "toddler-daily-care-source-r01.18-24.toddler-getting-dressed",
+      "entryId": "toddler-getting-dressed",
+      "placementId": "18-24.toddler-getting-dressed",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.toddler-getting-dressed.json",
+      "snapshotFileSha256": "b9102b1ee67f92eed8a3f7b3a0193671de0b51a0549f09f36737111c05fa6c1c",
+      "textPlacementSha256": "4cd76a1df576ed37f40913c2b5c965675842aeedbabd380b82d58f8c23e56353",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-daily-care-source-r01.read.scope-and-activity",
+        "toddler-daily-care-source-r01.read.practical-life",
+        "toddler-daily-care-source-r01.read.room-by-room",
+        "toddler-daily-care-source-r01.read.participation-and-help",
+        "toddler-daily-care-source-r01.read.dressing",
+        "toddler-daily-care-source-r01.read.limits",
+        "toddler-daily-care-source-r01.read.coat-diagram",
+        "toddler-daily-care-source-r01.read.activity-chart-visuals"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for the exact title, summary, cue, three detail paragraphs, age context and references. The small-part invitation keeps changing help needs and the adult departure boundary together. All three topic rows retain wanted or needed help and day-to-day variation without an independence deadline.",
+        "fieldAssessments": {
+          "titleSummaryCue": "Supported by PDF 148–151: the wish to do it oneself, resistance to help and asking for help on another day are contextual possibilities.",
+          "detail": "Reachable limited seasonal choices match the bedroom row; elastic waists, roomy head openings, shirt/sleeve and shoe-back examples match the dressing unit. Necessary departure retains acknowledgment, gentle help and connection.",
+          "ageAndReferences": "Around 1–3 is the source scope on PDF 14. The 18–24 band is situational retrieval, with no expected start. All three cited spans were read; references display physical PDF pages, without unverified printed folios.",
+          "optionalSurfaces": "No opening surface, action label, extra steps, principle or artwork is present."
+        },
+        "renderedSurfaceChecks": {
+          "openingText": null,
+          "entryTextReviewed": true,
+          "topicRows": [
+            {
+              "topicId": "everyday-care",
+              "assessment": "The row describes a feasible part of dressing with adult help and variable participation."
+            },
+            {
+              "topicId": "connection-feelings",
+              "assessment": "The same row preserves the child’s wish and room for help, without recasting resistance as misconduct."
+            },
+            {
+              "topicId": "home-that-helps",
+              "assessment": "The row makes no furnishing demand; the detailed reachable-clothing examples preserve source alternatives."
+            }
+          ]
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-daily-care-source-r01.18-24.toddler-coat-flip",
+      "entryId": "toddler-coat-flip",
+      "placementId": "18-24.toddler-coat-flip",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.toddler-coat-flip.json",
+      "snapshotFileSha256": "7320d937fa9b79d0329e885c64806e06587fac75d4b11d0b106f7a9eb36d4b34",
+      "textPlacementSha256": "1a446a799e26c172c813f708c5772f86b47dd6847cdeec5105f48c51d6d9ffb5",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-daily-care-source-r01.read.scope-and-activity",
+        "toddler-daily-care-source-r01.read.practical-life",
+        "toddler-daily-care-source-r01.read.dressing",
+        "toddler-daily-care-source-r01.read.appendix-context",
+        "toddler-daily-care-source-r01.read.coat-diagram",
+        "toddler-daily-care-source-r01.read.activity-chart-visuals"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "toddler-daily-care-source-r01.coat-flip.open-orientation",
+            "severity": "medium",
+            "field": "publicProjection.textPlacement.entry.detail[0]; publicProjection.textPlacement.entry.steps[0]",
+            "surface": "EntryReading detail and Try it together first step",
+            "finding": "The only setup says to lay the coat on the floor with the child at its hood or label. PDF 149 supplies the missing information visually: the coat is open with its inside facing upward before hands enter the sleeves. This placement has no illustration, so the necessary orientation is lost in the text-only sequence.",
+            "requiredCorrection": "Carry the visually verified open-coat, inside-up orientation into the initial setup, keeping the child at the hood/label end and retaining optional practice and help. For example, describe an open coat on the floor with the inside facing up; add no unverified fastening, posture or equipment detail. Re-review the exact replacement.",
+            "status": "open",
+            "sourcePdfPages": [
+              {
+                "start": 149,
+                "end": 149
+              }
+            ]
+          }
+        ],
+        "assessment": "Revise the text-only setup to carry the orientation visible in the original diagram. The interest-led title, summary and cue, quiet practice, adult help, movements and explicit distinction between the chart age and the age-free coat-flip passage are otherwise supported. Both topic rows stand independently as optional practice invitations.",
+        "fieldAssessments": {
+          "titleSummaryCue": "The dedicated dressing unit explicitly offers practice when not rushing; interest and shared help agree with the general activity context.",
+          "detailAndSteps": "Hands into sleeves, overhead lift and coat onto body track the numbered source. The initial open, inside-up orientation is missing from both the first detail paragraph and the first step. No app image supplies it.",
+          "ageAndReferences": "The selected PDF 52 coat example is in 18 months–3 years; PDF 149 has no separate coat-flip age. The appendix has a distinct 14+ self-dressing row, which does not invalidate the explicitly named PDF 52 variant. The four cited spans are covered.",
+          "optionalSurfaces": "This is a nonopening placement with three steps and no artwork."
+        },
+        "renderedSurfaceChecks": {
+          "openingText": null,
+          "entryTextReviewed": true,
+          "topicRows": [
+            {
+              "topicId": "everyday-care",
+              "assessment": "Interest, unrushed practice and help are visible without requiring independent dressing."
+            },
+            {
+              "topicId": "play-discovery",
+              "assessment": "The row invites trying a movement without completion or performance pressure; the detailed setup issue still requires correction after opening it."
+            }
+          ]
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-daily-care-source-r01.18-24.toddler-care-connection",
+      "entryId": "toddler-care-connection",
+      "placementId": "18-24.toddler-care-connection",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.toddler-care-connection.json",
+      "snapshotFileSha256": "86d8d877273175140ebfc80b67deb330678379cb365ec68c48cd49cd4b6f1128",
+      "textPlacementSha256": "a3f68d24740ee3d627a3e289f075e59576a616f3320667e207bbd219d4ff3ce1",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-daily-care-source-r01.read.scope-and-activity",
+        "toddler-daily-care-source-r01.read.daily-care-rhythm-rituals",
+        "toddler-daily-care-source-r01.read.respectful-contact",
+        "toddler-daily-care-source-r01.read.limits",
+        "toddler-daily-care-source-r01.read.rhythm-and-limits-visuals"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass. The exact public surfaces preserve care as communication while retaining necessary care and protection. The reference to checking in before touch is read together with the complete limits context, so consent language does not become permission to delay necessary action.",
+        "fieldAssessments": {
+          "titleSummaryCue": "Dressing, washing, diapering and meals, smiles, shared attention, preword communication and turns are supported by PDF 145. The cue remains a possible interaction, not a required response.",
+          "detail": "Respectful touch is paired with gentle help and brief explanation for necessary care/protection, supported by PDF 131–133 as well as the final contact paragraph on PDF 173.",
+          "ageAndReferences": "Toddler-wide scope is retained in a situational 18–24 placement. All exact cited pages and the complete relevant contact/limits units were read. The contact descriptor points to the final paragraph within Skills for introverted toddlers.",
+          "optionalSurfaces": "No action label, opening surface, procedure, principle or artwork is present."
+        },
+        "renderedSurfaceChecks": {
+          "openingText": null,
+          "entryTextReviewed": true,
+          "topicRows": [
+            {
+              "topicId": "everyday-care",
+              "assessment": "The row visibly places respectful touch and communication within necessary care."
+            },
+            {
+              "topicId": "connection-feelings",
+              "assessment": "The row offers relationship within real care; it does not require a child’s permission before protection."
+            }
+          ]
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-daily-care-source-r01.18-24.toddler-daily-rhythm",
+      "entryId": "toddler-daily-rhythm",
+      "placementId": "18-24.toddler-daily-rhythm",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.toddler-daily-rhythm.json",
+      "snapshotFileSha256": "a88e60e8fead7d8a082812c41e0174c7ca8b70d14a2df08396e9b8cbf2684d39",
+      "textPlacementSha256": "59475efe89f7319d69baf1bdced5d81a6aceb2a7dc4b5c60c6cc2dfe7b9bfaf2",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-daily-care-source-r01.read.scope-and-activity",
+        "toddler-daily-care-source-r01.read.checklists-and-expectations",
+        "toddler-daily-care-source-r01.read.daily-care-rhythm-rituals",
+        "toddler-daily-care-source-r01.read.rhythm-and-limits-visuals"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass. The summary and both topic rows qualify familiarity with flexibility, and the detail preserves the child-made movable checklist as an example. Neither the daily-rhythm chart nor the morning/night examples becomes a compulsory schedule.",
+        "fieldAssessments": {
+          "titleSummaryCue": "Knowing what comes next and difficulty with changed transitions are supported; the draft uses possibility language instead of the source’s stronger cooperation claims.",
+          "detail": "Drawings or photographs, collaboration with the child and movable order match PDF 120–121. The sample day and preparation for changes match PDF 145–146.",
+          "ageAndReferences": "The general toddler scope and no-start-age situational framing avoid assigning a care timetable to 18–24 months. All three cited spans and relevant continuations were read.",
+          "optionalSurfaces": "No opening, steps, fixed clock times, principle or artwork is present."
+        },
+        "renderedSurfaceChecks": {
+          "openingText": null,
+          "entryTextReviewed": true,
+          "topicRows": [
+            {
+              "topicId": "everyday-care",
+              "assessment": "The row offers a recognizable pattern with room to follow the child/family."
+            },
+            {
+              "topicId": "home-that-helps",
+              "assessment": "The same short surface supports predictability without requiring a chart, purchase or fixed daily order."
+            }
+          ]
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-daily-care-source-r01.18-24.toddler-family-rituals",
+      "entryId": "toddler-family-rituals",
+      "placementId": "18-24.toddler-family-rituals",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.toddler-family-rituals.json",
+      "snapshotFileSha256": "e2c8f6782cbd6ddca9ada8f56f75ed2212c5ef233d8ebc9004ce3ad595eeb8ba",
+      "textPlacementSha256": "0fa682f819b68a34151d0bc30978ce1483b3e71d498966980175942c2abd45bc",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-daily-care-source-r01.read.scope-and-activity",
+        "toddler-daily-care-source-r01.read.daily-care-rhythm-rituals"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass. The public title, summary and cue describe possible familiar moments; the full entry keeps ordinary weekly examples, cultural variety and Davies’s personal low-key practice. The continuation on PDF 148 is retained rather than losing its inexpensive, nonperfect framing.",
+        "fieldAssessments": {
+          "titleSummaryCue": "Songs, weekly outings and seasonal traditions match the complete ritual examples. Looking forward to them is a possibility, not a guaranteed memory outcome.",
+          "detail": "Park/breakfast, food/songs/people/making and mixed cultural origins are supported. The final paragraph correctly treats inexpensive, low-key celebrations as Davies’s own practice.",
+          "ageAndReferences": "The source is toddler-wide; 18–24 remains situational retrieval. The full two-page reference includes the ritual continuation before dressing begins.",
+          "optionalSurfaces": "No opening, prescribed ritual sequence, steps, principle or artwork is present."
+        },
+        "renderedSurfaceChecks": {
+          "openingText": null,
+          "entryTextReviewed": true,
+          "topicRows": [
+            {
+              "topicId": "everyday-care",
+              "assessment": "The row presents repeatable familiar moments without an elaborate routine."
+            },
+            {
+              "topicId": "connection-feelings",
+              "assessment": "Shared anticipation is the purpose; it does not promise attachment or lasting memories as an outcome."
+            }
+          ]
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-daily-care-source-r01.18-24.toddler-meals",
+      "entryId": "toddler-meals",
+      "placementId": "18-24.toddler-meals",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.toddler-meals.json",
+      "snapshotFileSha256": "e945d1c03f4b4a76d83b1539683e4ae21699c9be9c8b000a340ad891641c0e10",
+      "textPlacementSha256": "4f6546d28ac29b51b57f56ec70c9709ec58054ead8b9cd66722f3fea183784dc",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-daily-care-source-r01.read.scope-and-activity",
+        "toddler-daily-care-source-r01.read.room-by-room",
+        "toddler-daily-care-source-r01.read.eating",
+        "toddler-daily-care-source-r01.read.activity-chart-visuals",
+        "toddler-daily-care-source-r01.read.sensitive-page-visuals"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for the narrow attributed perspective. Both topic rows retain the doctor qualification. The details distinguish adult offering roles, the child’s amount and pace, feasible shared meals, table boundaries and partial help from the source’s stronger appetite assurances and separate reset method.",
+        "fieldAssessments": {
+          "titleSummaryCue": "Connection and nourishment match PDF 152; the source explicitly says to consult a doctor for any concerns. The cue raises a situation without diagnosing a food problem.",
+          "detail": "The what/when/where versus how-much distinction is supported; the small adult meal, no expectation to stay until everyone finishes and keeping food/cutlery at the table match PDF 153. Partial cutlery help is supported by PDF 154. The medical continuation on PDF 155 is preserved without importing a waiting threshold.",
+          "sensitiveBoundary": "No instruction to restrict snacks, wait for the next meal, change milk, remove straps or alter seating; no promise of nutritional sufficiency or a resolved food battle. Mention of stronger passages does not endorse their procedures.",
+          "ageAndReferences": "General toddler situational context does not add a feeding age rule. The complete cited PDF 152–155 unit was read, including the reset continuation and medical note.",
+          "optionalSurfaces": "No opening, steps, principle or art supplies additional feeding claims."
+        },
+        "renderedSurfaceChecks": {
+          "openingText": null,
+          "entryTextReviewed": true,
+          "topicRows": [
+            {
+              "topicId": "everyday-care",
+              "assessment": "The row carries attribution, child participation/pace and doctor qualification in its own short text."
+            },
+            {
+              "topicId": "connection-feelings",
+              "assessment": "The row makes shared meals a relationship perspective without letting connection replace nourishment or the doctor qualification."
+            }
+          ]
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-daily-care-source-r01.18-24.toddler-food-on-floor",
+      "entryId": "toddler-food-on-floor",
+      "placementId": "18-24.toddler-food-on-floor",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.toddler-food-on-floor.json",
+      "snapshotFileSha256": "f2e299af209cfb99a77a538c15c2619ebe8b58eb0fb2c42dd94dce5d5a029ea0",
+      "textPlacementSha256": "eb3fdb5dd884022fcfbe55e45a33ef45d91916de6370c5311853361e425b4d5d",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-daily-care-source-r01.read.scope-and-activity",
+        "toddler-daily-care-source-r01.read.perspective-and-translation",
+        "toddler-daily-care-source-r01.read.eating",
+        "toddler-daily-care-source-r01.read.limits",
+        "toddler-daily-care-source-r01.read.sensitive-page-visuals"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass. The title and both short rows preserve a tentative question about being finished rather than certainty about appetite. The detailed plate-removal example remains attributed, without a threat, food-withholding schedule or claim that the child has eaten enough.",
+        "fieldAssessments": {
+          "titleSummaryCue": "PDF 155 includes exploration as well as a common all-finished interpretation; PDF 109 supplies the tentative translation question. The draft does not claim one motive for every throw.",
+          "detail": "The all-finished gesture and help carrying the plate, followed by calm removal if throwing continues, are in PDF 155. Wider food concerns and the limit of interpreting the example as sufficiency are explicit.",
+          "sensitiveBoundary": "This is a description of the source’s response to plate use, not a nutritional assessment. The narrow short rows do not prescribe ending a meal or delaying food, so their tentative question does not rely on detail-only medical language to repair such a claim.",
+          "ageAndReferences": "Toddler situational retrieval is explicit and all PDF 109/152–155 references and necessary limit context were read.",
+          "optionalSurfaces": "No opening, steps, water-removal instruction, principle or art is present."
+        },
+        "renderedSurfaceChecks": {
+          "openingText": null,
+          "entryTextReviewed": true,
+          "topicRows": [
+            {
+              "topicId": "everyday-care",
+              "assessment": "The row asks whether the child is finished and does not equate every throw with being full."
+            },
+            {
+              "topicId": "connection-feelings",
+              "assessment": "The same row combines understanding with a limit, without attributing malice or promising cooperation."
+            }
+          ]
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-daily-care-source-r01.18-24.toddler-sleep",
+      "entryId": "toddler-sleep",
+      "placementId": "18-24.toddler-sleep",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.toddler-sleep.json",
+      "snapshotFileSha256": "eec764548374d2aa7c1036c105e0914324b36376409a280904c59ccd40b7a1f3",
+      "textPlacementSha256": "f57fc3d7a2edc6ac53566b4f0bd87c7c3fe2137f7a1cfed259e5b0b096fdf2f5",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-daily-care-source-r01.read.scope-and-activity",
+        "toddler-daily-care-source-r01.read.sleep",
+        "toddler-daily-care-source-r01.read.sensitive-page-visuals"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for this bounded description. The exact summary and single topic row retain personal family context, a familiar sequence, needed help and specialist support. The full text preserves no crying alone and illness/teething support without translating the book’s settling, feeding or sleeping-space passages into instructions.",
+        "fieldAssessments": {
+          "titleSummaryCue": "Supported by the family-choice opening and the closing well-being/specialist qualification. Considering whether the arrangement works for the family remains a question, not a prescribed space.",
+          "detail": "Ordinary care, books and conversation precede sleep in PDF 157; the rejection of crying it out alone and extra support for sickness or teething are explicit. The final specialist statement matches PDF 158.",
+          "sensitiveBoundary": "No hours, ages for bed changes, light recommendation, chair progression, holding/laying-down method, crying diagnosis, feeding changes or bedding arrangement is supplied. The complete source context was read despite those omissions.",
+          "ageAndReferences": "The age field identifies only the book’s toddler scope and situational retrieval. PDF 156–158 is the complete unit with its continuation.",
+          "optionalSurfaces": "No opening, procedure, principle or artwork is present."
+        },
+        "renderedSurfaceChecks": {
+          "openingText": null,
+          "entryTextReviewed": true,
+          "topicRows": [
+            {
+              "topicId": "everyday-care",
+              "assessment": "The row itself retains help and the specialist condition for continuing difficulties affecting the child or family."
+            }
+          ]
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-daily-care-source-r01.18-24.toddler-teeth",
+      "entryId": "toddler-teeth",
+      "placementId": "18-24.toddler-teeth",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.toddler-teeth.json",
+      "snapshotFileSha256": "9edd35b05f828b32602a8b09fcd2d60da7cc8bc9aea55a763b4c726129f08718",
+      "textPlacementSha256": "1dae767d4b8e2b1f8c27150dd045e01785025144a3af7838984b390c0ced3049",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-daily-care-source-r01.read.scope-and-activity",
+        "toddler-daily-care-source-r01.read.practical-life",
+        "toddler-daily-care-source-r01.read.teeth",
+        "toddler-daily-care-source-r01.read.appendix-context",
+        "toddler-daily-care-source-r01.read.limits",
+        "toddler-daily-care-source-r01.read.activity-chart-visuals",
+        "toddler-daily-care-source-r01.read.sensitive-page-visuals"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass. The exact short surface retains both participation/gentle adult help and the absence of official Montessori dental guidelines. The full entry preserves necessary care and the child-start/adult-finish distinction from the actual appendix row without adding a dental protocol.",
+        "fieldAssessments": {
+          "titleSummaryCue": "Supported by PDF 159 and the full brushing row on PDF 247. The cue’s holding, choices or resistance are possible situations, without a tooth-brushing deadline.",
+          "detail": "Choice of brush and bath timing, adult modeling, necessary brushing and gentle assistance are present on PDF 159. The child begins and the adult offers to finish on PDF 247.",
+          "sensitiveBoundary": "The draft does not extend the mouth-opening script into restraint or handling technique and adds no toothpaste dose, duration, frequency or clinical claim.",
+          "ageAndReferences": "The general toddler age context is qualified as situational retrieval. The public reference locators separately retain the 12–18 assisted-brushing chart wording and 14+ appendix wording; neither is presented as a starting deadline. All row columns and chart continuation were checked.",
+          "optionalSurfaces": "No opening, steps, principle or artwork adds care claims."
+        },
+        "renderedSurfaceChecks": {
+          "openingText": null,
+          "entryTextReviewed": true,
+          "topicRows": [
+            {
+              "topicId": "everyday-care",
+              "assessment": "Attribution, adult help and the qualification about official Montessori guidelines are visible in the row itself."
+            }
+          ]
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-daily-care-source-r01.18-24.toddler-toileting",
+      "entryId": "toddler-toileting",
+      "placementId": "18-24.toddler-toileting",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.toddler-toileting.json",
+      "snapshotFileSha256": "6858eb89c8c7d56a77c04f2043168f3ad6e0778ebace62aa255499deb078f2a5",
+      "textPlacementSha256": "ca6dafcd7776545f7c409ca9813628e9e08d979142f90ff630b31e2394778e47",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-daily-care-source-r01.read.scope-and-activity",
+        "toddler-daily-care-source-r01.read.room-by-room",
+        "toddler-daily-care-source-r01.read.toileting",
+        "toddler-daily-care-source-r01.read.sensitive-page-visuals"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "toddler-daily-care-source-r01.toileting.readiness-examples",
+            "severity": "medium",
+            "field": "publicProjection.textPlacement.entry.cue; publicProjection.textPlacement.entry.detail[0]; publicProjection.textPlacement.placement.ageContext.readiness",
+            "surface": "EntryReading In the everyday, first detail paragraph, and Age, interest & context",
+            "finding": "The cue adds becoming interested in the bathroom and broadens the source’s privacy-while-pooping sign to seeking privacy generally. The first detail paragraph then says the book gives those observations as readiness signs. PDF 161’s complete five-item list includes pulling at a wet/soiled diaper, squatting or finding privacy while pooping, reporting pee/poop, sometimes resisting a diaper change and taking the diaper off; it does not include generic bathroom interest. The ageContext repeats the unqualified privacy wording.",
+            "requiredCorrection": "Use source-listed observations for this attributed readiness description, and preserve the bodily context for privacy and reporting. Remove generic bathroom interest from the attributed list or explicitly distinguish it as an editorial context cue without calling it a book readiness sign. Keep the no-age, no-force, noninterruption and doctor qualifications. Re-review the exact replacement.",
+            "status": "open",
+            "sourcePdfPages": [
+              {
+                "start": 161,
+                "end": 163
+              }
+            ]
+          }
+        ],
+        "assessment": "Revise the exact readiness examples. The title, summary and topic row faithfully retain gradual readiness without a set age or force, with a doctor check for suspected medical issues. The complete detail also preserves noninterruption and no-force conditions and avoids importing overnight or withholding methods, but it attributes an expanded cue list to the book.",
+        "fieldAssessments": {
+          "titleSummary": "Supported by PDF 160–163: no race, no ages in the readiness discussion, no force and medical qualification.",
+          "cueAndReadiness": "The book lists privacy while pooping, rather than general privacy, and does not list becoming interested in the bathroom among its five readiness signs. The subsequent statement that the book gives those observations as signs makes the expansion a source claim.",
+          "detail": "Small clothing skills, places for clean/soiled clothes, neutral wet-language and no interrupting/forcing are supported. Separate mention of overnight/stool-withholding material does not reproduce its methods or waiting reassurance.",
+          "ageAndReferences": "The age note explicitly rejects a time to begin or finish; retain it. Correct the repeated privacy wording in ageContext.readiness along with the cue/detail linkage. All four original pages and exact readiness bullets were read.",
+          "optionalSurfaces": "No opening, procedural steps, principle or artwork is present."
+        },
+        "renderedSurfaceChecks": {
+          "openingText": null,
+          "entryTextReviewed": true,
+          "topicRows": [
+            {
+              "topicId": "everyday-care",
+              "assessment": "The topic row passes independently: it contains no unsupported readiness examples and retains no set age, no force and the doctor qualification. The opened entry still needs the cue correction."
+            }
+          ]
+        }
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-daily-care-source-r01.18-24.toddler-pacifier-change",
+      "entryId": "toddler-pacifier-change",
+      "placementId": "18-24.toddler-pacifier-change",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.toddler-pacifier-change.json",
+      "snapshotFileSha256": "5157a43c5552a3f0f975cbaf76a829888ac679c36d7a9ef13c006c55253a6236",
+      "textPlacementSha256": "b1c9c6945fd56742ed11ee763a73b23b3b565a72392aec91dbdfa6f9eb6284e5",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-daily-care-source-r01.read.scope-and-activity",
+        "toddler-daily-care-source-r01.read.pacifier",
+        "toddler-daily-care-source-r01.read.sleep",
+        "toddler-daily-care-source-r01.read.sensitive-page-visuals"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for the narrow attributed change perspective. The title, summary, cue and age context retain family consideration and the young-toddler case without converting the source’s first-year preference into an 18–24-month deadline. The full entry follows the actual internal sleep reference and preserves support and specialist help.",
+        "fieldAssessments": {
+          "titleSummaryCue": "Informing the young toddler and extra support are directly supported; family consideration is a retrieval situation rather than a recommendation that every family remove a pacifier now.",
+          "detail": "The book moves from less use to a later bedtime change and offers tentative engagement, connection and calming possibilities. The draft keeps these tentative and reads them with PDF 156–158’s help/no-crying-alone/specialist context.",
+          "sensitiveBoundary": "No sleep-only timetable, replacement food/water/touch technique, reused-pacifier suggestion or short-time promise is supplied. The source’s restrictive sleep-crutch wording is not generalized into withholding needed help.",
+          "ageAndReferences": "The source first-year framing is acknowledged without becoming the selected browsing band’s deadline. Both complete cited units, including the full PDF 164 continuation and sleep cross-reference, were read.",
+          "optionalSurfaces": "No opening, steps, principle or artwork is present."
+        },
+        "renderedSurfaceChecks": {
+          "openingText": null,
+          "entryTextReviewed": true,
+          "topicRows": [
+            {
+              "topicId": "everyday-care",
+              "assessment": "The row itself identifies Davies’s young-toddler approach, informing/support and the absence of an age deadline; it gives no care method requiring a hidden qualification."
+            }
+          ]
+        }
+      },
+      "artContext": null
+    }
+  ],
+  "result": {
+    "placements": 11,
+    "verdictCounts": {
+      "pass": 9,
+      "revise": 2
+    },
+    "openIssueIds": [
+      "toddler-daily-care-source-r01.coat-flip.open-orientation",
+      "toddler-daily-care-source-r01.toileting.readiness-examples"
+    ],
+    "publicationStatus": "Not assessed; this source report alone grants no publication approval."
+  }
+}

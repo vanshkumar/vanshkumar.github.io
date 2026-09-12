@@ -1,0 +1,1481 @@
+{
+  "id": "shared-source-r01",
+  "reviewer": {
+    "task": "/root/shared_source_review",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Independent source review of the exact frozen r01 projections and actual rendered topic rows and entry reading text for the 15 shared canonical entries and their 29 placements in the 6–9-month and 18–24-month pilots. This reviewer authored none of these entries and did not inspect the final tone review. No shared placement contains an opening, scene or art context. Source meaning, attribution, public qualifications, references, and age/readiness/editorial placement are assessed separately from manuscript polish.",
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r01/RENDERED_SURFACES.json",
+    "sha256": "b7aa504ea50d67f7dd55c061ab4b187595df074d5da6aef47b9751d2af4ada8f"
+  },
+  "reviewInputs": {
+    "manifest": {
+      "path": "content/pilots/revisions/r01/MANIFEST.json",
+      "sha256": "2448b86ccaf96f1f4c40d6b83b0065490f306b9d85900ebd5b42fb367f9d7e4f"
+    },
+    "draft": {
+      "path": "content/pilots/drafts/shared/draft-r01.json",
+      "sha256": "f79e45730e30d50d59563bb78aaef23270bee632b47cbbf1b51147ac99c30eb2"
+    },
+    "batch": {
+      "path": "content/pilots/REVIEW_BATCHES.json",
+      "id": "shared",
+      "sha256": "9e38d753028bbce912db718722602e32bbad3572339500bf18894c9064333e43"
+    },
+    "rendererTextFilesRead": [
+      {
+        "path": "src/HomeStudy.jsx",
+        "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c"
+      },
+      {
+        "path": "src/guide/catalog.js",
+        "sha256": "d8d30a17c5f1b1c99ed68764f3f412cf99b48f55d09bf528313f0df1439da71c"
+      },
+      {
+        "path": "content/pilots/render-review.mjs",
+        "sha256": "cd0e48453377baa01b079389d1fa198847b237c78977d8c31cc13afe7226087f"
+      },
+      {
+        "path": "content/pilots/review-snapshot.mjs",
+        "sha256": "420cda1abdfc2fbbebe2be1e2e05a1befafe1f43e2d3999d2b96f9155a7d99b9"
+      }
+    ],
+    "renderedReadMethod": "Personally read every shared canonical full entryText and all 29 placements’ actual topic-row text from RENDERED_SURFACES.json, together with their frozen age labels, kinds, topics, cues, public age notes, principles and reference labels. The two age versions have identical full entryText; each placement’s selected age and topic routes were separately checked in the actual rendered HTML. Read the actual renderer to establish what a topic row omits. No opening or image is present for this batch. File and component hashes bind the reading; hash checks themselves are not semantic approval.",
+    "renderedPlacements": [
+      {
+        "placementId": "6-9.shared-observe",
+        "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-observe.entry.html",
+        "renderedEntrySha256": "cb0a377f18724e0db43c511ea1009f694825ed7f5346e031f6dabcca278d950f",
+        "entryTextSha256": "0a9eb781dd9a69747caac152de1bf6759fa80c6bf8f1c30b5b01d57054e44437",
+        "topicIds": [
+          "you-family",
+          "play-discovery"
+        ]
+      },
+      {
+        "placementId": "18-24.shared-observe",
+        "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-observe.entry.html",
+        "renderedEntrySha256": "8043d5803d66de5b405faf3262e015713a874aa121b93f6a8be9d9da23676daa",
+        "entryTextSha256": "0a9eb781dd9a69747caac152de1bf6759fa80c6bf8f1c30b5b01d57054e44437",
+        "topicIds": [
+          "you-family",
+          "play-discovery"
+        ]
+      },
+      {
+        "placementId": "6-9.shared-follow-readiness",
+        "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-follow-readiness.entry.html",
+        "renderedEntrySha256": "cc4ed2b14adf57ceac505a15f6e850ea2d5058f751a28b19372e528891be8951",
+        "entryTextSha256": "f2c1b146c6bf3daee12176373cf032bd6e7d01ffeee26ddb99d98ee5c106140f",
+        "topicIds": [
+          "play-discovery",
+          "you-family"
+        ]
+      },
+      {
+        "placementId": "18-24.shared-follow-readiness",
+        "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-follow-readiness.entry.html",
+        "renderedEntrySha256": "e3dd8a0cdcd399759461b9f06568932e6d8d0dca6ca15594a451c37440c1c538",
+        "entryTextSha256": "f2c1b146c6bf3daee12176373cf032bd6e7d01ffeee26ddb99d98ee5c106140f",
+        "topicIds": [
+          "play-discovery",
+          "you-family"
+        ]
+      },
+      {
+        "placementId": "6-9.shared-participation-help",
+        "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-participation-help.entry.html",
+        "renderedEntrySha256": "f6a63aee9267de93f42eb15b66d2755761d4a28a78ba7f279048f4369b5dd767",
+        "entryTextSha256": "58ea7ef1f20a216c7245af52cbf5d972a4584a5ee43eb710263e84fc2aad1f4d",
+        "topicIds": [
+          "everyday-care",
+          "play-discovery",
+          "you-family"
+        ]
+      },
+      {
+        "placementId": "18-24.shared-participation-help",
+        "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-participation-help.entry.html",
+        "renderedEntrySha256": "137ee80c3e52af1a5a524da97b4331fea0cec902513bfeb076306bbd8850ff7c",
+        "entryTextSha256": "58ea7ef1f20a216c7245af52cbf5d972a4584a5ee43eb710263e84fc2aad1f4d",
+        "topicIds": [
+          "everyday-care",
+          "play-discovery",
+          "you-family"
+        ]
+      },
+      {
+        "placementId": "6-9.shared-time-to-explore",
+        "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-time-to-explore.entry.html",
+        "renderedEntrySha256": "7900304deb6767748cc19cda8615e10dc0a22e1c0aaf0275fc896c35789ea345",
+        "entryTextSha256": "78ea463b59f4e37cb68ab781c65d26f2b90d819ba70cf9d3a8975535d5ed5591",
+        "topicIds": [
+          "play-discovery",
+          "connection-feelings"
+        ]
+      },
+      {
+        "placementId": "18-24.shared-time-to-explore",
+        "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-time-to-explore.entry.html",
+        "renderedEntrySha256": "47761eb09851b081c83f59ab4820f7cce28df8106f2c14f1b1104ca9991c60bc",
+        "entryTextSha256": "78ea463b59f4e37cb68ab781c65d26f2b90d819ba70cf9d3a8975535d5ed5591",
+        "topicIds": [
+          "play-discovery",
+          "connection-feelings"
+        ]
+      },
+      {
+        "placementId": "6-9.shared-feelings-limits",
+        "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-feelings-limits.entry.html",
+        "renderedEntrySha256": "18233905456833b218cb8209bed4b37343642fc102ee2d772ce5a6591c25fabe",
+        "entryTextSha256": "e73c30a29a424089a7084ab1291a2079f343810d15d54fac89fb477cd8675173",
+        "topicIds": [
+          "connection-feelings",
+          "you-family"
+        ]
+      },
+      {
+        "placementId": "18-24.shared-feelings-limits",
+        "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-feelings-limits.entry.html",
+        "renderedEntrySha256": "3b813d2afb8042029756c2595a00797a31343f4b13717d566c9ca0fadc7a6e20",
+        "entryTextSha256": "e73c30a29a424089a7084ab1291a2079f343810d15d54fac89fb477cd8675173",
+        "topicIds": [
+          "connection-feelings",
+          "you-family"
+        ]
+      },
+      {
+        "placementId": "6-9.shared-home-fits-family",
+        "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-home-fits-family.entry.html",
+        "renderedEntrySha256": "3ffcd409e2cfca4b0e0260f89bcbf3e05593d4be594c105fe8797da8112adb58",
+        "entryTextSha256": "d18f134870c9e05548a145830575fae5b5a6330216d4214ab1a4457071c9efb7",
+        "topicIds": [
+          "home-that-helps",
+          "you-family"
+        ]
+      },
+      {
+        "placementId": "18-24.shared-home-fits-family",
+        "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-home-fits-family.entry.html",
+        "renderedEntrySha256": "4f784a88bd1fa82db86b2adab0cdec65e0dffbf7950008fccbca1bd9e1715cc6",
+        "entryTextSha256": "d18f134870c9e05548a145830575fae5b5a6330216d4214ab1a4457071c9efb7",
+        "topicIds": [
+          "home-that-helps",
+          "you-family"
+        ]
+      },
+      {
+        "placementId": "6-9.shared-adult-needs-support",
+        "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-adult-needs-support.entry.html",
+        "renderedEntrySha256": "492afed643950ecea3a61d57e177192c1db67141feaf826e55cc803ca06a501f",
+        "entryTextSha256": "e4d049f93facdc8a37541b335bf52e1e15cbf340ee84f77a92893d7ba528c824",
+        "topicIds": [
+          "you-family"
+        ]
+      },
+      {
+        "placementId": "18-24.shared-adult-needs-support",
+        "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-adult-needs-support.entry.html",
+        "renderedEntrySha256": "e098a875f6a18d5486d3d124c64977c496ceb13d6745c1604f39ce6c0434f620",
+        "entryTextSha256": "e4d049f93facdc8a37541b335bf52e1e15cbf340ee84f77a92893d7ba528c824",
+        "topicIds": [
+          "you-family"
+        ]
+      },
+      {
+        "placementId": "6-9.shared-something-for-you",
+        "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-something-for-you.entry.html",
+        "renderedEntrySha256": "4090f918a20686360fda95a416bfb503d36aa8dc4363f40c182d971e9be7eda0",
+        "entryTextSha256": "9597c8f2c82c327093473e0925560b532c412c15b47da3fc860f1d03c7d155a9",
+        "topicIds": [
+          "you-family"
+        ]
+      },
+      {
+        "placementId": "18-24.shared-something-for-you",
+        "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-something-for-you.entry.html",
+        "renderedEntrySha256": "6c53ee92ccc9cb359f1e75bc9bd7af235a956a37f65c74d029a005f4bf6fbad2",
+        "entryTextSha256": "9597c8f2c82c327093473e0925560b532c412c15b47da3fc860f1d03c7d155a9",
+        "topicIds": [
+          "you-family"
+        ]
+      },
+      {
+        "placementId": "6-9.shared-less-crowded-day",
+        "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-less-crowded-day.entry.html",
+        "renderedEntrySha256": "33976f7114560ec7052c62e7cc6a836420fbdd2066260178f1b674f9bc7074ab",
+        "entryTextSha256": "71643d5e10f5e291120c9c12bca8b0438d8e6ae8b32204fd11e9c35f50b342ff",
+        "topicIds": [
+          "you-family",
+          "everyday-care"
+        ]
+      },
+      {
+        "placementId": "18-24.shared-less-crowded-day",
+        "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-less-crowded-day.entry.html",
+        "renderedEntrySha256": "dc9ffd71c9eb40764f6a496b16a77408a4e6222b2b703a9cfb9ee0b08e2ac8c4",
+        "entryTextSha256": "71643d5e10f5e291120c9c12bca8b0438d8e6ae8b32204fd11e9c35f50b342ff",
+        "topicIds": [
+          "you-family",
+          "everyday-care"
+        ]
+      },
+      {
+        "placementId": "6-9.shared-adult-pause",
+        "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-adult-pause.entry.html",
+        "renderedEntrySha256": "7410c22eb0715cd0e6c6753340084bf6674b17fd70fe5d6bf5c6fa0667b9a5a3",
+        "entryTextSha256": "da215f4278ffac5b13a6e850d4641f77cdf3f2bb379b4b67881a30e0d2132ada",
+        "topicIds": [
+          "you-family",
+          "connection-feelings"
+        ]
+      },
+      {
+        "placementId": "18-24.shared-adult-pause",
+        "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-adult-pause.entry.html",
+        "renderedEntrySha256": "6cda9384c14946ccbd12822def9b83392977214442956b66a49e8374bbb4c6a2",
+        "entryTextSha256": "da215f4278ffac5b13a6e850d4641f77cdf3f2bb379b4b67881a30e0d2132ada",
+        "topicIds": [
+          "you-family",
+          "connection-feelings"
+        ]
+      },
+      {
+        "placementId": "6-9.shared-repair",
+        "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-repair.entry.html",
+        "renderedEntrySha256": "e7a56032156e915f49ba358462532eaab22e7522b1cd6973c5ac6cdf8ed462e5",
+        "entryTextSha256": "5b34e23622498562a0eb1a4a70b1c597e5a97113de0e70fb9ae2f0b677a1d9ae",
+        "topicIds": [
+          "you-family",
+          "connection-feelings"
+        ]
+      },
+      {
+        "placementId": "18-24.shared-repair",
+        "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-repair.entry.html",
+        "renderedEntrySha256": "924a5ba5fea1eab3a50bf782c5e3c7ea67e1b2fb350bbc58c5cb79e90b8e7bba",
+        "entryTextSha256": "5b34e23622498562a0eb1a4a70b1c597e5a97113de0e70fb9ae2f0b677a1d9ae",
+        "topicIds": [
+          "you-family",
+          "connection-feelings"
+        ]
+      },
+      {
+        "placementId": "6-9.shared-family-needs",
+        "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-family-needs.entry.html",
+        "renderedEntrySha256": "9ce6c9c6c253dbb4157987baa6be7d001187a342cb805273713e2f79e29576cd",
+        "entryTextSha256": "7c7e9b46e518f5037aea09e8ab6138566638feef6465ab6d80fd6d4d7a76f8d4",
+        "topicIds": [
+          "you-family"
+        ]
+      },
+      {
+        "placementId": "18-24.shared-family-needs",
+        "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-family-needs.entry.html",
+        "renderedEntrySha256": "280f05c574bf7c20ce4fdaa10cc64a5cc193bdb256dcf393c76703fdc77b90e1",
+        "entryTextSha256": "7c7e9b46e518f5037aea09e8ab6138566638feef6465ab6d80fd6d4d7a76f8d4",
+        "topicIds": [
+          "you-family"
+        ]
+      },
+      {
+        "placementId": "6-9.shared-caregiver-common-ground",
+        "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-caregiver-common-ground.entry.html",
+        "renderedEntrySha256": "8b33ed20d77b967b77af86526e26c8e0d8b417eb59ef65ca6ee5dfd4b7df0445",
+        "entryTextSha256": "bf074da38822934735064bb7ba854ccebd42cb34affd4f176c9d87d99ed8d1d5",
+        "topicIds": [
+          "you-family",
+          "connection-feelings"
+        ]
+      },
+      {
+        "placementId": "18-24.shared-caregiver-common-ground",
+        "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-caregiver-common-ground.entry.html",
+        "renderedEntrySha256": "f93d68189adbe0018dfc08009e0a092387f68e2ef5afa22881ddc7187ed821d4",
+        "entryTextSha256": "bf074da38822934735064bb7ba854ccebd42cb34affd4f176c9d87d99ed8d1d5",
+        "topicIds": [
+          "you-family",
+          "connection-feelings"
+        ]
+      },
+      {
+        "placementId": "6-9.shared-family-separation",
+        "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-family-separation.entry.html",
+        "renderedEntrySha256": "dac4a249fdfae3c85c4ede288d70b8abc54ff5839f71e03967429bbd75f4b55b",
+        "entryTextSha256": "4b0331e7322163ab13d64d2649f75677485c476239df46dc8e9c6b1f07839611",
+        "topicIds": [
+          "you-family"
+        ]
+      },
+      {
+        "placementId": "18-24.shared-family-separation",
+        "renderedEntryPath": "tmp/pilot-review/r01/18-24.shared-family-separation.entry.html",
+        "renderedEntrySha256": "a9adcd2b0080742e60eaf66ba43d058a0a75f50df3bfc3351d1b6b7925cbb546",
+        "entryTextSha256": "4b0331e7322163ab13d64d2649f75677485c476239df46dc8e9c6b1f07839611",
+        "topicIds": [
+          "you-family"
+        ]
+      },
+      {
+        "placementId": "6-9.shared-choosing-care",
+        "renderedEntryPath": "tmp/pilot-review/r01/6-9.shared-choosing-care.entry.html",
+        "renderedEntrySha256": "e8b2f0a0c0d351fafa91bb92695a0bdedb0ad11b8e482c48905270a66694f55c",
+        "entryTextSha256": "c1d64b13a8cfa754510430cbcc1e32fc60030db010cca842aad5bae3339d48b8",
+        "topicIds": [
+          "you-family"
+        ]
+      }
+    ]
+  },
+  "sourceFingerprints": [
+    {
+      "sourceId": "baby-2021",
+      "path": "the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+      "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f",
+      "physicalPageCount": 310
+    },
+    {
+      "sourceId": "toddler-2019",
+      "path": "The Montessori Toddler - Simone Davies _Worldfreebooks.com_.pdf",
+      "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b",
+      "physicalPageCount": 257
+    }
+  ],
+  "readScope": "Personally read the complete text on the 68 Baby and 57 Toddler original physical PDF pages enumerated below, and 30 complete readable original-page visuals. These are bounded page and context reads, not entire-book reads. HANDOFF.md and author READ_LOG material are navigation/provenance only; none is claimed as this reviewer’s reading.",
+  "readLogs": [
+    {
+      "id": "shared.source.baby-2021.text.16-22",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 16,
+          "end": 22
+        }
+      ],
+      "mode": "full-text",
+      "description": "Introduction: why the authors value babies, infant/family scope, collaboration, individual differences, low-material framing, and the continued summary table through page 22. All text on the exact original pages was personally read using this reviewer’s extraction from the fingerprinted PDF; no other reader’s log is claimed."
+    },
+    {
+      "id": "shared.source.baby-2021.text.33-37",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 33,
+          "end": 37
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete Observation subsection and observation checklist, including its continuation, self-observation, informal/written options, and Prepared environment. All text on the exact original pages was personally read using this reviewer’s extraction from the fingerprinted PDF; no other reader’s log is claimed."
+    },
+    {
+      "id": "shared.source.baby-2021.text.96-115",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 96,
+          "end": 115
+        }
+      ],
+      "mode": "full-text",
+      "description": "Trust and acceptance context, the complete Respect discussion, kind/clear boundaries, concentration, movement and attachment context, complete crying response and guide sections, and Going slow. Read the sensitive adjacent examples as context; none is automatically approved for reuse. All text on the exact original pages was personally read using this reviewer’s extraction from the fingerprinted PDF; no other reader’s log is claimed."
+    },
+    {
+      "id": "shared.source.baby-2021.text.119-127",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 127
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete Introduction to activities and Further notes: purpose and age guidelines, support for concerns, suitability/challenge, material qualifications, timing/care needs, exploration and help, plus continuation of the clothing note. All text on the exact original pages was personally read using this reviewer’s extraction from the fingerprinted PDF; no other reader’s log is claimed."
+    },
+    {
+      "id": "shared.source.baby-2021.text.222-224",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 222,
+          "end": 224
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete daily-task and budget subsections, including real family help constraints and nearby oral-exploration context; no physical example imported. All text on the exact original pages was personally read using this reviewer’s extraction from the fingerprinted PDF; no other reader’s log is claimed."
+    },
+    {
+      "id": "shared.source.baby-2021.text.230-231",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 230,
+          "end": 231
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete Physical disabilities or neurological differences subsection and the following practice list; the preceding adoption continuation is read but is not evidence for a new care instruction. All text on the exact original pages was personally read using this reviewer’s extraction from the fingerprinted PDF; no other reader’s log is claimed."
+    },
+    {
+      "id": "shared.source.baby-2021.text.234-242",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 234,
+          "end": 242
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete adult preparation main discussion, physical/emotional needs, professional help for postpartum depression, forgiveness/self-observation, all 49 personal calm ideas and Doing our best through the practice list. All text on the exact original pages was personally read using this reviewer’s extraction from the fingerprinted PDF; no other reader’s log is claimed."
+    },
+    {
+      "id": "shared.source.baby-2021.text.244-255",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 244,
+          "end": 255
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete family/caregiver main discussions from We don’t walk alone through care choice, including help list, partners, single/co-parenting safety exception, all communication/request continuations, regular parenting chats, and available care constraints. All text on the exact original pages was personally read using this reviewer’s extraction from the fingerprinted PDF; no other reader’s log is claimed."
+    },
+    {
+      "id": "shared.source.baby-2021.text.294-294",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete physical page: the preceding table continuation, activity-list age/interest qualification, and the following age heading. The activity-list qualification is the cited unit, not the adjacent movement example. All text on the exact original pages was personally read using this reviewer’s extraction from the fingerprinted PDF; no other reader’s log is claimed."
+    },
+    {
+      "id": "shared.source.toddler-2019.text.11-14",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 11,
+          "end": 14
+        }
+      ],
+      "mode": "full-text",
+      "description": "Opening introduction and Why I love toddlers through the explicit around 1 to 3 years definition, preserving anecdotal and author-perspective framing. All text on the exact original pages was personally read using this reviewer’s extraction from the fingerprinted PDF; no other reader’s log is claimed."
+    },
+    {
+      "id": "shared.source.toddler-2019.text.17-17",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 17,
+          "end": 17
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete Parenting the Montessori toddler section: adult as guide, individuality, and relationship beyond activities/materials. All text on the exact original pages was personally read using this reviewer’s extraction from the fingerprinted PDF; no other reader’s log is claimed."
+    },
+    {
+      "id": "shared.source.toddler-2019.text.19-19",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 19,
+          "end": 19
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete Getting the most out of this book: selective inspiration, complementary influences, enjoyment and no completion/perfect-parent expectation. All text on the exact original pages was personally read using this reviewer’s extraction from the fingerprinted PDF; no other reader’s log is claimed."
+    },
+    {
+      "id": "shared.source.toddler-2019.text.27-29",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 27,
+          "end": 29
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete physical pages covering absorbent-mind context, freedom and limits, independence/responsibility, individual development, respect and observation. All text on the exact original pages was personally read using this reviewer’s extraction from the fingerprinted PDF; no other reader’s log is claimed."
+    },
+    {
+      "id": "shared.source.toddler-2019.text.33-39",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 33,
+          "end": 39
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete activities introduction, suitability/indicative ages, activity structure, partial participation/repetition, presentations and all ten general principles, including frustration/help and supervision limits. All text on the exact original pages was personally read using this reviewer’s extraction from the fingerprinted PDF; no other reader’s log is claimed."
+    },
+    {
+      "id": "shared.source.toddler-2019.text.82-85",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 82,
+          "end": 85
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete home general principles and closing discussion: clutter, family/cultural character, saving work, shared/small spaces, physical qualifications and gradual adaptation. All text on the exact original pages was personally read using this reviewer’s extraction from the fingerprinted PDF; no other reader’s log is claimed."
+    },
+    {
+      "id": "shared.source.toddler-2019.text.96-96",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 96,
+          "end": 96
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete physical page with rich learning environment, working-family time possibilities, and physical/emotional safety and secure-base context. All text on the exact original pages was personally read using this reviewer’s extraction from the fingerprinted PDF; no other reader’s log is claimed."
+    },
+    {
+      "id": "shared.source.toddler-2019.text.99-111",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 99,
+          "end": 111
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete original pages including daily participation, rushed-day/proportionate help, creativity context, observation/checklist, accepting the child, translating tentatively, feelings/behavior limits, and following feedback opening. All text on the exact original pages was personally read using this reviewer’s extraction from the fingerprinted PDF; no other reader’s log is claimed."
+    },
+    {
+      "id": "shared.source.toddler-2019.text.187-200",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 187,
+          "end": 200
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete adult-preparation main chapter discussion through its practice list: personal/nonuniversal framing, depression help, intellectual interests, flexible rituals, presence, observation, support, slow response with danger exception, guide, home helper, real constraints, repair and self-awareness. All text on the exact original pages was personally read using this reviewer’s extraction from the fingerprinted PDF; no other reader’s log is claimed."
+    },
+    {
+      "id": "shared.source.toddler-2019.text.203-211",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 203,
+          "end": 211
+        }
+      ],
+      "mode": "full-text",
+      "description": "Complete family chapter main discussion through its practice list: family forms, adult needs, parent preference context, shared needs/nonconditional plans, other caregivers, family information/values, complete conflict listening exercise and requests, divorce/contact-safety and factual update qualifications. All text on the exact original pages was personally read using this reviewer’s extraction from the fingerprinted PDF; no other reader’s log is claimed."
+    },
+    {
+      "id": "shared.source.baby-2021.visual",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 35,
+          "end": 37
+        },
+        {
+          "start": 111,
+          "end": 111
+        },
+        {
+          "start": 114,
+          "end": 114
+        },
+        {
+          "start": 119,
+          "end": 119
+        },
+        {
+          "start": 126,
+          "end": 127
+        },
+        {
+          "start": 238,
+          "end": 241
+        },
+        {
+          "start": 247,
+          "end": 247
+        },
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected and read complete original pages rendered individually by pdftoppm at a 1450-pixel longest edge, including all visible headings, lists, callouts, illustrations and continuation text. These are readable full pages, not contact sheets."
+    },
+    {
+      "id": "shared.source.toddler-2019.visual",
+      "reader": "/root/shared_source_review",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        },
+        {
+          "start": 33,
+          "end": 33
+        },
+        {
+          "start": 36,
+          "end": 36
+        },
+        {
+          "start": 83,
+          "end": 85
+        },
+        {
+          "start": 106,
+          "end": 106
+        },
+        {
+          "start": 110,
+          "end": 110
+        },
+        {
+          "start": 187,
+          "end": 188
+        },
+        {
+          "start": 190,
+          "end": 190
+        },
+        {
+          "start": 194,
+          "end": 194
+        },
+        {
+          "start": 198,
+          "end": 198
+        },
+        {
+          "start": 209,
+          "end": 211
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected and read complete original pages rendered individually by pdftoppm at a 1450-pixel longest edge, including all visible headings, lists, callouts, illustrations and continuation text. These are readable full pages, not contact sheets."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "shared-source-r01.6-9.shared-observe",
+      "entryId": "shared-observe",
+      "placementId": "6-9.shared-observe",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-observe.json",
+      "snapshotFileSha256": "ff9266d084dbf91ad3f4396f14bb7a5e00c345502bbc1348e8d9e535d994e157",
+      "textPlacementSha256": "1f4d1e64dee7cb9befac7105b255d51a5760f24e4d3727eafd7887554049cade",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.33-37",
+        "shared.source.baby-2021.text.96-115",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.27-29",
+        "shared.source.toddler-2019.text.99-111",
+        "shared.source.toddler-2019.text.187-200",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The title, summary and cue invite factual observation without a diagnostic or milestone claim. The detail keeps self-observation, informal observation and available help/protection alongside the books’ careful watching. The references identify complete observation passages and the factual-description basis; the short topic summary does not turn observation into a mandatory delay. The 6–9-month placement under For you & your family; Play & discovery is supported by Baby’s infant/family context and the entry’s general meaning. It is editorial reuse at this age, not a book-stated month-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.18-24.shared-observe",
+      "entryId": "shared-observe",
+      "placementId": "18-24.shared-observe",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-observe.json",
+      "snapshotFileSha256": "880c619e6291410453dd8a2d78518f3771727c6ecb543f2aff011ee74f5ca734",
+      "textPlacementSha256": "c57fc57d97e1281ea6da427b9a194a2b5d52795eeb32338800d91ccfce43e88c",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.33-37",
+        "shared.source.baby-2021.text.96-115",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.27-29",
+        "shared.source.toddler-2019.text.99-111",
+        "shared.source.toddler-2019.text.187-200",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The title, summary and cue invite factual observation without a diagnostic or milestone claim. The detail keeps self-observation, informal observation and available help/protection alongside the books’ careful watching. The references identify complete observation passages and the factual-description basis; the short topic summary does not turn observation into a mandatory delay. The 18–24-month placement under For you & your family; Play & discovery falls within Davies’s stated toddler scope of around 1 to 3 years. This is editorial placement of general guidance; the situation cue and summary do not impose a new age-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.6-9.shared-follow-readiness",
+      "entryId": "shared-follow-readiness",
+      "placementId": "6-9.shared-follow-readiness",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-follow-readiness.json",
+      "snapshotFileSha256": "6b4ea1ac806948ca5c1c55c410b385bb832c8ac029b92b19d29eb692cf5162ea",
+      "textPlacementSha256": "bf99c5b3b980ccf81b46c39013c8b3a713c353596fe7e8162dd717c0111d7d72",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.119-127",
+        "shared.source.baby-2021.text.230-231",
+        "shared.source.baby-2021.text.294-294",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.27-29",
+        "shared.source.toddler-2019.text.33-39",
+        "shared.source.toddler-2019.text.187-200",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The short summary preserves indicative activity ages and support for developmental concerns. Detail accurately joins suitability/challenge with Baby’s stated specialist-scope limit and Davies’s support-for-differences passage. The public age note identifies general activity-choice guidance instead of an expected skill. It neither promises an outcome nor supplies a developmental screening rule. The 6–9-month placement under Play & discovery; For you & your family is supported by Baby’s infant/family context and the entry’s general meaning. It is editorial reuse at this age, not a book-stated month-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.18-24.shared-follow-readiness",
+      "entryId": "shared-follow-readiness",
+      "placementId": "18-24.shared-follow-readiness",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-follow-readiness.json",
+      "snapshotFileSha256": "bdd73dacb8763ac688e498578b19d96a640717ab0dffd08443f60e20ceb9563d",
+      "textPlacementSha256": "ec2f213a16de40ba5330717ced7f72d2a388d35ed125c324556f9047e9ce7a0e",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.119-127",
+        "shared.source.baby-2021.text.230-231",
+        "shared.source.baby-2021.text.294-294",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.27-29",
+        "shared.source.toddler-2019.text.33-39",
+        "shared.source.toddler-2019.text.187-200",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The short summary preserves indicative activity ages and support for developmental concerns. Detail accurately joins suitability/challenge with Baby’s stated specialist-scope limit and Davies’s support-for-differences passage. The public age note identifies general activity-choice guidance instead of an expected skill. It neither promises an outcome nor supplies a developmental screening rule. The 18–24-month placement under Play & discovery; For you & your family falls within Davies’s stated toddler scope of around 1 to 3 years. This is editorial placement of general guidance; the situation cue and summary do not impose a new age-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.6-9.shared-participation-help",
+      "entryId": "shared-participation-help",
+      "placementId": "6-9.shared-participation-help",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-participation-help.json",
+      "snapshotFileSha256": "a07f4eeebfe7204a42a1e1a4bf6c500b281289f4bfe3b178b909f61a7daa87e0",
+      "textPlacementSha256": "d743743c63af326a857a399d11ca1a926baf91c3d5a5d9f68a6e51bc123a136a",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.96-115",
+        "shared.source.baby-2021.text.119-127",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.27-29",
+        "shared.source.toddler-2019.text.33-39",
+        "shared.source.toddler-2019.text.99-111",
+        "shared.source.toddler-2019.text.187-200",
+        "shared.source.baby-2021.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The short summary keeps adult availability with partial participation. Detail accurately preserves effort versus frustration, proportionate help, and Davies’s rushed-day exception. Baby’s collaboration passages support the younger placement, while the cited Toddler passages support the older placement; no toddler physical task is assigned to a baby. The title and principle avoid compulsory independent completion. The 6–9-month placement under Everyday care; Play & discovery; For you & your family is supported by Baby’s infant/family context and the entry’s general meaning. It is editorial reuse at this age, not a book-stated month-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.18-24.shared-participation-help",
+      "entryId": "shared-participation-help",
+      "placementId": "18-24.shared-participation-help",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-participation-help.json",
+      "snapshotFileSha256": "58c9a4a4cd1b92c0f4ada98da97bd4510397aa321f6fc7eb3d4c4ed04f3e75f3",
+      "textPlacementSha256": "7d855c99519aa35fd9ee9bcec8a154dcb871c054b094d0932413cc9084b64fa4",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.96-115",
+        "shared.source.baby-2021.text.119-127",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.27-29",
+        "shared.source.toddler-2019.text.33-39",
+        "shared.source.toddler-2019.text.99-111",
+        "shared.source.toddler-2019.text.187-200",
+        "shared.source.baby-2021.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The short summary keeps adult availability with partial participation. Detail accurately preserves effort versus frustration, proportionate help, and Davies’s rushed-day exception. Baby’s collaboration passages support the younger placement, while the cited Toddler passages support the older placement; no toddler physical task is assigned to a baby. The title and principle avoid compulsory independent completion. The 18–24-month placement under Everyday care; Play & discovery; For you & your family falls within Davies’s stated toddler scope of around 1 to 3 years. This is editorial placement of general guidance; the situation cue and summary do not impose a new age-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.6-9.shared-time-to-explore",
+      "entryId": "shared-time-to-explore",
+      "placementId": "6-9.shared-time-to-explore",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-time-to-explore.json",
+      "snapshotFileSha256": "c533462e4742b33056b2d3bdc9618bf76e8a29d81e5861d4d82d96622acc0af6",
+      "textPlacementSha256": "dfa84fdb187841e1833dd388ab8bab52d65cf0204e876642de27ab8f7f6e20c8",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.96-115",
+        "shared.source.baby-2021.text.119-127",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.27-29",
+        "shared.source.toddler-2019.text.33-39",
+        "shared.source.toddler-2019.text.187-200",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The summary retains safely absorbed activity and available care. Detail faithfully covers watching, repeated or partial activity, processing time and frustration, without a fixed waiting period or a demand for silent, isolated play. The references cover both the positive exploration discussion and its help/care context. The ordinary invitation does not inherit the sources’ omitted material setups or concentration-outcome claims. The 6–9-month placement under Play & discovery; Connection & feelings is supported by Baby’s infant/family context and the entry’s general meaning. It is editorial reuse at this age, not a book-stated month-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.18-24.shared-time-to-explore",
+      "entryId": "shared-time-to-explore",
+      "placementId": "18-24.shared-time-to-explore",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-time-to-explore.json",
+      "snapshotFileSha256": "d18ed54c46b5d890db3e316b5de83cea808f8f834a0bd519f572245910623371",
+      "textPlacementSha256": "04a073983113287237516cd1c1eaf4f848eecae70eb7fb59e5aeecbc058cfcb3",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.96-115",
+        "shared.source.baby-2021.text.119-127",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.27-29",
+        "shared.source.toddler-2019.text.33-39",
+        "shared.source.toddler-2019.text.187-200",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The summary retains safely absorbed activity and available care. Detail faithfully covers watching, repeated or partial activity, processing time and frustration, without a fixed waiting period or a demand for silent, isolated play. The references cover both the positive exploration discussion and its help/care context. The ordinary invitation does not inherit the sources’ omitted material setups or concentration-outcome claims. The 18–24-month placement under Play & discovery; Connection & feelings falls within Davies’s stated toddler scope of around 1 to 3 years. This is editorial placement of general guidance; the situation cue and summary do not impose a new age-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.6-9.shared-feelings-limits",
+      "entryId": "shared-feelings-limits",
+      "placementId": "6-9.shared-feelings-limits",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-feelings-limits.json",
+      "snapshotFileSha256": "e98d350ccbc496c1d532651d9ac126b804de9e95501d5be33ec15837c141cfdb",
+      "textPlacementSha256": "a5a8956c3495ffa2b1d777a6330ffb275e9cdc17dd7860488232953cca9bdc36",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.96-115",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.99-111",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The attributed summary and detail preserve the books’ distinction between accepting a feeling and limiting harmful action, including the adult’s responsibility to protect. Davies’s tentative translation remains a possibility rather than a diagnosis of motive. No restraint method, behavioral protocol or promised cooperation is introduced. The references and principle accurately support the shared relational meaning. The 6–9-month placement under Connection & feelings; For you & your family is supported by Baby’s infant/family context and the entry’s general meaning. It is editorial reuse at this age, not a book-stated month-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.18-24.shared-feelings-limits",
+      "entryId": "shared-feelings-limits",
+      "placementId": "18-24.shared-feelings-limits",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-feelings-limits.json",
+      "snapshotFileSha256": "e9da8d035ac0756f1d2a2ffeba9c3dc6b2751ae5f72792f62021647dab376e54",
+      "textPlacementSha256": "067eb2b7860fc804492ba83c04402d48dcc805acd58d6e416a622e8e10bf8f14",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.96-115",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.99-111",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The attributed summary and detail preserve the books’ distinction between accepting a feeling and limiting harmful action, including the adult’s responsibility to protect. Davies’s tentative translation remains a possibility rather than a diagnosis of motive. No restraint method, behavioral protocol or promised cooperation is introduced. The references and principle accurately support the shared relational meaning. The 18–24-month placement under Connection & feelings; For you & your family falls within Davies’s stated toddler scope of around 1 to 3 years. This is editorial placement of general guidance; the situation cue and summary do not impose a new age-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.6-9.shared-home-fits-family",
+      "entryId": "shared-home-fits-family",
+      "placementId": "6-9.shared-home-fits-family",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-home-fits-family.json",
+      "snapshotFileSha256": "8dd46947781c41e01e7a0c0846bbc44b00e668b8fe1084efacc784143b313a3b",
+      "textPlacementSha256": "19a7e647353c9d4f387c0244de6a57d56d7e8f3e50041b00b569bb953700c4dd",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.33-37",
+        "shared.source.baby-2021.text.222-224",
+        "shared.source.baby-2021.text.234-242",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.82-85",
+        "shared.source.toddler-2019.text.96-96",
+        "shared.source.toddler-2019.text.187-200",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The summary and detail preserve available resources, gradual adaptation, family/cultural character and people as part of the environment. The modest examples stay at the level of finding things, reducing tidying and participation; they do not import sensitive furnishing or childproofing instructions from the source pages. The references support the no-purchase framing and home’s service to both child and adult. The 6–9-month placement under A home that helps; For you & your family is supported by Baby’s infant/family context and the entry’s general meaning. It is editorial reuse at this age, not a book-stated month-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.18-24.shared-home-fits-family",
+      "entryId": "shared-home-fits-family",
+      "placementId": "18-24.shared-home-fits-family",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-home-fits-family.json",
+      "snapshotFileSha256": "5c316c3b31656803c5cb2919616381cb15a34ccad0972fe093a563990ce333ab",
+      "textPlacementSha256": "f5feca5b044349fb516fa219fd15c1d4f7e17853cb5fa954cd2d8bf02b62629b",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.33-37",
+        "shared.source.baby-2021.text.222-224",
+        "shared.source.baby-2021.text.234-242",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.82-85",
+        "shared.source.toddler-2019.text.96-96",
+        "shared.source.toddler-2019.text.187-200",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The summary and detail preserve available resources, gradual adaptation, family/cultural character and people as part of the environment. The modest examples stay at the level of finding things, reducing tidying and participation; they do not import sensitive furnishing or childproofing instructions from the source pages. The references support the no-purchase framing and home’s service to both child and adult. The 18–24-month placement under A home that helps; For you & your family falls within Davies’s stated toddler scope of around 1 to 3 years. This is editorial placement of general guidance; the situation cue and summary do not impose a new age-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.6-9.shared-adult-needs-support",
+      "entryId": "shared-adult-needs-support",
+      "placementId": "6-9.shared-adult-needs-support",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-adult-needs-support.json",
+      "snapshotFileSha256": "4dd195603a0666c622daddd27fd18a715afabf9b5d7d3c967e7f4f0dd0f50fbf",
+      "textPlacementSha256": "19d08368366284ffc7da4b678e54541f2f454dfb3df9c122de9d4a28ab118e92",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.234-242",
+        "shared.source.baby-2021.text.244-255",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.187-200",
+        "shared.source.toddler-2019.text.203-211",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The topic summary attributes adult food/rest/support and professional help for depression to both books. Detail keeps practical and emotional help, conditional access to paid support, Baby’s household-help list and its doctor/trusted-health-professional language. Davies’s physician-help passage remains distinct from ordinary rest ideas. The entry does not present self-care as depression treatment or require a particular family arrangement. The 6–9-month placement under For you & your family is supported by Baby’s infant/family context and the entry’s general meaning. It is editorial reuse at this age, not a book-stated month-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.18-24.shared-adult-needs-support",
+      "entryId": "shared-adult-needs-support",
+      "placementId": "18-24.shared-adult-needs-support",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-adult-needs-support.json",
+      "snapshotFileSha256": "a76d4bc9ea7acb3b7ec70d2f9ac967f7c22e1462d18a2400dd87a726233808b3",
+      "textPlacementSha256": "f080dd1546142dae651d44903afcf10a4874e42a270c0fdcd93807812808f98c",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.234-242",
+        "shared.source.baby-2021.text.244-255",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.187-200",
+        "shared.source.toddler-2019.text.203-211",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The topic summary attributes adult food/rest/support and professional help for depression to both books. Detail keeps practical and emotional help, conditional access to paid support, Baby’s household-help list and its doctor/trusted-health-professional language. Davies’s physician-help passage remains distinct from ordinary rest ideas. The entry does not present self-care as depression treatment or require a particular family arrangement. The 18–24-month placement under For you & your family falls within Davies’s stated toddler scope of around 1 to 3 years. This is editorial placement of general guidance; the situation cue and summary do not impose a new age-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.6-9.shared-something-for-you",
+      "entryId": "shared-something-for-you",
+      "placementId": "6-9.shared-something-for-you",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-something-for-you.json",
+      "snapshotFileSha256": "dc8bcfe505df17649fec9eb5d89fd36c4dd1893e50c33769d6ca482790eb7ba8",
+      "textPlacementSha256": "69c984e98d9a706c512a384740e7ffcb55d161fce6c99f4767776f2b77bad9ed",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.234-242",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.187-200",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The title and summary offer ordinary adult enjoyment grounded in the books’ reading, music and friendship examples. Detail visibly identifies the routines as personal possibilities and preserves Davies’s option to include the children. The Baby music example is supported by ordinary enjoyment/playing music as well as the neighboring list; no frequency/healing claim is carried forward. There is no prescribed routine or outcome promise. The 6–9-month placement under For you & your family is supported by Baby’s infant/family context and the entry’s general meaning. It is editorial reuse at this age, not a book-stated month-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.18-24.shared-something-for-you",
+      "entryId": "shared-something-for-you",
+      "placementId": "18-24.shared-something-for-you",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-something-for-you.json",
+      "snapshotFileSha256": "ee11fdcc4a6e8ad959a9df18db0129637f59ec4f8da832bf7ec6835f76044297",
+      "textPlacementSha256": "98734b8c544f304578e1adf515a27bb6be2a32fbea510d98dd042b322a9ad465",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.234-242",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.187-200",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The title and summary offer ordinary adult enjoyment grounded in the books’ reading, music and friendship examples. Detail visibly identifies the routines as personal possibilities and preserves Davies’s option to include the children. The Baby music example is supported by ordinary enjoyment/playing music as well as the neighboring list; no frequency/healing claim is carried forward. There is no prescribed routine or outcome promise. The 18–24-month placement under For you & your family falls within Davies’s stated toddler scope of around 1 to 3 years. This is editorial placement of general guidance; the situation cue and summary do not impose a new age-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.6-9.shared-less-crowded-day",
+      "entryId": "shared-less-crowded-day",
+      "placementId": "6-9.shared-less-crowded-day",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-less-crowded-day.json",
+      "snapshotFileSha256": "69c7aa2368c20da9e533f64f4a2203f8012e70984527eee032dc163c60960850",
+      "textPlacementSha256": "892b4afd8ce42a9e7c3187771774819644af78845cb7aa95be85864e33ed29eb",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.96-115",
+        "shared.source.baby-2021.text.222-224",
+        "shared.source.baby-2021.text.234-242",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.96-96",
+        "shared.source.toddler-2019.text.99-111",
+        "shared.source.toddler-2019.text.187-200",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The summary frames a possibility within real commitments. Detail accurately retains day-specific capacity, work/money constraints and opportunities in ordinary routines or on a weekend, drawing on both books. The meal/conversation/time examples remain general family life rather than feeding or sleep instructions. It neither requires a slower schedule nor promises that changing pace will produce child cooperation. The 6–9-month placement under For you & your family; Everyday care is supported by Baby’s infant/family context and the entry’s general meaning. It is editorial reuse at this age, not a book-stated month-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.18-24.shared-less-crowded-day",
+      "entryId": "shared-less-crowded-day",
+      "placementId": "18-24.shared-less-crowded-day",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-less-crowded-day.json",
+      "snapshotFileSha256": "a875b678940364a54445304b44bc1d227dec362d407c1abe82065e2666974567",
+      "textPlacementSha256": "a98972e7fbd539644d31fdcf94d6a17d5290cf0314148efc2628f4686d952013",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.96-115",
+        "shared.source.baby-2021.text.222-224",
+        "shared.source.baby-2021.text.234-242",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.96-96",
+        "shared.source.toddler-2019.text.99-111",
+        "shared.source.toddler-2019.text.187-200",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The summary frames a possibility within real commitments. Detail accurately retains day-specific capacity, work/money constraints and opportunities in ordinary routines or on a weekend, drawing on both books. The meal/conversation/time examples remain general family life rather than feeding or sleep instructions. It neither requires a slower schedule nor promises that changing pace will produce child cooperation. The 18–24-month placement under For you & your family; Everyday care falls within Davies’s stated toddler scope of around 1 to 3 years. This is editorial placement of general guidance; the situation cue and summary do not impose a new age-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.6-9.shared-adult-pause",
+      "entryId": "shared-adult-pause",
+      "placementId": "6-9.shared-adult-pause",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-adult-pause.json",
+      "snapshotFileSha256": "697a884e7a5d5f65a56513656417e9704a862d213a2898111a4b3807a241df06",
+      "textPlacementSha256": "4bbcc96736472be501fd8cbeeb84ef68208f1e2b4e3ff955fe5468bd41017868",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.96-115",
+        "shared.source.baby-2021.text.234-242",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.187-200",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The attributed summary itself includes the no-danger condition and immediate-danger exception. Detail retains responsive acknowledgment, assessment and comfort from Baby, distinguishes Davies’s pause, and avoids converting counting examples into a fixed delay. Later reflection is accurately separated from immediate response. This remains a descriptive book perspective rather than a new crying-response protocol. The 6–9-month placement under For you & your family; Connection & feelings is supported by Baby’s infant/family context and the entry’s general meaning. It is editorial reuse at this age, not a book-stated month-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.18-24.shared-adult-pause",
+      "entryId": "shared-adult-pause",
+      "placementId": "18-24.shared-adult-pause",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-adult-pause.json",
+      "snapshotFileSha256": "73c4a99174247c2c4f239cef9874957cbff11d395e9d740123113ae0958f1b1d",
+      "textPlacementSha256": "09215191563e17c9dfe040c7aaf94c0598f5daf1ac1adbbab3d1766f2822fe18",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.96-115",
+        "shared.source.baby-2021.text.234-242",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.187-200",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The attributed summary itself includes the no-danger condition and immediate-danger exception. Detail retains responsive acknowledgment, assessment and comfort from Baby, distinguishes Davies’s pause, and avoids converting counting examples into a fixed delay. Later reflection is accurately separated from immediate response. This remains a descriptive book perspective rather than a new crying-response protocol. The 18–24-month placement under For you & your family; Connection & feelings falls within Davies’s stated toddler scope of around 1 to 3 years. This is editorial placement of general guidance; the situation cue and summary do not impose a new age-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.6-9.shared-repair",
+      "entryId": "shared-repair",
+      "placementId": "6-9.shared-repair",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-repair.json",
+      "snapshotFileSha256": "4a6526eae5c0d2b7730057558059af551c9bacdc784aa9257d59effc20f70918",
+      "textPlacementSha256": "7146e4c8a3fe419123e89e52408912031b28aa465cf8b07f600777077465faf0",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.96-115",
+        "shared.source.baby-2021.text.234-242",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.187-200",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The summary and detail accurately preserve adult responsibility, apology and naming another possible response, with Baby support even in infancy and Davies’s explicit rejection of blaming the child. Forgiveness and another attempt remain ordinary family practices; there is no promise of the child forgiving, comforting or regulating the adult. The principle and references preserve repair without perfection. The 6–9-month placement under For you & your family; Connection & feelings is supported by Baby’s infant/family context and the entry’s general meaning. It is editorial reuse at this age, not a book-stated month-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.18-24.shared-repair",
+      "entryId": "shared-repair",
+      "placementId": "18-24.shared-repair",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-repair.json",
+      "snapshotFileSha256": "4c53b218292fdbe54737eefdbc770faf8c78805033fc6eefbee509633170350f",
+      "textPlacementSha256": "27797b3dccd2005e521a87f4e60aa3b07570c164f89a205fb41088e7a3220bd7",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.96-115",
+        "shared.source.baby-2021.text.234-242",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.187-200",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The summary and detail accurately preserve adult responsibility, apology and naming another possible response, with Baby support even in infancy and Davies’s explicit rejection of blaming the child. Forgiveness and another attempt remain ordinary family practices; there is no promise of the child forgiving, comforting or regulating the adult. The principle and references preserve repair without perfection. The 18–24-month placement under For you & your family; Connection & feelings falls within Davies’s stated toddler scope of around 1 to 3 years. This is editorial placement of general guidance; the situation cue and summary do not impose a new age-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.6-9.shared-family-needs",
+      "entryId": "shared-family-needs",
+      "placementId": "6-9.shared-family-needs",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-family-needs.json",
+      "snapshotFileSha256": "dcc7028a577f0d19c4291faef20476db23b2765df5df27b4e0ab4f72777e872f",
+      "textPlacementSha256": "0694af0a31dcab419a2b0ce1b0e3dbe58f9c1a87b2ea011d68f5cf5852a8d8c8",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.244-255",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.203-211",
+        "shared.source.baby-2021.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The short invitation includes adults’ needs alongside care and practical work. Detail accurately attributes Baby’s regular check-in suggestion and Davies’s nonconditional weekend-planning example, while retaining family forms and limits on what is possible. No partner is presumed and no fixed meeting frequency is imposed. The entry stays with ordinary shared planning, not sensitive family-contact guidance. The 6–9-month placement under For you & your family is supported by Baby’s infant/family context and the entry’s general meaning. It is editorial reuse at this age, not a book-stated month-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.18-24.shared-family-needs",
+      "entryId": "shared-family-needs",
+      "placementId": "18-24.shared-family-needs",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-family-needs.json",
+      "snapshotFileSha256": "a302bb55a0cb5389033145611a4229fd13d069abe80cd9390a52180cf875bb7f",
+      "textPlacementSha256": "e85bdead3a9ccf0e1e16f0a771cb4d18897e1c6791b572a80b4507210779b1ff",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.244-255",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.203-211",
+        "shared.source.baby-2021.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The short invitation includes adults’ needs alongside care and practical work. Detail accurately attributes Baby’s regular check-in suggestion and Davies’s nonconditional weekend-planning example, while retaining family forms and limits on what is possible. No partner is presumed and no fixed meeting frequency is imposed. The entry stays with ordinary shared planning, not sensitive family-contact guidance. The 18–24-month placement under For you & your family falls within Davies’s stated toddler scope of around 1 to 3 years. This is editorial placement of general guidance; the situation cue and summary do not impose a new age-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.6-9.shared-caregiver-common-ground",
+      "entryId": "shared-caregiver-common-ground",
+      "placementId": "6-9.shared-caregiver-common-ground",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-caregiver-common-ground.json",
+      "snapshotFileSha256": "4b3cb160099568b8b063d184c8315cbc4e2e4ecec13f7b4382d180a77260082b",
+      "textPlacementSha256": "1f6651a5ffcaccd762bb8fa173d7b4c8e1dafa4c4713fc3376305da104b47149",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.244-255",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.203-211",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The summary limits the invitation to everyday differences; the cue specifies a trusted caregiver and willingness to talk. Detail preserves an agreed conversation, listening, requests rather than demands, shared priorities, varied caring relationships and appreciation. The numbered active-listening exercise is not reproduced as a universal conflict protocol, nor is an agreement or outcome promised. Both books directly support the shared meaning. The 6–9-month placement under For you & your family; Connection & feelings is supported by Baby’s infant/family context and the entry’s general meaning. It is editorial reuse at this age, not a book-stated month-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.18-24.shared-caregiver-common-ground",
+      "entryId": "shared-caregiver-common-ground",
+      "placementId": "18-24.shared-caregiver-common-ground",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-caregiver-common-ground.json",
+      "snapshotFileSha256": "f2bc0042e9553f829e605a9e93577155a3a4a7b262870f76292f281b0d00c9bc",
+      "textPlacementSha256": "84f0aa12fcff56f510c2cba4ad24140cf5d20053bb8447b58cbc75975bc2a6f1",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.244-255",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.203-211",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The summary limits the invitation to everyday differences; the cue specifies a trusted caregiver and willingness to talk. Detail preserves an agreed conversation, listening, requests rather than demands, shared priorities, varied caring relationships and appreciation. The numbered active-listening exercise is not reproduced as a universal conflict protocol, nor is an agreement or outcome promised. Both books directly support the shared meaning. The 18–24-month placement under For you & your family; Connection & feelings falls within Davies’s stated toddler scope of around 1 to 3 years. This is editorial placement of general guidance; the situation cue and summary do not impose a new age-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.6-9.shared-family-separation",
+      "entryId": "shared-family-separation",
+      "placementId": "6-9.shared-family-separation",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-family-separation.json",
+      "snapshotFileSha256": "84b61ff09401468e774f4efcab397bf00f0def20ca898372aa54666799d1fc71",
+      "textPlacementSha256": "97f717b3e6c299a0cd61a2cb8a96cedf7c9aa9ef47e50e64e4df0d61968bcc39",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.244-255",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.203-211",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The short summary explicitly qualifies continued parental contact by the child’s safety. Detail preserves Baby’s unchosen/unhappy/potentially dangerous circumstances and Davies’s psychological/physical exception, adult support away from the child, and factual age-appropriate updates. Attribution remains visible throughout the sensitive discussion; no custody prescription, contact schedule or independently verified safety claim is introduced. The 6–9-month placement under For you & your family is supported by Baby’s infant/family context and the entry’s general meaning. It is editorial reuse at this age, not a book-stated month-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.18-24.shared-family-separation",
+      "entryId": "shared-family-separation",
+      "placementId": "18-24.shared-family-separation",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/18-24.shared-family-separation.json",
+      "snapshotFileSha256": "3b345cbc235ab946a8731a28f62373c6f61271f6b4974b4a53f2b4f9e04bce7f",
+      "textPlacementSha256": "659413146cd5d7d36d268386790ca0e975a1afe4ef2156c17fa0a132fb9934c3",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.244-255",
+        "shared.source.toddler-2019.text.11-14",
+        "shared.source.toddler-2019.text.17-17",
+        "shared.source.toddler-2019.text.19-19",
+        "shared.source.toddler-2019.text.203-211",
+        "shared.source.baby-2021.visual",
+        "shared.source.toddler-2019.visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The short summary explicitly qualifies continued parental contact by the child’s safety. Detail preserves Baby’s unchosen/unhappy/potentially dangerous circumstances and Davies’s psychological/physical exception, adult support away from the child, and factual age-appropriate updates. Attribution remains visible throughout the sensitive discussion; no custody prescription, contact schedule or independently verified safety claim is introduced. The 18–24-month placement under For you & your family falls within Davies’s stated toddler scope of around 1 to 3 years. This is editorial placement of general guidance; the situation cue and summary do not impose a new age-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    },
+    {
+      "id": "shared-source-r01.6-9.shared-choosing-care",
+      "entryId": "shared-choosing-care",
+      "placementId": "6-9.shared-choosing-care",
+      "snapshotPath": "content/pilots/revisions/r01/snapshots/6-9.shared-choosing-care.json",
+      "snapshotFileSha256": "b33c819ab577e69a6d18a1eefa4c88c90f008f7fd0835f2856f9b57d82dcd193",
+      "textPlacementSha256": "0530c00956518fbce507cbfe0cb4fff9fac470812f7e4cc68532c5609d8dab7b",
+      "artContextSha256": null,
+      "readLogIds": [
+        "shared.source.baby-2021.text.16-22",
+        "shared.source.baby-2021.text.244-255"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "The title, attributed summary and detail preserve Baby’s emphasis on warm/responsive care, availability and budget, familiar caregivers, and assessing the setting as it currently is. The account does not turn the source’s ideal caregiver durations, ratios, feeding/sleep arrangements or alternative-work suggestions into requirements. The source reference covers the complete care-choice discussion and its qualifications. This review covers only the baby placement supplied. The 6–9-month placement under For you & your family is supported by Baby’s infant/family context and the entry’s general meaning. It is editorial reuse at this age, not a book-stated month-specific ability or readiness requirement. The actual topic rows were assessed with only their rendered kind, title and summary; the source meaning does not depend on opening the detail to recover a missing qualification. The full reading view and structured PDF reference labels preserve the reviewed source support."
+      },
+      "artContext": null
+    }
+  ]
+}

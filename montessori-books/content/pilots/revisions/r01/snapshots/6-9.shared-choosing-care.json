@@ -1,0 +1,84 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "shared-choosing-care",
+        "kind": "perspective",
+        "title": "Look at the care that is available",
+        "summary": "The Montessori Baby puts warmth and a family’s real options at the center of choosing care. The authors ask families to consider a setting as it is today.",
+        "cue": "When you need or want someone else to care for your baby.",
+        "detail": [
+          "The authors describe patient, responsive caregivers who enjoy babies, attend to their signals, and support parents. Familiar, consistent caregivers matter in their account.",
+          "They acknowledge that one-to-one care or a Montessori program may be unavailable or outside a family’s budget. A warm setting without a Montessori label may suit a family better than one that applies the principles more strictly.",
+          "Their question is whether the care feels acceptable as it currently works, without relying on the provider changing later. They offer possible alternatives when it does not fit, while recognizing that families have different options."
+        ],
+        "principle": {
+          "id": "principle.family-respect-and-context",
+          "text": "The relationship and the family’s real options matter when choosing care."
+        },
+        "references": [
+          {
+            "id": "shared.ref.baby.care-choice",
+            "sourceId": "baby-2021",
+            "section": "What to look for in a day care or caregiver; What if the day care has different values than at home?",
+            "locator": "Warm/responsive and consistent care, availability/budget, present-setting assessment and alternatives",
+            "pdfPages": [
+              {
+                "start": 253,
+                "end": 255
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "6-9.shared-choosing-care",
+        "entryId": "shared-choosing-care",
+        "ageId": "6-9",
+        "topicIds": [
+          "you-family"
+        ]
+      },
+      "displayContext": {
+        "ageLabel": "6–9 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "What’s underneath",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "you-family",
+            "label": "For you & your family"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 253–255"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "0530c00956518fbce507cbfe0cb4fff9fac470812f7e4cc68532c5609d8dab7b",
+  "artContextSha256": null,
+  "publicProjectionSha256": "bb3fd2f5a742becb9e5d405d4f033daf32b7cf09de9632cf24c31ad9001387d1",
+  "provenance": {
+    "draft": {
+      "path": "content/pilots/drafts/shared/draft-r01.json",
+      "sha256": "f79e45730e30d50d59563bb78aaef23270bee632b47cbbf1b51147ac99c30eb2"
+    },
+    "revision": "r01",
+    "evidenceFile": "content/pilots/drafts/shared/draft-r01.json",
+    "note": "Full private provenance and actual author read logs remain in this immutable draft and its handoff."
+  }
+}

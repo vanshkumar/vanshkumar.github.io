@@ -1,0 +1,37 @@
+{
+  "revision": "r05",
+  "editor": "/root",
+  "date": "2026-09-10",
+  "previousDraft": {
+    "path": "content/pilots/drafts/baby/draft-r04.json",
+    "sha256": "1124334c410bf59fc445f739fffbfbaf3fbd2850415721a39f427fc7a8213633"
+  },
+  "findingReports": [
+    {
+      "path": "content/pilots/reviews/final/baby-sleep-connection-source-r06.json",
+      "sha256": "ec4713d4ea8fe1f4e2c65412ef13e7aa984e35990feda1a8c6982e758b0e033d"
+    }
+  ],
+  "changes": [
+    {
+      "entryId": "baby-pacifier",
+      "beforeEntrySha256": "203a81d7230bdf6f75adc32898e62aee5517416cd05c507b026b785d373a975a",
+      "afterEntrySha256": "b6fb7ad16a00a12109903b336417857b207aef7899f37a1c24cd004c343a5b21",
+      "changedFields": [
+        "references"
+      ],
+      "placementChanged": false,
+      "issueIds": [
+        "baby-sleep-connection-source-r06.pacifier.reference-headings"
+      ]
+    }
+  ],
+  "status": "Proposed exact corrections; affected independent source and tone reviews pending",
+  "editorReadLogs": [
+    {
+      "path": "content/pilots/editorial/ROOT_READ_LOG-baby-r05.json",
+      "sha256": "62fe3af2fb39358afe4c7bb8690cde3bca4ca0c45021825ce575d1bf43272b47"
+    }
+  ],
+  "readBoundary": "Original author provenance and read logs remain intact. Limited additional editor original-source reads are separately logged; no independent approval by the editor is claimed."
+}

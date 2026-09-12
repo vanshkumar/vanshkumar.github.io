@@ -1,0 +1,1960 @@
+{
+  "reviewVersion": 1,
+  "id": "prototype-six.source-review.2026-09-10",
+  "task": "/root/prototype_source_review",
+  "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+  "role": "source",
+  "reasoning": "xhigh",
+  "date": "2026-09-10",
+  "scope": "Independent source review of the six exact preserved public projections only, including each opening/topic/detail wording, all listed placements, actual scene metadata and bytes. The coordinator explicitly authorized this narrow review before the pending whole-book handoffs.",
+  "input": {
+    "path": "content/pilots/PROTOTYPE_BASELINE.json",
+    "sha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+    "capturedOn": "2026-09-10",
+    "hashVerification": "Original file SHA and all 18 text-placement/art-context/public-projection hashes independently recomputed and matched. Each asset byte hash matched.",
+    "provenance": "The baseline itself is the frozen draft and immutable review snapshot. Original app-source provenance hashes are preserved inside it; no claim is made that live app source files are unchanged or newly approved."
+  },
+  "independence": {
+    "author": false,
+    "spiritToneReviewer": false,
+    "otherReviewerOutputsRead": false,
+    "otherResearcherDirectoriesRead": false,
+    "verdictCoordination": false,
+    "agentsSpawned": false
+  },
+  "methods": {
+    "text": "pypdf extraction directly from supplied PDFs, complete selected-page text read; image-only relevant tables read from original renders. Raw extraction files remain ignored in tmp/pilots-source-review/.",
+    "visual": "Bundled pdftoppm at 110 dpi rendered original pages without modifying PDFs; original PNG renders inspected with view_image, including all cited Toddler folios and meaningful tables/callouts/continuations. Original app WebPs and accepted round-16 screenshot inspected directly.",
+    "runtime": "Bundled Python /Users/vanshkumar/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3; pypdf and bundled Poppler.",
+    "browserUsed": false,
+    "externalSourcesUsed": false,
+    "pdfAuthoringMarkersRun": false,
+    "appOrSourceEdits": false,
+    "surfaceLimit": "Reviewed the complete frozen public projection and accepted screenshot; no live-browser/interaction/layout QA was performed. A source fidelity pass is not a claim of UI testing, medical verification, completed coverage, final contract conformance or release approval."
+  },
+  "sourceIdentity": {
+    "baby-2021": {
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+      "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f",
+      "sizeBytes": 10117663,
+      "physicalPages": 310,
+      "title": "The Montessori Baby: A Parent's Guide to Nurturing Your Baby with Love, Respect, and Understanding",
+      "authors": [
+        "Simone Davies",
+        "Junnifa Uzodike"
+      ],
+      "publisher": "Workman Publishing, New York",
+      "publicationStatement": "Copyright 2021; eISBN 9781523514069. No numbered edition/printing claim.",
+      "identityReadLogId": "psr.baby.identity",
+      "printedPagination": "No dependable printed-page equivalent; use physical PDF pages only."
+    },
+    "toddler-2019": {
+      "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/The Montessori Toddler - Simone Davies _Worldfreebooks.com_.pdf",
+      "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b",
+      "sizeBytes": 7036292,
+      "physicalPages": 257,
+      "title": "The Montessori Toddler: A Parent's Guide to Raising a Curious and Responsible Human Being",
+      "authors": [
+        "Simone Davies"
+      ],
+      "illustrator": "Hiyoko Imai",
+      "publisher": "Workman Publishing, New York",
+      "publicationStatement": "Copyright 2019; first printing February 2019; ISBN 978-1-5235-0689-7.",
+      "identityReadLogId": "psr.toddler.identity",
+      "printedPagination": "Every cited folio below was independently read on a rendered original page, not derived from viewer labels or an offset."
+    }
+  },
+  "printedFolioVerification": {
+    "sourceId": "toddler-2019",
+    "date": "2026-09-10",
+    "verifier": "/root/prototype_source_review",
+    "method": "Each folio read individually on the complete rendered original page; the commonly observed minus-nine relationship was not used as proof.",
+    "pages": [
+      {
+        "pdfPage": 33,
+        "printedPage": 24
+      },
+      {
+        "pdfPage": 34,
+        "printedPage": 25
+      },
+      {
+        "pdfPage": 35,
+        "printedPage": 26
+      },
+      {
+        "pdfPage": 36,
+        "printedPage": 27
+      },
+      {
+        "pdfPage": 37,
+        "printedPage": 28
+      },
+      {
+        "pdfPage": 38,
+        "printedPage": 29
+      },
+      {
+        "pdfPage": 39,
+        "printedPage": 30
+      },
+      {
+        "pdfPage": 48,
+        "printedPage": 39
+      },
+      {
+        "pdfPage": 49,
+        "printedPage": 40
+      },
+      {
+        "pdfPage": 50,
+        "printedPage": 41
+      },
+      {
+        "pdfPage": 51,
+        "printedPage": 42
+      },
+      {
+        "pdfPage": 52,
+        "printedPage": 43
+      },
+      {
+        "pdfPage": 53,
+        "printedPage": 44
+      },
+      {
+        "pdfPage": 54,
+        "printedPage": 45
+      },
+      {
+        "pdfPage": 55,
+        "printedPage": 46
+      },
+      {
+        "pdfPage": 75,
+        "printedPage": 66
+      },
+      {
+        "pdfPage": 76,
+        "printedPage": 67
+      },
+      {
+        "pdfPage": 77,
+        "printedPage": 68
+      },
+      {
+        "pdfPage": 245,
+        "printedPage": 236
+      },
+      {
+        "pdfPage": 248,
+        "printedPage": 239
+      },
+      {
+        "pdfPage": 249,
+        "printedPage": 240
+      },
+      {
+        "pdfPage": 250,
+        "printedPage": 241
+      },
+      {
+        "pdfPage": 251,
+        "printedPage": 242
+      },
+      {
+        "pdfPage": 252,
+        "printedPage": 243
+      }
+    ],
+    "allExistingCitedFoliosVerified": [
+      {
+        "pdfPage": 35,
+        "printedPage": 26
+      },
+      {
+        "pdfPage": 36,
+        "printedPage": 27
+      },
+      {
+        "pdfPage": 51,
+        "printedPage": 42
+      },
+      {
+        "pdfPage": 53,
+        "printedPage": 44
+      },
+      {
+        "pdfPage": 54,
+        "printedPage": 45
+      },
+      {
+        "pdfPage": 75,
+        "printedPage": 66
+      },
+      {
+        "pdfPage": 76,
+        "printedPage": 67
+      },
+      {
+        "pdfPage": 251,
+        "printedPage": 242
+      }
+    ]
+  },
+  "readLog": [
+    {
+      "id": "psr.baby.identity",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 3,
+          "end": 3
+        },
+        {
+          "start": 310,
+          "end": 310
+        }
+      ],
+      "mode": "visual",
+      "description": "Read the complete original title and copyright pages: both authors, Workman, 2021 copyright and eISBN. Independently counted the original PDF pages and hashed the original bytes."
+    },
+    {
+      "id": "psr.toddler.identity",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 2,
+          "end": 2
+        },
+        {
+          "start": 3,
+          "end": 3
+        }
+      ],
+      "mode": "visual",
+      "description": "Read the complete original title and copyright pages: Simone Davies, Hiyoko Imai, Workman, 2019 copyright, first printing February 2019, ISBN. Independently counted original PDF pages and hashed bytes."
+    },
+    {
+      "id": "psr.baby.relationship.text",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 98,
+          "end": 114
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete original-page text, including respect/body permission, individual timelines, observation, safe boundaries, movement, responsive caregiving, crying, adult availability, and connection checklist. This narrow context read does not approve neighboring developmental/outcome or sleep claims."
+    },
+    {
+      "id": "psr.baby.relationship.visual",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 99,
+          "end": 100
+        },
+        {
+          "start": 103,
+          "end": 103
+        },
+        {
+          "start": 107,
+          "end": 112
+        },
+        {
+          "start": 114,
+          "end": 114
+        }
+      ],
+      "mode": "visual",
+      "description": "Inspected complete rendered pages. Read permission exchange and gentle hands, safe-redirection paragraph, freedom-of-movement continuation, attachment/crying callouts and continuations, guide list, and complete connection checklist."
+    },
+    {
+      "id": "psr.baby.activity.text",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 130
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read activity-purpose/age and help-seeking qualifications, material-size and mouthing cautions, complete choice/observation guidance, awake/comfortable activity context, struggle-versus-frustration help example, clothing continuation, and introduction to language with turn-taking continuation."
+    },
+    {
+      "id": "psr.baby.activity.visual",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 120
+        },
+        {
+          "start": 123,
+          "end": 130
+        }
+      ],
+      "mode": "visual",
+      "description": "Inspected full pages and read the framed activity-purpose box, choosing-activities continuation, when-to-offer box, adult-role list continued onto 126, stuck/struggling paragraph, full further-notes callout through 127 with movement drawing, and language framing/callout through 130."
+    },
+    {
+      "id": "psr.baby.language.text",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 131,
+          "end": 136
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read original language-page text around all cited pages, including complete 3-to-6 section, its sign-language continuation, complete 6-to-9 section, and neighboring 9-to-12/12+ headings. Hearing-check and later-development statements were read as context, not adopted as new companion advice."
+    },
+    {
+      "id": "psr.baby.language.visual",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 133,
+          "end": 135
+        }
+      ],
+      "mode": "visual",
+      "description": "Inspected each complete cited page, the book illustration, heading boundaries, sign-language continuation and external-book recommendation callout; the source example for naming a noticed barking dog is under 6 TO 9 MONTHS on physical page 135."
+    },
+    {
+      "id": "psr.baby.movement.text",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 155,
+          "end": 164
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete original-page text for floor movement, the authors' tummy/back position and discomfort qualification, slow-rolling objects, observation lists, 6-to-9 gross/fine movement, childproofing, possible mat removal after crawling, sitting qualification, and adjacent 9-to-12 material. Later soft-ball examples were not silently reassigned to 6-to-9."
+    },
+    {
+      "id": "psr.baby.movement.visual",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 155,
+          "end": 162
+        }
+      ],
+      "mode": "visual",
+      "description": "Inspected all complete cited movement pages and preceding context. Read both observation callouts in full, childproofing box, chair/table illustrations, glitter-drum and patchwork-ball images, and every continuation through the 6-to-9 section boundary."
+    },
+    {
+      "id": "psr.baby.appendix.relevant",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 294,
+          "end": 294
+        },
+        {
+          "start": 296,
+          "end": 296
+        },
+        {
+          "start": 299,
+          "end": 300
+        }
+      ],
+      "mode": "visual",
+      "description": "Read the age-guideline paragraph on 294 and complete illustrated-table pages 296, 299 and 300, including self-expression, 5-to-7+ months knitted/crocheted ball, slow-rolling cylinder, and basket of balls once creeping around 8 or 9 months. Checked row-specific ages, headings and qualifications directly in the image-only tables."
+    },
+    {
+      "id": "psr.baby.appendix.navigation",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 295,
+          "end": 295
+        },
+        {
+          "start": 297,
+          "end": 298
+        },
+        {
+          "start": 301,
+          "end": 303
+        }
+      ],
+      "mode": "navigation-only",
+      "description": "Inspected table layout and adjacent rows to establish continuation/boundary context. These pages are not asserted as completed research coverage and supply no new prototype claim. The relevant 299-300 rows were separately read in full."
+    },
+    {
+      "id": "psr.toddler.general",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 33,
+          "end": 39
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete original text and full rendered pages: age indications, limited steps and repetition, activity presentation, slow hands/omit words callout, child choice, noninterruption, putting-away continuation, modeling, adaptable challenge, existing resources and small-parts/sharp-object supervision. Visually read folios 24 through 30 individually."
+    },
+    {
+      "id": "psr.toddler.general.visual",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 33,
+          "end": 39
+        }
+      ],
+      "mode": "visual",
+      "description": "Read complete original text and full rendered pages: age indications, limited steps and repetition, activity presentation, slow hands/omit words callout, child choice, noninterruption, putting-away continuation, modeling, adaptable challenge, existing resources and small-parts/sharp-object supervision. Visually read folios 24 through 30 individually."
+    },
+    {
+      "id": "psr.toddler.practical",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 48,
+          "end": 52
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read the complete practical-life section through its age list, including supervised participation, spill quantities, under-two one/two-step context, budget and household contribution; read the 12-to-18 and 18-month-to-3-year lists and 3-to-4 continuation columns. Visually read folios 39, 40, 41, 42 and 43 individually."
+    },
+    {
+      "id": "psr.toddler.practical.visual",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 48,
+          "end": 52
+        }
+      ],
+      "mode": "visual",
+      "description": "Read the complete practical-life section through its age list, including supervised participation, spill quantities, under-two one/two-step context, budget and household contribution; read the 12-to-18 and 18-month-to-3-year lists and 3-to-4 continuation columns. Visually read folios 39, 40, 41, 42 and 43 individually."
+    },
+    {
+      "id": "psr.toddler.arts",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 53,
+          "end": 55
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete arts-and-crafts text and continuation, material examples, young-toddler drawing context, process over product, descriptive feedback, quality, loose-line example, own paper, and the neighboring language heading. Visually read folios 44, 45 and 46 individually. No preschool/sewing/scissors age was attributed to drawing."
+    },
+    {
+      "id": "psr.toddler.arts.visual",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 53,
+          "end": 55
+        }
+      ],
+      "mode": "visual",
+      "description": "Read complete arts-and-crafts text and continuation, material examples, young-toddler drawing context, process over product, descriptive feedback, quality, loose-line example, own paper, and the neighboring language heading. Visually read folios 44, 45 and 46 individually. No preschool/sewing/scissors age was attributed to drawing."
+    },
+    {
+      "id": "psr.toddler.home",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 75,
+          "end": 77
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete home-setup tips and room-by-room table through the kitchen continuation, including child manageability, order, adaptable/nonprescriptive room ideas, shoe basket OR shelf, low tables/chairs, fragile-glass handling context, small jug and cloth/sponges. Visually read folios 66, 67 and 68 individually."
+    },
+    {
+      "id": "psr.toddler.home.visual",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 75,
+          "end": 77
+        }
+      ],
+      "mode": "visual",
+      "description": "Read complete home-setup tips and room-by-room table through the kitchen continuation, including child manageability, order, adaptable/nonprescriptive room ideas, shoe basket OR shelf, low tables/chairs, fragile-glass handling context, small jug and cloth/sponges. Visually read folios 66, 67 and 68 individually."
+    },
+    {
+      "id": "psr.toddler.appendix",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 245,
+          "end": 245
+        },
+        {
+          "start": 248,
+          "end": 252
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete table text and rendered tables: row-specific ages/readiness and column boundaries, 12-month scribbling (block crayon/chunky pencil), and the 18+ pour-a-glass-of-water row on 251 with its own material list and Food preparation classification. Read neighboring pages to exclude inherited age/readiness; able-to-carry-a-jug on 250 belongs to handwashing, not the pouring row. Visually read folios 236 and 239 through 243 individually."
+    },
+    {
+      "id": "psr.toddler.appendix.visual",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 245,
+          "end": 245
+        },
+        {
+          "start": 248,
+          "end": 252
+        }
+      ],
+      "mode": "visual",
+      "description": "Read complete table text and rendered tables: row-specific ages/readiness and column boundaries, 12-month scribbling (block crayon/chunky pencil), and the 18+ pour-a-glass-of-water row on 251 with its own material list and Food preparation classification. Read neighboring pages to exclude inherited age/readiness; able-to-carry-a-jug on 250 belongs to handwashing, not the pouring row. Visually read folios 236 and 239 through 243 individually."
+    },
+    {
+      "id": "psr.toddler.navigation",
+      "task": "/root/prototype_source_review",
+      "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+      "role": "source",
+      "reasoning": "xhigh",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 32,
+          "end": 32
+        },
+        {
+          "start": 73,
+          "end": 74
+        },
+        {
+          "start": 244,
+          "end": 244
+        }
+      ],
+      "mode": "visual",
+      "description": "Inspected chapter/appendix opener art and heading pages as orientation. Physical 73 and 244 have no visible numbered folio; no printed citation is inferred for them. These are not source support for practical instructions."
+    }
+  ],
+  "visualAssets": [
+    {
+      "path": "public/art/home-paper-baby.webp",
+      "sha256": "fb09c915ce18725df3f0ef1818fc0072116d2d97c6dbc45eb7578dda55dbc922",
+      "method": "Direct full-image visual inspection of original local file via view_image",
+      "date": "2026-09-10",
+      "reviewer": "/root/prototype_source_review"
+    },
+    {
+      "path": "public/art/home-paper-toddler.webp",
+      "sha256": "6590e3b468d918f375cf5fd7ea2362b45e511f0d41c0b1a7113b2b5b6ae2d422",
+      "method": "Direct full-image visual inspection of original local file via view_image",
+      "date": "2026-09-10",
+      "reviewer": "/root/prototype_source_review"
+    },
+    {
+      "path": "tmp/design-critique/round-16.png",
+      "sha256": "a97d5d57820c47fb1d94185c26961b481e122ed3e56fda3fed8f2d90c9fe0ec7",
+      "method": "Direct full-image visual inspection of original local file via view_image",
+      "date": "2026-09-10",
+      "reviewer": "/root/prototype_source_review"
+    }
+  ],
+  "sharedIntegrationRequirements": [
+    {
+      "id": "psr.integration.structured-references",
+      "type": "publication-contract",
+      "finding": "All six preserved prototypes use legacyPageLabel rather than final structured references. The source review separately verifies the displayed page strings; it does not turn their current schema into final approved payloads.",
+      "action": "Before release, replace legacy labels with precise structured source references and locators, including individually verified Toddler printed mappings. Use the source checks in each entry, then freeze and review the resulting exact projection."
+    },
+    {
+      "id": "psr.integration.age-provenance",
+      "type": "publication-contract",
+      "finding": "No prototype contains ageContext or an authored private three-part age rationale. The book ages and observed-interest basis are recorded below; they must not be mistaken for a completed whole-book evidence/coverage handoff.",
+      "action": "Finalize private book-age/readiness/editorial-placement evidence. Preserve the sources' ages-as-guides meaning near the age browsing surface; show a local public note whenever the band or illustration could otherwise imply an onset/deadline. Existing cues support the ordinary invitations, but do not supply the missing private evidence contract."
+    },
+    {
+      "id": "psr.integration.independent-review",
+      "type": "release-gate",
+      "finding": "This file is the source review only. Full-book research, coverage reconciliation, final pilot drafting, the separate independent spirit/tone review, resolutions and final exact-hash integration checks remain outside this bounded review.",
+      "action": "No complete pilot or publication approval may be claimed from these findings. Preserve the existing local prototypes while drafting; do not carry passes onto changed text, placement, metadata or image bytes."
+    }
+  ],
+  "verdictMeaning": "pass means the source fidelity of that exact component is acceptable within this narrow prototype review. revise means one or more identified source/context/metadata changes are required. Common final-publication contract work is listed separately rather than misrepresented as a factual error in an otherwise sound ordinary invitation. No entry has final publication approval. Changed public fields require fresh hashes and affected re-review.",
+  "entries": [
+    {
+      "entryId": "baby-movement",
+      "placementId": "6-9.baby-movement",
+      "ageId": "6-9",
+      "topicIds": [
+        "play-discovery"
+      ],
+      "openingOrder": 1,
+      "snapshotPath": "content/pilots/PROTOTYPE_BASELINE.json",
+      "snapshotFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+      "textPlacementSha256": "e67c9fd3559b114970e0967e2417ff7b8ab11f3a534bef5f278167ce552b4c31",
+      "artContextSha256": "8b58ddf2fd4ea58f6d00fd89f35c0e31d78c510ddd8a8d68e0de1fee456e7806",
+      "publicProjectionSha256": "ebe48d8b8bc009a24ce053b1ba826817ce344d94d36408b70318226b426eca6d",
+      "summary": "The observation and proportionate-help idea is supported, but direct positioning/movement instructions and an overbroad position rule need revision under the source-only sensitive-content charter.",
+      "actualSourceChecks": [
+        {
+          "id": "baby-movement.reviewed-existing-locator",
+          "sourceId": "baby-2021",
+          "sourceSha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f",
+          "pdfPages": [
+            {
+              "start": 107,
+              "end": 108
+            },
+            {
+              "start": 126,
+              "end": 126
+            },
+            {
+              "start": 157,
+              "end": 162
+            }
+          ],
+          "section": "Chapter 5, “Freedom of movement”; chapter 6, movement activities for 6–9 months and help when struggling.",
+          "locator": "Existing page range checked against the exact prototype claims; see surface assessments and issues for additions/narrowing.",
+          "printedPages": null,
+          "printedVerification": {
+            "status": "not-applicable"
+          },
+          "contextRead": [
+            {
+              "sourceId": "baby-2021",
+              "readLogIds": [
+                "psr.baby.relationship.text",
+                "psr.baby.relationship.visual",
+                "psr.baby.activity.text",
+                "psr.baby.activity.visual",
+                "psr.baby.movement.text",
+                "psr.baby.movement.visual",
+                "psr.baby.appendix.relevant"
+              ]
+            }
+          ],
+          "readLogIds": [
+            "psr.baby.relationship.text",
+            "psr.baby.relationship.visual",
+            "psr.baby.activity.text",
+            "psr.baby.activity.visual",
+            "psr.baby.movement.text",
+            "psr.baby.movement.visual",
+            "psr.baby.appendix.relevant"
+          ]
+        }
+      ],
+      "ageBasisReview": {
+        "bookWording": [
+          {
+            "wording": "6 TO 9 MONTHS",
+            "pdfPages": [
+              {
+                "start": 157,
+                "end": 162
+              }
+            ]
+          },
+          {
+            "wording": "5 to 7+ months (knitted or crocheted ball); once child is creeping, around 8 or 9 months (basket of balls)",
+            "pdfPages": [
+              {
+                "start": 299,
+                "end": 300
+              }
+            ]
+          }
+        ],
+        "readiness": "The authors use current movement, interest, comfort and the difference between effort and frustration; ages are guidelines (119, 294).",
+        "editorialPlacement": "A 6-9 browsing placement is supported by the source section, but it must not imply every child crawls, reaches in the illustrated posture, or should be advanced toward the ball. The specific ball rows have their own cues."
+      },
+      "publicSurfaceAssessment": {
+        "opening": "Revise: Clear floor space/Reach/Try this together with a tummy-down scene presents a sensitive movement setup as direct advice, without the source's awake/comfortable and responsive-change context.",
+        "topicSummary": "Revise: Make room for movement remains a direct instruction. A reader sees no source attribution or distinction between observing existing movement and placing/advancing the baby.",
+        "detail": "Revise: observation, current ability and proportionate help are sound. The principle broadens not propping into sitting/standing into a rule against every position not reached independently; 107-108 expressly allow back/belly positions and 155-156 discuss the authors' tummy-time position and responding to discomfort.",
+        "ageAndTopic": "Play & discovery is reasonable, but the movement/positioning content retains its safety-sensitive treatment in this topic."
+      },
+      "textPlacementReview": {
+        "id": "baby-movement.prototype-baseline.source.text-placement",
+        "task": "/root/prototype_source_review",
+        "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+        "role": "source",
+        "reasoning": "xhigh",
+        "date": "2026-09-10",
+        "component": "text-placement",
+        "componentSha256": "e67c9fd3559b114970e0967e2417ff7b8ab11f3a534bef5f278167ce552b4c31",
+        "snapshotPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "snapshotFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "snapshotEntryId": "baby-movement",
+        "draftPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "draftRevision": "frozen prototype baseline captured 2026-09-10",
+        "draftFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "sourceReadLogIds": [
+          "psr.baby.relationship.text",
+          "psr.baby.relationship.visual",
+          "psr.baby.activity.text",
+          "psr.baby.activity.visual",
+          "psr.baby.movement.text",
+          "psr.baby.movement.visual",
+          "psr.baby.appendix.relevant"
+        ],
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "psr.baby-movement.sensitive-presentation",
+            "priority": "high",
+            "locations": [
+              "entry.invitation",
+              "entry.summary",
+              "entry.steps",
+              "displayContext.kindLabel",
+              "displayContext.openingCTA",
+              "displayContext.headings"
+            ],
+            "finding": "The current entry is an imperative movement routine. The charter requires descriptive book-only handling of positioning/movement; the private citations and generic illustrative colophon do not change the public instructions.",
+            "sourceBasis": "Baby PDF 107-108, 119, 123-126, 155-158; EDITORIAL_CHARTER.md Safety-sensitive source material.",
+            "requiredRevision": "Retain the useful observation idea as a concise account of what the authors describe, with a reading CTA and no invented movement protocol. Example direction: The authors describe watching an awake, comfortable baby explore a prepared floor space, and responding when help or a change is needed. Preserve their own-pace and help-seeking qualification when explaining development. Keep the qualification in the opening/topic wording as well as the detail.",
+            "status": "open",
+            "resolution": null,
+            "reReview": null
+          },
+          {
+            "id": "psr.baby-movement.position-scope",
+            "priority": "high",
+            "locations": [
+              "entry.principle.text"
+            ],
+            "finding": "Positions they cannot yet reach themselves is broader than the source's sitting/standing/propping limitation and obscures the authors' explicit distinction for lying on back or tummy.",
+            "sourceBasis": "Baby PDF 107-108; 155-156; 159.",
+            "requiredRevision": "Narrow the paraphrase to the authors' caution about propping into sitting or standing before the baby can get there. If tummy-down positioning is discussed, describe the authors' actual position and their discomfort/change-or-pickup qualification from 155-156; do not use a universal self-reached-position rule.",
+            "status": "open",
+            "resolution": null,
+            "reReview": null
+          }
+        ],
+        "resolutionLinks": [],
+        "reReviewLinks": []
+      },
+      "artContextReview": {
+        "id": "baby-movement.prototype-baseline.source.art-context",
+        "task": "/root/prototype_source_review",
+        "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+        "role": "source",
+        "reasoning": "xhigh",
+        "date": "2026-09-10",
+        "component": "art-context",
+        "componentSha256": "8b58ddf2fd4ea58f6d00fd89f35c0e31d78c510ddd8a8d68e0de1fee456e7806",
+        "snapshotPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "snapshotFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "snapshotEntryId": "baby-movement",
+        "draftPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "draftRevision": "frozen prototype baseline captured 2026-09-10",
+        "draftFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "sourceReadLogIds": [
+          "psr.baby.relationship.text",
+          "psr.baby.relationship.visual",
+          "psr.baby.activity.text",
+          "psr.baby.activity.visual",
+          "psr.baby.movement.text",
+          "psr.baby.movement.visual",
+          "psr.baby.appendix.relevant"
+        ],
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "psr.baby-movement.art-context",
+            "priority": "high",
+            "locations": [
+              "scene",
+              "scene.caption",
+              "entry.invitation",
+              "entry.principle.text"
+            ],
+            "finding": "The illustration shows an awake tummy-down baby reaching for a ball with an observing adult. The physical scene is source-compatible, but the direct Reach/floor-space instruction makes it a setup to enact, while the overbroad position rule creates a misleading context.",
+            "sourceBasis": "Baby PDF 107-108, 123-126, 155-159; ball-table rows 299-300.",
+            "requiredRevision": "Retain the image if desired. Re-review it with the revised descriptive movement copy and visible interest/comfort framing. Do not label the illustrated ball safe, prescribe its size/material, require this posture at 6-9 months, or imply that the mat is required. The source permits adapting/removing a mat once it impedes crawling (158).",
+            "status": "open",
+            "resolution": null,
+            "reReview": null
+          }
+        ],
+        "resolutionLinks": [],
+        "reReviewLinks": [],
+        "assetChecks": [
+          {
+            "src": "art/home-paper-baby.webp",
+            "sha256": "fb09c915ce18725df3f0ef1818fc0072116d2d97c6dbc45eb7578dda55dbc922"
+          }
+        ],
+        "assessment": "No anatomical or source-material contradiction was identified in the actual bytes. Bare feet, active attention, a low mat and nearby adult are compatible with the read passages. Covered knees are not a mandatory error: the source preference is qualified by practicality/temperature. The scene cannot establish how the child reached the posture, ball speed, exact composition, or material safety.",
+        "artChangesRequired": "No new image is required by this review; resolve the identified wording/context or alt metadata and review the new exact hashes."
+      },
+      "finalPublicationApproval": false
+    },
+    {
+      "entryId": "baby-language",
+      "placementId": "6-9.baby-language",
+      "ageId": "6-9",
+      "topicIds": [
+        "play-discovery"
+      ],
+      "openingOrder": 2,
+      "snapshotPath": "content/pilots/PROTOTYPE_BASELINE.json",
+      "snapshotFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+      "textPlacementSha256": "00bdc6bc9376439798adcb8fa48fa27a165e99c2206dc051787b504dd45a1447",
+      "artContextSha256": "3492ca2e8cc9516de111e703aca541880d76fb65cc1f125871b7f70ee7601d8d",
+      "publicProjectionSha256": "b55c3d02c18782a1b853b5bb43e88a46eaae014e472f0104d3f43423e1ecf2db",
+      "summary": "The ordinary naming-and-turn-taking invitation is a faithful, modest synthesis of the cited language pages. It does not turn a response into a milestone test.",
+      "actualSourceChecks": [
+        {
+          "id": "baby-language.reviewed-existing-locator",
+          "sourceId": "baby-2021",
+          "sourceSha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f",
+          "pdfPages": [
+            {
+              "start": 133,
+              "end": 135
+            }
+          ],
+          "section": "Chapter 6, language activities: “6 to 9 months”; ongoing conversational turn-taking from “3 to 6 months”.",
+          "locator": "Existing page range checked against the exact prototype claims; see surface assessments and issues for additions/narrowing.",
+          "printedPages": null,
+          "printedVerification": {
+            "status": "not-applicable"
+          },
+          "contextRead": [
+            {
+              "sourceId": "baby-2021",
+              "readLogIds": [
+                "psr.baby.language.text",
+                "psr.baby.language.visual",
+                "psr.baby.activity.text",
+                "psr.baby.activity.visual",
+                "psr.baby.relationship.text",
+                "psr.baby.relationship.visual",
+                "psr.baby.movement.text",
+                "psr.baby.movement.visual",
+                "psr.baby.appendix.relevant"
+              ]
+            }
+          ],
+          "readLogIds": [
+            "psr.baby.language.text",
+            "psr.baby.language.visual",
+            "psr.baby.activity.text",
+            "psr.baby.activity.visual",
+            "psr.baby.relationship.text",
+            "psr.baby.relationship.visual",
+            "psr.baby.movement.text",
+            "psr.baby.movement.visual",
+            "psr.baby.appendix.relevant"
+          ]
+        }
+      ],
+      "ageBasisReview": {
+        "bookWording": [
+          {
+            "wording": "6 TO 9 MONTHS; conversational turn-taking is described under 3 TO 6 MONTHS",
+            "pdfPages": [
+              {
+                "start": 133,
+                "end": 135
+              }
+            ]
+          }
+        ],
+        "readiness": "A baby turns/looks toward an everyday sound; the adult names what is noticed. Sounds and gestures can form a reply. The prototype's no-response-required wording fits the no-performance context (112).",
+        "editorialPlacement": "6-9 matches the naming-sounds source heading; continuing the earlier turn-taking practice is compatible with the book. No claim that an infant must produce speech, gesture or a particular response at this age is made."
+      },
+      "publicSurfaceAssessment": {
+        "opening": "Pass: begins with a sound that already caught the baby's attention and leaves room for a reply rather than demanding one.",
+        "topicSummary": "Pass: names an everyday observation and a pause; no materials, hearing test, performance task or developmental guarantee.",
+        "detail": "Pass: dog-barking example, simple naming, pause and contingent response are directly supported by 133-135. The cue explicitly permits no response.",
+        "ageAndTopic": "Pass for source fidelity: 6-9 matches the named subsection, Play & discovery is a reasonable editorial home. The missing final provenance/schema work remains in the separate integration requirements."
+      },
+      "textPlacementReview": {
+        "id": "baby-language.prototype-baseline.source.text-placement",
+        "task": "/root/prototype_source_review",
+        "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+        "role": "source",
+        "reasoning": "xhigh",
+        "date": "2026-09-10",
+        "component": "text-placement",
+        "componentSha256": "00bdc6bc9376439798adcb8fa48fa27a165e99c2206dc051787b504dd45a1447",
+        "snapshotPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "snapshotFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "snapshotEntryId": "baby-language",
+        "draftPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "draftRevision": "frozen prototype baseline captured 2026-09-10",
+        "draftFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "sourceReadLogIds": [
+          "psr.baby.language.text",
+          "psr.baby.language.visual",
+          "psr.baby.activity.text",
+          "psr.baby.activity.visual",
+          "psr.baby.relationship.text",
+          "psr.baby.relationship.visual",
+          "psr.baby.movement.text",
+          "psr.baby.movement.visual",
+          "psr.baby.appendix.relevant"
+        ],
+        "verdict": "pass",
+        "issues": [],
+        "resolutionLinks": [],
+        "reReviewLinks": []
+      },
+      "artContextReview": {
+        "id": "baby-language.prototype-baseline.source.art-context",
+        "task": "/root/prototype_source_review",
+        "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+        "role": "source",
+        "reasoning": "xhigh",
+        "date": "2026-09-10",
+        "component": "art-context",
+        "componentSha256": "3492ca2e8cc9516de111e703aca541880d76fb65cc1f125871b7f70ee7601d8d",
+        "snapshotPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "snapshotFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "snapshotEntryId": "baby-language",
+        "draftPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "draftRevision": "frozen prototype baseline captured 2026-09-10",
+        "draftFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "sourceReadLogIds": [
+          "psr.baby.language.text",
+          "psr.baby.language.visual",
+          "psr.baby.activity.text",
+          "psr.baby.activity.visual",
+          "psr.baby.relationship.text",
+          "psr.baby.relationship.visual",
+          "psr.baby.movement.text",
+          "psr.baby.movement.visual",
+          "psr.baby.appendix.relevant"
+        ],
+        "verdict": "pass",
+        "issues": [],
+        "resolutionLinks": [],
+        "reReviewLinks": [],
+        "assetChecks": [
+          {
+            "src": "art/home-paper-baby.webp",
+            "sha256": "fb09c915ce18725df3f0ef1818fc0072116d2d97c6dbc45eb7578dda55dbc922"
+          }
+        ],
+        "assessment": "Pass for the exact illustrative context. The shared image shows an awake infant, nearby adult and ball; the alt text does not claim a dog, sound source or a demonstrated vocal response. In this naming-sounds entry it does not instruct the reader to place the baby on the tummy or make the scene a required language setup. The body/ball context was nevertheless checked against 107-108, 123-126, 155-159 and 299-300. No new art is needed.",
+        "artChangesRequired": "No new image is required by this review; resolve the identified wording/context or alt metadata and review the new exact hashes."
+      },
+      "finalPublicationApproval": false
+    },
+    {
+      "entryId": "baby-connection",
+      "placementId": "6-9.baby-connection",
+      "ageId": "6-9",
+      "topicIds": [
+        "connection-feelings",
+        "everyday-care"
+      ],
+      "openingOrder": 3,
+      "snapshotPath": "content/pilots/PROTOTYPE_BASELINE.json",
+      "snapshotFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+      "textPlacementSha256": "3616b3660520d85fa0b1a4e8c205c506884f329925a15587e42a0ee031e51966",
+      "artContextSha256": "8f7be6cb7adcd609a64f6e29b09dfcaceed887617221af740e05479e594e279c",
+      "publicProjectionSha256": "52c80831ef97ed4b01c7045652fa2c712f7acd8d26e6a9b253a9bbff42cf1ccb",
+      "summary": "The respectful exchange is source-supported. The topic summary should retain the can-wait boundary, and the necessary-care/protection distinction needs its actual source references.",
+      "actualSourceChecks": [
+        {
+          "id": "baby-connection.reviewed-existing-locator",
+          "sourceId": "baby-2021",
+          "sourceSha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f",
+          "pdfPages": [
+            {
+              "start": 99,
+              "end": 100
+            },
+            {
+              "start": 114,
+              "end": 114
+            }
+          ],
+          "section": "Chapter 5, “Respect our baby’s body,” collaboration, and the connection checklist.",
+          "locator": "Existing page range checked against the exact prototype claims; see surface assessments and issues for additions/narrowing.",
+          "printedPages": null,
+          "printedVerification": {
+            "status": "not-applicable"
+          },
+          "contextRead": [
+            {
+              "sourceId": "baby-2021",
+              "readLogIds": [
+                "psr.baby.relationship.text",
+                "psr.baby.relationship.visual",
+                "psr.baby.activity.text",
+                "psr.baby.activity.visual",
+                "psr.baby.movement.text",
+                "psr.baby.movement.visual",
+                "psr.baby.appendix.relevant"
+              ]
+            }
+          ],
+          "readLogIds": [
+            "psr.baby.relationship.text",
+            "psr.baby.relationship.visual",
+            "psr.baby.activity.text",
+            "psr.baby.activity.visual",
+            "psr.baby.movement.text",
+            "psr.baby.movement.visual",
+            "psr.baby.appendix.relevant"
+          ]
+        }
+      ],
+      "ageBasisReview": {
+        "bookWording": [
+          {
+            "wording": "Respect from birth / during the first year; no 6-9-only age for the pickup exchange",
+            "pdfPages": [
+              {
+                "start": 98,
+                "end": 100
+              },
+              {
+                "start": 114,
+                "end": 114
+              }
+            ]
+          }
+        ],
+        "readiness": "Observe changes in gesture/expression; allow refusal when a pickup can wait while responding to care needs and unsafe situations (103, 109-110).",
+        "editorialPlacement": "Valid as shared infancy guidance surfaced at 6-9, not an onset at six months or a requirement for recognizable consent gestures."
+      },
+      "publicSurfaceAssessment": {
+        "opening": "The invitation already says unhurried pickup, which preserves an important limit. Its relational actions are supported and need no new lifting technique.",
+        "topicSummary": "Revise: Turn an ordinary pickup into a small exchange drops the unhurried/can-wait condition. The summary must remain faithful without requiring the reader to open the principle first.",
+        "detail": "The listed gestures, slow respectful handling, and can-wait wording in step 3 are supported. The principle's necessary-care/immediate-protection qualification is useful, but the existing page labels omit the passages that establish prompt response and safe redirection.",
+        "ageAndTopic": "Connection & feelings and Everyday care both fit. Identify the source as infancy-wide in finalized age provenance instead of inventing a 6-9-specific readiness test."
+      },
+      "textPlacementReview": {
+        "id": "baby-connection.prototype-baseline.source.text-placement",
+        "task": "/root/prototype_source_review",
+        "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+        "role": "source",
+        "reasoning": "xhigh",
+        "date": "2026-09-10",
+        "component": "text-placement",
+        "componentSha256": "3616b3660520d85fa0b1a4e8c205c506884f329925a15587e42a0ee031e51966",
+        "snapshotPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "snapshotFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "snapshotEntryId": "baby-connection",
+        "draftPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "draftRevision": "frozen prototype baseline captured 2026-09-10",
+        "draftFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "sourceReadLogIds": [
+          "psr.baby.relationship.text",
+          "psr.baby.relationship.visual",
+          "psr.baby.activity.text",
+          "psr.baby.activity.visual",
+          "psr.baby.movement.text",
+          "psr.baby.movement.visual",
+          "psr.baby.appendix.relevant"
+        ],
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "psr.baby-connection.short-qualification",
+            "priority": "medium",
+            "locations": [
+              "entry.summary"
+            ],
+            "finding": "The topic summary loses the restriction that the pickup can wait, although it is present in the opening invitation and later detail.",
+            "sourceBasis": "Baby PDF 99-100 and 114 for participation; 103 for unsafe situations; 109-110 for prompt response to needs and comforting pickup.",
+            "requiredRevision": "Carry the boundary into the short summary. A concise source-framed option is: The authors describe making room for a baby's response before a pickup that can wait. Preserve the distinction that responding to care needs or danger is not contingent on waiting for permission. This is a communication perspective, not a physical lifting protocol.",
+            "status": "open",
+            "resolution": null,
+            "reReview": null
+          },
+          {
+            "id": "psr.baby-connection.reference-coverage",
+            "priority": "medium",
+            "locations": [
+              "entry.references",
+              "displayContext.referenceLabels"
+            ],
+            "finding": "The source label lists 99-100 and 114 but the explicit necessary-care/protection exception is supported by additional passages actually read in this review.",
+            "sourceBasis": "Baby PDF 103, 109-110; also 129-130 for narrated care and pause.",
+            "requiredRevision": "Add precise references/locators for 103 and 109-110 when retaining the exception. Keep necessary care concrete as the book's response to need/comfort/protection, not a broad permission to ignore the baby's responses.",
+            "status": "open",
+            "resolution": null,
+            "reReview": null
+          }
+        ],
+        "resolutionLinks": [],
+        "reReviewLinks": []
+      },
+      "artContextReview": {
+        "id": "baby-connection.prototype-baseline.source.art-context",
+        "task": "/root/prototype_source_review",
+        "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+        "role": "source",
+        "reasoning": "xhigh",
+        "date": "2026-09-10",
+        "component": "art-context",
+        "componentSha256": "8f7be6cb7adcd609a64f6e29b09dfcaceed887617221af740e05479e594e279c",
+        "snapshotPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "snapshotFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "snapshotEntryId": "baby-connection",
+        "draftPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "draftRevision": "frozen prototype baseline captured 2026-09-10",
+        "draftFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "sourceReadLogIds": [
+          "psr.baby.relationship.text",
+          "psr.baby.relationship.visual",
+          "psr.baby.activity.text",
+          "psr.baby.activity.visual",
+          "psr.baby.movement.text",
+          "psr.baby.movement.visual",
+          "psr.baby.appendix.relevant"
+        ],
+        "verdict": "pass",
+        "issues": [],
+        "resolutionLinks": [],
+        "reReviewLinks": [],
+        "assetChecks": [
+          {
+            "src": "art/home-paper-baby.webp",
+            "sha256": "fb09c915ce18725df3f0ef1818fc0072116d2d97c6dbc45eb7578dda55dbc922"
+          }
+        ],
+        "assessment": "Pass for source fidelity of this exact contextual scene: it depicts no lift, grip, unsupported carrying posture, or care delay. The caregiver is present with open hands while the awake baby attends to a ball. The image can accompany the relational exchange without becoming a lifting demonstration. The independent text changes will still invalidate the old art-context hash and require the stipulated re-review.",
+        "artChangesRequired": "No new image is required by this review; resolve the identified wording/context or alt metadata and review the new exact hashes."
+      },
+      "finalPublicationApproval": false
+    },
+    {
+      "entryId": "toddler-pouring",
+      "placementId": "18-24.toddler-pouring",
+      "ageId": "18-24",
+      "topicIds": [
+        "play-discovery"
+      ],
+      "openingOrder": 1,
+      "snapshotPath": "content/pilots/PROTOTYPE_BASELINE.json",
+      "snapshotFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+      "textPlacementSha256": "e1cc51dfa7548fc1a081a5cdfb95644f61a943e2f91367a5531e325c6ac9a420",
+      "artContextSha256": "0d4f84e1c55dce4e4dc2f4f0261d0590585512924c70c60f607555110ddedb61",
+      "publicProjectionSha256": "0483a6fa97ea9bf96230c568cb61748b2714647ed3641788873ffb8bfb699cd9",
+      "summary": "The ordinary pouring invitation is supported by the practical-life examples, demonstrations and setup passages. Its modest spill amount is a task adjustment, not hydration or feeding advice.",
+      "actualSourceChecks": [
+        {
+          "id": "toddler-pouring.reviewed-existing-locator",
+          "sourceId": "toddler-2019",
+          "sourceSha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b",
+          "pdfPages": [
+            {
+              "start": 35,
+              "end": 36
+            },
+            {
+              "start": 51,
+              "end": 51
+            },
+            {
+              "start": 76,
+              "end": 76
+            },
+            {
+              "start": 251,
+              "end": 251
+            }
+          ],
+          "section": "Appendix, “List of Montessori activities for toddlers” (pouring, 18+ months); chapters 3–4, demonstrations and a child-sized table.",
+          "locator": "Existing page range checked against the exact prototype claims; see surface assessments and issues for additions/narrowing.",
+          "printedPages": [
+            {
+              "pdfPage": 35,
+              "printedPage": 26
+            },
+            {
+              "pdfPage": 36,
+              "printedPage": 27
+            },
+            {
+              "pdfPage": 51,
+              "printedPage": 42
+            },
+            {
+              "pdfPage": 76,
+              "printedPage": 67
+            },
+            {
+              "pdfPage": 251,
+              "printedPage": 242
+            }
+          ],
+          "printedVerification": {
+            "status": "visually-verified",
+            "verifier": "/root/prototype_source_review",
+            "date": "2026-09-10",
+            "method": "Read each small printed folio on the complete 110-dpi original-PDF rendering. Offset/viewer labels were not evidence.",
+            "pages": [
+              {
+                "pdfPage": 35,
+                "printedPage": 26
+              },
+              {
+                "pdfPage": 36,
+                "printedPage": 27
+              },
+              {
+                "pdfPage": 51,
+                "printedPage": 42
+              },
+              {
+                "pdfPage": 76,
+                "printedPage": 67
+              },
+              {
+                "pdfPage": 251,
+                "printedPage": 242
+              }
+            ]
+          },
+          "contextRead": [
+            {
+              "sourceId": "toddler-2019",
+              "readLogIds": [
+                "psr.toddler.general",
+                "psr.toddler.general.visual",
+                "psr.toddler.practical",
+                "psr.toddler.practical.visual",
+                "psr.toddler.home",
+                "psr.toddler.home.visual",
+                "psr.toddler.arts",
+                "psr.toddler.arts.visual",
+                "psr.toddler.appendix",
+                "psr.toddler.appendix.visual"
+              ]
+            }
+          ],
+          "readLogIds": [
+            "psr.toddler.general",
+            "psr.toddler.general.visual",
+            "psr.toddler.practical",
+            "psr.toddler.practical.visual",
+            "psr.toddler.home",
+            "psr.toddler.home.visual",
+            "psr.toddler.arts",
+            "psr.toddler.arts.visual",
+            "psr.toddler.appendix",
+            "psr.toddler.appendix.visual"
+          ]
+        }
+      ],
+      "ageBasisReview": {
+        "bookWording": [
+          {
+            "wording": "12 to 18 months: pour water or milk using a small jug; later ages add to earlier activities",
+            "pdfPages": [
+              {
+                "start": 51,
+                "end": 52
+              }
+            ]
+          },
+          {
+            "wording": "18+ months: Pour a glass of water",
+            "pdfPages": [
+              {
+                "start": 251,
+                "end": 251
+              }
+            ]
+          }
+        ],
+        "readiness": "Child interest and manageable equipment are grounded in the general activity/presentation guidance (33-36) and child-sized setup (75). Able to carry a jug on 250 modifies handwashing, not the pouring row; the prototype cue is a general editorial synthesis, not that row's quoted prerequisite.",
+        "editorialPlacement": "18-24 fits the appendix and continuation of household examples. Do not report 18 months as a unique prescribed onset or borrow the handwashing prerequisite as a stated pouring age condition."
+      },
+      "publicSurfaceAssessment": {
+        "opening": "Pass: small amount, small pitcher, spill cloth and slow demonstration are supported; the visible cue supplies interest/manageability.",
+        "topicSummary": "Pass: the manageable pouring opportunity is modest and the nearby adult remains explicit. It promises neither independent completion nor no spills.",
+        "detail": "Pass: low table, small amount, sponge/cloth, visible slow hand demonstration, repetition and proportionate help are traceable to the cited pages plus general/practical-life context. The three listed steps are adult presentation steps; they do not demand a three-step child work cycle before age two.",
+        "ageAndTopic": "Play & discovery is a defensible editorial classification; preserve practical-life/household participation in the detail and evidence. No nutrition, drink schedule/quantity, glass-safety assurance or novel physical positioning instruction is asserted."
+      },
+      "textPlacementReview": {
+        "id": "toddler-pouring.prototype-baseline.source.text-placement",
+        "task": "/root/prototype_source_review",
+        "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+        "role": "source",
+        "reasoning": "xhigh",
+        "date": "2026-09-10",
+        "component": "text-placement",
+        "componentSha256": "e1cc51dfa7548fc1a081a5cdfb95644f61a943e2f91367a5531e325c6ac9a420",
+        "snapshotPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "snapshotFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "snapshotEntryId": "toddler-pouring",
+        "draftPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "draftRevision": "frozen prototype baseline captured 2026-09-10",
+        "draftFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "sourceReadLogIds": [
+          "psr.toddler.general",
+          "psr.toddler.general.visual",
+          "psr.toddler.practical",
+          "psr.toddler.practical.visual",
+          "psr.toddler.home",
+          "psr.toddler.home.visual",
+          "psr.toddler.arts",
+          "psr.toddler.arts.visual",
+          "psr.toddler.appendix",
+          "psr.toddler.appendix.visual"
+        ],
+        "verdict": "pass",
+        "issues": [],
+        "resolutionLinks": [],
+        "reReviewLinks": []
+      },
+      "artContextReview": {
+        "id": "toddler-pouring.prototype-baseline.source.art-context",
+        "task": "/root/prototype_source_review",
+        "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+        "role": "source",
+        "reasoning": "xhigh",
+        "date": "2026-09-10",
+        "component": "art-context",
+        "componentSha256": "0d4f84e1c55dce4e4dc2f4f0261d0590585512924c70c60f607555110ddedb61",
+        "snapshotPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "snapshotFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "snapshotEntryId": "toddler-pouring",
+        "draftPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "draftRevision": "frozen prototype baseline captured 2026-09-10",
+        "draftFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "sourceReadLogIds": [
+          "psr.toddler.general",
+          "psr.toddler.general.visual",
+          "psr.toddler.practical",
+          "psr.toddler.practical.visual",
+          "psr.toddler.home",
+          "psr.toddler.home.visual",
+          "psr.toddler.arts",
+          "psr.toddler.arts.visual",
+          "psr.toddler.appendix",
+          "psr.toddler.appendix.visual"
+        ],
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "psr.toddler-pouring.alt-location",
+            "priority": "low",
+            "locations": [
+              "scene.alt"
+            ],
+            "finding": "The alt text says the shoes sit in a basket beside the low shelf. In the actual WebP, the basket sits on the shelf's bottom tier. The paper-like stack is on its middle tier and the crayons are on top.",
+            "sourceBasis": "Direct inspection of public/art/home-paper-toddler.webp at SHA-256 6590e3b468d918f375cf5fd7ea2362b45e511f0d41c0b1a7113b2b5b6ae2d422; source storage options checked on Toddler PDF 75-76.",
+            "requiredRevision": "Correct the shared scene alt metadata once, for example: A toddler pours water from a small pitcher into a cup at a low table, with a caregiver nearby and a folded cloth on the table. A low shelf holds crayons, paper, and a basket of shoes on its bottom tier. Retain the existing image bytes. Freeze/re-review each new art-context projection.",
+            "status": "open",
+            "resolution": null,
+            "reReview": null
+          }
+        ],
+        "resolutionLinks": [],
+        "reReviewLinks": [],
+        "assetChecks": [
+          {
+            "src": "art/home-paper-toddler.webp",
+            "sha256": "6590e3b468d918f375cf5fd7ea2362b45e511f0d41c0b1a7113b2b5b6ae2d422"
+          }
+        ],
+        "assessment": "The actual standing child uses a small pitcher over a cup at a low table; the adult watches nearby and a folded cloth is available. This is compatible with ordinary practical-life participation. No drinking/feeding posture or assurance of safe breakable materials is claimed. The apparent ceramic appearance does not establish a precise material; do not add such a claim. Correct the shared alt-text location error described below.",
+        "artChangesRequired": "No new image is required by this review; resolve the identified wording/context or alt metadata and review the new exact hashes."
+      },
+      "finalPublicationApproval": false
+    },
+    {
+      "entryId": "toddler-drawing",
+      "placementId": "18-24.toddler-drawing",
+      "ageId": "18-24",
+      "topicIds": [
+        "play-discovery"
+      ],
+      "openingOrder": 2,
+      "snapshotPath": "content/pilots/PROTOTYPE_BASELINE.json",
+      "snapshotFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+      "textPlacementSha256": "3995b20b735f72eef95e5080b6b3c897d80e9c46b207daaec9af413b48fcb6db",
+      "artContextSha256": "0947ad318020a78b0a74d68cb9ddf112b95089692924c7355e929701f70615c6",
+      "publicProjectionSha256": "90b86c6feb033140939635050e3791d2962b7125e9b885d5eea3f7eef9a4a742",
+      "summary": "The drawing copy closely preserves the arts-and-crafts section: easy marks, open exploration, own-paper demonstration and descriptive response.",
+      "actualSourceChecks": [
+        {
+          "id": "toddler-drawing.reviewed-existing-locator",
+          "sourceId": "toddler-2019",
+          "sourceSha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b",
+          "pdfPages": [
+            {
+              "start": 53,
+              "end": 54
+            }
+          ],
+          "section": "Chapter 3, “Arts and crafts.” Drawing tools, loose-line demonstrations, and descriptive feedback.",
+          "locator": "Existing page range checked against the exact prototype claims; see surface assessments and issues for additions/narrowing.",
+          "printedPages": [
+            {
+              "pdfPage": 53,
+              "printedPage": 44
+            },
+            {
+              "pdfPage": 54,
+              "printedPage": 45
+            }
+          ],
+          "printedVerification": {
+            "status": "visually-verified",
+            "verifier": "/root/prototype_source_review",
+            "date": "2026-09-10",
+            "method": "Read each small printed folio on the complete 110-dpi original-PDF rendering. Offset/viewer labels were not evidence.",
+            "pages": [
+              {
+                "pdfPage": 53,
+                "printedPage": 44
+              },
+              {
+                "pdfPage": 54,
+                "printedPage": 45
+              }
+            ]
+          },
+          "contextRead": [
+            {
+              "sourceId": "toddler-2019",
+              "readLogIds": [
+                "psr.toddler.arts",
+                "psr.toddler.arts.visual",
+                "psr.toddler.general",
+                "psr.toddler.general.visual",
+                "psr.toddler.appendix",
+                "psr.toddler.appendix.visual",
+                "psr.toddler.practical",
+                "psr.toddler.practical.visual",
+                "psr.toddler.home",
+                "psr.toddler.home.visual"
+              ]
+            }
+          ],
+          "readLogIds": [
+            "psr.toddler.arts",
+            "psr.toddler.arts.visual",
+            "psr.toddler.general",
+            "psr.toddler.general.visual",
+            "psr.toddler.appendix",
+            "psr.toddler.appendix.visual",
+            "psr.toddler.practical",
+            "psr.toddler.practical.visual",
+            "psr.toddler.home",
+            "psr.toddler.home.visual"
+          ]
+        }
+      ],
+      "ageBasisReview": {
+        "bookWording": [
+          {
+            "wording": "young toddlers (drawing); 12 months (Scribbling appendix row)",
+            "pdfPages": [
+              {
+                "start": 53,
+                "end": 53
+              },
+              {
+                "start": 245,
+                "end": 245
+              }
+            ]
+          }
+        ],
+        "readiness": "Interest in drawing and manipulating the tool; the general activity guidance follows the child and adjusts challenge (33, 36, 39). The 18-month statement on 53 is for scissors and gluing, not drawing.",
+        "editorialPlacement": "18-24 is a reasonable continuation of young-toddler drawing, not the book's starting age. Record the 12-month appendix context in final evidence."
+      },
+      "publicSurfaceAssessment": {
+        "opening": "Pass: paper, a small selection of grippable crayons, and scribbling as exploration convey the source's process-first approach.",
+        "topicSummary": "Pass: hand-made marks and accessible crayons, without a finished-picture target or milestone.",
+        "detail": "Pass: loose lines/squiggles and separate adult paper are explicit on 54; describing observed marks preserves the same page's feedback guidance. The when-they-seek-a-response wording also fits 37. Chunky crayons is a modest paraphrase of grippable crayons/material selection; the appendix's more precise example is a block crayon or chunky pencil, not a required product.",
+        "ageAndTopic": "Play & discovery fits. The prose does not turn the nearby scissors/gluing age into a drawing age, and does not generalize those tools' sensitive instructions into this invitation."
+      },
+      "textPlacementReview": {
+        "id": "toddler-drawing.prototype-baseline.source.text-placement",
+        "task": "/root/prototype_source_review",
+        "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+        "role": "source",
+        "reasoning": "xhigh",
+        "date": "2026-09-10",
+        "component": "text-placement",
+        "componentSha256": "3995b20b735f72eef95e5080b6b3c897d80e9c46b207daaec9af413b48fcb6db",
+        "snapshotPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "snapshotFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "snapshotEntryId": "toddler-drawing",
+        "draftPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "draftRevision": "frozen prototype baseline captured 2026-09-10",
+        "draftFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "sourceReadLogIds": [
+          "psr.toddler.arts",
+          "psr.toddler.arts.visual",
+          "psr.toddler.general",
+          "psr.toddler.general.visual",
+          "psr.toddler.appendix",
+          "psr.toddler.appendix.visual",
+          "psr.toddler.practical",
+          "psr.toddler.practical.visual",
+          "psr.toddler.home",
+          "psr.toddler.home.visual"
+        ],
+        "verdict": "pass",
+        "issues": [],
+        "resolutionLinks": [],
+        "reReviewLinks": []
+      },
+      "artContextReview": {
+        "id": "toddler-drawing.prototype-baseline.source.art-context",
+        "task": "/root/prototype_source_review",
+        "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+        "role": "source",
+        "reasoning": "xhigh",
+        "date": "2026-09-10",
+        "component": "art-context",
+        "componentSha256": "0947ad318020a78b0a74d68cb9ddf112b95089692924c7355e929701f70615c6",
+        "snapshotPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "snapshotFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "snapshotEntryId": "toddler-drawing",
+        "draftPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "draftRevision": "frozen prototype baseline captured 2026-09-10",
+        "draftFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "sourceReadLogIds": [
+          "psr.toddler.arts",
+          "psr.toddler.arts.visual",
+          "psr.toddler.general",
+          "psr.toddler.general.visual",
+          "psr.toddler.appendix",
+          "psr.toddler.appendix.visual",
+          "psr.toddler.practical",
+          "psr.toddler.practical.visual",
+          "psr.toddler.home",
+          "psr.toddler.home.visual"
+        ],
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "psr.toddler-drawing.alt-location",
+            "priority": "low",
+            "locations": [
+              "scene.alt"
+            ],
+            "finding": "The alt text says the shoes sit in a basket beside the low shelf. In the actual WebP, the basket sits on the shelf's bottom tier. The paper-like stack is on its middle tier and the crayons are on top.",
+            "sourceBasis": "Direct inspection of public/art/home-paper-toddler.webp at SHA-256 6590e3b468d918f375cf5fd7ea2362b45e511f0d41c0b1a7113b2b5b6ae2d422; source storage options checked on Toddler PDF 75-76.",
+            "requiredRevision": "Correct the shared scene alt metadata once, for example: A toddler pours water from a small pitcher into a cup at a low table, with a caregiver nearby and a folded cloth on the table. A low shelf holds crayons, paper, and a basket of shoes on its bottom tier. Retain the existing image bytes. Freeze/re-review each new art-context projection.",
+            "status": "open",
+            "resolution": null,
+            "reReview": null
+          }
+        ],
+        "resolutionLinks": [],
+        "reReviewLinks": [],
+        "assetChecks": [
+          {
+            "src": "art/home-paper-toddler.webp",
+            "sha256": "6590e3b468d918f375cf5fd7ea2362b45e511f0d41c0b1a7113b2b5b6ae2d422"
+          }
+        ],
+        "assessment": "Art materials are visible as props on the low shelf; the scene does not promise a representational drawing or show an adult correcting the child's paper. The common pouring vignette was independently checked against 35-36, 48-52, 75-77 and 251; it does not prescribe an additional drawing step. Correct the shared alt-text location error described below.",
+        "artChangesRequired": "No new image is required by this review; resolve the identified wording/context or alt metadata and review the new exact hashes."
+      },
+      "finalPublicationApproval": false
+    },
+    {
+      "entryId": "toddler-shoes",
+      "placementId": "18-24.toddler-shoes",
+      "ageId": "18-24",
+      "topicIds": [
+        "home-that-helps",
+        "everyday-care"
+      ],
+      "openingOrder": 3,
+      "snapshotPath": "content/pilots/PROTOTYPE_BASELINE.json",
+      "snapshotFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+      "textPlacementSha256": "ddb0b7cb37a491fe059e0a39f7cbd6ea3f0ac674fc2803fd58478845f376f63c",
+      "artContextSha256": "2bfd2dd79f29fa23e378094853646c52ed908844f57ff09ada610f4ab09d2015",
+      "publicProjectionSha256": "26eb0b75b507692b14fc9b49179f03b811390b86ebf130662f58c921e7dab6bd",
+      "summary": "The shoe-place and small participation idea is faithful. The stated slow demonstration and collaborative return need the source pages that actually explain them, beyond the current environment/activity-list references.",
+      "actualSourceChecks": [
+        {
+          "id": "toddler-shoes.reviewed-existing-locator",
+          "sourceId": "toddler-2019",
+          "sourceSha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b",
+          "pdfPages": [
+            {
+              "start": 51,
+              "end": 51
+            },
+            {
+              "start": 75,
+              "end": 76
+            }
+          ],
+          "section": "Chapter 4, “Setting up Montessori-style spaces” and “Entrance”; chapter 3, practical-life list.",
+          "locator": "Existing page range checked against the exact prototype claims; see surface assessments and issues for additions/narrowing.",
+          "printedPages": [
+            {
+              "pdfPage": 51,
+              "printedPage": 42
+            },
+            {
+              "pdfPage": 75,
+              "printedPage": 66
+            },
+            {
+              "pdfPage": 76,
+              "printedPage": 67
+            }
+          ],
+          "printedVerification": {
+            "status": "visually-verified",
+            "verifier": "/root/prototype_source_review",
+            "date": "2026-09-10",
+            "method": "Read each small printed folio on the complete 110-dpi original-PDF rendering. Offset/viewer labels were not evidence.",
+            "pages": [
+              {
+                "pdfPage": 51,
+                "printedPage": 42
+              },
+              {
+                "pdfPage": 75,
+                "printedPage": 66
+              },
+              {
+                "pdfPage": 76,
+                "printedPage": 67
+              }
+            ]
+          },
+          "contextRead": [
+            {
+              "sourceId": "toddler-2019",
+              "readLogIds": [
+                "psr.toddler.general",
+                "psr.toddler.general.visual",
+                "psr.toddler.practical",
+                "psr.toddler.practical.visual",
+                "psr.toddler.home",
+                "psr.toddler.home.visual",
+                "psr.toddler.arts",
+                "psr.toddler.arts.visual",
+                "psr.toddler.appendix",
+                "psr.toddler.appendix.visual"
+              ]
+            }
+          ],
+          "readLogIds": [
+            "psr.toddler.general",
+            "psr.toddler.general.visual",
+            "psr.toddler.practical",
+            "psr.toddler.practical.visual",
+            "psr.toddler.home",
+            "psr.toddler.home.visual",
+            "psr.toddler.arts",
+            "psr.toddler.arts.visual",
+            "psr.toddler.appendix",
+            "psr.toddler.appendix.visual"
+          ]
+        }
+      ],
+      "ageBasisReview": {
+        "bookWording": [
+          {
+            "wording": "12 to 18 months: Fetch shoes; later activities are additional to earlier ones",
+            "pdfPages": [
+              {
+                "start": 51,
+                "end": 52
+              }
+            ]
+          },
+          {
+            "wording": "toddler-wide entrance basket or shelf and home order; no 18-24-specific age",
+            "pdfPages": [
+              {
+                "start": 75,
+                "end": 76
+              }
+            ]
+          }
+        ],
+        "readiness": "A reachable place, interest in participation, and help proportional to the task. Putting-away can be modeled and shared, and may not happen every day (37-38).",
+        "editorialPlacement": "18-24 is a sensible later browsing placement for a simpler task. Fetching/returning shoes must not inherit the separate 18-month-to-3-year Velcro-shoe skill as a prerequisite."
+      },
+      "publicSurfaceAssessment": {
+        "opening": "Pass in substance: reachable shoe storage plus a small invitation to fetch or return, without demanding fastening.",
+        "topicSummary": "Pass in substance in both Home that helps and Everyday care: familiar reachable storage supports joining routines.",
+        "detail": "The predictable basket near an entrance is supported on 75-76 and fetching on 51. Slow demonstration and help with returning align with 35-38 but are missing from the existing citation. The one-shoe/fastening-not-required limit is a sound editorial narrowing, not a quotation that the book labels one shoe enough.",
+        "ageAndTopic": "Both assigned topics fit; none requires a particular room, shelf purchase, or independent fastening outcome."
+      },
+      "textPlacementReview": {
+        "id": "toddler-shoes.prototype-baseline.source.text-placement",
+        "task": "/root/prototype_source_review",
+        "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+        "role": "source",
+        "reasoning": "xhigh",
+        "date": "2026-09-10",
+        "component": "text-placement",
+        "componentSha256": "ddb0b7cb37a491fe059e0a39f7cbd6ea3f0ac674fc2803fd58478845f376f63c",
+        "snapshotPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "snapshotFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "snapshotEntryId": "toddler-shoes",
+        "draftPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "draftRevision": "frozen prototype baseline captured 2026-09-10",
+        "draftFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "sourceReadLogIds": [
+          "psr.toddler.general",
+          "psr.toddler.general.visual",
+          "psr.toddler.practical",
+          "psr.toddler.practical.visual",
+          "psr.toddler.home",
+          "psr.toddler.home.visual",
+          "psr.toddler.arts",
+          "psr.toddler.arts.visual",
+          "psr.toddler.appendix",
+          "psr.toddler.appendix.visual"
+        ],
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "psr.toddler-shoes.reference-coverage",
+            "priority": "medium",
+            "locations": [
+              "entry.references",
+              "displayContext.referenceLabels",
+              "entry.steps[1]",
+              "entry.steps[2]"
+            ],
+            "finding": "The current reference string supports storage/order and fetching but does not locate the slow demonstration/collaborative return used in the steps. Those distinct practical details have direct support in the general activity section.",
+            "sourceBasis": "Toddler printed 26-29 / PDF 35-38, especially the complete putting-away continuation on printed 29 / PDF 38.",
+            "requiredRevision": "Add structured references for the slow presentation and modeling/shared putting-away passages. Retain the small participation framing, and carry the book's flexibility (some days the adult helps/does it) if expanding the entry into a routine. No change to the core shoe invitation is required.",
+            "status": "open",
+            "resolution": null,
+            "reReview": null
+          }
+        ],
+        "resolutionLinks": [],
+        "reReviewLinks": []
+      },
+      "artContextReview": {
+        "id": "toddler-shoes.prototype-baseline.source.art-context",
+        "task": "/root/prototype_source_review",
+        "identity": "fresh independent source reviewer; not prototype author and not spirit/tone reviewer",
+        "role": "source",
+        "reasoning": "xhigh",
+        "date": "2026-09-10",
+        "component": "art-context",
+        "componentSha256": "2bfd2dd79f29fa23e378094853646c52ed908844f57ff09ada610f4ab09d2015",
+        "snapshotPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "snapshotFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "snapshotEntryId": "toddler-shoes",
+        "draftPath": "content/pilots/PROTOTYPE_BASELINE.json",
+        "draftRevision": "frozen prototype baseline captured 2026-09-10",
+        "draftFileSha256": "11ea0b6dd6c3f9c6d7900915205569c934642491cae7f26625b59c99ff5e3d83",
+        "sourceReadLogIds": [
+          "psr.toddler.general",
+          "psr.toddler.general.visual",
+          "psr.toddler.practical",
+          "psr.toddler.practical.visual",
+          "psr.toddler.home",
+          "psr.toddler.home.visual",
+          "psr.toddler.arts",
+          "psr.toddler.arts.visual",
+          "psr.toddler.appendix",
+          "psr.toddler.appendix.visual"
+        ],
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "psr.toddler-shoes.alt-location",
+            "priority": "low",
+            "locations": [
+              "scene.alt"
+            ],
+            "finding": "The alt text says the shoes sit in a basket beside the low shelf. In the actual WebP, the basket sits on the shelf's bottom tier. The paper-like stack is on its middle tier and the crayons are on top.",
+            "sourceBasis": "Direct inspection of public/art/home-paper-toddler.webp at SHA-256 6590e3b468d918f375cf5fd7ea2362b45e511f0d41c0b1a7113b2b5b6ae2d422; source storage options checked on Toddler PDF 75-76.",
+            "requiredRevision": "Correct the shared scene alt metadata once, for example: A toddler pours water from a small pitcher into a cup at a low table, with a caregiver nearby and a folded cloth on the table. A low shelf holds crayons, paper, and a basket of shoes on its bottom tier. Retain the existing image bytes. Freeze/re-review each new art-context projection.",
+            "status": "open",
+            "resolution": null,
+            "reReview": null
+          }
+        ],
+        "resolutionLinks": [],
+        "reReviewLinks": [],
+        "assetChecks": [
+          {
+            "src": "art/home-paper-toddler.webp",
+            "sha256": "6590e3b468d918f375cf5fd7ea2362b45e511f0d41c0b1a7113b2b5b6ae2d422"
+          }
+        ],
+        "assessment": "The reachable shoe basket on the lower shelf is consistent with the source's basket-or-shelf storage idea and ordinary participation. No fastening or other motor prerequisite is depicted. The composition need not reproduce a literal entryway; the source says room examples are adaptable. Correct the shared alt-text location error described below.",
+        "artChangesRequired": "No new image is required by this review; resolve the identified wording/context or alt metadata and review the new exact hashes."
+      },
+      "finalPublicationApproval": false
+    }
+  ],
+  "summary": {
+    "textPlacement": {
+      "pass": [
+        "baby-language",
+        "toddler-pouring",
+        "toddler-drawing"
+      ],
+      "revise": [
+        "baby-movement",
+        "baby-connection",
+        "toddler-shoes"
+      ],
+      "hold": []
+    },
+    "artContext": {
+      "pass": [
+        "baby-language",
+        "baby-connection"
+      ],
+      "revise": [
+        "baby-movement",
+        "toddler-pouring",
+        "toddler-drawing",
+        "toddler-shoes"
+      ],
+      "hold": []
+    },
+    "newArtworkRequired": false,
+    "fullPilotsApproved": false,
+    "nextAction": "Use these source findings with the pending whole-book handoffs to draft immutable pilots. Retain supported ordinary invitations; revise the movement presentation and position scope, preserve pickup limits on the short summary, add the shoe-demonstration sources, correct the shared toddler alt text, finalize references/age evidence, then obtain source and independent tone review of the exact resulting projections."
+  },
+  "learningsForCoordinator": [
+    {
+      "date": "2026-09-10",
+      "taskType": "Prototype source review",
+      "observation": "The Toddler appendix puts pouring at 18+ months while its household list includes small-jug pouring at 12-18 months; the able-to-carry-a-jug condition is on the adjacent handwashing row, not the pouring row.",
+      "action": "Preserve each passage's actual age/context and avoid borrowing a neighboring table prerequisite when assembling pilot age evidence.",
+      "confidence": "high"
+    },
+    {
+      "date": "2026-09-10",
+      "taskType": "Prototype source review",
+      "observation": "The Baby source cautions against propping sitting/standing but separately permits back/tummy positions; compressing this to every position the baby cannot reach alone changes the authors' meaning.",
+      "action": "Keep the position-specific distinction and source-only treatment when drafting the movement pilot; retain context/qualifications on short public surfaces.",
+      "confidence": "high"
+    }
+  ]
+}

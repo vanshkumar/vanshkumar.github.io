@@ -1,0 +1,259 @@
+{
+  "id": "baby-play-source-r06",
+  "reviewer": {
+    "task": "/root/pilot_baby_play_source_r04",
+    "role": "source",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Renewed independent source review of only the complete exact r06 6-9.baby-first-containers text/age/topic/reference placement and actual rendered surfaces, including resolution of my r04 wooden-egg finding. No art. No other-role report or other reviewer reading was used.",
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r06/RENDERED_SURFACES.json",
+    "sha256": "6d02e4f0edc1fa01046ad3fce232dfd4bd85179955a4a51bd58996a6180e21e0"
+  },
+  "renderer": [
+    {
+      "path": "src/HomeStudy.jsx",
+      "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c"
+    },
+    {
+      "path": "src/home.css",
+      "sha256": "55de72c5b21d2f1a3ead85c5975febd09ac3135fcbc2219e6672a13f4786a6e1"
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "503e980cdf9ba4728adf678bb27bc4cd4095d1ae131c3c02181cc4b9a4df22ce"
+    },
+    {
+      "path": "src/guide/catalog.js",
+      "sha256": "d8d30a17c5f1b1c99ed68764f3f412cf99b48f55d09bf528313f0df1439da71c"
+    },
+    {
+      "path": "src/concepts.js",
+      "sha256": "cb086bcc98ad4fde98677a03cb42a849ae5993405dd886a71e7642ca079a3e4a"
+    }
+  ],
+  "checkedInputs": [
+    {
+      "path": "content/pilots/revisions/r06/MANIFEST.json",
+      "sha256": "a72d8cb63ccc81b90f6a24fd8a1742572bd14eeb7ca08de5b0508f02ab3c4731"
+    },
+    {
+      "path": "content/pilots/revisions/r06/payload.json",
+      "sha256": "7bb37ff5e62290705decad9142584a4d0ca78bb8f5d56029f878f513d3bfd6bb"
+    },
+    {
+      "path": "content/pilots/drafts/baby/draft-r04.json",
+      "sha256": "1124334c410bf59fc445f739fffbfbaf3fbd2850415721a39f427fc7a8213633"
+    }
+  ],
+  "sourceArtifact": {
+    "sourceId": "baby-2021",
+    "path": "the-montessori-baby-a-parents-guide-to-nurturing-your-baby-with-love-respect-and-understanding-9781523514069.pdf",
+    "sha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f",
+    "pagination": "One-based physical PDF pages only; original bytes independently hashed."
+  },
+  "priorReview": {
+    "path": "content/pilots/reviews/final/baby-play-source-r04.json",
+    "sha256": "009c7d34064448b02c5523c660237ed79da18a9ea14d38f5f6b61af897161254",
+    "reviewId": "baby-play-source-r04.6-9.baby-first-containers",
+    "purpose": "Explicit evidence links for my retained personal original-page reading and the issue being re-reviewed, not a substitute for current wording judgment."
+  },
+  "identityVerification": "Recomputed selected snapshot file, textPlacement and publicProjection hashes, confirmed null artContext, compared selected payload public entry and placement with the snapshot, and checked all five current renderer file hashes against r06 MANIFEST.json. All matched. Rehashed the unchanged original Baby PDF and prior r04 report. A complete public-projection diff against my r04 input found only the wooden-egg wording change; all current surfaces were read independently.",
+  "readLogs": [
+    {
+      "id": "source.baby.play-r04.activities-text",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 127
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete introduction-to-activities unit from the original PDF, including ages as guidelines and support for developmental concerns, interest-based choice, mouthing/material and component-size qualifications, challenge versus frustration, optional later return to materials, independent exploration, adult responsiveness and clothing context.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/baby-play-source-r04.json",
+        "sha256": "009c7d34064448b02c5523c660237ed79da18a9ea14d38f5f6b61af897161254",
+        "readLogId": "source.baby.play-r04.activities-text",
+        "readerTask": "/root/pilot_baby_play_source_r04",
+        "note": "This is my own original-page reading completed for r04 and explicitly retained for this renewed review; it is not a claim that these entire spans were read again in r06."
+      }
+    },
+    {
+      "id": "source.baby.play-r04.movement-framing-text",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 140,
+          "end": 145
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read original movement framing and qualifications: voluntary movement, adult support, individual timing, removing obstacles and avoiding imposed sitting, plus the movement-mat unit. Image content missing from extraction was checked separately on 144-145.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/baby-play-source-r04.json",
+        "sha256": "009c7d34064448b02c5523c660237ed79da18a9ea14d38f5f6b61af897161254",
+        "readLogId": "source.baby.play-r04.movement-framing-text",
+        "readerTask": "/root/pilot_baby_play_source_r04",
+        "note": "This is my own original-page reading completed for r04 and explicitly retained for this renewed review; it is not a claim that these entire spans were read again in r06."
+      }
+    },
+    {
+      "id": "source.baby.play-r04.movement-detail-text",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 155,
+          "end": 169
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original pages including the full tummy-time discussion and discomfort response, slow-rolling objects, all 6-to-9 movement material through its observing questions, and 9-to-12 context through the complete fine-motor list and observation continuation. Read the actual discovery-basket contents and occasional-language qualification, independent-sitting discussion, home precautions and stable-furniture examples, precise-fit wooden egg, ring removal and later placement, and adjacent qualifications. Sensitive sleep/feeding/fall statements encountered here were read as context, not converted into procedures for these placements.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/baby-play-source-r04.json",
+        "sha256": "009c7d34064448b02c5523c660237ed79da18a9ea14d38f5f6b61af897161254",
+        "readLogId": "source.baby.play-r04.movement-detail-text",
+        "readerTask": "/root/pilot_baby_play_source_r04",
+        "note": "This is my own original-page reading completed for r04 and explicitly retained for this renewed review; it is not a claim that these entire spans were read again in r06."
+      }
+    },
+    {
+      "id": "source.baby.play-r04.appendix-intro-text",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 294,
+          "end": 294
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the original complete text on page 294, including the activity-list introduction: ages are guidelines; choose for individual interest and current skills; remove activities that are too hard or too easy.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/baby-play-source-r04.json",
+        "sha256": "009c7d34064448b02c5523c660237ed79da18a9ea14d38f5f6b61af897161254",
+        "readLogId": "source.baby.play-r04.appendix-intro-text",
+        "readerTask": "/root/pilot_baby_play_source_r04",
+        "note": "This is my own original-page reading completed for r04 and explicitly retained for this renewed review; it is not a claim that these entire spans were read again in r06."
+      }
+    },
+    {
+      "id": "source.baby.play-r04.movement-visual",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 144,
+          "end": 145
+        },
+        {
+          "start": 155,
+          "end": 156
+        },
+        {
+          "start": 158,
+          "end": 160
+        },
+        {
+          "start": 165,
+          "end": 169
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected readable individual full original-page renders at 125 dpi: illustrated grasp progression and its continuation; tummy-time and slow-object qualifications; childproofing box and furniture drawings with independent-sitting/discovery-basket text; the gross-motor illustration and continuation; and full fine-motor/observation pages including the precise-fit egg example and drawer illustration. Did not use pictured age stages as independent developmental requirements.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/baby-play-source-r04.json",
+        "sha256": "009c7d34064448b02c5523c660237ed79da18a9ea14d38f5f6b61af897161254",
+        "readLogId": "source.baby.play-r04.movement-visual",
+        "readerTask": "/root/pilot_baby_play_source_r04",
+        "note": "This is my own original-page reading completed for r04 and explicitly retained for this renewed review; it is not a claim that these entire spans were read again in r06."
+      }
+    },
+    {
+      "id": "source.baby.play-r04.appendix-visual",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 294,
+          "end": 294
+        },
+        {
+          "start": 299,
+          "end": 301
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally read full original-page renders at readable 125 dpi, including all columns and complete rows, not an extraction or research paraphrase. Confirmed familiar basket: 5 or 6+ months, two or three familiar toys, small soft basket, lying or sitting; ottoman: once pulling up from 7+ months, heavy/stable/non-tipping; egg and cube: between 7 and 9+ months and both wooden; tray/ball: around 8+ months; low heavy table: pulling-to-standing readiness around 8 to 10+ months; rocking rings: stable sitting around 8 to 11 months, initially largest ring; stable-base rings: 8 to 12+ depending on previous skill, initially large opening. Also read surrounding rows and the age-guideline introduction.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/baby-play-source-r04.json",
+        "sha256": "009c7d34064448b02c5523c660237ed79da18a9ea14d38f5f6b61af897161254",
+        "readLogId": "source.baby.play-r04.appendix-visual",
+        "readerTask": "/root/pilot_baby_play_source_r04",
+        "note": "This is my own original-page reading completed for r04 and explicitly retained for this renewed review; it is not a claim that these entire spans were read again in r06."
+      }
+    },
+    {
+      "id": "source.baby.play-r06.wooden-egg-visual",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 167,
+          "end": 167
+        },
+        {
+          "start": 300,
+          "end": 300
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally reread two complete original PDF pages in newly generated readable 125 dpi full-page renders for r06. Page 167 specifies the wooden egg or peg in a matching cup, posting-box action, and removal before later replacement of rings. Page 300 specifies a wooden egg cup with a wooden egg or a large ball in a cup; independently read every table row and its own age/description columns, including egg/cube 7 to 9+ months and tray/ball around 8+ months. These are original PDF page renders, not author/research paraphrases."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "baby-play-source-r06.6-9.baby-first-containers",
+      "entryId": "baby-first-containers",
+      "placementId": "6-9.baby-first-containers",
+      "snapshotPath": "content/pilots/revisions/r06/snapshots/6-9.baby-first-containers.json",
+      "snapshotFileSha256": "7eb6f6c9521abed70fe198940af8e4efda574d5c937c56f7662b47792c64a4bb",
+      "textPlacementSha256": "29b0c69368b3f16f31ccc77fa8e648a3250311c296086886509d820e9af473c5",
+      "artContextSha256": null,
+      "readLogIds": [
+        "source.baby.play-r04.activities-text",
+        "source.baby.play-r04.movement-framing-text",
+        "source.baby.play-r04.movement-detail-text",
+        "source.baby.play-r04.appendix-intro-text",
+        "source.baby.play-r04.movement-visual",
+        "source.baby.play-r04.appendix-visual",
+        "source.baby.play-r06.wooden-egg-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass on my renewed independent source judgment of the complete exact r06 text placement, not merely a carried-forward verdict. I read the complete frozen entry, 6-to-9 age/readiness metadata, Play & discovery topic row, rendered full entry and reference labels, and the actual HomeStudy renderer. The public first detail now specifies a wooden egg in a matching cup, agreeing with original physical PDF pages 167 and 300, which I personally visually reread for this review. The sole public-projection change from r04 is that material clarification. The topic summary still attributes the authors perspective and includes both mouthing/secure-part qualifications and the main 9-to-12 versus earlier appendix distinction before detail is opened. The full entry preserves removal and later return, the different posting-box action, stable-sitting readiness for rocking rings, and the preceding-skill basis of stable-base rings. The age context accurately distinguishes main prose 9-to-12 months, appendix egg/cube 7-to-9+ months, tray box around 8+, and rocking rings stable sitting around 8-to-11. Its interest-led browsing note and possibilities-to-revisit framing do not make a 6-to-9 developmental deadline or completion list. Full relevant source context and page-301 row details remain supported by my explicitly linked personal r04 reading. No new source context is introduced by the correction, and no added clinical advice, procedures or safety certification are implied. There is no opening projection or art context for this placement."
+      },
+      "artContext": null,
+      "resolvedIssueIds": [
+        "baby-play-source-r04.first-containers.wooden-egg"
+      ],
+      "resolutions": [
+        {
+          "issueId": "baby-play-source-r04.first-containers.wooden-egg",
+          "status": "resolved",
+          "priorReport": {
+            "path": "content/pilots/reviews/final/baby-play-source-r04.json",
+            "sha256": "009c7d34064448b02c5523c660237ed79da18a9ea14d38f5f6b61af897161254",
+            "reviewId": "baby-play-source-r04.6-9.baby-first-containers"
+          },
+          "field": "publicProjection.textPlacement.entry.detail[0]",
+          "verifiedReplacement": "A wooden egg in a matching cup",
+          "resolution": "Verified this exact replacement in the frozen r06 snapshot and actual rendered entryText against original physical PDF pages 167 and 300. It restores the specified object material and resolves my r04 ambiguity finding; the earlier immutable finding remains unchanged.",
+          "snapshotFileSha256": "7eb6f6c9521abed70fe198940af8e4efda574d5c937c56f7662b47792c64a4bb",
+          "textPlacementSha256": "29b0c69368b3f16f31ccc77fa8e648a3250311c296086886509d820e9af473c5",
+          "readLogIds": [
+            "source.baby.play-r06.wooden-egg-visual"
+          ]
+        }
+      ]
+    }
+  ]
+}

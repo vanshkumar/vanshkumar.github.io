@@ -1,0 +1,609 @@
+{
+  "id": "toddler-play-tone-r02",
+  "reviewer": {
+    "task": "/root/pilot_toddler_play_tone",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Independent tone review of exactly the 13 toddler-play r02 entries and their 13 frozen 18–24-month placements, actual server-rendered opening/topic/detail text and the drawing-opening art context. No release claim.",
+  "independence": "Reviewer did not author the content and did not read another reviewer or role report before independent judgment. No other batch received a review. The wider play topic was scanned by title only for repetition. Original source units were personally read; author provenance and research-ready status were not treated as publication approval.",
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r02/RENDERED_SURFACES.json",
+    "sha256": "186f8914b494c8a76ca9735f1d3f212273e9f43040683497e311f5e8cb92b048"
+  },
+  "inputs": [
+    {
+      "path": "content/pilots/revisions/r02/MANIFEST.json",
+      "sha256": "b95284165cf0d9c48216d63a25d5f2bf544557b513ff0304d9a0bac55f4235e1"
+    },
+    {
+      "path": "content/pilots/revisions/r02/payload.json",
+      "sha256": "fe5655f12ddc5e71cba7cc5ff0c097254b4a332c390136b4244a92c9770a1b36"
+    },
+    {
+      "path": "content/pilots/drafts/toddler/draft-r02.json",
+      "sha256": "f39ed756bf39cf2962b21557a05828838069d1037ca3c4fcca8e1667640f45b7"
+    },
+    {
+      "path": "src/HomeStudy.jsx",
+      "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c"
+    }
+  ],
+  "sourceVerification": {
+    "sourceId": "toddler-2019",
+    "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/The Montessori Toddler - Simone Davies _Worldfreebooks.com_.pdf",
+    "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b",
+    "bytes": 7036292,
+    "physicalPdfPages": 257,
+    "manifestMatch": true,
+    "method": "Compared exact original PDF bytes, SHA-256 and pypdf physical-page count to SOURCE_MANIFEST.md. All pilot reader references use physical PDF pages; no new printed-page equivalence was inferred."
+  },
+  "verification": "Read HomeStudy rendering behavior and every assigned frozen projection, corresponding payload/draft entry and placement, private entry provenance and actual RENDERED_SURFACES text. Independently checked all 13 snapshot file hashes and recomputed textPlacement/artContext/publicProjection hashes; all matched. Current renderer file hashes match the frozen manifest. Only drawing has opening art in this batch. Source text was extracted directly from the verified original into ignored scratch and read page by page; full-page visual reads are logged separately and do not claim unviewed extracts as read.",
+  "readLogs": [
+    {
+      "id": "tone.toddler-play.scope-framing",
+      "reader": "/root/pilot_toddler_play_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        },
+        {
+          "start": 26,
+          "end": 26
+        },
+        {
+          "start": 29,
+          "end": 29
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text: the approximate one-to-three toddler scope, the entire sensitive-period table including its individual-timing heading, and individual development, respect and observation. The table also received a readable full-page visual read."
+    },
+    {
+      "id": "tone.toddler-play.general-activity",
+      "reader": "/root/pilot_toddler_play_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 33,
+          "end": 42
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text from the whole-child activity introduction through activity characteristics, showing activities, all ten general principles, setup and both setup examples. This includes indicative ages, repeated partial sequences, declined help, warm feedback after concentration, shared cleanup, stopping harmful use, adapting difficulty, available materials, small/sharp-object supervision, and watercolor setup. Page 41 photo/layout separately inspected visually."
+    },
+    {
+      "id": "tone.toddler-play.hand-and-music",
+      "reader": "/root/pilot_toddler_play_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 43,
+          "end": 47
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete eye-hand coordination and music/movement units, including threading, posting, opening/closing, sorting, mystery bags, puzzle continuation, music for pleasure, shared rhythm, movement examples and indoor/outdoor context. Later and equipment-specific examples were read as context, not promoted into this pilot."
+    },
+    {
+      "id": "tone.toddler-play.practical-context",
+      "reader": "/root/pilot_toddler_play_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 48,
+          "end": 52
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read the complete practical-life unit and age table: ordinary participation, adult supervision and limited capacity, small amounts, spills and available cloths, simpler sequences, household substitutions, pouring, fetching shoes and sorting clothing. Used for sorting and the complete drawing-opening scene context, without reviewing other batches' authored entries."
+    },
+    {
+      "id": "tone.toddler-play.art-language",
+      "reader": "/root/pilot_toddler_play_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 53,
+          "end": 58
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete arts/crafts and language units and their continuations: materials, younger-toddler paint supervision, process and nonprescriptive examples, feedback and drawing on separate paper; real/replica objects, identical before similar matching, all three lesson periods including the over-three condition, books and occasional pretend-book exception, conversation and silence. No dough recipe or procedure was imported."
+    },
+    {
+      "id": "tone.toddler-play.examples-visual",
+      "reader": "/root/pilot_toddler_play_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 59,
+          "end": 68
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read all ten original pages at a readable 1400-pixel page height, including complete photograph pages and complete facing captions. Inspected the five-piece peg puzzle and small-button sorting distinction; all music/movement captions and apparatus; practical-life photos/captions as scene context; watercolor, scribbling, chalk, glue and clay tools with their ages; real and replica vocabulary objects, identical/similar object-picture examples, cards and books. These were full original-page visual reads, not thumbnail or extraction-only checks."
+    },
+    {
+      "id": "tone.toddler-play.tables-and-setup-visual",
+      "reader": "/root/pilot_toddler_play_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 26,
+          "end": 26
+        },
+        {
+          "start": 41,
+          "end": 41
+        },
+        {
+          "start": 51,
+          "end": 52
+        },
+        {
+          "start": 56,
+          "end": 56
+        },
+        {
+          "start": 80,
+          "end": 80
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read each complete original page at readable resolution: individual-timing table and all rows, setup tray photograph and elements, the two-page practical-life age table, complete three-period language table, and complete reading-place/outside table. Verified headings and row/column associations rather than relying on extracted order."
+    },
+    {
+      "id": "tone.toddler-play.outdoors-home",
+      "reader": "/root/pilot_toddler_play_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 69,
+          "end": 72
+        },
+        {
+          "start": 80,
+          "end": 80
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete outdoors/nature and non-Montessori-toys/home units, the final activity-chapter page, and complete reading-place/outside table. Included quiet observation, varied outdoor examples, alternatives without home outdoor space, existing favorites, open-ended play, the home/classroom distinction, modest beginnings and relationship."
+    },
+    {
+      "id": "tone.toddler-play.curiosity-creativity",
+      "reader": "/root/pilot_toddler_play_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 97,
+          "end": 104
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text from wonder and the seven-principle introduction through following interests with limits, discovery, family time/capacity, going slowly, help and mistakes, and the complete imagination/fantasy and artistic-creativity units. PDF 103 contains the reality/imagination and pretend-play discussion; PDF 104 is the artistic-creativity continuation. Did not import guaranteed outcomes or fantasy prohibitions."
+    },
+    {
+      "id": "tone.toddler-play.concentration-frustration",
+      "reader": "/root/pilot_toddler_play_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 177,
+          "end": 178
+        },
+        {
+          "start": 194,
+          "end": 194
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read both full concentration/frustration pages, including response to the child, repeat interest, proportional help, declined help/anger and another attempt. Read complete PDF 194 as supplementary context, including the explicit immediate-danger exception to pausing; this is not a claim to have read the entire adult chapter."
+    },
+    {
+      "id": "tone.toddler-play.appendix-visual",
+      "reader": "/root/pilot_toddler_play_tone",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 245,
+          "end": 252
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Read the complete eight original appendix pages at readable 1400-pixel page height, including age, activity, materials/description and development columns for every visible row. Checked toddler-context all-ages language/music/books, scribbling, easel chalk versus standing-readiness paint and paint-in-a-cup grammar, hand materials and closures, identical/similar cards, movement variants, clay, sorting, vocabulary cards, gluing and adjacent later rows. Original PDF 244 was also visually inspected as an unnumbered appendix divider; it is not counted as substantive reading here."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "toddler-play-tone-r02.18-24.toddler-drawing",
+      "entryId": "toddler-drawing",
+      "placementId": "18-24.toddler-drawing",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-drawing.json",
+      "snapshotFileSha256": "d30dd6e1622b6e2b69063166f3ba7a5893a6f1f4c980e562e2fe452cb59f394f",
+      "textPlacementSha256": "a9325c8d9f526095aee2f353ad2e27e2f92fe1b79379f9545bec75b074583d34",
+      "artContextSha256": "80d7edb00a2b28b69537b49d31fdba671c59ba3b2d99bb706daa80afeac04dbe",
+      "readLogIds": [
+        "tone.toddler-play.scope-framing",
+        "tone.toddler-play.general-activity",
+        "tone.toddler-play.art-language",
+        "tone.toddler-play.examples-visual",
+        "tone.toddler-play.tables-and-setup-visual",
+        "tone.toddler-play.appendix-visual",
+        "tone.toddler-play.practical-context"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for the exact opening, topic row and detail. “Make a mark” is concrete and inviting; paper, an easy-mark material, separate adult paper and loose lines make the suggestion usable. Responding when the child looks over preserves warmth without interrupting concentration. The copy leaves the product, repetition and amount of participation to the child, offers no performance target, and presents the source age alongside interest rather than as a deadline."
+      },
+      "artContext": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass for this exact drawing opening and complete shared scene, separate from the text verdict. The actual scene shows a standing toddler pouring with one hand on a small pitcher and the other steadying a cup; a relaxed caregiver kneels nearby, a cloth is on the table, and a low shelf holds three crayons, paper and a shoe basket on the bottom tier. It depicts pouring, not a child drawing; the available drawing materials support the “Draw” choice without showing a model picture to copy. The source-supported modest materials and nearby adult accord with the open-ended invitation. The alt text accurately distinguishes the action and shelf contents. The caption, choice navigation and colophon frame this as an illustrative home possibility, not a furniture plan, developmental test or obligation to perform all three actions. No separate key-moment image is present.",
+        "assetReads": [
+          {
+            "src": "art/home-paper-toddler.webp",
+            "sha256": "6590e3b468d918f375cf5fd7ea2362b45e511f0d41c0b1a7113b2b5b6ae2d422",
+            "mode": "actual-image-visual",
+            "description": "Personally inspected the actual 1536×1024 public WebP bytes with view_image, including the whole composition, both child hands, cup/pitcher/water, child posture and feet, nearby caregiver hands/posture, spill cloth, crayons and paper shelf, and bottom-tier shoes. The source image was read directly; generation prompts were not used as evidence of its content."
+          }
+        ],
+        "readLogIds": [
+          "tone.toddler-play.scope-framing",
+          "tone.toddler-play.general-activity",
+          "tone.toddler-play.art-language",
+          "tone.toddler-play.practical-context",
+          "tone.toddler-play.examples-visual",
+          "tone.toddler-play.tables-and-setup-visual",
+          "tone.toddler-play.appendix-visual"
+        ]
+      }
+    },
+    {
+      "id": "toddler-play-tone-r02.18-24.toddler-puzzles",
+      "entryId": "toddler-puzzles",
+      "placementId": "18-24.toddler-puzzles",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-puzzles.json",
+      "snapshotFileSha256": "b2dc757296d0aad3d3f628da1f0a87d45f9e5571d0d5099dc3a7a726876fc88f",
+      "textPlacementSha256": "5f653c6344b3af5b6e5301afaf0ab48ed0643449e868a16773fb2bec149c1ab8",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone.toddler-play.scope-framing",
+        "tone.toddler-play.general-activity",
+        "tone.toddler-play.hand-and-music",
+        "tone.toddler-play.examples-visual",
+        "tone.toddler-play.appendix-visual",
+        "tone.toddler-play.concentration-frustration"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass. The title and summary explicitly welcome taking a puzzle apart before reassembly; the detail offers replacement pieces, a slow turn or cue, and a harder puzzle another time. Help is available and the adult is not tasked with producing a completed puzzle. Small-part supervision appears with the material detail; the short row does not introduce small loose objects or a fixed completion age."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-play-tone-r02.18-24.toddler-fitting-and-turning",
+      "entryId": "toddler-fitting-and-turning",
+      "placementId": "18-24.toddler-fitting-and-turning",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-fitting-and-turning.json",
+      "snapshotFileSha256": "c8712836db033c3f42780cae0ee7c925136083357b1c8c2e1e23731359d74353",
+      "textPlacementSha256": "7fc667075b58bc60ee76d7a34a5976cea60c360bb2702a6ebbed2af9832ea596",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone.toddler-play.scope-framing",
+        "tone.toddler-play.general-activity",
+        "tone.toddler-play.hand-and-music",
+        "tone.toddler-play.examples-visual",
+        "tone.toddler-play.appendix-visual"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "toddler-play-tone-r02.fitting-title",
+            "severity": "low",
+            "field": "entry.title",
+            "surface": "play-discovery topic-row heading and detail heading",
+            "finding": "“What their hands keep trying” does not identify the fitting/opening/turning situation. In the same topic it could name the adjacent puzzle, drawing, glue or music entries. Its summary and cue supply the useful concrete distinction only after the reader has passed the title.",
+            "requiredCorrection": "Make the title name a supported action or object, such as fitting shapes or opening and closing, while preserving the existing interest-led perspective. The body does not need a blanket rewrite.",
+            "status": "open"
+          }
+        ],
+        "assessment": "The perspective, summary and detail preserve repeated movements, taking pieces off first, adjustable difficulty, supervision and freedom from collecting all the materials. The listed ages remain examples rather than deadlines. Revise only the abstract title so parents can distinguish this situation from neighboring hand activities."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-play-tone-r02.18-24.toddler-sorting",
+      "entryId": "toddler-sorting",
+      "placementId": "18-24.toddler-sorting",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-sorting.json",
+      "snapshotFileSha256": "f5c8ad200c8b5cc335ea01d83f299f0d9db823fd4afbaa6fa3753ef499303d19",
+      "textPlacementSha256": "e2cbbb825fbd715230a445d99fe7220f0caeeabad4f0cd329467034227319021",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone.toddler-play.scope-framing",
+        "tone.toddler-play.general-activity",
+        "tone.toddler-play.hand-and-music",
+        "tone.toddler-play.examples-visual",
+        "tone.toddler-play.practical-context",
+        "tone.toddler-play.tables-and-setup-visual",
+        "tone.toddler-play.appendix-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass. The short row carries adult supervision and describes interest rather than a sorting test. The full detail preserves the crucial distinction between broad sorting around eighteen months and the small-button photograph from two years, and offers ordinary clothing as a recognizable example. “Belongs together” is kept exploratory by the explicit no-quiz context. Reference wording about adjacent distinctions is a locator, not an exposed review verdict."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-play-tone-r02.18-24.toddler-music",
+      "entryId": "toddler-music",
+      "placementId": "18-24.toddler-music",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-music.json",
+      "snapshotFileSha256": "83d3cfa4b2a3841cc734f7c09028d4d8803b0d3ee6b7f794dce2e2bd86fd4a8a",
+      "textPlacementSha256": "ba37d0379dd11ea41281582f4c56a9404b8ea23ee82789081e8fd3c168dc6b76",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone.toddler-play.scope-framing",
+        "tone.toddler-play.general-activity",
+        "tone.toddler-play.hand-and-music",
+        "tone.toddler-play.examples-visual",
+        "tone.toddler-play.appendix-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass in both topic contexts. Enjoying a song, copying a movement or listening are feasible alternatives, and the adult need not perform well. Cultural dances, the child's answer and quiet listening all retain the social pleasure of the source without promises of development or a required music kit. “All ages” is expressly bounded to the toddler appendix."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-play-tone-r02.18-24.toddler-books",
+      "entryId": "toddler-books",
+      "placementId": "18-24.toddler-books",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-books.json",
+      "snapshotFileSha256": "122fa382a9d347a6e0a7de8fab13bb6bc1ee352fd70169609f561085c60ee960",
+      "textPlacementSha256": "2876d39de6992120d0e2705abfcf4eb53cf1cccfd78728f8a30290121a742c04",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone.toddler-play.scope-framing",
+        "tone.toddler-play.general-activity",
+        "tone.toddler-play.art-language",
+        "tone.toddler-play.examples-visual",
+        "tone.toddler-play.outdoors-home",
+        "tone.toddler-play.tables-and-setup-visual",
+        "tone.toddler-play.appendix-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass across play, home and connection topic rows and detail. The title recognizes the familiar repeated-book situation. Adult enjoyment, different families and cultures, modest visible book choices and interest-led complexity keep the entry useful without a shopping standard. The realistic-book preference is attributed and the occasional pretend-story exception remains visible."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-play-tone-r02.18-24.toddler-conversation",
+      "entryId": "toddler-conversation",
+      "placementId": "18-24.toddler-conversation",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-conversation.json",
+      "snapshotFileSha256": "43eb4b8992179f2a33da098aee30e69dfcbcee8306d664db0415e1d6b275208b",
+      "textPlacementSha256": "b86823210601b26fca545a2e267a3e83e70ca8618c8c88674921c8e0d4ad7a69",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone.toddler-play.scope-framing",
+        "tone.toddler-play.general-activity",
+        "tone.toddler-play.art-language",
+        "tone.toddler-play.tables-and-setup-visual",
+        "tone.toddler-play.appendix-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass in play and connection placements. The short text treats gestures and sounds as real communication now; detail supplies ordinary shared naming, time to reply, natural full words, showing when unclear, and silence. Cultural appropriateness of eye contact remains public. It creates neither a vocabulary test nor an obligation to narrate every moment."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-play-tone-r02.18-24.toddler-objects-and-pictures",
+      "entryId": "toddler-objects-and-pictures",
+      "placementId": "18-24.toddler-objects-and-pictures",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-objects-and-pictures.json",
+      "snapshotFileSha256": "cb6cc6aecd4114d81126f196b8b87eee3e1dd41d4fd489bc1f16148eca210489",
+      "textPlacementSha256": "7969fd378ad1a720ef62834cd301aa52d78006fb24fea97832716ed078568386",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone.toddler-play.scope-framing",
+        "tone.toddler-play.general-activity",
+        "tone.toddler-play.art-language",
+        "tone.toddler-play.examples-visual",
+        "tone.toddler-play.tables-and-setup-visual",
+        "tone.toddler-play.appendix-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass in both topic rows and full detail. The familiar-object title and naming invitation are concrete; matching is optional, identical before similar is preserved, mistakes are not treated as failed answers, and the source's formal test is clearly outside this age. Supervision is explicit where small real or replica objects enter the detail. No specialized purchased collection is required."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-play-tone-r02.18-24.toddler-paint-and-chalk",
+      "entryId": "toddler-paint-and-chalk",
+      "placementId": "18-24.toddler-paint-and-chalk",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-paint-and-chalk.json",
+      "snapshotFileSha256": "9e5145b71621f7a8b319591c6bc5e8bf370507bf4d909f9f1802a1d2b1b24e0c",
+      "textPlacementSha256": "dc4a99b539bea7998b2b529c205ea80494ae077e10acdcaa0cce15a54f98536c",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone.toddler-play.scope-framing",
+        "tone.toddler-play.general-activity",
+        "tone.toddler-play.art-language",
+        "tone.toddler-play.examples-visual",
+        "tone.toddler-play.tables-and-setup-visual",
+        "tone.toddler-play.appendix-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass. The source-attributed short row keeps adult help/supervision and process over finished picture. The details distinguish watercolor, large chalk surfaces and easel painting, preserve standing readiness rather than inventing an easel age, and describe one color of paint in a cup rather than a measured cupful. The related “mark” titles distinguish drawing from further materials when read with their specific summaries."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-play-tone-r02.18-24.toddler-glue-and-mold",
+      "entryId": "toddler-glue-and-mold",
+      "placementId": "18-24.toddler-glue-and-mold",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-glue-and-mold.json",
+      "snapshotFileSha256": "77ad09b2856d732ef9d78b5ad45ee699f2c2970432f8996c35d19a90cdbca74d",
+      "textPlacementSha256": "f553e94bf415bfe75224285767204e7a5dfeb88abc5b81acb2dd0219b232c501",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone.toddler-play.scope-framing",
+        "tone.toddler-play.general-activity",
+        "tone.toddler-play.art-language",
+        "tone.toddler-play.examples-visual",
+        "tone.toddler-play.appendix-visual"
+      ],
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass. The action title and material-specific summary are recognizable, supervised and nonprescriptive. The detail retains large paper shapes as the appendix example, permits one repeated movement, and does not supply an invented edible-material claim or homemade-dough recipe. The brief glue sequence is attributed source description without demanding a finished product."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-play-tone-r02.18-24.toddler-outside-noticing",
+      "entryId": "toddler-outside-noticing",
+      "placementId": "18-24.toddler-outside-noticing",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-outside-noticing.json",
+      "snapshotFileSha256": "ffa66ea1a0c7e83380158a94eb66c967076970f6f141ea1c264e002aa650e286",
+      "textPlacementSha256": "407b77e2dbd25fd7b9ed4633393364a46cd64ce2d954e7a00553b45a7a14d0d5",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone.toddler-play.scope-framing",
+        "tone.toddler-play.general-activity",
+        "tone.toddler-play.outdoors-home",
+        "tone.toddler-play.tables-and-setup-visual",
+        "tone.toddler-play.curiosity-creativity"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "toddler-play-tone-r02.outside-materials-context",
+            "severity": "medium",
+            "field": "placement.ageContext.readiness",
+            "surface": "detail / Age, interest & context",
+            "finding": "“Follow interest and how comfortably your child manages the materials” is an activity-material template inside an invitation to watch leaves, clouds and insects. No materials are proposed here. It introduces an irrelevant handling requirement and weakens the specific, accessible invitation to notice together.",
+            "requiredCorrection": "Remove the materials clause or replace this line with the entry's supported interest cue about stopping, pointing or looking together. Keep the existing allowance for adult time and for families without outdoor space.",
+            "status": "open"
+          }
+        ],
+        "assessment": "The title, topic row and main paragraphs give warm, concrete possibilities without needing a garden, equipment, a lesson or a daily quota. “When you have time” preserves family capacity. Revise the unrelated material-handling readiness template; the main invitation can remain."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-play-tone-r02.18-24.toddler-room-to-move",
+      "entryId": "toddler-room-to-move",
+      "placementId": "18-24.toddler-room-to-move",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-room-to-move.json",
+      "snapshotFileSha256": "cfb8e7182a64886356cb673a4649b162e1d5c935f6598a5948228fea7db5ffe8",
+      "textPlacementSha256": "fb04a3cbc1a4918374f76fee2a42f2346a620fd4bbce8bb703cde50a00dcfe90",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone.toddler-play.scope-framing",
+        "tone.toddler-play.general-activity",
+        "tone.toddler-play.hand-and-music",
+        "tone.toddler-play.examples-visual",
+        "tone.toddler-play.tables-and-setup-visual",
+        "tone.toddler-play.appendix-visual"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "toddler-play-tone-r02.movement-materials-context",
+            "severity": "medium",
+            "field": "placement.ageContext.readiness",
+            "surface": "detail / Age, interest & context",
+            "finding": "The same “how comfortably your child manages the materials” line fits neither running nor dancing, two of this entry's main examples. Before the body discusses equipment only as contextual possibilities, this line makes material handling sound like the general criterion for everyday movement.",
+            "requiredCorrection": "Use the source-supported cue about the child's current movements and available space, or omit the generic line. Keep equipment ages/readiness distinct and do not add a skill sequence or apparatus instruction.",
+            "status": "open"
+          }
+        ],
+        "assessment": "The perspective preserves current movements, space constraints and differing equipment contexts rather than implying a list of achievements at this age. The summary names running, dancing and a ball, so the broader movement title is understandable in the topic scan; the isolated “Room for” title is not itself grounds for a blanket wording change. Revise the material-handling readiness line to match bodily movement."
+      },
+      "artContext": null
+    },
+    {
+      "id": "toddler-play-tone-r02.18-24.toddler-everyday-play",
+      "entryId": "toddler-everyday-play",
+      "placementId": "18-24.toddler-everyday-play",
+      "snapshotPath": "content/pilots/revisions/r02/snapshots/18-24.toddler-everyday-play.json",
+      "snapshotFileSha256": "a56657b0a6167d6ac0beef7db65747ae2b14597eba9e0d8acc261777cca74939",
+      "textPlacementSha256": "23da4e162eb4cc0f8af9750f5748b80a746653a4c5710406894ce022fb047d14",
+      "artContextSha256": null,
+      "readLogIds": [
+        "tone.toddler-play.scope-framing",
+        "tone.toddler-play.general-activity",
+        "tone.toddler-play.outdoors-home",
+        "tone.toddler-play.curiosity-creativity"
+      ],
+      "textPlacement": {
+        "verdict": "revise",
+        "issues": [
+          {
+            "id": "toddler-play-tone-r02.pretend-reference",
+            "severity": "medium",
+            "field": "entry.references[id=toddler-everyday-play.ref.2].pdfPages and .locator",
+            "surface": "detail / Back to the books",
+            "finding": "The visible reference promises “Reality-based imagination, everyday pretend play and open-ended materials” but sends the reader only to PDF 104. Personally reading the full unit shows that discussion on PDF 103; PDF 104 covers artistic creativity. The reference does not return a parent to the described passage or its age/context qualifications.",
+            "requiredCorrection": "Include PDF 103 in this reference (103–104 if retaining the artistic-creativity continuation) and ensure the locator describes the pages actually linked. Preserve the distinction between the toddler-wide home-play discussion on PDF 71 and the later pretend-play discussion on PDF 103; do not turn the latter into an expectation for every 18–24-month-old.",
+            "status": "open"
+          }
+        ],
+        "assessment": "The familiar-favorites title and source-attributed summary reduce purchase and classroom-replication pressure. The main text permits ordinary pretend experience without requiring performance, and keeps material fit and supervision. Revise the misdirected reader reference so its source qualification is available at the cited place; the 18–24 placement must continue to avoid treating the later pretend-play passage as a milestone."
+      },
+      "artContext": null
+    }
+  ],
+  "counts": {
+    "entries": 13,
+    "placements": 13,
+    "textPass": 9,
+    "textRevise": 4,
+    "textHold": 0,
+    "artPass": 1,
+    "artRevise": 0,
+    "artHold": 0,
+    "openIssues": 4
+  },
+  "learnings": [
+    {
+      "date": "2026-09-10",
+      "taskType": "Independent pilot tone review",
+      "observation": "The frozen r02 outdoor-noticing and everyday-movement placements share a material-handling readiness sentence even though their main examples are watching, running and dancing.",
+      "action": "Review each public ageContext line against its specific reader situation; keep body-specific interest cues when reusing placement metadata.",
+      "confidence": "high"
+    }
+  ]
+}

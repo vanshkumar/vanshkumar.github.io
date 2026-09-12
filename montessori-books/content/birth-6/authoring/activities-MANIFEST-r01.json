@@ -1,0 +1,51 @@
+{
+  "author": "/root/birth6_activity_author",
+  "revision": "activities-r01",
+  "date": "2026-09-10",
+  "workflow": "lean-v1",
+  "outputs": [
+    {
+      "path": "content/birth-6/drafts/activities-r01.json",
+      "sha256": "2c76e99fbc0896c792f407ca3f549e6d443e76f596d9b6486cde64dc5f2bfe11"
+    },
+    {
+      "path": "content/birth-6/authoring/activities-READ_LOG-r01.json",
+      "sha256": "b33dbc92db394a23c571ba3f82d50e43801b4527d8079a73d68a02de989cffe7"
+    },
+    {
+      "path": "content/birth-6/authoring/activities-COVERAGE_SUGGESTIONS-r01.json",
+      "sha256": "99c8a69e16f419feaa39c68e4eacc783f8862ff65d4ed770cfde3a830e7b3efa"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "POPULATION_WORKFLOW.md",
+      "sha256": "9400ac1c7306d8eafc57ad96f1fb00e1bbd405ee1cd4ec76415113fe2ca233c2"
+    },
+    {
+      "path": "content/pilots/CANONICAL_REGISTRY.json",
+      "sha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+    },
+    {
+      "path": "content/pilots/revisions/r08/payload.json",
+      "sha256": "9d371c590ec6bc22872912769c8e61c795b0fd5ec4265b02a6ee6a126317a7f6"
+    },
+    {
+      "path": "research/baby/EVIDENCE.jsonl",
+      "sha256": "aa71ee9471e24b77c6d71901cd6d8b84756aea23b0299ba1cb74c197d1206129"
+    },
+    {
+      "path": "research/baby/COVERAGE_LEDGER.jsonl",
+      "sha256": "b30e5c55e2364af2762aa7af49a5e752908bdb3481779e61fc39762a05432a0f"
+    }
+  ],
+  "counts": {
+    "newEntries": 7,
+    "frozenReuses": 11,
+    "placements": 30,
+    "crossAgePlacements": 3
+  },
+  "recordHashFormat": "SHA-256 of UTF-8 JSON with sorted keys, no extra separators/whitespace, literal Unicode (Python ensure_ascii=False).",
+  "publication": false,
+  "independentReview": "pending; author does not review own work"
+}

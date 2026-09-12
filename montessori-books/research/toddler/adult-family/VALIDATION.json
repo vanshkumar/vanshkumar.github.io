@@ -1,0 +1,57 @@
+{
+  "date": "2026-09-10",
+  "validator": "/root/adult_family",
+  "kind": "research mechanical QA; not independent publication review",
+  "status": "pass",
+  "source": {
+    "sourceId": "toddler-2019",
+    "bytes": 7036292,
+    "physicalPages": 257,
+    "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b"
+  },
+  "checks": {
+    "allAssignedPagesRegistered": true,
+    "allAssignedPagesVisuallyInspected": true,
+    "uniqueIds": true,
+    "allIdeasDisposed": true,
+    "localAndPeerTargetsResolve": true,
+    "allRequiredEvidenceFields": true,
+    "sourceAndContextPagesHaveActualTextReads": true,
+    "allNecessaryCrossReferencesFollowed": true,
+    "individualEvidenceHashesMatch": true,
+    "allFullTextCachePagesMatchOriginalExtraction": true
+  },
+  "counts": {
+    "SOURCE_MAP": 52,
+    "READ_LOG": 39,
+    "COVERAGE_LEDGER": 100,
+    "EVIDENCE": 100,
+    "RESOURCE_INVENTORY": 50
+  },
+  "fullTextPageCountIncludingNavigationAndEmptyExtraction": 114,
+  "visualPageCount": 61,
+  "heldEvidenceIds": [
+    "toddler.family.ev.planes-neuroscience",
+    "toddler.family.ev.early-personality",
+    "toddler.family.ev.table-sign",
+    "toddler.family.ev.table-amends",
+    "toddler.family.ev.table-kind-limit",
+    "toddler.family.ev.table-sibling-responsibility",
+    "toddler.family.ev.materials-glass",
+    "toddler.family.ev.materials-furniture",
+    "toddler.family.ev.playdough-storage"
+  ],
+  "publicationReviews": {
+    "source": 0,
+    "tone": 0
+  },
+  "artifactHashes": {
+    "COVERAGE_LEDGER.jsonl": "72daf493b3311892965e536857452722296467e56f60f82f4ed7a9fbfa9dfd34",
+    "EVIDENCE.jsonl": "f439cdee8098140b8dab9b11f4da9810eca09c6610d48345a6bb53fbd8213ac7",
+    "HANDOFF.md": "78c6af509339f95f4ed5f5cc995293e568e03b3976077dc1fcd3c7d71af07259",
+    "NOTES.md": "cf24571b952fcd3a469a91ad01827306cbce72b493504a1eff761e69b1bcac58",
+    "READ_LOG.jsonl": "ae32e4e446ee27ae2a812be0e9975b0faa33cf21593bed81a1cfe72322ce076e",
+    "RESOURCE_INVENTORY.jsonl": "f7a721502621282d0933f255f7cac4e567b1bc62ffd2fec8e41dc530b30ce277",
+    "SOURCE_MAP.jsonl": "3d0fb2963f861ac99616a9392a30acb6ea061eb5a85e63bf95d682040e2aec42"
+  }
+}

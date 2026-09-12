@@ -1,0 +1,47 @@
+{
+  "revision": "r02",
+  "scope": "Pilot-stage source idea accounting; no whole-product exclusion or editorial approval",
+  "inputs": [
+    {
+      "sourceId": "baby-2021",
+      "ledgerPath": "research/baby/COVERAGE_LEDGER.jsonl",
+      "ledgerSha256": "b30e5c55e2364af2762aa7af49a5e752908bdb3481779e61fc39762a05432a0f",
+      "evidencePath": "research/baby/EVIDENCE.jsonl",
+      "evidenceSha256": "aa71ee9471e24b77c6d71901cd6d8b84756aea23b0299ba1cb74c197d1206129",
+      "coveragePath": "content/pilots/drafts/baby/COVERAGE.jsonl",
+      "coverageSha256": "3b37b4e54775700c344a98c3909f3f8306330f7dc19fb1b5366ea63f6cd0a952",
+      "sourceIdeas": 617
+    },
+    {
+      "sourceId": "toddler-2019",
+      "ledgerPath": "research/toddler/COVERAGE_LEDGER.jsonl",
+      "ledgerSha256": "dff004b408d6a74d83b41560d5aaf0fda7e3ec7c819a03b11605344e7b2074e2",
+      "evidencePath": "research/toddler/EVIDENCE.jsonl",
+      "evidenceSha256": "ad7d7b0132a4f1389d41f1f393ec01d88cab415c54913dc6a198bd2e24123440",
+      "coveragePath": "content/pilots/drafts/toddler/COVERAGE.jsonl",
+      "coverageSha256": "faf703ed37ca067b7ff2918dfa9eccbe19a2f2e9690429bda55b441fed70da3a",
+      "sourceIdeas": 692
+    }
+  ],
+  "amendments": {
+    "path": "content/pilots/editorial/COVERAGE_AMENDMENTS-r02.json",
+    "sha256": "4881b1be0e6af14f35ed2a6838b1922742d1e445d43a55ca742ea51bfd9e2986",
+    "applied": 1
+  },
+  "rows": 1309,
+  "counts": {
+    "baby-2021": {
+      "included": 91,
+      "combined": 48,
+      "context-only": 294,
+      "excluded": 184
+    },
+    "toddler-2019": {
+      "included": 0,
+      "combined": 330,
+      "context-only": 245,
+      "excluded": 117
+    }
+  },
+  "normalization": "The 63 Baby author-held rows become context-only qualification/omission records with explicit heldDetails. Their original disposition/reason and source questions remain linked; no operational detail becomes included by normalization. The 7 foundation targets remain private context targets. Shared 153 rows overlap these source IDs and are never added as new ideas. Explicit revision amendments retain the original author record and the exact editorial issue link."
+}

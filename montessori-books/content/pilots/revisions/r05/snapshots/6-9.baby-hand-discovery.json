@@ -1,0 +1,112 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-hand-discovery",
+        "kind": "perspective",
+        "title": "What their hands are finding out",
+        "summary": "The authors describe grasping, turning and passing objects between hands as exploration. Their examples depend on objects and every component being suitable for mouthing.",
+        "cue": "Your baby is reaching for an object, turning it, or moving it from one hand to the other.",
+        "detail": [
+          "A familiar object can offer a new experience as a baby’s hand movements change. The book describes differences in texture, shape and weight, and a rotating drum that answers a hand movement with motion and sound.",
+          "The authors also notice babies exploring the basket or container itself. They leave room for this interest, within the same limits on safe finishes, size and securely attached parts. Natural materials alone do not establish suitability."
+        ],
+        "references": [
+          {
+            "id": "baby-hand-discovery.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Movement activities / Grasping materials; 6 to 9 months",
+            "locator": "Developing grasp, two-hand transfer, rotating drum and interest in containers",
+            "pdfPages": [
+              {
+                "start": 154,
+                "end": 155
+              },
+              {
+                "start": 159,
+                "end": 162
+              }
+            ]
+          },
+          {
+            "id": "baby-hand-discovery.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Choosing activities; Mouthing; Visitor note",
+            "locator": "Mouthing-safe materials, secure parts and removing unsafe objects",
+            "pdfPages": [
+              {
+                "start": 120,
+                "end": 120
+              },
+              {
+                "start": 221,
+                "end": 222
+              },
+              {
+                "start": 258,
+                "end": 258
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "6-9.baby-hand-discovery",
+        "entryId": "baby-hand-discovery",
+        "ageId": "6-9",
+        "topicIds": [
+          "play-discovery"
+        ],
+        "ageContext": {
+          "bookAge": "6–9 months for transfer and the rotating drum; grasping examples also appear earlier.",
+          "readiness": "Current reaching, grasping, turning or transfer; help may still be needed to recover dropped objects.",
+          "note": "The age group is a way to browse; follow the interest or situation described here."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "6–9 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "play-discovery",
+            "label": "Play & discovery"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 154–155, 159–162"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 120, 221–222, 258"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "d41a19dec28ba15c50fdadea85226fb71067beeac1533f4655fdb3ad14ec84e0",
+  "artContextSha256": null,
+  "publicProjectionSha256": "325342e9846feec0b091890a048a098a3c93d08a5d4dec588a2a741dbcb3317f",
+  "provenance": {
+    "draft": {
+      "path": "content/pilots/drafts/baby/draft-r03.json",
+      "sha256": "b89870e427766f0891c3bc44e5213d70026bf5b62c934e9bff7e5bb20349e7c3"
+    },
+    "revision": "r05",
+    "evidenceFile": "content/pilots/drafts/baby/draft-r03.json",
+    "note": "Full private provenance and actual author read logs remain in this immutable draft and its handoff."
+  }
+}

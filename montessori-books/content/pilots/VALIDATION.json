@@ -1,0 +1,225 @@
+{
+  "date": "2026-09-10",
+  "revision": "r08",
+  "status": "PASS",
+  "scope": "Reviewed local two-age pilot, content architecture and disjoint population workflow; no deployment or full seven-age completion claimed.",
+  "release": {
+    "payload": {
+      "path": "src/guide/approved.json",
+      "sha256": "9d371c590ec6bc22872912769c8e61c795b0fd5ec4265b02a6ee6a126317a7f6"
+    },
+    "integrationReceipt": {
+      "path": "content/pilots/revisions/r08/INTEGRATION_RECEIPT.json",
+      "sha256": "380af98a5c058d75db9e511da69cb1e73debd803b27e68e76e34c8448d2e4098"
+    },
+    "registry": {
+      "path": "content/pilots/CANONICAL_REGISTRY.json",
+      "sha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+    }
+  },
+  "review": {
+    "reports": 40,
+    "canonicalEntries": 101,
+    "agePlacements": 115,
+    "sourceTextPasses": 115,
+    "toneTextPasses": 115,
+    "illustratedCombinations": 6,
+    "sourceArtPasses": 6,
+    "toneArtPasses": 6,
+    "historicalIssuesResolved": 64,
+    "openIssues": 0,
+    "actualSurfaceEquality": "Checked in final integration gate, including retained earlier approvals"
+  },
+  "researchIntegrity": {
+    "frozenPackageFilesIncludingAudits": 74,
+    "changed": 0,
+    "sourceIdeaRows": 1309,
+    "babyIdeas": 617,
+    "toddlerIdeas": 692,
+    "sharedRowsOverlapOriginalIds": 153
+  },
+  "structuralChecks": {
+    "scope": "Isolated synthetic fixtures only; fabricated fixture approvals never entered real review or app content.",
+    "pilotIntegration": [
+      {
+        "name": "One role cannot satisfy both approvals",
+        "passed": true,
+        "observed": "fixture rejected",
+        "expectedMessage": "Missing current tone"
+      },
+      {
+        "name": "A later revise supersedes an earlier same-hash pass",
+        "passed": true,
+        "observed": "fixture rejected",
+        "expectedMessage": "Missing current source textPlacement pass"
+      },
+      {
+        "name": "Illustrations require separate actual-image binding",
+        "passed": true,
+        "observed": "fixture rejected",
+        "expectedMessage": "Missing actual artwork inspection"
+      },
+      {
+        "name": "Original cited-page records must resolve",
+        "passed": true,
+        "observed": "fixture rejected",
+        "expectedMessage": "Unresolved read log"
+      },
+      {
+        "name": "Changed renderer blocks integration",
+        "passed": true,
+        "observed": "fixture rejected",
+        "expectedMessage": "Renderer changed after freeze"
+      },
+      {
+        "name": "Actual changed opening context blocks retained approval",
+        "passed": true,
+        "observed": "fixture rejected",
+        "expectedMessage": "Rendered context changed"
+      },
+      {
+        "name": "Complete structurally valid synthetic package passes",
+        "passed": true,
+        "observed": "fixture accepted"
+      },
+      {
+        "name": "Emitted fixture contains only public collections",
+        "passed": true,
+        "entries": 101,
+        "placements": 115
+      }
+    ],
+    "contributionWorkflow": [
+      {
+        "name": "Freeze six text targets with canonical reuse",
+        "pass": true
+      },
+      {
+        "name": "Render actual opening text without any image/placeholder output",
+        "pass": true
+      },
+      {
+        "name": "Reject missing independent roles",
+        "pass": true
+      },
+      {
+        "name": "Later applicable revise revokes pass",
+        "pass": true
+      },
+      {
+        "name": "Reject unread cited page",
+        "pass": true
+      },
+      {
+        "name": "Reject artwork claim in text phase",
+        "pass": true
+      },
+      {
+        "name": "Reject stale canonical digest before freeze",
+        "pass": true
+      },
+      {
+        "name": "Reject unowned existing pilot pair",
+        "pass": true
+      },
+      {
+        "name": "Reject edited frozen public payload",
+        "pass": true
+      },
+      {
+        "name": "Verified contribution writes only private owned receipt",
+        "pass": true
+      }
+    ]
+  },
+  "build": {
+    "command": "node node_modules/vite/bin/vite.js build",
+    "node": "/Users/vanshkumar/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "vite": "6.4.3",
+    "modules": 34,
+    "result": "PASS",
+    "moduleGraphGuard": "Production build rejects src/content.js, LegacyStudies.jsx, guide/prototype.js, content/ and research/ imports.",
+    "artwork": [
+      "art/home-paper-toddler.webp",
+      "art/home-paper-baby.webp"
+    ],
+    "unchangedReviewedImageBytes": true,
+    "privateMarkerScan": {
+      "markers": [
+        "sourceIdeaId",
+        "editorialRevision",
+        "READ_LOG",
+        "REVIEW_INPUTS",
+        "PROTOTYPE_BASELINE",
+        "/root/pilot_"
+      ],
+      "matches": []
+    },
+    "emittedFiles": [
+      {
+        "path": "dist/index.html",
+        "bytes": 1090,
+        "sha256": "e73d3f7e0a61424344ddf11b6aa9a667d335f4e2a6ff924f7a2f6a31da4ee278"
+      },
+      {
+        "path": "dist/art/home-paper-toddler.webp",
+        "bytes": 240914,
+        "sha256": "6590e3b468d918f375cf5fd7ea2362b45e511f0d41c0b1a7113b2b5b6ae2d422"
+      },
+      {
+        "path": "dist/art/home-paper-baby.webp",
+        "bytes": 191216,
+        "sha256": "fb09c915ce18725df3f0ef1818fc0072116d2d97c6dbc45eb7578dda55dbc922"
+      },
+      {
+        "path": "dist/assets/index-Gk3tLmTZ.js",
+        "bytes": 337502,
+        "sha256": "8c617213fe5bc185f1fd64154777ba00ac71c0509433108c0bba2fc8fdc5282c"
+      },
+      {
+        "path": "dist/assets/index-BdLUWdVw.css",
+        "bytes": 56106,
+        "sha256": "be4f8b60c71467d36072a0e2739f8c96f6625dd4ffedff13648726712daf8caa"
+      }
+    ],
+    "trackedOwnedDiffWhitespace": "git diff --check -- index.html src vite.config.js passed"
+  },
+  "browser": {
+    "tool": "Codex in-app browser via CUA",
+    "url": "http://127.0.0.1:4174/montessori-books/",
+    "productionBundle": true,
+    "viewports": [
+      [
+        1280,
+        720
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "checks": [
+      "Baby conversation opening and Toddler pouring opening visually inspected at 1280×720: accepted scene/title/reading arrangement intact; no title overlap.",
+      "Toddler drawing opening visually inspected at 390×844: image, headline, choices and invitation fit the phone layout.",
+      "Pouring full entry visually inspected at 390×844: text and age context wrap cleanly; 3 optional steps and 4 structured references displayed.",
+      "Everyday care list contains 25 actual rows at 18–24; five topic links are available.",
+      "Toothbrushing perspective displays necessary-care/help qualification in summary, 3 references and no steps.",
+      "Corrected Baby pacifier original section names appear in actual production references; no steps are invented.",
+      "Measured document width equals scroll width at 1280 for Baby opening and 390 for phone opening, topic and reading surfaces; no horizontal document overflow.",
+      "Displayed scene images loaded successfully; phone opening broken-image count 0.",
+      "Age select changes to 18–24 home; Back/Forward restores pouring reading/home routes and selected age.",
+      "Reading heading receives focus; returning to topic restores entry-link-toddler-teeth focus.",
+      "Invalid age defaults to 6–9; unknown topic shows Topic not found; unsupported newborn/Baby-entry combination shows recovery link to 6–9.",
+      "24–36 retains 2–3 years label and honest unfinished state; production studies route shows Page not found with age-preserving guide return.",
+      "No development study links in production opening; captured browser warning/error log empty.",
+      "Temporary viewport reset; existing browser tab retained for coordinator handoff."
+    ],
+    "screenshotEvidence": "Current production viewport captures inspected inline during this task; no claim of a separately saved screenshot artifact."
+  },
+  "limits": [
+    "Only 6–9 and 18–24 are completed pilots. Other age content and new artwork remain assigned to Tasks 5–8.",
+    "Two existing source-and-tone-reviewed scene assets are unchanged. Text-only contribution receipts approve no future illustration or composition.",
+    "Book-sensitive content is attributed summary, not independent current clinical validation.",
+    "No commit, deployment, new image generation, research edit or shared-memory edit by Task 4."
+  ]
+}

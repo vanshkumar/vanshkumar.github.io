@@ -1,0 +1,639 @@
+{
+  "id": "toddler-daily-care-tone-r06",
+  "reviewer": {
+    "task": "/root/toddler_daily_tone_r04",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "date": "2026-09-10",
+  "scope": "Renewed independent tone review only for the four changed r06 toddler-daily-care placements: meals, food on floor, brushing teeth and pacifier change. Exact 18–24 months text, metadata, all six actual topic rows and four expanded entries reviewed. All four placements are unillustrated. No other batch or release determination.",
+  "batchId": "toddler-daily-care",
+  "revision": "r06",
+  "manifest": {
+    "path": "content/pilots/revisions/r06/MANIFEST.json",
+    "sha256": "a72d8cb63ccc81b90f6a24fd8a1742572bd14eeb7ca08de5b0508f02ab3c4731"
+  },
+  "renderedSurfaces": {
+    "path": "content/pilots/revisions/r06/RENDERED_SURFACES.json",
+    "sha256": "6d02e4f0edc1fa01046ad3fce232dfd4bd85179955a4a51bd58996a6180e21e0"
+  },
+  "renderer": {
+    "path": "src/HomeStudy.jsx",
+    "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c",
+    "read": true,
+    "readBasis": "Same reviewer’s complete r04 renderer reading retained; file hash reconfirmed unchanged against r06 manifest."
+  },
+  "draft": {
+    "path": "content/pilots/drafts/toddler/draft-r06.json",
+    "sha256": "dbbf4a6f7e915168d7f80d6200ee505065064622bd39b9008a8177d2ec8d7292",
+    "readScope": "Four matching entries and placements, validated against exact public projection."
+  },
+  "sourceVerification": {
+    "sourceId": "toddler-2019",
+    "path": "/Users/vanshkumar/Documents/repos/vanshkumar.github.io/montessori-books/The Montessori Toddler - Simone Davies _Worldfreebooks.com_.pdf",
+    "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b",
+    "fileSizeBytes": 7036292,
+    "physicalPdfPages": 257,
+    "matchesFoundationManifest": true,
+    "method": "SHA-256 and byte length of original PDF; physical page count with pypdf. No outside edition or clinical verification.",
+    "r06FingerprintReconfirmed": true
+  },
+  "priorOwnReview": {
+    "path": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+    "sha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f",
+    "unchanged": true,
+    "use": "Own stable issues and actual original-source reading only. Current text passes are new judgments on r06 components."
+  },
+  "readLogRetention": "Previously completed original-source readings retain their original IDs and explicit immutable origin. New r06 rereads have new IDs. Retaining source context does not carry a prior prose verdict forward.",
+  "independence": {
+    "otherReviewerReportsRead": false,
+    "correctionFindingFilesRead": false,
+    "otherBatchFullAppProseRead": false,
+    "originalSourceReadPersonally": true
+  },
+  "readLogs": [
+    {
+      "id": "toddler-daily-care-tone-r04.read.scope-activity.text",
+      "reader": "/root/toddler_daily_tone_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 14,
+          "end": 14
+        },
+        {
+          "start": 29,
+          "end": 29
+        },
+        {
+          "start": 33,
+          "end": 39
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text extracted directly from the fingerprint-verified PDF with pypdf into this reviewer’s scratch directory. Toddler scope; individual development, respect and observation; complete general activity introduction, partial repetition, demonstration and principles through supervision. No developmental deadline or compulsory independence inferred.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+        "sha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f",
+        "readLogId": "toddler-daily-care-tone-r04.read.scope-activity.text"
+      },
+      "retentionNote": "This is the same reviewer’s actual r04 original-source reading, explicitly retained for unchanged book context. It is not counted as a new r06 read; original source fingerprint reconfirmed for this re-review."
+    },
+    {
+      "id": "toddler-daily-care-tone-r04.read.practical-life.text",
+      "reader": "/root/toddler_daily_tone_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 48,
+          "end": 52
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text extracted directly from the fingerprint-verified PDF with pypdf into this reviewer’s scratch directory. Complete practical-life section through the two-page age chart: daily care and dressing examples, limited steps, process, support, family resources and age-column distinctions.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+        "sha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f",
+        "readLogId": "toddler-daily-care-tone-r04.read.practical-life.text"
+      },
+      "retentionNote": "This is the same reviewer’s actual r04 original-source reading, explicitly retained for unchanged book context. It is not counted as a new r06 read; original source fingerprint reconfirmed for this re-review."
+    },
+    {
+      "id": "toddler-daily-care-tone-r04.read.home.text",
+      "reader": "/root/toddler_daily_tone_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 76,
+          "end": 80
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text extracted directly from the fingerprint-verified PDF with pypdf into this reviewer’s scratch directory. Complete Room by room unit: adaptable examples, entrance, kitchen, eating area, bedroom clothing choices and safety note, bathroom, arts, reading and outside continuation. Read for dressing/home and meal cross-references, without importing furnishings as requirements.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+        "sha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f",
+        "readLogId": "toddler-daily-care-tone-r04.read.home.text"
+      },
+      "retentionNote": "This is the same reviewer’s actual r04 original-source reading, explicitly retained for unchanged book context. It is not counted as a new r06 read; original source fingerprint reconfirmed for this re-review."
+    },
+    {
+      "id": "toddler-daily-care-tone-r04.read.translator.text",
+      "reader": "/root/toddler_daily_tone_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 108,
+          "end": 110
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text extracted directly from the fingerprint-verified PDF with pypdf into this reviewer’s scratch directory. Complete acceptance introduction and Be their translator, followed by Allow all feelings but not all behavior. Includes tentative all-finished question and responsibility to intervene.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+        "sha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f",
+        "readLogId": "toddler-daily-care-tone-r04.read.translator.text"
+      },
+      "retentionNote": "This is the same reviewer’s actual r04 original-source reading, explicitly retained for unchanged book context. It is not counted as a new r06 read; original source fingerprint reconfirmed for this re-review."
+    },
+    {
+      "id": "toddler-daily-care-tone-r04.read.limits-touch.text",
+      "reader": "/root/toddler_daily_tone_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 129,
+          "end": 135
+        },
+        {
+          "start": 172,
+          "end": 173
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text extracted directly from the fingerprint-verified PDF with pypdf into this reviewer’s scratch directory. Setting limits introduction, household rules and complete Follow through with kind and clear action through immediate-danger and laughing subsections; complete Acknowledge negative feelings continuation and tantrum support; complete Skills for introverted toddlers through respectful touch. Necessary care is read beside child choice and no-forced-comfort context.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+        "sha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f",
+        "readLogId": "toddler-daily-care-tone-r04.read.limits-touch.text"
+      },
+      "retentionNote": "This is the same reviewer’s actual r04 original-source reading, explicitly retained for unchanged book context. It is not counted as a new r06 read; original source fingerprint reconfirmed for this re-review."
+    },
+    {
+      "id": "toddler-daily-care-tone-r04.read.rhythm-ritual-dressing.text",
+      "reader": "/root/toddler_daily_tone_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 145,
+          "end": 151
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text extracted directly from the fingerprint-verified PDF with pypdf into this reviewer’s scratch directory. Complete Daily care introduction, Daily rhythm plus boxed example, Rituals including low-key inexpensive continuation, and Getting dressed and leaving the house through departure limits and diapering note. Complete coat-flip numbered text and accompanying page text read.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+        "sha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f",
+        "readLogId": "toddler-daily-care-tone-r04.read.rhythm-ritual-dressing.text"
+      },
+      "retentionNote": "This is the same reviewer’s actual r04 original-source reading, explicitly retained for unchanged book context. It is not counted as a new r06 read; original source fingerprint reconfirmed for this re-review."
+    },
+    {
+      "id": "toddler-daily-care-tone-r04.read.eating.text",
+      "reader": "/root/toddler_daily_tone_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 152,
+          "end": 155
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text extracted directly from the fingerprint-verified PDF with pypdf into this reviewer’s scratch directory. Complete Eating unit: adult roles, table/food limits, adult schedule realities, amount and appetite assertions, entire reset method and medical note, throwing-food and water continuation. These original care prescriptions are context for reviewing attributed selective summaries, not independent medical guidance.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+        "sha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f",
+        "readLogId": "toddler-daily-care-tone-r04.read.eating.text"
+      },
+      "retentionNote": "This is the same reviewer’s actual r04 original-source reading, explicitly retained for unchanged book context. It is not counted as a new r06 read; original source fingerprint reconfirmed for this re-review."
+    },
+    {
+      "id": "toddler-daily-care-tone-r04.read.sleep.text",
+      "reader": "/root/toddler_daily_tone_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 156,
+          "end": 158
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text extracted directly from the fingerprint-verified PDF with pypdf into this reviewer’s scratch directory. Complete Sleeping unit: family sleeping choice, arrangements, sleep quantities, settling sequence and chair technique, no crying alone, illness/teething, sleep-crutch and night-feeding continuation, ending specialist qualification.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+        "sha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f",
+        "readLogId": "toddler-daily-care-tone-r04.read.sleep.text"
+      },
+      "retentionNote": "This is the same reviewer’s actual r04 original-source reading, explicitly retained for unchanged book context. It is not counted as a new r06 read; original source fingerprint reconfirmed for this re-review."
+    },
+    {
+      "id": "toddler-daily-care-tone-r04.read.teeth.text",
+      "reader": "/root/toddler_daily_tone_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 159,
+          "end": 159
+        },
+        {
+          "start": 247,
+          "end": 247
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text extracted directly from the fingerprint-verified PDF with pypdf into this reviewer’s scratch directory. Complete Brushing teeth unit and complete original appendix page 247, including its 14+ months brushing row. The child’s part, adult finishing, gentle assistance and nonoptional care are read together. Appendix activity rows on this page read in full; they are not inferred age instructions for this entry.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+        "sha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f",
+        "readLogId": "toddler-daily-care-tone-r04.read.teeth.text"
+      },
+      "retentionNote": "This is the same reviewer’s actual r04 original-source reading, explicitly retained for unchanged book context. It is not counted as a new r06 read; original source fingerprint reconfirmed for this re-review."
+    },
+    {
+      "id": "toddler-daily-care-tone-r04.read.toileting-pacifier.text",
+      "reader": "/root/toddler_daily_tone_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 160,
+          "end": 164
+        }
+      ],
+      "mode": "full-text",
+      "description": "Personally read complete original-page text extracted directly from the fingerprint-verified PDF with pypdf into this reviewer’s scratch directory. Complete Toileting unit: scaffolding, exact readiness observations, setup, noninterruption, no forcing, night changes, withholding/doctor qualification and intentional-peeing discussion. Complete Saying goodbye to pacifiers through its list, planned bedtime change, extra support and explicit sleeping cross-reference. The opening sibling text sharing page 164 was also read, without a sibling-entry review.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+        "sha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f",
+        "readLogId": "toddler-daily-care-tone-r04.read.toileting-pacifier.text"
+      },
+      "retentionNote": "This is the same reviewer’s actual r04 original-source reading, explicitly retained for unchanged book context. It is not counted as a new r06 read; original source fingerprint reconfirmed for this re-review."
+    },
+    {
+      "id": "toddler-daily-care-tone-r04.read.daily-care.visual",
+      "reader": "/root/toddler_daily_tone_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 145,
+          "end": 164
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected readable full original-page PNGs rendered directly from the fingerprint-verified PDF with Poppler at 1500 pixels on the long edge. All twenty complete pages inspected, including printed folios 136–155, the boxed daily-rhythm example, ritual decoration/resource box and continuation, all three coat-flip panels and numbered captions, eating medical note, sleeping continuation and closing note, teeth text, readiness lists, no-force continuation and pacifier list/cross-reference. The coat is open with inside up, child at neck/hood end, hands in sleeves and arms rising overhead.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+        "sha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f",
+        "readLogId": "toddler-daily-care-tone-r04.read.daily-care.visual"
+      },
+      "retentionNote": "This is the same reviewer’s actual r04 original-source reading, explicitly retained for unchanged book context. It is not counted as a new r06 read; original source fingerprint reconfirmed for this re-review."
+    },
+    {
+      "id": "toddler-daily-care-tone-r04.read.activities.visual",
+      "reader": "/root/toddler_daily_tone_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 35,
+          "end": 36
+        },
+        {
+          "start": 51,
+          "end": 52
+        },
+        {
+          "start": 247,
+          "end": 247
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected readable full original-page PNGs rendered directly from the fingerprint-verified PDF with Poppler at 1500 pixels on the long edge. Complete demonstration pages including the SHOW box; both complete practical-life chart pages with 12–18 months, 18 months–3 years and 3–4 years separated; complete appendix 247 with brushing-teeth row, its independent 14+ months age, all columns and surrounding rows. Visible folios 26, 27, 42, 43 and 238.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+        "sha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f",
+        "readLogId": "toddler-daily-care-tone-r04.read.activities.visual"
+      },
+      "retentionNote": "This is the same reviewer’s actual r04 original-source reading, explicitly retained for unchanged book context. It is not counted as a new r06 read; original source fingerprint reconfirmed for this re-review."
+    },
+    {
+      "id": "toddler-daily-care-tone-r04.read.home.visual",
+      "reader": "/root/toddler_daily_tone_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 76,
+          "end": 80
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected readable full original-page PNGs rendered directly from the fingerprint-verified PDF with Poppler at 1500 pixels on the long edge. Entire room-by-room table across five pages, including introductory nonprescriptive framing, every row boundary, notes and bedroom clothing options. Visible folios 67–71. No source decorative imagery is treated as an app illustration.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+        "sha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f",
+        "readLogId": "toddler-daily-care-tone-r04.read.home.visual"
+      },
+      "retentionNote": "This is the same reviewer’s actual r04 original-source reading, explicitly retained for unchanged book context. It is not counted as a new r06 read; original source fingerprint reconfirmed for this re-review."
+    },
+    {
+      "id": "toddler-daily-care-tone-r04.read.help-translator.visual",
+      "reader": "/root/toddler_daily_tone_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 101,
+          "end": 102
+        },
+        {
+          "start": 109,
+          "end": 110
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected readable full original-page PNGs rendered directly from the fingerprint-verified PDF with Poppler at 1500 pixels on the long edge. Complete help pages including next-page time-limit continuation and quote; complete translator page and the illustrated translator statement plus feelings/behavior limits. Visible folios 92, 93, 100 and 101.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+        "sha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f",
+        "readLogId": "toddler-daily-care-tone-r04.read.help-translator.visual"
+      },
+      "retentionNote": "This is the same reviewer’s actual r04 original-source reading, explicitly retained for unchanged book context. It is not counted as a new r06 read; original source fingerprint reconfirmed for this re-review."
+    },
+    {
+      "id": "toddler-daily-care-tone-r04.read.limits-touch.visual",
+      "reader": "/root/toddler_daily_tone_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 131,
+          "end": 133
+        },
+        {
+          "start": 172,
+          "end": 173
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "Personally inspected readable full original-page PNGs rendered directly from the fingerprint-verified PDF with Poppler at 1500 pixels on the long edge. Complete necessary-care follow-through pages including household-rule context, logical consequences and immediate-danger section; both complete introverted-toddler/respectful-contact pages, with all lists and final touch paragraph. Visible folios 122–124 and 163–164.",
+      "retainedFrom": {
+        "path": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+        "sha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f",
+        "readLogId": "toddler-daily-care-tone-r04.read.limits-touch.visual"
+      },
+      "retentionNote": "This is the same reviewer’s actual r04 original-source reading, explicitly retained for unchanged book context. It is not counted as a new r06 read; original source fingerprint reconfirmed for this re-review."
+    },
+    {
+      "id": "toddler-daily-care-tone-r06.read.eating-teeth-sleep-pacifier.text",
+      "reader": "/root/toddler_daily_tone_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 152,
+          "end": 159
+        },
+        {
+          "start": 163,
+          "end": 164
+        }
+      ],
+      "mode": "full-text",
+      "description": "For r06, personally reread the complete original-page text from this reviewer’s direct pypdf extraction of the unchanged fingerprint-verified source. Complete Eating unit includes all adult/child roles, family scheduling, appetite assertions, reset continuation, medical note and throwing-food/water subsection; complete Brushing teeth includes nonoptional care, gentle help and modeling; complete Sleeping includes methods, illness/teething, no crying alone, night feeding and closing specialist qualification; complete Saying goodbye to pacifiers includes author age preference, possible needs, list, planned change, extra support and sleep cross-reference. All text on these ten pages read, including incidental portions adjoining the named units."
+    },
+    {
+      "id": "toddler-daily-care-tone-r06.read.care-and-appendix.visual",
+      "reader": "/root/toddler_daily_tone_r04",
+      "date": "2026-09-10",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 155,
+          "end": 155
+        },
+        {
+          "start": 159,
+          "end": 159
+        },
+        {
+          "start": 163,
+          "end": 164
+        },
+        {
+          "start": 247,
+          "end": 247
+        }
+      ],
+      "mode": "full-page-visual",
+      "description": "For r06, personally reinspected five complete readable original-page PNGs, originally rendered directly from the fingerprint-verified PDF by this reviewer with Poppler at 1500 pixels on the long edge. Read the whole eating continuation including medical note, distinct not-finished-but-continues-throwing condition and plate action; complete teeth page; full pacifier pages and list/cross-reference; every row and column of appendix page 247 including 14+ months brushing and adult finishing. Visible folios 146, 150, 154, 155 and 238. Other cited-page/full-context visuals remain explicitly linked to the same reviewer’s actual r04 readings."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "toddler-daily-care-tone-r06.18-24.toddler-meals",
+      "entryId": "toddler-meals",
+      "placementId": "18-24.toddler-meals",
+      "snapshotPath": "content/pilots/revisions/r06/snapshots/18-24.toddler-meals.json",
+      "snapshotFileSha256": "9b2eb5d7e86e57c028c2053c0bf5b9112cd0e16b7d5099dacc06360d8825291e",
+      "textPlacementSha256": "2b7a36a9697bb4ee8a4511090848e59300035842f26b79a1cf0c470e0cfd39db",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-daily-care-tone-r04.read.scope-activity.text",
+        "toddler-daily-care-tone-r04.read.eating.text",
+        "toddler-daily-care-tone-r04.read.daily-care.visual",
+        "toddler-daily-care-tone-r04.read.home.text",
+        "toddler-daily-care-tone-r04.read.home.visual",
+        "toddler-daily-care-tone-r04.read.rhythm-ritual-dressing.text",
+        "toddler-daily-care-tone-r06.read.eating-teeth-sleep-pacifier.text",
+        "toddler-daily-care-tone-r06.read.care-and-appendix.visual"
+      ],
+      "surfacesRead": {
+        "opening": null,
+        "topicRows": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "fullEntry": true,
+        "ageLabel": "18–24 months",
+        "method": "Personally read exact r06 frozen projection plus all matching actual topic-row text/HTML and complete entryText in RENDERED_SURFACES.json. Prior HomeStudy.jsx reading retained only after unchanged hash verification."
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass across both actual topic rows and the complete expanded r06 entry. The last paragraph now gives Davies’s medical/food-related refusal and doctor qualification directly, and the reference locator describes the relevant subject in ordinary language. The vague audit note and reset-method signposting are gone. Attribution, adult schedule realities, child participation, available help and the short row’s own concern qualification remain; no appetite guarantee, independent clinical claim or care protocol was introduced."
+      },
+      "artContext": null,
+      "resolutions": [
+        {
+          "issueId": "toddler-daily-care-tone-r04.meals.audit-language",
+          "status": "resolved",
+          "priorReviewPath": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+          "priorReviewFileSha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f",
+          "priorReviewId": "toddler-daily-care-tone-r04.18-24.toddler-meals",
+          "resolvedByReviewId": "toddler-daily-care-tone-r06.18-24.toddler-meals",
+          "resolvedSnapshotPath": "content/pilots/revisions/r06/snapshots/18-24.toddler-meals.json",
+          "resolvedSnapshotFileSha256": "9b2eb5d7e86e57c028c2053c0bf5b9112cd0e16b7d5099dacc06360d8825291e",
+          "resolvedTextPlacementSha256": "2b7a36a9697bb4ee8a4511090848e59300035842f26b79a1cf0c470e0cfd39db",
+          "assessment": "The exact r06 final detail paragraph now states Davies’s refusal/doctor qualification directly. The updated locator reads Shared meals, adult and child roles, eating concerns and consulting a doctor. Both were reviewed in the actual expanded rendered text; the editorial audit sentence is absent."
+        }
+      ]
+    },
+    {
+      "id": "toddler-daily-care-tone-r06.18-24.toddler-food-on-floor",
+      "entryId": "toddler-food-on-floor",
+      "placementId": "18-24.toddler-food-on-floor",
+      "snapshotPath": "content/pilots/revisions/r06/snapshots/18-24.toddler-food-on-floor.json",
+      "snapshotFileSha256": "581444e61d073cf732be6f6bfbaafedfa66287eb9fdec24b2e4e3ec1397a9e30",
+      "textPlacementSha256": "9fef5a1bccef1bc7e5f4f62e0e6ef45f4404d0374c10261a5acdd707351db983",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-daily-care-tone-r04.read.scope-activity.text",
+        "toddler-daily-care-tone-r04.read.eating.text",
+        "toddler-daily-care-tone-r04.read.daily-care.visual",
+        "toddler-daily-care-tone-r04.read.translator.text",
+        "toddler-daily-care-tone-r04.read.help-translator.visual",
+        "toddler-daily-care-tone-r04.read.limits-touch.text",
+        "toddler-daily-care-tone-r04.read.limits-touch.visual",
+        "toddler-daily-care-tone-r06.read.eating-teeth-sleep-pacifier.text",
+        "toddler-daily-care-tone-r06.read.care-and-appendix.visual"
+      ],
+      "surfacesRead": {
+        "opening": null,
+        "topicRows": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "fullEntry": true,
+        "ageLabel": "18–24 months",
+        "method": "Personally read exact r06 frozen projection plus all matching actual topic-row text/HTML and complete entryText in RENDERED_SURFACES.json. Prior HomeStudy.jsx reading retained only after unchanged hash verification."
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass across both actual topic rows and the complete expanded r06 entry. The replacement explicitly distinguishes asking whether the child is finished from the source’s continued throwing while not finished, and plainly names helping take the plate to the kitchen. It retains Davies attribution, a calm nonthreatening response, uncertainty about meaning and the stated limits of the example for determining adequate intake. The short rows remain bounded descriptions of interpreting and setting a limit; they do not prescribe plate removal or establish satiety."
+      },
+      "artContext": null,
+      "resolutions": [
+        {
+          "issueId": "toddler-daily-care-tone-r04.food-floor.clear-plate-action",
+          "status": "resolved",
+          "priorReviewPath": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+          "priorReviewFileSha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f",
+          "priorReviewId": "toddler-daily-care-tone-r04.18-24.toddler-food-on-floor",
+          "resolvedByReviewId": "toddler-daily-care-tone-r06.18-24.toddler-food-on-floor",
+          "resolvedSnapshotPath": "content/pilots/revisions/r06/snapshots/18-24.toddler-food-on-floor.json",
+          "resolvedSnapshotFileSha256": "581444e61d073cf732be6f6bfbaafedfa66287eb9fdec24b2e4e3ec1397a9e30",
+          "resolvedTextPlacementSha256": "9fef5a1bccef1bc7e5f4f62e0e6ef45f4404d0374c10261a5acdd707351db983",
+          "assessment": "The exact r06 first detail paragraph expressly says the child is not finished eating but keeps throwing food and identifies Davies’s action as helping take the plate to the kitchen. The retained second paragraph limits what the example implies about intake and food-related concerns."
+        }
+      ]
+    },
+    {
+      "id": "toddler-daily-care-tone-r06.18-24.toddler-teeth",
+      "entryId": "toddler-teeth",
+      "placementId": "18-24.toddler-teeth",
+      "snapshotPath": "content/pilots/revisions/r06/snapshots/18-24.toddler-teeth.json",
+      "snapshotFileSha256": "14dca0d7bcdfd0162340599895572dd177a83e2e4d5df71d8558b7f006a9e69f",
+      "textPlacementSha256": "7c8c4a6de819bffc723bd709e6d11c5f66883658d8c58c64dd492e577482aab1",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-daily-care-tone-r04.read.scope-activity.text",
+        "toddler-daily-care-tone-r04.read.teeth.text",
+        "toddler-daily-care-tone-r04.read.daily-care.visual",
+        "toddler-daily-care-tone-r04.read.practical-life.text",
+        "toddler-daily-care-tone-r04.read.activities.visual",
+        "toddler-daily-care-tone-r04.read.limits-touch.text",
+        "toddler-daily-care-tone-r06.read.eating-teeth-sleep-pacifier.text",
+        "toddler-daily-care-tone-r06.read.care-and-appendix.visual"
+      ],
+      "surfacesRead": {
+        "opening": null,
+        "topicRows": [
+          "everyday-care"
+        ],
+        "fullEntry": true,
+        "ageLabel": "18–24 months",
+        "method": "Personally read exact r06 frozen projection plus all matching actual topic-row text/HTML and complete entryText in RENDERED_SURFACES.json. Prior HomeStudy.jsx reading retained only after unchanged hash verification."
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass on the actual Everyday care row and complete expanded r06 entry. The summary itself now identifies necessary care alongside chances for participation and gentle adult help, so its boundary no longer depends on opening the detail. It still frames this as Davies’s application of Montessori principles rather than official dental guidance. The full entry preserves child choices, adult finishing and respectful help without new dental instructions or a coercive handling sequence."
+      },
+      "artContext": null,
+      "resolutions": [
+        {
+          "issueId": "toddler-daily-care-tone-r04.teeth.short-necessary-care",
+          "status": "resolved",
+          "priorReviewPath": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+          "priorReviewFileSha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f",
+          "priorReviewId": "toddler-daily-care-tone-r04.18-24.toddler-teeth",
+          "resolvedByReviewId": "toddler-daily-care-tone-r06.18-24.toddler-teeth",
+          "resolvedSnapshotPath": "content/pilots/revisions/r06/snapshots/18-24.toddler-teeth.json",
+          "resolvedSnapshotFileSha256": "14dca0d7bcdfd0162340599895572dd177a83e2e4d5df71d8558b7f006a9e69f",
+          "resolvedTextPlacementSha256": "7c8c4a6de819bffc723bd709e6d11c5f66883658d8c58c64dd492e577482aab1",
+          "assessment": "The exact r06 summary now begins by describing brushing as necessary care while retaining participation and gentle adult help. This complete meaning appears in the actual short topic row as well as the expanded summary."
+        }
+      ]
+    },
+    {
+      "id": "toddler-daily-care-tone-r06.18-24.toddler-pacifier-change",
+      "entryId": "toddler-pacifier-change",
+      "placementId": "18-24.toddler-pacifier-change",
+      "snapshotPath": "content/pilots/revisions/r06/snapshots/18-24.toddler-pacifier-change.json",
+      "snapshotFileSha256": "0a3865664f026c61714e83b9fcd4038fbc3a17e545dd0a558c1457df5b858ebc",
+      "textPlacementSha256": "7b780363a0920dc4c24bd4a22df2df712b949c76c281023c5ccbc66fed230d43",
+      "artContextSha256": null,
+      "readLogIds": [
+        "toddler-daily-care-tone-r04.read.scope-activity.text",
+        "toddler-daily-care-tone-r04.read.toileting-pacifier.text",
+        "toddler-daily-care-tone-r04.read.sleep.text",
+        "toddler-daily-care-tone-r04.read.daily-care.visual",
+        "toddler-daily-care-tone-r04.read.limits-touch.text",
+        "toddler-daily-care-tone-r04.read.limits-touch.visual",
+        "toddler-daily-care-tone-r06.read.eating-teeth-sleep-pacifier.text",
+        "toddler-daily-care-tone-r06.read.care-and-appendix.visual"
+      ],
+      "surfacesRead": {
+        "opening": null,
+        "topicRows": [
+          "everyday-care"
+        ],
+        "fullEntry": true,
+        "ageLabel": "18–24 months",
+        "method": "Personally read exact r06 frozen projection plus all matching actual topic-row text/HTML and complete entryText in RENDERED_SURFACES.json. Prior HomeStudy.jsx reading retained only after unchanged hash verification."
+      },
+      "textPlacement": {
+        "verdict": "pass",
+        "issues": [],
+        "assessment": "Pass on the actual Everyday care row and complete expanded r06 entry. The new title names the pacifier change and makes family consideration explicit, so the situation is recognizable when scanning headings. The unchanged summary/detail/age context continue to retain author attribution, no deadline for this band, tentative explanations, child inclusion, extra support and the sleep help-seeking qualification, without a replacement-activity recipe or guaranteed transition time."
+      },
+      "artContext": null,
+      "resolutions": [
+        {
+          "issueId": "toddler-daily-care-tone-r04.pacifier.identifiable-title",
+          "status": "resolved",
+          "priorReviewPath": "content/pilots/reviews/final/toddler-daily-care-tone-r04.json",
+          "priorReviewFileSha256": "b136d24baaddec8c1b2993dd845ba8d86cd886d6696cca96812fc4868c658d5f",
+          "priorReviewId": "toddler-daily-care-tone-r04.18-24.toddler-pacifier-change",
+          "resolvedByReviewId": "toddler-daily-care-tone-r06.18-24.toddler-pacifier-change",
+          "resolvedSnapshotPath": "content/pilots/revisions/r06/snapshots/18-24.toddler-pacifier-change.json",
+          "resolvedSnapshotFileSha256": "0a3865664f026c61714e83b9fcd4038fbc3a17e545dd0a558c1457df5b858ebc",
+          "resolvedTextPlacementSha256": "7b780363a0920dc4c24bd4a22df2df712b949c76c281023c5ccbc66fed230d43",
+          "assessment": "The exact r06 title is When your family considers a pacifier change, present in the actual topic-row heading and expanded heading. It identifies the source situation while preserving conditional family choice."
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "placements": 4,
+    "pass": 4,
+    "revise": 0,
+    "hold": 0,
+    "openIssues": 0,
+    "ownPriorIssuesResolved": 4,
+    "illustratedPlacements": 0,
+    "topicRows": 6
+  }
+}

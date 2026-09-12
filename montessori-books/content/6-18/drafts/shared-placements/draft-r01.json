@@ -1,0 +1,2609 @@
+{
+  "author": {
+    "task": "/root",
+    "reasoning": "xhigh"
+  },
+  "workflow": "lean-v1",
+  "revision": "r01",
+  "reuse": [
+    {
+      "entryId": "shared-observe",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "be586cb71ff0fed0a1e9904aa80691945c86bee712e7f2a83fe5779cbf93741d"
+    },
+    {
+      "entryId": "shared-follow-readiness",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "faf6b70472402cf68b23e4a7351c5c38613801bc3e0185ccc02f79c63b6b762f"
+    },
+    {
+      "entryId": "shared-participation-help",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "179d1031c809beab7faf2065ff47caa85c7c1bf73df76bdbe05e296c1fe2b4c4"
+    },
+    {
+      "entryId": "shared-time-to-explore",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "8904cbdc1e74829188d73117b0eb343cce29beb2384e3cfb6e5517ff674eda33"
+    },
+    {
+      "entryId": "shared-feelings-limits",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "07c45c4884b3cd9d73a3c14bb041d30f4880d0c839ad31ab67918540724bdabf"
+    },
+    {
+      "entryId": "shared-home-fits-family",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "fb7f30238d159ef3395035a56b71356f237faaaa4369ad932effe544ff0625d0"
+    },
+    {
+      "entryId": "shared-adult-needs-support",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "9eb3d6c99388c760b335570260180e97d59b9e2ae1e5ad17b41e2be4e28a90fb"
+    },
+    {
+      "entryId": "shared-something-for-you",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "6488f1305c07855fd68a21f8e981aa8d73906cf4df29ee9903458c02fdc9b9c3"
+    },
+    {
+      "entryId": "shared-less-crowded-day",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "bb2335181b6e1faf055f9c5e195b5ff504f5cd3a5890e36da19f30a50f552e70"
+    },
+    {
+      "entryId": "shared-adult-pause",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "f76130da96f90ba217443bf341dcbcffc5213bee068e55820607ee1aa78d87d5"
+    },
+    {
+      "entryId": "shared-repair",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "bd229463b295f6eff67d11e194bbbad311a8409c8e8b4b423419af5b1ce73f45"
+    },
+    {
+      "entryId": "shared-family-needs",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "2b681012f29bec4ea9bf3a5b2b09969d0e7af714bdfbc5c6d2adeeb85a1faf75"
+    },
+    {
+      "entryId": "shared-caregiver-common-ground",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "da1c89367248409bc919f6f899ddd6a1f7e35934150e9d2d05418d04401b2943"
+    },
+    {
+      "entryId": "shared-family-separation",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "b255f1ce2d259ca26c350df871ab3dea2e699506a8713f9f30360205b3b5c015"
+    },
+    {
+      "entryId": "shared-choosing-care",
+      "registryRevision": "r08",
+      "canonicalEntrySha256": "b00e2d2966250d488c4f275a1a1d133e8828f24c547c3eab94de72ae7c0ce2ad"
+    }
+  ],
+  "placements": [
+    {
+      "id": "9-12.shared-observe",
+      "entryId": "shared-observe",
+      "ageId": "9-12",
+      "topicIds": [
+        "you-family",
+        "play-discovery"
+      ]
+    },
+    {
+      "id": "12-18.shared-observe",
+      "entryId": "shared-observe",
+      "ageId": "12-18",
+      "topicIds": [
+        "you-family",
+        "play-discovery"
+      ]
+    },
+    {
+      "id": "9-12.shared-follow-readiness",
+      "entryId": "shared-follow-readiness",
+      "ageId": "9-12",
+      "topicIds": [
+        "play-discovery",
+        "you-family"
+      ],
+      "ageContext": {
+        "note": "General guidance for choosing activities by interest, rather than a skill expected at this age."
+      }
+    },
+    {
+      "id": "12-18.shared-follow-readiness",
+      "entryId": "shared-follow-readiness",
+      "ageId": "12-18",
+      "topicIds": [
+        "play-discovery",
+        "you-family"
+      ],
+      "ageContext": {
+        "note": "General guidance for choosing activities by interest, rather than a skill expected at this age."
+      }
+    },
+    {
+      "id": "9-12.shared-participation-help",
+      "entryId": "shared-participation-help",
+      "ageId": "9-12",
+      "topicIds": [
+        "everyday-care",
+        "play-discovery",
+        "you-family"
+      ]
+    },
+    {
+      "id": "12-18.shared-participation-help",
+      "entryId": "shared-participation-help",
+      "ageId": "12-18",
+      "topicIds": [
+        "everyday-care",
+        "play-discovery",
+        "you-family"
+      ]
+    },
+    {
+      "id": "9-12.shared-time-to-explore",
+      "entryId": "shared-time-to-explore",
+      "ageId": "9-12",
+      "topicIds": [
+        "play-discovery",
+        "connection-feelings"
+      ]
+    },
+    {
+      "id": "12-18.shared-time-to-explore",
+      "entryId": "shared-time-to-explore",
+      "ageId": "12-18",
+      "topicIds": [
+        "play-discovery",
+        "connection-feelings"
+      ]
+    },
+    {
+      "id": "9-12.shared-feelings-limits",
+      "entryId": "shared-feelings-limits",
+      "ageId": "9-12",
+      "topicIds": [
+        "connection-feelings",
+        "you-family"
+      ]
+    },
+    {
+      "id": "12-18.shared-feelings-limits",
+      "entryId": "shared-feelings-limits",
+      "ageId": "12-18",
+      "topicIds": [
+        "connection-feelings",
+        "you-family"
+      ]
+    },
+    {
+      "id": "9-12.shared-home-fits-family",
+      "entryId": "shared-home-fits-family",
+      "ageId": "9-12",
+      "topicIds": [
+        "home-that-helps",
+        "you-family"
+      ]
+    },
+    {
+      "id": "12-18.shared-home-fits-family",
+      "entryId": "shared-home-fits-family",
+      "ageId": "12-18",
+      "topicIds": [
+        "home-that-helps",
+        "you-family"
+      ]
+    },
+    {
+      "id": "9-12.shared-adult-needs-support",
+      "entryId": "shared-adult-needs-support",
+      "ageId": "9-12",
+      "topicIds": [
+        "you-family"
+      ]
+    },
+    {
+      "id": "12-18.shared-adult-needs-support",
+      "entryId": "shared-adult-needs-support",
+      "ageId": "12-18",
+      "topicIds": [
+        "you-family"
+      ]
+    },
+    {
+      "id": "9-12.shared-something-for-you",
+      "entryId": "shared-something-for-you",
+      "ageId": "9-12",
+      "topicIds": [
+        "you-family"
+      ]
+    },
+    {
+      "id": "12-18.shared-something-for-you",
+      "entryId": "shared-something-for-you",
+      "ageId": "12-18",
+      "topicIds": [
+        "you-family"
+      ]
+    },
+    {
+      "id": "9-12.shared-less-crowded-day",
+      "entryId": "shared-less-crowded-day",
+      "ageId": "9-12",
+      "topicIds": [
+        "you-family",
+        "everyday-care"
+      ]
+    },
+    {
+      "id": "12-18.shared-less-crowded-day",
+      "entryId": "shared-less-crowded-day",
+      "ageId": "12-18",
+      "topicIds": [
+        "you-family",
+        "everyday-care"
+      ]
+    },
+    {
+      "id": "9-12.shared-adult-pause",
+      "entryId": "shared-adult-pause",
+      "ageId": "9-12",
+      "topicIds": [
+        "you-family",
+        "connection-feelings"
+      ]
+    },
+    {
+      "id": "12-18.shared-adult-pause",
+      "entryId": "shared-adult-pause",
+      "ageId": "12-18",
+      "topicIds": [
+        "you-family",
+        "connection-feelings"
+      ]
+    },
+    {
+      "id": "9-12.shared-repair",
+      "entryId": "shared-repair",
+      "ageId": "9-12",
+      "topicIds": [
+        "you-family",
+        "connection-feelings"
+      ]
+    },
+    {
+      "id": "12-18.shared-repair",
+      "entryId": "shared-repair",
+      "ageId": "12-18",
+      "topicIds": [
+        "you-family",
+        "connection-feelings"
+      ]
+    },
+    {
+      "id": "9-12.shared-family-needs",
+      "entryId": "shared-family-needs",
+      "ageId": "9-12",
+      "topicIds": [
+        "you-family"
+      ]
+    },
+    {
+      "id": "12-18.shared-family-needs",
+      "entryId": "shared-family-needs",
+      "ageId": "12-18",
+      "topicIds": [
+        "you-family"
+      ]
+    },
+    {
+      "id": "9-12.shared-caregiver-common-ground",
+      "entryId": "shared-caregiver-common-ground",
+      "ageId": "9-12",
+      "topicIds": [
+        "you-family",
+        "connection-feelings"
+      ]
+    },
+    {
+      "id": "12-18.shared-caregiver-common-ground",
+      "entryId": "shared-caregiver-common-ground",
+      "ageId": "12-18",
+      "topicIds": [
+        "you-family",
+        "connection-feelings"
+      ]
+    },
+    {
+      "id": "9-12.shared-family-separation",
+      "entryId": "shared-family-separation",
+      "ageId": "9-12",
+      "topicIds": [
+        "you-family"
+      ]
+    },
+    {
+      "id": "12-18.shared-family-separation",
+      "entryId": "shared-family-separation",
+      "ageId": "12-18",
+      "topicIds": [
+        "you-family"
+      ]
+    },
+    {
+      "id": "9-12.shared-choosing-care",
+      "entryId": "shared-choosing-care",
+      "ageId": "9-12",
+      "topicIds": [
+        "you-family"
+      ]
+    },
+    {
+      "id": "12-18.shared-choosing-care",
+      "entryId": "shared-choosing-care",
+      "ageId": "12-18",
+      "topicIds": [
+        "you-family"
+      ]
+    }
+  ],
+  "placementEvidence": [
+    {
+      "placementId": "9-12.shared-observe",
+      "sourceAge": {
+        "statement": "No fixed age is stated for observation of the individual baby.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 33,
+                "end": 37
+              }
+            ],
+            "section": "Montessori principles for babies / Observation",
+            "locator": "Observation of movement, communication, interests and the adult’s response; informal observation"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.environment-includes-people",
+          "baby.ev.observation-domains",
+          "baby.ev.observe-baby",
+          "baby.ev.sleep-observation-anecdote",
+          "baby.ev.solids-sensitive-period",
+          "baby.ev.time-to-look-at-details",
+          "baby.ev.unobtrusive-observation"
+        ]
+      },
+      "readiness": {
+        "statement": "The adult wants to understand the child’s actions, interests, surroundings or need for help.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 33,
+                "end": 37
+              }
+            ],
+            "section": "Montessori principles for babies / Observation",
+            "locator": "Observation of movement, communication, interests and the adult’s response; informal observation"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.environment-includes-people",
+          "baby.ev.observation-domains",
+          "baby.ev.observe-baby",
+          "baby.ev.sleep-observation-anecdote",
+          "baby.ev.solids-sensitive-period",
+          "baby.ev.time-to-look-at-details",
+          "baby.ev.unobtrusive-observation"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 9-12 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.33-37"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-observe",
+        "canonicalEntrySha256": "be586cb71ff0fed0a1e9904aa80691945c86bee712e7f2a83fe5779cbf93741d",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "12-18.shared-observe",
+      "sourceAge": {
+        "statement": "No fixed age is stated for observation of the individual baby.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 33,
+                "end": 37
+              }
+            ],
+            "section": "Montessori principles for babies / Observation",
+            "locator": "Observation of movement, communication, interests and the adult’s response; informal observation"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.environment-includes-people",
+          "baby.ev.observation-domains",
+          "baby.ev.observe-baby",
+          "baby.ev.sleep-observation-anecdote",
+          "baby.ev.solids-sensitive-period",
+          "baby.ev.time-to-look-at-details",
+          "baby.ev.unobtrusive-observation"
+        ]
+      },
+      "readiness": {
+        "statement": "The adult wants to understand the child’s actions, interests, surroundings or need for help.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 33,
+                "end": 37
+              }
+            ],
+            "section": "Montessori principles for babies / Observation",
+            "locator": "Observation of movement, communication, interests and the adult’s response; informal observation"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.environment-includes-people",
+          "baby.ev.observation-domains",
+          "baby.ev.observe-baby",
+          "baby.ev.sleep-observation-anecdote",
+          "baby.ev.solids-sensitive-period",
+          "baby.ev.time-to-look-at-details",
+          "baby.ev.unobtrusive-observation"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 12-18 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.33-37"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-observe",
+        "canonicalEntrySha256": "be586cb71ff0fed0a1e9904aa80691945c86bee712e7f2a83fe5779cbf93741d",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "9-12.shared-follow-readiness",
+      "sourceAge": {
+        "statement": "The authors call activity ages guidelines and reject speeding up or slowing down an individual timeline.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 119,
+                "end": 120
+              }
+            ],
+            "section": "Introduction to activities",
+            "locator": "Age guidelines, individual development, support-seeking and choosing by observed interest"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch06-activity-purpose-and-age",
+          "baby.ev.ch06-brain-volume-statistic",
+          "baby.ev.ch06-material-suitability"
+        ]
+      },
+      "readiness": {
+        "statement": "Choose in response to what the child is developing, practicing or showing interest in.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 119,
+                "end": 120
+              }
+            ],
+            "section": "Introduction to activities",
+            "locator": "Age guidelines, individual development, support-seeking and choosing by observed interest"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch06-activity-purpose-and-age",
+          "baby.ev.ch06-brain-volume-statistic",
+          "baby.ev.ch06-material-suitability"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 9-12 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.119-120"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-follow-readiness",
+        "canonicalEntrySha256": "faf6b70472402cf68b23e4a7351c5c38613801bc3e0185ccc02f79c63b6b762f",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "12-18.shared-follow-readiness",
+      "sourceAge": {
+        "statement": "The authors call activity ages guidelines and reject speeding up or slowing down an individual timeline.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 119,
+                "end": 120
+              }
+            ],
+            "section": "Introduction to activities",
+            "locator": "Age guidelines, individual development, support-seeking and choosing by observed interest"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch06-activity-purpose-and-age",
+          "baby.ev.ch06-brain-volume-statistic",
+          "baby.ev.ch06-material-suitability"
+        ]
+      },
+      "readiness": {
+        "statement": "Choose in response to what the child is developing, practicing or showing interest in.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 119,
+                "end": 120
+              }
+            ],
+            "section": "Introduction to activities",
+            "locator": "Age guidelines, individual development, support-seeking and choosing by observed interest"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch06-activity-purpose-and-age",
+          "baby.ev.ch06-brain-volume-statistic",
+          "baby.ev.ch06-material-suitability"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 12-18 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.119-120"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-follow-readiness",
+        "canonicalEntrySha256": "faf6b70472402cf68b23e4a7351c5c38613801bc3e0185ccc02f79c63b6b762f",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "9-12.shared-participation-help",
+      "sourceAge": {
+        "statement": "The authors explicitly describe collaboration at every stage; the nine-month sleeve is an example, not a deadline.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 100,
+                "end": 101
+              }
+            ],
+            "section": "Respect our baby",
+            "locator": "Collaboration at every stage and observing the amount of help needed"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-collaboration",
+          "baby.ev.ch05-individuality-observation",
+          "baby.ev.ch05-praise-alternatives",
+          "baby.ev.ch05-protect-safe-effort"
+        ]
+      },
+      "readiness": {
+        "statement": "The child is taking part or making an effort; an adult observes whether help is needed.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 100,
+                "end": 101
+              }
+            ],
+            "section": "Respect our baby",
+            "locator": "Collaboration at every stage and observing the amount of help needed"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-collaboration",
+          "baby.ev.ch05-individuality-observation",
+          "baby.ev.ch05-praise-alternatives",
+          "baby.ev.ch05-protect-safe-effort"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 9-12 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.99-104"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-participation-help",
+        "canonicalEntrySha256": "179d1031c809beab7faf2065ff47caa85c7c1bf73df76bdbe05e296c1fe2b4c4",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "12-18.shared-participation-help",
+      "sourceAge": {
+        "statement": "The authors explicitly describe collaboration at every stage; the nine-month sleeve is an example, not a deadline.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 100,
+                "end": 101
+              }
+            ],
+            "section": "Respect our baby",
+            "locator": "Collaboration at every stage and observing the amount of help needed"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-collaboration",
+          "baby.ev.ch05-individuality-observation",
+          "baby.ev.ch05-praise-alternatives",
+          "baby.ev.ch05-protect-safe-effort"
+        ]
+      },
+      "readiness": {
+        "statement": "The child is taking part or making an effort; an adult observes whether help is needed.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 100,
+                "end": 101
+              }
+            ],
+            "section": "Respect our baby",
+            "locator": "Collaboration at every stage and observing the amount of help needed"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-collaboration",
+          "baby.ev.ch05-individuality-observation",
+          "baby.ev.ch05-praise-alternatives",
+          "baby.ev.ch05-protect-safe-effort"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 12-18 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.99-104"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-participation-help",
+        "canonicalEntrySha256": "179d1031c809beab7faf2065ff47caa85c7c1bf73df76bdbe05e296c1fe2b4c4",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "9-12.shared-time-to-explore",
+      "sourceAge": {
+        "statement": "No fixed age is stated for respecting safe activity and the baby’s pace.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 101,
+                "end": 102
+              }
+            ],
+            "section": "Respect our baby / Respect the baby’s pace (slow down)",
+            "locator": "Safe exploration, assistance when needed and time to process and try"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-praise-alternatives",
+          "baby.ev.ch05-processing-seconds",
+          "baby.ev.ch05-protect-safe-effort",
+          "baby.ev.ch05-real-choices",
+          "baby.ev.ch05-tarry-time"
+        ]
+      },
+      "readiness": {
+        "statement": "The child is safely engaged in watching, movement or repeated effort, with help available.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 101,
+                "end": 102
+              }
+            ],
+            "section": "Respect our baby / Respect the baby’s pace (slow down)",
+            "locator": "Safe exploration, assistance when needed and time to process and try"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-praise-alternatives",
+          "baby.ev.ch05-processing-seconds",
+          "baby.ev.ch05-protect-safe-effort",
+          "baby.ev.ch05-real-choices",
+          "baby.ev.ch05-tarry-time"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 9-12 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.99-104"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-time-to-explore",
+        "canonicalEntrySha256": "8904cbdc1e74829188d73117b0eb343cce29beb2384e3cfb6e5517ff674eda33",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "12-18.shared-time-to-explore",
+      "sourceAge": {
+        "statement": "No fixed age is stated for respecting safe activity and the baby’s pace.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 101,
+                "end": 102
+              }
+            ],
+            "section": "Respect our baby / Respect the baby’s pace (slow down)",
+            "locator": "Safe exploration, assistance when needed and time to process and try"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-praise-alternatives",
+          "baby.ev.ch05-processing-seconds",
+          "baby.ev.ch05-protect-safe-effort",
+          "baby.ev.ch05-real-choices",
+          "baby.ev.ch05-tarry-time"
+        ]
+      },
+      "readiness": {
+        "statement": "The child is safely engaged in watching, movement or repeated effort, with help available.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 101,
+                "end": 102
+              }
+            ],
+            "section": "Respect our baby / Respect the baby’s pace (slow down)",
+            "locator": "Safe exploration, assistance when needed and time to process and try"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-praise-alternatives",
+          "baby.ev.ch05-processing-seconds",
+          "baby.ev.ch05-protect-safe-effort",
+          "baby.ev.ch05-real-choices",
+          "baby.ev.ch05-tarry-time"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 12-18 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.99-104"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-time-to-explore",
+        "canonicalEntrySha256": "8904cbdc1e74829188d73117b0eb343cce29beb2384e3cfb6e5517ff674eda33",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "9-12.shared-feelings-limits",
+      "sourceAge": {
+        "statement": "The boundaries section says this begins at birth; no later age threshold is given.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 103,
+                "end": 104
+              },
+              {
+                "start": 110,
+                "end": 111
+              }
+            ],
+            "section": "Having kind and clear boundaries; When our baby cries",
+            "locator": "Freedom within safety and ability limits, protective intervention and responding to crying"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-attachment-responsive",
+          "baby.ev.ch05-crying-response",
+          "baby.ev.ch05-guide-and-repair",
+          "baby.ev.ch05-kind-limits",
+          "baby.ev.ch05-limits-brain-claim"
+        ]
+      },
+      "readiness": {
+        "statement": "An action needs a safety or family boundary, or the child expresses a difficult feeling.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 103,
+                "end": 104
+              },
+              {
+                "start": 110,
+                "end": 111
+              }
+            ],
+            "section": "Having kind and clear boundaries; When our baby cries",
+            "locator": "Freedom within safety and ability limits, protective intervention and responding to crying"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-attachment-responsive",
+          "baby.ev.ch05-crying-response",
+          "baby.ev.ch05-guide-and-repair",
+          "baby.ev.ch05-kind-limits",
+          "baby.ev.ch05-limits-brain-claim"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 9-12 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.99-104",
+          "s6.shared.author.baby.110-115"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-feelings-limits",
+        "canonicalEntrySha256": "07c45c4884b3cd9d73a3c14bb041d30f4880d0c839ad31ab67918540724bdabf",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "12-18.shared-feelings-limits",
+      "sourceAge": {
+        "statement": "The boundaries section says this begins at birth; no later age threshold is given.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 103,
+                "end": 104
+              },
+              {
+                "start": 110,
+                "end": 111
+              }
+            ],
+            "section": "Having kind and clear boundaries; When our baby cries",
+            "locator": "Freedom within safety and ability limits, protective intervention and responding to crying"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-attachment-responsive",
+          "baby.ev.ch05-crying-response",
+          "baby.ev.ch05-guide-and-repair",
+          "baby.ev.ch05-kind-limits",
+          "baby.ev.ch05-limits-brain-claim"
+        ]
+      },
+      "readiness": {
+        "statement": "An action needs a safety or family boundary, or the child expresses a difficult feeling.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 103,
+                "end": 104
+              },
+              {
+                "start": 110,
+                "end": 111
+              }
+            ],
+            "section": "Having kind and clear boundaries; When our baby cries",
+            "locator": "Freedom within safety and ability limits, protective intervention and responding to crying"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-attachment-responsive",
+          "baby.ev.ch05-crying-response",
+          "baby.ev.ch05-guide-and-repair",
+          "baby.ev.ch05-kind-limits",
+          "baby.ev.ch05-limits-brain-claim"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 12-18 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.99-104",
+          "s6.shared.author.baby.110-115"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-feelings-limits",
+        "canonicalEntrySha256": "07c45c4884b3cd9d73a3c14bb041d30f4880d0c839ad31ab67918540724bdabf",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "9-12.shared-home-fits-family",
+      "sourceAge": {
+        "statement": "No fixed age is stated; the passage describes adapting what the family has as the child grows.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 223,
+                "end": 224
+              }
+            ],
+            "section": "How can you do Montessori on a budget?",
+            "locator": "Relationship, everyday participation, existing resources and adapting as the child grows"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.budget-improvised-equipment",
+          "baby.ev.budget-montessori",
+          "baby.ev.daily-tasks-with-baby"
+        ]
+      },
+      "readiness": {
+        "statement": "The family is considering changes to the home or available materials.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 223,
+                "end": 224
+              }
+            ],
+            "section": "How can you do Montessori on a budget?",
+            "locator": "Relationship, everyday participation, existing resources and adapting as the child grows"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.budget-improvised-equipment",
+          "baby.ev.budget-montessori",
+          "baby.ev.daily-tasks-with-baby"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 9-12 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.222-224"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-home-fits-family",
+        "canonicalEntrySha256": "fb7f30238d159ef3395035a56b71356f237faaaa4369ad932effe544ff0625d0",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "12-18.shared-home-fits-family",
+      "sourceAge": {
+        "statement": "No fixed age is stated; the passage describes adapting what the family has as the child grows.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 223,
+                "end": 224
+              }
+            ],
+            "section": "How can you do Montessori on a budget?",
+            "locator": "Relationship, everyday participation, existing resources and adapting as the child grows"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.budget-improvised-equipment",
+          "baby.ev.budget-montessori",
+          "baby.ev.daily-tasks-with-baby"
+        ]
+      },
+      "readiness": {
+        "statement": "The family is considering changes to the home or available materials.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 223,
+                "end": 224
+              }
+            ],
+            "section": "How can you do Montessori on a budget?",
+            "locator": "Relationship, everyday participation, existing resources and adapting as the child grows"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.budget-improvised-equipment",
+          "baby.ev.budget-montessori",
+          "baby.ev.daily-tasks-with-baby"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 12-18 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.222-224"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-home-fits-family",
+        "canonicalEntrySha256": "fb7f30238d159ef3395035a56b71356f237faaaa4369ad932effe544ff0625d0",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "9-12.shared-adult-needs-support",
+      "sourceAge": {
+        "statement": "Adult preparation is not tied to a child skill or fixed age; the early months are emphasized, not made an endpoint.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 235,
+                "end": 238
+              }
+            ],
+            "section": "Preparing ourselves",
+            "locator": "Adult needs, rest, support and professional help for postpartum depression"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.adult-basic-care",
+          "baby.ev.adult-depression-support",
+          "baby.ev.adult-memory-and-presence",
+          "baby.ev.adult-needs-belong",
+          "baby.ev.adult-preparation-box",
+          "baby.ev.adult-selective-learning",
+          "baby.ev.adult-self-trust-forgiveness",
+          "baby.ev.adult-support-system"
+        ]
+      },
+      "readiness": {
+        "statement": "The adult needs rest, nourishment, emotional company or practical/professional support.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 235,
+                "end": 238
+              }
+            ],
+            "section": "Preparing ourselves",
+            "locator": "Adult needs, rest, support and professional help for postpartum depression"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.adult-basic-care",
+          "baby.ev.adult-depression-support",
+          "baby.ev.adult-memory-and-presence",
+          "baby.ev.adult-needs-belong",
+          "baby.ev.adult-preparation-box",
+          "baby.ev.adult-selective-learning",
+          "baby.ev.adult-self-trust-forgiveness",
+          "baby.ev.adult-support-system"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 9-12 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.234-242"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-adult-needs-support",
+        "canonicalEntrySha256": "9eb3d6c99388c760b335570260180e97d59b9e2ae1e5ad17b41e2be4e28a90fb",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "12-18.shared-adult-needs-support",
+      "sourceAge": {
+        "statement": "Adult preparation is not tied to a child skill or fixed age; the early months are emphasized, not made an endpoint.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 235,
+                "end": 238
+              }
+            ],
+            "section": "Preparing ourselves",
+            "locator": "Adult needs, rest, support and professional help for postpartum depression"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.adult-basic-care",
+          "baby.ev.adult-depression-support",
+          "baby.ev.adult-memory-and-presence",
+          "baby.ev.adult-needs-belong",
+          "baby.ev.adult-preparation-box",
+          "baby.ev.adult-selective-learning",
+          "baby.ev.adult-self-trust-forgiveness",
+          "baby.ev.adult-support-system"
+        ]
+      },
+      "readiness": {
+        "statement": "The adult needs rest, nourishment, emotional company or practical/professional support.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 235,
+                "end": 238
+              }
+            ],
+            "section": "Preparing ourselves",
+            "locator": "Adult needs, rest, support and professional help for postpartum depression"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.adult-basic-care",
+          "baby.ev.adult-depression-support",
+          "baby.ev.adult-memory-and-presence",
+          "baby.ev.adult-needs-belong",
+          "baby.ev.adult-preparation-box",
+          "baby.ev.adult-selective-learning",
+          "baby.ev.adult-self-trust-forgiveness",
+          "baby.ev.adult-support-system"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 12-18 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.234-242"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-adult-needs-support",
+        "canonicalEntrySha256": "9eb3d6c99388c760b335570260180e97d59b9e2ae1e5ad17b41e2be4e28a90fb",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "9-12.shared-something-for-you",
+      "sourceAge": {
+        "statement": "No child age is specified for the adult’s own interests.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 235,
+                "end": 236
+              },
+              {
+                "start": 239,
+                "end": 241
+              }
+            ],
+            "section": "Intellectual preparation; 49 ideas for staying calm",
+            "locator": "Interests outside parenting and the authors’ personal possibilities"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.adult-basic-care",
+          "baby.ev.adult-needs-belong",
+          "baby.ev.adult-selective-learning",
+          "baby.ev.adult-self-observation",
+          "baby.ev.adult-self-trust-forgiveness",
+          "baby.ev.calm-agency",
+          "baby.ev.calm-attention-reflection",
+          "baby.ev.calm-care-swap",
+          "baby.ev.calm-frequency-claim",
+          "baby.ev.calm-friendship",
+          "baby.ev.calm-get-help",
+          "baby.ev.calm-guide-perspective",
+          "baby.ev.calm-home-order",
+          "baby.ev.calm-movement-nature",
+          "baby.ev.calm-music",
+          "baby.ev.calm-nourishment",
+          "baby.ev.calm-pause",
+          "baby.ev.calm-personal-time",
+          "baby.ev.calm-receiving-care",
+          "baby.ev.calm-repair-compassion",
+          "baby.ev.calm-rest",
+          "baby.ev.calm-small-pleasures",
+          "baby.ev.doing-best-today"
+        ]
+      },
+      "readiness": {
+        "statement": "The adult wants room for their own learning, enjoyment or company.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 235,
+                "end": 236
+              },
+              {
+                "start": 239,
+                "end": 241
+              }
+            ],
+            "section": "Intellectual preparation; 49 ideas for staying calm",
+            "locator": "Interests outside parenting and the authors’ personal possibilities"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.adult-basic-care",
+          "baby.ev.adult-needs-belong",
+          "baby.ev.adult-selective-learning",
+          "baby.ev.adult-self-observation",
+          "baby.ev.adult-self-trust-forgiveness",
+          "baby.ev.calm-agency",
+          "baby.ev.calm-attention-reflection",
+          "baby.ev.calm-care-swap",
+          "baby.ev.calm-frequency-claim",
+          "baby.ev.calm-friendship",
+          "baby.ev.calm-get-help",
+          "baby.ev.calm-guide-perspective",
+          "baby.ev.calm-home-order",
+          "baby.ev.calm-movement-nature",
+          "baby.ev.calm-music",
+          "baby.ev.calm-nourishment",
+          "baby.ev.calm-pause",
+          "baby.ev.calm-personal-time",
+          "baby.ev.calm-receiving-care",
+          "baby.ev.calm-repair-compassion",
+          "baby.ev.calm-rest",
+          "baby.ev.calm-small-pleasures",
+          "baby.ev.doing-best-today"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 9-12 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.234-242"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-something-for-you",
+        "canonicalEntrySha256": "6488f1305c07855fd68a21f8e981aa8d73906cf4df29ee9903458c02fdc9b9c3",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "12-18.shared-something-for-you",
+      "sourceAge": {
+        "statement": "No child age is specified for the adult’s own interests.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 235,
+                "end": 236
+              },
+              {
+                "start": 239,
+                "end": 241
+              }
+            ],
+            "section": "Intellectual preparation; 49 ideas for staying calm",
+            "locator": "Interests outside parenting and the authors’ personal possibilities"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.adult-basic-care",
+          "baby.ev.adult-needs-belong",
+          "baby.ev.adult-selective-learning",
+          "baby.ev.adult-self-observation",
+          "baby.ev.adult-self-trust-forgiveness",
+          "baby.ev.calm-agency",
+          "baby.ev.calm-attention-reflection",
+          "baby.ev.calm-care-swap",
+          "baby.ev.calm-frequency-claim",
+          "baby.ev.calm-friendship",
+          "baby.ev.calm-get-help",
+          "baby.ev.calm-guide-perspective",
+          "baby.ev.calm-home-order",
+          "baby.ev.calm-movement-nature",
+          "baby.ev.calm-music",
+          "baby.ev.calm-nourishment",
+          "baby.ev.calm-pause",
+          "baby.ev.calm-personal-time",
+          "baby.ev.calm-receiving-care",
+          "baby.ev.calm-repair-compassion",
+          "baby.ev.calm-rest",
+          "baby.ev.calm-small-pleasures",
+          "baby.ev.doing-best-today"
+        ]
+      },
+      "readiness": {
+        "statement": "The adult wants room for their own learning, enjoyment or company.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 235,
+                "end": 236
+              },
+              {
+                "start": 239,
+                "end": 241
+              }
+            ],
+            "section": "Intellectual preparation; 49 ideas for staying calm",
+            "locator": "Interests outside parenting and the authors’ personal possibilities"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.adult-basic-care",
+          "baby.ev.adult-needs-belong",
+          "baby.ev.adult-selective-learning",
+          "baby.ev.adult-self-observation",
+          "baby.ev.adult-self-trust-forgiveness",
+          "baby.ev.calm-agency",
+          "baby.ev.calm-attention-reflection",
+          "baby.ev.calm-care-swap",
+          "baby.ev.calm-frequency-claim",
+          "baby.ev.calm-friendship",
+          "baby.ev.calm-get-help",
+          "baby.ev.calm-guide-perspective",
+          "baby.ev.calm-home-order",
+          "baby.ev.calm-movement-nature",
+          "baby.ev.calm-music",
+          "baby.ev.calm-nourishment",
+          "baby.ev.calm-pause",
+          "baby.ev.calm-personal-time",
+          "baby.ev.calm-receiving-care",
+          "baby.ev.calm-repair-compassion",
+          "baby.ev.calm-rest",
+          "baby.ev.calm-small-pleasures",
+          "baby.ev.doing-best-today"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 12-18 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.234-242"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-something-for-you",
+        "canonicalEntrySha256": "6488f1305c07855fd68a21f8e981aa8d73906cf4df29ee9903458c02fdc9b9c3",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "9-12.shared-less-crowded-day",
+      "sourceAge": {
+        "statement": "The daily-task discussion explicitly continues beyond the first six to eight weeks; doing our best has no fixed child age.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 222,
+                "end": 223
+              },
+              {
+                "start": 241,
+                "end": 242
+              }
+            ],
+            "section": "What do we do when we need to get through our daily tasks?; Doing our best",
+            "locator": "Daily tasks beyond the symbiotic period and capacity that changes with the day"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.adult-closing-prompts",
+          "baby.ev.budget-montessori",
+          "baby.ev.calm-attention-reflection",
+          "baby.ev.calm-frequency-claim",
+          "baby.ev.calm-get-help",
+          "baby.ev.calm-movement-nature",
+          "baby.ev.calm-music",
+          "baby.ev.calm-nourishment",
+          "baby.ev.calm-pause",
+          "baby.ev.calm-personal-time",
+          "baby.ev.calm-repair-compassion",
+          "baby.ev.calm-small-pleasures",
+          "baby.ev.daily-tasks-with-baby",
+          "baby.ev.doing-best-today",
+          "baby.ev.oral-exploration-claims"
+        ]
+      },
+      "readiness": {
+        "statement": "Ordinary work, care, rest and commitments compete for time.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 222,
+                "end": 223
+              },
+              {
+                "start": 241,
+                "end": 242
+              }
+            ],
+            "section": "What do we do when we need to get through our daily tasks?; Doing our best",
+            "locator": "Daily tasks beyond the symbiotic period and capacity that changes with the day"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.adult-closing-prompts",
+          "baby.ev.budget-montessori",
+          "baby.ev.calm-attention-reflection",
+          "baby.ev.calm-frequency-claim",
+          "baby.ev.calm-get-help",
+          "baby.ev.calm-movement-nature",
+          "baby.ev.calm-music",
+          "baby.ev.calm-nourishment",
+          "baby.ev.calm-pause",
+          "baby.ev.calm-personal-time",
+          "baby.ev.calm-repair-compassion",
+          "baby.ev.calm-small-pleasures",
+          "baby.ev.daily-tasks-with-baby",
+          "baby.ev.doing-best-today",
+          "baby.ev.oral-exploration-claims"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 9-12 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.222-224",
+          "s6.shared.author.baby.234-242"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-less-crowded-day",
+        "canonicalEntrySha256": "bb2335181b6e1faf055f9c5e195b5ff504f5cd3a5890e36da19f30a50f552e70",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "12-18.shared-less-crowded-day",
+      "sourceAge": {
+        "statement": "The daily-task discussion explicitly continues beyond the first six to eight weeks; doing our best has no fixed child age.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 222,
+                "end": 223
+              },
+              {
+                "start": 241,
+                "end": 242
+              }
+            ],
+            "section": "What do we do when we need to get through our daily tasks?; Doing our best",
+            "locator": "Daily tasks beyond the symbiotic period and capacity that changes with the day"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.adult-closing-prompts",
+          "baby.ev.budget-montessori",
+          "baby.ev.calm-attention-reflection",
+          "baby.ev.calm-frequency-claim",
+          "baby.ev.calm-get-help",
+          "baby.ev.calm-movement-nature",
+          "baby.ev.calm-music",
+          "baby.ev.calm-nourishment",
+          "baby.ev.calm-pause",
+          "baby.ev.calm-personal-time",
+          "baby.ev.calm-repair-compassion",
+          "baby.ev.calm-small-pleasures",
+          "baby.ev.daily-tasks-with-baby",
+          "baby.ev.doing-best-today",
+          "baby.ev.oral-exploration-claims"
+        ]
+      },
+      "readiness": {
+        "statement": "Ordinary work, care, rest and commitments compete for time.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 222,
+                "end": 223
+              },
+              {
+                "start": 241,
+                "end": 242
+              }
+            ],
+            "section": "What do we do when we need to get through our daily tasks?; Doing our best",
+            "locator": "Daily tasks beyond the symbiotic period and capacity that changes with the day"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.adult-closing-prompts",
+          "baby.ev.budget-montessori",
+          "baby.ev.calm-attention-reflection",
+          "baby.ev.calm-frequency-claim",
+          "baby.ev.calm-get-help",
+          "baby.ev.calm-movement-nature",
+          "baby.ev.calm-music",
+          "baby.ev.calm-nourishment",
+          "baby.ev.calm-pause",
+          "baby.ev.calm-personal-time",
+          "baby.ev.calm-repair-compassion",
+          "baby.ev.calm-small-pleasures",
+          "baby.ev.daily-tasks-with-baby",
+          "baby.ev.doing-best-today",
+          "baby.ev.oral-exploration-claims"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 12-18 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.222-224",
+          "s6.shared.author.baby.234-242"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-less-crowded-day",
+        "canonicalEntrySha256": "bb2335181b6e1faf055f9c5e195b5ff504f5cd3a5890e36da19f30a50f552e70",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "9-12.shared-adult-pause",
+      "sourceAge": {
+        "statement": "No fixed age limits the adult’s responsive pause.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 110,
+                "end": 111
+              }
+            ],
+            "section": "When our baby cries",
+            "locator": "The no-danger condition and acknowledging, observing and responding to the baby"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-attachment-responsive",
+          "baby.ev.ch05-crying-response",
+          "baby.ev.ch05-guide-and-repair"
+        ]
+      },
+      "readiness": {
+        "statement": "The adult feels a strong reaction; the child is not in immediate danger and remains responded to.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 110,
+                "end": 111
+              }
+            ],
+            "section": "When our baby cries",
+            "locator": "The no-danger condition and acknowledging, observing and responding to the baby"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-attachment-responsive",
+          "baby.ev.ch05-crying-response",
+          "baby.ev.ch05-guide-and-repair"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 9-12 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.110-115"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-adult-pause",
+        "canonicalEntrySha256": "f76130da96f90ba217443bf341dcbcffc5213bee068e55820607ee1aa78d87d5",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "12-18.shared-adult-pause",
+      "sourceAge": {
+        "statement": "No fixed age limits the adult’s responsive pause.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 110,
+                "end": 111
+              }
+            ],
+            "section": "When our baby cries",
+            "locator": "The no-danger condition and acknowledging, observing and responding to the baby"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-attachment-responsive",
+          "baby.ev.ch05-crying-response",
+          "baby.ev.ch05-guide-and-repair"
+        ]
+      },
+      "readiness": {
+        "statement": "The adult feels a strong reaction; the child is not in immediate danger and remains responded to.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 110,
+                "end": 111
+              }
+            ],
+            "section": "When our baby cries",
+            "locator": "The no-danger condition and acknowledging, observing and responding to the baby"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-attachment-responsive",
+          "baby.ev.ch05-crying-response",
+          "baby.ev.ch05-guide-and-repair"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 12-18 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.110-115"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-adult-pause",
+        "canonicalEntrySha256": "f76130da96f90ba217443bf341dcbcffc5213bee068e55820607ee1aa78d87d5",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "9-12.shared-repair",
+      "sourceAge": {
+        "statement": "The authors address apology and modeling while caring for babies without a numerical threshold.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 111,
+                "end": 112
+              }
+            ],
+            "section": "Being their guide / Modeling",
+            "locator": "Adult apology, acknowledging feelings and naming a different action"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-crying-response",
+          "baby.ev.ch05-guide-and-repair",
+          "baby.ev.ch05-remove-obstacles-no-performance"
+        ]
+      },
+      "readiness": {
+        "statement": "The adult has acted or spoken in a way they want to acknowledge and repair.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 111,
+                "end": 112
+              }
+            ],
+            "section": "Being their guide / Modeling",
+            "locator": "Adult apology, acknowledging feelings and naming a different action"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-crying-response",
+          "baby.ev.ch05-guide-and-repair",
+          "baby.ev.ch05-remove-obstacles-no-performance"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 9-12 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.110-115"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-repair",
+        "canonicalEntrySha256": "bd229463b295f6eff67d11e194bbbad311a8409c8e8b4b423419af5b1ce73f45",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "12-18.shared-repair",
+      "sourceAge": {
+        "statement": "The authors address apology and modeling while caring for babies without a numerical threshold.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 111,
+                "end": 112
+              }
+            ],
+            "section": "Being their guide / Modeling",
+            "locator": "Adult apology, acknowledging feelings and naming a different action"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-crying-response",
+          "baby.ev.ch05-guide-and-repair",
+          "baby.ev.ch05-remove-obstacles-no-performance"
+        ]
+      },
+      "readiness": {
+        "statement": "The adult has acted or spoken in a way they want to acknowledge and repair.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 111,
+                "end": 112
+              }
+            ],
+            "section": "Being their guide / Modeling",
+            "locator": "Adult apology, acknowledging feelings and naming a different action"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.ch05-crying-response",
+          "baby.ev.ch05-guide-and-repair",
+          "baby.ev.ch05-remove-obstacles-no-performance"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 12-18 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.110-115"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-repair",
+        "canonicalEntrySha256": "bd229463b295f6eff67d11e194bbbad311a8409c8e8b4b423419af5b1ce73f45",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "9-12.shared-family-needs",
+      "sourceAge": {
+        "statement": "The family discussion extends beyond birth and through childhood; no child skill is needed for adults to plan together.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 244,
+                "end": 246
+              },
+              {
+                "start": 251,
+                "end": 253
+              }
+            ],
+            "section": "We don’t walk alone; Working with our partner; Getting on the same page",
+            "locator": "Different family supports, partner check-in and regular parenting conversations"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.care-choice-realities",
+          "baby.ev.caregiver-curiosity-appreciation",
+          "baby.ev.caregiver-feelings-needs",
+          "baby.ev.caregiver-shared-values",
+          "baby.ev.grandparent-support-context",
+          "baby.ev.nido-community-labels",
+          "baby.ev.parenting-chats",
+          "baby.ev.partners-check-in",
+          "baby.ev.partners-practical-connection",
+          "baby.ev.partners-prenatal",
+          "baby.ev.village-connections",
+          "baby.ev.village-professionals",
+          "baby.ev.visible-help-list"
+        ]
+      },
+      "readiness": {
+        "statement": "Adults sharing family care need to discuss arrangements, support and practical work.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 244,
+                "end": 246
+              },
+              {
+                "start": 251,
+                "end": 253
+              }
+            ],
+            "section": "We don’t walk alone; Working with our partner; Getting on the same page",
+            "locator": "Different family supports, partner check-in and regular parenting conversations"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.care-choice-realities",
+          "baby.ev.caregiver-curiosity-appreciation",
+          "baby.ev.caregiver-feelings-needs",
+          "baby.ev.caregiver-shared-values",
+          "baby.ev.grandparent-support-context",
+          "baby.ev.nido-community-labels",
+          "baby.ev.parenting-chats",
+          "baby.ev.partners-check-in",
+          "baby.ev.partners-practical-connection",
+          "baby.ev.partners-prenatal",
+          "baby.ev.village-connections",
+          "baby.ev.village-professionals",
+          "baby.ev.visible-help-list"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 9-12 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.244-255"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-family-needs",
+        "canonicalEntrySha256": "2b681012f29bec4ea9bf3a5b2b09969d0e7af714bdfbc5c6d2adeeb85a1faf75",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "12-18.shared-family-needs",
+      "sourceAge": {
+        "statement": "The family discussion extends beyond birth and through childhood; no child skill is needed for adults to plan together.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 244,
+                "end": 246
+              },
+              {
+                "start": 251,
+                "end": 253
+              }
+            ],
+            "section": "We don’t walk alone; Working with our partner; Getting on the same page",
+            "locator": "Different family supports, partner check-in and regular parenting conversations"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.care-choice-realities",
+          "baby.ev.caregiver-curiosity-appreciation",
+          "baby.ev.caregiver-feelings-needs",
+          "baby.ev.caregiver-shared-values",
+          "baby.ev.grandparent-support-context",
+          "baby.ev.nido-community-labels",
+          "baby.ev.parenting-chats",
+          "baby.ev.partners-check-in",
+          "baby.ev.partners-practical-connection",
+          "baby.ev.partners-prenatal",
+          "baby.ev.village-connections",
+          "baby.ev.village-professionals",
+          "baby.ev.visible-help-list"
+        ]
+      },
+      "readiness": {
+        "statement": "Adults sharing family care need to discuss arrangements, support and practical work.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 244,
+                "end": 246
+              },
+              {
+                "start": 251,
+                "end": 253
+              }
+            ],
+            "section": "We don’t walk alone; Working with our partner; Getting on the same page",
+            "locator": "Different family supports, partner check-in and regular parenting conversations"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.care-choice-realities",
+          "baby.ev.caregiver-curiosity-appreciation",
+          "baby.ev.caregiver-feelings-needs",
+          "baby.ev.caregiver-shared-values",
+          "baby.ev.grandparent-support-context",
+          "baby.ev.nido-community-labels",
+          "baby.ev.parenting-chats",
+          "baby.ev.partners-check-in",
+          "baby.ev.partners-practical-connection",
+          "baby.ev.partners-prenatal",
+          "baby.ev.village-connections",
+          "baby.ev.village-professionals",
+          "baby.ev.visible-help-list"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 12-18 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.244-255"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-family-needs",
+        "canonicalEntrySha256": "2b681012f29bec4ea9bf3a5b2b09969d0e7af714bdfbc5c6d2adeeb85a1faf75",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "9-12.shared-caregiver-common-ground",
+      "sourceAge": {
+        "statement": "No child age is stated for everyday conversations among caregivers.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 246,
+                "end": 253
+              }
+            ],
+            "section": "Working with grandparents and other caregivers; Getting on the same page",
+            "locator": "Everyday caregiver differences, mutual requests, shared values and appreciation"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.care-choice-realities",
+          "baby.ev.caregiver-curiosity-appreciation",
+          "baby.ev.caregiver-feelings-needs",
+          "baby.ev.caregiver-information",
+          "baby.ev.caregiver-priorities",
+          "baby.ev.caregiver-shared-values",
+          "baby.ev.family-forms-contact",
+          "baby.ev.family-forms-outcomes",
+          "baby.ev.grandparent-support-context",
+          "baby.ev.nido-community-labels",
+          "baby.ev.parenting-chats",
+          "baby.ev.partners-check-in",
+          "baby.ev.partners-practical-connection",
+          "baby.ev.partners-prenatal"
+        ]
+      },
+      "readiness": {
+        "statement": "Trusted caregivers have differing approaches and want to discuss priorities together.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 246,
+                "end": 253
+              }
+            ],
+            "section": "Working with grandparents and other caregivers; Getting on the same page",
+            "locator": "Everyday caregiver differences, mutual requests, shared values and appreciation"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.care-choice-realities",
+          "baby.ev.caregiver-curiosity-appreciation",
+          "baby.ev.caregiver-feelings-needs",
+          "baby.ev.caregiver-information",
+          "baby.ev.caregiver-priorities",
+          "baby.ev.caregiver-shared-values",
+          "baby.ev.family-forms-contact",
+          "baby.ev.family-forms-outcomes",
+          "baby.ev.grandparent-support-context",
+          "baby.ev.nido-community-labels",
+          "baby.ev.parenting-chats",
+          "baby.ev.partners-check-in",
+          "baby.ev.partners-practical-connection",
+          "baby.ev.partners-prenatal"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 9-12 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.244-255"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-caregiver-common-ground",
+        "canonicalEntrySha256": "da1c89367248409bc919f6f899ddd6a1f7e35934150e9d2d05418d04401b2943",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "12-18.shared-caregiver-common-ground",
+      "sourceAge": {
+        "statement": "No child age is stated for everyday conversations among caregivers.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 246,
+                "end": 253
+              }
+            ],
+            "section": "Working with grandparents and other caregivers; Getting on the same page",
+            "locator": "Everyday caregiver differences, mutual requests, shared values and appreciation"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.care-choice-realities",
+          "baby.ev.caregiver-curiosity-appreciation",
+          "baby.ev.caregiver-feelings-needs",
+          "baby.ev.caregiver-information",
+          "baby.ev.caregiver-priorities",
+          "baby.ev.caregiver-shared-values",
+          "baby.ev.family-forms-contact",
+          "baby.ev.family-forms-outcomes",
+          "baby.ev.grandparent-support-context",
+          "baby.ev.nido-community-labels",
+          "baby.ev.parenting-chats",
+          "baby.ev.partners-check-in",
+          "baby.ev.partners-practical-connection",
+          "baby.ev.partners-prenatal"
+        ]
+      },
+      "readiness": {
+        "statement": "Trusted caregivers have differing approaches and want to discuss priorities together.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 246,
+                "end": 253
+              }
+            ],
+            "section": "Working with grandparents and other caregivers; Getting on the same page",
+            "locator": "Everyday caregiver differences, mutual requests, shared values and appreciation"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.care-choice-realities",
+          "baby.ev.caregiver-curiosity-appreciation",
+          "baby.ev.caregiver-feelings-needs",
+          "baby.ev.caregiver-information",
+          "baby.ev.caregiver-priorities",
+          "baby.ev.caregiver-shared-values",
+          "baby.ev.family-forms-contact",
+          "baby.ev.family-forms-outcomes",
+          "baby.ev.grandparent-support-context",
+          "baby.ev.nido-community-labels",
+          "baby.ev.parenting-chats",
+          "baby.ev.partners-check-in",
+          "baby.ev.partners-practical-connection",
+          "baby.ev.partners-prenatal"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 12-18 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.244-255"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-caregiver-common-ground",
+        "canonicalEntrySha256": "da1c89367248409bc919f6f899ddd6a1f7e35934150e9d2d05418d04401b2943",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "9-12.shared-family-separation",
+      "sourceAge": {
+        "statement": "The discussion concerns babies and families as they grow, without a numerical threshold.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 247,
+                "end": 247
+              }
+            ],
+            "section": "Being a single parent or co-parent",
+            "locator": "Separated homes, adult support and explicit child-safety exception to contact"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.family-forms-contact",
+          "baby.ev.family-forms-outcomes",
+          "baby.ev.grandparent-support-context"
+        ]
+      },
+      "readiness": {
+        "statement": "Parents live apart; the child-safety qualification remains part of the approved summary.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 247,
+                "end": 247
+              }
+            ],
+            "section": "Being a single parent or co-parent",
+            "locator": "Separated homes, adult support and explicit child-safety exception to contact"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.family-forms-contact",
+          "baby.ev.family-forms-outcomes",
+          "baby.ev.grandparent-support-context"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 9-12 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.244-255"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-family-separation",
+        "canonicalEntrySha256": "b255f1ce2d259ca26c350df871ab3dea2e699506a8713f9f30360205b3b5c015",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "12-18.shared-family-separation",
+      "sourceAge": {
+        "statement": "The discussion concerns babies and families as they grow, without a numerical threshold.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 247,
+                "end": 247
+              }
+            ],
+            "section": "Being a single parent or co-parent",
+            "locator": "Separated homes, adult support and explicit child-safety exception to contact"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.family-forms-contact",
+          "baby.ev.family-forms-outcomes",
+          "baby.ev.grandparent-support-context"
+        ]
+      },
+      "readiness": {
+        "statement": "Parents live apart; the child-safety qualification remains part of the approved summary.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 247,
+                "end": 247
+              }
+            ],
+            "section": "Being a single parent or co-parent",
+            "locator": "Separated homes, adult support and explicit child-safety exception to contact"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.family-forms-contact",
+          "baby.ev.family-forms-outcomes",
+          "baby.ev.grandparent-support-context"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 12-18 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.244-255"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-family-separation",
+        "canonicalEntrySha256": "b255f1ce2d259ca26c350df871ab3dea2e699506a8713f9f30360205b3b5c015",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "9-12.shared-choosing-care",
+      "sourceAge": {
+        "statement": "The source describes nido up to around sixteen months and infant community around sixteen months to three years; its discussion of care and consistency spans the transition.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 253,
+                "end": 255
+              }
+            ],
+            "section": "What to look for in a day care or caregiver; What if the day care has different values than at home?",
+            "locator": "Responsive consistent caregivers, available options and assessing the present setting"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.care-choice-realities",
+          "baby.ev.caregiver-curiosity-appreciation",
+          "baby.ev.caregiver-quality-continuity",
+          "baby.ev.childcare-setup-list",
+          "baby.ev.nido-community-labels"
+        ]
+      },
+      "readiness": {
+        "statement": "The family needs or wants another caregiver and is considering the options actually available.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 253,
+                "end": 255
+              }
+            ],
+            "section": "What to look for in a day care or caregiver; What if the day care has different values than at home?",
+            "locator": "Responsive consistent caregivers, available options and assessing the present setting"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.care-choice-realities",
+          "baby.ev.caregiver-curiosity-appreciation",
+          "baby.ev.caregiver-quality-continuity",
+          "baby.ev.childcare-setup-list",
+          "baby.ev.nido-community-labels"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 9-12 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.244-255"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-choosing-care",
+        "canonicalEntrySha256": "b00e2d2966250d488c4f275a1a1d133e8828f24c547c3eab94de72ae7c0ce2ad",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    },
+    {
+      "placementId": "12-18.shared-choosing-care",
+      "sourceAge": {
+        "statement": "The source describes nido up to around sixteen months and infant community around sixteen months to three years; its discussion of care and consistency spans the transition.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 253,
+                "end": 255
+              }
+            ],
+            "section": "What to look for in a day care or caregiver; What if the day care has different values than at home?",
+            "locator": "Responsive consistent caregivers, available options and assessing the present setting"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.care-choice-realities",
+          "baby.ev.caregiver-curiosity-appreciation",
+          "baby.ev.caregiver-quality-continuity",
+          "baby.ev.childcare-setup-list",
+          "baby.ev.nido-community-labels"
+        ]
+      },
+      "readiness": {
+        "statement": "The family needs or wants another caregiver and is considering the options actually available.",
+        "references": [
+          {
+            "sourceId": "baby-2021",
+            "pdfPages": [
+              {
+                "start": 253,
+                "end": 255
+              }
+            ],
+            "section": "What to look for in a day care or caregiver; What if the day care has different values than at home?",
+            "locator": "Responsive consistent caregivers, available options and assessing the present setting"
+          }
+        ],
+        "evidenceIds": [
+          "baby.ev.care-choice-realities",
+          "baby.ev.caregiver-curiosity-appreciation",
+          "baby.ev.caregiver-quality-continuity",
+          "baby.ev.childcare-setup-list",
+          "baby.ev.nido-community-labels"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "Reuse the unchanged, approved general guidance while families browse 12-18 months. The situation and adult role remain relevant; this placement adds no activity, skill expectation or care procedure.",
+        "authorReadLogIds": [
+          "s6.shared.author.baby.244-255"
+        ]
+      },
+      "bodyReview": {
+        "entryId": "shared-choosing-care",
+        "canonicalEntrySha256": "b00e2d2966250d488c4f275a1a1d133e8828f24c547c3eab94de72ae7c0ce2ad",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5"
+      },
+      "qualifications": [
+        "Retain every frozen body qualification and reference. Age is browse context, not an instruction or developmental deadline."
+      ],
+      "artworkImplications": "No opening or new illustration is proposed for these general topic placements."
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "s6.shared.author.baby.33-37",
+      "reader": "/root",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 33,
+          "end": 37
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete freshly extracted original-page text in bounded outputs; supports new placement context, not a rereview of the frozen canonical bibliography.",
+      "sourceSha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+    },
+    {
+      "id": "s6.shared.author.baby.99-104",
+      "reader": "/root",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 99,
+          "end": 104
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete freshly extracted original-page text in bounded outputs; supports new placement context, not a rereview of the frozen canonical bibliography.",
+      "sourceSha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+    },
+    {
+      "id": "s6.shared.author.baby.110-115",
+      "reader": "/root",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 110,
+          "end": 115
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete freshly extracted original-page text in bounded outputs; supports new placement context, not a rereview of the frozen canonical bibliography.",
+      "sourceSha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+    },
+    {
+      "id": "s6.shared.author.baby.119-120",
+      "reader": "/root",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 119,
+          "end": 120
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete freshly extracted original-page text in bounded outputs; supports new placement context, not a rereview of the frozen canonical bibliography.",
+      "sourceSha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+    },
+    {
+      "id": "s6.shared.author.baby.222-224",
+      "reader": "/root",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 222,
+          "end": 224
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete freshly extracted original-page text in bounded outputs; supports new placement context, not a rereview of the frozen canonical bibliography.",
+      "sourceSha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+    },
+    {
+      "id": "s6.shared.author.baby.234-242",
+      "reader": "/root",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 234,
+          "end": 242
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete freshly extracted original-page text in bounded outputs; supports new placement context, not a rereview of the frozen canonical bibliography.",
+      "sourceSha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+    },
+    {
+      "id": "s6.shared.author.baby.244-255",
+      "reader": "/root",
+      "date": "2026-09-10",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 244,
+          "end": 255
+        }
+      ],
+      "mode": "full-text",
+      "description": "Read complete freshly extracted original-page text in bounded outputs; supports new placement context, not a rereview of the frozen canonical bibliography.",
+      "sourceSha256": "517a095024dff9cc43d72fd2ba60516bc50ee6aba686ee8277d0e695b785f04f"
+    }
+  ],
+  "provenance": []
+}

@@ -1,0 +1,105 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-crying",
+        "kind": "perspective",
+        "title": "Hear the message in the crying",
+        "summary": "The authors treat crying as communication: acknowledge it, stay responsive and offer comfort. Trying to understand the need goes alongside care, not ahead of needed help.",
+        "cue": "Your baby is crying and you are trying to understand what they need.",
+        "detail": [
+          "They describe acknowledging a cry and responding with presence or holding when needed. Feelings can be heard without asking the baby to stop crying or insisting that everything is fine.",
+          "In their discussion of prolonged crying and pain, the authors include medical advice and sharing observations with a doctor or pediatrician. They also recognize how tiring this can be and the value of support for the adult."
+        ],
+        "references": [
+          {
+            "id": "baby-crying.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Responsive parenting; When our baby cries",
+            "locator": "Prompt response, acknowledgment, comfort and no-danger boundary",
+            "pdfPages": [
+              {
+                "start": 109,
+                "end": 111
+              }
+            ]
+          },
+          {
+            "id": "baby-crying.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Colic and reflux",
+            "locator": "Medical advice and support when crying is prolonged or painful",
+            "pdfPages": [
+              {
+                "start": 215,
+                "end": 216
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "6-9.baby-crying",
+        "entryId": "baby-crying",
+        "ageId": "6-9",
+        "topicIds": [
+          "connection-feelings",
+          "everyday-care"
+        ],
+        "ageContext": {
+          "bookAge": "Infant-wide crying discussion.",
+          "readiness": "The baby’s actual need and response; no sound is treated as a diagnosis.",
+          "note": "The age group is a way to browse; follow the interest or situation described here."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "6–9 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          },
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 109–111"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 215–216"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "39b5491e662df3b4fa50abb11ef02cc154ce99c0ba5e60571d29f0568581957d",
+  "artContextSha256": null,
+  "publicProjectionSha256": "c335b1f8f88f2991834d8d0bd321e9dc166afb0710b418859f8927205ed6fafa",
+  "provenance": {
+    "draft": {
+      "path": "content/pilots/drafts/baby/draft-r05.json",
+      "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b"
+    },
+    "revision": "r08",
+    "evidenceFile": "content/pilots/drafts/baby/draft-r05.json",
+    "note": "Full private provenance and actual author read logs remain in this immutable draft and its handoff."
+  }
+}

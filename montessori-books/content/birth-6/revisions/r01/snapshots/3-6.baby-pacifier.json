@@ -1,0 +1,112 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-pacifier",
+        "kind": "perspective",
+        "title": "The book’s view of pacifiers",
+        "summary": "The authors discourage constant pacifier use while also acknowledging a possible reduction in SIDS risk and allowing limited use for settling or sleep. Their position is not an absolute ban.",
+        "cue": "You are reading about pacifiers in the Montessori approach.",
+        "detail": [
+          "Their concern is that something constantly in the mouth can limit opportunities for sounds and communication. The same discussion recognizes that a pacifier may help an unsettled baby or a baby falling asleep.",
+          "The book also includes considering a pacifier at naps and bedtime in its 2021 sleep-safety box. These parts belong together when understanding the authors’ view."
+        ],
+        "references": [
+          {
+            "id": "baby-pacifier.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Using a pacifier",
+            "locator": "General discouragement, limited-use permission and SIDS acknowledgment",
+            "pdfPages": [
+              {
+                "start": 213,
+                "end": 214
+              }
+            ]
+          },
+          {
+            "id": "baby-pacifier.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Remove obstacles; Consider going pacifier-free; SIDS guidelines for sleep",
+            "locator": "Cross-referenced pacifier statements and nap/bedtime acknowledgment",
+            "pdfPages": [
+              {
+                "start": 132,
+                "end": 132
+              },
+              {
+                "start": 199,
+                "end": 199
+              },
+              {
+                "start": 76,
+                "end": 76
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "3-6.baby-pacifier",
+        "entryId": "baby-pacifier",
+        "ageId": "3-6",
+        "topicIds": [
+          "everyday-care"
+        ]
+      },
+      "displayContext": {
+        "ageLabel": "3–6 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 213–214"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 132, 199, 76"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "19822ffbeab33327ff7848afc4df3a3b7c1a5ef0d11340d46ad302b65f376d1d",
+  "artContextSha256": null,
+  "publicProjectionSha256": "7a785b3018131733e1a67e0bcc259b51b78c9aba11b2cd0cb5bd66eb66cf1f10",
+  "provenance": {
+    "revision": "r01",
+    "placementDraft": {
+      "path": "content/birth-6/drafts/care-r01.json",
+      "sha256": "26593e72e36d37bd0a30292301c2cdd4de2c1afebed740fffbfa42850831d572"
+    },
+    "canonical": {
+      "entryId": "baby-pacifier",
+      "canonicalEntrySha256": "b6fb7ad16a00a12109903b336417857b207aef7899f37a1c24cd004c343a5b21",
+      "authoringRecord": {
+        "path": "content/pilots/drafts/baby/draft-r05.json",
+        "sha256": "42022e52398afd99bf09da3a5a442c30bbcb604bca50d74cb2ed17293810ff5b",
+        "jsonPointer": "/entries/25",
+        "author": "/root/baby_pilot_draft",
+        "provenancePointer": "/provenance/25"
+      }
+    },
+    "mode": "text-only-contribution"
+  }
+}

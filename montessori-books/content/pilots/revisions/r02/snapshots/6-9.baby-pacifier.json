@@ -1,0 +1,113 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-pacifier",
+        "kind": "perspective",
+        "title": "The book’s view of pacifiers",
+        "summary": "The authors discourage constant pacifier use while also acknowledging a possible reduction in SIDS risk and allowing limited use for settling or sleep. Their position is not an absolute ban.",
+        "cue": "You are reading about pacifiers in the Montessori approach.",
+        "detail": [
+          "Their concern is that something constantly in the mouth can limit opportunities for sounds and communication. The same discussion recognizes that a pacifier may help an unsettled baby or a baby falling asleep.",
+          "The book also includes considering a pacifier at naps and bedtime in its 2021 sleep-safety box. These parts belong together when understanding the authors’ view."
+        ],
+        "references": [
+          {
+            "id": "baby-pacifier.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Using a pacifier",
+            "locator": "General discouragement, limited-use permission and SIDS acknowledgment",
+            "pdfPages": [
+              {
+                "start": 213,
+                "end": 214
+              }
+            ]
+          },
+          {
+            "id": "baby-pacifier.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Language obstacles; Pacifier-free care; SIDS guidelines for sleep",
+            "locator": "Cross-referenced pacifier statements and nap/bedtime acknowledgment",
+            "pdfPages": [
+              {
+                "start": 132,
+                "end": 132
+              },
+              {
+                "start": 199,
+                "end": 199
+              },
+              {
+                "start": 76,
+                "end": 76
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "6-9.baby-pacifier",
+        "entryId": "baby-pacifier",
+        "ageId": "6-9",
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "bookAge": "Infant-wide discussion; this summary does not use the book’s removal-age preference as a deadline.",
+          "readiness": "Relevant when pacifier use is part of the family’s situation.",
+          "note": "The age group is a way to browse; follow the interest or situation described here."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "6–9 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 213–214"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 132, 199, 76"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "885b68c609a2b7bad2ba472a4369a52c1d264f959ca74f8e6bf787687ad9e18d",
+  "artContextSha256": null,
+  "publicProjectionSha256": "060379913a3bb873cf594eb2eb975178e68b4dd0aa3d01c08e4e5a34ae7f67e3",
+  "provenance": {
+    "draft": {
+      "path": "content/pilots/drafts/baby/draft-r02.json",
+      "sha256": "3231378dc6564ab6bcbe9cf75a4e3d2420cadfe15c5f995f8c026b6f7bef2ead"
+    },
+    "revision": "r02",
+    "evidenceFile": "content/pilots/drafts/baby/draft-r02.json",
+    "note": "Full private provenance and actual author read logs remain in this immutable draft and its handoff."
+  }
+}

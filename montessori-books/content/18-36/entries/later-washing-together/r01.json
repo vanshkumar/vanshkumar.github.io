@@ -1,0 +1,347 @@
+{
+  "author": {
+    "task": "/root/t7_care_connection_author",
+    "date": "2026-09-10",
+    "reasoning": "xhigh",
+    "workflow": "lean-v1"
+  },
+  "entries": [
+    {
+      "id": "later-washing-together",
+      "kind": "perspective",
+      "title": "A turn in washing face and body",
+      "summary": "Davies includes cleaning the face and washing the body among the care activities an older toddler can join. Her chart describes growing participation with help, within care shared with an adult.",
+      "cue": "Your child wants to join a movement you are making during washing.",
+      "detail": [
+        "The 18-month-to-3-year chart names face cleaning and body washing. For the body-washing example, Davies mentions a small travel-size soap bottle to reduce waste; she does not supply a bathing procedure in that list.",
+        "Her wider care discussion treats washing as time for communication and respectful touch. Talk about what is happening and listen to the child’s response, including gestures or sounds.",
+        "The child’s turn can be only part of the care. Davies keeps gentle adult assistance and a brief explanation alongside necessary care; participation does not mean managing the whole routine alone."
+      ],
+      "references": [
+        {
+          "id": "later-washing-together.ref.1",
+          "sourceId": "toddler-2019",
+          "section": "Some at-home practical life activities by age",
+          "locator": "Earlier activities continue; 18 months to 3 years bathroom and clothing examples",
+          "pdfPages": [
+            {
+              "start": 51,
+              "end": 52
+            }
+          ]
+        },
+        {
+          "id": "later-washing-together.ref.2",
+          "sourceId": "toddler-2019",
+          "section": "Daily care / Moments of care = moments of connection",
+          "locator": "Bathing and other care as communication with respectful touch",
+          "pdfPages": [
+            {
+              "start": 145,
+              "end": 145
+            }
+          ]
+        },
+        {
+          "id": "later-washing-together.ref.3",
+          "sourceId": "toddler-2019",
+          "section": "Setting limits / Follow through with kind and clear action",
+          "locator": "Necessary care, gentle assistance, brief explanations and protection",
+          "pdfPages": [
+            {
+              "start": 131,
+              "end": 133
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "entryId": "later-washing-together",
+      "revision": "r01",
+      "author": "/root/t7_care_connection_author",
+      "date": "2026-09-10",
+      "workflow": "lean-v1",
+      "sourceFingerprint": {
+        "sourceId": "toddler-2019",
+        "sha256": "d4d66faa1169ae6c3623a4adaa23f611cb94c67625932b5dc53db48ffe91864b",
+        "physicalPdfPages": 257
+      },
+      "sourceRefs": [
+        {
+          "id": "later-washing-together.ref.1",
+          "sourceId": "toddler-2019",
+          "section": "Some at-home practical life activities by age",
+          "locator": "Earlier activities continue; 18 months to 3 years bathroom and clothing examples",
+          "pdfPages": [
+            {
+              "start": 51,
+              "end": 52
+            }
+          ]
+        },
+        {
+          "id": "later-washing-together.ref.2",
+          "sourceId": "toddler-2019",
+          "section": "Daily care / Moments of care = moments of connection",
+          "locator": "Bathing and other care as communication with respectful touch",
+          "pdfPages": [
+            {
+              "start": 145,
+              "end": 145
+            }
+          ]
+        },
+        {
+          "id": "later-washing-together.ref.3",
+          "sourceId": "toddler-2019",
+          "section": "Setting limits / Follow through with kind and clear action",
+          "locator": "Necessary care, gentle assistance, brief explanations and protection",
+          "pdfPages": [
+            {
+              "start": 131,
+              "end": 133
+            }
+          ]
+        }
+      ],
+      "authorReadLogIds": [
+        "care-author.read.original-text.r01",
+        "care-author.read.original-visual.r01"
+      ],
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json",
+      "qualifications": [
+        "The small travel-size bottle is Davies’s waste-reduction example, not a required purchase or a product safety claim. No independent bathing, water temperature, access or handling technique is added."
+      ],
+      "heldDetails": [
+        "The brief chart does not specify a bathing setup or operational safety details; these remain outside this participation summary."
+      ],
+      "illustrationImplications": "No bathing setup, unclothed depiction or unsupervised washing illustration; if illustrated later, show only supported care participation with reviewed context.",
+      "sensitivity": "book-summary-only; no independent medical or safety verification",
+      "evidence": [
+        {
+          "id": "toddler.activities.ev.body-wash",
+          "revision": "2026-09-10-r1-2ce4786fef5c",
+          "file": "research/toddler/activities/EVIDENCE.jsonl",
+          "fileSha256": "dcaa2c2fcef584df62db0aa535d1122fcdc9bdbcccd683001d65d3071e601e84",
+          "recordSha256": "cfe1b721d621899c220ebf31258ba62ec7b20d1589bb3e3de5041613b8ea744b",
+          "recordHashMethod": "SHA256 of exact JSONL record bytes excluding trailing LF",
+          "sourceIdeaIds": [
+            "toddler.activities.idea.body-wash"
+          ],
+          "researchStatus": "research-ready",
+          "qualifications": [
+            "PDF33 explicitly makes activity ages indications only: follow attention and remove activities too hard or easy.",
+            "PDF34-39 allows partial sequences, repetition, assistance and safe exploration; no completion requirement or required purchase.",
+            "PDF39 requires supervision whenever activities involve small parts or sharp objects, including knives/scissors; calm observation is retained.",
+            "Activity catalog describes Davies's educational perspective; developmental benefit statements are not independently verified outcomes. Exact practical/tone reviews are still required for any authored entry."
+          ],
+          "openQuestions": []
+        },
+        {
+          "id": "toddler.activities.ev.face-wash",
+          "revision": "2026-09-10-r1-0b8e1b77e5de",
+          "file": "research/toddler/activities/EVIDENCE.jsonl",
+          "fileSha256": "dcaa2c2fcef584df62db0aa535d1122fcdc9bdbcccd683001d65d3071e601e84",
+          "recordSha256": "9b6defa1194fa3a6342c9018e237fec671a2beccc60ba131282c37edf9721e7d",
+          "recordHashMethod": "SHA256 of exact JSONL record bytes excluding trailing LF",
+          "sourceIdeaIds": [
+            "toddler.activities.idea.face-wash"
+          ],
+          "researchStatus": "research-ready",
+          "qualifications": [
+            "PDF33 explicitly makes activity ages indications only: follow attention and remove activities too hard or easy.",
+            "PDF34-39 allows partial sequences, repetition, assistance and safe exploration; no completion requirement or required purchase.",
+            "PDF39 requires supervision whenever activities involve small parts or sharp objects, including knives/scissors; calm observation is retained.",
+            "Activity catalog describes Davies's educational perspective; developmental benefit statements are not independently verified outcomes. Exact practical/tone reviews are still required for any authored entry."
+          ],
+          "openQuestions": []
+        },
+        {
+          "id": "toddler.care.ev.care-connection",
+          "revision": "1-546e137f65ed",
+          "file": "research/toddler/care-limits/EVIDENCE.jsonl",
+          "fileSha256": "0e890955c0b3f304057e914e0fadc83dcf391cfa79cb430a965e9d54b2aa2c9b",
+          "recordSha256": "05f38b077d85a02040bf92b0c4f9de96428cbb461b00480b067e223936ca4642",
+          "recordHashMethod": "SHA256 of exact JSONL record bytes excluding trailing LF",
+          "sourceIdeaIds": [
+            "toddler.care.idea.care-connection"
+          ],
+          "researchStatus": "research-ready",
+          "qualifications": [
+            "She includes listening to preverbal communication, turn-taking, smiling, eye contact and hugs.",
+            "This is an invitation to change perspective, not a requirement that care always feel peaceful; the introduction calls the peaceful transformation an ideal.",
+            "Touch/eye-contact particulars must remain responsive to the child and cultural context when later combined with other source evidence."
+          ],
+          "openQuestions": []
+        },
+        {
+          "id": "toddler.care.ev.kind-follow-through",
+          "revision": "1-fefe4fbbcfb3",
+          "file": "research/toddler/care-limits/EVIDENCE.jsonl",
+          "fileSha256": "0e890955c0b3f304057e914e0fadc83dcf391cfa79cb430a965e9d54b2aa2c9b",
+          "recordSha256": "e269d8b2321108584f901e5d21e66214b3389436a8a37365c389d406a1570063",
+          "recordHashMethod": "SHA256 of exact JSONL record bytes excluding trailing LF",
+          "sourceIdeaIds": [
+            "toddler.care.idea.kind-follow-through"
+          ],
+          "researchStatus": "research-ready",
+          "qualifications": [
+            "Examples include a diaper change, helping remove a thrown-food plate or leaving the park.",
+            "She describes gentle touch/handling, brief explanation, getting to the child’s level and first-person limit statements.",
+            "A known limit need not receive lengthy renegotiation each time; laughter does not remove the limit.",
+            "Food-specific qualifications155 and consent/safety interplay173-176 stay with reuse."
+          ],
+          "openQuestions": []
+        }
+      ],
+      "priorMeaningSearch": {
+        "registryRevision": "r08",
+        "registrySha256": "5a549e09553817bbb882249690e124cedce145a6ae2608dd95798d69b099b2d5",
+        "decision": "Compared all 101 frozen titles/summaries and the full relevant toddler bodies. This specific variant is absent from the frozen public text; existing related bodies are reused separately."
+      }
+    }
+  ],
+  "placements": [
+    {
+      "id": "18-24.later-washing-together",
+      "entryId": "later-washing-together",
+      "ageId": "18-24",
+      "topicIds": [
+        "everyday-care"
+      ],
+      "ageContext": {
+        "bookAge": "The practical-life chart lists washing the body and cleaning the face for 18 months to 3 years, continuing earlier skills with help.",
+        "readiness": "Interest in joining care; the chart gives a broad age indication, not a requirement to complete washing independently.",
+        "note": "A shared-care perspective; the chart does not set a bathing procedure or a self-care deadline."
+      }
+    },
+    {
+      "id": "24-36.later-washing-together",
+      "entryId": "later-washing-together",
+      "ageId": "24-36",
+      "topicIds": [
+        "everyday-care"
+      ],
+      "ageContext": {
+        "bookAge": "The practical-life chart lists washing the body and cleaning the face for 18 months to 3 years, continuing earlier skills with help.",
+        "readiness": "Interest in joining care; the chart gives a broad age indication, not a requirement to complete washing independently.",
+        "note": "A shared-care perspective; the chart does not set a bathing procedure or a self-care deadline."
+      }
+    }
+  ],
+  "placementEvidence": [
+    {
+      "placementId": "18-24.later-washing-together",
+      "sourceAge": {
+        "statement": "The practical-life chart lists washing the body and cleaning the face for 18 months to 3 years, continuing earlier skills with help.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Some at-home practical life activities by age",
+            "locator": "Earlier activities continue; 18 months to 3 years bathroom and clothing examples",
+            "pdfPages": [
+              {
+                "start": 51,
+                "end": 52
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.body-wash",
+          "toddler.activities.ev.face-wash",
+          "toddler.care.ev.care-connection",
+          "toddler.care.ev.kind-follow-through"
+        ]
+      },
+      "readiness": {
+        "statement": "Interest in joining care; the chart gives a broad age indication, not a requirement to complete washing independently.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Some at-home practical life activities by age",
+            "locator": "Earlier activities continue; 18 months to 3 years bathroom and clothing examples",
+            "pdfPages": [
+              {
+                "start": 51,
+                "end": 52
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.body-wash",
+          "toddler.activities.ev.face-wash",
+          "toddler.care.ev.care-connection",
+          "toddler.care.ev.kind-follow-through"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "A shared-care perspective; the chart does not set a bathing procedure or a self-care deadline. The source’s 18-month-to-3-year chart explicitly spans this browse age.",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01",
+          "care-author.read.original-visual.r01"
+        ]
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json"
+    },
+    {
+      "placementId": "24-36.later-washing-together",
+      "sourceAge": {
+        "statement": "The practical-life chart lists washing the body and cleaning the face for 18 months to 3 years, continuing earlier skills with help.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Some at-home practical life activities by age",
+            "locator": "Earlier activities continue; 18 months to 3 years bathroom and clothing examples",
+            "pdfPages": [
+              {
+                "start": 51,
+                "end": 52
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.body-wash",
+          "toddler.activities.ev.face-wash",
+          "toddler.care.ev.care-connection",
+          "toddler.care.ev.kind-follow-through"
+        ]
+      },
+      "readiness": {
+        "statement": "Interest in joining care; the chart gives a broad age indication, not a requirement to complete washing independently.",
+        "references": [
+          {
+            "sourceId": "toddler-2019",
+            "section": "Some at-home practical life activities by age",
+            "locator": "Earlier activities continue; 18 months to 3 years bathroom and clothing examples",
+            "pdfPages": [
+              {
+                "start": 51,
+                "end": 52
+              }
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "toddler.activities.ev.body-wash",
+          "toddler.activities.ev.face-wash",
+          "toddler.care.ev.care-connection",
+          "toddler.care.ev.kind-follow-through"
+        ]
+      },
+      "editorialPlacement": {
+        "reason": "A shared-care perspective; the chart does not set a bathing procedure or a self-care deadline. The source’s 18-month-to-3-year chart explicitly spans this browse age.",
+        "authorReadLogIds": [
+          "care-author.read.original-text.r01",
+          "care-author.read.original-visual.r01"
+        ]
+      },
+      "authorReadLogFile": "content/18-36/source-work/care-author/READ_LOG-r01.json"
+    }
+  ]
+}

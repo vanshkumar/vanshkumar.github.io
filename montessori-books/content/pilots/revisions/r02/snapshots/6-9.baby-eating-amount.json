@@ -1,0 +1,104 @@
+{
+  "snapshotVersion": 1,
+  "publicProjection": {
+    "textPlacement": {
+      "entry": {
+        "id": "baby-eating-amount",
+        "kind": "perspective",
+        "title": "When eating slows or food is thrown",
+        "summary": "The authors leave how much to eat to the baby. Throwing food may mean they are finished; it is a possibility to notice, not a certain explanation.",
+        "cue": "Your baby’s interest in the meal has changed.",
+        "detail": [
+          "In the book’s division of responsibility, the adult offers the food and place, and the baby decides how much. The authors oppose pressing one more mouthful or distracting a baby into eating.",
+          "They describe asking whether the baby is done and helping end the meal when that fits what is happening. Their brief eating-time example is not a time limit."
+        ],
+        "references": [
+          {
+            "id": "baby-eating-amount.ref.1",
+            "sourceId": "baby-2021",
+            "section": "Eating / More tips and observation",
+            "locator": "Food amount, throwing food, possible completion and adult feelings",
+            "pdfPages": [
+              {
+                "start": 190,
+                "end": 192
+              }
+            ]
+          },
+          {
+            "id": "baby-eating-amount.ref.2",
+            "sourceId": "baby-2021",
+            "section": "Language / 9 to 12 months",
+            "locator": "Positive-language example preserves possible finished meal",
+            "pdfPages": [
+              {
+                "start": 136,
+                "end": 136
+              }
+            ]
+          }
+        ]
+      },
+      "placement": {
+        "id": "6-9.baby-eating-amount",
+        "entryId": "baby-eating-amount",
+        "ageId": "6-9",
+        "topicIds": [
+          "everyday-care",
+          "connection-feelings"
+        ],
+        "ageContext": {
+          "readiness": "Changes in eating, interest or throwing; interpret tentatively.",
+          "note": "The age group is a way to browse; follow the interest or situation described here."
+        }
+      },
+      "displayContext": {
+        "ageLabel": "6–9 months",
+        "kindLabel": "A perspective",
+        "headings": [
+          "A home within reach",
+          "In the everyday",
+          "Age, interest & context",
+          "Back to the books"
+        ],
+        "footer": "You don’t need a different home. Start with what you have.",
+        "colophon": "Original summaries inspired by The Montessori Baby and The Montessori Toddler. Open any idea for its book references. The illustration is an invitation to explore, rather than a room to reproduce. Follow your child’s pace.",
+        "bookline": "A Montessori companion",
+        "referenceNote": "Paraphrased for this companion. Illustrations are original and illustrative.",
+        "topics": [
+          {
+            "id": "everyday-care",
+            "label": "Everyday care"
+          },
+          {
+            "id": "connection-feelings",
+            "label": "Connection & feelings"
+          }
+        ],
+        "referenceLabels": [
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF pp. 190–192"
+          },
+          {
+            "title": "The Montessori Baby",
+            "pages": "PDF p. 136"
+          }
+        ]
+      }
+    },
+    "artContext": null
+  },
+  "textPlacementSha256": "92c1b65aebd65f6eaeb24f784c9311f64f0398c241f2ae5556e57447ffd9f94c",
+  "artContextSha256": null,
+  "publicProjectionSha256": "8215915f07e13be87ac67b4d7f0a30bc819dadbcfdda0a68ee62e7b3b651b6b1",
+  "provenance": {
+    "draft": {
+      "path": "content/pilots/drafts/baby/draft-r02.json",
+      "sha256": "3231378dc6564ab6bcbe9cf75a4e3d2420cadfe15c5f995f8c026b6f7bef2ead"
+    },
+    "revision": "r02",
+    "evidenceFile": "content/pilots/drafts/baby/draft-r02.json",
+    "note": "Full private provenance and actual author read logs remain in this immutable draft and its handoff."
+  }
+}

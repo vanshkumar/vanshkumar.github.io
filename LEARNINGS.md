@@ -431,6 +431,11 @@
 
 ## What Has Failed
 
+**[2026-09-11] — Quote paragraph spacing**
+- Observation: Impact's quote has valid blank `>` lines between paragraphs, but `.prose blockquote > * { margin: 0; }` removes their visual spacing; the regular `.prose > p + p` rule only reaches direct prose children.
+- Action: Restore spacing between adjacent paragraphs inside standard blockquotes with a scoped sibling rule, excluding `.callout` when preserving callout styling.
+- Confidence: high
+
 **[2026-08-23] — Homepage Markdown paragraph styling**
 - Observation: `src/pages/index.astro` renders both sides of the comic marker inside `.home-static`, so the broad `.home-static > p` rule styles every authored homepage paragraph as oversized intro copy and removes its margin; adding ordinary paragraphs after the comic therefore makes them look like headings and collide with the following Recent posts section even though Markdown produced correct `<p>` elements.
 - Action: Keep display typography scoped to `.home-static-intro > h1`, keep post-comic prose and directory styling under `.home-static-directory`, and preserve the explicit gap from that fragment to the first `.home-section`.

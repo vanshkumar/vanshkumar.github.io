@@ -589,6 +589,10 @@ h3 {
   margin: 0;
 }
 
+.prose blockquote:not(.callout) > p + p {
+  margin-top: 1.35rem;
+}
+
 .prose blockquote ul,
 .prose blockquote ol,
 .prose details.callout ul,

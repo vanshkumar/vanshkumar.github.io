@@ -8,7 +8,7 @@ const repoRoot = path.resolve(root, '..');
 const vaultRoot = path.join(repoRoot, 'vault');
 const contentRoot = path.join(repoRoot, 'src', 'content');
 
-const collections = ['terrain', 'logs', 'pages', 'shelf'];
+const collections = ['terrain', 'logs', 'pages', 'shelf', 'poems'];
 const retiredCollections = ['projects', 'questions', 'hunches'];
 const customSlugCollections = new Set(['terrain']);
 

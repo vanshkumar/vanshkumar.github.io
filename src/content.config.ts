@@ -23,6 +23,7 @@ const siteCopy = z.object({
   writing: z.object({
     postLabel: z.string(),
     noteLabel: z.string(),
+    poemLabel: z.string(),
     logsTitle: z.string(),
     previousLabel: z.string(),
     nextLabel: z.string(),
@@ -177,6 +178,17 @@ const shelf = defineCollection({
   })
 });
 
+const poems = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: optionalText,
+    description: optionalText,
+    date: z.coerce.date().optional(),
+    lastmod: z.coerce.date().optional(),
+    aliases: z.array(z.string()).optional()
+  })
+});
+
 const pages = defineCollection({
   type: 'content',
   schema: z.object({
@@ -199,5 +211,6 @@ export const collections = {
   terrain,
   logs,
   shelf,
+  poems,
   pages
 };

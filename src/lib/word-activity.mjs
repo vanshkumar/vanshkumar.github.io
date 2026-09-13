@@ -19,6 +19,7 @@ export const PUBLIC_MARKDOWN_PATHS = [
   ':(glob)vault/pages/**/*.md',
   ':(glob)vault/logs/**/*.md',
   ':(glob)vault/shelf/**/*.md',
+  ':(glob)vault/poems/**/*.md',
   ':(glob)vault/probes/**/*.md',
   ':(glob)vault/questions/**/*.md',
   ':(glob)vault/attractors/**/*.md',

@@ -29,6 +29,22 @@ has('/', /<h2 id="recent-notes-title">/, 'missing Recent notes heading');
 has('/', /<figure class="home-comic">[\s\S]*?<img\b[^>]*alt="[^"]+"/, 'comic needs non-empty alt text');
 has('/', /class="skip-link" href="#main-content"/, 'missing skip link');
 const homeHtml = htmlFor('/');
+const writingNavHtml = homeHtml.match(/<nav class="home-writing-nav"[\s\S]*?<\/nav>/)?.[0];
+assert.ok(writingNavHtml, 'homepage should contain the writing navigation');
+assert.deepEqual(
+  [...writingNavHtml.matchAll(/<a href="([^"]+)">([^<]+)<\/a>/g)].map((match) => [match[1], match[2]]),
+  [['/posts', 'Posts'], ['/notes', 'Notes'], ['/poems', 'Poems']],
+  'homepage writing navigation should be Posts · Notes · Poems'
+);
+const homeDirectoryHtml = homeHtml.slice(
+  homeHtml.indexOf('class="home-static home-static-directory"'),
+  homeHtml.indexOf('class="home-writing-nav"')
+);
+assert.doesNotMatch(
+  homeDirectoryHtml,
+  /href="\/poems"/,
+  'Poems should stay out of the homepage directory'
+);
 assert.doesNotMatch(
   homeHtml,
   /<figure class="home-comic">[\s\S]*?<figcaption>/,
@@ -48,6 +64,7 @@ assert.doesNotMatch(
 assert.doesNotMatch(htmlFor('/about'), /class="word-garden"/, 'About should not contain the Word Garden');
 has('/posts', /<h1 id="posts-title">/, 'missing Posts archive heading');
 has('/notes', /<h1 id="notes-title">/, 'missing Notes archive heading');
+has('/poems', /<h1 id="poems-title">/, 'missing Poems archive heading');
 
 const shelfHtml = htmlFor('/shelf');
 const currentlyReadingStart = shelfHtml.indexOf('class="shelf-section shelf-current-section"');
@@ -75,6 +92,11 @@ assert.match(
   shelfCss,
   /\.prose\s+\.shelf-review-link\s*\{[^}]*align-self:\s*center[^}]*\}/,
   'Shelf notes links should be centered below their covers'
+);
+assert.match(
+  shelfCss,
+  /\.poem-body\s*>\s*p\s*\{[^}]*white-space:\s*pre-line[^}]*\}/,
+  'Poem paragraphs should preserve authored line breaks'
 );
 const shelfCoverTitles = (html) =>
   [...html.matchAll(/<img\b[^>]*\balt="([^"]+) cover"/g)].map((match) => match[1]);
@@ -124,7 +146,7 @@ redirect('/guesses', '/notes');
 
 const rss = fs.readFileSync(path.join(dist, 'rss.xml'), 'utf8');
 const items = [...rss.matchAll(/<item>/g)];
-const writingLinks = [...rss.matchAll(/<link>(https:\/\/vanshkumar\.net\/(?:posts|notes)\/[^<]+)<\/link>/g)]
+const writingLinks = [...rss.matchAll(/<link>(https:\/\/vanshkumar\.net\/(?:posts|notes|poems)\/[^<]+)<\/link>/g)]
   .map((match) => match[1].replace(/\/$/, ''));
 const writingRoot = path.join(process.cwd(), 'src', 'content', 'terrain');
 const expectedWritingLinks = fs.readdirSync(writingRoot)
@@ -133,9 +155,14 @@ const expectedWritingLinks = fs.readdirSync(writingRoot)
     const { data } = matter(fs.readFileSync(path.join(writingRoot, name), 'utf8'));
     return `https://vanshkumar.net${canonicalWritingPath({ slug: name.replace(/\.md$/, ''), data })}`;
   });
-assert.equal(items.length, expectedWritingLinks.length, 'RSS should contain every writing entry');
-assert.deepEqual(writingLinks.sort(), expectedWritingLinks.sort(), 'RSS should use the canonical link for every writing entry');
-assert.equal(new Set(writingLinks).size, expectedWritingLinks.length, 'RSS canonical links should be unique');
+const poemRoot = path.join(process.cwd(), 'src', 'content', 'poems');
+const expectedPoemLinks = fs.readdirSync(poemRoot)
+  .filter((name) => name.endsWith('.md'))
+  .map((name) => `https://vanshkumar.net/poems/${name.replace(/\.md$/, '')}`);
+const expectedFeedLinks = [...expectedWritingLinks, ...expectedPoemLinks];
+assert.equal(items.length, expectedFeedLinks.length, 'RSS should contain every writing entry');
+assert.deepEqual(writingLinks.sort(), expectedFeedLinks.sort(), 'RSS should use the canonical link for every writing entry');
+assert.equal(new Set(writingLinks).size, expectedFeedLinks.length, 'RSS canonical links should be unique');
 
 expectedWritingLinks.forEach((link) => {
   const route = new URL(link).pathname;
@@ -146,6 +173,12 @@ expectedWritingLinks.forEach((link) => {
     const alias = `/${prefix}/${slug}`;
     if (alias !== route) redirect(alias, route);
   });
+});
+
+expectedPoemLinks.forEach((link) => {
+  const route = new URL(link).pathname;
+  canonical(route, route);
+  has(route, /<meta property="og:type" content="article">/, 'poems must use article OG type');
 });
 
 const walk = (directory) => fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
@@ -191,4 +224,4 @@ walk(path.join(dist, 'homepage-variants'))
     assert.match(fs.readFileSync(file, 'utf8'), /<meta name="robots" content="noindex">/, `${file} must remain noindex`);
   });
 
-console.log('Verified canonical writing routes, redirects, metadata, homepage, archives, Shelf, RSS, and prototype isolation.');
+console.log('Verified canonical writing routes, redirects, metadata, homepage, archives, Poems, Shelf, RSS, and prototype isolation.');

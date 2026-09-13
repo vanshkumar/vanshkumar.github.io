@@ -1407,8 +1407,26 @@ h3,
   content: "—";
 }
 
-.home-static-directory + .home-section {
+.home-static-directory + .home-writing-nav {
   margin-top: 4.5rem;
+}
+
+.home-writing-nav {
+  color: #6f685f;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.home-writing-nav > p {
+  margin: 0;
+}
+
+.home-writing-nav a {
+  color: var(--text);
+}
+
+.home-writing-nav + .home-section {
+  margin-top: 2.85rem;
 }
 
 .home-section + .home-section {
@@ -1582,6 +1600,14 @@ h3,
   color: #312b25;
   font-size: 1rem;
   line-height: 1.75;
+}
+
+.poem-body {
+  line-height: 1.65;
+}
+
+.poem-body > p {
+  white-space: pre-line;
 }
 
 .prose a {
@@ -1850,7 +1876,7 @@ h3,
     margin: 2.1rem calc(50% - 50vw + 0.55rem);
   }
 
-  .home-static-directory + .home-section {
+  .home-static-directory + .home-writing-nav {
     margin-top: 3.7rem;
   }
 

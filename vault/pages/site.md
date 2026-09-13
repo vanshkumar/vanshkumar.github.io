@@ -27,6 +27,7 @@ site:
   writing:
     postLabel: Post
     noteLabel: Note
+    poemLabel: Poem
     logsTitle: Logs
     previousLabel: Previous
     nextLabel: Next

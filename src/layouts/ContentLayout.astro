@@ -11,7 +11,8 @@ const {
   backlinks = [],
   lastUpdated,
   showDateRange = false,
-  showHeaderDivider = true
+  showHeaderDivider = true,
+  proseClass
 } = Astro.props;
 const formatHeaderDate = (value) =>
   new Intl.DateTimeFormat('en-US', {
@@ -50,7 +51,7 @@ const siteCopy = await getSiteCopy();
       {description ? <p class="lede">{description}</p> : null}
       {meta ? <p class="meta">{meta}</p> : null}
     </header>
-    <div class="prose">
+    <div class:list={['prose', proseClass]}>
       <slot />
     </div>
     <slot name="after-content" />

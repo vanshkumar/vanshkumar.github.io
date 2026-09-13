@@ -5,6 +5,7 @@ import {
 
 export const WIKI_INDEX_COLLECTIONS = [
   'terrain',
+  'poems',
   'logs',
   'pages',
   'shelf'
@@ -12,6 +13,7 @@ export const WIKI_INDEX_COLLECTIONS = [
 
 export const WIKI_LOOKUP_ORDER = [
   'terrain',
+  'poems',
   'shelf',
   'logs',
   'pages'
@@ -64,6 +66,9 @@ export const urlForEntry = (collection, slug, data = {}) => {
   }
   if (collection === 'shelf') {
     return `/shelf/${slug}`;
+  }
+  if (collection === 'poems') {
+    return `/poems/${slug}`;
   }
   const [project, ...rest] = slug.split('/');
   return canonicalLogPath(project, rest.join('/'));

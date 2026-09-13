@@ -9,7 +9,7 @@ lastmod: 2026-09-13
 ---
 I read this great article a couple weeks ago from [Experimental History](https://open.substack.com/pub/experimentalhistory), titled [Underrated ways to change the world](https://substack.com/inbox/post/151872212), which resonated a lot with me. I strongly recommend reading the article, but the basic idea is summarized in the quote below:
 
-> We get stuck here because we assume that there are only two paths to improving the world. Option #1 is to go high_-status_: get rich so you can blast problems with your billions of bucks, or get into office so you can ban all the bad things and mandate all the good things. Only a fortunate few are powerful enough to do anything, of course, so most of the people attempting to improve the world through the high-status route will end up either begging our overlords to do the right thing, or trying to drum up the votes necessary to replace them.
+> We get stuck here because we assume that there are only two paths to improving the world. Option #1 is to go high-_status_: get rich so you can blast problems with your billions of bucks, or get into office so you can ban all the bad things and mandate all the good things. Only a fortunate few are powerful enough to do anything, of course, so most of the people attempting to improve the world through the high-status route will end up either begging our overlords to do the right thing, or trying to drum up the votes necessary to replace them.
 > 
 > Option #2 is to go high-_sacrifice_: sell everything you have and spend your life earning $7/hr to scrub the toilets in an orphanage. Only a virtuous few will have the saintliness necessary to live such a life, of course, so most of the people attempting to improve the world through the high-sacrifice path will end up writing checks to the martyrs on the front lines.
 > 
@@ -31,7 +31,8 @@ After college, I joined Google LA and worked on an ads forecasting team for abou
 
 Once Covid hit, I wanted to get closer to that desire/feeling. So much was happening in the world and my work on ads forecasting felt less and less worth my time. I applied for and joined a six month Google.org fellowship/rotation for the first half of 2021, where I was the tech lead of a small team working with the Morehouse School of Medicine to help build [https://healthequitytracker.org](https://healthequitytracker.org/). I learned web development, some health stats techniques like age-adjustment, had some email comms with the CDC and found errors in their Covid datasets, and developed a tracker that was able to produce visualizations like the below:
 
-![[Pasted image 20260911210847.png|shoutout West Virginia with clearly no data reporting|]]![[Pasted image 20260911210926.png|a bit hard to read as it's a lot of info, but again so many states with missing data]]
+
+![[Pasted image 20260911210847.png|shoutout West Virginia with clearly no data reporting]]![[Pasted image 20260911210926.png|a bit hard to read as it's a lot of info, but again so many states with missing data]]
 
 However, and I plan to expand on this more in a later post, it was never really clear how this tracker would effect real-world change – the idea was that it would aid “policy influencers” in obtaining data visualizations to push for policy change. I heard about some instances of think tanks using screenshots from the tracker, but I was never really sure about the details. Probably building the tracker was worth it just for highlighting missing/bad data in CDC and other governmental datasets.
 

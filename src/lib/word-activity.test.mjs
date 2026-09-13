@@ -97,6 +97,7 @@ test('keeps public history allowlisted and rejects shallow clones', () => {
   assert.ok(PUBLIC_MARKDOWN_PATHS.some((path) => path.includes('vault/*.md')));
   assert.ok(PUBLIC_MARKDOWN_PATHS.some((path) => path.includes('vault/traces')));
   assert.ok(PUBLIC_MARKDOWN_PATHS.some((path) => path.includes('vault/hunches')));
+  assert.ok(PUBLIC_MARKDOWN_PATHS.some((path) => path.includes('vault/poems')));
   assert.ok(PUBLIC_MARKDOWN_PATHS.every((path) => !path.includes('writing inbox')));
   assert.ok(PUBLIC_MARKDOWN_PATHS.every((path) => !path.includes('scratch')));
   assert.throws(

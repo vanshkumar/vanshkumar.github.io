@@ -42,8 +42,9 @@ const extractTargets = (body: string) => {
 };
 
 const buildEntries = async () => {
-  const [terrain, shelf, logs, pages] = await Promise.all([
+  const [terrain, poems, shelf, logs, pages] = await Promise.all([
     getCollection('terrain'),
+    getCollection('poems'),
     getCollection('shelf'),
     getCollection('logs'),
     getCollection('pages')
@@ -66,6 +67,7 @@ const buildEntries = async () => {
   };
 
   pushEntries('terrain', terrain);
+  pushEntries('poems', poems);
   pushEntries('shelf', shelf);
   pushEntries('logs', logs);
   pushEntries('pages', pages);

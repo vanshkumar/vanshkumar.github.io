@@ -2,6 +2,16 @@
 
 ## What Has Worked
 
+**[2026-09-13] — Poem line-break rendering**
+- Observation: A dedicated `poems` collection can preserve ordinary single newlines without changing Markdown behavior site-wide: Astro retains the newline in each rendered paragraph, and scoped `white-space: pre-line` displays it while blank lines still create stanza paragraphs.
+- Action: Render poem entries through `ContentLayout` with the `poem-body` prose class; do not enable global hard breaks or require trailing Markdown backslashes for every poetic line.
+- Confidence: high
+
+**[2026-09-13] — Substack poem extraction**
+- Observation: The five referenced Substack posts contain the authored poems “DUPONT Tyvek CommercialWrap,” bilingual “Ocho y la eternidad,” “Nobody loves you more than your Feed,” “Outside In,” and “Arachnid”; the Feed post also quotes an Al Ortolani poem, while “Crusade” also contains a separate short story.
+- Action: Keep the Spanish original and English translation together as one poem entry, omit quoted work and surrounding prose or fiction, and lock each imported poem's `date` and `lastmod` to its source post's publication date with `exclude_modified_update: true`.
+- Confidence: high
+
 **[2026-09-13] — Missing comic workflow history**
 - Observation: `vault/notes/Comic Co-Creation Workflow.md` was added in `2ca1ff8` and deleted in the June 4, 2026 vault backup `6b5622b`; Partition Summer retained its wikilink. The full 219-line document remains in Git history.
 - Action: The restored source is `vault/Comic Co-Creation Workflow.md`, classified as a Note at `/notes/comic-co-creation-workflow`; its slug resolves Partition Summer's existing lowercase wikilink. Preserve the original May 12 modification date and the site's normalized heading hierarchy.
@@ -315,8 +325,8 @@
 ## Patterns and Preferences
 
 **[2026-09-13] — Poetry navigation placement**
-- Observation: The user wants poetry to have its own `/poems` section, but does not want Poems added to the homepage’s “Here you can find” directory.
-- Action: Keep `/poems` out of that personal-directory list; surface it through a separate writing-oriented homepage element or another explicitly chosen navigation surface.
+- Observation: The user wants poetry to have its own `/poems` section, kept out of the homepage’s “Here you can find” directory, and chose a separate `Posts · Notes · Poems` writing index.
+- Action: Keep the three-link writing index between the homepage directory and Recent posts; leave the personal directory and minimal footer unchanged.
 - Confidence: high
 
 **[2026-09-12] — Matching body and title margins**

@@ -22,7 +22,13 @@ const homeSections = renderedHome.split(homeMarker);
 if (homeSections.length !== 2) {
   throw new Error('pages/home must contain exactly one <!-- home-comic --> placement marker');
 }
-const [beforeComic, afterComic] = homeSections;
+const [beforeComic, afterComicMarker] = homeSections;
+const writingNavMarker = '<!-- home-writing-nav -->';
+const writingNavSections = afterComicMarker.split(writingNavMarker);
+if (writingNavSections.length !== 2) {
+  throw new Error('pages/home must contain exactly one <!-- home-writing-nav --> placement marker');
+}
+const [afterComic, writingNav] = writingNavSections;
 const home = homeEntry.data.home;
 const { posts, notes } = partitionWriting(await getCollection('terrain'));
 const titleFor = (entry) => entry.data.title ?? titleFromSlug(entry.slug);
@@ -43,6 +49,8 @@ const wordGarden = getWordActivity();
     </figure>
 
     <div class="home-static home-static-directory" set:html={afterComic} />
+
+    <nav class="home-writing-nav" aria-label="Writing" set:html={writingNav} />
 
     <section class="home-section" aria-labelledby="recent-posts-title">
       <div class="section-heading">

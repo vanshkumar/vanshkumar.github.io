@@ -46,3 +46,7 @@ Here you can find:
 - words I've written, below
 
 Email me at [vanshkumar95@gmail.com](mailto:vanshkumar95@gmail.com) to chat.
+
+<!-- home-writing-nav -->
+
+[Posts](/posts) · [Notes](/notes) · [Poems](/poems)

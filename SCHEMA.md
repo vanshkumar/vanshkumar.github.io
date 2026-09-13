@@ -22,14 +22,19 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
   - Ratings are intentionally unsupported. `status: recommended` adds a book to the curated
     recommendation grid; a non-empty Markdown body independently adds its `notes` link and
     detail route. Changing `status` never changes the Markdown file or its potential URL.
+- **poems** → `vault/poems/` → `/poems/<slug>`
+  - `title?` `description?` `date?` `lastmod?` `aliases?[]`
+  - Poems are listed newest-first on `/poems`. Ordinary single newlines inside poem paragraphs
+    remain visible as line breaks, while blank lines separate stanzas.
 - **pages** → `vault/pages/` → static pages, archive copy, and shared site copy
   - Common fields: `title?` `description?` `date?` `lastmod?` `aliases?[]`
     `heroTitle?` `heroAccent?`
   - `home.md` owns the live homepage prose, its `home` display settings, and Word
     Garden labels through `wordGarden`. Keep exactly one `<!-- home-comic -->`
-    marker where the comic belongs.
+    marker where the comic belongs and one `<!-- home-writing-nav -->` marker
+    before the Markdown-authored Posts · Notes · Poems navigation.
   - `about.md` and `now.md` own their respective page prose.
-  - `posts.md`, `notes.md`, and `shelf.md` own archive titles and optional archive
+  - `posts.md`, `notes.md`, `poems.md`, and `shelf.md` own archive titles and optional archive
     introductions. Shelf section headings and surrounding prose live directly in the
     `shelf.md` Markdown body around `<!-- shelf-currently-reading -->` and
     `<!-- shelf-recommendations -->`; its `shelf` frontmatter is limited to generated-copy
@@ -41,7 +46,7 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
   - Structured page-copy fields are validated in `src/content.config.ts`; text
     templates use named placeholders such as `{title}`, `{author}`, or `{date}`.
 
-Folders such as `scratch/`, `writing inbox/`, `_voice_inbox/`, `logs/`, `shelf/`, and `pages/`
+Folders such as `scratch/`, `writing inbox/`, `_voice_inbox/`, `logs/`, `poems/`, `shelf/`, and `pages/`
 are not part of the root Terrain collection.
 
 ## Sync Rules
@@ -58,7 +63,7 @@ are not part of the root Terrain collection.
 - `slug` is source-only frontmatter for Terrain. Sync consumes it to choose the generated content
   filename, then omits it from generated Astro content.
 - `scripts/sync-content.mjs` syncs only direct root Markdown into Terrain, recursively syncs the
-  three structured collections, validates that each required log parent matches its project
+  structured collections, validates that each required log parent matches its project
   folder, and removes retired generated `projects`, `questions`, and `hunches` directories.
 - `scripts/sync-assets.mjs` copies `vault/assets/` to `public/assets/`. Numeric PNG sequences in an
   asset subfolder also receive optimized copies under `web/`.
@@ -67,6 +72,7 @@ are not part of the root Terrain collection.
 
 - `/posts` and `/notes` are the public archives. Posts are sorted by `date` (falling back to
   `lastmod`); Notes are sorted by `lastmod` (falling back to `date`), with slug tie-breakers.
+- `/poems` is the poetry archive; `/poems/<slug>` renders each poem.
 - `/posts/<slug>` and `/notes/<slug>` are both generated for every Terrain entry. The namespace
   matching its current classification renders the entry; the other redirects to it, preserving
   URLs when an entry later changes category.
@@ -84,5 +90,5 @@ are not part of the root Terrain collection.
   compatibility prefix. For example, `[[foo]]`, `[[posts/foo]]`, `[[questions/foo]]`, and
   `[[notes/foo]]` all resolve directly to the entry's canonical Posts/Notes URL.
 - Tag-qualified targets such as `[[essays/foo]]` resolve when that tag is attached to the entry.
-- Logs, Shelf entries, and special pages participate in lookup and backlinks while preserving
+- Poems, logs, Shelf entries, and special pages participate in lookup and backlinks while preserving
   their own canonical URLs.

@@ -1,0 +1,34 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { titleFromSlug } from '../../lib/content';
+
+const pageEntry = await getEntry('pages', 'poems');
+if (!pageEntry) {
+  throw new Error('Missing content entry: pages/poems');
+}
+const { Content } = await pageEntry.render();
+const title = pageEntry.data.title ?? titleFromSlug(pageEntry.slug);
+const poems = (await getCollection('poems')).sort((a, b) => {
+  const aDate = a.data.date ?? a.data.lastmod;
+  const bDate = b.data.date ?? b.data.lastmod;
+  const difference = (bDate?.getTime() ?? 0) - (aDate?.getTime() ?? 0);
+  return difference || a.slug.localeCompare(b.slug);
+});
+---
+
+<BaseLayout title={title} description={pageEntry.data.description}>
+  <section class="writing-archive" aria-labelledby="poems-title">
+    <header class="archive-header">
+      <h1 id="poems-title">{title}</h1>
+    </header>
+    {pageEntry.body?.trim() ? <div class="prose"><Content /></div> : null}
+    {poems.length ? (
+      <ul class="note-archive-list poem-archive-list">
+        {poems.map((entry) => (
+          <li><a href={`/poems/${entry.slug}`}>{entry.data.title ?? titleFromSlug(entry.slug)}</a></li>
+        ))}
+      </ul>
+    ) : null}
+  </section>
+</BaseLayout>

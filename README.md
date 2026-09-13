@@ -7,7 +7,7 @@ GitHub Pages deployment.
 ## Repo Map
 
 - `src/` - Astro site routes, layouts, shared styles, and markdown helpers.
-- `vault/` - source of truth for public markdown content and vault assets.
+- `vault/` - source of truth for public markdown content, poems, and vault assets.
 - `scripts/` - content and asset sync scripts for the Astro site.
 - `public/` - committed static files. `public/assets/` is generated from
   `vault/assets/` and ignored by git.
@@ -38,7 +38,8 @@ content first. Edit markdown in `vault/`, not `src/content/`.
   Page prose and page-specific labels live in `vault/pages/`; global text such
   as the site name, footer links, metadata, writing controls, redirects, and RSS
   labels lives in `vault/pages/site.md`. `vault/pages/home.md` controls the live
-  homepage copy around its required `<!-- home-comic -->` placement marker.
+  homepage copy around its required `<!-- home-comic -->` and
+  `<!-- home-writing-nav -->` placement markers.
 - Main site layouts and rendering logic live in `src/pages/` and `src/layouts/`;
   most visual styling is in `src/styles/global.css`. The isolated, noindex
   `src/pages/homepage-variants/` prototypes are design studies and intentionally
@@ -47,6 +48,8 @@ content first. Edit markdown in `vault/`, not `src/content/`.
   Their `projects`/`essays` or `hunches`/`questions` tags classify them into the
   public Posts and Notes routes; `slug` frontmatter remains their stable URL
   identity. See `SCHEMA.md` before changing published slugs or classifications.
+- Poems live in `vault/poems/` and publish independently at `/poems/<slug>`;
+  ordinary source line breaks remain visible in rendered poem paragraphs.
 - The sibling Vite apps have their own `package.json`, tests, builds, and
   READMEs. Work from inside the relevant app folder.
 - Analytics uses Google tag `G-3HGGFGZK6Y`. The root Astro site loads it from

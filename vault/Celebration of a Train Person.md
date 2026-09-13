@@ -3,8 +3,8 @@ tags:
   - essays
 slug: celebration-of-a-train-person
 title: Celebration of a Train Person
-date: 2024-01-04
-lastmod: 2024-01-04
+date: 2025-01-04
+lastmod: 2025-01-04
 ---
 In early July 2024 (which is now last year??), my friend Ashwin visited Kathy and me in NYC. We’re all big train enthusiasts, so naturally we took the subway to visit a museum that had been on Kathy and my list for a long time, the [New York Transit Museum](https://www.nytransitmuseum.org/) in Brooklyn. It’s full of history and is built inside an old subway station, which is cool in and of itself.
 

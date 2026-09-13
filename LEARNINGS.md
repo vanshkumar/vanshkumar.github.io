@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-13] — Fiction post tagging**
+- Observation: `fiction` works as an additional tag alongside `essays`; the existing Post classifier still requires `essays` or `projects`, and the new post passes the build without a tag registry change.
+- Action: For fiction posts under the current classification scheme, keep `essays` alongside `fiction`.
+- Confidence: high
+
 **[2026-09-13] — Heading-to-list spacing cascade**
 - Observation: The prose list margin reset appeared after the equally specific H2 sibling spacing rule, removing the gap below About’s Inspo heading while heading-to-paragraph spacing remained intact.
 - Action: Keep the generic prose list reset before heading sibling spacing rules so H2 lists retain the standard 0.9rem gap and H3 lists retain their 1.25rem gap.

@@ -1,0 +1,36 @@
+---
+tags:
+  - essays
+slug: celebration-of-a-train-person
+title: Celebration of a Train Person
+date: 2024-01-04
+lastmod: 2024-01-04
+---
+In early July 2024 (which is now last year??), my friend Ashwin visited Kathy and me in NYC. We’re all big train enthusiasts, so naturally we took the subway to visit a museum that had been on Kathy and my list for a long time, the [New York Transit Museum](https://www.nytransitmuseum.org/) in Brooklyn. It’s full of history and is built inside an old subway station, which is cool in and of itself.
+
+![[Pasted image 20260913135524.png]]
+
+But what makes it one of the best museums I’ve ever been to is that you can walk through all the previous generation train cars, and the ads in the cars are from the time period. Reading often hilarious subway ads is an incredibly entertaining way to immerse yourself in and learn history. There are ads referencing WWI, the Japanese Internment Act, WWII, advertising the US open at the Forest Hills Stadium, and then ads with the most inane slogans that look like they were made in MS Paint.
+
+![[Pasted image 20260913135536.png|emoji masters out here]]
+![[Pasted image 20260913135548.png|so incredibly believable]]
+![[Pasted image 20260913135600.png|not a chance]]
+![[Pasted image 20260913135609.png|umaybe right]]
+
+We spent a long long time in that museum and were literally the last people to leave/get kicked out by the staff when it was closing. That’s the day I would say I started to self-identify as an Aspiring Train Guy – aspiring because real Train People are way more legit than me. I bought some merch (this [dope sweater](https://www.nytransitmuseumstore.com/apparel/sweatshirt-black-subway-map.html)!) and subscribed to the museum’s events calendar immediately.
+
+Fast forward a couple months and a couple of Kathy’s friends (shoutout [Aisha Marissa](https://www.youtube.com/watch?v=4zSAGBDdCfU)) were visiting us from London, and their trip happened to coincide with one of the museum’s events. They’re homies so they were down to buy a $60 ticket to [ride on an old train](https://www.nytransitmuseum.org/program/brightliners2pm/) that was brought out of retirement to celebrate its 60th anniversary.
+
+The day of, I was a bit nervous as I didn’t know if it would actually be fun or not, and it would take up 2-3 hours on a Saturday afternoon with perfect mid-September weather. We made our way to the 96th street Q stop, which was a bit of a trek in itself, and found the NY Transit Museum organizers. There was a pretty sizable group of people already waiting and they were all shapes, sizes, colors, and ages. I had been expecting mostly older people and some young kids, but there groups of teenagers talking loudly amongst themselves, adults in their 20s with their families, and all other kinds of people. While we were waiting for our train to get to the station, I went upstairs to the bathroom since there wouldn’t be any on the train. And that’s when I met Joseph.
+
+It was a single occupancy bathroom and there were two people in line, with the person directly ahead of me chatting animatedly to the other in a strong New York accent. The person ahead of me was a guy probably in his mid-30s, a bit taller than me, a little chubby, wearing glasses, and wearing a black puffy vest and beige beret. When the person at the front of the line went into the bathroom, he immediately turned around and started talking to me with no prompting. I would actually describe it more as talking _at_ me rather than talking _to_ me, as he told me in detail about his long 50 street walking commute when he used to do some storage work at the Guggenheim and a bunch of other things that I don’t remember the details of anymore. As he was talking, someone who seemed like his mom came out of the women’s bathroom and smiled at me, her eyes implying that he liked to talk & did this often. Even though he was talking at me for a long while, he seemed like a sweet sincere guy and not like someone who talked just to hear himself talk, so I enjoyed the interaction overall. Eventually it was his turn to go into the bathroom & we said see your later on the train. When I got back to our group, I told Kathy about the entertaining interaction and we kept waiting for the train.
+
+When the train showed up, the same guy who I chatted with while waiting for the bathroom ended up in the same train car as us. He talked pretty loudly so we quickly found out his name was Joseph and he ended up being the person who made our 2 hour round trip train journey way way more fun. He was a true Train Person.
+
+As the train went along and we got into the overground section in Brooklyn, Joseph started popping off. When he saw a train he recognized (all of them), he would shout out what kind of train it was. As MTA employees walked into our train car, he would usually already know who they were or, if not, shake their hand and introduce himself. He would always make sure to introduce his mom too, saying “say hi to my mom Mary” and making sure her to involve her in the conversation, which was super sweet. At one point we overheard him talking to an MTA employee asking about why another employee wasn’t there that day and then said “Oh I remember, his daughter is getting married today! Say congratulations to him from me!” Ridiculous level of involvement in the MTA despite not being an employee himself. He also gave super sincere compliments to one of the other adult who was with him, saying “You have a very nice smile, it’s always so pleasant to be around you.”
+
+We heard him asking his mom if they could go on another of these nostalgia train rides that was coming up, and she said no because of how expensive they were. It was clear that this was a rare experience for him and his unbridled joy was incredible to see. Soon after that conversation about money, he said unprompted “if I had enough money, I would buy this train car and live in it. This bit could be the living room, I could put the bathroom here…” So cute. He was one of the purest and most sincere souls I’ve been around for a long time and our group absolutely loved to see it. It was like watching a little kid on Christmas, except that kid was in their mid-30s so you’d naturally expect society to have shaved away at least some of that energy by now. I get so happy meeting people who are uncontrollably, irrationally obsessed with something and the joy it brings them is so obvious it can’t be repressed. It’s so infectious. Train People in particular seem to have a really beautiful obsessive subculture figured out – I’m definitely a bit jealous and that’s probably why I consider myself an Aspiring Train Person.
+
+May we all find our own niche or subculture that brings us a Joseph level of joy. Or if it doesn’t exist yet, may we have the fortitude to build it. From [Experimental History](https://open.substack.com/pub/experimentalhistory)’s wonderful essay [There’s a place for everyone](https://www.experimental-history.com/p/theres-a-place-for-everyone), after listing a bunch of truly out-there jobs:
+
+> You can read that list thinking to yourself, “Which of these jobs might I like to do?” But the better question is: “Which jobs are still missing?”

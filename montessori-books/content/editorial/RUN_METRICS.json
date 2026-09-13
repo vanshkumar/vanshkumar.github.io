@@ -1,0 +1,78 @@
+{
+  "startedAt": "2026-09-12T15:07:14Z",
+  "pausedAt": "2026-09-12T16:47:10Z",
+  "resumedAt": "2026-09-12T23:22:54Z",
+  "completedAt": "2026-09-13T00:20:01Z",
+  "activeReviewers": 2,
+  "editor": "/root",
+  "substantiveReviewerReasoning": "xhigh",
+  "actualTokenCounts": null,
+  "actualTokenCountsAvailability": "No actual token counter exposed. No token-saving percentage claimed.",
+  "totalAgentCalls": null,
+  "totalAgentCallsAvailability": "Complete run-wide agent-call count unavailable; reviewers reported approximate counts for individual batches only.",
+  "receiptInputs": [
+    {
+      "path": "content/birth-6/revisions/r03/CONTRIBUTION_RECEIPT.json",
+      "sha256": "2c84a14733cabcf06c0f86c6bb7a8ee47effac9785af5ff06c7bd3197a348f75",
+      "textPlacements": 113
+    },
+    {
+      "path": "content/6-18/revisions/r06/CONTRIBUTION_RECEIPT.json",
+      "sha256": "0f12b632dd7435d772ba26f190d9aa93b7b0039b803de8fc08f6584143534601",
+      "textPlacements": 224
+    },
+    {
+      "path": "content/18-36/revisions/r03/CONTRIBUTION_RECEIPT.json",
+      "sha256": "b0cc8e32d58161be59bb504d03aae91d45bb91bb6771cf4170f09ace89684496",
+      "textPlacements": 193
+    }
+  ],
+  "publicPayloadBytes": 642317,
+  "artPacketBytes": 94827,
+  "sizeMeasurementBoundary": "Bytes measure saved artifact size; reports listed are a selected final subset, not total model input/output. They are not token counts or demonstrated token savings.",
+  "textPlacementsVerified": 530,
+  "publication": false,
+  "activeElapsedSeconds": 9423,
+  "activeElapsedBoundary": "Recorded continuation segments; excludes the user-requested pause. Includes review, integration and final QA/documentation; not model CPU time.",
+  "retainedPilotPlacements": 115,
+  "totalIntegratedPlacements": 645,
+  "canonicalEntries": 174,
+  "sourceIdeasAllocated": 1309,
+  "newArtContextsReviewed": 18,
+  "newArtAssets": 6,
+  "reviewedArtScreenshots": 28,
+  "remainingKnownDefects": [],
+  "administrativeEffort": {
+    "measuredSeconds": null,
+    "work": [
+      "Expanded reviewer decisions using existing helpers; verified all three contribution receipts.",
+      "Bound independent art decisions to the exact images and rendered contexts.",
+      "Allowed only an explicit default-opening query parameter when comparing cross-age topic links; reader-visible markup and reviewed text remain exact.",
+      "Accepted declared screenshot reads in either string-path or path-with-notes form.",
+      "Created the final integration receipt and release, then performed one production build and brief browser QA."
+    ],
+    "boundary": "No separate administrative timer; included in active elapsed time."
+  },
+  "partialReviewerCallReports": [
+    {
+      "reviewer": "source",
+      "scope": "Final adult/family and art batch, 93 text placements and 18 art contexts",
+      "approximateToolCalls": 39
+    },
+    {
+      "reviewer": "tone",
+      "scope": "Resumed final adult/family and art work",
+      "approximateExecCalls": 26,
+      "approximateNestedCalls": 62,
+      "coordinationMessages": 3
+    }
+  ],
+  "selectedRawReportBytes": {
+    "content/editorial/family-adult-life-source-r01.json": 10714,
+    "content/editorial/family-adult-life-tone-r01.json": 13781,
+    "content/editorial/family-changing-needs-source-r01.json": 7160,
+    "content/editorial/family-changing-needs-tone-r01.json": 9061,
+    "content/editorial/art-source-r01.json": 15696,
+    "content/editorial/art-tone-r01.json": 15891
+  }
+}

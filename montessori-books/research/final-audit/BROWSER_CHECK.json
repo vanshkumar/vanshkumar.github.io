@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-09-13T00:20:01Z",
+  "preview": "http://127.0.0.1:4174/montessori-books/",
+  "desktopViewport": [
+    1280,
+    1050
+  ],
+  "phoneViewport": [
+    390,
+    844
+  ],
+  "ageViewsChecked": [
+    "0-3",
+    "3-6",
+    "6-9",
+    "9-12",
+    "12-18",
+    "18-24",
+    "24-36"
+  ],
+  "results": {
+    "ageSwitches": "pass; matching title, three choices and loaded illustration in all seven views",
+    "openingChoices": "pass; Wipe and Draw at 24\u201336 months",
+    "reader": "pass; drawing references and adult-limits content displayed",
+    "topics": "pass; five topic links, family and everyday-care lists",
+    "returnFocus": "pass; reader back link restores originating topic entry on desktop and phone",
+    "phone": "pass; 390px document width, topic controls, dressing reader and shoe-help illustration",
+    "consoleErrors": [],
+    "viewportOverride": "reset"
+  },
+  "screenshots": [
+    "tmp/final-qa/12-18-desktop.png",
+    "tmp/final-qa/12-18-mobile.png",
+    "tmp/final-qa/18-24-desktop.png",
+    "tmp/final-qa/24-36-desktop.png",
+    "tmp/final-qa/3-6-desktop.png",
+    "tmp/final-qa/6-9-desktop.png",
+    "tmp/final-qa/9-12-desktop.png",
+    "tmp/final-qa/care-topic-mobile.png",
+    "tmp/final-qa/family-topic-mobile.png",
+    "tmp/final-qa/newborn-desktop.png",
+    "tmp/final-qa/shoe-help-mobile.png",
+    "tmp/final-qa/window-cleaning-desktop.png"
+  ],
+  "scope": "Brief prototype QA; no automated suite or broad regression audit."
+}

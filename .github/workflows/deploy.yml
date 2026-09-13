@@ -59,6 +59,19 @@ jobs:
         env:
           VITE_COFFEE_RUSH_RELAY_URL: ${{ vars.COFFEE_RUSH_RELAY_URL }}
 
+      - name: Setup pnpm for Montessori companion
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Install Montessori companion dependencies
+        run: pnpm install --frozen-lockfile
+        working-directory: montessori-books
+
+      - name: Build Montessori companion
+        run: pnpm build
+        working-directory: montessori-books
+
       - name: Assemble site artifact
         run: |
           rm -rf site
@@ -68,6 +81,8 @@ jobs:
           cp -a terminal-desires-ranker/dist/. site/terminal-desires-ranker/
           mkdir -p site/coffee-rush
           cp -a coffee-rush/dist/. site/coffee-rush/
+          mkdir -p site/montessori-books
+          cp -a montessori-books/dist/. site/montessori-books/
           touch site/.nojekyll
           if [ -f CNAME ]; then cp CNAME site/CNAME; fi
 
@@ -75,6 +90,7 @@ jobs:
         run: |
           test -f site/terminal-desires-ranker/index.html
           test -f site/coffee-rush/index.html
+          test -f site/montessori-books/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5

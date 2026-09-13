@@ -1,29 +1,38 @@
 # Population status
 
-The coordinating task owns this file. Approved scope: POPULATION_PLAN.md.
+Completed — 2026-09-12 (America/Los_Angeles).
 
-PAUSED at user request — 2026-09-12 16:47 UTC. This continuation began at
-15:07 UTC (about 100 minutes of elapsed work). Both retained reviewers are stopped;
-the three older population tasks remain paused. Do not resume without authorization.
+The full birth-through-three companion is integrated: **174 canonical entries,
+645 age placements, seven age bands**, with three starting ideas and five topics
+per age. The accepted design is preserved. Six new original illustrations join
+the two unchanged pilot assets.
 
-The combined draft contains 174 bodies and 645 age placements, including 115
-unchanged pilot pairs. All 530 new placements have source passes. Tone decisions
-are saved for 437 of them; the final 15 adult/family bodies across 93 placements
-remain. The latest toddler-together tone decisions are saved but not expanded yet.
-All focused text corrections have both passes; no known open content defect.
+All **530 new placements** have independent source and tone passes from the two
+retained xhigh reviewers. The **115 pilot placements** retain their exact text
+and approvals. Both reviewers passed all **18 new illustrated combinations**, based
+on six actual assets and 28 desktop/phone review screenshots. Six pilot illustrated
+contexts remain unchanged. No known unresolved review defect remains.
 
-All 1,309 source ideas have a resolved allocation, reason and valid target where
-applicable. Source variants, context-only material and deliberate omissions remain
-explicit. Six new illustrations are generated and previewed in actual layouts;
-source review passed all 18 new image/context combinations, including desktop and
-phone screenshots. Independent tone review of those images remains.
+All **1,309 source ideas** have explicit allocations and reasons, including
+context-only material, combined coverage, source qualifications and deliberate
+omissions. Coverage does not imply every source idea becomes a public entry.
 
-Birth–6 r03 has its complete 113-placement text receipt. Current 6–18 r06 and
-18–36 r03 still need their final receipts. The final integration helper is written
-but has not been run; no full release, final build or final runtime QA yet.
-The application still contains only the approved pilot payload. New assets and
-a narrowly scoped illustration style are saved but not integrated into that data.
-See content/editorial/PAUSED-2026-09-12.md for exact restart steps and estimate.
+All three contribution receipts and the full integration receipt are complete.
+The app payload matches the reviewed full payload exactly. The production build,
+brief desktop/phone navigation checks and release/asset hash checks passed.
+The public build contains only the app and eight approved illustrations; no PDFs,
+private research or legacy design-study data are included.
+
+Final handoff: `research/final-audit/HANDOFF.md`.
+Release: `content/APPROVED_RELEASE.json`.
+Timing and measurement limits: `content/editorial/RUN_METRICS.json`.
+Local preview: http://127.0.0.1:4174/montessori-books/.
+
+The subsequent publishing request authorizes commit and push. The parent Pages
+workflow now includes the companion; see the publishing follow-up in the handoff.
+The retained reviewers are finished. The three older
+population tasks remain paused; their saved drafts were reused by the sole editor.
+No separate Task 8 was created; the coordinating task completed integration.
 
 The remaining entries below are historical checkpoints, superseded by this run.
 

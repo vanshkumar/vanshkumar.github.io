@@ -1,4 +1,13 @@
-# Population workflow — consolidated editorial trial
+# Population workflow — consolidated editorial review
+
+## Completed — 2026-09-12
+
+The authorized full continuation is complete. One editor and the two retained
+independent xhigh reviewers finished 530 new placements; 115 exact pilot placements
+were retained. All 645 placements and reviewed art are integrated. Final evidence,
+build and brief browser checks are recorded in `research/final-audit/HANDOFF.md`.
+The workflow amendments below are retained as historical instructions and evidence;
+there is no remaining population assignment or automatic reviewer restart.
 
 ## Full continuation authorized — 2026-09-12
 

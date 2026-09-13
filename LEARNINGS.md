@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-12] — Montessori companion Pages deployment**
+- Observation: The standalone Montessori app uses a pnpm lockfile, a `/montessori-books/` Vite base, hash routes and a release guard that emits only approved artwork. The root Astro build does not include it.
+- Action: Keep its frozen pnpm install/build and dist-only copy in the Pages workflow, and verify `site/montessori-books/index.html`. Keep PDFs, research and review files outside the deployed artifact; preserve the release guard when updating publishing metadata.
+- Confidence: high
+
 **[2026-09-11] — Property edits and modification dates**
 - Observation: The installed modified-date plugin's `useKeyupEvents` mode listens to CodeMirror input/delete/move transactions instead of broad editor-change events. Its event registration happens at plugin load; direct YAML typing still qualifies as an edit.
 - Action: Enable this mode to avoid Properties-panel and external-edit date churn, then reload the plugin or Obsidian. Use the per-note exclusion flag when all automatic date updates must stop.

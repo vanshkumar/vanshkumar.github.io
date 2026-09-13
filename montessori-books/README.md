@@ -1,7 +1,11 @@
 # Small beginnings
 
-Ten local Montessori design prototypes, with shared, source-checked guidance for
-6–9 months and 18–24 months. Other age bands are explicitly unfinished previews.
+A visual Montessori companion from birth through age three, based on
+*The Montessori Baby* and *The Montessori Toddler*. Each age opens with three
+starting invitations, followed by five everyday topics and focused readers.
+The complete content has 174 reusable entries with age-specific presentations.
+Suggestions, readiness and family circumstances take precedence over deadlines
+or completion tracking.
 
 ## Run
 
@@ -18,36 +22,45 @@ pnpm build
 pnpm preview
 ```
 
-The comparison index links to all ten concepts. The direction picker preserves
-the selected age. Hash links work without a server-side SPA fallback, for example
-`/montessori-books/#/windows?age=18-24`.
+Hash links work without a server-side SPA fallback, for example
+`/montessori-books/#/home?age=12-18` or
+`/montessori-books/#/home?age=24-36&entry=later-window-cleaning`.
+The ten earlier visual studies remain available in development; their data and
+application code are excluded from production.
 
 ## Edit
 
-- `src/content.js`: six original guidance records, readiness cues, practical
-  steps, and verified references. Baby references use physical PDF pages;
-  Toddler references include verified printed pages and physical PDF pages.
-- `src/concepts.js`: the ten random seeds, interpretations, and palette notes.
-- `src/main.jsx` and `src/styles.css`: shared controls and ten distinct layouts.
+- `src/guide/approved.json`: generated, reviewed public content. Do not edit it
+  directly: exact content, independent decisions and integration receipts live
+  under `content/`. References identify physical PDF pages; verified Toddler
+  printed-page references are retained where available.
+- `src/guide/store.js` and `routes.js`: shared age/topic selectors and hash routes.
 - `src/HomeStudy.jsx` and `src/home.css`: the refined second direction, with a
   compact age selector, an open illustration for each populated age, and three
   idea choices above a focused reading panel with an observation cue.
-- `public/art/`: eleven original generated illustrations and revisions, optimized to WebP.
-  `ARTWORK.md` records the generation briefs. Images are conceptual; repeated
-  crops in the comic study are a prototype treatment, not distinct instructional frames.
+- `public/art/`: original artwork, including historical prototypes. The build
+  emits only the eight images referenced by the reviewed release. New generation
+  records are in `research/art-direction/GENERATIONS-2026-09-12.json`.
+- `content/APPROVED_RELEASE.json`: the full release's content, receipt, image and
+  presentation fingerprints. The build rejects changes outside that reviewed
+  integration. The earlier pilot release and its evidence stay intact.
+- `research/`: the source crosswalks and editorial foundation; the consolidated
+  allocation is in `content/editorial/coverage/RESOLVED_COVERAGE.jsonl`.
 
 The PDFs are local research inputs. They are ignored by Git and never copied to
 the public directory or built output. The prose is paraphrased; no book artwork
-is reproduced. All pages carry `noindex, nofollow` during this comparison phase.
+is reproduced. The published companion is indexable and declares its canonical URL.
 
-## Later deployment
+## Deployment
 
-This is a standalone sibling app. The root Astro build does not include it.
-When a direction is selected, add a pnpm install/build step to the parent Pages
-workflow, copy this app's `dist/` into `site/montessori-books/`, and verify its
-`index.html` alongside the existing sibling apps. Add the root site's documented
-analytics snippet at that point. No parent workflow changes or publication are
-included in this prototype.
+Live URL: https://vanshkumar.net/montessori-books/.
+
+The parent GitHub Pages workflow installs from this app’s frozen pnpm lockfile,
+builds it separately, and copies only `dist/` to `site/montessori-books/`.
+Hash navigation needs no extra server routing. The HTML includes the parent site’s
+Google Analytics tag and canonical URL. The release fingerprint records these
+publishing metadata changes; all reviewed content, artwork and visible layouts
+remain unchanged.
 
 Validation is intentionally limited to a production build and a brief browser
 smoke check. No automated test suite was added.

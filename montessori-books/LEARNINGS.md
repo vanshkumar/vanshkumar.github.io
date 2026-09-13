@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-12] — Cross-age topic link integration**
+- Observation: A contribution can contain a topic entry for an age without owning that age’s three starting ideas. Assembly then adds an explicit `idea` query parameter for the already-approved first opening, although the contribution’s implicit default returns to the same opening. Literal markup equality initially treated that navigation binding as changed editorial content.
+- Action: Allow only this validated implicit-to-explicit default-opening parameter when joining approved contributions. Preserve all other URL parameters, visible markup and exact text hashes, and record each binding in the integration receipt. Do not normalize away substantive presentation differences.
+- Confidence: high
+
 **[2026-09-12] — Retained reading ancestry**
 - Observation: The adult-life source review referenced a previous raw decision file whose PDF 39 reading was itself retained from another review. The compiler initially reported the page unread even though the reviewer had read and explicitly retained it.
 - Action: Follow explicitly declared same-reviewer/role reading ancestry, hash every link and preserve distinct log declarations with colliding local IDs. Do not ask the reviewer to repeat original reading just to repair this administrative join.

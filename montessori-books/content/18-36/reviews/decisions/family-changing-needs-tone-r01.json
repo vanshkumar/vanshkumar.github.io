@@ -1,0 +1,330 @@
+{
+  "id": "family-changing-needs-tone-r01",
+  "date": "2026-09-12",
+  "reviewer": {
+    "task": "/root/trial_tone",
+    "role": "tone",
+    "reasoning": "xhigh"
+  },
+  "retainedReads": [
+    {
+      "path": "content/editorial/shared-foundations-tone-r01.json"
+    },
+    {
+      "path": "content/editorial/shared-family-tone-r01.json"
+    },
+    {
+      "path": "content/editorial/family-adult-life-tone-r01.json"
+    },
+    {
+      "path": "content/editorial/toddler-hand-art-tone-r01.json"
+    },
+    {
+      "path": "content/6-18/reviews/decisions/infant-hand-play-tone-r01.json"
+    }
+  ],
+  "readLogs": [
+    {
+      "id": "fcn-tone-baby-text-105",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 105,
+          "end": 105
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/105.txt",
+      "notes": "Concentration framing, ordinary quiet and passive entertainment."
+    },
+    {
+      "id": "fcn-tone-baby-text-106",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 106,
+          "end": 106
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/106.txt",
+      "notes": "Explicit before-two/after-two screen recommendation and sensory exploration."
+    },
+    {
+      "id": "fcn-tone-baby-text-107",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 107,
+          "end": 107
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/107.txt",
+      "notes": "Concentration and individual exploration alongside adult observation."
+    },
+    {
+      "id": "fcn-tone-baby-text-111",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 111,
+          "end": 111
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/111.txt",
+      "notes": "Available adult guidance and proportionate help."
+    },
+    {
+      "id": "fcn-tone-baby-text-113",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 113,
+          "end": 113
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/113.txt",
+      "notes": "Open gender opportunities, capability and avoiding fixed labels."
+    },
+    {
+      "id": "fcn-tone-baby-text-228",
+      "sourceId": "baby-2021",
+      "pdfPages": [
+        {
+          "start": 228,
+          "end": 228
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/baby/228.txt",
+      "notes": "Individual twins, gradual skills, turns and manageable care."
+    },
+    {
+      "id": "fcn-tone-toddler-text-213",
+      "sourceId": "toddler-2019",
+      "pdfPages": [
+        {
+          "start": 213,
+          "end": 213
+        }
+      ],
+      "mode": "full-text",
+      "path": "tmp/editorial/sources/toddler/213.txt",
+      "notes": "Upcoming preschool, supported independence, familiar caregiver before separation and social guidance."
+    }
+  ],
+  "decisions": [
+    {
+      "placementIds": [
+        "0-3.family-twins-as-individuals",
+        "3-6.family-twins-as-individuals",
+        "6-9.family-twins-as-individuals",
+        "9-12.family-twins-as-individuals",
+        "12-18.family-twins-as-individuals",
+        "18-24.family-twins-as-individuals",
+        "24-36.family-twins-as-individuals"
+      ],
+      "verdict": "pass",
+      "assessment": "Across all ages, the twins entry values individual names and needs, gradual participation and caregiver capacity without requiring matched possessions or performance.",
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 228,
+              "end": 229
+            }
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "0-3.family-familiar-people",
+        "3-6.family-familiar-people",
+        "6-9.family-familiar-people",
+        "9-12.family-familiar-people",
+        "12-18.family-familiar-people",
+        "18-24.family-familiar-people",
+        "24-36.family-familiar-people"
+      ],
+      "verdict": "pass",
+      "assessment": "The wider circle remains an available source of connection across ages, with ordinary and distant relationships offered without a required social network.",
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 244,
+              "end": 245
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 203,
+              "end": 203
+            }
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "12-18.family-preferring-one-parent",
+        "18-24.family-preferring-one-parent",
+        "24-36.family-preferring-one-parent"
+      ],
+      "verdict": "pass",
+      "assessment": "All toddler contexts acknowledge the child’s wish and the other parent’s feelings while allowing gentle care from the available adult and tentative explanations.",
+      "contextReferences": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 204,
+              "end": 205
+            }
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "0-3.family-baby-screen-perspective",
+        "3-6.family-baby-screen-perspective",
+        "6-9.family-baby-screen-perspective",
+        "9-12.family-baby-screen-perspective",
+        "12-18.family-baby-screen-perspective",
+        "18-24.family-baby-screen-perspective",
+        "24-36.family-baby-screen-perspective"
+      ],
+      "verdict": "pass",
+      "assessment": "The before-two and after-two recommendation stays explicitly attributed to the Baby authors and their sensory-exploration perspective without claiming an individual developmental outcome.",
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 105,
+              "end": 107
+            }
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "0-3.family-interests-without-gender-labels",
+        "3-6.family-interests-without-gender-labels",
+        "6-9.family-interests-without-gender-labels",
+        "9-12.family-interests-without-gender-labels",
+        "12-18.family-interests-without-gender-labels",
+        "18-24.family-interests-without-gender-labels",
+        "24-36.family-interests-without-gender-labels"
+      ],
+      "verdict": "pass",
+      "assessment": "All placements preserve open opportunities and temporary descriptions without assigning interests or fixed identities to children.",
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 113,
+              "end": 113
+            }
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "12-18.family-starting-preschool",
+        "18-24.family-starting-preschool",
+        "24-36.family-starting-preschool"
+      ],
+      "verdict": "pass",
+      "assessment": "Each context is tied to an actual upcoming start, with supported participation and familiar care rather than an age deadline, required skills or an imposed separation timetable.",
+      "contextReferences": [
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 14,
+              "end": 14
+            },
+            {
+              "start": 34,
+              "end": 35
+            },
+            {
+              "start": 206,
+              "end": 206
+            },
+            {
+              "start": 213,
+              "end": 213
+            }
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "placementIds": [
+        "0-3.family-watching-without-a-demonstration",
+        "3-6.family-watching-without-a-demonstration",
+        "6-9.family-watching-without-a-demonstration",
+        "9-12.family-watching-without-a-demonstration",
+        "12-18.family-watching-without-a-demonstration",
+        "18-24.family-watching-without-a-demonstration",
+        "24-36.family-watching-without-a-demonstration"
+      ],
+      "verdict": "pass",
+      "assessment": "The child remains free from requested performances at every age, while the around-three exception retains both known competence and eagerness to share.",
+      "contextReferences": [
+        {
+          "sourceId": "baby-2021",
+          "pdfPages": [
+            {
+              "start": 111,
+              "end": 113
+            }
+          ]
+        },
+        {
+          "sourceId": "toddler-2019",
+          "pdfPages": [
+            {
+              "start": 36,
+              "end": 39
+            }
+          ]
+        }
+      ],
+      "issues": []
+    }
+  ],
+  "editorialDecisionInput": {
+    "path": "content/editorial/family-changing-needs-tone-r01.json",
+    "sha256": "c82994415b874daf1e47bc2387405456f331998044f36c57ce0e6008d3ccff65"
+  },
+  "packet": {
+    "path": "content/editorial/family-changing-needs.json",
+    "sha256": "a639154cd0b48ee125bc2c3bdae5e92fc18828dda041ada31870ed653b68e1fe"
+  }
+}

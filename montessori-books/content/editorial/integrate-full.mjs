@@ -8,7 +8,7 @@ import {createServer} from 'vite';
 import {read,hash,write,loadFrozen} from '../pilots/contribution-core.mjs';
 import {digest,makeSnapshot,publicEntry,publicPlacement,publicScene} from '../pilots/review-snapshot.mjs';
 import {displayContext} from '../pilots/display-context.mjs';
-import {assertReadCoverage} from '../pilots/lean-review.mjs';
+import {assertReadCoverage,textDelta} from '../pilots/lean-review.mjs';
 import {createGuideStore} from '../../src/guide/store.js';
 import {readRoute,homeLink} from '../../src/guide/routes.js';
 import {topics} from '../../src/guide/catalog.js';
@@ -66,7 +66,7 @@ for(const placement of payload.placements){
 // original art captions are omitted from both sides of this text-only check.
 const plain=html=>html.replace(/<[^>]*>/g,' ').replace(/&#x27;/g,"'").replace(/&quot;/g,'"').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/\s+/g,' ').trim();
 const withoutArt=html=>html.replace(/<link\b[^>]*as="image"[^>]*\/?\s*>/g,'').replace(/<img\b[^>]*\/?\s*>/g,'').replace(/<figcaption\b[^>]*>[\s\S]*?<\/figcaption>/g,'');
-const renderingProof=[];
+const renderingProof=[],navigationBindings=[];
 const server=await createServer({optimizeDeps:{noDiscovery:true,include:[],entries:[]},server:{middlewareMode:true,hmr:false},appType:'custom'});
 try{
  const {default:HomeStudy}=await server.ssrLoadModule('/src/HomeStudy.jsx');
@@ -78,7 +78,26 @@ try{
   let expected;
   if(record.basis===pilotPath)expected=surface(pilotGuide,p);
   else{if(!cache.has(record.basis))cache.set(record.basis,read(`${record.basis}/RENDERED_SURFACES.json`).surfaces);const s=cache.get(record.basis).find(s=>s.placementId===p.id);expected={entryText:s.entryText,openingText:s.openingText,topicRows:s.topicRows};}
-  if(digest(actual)!==digest(expected))throw Error(`Integrated reader/opening/topic wording changed: ${p.id}`);
+  // A contributor may supply cross-age entries before that age's three opening
+  // choices exist in its private payload. Full assembly makes the same default
+  // return destination explicit. Permit only that exact, behavior-equivalent
+  // href addition; all words, other attributes and query fields remain exact.
+  const reconciled={...expected,topicRows:expected.topicRows.map(row=>{
+   const target=actual.topicRows.find(r=>r.topicId===row.topicId);
+   if(!target||target.html===row.html)return row;
+   const options={age:p.ageId,topic:row.topicId,entry:p.entryId};
+   const from=homeLink(options).replaceAll('&','&amp;');
+   const idea=guide.openings(p.ageId)[0].entry.id;
+   const to=homeLink({...options,idea}).replaceAll('&','&amp;');
+   const html=row.html.replace(`href="${from}"`,`href="${to}"`);
+   if(html===row.html||html!==target.html||target.text!==row.text)return row;
+   navigationBindings.push({placementId:p.id,topicId:row.topicId,from,to,approvedDefaultOpening:idea});
+   return {...row,html};
+  })};
+  if(digest(actual)!==digest(reconciled)){
+   console.error(JSON.stringify({placementId:p.id,differences:Object.keys(actual).filter(k=>digest(actual[k])!==digest(expected[k])).map(field=>({field,delta:textDelta(JSON.stringify(expected[field]),JSON.stringify(actual[field]))}))}));
+   throw Error(`Integrated reader/opening/topic wording changed: ${p.id}`);
+  }
   renderingProof.push({placementId:p.id,sha256:digest(actual)});
  }
 }finally{await server.close();}
@@ -94,6 +113,7 @@ function ownReads(report,reviewer,seen=new Set()){
  return logs;
 }
 const artApprovals=new Map();
+const screenshotPath=record=>path.resolve(typeof record==='string'?record:record.path);
 for(const id of artPacket.newPlacementIds){
  const context=artContexts.find(c=>c.placementId===id),snapshot=current.get(id);
  if(!context||context.snapshot.artContextSha256!==snapshot.artContextSha256)throw Error(`Art context changed: ${id}`);
@@ -105,7 +125,7 @@ for(const id of artPacket.newPlacementIds){
   if(decision.verdict!=='pass'||decision.issues?.some(i=>i.status!=='resolved'))throw Error(`Unresolved art ${role}: ${id}`);
   const assetReads=[...(found.report.assetReads??[]),...(decision.assetReads??[])];
   if(!assetReads.some(a=>a.src===packet.actualArtwork.src&&a.mode==='actual-image-visual'&&a.description))throw Error(`Missing actual image inspection: ${id}`);
-  const screenshotReads=new Set((found.report.screenshotReads??[]).map(p=>path.resolve(p)));
+  const screenshotReads=new Set((found.report.screenshotReads??[]).map(screenshotPath));
   for(const s of packet.contexts.find(c=>c.placementId===id).screenshots)if(!screenshotReads.has(path.resolve(s.path)))throw Error(`Missing actual presentation inspection: ${id}/${s.path}`);
   const logs=ownReads(found.report,found.report.reviewer);
   const refs=role==='source'?[packet.sourceContext]:(decision.contextReferences??found.report.contextReferences??[]);
@@ -120,9 +140,9 @@ for(const c of artContexts.filter(c=>c.previousPilotArtwork)){const original=rea
 const coverage=read('content/editorial/coverage/RESOLUTION_SUMMARY.json');coverage.files.forEach(unchanged);
 if(coverage.sourceIdeas!==1309||coverage.unresolvedSourceIdeas.length||coverage.invalidIncludedTargets.length)throw Error('Unresolved coverage allocation');
 const supplementPath=`${directory}/ART_MOBILE_READER_SUPPLEMENT.json`,supplement=read(supplementPath);
-for(const s of supplement.screenshots){unchanged(s);for(const role of ['source','tone'])if(!artReports.some(r=>r.report.reviewer.role===role&&(r.report.screenshotReads??[]).some(p=>path.resolve(p)===path.resolve(s.path))))throw Error(`Missing ${role} phone reader inspection`);}
-const receipt={integratedOn:new Date().toISOString(),payloadSha256:manifest.payloadSha256,contributions,pilot:ref(baseline.receiptPath),coverage:ref('content/editorial/coverage/RESOLUTION_SUMMARY.json'),artPacket:ref(artPacketPath),artSupplement:ref(supplementPath),artReports:artReports.map(({report,binding,...r})=>r),retainedReadingFiles:[...retainedReadingFiles.values()],renderingProof,components:payload.placements.map(p=>({placementId:p.id,textPlacementSha256:current.get(p.id).textPlacementSha256,textApprovals:text.get(p.id).approvals,...(artApprovals.has(p.id)?{artApprovals:artApprovals.get(p.id)}:{})})),retainedPilotArtContexts:6,publication:'Approved local integration; deployment not performed'};
+for(const s of supplement.screenshots){unchanged(s);for(const role of ['source','tone'])if(!artReports.some(r=>r.report.reviewer.role===role&&(r.report.screenshotReads??[]).some(p=>screenshotPath(p)===path.resolve(s.path))))throw Error(`Missing ${role} phone reader inspection`);}
+const receipt={integratedOn:new Date().toISOString(),payloadSha256:manifest.payloadSha256,contributions,pilot:ref(baseline.receiptPath),coverage:ref('content/editorial/coverage/RESOLUTION_SUMMARY.json'),artPacket:ref(artPacketPath),artSupplement:ref(supplementPath),artReports:artReports.map(({report,binding,...r})=>r),retainedReadingFiles:[...retainedReadingFiles.values()],renderingProof,navigationBindings,navigationBindingRule:'Only an omitted idea query parameter becoming the already-approved first opening of the same age; identical implicit/explicit return destination, exact reader words and all other markup/query fields preserved.',components:payload.placements.map(p=>({placementId:p.id,textPlacementSha256:current.get(p.id).textPlacementSha256,textApprovals:text.get(p.id).approvals,...(artApprovals.has(p.id)?{artApprovals:artApprovals.get(p.id)}:{})})),retainedPilotArtContexts:6,publication:'Approved local integration; deployment not performed'};
 write(receiptPath,receipt);
 fs.copyFileSync(`${directory}/payload.json`,'src/guide/approved.json');
-write('content/APPROVED_RELEASE.json',{revision:directory.split('/').at(-1),payloadSha256:hash('src/guide/approved.json'),receiptPath,receiptSha256:hash(receiptPath),assets:Object.entries(manifest.assets).map(([src,sha256])=>({src,sha256})),renderer:[...manifest.renderer,...['src/main.jsx','src/guide/index.js','vite.config.js'].map(ref)]});
+write('content/APPROVED_RELEASE.json',{revision:directory.split('/').at(-1),payloadSha256:hash('src/guide/approved.json'),receiptPath,receiptSha256:hash(receiptPath),assets:Object.entries(manifest.assets).map(([src,sha256])=>({src,sha256})),renderer:[...manifest.renderer,...['src/main.jsx','src/guide/index.js','vite.config.js','index.html'].map(ref)]});
 console.log(JSON.stringify({entries:payload.entries.length,placements:payload.placements.length,ages:ages.length,newArtContexts:artApprovals.size,receiptPath}));

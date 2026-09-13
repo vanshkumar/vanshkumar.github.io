@@ -14,6 +14,7 @@ GitHub Pages deployment.
 - `coffee-rush/` - React/Vite hot-seat game deployed at `/coffee-rush/`.
 - `terminal-desires-ranker/` - React/Vite client-only ranker deployed at
   `/terminal-desires-ranker/`.
+- `montessori-books/` - reviewed React/Vite Montessori companion at `/montessori-books/`.
 - `vault-weather/` - local-only React/Vite surface over the internal Terrain corpus
   and the separate `vault/shelf/` collection; it is not part of the Pages deploy.
 - `SCHEMA.md` - content collections and vault sync rules.
@@ -52,5 +53,5 @@ content first. Edit markdown in `vault/`, not `src/content/`.
   `src/layouts/BaseLayout.astro`; deployed sibling Vite apps should include the
   same snippet in their `index.html` and any GitHub Pages SPA fallback
   `public/404.html`.
-- GitHub Actions builds the Astro site, then builds `terminal-desires-ranker/`
-  and `coffee-rush/`, then assembles the final Pages artifact.
+- GitHub Actions builds the Astro site, then builds `terminal-desires-ranker/`,
+  `coffee-rush/`, and `montessori-books/`, then assembles the final Pages artifact.

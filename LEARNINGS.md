@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-13] — Substack corpus audit**
+- Observation: The site's “Preordained in the present” is a section of Substack's “Crusade,” while “Celebration of a Train Person” and “Inscrutable exhortations” contain Substack `VideoEmbedPlayer` blocks that are absent from the imported Markdown even when the surrounding text/images match.
+- Action: Match the fiction excerpt to `/p/crusade`; explicitly inventory video component blocks when auditing these imports, and report omitted surrounding sections separately from changes within the retained excerpt.
+- Confidence: high
+
 **[2026-09-13] — Last couple weeks import**
 - Observation: “The last couple weeks” places its Medi-Cal footnote after the subscription widget, while two authored feedback links surround the closing prompt.
 - Action: Preserve the footnote after removing the widget and retain both feedback links in this post’s Markdown.
@@ -303,6 +308,11 @@
 - Confidence: high
 
 ## Patterns and Preferences
+
+**[2026-09-13] — Poetry navigation placement**
+- Observation: The user wants poetry to have its own `/poems` section, but does not want Poems added to the homepage’s “Here you can find” directory.
+- Action: Keep `/poems` out of that personal-directory list; surface it through a separate writing-oriented homepage element or another explicitly chosen navigation surface.
+- Confidence: high
 
 **[2026-09-12] — Matching body and title margins**
 - Observation: The user approved body text aligned with the title after previewing Now; the previous inset came from the shared article grid's 36rem text track.

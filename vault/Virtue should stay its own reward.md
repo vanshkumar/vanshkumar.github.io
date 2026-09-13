@@ -3,7 +3,6 @@ tags:
   - essays
 slug: virtue-should-stay-its-own-reward
 title: Virtue should stay its own reward
-description: "#27, #28, and #29"
 date: 2025-01-16
 lastmod: 2025-01-16
 exclude_modified_update: true

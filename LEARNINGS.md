@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-13] — Heading-to-list spacing cascade**
+- Observation: The prose list margin reset appeared after the equally specific H2 sibling spacing rule, removing the gap below About’s Inspo heading while heading-to-paragraph spacing remained intact.
+- Action: Keep the generic prose list reset before heading sibling spacing rules so H2 lists retain the standard 0.9rem gap and H3 lists retain their 1.25rem gap.
+- Confidence: high
+
 **[2026-09-12] — Montessori companion Pages deployment**
 - Observation: The standalone Montessori app uses a pnpm lockfile, a `/montessori-books/` Vite base, hash routes and a release guard that emits only approved artwork. The root Astro build does not include it.
 - Action: Keep its frozen pnpm install/build and dist-only copy in the Pages workflow, and verify `site/montessori-books/index.html`. Keep PDFs, research and review files outside the deployed artifact; preserve the release guard when updating publishing metadata.

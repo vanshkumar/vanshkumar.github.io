@@ -2,6 +2,36 @@
 
 ## What Has Worked
 
+**[2026-09-13] — Last couple weeks import**
+- Observation: “The last couple weeks” places its Medi-Cal footnote after the subscription widget, while two authored feedback links surround the closing prompt.
+- Action: Preserve the footnote after removing the widget and retain both feedback links in this post’s Markdown.
+- Confidence: high
+
+**[2026-09-13] — Rami post import**
+- Observation: “What would Rami do?” has two horizontal section breaks and three inline links, with no article images; the trailing subscription widget is separate from its closing paragraph.
+- Action: Preserve those breaks and links in the vault Markdown, and end the imported body after the free-writing reflection.
+- Confidence: high
+
+**[2026-09-13] — Terminal post import**
+- Observation: Terminal’s text-only Substack extraction omits its results screenshot and splits several source paragraphs; the original HTML retains the paragraph boundaries, emphasis, and image URL.
+- Action: Use the original HTML for this post’s Markdown fidelity and keep its ranking screenshot at `vault/assets/terminal-results.png`.
+- Confidence: high
+
+**[2026-09-13] — Substack feedback link import**
+- Observation: The 10.1.2024 post includes an authored anonymous-feedback button and a following paragraph referring to it, separate from Substack’s subscription widget.
+- Action: Preserve authored feedback buttons as ordinary Markdown links and keep their accompanying prose when removing subscription widgets from imports.
+- Confidence: high
+
+**[2026-09-13] — Substack emphasis conversion**
+- Observation: The Virtue post’s source splits continuous bold passages around bold-italic words and includes trailing whitespace inside an italic paper title; direct tag-to-delimiter conversion leaves invalid Markdown emphasis.
+- Action: Merge adjacent bold spans around nested italics and move boundary whitespace outside emphasis delimiters when importing Substack HTML; compare rendered paragraphs with the original while allowing the site’s smart punctuation.
+- Confidence: high
+
+**[2026-09-13] — Substack post import**
+- Observation: Arabian Nights’ Substack body includes five footnotes, a captioned image, and formula links split across multiple anchors; Astro renders Markdown footnotes including nested paragraphs and blockquotes correctly.
+- Action: Import the article body without subscription widgets, use Markdown footnotes and vault image-caption embeds, and consolidate fragmented formula links using the matching complete source link.
+- Confidence: high
+
 **[2026-09-13] — Fiction post tagging**
 - Observation: `fiction` works as an additional tag alongside `essays`; the existing Post classifier still requires `essays` or `projects`, and the new post passes the build without a tag registry change.
 - Action: For fiction posts under the current classification scheme, keep `essays` alongside `fiction`.
@@ -469,4 +499,9 @@
 **[2026-06-25] — Terrain question card vertical balance**
 - Observation: Moving the updated date into normal flow to match the top title gap made question cards feel wrong; the preferred layout keeps the updated date locked to the card bottom.
 - Action: Do not remove `margin-top: auto` from `.terrain-card-question .terrain-card-footer` to chase equal top/title-to-date spacing.
+- Confidence: high
+
+**[2026-09-13] — Combined Apartment planning import**
+- Observation: The two Apartment planning articles use H3 pattern headings and contain 14 images, three plain-text captions, and one footnote across both parts.
+- Action: Keep each original article under an H2 part heading when combining them so the existing H3 headings remain valid; store all 14 source images locally and retain the single footnote at the combined post’s end.
 - Confidence: high

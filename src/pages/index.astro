@@ -3,7 +3,10 @@ import { getCollection, getEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import WordGarden from '../components/WordGarden.astro';
 import { titleFromSlug } from '../lib/content';
-import { canonicalWritingPath, partitionWriting } from '../lib/writing.mjs';
+import {
+  canonicalWritingPath,
+  partitionWriting
+} from '../lib/writing.mjs';
 import { getWordActivity } from '../lib/word-activity.mjs';
 
 const homeEntry = await getEntry('pages', 'home');
@@ -22,16 +25,11 @@ const homeSections = renderedHome.split(homeMarker);
 if (homeSections.length !== 2) {
   throw new Error('pages/home must contain exactly one <!-- home-comic --> placement marker');
 }
-const [beforeComic, afterComicMarker] = homeSections;
-const writingNavMarker = '<!-- home-writing-nav -->';
-const writingNavSections = afterComicMarker.split(writingNavMarker);
-if (writingNavSections.length !== 2) {
-  throw new Error('pages/home must contain exactly one <!-- home-writing-nav --> placement marker');
-}
-const [afterComic, writingNav] = writingNavSections;
+const [beforeComic, afterComic] = homeSections;
 const home = homeEntry.data.home;
-const { posts, notes } = partitionWriting(await getCollection('terrain'));
+const { posts } = partitionWriting(await getCollection('terrain'));
 const titleFor = (entry) => entry.data.title ?? titleFromSlug(entry.slug);
+const recentPosts = posts.slice(0, 3);
 const wordGarden = getWordActivity();
 ---
 
@@ -50,33 +48,18 @@ const wordGarden = getWordActivity();
 
     <div class="home-static home-static-directory" set:html={afterComic} />
 
-    <nav class="home-writing-nav" aria-label="Writing" set:html={writingNav} />
-
-    <section class="home-section" aria-labelledby="recent-posts-title">
+    <section class="home-section" aria-labelledby="recent-title">
       <div class="section-heading">
-        <h2 id="recent-posts-title">{home.recentPosts.title}</h2>
-        <a href={home.recentPosts.href}>{home.recentPosts.linkLabel}</a>
+        <h2 id="recent-title">{home.recent.title}</h2>
       </div>
-      <div class="home-posts">
-        {posts.slice(0, 3).map((entry) => (
-          <article class="home-post">
+      <ol class="home-recent">
+        {recentPosts.map((entry) => (
+          <li class="home-recent-item">
             <h3><a href={canonicalWritingPath(entry)}>{titleFor(entry)}</a></h3>
             {entry.data.description ? <p>{entry.data.description}</p> : null}
-          </article>
+          </li>
         ))}
-      </div>
-    </section>
-
-    <section class="home-section" aria-labelledby="recent-notes-title">
-      <div class="section-heading">
-        <h2 id="recent-notes-title">{home.recentNotes.title}</h2>
-        <a href={home.recentNotes.href}>{home.recentNotes.linkLabel}</a>
-      </div>
-      <ul class="home-notes">
-        {notes.slice(0, 3).map((entry) => (
-          <li><a href={canonicalWritingPath(entry)}>{titleFor(entry)}</a></li>
-        ))}
-      </ul>
+      </ol>
     </section>
 
     <WordGarden garden={wordGarden} copy={homeEntry.data.wordGarden} />

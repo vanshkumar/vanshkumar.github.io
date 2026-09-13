@@ -1407,26 +1407,8 @@ h3,
   content: "—";
 }
 
-.home-static-directory + .home-writing-nav {
+.home-static-directory + .home-section {
   margin-top: 4.5rem;
-}
-
-.home-writing-nav {
-  color: #6f685f;
-  font-size: 1.05rem;
-  line-height: 1.5;
-}
-
-.home-writing-nav > p {
-  margin: 0;
-}
-
-.home-writing-nav + .home-section {
-  margin-top: 2.85rem;
-}
-
-.home-section + .home-section {
-  margin-top: 3.7rem;
 }
 
 .section-heading {
@@ -1438,7 +1420,6 @@ h3,
 }
 
 .section-heading h2,
-.section-heading > a,
 .archive-header::after,
 .article-kind {
   font-family: var(--sans);
@@ -1453,20 +1434,37 @@ h3,
   color: #6b655d;
 }
 
-.section-heading > a {
-  letter-spacing: 0.04em;
-  text-transform: lowercase;
+.home-recent {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.home-post + .home-post {
-  margin-top: 2rem;
+.home-recent-item + .home-recent-item {
+  margin-top: 1.6rem;
 }
 
-.home-post h3,
+.home-recent-item h3,
 .archive-post h2 {
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.38;
+}
+
+.home-recent-item h3 {
+  font-size: 1.08rem;
+  line-height: 1.45;
+}
+
+.home-recent-item h3 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.home-recent-item h3 a:hover,
+.home-recent-item h3 a:focus-visible {
+  color: var(--link);
+  text-decoration: underline;
 }
 
 .archive-post h2 a,
@@ -1474,7 +1472,7 @@ h3,
   color: var(--text);
 }
 
-.home-post p,
+.home-recent-item > p,
 .archive-post p {
   margin: 0.35rem 0 0;
   color: var(--muted);
@@ -1483,23 +1481,18 @@ h3,
   line-height: 1.55;
 }
 
-.home-notes,
+.home-recent-item > p {
+  font-size: 0.78rem;
+  font-style: normal;
+}
+
 .note-archive-list {
   margin: 0;
   padding-left: 1.15rem;
 }
 
-.home-notes li + li {
-  margin-top: 0.8rem;
-}
-
-.home-notes li::marker,
 .note-archive-list li::marker {
   color: #a3a097;
-}
-
-.home-notes a {
-  line-height: 1.45;
 }
 
 .writing-archive,
@@ -1869,7 +1862,7 @@ h3,
     margin: 2.1rem calc(50% - 50vw + 0.55rem);
   }
 
-  .home-static-directory + .home-writing-nav {
+  .home-static-directory + .home-section {
     margin-top: 3.7rem;
   }
 

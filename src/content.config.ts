@@ -77,15 +77,8 @@ const homeCopy = z.object({
     width: z.number().int().positive(),
     height: z.number().int().positive()
   }),
-  recentPosts: z.object({
-    title: z.string(),
-    href: z.string(),
-    linkLabel: z.string()
-  }),
-  recentNotes: z.object({
-    title: z.string(),
-    href: z.string(),
-    linkLabel: z.string()
+  recent: z.object({
+    title: z.string()
   })
 });
 

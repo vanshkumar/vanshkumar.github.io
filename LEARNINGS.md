@@ -334,9 +334,34 @@
 
 ## Patterns and Preferences
 
+**[2026-09-13] — Writing navigation folded into intro**
+- Observation: The user chose “words I've written (posts, notes, poems)” in the intro directory, with each lowercase category linked, and restored “Recent posts” for the posts-only list below.
+- Action: Supersede the standalone writing-navigation and “Recent” label preferences; keep these links in homepage Markdown, remove the writing-nav placement marker, and space the recent section directly after the intro.
+- Confidence: high
+
+**[2026-09-13] — Recent heading wording**
+- Observation: The user wants the posts-only homepage list labeled simply “Recent” and is reconsidering the dot-separated Posts · Notes · Poems navigation.
+- Action: Keep the section heading as “Recent”; treat the navigation presentation as unsettled until a replacement is selected.
+- Confidence: high
+
+**[2026-09-13] — Posts-only homepage recent list**
+- Observation: After reviewing the combined Recent preview, the user chose to feature only recent Posts and keep Notes accessible through the top-level writing navigation.
+- Action: Show the three latest Posts with the quieter title/description styling, omit redundant Post prefixes, and retain Posts · Notes · Poems above the list. This supersedes the combined recent-writing preference.
+- Confidence: high
+
+**[2026-09-13] — Quieter homepage title preview**
+- Observation: After publishing green homepage titles, the user disliked the visual result and requested a calmer preview. The current combined Recent layout supports dark 1.08rem titles with green hover/focus underlines and upright 0.78rem descriptions.
+- Action: Supersede the earlier blanket green-title preference; retain green inline/navigation links while evaluating the quieter title treatment locally before publishing.
+- Confidence: high
+
 **[2026-09-13] — Poetry navigation placement**
 - Observation: The user wants poetry to have its own `/poems` section, kept out of the homepage’s “Here you can find” directory, and chose a separate `Posts · Notes · Poems` writing index.
 - Action: Keep the three-link writing index between the homepage directory and Recent posts; leave the personal directory and minimal footer unchanged.
+- Confidence: high
+
+**[2026-09-13] — Unified homepage recent writing**
+- Observation: Once the separate `Posts · Notes · Poems` index was present, distinct Recent posts/Recent notes headings and right-aligned “see all” links felt visually redundant to the user.
+- Action: Supersede the older split-recent preference: use one `Recent` section with quiet Post/Note/Poem prefixes and no “see all” links; draw a small candidate set from every writing type before sorting so frequently updated Notes do not entirely crowd out Posts.
 - Confidence: high
 
 **[2026-09-12] — Matching body and title margins**

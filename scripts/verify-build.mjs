@@ -24,27 +24,26 @@ const redirect = (route, target) => {
   canonical(route, target);
 };
 
-has('/', /<h2 id="recent-posts-title">/, 'missing Recent posts heading');
-has('/', /<h2 id="recent-notes-title">/, 'missing Recent notes heading');
+has('/', /<h2 id="recent-title">/, 'missing recent posts heading');
 has('/', /<figure class="home-comic">[\s\S]*?<img\b[^>]*alt="[^"]+"/, 'comic needs non-empty alt text');
 has('/', /class="skip-link" href="#main-content"/, 'missing skip link');
 const homeHtml = htmlFor('/');
-const writingNavHtml = homeHtml.match(/<nav class="home-writing-nav"[\s\S]*?<\/nav>/)?.[0];
-assert.ok(writingNavHtml, 'homepage should contain the writing navigation');
-assert.deepEqual(
-  [...writingNavHtml.matchAll(/<a href="([^"]+)">([^<]+)<\/a>/g)].map((match) => [match[1], match[2]]),
-  [['/posts', 'Posts'], ['/notes', 'Notes'], ['/poems', 'Poems']],
-  'homepage writing navigation should be Posts · Notes · Poems'
-);
+assert.doesNotMatch(homeHtml, /id="recent-(?:posts|notes)-title"/, 'homepage should use one Recent section');
+assert.doesNotMatch(homeHtml, />\s*see all\s*</i, 'homepage should not show redundant see-all links');
+const recentHtml = homeHtml.match(/<ol class="home-recent">[\s\S]*?<\/ol>/)?.[0];
+assert.ok(recentHtml, 'homepage should contain recent posts');
+for (const [, href] of recentHtml.matchAll(/<a href="([^"]+)"/g)) {
+  assert.ok(href.startsWith('/posts/'), 'homepage recent entries should only link to posts');
+}
+assert.doesNotMatch(homeHtml, /class="home-recent-kind"/, 'post-only list should omit redundant type labels');
+assert.doesNotMatch(homeHtml, /class="home-writing-nav"/, 'writing links should be integrated into the intro');
 const homeDirectoryHtml = homeHtml.slice(
   homeHtml.indexOf('class="home-static home-static-directory"'),
-  homeHtml.indexOf('class="home-writing-nav"')
+  homeHtml.indexOf('class="home-section"')
 );
-assert.doesNotMatch(
-  homeDirectoryHtml,
-  /href="\/poems"/,
-  'Poems should stay out of the homepage directory'
-);
+for (const route of ['/posts', '/notes', '/poems']) {
+  assert.ok(homeDirectoryHtml.includes(`href="${route}"`), `homepage intro should link to ${route}`);
+}
 assert.doesNotMatch(
   homeHtml,
   /<figure class="home-comic">[\s\S]*?<figcaption>/,
@@ -53,8 +52,8 @@ assert.doesNotMatch(
 const gardenMatches = homeHtml.match(/class="word-garden"/g) ?? [];
 assert.equal(gardenMatches.length, 1, 'homepage should contain the Word Garden exactly once');
 assert.ok(
-  homeHtml.indexOf('class="word-garden"') > homeHtml.indexOf('id="recent-notes-title"'),
-  'Word Garden should appear after Recent notes'
+  homeHtml.indexOf('class="word-garden"') > homeHtml.indexOf('id="recent-title"'),
+  'Word Garden should appear after Recent writing'
 );
 assert.doesNotMatch(
   homeHtml,

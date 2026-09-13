@@ -2,6 +2,16 @@
 
 ## What Has Worked
 
+**[2026-09-12] — Distinct starting-idea curation**
+- Observation: Promoting existing topic entries to starting ideas required nine missing action labels; HomeStudy already uses their approved summaries when no short invitation exists. Changing openingOrder and those labels left all 645 rendered reader bodies identical, while the 21 starting selections became unique.
+- Action: Use content/editorial/starting-ideas.json and curate-openings.mjs for selection-only revisions. Retain age/topic placement and reader content, validate the full set of openings together, and record new curation separately from historical independent source/art reviews.
+- Confidence: high
+
+**[2026-09-12] — Starting-idea duplication audit**
+- Observation: The 21 starting slots use only 12 entries; 12–18 and 18–24 repeat the same complete trio in a different order. HomeStudy renders shared entry text on the home screen, while placement-specific age notes appear only inside the reader. Differently named Baby/Toddler topic entries also overlap at 12–18.
+- Action: Review the seven starting trios together when curating openings. Count repeated entry IDs and inspect similar actions under different titles; neither a reordered trio nor a changed reader age note creates a distinct starting idea. Use research/DUPLICATION_AUDIT-2026-09-12.md as the baseline inventory.
+- Confidence: high
+
 **[2026-09-12] — Cross-age topic link integration**
 - Observation: A contribution can contain a topic entry for an age without owning that age’s three starting ideas. Assembly then adds an explicit `idea` query parameter for the already-approved first opening, although the contribution’s implicit default returns to the same opening. Literal markup equality initially treated that navigation binding as changed editorial content.
 - Action: Allow only this validated implicit-to-explicit default-opening parameter when joining approved contributions. Preserve all other URL parameters, visible markup and exact text hashes, and record each binding in the integration receipt. Do not normalize away substantive presentation differences.

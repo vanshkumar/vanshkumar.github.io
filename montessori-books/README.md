@@ -30,10 +30,16 @@ application code are excluded from production.
 
 ## Edit
 
-- `src/guide/approved.json`: generated, reviewed public content. Do not edit it
+- `src/guide/approved.json`: generated public content with reviewed source material. Do not edit it
   directly: exact content, independent decisions and integration receipts live
   under `content/`. References identify physical PDF pages; verified Toddler
   printed-page references are retained where available.
+- `content/editorial/starting-ideas.json`: the 21 distinct starting selections.
+  `node content/editorial/curate-openings.mjs full-rNN content/editorial/starting-ideas.json`
+  records a new immutable curation release. It only selects existing age
+  placements and adds missing navigation labels; every rendered reader body must
+  remain identical. Its receipt distinguishes local curation from the historical
+  independent source and artwork reviews.
 - `src/guide/store.js` and `routes.js`: shared age/topic selectors and hash routes.
 - `src/HomeStudy.jsx` and `src/home.css`: the refined second direction, with a
   compact age selector, an open illustration for each populated age, and three
@@ -42,8 +48,8 @@ application code are excluded from production.
   emits only the eight images referenced by the reviewed release. New generation
   records are in `research/art-direction/GENERATIONS-2026-09-12.json`.
 - `content/APPROVED_RELEASE.json`: the full release's content, receipt, image and
-  presentation fingerprints. The build rejects changes outside that reviewed
-  integration. The earlier pilot release and its evidence stay intact.
+  presentation fingerprints. The build rejects changes outside that recorded
+  integration. Earlier releases and their review evidence stay intact.
 - `research/`: the source crosswalks and editorial foundation; the consolidated
   allocation is in `content/editorial/coverage/RESOLVED_COVERAGE.jsonl`.
 

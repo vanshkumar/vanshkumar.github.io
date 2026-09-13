@@ -334,6 +334,11 @@
 
 ## Patterns and Preferences
 
+**[2026-09-13] — Recent post subtitle italics restored**
+- Observation: After approving the simplified homepage, the user requested italic Recent post subtitles again.
+- Action: Keep the smaller 0.78rem homepage subtitles but inherit the shared italic post-description styling; this supersedes the upright-description preview preference.
+- Confidence: high
+
 **[2026-09-13] — Writing navigation folded into intro**
 - Observation: The user chose “words I've written (posts, notes, poems)” in the intro directory, with each lowercase category linked, and restored “Recent posts” for the posts-only list below.
 - Action: Supersede the standalone writing-navigation and “Recent” label preferences; keep these links in homepage Markdown, remove the writing-nav placement marker, and space the recent section directly after the intro.

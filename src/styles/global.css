@@ -1421,10 +1421,6 @@ h3,
   margin: 0;
 }
 
-.home-writing-nav a {
-  color: var(--text);
-}
-
 .home-writing-nav + .home-section {
   margin-top: 2.85rem;
 }
@@ -1458,7 +1454,6 @@ h3,
 }
 
 .section-heading > a {
-  color: var(--muted);
   letter-spacing: 0.04em;
   text-transform: lowercase;
 }
@@ -1474,9 +1469,7 @@ h3,
   line-height: 1.38;
 }
 
-.home-post h3 a,
 .archive-post h2 a,
-.home-notes a,
 .note-archive-list a {
   color: var(--text);
 }

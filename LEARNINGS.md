@@ -2,6 +2,16 @@
 
 ## What Has Worked
 
+**[2026-09-13] — Homepage green-link preview**
+- Observation: Removing the homepage writing-navigation, recent-title, and “see all” color overrides lets those links inherit the shared green treatment; the complete writing section fits a normal 1280×720 viewport after scrolling.
+- Action: Preserve the user-approved green treatment on homepage writing navigation, recent titles, and “see all” links; archive title colors have separate selectors.
+- Confidence: high
+
+**[2026-09-13] — Homepage link color diagnosis**
+- Observation: The editorial CSS explicitly overrides writing navigation and homepage/archive title links to `--text`, and section “see all” links to `--muted`, while ordinary links use `--link`; all retain the shared green underline.
+- Action: When adjusting link consistency, account for `.home-writing-nav a`, the grouped homepage/archive title selectors, and `.section-heading > a`; changing the global link token alone will not affect their text colors.
+- Confidence: high
+
 **[2026-09-13] — Poem line-break rendering**
 - Observation: A dedicated `poems` collection can preserve ordinary single newlines without changing Markdown behavior site-wide: Astro retains the newline in each rendered paragraph, and scoped `white-space: pre-line` displays it while blank lines still create stanza paragraphs.
 - Action: Render poem entries through `ContentLayout` with the `poem-body` prose class; do not enable global hard breaks or require trailing Markdown backslashes for every poetic line.

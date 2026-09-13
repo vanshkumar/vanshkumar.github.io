@@ -1,21 +1,37 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { stages } from './concepts';
 import { guide as defaultGuide } from './guide';
 import { books, kindLabels, topics, pageLabel } from './guide/catalog';
 import { homeLink, studyLink } from './guide/routes';
+import { ideaChoices, refreshIdeas, readSeenIdeas, saveSeenIdeas } from './guide/ideas';
 import './home.css';
 
 export default function HomeStudy({ route, guide = defaultGuide }) {
   const { age } = route;
   const stage = stages.find(s => s.id === age);
-  const openings = guide.openings(age);
+  const openings = ideaChoices(guide, age, route.ideas);
+  const ideas = route.ideas ? openings.map(item => item.entry.id) : undefined;
+  const link = options => homeLink({ age, ideas, ...options });
   const active = openings.find(item => item.entry.id === (route.idea ?? route.entry)) ?? openings[0];
+  const pool = guide.forAge(age).filter(item => item.entry.kind === 'invitation').map(item => item.entry.id);
+  const currentIds = openings.map(item => item.entry.id);
+  const canRefresh = pool.filter(id => !currentIds.includes(id)).length >= 3;
+  const seen = useRef(null);
+  const [refreshCount, setRefreshCount] = useState(0);
+  const refresh = () => {
+    const next = refreshIdeas(pool, currentIds, seen.current ?? readSeenIdeas(age));
+    if (!next) return;
+    seen.current = next.seen;
+    saveSeenIdeas(age, next.seen);
+    window.location.hash = link({ ideas: next.ids, idea: next.ids[0] });
+    setRefreshCount(count => count + 1);
+  };
   const scene = guide.scene(age);
   const topic = topics.find(item => item.id === route.topic);
   const selected = route.entry ? guide.atAge(route.entry, age, route.topic) : null;
   const browsing = Boolean(route.explore || route.topic);
-  const home = homeLink({ age, idea: active?.entry.id });
-  const explore = homeLink({ age, idea: active?.entry.id, explore: true });
+  const home = link({ idea: active?.entry.id });
+  const explore = link({ idea: active?.entry.id, explore: true });
   const viewKey = `${age}/${route.entry ?? ''}/${route.topic ?? ''}/${route.explore}`;
   const previous = useRef(null);
 
@@ -39,7 +55,7 @@ export default function HomeStudy({ route, guide = defaultGuide }) {
 
   return <div className="home-edition theme-home">
     <header className="he-masthead">
-      <a href={homeLink({ age })} className="he-brand"><span>small</span> <span>beginnings</span></a>
+      <a href={link({})} className="he-brand"><span>small</span> <span>beginnings</span></a>
       <span className="he-bookline">A Montessori companion</span>
       {import.meta.env.DEV && <a className="he-back" href={studyLink('studies', age)}>All studies <span aria-hidden="true">→</span></a>}
     </header>
@@ -57,10 +73,10 @@ export default function HomeStudy({ route, guide = defaultGuide }) {
 
       {route.entry ? selected ? <EntryReading
         entry={selected.entry} placement={selected.placement}
-        back={topic ? homeLink({ age, topic: topic.id, idea: active?.entry.id }) : browsing ? explore : home}
+        back={topic ? link({ topic: topic.id, idea: active?.entry.id }) : browsing ? explore : home}
         backLabel={topic?.label ?? (browsing ? 'Explore more' : 'Three starting ideas')}
       /> : <UnavailableEntry id={route.entry} age={age} home={home} guide={guide}/>
-      : browsing ? <TopicBrowser route={route} activeId={active?.entry.id} home={home} topic={topic} guide={guide}/>
+      : browsing ? <TopicBrowser route={route} activeId={active?.entry.id} home={home} topic={topic} guide={guide} link={link}/>
       : active && scene ? <>
         <section className="he-room-section" aria-label="Explore your home">
           <div className="he-room-spread">
@@ -73,18 +89,27 @@ export default function HomeStudy({ route, guide = defaultGuide }) {
             </figure>
 
             <aside className="he-invitation" aria-label="Three ideas for this age">
+              <div className="he-idea-controls">
               <nav className="he-idea-nav" aria-label="Choose an idea">
-                {openings.map(({ entry }, i) => <a key={entry.id} href={homeLink({ age, idea: entry.id })}
+                {openings.map(({ entry }, i) => <a key={entry.id} href={link({ idea: entry.id })}
                   className={active.entry.id === entry.id ? 'is-active' : ''}
                   aria-current={active.entry.id === entry.id ? 'true' : undefined} aria-controls="home-invitation">
-                  <span className="he-idea-index">0{i + 1}</span>{entry.actionLabel}
+                  <span className="he-idea-index">0{i + 1}</span><span className="he-idea-label">{entry.actionLabel}</span>
                 </a>)}
               </nav>
+              <button type="button" className="he-refresh" onClick={refresh} disabled={!canRefresh}
+                aria-label="Show three new activities" title="Show three new activities" aria-controls="home-invitation">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M20 7v5h-5M4 17v-5h5"/><path d="M6.1 6.1A8 8 0 0 1 20 12M4 12a8 8 0 0 0 13.9 5.9"/>
+                </svg>
+              </button>
+              </div>
+              <span className="he-refresh-status" role="status">{refreshCount > 0 ? `Three new activities shown. Refresh ${refreshCount}.` : ''}</span>
               <section id="home-invitation" className="he-reading" aria-labelledby="home-idea-title">
                 <p className="he-guide-label">{active.entry.category ?? kindLabels[active.entry.kind]}</p>
                 <p className="he-invitation-copy">{active.entry.invitation ?? active.entry.summary}</p>
                 {active.entry.cue && <div className="he-observation"><h3>{active.entry.kind === 'invitation' ? 'Start by noticing' : 'In the everyday'}</h3><p>{active.entry.cue}</p></div>}
-                <a id="home-read-entry" className="he-read" href={homeLink({ age, entry: active.entry.id, idea: active.entry.id })}>
+                <a id="home-read-entry" className="he-read" href={link({ entry: active.entry.id, idea: active.entry.id })}>
                   {active.entry.kind === 'invitation' ? 'Try this together' : 'Read more'} <span aria-hidden="true">→</span>
                 </a>
               </section>
@@ -102,7 +127,7 @@ export default function HomeStudy({ route, guide = defaultGuide }) {
   </div>;
 }
 
-function TopicBrowser({ route, activeId, home, topic, guide }) {
+function TopicBrowser({ route, activeId, home, topic, guide, link }) {
   const entries = topic ? guide.forTopic(route.age, topic.id) : [];
   const topicNav = useRef(null);
   useEffect(() => {
@@ -114,14 +139,14 @@ function TopicBrowser({ route, activeId, home, topic, guide }) {
     <a className="he-return" href={home}>← Three starting ideas</a>
     <div className="he-browse-layout">
       <nav className="he-topics" aria-label="Everyday topics" ref={topicNav}>
-        {topics.map(item => <a key={item.id} href={homeLink({ age: route.age, topic: item.id, idea: activeId })}
+        {topics.map(item => <a key={item.id} href={link({ topic: item.id, idea: activeId })}
           aria-current={item.id === topic?.id ? 'page' : undefined}>{item.label}<span aria-hidden="true">→</span></a>)}
       </nav>
       <div className="he-topic-content">
         <h2 id="home-view-title" tabIndex={-1}>{topic?.label ?? (route.topic ? 'Topic not found' : 'Explore more')}</h2>
         {!topic ? <p>{route.topic ? 'Choose one of the everyday topics.' : 'Play, care, connection, home, and family life. Choose a topic to look closer.'}</p>
         : entries.length ? <ul className="he-entry-list">{entries.map(({ entry }) => <li key={entry.id}>
-          <a id={`entry-link-${entry.id}`} href={homeLink({ age: route.age, topic: topic.id, entry: entry.id, idea: activeId })}>
+          <a id={`entry-link-${entry.id}`} href={link({ topic: topic.id, entry: entry.id, idea: activeId })}>
             <span className="he-guide-label">{kindLabels[entry.kind]}</span><h3>{entry.title}</h3><p>{entry.summary}</p><span className="he-entry-arrow" aria-hidden="true">↗</span>
           </a>
         </li>)}</ul> : <p>There are no entries here yet. You can explore another topic or return to the starting ideas.</p>}

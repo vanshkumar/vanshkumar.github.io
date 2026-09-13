@@ -1,8 +1,8 @@
 {
-  "revision": "full-r04",
-  "payloadSha256": "360bc75352f7fe582edbae2f2d1cc9c1c3dd2d0d6fd319aa121d40d01acc55a1",
-  "receiptPath": "content/editorial/full-r04/INTEGRATION_RECEIPT.json",
-  "receiptSha256": "992b7b7bd0ecd3cc1c41917ecbe3f5e6588e26d690a6554ad77ee2409f00d9cc",
+  "revision": "full-r02",
+  "payloadSha256": "08cf5dad71c099a48b574cb7cf1c62ee7f9e75dc25755c3cdefbd97cb99fc14f",
+  "receiptPath": "content/editorial/full-r02/INTEGRATION_RECEIPT.json",
+  "receiptSha256": "77d9907b7656d7a1f0ac3e83ca98d2b1ed662ed10afb2d072624bb76a6bbafbf",
   "assets": [
     {
       "src": "art/home-paper-baby.webp",
@@ -40,11 +40,11 @@
   "renderer": [
     {
       "path": "src/HomeStudy.jsx",
-      "sha256": "67d90127c11f3a59cfd8dd60e41c93894dc410d6f55838705ee249cf98548206"
+      "sha256": "4153025ff12b44a63577808ecc9f433f0c2c110c97ec94689187a71fee3b7b4c"
     },
     {
       "path": "src/home.css",
-      "sha256": "7fce4014b373615fbb41b866c68e63363eb35a363bb2bb176551fe467bd3c6fd"
+      "sha256": "55de72c5b21d2f1a3ead85c5975febd09ac3135fcbc2219e6672a13f4786a6e1"
     },
     {
       "path": "src/styles.css",
@@ -68,7 +68,7 @@
     },
     {
       "path": "src/guide/routes.js",
-      "sha256": "85d742c1aa52fb81ee0fa7f4b00375882e4312622527aec0c00d8bec0fbd1d3e"
+      "sha256": "c2aebf88a9155792b83f22d9c0bfa291e50c1b8c8958f00589c9da1d6b9751e9"
     },
     {
       "path": "src/main.jsx",
@@ -85,10 +85,6 @@
     {
       "path": "index.html",
       "sha256": "420f9f8173c92d5258b3ee431f9ae15a66950094932ba7ee9743798a3a2975f3"
-    },
-    {
-      "path": "src/guide/ideas.js",
-      "sha256": "192e4358d70347078a8197152f01e382fcecf942b1424e4ded8f01eba65c6dff"
     }
   ]
 }

@@ -2,6 +2,16 @@
 
 ## What Has Worked
 
+**[2026-09-12] — Activity refresh and complete navigation labels**
+- Observation: All 174 entries now have distinct labels of up to three words; the two former “Listen” labels needed disambiguation. Carrying the three entry IDs in the hash preserves refreshed choices through readers, topics, reloads and browser history. Session storage keeps age-specific seen IDs. The label/refresh release retained all 645 rendered reader bodies.
+- Action: Maintain labels in content/editorial/navigation-labels.json and use label-navigation.mjs for its release evidence. Carry the ideas parameter through home/topic/reader links, validate it against age placements, and exclude the visible trio even when filling a batch across an exhausted pool.
+- Confidence: high
+
+**[2026-09-12] — Refreshing the starting activities assessment**
+- Observation: HomeStudy always uses the three openingOrder placements, while the approved payload contains 15–31 invitation entries per age. Only 3–9 invitations per age have short actionLabel text; the remainder already have titles and summaries. The release guard fingerprints the home renderer, selectors and routes.
+- Action: For an activity refresh, select from age-matched invitations, track previously shown IDs and handle pool exhaustion. Provide a title fallback for missing navigation labels, preserve the chosen trio through reader navigation, and record the presentation change through the release process.
+- Confidence: high
+
 **[2026-09-12] — Distinct starting-idea curation**
 - Observation: Promoting existing topic entries to starting ideas required nine missing action labels; HomeStudy already uses their approved summaries when no short invitation exists. Changing openingOrder and those labels left all 645 rendered reader bodies identical, while the 21 starting selections became unique.
 - Action: Use content/editorial/starting-ideas.json and curate-openings.mjs for selection-only revisions. Retain age/topic placement and reader content, validate the full set of openings together, and record new curation separately from historical independent source/art reviews.
@@ -88,6 +98,11 @@
 - Confidence: high
 
 ## Patterns and Preferences
+
+**[2026-09-12] — Refresh control visibility**
+- Observation: After trying refresh, the user found the muted icon too subtle, suggested a warmer color, and approved the burnt-orange icon with its faint circular background for publishing.
+- Action: Give the refresh control the existing burnt-orange accent with a faint matching circular background; keep a stronger tint on hover.
+- Confidence: high
 
 **[2026-09-12] — Consolidated editorial trial**
 - Observation: Two independent xhigh reviewers passed five saved entries across nine new placements without corrections. Interning repeated references and omitting operational metadata reduced the packet from 67,592 to 48,525 bytes, but both reviewers still needed recovery reads after oversized combined output was truncated. No actual token counter was exposed.

@@ -3,6 +3,10 @@
 A visual Montessori companion from birth through age three, based on
 *The Montessori Baby* and *The Montessori Toddler*. Each age opens with three
 starting invitations, followed by five everyday topics and focused readers.
+The refresh icon replaces all three choices with age-matched activities, working
+through the available invitations before repeating. The current trio travels in
+the URL through readers and topics; seen activities are remembered per age for
+the current browser session.
 The complete content has 174 reusable entries with age-specific presentations.
 Suggestions, readiness and family circumstances take precedence over deadlines
 or completion tracking.
@@ -41,6 +45,13 @@ application code are excluded from production.
   remain identical. Its receipt distinguishes local curation from the historical
   independent source and artwork reviews.
 - `src/guide/store.js` and `routes.js`: shared age/topic selectors and hash routes.
+- `content/editorial/navigation-labels.json`: short labels for every entry.
+  `node content/editorial/label-navigation.mjs full-rNN` records label changes and
+  the refresh presentation in an immutable release, checks reader bodies against
+  the previous release and verifies complete refresh cycles for every age.
+- `src/guide/ideas.js`: invitation selection, validation of trios from links,
+  and session history. Refresh excludes every currently visible choice, even
+  when starting another cycle after the pool is exhausted.
 - `src/HomeStudy.jsx` and `src/home.css`: the refined second direction, with a
   compact age selector, an open illustration for each populated age, and three
   idea choices above a focused reading panel with an observation cue.

@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-13] — Missing comic workflow history**
+- Observation: `vault/notes/Comic Co-Creation Workflow.md` was added in `2ca1ff8` and deleted in the June 4, 2026 vault backup `6b5622b`; Partition Summer retained its wikilink. The full 219-line document remains in Git history.
+- Action: The restored source is `vault/Comic Co-Creation Workflow.md`, classified as a Note at `/notes/comic-co-creation-workflow`; its slug resolves Partition Summer's existing lowercase wikilink. Preserve the original May 12 modification date and the site's normalized heading hierarchy.
+- Confidence: high
+
 **[2026-09-13] — Substack corpus audit**
 - Observation: The site's “Preordained in the present” is a section of Substack's “Crusade,” while “Celebration of a Train Person” and “Inscrutable exhortations” contain Substack `VideoEmbedPlayer` blocks that are absent from the imported Markdown even when the surrounding text/images match.
 - Action: Match the fiction excerpt to `/p/crusade`; explicitly inventory video component blocks when auditing these imports, and report omitted surrounding sections separately from changes within the retained excerpt.

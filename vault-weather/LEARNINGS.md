@@ -9,6 +9,11 @@
 
 ## Patterns and Preferences
 
+**2026-09-13 — Poems surface**
+- Observation: Poems live directly in `vault/poems/` and use optional title/date/lastmod frontmatter without Writing classification tags or Shelf ratings. Collection configuration drives their navigation, discovery, creation, and saved surface state.
+- Action: Keep Poems as its own `poems` collection, ignore the retained Writing filter on that surface, and create poems with only date/lastmod frontmatter. Use the shared activity logic and the Writing-sized card grid.
+- Confidence: high
+
 **2026-06-17 — Local npm workflow**
 - Observation: `npm` is not directly available on this Codex shell PATH for this repo, but `mise x -- npm ...` runs tests, lint, build, and plugin installation successfully.
 - Action: Use `mise x -- npm <script>` for project npm commands in this workspace.

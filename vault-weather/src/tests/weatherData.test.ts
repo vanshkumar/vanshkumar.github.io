@@ -63,6 +63,50 @@ const makeApp = ({
 };
 
 describe('WeatherDataService', () => {
+  it('reads poems independently of Writing filters and other vault folders', async () => {
+    const { app } = makeApp({
+      files: [
+        makeFile('poems/Arachnid.md'),
+        makeFile('poems/Outside In.md'),
+        makeFile('poems/drafts/Hidden.md'),
+        makeFile('pages/poems.md'),
+        makeFile('Root.md', '/'),
+        makeFile('shelf/Book.md')
+      ],
+      frontmatter: {
+        'poems/Arachnid.md': { title: 'Arachnid', lastmod: '2026-09-13' },
+        'poems/Outside In.md': { lastMod: '2024-12-31' }
+      }
+    });
+    const data = await new WeatherDataService(app).buildCollection(
+      'poems',
+      { mode: 'group', group: 'posts' },
+      new Date('2026-09-13T12:00:00Z')
+    );
+
+    expect(data.items.map((item) => item.vaultPath)).toEqual([
+      'poems/Arachnid.md', 'poems/Outside In.md'
+    ]);
+    expect(data.items[0].activity).toMatchObject({ recentUpdateCount: 1, level: 5 });
+    expect(data.items[1]).toMatchObject({ title: 'Outside In', activity: { level: 0 } });
+  });
+
+  it('creates poems with minimal frontmatter and prevents duplicates', async () => {
+    const { app, contents, folders } = makeApp({ files: [] });
+    const service = new WeatherDataService(app);
+    const file = await service.createNote({
+      collectionKey: 'poems',
+      title: 'New Poem',
+      now: new Date('2026-09-13T12:00:00Z')
+    });
+
+    expect(file.path).toBe('poems/New Poem.md');
+    expect(folders.has('poems')).toBe(true);
+    expect(contents.get(file.path)).toBe('---\ndate: 2026-09-13\nlastmod: 2026-09-13\n---\n\n');
+    await expect(service.createNote({ collectionKey: 'poems', title: 'New Poem' }))
+      .rejects.toThrow('A poem with that title already exists');
+  });
+
   it('builds root Terrain data and ignores nested Markdown files', async () => {
     const files = [
       makeFile('A Question.md', '/'),

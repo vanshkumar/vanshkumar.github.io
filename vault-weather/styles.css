@@ -191,7 +191,8 @@
   gap: 8px;
 }
 
-.vault-weather-view .writing-stack {
+.vault-weather-view .writing-stack,
+.vault-weather-view .poems-stack {
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 }
 
@@ -355,7 +356,8 @@
 }
 
 @media (min-width: 1180px) {
-  .vault-weather-view .writing-stack {
+  .vault-weather-view .writing-stack,
+  .vault-weather-view .poems-stack {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 

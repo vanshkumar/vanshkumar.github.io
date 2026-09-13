@@ -1,6 +1,6 @@
 import type { TFile } from 'obsidian';
 
-export type CollectionKey = 'terrain' | 'shelf';
+export type CollectionKey = 'terrain' | 'poems' | 'shelf';
 
 export type WritingGroup = 'posts' | 'notes';
 
@@ -79,6 +79,21 @@ export const COLLECTION_CONFIGS: Record<CollectionKey, CollectionConfig> = {
     addLabel: 'Add writing entry',
     cardClassName: 'writing-entry-card',
     stackClassName: 'writing-stack',
+    cardMode: 'plain',
+    requiresRating: false
+  },
+  poems: {
+    key: 'poems',
+    folder: 'poems',
+    navLabel: 'Poems',
+    title: 'Poems Weather',
+    countLabel: 'poems',
+    listLabel: 'Poems',
+    titleLabel: 'Poem title',
+    itemLabel: 'poem',
+    addLabel: 'Add poem',
+    cardClassName: 'poem-card',
+    stackClassName: 'poems-stack',
     cardMode: 'plain',
     requiresRating: false
   },

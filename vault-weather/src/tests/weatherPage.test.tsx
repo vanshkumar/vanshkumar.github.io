@@ -21,8 +21,8 @@ const activity: Activity = {
 };
 
 const itemFor = (key: CollectionKey): WeatherItem => {
-  const title = key === 'shelf' ? 'A Book' : 'A Terrain Note';
-  const vaultPath = key === 'shelf' ? `shelf/${title}.md` : `${title}.md`;
+  const title = key === 'shelf' ? 'A Book' : key === 'poems' ? 'A Poem' : 'A Terrain Note';
+  const vaultPath = key === 'terrain' ? `${title}.md` : `${key}/${title}.md`;
   return {
     file: { path: vaultPath } as TFile,
     slug: title.toLowerCase().replace(/ /g, '-'),
@@ -66,6 +66,7 @@ const renderSurface = (
 describe('sandboxed WeatherPage rendering', () => {
   it.each([
     ['terrain', 'Writing Weather', 'A Terrain Note', 'writing-stack'],
+    ['poems', 'Poems Weather', 'A Poem', 'poems-stack'],
     ['shelf', 'Shelf Weather', 'A Book', 'shelf-stack']
   ] as const)('renders the %s surface', (key, heading, itemTitle, stackClass) => {
     const html = renderSurface(key);
@@ -92,6 +93,14 @@ describe('sandboxed WeatherPage rendering', () => {
     const html = renderSurface('terrain', { mode: 'group', group: 'posts' }, []);
     expect(html).toContain('class="weather-empty-state"');
     expect(html).not.toContain('class="empty-state"');
+  });
+
+  it('renders Poems with its own creation control and no Writing filters', () => {
+    const html = renderSurface('poems', { mode: 'group', group: 'notes' });
+    expect(html).toContain('aria-current="page">Poems</button>');
+    expect(html).toContain('aria-label="Add poem"');
+    expect(html).toContain('aria-label="Open A Poem in Obsidian"');
+    expect(html).not.toContain('writing-filter-tabs');
   });
 
   it('renders a resolved shelf cover resource', () => {

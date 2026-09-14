@@ -4,6 +4,7 @@ tags:
   - fiction
 slug: preordained-in-the-present
 title: Preordained in the present
+description: dinosaurs in planes
 date: 2024-12-21
 lastmod: 2024-12-21
 ---

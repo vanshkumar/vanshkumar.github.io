@@ -3,12 +3,12 @@ tags:
   - essays
 slug: apartment-planning
 title: Apartment planning
+description: trying my hand at interior design
 date: 2025-01-23
 lastmod: 2025-01-23
-exclude_modified_update: true
 ---
 
-## Part 1
+# Part 1
 
 Kathy and I have an apartment in Pasadena! The original plan was to move there March 1 but due to the (still ongoing) LA fires, we decided to start looking earlier as we figured housing will be super competitive. It’s not ideal to add further demand to a housing market that’s highly competitive from people being displaced by fires, but we had decided on the move and already found a doctor nearby. [This article in particular](<https://www.cnn.com/2025/01/19/us/altadena-california-wildfire-black-community/index.html>) made me very sad, as a couple of the elementary schools served by the tutoring program I ran in college were in Altadena:
 
@@ -124,11 +124,11 @@ Pretty similar to the idea of simultaneous privacy and community. I think we all
 
 I didn’t include any of the bedroom-related patterns or anything about the outdoor areas as this post is pretty long already. I’m looking forward to playing around with the layout once we actually move in in a couple weeks!
 
-## Part 2
+# Part 2
 
 If you didn’t care about interior design yesterday, let’s see if I can’t get you to care even less.
 
-There were a few parts of the floor plan from [yesterday’s post](<https://vanshkumar.substack.com/p/apartment-planning>) that I didn’t get to, so I’m finishing it up today. The focus will be on the master bedroom/patio. I’m not going to think about the second bedroom/nursery yet since tbh I don’t really know in  detail yet what’s needed in a nursery. Here’s the floor plan from where we left off yesterday:
+There were a few parts of the floor plan from the above that I didn’t get to, so I’m finishing it up today. The focus will be on the master bedroom/patio. I’m not going to think about the second bedroom/nursery yet since tbh I don’t really know in detail yet what’s needed in a nursery. Here’s the floor plan from where we left off yesterday:
 
 ![[apartment-planning-10.png|yellow = window, blue = window seat, brown = couch/chairs, red = TV, purple = table, orange = desk]]
 

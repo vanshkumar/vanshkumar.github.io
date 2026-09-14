@@ -3,10 +3,9 @@ tags:
   - essays
 slug: terminal
 title: Terminal
-description: Do it for the love of the game
+description: do it for the love of the game
 date: 2025-02-13
 lastmod: 2025-02-13
-exclude_modified_update: true
 ---
 
 > What happens when you don’t need to work anymore? What happens when your days are free and open, as though you were totally retired, forever?

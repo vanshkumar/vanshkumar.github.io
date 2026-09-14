@@ -3,6 +3,7 @@ tags:
   - essays
 slug: celebration-of-a-train-person
 title: Celebration of a Train Person
+description: a place for everyone
 date: 2025-01-04
 lastmod: 2025-01-04
 ---

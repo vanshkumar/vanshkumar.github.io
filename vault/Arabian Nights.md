@@ -3,9 +3,9 @@ tags:
   - essays
 slug: arabian-nights
 title: Arabian Nights
+description: the st. petersburg paradox and ergodicity
 date: 2025-01-08
 lastmod: 2025-01-08
-exclude_modified_update: true
 ---
 
 ![[arabian-nights.jpeg|please don’t sue me for copyright Disney]]

@@ -3,9 +3,9 @@ tags:
   - essays
 slug: virtue-should-stay-its-own-reward
 title: Virtue should stay its own reward
+description: what's up with intrinsic motivation
 date: 2025-01-16
 lastmod: 2025-01-16
-exclude_modified_update: true
 ---
 
 A week or two ago, I started reading _The Nurture Assumption_, a 1998 book about the \[lack of\] impact of parenting on children’s eventual personality. In the middle of the first chapter, there was the following:

@@ -3,6 +3,7 @@ tags:
   - essays
 slug: divorce-kitchen
 title: Divorce kitchen
+description: type 2 fun?
 date: 2024-12-29
 lastmod: 2024-12-29
 ---

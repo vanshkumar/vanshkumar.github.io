@@ -567,6 +567,6 @@
 - Confidence: high
 
 **[2026-09-13] — Combined Apartment planning import**
-- Observation: The two Apartment planning articles use H3 pattern headings and contain 14 images, three plain-text captions, and one footnote across both parts.
+- Observation: The two Apartment planning articles use H3 pattern headings and contain 14 images, three plain-text captions, and one footnote across both parts. A later vault backup promoted both part headings to H1, causing Pages verification to fail with three H1s on the article.
 - Action: Keep each original article under an H2 part heading when combining them so the existing H3 headings remain valid; store all 14 source images locally and retain the single footnote at the combined post’s end.
 - Confidence: high

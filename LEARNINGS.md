@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-15] — Individual letter shapes**
+- Observation: The user dislikes the unequal f shapes in the serif font's combined ff ligature and wants individual letter shapes throughout the site.
+- Action: Keep `font-variant-ligatures: none` inherited from the shared body style for both headings and prose.
+- Confidence: high
+
 **[2026-09-15] — Wrapped title line spacing**
 - Observation: The shared article title's `1.06` line height lets the J descender in the TJ admissions title touch the h on the following line.
 - Action: Use `1.2` line height for shared article/archive titles, terrain hero titles, and Shelf section headings so wrapped display text has room between lines site-wide.

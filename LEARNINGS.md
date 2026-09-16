@@ -344,6 +344,16 @@
 
 ## Patterns and Preferences
 
+**[2026-09-15] — TJ analysis project ownership**
+- Observation: The user wants the ongoing Class of 2027 analysis and its two-month monitor in the saved `tj-psat-analysis` project and approved a continuation task there.
+- Action: Continue the data analysis in that project; use this site repo for matching post changes. Preserve the existing monitor when transferring ownership instead of creating a duplicate.
+- Confidence: high
+
+**[2026-09-15] — TJ monitor reasoning preference**
+- Observation: The user requested xhigh thinking, rather than ultra, for this task and its future recurring work.
+- Action: Keep the TJ admissions analysis task and scheduled Class of 2027 checks at xhigh reasoning.
+- Confidence: high
+
 **[2026-09-13] — Recent post subtitle italics restored**
 - Observation: After approving the simplified homepage, the user requested italic Recent post subtitles again.
 - Action: Keep the smaller 0.78rem homepage subtitles but inherit the shared italic post-description styling; this supersedes the upright-description preview preference.

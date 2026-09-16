@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-15] — Wrapped title line spacing**
+- Observation: The shared article title's `1.06` line height lets the J descender in the TJ admissions title touch the h on the following line.
+- Action: Use `1.2` line height for shared article/archive titles, terrain hero titles, and Shelf section headings so wrapped display text has room between lines site-wide.
+- Confidence: high
+
 **[2026-09-13] — Homepage green-link preview**
 - Observation: Removing the homepage writing-navigation, recent-title, and “see all” color overrides lets those links inherit the shared green treatment; the complete writing section fits a normal 1280×720 viewport after scrolling.
 - Action: Preserve the user-approved green treatment on homepage writing navigation, recent titles, and “see all” links; archive title colors have separate selectors.

@@ -1402,10 +1402,19 @@ h3,
   margin-top: 1.35rem;
 }
 
-.home-static-directory > ul li::before {
+.home-static-directory > ul > li::before {
   margin-right: 0.55rem;
   color: #a69f94;
   content: "—";
+}
+
+.home-static-directory > ul ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+  margin: 0.1rem 0 0.3rem;
+  padding: 0 0 0 1.55rem;
+  list-style: none;
 }
 
 .home-static-directory + .home-section {

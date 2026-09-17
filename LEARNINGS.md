@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-17] — Homepage nested directory links**
+- Observation: Nested Markdown lists in the homepage directory inherited custom dashes while retaining browser bullets, producing doubled markers and excessive indentation.
+- Action: Scope directory dashes to direct top-level items and render nested directory links as a marker-free, wrapping row aligned beneath their parent text.
+- Confidence: high
+
 **[2026-09-15] — Individual letter shapes**
 - Observation: The user dislikes the unequal f shapes in the serif font's combined ff ligature and wants individual letter shapes throughout the site.
 - Action: Keep `font-variant-ligatures: none` inherited from the shared body style for both headings and prose.

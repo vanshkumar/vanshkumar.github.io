@@ -2,7 +2,7 @@
 slug: always-do-what-feels-right
 title: Always do what feels right
 date: 2026-09-13
-lastmod: 2026-09-16
+lastmod: 2026-09-17
 tags:
   - hunches
 ---
@@ -13,7 +13,9 @@ Breaking down each word:
 - Do – let it occur without hesitation
 - What feels right – feel whatever is happening across all of the senses
 
-Notably, it is not to *only* do what feels right to *you*. It is to do what feels right to the *system*, to Nature. But don't forget that you are also a part of Nature. Trust in your ability to get better at noticing when something feels right.
+Notably, it is not to *only* do what feels right to *you*. It is to do what feels right to the *system*, to Nature. But don't forget that you are also a part of Nature.
+
+Trust in your ability to get better at noticing when something feels right over time.
 
  Equivalently, [return everything to nature](https://luminousdharma.org/returning-to-nature-advanced-dharma-practice/):
  - Wish sincerely to nature, "Please handle this"

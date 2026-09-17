@@ -37,6 +37,9 @@ Here you can find:
 - what I’m doing [now](/now)
 - what I’m [reading](/shelf)
 - more [about me](/about)
-- words I've written ([posts](/posts), [notes](/notes), [poems](/poems))
+- words I've written
+	- [Posts](/posts)
+	- [Notes](/notes)
+	- [Poems](/poems)
 
 Email me at [vanshkumar95@gmail.com](mailto:vanshkumar95@gmail.com) to chat.

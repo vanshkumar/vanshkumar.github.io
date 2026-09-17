@@ -3,8 +3,8 @@
 ## What Has Worked
 
 **[2026-09-17] — Homepage nested directory links**
-- Observation: Nested Markdown lists in the homepage directory inherited custom dashes while retaining browser bullets, producing doubled markers and excessive indentation.
-- Action: Scope directory dashes to direct top-level items and render nested directory links as a marker-free, wrapping row aligned beneath their parent text.
+- Observation: Nested Markdown lists in the homepage directory inherited custom dashes while retaining browser bullets. The user clarified that Posts, Notes, and Poems should remain stacked, indented list items with the same dash as the parent lines; the horizontal row was unwanted.
+- Action: Apply directory dashes to all list items, suppress native markers on nested lists, and retain the vertical nested layout with modest indentation.
 - Confidence: high
 
 **[2026-09-15] — Individual letter shapes**

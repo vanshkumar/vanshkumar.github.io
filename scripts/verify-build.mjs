@@ -200,6 +200,8 @@ walk(dist)
   .forEach((file) => {
     const html = fs.readFileSync(file, 'utf8');
     if (!/<article class="article">/.test(html)) return;
+    assert.doesNotMatch(html, /class="katex-error"/, `${file}: math must render without errors`);
+    assert.doesNotMatch(html, /id="MathJax-script"/, `${file}: prose must not be reparsed as client-side math`);
 
     const depths = headingDepths(html);
     assert.equal(depths[0], 1, `${file}: article page should start with an H1`);

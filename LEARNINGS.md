@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-20] — Currency and math parsing**
+- Observation: Client-side MathJax paired currency signs in Arabian Nights and the education note, typesetting intervening prose as math. Markdown also consumed LaTeX escapes before that renderer ran. The public Shelf equations include a Unicode en dash that KaTeX flags as an unsupported math symbol.
+- Action: Supersede the client-side MathJax approach with remark-math and build-time rehype-katex; escape currency as `\$`, retain `$...$` and `$$...$$` for math, and use TeX minus/operators in equations. Keep KaTeX CSS on the renderer's 0.16 dependency line and regression checks on fixtures rather than fixed post counts.
+- Confidence: high
+
 **[2026-09-17] — Homepage nested directory links**
 - Observation: Nested Markdown lists in the homepage directory inherited custom dashes while retaining browser bullets. The user clarified that Posts, Notes, and Poems should remain stacked, indented list items with the same dash as the parent lines; the horizontal row was unwanted.
 - Action: Apply directory dashes to all list items, suppress native markers on nested lists, and retain the vertical nested layout with modest indentation.

@@ -48,7 +48,7 @@ The word "paradigm" is used throughout the book and Kuhn doesn't really give a d
 
 The postscript, written ~10 years later, has Kuhn note that his loose use of this word was one of the biggest objections to the ideas in the book. He then provides a clarification: paradigm is something akin to "shared exemplar." It's a solution to an important recognized problem that acts as a beacon for. He illustrates this with the example of $f = ma$:
 
-> That expression proves on examination to be a law-sketch or a law-schema. As the student or the practicing scientist moves from one problem situation to the next, the symbolic generalization to which such manipulations apply changes. For the case of free fall, $f = ma$ becomes $mg = m \frac{d^2s}{dt^2}$; for the simple pendulum it is transformed to $mg sin(\theta) = – ml \frac{d^2 \theta}{dt^2}$
+> That expression proves on examination to be a law-sketch or a law-schema. As the student or the practicing scientist moves from one problem situation to the next, the symbolic generalization to which such manipulations apply changes. For the case of free fall, $f = ma$ becomes $mg = m \frac{d^2s}{dt^2}$; for the simple pendulum it is transformed to $mg \sin(\theta) = -ml \frac{d^2 \theta}{dt^2}$
 
 > The student discovers, with or without the assistance of his instructor, a way to see his problem as *like* a problem he has already encountered. Having seen the resemblance, grasped the analogy between two or more distinct problems, he can interrelate symbols and attach them to nature in the ways that have proved effective before. The law-sketch, say $f = ma$, has functioned as a tool, informing the student what similarities to look for, signaling the gestalt in which the situation is to be seen.
 

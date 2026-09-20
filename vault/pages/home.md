@@ -39,7 +39,7 @@ Here you can find:
 - more [about me](/about)
 - words I've written
 	- [Posts](/posts)
-	- [Working notes](/notes)
+	- [Notes](/notes)
 	- [Poems](/poems)
 
 Email me at [vanshkumar95@gmail.com](mailto:vanshkumar95@gmail.com) to chat.

@@ -1,6 +1,6 @@
 ---
 title: Home
-lastmod: 2026-09-17
+lastmod: 2026-09-20
 home:
   comic:
     src: /assets/Pasted image 20260203101338.png

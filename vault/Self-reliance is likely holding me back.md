@@ -19,10 +19,10 @@ So I want to change my default stance. How do I do that?
 I am going to [[Always do what feels right]]. Concretely, when I notice entanglement in a self-reliant pattern, I am going to [[Return it to Nature]]. Let's see how this goes for the next 30 days. I am also taking the AoA Connection course (finally) in October.
 
 What are some of the self-reliant patterns to notice? From [this AoA podcast](https://www.artofaccomplishment.com/podcast/how-self-reliance-convinces-you-that-you-cant-rely-on-anyone?utm_source=podcast&utm_campaignLoveandObligation=):
-- Difficult asking for what you want
+- Difficulty asking for what you want
 - Hard time identifying your needs
-- Issue with authority
-- Feel like it's your job to take care of other people
+- Issues with authority
+- Feeling like it's your job to take care of other people
 - Hard time expressing when you're hurt
 
 

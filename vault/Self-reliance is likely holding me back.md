@@ -6,7 +6,7 @@ lastmod: 2026-09-20
 tags:
   - hunches
 ---
-I consider myself a very self-reliant person. I developed my current level of self-reliance around 14 years old, I suspect as a mechanism to avoid feeling my utterly helpless position[^1] in the face of family trauma. I had the classic role reversal of trying to take care of my parents, etc.
+I consider myself a very self-reliant person. I developed my current level of self-reliance around 14 years old, I suspect as a mechanism to avoid feeling my utterly helpless position[^1] in the face of family trauma[^2]. I had the classic role reversal of trying to take care of my parents, etc.
 
 I am grateful for my self-reliance. It made me much more resourceful, empathetic, and independently capable than I otherwise likely would have been. Living on the other side of the country, I had a generally great experience in college. I intentionally decided to become much more social and ended up making amazing lifelong friends. I graduated on time with a double major in applied math & CS, started an elementary school volunteer tutoring program, and was able to be there for many friends as they went through tough times. However, I was (and am) terrible at reaching out for help myself.
 
@@ -28,3 +28,4 @@ What are some of the self-reliant patterns to notice? From [this AoA podcast](ht
 
 
 [^1]: I tried out an [LLM chat](https://chatgpt.com/share/6ab03064-9a84-83e8-8d9a-ad8f55d5dd92) a while back to feel the utter helplessness. I sobbed.
+[^2]: If we haven't talked about this before and you want to hear more, reach out.

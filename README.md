@@ -58,3 +58,5 @@ content first. Edit markdown in `vault/`, not `src/content/`.
   `public/404.html`.
 - GitHub Actions builds the Astro site, then builds `terminal-desires-ranker/`,
   `coffee-rush/`, and `montessori-books/`, then assembles the final Pages artifact.
+
+Math uses `$...$` inline and `$$...$$` on separate lines for display equations, rendered at build time with KaTeX. Escape literal currency signs as `\$` so prices remain prose.

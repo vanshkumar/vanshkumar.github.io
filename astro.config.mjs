@@ -5,6 +5,8 @@ import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
 import wikiLinkPlugin from '@flowershow/remark-wiki-link';
 import rehypeExternalLinks from 'rehype-external-links';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 import { rehypeObsidianCallouts } from './src/lib/callouts.mjs';
 import { remarkImageCaptions } from './src/lib/image-captions.mjs';
 import {
@@ -141,6 +143,7 @@ export default defineConfig({
   trailingSlash: 'never',
   markdown: {
     remarkPlugins: [
+      remarkMath,
       [
         wikiLinkPlugin,
         {
@@ -152,6 +155,7 @@ export default defineConfig({
       remarkImageCaptions
     ],
     rehypePlugins: [
+      rehypeKatex,
       rehypeObsidianCallouts,
       [
         rehypeExternalLinks,

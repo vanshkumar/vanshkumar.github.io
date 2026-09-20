@@ -27,13 +27,13 @@ But yea ASSUMING reducing class sizes by a factor of 5 has some significant econ
 The other assumption here is that these 5x more teachers are also being paid more than teachers are paid today. Which requires an even bigger portion of the presumed economic surplus that results.
 
 How much do guides at Alpha School get paid? How much do teachers at public schools in the same location as Alpha get paid? From [Your Review Alpha School](https://www.astralcodexten.com/p/your-review-alpha-school):
-- Associate guides make $60k/yr vs $40k/yr for Austin teachers
+- Associate guides make \$60k/yr vs \$40k/yr for Austin teachers
 - Full guides make 100k
 - Head guides make 150k
 
 So can use 1.5x salary as a rough starting point
 
-So basically you need 5x more teachers & 1.5x more salary, so roughly 7.5x more $ being given to teachers. What is the economic surplus of increasing teacher pay? Is this economic surplus sufficient? There are two parts to the surplus
+So basically you need 5x more teachers & 1.5x more salary, so roughly 7.5x more \$ being given to teachers. What is the economic surplus of increasing teacher pay? Is this economic surplus sufficient? There are two parts to the surplus
 - Increasing teacher salary (fix class sizes)
 - Reducing class sizes (fix teacher salary)
 	- I suppose the joint distribution of these could also scale differently than the marginals – either more or less economic surplus

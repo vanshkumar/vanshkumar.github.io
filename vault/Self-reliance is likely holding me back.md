@@ -1,6 +1,6 @@
 ---
 slug: self-reliance-is-likely-holding-me-back
-title: "Self-reliance is likely holding me back"
+title: Self-reliance is likely holding me back
 date: 2026-09-20
 lastmod: 2026-09-20
 tags:
@@ -10,7 +10,7 @@ I consider myself a very self-reliant person. I developed my current level of se
 
 I am grateful for my self-reliance. It made me much more resourceful, empathetic, and independently capable than I otherwise likely would have been. Living on the other side of the country, I had a generally great experience in college. I intentionally decided to become much more social and ended up making amazing lifelong friends. I graduated on time with a double major in applied math & CS, started an elementary school volunteer tutoring program, and was able to be there for many friends as they went through tough times. However, I was (and am) terrible at reaching out for help myself.
 
-I am content with the current state of my life. In many ways, it's incredible. But lately, I have been getting the gnawing sense that my self-reliant stance towards the world is holding me back. It is a very egocentric stance. I value community & want to be working more for others, but I suspect my default mode of self-reliance is blinding me to prosocial options & preventing me for vulnerably asking for help.
+I am content with the current state of my life. In many ways, it's incredible. But lately, I have been getting the gnawing sense that my self-reliant stance towards the world is holding me back. It is a very egocentric stance. I value community & want to be working more for others, but I suspect my default mode of self-reliance is blinding me to prosocial options & preventing me from vulnerably asking for help.
 
 Our greatest strengths and greatest weaknesses are typically entangled with each other, so this makes sense.
 

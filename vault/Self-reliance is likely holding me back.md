@@ -2,7 +2,7 @@
 slug: self-reliance-is-likely-holding-me-back
 title: Self-reliance is likely holding me back
 date: 2026-09-20
-lastmod: 2026-09-20
+lastmod: 2026-09-21
 tags:
   - hunches
 ---
@@ -27,5 +27,5 @@ What are some of the self-reliant patterns to notice? From [this AoA podcast](ht
 
 
 
-[^1]: I tried out an [LLM chat](https://chatgpt.com/share/6ab03064-9a84-83e8-8d9a-ad8f55d5dd92) a while back to feel the utter helplessness. I sobbed.
+[^1]: I tried out an LLM chat a while back on this topic with the following prompt: "You are the most experienced IFS / imaginal dialogue coach in the world. I will discuss things with you and I want you to help me trace emotions through dialogue to their root." I felt the utter helplessness and sobbed. Progress.
 [^2]: If we haven't talked about this before and you want to hear more, reach out.

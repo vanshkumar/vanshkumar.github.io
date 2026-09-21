@@ -8,7 +8,7 @@ tags:
 ---
 I consider myself a very self-reliant person. I developed my current level of self-reliance around 14 years old, I suspect as a mechanism to avoid feeling my utterly helpless position[^1] in the face of family trauma[^2]. I had the classic role reversal of trying to take care of my parents, etc.
 
-I am grateful for my self-reliance. It made me much more resourceful, empathetic, and independently capable than I otherwise likely would have been. Living on the other side of the country, I had a generally great experience in college. I intentionally decided to become much more social and ended up making amazing lifelong friends. I graduated on time with a double major in applied math & CS, started an elementary school volunteer tutoring program, and was able to be there for many friends as they went through tough times. However, I was (and am) terrible at reaching out for help myself.
+I am grateful for my self-reliance. It made me much more resourceful, empathetic, and independently capable than I otherwise likely would have been. Living on the other side of the country, I had a generally great experience in college. I intentionally decided to become much more social and ended up making amazing lifelong friends. I graduated on time with a double major in applied math & CS, started an elementary school volunteer tutoring program, and was able to be there for many friends as they went through tough times. I also made the conscious decision to tell a few close friends about my family situation as even then I felt I was bad at asking for help. I'm surprised by and proud of that decision, but still consider myself fairly bad at reaching out for help, owning my wants, and expressing when I'm hurt.
 
 I am content with the current state of my life. In many ways, it's incredible. But lately, I have been getting the gnawing sense that my self-reliant stance towards the world is holding me back. It is a very egocentric stance. I value community & want to be working more for others, but I suspect my default mode of self-reliance is blinding me to prosocial options & preventing me from vulnerably asking for help.
 
@@ -16,7 +16,7 @@ Our greatest strengths and greatest weaknesses are typically entangled with each
 
 So I want to change my default stance. How do I do that?
 
-I am going to [[Always do what feels right]]. Concretely, when I notice entanglement in a self-reliant pattern, I am going to [[Return it to Nature]]. Let's see how this goes for the next 30 days. I am also taking the AoA Connection course (finally) in October.
+I am going to [[Always do what feels right]]. Concretely, when I notice entanglement in a self-reliant pattern, I am going to [[Return it to Nature]]. That will necessarily involve feeling the helplessness, fear, and whatever else may be at the root of this stance. Let's see how it goes for the next month. I am also taking the AoA Connection course (finally) in October.
 
 What are some of the self-reliant patterns to notice? From [this AoA podcast](https://www.artofaccomplishment.com/podcast/how-self-reliance-convinces-you-that-you-cant-rely-on-anyone?utm_source=podcast&utm_campaignLoveandObligation=):
 - Difficulty asking for what you want

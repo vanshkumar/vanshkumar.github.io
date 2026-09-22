@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-22] — Blindsight footnote numbering**
+- Observation: The user chose to renumber Blindsight’s quoted footnotes sequentially instead of preserving the book’s numbering through a custom renderer. The repeated citation reuses footnote 1.
+- Action: Keep references and definitions numbered together in first-appearance order using standard Markdown footnotes; retain Astro’s automatic rendering.
+- Confidence: high
+
 **[2026-09-20] — Currency and math parsing**
 - Observation: Client-side MathJax paired currency signs in Arabian Nights and the education note, typesetting intervening prose as math. Markdown also consumed LaTeX escapes before that renderer ran. The public Shelf equations include a Unicode en dash that KaTeX flags as an unsupported math symbol.
 - Action: Supersede the client-side MathJax approach with remark-math and build-time rehype-katex; escape currency as `\$`, retain `$...$` and `$$...$$` for math, and use TeX minus/operators in equations. Keep KaTeX CSS on the renderer's 0.16 dependency line and regression checks on fixtures rather than fixed post counts.

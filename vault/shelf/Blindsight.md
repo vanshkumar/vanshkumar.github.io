@@ -50,42 +50,42 @@ If you really want a spoiler of the core idea, I have two very long quotes from 
 
 <br><br>
 
-> But beneath the unthreatening, superficial question of what consciousness *is* floats the more functional question of what it’s good for. It’s telling to note that the nonconscious mind usually works so well on its own that it actually employs a gatekeeper to *prevent* the conscious self from interfering in daily operations.[^102][^103][^104] (If the rest of your brain *were* conscious, it would probably regard you as the pointy-haired boss from *Dilbert*.) Sentience isn’t even necessary to develop a “theory of mind”: you don’t need to be self-reflective in order to track *others’* intentions[^97]. Norretranders declared outright that “Consciousness is a fraud.”[^105]
+> But beneath the unthreatening, superficial question of what consciousness *is* floats the more functional question of what it’s good for. It’s telling to note that the nonconscious mind usually works so well on its own that it actually employs a gatekeeper to *prevent* the conscious self from interfering in daily operations.[^1][^2][^3] (If the rest of your brain *were* conscious, it would probably regard you as the pointy-haired boss from *Dilbert*.) Sentience isn’t even necessary to develop a “theory of mind”: you don’t need to be self-reflective in order to track *others’* intentions[^4]. Norretranders declared outright that “Consciousness is a fraud.”[^5]
 >
-> Aesthetics might be an exception. Aesthetics seem to require self-awareness—it might even be what got the whole sentience ball rolling in the first place. When music is so beautiful it makes you shiver, that’s your limbic reward circuitry kicking in: the same circuitry that rewards you for fucking an attractive partner or gorging on sucrose.[^106] It’s a hack, in other words; your brain has learned to get the reward without actually earning it through increased fitness[^88]. It feels good, and it fulfills us, and it makes life worth living. But it also turns us inward and distracts us. Those rats back in the sixties, the ones that learned to stimulate their own pleasure centers by pressing a lever: remember them? They pressed those levers with such addictive zeal that they forgot to eat. They starved to death. They died happy, but they died, without issue. Their fitness went to Zero.
+> Aesthetics might be an exception. Aesthetics seem to require self-awareness—it might even be what got the whole sentience ball rolling in the first place. When music is so beautiful it makes you shiver, that’s your limbic reward circuitry kicking in: the same circuitry that rewards you for fucking an attractive partner or gorging on sucrose.[^6] It’s a hack, in other words; your brain has learned to get the reward without actually earning it through increased fitness[^7]. It feels good, and it fulfills us, and it makes life worth living. But it also turns us inward and distracts us. Those rats back in the sixties, the ones that learned to stimulate their own pleasure centers by pressing a lever: remember them? They pressed those levers with such addictive zeal that they forgot to eat. They starved to death. They died happy, but they died, without issue. Their fitness went to Zero.
 >
 > Aesthetics. Sentience. Extinction.
 >
-> Which brings us to one last question, lurking way down in the anoxic zone: the question of what consciousness *costs*. Compared to nonconscious processing, self-awareness is slow and expensive[^102]. (The premise of a separate, faster “emergency brain” lurking at the base of our primary one is taken from studies by Joe LeDoux, and others.[^107][^108]) By way of comparison, consider the complex, lightning-fast calculations of savantes; those abilities are noncognitive,[^109] and they owe their superfunctionality not to any overarching integration of mental processes but to relative neurological *fragmentation*[^5]. Even if sentient and nonsentient processes were equally efficient, the conscious awareness of visceral stimuli—by its very nature—distracts the individual from other threats and opportunities in its environment.[^110]
+> Which brings us to one last question, lurking way down in the anoxic zone: the question of what consciousness *costs*. Compared to nonconscious processing, self-awareness is slow and expensive[^1]. (The premise of a separate, faster “emergency brain” lurking at the base of our primary one is taken from studies by Joe LeDoux, and others.[^8][^9]) By way of comparison, consider the complex, lightning-fast calculations of savantes; those abilities are noncognitive,[^10] and they owe their superfunctionality not to any overarching integration of mental processes but to relative neurological *fragmentation*[^11]. Even if sentient and nonsentient processes were equally efficient, the conscious awareness of visceral stimuli—by its very nature—distracts the individual from other threats and opportunities in its environment.[^12]
 >
 > But while many have described the various costs and drawbacks of sentience, few if any have taken the next step and wondered out loud if the whole damn thing isn’t more trouble than it’s worth. Of course it is, people assume; otherwise natural selection would have weeded it out long ago. And they’re probably right. I hope they are. *Blindsight* is a thought experiment, a game of *Just suppose*. Nothing more.
 >
 > On the other hand, the dodoes and the Steller sea cows could have used exactly the same argument to prove their own superiority, a thousand years ago: *If we’re so unfit, why haven’t we gone extinct?* Why? Because natural selection takes time, and luck plays a role. The game isn’t over. The game is *never* over; and so, neither can there be any winners. There are only those who haven’t yet lost.
 >
-> Chimpanzees have a higher brain-to-body ratio than orangutans,[^111] yet orangs consistently recognize themselves in mirrors while chimps do so only half the time.[^112] Gorillas don’t self-recognize at all. Similarly, those nonhuman species with the most sophisticated language skills are a variety of birds and monkeys—not the presumably “more sentient” great apes who are our closest relatives.[^73][^113] Such facts almost suggest that sentience itself could be a phase, something that orangutans haven’t yet grown out of but which their more advanced chimpanzee cousins are beginning to.
+> Chimpanzees have a higher brain-to-body ratio than orangutans,[^13] yet orangs consistently recognize themselves in mirrors while chimps do so only half the time.[^14] Gorillas don’t self-recognize at all. Similarly, those nonhuman species with the most sophisticated language skills are a variety of birds and monkeys—not the presumably “more sentient” great apes who are our closest relatives.[^15][^16] Such facts almost suggest that sentience itself could be a phase, something that orangutans haven’t yet grown out of but which their more advanced chimpanzee cousins are beginning to.
 >
 > Of course, we don’t fit this pattern. If it even is a pattern. We’re outliers: that’s one of the points I’m making. I bet vampires would fit it, though.
 >
-> And finally, some very timely experimental support for this unpleasant premise came out just as *Blindsight* was being copy edited: It turns out the unconscious mind is better at making complex decisions than is the conscious mind[^114]. The conscious mind just can’t handle as many variables, apparently. Quoth one of the researchers: “At some point in our evolution, we started to make decisions consciously, and we’re not very good at it.”[^115]
+> And finally, some very timely experimental support for this unpleasant premise came out just as *Blindsight* was being copy edited: It turns out the unconscious mind is better at making complex decisions than is the conscious mind[^17]. The conscious mind just can’t handle as many variables, apparently. Quoth one of the researchers: “At some point in our evolution, we started to make decisions consciously, and we’re not very good at it.”[^18]
 
-[^102]: Matsumoto, K., and K. Tanaka. 2004. *Science* 303: 969–970.
-[^103]: Kerns, J.G., *et al.* 2004. *Science* 303: 1023–1026.
-[^104]: Petersen, S.E. *et al.* 1998. *Proc. Nat. Acad. Sci.* 95: 853–860.
-[^97]: Zimmer, C. 2003. *Science* 300:1079–1080.
-[^105]: Norretranders, T. 1999. *The User Illusion: Cutting Consciousness Down to Size.* Penguin Press Science. p. 467.
-[^106]: Altenmüller, E.O. 2004. *Sci. Amer.* 14: 24–31.
-[^88]: Pinker, S. 1997. *How the Mind Works.* WW Norton & Co., New York. p. 660.
-[^107]: Helmuth, L. 2003. *Science* 300: 568–569.
-[^108]: Dolan, R.J. 2002. *Science* 298: 1191–1194.
-[^109]: Treffert, D.A., and G.L. Wallace. 2004. *Sci. Amer.* 14: 14–23.
-[^5]: Anonymous, 2004. Autism: making the connection. *Economist* 372(8387): 66.
-[^110]: Wegner, D.M. 1994. *Psychol. Rev.* 101: 34–52.
-[^111]: Aiello, L., and C. Dean. 1990. *An Introduction to Human Evolutionary Anatomy.* Academic Press, London.
-[^112]: Povinelli, D.J. 1993. *Amer. Psychologist* 48: 493–509.
-[^73]: Hauser, M.D., N. Chomsky, and W.T. Fitch. 2002. *Science* 298: 1569–1579.
-[^113]: Carstairs-McCarthy, A. 2004. *Science* 303:1299–1300.
-[^114]: Dijksterhuis, A., *et al.* 2006. *Science* 311: 1005–1007.
-[^115]: Vince, G. 2006. “Sleeping on it’ best for complex decisions.” Newscientist.com, [article](http://www.newscientist.com/channel/being-human/dn8732.html).
+[^1]: Matsumoto, K., and K. Tanaka. 2004. *Science* 303: 969–970.
+[^2]: Kerns, J.G., *et al.* 2004. *Science* 303: 1023–1026.
+[^3]: Petersen, S.E. *et al.* 1998. *Proc. Nat. Acad. Sci.* 95: 853–860.
+[^4]: Zimmer, C. 2003. *Science* 300:1079–1080.
+[^5]: Norretranders, T. 1999. *The User Illusion: Cutting Consciousness Down to Size.* Penguin Press Science. p. 467.
+[^6]: Altenmüller, E.O. 2004. *Sci. Amer.* 14: 24–31.
+[^7]: Pinker, S. 1997. *How the Mind Works.* WW Norton & Co., New York. p. 660.
+[^8]: Helmuth, L. 2003. *Science* 300: 568–569.
+[^9]: Dolan, R.J. 2002. *Science* 298: 1191–1194.
+[^10]: Treffert, D.A., and G.L. Wallace. 2004. *Sci. Amer.* 14: 14–23.
+[^11]: Anonymous, 2004. Autism: making the connection. *Economist* 372(8387): 66.
+[^12]: Wegner, D.M. 1994. *Psychol. Rev.* 101: 34–52.
+[^13]: Aiello, L., and C. Dean. 1990. *An Introduction to Human Evolutionary Anatomy.* Academic Press, London.
+[^14]: Povinelli, D.J. 1993. *Amer. Psychologist* 48: 493–509.
+[^15]: Hauser, M.D., N. Chomsky, and W.T. Fitch. 2002. *Science* 298: 1569–1579.
+[^16]: Carstairs-McCarthy, A. 2004. *Science* 303:1299–1300.
+[^17]: Dijksterhuis, A., *et al.* 2006. *Science* 311: 1005–1007.
+[^18]: Vince, G. 2006. “Sleeping on it’ best for complex decisions.” Newscientist.com, [article](http://www.newscientist.com/channel/being-human/dn8732.html).
 
 
 ## Provenance

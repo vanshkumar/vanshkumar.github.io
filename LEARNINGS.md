@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-22] — Adjacent footnote spacing**
+- Observation: Blindsight’s consecutive footnote references render as visually concatenated numbers when their Markdown markers touch; the repository scan found four missing spaces across three citation groups in this entry.
+- Action: Separate adjacent Markdown footnote references with a space so the rendered superscript links remain visually distinct.
+- Confidence: high
+
 **[2026-09-22] — Blindsight footnote numbering**
 - Observation: The user chose to renumber Blindsight’s quoted footnotes sequentially instead of preserving the book’s numbering through a custom renderer. The repeated citation reuses footnote 1.
 - Action: Keep references and definitions numbered together in first-appearance order using standard Markdown footnotes; retain Astro’s automatic rendering.

@@ -68,24 +68,24 @@ If you really want a spoiler of the core idea, I have two very long quotes from 
 >
 > And finally, some very timely experimental support for this unpleasant premise came out just as *Blindsight* was being copy edited: It turns out the unconscious mind is better at making complex decisions than is the conscious mind[^17]. The conscious mind just can’t handle as many variables, apparently. Quoth one of the researchers: “At some point in our evolution, we started to make decisions consciously, and we’re not very good at it.”[^18]
 
-[^1]: Matsumoto, K., and K. Tanaka. 2004. *Science* 303: 969–970.
-[^2]: Kerns, J.G., *et al.* 2004. *Science* 303: 1023–1026.
-[^3]: Petersen, S.E. *et al.* 1998. *Proc. Nat. Acad. Sci.* 95: 853–860.
-[^4]: Zimmer, C. 2003. *Science* 300:1079–1080.
-[^5]: Norretranders, T. 1999. *The User Illusion: Cutting Consciousness Down to Size.* Penguin Press Science. p. 467.
-[^6]: Altenmüller, E.O. 2004. *Sci. Amer.* 14: 24–31.
-[^7]: Pinker, S. 1997. *How the Mind Works.* WW Norton & Co., New York. p. 660.
-[^8]: Helmuth, L. 2003. *Science* 300: 568–569.
-[^9]: Dolan, R.J. 2002. *Science* 298: 1191–1194.
-[^10]: Treffert, D.A., and G.L. Wallace. 2004. *Sci. Amer.* 14: 14–23.
-[^11]: Anonymous, 2004. Autism: making the connection. *Economist* 372(8387): 66.
-[^12]: Wegner, D.M. 1994. *Psychol. Rev.* 101: 34–52.
-[^13]: Aiello, L., and C. Dean. 1990. *An Introduction to Human Evolutionary Anatomy.* Academic Press, London.
-[^14]: Povinelli, D.J. 1993. *Amer. Psychologist* 48: 493–509.
-[^15]: Hauser, M.D., N. Chomsky, and W.T. Fitch. 2002. *Science* 298: 1569–1579.
-[^16]: Carstairs-McCarthy, A. 2004. *Science* 303:1299–1300.
-[^17]: Dijksterhuis, A., *et al.* 2006. *Science* 311: 1005–1007.
-[^18]: Vince, G. 2006. “Sleeping on it’ best for complex decisions.” Newscientist.com, [article](http://www.newscientist.com/channel/being-human/dn8732.html).
+[^1]: Matsumoto, K., and K. Tanaka. 2004. [“Conflict and Cognitive Control.”](https://doi.org/10.1126/science.1094733) *Science* 303: 969–970. Publisher access may require a subscription.
+[^2]: Kerns, J.G., *et al.* 2004. “Anterior Cingulate Conflict Monitoring and Adjustments in Control.” *Science* 303: 1023–1026. [Full-text PDF](https://brain.phgy.queensu.ca/dorrislab/Kerns_ACC.pdf) · [Publisher](https://doi.org/10.1126/science.1089910).
+[^3]: Petersen, S.E., *et al.* 1998. [“The Effects of Practice on the Functional Anatomy of Task Performance.”](https://pmc.ncbi.nlm.nih.gov/articles/PMC33808/) *Proc. Nat. Acad. Sci.* 95: 853–860. Free full text.
+[^4]: Zimmer, C. 2003. [“How the Mind Reads Other Minds.”](https://carlzimmer.com/how-the-mind-reads-other-minds/) *Science* 300: 1079–1080. Free full text on the author’s site; the relevant discussion is in the final section, “An evolving theory.”
+[^5]: Nørretranders, T. 1999. *The User Illusion: Cutting Consciousness Down to Size.* Penguin Press Science. [Book preview](https://books.google.com/books?id=NIRPEAAAQBAJ). The original reference gives the book’s total length (467 pages), not a passage location; the exact page for this quotation has not been verified. Preview access is limited.
+[^6]: Altenmüller, E.O. 2004. “Music in Your Head.” *Scientific American Mind* 14: 24–31. [Full text on ResearchGate](https://www.researchgate.net/publication/241608938_Music_in_your_Head) · [Publisher](https://www.scientificamerican.com/article/music-in-your-head/). The music/reward-circuit discussion is near the beginning; access may vary.
+[^7]: Pinker, S. 1997. *How the Mind Works.* W.W. Norton & Co., New York. [Book preview (later edition)](https://books.google.com/books?id=48zpLNAmTXwC). The original reference gives the book’s total length (660 pages), not a passage location; the exact passage has not been verified. Preview access is limited.
+[^8]: Helmuth, L. 2003. [“Fear and Trembling in the Amygdala.”](https://doi.org/10.1126/science.300.5619.568) *Science* 300: 568–569. Publisher access may require a subscription.
+[^9]: Dolan, R.J. 2002. “Emotion, Cognition, and Behavior.” *Science* 298: 1191–1194. [Author-uploaded full text](https://www.researchgate.net/publication/11042864_Emotion_Cognition_and_Behavior) · [Publisher](https://doi.org/10.1126/science.1076358). ResearchGate access may vary.
+[^10]: Treffert, D.A., and G.L. Wallace. 2004. “Islands of Genius.” *Scientific American Mind* 14: 14–23. [Full-text reprint PDF](https://lcn.salk.edu/press/uncommon_genius.pdf) · [Original publisher page](https://www.scientificamerican.com/article/islands-of-genius/). The PDF is a 2006 reprint with different pagination.
+[^11]: Anonymous. 2004. “Autism: Making the Connection.” *The Economist* 372(8387): 66. A working link to this exact article has not been located. For related original research, see Just *et al.* (2004), [“Cortical Activation and Synchronization During Sentence Comprehension in High-Functioning Autism: Evidence of Underconnectivity”](https://pubmed.ncbi.nlm.nih.gov/15215213/) (abstract and full-text links; a separate source, not the cited article).
+[^12]: Wegner, D.M. 1994. “Ironic Processes of Mental Control.” *Psychological Review* 101: 34–52. [Full-text PDF](https://dtg.sites.fas.harvard.edu/DANWEGNER/pub/Wegner%20Ironic%20Processes%201994.pdf) · [Publisher](https://doi.org/10.1037/0033-295X.101.1.34).
+[^13]: Aiello, L., and C. Dean. 1990. *An Introduction to Human Evolutionary Anatomy.* Academic Press, London. [Book preview](https://books.google.com/books?id=JtUzCX2aPoIC). Chapter 10, “The Anatomy of the Brain and Hominoid Endocasts,” begins on p. 176. The original citation gives no page, and the exact passage has not been verified; preview access is limited.
+[^14]: Povinelli, D.J. 1993. “Reconstructing the Evolution of Mind.” *American Psychologist* 48: 493–509. [Full text on ResearchGate](https://www.researchgate.net/publication/14692368_Reconstructing_the_evolution_of_mind) · [Publisher](https://doi.org/10.1037/0003-066X.48.5.493). Access may vary.
+[^15]: Hauser, M.D., N. Chomsky, and W.T. Fitch. 2002. [“The Faculty of Language: What Is It, Who Has It, and How Did It Evolve?”](https://doi.org/10.1126/science.298.5598.1569) *Science* 298: 1569–1579. Publisher access may require a subscription.
+[^16]: Carstairs-McCarthy, A. 2004. [“Many Perspectives, No Consensus.”](https://doi.org/10.1126/science.1094779) *Science* 303: 1299–1300. A review of *Language Evolution*; publisher access may require a subscription.
+[^17]: Dijksterhuis, A., *et al.* 2006. “On Making the Right Choice: The Deliberation-Without-Attention Effect.” *Science* 311: 1005–1007. [Full-text PDF](https://www2.psych.purdue.edu/~gfrancis/Classes/PSY392/Dijksterhuisetal.pdf) · [Publisher](https://doi.org/10.1126/science.1121629).
+[^18]: Vince, G. 2006. [“‘Sleeping on It’ Best for Complex Decisions.”](https://www.newscientist.com/article/dn8732-sleeping-on-it-best-for-complex-decisions/) *New Scientist*, February 16. The quotation appears in the final section, “Expectation counts.”
 
 
 ## Provenance

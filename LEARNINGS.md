@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-23] — Blindsight source links**
+- Observation: Watts’s author-hosted endnotes list The User Illusion as 467pp. and How the Mind Works as 660pp.; the imported Shelf references had mistaken those total lengths for cited pages. The user prefers direct source links in footnotes over inline previews.
+- Action: Keep article titles and direct source links in the Markdown definitions, distinguish full text from previews and related sources, and do not restore the false p. 467/p. 660 locators. The exact Economist article and the three books’ passage locations remain unverified.
+- Confidence: high
+
 **[2026-09-22] — Adjacent footnote spacing**
 - Observation: Blindsight’s consecutive footnote references render as visually concatenated numbers when their Markdown markers touch; the repository scan found four missing spaces across three citation groups in this entry.
 - Action: Separate adjacent Markdown footnote references with a space so the rendered superscript links remain visually distinct.

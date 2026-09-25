@@ -2,7 +2,7 @@
 slug: what-is-the-relationship-between-self-awareness-and-intelligence
 title: What is the relationship between self-awareness and intelligence?
 date: 2026-09-12
-lastmod: 2026-09-12
+lastmod: 2026-09-25
 tags:
   - questions
 ---
@@ -15,7 +15,7 @@ Concurrently I have been reading Daoist ideas (the *Zhuangzhi*) and related arti
 Anyways, the core thread here is – perhaps our natural intelligence (likely what we refer to as the unconscious mind) already knows what to do & our self-awareness can get in the way in many situations. That's a bit stronger of a statement than I would make, as I think self-awareness can be quite valuable for humans specifically. I do buy the idea though from Blindsight that there are other pathways to intelligence.
 
 
-From [[A Brief History Of Intelligence]] it seems that one of the leading theories of why the human brain scaled up as much as it did is that our social dynamics got more and more complex, leading to greater returns on intelligence. More intelligence meant more complex social dynamics, creating a positive feedback loop:
+From [[A Brief History Of Intelligence]], one of the leading theories of why the human brain scaled up as much as it did is that our social dynamics got more and more complex, leading to greater returns on intelligence. More intelligence meant more complex social dynamics, creating a positive feedback loop:
 
 > Every roundabout of this cycle made our ancestors' brains bigger and bigger. As social groups got bigger (powered by improved gossip, altruism, and punishment), it created more pressure for bigger brains to keep track of all the social relationships. As more ideas accumulated across generations, it created more pressure for bigger brains to increase the storage capacity of ideas that could be maintained within a generation. As the usefulness of inner simulations increased due to more reliable sharing of thoughts through language, it created more pressure for bigger brains to render more sophisticated inner simulations in the first place.
 > 
@@ -23,4 +23,6 @@ From [[A Brief History Of Intelligence]] it seems that one of the leading theori
 
 Does any of this *require* consciousness/self-awareness though? Ants have complex social dynamics without self-awareness (as far as we know). Is language the difference? LLMs have language but no self-awareness (as far as we know). So why do we have self-awareness? Presumably it's expensive to run in the brain.
 
-Actually hmm wasn't there a section in Brief History on why self-awareness may have been necessary for future planning? The monkeys needing to imagine themselves getting hungry in the future to set up for fruits to ripen in the future? Or at least that was one hypothesis for how mentalizing / self-awareness appeared.
+Another hypothesis from the same book is the ecological brain hypothesis: anticipating future needs was necessary specifically for frugivore (fruit-eating) primates because fruits only ripen in a specific window & certain fruits are more competitive than others. Being a frugivore requires more long-term planning (imaging yourself being hungry in the future) than other strategies, so it selected for brains that were capable of modeling their selves better.
+
+All of this is specific to humans. There is no reason to believe that across the evolutionary tree, self-awareness & theory of mind *have* to be tied to the same neural machinery.

@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-09-25] — Blindsight mirror citation correction**
+- Observation: Shelf footnote 14 named Povinelli (1993), but Watts’s online endnotes attach Gallup (1997), note 123, to the same mirror-recognition sentence. The publisher lists Gallup’s article on pp. 73–82; Watts’s endnote gives a different page range.
+- Action: Match imported citations to the corresponding sentence in Watts’s endnotes before adding source links, and verify article metadata with the publisher. Keep the direct link to endnotes p. 19 alongside the corrected Gallup citation.
+- Confidence: high
+
 **[2026-09-23] — Blindsight source links**
 - Observation: Watts’s author-hosted endnotes list The User Illusion as 467pp. and How the Mind Works as 660pp.; the imported Shelf references had mistaken those total lengths for cited pages. The user prefers direct source links in footnotes over inline previews.
 - Action: Keep article titles and direct source links in the Markdown definitions, distinguish full text from previews and related sources, and do not restore the false p. 467/p. 660 locators. The exact Economist article and the three books’ passage locations remain unverified.

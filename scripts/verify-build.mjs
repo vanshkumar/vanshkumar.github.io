@@ -24,18 +24,25 @@ const redirect = (route, target) => {
   canonical(route, target);
 };
 
-has('/', /<h2 id="recent-title">/, 'missing recent posts heading');
+has('/', /<h2 id="selected-title">/, 'missing selected posts heading');
 has('/', /<figure class="home-comic">[\s\S]*?<img\b[^>]*alt="[^"]+"/, 'comic needs non-empty alt text');
 has('/', /class="skip-link" href="#main-content"/, 'missing skip link');
 const homeHtml = htmlFor('/');
-assert.doesNotMatch(homeHtml, /id="recent-(?:posts|notes)-title"/, 'homepage should use one Recent section');
+assert.doesNotMatch(homeHtml, /id="recent(?:-posts|-notes)?-title"/, 'homepage should use selected posts');
 assert.doesNotMatch(homeHtml, />\s*see all\s*</i, 'homepage should not show redundant see-all links');
-const recentHtml = homeHtml.match(/<ol class="home-recent">[\s\S]*?<\/ol>/)?.[0];
-assert.ok(recentHtml, 'homepage should contain recent posts');
-for (const [, href] of recentHtml.matchAll(/<a href="([^"]+)"/g)) {
-  assert.ok(href.startsWith('/posts/'), 'homepage recent entries should only link to posts');
-}
-assert.doesNotMatch(homeHtml, /class="home-recent-kind"/, 'post-only list should omit redundant type labels');
+const selectedHtml = homeHtml.match(/<ol class="home-selected">[\s\S]*?<\/ol>/)?.[0];
+assert.ok(selectedHtml, 'homepage should contain selected posts');
+const { data: homeData } = matter(fs.readFileSync('src/content/pages/home.md', 'utf8'));
+const selectedPaths = [...selectedHtml.matchAll(/<a href="([^"]+)"/g)].map(([, href]) => href);
+assert.deepEqual(
+  selectedPaths,
+  homeData.home.selected.slugs.map((slug) => `/posts/${slug}`),
+  'homepage selections should match the authored list in order'
+);
+selectedPaths.forEach((route) => {
+  has(route, /<article class="article">/, 'selected posts should resolve to an article, not a redirect');
+});
+assert.doesNotMatch(homeHtml, /class="home-selected-kind"/, 'post-only list should omit redundant type labels');
 assert.doesNotMatch(homeHtml, /class="home-writing-nav"/, 'writing links should be integrated into the intro');
 const homeDirectoryHtml = homeHtml.slice(
   homeHtml.indexOf('class="home-static home-static-directory"'),
@@ -52,8 +59,21 @@ assert.doesNotMatch(
 const gardenMatches = homeHtml.match(/class="word-garden"/g) ?? [];
 assert.equal(gardenMatches.length, 1, 'homepage should contain the Word Garden exactly once');
 assert.ok(
-  homeHtml.indexOf('class="word-garden"') > homeHtml.indexOf('id="recent-title"'),
-  'Word Garden should appear after Recent writing'
+  homeHtml.indexOf('class="word-garden"') > homeHtml.indexOf('id="selected-title"'),
+  'Word Garden should appear after selected posts'
+);
+const { data: siteData } = matter(fs.readFileSync('src/content/pages/site.md', 'utf8'));
+const subscriptionEmbeds = (html) => [...html.matchAll(/<iframe class="subscribe-embed"[\s\S]*?<\/iframe>/g)]
+  .map(([block]) => block);
+const assertSubscription = (html, label) => {
+  const embeds = subscriptionEmbeds(html);
+  assert.equal(embeds.length, 1, `${label}: should contain one subscription embed`);
+  assert.ok(embeds[0].includes(`src="${siteData.site.subscription.src}"`), `${label}: subscription should use the configured destination`);
+};
+assertSubscription(homeHtml, 'homepage');
+assert.ok(
+  homeHtml.indexOf('class="subscribe-embed"') > homeHtml.indexOf('</section>', homeHtml.indexOf('class="word-garden"')),
+  'homepage subscription should appear after the Word Garden'
 );
 assert.doesNotMatch(
   homeHtml,
@@ -167,11 +187,25 @@ expectedWritingLinks.forEach((link) => {
   const route = new URL(link).pathname;
   canonical(route, route);
   has(route, /<meta property="og:type" content="article">/, 'writing must use article OG type');
+  if (route.startsWith('/posts/')) {
+    const html = htmlFor(route);
+    assertSubscription(html, route);
+    assert.match(html, /<iframe class="subscribe-embed"[\s\S]*?<\/iframe>\s*<\/article>/, `${route}: subscription should be at the bottom of the article`);
+  } else {
+    assert.equal(subscriptionEmbeds(htmlFor(route)).length, 0, `${route}: notes should not gain a Post subscription embed`);
+  }
   const slug = path.posix.basename(route);
   ['posts', 'notes', 'terrain', 'projects', 'questions', 'hunches', 'guesses', 'traces'].forEach((prefix) => {
     const alias = `/${prefix}/${slug}`;
     if (alias !== route) redirect(alias, route);
   });
+});
+
+fs.readdirSync(writingRoot).filter((name) => name.endsWith('.md')).forEach((name) => {
+  const { data } = matter(fs.readFileSync(path.join(writingRoot, name), 'utf8'));
+  if (!data.tags.includes('posts')) return;
+  const slug = name.replace(/\.md$/, '');
+  redirect(`/terrain/essays/${slug}`, `/posts/${slug}`);
 });
 
 expectedPoemLinks.forEach((link) => {

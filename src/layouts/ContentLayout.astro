@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import SubscribeEmbed from '../components/SubscribeEmbed.astro';
 import { formatCopy, getSiteCopy } from '../lib/site-copy';
 
 const {
@@ -12,6 +13,7 @@ const {
   lastUpdated,
   showDateRange = false,
   showHeaderDivider = true,
+  showSubscribe = false,
   proseClass
 } = Astro.props;
 const formatHeaderDate = (value) =>
@@ -73,5 +75,6 @@ const siteCopy = await getSiteCopy();
         {formatCopy(siteCopy.content.lastUpdatedTemplate, { date: formattedLastUpdated })}
       </div>
     ) : null}
+    {showSubscribe ? <SubscribeEmbed /> : null}
   </article>
 </BaseLayout>

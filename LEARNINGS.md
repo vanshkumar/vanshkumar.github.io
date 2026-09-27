@@ -2,6 +2,26 @@
 
 ## What Has Worked
 
+**[2026-09-27] — Compact Substack signup styling**
+- Observation: The user finds the 480×320 Substack card too tall and wants the email signup without publication branding, on the site's cream background. Substack's own stylesheet hides the logo, subtitle, and publication name at iframe heights of 160px or less, but caps its inner signup form at about 360px regardless of the outer width.
+- Action: Keep the shared embed full-column and 150px tall with no border. Do not claim that widening the iframe also widens Substack's inner form. This supersedes the original 480×320 presentation.
+- Confidence: high
+
+**[2026-09-27] — Substack embed preview diagnosis**
+- Observation: The local preview and Substack embed endpoint return HTTP 200, and Substack sends `frame-ancestors *`. In the in-app browser, the supplied iframe stays at about:blank even on a bare diagnostic page, while same-origin and cross-origin local iframes load; the Substack embed renders when opened directly. The user's subsequent screenshot confirms that the embed renders in their browser; native Chrome and Safari computer-use access was not approved.
+- Action: Distinguish a passing build and correct iframe markup from a working remote signup widget; use an independent browser check before attributing this blank frame to the site layout or claiming full signup verification.
+- Confidence: high
+
+**[2026-09-26] — Recent writing cadence audit**
+- Observation: Aug 26–Sep 26 committed vault history shows five new general Notes after excluding Substack imports and the restored Comic Co-Creation Workflow; Return it to Nature was extracted from Always do what feels right. Self-reliance and self-awareness/intelligence are substantial prose, while other activity includes source collection, small revisions, and Blindsight quotations/citation maintenance. This does not establish three new standalone pieces per week.
+- Action: Ground publishing-cadence advice in substantive body diffs, distinguishing writing occasions from new pieces and extracted files from new material; describe this month's similarity to blogging as a similarity of form, not demonstrated frequency. Keep uncommitted writing separate from historical counts.
+- Confidence: high
+
+**[2026-09-26] — Essay versus blog editorial review**
+- Observation: The current Posts corpus contains standalone explainers (Virtue should stay its own reward, Arabian Nights), personal essays (Divorce kitchen, Celebration of a Train Person), life updates, project reports, and fiction. The user is considering an Essays/Blog split but has not selected a taxonomy.
+- Action: Classify from the body and reader purpose rather than the existing `essays` tag or the presence of dates/personal anecdotes; account separately for Partition Summer's comic memoir and Preordained in the present's fiction when proposing a split.
+- Confidence: high
+
 **[2026-09-25] — Blindsight mirror citation correction**
 - Observation: Shelf footnote 14 named Povinelli (1993), but Watts’s online endnotes attach Gallup (1997), note 123, to the same mirror-recognition sentence. The publisher lists Gallup’s article on pp. 73–82; Watts’s endnote gives a different page range.
 - Action: Match imported citations to the corresponding sentence in Watts’s endnotes before adding source links, and verify article metadata with the publisher. Keep the direct link to endnotes p. 19 alongside the corrected Gallup citation.
@@ -374,6 +394,31 @@
 
 ## Patterns and Preferences
 
+**[2026-09-27] — Homepage signup order and concise writing labels**
+- Observation: The user moved the homepage signup below the Word Garden, requested lowercase writing links in homepage prose, and shortened the visible label from Working notes to Notes.
+- Action: Render the homepage as selected posts, Word Garden, then signup. Use `blog`, `notes`, and `poems` in the homepage Markdown directory, with `Notes` in the shared writing navigation and archive title. This supersedes the earlier Working notes label and signup-above-garden placement.
+- Confidence: high
+
+**[2026-09-27] — Working notes capitalization**
+- Observation: The intended navigation label is “Working notes,” capitalized consistently with Blog and Poems.
+- Action: Use “Working notes” for the homepage link, archive title, and shared writing navigation label.
+- Confidence: high
+
+**[2026-09-27] — Selected writing and Substack signup**
+- Observation: The user chose Blog and working notes as navigation labels, selected What would Rami do?, Arabian Nights, and Inscrutable exhortations for the homepage in that order, and deferred the proposed Projects archive. They replaced the initial small subscription-link request with Substack's supplied 480×320 signup iframe, above the Word Garden and at the bottom of posts.
+- Action: Maintain selections through `home.selected.slugs` in `vault/pages/home.md` and the iframe URL/title through `site.subscription` in `vault/pages/site.md`; cap its width to the available space. Use `posts` in place of the former `essays` tag; keep canonical URLs and legacy essay-tag redirects. This supersedes the recent-post list and no-subscription preferences.
+- Confidence: high
+
+**[2026-09-27] — Dated posts alongside evolving notes**
+- Observation: The user suspects filing everything as a Note can defer sharing indefinitely and is comfortable with future Posts being dated snapshots of evolving Notes, with some duplicated material.
+- Action: Allow a post to link to its evolving Note in ordinary authored prose; do not require unique content, a finished essay, or an automatic synchronization system before publishing a snapshot.
+- Confidence: high
+
+**[2026-09-26] — Frequent publishing and evolving Notes**
+- Observation: The user naturally creates or revises Notes at roughly the frequency of Matt Webb's blogging habit, intends those Notes to keep evolving, and is considering sending writing by email through the site or their existing Substack. No publishing setup or Essays/Blog split is decided.
+- Action: Preserve evolving Notes when exploring frequent publishing; avoid making a polished essay or a mandatory Note-to-Post rewrite the prerequisite for sharing. Treat email delivery and site classification as separate decisions.
+- Confidence: high
+
 **[2026-09-15] — TJ analysis project ownership**
 - Observation: The user wants the ongoing Class of 2027 analysis and its two-month monitor in the saved `tj-psat-analysis` project and approved a continuation task there.
 - Action: Continue the data analysis in that project; use this site repo for matching post changes. Preserve the existing monitor when transferring ownership instead of creating a duplicate.
@@ -595,6 +640,11 @@
 - Confidence: high
 
 ## What Has Failed
+
+**[2026-09-27] — Substack background blending**
+- Observation: The user's browser still displayed a white Substack rectangle with `mix-blend-mode: multiply`. The live `/embed?transparent=true` response sets `embedTransparent` to true, adds the `transparent` embed class, and removes the main container's `use-theme-bg` class.
+- Action: Use Substack's `transparent=true` URL option and set the iframe background directly to the site's `var(--bg)`; remove blending. Verify the embedded document's background behavior rather than claiming a match from the outer iframe CSS alone.
+- Confidence: high
 
 **[2026-09-12] — Repeated standalone line breaks**
 - Observation: Blindsight's blank-line-separated `<br>` tags render as direct children of the article's CSS grid; Astro instead wraps consecutive `<br><br><br>` on one line in a paragraph, where they participate in normal line layout.

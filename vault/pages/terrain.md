@@ -3,7 +3,7 @@ title: Terrain
 heroAccent: How does a mind develop?
 lastmod: 2026-07-07
 terrain:
-  projectsTitle: Projects & essays
+  projectsTitle: Blog
   noProjectsMessage: No projects yet.
   questionsTitle: Questions
   noQuestionsMessage: No questions yet.

@@ -1,6 +1,6 @@
 ---
 tags:
-  - essays
+  - posts
 slug: celebration-of-a-train-person
 title: Celebration of a Train Person
 description: a place for everyone

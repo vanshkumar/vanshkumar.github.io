@@ -2,6 +2,7 @@
 import { getCollection, getEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import WordGarden from '../components/WordGarden.astro';
+import SubscribeEmbed from '../components/SubscribeEmbed.astro';
 import { titleFromSlug } from '../lib/content';
 import {
   canonicalWritingPath,
@@ -29,7 +30,12 @@ const [beforeComic, afterComic] = homeSections;
 const home = homeEntry.data.home;
 const { posts } = partitionWriting(await getCollection('terrain'));
 const titleFor = (entry) => entry.data.title ?? titleFromSlug(entry.slug);
-const recentPosts = posts.slice(0, 3);
+const postsBySlug = new Map(posts.map((entry) => [entry.slug, entry]));
+const selectedPosts = home.selected.slugs.map((slug) => {
+  const entry = postsBySlug.get(slug);
+  if (!entry) throw new Error(`Selected homepage post not found: ${slug}`);
+  return entry;
+});
 const wordGarden = getWordActivity();
 ---
 
@@ -48,13 +54,13 @@ const wordGarden = getWordActivity();
 
     <div class="home-static home-static-directory" set:html={afterComic} />
 
-    <section class="home-section" aria-labelledby="recent-title">
+    <section class="home-section" aria-labelledby="selected-title">
       <div class="section-heading">
-        <h2 id="recent-title">{home.recent.title}</h2>
+        <h2 id="selected-title">{home.selected.title}</h2>
       </div>
-      <ol class="home-recent">
-        {recentPosts.map((entry) => (
-          <li class="home-recent-item">
+      <ol class="home-selected">
+        {selectedPosts.map((entry) => (
+          <li class="home-selected-item">
             <h3><a href={canonicalWritingPath(entry)}>{titleFor(entry)}</a></h3>
             {entry.data.description ? <p>{entry.data.description}</p> : null}
           </li>
@@ -63,5 +69,6 @@ const wordGarden = getWordActivity();
     </section>
 
     <WordGarden garden={wordGarden} copy={homeEntry.data.wordGarden} />
+    <SubscribeEmbed />
   </div>
 </BaseLayout>

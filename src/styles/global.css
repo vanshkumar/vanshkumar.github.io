@@ -1432,35 +1432,35 @@ h3,
   color: #6b655d;
 }
 
-.home-recent {
+.home-selected {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.home-recent-item + .home-recent-item {
+.home-selected-item + .home-selected-item {
   margin-top: 1.6rem;
 }
 
-.home-recent-item h3,
+.home-selected-item h3,
 .archive-post h2 {
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.38;
 }
 
-.home-recent-item h3 {
+.home-selected-item h3 {
   font-size: 1.08rem;
   line-height: 1.45;
 }
 
-.home-recent-item h3 a {
+.home-selected-item h3 a {
   color: var(--text);
   text-decoration: none;
 }
 
-.home-recent-item h3 a:hover,
-.home-recent-item h3 a:focus-visible {
+.home-selected-item h3 a:hover,
+.home-selected-item h3 a:focus-visible {
   color: var(--link);
   text-decoration: underline;
 }
@@ -1470,7 +1470,7 @@ h3,
   color: var(--text);
 }
 
-.home-recent-item > p,
+.home-selected-item > p,
 .archive-post p {
   margin: 0.35rem 0 0;
   color: var(--muted);
@@ -1479,7 +1479,7 @@ h3,
   line-height: 1.55;
 }
 
-.home-recent-item > p {
+.home-selected-item > p {
   font-size: 0.78rem;
 }
 
@@ -1720,8 +1720,19 @@ h3,
   box-shadow: 0 0.35rem 0.9rem rgba(55, 44, 32, 0.08);
 }
 
-.home-section + .word-garden {
-  margin-top: 4rem;
+.subscribe-embed {
+  display: block;
+  width: 100%;
+  /* Substack hides its publication heading and logo at heights <= 160px. */
+  height: 150px;
+  margin: 2.5rem auto 0;
+  border: 0;
+  /* The embed URL enables transparency inside the cross-origin document. */
+  background: var(--bg);
+}
+
+.home-copy > .home-section + .word-garden {
+  margin-top: 1rem;
 }
 
 .word-garden {

@@ -11,7 +11,9 @@ export async function getStaticPaths() {
   const seen = new Set();
 
   entries.forEach((entry) => {
-    const tags = Array.isArray(entry.data.tags) ? entry.data.tags : [];
+    const tags = [...(entry.data.tags ?? [])];
+    // Preserve published tag URLs after the essays -> posts rename.
+    if (tags.some((tag) => tag.trim().toLowerCase() === 'posts')) tags.push('essays');
     tags.forEach((tag) => {
       const normalizedTag = normalizeWikiTarget(tag).replace(/\//g, '-');
       const key = `${normalizedTag}/${entry.slug}`;

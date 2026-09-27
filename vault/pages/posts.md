@@ -1,4 +1,4 @@
 ---
-title: Posts
-lastmod: 2026-08-23
+title: Blog
+lastmod: 2026-09-27
 ---

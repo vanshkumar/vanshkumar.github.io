@@ -1,6 +1,6 @@
 ---
 tags:
-  - essays
+  - posts
 slug: divorce-kitchen
 title: Divorce kitchen
 description: type 2 fun?

@@ -1,6 +1,6 @@
 ---
 tags:
-  - essays
+  - posts
 slug: virtue-should-stay-its-own-reward
 title: Virtue should stay its own reward
 description: what's up with intrinsic motivation

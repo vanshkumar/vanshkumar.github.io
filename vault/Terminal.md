@@ -1,6 +1,6 @@
 ---
 tags:
-  - essays
+  - posts
 slug: terminal
 title: Terminal
 description: do it for the love of the game

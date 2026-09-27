@@ -45,8 +45,8 @@ content first. Edit markdown in `vault/`, not `src/content/`.
   `src/pages/homepage-variants/` prototypes are design studies and intentionally
   keep their sample copy alongside their standalone markup.
 - Root-level Markdown files in `vault/` form the internal Terrain collection.
-  Their `projects`/`essays` or `hunches`/`questions` tags classify them into the
-  public Posts and Notes routes; `slug` frontmatter remains their stable URL
+  Their `projects`/`posts` or `hunches`/`questions` tags classify them into the
+  public Blog (`/posts`) and Notes (`/notes`) routes; `slug` frontmatter remains their stable URL
   identity. See `SCHEMA.md` before changing published slugs or classifications.
 - Poems live in `vault/poems/` and publish independently at `/poems/<slug>`;
   ordinary source line breaks remain visible in rendered poem paragraphs.

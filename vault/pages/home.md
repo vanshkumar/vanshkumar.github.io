@@ -1,14 +1,18 @@
 ---
 title: Home
-lastmod: 2026-09-20
+lastmod: 2026-09-27
 home:
   comic:
     src: /assets/Pasted image 20260203101338.png
     alt: Calvin and Hobbes discussing whether to obey the inscrutable exhortations of the soul
     width: 908
     height: 295
-  recent:
-    title: Recent posts
+  selected:
+    title: Selected posts
+    slugs:
+      - what-would-rami-do
+      - arabian-nights
+      - inscrutable-exhortations
 wordGarden:
   sectionLabel: Writing activity
   rangeDescriptionTemplate: The visual calendar covers {startDate} through {endDate}. Active days can be focused to hear their word totals.
@@ -38,8 +42,8 @@ Here you can find:
 - what I’m [reading](/shelf)
 - more [about me](/about)
 - words I've written
-	- [Posts](/posts)
-	- [Notes](/notes)
-	- [Poems](/poems)
+	- [blog](/posts)
+	- [notes](/notes)
+	- [poems](/poems)
 
 Email me at [vanshkumar95@gmail.com](mailto:vanshkumar95@gmail.com) to chat.

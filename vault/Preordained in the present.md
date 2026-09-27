@@ -1,6 +1,6 @@
 ---
 tags:
-  - essays
+  - posts
   - fiction
 slug: preordained-in-the-present
 title: Preordained in the present

@@ -1,6 +1,6 @@
 ---
 tags:
-  - essays
+  - posts
 slug: impact
 title: Impact
 description: tracing a feeling

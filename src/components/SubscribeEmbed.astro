@@ -1,0 +1,15 @@
+---
+import { getSiteCopy } from '../lib/site-copy';
+
+const { subscription } = await getSiteCopy();
+---
+
+<iframe
+  class="subscribe-embed"
+  src={subscription.src}
+  title={subscription.title}
+  width="710"
+  height="150"
+  frameborder="0"
+  scrolling="no"
+></iframe>

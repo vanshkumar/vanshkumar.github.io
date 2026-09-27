@@ -16,6 +16,10 @@ const siteCopy = z.object({
   skipLinkLabel: z.string(),
   footerLabel: z.string(),
   footerLinks: z.array(link),
+  subscription: z.object({
+    src: z.string().url(),
+    title: z.string()
+  }),
   content: z.object({
     backlinksTitle: z.string(),
     lastUpdatedTemplate: z.string()
@@ -77,8 +81,12 @@ const homeCopy = z.object({
     width: z.number().int().positive(),
     height: z.number().int().positive()
   }),
-  recent: z.object({
-    title: z.string()
+  selected: z.object({
+    title: z.string(),
+    slugs: z.array(z.string()).refine(
+      (slugs) => new Set(slugs).size === slugs.length,
+      'Selected post slugs must be unique'
+    )
   })
 });
 

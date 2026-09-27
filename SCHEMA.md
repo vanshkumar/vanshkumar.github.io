@@ -9,7 +9,7 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
   - `slug?` `title?` `description?` `date?` `lastmod?` `tags?[]` `coverImage?`
     `aliases?[]` `comic?` (`assetDir`, `pageCount`, `width`, `height`)
   - Every root-level Markdown file is public. A Terrain slug must be one flat path segment.
-  - Every entry must have at least one Post tag (`projects` or `essays`) or one Note tag
+  - Every entry must have at least one Post tag (`projects` or `posts`) or one Note tag
     (`hunches` or `questions`), and may not combine tags from both groups. Multiple tags within
     one group and unrelated topic tags remain valid. The Astro build fails on an invalid split.
 - **logs** → `vault/logs/<project>/` → `/posts/<project>/logs/<slug>`
@@ -31,8 +31,9 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
     `heroTitle?` `heroAccent?`
   - `home.md` owns the live homepage prose, its `home` display settings, and Word
     Garden labels through `wordGarden`. Keep exactly one `<!-- home-comic -->`
-    marker where the comic belongs and one `<!-- home-writing-nav -->` marker
-    before the Markdown-authored Posts · Notes · Poems navigation.
+    marker where the comic belongs. Lowercase blog, notes, and poems navigation lives in the
+    Markdown directory. `home.selected.title` and `home.selected.slugs` control the selected
+    posts heading and ordered list; every selected slug must resolve to a Post.
   - `about.md` and `now.md` own their respective page prose.
   - `posts.md`, `notes.md`, `poems.md`, and `shelf.md` own archive titles and optional archive
     introductions. Shelf section headings and surrounding prose live directly in the
@@ -42,7 +43,8 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
   - `terrain.md` owns the legacy archive hero and section labels through `terrain`.
   - `site.md` owns shared visitor-facing copy through `site`, including the site
     name, description, footer, content and writing labels, comic-reader controls,
-    redirect messages, and RSS metadata.
+    redirect messages, RSS metadata, and `subscription` embed URL/title. The Substack signup
+    iframe appears below the homepage Word Garden and at the bottom of Post detail pages.
   - Structured page-copy fields are validated in `src/content.config.ts`; text
     templates use named placeholders such as `{title}`, `{author}`, or `{date}`.
 
@@ -70,7 +72,7 @@ are not part of the root Terrain collection.
 
 ## URLs and Compatibility
 
-- `/posts` and `/notes` are the public archives. Posts are sorted by `date` (falling back to
+- `/posts` (Blog) and `/notes` (Notes) are the public archives. Posts are sorted by `date` (falling back to
   `lastmod`); Notes are sorted by `lastmod` (falling back to `date`), with slug tie-breakers.
 - `/poems` is the poetry archive; `/poems/<slug>` renders each poem.
 - `/posts/<slug>` and `/notes/<slug>` are both generated for every Terrain entry. The namespace
@@ -89,6 +91,7 @@ are not part of the root Terrain collection.
 - Wikilinks resolve by Terrain slug, title-derived slug, alias, current collection path, or a
   compatibility prefix. For example, `[[foo]]`, `[[posts/foo]]`, `[[questions/foo]]`, and
   `[[notes/foo]]` all resolve directly to the entry's canonical Posts/Notes URL.
-- Tag-qualified targets such as `[[essays/foo]]` resolve when that tag is attached to the entry.
+- Tag-qualified targets such as `[[posts/foo]]` resolve to the entry; `essays` remains a legacy
+  wikilink prefix, and `/terrain/essays/<slug>` redirects remain for entries tagged `posts`.
 - Poems, logs, Shelf entries, and special pages participate in lookup and backlinks while preserving
   their own canonical URLs.

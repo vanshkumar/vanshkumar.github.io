@@ -1,6 +1,6 @@
 ---
 title: Site
-lastmod: 2026-08-23
+lastmod: 2026-09-27
 site:
   name: Vansh Kumar
   brandSubtitle: Obeying the inscrutable exhortations of my soul
@@ -21,12 +21,15 @@ site:
       rel: noopener noreferrer
     - label: RSS
       href: /rss.xml
+  subscription:
+    src: https://vanshkumar.substack.com/embed?transparent=true
+    title: Subscribe to Vansh Kumar on Substack
   content:
     backlinksTitle: Backlinks
     lastUpdatedTemplate: Last updated {date}
   writing:
-    postLabel: Post
-    noteLabel: Note
+    postLabel: Blog
+    noteLabel: Notes
     poemLabel: Poem
     logsTitle: Logs
     previousLabel: Previous
@@ -57,13 +60,13 @@ site:
       projectLogMoved: This project log moved
       writingMoved: This writing moved
       taggedPathMoved: This tagged path moved
-      writingNowPost: This writing is now a Post
-      writingNowNote: This writing is now a Note
-      guessesNowNotes: Guesses now live under Notes
-      hunchesNowNotes: Hunches now live under Notes
-      projectsNowPosts: Projects now live under Posts
-      questionsNowNotes: Questions now live under Notes
+      writingNowPost: This writing is now on the Blog
+      writingNowNote: This writing is now in notes
+      guessesNowNotes: Guesses now live under notes
+      hunchesNowNotes: Hunches now live under notes
+      projectsNowPosts: Projects now live on the Blog
+      questionsNowNotes: Questions now live under notes
   rss:
     title: Vansh Kumar — Writing
-    description: Posts and notes from Vansh Kumar.
+    description: Blog posts and notes from Vansh Kumar.
 ---

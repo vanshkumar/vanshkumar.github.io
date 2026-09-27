@@ -1,6 +1,6 @@
 ---
 tags:
-  - essays
+  - posts
 slug: what-would-rami-do
 title: What would Rami do?
 description: rambling about my son

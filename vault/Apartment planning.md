@@ -1,6 +1,6 @@
 ---
 tags:
-  - essays
+  - posts
 slug: apartment-planning
 title: Apartment planning
 description: trying my hand at interior design

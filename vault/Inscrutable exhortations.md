@@ -1,6 +1,6 @@
 ---
 tags:
-  - essays
+  - posts
 slug: inscrutable-exhortations
 title: Inscrutable exhortations
 description: a useful mandate

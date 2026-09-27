@@ -1,4 +1,4 @@
-export const POST_TAGS = Object.freeze(['projects', 'essays']);
+export const POST_TAGS = Object.freeze(['projects', 'posts']);
 export const NOTE_TAGS = Object.freeze(['hunches', 'questions']);
 
 const normalizedTags = (tags) =>
@@ -12,10 +12,10 @@ export const writingClassificationIssue = (tags) => {
   const hasNoteTag = values.some((tag) => NOTE_TAGS.includes(tag));
 
   if (hasPostTag && hasNoteTag) {
-    return 'has tags from both the Post group (projects/essays) and Note group (hunches/questions)';
+    return 'has tags from both the Post group (projects/posts) and Note group (hunches/questions)';
   }
   if (!hasPostTag && !hasNoteTag) {
-    return 'must have at least one Post tag (projects/essays) or Note tag (hunches/questions)';
+    return 'must have at least one Post tag (projects/posts) or Note tag (hunches/questions)';
   }
   return null;
 };

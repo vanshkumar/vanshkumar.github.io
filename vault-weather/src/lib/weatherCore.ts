@@ -193,7 +193,7 @@ export const createNoteDraft = ({
   if (collectionKey === 'terrain') {
     if (!cleanTag) throw new WeatherCreateError('Writing type is required');
     if (!isWritingTypeTag(cleanTag)) {
-      throw new WeatherCreateError('Writing type must be Project, Essay, Hunch, or Question');
+      throw new WeatherCreateError('Writing type must be Project, Post, Hunch, or Question');
     }
     fields.push('tags:', `  - ${JSON.stringify(cleanTag)}`);
   }

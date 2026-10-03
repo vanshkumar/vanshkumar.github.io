@@ -45,7 +45,7 @@ within the active Writing view, Poems surface, or Shelf surface.
 Vault Weather listens for Obsidian metadata and vault file events, refreshes whenever its view
 becomes active, and recalculates activity at each UTC date boundary. The plus button creates a note
 with minimal `date` and `lastmod` frontmatter. Creating a Writing entry requires choosing Project,
-Essay, Hunch, or Question so the note satisfies the public site's Posts/Notes classification. The
+Post, Hunch, or Question so the note satisfies the public site's Posts/Notes classification. The
 active Writing view narrows that choice to the matching group. Shelf notes additionally require an
 integer `rating` from 0 to 5. Poems are created in `poems/` with no required type or rating.
 New notes intentionally omit `slug` and `title`.

@@ -2,7 +2,7 @@
 slug: always-do-what-feels-right
 title: Always do what feels right
 date: 2026-09-13
-lastmod: 2026-09-20
+lastmod: 2026-10-01
 tags:
   - hunches
 ---
@@ -17,7 +17,7 @@ Notably, it is not to *only* do what feels right to *you*. It is to do what feel
 
 How do you actually do this?
 1. [[Return it to Nature]]
-2. If it cannot be returned to Nature, do good deeds
+2. If you cannot yet return it to Nature, do good deeds
 
 
 ---

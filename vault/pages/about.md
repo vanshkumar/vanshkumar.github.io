@@ -6,7 +6,7 @@ date: 2026-05-27
 ## This site
 is a living workspace for my projects and writing.
 
-My goal with my writing is to **learn what I think**. Everything on this site should be thought of as a **perpetual draft**, with all mistakes mine.
+My goal with my writing is to **discover what I think**. Everything on this site should be thought of as a **perpetual draft**, with all mistakes mine.
 
 ## I
 am Vansh Kumar and the one who sculpts the terrain of this site. I live in Pasadena, CA.

@@ -142,13 +142,14 @@ describe('WeatherDataService', () => {
   });
 
   it('filters Posts and Notes before assigning activity levels', async () => {
-    const files = [makeFile('Question.md'), makeFile('Hunch.md'), makeFile('Project.md')];
+    const files = [makeFile('Question.md'), makeFile('Hunch.md'), makeFile('Project.md'), makeFile('Post.md')];
     const { app } = makeApp({
       files,
       frontmatter: {
         'Question.md': { tags: ['questions'], lastmod: '2026-06-15' },
         'Hunch.md': { tags: ['hunches'], lastmod: '2026-06-13' },
-        'Project.md': { tags: ['projects'], lastmod: '2026-06-14' }
+        'Project.md': { tags: ['projects'], lastmod: '2026-06-14' },
+        'Post.md': { tags: ['posts'], lastmod: '2026-06-14' }
       }
     });
     const service = new WeatherDataService(app);
@@ -167,7 +168,7 @@ describe('WeatherDataService', () => {
     expect(notes.items.map((item) => item.title)).toEqual(['Hunch', 'Question']);
     expect(notes.items[0].activity.level).toBeLessThan(5);
     expect(notes.items[1].activity.level).toBe(5);
-    expect(posts.items.map((item) => item.title)).toEqual(['Project']);
+    expect(posts.items.map((item) => item.title)).toEqual(['Post', 'Project']);
     expect(posts.items[0].activity.level).toBe(5);
   });
 
@@ -211,6 +212,15 @@ describe('WeatherDataService', () => {
       now: new Date('2026-06-30T12:00:00Z')
     });
 
+    const post = await service.createNote({
+      collectionKey: 'terrain',
+      title: 'A new post',
+      tag: 'posts',
+      now: new Date('2026-06-30T12:00:00Z')
+    });
+
+    expect(post.path).toBe('A new post.md');
+    expect(contents.get(post.path)).toContain('tags:\n  - "posts"');
     expect(hunch.path).toBe('Reality has feedback loops.md');
     expect(contents.get(hunch.path)).toContain('tags:\n  - "hunches"');
     expect(project.path).toBe('A new project.md');

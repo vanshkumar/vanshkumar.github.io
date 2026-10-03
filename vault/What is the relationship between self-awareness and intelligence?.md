@@ -2,7 +2,7 @@
 slug: what-is-the-relationship-between-self-awareness-and-intelligence
 title: What is the relationship between self-awareness and intelligence?
 date: 2026-09-12
-lastmod: 2026-09-25
+lastmod: 2026-09-26
 tags:
   - questions
 ---
@@ -25,4 +25,4 @@ Does any of this *require* consciousness/self-awareness though? Ants have comple
 
 Another hypothesis from the same book is the ecological brain hypothesis: anticipating future needs was necessary specifically for frugivore (fruit-eating) primates because fruits only ripen in a specific window & certain fruits are more competitive than others. Being a frugivore requires more long-term planning (imaging yourself being hungry in the future) than other strategies, so it selected for brains that were capable of modeling their selves better.
 
-All of this is specific to humans. There is no reason to believe that across the evolutionary tree, self-awareness & theory of mind *have* to be tied to the same neural machinery.
+All of this is specific to humans. There is no reason to believe that across the evolutionary tree, self-awareness & theory of mind *have* to be tied to the same neural machinery. So, while the statements in Blindsight about consciousness being an inhibitor on intelligence are likely too strong, I don't think the aliens in the book are an evolutionary impossibility.

@@ -15,6 +15,12 @@ describe('Weather workspace state', () => {
       mode: 'group',
       group: 'posts'
     });
+    for (const tag of ['essays', 'posts']) {
+      expect(terrainFilterFromState({ mode: 'tag', tag })).toEqual({
+        mode: 'group',
+        group: 'posts'
+      });
+    }
     expect(terrainFilterFromState({ mode: 'untagged' })).toEqual({ mode: 'all' });
   });
 });

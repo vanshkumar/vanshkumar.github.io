@@ -2,6 +2,16 @@
 
 ## What Has Worked
 
+**[2026-09-27] — Weather creation and publication state**
+- Observation: Weather's `createNoteDraft` constructs Markdown, but `WeatherDataService.createNote` immediately writes Writing entries into the public vault root with a classification tag and current date fields. There is no separate unpublished-draft state in this creation flow.
+- Action: Describe any proposed snapshot-copy action as creating a Post that enters the normal site sync, not as saving a private draft or sending a newsletter. Keep Substack delivery explicit when discussing how much publishing work that action would remove.
+- Confidence: high
+
+**[2026-09-27] — Note and snapshot URL identity**
+- Observation: The site generates both `/posts/<slug>` and `/notes/<slug>` for each Terrain entry, redirecting the noncanonical namespace to the canonical one. Retagging a Note as a Post therefore moves the entry; it does not preserve an independently evolving Note alongside a dated snapshot.
+- Action: If implementing paired Notes and snapshot Posts, keep separate vault files with distinct slugs and link the Post to the Note. Ordinary wikilinks and existing backlinks can express the relationship before introducing dedicated metadata or automation.
+- Confidence: high
+
 **[2026-09-27] — Compact Substack signup styling**
 - Observation: The user finds the 480×320 Substack card too tall and wants the email signup without publication branding, on the site's cream background. Substack's own stylesheet hides the logo, subtitle, and publication name at iframe heights of 160px or less, but caps its inner signup form at about 360px regardless of the outer width.
 - Action: Keep the shared embed full-column and 150px tall with no border. Do not claim that widening the iframe also widens Substack's inner form. This supersedes the original 480×320 presentation.
@@ -417,6 +427,11 @@
 **[2026-09-26] — Frequent publishing and evolving Notes**
 - Observation: The user naturally creates or revises Notes at roughly the frequency of Matt Webb's blogging habit, intends those Notes to keep evolving, and is considering sending writing by email through the site or their existing Substack. No publishing setup or Essays/Blog split is decided.
 - Action: Preserve evolving Notes when exploring frequent publishing; avoid making a polished essay or a mandatory Note-to-Post rewrite the prerequisite for sharing. Treat email delivery and site classification as separate decisions.
+- Confidence: high
+
+**[2026-09-25] — Weekly note shortcut**
+- Observation: The user has Periodic Notes weekly notes configured and wants an Apple Shortcut to open the current week dynamically.
+- Action: Use the Periodic Notes current-week command through Advanced URI; the target vault name and Advanced URI installation remain unconfirmed.
 - Confidence: high
 
 **[2026-09-15] — TJ analysis project ownership**

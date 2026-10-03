@@ -6,7 +6,7 @@ export type WritingGroup = 'posts' | 'notes';
 
 export const WRITING_TYPES = [
   { tag: 'projects', label: 'Project', group: 'posts' },
-  { tag: 'essays', label: 'Essay', group: 'posts' },
+  { tag: 'posts', label: 'Post', group: 'posts' },
   { tag: 'hunches', label: 'Hunch', group: 'notes' },
   { tag: 'questions', label: 'Question', group: 'notes' }
 ] as const;
@@ -143,6 +143,6 @@ export const terrainFilterFromState = (value: unknown): TerrainFilter | null => 
   if (legacy.mode === 'untagged') return ALL_TERRAIN_FILTER;
   if (legacy.mode !== 'tag') return null;
 
-  const group = writingGroupForTag(legacy.tag);
+  const group = writingGroupForTag(legacy.tag === 'essays' ? 'posts' : legacy.tag);
   return group ? { mode: 'group', group } : ALL_TERRAIN_FILTER;
 };

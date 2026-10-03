@@ -119,7 +119,10 @@ describe('weather core', () => {
     ).toThrow('Writing type is required');
     expect(() =>
       createNoteDraft({ collectionKey: 'terrain', title: 'Topic only', tag: 'learning' })
-    ).toThrow('Writing type must be Project, Essay, Hunch, or Question');
+    ).toThrow('Writing type must be Project, Post, Hunch, or Question');
+    expect(() =>
+      createNoteDraft({ collectionKey: 'terrain', title: 'Old type', tag: 'essays' })
+    ).toThrow('Writing type must be Project, Post, Hunch, or Question');
   });
 
   it('normalizes safe vault cover paths', () => {

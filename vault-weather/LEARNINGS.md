@@ -9,6 +9,11 @@
 
 ## Patterns and Preferences
 
+**[2026-09-27] — Post tag migration**
+- Observation: The site replaced the `essays` classification tag with `posts`; Weather uses `WRITING_TYPES` for both filtering and creation options, while saved legacy tag filters need separate migration.
+- Action: Use `posts`/Post in `WRITING_TYPES` and new drafts; map saved `essays` filters to the Posts view without accepting `essays` as a current creation type.
+- Confidence: high
+
 **2026-09-13 — Poems surface**
 - Observation: Poems live directly in `vault/poems/` and use optional title/date/lastmod frontmatter without Writing classification tags or Shelf ratings. Collection configuration drives their navigation, discovery, creation, and saved surface state.
 - Action: Keep Poems as its own `poems` collection, ignore the retained Writing filter on that surface, and create poems with only date/lastmod frontmatter. Use the shared activity logic and the Writing-sized card grid.
@@ -45,8 +50,8 @@
 - Confidence: high
 
 **2026-08-22 — Posts/Notes view alignment**
-- Observation: The public site now requires every root Terrain entry to belong to exactly one classification group: projects/essays are Posts, and hunches/questions are Notes; untagged entries fail publishing validation.
-- Action: Present the plugin surface as Writing with All, Posts, and Notes filters; require a Project, Essay, Hunch, or Question selection on creation, and migrate legacy Untagged/tag workspace state to the closest current filter.
+- Observation: The public site now requires every root Terrain entry to belong to exactly one classification group: projects/posts are Posts, and hunches/questions are Notes; untagged entries fail publishing validation.
+- Action: Present the plugin surface as Writing with All, Posts, and Notes filters; require a Project, Post, Hunch, or Question selection on creation, and migrate legacy Untagged/tag workspace state to the closest current filter.
 - Confidence: high
 
 **2026-07-03 — Git workflow**

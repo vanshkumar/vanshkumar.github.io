@@ -1,6 +1,6 @@
 ---
 slug: reflections-on-a-weekend-solo-parenting
-title: "Reflections on a weekend solo parenting"
+title: Reflections on a weekend solo parenting
 date: 2026-10-12
 lastmod: 2026-10-15
 tags:
@@ -20,7 +20,6 @@ One takeaway from this experience could be that I should have actually have *les
 So I find myself landing on the notion that there is no reason I can't bring the attitude I had during this weekend into my typical day to day life. It's largely a choice.
 
 ---
-
 ## Postscript (10/14)
 
 Some light feelings of resentment did return after Kathy got back. But interestingly I noticed that they are correlated with how late in the day it is. If I am cleaning up a bunch of things early in the morning, which I normally don't do but did due to our flight to Virginia, I didn't mind at all. In fact, I even found myself feeling a bit of gratitude for getting to do these domestic tasks to take care of my family. Again, the takeaway is attitude is primary. It is possible to romanticize "menial" domestic tasks.

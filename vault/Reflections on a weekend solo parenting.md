@@ -21,6 +21,6 @@ So I find myself landing on the notion that there is no reason I can't bring the
 
 ---
 
-### Postscript (10/14)
+## Postscript (10/14)
 
 Some light feelings of resentment did return after Kathy got back. But interestingly I noticed that they are correlated with how late in the day it is. If I am cleaning up a bunch of things early in the morning, which I normally don't do but did due to our flight to Virginia, I didn't mind at all. In fact, I even found myself feeling a bit of gratitude for getting to do these domestic tasks to take care of my family. Again, the takeaway is attitude is primary. It is possible to romanticize "menial" domestic tasks.

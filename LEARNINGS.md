@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-10-15] — Pages build failure diagnosis**
+- Observation: The Pages workflow's `Build Astro site` step runs `scripts/verify-build.mjs` after Astro reports `Complete!`; the October 15 run generated all 812 routes before failing the postscript heading check.
+- Action: Inspect the verification output at the end of that workflow step and run the full root build sequence when diagnosing deployment failures; Astro's completion message alone does not confirm the step passed.
+- Confidence: high
+
 **[2026-09-27] — Weather creation and publication state**
 - Observation: Weather's `createNoteDraft` constructs Markdown, but `WeatherDataService.createNote` immediately writes Writing entries into the public vault root with a classification tag and current date fields. There is no separate unpublished-draft state in this creation flow.
 - Action: Describe any proposed snapshot-copy action as creating a Post that enters the normal site sync, not as saving a private draft or sending a newsletter. Keep Substack delivery explicit when discussing how much publishing work that action would remove.

@@ -20,7 +20,7 @@ tags:
 
 Intriguing.
 
-Out of the list above, the ones applicable to me are books (~1 book/week), social media (~15m/day), podcasts (~1 hour/week), adult content (once in a while), and video games (~30m/day mostly with my brother). I don't really watch movies/shows/youtube and don't listen to too much music these days. The biggest things to give up for me right now would definitely be books, adult content, and video games. Books especially.
+Out of the list above, the ones applicable to me are books (~1 book/week), social media (~15m/day), podcasts (~1 hour/week), adult content (once in a while), and video games (~30m/day mostly with my brother). I don't really watch movies/shows/youtube and don't listen to much music these days. The biggest things to give up for me right now would definitely be books, adult content, and video games. Books especially.
 
 I feel some resistance thinking about giving up books, but also I feel that I have been in a bit of a rut in terms of not taking action in my life lately. So doing something random like this that's calling to me feels like the right move. Send it.
 

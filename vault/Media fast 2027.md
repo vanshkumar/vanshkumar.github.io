@@ -42,4 +42,5 @@ What do I think I might do with the extra time? Possibly writing more on here, p
 
 ---
 
-10/19: so far I have been playing a lot of video games with my brother, as we are in Northern Virginia for a month. We also have been traveling (flight, drive to Massanutten) so there hasn't been a ton of time. I have noticed that my desire to seek out things to read has increased – when I check my email, I feel a stronger urge to open various substacks I am subscribed to, etc.
+10/19: so far I have been playing a lot of video games with my brother, as we are in Northern Virginia for a month. We also have been traveling (flight, drive to Massanutten) so there hasn't been a ton of time. I have noticed that my desire to seek out things to read has increased – when I check my email, I feel a stronger urge to open various substacks I am subscribed to, etc. I have been more consistent about morning journaling, though I do always wonder if I'm doing more harm than good by ruminating on feelings in the journal. Sometimes it's useful for releasing things that come up when I'm triggered (which happens more frequently as I'm in Nova / around my parents), but it can be counterproductive too. Better to stare at the ceiling sometimes.
+

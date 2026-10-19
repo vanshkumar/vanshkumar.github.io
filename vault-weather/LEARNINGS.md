@@ -9,6 +9,11 @@
 
 ## Patterns and Preferences
 
+**[2026-10-19] — Draft Post cards**
+- Observation: Draft Posts/Projects remain in Weather's local Writing views and activity calculations while the public site excludes them. Their boolean `draft` frontmatter drives a dashed border, a Draft label, and the accessible button name; metadata refresh picks up publication changes.
+- Action: Keep draft state independent of activity color, use the contrasting light border on the darkest activity cards, and leave new-entry publication defaults unchanged. Install with `install:plugin`; this session verified the real component in a browser preview, but native Obsidian access was not approved, so the installed plugin still needs a reload there.
+- Confidence: high
+
 **[2026-09-27] — Post tag migration**
 - Observation: The site replaced the `essays` classification tag with `posts`; Weather uses `WRITING_TYPES` for both filtering and creation options, while saved legacy tag filters need separate migration.
 - Action: Use `posts`/Post in `WRITING_TYPES` and new drafts; map saved `essays` filters to the Posts view without accepting `essays` as a current creation type.

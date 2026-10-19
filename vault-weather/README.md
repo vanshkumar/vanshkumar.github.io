@@ -3,7 +3,7 @@
 Vault Weather is a personal Obsidian plugin for browsing local vault writing, poems, and shelf items by
 recent activity:
 
-- **Writing Weather** reads public Markdown files directly at the vault root. Its All, Posts, and
+- **Writing Weather** reads Markdown files directly at the vault root, including draft Posts. Its All, Posts, and
   Notes views mirror the public site's writing model while Terrain remains the internal collection
   name.
 - **Poems Weather** reads Markdown files directly in `poems/` and opens them in Obsidian.
@@ -41,6 +41,12 @@ Obsidian.
 Activity comes only from each note's `lastmod` or `lastMod` frontmatter. Updates from the last 30
 days receive a quadratic recency discount, and visual levels are assigned relative to other notes
 within the active Writing view, Poems surface, or Shelf surface.
+
+Posts (including Projects) with the boolean property `draft: true` stay visible in Weather with
+a dashed card border and a **Draft** label. Activity colors keep their existing meaning. Set
+`draft: false` or remove the property to publish on the site's next deployment; Weather picks up
+the property change automatically. Draft support currently applies only to Posts, and new entries
+keep the existing published-by-default behavior.
 
 Vault Weather listens for Obsidian metadata and vault file events, refreshes whenever its view
 becomes active, and recalculates activity at each UTC date boundary. The plus button creates a note

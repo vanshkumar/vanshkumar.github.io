@@ -58,7 +58,7 @@ const siteCopy = await getSiteCopy();
     <slot name="after-content" />
 
     {backlinks.length ? (
-      <section class="section">
+      <section class="section backlinks">
         <h2>{siteCopy.content.backlinksTitle}</h2>
         <ul class="list">
           {backlinks.map((link) => (

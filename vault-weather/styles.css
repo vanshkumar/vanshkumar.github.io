@@ -235,6 +235,18 @@
   background: var(--vw-surface-cool);
 }
 
+.vault-weather-view .weather-card.is-draft {
+  border: 2px dashed var(--vw-muted);
+}
+
+.vault-weather-view .weather-card.is-draft.tone-electric {
+  border-color: #fffaf0;
+}
+
+.vault-weather-view .weather-card-draft {
+  font-weight: 700;
+}
+
 .vault-weather-view .weather-card:hover {
   transform: translateY(-1px);
   box-shadow: var(--vw-shadow);

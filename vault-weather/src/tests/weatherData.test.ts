@@ -63,6 +63,30 @@ const makeApp = ({
 };
 
 describe('WeatherDataService', () => {
+  it('keeps draft posts visible locally and refreshes their publication state from metadata', async () => {
+    const frontmatter = {
+      'Draft.md': { tags: ['posts'], draft: true, lastmod: '2026-10-19' },
+      'Project.md': { tags: ['projects'], draft: true },
+      'Published.md': { tags: ['posts'], draft: false },
+      'Legacy.md': { tags: ['posts'] },
+      'Note.md': { tags: ['questions'], draft: true }
+    };
+    const { app } = makeApp({ files: Object.keys(frontmatter).map((name) => makeFile(name)), frontmatter });
+    const service = new WeatherDataService(app);
+    const data = await service.buildCollection('terrain', { mode: 'group', group: 'posts' }, new Date('2026-10-19T12:00:00Z'));
+    expect(data.items.map(({ title, draft }) => ({ title, draft }))).toEqual([
+      { title: 'Draft', draft: true },
+      { title: 'Legacy', draft: false },
+      { title: 'Project', draft: true },
+      { title: 'Published', draft: false }
+    ]);
+    expect(data.items[0].activity.recentUpdateCount).toBe(1);
+    frontmatter['Draft.md'].draft = false;
+    const refreshed = await service.buildCollection('terrain');
+    expect(refreshed.items.find((item) => item.title === 'Draft')?.draft).toBe(false);
+    expect(refreshed.items.find((item) => item.title === 'Note')?.draft).toBe(false);
+  });
+
   it('reads poems independently of Writing filters and other vault folders', async () => {
     const { app } = makeApp({
       files: [

@@ -30,6 +30,17 @@ export const classifyWritingTags = (tags, identifier = 'Writing entry') => {
 export const classifyWritingEntry = (entry) =>
   classifyWritingTags(entry?.data?.tags, `terrain/${entry?.slug ?? 'unknown'}`);
 
+export const isDraftPost = (data, identifier = 'Writing entry') => {
+  if (data.draft !== undefined && typeof data.draft !== 'boolean') {
+    throw new Error(`${identifier}: draft must be true or false (a YAML boolean).`);
+  }
+  if (data.draft !== true) return false;
+  if (classifyWritingTags(data.tags, identifier) !== 'post') {
+    throw new Error(`${identifier}: draft is currently supported only for Posts (projects/posts).`);
+  }
+  return true;
+};
+
 export const canonicalWritingPath = (entry) =>
   `/${classifyWritingEntry(entry) === 'post' ? 'posts' : 'notes'}/${entry.slug}`;
 

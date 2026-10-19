@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-10-19] — Draft Post publishing**
+- Observation: Boolean `draft: true` now excludes Posts and their logs at content sync, so routes, RSS, wiki lookup, and backlinks share the same published set. Homepage selections are filtered in generated copy and restored on publication; gray-matter caches parsed objects, so nested selection data must be copied before filtering. Word Garden counts and asset copying use separate inputs.
+- Action: Mark Posts/Projects as drafts in vault frontmatter and clear the property or set it to false to publish; Notes do not support drafts yet. Keep homepage source selections intact, test publish/unpublish cycles with fixtures, and distinguish website exclusion from repository/asset privacy. This supersedes the earlier rule that every root-level Markdown file must be public.
+- Confidence: high
+
 **[2026-10-15] — Pages build failure diagnosis**
 - Observation: The Pages workflow's `Build Astro site` step runs `scripts/verify-build.mjs` after Astro reports `Complete!`; the October 15 run generated all 812 routes before failing the postscript heading check.
 - Action: Inspect the verification output at the end of that workflow step and run the full root build sequence when diagnosing deployment failures; Astro's completion message alone does not confirm the step passed.

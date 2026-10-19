@@ -31,6 +31,7 @@ const itemFor = (key: CollectionKey): WeatherItem => {
     date: '2026-07-01',
     lastmod: '2026-07-17',
     tags: key === 'terrain' ? ['questions'] : [],
+    draft: false,
     rating: key === 'shelf' ? 5 : null,
     coverImage: key === 'shelf' ? '/assets/shelf/book.webp' : null,
     coverUrl: key === 'shelf' ? 'app://vault/assets/shelf/book.webp' : null,
@@ -64,6 +65,16 @@ const renderSurface = (
 };
 
 describe('sandboxed WeatherPage rendering', () => {
+  it('identifies draft cards visibly and in their accessible name while retaining activity color', () => {
+    const draft = { ...itemFor('terrain'), title: 'Unfinished Post', tags: ['posts'], draft: true };
+    const html = renderSurface('terrain', { mode: 'group', group: 'posts' }, [draft]);
+    expect(html).toContain('tone-electric is-draft');
+    expect(html).toContain('class="weather-card-draft">Draft · </span>');
+    expect(html).toContain('aria-label="Open Unfinished Post (draft) in Obsidian"');
+    expect(renderSurface('terrain')).not.toContain('is-draft');
+    expect(renderSurface('terrain')).not.toContain('weather-card-draft');
+  });
+
   it.each([
     ['terrain', 'Writing Weather', 'A Terrain Note', 'writing-stack'],
     ['poems', 'Poems Weather', 'A Poem', 'poems-stack'],

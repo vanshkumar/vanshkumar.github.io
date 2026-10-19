@@ -6,16 +6,21 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
 ## Collections
 
 - **terrain** → root-level `vault/*.md` → canonical `/posts/<slug>` or `/notes/<slug>`
-  - `slug?` `title?` `description?` `date?` `lastmod?` `tags?[]` `coverImage?`
+  - `slug?` `title?` `description?` `date?` `lastmod?` `tags?[]` `draft?` `coverImage?`
     `aliases?[]` `comic?` (`assetDir`, `pageCount`, `width`, `height`)
-  - Every root-level Markdown file is public. A Terrain slug must be one flat path segment.
+  - Root-level Markdown is public by default. Posts (`projects` or `posts`) may set
+    `draft: true` to stay out of the generated site, including detail/redirect routes, archives,
+    RSS, wiki lookup, and backlinks. Remove `draft` or set `draft: false` to publish on the next
+    deployment. Use a YAML boolean, not a quoted string; `draft: true` on a Note fails sync
+    because this first version supports Posts only. A Terrain slug must be one flat path segment.
   - Every entry must have at least one Post tag (`projects` or `posts`) or one Note tag
     (`hunches` or `questions`), and may not combine tags from both groups. Multiple tags within
     one group and unrelated topic tags remain valid. The Astro build fails on an invalid split.
 - **logs** → `vault/logs/<project>/` → `/posts/<project>/logs/<slug>`
   - `date` (required) `lastmod?` `parent` (required or inferred from folder) `day?` `title?`
     `aliases?[]`
-  - A log parent must resolve to a Terrain entry classified as a Post.
+  - A log parent must resolve to a Terrain entry classified as a Post. Logs belonging to draft
+    Posts are also excluded until the parent is published.
 - **shelf** → `vault/shelf/` → `/shelf/<slug>`
   - Common fields: `status` (`reading` or `recommended`), `author`, `title?`, `description?`,
     `date?`, `lastmod?`, `coverImage?`, `aliases?[]`
@@ -33,7 +38,8 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
     Garden labels through `wordGarden`. Keep exactly one `<!-- home-comic -->`
     marker where the comic belongs. Lowercase blog, notes, and poems navigation lives in the
     Markdown directory. `home.selected.title` and `home.selected.slugs` control the selected
-    posts heading and ordered list; every selected slug must resolve to a Post.
+    posts heading and ordered list; every selected slug must resolve to a Post. Draft selections
+    are omitted during sync without changing the authored list, and return when published.
   - `about.md` and `now.md` own their respective page prose.
   - `posts.md`, `notes.md`, `poems.md`, and `shelf.md` own archive titles and optional archive
     introductions. Shelf section headings and surrounding prose live directly in the
@@ -69,6 +75,9 @@ are not part of the root Terrain collection.
   folder, and removes retired generated `projects`, `questions`, and `hunches` directories.
 - `scripts/sync-assets.mjs` copies `vault/assets/` to `public/assets/`. Numeric PNG sequences in an
   asset subfolder also receive optimized copies under `web/`.
+- Drafts remain editable in Obsidian/Weather. Website exclusion does not hide committed source
+  files or assets in `vault/assets/`. The Word Garden still counts aggregate writing activity;
+  it does not publish entry titles or text.
 
 ## URLs and Compatibility
 

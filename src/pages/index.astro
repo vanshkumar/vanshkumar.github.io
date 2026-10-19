@@ -54,7 +54,7 @@ const wordGarden = getWordActivity();
 
     <div class="home-static home-static-directory" set:html={afterComic} />
 
-    <section class="home-section" aria-labelledby="selected-title">
+    {selectedPosts.length > 0 && <section class="home-section" aria-labelledby="selected-title">
       <div class="section-heading">
         <h2 id="selected-title">{home.selected.title}</h2>
       </div>
@@ -66,7 +66,7 @@ const wordGarden = getWordActivity();
           </li>
         ))}
       </ol>
-    </section>
+    </section>}
 
     <WordGarden garden={wordGarden} copy={homeEntry.data.wordGarden} />
     <SubscribeEmbed />

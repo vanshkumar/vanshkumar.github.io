@@ -2,8 +2,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
-import { canonicalWritingPath } from '../src/lib/writing.mjs';
+import { canonicalWritingPath, isDraftPost } from '../src/lib/writing.mjs';
 import { hasShelfReview } from '../src/lib/shelf.mjs';
+import { slugify } from './sync-content.mjs';
 
 const dist = path.join(process.cwd(), 'dist');
 const fileForRoute = (route) => {
@@ -24,16 +25,16 @@ const redirect = (route, target) => {
   canonical(route, target);
 };
 
-has('/', /<h2 id="selected-title">/, 'missing selected posts heading');
 has('/', /<figure class="home-comic">[\s\S]*?<img\b[^>]*alt="[^"]+"/, 'comic needs non-empty alt text');
 has('/', /class="skip-link" href="#main-content"/, 'missing skip link');
 const homeHtml = htmlFor('/');
 assert.doesNotMatch(homeHtml, /id="recent(?:-posts|-notes)?-title"/, 'homepage should use selected posts');
 assert.doesNotMatch(homeHtml, />\s*see all\s*</i, 'homepage should not show redundant see-all links');
 const selectedHtml = homeHtml.match(/<ol class="home-selected">[\s\S]*?<\/ol>/)?.[0];
-assert.ok(selectedHtml, 'homepage should contain selected posts');
 const { data: homeData } = matter(fs.readFileSync('src/content/pages/home.md', 'utf8'));
-const selectedPaths = [...selectedHtml.matchAll(/<a href="([^"]+)"/g)].map(([, href]) => href);
+assert.equal(Boolean(selectedHtml), homeData.home.selected.slugs.length > 0, 'homepage should show selected posts only when published selections exist');
+if (selectedHtml) has('/', /<h2 id="selected-title">/, 'missing selected posts heading');
+const selectedPaths = [...(selectedHtml ?? '').matchAll(/<a href="([^"]+)"/g)].map(([, href]) => href);
 assert.deepEqual(
   selectedPaths,
   homeData.home.selected.slugs.map((slug) => `/posts/${slug}`),
@@ -219,6 +220,31 @@ const walk = (directory) => fs.readdirSync(directory, { withFileTypes: true }).f
   return entry.isDirectory() ? walk(file) : [file];
 });
 
+const builtHtmlFiles = walk(dist).filter((file) => file.endsWith('.html'));
+const draftSlugs = fs.readdirSync('vault', { withFileTypes: true })
+  .filter((entry) => entry.isFile() && !entry.name.startsWith('.') && entry.name.endsWith('.md'))
+  .flatMap(({ name }) => {
+    const { data } = matter(fs.readFileSync(path.join('vault', name), 'utf8'));
+    return isDraftPost(data, `vault/${name}`) ? [slugify(data.slug ?? name)] : [];
+  });
+const writingPrefixes = new Set(['posts', 'notes', 'terrain', 'projects', 'questions', 'hunches', 'guesses', 'traces']);
+for (const slug of draftSlugs) {
+  assert.ok(!fs.existsSync(path.join(writingRoot, `${slug}.md`)), `${slug}: draft must not enter public content`);
+  for (const file of builtHtmlFiles) {
+    const [prefix, entry, taggedEntry] = path.relative(dist, file).split(path.sep);
+    const isDraftRoute = writingPrefixes.has(prefix) &&
+      (entry === slug || (prefix === 'terrain' && taggedEntry === slug));
+    assert.ok(!isDraftRoute, `${slug}: draft route, redirect, or child log was built: ${file}`);
+    const html = fs.readFileSync(file, 'utf8');
+    const backlinks = html.match(/<section class="section backlinks">[\s\S]*?<\/section>/)?.[0] ?? '';
+    assert.ok(!backlinks.includes(`href="/posts/${slug}"`), `${slug}: draft must not appear in backlinks`);
+  }
+  for (const route of ['/', '/posts', '/notes', '/terrain']) {
+    assert.ok(!htmlFor(route).includes(`href="/posts/${slug}"`), `${slug}: draft must not appear on ${route}`);
+  }
+  assert.ok(!writingLinks.includes(`https://vanshkumar.net/posts/${slug}`), `${slug}: draft must not appear in RSS`);
+}
+
 const headingDepths = (html) =>
   [...html.matchAll(/<h([1-6])(?:\s|>)/g)].map((match) => Number(match[1]));
 
@@ -229,8 +255,7 @@ assert.equal(
   'homepage should contain exactly one H1'
 );
 
-walk(dist)
-  .filter((file) => file.endsWith('.html'))
+builtHtmlFiles
   .forEach((file) => {
     const html = fs.readFileSync(file, 'utf8');
     if (!/<article class="article">/.test(html)) return;

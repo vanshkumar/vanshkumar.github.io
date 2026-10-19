@@ -127,6 +127,7 @@ const terrain = defineCollection({
     date: z.coerce.date().optional(),
     lastmod: z.coerce.date().optional(),
     tags: z.array(z.string()),
+    draft: z.boolean().optional(),
     coverImage: z.string().optional(),
     aliases: z.array(z.string()).optional(),
     comic: z

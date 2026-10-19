@@ -53,6 +53,7 @@ export interface WeatherItem {
   date: string | null;
   lastmod: string | null;
   tags: string[];
+  draft: boolean;
   rating: unknown;
   coverImage: string | null;
   coverUrl: string | null;

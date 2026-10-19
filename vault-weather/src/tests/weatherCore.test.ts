@@ -48,6 +48,7 @@ describe('weather core', () => {
       date: '2026-06-01',
       lastmod: '2026-06-10',
       tags: [],
+      draft: false,
       rating: null,
       coverImage: null,
       coverUrl: null,

@@ -80,6 +80,7 @@ export class WeatherDataService {
       const frontmatter = this.frontmatter(file);
       const lastmod = dateToIsoDate(frontmatter.lastmod ?? frontmatter.lastMod);
       const cover = this.resolveCover(frontmatter.coverImage);
+      const tags = tagsValue(frontmatter.tags);
 
       return {
         file,
@@ -88,7 +89,9 @@ export class WeatherDataService {
         vaultPath: file.path,
         date: dateToIsoDate(frontmatter.date),
         lastmod,
-        tags: tagsValue(frontmatter.tags),
+        tags,
+        draft: collectionKey === 'terrain' && frontmatter.draft === true &&
+          tags.some((tag) => writingGroupForTag(tag.toLowerCase()) === 'posts'),
         rating: frontmatter.rating ?? null,
         coverImage: stringValue(frontmatter.coverImage),
         coverUrl: cover?.url ?? null,

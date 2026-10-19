@@ -42,15 +42,18 @@ function WeatherCard({ item, collectionKey, openFile }: WeatherCardProps) {
 
   return (
     <article
-      className={`weather-card ${config.cardClassName} tone-${tone}${hasCover ? ' has-cover' : ''}`}
+      className={`weather-card ${config.cardClassName} tone-${tone}${hasCover ? ' has-cover' : ''}${item.draft ? ' is-draft' : ''}`}
     >
       <button
         className="weather-card-link"
         type="button"
         onClick={() => void openFile(item.file)}
-        aria-label={`Open ${item.title} in Obsidian`}
+        aria-label={`Open ${item.title}${item.draft ? ' (draft)' : ''} in Obsidian`}
       >
-        <span className="weather-card-meta">Updated {formatDate(updatedDate)}</span>
+        <span className="weather-card-meta">
+          {item.draft ? <span className="weather-card-draft">Draft · </span> : null}
+          Updated {formatDate(updatedDate)}
+        </span>
         {hasCover ? (
           <span className="weather-card-cover">
             <img src={item.coverUrl ?? ''} alt="" loading="lazy" aria-hidden="true" />

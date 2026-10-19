@@ -1,13 +1,13 @@
 ---
 slug: media-fast-2027
-title: "Media fast 2027"
+title: Media fast 2027
 date: 2026-10-15
-lastmod: 2026-10-15
+lastmod: 2026-10-19
 tags:
   - posts
 ---
 
-[Read this](https://cuckfucius.substack.com/p/im-quitting-all-media-consumption) recently, about a "media fast" protocol this substacker is running for the rest of 2027:
+I [read this](https://cuckfucius.substack.com/p/im-quitting-all-media-consumption) recently, about a "media fast" protocol some substacker is running for the rest of 2027:
 > - no books
 > - no movies, shows, netflix, youtube
 > - no social media / news
@@ -24,8 +24,9 @@ Out of the list above, the ones applicable to me are books (~1 book/week), socia
 
 I feel some resistance thinking about giving up books, but also I feel that I have been in a bit of a rut in terms of not taking action in my life lately. So doing something random like this that's calling to me feels like the right move. Send it.
 
-## My personal rules
+## My personal rules for this media fast
 
+Starting 10/16/26:
 - No books, with a couple small exceptions
 	- What we're reading in my book clubs (Anna Karenina, The Unconsoled)
 	- Dune 6 (because I want to finish the series before I forget all the context)
@@ -33,10 +34,12 @@ I feel some resistance thinking about giving up books, but also I feel that I ha
 - No social media
 - No podcasts
 - No music
-- No adult content
+- No adult content/masturbation
 - No video games, except for with my bro
 	- This is the one I'm debating the most about, might adjust it (eg add a time limit) based on how things go
 
-What do I think I might do with the extra time? Possibly writing more on here, possibly more [[Do nothing|staring at the wall]]. Guess we'll find out.
+What do I think I might do with the extra time? Possibly writing more on here, possibly more [[Do nothing|staring at the wall]]. Guess we'll find out. I'll capture notes & reflections below.
 
 ---
+
+10/19: so far I have been playing a lot of video games with my brother, as we are in Northern Virginia for a month. We also have been traveling (flight, drive to Massanutten) so there hasn't been a ton of time. I have noticed that my desire to seek out things to read has increased – when I check my email, I feel a stronger urge to open various substacks I am subscribed to, etc.

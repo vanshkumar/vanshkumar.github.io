@@ -1,15 +1,13 @@
 ---
 slug: do-nothing
-title: "Do nothing"
+title: Do nothing
 date: 2026-10-16
-lastmod: 2026-10-16
+lastmod: 2026-10-17
 tags:
-  - "hunches"
+  - hunches
 ---
 
-The couple months after quitting my job, I was spending a ton of time wandering around NYC parks, processing the big changes of both leaving my job & that my wife was (unexpectedly) pregnant
-
-(more on those changes here: [[10.1.2024]])
+The couple months after quitting my job, I was spending a ton of time wandering around NYC parks, processing the big changes of both leaving my job & that my wife was unexpectedly pregnant (more on those changes here: [[10.1.2024]])
 
 For some reason I decided to sit down on a park bench, set a timer for 30 minutes on my watch, and did nothing at all. I wasn't aware this was a form of meditation until way later, but the description here matches exactly what I was doing: [youtube.com/watch?v=cZ6…](https://www.youtube.com/watch?v=cZ6cdIaUZCA)
 

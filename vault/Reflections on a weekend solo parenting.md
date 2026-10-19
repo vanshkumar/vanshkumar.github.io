@@ -2,12 +2,12 @@
 slug: reflections-on-a-weekend-solo-parenting
 title: Reflections on a weekend solo parenting
 date: 2026-10-12
-lastmod: 2026-10-15
+lastmod: 2026-10-18
 tags:
   - posts
 ---
 
-This last weekend was the first time my wife Kathy left our 16 month son Rami overnight. She had a bachelerotte party in Vegas for one of her closest friends, so she left early Fri morning and came back Sun afternoon. It was my first time solo parenting and frankly it was quite a lot of fun.
+This last weekend (10/9-10/11) was the first time my wife Kathy left our 16 month son Rami overnight. She had a bachelerotte party in Vegas for one of her closest friends, so she left early Fri morning and came back Sun afternoon. It was my first time solo parenting and frankly it was quite a lot of fun.
 
 As Kathy is in (but nearing the end of) the first trimester of her pregnancy, she's been very nauseous and tired, so I already was kinda used to being the primary parent on duty while Rami was awake. That aspect wasn't as much of a shock to me. Notably, I did find myself sometimes feeling a bit of irrational and unwarranted resentment towards Kathy for having to sometimes take Rami for many hours while doing all the chores etc. Of course I felt bad about feeling any resentment here, because she has been dying from first trimester symptoms and deserves all the rest she can get while literally bringing new life into this world. I knew intellectually feeling any resentment was very silly, but I still felt the emotion once in a while anyways.
 

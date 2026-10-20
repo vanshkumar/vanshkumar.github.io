@@ -414,6 +414,16 @@
 
 ## Patterns and Preferences
 
+**[2026-10-20] — Annual review photo selection**
+- Observation: After reviewing the converted Reflecting Forwards post, the user requested removal of the final two gallery photos and their assets, leaving 18 gallery photos plus the two template illustrations.
+- Action: Keep the gallery ending at `photo-18.jpeg`; do not restore `photo-19.jpeg` or `photo-20.jpeg` from the original export.
+- Confidence: high
+
+**[2026-10-20] — Notion annual review conversion**
+- Observation: The user approved a formatting-only conversion of Reflecting Forwards, including collapsible template guidance, callout prompts, a contents list, and a responsive photo gallery. Its Notion export had 22 images outside the asset sync path and an empty list item that caused the closing quotation and screenshot to render as code. The user specified creation on December 17, 2025 and last modification on January 4, 2026.
+- Action: Keep its wording, prompts, answers, unanswered items, and images intact. Use the existing Markdown callout renderer (`abstract`, `quote`, and CSS-styled `gallery`), preserve the dates with `exclude_modified_update: true`, and keep the images under `vault/assets/reflecting-forwards/`. Check rendered text/link fidelity and image hashes when adapting Notion markup; flatten empty list wrappers around nested quotations to prevent accidental code blocks.
+- Confidence: high
+
 **[2026-09-27] — Homepage signup order and concise writing labels**
 - Observation: The user moved the homepage signup below the Word Garden, requested lowercase writing links in homepage prose, and shortened the visible label from Working notes to Notes.
 - Action: Render the homepage as selected posts, Word Garden, then signup. Use `blog`, `notes`, and `poems` in the homepage Markdown directory, with `Notes` in the shared writing navigation and archive title. This supersedes the earlier Working notes label and signup-above-garden placement.

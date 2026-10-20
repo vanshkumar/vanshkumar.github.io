@@ -701,6 +701,96 @@ h3 {
   text-align: center;
 }
 
+/* Annual-review imports keep their text in Markdown and use native callouts. */
+.prose .review-toc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.prose .review-toc ul {
+  padding: 0;
+  list-style: none;
+}
+
+.prose:has(.review-toc) details.callout[data-callout="abstract"] {
+  --callout-rgb: 107, 94, 81;
+  color: inherit;
+  font-size: 0.9rem;
+}
+
+.prose:has(.review-toc) details.callout[data-callout="abstract"] > * + * {
+  margin-top: 1rem;
+}
+
+.prose:has(.review-toc) details.callout[data-callout="abstract"] > :is(h2, h3) {
+  margin-top: 2rem;
+}
+
+.prose:has(.review-toc) h4 {
+  margin-top: 2.5rem;
+  line-height: 1.5;
+}
+
+.prose:has(.review-toc) h4 + .callout {
+  margin-top: 0.85rem;
+}
+
+.prose:has(.review-toc) blockquote[data-callout="quote"] {
+  margin-bottom: 0;
+  font-size: 0.88rem;
+  color: inherit;
+}
+
+.prose:has(.review-toc) blockquote[data-callout="quote"] > * + * {
+  margin-top: 0.65rem;
+}
+
+.prose:has(.review-toc) :is(h2, h3, h4) {
+  scroll-margin-top: 1.5rem;
+}
+
+.prose blockquote[data-callout="gallery"] {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+}
+
+.prose [data-callout="gallery"] > .callout-title {
+  grid-column: 1 / -1;
+}
+
+.prose [data-callout="gallery"] > p {
+  min-width: 0;
+  margin: 0;
+}
+
+.prose [data-callout="gallery"] a {
+  display: block;
+  border: 0;
+  text-decoration: none;
+}
+
+.prose [data-callout="gallery"] img {
+  width: 100%;
+  height: auto;
+}
+
+.prose [data-callout="gallery"] a:focus-visible,
+.prose:has(.review-toc) summary:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  .prose blockquote[data-callout="gallery"] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

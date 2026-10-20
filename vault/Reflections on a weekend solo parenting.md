@@ -2,7 +2,7 @@
 slug: reflections-on-a-weekend-solo-parenting
 title: Reflections on a weekend solo parenting
 date: 2026-10-12
-lastmod: 2026-10-18
+lastmod: 2026-10-20
 tags:
   - posts
 ---

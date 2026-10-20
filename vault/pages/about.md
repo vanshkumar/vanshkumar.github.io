@@ -1,19 +1,19 @@
 ---
 title: About
-lastmod: 2026-10-03
+lastmod: 2026-10-20
 date: 2026-05-27
 ---
 ## This site
 is a living workspace for my projects and writing.
 
-My goal with my writing is to **discover what I think**. Everything on this site should be thought of as a **perpetual draft**, with all mistakes mine.
+My goal with my writing is to **discover what I think** and **connect with people** ([email me!](mailto:vanshkumar95@gmail.com)). Everything on this site should be thought of as a perpetual draft, with all mistakes mine.
 
 ## I
 am Vansh Kumar and the one who sculpts the terrain of this site. I live in Pasadena, CA.
 
 ![[DSCF0096.jpg]]
 
-I spend my time pursuing whatever interests me. I was a tech lead & manager at Alphabet in a past life.
+I spend my time pursuing whatever interests me. I was a tech lead & engineering manager at Alphabet in a past life.
 
 Some of my interests:
 - Developmental neuroscience
@@ -29,6 +29,8 @@ Some of my interests:
 - Cognitive psychology
 - History of science
 - Child development/parenting
+- Physics
+- Nonlinear dynamics
 
 ## Inspo
 - [Andy Matuschak](https://andymatuschak.org/)

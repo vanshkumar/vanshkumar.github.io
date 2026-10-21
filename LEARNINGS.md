@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-10-20] — The Unconsoled Shelf cover source**
+- Observation: The Unconsoled uses the Vintage paperback cover (ISBN 9780679735878), available from Penguin Random House at `https://images2.penguinrandomhouse.com/cover/9780679735878` as a 292×450 JPEG.
+- Action: Use this publisher source when refreshing `vault/assets/shelf/the-unconsoled.jpg`.
+- Confidence: high
+
 **[2026-10-19] — Draft Post publishing**
 - Observation: Boolean `draft: true` now excludes Posts and their logs at content sync, so routes, RSS, wiki lookup, and backlinks share the same published set. Homepage selections are filtered in generated copy and restored on publication; gray-matter caches parsed objects, so nested selection data must be copied before filtering. Word Garden counts and asset copying use separate inputs.
 - Action: Mark Posts/Projects as drafts in vault frontmatter and clear the property or set it to false to publish; Notes do not support drafts yet. Keep homepage source selections intact, test publish/unpublish cycles with fixtures, and distinguish website exclusion from repository/asset privacy. This supersedes the earlier rule that every root-level Markdown file must be public.

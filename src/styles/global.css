@@ -1840,6 +1840,14 @@ h3,
   font-size: 0.8rem;
 }
 
+.prose .reading-log-summary {
+  margin: 2.5rem 0 0;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
 @media (max-width: 480px) {
   .reading-log-entry {
     column-gap: 0.65rem;

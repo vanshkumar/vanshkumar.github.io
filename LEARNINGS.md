@@ -434,6 +434,11 @@
 
 ## Patterns and Preferences
 
+**[2026-10-21] — Reading-log summary footer**
+- Observation: The user wants a muted entry count and updated date beneath the continuous reading log, matching the supplied reference. Reading records have no modification-date field.
+- Action: Count rendered read events, including any retained rereads, and derive the updated date from the latest Git commit touching `vault/reading-log/`. Keep the labels in Shelf page frontmatter and do not substitute the build date or latest completion date.
+- Confidence: high
+
 **[2026-10-21] — Continuous reading log**
 - Observation: The user prefers one continuous reading log headed “Log,” with the year included in each row's date instead of per-year headings and sections.
 - Action: Keep the log newest-first with dates such as `Oct 9, 2026`; omit year navigation and grouping, and reserve enough date-column width for the full date on mobile. Author `Log` in `vault/pages/shelf.md` and preserve the existing `#reading-log` link on the section wrapper.

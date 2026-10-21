@@ -1,4 +1,5 @@
 ---
+import { execFileSync } from 'node:child_process';
 import { getCollection, getEntry } from 'astro:content';
 import ContentLayout from '../layouts/ContentLayout.astro';
 import { titleFromSlug } from '../lib/content';
@@ -43,6 +44,13 @@ const recommendations = books.filter((book) => book.data.status === 'recommended
 const readingLog = getReadingLog(await getCollection('reading-log'));
 const notesSlugs = new Set(books.filter(hasShelfReview).map((book) => book.slug));
 const readingCopy = shelfCopy.readingLog;
+// Use record history, not the build date or the latest book's completion date.
+const readingLogUpdated = execFileSync('git', ['log', '-1', '--format=%cs', '--', 'vault/reading-log'], {
+  encoding: 'utf8'
+}).trim();
+const updatedDateLabel = readingLogUpdated ? new Intl.DateTimeFormat('en-US', {
+  month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC'
+}).format(new Date(`${readingLogUpdated}T00:00:00Z`)) : null;
 ---
 
 <ContentLayout
@@ -157,5 +165,9 @@ const readingCopy = shelfCopy.readingLog;
         </li>
       ))}
     </ol>
+    <p class="reading-log-summary">
+      {formatCopy(readingLog.length === 1 ? readingCopy.entryCountSingularTemplate : readingCopy.entryCountPluralTemplate, { count: readingLog.length.toLocaleString('en-US') })}
+      {readingLogUpdated && <>{' · '}{readingCopy.updatedLabel}{' '}<time datetime={readingLogUpdated}>{updatedDateLabel}</time></>}
+    </p>
   </section>
 </ContentLayout>

@@ -67,6 +67,8 @@ Math uses `$...$` inline and `$$...$$` on separate lines for display equations, 
 Markdown file with its authors and completed reads in frontmatter. The Shelf
 renders these reads newest-first in one continuous list below the recommendation
 grid, with the year included in each row's date.
+The footer counts the displayed reads and shows the latest Git commit date for
+`vault/reading-log/`, so unrelated builds do not change its updated date.
 To log a new book, add a file such as `vault/reading-log/example-book.md`:
 
 ```yaml

@@ -8,6 +8,9 @@ shelf:
   readingLog:
     unknownDateLabel: Date unknown
     notesLinkLabel: my notes
+    entryCountSingularTemplate: "{count} entry"
+    entryCountPluralTemplate: "{count} entries"
+    updatedLabel: Updated
 date: 2026-08-23
 ---
 

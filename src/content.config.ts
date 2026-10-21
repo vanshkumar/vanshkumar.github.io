@@ -97,7 +97,10 @@ const shelfCopy = z.object({
   coverAltTemplate: z.string(),
   readingLog: z.object({
     unknownDateLabel: z.string(),
-    notesLinkLabel: z.string()
+    notesLinkLabel: z.string(),
+    entryCountSingularTemplate: z.string(),
+    entryCountPluralTemplate: z.string(),
+    updatedLabel: z.string()
   })
 });
 

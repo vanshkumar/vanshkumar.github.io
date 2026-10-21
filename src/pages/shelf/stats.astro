@@ -49,7 +49,12 @@ const payload = JSON.stringify({events,c,years}).replace(/</g,'\\u003c');
 <script>
   import { todayInNewYork } from '../../lib/reading-stats.mjs';
   import { renderStats, renderComparison } from '../../lib/reading-stats-render.mjs';
+  import { bindPublicationChart } from '../../lib/reading-publication-client.mjs';
+  import { bindTrendCharts } from '../../lib/reading-trends-client.mjs';
   const {events,c,years} = JSON.parse(document.getElementById('reading-stats-data')!.textContent!);
+  bindPublicationChart(document.getElementById('stats-results')!, events);
+  bindTrendCharts(document.getElementById('stats-results')!);
+  bindTrendCharts(document.getElementById('stats-compare-results')!);
   const period = document.getElementById('stats-period') as HTMLFormElement;
   const comparison = document.getElementById('stats-compare-controls') as HTMLFormElement;
   const control = (form:HTMLFormElement,name:string) => form.elements.namedItem(name) as HTMLSelectElement;

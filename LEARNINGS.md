@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-10-21] — Publication chart layout and interaction**
+- Observation: The user found the publication-year scatterplot with only endpoint labels and identical dots visually weak. The replacement uses regular year/date guides, fiction/nonfiction color and shape, and a selectable book detail row. Stats filters replace the entire results subtree.
+- Action: Keep chart positions proportional while labels and HTML point controls retain readable sizes on narrow screens. Delegate selection and keyboard handling to the persistent results container so interactions survive year/month changes; resolve overlapping pointer hit targets by distance to the marker center, not DOM stacking. Keep publication and completion dates unchanged when laying out points.
+- Confidence: high
+
 **[2026-10-21] — Reading metadata enrichment and work identity**
 - Observation: The eight-record enrichment leaves only two page-count gaps: Living from a Place of Surrender and The Untethered Soul at Work have no verified print editions. The Science of Enlightenment was imported as an older recorded course, but the user tentatively identified the 2016 book How Meditation Works. Prime Intellect's author dates its first public release to 2002, distinct from writing it in 1994.
 - Action: Preserve the two unknown page counts instead of borrowing counts from other Michael Singer books. Keep the tentative Science of Enlightenment work match and print-reference sources documented in its Markdown body. Use 2002 for Prime Intellect's original publication year. Store enrichment evidence per record; mood/pace estimates must be identified as editorial inference, not StoryGraph aggregates or the user's ratings. The later title/ISBN corrections intentionally trigger the archived importer's identity guard; keep that guard and enrich local records directly.
@@ -438,6 +443,16 @@
 - Confidence: high
 
 ## Patterns and Preferences
+
+**[2026-10-21] — Stats visual hierarchy and chart treatment**
+- Observation: The user approved the publication chart's richer treatment and requested similarly appealing graphs and statistics while retaining the page structure. Publication year belongs within Highlights rather than beside it as a top-level section.
+- Action: Keep Publication year as an H3 inside Highlights. Use readable HTML axes, selectable monthly bars/area charts, consistent green/rust comparison colors, and prominent values with quieter labels. Preserve closed breakdowns and book drilldowns; leave unknown page counts and months after a chart's current/YTD cutoff as gaps rather than zero points.
+- Confidence: high
+
+**[2026-10-21] — Collapsed Stats breakdowns**
+- Observation: The user finds the genre, mood, and other breakdown lists too long when shown in full, including New authors in Highlights.
+- Action: Keep each breakdown panel and New authors closed by default, with a clickable heading that reveals the existing bars and book drilldowns. Reset them to collapsed when the period changes.
+- Confidence: high
 
 **[2026-10-21] — Minimal Stats presentation**
 - Observation: The user finds period-status sentences, repeated metadata-coverage counts, and explanatory commentary on Stats unnecessary. They want the data and controls to stand on their own.

@@ -123,7 +123,7 @@ assert.ok(statsPayload, 'Stats should include locally generated data');
 assert.deepEqual(statsPayload.events.map(event => event.id), expectedReads.map(event => event.id), 'Stats must use the same completed reads as the log');
 assert.match(statsHtml, /id="stats-period"/, 'Stats should support period selection');
 assert.match(statsHtml, /id="stats-compare-controls"/, 'Stats should support year comparison');
-if (expectedReads.length) assert.match(statsHtml, /<details class="stats-bar">/, 'Chart breakdowns should be keyboard accessible');
+if (expectedReads.length) assert.match(statsHtml, /<details class="stats-bar"[^>]*><summary>/, 'Chart breakdowns should be keyboard accessible');
 assert.match(statsHtml, /<table>/, 'Charts need text/table alternatives');
 assert.doesNotMatch(statsHtml, /<script[^>]+src="https?:\/\/[^"]*thestorygraph/, 'Stats must not load StoryGraph scripts');
 

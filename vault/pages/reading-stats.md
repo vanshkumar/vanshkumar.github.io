@@ -23,6 +23,8 @@ readingStats:
   moods: Moods
   pace: Pace
   type: Fiction & nonfiction
+  fiction: Fiction
+  nonfiction: Nonfiction
   length: Book length
   authors: Authors
   unknown: Unknown

@@ -52,7 +52,7 @@ test('empty periods produce stable empty summaries',()=>{
 test('rendered titles and chart labels cannot inject HTML',async()=>{
  const fs=await import('node:fs/promises');const {default:matter}=await import('gray-matter');
  const c=matter(await fs.readFile(new URL('../../vault/pages/reading-stats.md',import.meta.url),'utf8')).data.readingStats;
- const html=renderStats(statsEvents([book('<script>bad</script>','2024-01-01',{genres:['<img src=x onerror=bad>']})]),{year:'2024'},c);
+ const html=renderStats(statsEvents([book('<script>bad</script>','2024-01-01',{publicationYear:2001,genres:['<img src=x onerror=bad>']})]),{year:'2024'},c);
  assert.ok(!html.includes('<script>bad'));assert.ok(!html.includes('<img src=x'));
  assert.ok(html.includes('&lt;script&gt;bad'));
 });

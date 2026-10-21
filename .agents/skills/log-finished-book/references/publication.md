@@ -66,7 +66,11 @@ assume this desktop chat's permissions exist in a different cloud environment.
 Find the **push** run for the actual new commit in `.github/workflows/deploy.yml`.
 The generic GitHub fetch tool can read:
 
-`https://api.github.com/repos/vanshkumar/vanshkumar.github.io/actions/workflows/deploy.yml/runs?head_sha=<COMMIT>&event=push`
+`https://api.github.com/repos/vanshkumar/vanshkumar.github.io/actions/runs?head_sha=<COMMIT>&event=push`
+
+Select the result whose `path` is `.github/workflows/deploy.yml`. The connector
+accepts this repository-run endpoint; its URL allowlist may reject the otherwise
+valid workflow-specific `/actions/workflows/deploy.yml/runs` endpoint.
 
 Some convenience workflow tools only report pull-request runs, so an empty result
 from those tools is not evidence about Pages deployment. Inspect the exact run

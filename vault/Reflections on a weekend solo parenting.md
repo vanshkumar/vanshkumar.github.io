@@ -5,6 +5,7 @@ date: 2026-10-12
 lastmod: 2026-10-20
 tags:
   - posts
+description: "spoiler: it was surprisingly fun"
 ---
 
 This last weekend (10/9-10/11) was the first time my wife Kathy left our 16 month old son Rami overnight. She had a bachelerotte party for one of her closest friends in Vegas, so she left early Fri morning and came back Sun afternoon. It was my first time solo parenting and surprisingly it was quite a lot of fun.

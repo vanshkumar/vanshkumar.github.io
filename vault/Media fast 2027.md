@@ -5,6 +5,7 @@ date: 2026-10-15
 lastmod: 2026-10-20
 tags:
   - posts
+description: a random experiment
 ---
 
 I [read this](https://cuckfucius.substack.com/p/im-quitting-all-media-consumption) recently, about a "media fast" protocol some substacker is running for the rest of 2027:

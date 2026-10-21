@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-10-21] — Stats dropdown arrow spacing**
+- Observation: The native arrows in the Stats year/month and comparison selects sit against the right border despite extra text padding. All five controls share `.stats-controls select`.
+- Action: Keep native select behavior but use `appearance: none` with a centered SVG chevron inset `.75rem` and reserved right padding in the shared Stats rule. Preserve the 44px minimum height, disabled Month styling, and native-arrow fallback in forced-color mode.
+- Confidence: high
+
 **[2026-10-21] — Publication chart layout and interaction**
 - Observation: The user found the publication-year scatterplot with only endpoint labels and identical dots visually weak. The replacement uses regular year/date guides, fiction/nonfiction color and shape, and a selectable book detail row. Stats filters replace the entire results subtree.
 - Action: Keep chart positions proportional while labels and HTML point controls retain readable sizes on narrow screens. Delegate selection and keyboard handling to the persistent results container so interactions survive year/month changes; resolve overlapping pointer hit targets by distance to the marker center, not DOM stacking. Keep publication and completion dates unchanged when laying out points.

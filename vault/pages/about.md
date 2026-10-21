@@ -20,7 +20,7 @@ Some of my interests:
 - Education & culture
 - Watching a lot of tennis
 - Playing all racket sports – tennis, paddle/pop tennis, ping pong, you name it
-- [Doing Nothing](https://www.youtube.com/watch?v=cZ6cdIaUZCA)
+- [[Do nothing||Doing nothing]]
 - Playing Rocket League
 - Staring at trees
 - Reading

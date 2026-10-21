@@ -434,6 +434,11 @@
 
 ## Patterns and Preferences
 
+**[2026-10-21] — Continuous reading log**
+- Observation: The user prefers one continuous reading log headed “Log,” with the year included in each row's date instead of per-year headings and sections.
+- Action: Keep the log newest-first with dates such as `Oct 9, 2026`; omit year navigation and grouping, and reserve enough date-column width for the full date on mobile. Author `Log` in `vault/pages/shelf.md` and preserve the existing `#reading-log` link on the section wrapper.
+- Confidence: high
+
 **[2026-10-21] — Reading-history duplicate review**
 - Observation: The user reviewed all five repeated books one at a time. They removed the count-only undated reads for *2001: A Space Odyssey*, *The End of Eternity*, *The Gods Themselves*, and *Why Greatness Cannot Be Planned*, keeping December 6, 2025, May 5, 2025, April 28, 2025, and April 20, 2025 respectively. They confirmed reading *Good Work* twice but chose to retain only September 23, 2024, removing August 28, 2025 from the log.
 - Action: Preserve these choices in the corresponding `vault/reading-log/` records and leave the original CSV untouched. Review any future repeated books individually before changing their history; neither an exported read count nor a confirmed reread determines which entries the user wants displayed.

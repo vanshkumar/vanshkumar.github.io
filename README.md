@@ -65,7 +65,8 @@ Math uses `$...$` inline and `$$...$$` on separate lines for display equations, 
 
 `vault/reading-log/` is the source of truth for reading history. Each book is a
 Markdown file with its authors and completed reads in frontmatter. The Shelf
-renders these reads newest-first, grouped by year, below the recommendation grid.
+renders these reads newest-first in one continuous list below the recommendation
+grid, with the year included in each row's date.
 To log a new book, add a file such as `vault/reading-log/example-book.md`:
 
 ```yaml
@@ -86,7 +87,7 @@ dates quoted. A book with `reads: []` is not shown in the completed reading log.
 The StoryGraph migration retained all 141 book records, including to-read and
 did-not-finish books. The untouched export is archived in
 `imports/storygraph/2026-10-21.csv`; future edits belong in the Markdown records,
-not that snapshot. Reads recorded without dates appear under Undated reads;
+not that snapshot. Reads recorded without dates appear last with “Date unknown”;
 review corrections belong in the local records. Author, edition, format, and available start/finish data are
 preserved for future statistics. This export contains no page counts, genres,
 ratings, or moods; those would need to be added before building those views.

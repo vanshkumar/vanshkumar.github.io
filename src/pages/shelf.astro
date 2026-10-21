@@ -4,7 +4,7 @@ import ContentLayout from '../layouts/ContentLayout.astro';
 import { titleFromSlug } from '../lib/content';
 import { hasShelfReview } from '../lib/shelf.mjs';
 import { formatCopy } from '../lib/site-copy';
-import { amazonBookUrl, formatReadingDate, groupReadingLog } from '../lib/reading-log.mjs';
+import { amazonBookUrl, formatReadingDate, getReadingLog } from '../lib/reading-log.mjs';
 
 const pageEntry = await getEntry('pages', 'shelf');
 if (!pageEntry?.data.shelf) {
@@ -40,7 +40,7 @@ const books = (await getCollection('shelf')).sort((a, b) => {
 });
 const currentlyReading = books.filter((book) => book.data.status === 'reading');
 const recommendations = books.filter((book) => book.data.status === 'recommended');
-const readingGroups = groupReadingLog(await getCollection('reading-log'));
+const readingLog = getReadingLog(await getCollection('reading-log'));
 const notesSlugs = new Set(books.filter(hasShelfReview).map((book) => book.slug));
 const readingCopy = shelfCopy.readingLog;
 ---
@@ -135,39 +135,27 @@ const readingCopy = shelfCopy.readingLog;
     ) : null}
   </section>
 
-  <section class="shelf-section shelf-reading-log">
+  <section id="reading-log" class="shelf-section shelf-reading-log">
     <div class="shelf-section-copy" set:html={readingLogCopy} />
-    <nav class="reading-log-years" aria-label={readingCopy.navigationLabel}>
-      {readingGroups.map(({ year }) => (
-        <a href={`#reading-${year}`}>
-          {year === 'undated' ? readingCopy.undatedLabel : year}
-        </a>
+    <ol class="reading-log-list" role="list">
+      {readingLog.map(({ id, finished, book }) => (
+        <li class="reading-log-entry" data-read-id={id}>
+          {finished && finished.length > 4 ? (
+            <time class="reading-log-date" datetime={finished}>{formatReadingDate(finished)}</time>
+          ) : (
+            <span class="reading-log-date">{finished ?? readingCopy.unknownDateLabel}</span>
+          )}
+          <div class="reading-log-book">
+            <a class="reading-log-title" href={amazonBookUrl(book)} target="_blank" rel="noopener noreferrer">{book.title}</a>
+            <span class="reading-log-author">
+              {' '}{formatCopy(shelfCopy.bylineTemplate, { author: book.authors.join(', ') })}
+              {book.shelfSlug && notesSlugs.has(book.shelfSlug) ? (
+                <>{' '}<a class="reading-log-notes" href={`/shelf/${book.shelfSlug}`}>({readingCopy.notesLinkLabel})</a></>
+              ) : null}
+            </span>
+          </div>
+        </li>
       ))}
-    </nav>
-    {readingGroups.map(({ year, reads }) => (
-      <section class="reading-log-year" aria-labelledby={`reading-${year}`}>
-        <h3 id={`reading-${year}`}>{year === 'undated' ? readingCopy.undatedLabel : year}</h3>
-        <ol class="reading-log-list" role="list">
-          {reads.map(({ id, finished, book }) => (
-            <li class="reading-log-entry" data-read-id={id}>
-              {finished && finished.length > 4 ? (
-                <time class="reading-log-date" datetime={finished}>{formatReadingDate(finished)}</time>
-              ) : (
-                <span class="reading-log-date">{finished ?? readingCopy.unknownDateLabel}</span>
-              )}
-              <div class="reading-log-book">
-                <a class="reading-log-title" href={amazonBookUrl(book)} target="_blank" rel="noopener noreferrer">{book.title}</a>
-                <span class="reading-log-author">
-                  {' '}{formatCopy(shelfCopy.bylineTemplate, { author: book.authors.join(', ') })}
-                  {book.shelfSlug && notesSlugs.has(book.shelfSlug) ? (
-                    <>{' '}<a class="reading-log-notes" href={`/shelf/${book.shelfSlug}`}>({readingCopy.notesLinkLabel})</a></>
-                  ) : null}
-                </span>
-              </div>
-            </li>
-          ))}
-        </ol>
-      </section>
-    ))}
+    </ol>
   </section>
 </ContentLayout>

@@ -25,9 +25,9 @@ const monthFormatter = new Intl.DateTimeFormat('en-US', { month: 'short', timeZo
 export const formatReadingDate = (date) => {
   if (!isReadingDate(date)) throw new Error(`Invalid reading date: ${date}`);
   if (date.length === 4) return date;
-  const [, month, day] = date.split('-').map(Number);
+  const [year, month, day] = date.split('-').map(Number);
   const label = monthFormatter.format(new Date(Date.UTC(2000, month - 1, 1)));
-  return day ? `${label} ${day}` : label;
+  return day ? `${label} ${day}, ${year}` : `${label} ${year}`;
 };
 
 export const amazonBookUrl = (book) => {
@@ -54,7 +54,7 @@ export const amazonBookUrl = (book) => {
 
 // One event per completed read, including undated reads and rereads. Current
 // status is independent: a book can be on the to-read list for a future reread.
-export const groupReadingLog = (books) => {
+export const getReadingLog = (books) => {
   const events = books.flatMap(({ slug, data }) => (data.reads ?? []).map((read, index) => {
     const finished = readingDateString(read.finished);
     if (finished !== null && !isReadingDate(finished)) {
@@ -67,11 +67,5 @@ export const groupReadingLog = (books) => {
     a.book.title.localeCompare(b.book.title, 'en', { sensitivity: 'base' }) ||
     a.id.localeCompare(b.id, 'en')
   );
-  const groups = new Map();
-  for (const event of events) {
-    const year = event.finished?.slice(0, 4) ?? 'undated';
-    if (!groups.has(year)) groups.set(year, { year, reads: [] });
-    groups.get(year).reads.push(event);
-  }
-  return [...groups.values()];
+  return events;
 };

@@ -1803,20 +1803,6 @@ h3,
   line-height: 1.35;
 }
 
-.reading-log-years {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.2rem;
-  font-family: var(--sans);
-  font-size: 0.78rem;
-}
-
-.reading-log-year h3 {
-  margin: 2.4rem 0 1.2rem;
-  font-size: 1.3rem;
-  scroll-margin-top: 2rem;
-}
-
 .prose .reading-log-list {
   margin: 0;
   padding: 0;
@@ -1825,7 +1811,7 @@ h3,
 
 .reading-log-entry {
   display: grid;
-  grid-template-columns: 5rem minmax(0, 1fr);
+  grid-template-columns: 6rem minmax(0, 1fr);
   column-gap: 1rem;
   align-items: baseline;
   line-height: 1.5;
@@ -1840,6 +1826,7 @@ h3,
   font-family: var(--sans);
   font-size: 0.72rem;
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 .reading-log-book {
@@ -1855,7 +1842,6 @@ h3,
 
 @media (max-width: 480px) {
   .reading-log-entry {
-    grid-template-columns: 4rem minmax(0, 1fr);
     column-gap: 0.65rem;
   }
 

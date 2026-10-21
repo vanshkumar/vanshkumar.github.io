@@ -6,8 +6,6 @@ shelf:
   reviewLinkLabel: notes
   coverAltTemplate: "{title} cover"
   readingLog:
-    navigationLabel: Reading years
-    undatedLabel: Undated reads
     unknownDateLabel: Date unknown
     notesLinkLabel: my notes
 date: 2026-08-23
@@ -25,4 +23,4 @@ because they somehow changed how I see the world.
 
 <!-- shelf-reading-log -->
 
-## Reading log
+## Log

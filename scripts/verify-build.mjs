@@ -4,7 +4,7 @@ import path from 'node:path';
 import matter from 'gray-matter';
 import { canonicalWritingPath, isDraftPost } from '../src/lib/writing.mjs';
 import { hasShelfReview } from '../src/lib/shelf.mjs';
-import { groupReadingLog } from '../src/lib/reading-log.mjs';
+import { getReadingLog } from '../src/lib/reading-log.mjs';
 import { slugify } from './sync-content.mjs';
 
 const dist = path.join(process.cwd(), 'dist');
@@ -108,7 +108,7 @@ const readingBooks = fs.readdirSync(readingRoot, { recursive: true })
     slug: name.replace(/\.md$/, '').replace(/\\/g, '/'),
     data: matter(fs.readFileSync(path.join(readingRoot, name), 'utf8')).data
   }));
-const expectedReads = groupReadingLog(readingBooks).flatMap(({ reads }) => reads);
+const expectedReads = getReadingLog(readingBooks);
 assert.deepEqual(
   [...readingLogHtml.matchAll(/data-read-id="([^"]+)"/g)].map(([, id]) => id),
   expectedReads.map(({ id }) => id),

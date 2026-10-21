@@ -96,8 +96,6 @@ const shelfCopy = z.object({
   reviewLinkLabel: z.string(),
   coverAltTemplate: z.string(),
   readingLog: z.object({
-    navigationLabel: z.string(),
-    undatedLabel: z.string(),
     unknownDateLabel: z.string(),
     notesLinkLabel: z.string()
   })

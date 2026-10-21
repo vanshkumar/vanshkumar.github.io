@@ -4,6 +4,7 @@ import path from 'node:path';
 import matter from 'gray-matter';
 import { canonicalWritingPath, isDraftPost } from '../src/lib/writing.mjs';
 import { hasShelfReview } from '../src/lib/shelf.mjs';
+import { groupReadingLog } from '../src/lib/reading-log.mjs';
 import { slugify } from './sync-content.mjs';
 
 const dist = path.join(process.cwd(), 'dist');
@@ -89,6 +90,7 @@ has('/poems', /<h1 id="poems-title">/, 'missing Poems archive heading');
 const shelfHtml = htmlFor('/shelf');
 const currentlyReadingStart = shelfHtml.indexOf('class="shelf-section shelf-current-section"');
 const recommendationsStart = shelfHtml.indexOf('class="shelf-section shelf-recommendations-section"');
+const readingLogStart = shelfHtml.indexOf('class="shelf-section shelf-reading-log"');
 assert.notEqual(currentlyReadingStart, -1, 'Shelf needs a Currently reading section');
 assert.notEqual(recommendationsStart, -1, 'Shelf needs a recommended books section');
 assert.ok(
@@ -96,7 +98,23 @@ assert.ok(
   'Currently reading should appear before recommended books'
 );
 const currentlyReadingHtml = shelfHtml.slice(currentlyReadingStart, recommendationsStart);
-const recommendationsHtml = shelfHtml.slice(recommendationsStart);
+assert.ok(readingLogStart > recommendationsStart, 'Reading log should appear after recommendations');
+const recommendationsHtml = shelfHtml.slice(recommendationsStart, readingLogStart);
+const readingLogHtml = shelfHtml.slice(readingLogStart);
+const readingRoot = path.join(process.cwd(), 'src/content/reading-log');
+const readingBooks = fs.readdirSync(readingRoot, { recursive: true })
+  .filter((name) => name.endsWith('.md'))
+  .map((name) => ({
+    slug: name.replace(/\.md$/, '').replace(/\\/g, '/'),
+    data: matter(fs.readFileSync(path.join(readingRoot, name), 'utf8')).data
+  }));
+const expectedReads = groupReadingLog(readingBooks).flatMap(({ reads }) => reads);
+assert.deepEqual(
+  [...readingLogHtml.matchAll(/data-read-id="([^"]+)"/g)].map(([, id]) => id),
+  expectedReads.map(({ id }) => id),
+  'Reading log should render every completed read once, in date order'
+);
+assert.match(readingLogHtml, /<h2\b/, 'Reading log needs a Markdown-authored heading');
 const shelfStylesheetHref = shelfHtml.match(/<link rel="stylesheet" href="([^"]+\.css)">/)?.[1];
 assert.ok(shelfStylesheetHref, 'Shelf needs a built stylesheet');
 const shelfCss = fs.readFileSync(

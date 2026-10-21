@@ -5,6 +5,11 @@ shelf:
   bylineTemplate: by {author}
   reviewLinkLabel: notes
   coverAltTemplate: "{title} cover"
+  readingLog:
+    navigationLabel: Reading years
+    undatedLabel: Undated reads
+    unknownDateLabel: Date unknown
+    notesLinkLabel: my notes
 date: 2026-08-23
 ---
 
@@ -17,3 +22,7 @@ I like to read with friends & discuss. [Email me](mailto:vanshkumar95@gmail.com)
 
 ## Books I recommend
 because they somehow changed how I see the world.
+
+<!-- shelf-reading-log -->
+
+## Reading log

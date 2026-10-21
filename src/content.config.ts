@@ -1,5 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { writingClassificationIssue } from './lib/writing.mjs';
+import { isReadingDate, readingDateString, validReadingInterval } from './lib/reading-log.mjs';
 
 const optionalText = z.string().optional().nullable();
 
@@ -93,7 +94,13 @@ const homeCopy = z.object({
 const shelfCopy = z.object({
   bylineTemplate: z.string(),
   reviewLinkLabel: z.string(),
-  coverAltTemplate: z.string()
+  coverAltTemplate: z.string(),
+  readingLog: z.object({
+    navigationLabel: z.string(),
+    undatedLabel: z.string(),
+    unknownDateLabel: z.string(),
+    notesLinkLabel: z.string()
+  })
 });
 
 const terrainCopy = z.object({
@@ -180,6 +187,31 @@ const shelf = defineCollection({
   })
 });
 
+const readingDate = z.preprocess(readingDateString, z.string().refine(isReadingDate, {
+  message: 'Use a valid YYYY-MM-DD, YYYY-MM, or YYYY calendar date'
+}));
+
+const readingLog = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string().min(1),
+    authors: z.array(z.string().min(1)).min(1),
+    // An explicit null completion date means a completed read with no known date.
+    reads: z.array(z.object({
+      started: readingDate.optional(),
+      finished: readingDate.nullable()
+    }).refine(validReadingInterval, 'A read cannot finish before it starts')).default([]),
+    status: z.enum(['read', 'currently-reading', 'to-read', 'did-not-finish']).optional(),
+    isbn: z.string().optional(),
+    amazonAsin: z.string().regex(/^[A-Z0-9]{10}$/).optional(),
+    contributors: z.string().optional(),
+    format: z.string().optional(),
+    dateAdded: readingDate.optional(),
+    owned: z.boolean().optional(),
+    shelfSlug: z.string().regex(/^[a-z0-9-]+$/).optional()
+  })
+});
+
 const poems = defineCollection({
   type: 'content',
   schema: z.object({
@@ -213,6 +245,7 @@ export const collections = {
   terrain,
   logs,
   shelf,
+  'reading-log': readingLog,
   poems,
   pages
 };

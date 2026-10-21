@@ -60,3 +60,41 @@ content first. Edit markdown in `vault/`, not `src/content/`.
   `coffee-rush/`, and `montessori-books/`, then assembles the final Pages artifact.
 
 Math uses `$...$` inline and `$$...$$` on separate lines for display equations, rendered at build time with KaTeX. Escape literal currency signs as `\$` so prices remain prose.
+
+## Reading Log
+
+`vault/reading-log/` is the source of truth for reading history. Each book is a
+Markdown file with its authors and completed reads in frontmatter. The Shelf
+renders these reads newest-first, grouped by year, below the recommendation grid.
+To log a new book, add a file such as `vault/reading-log/example-book.md`:
+
+```yaml
+---
+title: Example Book
+authors:
+  - Example Author
+reads:
+  - finished: '2026-10-21'
+---
+```
+
+For a reread, append another item to the same book's `reads` list. Optionally add
+`started` to that item. Dates can be `'YYYY-MM-DD'`, `'YYYY-MM'`, or `'YYYY'`;
+use `finished: null` for a completed read whose date is unknown. Keep partial
+dates quoted. A book with `reads: []` is not shown in the completed reading log.
+
+The StoryGraph migration retained all 141 book records, including to-read and
+did-not-finish books. The untouched export is archived in
+`imports/storygraph/2026-10-21.csv`; future edits belong in the Markdown records,
+not that snapshot. Reads recorded without dates appear under Undated reads;
+review corrections belong in the local records. Author, edition, format, and available start/finish data are
+preserved for future statistics. This export contains no page counts, genres,
+ratings, or moods; those would need to be added before building those views.
+
+Curated recommendations and their notes remain in `vault/shelf/`. Reading-log
+titles link to Amazon using a print ISBN, or a title/author search when a product
+identifier is unavailable. Optional `amazonAsin` supplies a specific product link
+for any edition. An optional `shelfSlug` adds a separate `(my notes)` link after
+the author when that Shelf entry has notes.
+Section headings and placement live in `vault/pages/shelf.md`. Run the normal
+site build to publish updated records; no StoryGraph connection is needed.

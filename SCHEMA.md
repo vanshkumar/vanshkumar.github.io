@@ -31,6 +31,19 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
   - `title?` `description?` `date?` `lastmod?` `aliases?[]`
   - Poems are listed newest-first on `/poems`. Ordinary single newlines inside poem paragraphs
     remain visible as line breaks, while blank lines separate stanzas.
+- **reading-log** → `vault/reading-log/` → inline on `/shelf#reading-log`
+  - `title`, `authors[]`, `reads[]` (`finished` required, `started?`), `status?`,
+    `isbn?`, `amazonAsin?`, `contributors?`, `format?`, `dateAdded?`, `owned?`, `shelfSlug?`
+  - One Markdown file per book, with one `reads` item per completion, including
+    rereads. Calendar dates are strings in `YYYY-MM-DD`, `YYYY-MM`, or `YYYY`
+    format. `finished: null` retains a completed read with an unknown date.
+  - Optional `status` is `read`, `currently-reading`, `to-read`, or `did-not-finish`.
+    The completed log derives from `reads`, independently of the current status;
+    to-read and abandoned books without completed reads are retained but omitted.
+  - These records have no detail routes or wiki index entries. `shelfSlug` can
+    connect a separate `(my notes)` link to an existing Shelf notes route without
+    adding a recommendation. Titles link to Amazon; `amazonAsin` overrides the
+    derived print-ISBN link or title/author search fallback.
 - **pages** → `vault/pages/` → static pages, archive copy, and shared site copy
   - Common fields: `title?` `description?` `date?` `lastmod?` `aliases?[]`
     `heroTitle?` `heroAccent?`
@@ -44,7 +57,7 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
   - `posts.md`, `notes.md`, `poems.md`, and `shelf.md` own archive titles and optional archive
     introductions. Shelf section headings and surrounding prose live directly in the
     `shelf.md` Markdown body around `<!-- shelf-currently-reading -->` and
-    `<!-- shelf-recommendations -->`; its `shelf` frontmatter is limited to generated-copy
+    `<!-- shelf-recommendations -->`, and `<!-- shelf-reading-log -->`; its `shelf` frontmatter is limited to generated-copy
     templates that depend on book data.
   - `terrain.md` owns the legacy archive hero and section labels through `terrain`.
   - `site.md` owns shared visitor-facing copy through `site`, including the site
@@ -54,7 +67,7 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
   - Structured page-copy fields are validated in `src/content.config.ts`; text
     templates use named placeholders such as `{title}`, `{author}`, or `{date}`.
 
-Folders such as `scratch/`, `writing inbox/`, `_voice_inbox/`, `logs/`, `poems/`, `shelf/`, and `pages/`
+Folders such as `scratch/`, `writing inbox/`, `_voice_inbox/`, `logs/`, `poems/`, `shelf/`, `reading-log/`, and `pages/`
 are not part of the root Terrain collection.
 
 ## Sync Rules

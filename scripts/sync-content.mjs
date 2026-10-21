@@ -7,7 +7,7 @@ import { isDraftPost } from '../src/lib/writing.mjs';
 const root = path.dirname(fileURLToPath(new URL(import.meta.url)));
 const repoRoot = path.resolve(root, '..');
 
-const collections = ['terrain', 'logs', 'pages', 'shelf', 'poems'];
+const collections = ['terrain', 'logs', 'pages', 'shelf', 'poems', 'reading-log'];
 const retiredCollections = ['projects', 'questions', 'hunches'];
 const customSlugCollections = new Set(['terrain']);
 
@@ -138,7 +138,12 @@ export const syncContent = (sourceRoot = repoRoot) => {
         };
       }
 
-      const output = matter.stringify(parsed.content, data);
+      let output = matter.stringify(parsed.content, data);
+      if (collection === 'reading-log' && typeof data.isbn === 'string') {
+        // gray-matter's YAML 1.1 writer leaves some leading-zero ISBNs bare;
+        // Astro's YAML 1.2 reader would turn those identifiers into numbers.
+        output = output.replace(/^isbn:.*$/m, `isbn: ${JSON.stringify(data.isbn)}`);
+      }
       const targetPath = path.join(targetDir, `${cleanRel}.md`);
       ensureDir(path.dirname(targetPath));
       fs.writeFileSync(targetPath, output);

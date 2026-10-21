@@ -2,6 +2,21 @@
 
 ## What Has Worked
 
+**[2026-10-21] — Reading log migration from StoryGraph**
+- Observation: The user chose the local reading log as their source of truth and plans to leave StoryGraph, with stats views deferred. The export contains 124 finished books, 12 did-not-finish books, and 5 to-read books. Its read counts total 129, but only 125 completion dates are recorded; four earlier reads lack dates. It includes 16 start dates but no page counts, genres, ratings, or moods.
+- Action: Maintain book records in `vault/reading-log/`, append rereads to `reads`, and retain missing completion dates as explicit nulls. Derive the public log from completed reads rather than current status or the Shelf's editorial dates. Keep `imports/storygraph/2026-10-21.csv` as an immutable migration archive; add future stats metadata to the local records instead of resyncing StoryGraph. This supersedes StoryGraph as the comprehensive tracking source.
+- Confidence: high
+
+**[2026-10-21] — Reading-log ISBN serialization**
+- Observation: gray-matter's YAML 1.1 writer leaves `0671212095` and `0679733736` unquoted, while Astro's YAML 1.2 reader treats them as numbers, losing the identifier type during content validation.
+- Action: Keep ISBNs quoted in reading-log source and explicitly quote the `isbn` line after serializing that collection in `scripts/sync-content.mjs`; do not coerce numeric ISBNs back to strings because leading zeros may already be lost.
+- Confidence: high
+
+**[2026-10-21] — Shelf reading-history integration research**
+- Observation: The user is considering a dated reading log below the Shelf's existing sections, inspired by `https://stevekrouse.com/books`. The current Shelf schema only supports `reading` and `recommended`, with no explicit completion-date field. StoryGraph's official API roadmap remains marked Long-term; its supported library export is available at `https://app.thestorygraph.com/user-export`.
+- Action: For a future full-history import, inspect the user's StoryGraph CSV and use its recorded reading dates rather than the Shelf entries' existing `date` metadata. Account for undated books and rereads, and keep the archive's data separate from curated recommendation membership. Recheck API availability before promising automatic synchronization.
+- Confidence: high
+
 **[2026-10-20] — The Unconsoled Shelf cover source**
 - Observation: The Unconsoled uses the Vintage paperback cover (ISBN 9780679735878), available from Penguin Random House at `https://images2.penguinrandomhouse.com/cover/9780679735878` as a 292×450 JPEG.
 - Action: Use this publisher source when refreshing `vault/assets/shelf/the-unconsoled.jpg`.
@@ -418,6 +433,16 @@
 - Confidence: high
 
 ## Patterns and Preferences
+
+**[2026-10-21] — Reading-history duplicate review**
+- Observation: The user reviewed all five repeated books one at a time. They removed the count-only undated reads for *2001: A Space Odyssey*, *The End of Eternity*, *The Gods Themselves*, and *Why Greatness Cannot Be Planned*, keeping December 6, 2025, May 5, 2025, April 28, 2025, and April 20, 2025 respectively. They confirmed reading *Good Work* twice but chose to retain only September 23, 2024, removing August 28, 2025 from the log.
+- Action: Preserve these choices in the corresponding `vault/reading-log/` records and leave the original CSV untouched. Review any future repeated books individually before changing their history; neither an exported read count nor a confirmed reread determines which entries the user wants displayed.
+- Confidence: high
+
+**[2026-10-21] — Reading-log title and notes links**
+- Observation: The user wants reading-log titles to link to Amazon and a separate `(my notes)` link after the author when a book has an authored Shelf entry.
+- Action: Keep the row order as linked title, author, then optional linked `(my notes)`. Use `shelfSlug` plus a non-empty Shelf body to determine notes availability, and keep the curated cover grids' existing link behavior unchanged.
+- Confidence: high
 
 **[2026-10-20] — Annual review photo selection**
 - Observation: After reviewing the converted Reflecting Forwards post, the user requested removal of the final two gallery photos and their assets, leaving 18 gallery photos plus the two template illustrations.

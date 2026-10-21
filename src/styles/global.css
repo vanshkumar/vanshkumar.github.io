@@ -1803,6 +1803,67 @@ h3,
   line-height: 1.35;
 }
 
+.reading-log-years {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.2rem;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+}
+
+.reading-log-year h3 {
+  margin: 2.4rem 0 1.2rem;
+  font-size: 1.3rem;
+  scroll-margin-top: 2rem;
+}
+
+.prose .reading-log-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reading-log-entry {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  column-gap: 1rem;
+  align-items: baseline;
+  line-height: 1.5;
+}
+
+.prose .reading-log-entry + .reading-log-entry {
+  margin-top: 0.85rem;
+}
+
+.reading-log-date {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.reading-log-book {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 0.9rem;
+}
+
+.reading-log-author {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 480px) {
+  .reading-log-entry {
+    grid-template-columns: 4rem minmax(0, 1fr);
+    column-gap: 0.65rem;
+  }
+
+  .reading-log-author {
+    display: block;
+  }
+}
+
 .shelf-cover {
   border-color: var(--border);
   border-radius: 0.15rem;

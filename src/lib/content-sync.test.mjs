@@ -56,6 +56,20 @@ test('drafts omit Posts and logs, retain local source, and return when published
   }
 });
 
+test('reading history sync preserves leading-zero edition identifiers and undated rereads', (t) => {
+  const vault = fixture(t);
+  const book = {
+    title: 'A Book', authors: ['An Author'], isbn: '0671212095',
+    reads: [{ finished: null }, { started: '2026-01-01', finished: '2026-01-20' }]
+  };
+  vault.write('reading-log/A Book.md', book);
+  vault.sync();
+  const synced = vault.read('reading-log/a-book.md');
+  assert.deepEqual(synced.data, book);
+  assert.match(synced.matter, /isbn: "0671212095"/, 'ISBN must remain quoted for YAML 1.2 readers');
+  assert.equal(vault.exists('terrain/a-book.md'), false);
+});
+
 test('draft sync rejects ambiguous flags and unsupported Note drafts', (t) => {
   const vault = fixture(t);
   for (const draft of ['true', 'false', null, 1]) {

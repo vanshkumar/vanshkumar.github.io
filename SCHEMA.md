@@ -41,8 +41,10 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
     `pace` is `slow`, `medium`, or `fast`.
   - Each metadata source has `url`, exact calendar date `retrieved`, and optional
     `fields[]` naming the metadata it supports. Labels are locally owned after import.
-  - `title` and `authors` remain required even when a future capture interface
-    collects less information: enrichment must complete required fields before insertion.
+  - `title` and `authors` remain required even when mobile capture collects less
+    information: enrichment must complete required fields before insertion.
+    Astro and the capture helper share `src/lib/reading-record.mjs`; new captures
+    additionally require an exact completion date, metadata sources, and provenance.
   - One Markdown file per book, with one `finished` date. Calendar dates are strings
     in `YYYY-MM-DD`, `YYYY-MM`, or `YYYY` format. `finished: null` retains a completed
     book with an unknown date; omitted `finished` means no completion.

@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-10-21] — Finished-book capture validation**
+- Observation: Astro's `astro/zod` export works in the standalone Node writer, allowing the canonical reading-record schema and YAML serializer to be shared with content sync. Historical partial/null dates remain valid while new captures require an exact date. The writer can update unfinished records without losing body notes or Shelf links, and refuses updates without a fresh SHA-256 digest.
+- Action: Keep reading-record validation in `src/lib/reading-record.mjs`; use `npm run log-book` with enriched input for mobile captures. Refresh and inspect existing records before updating, and distinguish helper writes, GitHub commits, and confirmed Pages deployments in chat reports.
+- Confidence: high
+
 **[2026-10-21] — Stats dropdown arrow spacing**
 - Observation: The native arrows in the Stats year/month and comparison selects sit against the right border despite extra text padding. All five controls share `.stats-controls select`.
 - Action: Keep native select behavior but use `appearance: none` with a centered SVG chevron inset `.75rem` and reserved right padding in the shared Stats rule. Preserve the 44px minimum height, disabled Month styling, and native-arrow fallback in forced-color mode.

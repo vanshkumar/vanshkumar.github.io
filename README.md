@@ -69,7 +69,10 @@ renders completed books newest-first in one continuous list below the recommenda
 grid, with the year included in each row's date.
 The footer counts the displayed completions and shows the latest Git commit date for
 `vault/reading-log/`, so unrelated builds do not change its updated date.
-To log a new book, add a file such as `vault/reading-log/example-book.md`:
+For mobile capture, send a book and completion date in the dedicated Codex Cloud
+Reading log chat. The repository's `log-finished-book` skill researches and validates
+the record before publishing; see [setup and usage](docs/reading-log-workflow.md).
+For a manual edit, a minimal record such as `vault/reading-log/example-book.md` is:
 
 ```yaml
 ---
@@ -112,10 +115,11 @@ year/month/all-time views, clickable book breakdowns, and two-year comparisons
 Copy lives in `vault/pages/reading-stats.md`; shared calculations and rendering
 live in `src/lib/reading-stats*.mjs`.
 
-Keep `title` and a nonempty `authors` list required. A future phone capture flow
-may accept only a book and completion date, but enrichment must supply the
-canonical required fields **before** adding the record. That capture workflow is
-not implemented here. Statistical metadata can be filled once and edited locally.
+Keep `title` and a nonempty `authors` list required. The phone workflow accepts
+only a book and completion date, then enriches the canonical record before insertion.
+`npm run log-book` validates enriched internal JSON with the shared content schema;
+it defaults to a dry run and requires `--write` to change the reading log.
+Statistical metadata can also be filled once and edited locally.
 
 The supported statistical metadata is `pageCount`, `publicationYear`, `genres`,
 `moods`, `pace`, and `bookType`. Cite the fields supplied by each source in

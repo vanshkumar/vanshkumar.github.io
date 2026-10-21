@@ -8,6 +8,7 @@
     "dev": "npm run sync-content && npm run sync-assets && astro dev",
     "build": "npm run sync-content && npm run sync-assets && astro build && npm run verify-build",
     "normalize-content": "node scripts/normalize-content.mjs",
+    "log-book": "node scripts/log-finished-book.mjs",
     "postinstall": "npm run clean-lock",
     "preview": "astro preview",
     "sync-content": "node scripts/sync-content.mjs",

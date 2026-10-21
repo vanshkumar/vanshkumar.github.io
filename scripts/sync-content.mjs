@@ -3,6 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
 import { isDraftPost } from '../src/lib/writing.mjs';
+import { serializeReadingRecord } from '../src/lib/reading-record.mjs';
 
 const root = path.dirname(fileURLToPath(new URL(import.meta.url)));
 const repoRoot = path.resolve(root, '..');
@@ -138,16 +139,9 @@ export const syncContent = (sourceRoot = repoRoot) => {
         };
       }
 
-      let output = matter.stringify(parsed.content, data);
-      if (collection === 'reading-log') {
-        // YAML 1.1 can leave leading-zero identifiers bare; YAML 1.2 would
-        // parse those as numbers. Keep both reference and product IDs quoted.
-        for (const key of ['isbn', 'amazonAsin']) {
-          if (typeof data[key] === 'string') {
-            output = output.replace(new RegExp(`^${key}:.*$`, 'm'), `${key}: ${JSON.stringify(data[key])}`);
-          }
-        }
-      }
+      const output = collection === 'reading-log'
+        ? serializeReadingRecord(parsed.content, data)
+        : matter.stringify(parsed.content, data);
       const targetPath = path.join(targetDir, `${cleanRel}.md`);
       ensureDir(path.dirname(targetPath));
       fs.writeFileSync(targetPath, output);

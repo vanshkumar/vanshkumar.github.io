@@ -1,6 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { writingClassificationIssue } from './lib/writing.mjs';
-import { isReadingDate, readingDateString } from './lib/reading-log.mjs';
+import { readingRecordSchema } from './lib/reading-record.mjs';
 
 const optionalText = z.string().optional().nullable();
 
@@ -188,36 +188,9 @@ const shelf = defineCollection({
   })
 });
 
-const readingDate = z.preprocess(readingDateString, z.string().refine(isReadingDate, {
-  message: 'Use a valid YYYY-MM-DD, YYYY-MM, or YYYY calendar date'
-}));
-
 const readingLog = defineCollection({
   type: 'content',
-  schema: z.object({
-    title: z.string().min(1),
-    authors: z.array(z.string().min(1)).min(1),
-    // Null means completed with no known date; omitted means not completed.
-    finished: readingDate.nullable().optional(),
-    status: z.enum(['read', 'currently-reading', 'to-read', 'did-not-finish']).optional(),
-    isbn: z.string().optional(),
-    amazonAsin: z.string().regex(/^[A-Z0-9]{10}$/).optional(),
-    contributors: z.string().optional(),
-    pageCount: z.number().int().positive().optional(),
-    bookType: z.enum(['fiction', 'nonfiction']).optional(),
-    genres: z.array(z.string().min(1)).optional(),
-    moods: z.array(z.string().min(1)).optional(),
-    pace: z.enum(['slow', 'medium', 'fast']).optional(),
-    publicationYear: z.number().int().min(1).max(9999).optional(),
-    metadataSources: z.array(z.object({
-      url: z.string().url(),
-      retrieved: z.preprocess(readingDateString, z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine(isReadingDate)),
-      fields: z.array(z.string()).optional()
-    })).optional(),
-    dateAdded: readingDate.optional(),
-    owned: z.boolean().optional(),
-    shelfSlug: z.string().regex(/^[a-z0-9-]+$/).optional()
-  })
+  schema: readingRecordSchema
 });
 
 const poems = defineCollection({

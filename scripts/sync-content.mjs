@@ -139,10 +139,14 @@ export const syncContent = (sourceRoot = repoRoot) => {
       }
 
       let output = matter.stringify(parsed.content, data);
-      if (collection === 'reading-log' && typeof data.isbn === 'string') {
-        // gray-matter's YAML 1.1 writer leaves some leading-zero ISBNs bare;
-        // Astro's YAML 1.2 reader would turn those identifiers into numbers.
-        output = output.replace(/^isbn:.*$/m, `isbn: ${JSON.stringify(data.isbn)}`);
+      if (collection === 'reading-log') {
+        // YAML 1.1 can leave leading-zero identifiers bare; YAML 1.2 would
+        // parse those as numbers. Keep both reference and product IDs quoted.
+        for (const key of ['isbn', 'amazonAsin']) {
+          if (typeof data[key] === 'string') {
+            output = output.replace(new RegExp(`^${key}:.*$`, 'm'), `${key}: ${JSON.stringify(data[key])}`);
+          }
+        }
       }
       const targetPath = path.join(targetDir, `${cleanRel}.md`);
       ensureDir(path.dirname(targetPath));

@@ -2,9 +2,14 @@
 
 ## What Has Worked
 
+**[2026-10-21] — Reading metadata enrichment and work identity**
+- Observation: The eight-record enrichment leaves only two page-count gaps: Living from a Place of Surrender and The Untethered Soul at Work have no verified print editions. The Science of Enlightenment was imported as an older recorded course, but the user tentatively identified the 2016 book How Meditation Works. Prime Intellect's author dates its first public release to 2002, distinct from writing it in 1994.
+- Action: Preserve the two unknown page counts instead of borrowing counts from other Michael Singer books. Keep the tentative Science of Enlightenment work match and print-reference sources documented in its Markdown body. Use 2002 for Prime Intellect's original publication year. Store enrichment evidence per record; mood/pace estimates must be identified as editorial inference, not StoryGraph aggregates or the user's ratings. The later title/ISBN corrections intentionally trigger the archived importer's identity guard; keep that guard and enrich local records directly.
+- Confidence: high
+
 **[2026-10-21] — Reading log migration from StoryGraph**
 - Observation: The user chose the local reading log as their source of truth and plans to leave StoryGraph, with stats views deferred. The export contains 124 finished books, 12 did-not-finish books, and 5 to-read books. Its read counts total 129, but only 125 completion dates are recorded; four earlier reads lack dates. It includes 16 start dates but no page counts, genres, ratings, or moods.
-- Action: Maintain book records in `vault/reading-log/`, append rereads to `reads`, and retain missing completion dates as explicit nulls. Derive the public log from completed reads rather than current status or the Shelf's editorial dates. Keep `imports/storygraph/2026-10-21.csv` as an immutable migration archive; add future stats metadata to the local records instead of resyncing StoryGraph. This supersedes StoryGraph as the comprehensive tracking source.
+- Action: Maintain book records in `vault/reading-log/` and retain unknown completion dates as explicit nulls. The later simplified Stats model supersedes the original `reads` array with one `finished` date per book. Derive the public log from completed reads rather than current status or the Shelf's editorial dates. Keep `imports/storygraph/2026-10-21.csv` as an immutable migration archive; add future stats metadata to the local records instead of resyncing StoryGraph. This supersedes StoryGraph as the comprehensive tracking source.
 - Confidence: high
 
 **[2026-10-21] — Reading-log ISBN serialization**
@@ -434,9 +439,29 @@
 
 ## Patterns and Preferences
 
+**[2026-10-21] — Minimal Stats presentation**
+- Observation: The user finds period-status sentences, repeated metadata-coverage counts, and explanatory commentary on Stats unnecessary. They want the data and controls to stand on their own.
+- Action: Omit visible status announcements, coverage captions/fractions, introductory prose, and methodology notes from `/shelf/stats`. Keep concise labels, chart/book drilldowns, empty states, Estimated pages, and the year-to-date cutoff. Keep missing-data handling in the calculations; this supersedes the earlier preference to display coverage on the page.
+- Confidence: high
+
+**[2026-10-21] — Simplified Stats model and coverage audit**
+- Observation: The user removed format, language, series, reread, completion-duration, and audiobook-length tracking from both Stats and stored records. All 124 completed books have one exact date; the 2026 36/37 coverage gap is The Motern Method for pages/classifications and The Metamorphosis of Prime Intellect for publication year. Eight completed books have at least one metadata gap overall.
+- Action: Store a single top-level `finished` date per book and retain only page count, original publication year, fiction/nonfiction, genres, moods, and pace as statistical metadata. Treat coverage gaps separately from missing completions. Preserve existing Amazon destinations with explicit, quoted `amazonAsin` values, quote both identifiers during content sync, and skip retired fields when reading the immutable import archive.
+- Confidence: high
+
+**[2026-10-21] — Reading stats and reference editions**
+- Observation: StoryGraph editions are often placeholders for this reading history. The user wants completion-based year/month/all-time stats and year comparisons, while logging only finished books. Imported genre, mood, and pace labels are now locally owned; the original publication year for The Metamorphosis of Prime Intellect conflicts across StoryGraph editions.
+- Action: Keep stats at `/shelf/stats`, label reference-length totals Estimated pages, and use book-level page counts as reference estimates. Show unknown coverage and withhold disputed publication years until verified; the later simplified Stats scope removes format, language, series, and timing fields. Keep source evidence and gaps in the dated metadata snapshot.
+- Confidence: high
+
+**[2026-10-21] — Capture input versus canonical reading records**
+- Observation: The planned phone interface will accept book + completion date, then use an LLM to enrich the entry before adding it to the log. The user explicitly wants author information to remain required in stored records.
+- Action: Preserve the nonempty `authors` schema requirement; do not introduce pending canonical records or relax validation to mirror minimal capture input. Future enrichment belongs before insertion, and daily progress logging is outside the intended workflow.
+- Confidence: high
+
 **[2026-10-21] — Reading-log summary footer**
 - Observation: The user wants a muted entry count and updated date beneath the continuous reading log, matching the supplied reference. Reading records have no modification-date field.
-- Action: Count rendered read events, including any retained rereads, and derive the updated date from the latest Git commit touching `vault/reading-log/`. Keep the labels in Shelf page frontmatter and do not substitute the build date or latest completion date.
+- Action: Count rendered completions and derive the updated date from the latest Git commit touching `vault/reading-log/`. Keep the labels in Shelf page frontmatter and do not substitute the build date or latest completion date.
 - Confidence: high
 
 **[2026-10-21] — Continuous reading log**

@@ -115,6 +115,18 @@ assert.deepEqual(
   'Reading log should render every completed read once, in date order'
 );
 assert.match(readingLogHtml, /<h2\b/, 'Reading log needs a Markdown-authored heading');
+const statsHtml = htmlFor('/shelf/stats');
+assert.ok(shelfHtml.includes('href="/shelf/stats"'), 'Shelf should link to its stats');
+canonical('/shelf/stats', '/shelf/stats');
+const statsPayload = JSON.parse(statsHtml.match(/<script id="reading-stats-data" type="application\/json">([\s\S]*?)<\/script>/)?.[1] ?? 'null');
+assert.ok(statsPayload, 'Stats should include locally generated data');
+assert.deepEqual(statsPayload.events.map(event => event.id), expectedReads.map(event => event.id), 'Stats must use the same completed reads as the log');
+assert.match(statsHtml, /id="stats-period"/, 'Stats should support period selection');
+assert.match(statsHtml, /id="stats-compare-controls"/, 'Stats should support year comparison');
+if (expectedReads.length) assert.match(statsHtml, /<details class="stats-bar">/, 'Chart breakdowns should be keyboard accessible');
+assert.match(statsHtml, /<table>/, 'Charts need text/table alternatives');
+assert.doesNotMatch(statsHtml, /<script[^>]+src="https?:\/\/[^"]*thestorygraph/, 'Stats must not load StoryGraph scripts');
+
 const shelfStylesheetHref = shelfHtml.match(/<link rel="stylesheet" href="([^"]+\.css)">/)?.[1];
 assert.ok(shelfStylesheetHref, 'Shelf needs a built stylesheet');
 const shelfCss = fs.readFileSync(

@@ -2,11 +2,30 @@
 title: Second Foundation
 authors:
   - Isaac Asimov
-reads:
-  - finished: '2024-12-14'
+finished: '2024-12-14'
 status: read
-isbn: '9780553803730'
-format: hardcover
+isbn: "9780553803730"
 dateAdded: '2024-12-29'
 owned: false
+pageCount: 256
+publicationYear: 1953
+bookType: fiction
+genres:
+  - classics
+  - science fiction
+moods:
+  - adventurous
+  - mysterious
+pace: medium
+metadataSources:
+  - url: 'https://app.thestorygraph.com/books-read/vanshkumar95?year=0'
+    retrieved: '2026-10-21'
+    fields:
+      - pageCount
+      - publicationYear
+      - bookType
+      - genres
+      - moods
+      - pace
+amazonAsin: "0553803735"
 ---

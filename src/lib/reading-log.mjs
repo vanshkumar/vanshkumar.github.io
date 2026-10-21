@@ -12,15 +12,6 @@ export const readingDateString = (value) =>
     ? value.toISOString().slice(0, 10)
     : value;
 
-export const validReadingInterval = ({ started, finished }) => {
-  if (!started || !finished) return true;
-  // Partial dates express uncertainty; reject only definitely reversed intervals.
-  const first = started.padEnd(10, '-01').slice(0, 10);
-  const last = finished.length === 4 ? `${finished}-12-31`
-    : finished.length === 7 ? `${finished}-31` : finished;
-  return first <= last;
-};
-
 const monthFormatter = new Intl.DateTimeFormat('en-US', { month: 'short', timeZone: 'UTC' });
 export const formatReadingDate = (date) => {
   if (!isReadingDate(date)) throw new Error(`Invalid reading date: ${date}`);
@@ -32,36 +23,20 @@ export const formatReadingDate = (date) => {
 
 export const amazonBookUrl = (book) => {
   if (book.amazonAsin) return `https://www.amazon.com/dp/${book.amazonAsin}`;
-  const isbn = (book.isbn ?? '').replace(/[\s-]/g, '').toUpperCase();
-  if (!['digital', 'audio'].includes(book.format)) {
-    if (/^\d{9}[\dX]$/.test(isbn)) {
-      const sum = [...isbn].reduce((total, digit, i) => total + (digit === 'X' ? 10 : Number(digit)) * (10 - i), 0);
-      if (sum % 11 === 0) return `https://www.amazon.com/dp/${isbn}`;
-    }
-    if (/^978\d{10}$/.test(isbn)) {
-      const sum = [...isbn].reduce((total, digit, i) => total + Number(digit) * (i % 2 ? 3 : 1), 0);
-      if (sum % 10 === 0) {
-        const body = isbn.slice(3, 12);
-        const check = (11 - [...body].reduce((total, digit, i) => total + Number(digit) * (10 - i), 0) % 11) % 11;
-        return `https://www.amazon.com/dp/${body}${check === 10 ? 'X' : check}`;
-      }
-    }
-  }
-  // Kindle, audio, 979-prefix editions, and books without an ISBN need an ASIN
-  // lookup. A title/author search remains useful until an explicit ASIN is set.
+  // A reference ISBN alone does not establish the correct Amazon product.
+  // Existing product destinations are retained as explicit ASINs in the records.
   return `https://www.amazon.com/s?k=${encodeURIComponent([book.title, ...book.authors].join(' '))}`;
 };
 
-// One event per completed read, including undated reads and rereads. Current
-// status is independent: a book can be on the to-read list for a future reread.
+// One completion per book. Completion date and current shelf status are independent.
 export const getReadingLog = (books) => {
-  const events = books.flatMap(({ slug, data }) => (data.reads ?? []).map((read, index) => {
-    const finished = readingDateString(read.finished);
+  const events = books.filter(({ data }) => data.finished !== undefined).map(({ slug, data }) => {
+    const finished = readingDateString(data.finished);
     if (finished !== null && !isReadingDate(finished)) {
-      throw new Error(`Invalid completion date in ${slug}, read ${index + 1}`);
+      throw new Error(`Invalid completion date in ${slug}`);
     }
-    return { ...read, finished, id: `${slug}-${index + 1}`, book: data };
-  }));
+    return { finished, id: `${slug}-1`, book: data };
+  });
   events.sort((a, b) =>
     (b.finished ?? '').localeCompare(a.finished ?? '') ||
     a.book.title.localeCompare(b.book.title, 'en', { sensitivity: 'base' }) ||

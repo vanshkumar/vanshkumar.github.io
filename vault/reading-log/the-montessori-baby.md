@@ -5,12 +5,30 @@ title: >-
 authors:
   - Simone Davies
   - Junnifa Uzodike
-reads:
-  - finished: '2026-02-26'
+finished: '2026-02-26'
 status: read
-isbn: '9781523512409'
+isbn: "9781523512409"
 contributors: Sanny Van Loon (Illustrator)
-format: paperback
 dateAdded: '2026-02-27'
 owned: false
+pageCount: 278
+publicationYear: 2021
+bookType: nonfiction
+genres:
+  - reference
+moods:
+  - informative
+  - lighthearted
+pace: slow
+metadataSources:
+  - url: 'https://app.thestorygraph.com/books-read/vanshkumar95?year=0'
+    retrieved: '2026-10-21'
+    fields:
+      - pageCount
+      - publicationYear
+      - bookType
+      - genres
+      - moods
+      - pace
+amazonAsin: "1523512407"
 ---

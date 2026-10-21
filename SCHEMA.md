@@ -31,19 +31,28 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
   - `title?` `description?` `date?` `lastmod?` `aliases?[]`
   - Poems are listed newest-first on `/poems`. Ordinary single newlines inside poem paragraphs
     remain visible as line breaks, while blank lines separate stanzas.
-- **reading-log** → `vault/reading-log/` → inline on `/shelf#reading-log`
-  - `title`, `authors[]`, `reads[]` (`finished` required, `started?`), `status?`,
-    `isbn?`, `amazonAsin?`, `contributors?`, `format?`, `dateAdded?`, `owned?`, `shelfSlug?`
-  - One Markdown file per book, with one `reads` item per completion, including
-    rereads. Calendar dates are strings in `YYYY-MM-DD`, `YYYY-MM`, or `YYYY`
-    format. `finished: null` retains a completed read with an unknown date.
+- **reading-log** → `vault/reading-log/` → inline on `/shelf#reading-log`, aggregated at `/shelf/stats`
+  - `title`, nonempty `authors[]`, `finished?`, `status?`, `isbn?`, `amazonAsin?`,
+    `contributors?`, `dateAdded?`, `owned?`, `shelfSlug?`, `pageCount?`, `bookType?`,
+    `genres?[]`, `moods?[]`, `pace?`, `publicationYear?`, `metadataSources?[]`
+  - ISBN and positive integer `pageCount` describe a reference edition, not
+    necessarily the edition read. `publicationYear` is the original publication
+    year (1–9999), not an edition date. `bookType` is `fiction` or `nonfiction`;
+    `pace` is `slow`, `medium`, or `fast`.
+  - Each metadata source has `url`, exact calendar date `retrieved`, and optional
+    `fields[]` naming the metadata it supports. Labels are locally owned after import.
+  - `title` and `authors` remain required even when a future capture interface
+    collects less information: enrichment must complete required fields before insertion.
+  - One Markdown file per book, with one `finished` date. Calendar dates are strings
+    in `YYYY-MM-DD`, `YYYY-MM`, or `YYYY` format. `finished: null` retains a completed
+    book with an unknown date; omitted `finished` means no completion.
   - Optional `status` is `read`, `currently-reading`, `to-read`, or `did-not-finish`.
-    The completed log derives from `reads`, independently of the current status;
-    to-read and abandoned books without completed reads are retained but omitted.
+    The completed log derives from `finished`, independently of the current status;
+    to-read and abandoned books without a completion are retained but omitted.
   - These records have no detail routes or wiki index entries. `shelfSlug` can
     connect a separate `(my notes)` link to an existing Shelf notes route without
-    adding a recommendation. Titles link to Amazon; `amazonAsin` overrides the
-    derived print-ISBN link or title/author search fallback.
+    adding a recommendation. Titles link to Amazon using `amazonAsin` or a
+    title/author search fallback. Keep `isbn` and `amazonAsin` quoted.
 - **pages** → `vault/pages/` → static pages, archive copy, and shared site copy
   - Common fields: `title?` `description?` `date?` `lastmod?` `aliases?[]`
     `heroTitle?` `heroAccent?`
@@ -59,6 +68,9 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
     `shelf.md` Markdown body around `<!-- shelf-currently-reading -->` and
     `<!-- shelf-recommendations -->`, and `<!-- shelf-reading-log -->`; its `shelf` frontmatter is limited to generated-copy
     templates that depend on book data.
+  - `reading-stats.md` owns stats labels through `readingStats`. The page keeps
+    data and controls without introductory or methodology prose. The Shelf route
+    slug `stats` is reserved for this page.
   - `terrain.md` owns the legacy archive hero and section labels through `terrain`.
   - `site.md` owns shared visitor-facing copy through `site`, including the site
     name, description, footer, content and writing labels, comic-reader controls,

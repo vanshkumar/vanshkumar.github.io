@@ -56,17 +56,18 @@ test('drafts omit Posts and logs, retain local source, and return when published
   }
 });
 
-test('reading history sync preserves leading-zero edition identifiers and undated rereads', (t) => {
+test('reading history sync preserves leading-zero edition identifiers and undated completions', (t) => {
   const vault = fixture(t);
   const book = {
     title: 'A Book', authors: ['An Author'], isbn: '0671212095',
-    reads: [{ finished: null }, { started: '2026-01-01', finished: '2026-01-20' }]
+    amazonAsin: '0671212095', finished: null
   };
   vault.write('reading-log/A Book.md', book);
   vault.sync();
   const synced = vault.read('reading-log/a-book.md');
   assert.deepEqual(synced.data, book);
   assert.match(synced.matter, /isbn: "0671212095"/, 'ISBN must remain quoted for YAML 1.2 readers');
+  assert.match(synced.matter, /amazonAsin: "0671212095"/, 'ASIN must remain quoted for YAML 1.2 readers');
   assert.equal(vault.exists('terrain/a-book.md'), false);
 });
 

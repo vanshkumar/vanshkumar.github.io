@@ -11,11 +11,10 @@ authors:
   - Yiyun Li
   - Elif Batuman
   - Tommy Orange
-reads: []
 status: did-not-finish
-isbn: '9781646222643'
+isbn: "9781646222643"
 contributors: Becca Rothfeld (Contributor)
-format: paperback
 dateAdded: '2025-01-01'
 owned: false
+amazonAsin: "1646222644"
 ---

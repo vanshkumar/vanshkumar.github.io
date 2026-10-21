@@ -6,10 +6,9 @@ authors:
   - Robin Ticic
   - Laurel Hulley
   - Bruce Ecker
-reads: []
 status: to-read
-isbn: '9780415897174'
-format: paperback
+isbn: "9780415897174"
 dateAdded: '2024-12-29'
 owned: false
+amazonAsin: "0415897173"
 ---

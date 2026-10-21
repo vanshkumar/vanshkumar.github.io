@@ -1,18 +1,17 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { amazonBookUrl, formatReadingDate, getReadingLog, isReadingDate, readingDateString, validReadingInterval } from './reading-log.mjs';
+import { amazonBookUrl, formatReadingDate, getReadingLog, isReadingDate, readingDateString } from './reading-log.mjs';
 
-test('Amazon links convert print ISBNs without losing leading zeros and fall back for other editions', () => {
+test('Amazon links use explicit product IDs without losing leading zeros, otherwise search by title and author', () => {
   const book = { title: 'A Book & Another', authors: ['An Author'] };
-  assert.equal(amazonBookUrl({ ...book, isbn: '978-0747591054' }), 'https://www.amazon.com/dp/0747591059');
-  assert.equal(amazonBookUrl({ ...book, isbn: '0671212095' }), 'https://www.amazon.com/dp/0671212095');
-  assert.equal(amazonBookUrl({ ...book, isbn: '9780807014295' }), 'https://www.amazon.com/dp/080701429X');
-  for (const edition of [{}, { isbn: '9780747591055' }, { isbn: '0671212094' }, { isbn: '9798993566214' }, { isbn: '9780747591054', format: 'digital' }, { isbn: '9780747591054', format: 'audio' }]) {
+  for (const amazonAsin of ['0747591059', '0671212095', '080701429X', 'B012345678']) {
+    assert.equal(amazonBookUrl({ ...book, amazonAsin }), `https://www.amazon.com/dp/${amazonAsin}`);
+  }
+  for (const edition of [{}, { isbn: '9780747591054' }, { isbn: '0671212095' }]) {
     const url = new URL(amazonBookUrl({ ...book, ...edition }));
     assert.equal(url.pathname, '/s');
     assert.equal(url.searchParams.get('k'), 'A Book & Another An Author');
   }
-  assert.equal(amazonBookUrl({ ...book, amazonAsin: 'B012345678', format: 'digital' }), 'https://www.amazon.com/dp/B012345678');
 });
 
 test('calendar dates retain their precision and reject impossible dates', () => {
@@ -27,27 +26,27 @@ test('calendar dates retain their precision and reject impossible dates', () => 
   assert.equal(formatReadingDate('2026'), '2026');
   assert.equal(readingDateString(new Date('2026-01-01T00:00:00Z')), '2026-01-01');
   assert.equal(readingDateString('2026-01'), '2026-01');
-  assert.equal(validReadingInterval({ started: '2026-02-01', finished: '2026-01-31' }), false);
-  assert.equal(validReadingInterval({ started: '2026-02-01', finished: '2026-02' }), true);
-  assert.equal(validReadingInterval({ started: '2026', finished: '2026-01-01' }), true);
 });
 
-test('lists completed reads newest first, preserving rereads and undated history', () => {
+test('lists completed books newest first, preserving date precision and unknown dates', () => {
   const books = [
-    { slug: 'again', data: { title: 'Again', status: 'to-read', reads: [{ finished: null }, { finished: '2026-01-01' }] } },
-    { slug: 'zebra', data: { title: 'Zebra', reads: [{ finished: '2026-01-01' }, { finished: '2025-12-31' }] } },
-    { slug: 'partial', data: { title: 'Partial', reads: [{ finished: '2026' }, { finished: '2026-03' }] } },
-    { slug: 'unread', data: { title: 'Unread', status: 'to-read', reads: [] } },
+    { slug: 'alpha', data: { title: 'Alpha', status: 'to-read', finished: '2026-01-01' } },
+    { slug: 'zebra', data: { title: 'Zebra', finished: '2026-01-01' } },
+    { slug: 'older', data: { title: 'Older', finished: '2025-12-31' } },
+    { slug: 'year', data: { title: 'Year', finished: '2026' } },
+    { slug: 'month', data: { title: 'Month', finished: '2026-03' } },
+    { slug: 'undated', data: { title: 'Undated', finished: null } },
+    { slug: 'unread', data: { title: 'Unread', status: 'to-read' } },
     { slug: 'abandoned', data: { title: 'Abandoned', status: 'did-not-finish' } }
   ];
   const before = structuredClone(books);
-  const reads = getReadingLog(books);
-  assert.deepEqual(reads.map(({ id }) => id), ['partial-2', 'again-2', 'zebra-1', 'partial-1', 'zebra-2', 'again-1']);
-  assert.equal(reads.at(-1).finished, null);
+  const events = getReadingLog(books);
+  assert.deepEqual(events.map(({ id }) => id), ['month-1', 'alpha-1', 'zebra-1', 'year-1', 'older-1', 'undated-1']);
+  assert.equal(events.at(-1).finished, null);
   assert.deepEqual(books, before, 'rendering must not mutate the source of truth');
   assert.deepEqual(getReadingLog([]), []);
   assert.equal(getReadingLog([{ slug: 'yaml-date', data: {
-    title: 'Unquoted YAML date', reads: [{ finished: new Date('2026-01-01T00:00:00Z') }]
+    title: 'Unquoted YAML date', finished: new Date('2026-01-01T00:00:00Z')
   } }])[0].finished, '2026-01-01');
-  assert.throws(() => getReadingLog([{ slug: 'invalid', data: { title: 'Invalid', reads: [{}] } }]), /completion date/);
+  assert.throws(() => getReadingLog([{ slug: 'invalid', data: { title: 'Invalid', finished: '2026-02-30' } }]), /completion date/);
 });

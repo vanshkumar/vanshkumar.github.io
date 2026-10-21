@@ -1,0 +1,94 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import { hasShelfReview } from '../../lib/shelf.mjs';
+import { statsEvents, todayInNewYork, monthNames } from '../../lib/reading-stats.mjs';
+import { renderStats, renderComparison } from '../../lib/reading-stats-render.mjs';
+import '../../styles/reading-stats.css';
+
+const page = await getEntry('pages', 'reading-stats');
+if (!page?.data.readingStats) throw new Error('Missing reading stats page copy');
+const c = page.data.readingStats;
+const notes = new Set((await getCollection('shelf')).filter(hasShelfReview).map(book=>book.slug));
+if (notes.has('stats')) throw new Error('The Shelf slug stats is reserved for reading statistics');
+const books = (await getCollection('reading-log')).map(book=>({slug:book.slug,data:{...book.data,
+  notesUrl:book.data.shelfSlug && notes.has(book.data.shelfSlug) ? `/shelf/${book.data.shelfSlug}` : undefined
+}}));
+const events = statsEvents(books);
+const today = todayInNewYork();
+const year = today.slice(0,4);
+const years = [...new Set([year,...events.flatMap(e=>e.finished ? [e.finished.slice(0,4)] : [])])].sort().reverse();
+const secondYear = years.find(y=>y<year) ?? year;
+const payload = JSON.stringify({events,c,years}).replace(/</g,'\\u003c');
+---
+<ContentLayout title={page.data.title} description={page.data.description} proseClass="reading-stats">
+  <p><a href="/shelf">← {c.back}</a></p>
+  <nav class="stats-jump" aria-label={c.jump}>
+    <a href="#stats-overview">{c.overview}</a>
+    <a href="#stats-breakdowns">{c.breakdowns}</a>
+    <a href="#stats-highlights">{c.highlights}</a>
+    <a href="#stats-comparison">{c.compare}</a>
+  </nav>
+  <noscript><p>{c.noScript}</p></noscript>
+  <form id="stats-period" class="stats-controls" aria-label={c.period} hidden>
+    <label>{c.year}<select name="year"><option value="all">{c.allTime}</option>{years.map(y=><option value={y} selected={y===year}>{y}</option>)}</select></label>
+    <label>{c.month}<select name="month"><option value="">{c.allMonths}</option>{monthNames.map((name,i)=><option value={String(i+1).padStart(2,'0')}>{name}</option>)}</select></label>
+  </form>
+  <div id="stats-results" set:html={renderStats(events,{year},c)}/>
+  <section id="stats-comparison">
+    <h2>{c.compare}</h2>
+    <form id="stats-compare-controls" class="stats-controls" aria-label={c.compare} hidden>
+      <label>{c.firstYear}<select name="first">{years.map(y=><option value={y} selected={y===year}>{y}</option>)}</select></label>
+      <label>{c.secondYear}<select name="second">{years.map(y=><option value={y} selected={y===secondYear}>{y}</option>)}</select></label>
+      <label>{c.comparisonMode}<select name="mode"><option value="ytd">{c.ytd}</option><option value="full">{c.fullYear}</option></select></label>
+    </form>
+    <div id="stats-compare-results" set:html={renderComparison(events,year,secondYear,'ytd',today,c)}/>
+  </section>
+</ContentLayout>
+<script id="reading-stats-data" type="application/json" set:html={payload}/>
+<script>
+  import { todayInNewYork } from '../../lib/reading-stats.mjs';
+  import { renderStats, renderComparison } from '../../lib/reading-stats-render.mjs';
+  const {events,c,years} = JSON.parse(document.getElementById('reading-stats-data')!.textContent!);
+  const period = document.getElementById('stats-period') as HTMLFormElement;
+  const comparison = document.getElementById('stats-compare-controls') as HTMLFormElement;
+  const control = (form:HTMLFormElement,name:string) => form.elements.namedItem(name) as HTMLSelectElement;
+  const today=todayInNewYork(), current=today.slice(0,4);
+  if (!years.includes(current)) {
+    years.unshift(current);
+    for (const [form,names] of [[period,['year']],[comparison,['first','second']]] as const)
+      for (const name of names) control(form,name).add(new Option(current,current),0);
+  }
+  const year=control(period,'year'), month=control(period,'month');
+  const first=control(comparison,'first'), second=control(comparison,'second'), mode=control(comparison,'mode');
+  const params=new URLSearchParams(location.search);
+  const validYear=(v:string|null)=>v && years.includes(v);
+  year.value=params.get('year')==='all'?'all':validYear(params.get('year'))?params.get('year')!:current;
+  month.value=/^(0[1-9]|1[0-2])$/.test(params.get('month')??'')?params.get('month')!:'';
+  first.value=validYear(params.get('a'))?params.get('a')!:current;
+  second.value=validYear(params.get('b'))?params.get('b')!:years.find((y:string)=>y<current)??current;
+  mode.value=params.get('mode')==='full'?'full':params.get('mode')==='ytd'?'ytd':first.value===current||second.value===current?'ytd':'full';
+  function updateURL() {
+    const p=new URLSearchParams();
+    p.set('year',year.value); if(month.value)p.set('month',month.value);
+    p.set('a',first.value);p.set('b',second.value);p.set('mode',mode.value);
+    history.replaceState(null,'',`${location.pathname}?${p}${location.hash}`);
+  }
+  function updatePeriod() {
+    month.disabled=year.value==='all'; if(month.disabled)month.value='';
+    const selection={year:year.value,month:month.value};
+    document.getElementById('stats-results')!.innerHTML=renderStats(events,selection,c);
+  }
+  function updateComparison() {
+    document.getElementById('stats-compare-results')!.innerHTML=renderComparison(events,first.value,second.value,mode.value,today,c);
+  }
+  period.hidden=false; comparison.hidden=false;
+  period.addEventListener('submit',event=>event.preventDefault());
+  comparison.addEventListener('submit',event=>event.preventDefault());
+  period.addEventListener('change',()=>{updatePeriod();updateURL();});
+  comparison.addEventListener('change',event=>{
+    if(event.target!==mode)mode.value=first.value===current||second.value===current?'ytd':'full';
+    updateComparison();updateURL();
+  });
+  updatePeriod();updateComparison();
+</script>

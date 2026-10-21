@@ -27,3 +27,5 @@ because they somehow changed how I see the world.
 <!-- shelf-reading-log -->
 
 ## Log
+
+[Stats →](/shelf/stats)

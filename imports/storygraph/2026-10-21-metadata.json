@@ -1,0 +1,6624 @@
+{
+  "retrieved": "2026-10-21",
+  "source": "StoryGraph signed-in catalog, reference editions, and all-time stats",
+  "notes": [
+    "One-time import. Local Markdown is authoritative; no resync.",
+    "129 StoryGraph entries map to 124 existing local books. Completion history is not imported.",
+    "Catalog titles and author lists matched every local completed book exactly after punctuation/case normalization. ISBN was verified where edition pages were captured.",
+    "Language is supported by the all-time stats statement that all books are in English.",
+    "Book format and page lengths describe reference editions; no actual read format was inferred.",
+    "Missing series membership is unknown, not asserted standalone."
+  ],
+  "records": [
+    {
+      "slug": "the-metamorphosis-of-prime-intellect",
+      "title": "The Metamorphosis of Prime Intellect",
+      "authors": [
+        "Roger Williams"
+      ],
+      "isbn": "9781411602199",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "176 pages  •  paperback  •  2006   • ",
+        "labels": "fiction science fiction adventurous challenging dark fast-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 176,
+        "bookType": "fiction",
+        "genres": [
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous",
+          "challenging",
+          "dark"
+        ],
+        "pace": "fast",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/books/1d5d57d1-82a0-43a6-943f-e4b2d2e7e821/editions",
+          "retrieved": "2026-10-21",
+          "fields": []
+        }
+      ],
+      "issues": [
+        "StoryGraph editions disagree on original publication year (2002 versus 2006). Withheld pending verification."
+      ]
+    },
+    {
+      "slug": "becoming-a-writer",
+      "title": "Becoming a Writer",
+      "authors": [
+        "Dorothea Brande"
+      ],
+      "isbn": "9780874771640",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "186 pages  •  paperback  •  1934   • ",
+        "labels": "nonfiction reference informative reflective slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 186,
+        "publicationYear": 1934,
+        "bookType": "nonfiction",
+        "genres": [
+          "reference"
+        ],
+        "moods": [
+          "informative",
+          "reflective"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "chop-wood-carry-water",
+      "title": "Chop Wood, Carry Water: The Yoga of Work",
+      "authors": [
+        "Andrew Taggart"
+      ],
+      "isbn": "9798993566214",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "68 pages  •  paperback  •  2025   • ",
+        "labels": "nonfiction philosophy reflective slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 68,
+        "publicationYear": 2025,
+        "bookType": "nonfiction",
+        "genres": [
+          "philosophy"
+        ],
+        "moods": [
+          "reflective"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "piranesi",
+      "title": "Piranesi",
+      "authors": [
+        "Susanna Clarke"
+      ],
+      "isbn": "9781635575637",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "245 pages  •  hardcover  •  2020   • ",
+        "labels": "fiction fantasy literary adventurous mysterious reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 245,
+        "publicationYear": 2020,
+        "bookType": "fiction",
+        "genres": [
+          "fantasy",
+          "literary"
+        ],
+        "moods": [
+          "adventurous",
+          "mysterious",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "when-we-cease-to-understand-the-world",
+      "title": "When We Cease to Understand the World",
+      "authors": [
+        "Benjamín Labatut"
+      ],
+      "isbn": "9781782276128",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "192 pages  •  hardcover  •  2020   • ",
+        "labels": "fiction historical literary short stories challenging informative reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 192,
+        "publicationYear": 2020,
+        "bookType": "fiction",
+        "genres": [
+          "historical",
+          "literary",
+          "short stories"
+        ],
+        "moods": [
+          "challenging",
+          "informative",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-alchemist",
+      "title": "The Alchemist",
+      "authors": [
+        "Paulo Coelho"
+      ],
+      "isbn": "9780062315007",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "182 pages  •  paperback  •  1988   • ",
+        "labels": "fiction classics literary adventurous inspiring reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 182,
+        "publicationYear": 1988,
+        "bookType": "fiction",
+        "genres": [
+          "classics",
+          "literary"
+        ],
+        "moods": [
+          "adventurous",
+          "inspiring",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "blindsight",
+      "title": "Blindsight",
+      "authors": [
+        "Peter Watts"
+      ],
+      "isbn": "9780765312181",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "384 pages  •  hardcover  •  2006   • ",
+        "labels": "fiction horror science fiction challenging dark mysterious medium-paced",
+        "series": [
+          "Firefall",
+          "#1"
+        ]
+      },
+      "metadata": {
+        "pageCount": 384,
+        "publicationYear": 2006,
+        "bookType": "fiction",
+        "genres": [
+          "horror",
+          "science fiction"
+        ],
+        "moods": [
+          "challenging",
+          "dark",
+          "mysterious"
+        ],
+        "pace": "medium",
+        "series": [
+          {
+            "name": "Firefall",
+            "position": "1"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "finite-and-infinite-games",
+      "title": "Finite and Infinite Games: A Vision of Life as Play and Possibility",
+      "authors": [
+        "James P. Carse"
+      ],
+      "isbn": "9780345341846",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "192 pages  •  paperback  •  1986   • ",
+        "labels": "nonfiction business philosophy psychology challenging informative reflective slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 192,
+        "publicationYear": 1986,
+        "bookType": "nonfiction",
+        "genres": [
+          "business",
+          "philosophy",
+          "psychology"
+        ],
+        "moods": [
+          "challenging",
+          "informative",
+          "reflective"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "an-artist-of-the-floating-world",
+      "title": "An Artist of the Floating World",
+      "authors": [
+        "Kazuo Ishiguro"
+      ],
+      "isbn": "9780571225361",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "206 pages  •  paperback  •  1986   • ",
+        "labels": "fiction historical literary reflective slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 206,
+        "publicationYear": 1986,
+        "bookType": "fiction",
+        "genres": [
+          "historical",
+          "literary"
+        ],
+        "moods": [
+          "reflective"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "impro",
+      "title": "Impro: Improvisation and the Theatre",
+      "authors": [
+        "Keith Johnstone"
+      ],
+      "isbn": "9780878301171",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "208 pages  •  paperback  •  1979   • ",
+        "labels": "nonfiction art psychology funny informative medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 208,
+        "publicationYear": 1979,
+        "bookType": "nonfiction",
+        "genres": [
+          "art",
+          "psychology"
+        ],
+        "moods": [
+          "funny",
+          "informative"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-invention-of-nature",
+      "title": "The Invention of Nature: Alexander Von Humboldt's New World",
+      "authors": [
+        "Andrea Wulf"
+      ],
+      "isbn": "9780385350662",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "496 pages  •  hardcover  •  2015   • ",
+        "labels": "nonfiction biography history nature science adventurous informative inspiring slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 496,
+        "publicationYear": 2015,
+        "bookType": "nonfiction",
+        "genres": [
+          "biography",
+          "history",
+          "nature",
+          "science"
+        ],
+        "moods": [
+          "adventurous",
+          "informative",
+          "inspiring"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "theories-of-childhood",
+      "title": "Theories of Childhood: An Introduction to Dewey, Montessori, Erikson, Piaget, and Vygotsky",
+      "authors": [
+        "Carol Garhart Mooney"
+      ],
+      "isbn": "9781605541389",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "134 pages  •  paperback  •  2000   • ",
+        "labels": "nonfiction education psychology informative medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 134,
+        "publicationYear": 2000,
+        "bookType": "nonfiction",
+        "genres": [
+          "education",
+          "psychology"
+        ],
+        "moods": [
+          "informative"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "children-s-machine",
+      "title": "Children's Machine: Rethinking School in the Age of Computer",
+      "authors": [
+        "Seymour Papert"
+      ],
+      "isbn": "9780465010639",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "256 pages  •  paperback  •  1993   • ",
+        "labels": "nonfiction education technology informative reflective slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 256,
+        "publicationYear": 1993,
+        "bookType": "nonfiction",
+        "genres": [
+          "education",
+          "technology"
+        ],
+        "moods": [
+          "informative",
+          "reflective"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "heretics-of-dune",
+      "title": "Heretics of Dune",
+      "authors": [
+        "Frank Herbert"
+      ],
+      "isbn": "9780593098264",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "669 pages  •  paperback  •  1984   • ",
+        "labels": "fiction classics science fiction adventurous challenging mysterious slow-paced",
+        "series": [
+          "Dune",
+          "#5"
+        ]
+      },
+      "metadata": {
+        "pageCount": 669,
+        "publicationYear": 1984,
+        "bookType": "fiction",
+        "genres": [
+          "classics",
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous",
+          "challenging",
+          "mysterious"
+        ],
+        "pace": "slow",
+        "series": [
+          {
+            "name": "Dune",
+            "position": "5"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "god-emperor-of-dune",
+      "title": "God Emperor of Dune",
+      "authors": [
+        "Frank Herbert"
+      ],
+      "isbn": "9780593098257",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "587 pages  •  paperback  •  1981   • ",
+        "labels": "fiction classics science fiction challenging mysterious reflective slow-paced",
+        "series": [
+          "Dune",
+          "#4"
+        ]
+      },
+      "metadata": {
+        "pageCount": 587,
+        "publicationYear": 1981,
+        "bookType": "fiction",
+        "genres": [
+          "classics",
+          "science fiction"
+        ],
+        "moods": [
+          "challenging",
+          "mysterious",
+          "reflective"
+        ],
+        "pace": "slow",
+        "series": [
+          {
+            "name": "Dune",
+            "position": "4"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "children-of-dune",
+      "title": "Children of Dune",
+      "authors": [
+        "Frank Herbert"
+      ],
+      "isbn": "9780593098240",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "609 pages  •  paperback  •  1976   • ",
+        "labels": "fiction classics science fiction adventurous challenging mysterious slow-paced",
+        "series": [
+          "Dune",
+          "#3"
+        ]
+      },
+      "metadata": {
+        "pageCount": 609,
+        "publicationYear": 1976,
+        "bookType": "fiction",
+        "genres": [
+          "classics",
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous",
+          "challenging",
+          "mysterious"
+        ],
+        "pace": "slow",
+        "series": [
+          {
+            "name": "Dune",
+            "position": "3"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "meditations-for-mortals",
+      "title": "Meditations for Mortals: Four Weeks to Embrace Your Limitations and Finally Make Time for What Counts",
+      "authors": [
+        "Oliver Burkeman"
+      ],
+      "isbn": "9780374611996",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "203 pages  •  hardcover  •  2024   • ",
+        "labels": "nonfiction philosophy self help informative inspiring reflective fast-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 203,
+        "publicationYear": 2024,
+        "bookType": "nonfiction",
+        "genres": [
+          "philosophy",
+          "self help"
+        ],
+        "moods": [
+          "informative",
+          "inspiring",
+          "reflective"
+        ],
+        "pace": "fast",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-clock-of-the-long-now",
+      "title": "The Clock of the Long Now: Time and Responsibility",
+      "authors": [
+        "Stewart Brand"
+      ],
+      "isbn": "9780465007806",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "208 pages  •  paperback  •  1999   • ",
+        "labels": "nonfiction philosophy science technology informative reflective slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 208,
+        "publicationYear": 1999,
+        "bookType": "nonfiction",
+        "genres": [
+          "philosophy",
+          "science",
+          "technology"
+        ],
+        "moods": [
+          "informative",
+          "reflective"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "dune-messiah",
+      "title": "Dune Messiah",
+      "authors": [
+        "Frank Herbert"
+      ],
+      "isbn": "9780593098233",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "336 pages  •  paperback  •  1969   • ",
+        "labels": "fiction classics science fiction adventurous dark mysterious medium-paced",
+        "series": [
+          "Dune",
+          "#2"
+        ]
+      },
+      "metadata": {
+        "pageCount": 336,
+        "publicationYear": 1969,
+        "bookType": "fiction",
+        "genres": [
+          "classics",
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous",
+          "dark",
+          "mysterious"
+        ],
+        "pace": "medium",
+        "series": [
+          {
+            "name": "Dune",
+            "position": "2"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "dune",
+      "title": "Dune",
+      "authors": [
+        "Frank Herbert"
+      ],
+      "isbn": "9780593099322",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "658 pages  •  hardcover  •  1965   • ",
+        "labels": "fiction classics science fiction adventurous challenging slow-paced",
+        "series": [
+          "Dune",
+          "#1"
+        ]
+      },
+      "metadata": {
+        "pageCount": 658,
+        "publicationYear": 1965,
+        "bookType": "fiction",
+        "genres": [
+          "classics",
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous",
+          "challenging"
+        ],
+        "pace": "slow",
+        "series": [
+          {
+            "name": "Dune",
+            "position": "1"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "a-pale-view-of-hills",
+      "title": "A Pale View of Hills",
+      "authors": [
+        "Kazuo Ishiguro"
+      ],
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "183 pages  •  digital  •  1982   • ",
+        "labels": "fiction historical literary dark mysterious reflective slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 183,
+        "publicationYear": 1982,
+        "bookType": "fiction",
+        "genres": [
+          "historical",
+          "literary"
+        ],
+        "moods": [
+          "dark",
+          "mysterious",
+          "reflective"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-buried-giant",
+      "title": "The Buried Giant",
+      "authors": [
+        "Kazuo Ishiguro"
+      ],
+      "isbn": "9780307271037",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "317 pages  •  hardcover  •  2015   • ",
+        "labels": "fiction fantasy historical literary adventurous mysterious reflective slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 317,
+        "publicationYear": 2015,
+        "bookType": "fiction",
+        "genres": [
+          "fantasy",
+          "historical",
+          "literary"
+        ],
+        "moods": [
+          "adventurous",
+          "mysterious",
+          "reflective"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "a-brief-history-of-intelligence",
+      "title": "A Brief History of Intelligence: Evolution, AI, and the Five Breakthroughs That Made Our Brains",
+      "authors": [
+        "Max Solomon Bennett"
+      ],
+      "isbn": "9780063286344",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "432 pages  •  2023   • ",
+        "labels": "nonfiction science informative reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 432,
+        "publicationYear": 2023,
+        "bookType": "nonfiction",
+        "genres": [
+          "science"
+        ],
+        "moods": [
+          "informative",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "klara-and-the-sun",
+      "title": "Klara and the Sun",
+      "authors": [
+        "Kazuo Ishiguro"
+      ],
+      "isbn": "9780593318171",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "303 pages  •  hardcover  •  2021   • ",
+        "labels": "fiction dystopian literary science fiction emotional reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 303,
+        "publicationYear": 2021,
+        "bookType": "fiction",
+        "genres": [
+          "dystopian",
+          "literary",
+          "science fiction"
+        ],
+        "moods": [
+          "emotional",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-structure-of-scientific-revolutions",
+      "title": "The Structure of Scientific Revolutions",
+      "authors": [
+        "Thomas S. Kuhn"
+      ],
+      "isbn": "9780226458083",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "226 pages  •  paperback  •  1962   • ",
+        "labels": "nonfiction history philosophy science challenging informative slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 226,
+        "publicationYear": 1962,
+        "bookType": "nonfiction",
+        "genres": [
+          "history",
+          "philosophy",
+          "science"
+        ],
+        "moods": [
+          "challenging",
+          "informative"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-drama-of-the-gifted-child",
+      "title": "The Drama of the Gifted Child: The Search for the True Self, Third Edition",
+      "authors": [
+        "Alice Miller"
+      ],
+      "isbn": "9780465016907",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "136 pages  •  paperback  •  1979   • ",
+        "labels": "nonfiction psychology emotional reflective slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 136,
+        "publicationYear": 1979,
+        "bookType": "nonfiction",
+        "genres": [
+          "psychology"
+        ],
+        "moods": [
+          "emotional",
+          "reflective"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "how-to-read-a-book",
+      "title": "How to Read a Book: The Classic Guide to Intelligent Reading",
+      "authors": [
+        "Mortimer J. Adler",
+        "Charles Van Doren"
+      ],
+      "isbn": "0671212095",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "426 pages  •  paperback  •  1940   • ",
+        "labels": "nonfiction education reference informative slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 426,
+        "publicationYear": 1940,
+        "bookType": "nonfiction",
+        "genres": [
+          "education",
+          "reference"
+        ],
+        "moods": [
+          "informative"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "ficciones",
+      "title": "Ficciones",
+      "authors": [
+        "Jorge Luis Borges"
+      ],
+      "isbn": "9780802130303",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "174 pages  •  paperback  •  1944   • ",
+        "labels": "fiction classics magical realism short stories challenging mysterious reflective slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 174,
+        "publicationYear": 1944,
+        "bookType": "fiction",
+        "genres": [
+          "classics",
+          "magical realism",
+          "short stories"
+        ],
+        "moods": [
+          "challenging",
+          "mysterious",
+          "reflective"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-art-of-learning",
+      "title": "The Art of Learning: A Journey in the Pursuit of Excellence",
+      "authors": [
+        "Josh Waitzkin"
+      ],
+      "isbn": "9780743277457",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "265 pages  •  hardcover  •  2007   • ",
+        "labels": "nonfiction psychology self help adventurous informative inspiring slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 265,
+        "publicationYear": 2007,
+        "bookType": "nonfiction",
+        "genres": [
+          "psychology",
+          "self help"
+        ],
+        "moods": [
+          "adventurous",
+          "informative",
+          "inspiring"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-prophet",
+      "title": "The Prophet",
+      "authors": [
+        "Kahlil Gibran"
+      ],
+      "isbn": "9780001000391",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "127 pages  •  paperback  •  1923   • ",
+        "labels": "fiction classics philosophy poetry inspiring reflective fast-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 127,
+        "publicationYear": 1923,
+        "bookType": "fiction",
+        "genres": [
+          "classics",
+          "philosophy",
+          "poetry"
+        ],
+        "moods": [
+          "inspiring",
+          "reflective"
+        ],
+        "pace": "fast",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-montessori-baby",
+      "title": "The Montessori Baby: A Parent's Guide to Nurturing Your Baby with Love, Respect, and Understanding",
+      "authors": [
+        "Simone Davies",
+        "Junnifa Uzodike"
+      ],
+      "isbn": "9781523512409",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "278 pages  •  paperback  •  2021   • ",
+        "labels": "nonfiction reference informative lighthearted slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 278,
+        "publicationYear": 2021,
+        "bookType": "nonfiction",
+        "genres": [
+          "reference"
+        ],
+        "moods": [
+          "informative",
+          "lighthearted"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "a-little-book-on-the-human-shadow",
+      "title": "A Little Book on the Human Shadow",
+      "authors": [
+        "Robert Bly"
+      ],
+      "isbn": "9780062548474",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "96 pages  •  paperback  •  1988   • ",
+        "labels": "nonfiction philosophy poetry psychology reflective fast-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 96,
+        "publicationYear": 1988,
+        "bookType": "nonfiction",
+        "genres": [
+          "philosophy",
+          "poetry",
+          "psychology"
+        ],
+        "moods": [
+          "reflective"
+        ],
+        "pace": "fast",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "kokoro",
+      "title": "Kokoro",
+      "authors": [
+        "Natsume Sōseki"
+      ],
+      "isbn": "9780895267153",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "248 pages  •  paperback  •  1914   • ",
+        "labels": "fiction classics reflective sad slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 248,
+        "publicationYear": 1914,
+        "bookType": "fiction",
+        "genres": [
+          "classics"
+        ],
+        "moods": [
+          "reflective",
+          "sad"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "exhalation",
+      "title": "Exhalation",
+      "authors": [
+        "Ted Chiang"
+      ],
+      "isbn": "9781101947883",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "350 pages  •  hardcover  •  2019   • ",
+        "labels": "fiction literary science fiction short stories challenging reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 350,
+        "publicationYear": 2019,
+        "bookType": "fiction",
+        "genres": [
+          "literary",
+          "science fiction",
+          "short stories"
+        ],
+        "moods": [
+          "challenging",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-paper-menagerie-and-other-stories",
+      "title": "The Paper Menagerie and Other Stories",
+      "authors": [
+        "Ken Liu"
+      ],
+      "isbn": "9781481442541",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "450 pages  •  hardcover  •  2016   • ",
+        "labels": "fiction science fiction short stories speculative fiction challenging emotional reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 450,
+        "publicationYear": 2016,
+        "bookType": "fiction",
+        "genres": [
+          "science fiction",
+          "short stories",
+          "speculative fiction"
+        ],
+        "moods": [
+          "challenging",
+          "emotional",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-motern-method",
+      "title": "The Motern Method",
+      "authors": [
+        "Matt Farley"
+      ],
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "missing page info  •  2021   • ",
+        "series": []
+      },
+      "metadata": {
+        "publicationYear": 2021,
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "publicationYear"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": [
+        "Source has no length.",
+        "Source has no classification labels.",
+        "Source has no pace label."
+      ]
+    },
+    {
+      "slug": "excellent-advice-for-living",
+      "title": "Excellent Advice for Living",
+      "authors": [
+        "Kevin Kelly"
+      ],
+      "isbn": "9780593654521",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "224 pages  •  hardcover  •  2023   • ",
+        "labels": "nonfiction psychology self help informative inspiring reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 224,
+        "publicationYear": 2023,
+        "bookType": "nonfiction",
+        "genres": [
+          "psychology",
+          "self help"
+        ],
+        "moods": [
+          "informative",
+          "inspiring",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-illustrated-man",
+      "title": "The Illustrated Man",
+      "authors": [
+        "Ray Bradbury"
+      ],
+      "isbn": "9780007127740",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "239 pages  •  paperback  •  1951   • ",
+        "labels": "fiction classics science fiction short stories adventurous dark mysterious medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 239,
+        "publicationYear": 1951,
+        "bookType": "fiction",
+        "genres": [
+          "classics",
+          "science fiction",
+          "short stories"
+        ],
+        "moods": [
+          "adventurous",
+          "dark",
+          "mysterious"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-diamond-age",
+      "title": "The Diamond Age: Or, a Young Lady's Illustrated Primer",
+      "authors": [
+        "Neal Stephenson"
+      ],
+      "isbn": "9780553380965",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "499 pages  •  paperback  •  1995   • ",
+        "labels": "fiction science fiction adventurous slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 499,
+        "publicationYear": 1995,
+        "bookType": "fiction",
+        "genres": [
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "2001",
+      "title": "2001: A Space Odyssey",
+      "authors": [
+        "Arthur C. Clarke"
+      ],
+      "isbn": "9780451457998",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "297 pages  •  paperback  •  1968   • ",
+        "labels": "fiction classics science fiction adventurous mysterious medium-paced",
+        "series": [
+          "Space Odyssey",
+          "#1"
+        ]
+      },
+      "metadata": {
+        "pageCount": 297,
+        "publicationYear": 1968,
+        "bookType": "fiction",
+        "genres": [
+          "classics",
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous",
+          "mysterious"
+        ],
+        "pace": "medium",
+        "series": [
+          {
+            "name": "Space Odyssey",
+            "position": "1"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "democracy-and-education",
+      "title": "Democracy and Education: An Introduction to the Philosophy of Education",
+      "authors": [
+        "John Dewey"
+      ],
+      "isbn": "9780684836317",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "378 pages  •  paperback  •  1916   • ",
+        "labels": "nonfiction education philosophy politics reflective slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 378,
+        "publicationYear": 1916,
+        "bookType": "nonfiction",
+        "genres": [
+          "education",
+          "philosophy",
+          "politics"
+        ],
+        "moods": [
+          "reflective"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "stories-of-your-life-and-others",
+      "title": "Stories of Your Life and Others",
+      "authors": [
+        "Ted Chiang"
+      ],
+      "isbn": "9780330426640",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "320 pages  •  paperback  •  2002   • ",
+        "labels": "fiction science fiction short stories challenging reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 320,
+        "publicationYear": 2002,
+        "bookType": "fiction",
+        "genres": [
+          "science fiction",
+          "short stories"
+        ],
+        "moods": [
+          "challenging",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "nightfall-and-other-stories",
+      "title": "Nightfall and Other Stories",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "isbn": "9780345310910",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "350 pages  •  paperback  •  1969   • ",
+        "labels": "fiction science fiction short stories reflective slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 350,
+        "publicationYear": 1969,
+        "bookType": "fiction",
+        "genres": [
+          "science fiction",
+          "short stories"
+        ],
+        "moods": [
+          "reflective"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "good-work",
+      "title": "Good Work: Reclaiming Your Inner Ambition",
+      "authors": [
+        "Paul Millerd"
+      ],
+      "isbn": "1965701000",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "224 pages  •  digital  •  2024   • ",
+        "labels": "nonfiction memoir self help informative inspiring reflective fast-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 224,
+        "publicationYear": 2024,
+        "bookType": "nonfiction",
+        "genres": [
+          "memoir",
+          "self help"
+        ],
+        "moods": [
+          "informative",
+          "inspiring",
+          "reflective"
+        ],
+        "pace": "fast",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-remains-of-the-day",
+      "title": "The Remains of the Day",
+      "authors": [
+        "Kazuo Ishiguro"
+      ],
+      "isbn": "9780571225385",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "258 pages  •  paperback  •  1989   • ",
+        "labels": "fiction classics historical literary emotional reflective slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 258,
+        "publicationYear": 1989,
+        "bookType": "fiction",
+        "genres": [
+          "classics",
+          "historical",
+          "literary"
+        ],
+        "moods": [
+          "emotional",
+          "reflective"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-money-men",
+      "title": "The Money Men: Capitalism, Democracy, and the Hundred Years' War Over the American Dollar",
+      "authors": [
+        "H.W. Brands"
+      ],
+      "isbn": "9780393330502",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "239 pages  •  paperback  •  2006   • ",
+        "labels": "nonfiction economics history informative slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 239,
+        "publicationYear": 2006,
+        "bookType": "nonfiction",
+        "genres": [
+          "economics",
+          "history"
+        ],
+        "moods": [
+          "informative"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-end-of-eternity",
+      "title": "The End of Eternity",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "isbn": "9780449016190",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "192 pages  •  paperback  •  1955   • ",
+        "labels": "fiction science fiction adventurous mysterious reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 192,
+        "publicationYear": 1955,
+        "bookType": "fiction",
+        "genres": [
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous",
+          "mysterious",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-gods-themselves",
+      "title": "The Gods Themselves",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "isbn": "9781857989342",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "288 pages  •  paperback  •  1972   • ",
+        "labels": "fiction science fiction adventurous mysterious medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 288,
+        "publicationYear": 1972,
+        "bookType": "fiction",
+        "genres": [
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous",
+          "mysterious"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "why-greatness-cannot-be-planned",
+      "title": "Why Greatness Cannot Be Planned: The Myth of the Objective",
+      "authors": [
+        "Joel Lehman",
+        "Kenneth O. Stanley"
+      ],
+      "isbn": "9783319155234",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "141 pages  •  paperback  •  2015   • ",
+        "labels": "nonfiction business philosophy science informative slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 141,
+        "publicationYear": 2015,
+        "bookType": "nonfiction",
+        "genres": [
+          "business",
+          "philosophy",
+          "science"
+        ],
+        "moods": [
+          "informative"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "robot-visions",
+      "title": "Robot Visions",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "isbn": "9780451450647",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "492 pages  •  paperback  •  1990   • ",
+        "labels": "fiction science fiction short stories adventurous reflective medium-paced",
+        "series": [
+          "Robot",
+          "#0.5"
+        ]
+      },
+      "metadata": {
+        "pageCount": 492,
+        "publicationYear": 1990,
+        "bookType": "fiction",
+        "genres": [
+          "science fiction",
+          "short stories"
+        ],
+        "moods": [
+          "adventurous",
+          "reflective"
+        ],
+        "pace": "medium",
+        "series": [
+          {
+            "name": "Robot",
+            "position": "0.5"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "making-sense-of-chaos",
+      "title": "Making Sense of Chaos: A Better Economics for a Better World",
+      "authors": [
+        "J. Doyne Farmer"
+      ],
+      "isbn": "9780241201985",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "384 pages   • ",
+        "labels": "nonfiction business economics",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 384,
+        "bookType": "nonfiction",
+        "genres": [
+          "business",
+          "economics"
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "bookType",
+            "genres"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": [
+        "Source has no original publication year.",
+        "Source has no pace label."
+      ]
+    },
+    {
+      "slug": "robot-dreams",
+      "title": "Robot Dreams",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "isbn": "9780441011834",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "352 pages  •  paperback  •  1986   • ",
+        "labels": "fiction science fiction short stories adventurous challenging mysterious slow-paced",
+        "series": [
+          "Robot",
+          "#0.4"
+        ]
+      },
+      "metadata": {
+        "pageCount": 352,
+        "publicationYear": 1986,
+        "bookType": "fiction",
+        "genres": [
+          "science fiction",
+          "short stories"
+        ],
+        "moods": [
+          "adventurous",
+          "challenging",
+          "mysterious"
+        ],
+        "pace": "slow",
+        "series": [
+          {
+            "name": "Robot",
+            "position": "0.4"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "tiny-experiments",
+      "title": "Tiny Experiments: How to Live Freely in a Goal-Obsessed World",
+      "authors": [
+        "Anne-Laure Le Cunff"
+      ],
+      "isbn": "9780593715130",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "304 pages  •  hardcover  •  2025   • ",
+        "labels": "nonfiction business psychology self help hopeful informative inspiring medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 304,
+        "publicationYear": 2025,
+        "bookType": "nonfiction",
+        "genres": [
+          "business",
+          "psychology",
+          "self help"
+        ],
+        "moods": [
+          "hopeful",
+          "informative",
+          "inspiring"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-autobiography-of-john-stuart-mill",
+      "title": "The Autobiography Of John Stuart Mill",
+      "authors": [
+        "John Stuart Mill"
+      ],
+      "isbn": "9781461115915",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "134 pages  •  paperback  •  1873   • ",
+        "labels": "nonfiction biography literary philosophy challenging reflective fast-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 134,
+        "publicationYear": 1873,
+        "bookType": "nonfiction",
+        "genres": [
+          "biography",
+          "literary",
+          "philosophy"
+        ],
+        "moods": [
+          "challenging",
+          "reflective"
+        ],
+        "pace": "fast",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-complete-robot",
+      "title": "The Complete Robot",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "isbn": "9780586057247",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "688 pages  •  paperback  •  1982   • ",
+        "labels": "fiction dystopian science fiction short stories adventurous reflective medium-paced",
+        "series": [
+          "Robot",
+          "#0.3"
+        ]
+      },
+      "metadata": {
+        "pageCount": 688,
+        "publicationYear": 1982,
+        "bookType": "fiction",
+        "genres": [
+          "dystopian",
+          "science fiction",
+          "short stories"
+        ],
+        "moods": [
+          "adventurous",
+          "reflective"
+        ],
+        "pace": "medium",
+        "series": [
+          {
+            "name": "Robot",
+            "position": "0.3"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-creative-act",
+      "title": "The Creative Act: A Way of Being",
+      "authors": [
+        "Rick Rubin"
+      ],
+      "isbn": "9780593652886",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "404 pages  •  hardcover  •  2023   • ",
+        "labels": "nonfiction art philosophy self help inspiring reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 404,
+        "publicationYear": 2023,
+        "bookType": "nonfiction",
+        "genres": [
+          "art",
+          "philosophy",
+          "self help"
+        ],
+        "moods": [
+          "inspiring",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "forward-the-foundation",
+      "title": "Forward the Foundation",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "isbn": "9780553565072",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "464 pages  •  paperback  •  1993   • ",
+        "labels": "fiction science fiction adventurous mysterious medium-paced",
+        "series": [
+          "Foundation",
+          "#7"
+        ]
+      },
+      "metadata": {
+        "pageCount": 464,
+        "publicationYear": 1993,
+        "bookType": "fiction",
+        "genres": [
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous",
+          "mysterious"
+        ],
+        "pace": "medium",
+        "series": [
+          {
+            "name": "Foundation",
+            "position": "7"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "prelude-to-foundation",
+      "title": "Prelude to Foundation",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "isbn": "9780586071113",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "460 pages  •  paperback  •  1988   • ",
+        "labels": "fiction science fiction adventurous mysterious medium-paced",
+        "series": [
+          "Foundation",
+          "#6"
+        ]
+      },
+      "metadata": {
+        "pageCount": 460,
+        "publicationYear": 1988,
+        "bookType": "fiction",
+        "genres": [
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous",
+          "mysterious"
+        ],
+        "pace": "medium",
+        "series": [
+          {
+            "name": "Foundation",
+            "position": "6"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-nurture-assumption",
+      "title": "The Nurture Assumption: Why Children Turn Out the Way They Do",
+      "authors": [
+        "Judith Rich Harris"
+      ],
+      "isbn": "9780684857077",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "462 pages  •  paperback  •  1998   • ",
+        "labels": "nonfiction psychology science challenging informative reflective slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 462,
+        "publicationYear": 1998,
+        "bookType": "nonfiction",
+        "genres": [
+          "psychology",
+          "science"
+        ],
+        "moods": [
+          "challenging",
+          "informative",
+          "reflective"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "foundation-and-earth",
+      "title": "Foundation and Earth",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "isbn": "9780553587579",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "513 pages  •  paperback  •  1986   • ",
+        "labels": "fiction science fiction adventurous mysterious medium-paced",
+        "series": [
+          "Foundation",
+          "#5"
+        ]
+      },
+      "metadata": {
+        "pageCount": 513,
+        "publicationYear": 1986,
+        "bookType": "fiction",
+        "genres": [
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous",
+          "mysterious"
+        ],
+        "pace": "medium",
+        "series": [
+          {
+            "name": "Foundation",
+            "position": "5"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "robots-and-empire",
+      "title": "Robots and Empire",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "isbn": "9780586062005",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "508 pages  •  paperback  •  1985   • ",
+        "labels": "fiction science fiction adventurous mysterious slow-paced",
+        "series": [
+          "Robot",
+          "#4"
+        ]
+      },
+      "metadata": {
+        "pageCount": 508,
+        "publicationYear": 1985,
+        "bookType": "fiction",
+        "genres": [
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous",
+          "mysterious"
+        ],
+        "pace": "slow",
+        "series": [
+          {
+            "name": "Robot",
+            "position": "4"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-power-broker",
+      "title": "The Power Broker: Robert Moses and the Fall of New York",
+      "authors": [
+        "Robert A. Caro"
+      ],
+      "isbn": "9780394720241",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "1246 pages  •  paperback  •  1974   • ",
+        "labels": "nonfiction biography history politics challenging informative slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 1246,
+        "publicationYear": 1974,
+        "bookType": "nonfiction",
+        "genres": [
+          "biography",
+          "history",
+          "politics"
+        ],
+        "moods": [
+          "challenging",
+          "informative"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-robots-of-dawn",
+      "title": "The Robots of Dawn",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "isbn": "9780553299496",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "448 pages  •  paperback  •  1983   • ",
+        "labels": "fiction mystery science fiction adventurous mysterious medium-paced",
+        "series": [
+          "Robot",
+          "#3"
+        ]
+      },
+      "metadata": {
+        "pageCount": 448,
+        "publicationYear": 1983,
+        "bookType": "fiction",
+        "genres": [
+          "mystery",
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous",
+          "mysterious"
+        ],
+        "pace": "medium",
+        "series": [
+          {
+            "name": "Robot",
+            "position": "3"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "foundation-s-edge",
+      "title": "Foundation's Edge",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "isbn": "9780553293388",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "452 pages  •  paperback  •  1982   • ",
+        "labels": "fiction science fiction adventurous mysterious medium-paced",
+        "series": [
+          "Foundation",
+          "#4"
+        ]
+      },
+      "metadata": {
+        "pageCount": 452,
+        "publicationYear": 1982,
+        "bookType": "fiction",
+        "genres": [
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous",
+          "mysterious"
+        ],
+        "pace": "medium",
+        "series": [
+          {
+            "name": "Foundation",
+            "position": "4"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "second-foundation",
+      "title": "Second Foundation",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "isbn": "9780553803730",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "256 pages  •  hardcover  •  1953   • ",
+        "labels": "fiction classics science fiction adventurous mysterious medium-paced",
+        "series": [
+          "Foundation",
+          "#3"
+        ]
+      },
+      "metadata": {
+        "pageCount": 256,
+        "publicationYear": 1953,
+        "bookType": "fiction",
+        "genres": [
+          "classics",
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous",
+          "mysterious"
+        ],
+        "pace": "medium",
+        "series": [
+          {
+            "name": "Foundation",
+            "position": "3"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "foundation-and-empire",
+      "title": "Foundation and Empire",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "isbn": "9780553803723",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "256 pages  •  hardcover  •  1952   • ",
+        "labels": "fiction classics science fiction adventurous medium-paced",
+        "series": [
+          "Foundation",
+          "#2"
+        ]
+      },
+      "metadata": {
+        "pageCount": 256,
+        "publicationYear": 1952,
+        "bookType": "fiction",
+        "genres": [
+          "classics",
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous"
+        ],
+        "pace": "medium",
+        "series": [
+          {
+            "name": "Foundation",
+            "position": "2"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-currents-of-space",
+      "title": "The Currents of Space",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "isbn": "9780553293418",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "304 pages  •  paperback  •  1952   • ",
+        "labels": "fiction science fiction adventurous mysterious medium-paced",
+        "series": [
+          "Galactic Empire",
+          "#2"
+        ]
+      },
+      "metadata": {
+        "pageCount": 304,
+        "publicationYear": 1952,
+        "bookType": "fiction",
+        "genres": [
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous",
+          "mysterious"
+        ],
+        "pace": "medium",
+        "series": [
+          {
+            "name": "Galactic Empire",
+            "position": "2"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-stars-like-dust",
+      "title": "The Stars, Like Dust",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "isbn": "9780553293432",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "304 pages  •  paperback  •  1951   • ",
+        "labels": "fiction science fiction adventurous mysterious medium-paced",
+        "series": [
+          "Galactic Empire",
+          "#1"
+        ]
+      },
+      "metadata": {
+        "pageCount": 304,
+        "publicationYear": 1951,
+        "bookType": "fiction",
+        "genres": [
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous",
+          "mysterious"
+        ],
+        "pace": "medium",
+        "series": [
+          {
+            "name": "Galactic Empire",
+            "position": "1"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "four-thousand-weeks",
+      "title": "Four Thousand Weeks: Time Management for Mortals",
+      "authors": [
+        "Oliver Burkeman"
+      ],
+      "isbn": "9780374159122",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "271 pages  •  hardcover  •  2021   • ",
+        "labels": "nonfiction self help informative reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 271,
+        "publicationYear": 2021,
+        "bookType": "nonfiction",
+        "genres": [
+          "self help"
+        ],
+        "moods": [
+          "informative",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "pebble-in-the-sky",
+      "title": "Pebble in the Sky",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "isbn": "9780593160084",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "246 pages  •  digital  •  1950   • ",
+        "labels": "fiction science fiction adventurous medium-paced",
+        "series": [
+          "Galactic Empire",
+          "#3"
+        ]
+      },
+      "metadata": {
+        "pageCount": 246,
+        "publicationYear": 1950,
+        "bookType": "fiction",
+        "genres": [
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous"
+        ],
+        "pace": "medium",
+        "series": [
+          {
+            "name": "Galactic Empire",
+            "position": "3"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-naked-sun",
+      "title": "The Naked Sun",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "isbn": "9780586010167",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "208 pages  •  paperback  •  1956   • ",
+        "labels": "fiction mystery science fiction adventurous mysterious reflective medium-paced",
+        "series": [
+          "Robot",
+          "#2"
+        ]
+      },
+      "metadata": {
+        "pageCount": 208,
+        "publicationYear": 1956,
+        "bookType": "fiction",
+        "genres": [
+          "mystery",
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous",
+          "mysterious",
+          "reflective"
+        ],
+        "pace": "medium",
+        "series": [
+          {
+            "name": "Robot",
+            "position": "2"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-caves-of-steel",
+      "title": "The Caves of Steel",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "isbn": "9780586008355",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "206 pages  •  paperback  •  1954   • ",
+        "labels": "fiction mystery science fiction adventurous mysterious medium-paced",
+        "series": [
+          "Robot",
+          "#1"
+        ]
+      },
+      "metadata": {
+        "pageCount": 206,
+        "publicationYear": 1954,
+        "bookType": "fiction",
+        "genres": [
+          "mystery",
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous",
+          "mysterious"
+        ],
+        "pace": "medium",
+        "series": [
+          {
+            "name": "Robot",
+            "position": "1"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "imperial-earth",
+      "title": "Imperial Earth",
+      "authors": [
+        "Arthur C. Clarke"
+      ],
+      "isbn": "9781416504542",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "320 pages  •  paperback  •  1975   • ",
+        "labels": "fiction science fiction adventurous challenging reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 320,
+        "publicationYear": 1975,
+        "bookType": "fiction",
+        "genres": [
+          "science fiction"
+        ],
+        "moods": [
+          "adventurous",
+          "challenging",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "i-robot",
+      "title": "I, Robot",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "isbn": "9780553803709",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "224 pages  •  hardcover  •  1950   • ",
+        "labels": "fiction classics science fiction short stories adventurous reflective medium-paced",
+        "series": [
+          "Robot",
+          "#0.1"
+        ]
+      },
+      "metadata": {
+        "pageCount": 224,
+        "publicationYear": 1950,
+        "bookType": "fiction",
+        "genres": [
+          "classics",
+          "science fiction",
+          "short stories"
+        ],
+        "moods": [
+          "adventurous",
+          "reflective"
+        ],
+        "pace": "medium",
+        "series": [
+          {
+            "name": "Robot",
+            "position": "0.1"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "days-at-the-morisaki-bookshop",
+      "title": "Days at the Morisaki Bookshop",
+      "authors": [
+        "Satoshi Yagisawa"
+      ],
+      "isbn": "9780063278677",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "147 pages  •  paperback  •  2010   • ",
+        "labels": "fiction contemporary hopeful lighthearted reflective fast-paced",
+        "series": [
+          "Days at the Morisaki Bookshop",
+          "#1"
+        ]
+      },
+      "metadata": {
+        "pageCount": 147,
+        "publicationYear": 2010,
+        "bookType": "fiction",
+        "genres": [
+          "contemporary"
+        ],
+        "moods": [
+          "hopeful",
+          "lighthearted",
+          "reflective"
+        ],
+        "pace": "fast",
+        "series": [
+          {
+            "name": "Days at the Morisaki Bookshop",
+            "position": "1"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-new-lombard-street",
+      "title": "The New Lombard Street: How the Fed Became the Dealer of Last Resort",
+      "authors": [
+        "Perry Mehrling"
+      ],
+      "isbn": "9780691143989",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "174 pages  •  hardcover   • ",
+        "labels": "nonfiction business economics challenging informative slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 174,
+        "bookType": "nonfiction",
+        "genres": [
+          "business",
+          "economics"
+        ],
+        "moods": [
+          "challenging",
+          "informative"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": [
+        "Source has no original publication year."
+      ]
+    },
+    {
+      "slug": "focusing",
+      "title": "Focusing",
+      "authors": [
+        "Eugene T. Gendlin"
+      ],
+      "isbn": "9780553278330",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "221 pages  •  paperback  •  1978   • ",
+        "labels": "nonfiction psychology self help informative reflective slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 221,
+        "publicationYear": 1978,
+        "bookType": "nonfiction",
+        "genres": [
+          "psychology",
+          "self help"
+        ],
+        "moods": [
+          "informative",
+          "reflective"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "tuesdays-with-morrie",
+      "title": "Tuesdays with Morrie",
+      "authors": [
+        "Mitch Albom"
+      ],
+      "isbn": "9780751529814",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "210 pages  •  paperback  •  1997   • ",
+        "labels": "nonfiction memoir emotional inspiring reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 210,
+        "publicationYear": 1997,
+        "bookType": "nonfiction",
+        "genres": [
+          "memoir"
+        ],
+        "moods": [
+          "emotional",
+          "inspiring",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "slow-productivity",
+      "title": "Slow Productivity: The Lost Art of Accomplishment Without Burnout",
+      "authors": [
+        "Cal Newport"
+      ],
+      "isbn": "9780593544853",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "244 pages  •  hardcover  •  2024   • ",
+        "labels": "nonfiction business self help informative inspiring reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 244,
+        "publicationYear": 2024,
+        "bookType": "nonfiction",
+        "genres": [
+          "business",
+          "self help"
+        ],
+        "moods": [
+          "informative",
+          "inspiring",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "convenience-store-woman",
+      "title": "Convenience Store Woman",
+      "authors": [
+        "Sayaka Murata"
+      ],
+      "isbn": "9781846276835",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "163 pages  •  paperback  •  2016   • ",
+        "labels": "fiction contemporary literary reflective fast-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 163,
+        "publicationYear": 2016,
+        "bookType": "fiction",
+        "genres": [
+          "contemporary",
+          "literary"
+        ],
+        "moods": [
+          "reflective"
+        ],
+        "pace": "fast",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "lying-for-money",
+      "title": "Lying for Money: How Legendary Frauds Reveal the Workings of Our World",
+      "authors": [
+        "Dan Davies"
+      ],
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "321 pages  •  digital  •  2018   • ",
+        "labels": "nonfiction economics history true crime challenging informative slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 321,
+        "publicationYear": 2018,
+        "bookType": "nonfiction",
+        "genres": [
+          "economics",
+          "history",
+          "true crime"
+        ],
+        "moods": [
+          "challenging",
+          "informative"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "land-is-a-big-deal",
+      "title": "Land is a Big Deal",
+      "authors": [
+        "Lars A. Doucet"
+      ],
+      "isbn": "9798985322521",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "305 pages  •  paperback  •  2022   • ",
+        "labels": "nonfiction economics philosophy politics challenging informative reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 305,
+        "publicationYear": 2022,
+        "bookType": "nonfiction",
+        "genres": [
+          "economics",
+          "philosophy",
+          "politics"
+        ],
+        "moods": [
+          "challenging",
+          "informative",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-inner-game-of-tennis",
+      "title": "The Inner Game of Tennis: The Classic Guide to the Mental Side of Peak Performance",
+      "authors": [
+        "W. Timothy Gallwey"
+      ],
+      "isbn": "9780679778318",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "160 pages  •  paperback  •  1974   • ",
+        "labels": "nonfiction psychology self help sports informative inspiring reflective medium-paced",
+        "series": [
+          "inner Game"
+        ]
+      },
+      "metadata": {
+        "pageCount": 160,
+        "publicationYear": 1974,
+        "bookType": "nonfiction",
+        "genres": [
+          "psychology",
+          "self help",
+          "sports"
+        ],
+        "moods": [
+          "informative",
+          "inspiring",
+          "reflective"
+        ],
+        "pace": "medium",
+        "series": [
+          {
+            "name": "inner Game"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "flowers-for-algernon",
+      "title": "Flowers for Algernon",
+      "authors": [
+        "Daniel Keyes"
+      ],
+      "isbn": "9780063320222",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "320 pages  •  paperback  •  1966   • ",
+        "labels": "fiction classics literary science fiction emotional reflective sad medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 320,
+        "publicationYear": 1966,
+        "bookType": "fiction",
+        "genres": [
+          "classics",
+          "literary",
+          "science fiction"
+        ],
+        "moods": [
+          "emotional",
+          "reflective",
+          "sad"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-pathless-path",
+      "title": "The Pathless Path: Imagining a New Story For Work and Life",
+      "authors": [
+        "Paul Millerd"
+      ],
+      "isbn": "9798985515305",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "220 pages  •  paperback  •  2022   • ",
+        "labels": "nonfiction business memoir self help informative inspiring reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 220,
+        "publicationYear": 2022,
+        "bookType": "nonfiction",
+        "genres": [
+          "business",
+          "memoir",
+          "self help"
+        ],
+        "moods": [
+          "informative",
+          "inspiring",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-untethered-soul-at-work",
+      "title": "The Untethered Soul at Work: Teachings to Transform Your Work Life",
+      "authors": [
+        "Michael Singer"
+      ],
+      "isbn": "9781683643005",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "2h 17m  •  audio   • ",
+        "labels": "nonfiction business philosophy self help informative medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "audioMinutes": 137,
+        "bookType": "nonfiction",
+        "genres": [
+          "business",
+          "philosophy",
+          "self help"
+        ],
+        "moods": [
+          "informative"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "audioMinutes",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": [
+        "Source has no original publication year."
+      ]
+    },
+    {
+      "slug": "the-untethered-soul",
+      "title": "The Untethered Soul: The Journey Beyond Yourself",
+      "authors": [
+        "Michael A. Singer"
+      ],
+      "isbn": "9781572245372",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "181 pages  •  paperback  •  2007   • ",
+        "labels": "nonfiction psychology self help informative inspiring reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 181,
+        "publicationYear": 2007,
+        "bookType": "nonfiction",
+        "genres": [
+          "psychology",
+          "self help"
+        ],
+        "moods": [
+          "informative",
+          "inspiring",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "living-from-a-place-of-surrender",
+      "title": "Living from a Place of Surrender: The Untethered Soul in Action",
+      "authors": [
+        "Michael Singer"
+      ],
+      "isbn": "9781683645856",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "9h 16m  •  audio   • ",
+        "labels": "nonfiction philosophy self help informative medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "audioMinutes": 556,
+        "bookType": "nonfiction",
+        "genres": [
+          "philosophy",
+          "self help"
+        ],
+        "moods": [
+          "informative"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "audioMinutes",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": [
+        "Source has no original publication year."
+      ]
+    },
+    {
+      "slug": "fortune-s-formula",
+      "title": "Fortune's Formula: The Untold Story of the Scientific Betting System That Beat the Casinos and Wall Street",
+      "authors": [
+        "William Poundstone"
+      ],
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "400 pages  •  paperback  •  2006   • ",
+        "labels": "nonfiction business economics informative medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 400,
+        "publicationYear": 2006,
+        "bookType": "nonfiction",
+        "genres": [
+          "business",
+          "economics"
+        ],
+        "moods": [
+          "informative"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "poverty-by-america",
+      "title": "Poverty, by America",
+      "authors": [
+        "Matthew Desmond"
+      ],
+      "isbn": "9780593239919",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "296 pages  •  hardcover  •  2023   • ",
+        "labels": "nonfiction economics politics sociology challenging informative reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 296,
+        "publicationYear": 2023,
+        "bookType": "nonfiction",
+        "genres": [
+          "economics",
+          "politics",
+          "sociology"
+        ],
+        "moods": [
+          "challenging",
+          "informative",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-science-of-enlightenment",
+      "title": "The Science of Enlightenment: Teachings and Meditations for Awakening Through Self-Investigation",
+      "authors": [
+        "Shinzen Young"
+      ],
+      "isbn": "9781591792321",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "16h 2m  •  audio  •  1998   • ",
+        "labels": "nonfiction philosophy informative reflective slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "audioMinutes": 962,
+        "publicationYear": 1998,
+        "bookType": "nonfiction",
+        "genres": [
+          "philosophy"
+        ],
+        "moods": [
+          "informative",
+          "reflective"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "audioMinutes",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "deep-work",
+      "title": "Deep Work: Rules for Focused Success in a Distracted World",
+      "authors": [
+        "Cal Newport"
+      ],
+      "isbn": "9781455586691",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "304 pages  •  hardcover  •  2016   • ",
+        "labels": "nonfiction business psychology self help informative medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 304,
+        "publicationYear": 2016,
+        "bookType": "nonfiction",
+        "genres": [
+          "business",
+          "psychology",
+          "self help"
+        ],
+        "moods": [
+          "informative"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "how-minds-change",
+      "title": "How Minds Change: The Surprising Science of Belief, Opinion, and Persuasion",
+      "authors": [
+        "David McRaney"
+      ],
+      "isbn": "9780593190296",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "350 pages  •  hardcover  •  2022   • ",
+        "labels": "nonfiction psychology informative reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 350,
+        "publicationYear": 2022,
+        "bookType": "nonfiction",
+        "genres": [
+          "psychology"
+        ],
+        "moods": [
+          "informative",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "yearbook",
+      "title": "Yearbook",
+      "authors": [
+        "Seth Rogen"
+      ],
+      "isbn": "9781984825407",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "260 pages  •  hardcover  •  2021   • ",
+        "labels": "nonfiction essays memoir funny lighthearted reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 260,
+        "publicationYear": 2021,
+        "bookType": "nonfiction",
+        "genres": [
+          "essays",
+          "memoir"
+        ],
+        "moods": [
+          "funny",
+          "lighthearted",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "adult-children-of-emotionally-immature-parents",
+      "title": "Adult Children of Emotionally Immature Parents",
+      "authors": [
+        "Lindsay C. Gibson"
+      ],
+      "isbn": "9781626251700",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "201 pages  •  paperback  •  2015   • ",
+        "labels": "nonfiction psychology self help informative reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 201,
+        "publicationYear": 2015,
+        "bookType": "nonfiction",
+        "genres": [
+          "psychology",
+          "self help"
+        ],
+        "moods": [
+          "informative",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "lombard-street",
+      "title": "Lombard Street: A Description of the Money Market",
+      "authors": [
+        "Walter Bagehot"
+      ],
+      "isbn": "9781406504392",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "188 pages  •  paperback  •  1873   • ",
+        "labels": "nonfiction economics history challenging informative slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 188,
+        "publicationYear": 1873,
+        "bookType": "nonfiction",
+        "genres": [
+          "economics",
+          "history"
+        ],
+        "moods": [
+          "challenging",
+          "informative"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "chaos",
+      "title": "Chaos: Making a New Science",
+      "authors": [
+        "James Gleick"
+      ],
+      "isbn": "9780143113454",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "360 pages  •  paperback  •  1987   • ",
+        "labels": "nonfiction mathematics science challenging informative reflective slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 360,
+        "publicationYear": 1987,
+        "bookType": "nonfiction",
+        "genres": [
+          "mathematics",
+          "science"
+        ],
+        "moods": [
+          "challenging",
+          "informative",
+          "reflective"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "die-with-zero",
+      "title": "Die with Zero: Getting All You Can from Your Money and Your Life",
+      "authors": [
+        "Bill Perkins"
+      ],
+      "isbn": "9780358099765",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "240 pages  •  hardcover  •  2020   • ",
+        "labels": "nonfiction economics informative inspiring reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 240,
+        "publicationYear": 2020,
+        "bookType": "nonfiction",
+        "genres": [
+          "economics"
+        ],
+        "moods": [
+          "informative",
+          "inspiring",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "just-keep-buying",
+      "title": "Just Keep Buying: Proven Ways to Save Money and Build Your Wealth",
+      "authors": [
+        "Nick Maggiulli"
+      ],
+      "isbn": "9780857199256",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "285 pages  •  paperback  •  2022   • ",
+        "labels": "nonfiction business economics informative medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 285,
+        "publicationYear": 2022,
+        "bookType": "nonfiction",
+        "genres": [
+          "business",
+          "economics"
+        ],
+        "moods": [
+          "informative"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-alchemy-of-finance",
+      "title": "The Alchemy of Finance",
+      "authors": [
+        "George Soros"
+      ],
+      "isbn": "9780471445494",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "416 pages  •  paperback  •  1987   • ",
+        "labels": "nonfiction business economics informative slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 416,
+        "publicationYear": 1987,
+        "bookType": "nonfiction",
+        "genres": [
+          "business",
+          "economics"
+        ],
+        "moods": [
+          "informative"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "how-to-sleep",
+      "title": "How to Sleep: The New Science-Based Solutions for Sleeping Through the Night",
+      "authors": [
+        "Rafael Pelayo"
+      ],
+      "isbn": "9781579659578",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "160 pages  •  hardcover  •  2020   • ",
+        "labels": "nonfiction science informative medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 160,
+        "publicationYear": 2020,
+        "bookType": "nonfiction",
+        "genres": [
+          "science"
+        ],
+        "moods": [
+          "informative"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-world-for-sale",
+      "title": "The World for Sale: Money, Power and the Traders Who Barter the Earth's Resources",
+      "authors": [
+        "Jack Farchy",
+        "Javier Blas"
+      ],
+      "isbn": "9781847942661",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "320 pages  •  paperback  •  2020   • ",
+        "labels": "nonfiction business politics challenging informative medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 320,
+        "publicationYear": 2020,
+        "bookType": "nonfiction",
+        "genres": [
+          "business",
+          "politics"
+        ],
+        "moods": [
+          "challenging",
+          "informative"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "decisive",
+      "title": "Decisive: How to Make Better Choices in Life and Work",
+      "authors": [
+        "Chip Heath",
+        "Dan Heath"
+      ],
+      "isbn": "9780307956392",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "316 pages  •  hardcover  •  2013   • ",
+        "labels": "nonfiction business psychology self help informative reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 316,
+        "publicationYear": 2013,
+        "bookType": "nonfiction",
+        "genres": [
+          "business",
+          "psychology",
+          "self help"
+        ],
+        "moods": [
+          "informative",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "man-s-search-for-meaning",
+      "title": "Man's Search for Meaning",
+      "authors": [
+        "Viktor E. Frankl"
+      ],
+      "isbn": "9780807014295",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "165 pages  •  paperback  •  1946   • ",
+        "labels": "nonfiction memoir philosophy psychology informative inspiring reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 165,
+        "publicationYear": 1946,
+        "bookType": "nonfiction",
+        "genres": [
+          "memoir",
+          "philosophy",
+          "psychology"
+        ],
+        "moods": [
+          "informative",
+          "inspiring",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-cult-of-smart",
+      "title": "The Cult of Smart: How Our Broken Education System Perpetuates Social Injustice",
+      "authors": [
+        "Fredrik deBoer"
+      ],
+      "isbn": "9781250752048",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "8h 1m  •  audio  •  2020   • ",
+        "labels": "nonfiction education psychology reflective slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "audioMinutes": 481,
+        "publicationYear": 2020,
+        "bookType": "nonfiction",
+        "genres": [
+          "education",
+          "psychology"
+        ],
+        "moods": [
+          "reflective"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "audioMinutes",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "disorder",
+      "title": "Disorder: Hard Times in the 21st Century",
+      "authors": [
+        "Helen Thompson"
+      ],
+      "isbn": "9780198864981",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "384 pages  •  hardcover  •  2022   • ",
+        "labels": "nonfiction history politics challenging informative medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 384,
+        "publicationYear": 2022,
+        "bookType": "nonfiction",
+        "genres": [
+          "history",
+          "politics"
+        ],
+        "moods": [
+          "challenging",
+          "informative"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-body-keeps-the-score",
+      "title": "The Body Keeps the Score: Brain, Mind, and Body in the Healing of Trauma",
+      "authors": [
+        "Bessel van der Kolk"
+      ],
+      "isbn": "9780670785933",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "443 pages  •  hardcover  •  2014   • ",
+        "labels": "nonfiction health psychology challenging informative reflective slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 443,
+        "publicationYear": 2014,
+        "bookType": "nonfiction",
+        "genres": [
+          "health",
+          "psychology"
+        ],
+        "moods": [
+          "challenging",
+          "informative",
+          "reflective"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "bottle-of-lies",
+      "title": "Bottle of Lies: The Inside Story of the Generic Drug Boom",
+      "authors": [
+        "Katherine Eban"
+      ],
+      "isbn": "9780062338808",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "512 pages  •  digital  •  2019   • ",
+        "labels": "nonfiction business health true crime informative medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 512,
+        "publicationYear": 2019,
+        "bookType": "nonfiction",
+        "genres": [
+          "business",
+          "health",
+          "true crime"
+        ],
+        "moods": [
+          "informative"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "atomic-habits",
+      "title": "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
+      "authors": [
+        "James Clear"
+      ],
+      "isbn": "9780735211292",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "306 pages  •  hardcover  •  2018   • ",
+        "labels": "nonfiction psychology self help informative inspiring reflective medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 306,
+        "publicationYear": 2018,
+        "bookType": "nonfiction",
+        "genres": [
+          "psychology",
+          "self help"
+        ],
+        "moods": [
+          "informative",
+          "inspiring",
+          "reflective"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "dreamland",
+      "title": "Dreamland: The True Tale of America's Opiate Epidemic",
+      "authors": [
+        "Sam Quinones"
+      ],
+      "isbn": "9781620402504",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "384 pages  •  hardcover  •  2015   • ",
+        "labels": "nonfiction history politics true crime challenging informative slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 384,
+        "publicationYear": 2015,
+        "bookType": "nonfiction",
+        "genres": [
+          "history",
+          "politics",
+          "true crime"
+        ],
+        "moods": [
+          "challenging",
+          "informative"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "fentanyl-inc",
+      "title": "Fentanyl, Inc.: How Rogue Chemists Are Creating the Deadliest Wave of the Opioid Epidemic",
+      "authors": [
+        "Ben Westhoff"
+      ],
+      "isbn": "9780802127433",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "356 pages  •  hardcover  •  2019   • ",
+        "labels": "nonfiction health science challenging informative medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 356,
+        "publicationYear": 2019,
+        "bookType": "nonfiction",
+        "genres": [
+          "health",
+          "science"
+        ],
+        "moods": [
+          "challenging",
+          "informative"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "trade-wars-are-class-wars",
+      "title": "Trade Wars Are Class Wars: How Rising Inequality Distorts the Global Economy and Threatens International Peace",
+      "authors": [
+        "Michael Pettis",
+        "Matthew C. Klein"
+      ],
+      "isbn": "9780300244175",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "288 pages  •  hardcover  •  2020   • ",
+        "labels": "nonfiction business economics politics challenging informative slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 288,
+        "publicationYear": 2020,
+        "bookType": "nonfiction",
+        "genres": [
+          "business",
+          "economics",
+          "politics"
+        ],
+        "moods": [
+          "challenging",
+          "informative"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "devil-take-the-hindmost",
+      "title": "Devil Take the Hindmost: A History of Financial Speculation",
+      "authors": [
+        "Edward Chancellor"
+      ],
+      "isbn": "9780452281806",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "400 pages  •  paperback  •  1999   • ",
+        "labels": "nonfiction economics history challenging informative slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 400,
+        "publicationYear": 1999,
+        "bookType": "nonfiction",
+        "genres": [
+          "economics",
+          "history"
+        ],
+        "moods": [
+          "challenging",
+          "informative"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "debt",
+      "title": "Debt: The First 5,000 Years",
+      "authors": [
+        "David Graeber"
+      ],
+      "isbn": "9781933633862",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "534 pages  •  hardcover  •  2011   • ",
+        "labels": "nonfiction economics history challenging informative slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 534,
+        "publicationYear": 2011,
+        "bookType": "nonfiction",
+        "genres": [
+          "economics",
+          "history"
+        ],
+        "moods": [
+          "challenging",
+          "informative"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "lords-of-finance",
+      "title": "Lords of Finance: The Bankers Who Broke the World",
+      "authors": [
+        "Liaquat Ahamed"
+      ],
+      "isbn": "9781594201820",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "564 pages  •  hardcover  •  2009   • ",
+        "labels": "nonfiction economics history informative slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 564,
+        "publicationYear": 2009,
+        "bookType": "nonfiction",
+        "genres": [
+          "economics",
+          "history"
+        ],
+        "moods": [
+          "informative"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-lessons-of-history",
+      "title": "The Lessons of History",
+      "authors": [
+        "Ariel Durant",
+        "Will Durant"
+      ],
+      "isbn": "9781567310245",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "119 pages  •  hardcover  •  1968   • ",
+        "labels": "nonfiction history politics adventurous slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 119,
+        "publicationYear": 1968,
+        "bookType": "nonfiction",
+        "genres": [
+          "history",
+          "politics"
+        ],
+        "moods": [
+          "adventurous"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-intelligent-investor",
+      "title": "The Intelligent Investor",
+      "authors": [
+        "Benjamin Graham"
+      ],
+      "isbn": "9780060555665",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "640 pages  •  paperback  •  1949   • ",
+        "labels": "nonfiction business informative slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 640,
+        "publicationYear": 1949,
+        "bookType": "nonfiction",
+        "genres": [
+          "business"
+        ],
+        "moods": [
+          "informative"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "the-deficit-myth",
+      "title": "The Deficit Myth",
+      "authors": [
+        "Stephanie Kelton"
+      ],
+      "isbn": "9781541736184",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "336 pages  •  hardcover  •  2020   • ",
+        "labels": "nonfiction economics politics challenging informative slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 336,
+        "publicationYear": 2020,
+        "bookType": "nonfiction",
+        "genres": [
+          "economics",
+          "politics"
+        ],
+        "moods": [
+          "challenging",
+          "informative"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "reminiscences-of-a-stock-operator",
+      "title": "Reminiscences of a Stock Operator",
+      "authors": [
+        "Edwin Lefèvre"
+      ],
+      "isbn": "9780471770886",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "273 pages  •  paperback  •  1922   • ",
+        "labels": "nonfiction business economics informative slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 273,
+        "publicationYear": 1922,
+        "bookType": "nonfiction",
+        "genres": [
+          "business",
+          "economics"
+        ],
+        "moods": [
+          "informative"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books-read/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "more-money-than-god",
+      "title": "More Money Than God: Hedge Funds and the Making of a New Elite",
+      "authors": [
+        "Sebastian Mallaby"
+      ],
+      "isbn": "9781594202551",
+      "match": "isbn",
+      "observed": {
+        "length": "496 pages  •  hardcover  •  2010   • ",
+        "labels": "nonfiction business economics informative slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 496,
+        "publicationYear": 2010,
+        "bookType": "nonfiction",
+        "genres": [
+          "business",
+          "economics"
+        ],
+        "moods": [
+          "informative"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books/caa64d72-7236-43d6-bab1-88eff4d4c64f/editions",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "fooled-by-randomness",
+      "title": "Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets",
+      "authors": [
+        "Nassim Nicholas Taleb"
+      ],
+      "isbn": "9780812975215",
+      "match": "isbn",
+      "observed": {
+        "length": "316 pages  •  paperback  •  2001   • ",
+        "labels": "nonfiction business economics challenging informative reflective slow-paced",
+        "series": [
+          "Incerto",
+          "#1"
+        ]
+      },
+      "metadata": {
+        "pageCount": 316,
+        "publicationYear": 2001,
+        "bookType": "nonfiction",
+        "genres": [
+          "business",
+          "economics"
+        ],
+        "moods": [
+          "challenging",
+          "informative",
+          "reflective"
+        ],
+        "pace": "slow",
+        "series": [
+          {
+            "name": "Incerto",
+            "position": "1"
+          }
+        ],
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books/a9dcd2ab-b993-4498-b5ba-c963c843a8e3/editions",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace",
+            "series"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "crashed",
+      "title": "Crashed: How a Decade of Financial Crises Changed the World",
+      "authors": [
+        "Adam Tooze"
+      ],
+      "isbn": "9780670024933",
+      "match": "isbn",
+      "observed": {
+        "length": "720 pages  •  hardcover  •  2018   • ",
+        "labels": "nonfiction economics history politics challenging informative slow-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 720,
+        "publicationYear": 2018,
+        "bookType": "nonfiction",
+        "genres": [
+          "economics",
+          "history",
+          "politics"
+        ],
+        "moods": [
+          "challenging",
+          "informative"
+        ],
+        "pace": "slow",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books/9082b0fe-4f6a-48b9-9ff6-73a8d4136d83/editions",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "dark-money",
+      "title": "Dark Money: The Hidden History of the Billionaires Behind the Rise of the Radical Right",
+      "authors": [
+        "Jane Mayer"
+      ],
+      "isbn": "9780307947901",
+      "match": "isbn",
+      "observed": {
+        "length": "576 pages  •  paperback  •  2016   • ",
+        "labels": "nonfiction economics history politics challenging dark informative medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 576,
+        "publicationYear": 2016,
+        "bookType": "nonfiction",
+        "genres": [
+          "economics",
+          "history",
+          "politics"
+        ],
+        "moods": [
+          "challenging",
+          "dark",
+          "informative"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books/3b56b9f9-a3ab-4b7f-91ba-60411ed7f0d3/editions",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    {
+      "slug": "evicted",
+      "title": "Evicted: Poverty and Profit in the American City",
+      "authors": [
+        "Matthew Desmond"
+      ],
+      "isbn": "9780553447439",
+      "match": "exact-title-and-authors",
+      "observed": {
+        "length": "432 pages  •  hardcover  •  2016   • ",
+        "labels": "nonfiction economics politics sociology emotional informative sad medium-paced",
+        "series": []
+      },
+      "metadata": {
+        "pageCount": 432,
+        "publicationYear": 2016,
+        "bookType": "nonfiction",
+        "genres": [
+          "economics",
+          "politics",
+          "sociology"
+        ],
+        "moods": [
+          "emotional",
+          "informative",
+          "sad"
+        ],
+        "pace": "medium",
+        "language": "English"
+      },
+      "sources": [
+        {
+          "url": "https://app.thestorygraph.com/books/e5eb2dc8-5948-4028-876d-73318cb9ea82",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "pageCount",
+            "publicationYear",
+            "bookType",
+            "genres",
+            "moods",
+            "pace"
+          ]
+        },
+        {
+          "url": "https://app.thestorygraph.com/stats/vanshkumar95?year=0",
+          "retrieved": "2026-10-21",
+          "fields": [
+            "language"
+          ]
+        }
+      ],
+      "issues": []
+    }
+  ]
+}

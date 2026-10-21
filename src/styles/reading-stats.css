@@ -1,0 +1,58 @@
+.reading-stats { --stats-green: #476b4d; --stats-rust: #9c5c40; --stats-line: #d6d9cc; }
+.reading-stats section { margin-block: 2.5rem; }
+.reading-stats h2 { margin-bottom: 1.1rem; }
+.reading-stats h3 { margin: 0 0 .6rem; font-size: 1.1rem; }
+.reading-stats .stats-controls { display: flex; flex-wrap: wrap; gap: 1rem; padding: 1rem 0; border-block: 1px solid var(--stats-line); }
+.reading-stats [hidden] { display: none; }
+.stats-controls label { display: flex; flex-direction: column; gap: .35rem; font-size: .82rem; }
+.stats-controls select { max-width: 100%; color: inherit; font: inherit; font-size: .9rem; background: #fffaf2; border: 1px solid #8b9788; border-radius: 3px; padding: .5rem 1.7rem .5rem .55rem; min-height: 44px; }
+.reading-stats .stats-caption { color: #626b5e; font-size: .79rem; line-height: 1.55; margin: .55rem 0 1rem; }
+.stats-summary { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.2rem; }
+.stats-summary dt,.stats-highlights dt { font-size: .8rem; color: #626b5e; }
+.stats-summary dd { margin: .3rem 0; color: #36503b; font-size: 1.65rem; line-height: 1.2; }
+.stats-panels { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.7rem; align-items: start; }
+.reading-stats section.stats-panel { margin: .8rem 0; min-width: 0; }
+.stats-bar { margin: .4rem 0; }
+.stats-bar summary { display: flex; justify-content: space-between; gap: .5rem; padding: .5rem .6rem; cursor: pointer; font-size: .8rem; line-height: 1.5; background: linear-gradient(to right,#e2e9dc var(--bar),transparent var(--bar)); border-left: 2px solid #6f8667; min-height: 44px; box-sizing: border-box; }
+.stats-bar summary::before { content: '+'; margin-right: .25rem; color: #476b4d; }
+.stats-bar[open] summary::before { content: '−'; }
+.stats-bar summary span { flex: 1; }
+.stats-bar summary strong { font-variant-numeric: tabular-nums; }
+.reading-stats summary::marker { color: #476b4d; }
+.reading-stats summary { cursor: pointer; }
+.reading-stats :is(summary,select,a):focus-visible { outline: 2px solid #476b4d; outline-offset: 4px; }
+.reading-stats .stats-books { list-style: none; padding: 0; margin: .8rem 0; }
+.stats-books li { margin: .75rem 0; line-height: 1.5; font-size: .84rem; }
+.stats-bar .stats-books { padding-left: .65rem; }
+.stats-byline,.stats-book-date { color: #626b5e; font-size: .75rem; }
+.stats-book-date { display: block; }
+.stats-line,.stats-scatter { margin: 1.4rem 0; }
+.stats-line figcaption { font-size: .85rem; }
+.reading-stats svg { width: 100%; height: auto; overflow: visible; }
+.reading-stats svg text { fill: #626b5e; font: 11px system-ui,sans-serif; }
+.stats-gridline { stroke: #d6d9cc; stroke-width: 1; }
+.stats-line-0,.stats-line-1 { fill: none; stroke-width: 2.5; stroke-linejoin: round; }
+.stats-line-0 { stroke: #476b4d; }
+.stats-line-1 { stroke: #9c5c40; stroke-dasharray: 6 4; }
+.stats-dot-0 { fill: #476b4d; fill-opacity: .8; }
+.stats-dot-1 { fill: #9c5c40; }
+.stats-table-details { margin: 1rem 0; font-size: .84rem; }
+.stats-table-wrap { overflow-x: auto; margin: 1rem 0; }
+.reading-stats table { width: 100%; border-collapse: collapse; font-size: .8rem; }
+.reading-stats :is(th,td) { padding: .6rem .5rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--stats-line); }
+.reading-stats tbody th { font-weight: normal; }
+.reading-stats small { display: block; font-size: .7rem; font-weight: normal; color: #626b5e; }
+.stats-highlights { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.3rem; }
+.stats-highlights dd { margin: .35rem 0; font-size: .9rem; }
+.stats-legend { display: flex; gap: 1.5rem; font-size: .8rem; }
+.stats-legend span::before { content: ''; display: inline-block; width: 1.3rem; border-top: 3px solid #476b4d; margin-right: .5rem; vertical-align: middle; }
+.stats-legend span+span::before { border-color: #9c5c40; border-top-style: dashed; }
+@media (max-width: 560px) {
+ .stats-panels,.stats-highlights { grid-template-columns: 1fr; gap: .75rem; }
+ .stats-controls label { flex: 1 1 120px; }
+ .stats-summary { grid-template-columns: repeat(2,minmax(0,1fr)); gap: .7rem; }
+ .stats-summary dd { font-size: 1.35rem; }
+ .reading-stats :is(th,td) { padding-inline: .3rem; }
+}
+
+.stats-jump { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; margin: 1rem 0; font-size: .8rem; }

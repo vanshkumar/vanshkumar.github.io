@@ -449,6 +449,11 @@
 
 ## Patterns and Preferences
 
+**[2026-10-21] — Average-length summary label**
+- Observation: The user finds the separate “pages” line beneath Average length redundant and visually distracting.
+- Action: Render the Average length summary as its label and number only, without a unit suffix or a separate unit line.
+- Confidence: high
+
 **[2026-10-21] — Stats visual hierarchy and chart treatment**
 - Observation: The user approved the publication chart's richer treatment and requested similarly appealing graphs and statistics while retaining the page structure. Publication year belongs within Highlights rather than beside it as a top-level section.
 - Action: Keep Publication year as an H3 inside Highlights. Use readable HTML axes, selectable monthly bars/area charts, consistent green/rust comparison colors, and prominent values with quieter labels. Preserve closed breakdowns and book drilldowns; leave unknown page counts and months after a chart's current/YTD cutoff as gaps rather than zero points.

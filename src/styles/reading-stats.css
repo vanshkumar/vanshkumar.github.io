@@ -33,7 +33,6 @@
 .stats-summary dd { margin: .45rem 0 0; color: #36503b; font-size: clamp(1.8rem,4.8vw,2.7rem); line-height: 1.15; font-variant-numeric: lining-nums tabular-nums; letter-spacing: -.045em; }
 .stats-summary > div:nth-child(2) dd { color: #965e40; }
 .stats-unit { display: inline-block; color: var(--stats-muted); font: .68rem/1.4 system-ui,sans-serif; letter-spacing: 0; margin-left: .35rem; }
-.stats-summary .stats-unit { display: block; margin: .35rem 0 0; }
 .stats-panels { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .25rem 1.7rem; align-items: start; }
 .stats-panel { --bar-color: #57764f; margin: .8rem 0; min-width: 0; }
 .stats-panel-moods { --bar-color: #9b764d; }

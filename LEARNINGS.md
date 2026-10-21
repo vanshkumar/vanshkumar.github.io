@@ -659,8 +659,8 @@
 - Action: Fix homepage crowding locally: prefer about `0.8rem` between Recent note items and `2rem` between Recent post blocks, while leaving title-to-description and section-to-section spacing unchanged.
 - Confidence: high
 
-**[2026-08-23] — Minimal footer navigation**
-- Observation: The user wants the global footer limited to About, Shelf, Twitter, Substack, and RSS, in that order; Posts, Notes, and Now should remain accessible elsewhere rather than appearing in the footer.
+**[2026-10-21] — Minimal footer navigation**
+- Observation: The user added Now as the first global footer link, revising the earlier preference to omit it. The footer order is now Now, About, Shelf, Twitter, Substack, and RSS; Posts and Notes remain accessible elsewhere.
 - Action: Preserve that exact footer link set and order in `vault/pages/site.md` unless the user explicitly revises the global navigation.
 - Confidence: high
 

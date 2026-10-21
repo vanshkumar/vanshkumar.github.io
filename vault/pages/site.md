@@ -1,12 +1,14 @@
 ---
 title: Site
-lastmod: 2026-09-27
+lastmod: 2026-10-21
 site:
   name: Vansh Kumar
   brandSubtitle: Obeying the inscrutable exhortations of my soul
   skipLinkLabel: Skip to content
   footerLabel: Footer
   footerLinks:
+    - label: Now
+      href: /now
     - label: About
       href: /about
     - label: Shelf

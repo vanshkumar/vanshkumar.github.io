@@ -2,7 +2,7 @@
 slug: media-fast-2027
 title: Media fast 2027
 date: 2026-10-15
-lastmod: 2026-10-20
+lastmod: 2026-10-22
 tags:
   - posts
 description: a random experiment
@@ -45,3 +45,4 @@ What do I think I might do with the extra time? Possibly writing more on here, p
 
 10/19: so far I have been playing a lot of video games with my brother, as we are in Northern Virginia for a month. We also have been traveling (the flight, drive to Massanutten) so there hasn't been a ton of time. I have noticed that my desire to seek out things to read has increased – when I check my email, I feel a stronger urge to open various substacks I am subscribed to, when normally I'm fine ignoring them. I have been more consistent about morning journaling, though I do always wonder if I'm doing more harm than good by ruminating on feelings in the journal. Sometimes it's useful for releasing things that come up when I'm triggered (which happens more frequently as I'm in Nova / around my parents), but it can be counterproductive too. Better to stare at the ceiling at times.
 
+10/22: it's only been a week but this whole thing is feeling a little bit troll. I feel that I am mostly using my time as I was before? Perhaps I am writing a bit more on here & just generally futzing with personal site more. Let's stick with it for at least a month and see what happens.

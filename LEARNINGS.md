@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-10-22] — Science-book recommendation evidence**
+- Observation: The Shelf notes for The Invention of Nature emphasize its narrative adventure and inspiration to explore nature; A Brief History of Intelligence is explicitly praised for clear explanations and called a favorite nonfiction book. Chaos is recommended but has no authored notes, while How Life Works and The Making of the Atomic Bomb are marked reading.
+- Action: Use those authored appraisals when tailoring science recommendations from this Shelf. Do not invent personal reactions for metadata-only entries or treat currently-reading membership as a completed-book endorsement.
+- Confidence: high
+
 **[2026-10-21] — Finished-book capture validation**
 - Observation: Astro's `astro/zod` export works in the standalone Node writer, allowing the canonical reading-record schema and YAML serializer to be shared with content sync. Historical partial/null dates remain valid while new captures require an exact date. The writer can update unfinished records without losing body notes or Shelf links, and refuses updates without a fresh SHA-256 digest.
 - Action: Keep reading-record validation in `src/lib/reading-record.mjs`; use `npm run log-book` with enriched input for mobile captures. Refresh and inspect existing records before updating, and distinguish helper writes, GitHub commits, and confirmed Pages deployments in chat reports.

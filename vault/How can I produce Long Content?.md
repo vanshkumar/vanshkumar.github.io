@@ -3,7 +3,7 @@ tags:
   - questions
 slug: how-can-i-produce-long-content
 title: How can I produce Long Content?
-lastmod: 2026-06-25
+lastmod: 2026-10-22
 date: 2026-06-09
 ---
 I have been thinking about applying the idea of the [Long Now](https://en.wikipedia.org/wiki/Long_Now_Foundation), inspired by the [About page of gwern.net](https://gwern.net/about#long-content):
@@ -38,7 +38,7 @@ If research papers are instead a suite of tools and data, as people ask their ow
 Misc notes:
 ## jun 2026
 
-this thread is a more general case of [[How can I allow my thinking to accrete over time?]]
+This thread is a more general case of [[How can I allow my thinking to accrete over time?]]
 
 
 One of the big shifts from working to not, over the last couple years, has been an extension of the length of my Now. Before it was more like a week, now it is closer to a month/year. Shifting it to decades appears to be the next natural step I am moving toward.
@@ -57,3 +57,12 @@ What are things in my life/around me that WILL survive for decades & therefore s
 - My body
 - The city of Pasadena
 - Caltech Y
+
+## oct 2026
+
+Feeling a need to re-focus on Long Now style work & thinking, especially after happening to read [this article](https://stevekrouse.com/syndicated/alan-kay-lunch):
+
+> It seemed like Alan was asking me to pick: how benevolent do you actually want to be? Or are you just looking to _seem_ benevolent? What’s your time horizon? Are you looking to make a small incremental improvement? Or are you looking 10 years out to build a better future for your children? Or are you looking to the 22nd century to ensure that our grandkids’ kids will be better than we are? Or are you thinking about the far future of not just humanity but all conscious beings, and how to build a thriving multi-planetary society for millions of years to come?
+
+Right now, I feel that my efforts are coalescing around looking 10 years out to build a better future for my children (eg with microschool), but not much further than that.
+

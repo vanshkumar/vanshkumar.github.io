@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-07-04
+lastmod: 2026-10-22
 date: 2026-06-15
 status: recommended
 author: Stewart Brand
@@ -9,7 +9,7 @@ Most of us think of Now as the current moment, hour, day, week, or maybe month. 
 
 How does taking *such* a long-term view change what you choose to work on, how you take responsibility, how you relate to what's around you?
 
-I enjoyed this work quite a lot. It directly inspired multiple questions for me, like [[How can I produce Long Content?]] and [[What are examples of Slow Science?]]. In my personal journal, I have made a list of things in my life that will survive for decades and that I can take more responsibility for over the long-term. I am brainstorming Long Art ideas and how I might work with the gardener in charge of my community to understand & improve the ecology of the garden. I have added many of the books mentioned in the text & from the Recommended Bibliography to my reading list.
+I enjoyed this work quite a lot. It directly inspired multiple questions for me, like [[How can I produce Long Content?]] and [[What are examples of Slow Science?]]. In my personal journal, I have made a list of things in my life that will survive for decades and that I can take more responsibility for over the long-term. I am brainstorming Long Art ideas and how I might work with the landscaper in charge of my community to understand & improve the ecology of the garden. I have added many of the books mentioned in the text & from the Recommended Bibliography to my reading list.
 
 I suspect the Long Now will be an extremely valuable ongoing lens for me.
 

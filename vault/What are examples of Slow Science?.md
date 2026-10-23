@@ -4,7 +4,7 @@ tags:
 slug: what-are-examples-of-slow-science
 title: What are examples of Slow Science?
 date: 2026-06-15
-lastmod: 2026-06-17
+lastmod: 2026-10-22
 ---
 *[[The Clock Of The Long Now]]* has a section on Slow Science – extremely long term scientific studies whose datasets tend to gain in value over time rather than diminish. I find this idea very intriguing.
 
@@ -18,7 +18,7 @@ Examples of Slow Science (10+ year studies):
 
 
 According to the book, Slow Science is rare because long-term scientific studies:
-1. Aren't about proving or disproving hypotheses
+1. Aren't about proving or disproving specific hypotheses
 2. Don't generate quick papers
 3. Bear no relation to scientific fashion
 4. Aren't subject to money-making patent or copyright

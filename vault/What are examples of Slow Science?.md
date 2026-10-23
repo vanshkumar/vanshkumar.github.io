@@ -4,7 +4,7 @@ tags:
 slug: what-are-examples-of-slow-science
 title: What are examples of Slow Science?
 date: 2026-06-15
-lastmod: 2026-10-22
+lastmod: 2026-10-23
 ---
 *[[The Clock Of The Long Now]]* has a section on Slow Science – extremely long term scientific studies whose datasets tend to gain in value over time rather than diminish. I find this idea very intriguing.
 
@@ -14,7 +14,7 @@ Examples of Slow Science (10+ year studies):
 - Jane Goodall chimpanzee work
 - Agricultural research at the Rothamsted estate
 - US Census data (instituted in 1790)
-
+- Does the Long Now Institute have anything like this? Protocol Institute?
 
 
 According to the book, Slow Science is rare because long-term scientific studies:

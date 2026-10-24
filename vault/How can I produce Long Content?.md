@@ -3,7 +3,7 @@ tags:
   - questions
 slug: how-can-i-produce-long-content
 title: How can I produce Long Content?
-lastmod: 2026-10-23
+lastmod: 2026-10-24
 date: 2026-06-09
 ---
 I have been thinking about applying the idea of the [Long Now](https://en.wikipedia.org/wiki/Long_Now_Foundation), inspired by the [About page of gwern.net](https://gwern.net/about#long-content):
@@ -67,3 +67,4 @@ Feeling a need to re-focus on Long Now style work & thinking, especially after h
 Right now, I feel that my efforts are coalescing around looking 10 years out to build a better future for my children (eg with microschool), but not much further than that.
 
 The students I'm working with in my project mentorship program are relevant here too. I would strongly prefer charging less so I could keep working with a kid over a much longer period of time vs finishing at some preset date. It's much more of a *relationship* in that case, as we can both collaborate to figure out the right ends of their education, etc, rather than necessarily being done when a particular project is done. I wonder how I would approach things differently if I saw them as my own kid who I will be in contact with for decades?
+

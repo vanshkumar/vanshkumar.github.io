@@ -464,6 +464,11 @@
 
 ## Patterns and Preferences
 
+**[2026-10-24] — Long Content brainstorming**
+- Observation: The Long Content note explicitly distinguishes improvement caused by elapsed time from long project duration or delayed payoff. Its October additions connect the microschool plans with a preference for sustained relationships with mentees beyond individual projects; the Now page identifies how a mind develops as the thread across the user's interests.
+- Action: Ground related creative suggestions in those existing interests and explain what elapsed years contribute. Do not present a regularly revised note or an accumulating archive as meeting the criterion without identifying that mechanism.
+- Confidence: high
+
 **[2026-10-21] — Average-length summary label**
 - Observation: The user finds the separate “pages” line beneath Average length redundant and visually distracting.
 - Action: Render the Average length summary as its label and number only, without a unit suffix or a separate unit line.

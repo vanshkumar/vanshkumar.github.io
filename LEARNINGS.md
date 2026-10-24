@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-10-24] — Removing a finished book from Currently reading**
+- Observation: Zhuangzi's completion was already recorded in `vault/reading-log/zhuangzi-basic-writings.md`, while its separate, notes-free `vault/shelf/Zhuangzi.md` still placed it in Currently reading. Shelf status only supports `reading` and `recommended`.
+- Action: For removal-only requests involving a Shelf entry without notes, remove that Shelf entry and preserve its independent reading-log record; finishing a book does not by itself authorize adding it to Recommendations.
+- Confidence: high
+
 **[2026-10-22] — Science-book recommendation evidence**
 - Observation: The Shelf notes for The Invention of Nature emphasize its narrative adventure and inspiration to explore nature; A Brief History of Intelligence is explicitly praised for clear explanations and called a favorite nonfiction book. Chaos is recommended but has no authored notes, while How Life Works and The Making of the Atomic Bomb are marked reading.
 - Action: Use those authored appraisals when tailoring science recommendations from this Shelf. Do not invent personal reactions for metadata-only entries or treat currently-reading membership as a completed-book endorsement.

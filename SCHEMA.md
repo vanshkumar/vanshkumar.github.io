@@ -76,7 +76,7 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
   - `terrain.md` owns the legacy archive hero and Posts/Notes section labels through `terrain`.
   - `site.md` owns shared visitor-facing copy through `site`, including the site
     name, description, footer, content and writing labels, comic-reader controls,
-    redirect messages, RSS metadata, and `subscription` embed URL/title. The Substack signup
+    redirect messages, RSS metadata, `pdfReader` open/download labels, and `subscription` embed URL/title. The Substack signup
     iframe appears below the homepage Word Garden and at the bottom of Post detail pages.
   - Structured page-copy fields are validated in `src/content.config.ts`; text
     templates use named placeholders such as `{title}`, `{author}`, or `{date}`.

@@ -20,6 +20,10 @@ const siteCopy = z.object({
     src: z.string().url(),
     title: z.string()
   }),
+  pdfReader: z.object({
+    openLabel: z.string(),
+    downloadLabel: z.string()
+  }),
   content: z.object({
     backlinksTitle: z.string(),
     lastUpdatedTemplate: z.string()

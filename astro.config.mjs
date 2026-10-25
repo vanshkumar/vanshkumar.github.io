@@ -9,6 +9,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import { rehypeObsidianCallouts } from './src/lib/callouts.mjs';
 import { remarkImageCaptions } from './src/lib/image-captions.mjs';
+import { remarkPdfEmbeds } from './src/lib/pdf-embeds.mjs';
 import {
   WIKI_INDEX_COLLECTIONS,
   isWikiAssetTarget,
@@ -20,6 +21,7 @@ import {
 
 const CONTENT_ROOT = fileURLToPath(new URL('./src/content', import.meta.url));
 const VAULT_ROOT = fileURLToPath(new URL('./vault', import.meta.url));
+const { data: sitePage } = matter(fs.readFileSync(path.join(VAULT_ROOT, 'pages/site.md'), 'utf8'));
 const ASSETS_DIR = fs.existsSync(path.join(VAULT_ROOT, 'assets'))
   ? path.join(VAULT_ROOT, 'assets')
   : path.join(CONTENT_ROOT, 'assets');
@@ -152,7 +154,8 @@ export default defineConfig({
           newClassName: 'wikilink-missing'
         }
       ],
-      remarkImageCaptions
+      remarkImageCaptions,
+      [remarkPdfEmbeds, sitePage.site.pdfReader]
     ],
     rehypePlugins: [
       rehypeKatex,

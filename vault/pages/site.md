@@ -26,6 +26,9 @@ site:
   subscription:
     src: https://vanshkumar.substack.com/embed?transparent=true
     title: Subscribe to Vansh Kumar on Substack
+  pdfReader:
+    openLabel: Open PDF ↗
+    downloadLabel: Download
   content:
     backlinksTitle: Backlinks
     lastUpdatedTemplate: Last updated {date}

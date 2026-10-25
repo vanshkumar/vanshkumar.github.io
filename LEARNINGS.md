@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-10-25] — Embedded PDF reader layout**
+- Observation: The wiki-link plugin emits PDF iframes with no height and `toolbar=0`, producing a 150px strip with a native border. The in-app browser showed the PDF blank even at its direct URL, while Safari rendered the same file correctly.
+- Action: Keep PDF embeds in the shared `remarkPdfEmbeds` figure renderer with responsive height, native controls, and vault-backed open/download labels. Split mixed Markdown paragraphs around PDF figures and preserve image-caption figures. Use a native browser to verify PDF rendering when the in-app browser is blank.
+- Confidence: high
+
 **[2026-10-25] — Missing manually created Weather entries**
 - Observation: The manually created Neuroscience of human social instincts file had dates but no `type`, so Weather showed it in All but excluded it from Posts and Notes. Adding `type: post` made the data service include it in Posts without changing its body or dates.
 - Action: For a root file missing from a Weather group, inspect its `type` first. Files created outside Weather need that field explicitly; the filename does not determine membership.

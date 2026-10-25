@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: focus-on-what-you-want-to-see-more-of
 title: "Focus on what you want to see more of"
 lastmod: 2026-02-28

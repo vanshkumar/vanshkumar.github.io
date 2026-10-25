@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: reciprocal-teaching-appears-to-have-a-very-large-effect-size
 title: Reciprocal teaching appears to have a very large effect size
 date: 2026-07-03

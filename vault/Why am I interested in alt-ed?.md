@@ -1,6 +1,5 @@
 ---
-tags:
-  - questions
+type: note
 slug: why-am-i-interested-in-alt-ed
 title: Why am I interested in alt-ed?
 lastmod: 2026-09-03

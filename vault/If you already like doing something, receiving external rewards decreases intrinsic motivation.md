@@ -3,8 +3,7 @@ slug: if-you-already-like-doing-something-receiving-external-rewards-decreases-i
 title: If you already like doing something, receiving external rewards decreases intrinsic motivation
 lastmod: 2026-07-22
 date: 2025-11-19
-tags:
-  - hunches
+type: note
 ---
 Blog post looking into the literature here: https://vanshkumar.substack.com/p/virtue-should-stay-its-own-reward
 

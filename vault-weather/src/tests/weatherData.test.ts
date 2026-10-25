@@ -65,11 +65,11 @@ const makeApp = ({
 describe('WeatherDataService', () => {
   it('keeps draft posts visible locally and refreshes their publication state from metadata', async () => {
     const frontmatter = {
-      'Draft.md': { tags: ['posts'], draft: true, lastmod: '2026-10-19' },
-      'Project.md': { tags: ['projects'], draft: true },
-      'Published.md': { tags: ['posts'], draft: false },
-      'Legacy.md': { tags: ['posts'] },
-      'Note.md': { tags: ['questions'], draft: true }
+      'Draft.md': { type: 'post', draft: true, lastmod: '2026-10-19' },
+      'Second post.md': { type: 'post', draft: true },
+      'Published.md': { type: 'post', draft: false },
+      'Legacy.md': { type: 'post' },
+      'Note.md': { type: 'note', draft: true }
     };
     const { app } = makeApp({ files: Object.keys(frontmatter).map((name) => makeFile(name)), frontmatter });
     const service = new WeatherDataService(app);
@@ -77,8 +77,8 @@ describe('WeatherDataService', () => {
     expect(data.items.map(({ title, draft }) => ({ title, draft }))).toEqual([
       { title: 'Draft', draft: true },
       { title: 'Legacy', draft: false },
-      { title: 'Project', draft: true },
-      { title: 'Published', draft: false }
+      { title: 'Published', draft: false },
+      { title: 'Second post', draft: true }
     ]);
     expect(data.items[0].activity.recentUpdateCount).toBe(1);
     frontmatter['Draft.md'].draft = false;
@@ -144,7 +144,7 @@ describe('WeatherDataService', () => {
           date: '2026-06-01',
           lastMod: '2026-06-14',
           slug: 'custom-question',
-          tags: ['questions']
+          type: 'note'
         }
       }
     });
@@ -159,21 +159,21 @@ describe('WeatherDataService', () => {
     expect(data.items[0]).toMatchObject({
       title: 'Custom title',
       slug: 'custom-question',
-      tags: ['questions'],
+      type: 'note',
       vaultPath: 'A Question.md',
       activity: { recentUpdateCount: 1, level: 5, lastActivity: '2026-06-14' }
     });
   });
 
   it('filters Posts and Notes before assigning activity levels', async () => {
-    const files = [makeFile('Question.md'), makeFile('Hunch.md'), makeFile('Project.md'), makeFile('Post.md')];
+    const files = [makeFile('Recent note.md'), makeFile('Older note.md'), makeFile('Second post.md'), makeFile('Post.md')];
     const { app } = makeApp({
       files,
       frontmatter: {
-        'Question.md': { tags: ['questions'], lastmod: '2026-06-15' },
-        'Hunch.md': { tags: ['hunches'], lastmod: '2026-06-13' },
-        'Project.md': { tags: ['projects'], lastmod: '2026-06-14' },
-        'Post.md': { tags: ['posts'], lastmod: '2026-06-14' }
+        'Recent note.md': { type: 'note', lastmod: '2026-06-15' },
+        'Older note.md': { type: 'note', lastmod: '2026-06-13' },
+        'Second post.md': { type: 'post', lastmod: '2026-06-14' },
+        'Post.md': { type: 'post', lastmod: '2026-06-14' }
       }
     });
     const service = new WeatherDataService(app);
@@ -189,10 +189,10 @@ describe('WeatherDataService', () => {
       new Date('2026-06-15T12:00:00Z')
     );
 
-    expect(notes.items.map((item) => item.title)).toEqual(['Hunch', 'Question']);
+    expect(notes.items.map((item) => item.title)).toEqual(['Older note', 'Recent note']);
     expect(notes.items[0].activity.level).toBeLessThan(5);
     expect(notes.items[1].activity.level).toBe(5);
-    expect(posts.items.map((item) => item.title)).toEqual(['Post', 'Project']);
+    expect(posts.items.map((item) => item.title)).toEqual(['Post', 'Second post']);
     expect(posts.items[0].activity.level).toBe(5);
   });
 
@@ -223,32 +223,25 @@ describe('WeatherDataService', () => {
     const { app, contents } = makeApp({ files });
     const service = new WeatherDataService(app);
 
-    const hunch = await service.createNote({
+    const note = await service.createNote({
       collectionKey: 'terrain',
       title: 'Reality has feedback loops',
-      tag: 'hunches',
+      type: 'note',
       now: new Date('2026-06-30T12:00:00Z')
     });
-    const project = await service.createNote({
-      collectionKey: 'terrain',
-      title: 'A new project',
-      tag: 'projects',
-      now: new Date('2026-06-30T12:00:00Z')
-    });
-
     const post = await service.createNote({
       collectionKey: 'terrain',
       title: 'A new post',
-      tag: 'posts',
+      type: 'post',
       now: new Date('2026-06-30T12:00:00Z')
     });
 
     expect(post.path).toBe('A new post.md');
-    expect(contents.get(post.path)).toContain('tags:\n  - "posts"');
-    expect(hunch.path).toBe('Reality has feedback loops.md');
-    expect(contents.get(hunch.path)).toContain('tags:\n  - "hunches"');
-    expect(project.path).toBe('A new project.md');
-    expect(contents.get(project.path)).toContain('tags:\n  - "projects"');
+    expect(contents.get(post.path)).toContain('type: post');
+    expect(note.path).toBe('Reality has feedback loops.md');
+    expect(contents.get(note.path)).toContain('type: note');
+    expect(contents.get(post.path)).not.toContain('tags:');
+    expect(contents.get(note.path)).not.toContain('tags:');
   });
 
   it('rejects duplicate root filenames and frontmatter slugs', async () => {
@@ -260,10 +253,10 @@ describe('WeatherDataService', () => {
     const service = new WeatherDataService(app);
 
     await expect(
-      service.createNote({ collectionKey: 'terrain', title: 'Existing', tag: 'hunches' })
+      service.createNote({ collectionKey: 'terrain', title: 'Existing', type: 'note' })
     ).rejects.toThrow('A writing entry with that title already exists');
     await expect(
-      service.createNote({ collectionKey: 'terrain', title: 'Duplicate Entry', tag: 'questions' })
+      service.createNote({ collectionKey: 'terrain', title: 'Duplicate Entry', type: 'note' })
     ).rejects.toThrow('A writing entry with that slug already exists');
   });
 });

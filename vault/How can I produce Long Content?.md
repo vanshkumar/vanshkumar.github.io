@@ -1,6 +1,5 @@
 ---
-tags:
-  - questions
+type: note
 slug: how-can-i-produce-long-content
 title: How can I produce Long Content?
 lastmod: 2026-10-24

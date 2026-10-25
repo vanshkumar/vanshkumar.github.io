@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: design-your-environment-as-scaffolding-towards-creating-the-world-you-want-to-see
 title: "Design your environment as scaffolding towards creating the world you want to see"
 lastmod: 2025-10-29

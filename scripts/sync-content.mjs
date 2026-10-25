@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
-import { isDraftPost } from '../src/lib/writing.mjs';
+import { classifyWritingType, isDraftPost } from '../src/lib/writing.mjs';
 import { serializeReadingRecord } from '../src/lib/reading-record.mjs';
 
 const root = path.dirname(fileURLToPath(new URL(import.meta.url)));
@@ -124,6 +124,7 @@ export const syncContent = (sourceRoot = repoRoot) => {
       }
       used.add(cleanRel);
 
+      if (collection === 'terrain') classifyWritingType(data.type, `vault/${rel}`);
       if (collection === 'terrain' && isDraftPost(data, `vault/${rel}`)) {
         draftSlugs.add(cleanRel);
         return;

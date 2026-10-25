@@ -3,8 +3,7 @@ slug: outside-stimulation-is-necessary-for-coming-up-with-good-ideas
 title: Outside stimulation is necessary for coming up with good ideas
 date: 2026-09-10
 lastmod: 2026-10-22
-tags:
-  - hunches
+type: note
 ---
 ![[Pasted image 20260910073211.png]]-Feynman
 

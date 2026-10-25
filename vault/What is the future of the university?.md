@@ -1,6 +1,5 @@
 ---
-tags:
-  - questions
+type: note
 slug: what-is-the-future-of-the-university
 title: What is the future of the university?
 date: 2026-07-05

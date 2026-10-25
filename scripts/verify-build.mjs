@@ -2,7 +2,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
-import { canonicalWritingPath, isDraftPost } from '../src/lib/writing.mjs';
+import { canonicalWritingPath, isDraftPost, writingRedirectTags } from '../src/lib/writing.mjs';
+import { normalizeWikiTarget } from '../src/lib/wiki-routing.mjs';
 import { hasShelfReview } from '../src/lib/shelf.mjs';
 import { getReadingLog } from '../src/lib/reading-log.mjs';
 import { slugify } from './sync-content.mjs';
@@ -234,9 +235,13 @@ expectedWritingLinks.forEach((link) => {
 
 fs.readdirSync(writingRoot).filter((name) => name.endsWith('.md')).forEach((name) => {
   const { data } = matter(fs.readFileSync(path.join(writingRoot, name), 'utf8'));
-  if (!data.tags.includes('posts')) return;
   const slug = name.replace(/\.md$/, '');
-  redirect(`/terrain/essays/${slug}`, `/posts/${slug}`);
+  const target = canonicalWritingPath({ slug, data });
+  for (const tag of writingRedirectTags(data)) {
+    const normalizedTag = normalizeWikiTarget(tag).replace(/\//g, '-');
+    if (normalizedTag) redirect(`/terrain/${normalizedTag}/${slug}`, target);
+  }
+  assert.ok(htmlFor('/terrain').includes(`href="${target}"`), `${slug}: missing from legacy archive`);
 });
 
 expectedPoemLinks.forEach((link) => {

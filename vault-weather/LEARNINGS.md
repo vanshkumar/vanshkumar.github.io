@@ -9,6 +9,11 @@
 
 ## Patterns and Preferences
 
+**[2026-10-25] — Creation with only Post and Note types**
+- Observation: Weather now reads and writes `type: post` or `type: note`, replacing the four subtype tags. The Posts/Notes view already supplies the new entry type, so a second selector is redundant; only All needs the two-option choice. Saved old tag filters still need migration.
+- Action: Create directly with the active view's type, offer only Post/Note from All, and preserve legacy workspace-filter mapping without accepting retired subtype values for new entries. This supersedes the earlier four-choice creation workflow.
+- Confidence: high
+
 **[2026-10-19] — Draft Post cards**
 - Observation: Draft Posts/Projects remain in Weather's local Writing views and activity calculations while the public site excludes them. Their boolean `draft` frontmatter drives a dashed border, a Draft label, and the accessible button name; metadata refresh picks up publication changes.
 - Action: Keep draft state independent of activity color, use the contrasting light border on the darkest activity cards, and leave new-entry publication defaults unchanged. Install with `install:plugin`; this session verified the real component in a browser preview, but native Obsidian access was not approved, so the installed plugin still needs a reload there.

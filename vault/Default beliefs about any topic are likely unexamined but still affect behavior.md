@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: default-beliefs-about-any-topic-are-likely-unexamined-but-still-affect-behavior
 title: "Default beliefs about any topic are likely unexamined but still affect behavior"
 lastmod: 2025-10-30

@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: humans-preferentially-learn-from-those-we-consider-high-status
 title: "Humans preferentially learn from those we consider high status"
 lastmod: 2025-11-08

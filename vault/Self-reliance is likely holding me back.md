@@ -3,8 +3,7 @@ slug: self-reliance-is-likely-holding-me-back
 title: Self-reliance is likely holding me back
 date: 2026-09-20
 lastmod: 2026-09-21
-tags:
-  - hunches
+type: note
 ---
 I consider myself a very self-reliant person. I developed my current level of self-reliance around 14 years old, I suspect as a mechanism to avoid feeling my utterly helpless position[^1] in the face of family trauma[^2]. I had the classic role reversal of trying to take care of my parents, etc.
 

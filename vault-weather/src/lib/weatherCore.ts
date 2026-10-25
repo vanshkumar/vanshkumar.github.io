@@ -2,7 +2,7 @@ import {
   COLLECTION_CONFIGS,
   type Activity,
   type CollectionKey,
-  isWritingTypeTag,
+  isWritingType,
   type WeatherItem
 } from './weatherTypes';
 
@@ -38,9 +38,6 @@ export const normalizeNoteTitle = (value: unknown): string =>
     .trim()
     .replace(/\.md$/i, '')
     .trim();
-
-export const normalizeTag = (value: unknown): string =>
-  normalizeNoteTitle(value).replace(/^#+/, '').trim();
 
 const withoutControlCharacters = (value: string): string =>
   Array.from(value)
@@ -164,13 +161,13 @@ export const createNoteDraft = ({
   collectionKey,
   title,
   rating,
-  tag,
+  type,
   now = new Date()
 }: {
   collectionKey: CollectionKey;
   title: unknown;
   rating?: unknown;
-  tag?: unknown;
+  type?: unknown;
   now?: Date;
 }): NoteDraft => {
   const config = COLLECTION_CONFIGS[collectionKey];
@@ -189,13 +186,12 @@ export const createNoteDraft = ({
 
   const date = dateToIsoDate(now) ?? dateToIsoDate(new Date())!;
   const fields = [`date: ${date}`, `lastmod: ${date}`];
-  const cleanTag = collectionKey === 'terrain' ? normalizeTag(tag).toLowerCase() : '';
   if (collectionKey === 'terrain') {
-    if (!cleanTag) throw new WeatherCreateError('Writing type is required');
-    if (!isWritingTypeTag(cleanTag)) {
-      throw new WeatherCreateError('Writing type must be Project, Post, Hunch, or Question');
+    if (!type) throw new WeatherCreateError('Writing type is required');
+    if (!isWritingType(type)) {
+      throw new WeatherCreateError('Writing type must be Post or Note');
     }
-    fields.push('tags:', `  - ${JSON.stringify(cleanTag)}`);
+    fields.push(`type: ${type}`);
   }
   if (config.requiresRating) fields.push(`rating: ${normalizeRating(rating)}`);
 

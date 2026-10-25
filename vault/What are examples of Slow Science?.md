@@ -1,6 +1,5 @@
 ---
-tags:
-  - questions
+type: note
 slug: what-are-examples-of-slow-science
 title: What are examples of Slow Science?
 date: 2026-06-15

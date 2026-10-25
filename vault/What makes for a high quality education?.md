@@ -1,6 +1,5 @@
 ---
-tags:
-  - questions
+type: note
 slug: what-makes-for-a-high-quality-education
 title: "What makes for a high quality education?"
 lastmod: 2026-06-09

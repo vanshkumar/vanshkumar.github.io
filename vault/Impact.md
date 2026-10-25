@@ -1,6 +1,5 @@
 ---
-tags:
-  - posts
+type: post
 slug: impact
 title: Impact
 description: tracing a feeling

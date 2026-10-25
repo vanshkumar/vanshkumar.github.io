@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: concretely-describe-your-utopia
 title: "Concretely describe your utopia"
 lastmod: 2026-02-04

@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: a-mind-cannot-be-defined-independently-of-its-social-environment
 title: A mind cannot be defined independently of its social environment
 date: 2026-07-03

@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: ideas-are-not-knowledge-until-they-are-tested-or-experienced
 title: "Ideas are not knowledge until they are tested or experienced"
 lastmod: 2026-03-02

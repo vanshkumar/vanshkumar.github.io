@@ -1,6 +1,5 @@
 ---
-tags:
-  - questions
+type: note
 slug: how-can-we-better-teach-metacognition
 title: How can we better teach metacognition?
 date: 2026-06-28

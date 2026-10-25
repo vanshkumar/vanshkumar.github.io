@@ -47,6 +47,7 @@ describe('weather core', () => {
       vaultPath: `${title}.md`,
       date: '2026-06-01',
       lastmod: '2026-06-10',
+      type: 'note',
       tags: [],
       draft: false,
       rating: null,
@@ -81,7 +82,7 @@ describe('weather core', () => {
       createNoteDraft({
         collectionKey: 'terrain',
         title: 'How do I choose?',
-        tag: 'questions',
+        type: 'note',
         now: new Date('2026-06-15T12:00:00Z')
       })
     ).toEqual({
@@ -90,7 +91,7 @@ describe('weather core', () => {
       filename: 'How do I choose?.md',
       vaultPath: 'How do I choose?.md',
       markdown:
-        '---\ndate: 2026-06-15\nlastmod: 2026-06-15\ntags:\n  - "questions"\n---\n\n'
+        '---\ndate: 2026-06-15\nlastmod: 2026-06-15\ntype: note\n---\n\n'
     });
     expect(
       createNoteDraft({
@@ -119,11 +120,11 @@ describe('weather core', () => {
       createNoteDraft({ collectionKey: 'terrain', title: 'Unclassified thought' })
     ).toThrow('Writing type is required');
     expect(() =>
-      createNoteDraft({ collectionKey: 'terrain', title: 'Topic only', tag: 'learning' })
-    ).toThrow('Writing type must be Project, Post, Hunch, or Question');
+      createNoteDraft({ collectionKey: 'terrain', title: 'Topic only', type: 'learning' })
+    ).toThrow('Writing type must be Post or Note');
     expect(() =>
-      createNoteDraft({ collectionKey: 'terrain', title: 'Old type', tag: 'essays' })
-    ).toThrow('Writing type must be Project, Post, Hunch, or Question');
+      createNoteDraft({ collectionKey: 'terrain', title: 'Old type', type: 'essays' })
+    ).toThrow('Writing type must be Post or Note');
   });
 
   it('normalizes safe vault cover paths', () => {

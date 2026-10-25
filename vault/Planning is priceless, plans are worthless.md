@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: planning-is-priceless-plans-are-worthless
 title: Planning is priceless, plans are worthless
 lastmod: 2026-07-03

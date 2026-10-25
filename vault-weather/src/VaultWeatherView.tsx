@@ -77,7 +77,7 @@ export class VaultWeatherView extends ItemView {
         service={this.service}
         changeCollection={(key) => this.changeCollection(key)}
         changeTerrainFilter={(filter) => this.changeTerrainFilter(filter)}
-        createNote={(key, tag) => this.openCreateModal(key, tag)}
+        createNote={(key, group) => this.openCreateModal(key, group)}
         openFile={(file) => this.openFile(file)}
       />
     );
@@ -97,8 +97,8 @@ export class VaultWeatherView extends ItemView {
   }
 
   private openCreateModal(key: CollectionKey, group?: WritingGroup): void {
-    new CreateNoteModal(this.app, key, group, async (title, rating, tag) => {
-      const file = await this.service.createNote({ collectionKey: key, title, rating, tag });
+    new CreateNoteModal(this.app, key, group, async (title, rating, type) => {
+      const file = await this.service.createNote({ collectionKey: key, title, rating, type });
       this.refresh();
       await this.openFile(file);
     }).open();

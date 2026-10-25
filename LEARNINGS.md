@@ -464,6 +464,11 @@
 
 ## Patterns and Preferences
 
+**[2026-10-25] — Posts and Notes without subtype tags**
+- Observation: The user removed the Project/Post and Hunch/Question distinctions. Root writing now uses `type: post` or `type: note`; topic tags such as `fiction` remain independent. Migrating metadata preserves canonical URLs, while retired tag-qualified URLs require explicit redirects.
+- Action: Use `type` for routing, archive membership, drafts, and log-parent validation. Do not restore subtype tags or separate Hunch/Question sections; retain legacy URL and wikilink compatibility. This supersedes the earlier tag-group classification rules.
+- Confidence: high
+
 **[2026-10-24] — Long Content brainstorming**
 - Observation: The Long Content note explicitly distinguishes improvement caused by elapsed time from long project duration or delayed payoff. Its October additions connect the microschool plans with a preference for sustained relationships with mentees beyond individual projects; the Now page identifies how a mind develops as the thread across the user's interests.
 - Action: Ground related creative suggestions in those existing interests and explain what elapsed years contribute. Do not present a regularly revised note or an accumulating archive as meeting the criterion without identifying that mechanism.

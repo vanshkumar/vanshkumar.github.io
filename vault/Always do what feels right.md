@@ -3,8 +3,7 @@ slug: always-do-what-feels-right
 title: Always do what feels right
 date: 2026-09-13
 lastmod: 2026-10-01
-tags:
-  - hunches
+type: note
 ---
 An exhortation.
 

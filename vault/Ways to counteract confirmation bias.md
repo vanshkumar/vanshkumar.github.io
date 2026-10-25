@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: ways-to-counteract-confirmation-bias
 title: "Ways to counteract confirmation bias"
 lastmod: 2026-02-28

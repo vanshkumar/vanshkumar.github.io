@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: confirmation-bias-is-the-one-to-watch-for
 title: "Confirmation bias is the one to watch for"
 lastmod: 2026-02-28

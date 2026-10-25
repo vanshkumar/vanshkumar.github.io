@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: discovery-of-something-the-rest-of-the-world-already-knows-is-still-a-valuable-discovery
 title: "Discovery of something the rest of the world already knows is still a valuable discovery"
 lastmod: 2026-03-02

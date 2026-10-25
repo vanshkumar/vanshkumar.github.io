@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: ambitious-goals-are-useful-as-they-illuminate-a-path-that-maximizes-learning-and-enjoyment-not-as-ends-in-themselves
 title: Ambitious goals are useful as they illuminate a path that maximizes learning and enjoyment, not as ends in themselves
 lastmod: 2026-09-20

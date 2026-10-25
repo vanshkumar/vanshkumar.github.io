@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: techniques-to-scale-an-opinionated-educational-culture
 title: "Techniques to scale an opinionated educational culture"
 lastmod: 2026-02-28

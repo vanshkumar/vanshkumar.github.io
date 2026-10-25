@@ -1,6 +1,5 @@
 ---
-tags:
-  - questions
+type: note
 slug: how-can-i-allow-my-thinking-to-accrete-over-time
 title: "How can I allow my thinking to accrete over time?"
 lastmod: 2026-06-09

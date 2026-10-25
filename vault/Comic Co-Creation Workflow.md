@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: comic-co-creation-workflow
 title: Comic Co-Creation Workflow
 lastmod: 2026-05-12

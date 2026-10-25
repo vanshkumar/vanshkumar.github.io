@@ -3,8 +3,7 @@ slug: media-fast-2027
 title: Media fast 2027
 date: 2026-10-15
 lastmod: 2026-10-23
-tags:
-  - posts
+type: post
 description: a random experiment
 ---
 

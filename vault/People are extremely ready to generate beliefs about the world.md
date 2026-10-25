@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: people-are-extremely-ready-to-generate-beliefs-about-the-world
 title: "People are extremely ready to generate beliefs about the world"
 lastmod: 2026-02-28

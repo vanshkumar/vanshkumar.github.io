@@ -1,6 +1,5 @@
 ---
-tags:
-  - questions
+type: note
 slug: what-do-i-want-to-see-in-the-world
 title: "What do I want to see in the world?"
 lastmod: 2026-06-09

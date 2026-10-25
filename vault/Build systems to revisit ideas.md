@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: build-systems-to-revisit-ideas
 title: "Build systems to revisit ideas"
 lastmod: 2026-02-28

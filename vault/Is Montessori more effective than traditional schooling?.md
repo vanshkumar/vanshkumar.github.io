@@ -1,6 +1,5 @@
 ---
-tags:
-  - questions
+type: note
 slug: is-montessori-more-effective-than-traditional-schooling
 title: Is Montessori more effective than traditional schooling?
 date: 2026-06-18

@@ -1,6 +1,5 @@
 ---
-tags:
-  - posts
+type: post
 slug: arabian-nights
 title: Arabian Nights
 description: the st. petersburg paradox and ergodicity

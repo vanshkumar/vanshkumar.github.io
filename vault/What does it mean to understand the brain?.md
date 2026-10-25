@@ -1,6 +1,5 @@
 ---
-tags:
-  - questions
+type: note
 slug: what-does-it-mean-to-understand-the-brain
 title: "What does it mean to understand the brain?"
 lastmod: 2026-06-09

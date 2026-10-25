@@ -42,7 +42,7 @@ Activity comes only from each note's `lastmod` or `lastMod` frontmatter. Updates
 days receive a quadratic recency discount, and visual levels are assigned relative to other notes
 within the active Writing view, Poems surface, or Shelf surface.
 
-Posts (including Projects) with the boolean property `draft: true` stay visible in Weather with
+Posts (`type: post`) with the boolean property `draft: true` stay visible in Weather with
 a dashed card border and a **Draft** label. Activity colors keep their existing meaning. Set
 `draft: false` or remove the property to publish on the site's next deployment; Weather picks up
 the property change automatically. Draft support currently applies only to Posts, and new entries
@@ -50,9 +50,9 @@ keep the existing published-by-default behavior.
 
 Vault Weather listens for Obsidian metadata and vault file events, refreshes whenever its view
 becomes active, and recalculates activity at each UTC date boundary. The plus button creates a note
-with minimal `date` and `lastmod` frontmatter. Creating a Writing entry requires choosing Project,
-Post, Hunch, or Question so the note satisfies the public site's Posts/Notes classification. The
-active Writing view narrows that choice to the matching group. Shelf notes additionally require an
+with minimal `date` and `lastmod` frontmatter. Writing entries use `type: post` or `type: note`;
+there are no subtype tags. Creating from Posts or Notes automatically uses that type. The All view
+asks only whether to create a Post or Note. Shelf notes additionally require an
 integer `rating` from 0 to 5. Poems are created in `poems/` with no required type or rating.
 New notes intentionally omit `slug` and `title`.
 

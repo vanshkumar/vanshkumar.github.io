@@ -5,13 +5,11 @@ export type CollectionKey = 'terrain' | 'poems' | 'shelf';
 export type WritingGroup = 'posts' | 'notes';
 
 export const WRITING_TYPES = [
-  { tag: 'projects', label: 'Project', group: 'posts' },
-  { tag: 'posts', label: 'Post', group: 'posts' },
-  { tag: 'hunches', label: 'Hunch', group: 'notes' },
-  { tag: 'questions', label: 'Question', group: 'notes' }
+  { type: 'post', label: 'Post', group: 'posts' },
+  { type: 'note', label: 'Note', group: 'notes' }
 ] as const;
 
-export type WritingTypeTag = (typeof WRITING_TYPES)[number]['tag'];
+export type WritingType = (typeof WRITING_TYPES)[number]['type'];
 
 export type TerrainFilter =
   | { mode: 'all' }
@@ -52,6 +50,7 @@ export interface WeatherItem {
   vaultPath: string;
   date: string | null;
   lastmod: string | null;
+  type: WritingType | null;
   tags: string[];
   draft: boolean;
   rating: unknown;
@@ -123,11 +122,11 @@ export const isCollectionKey = (value: unknown): value is CollectionKey =>
 export const isWritingGroup = (value: unknown): value is WritingGroup =>
   value === 'posts' || value === 'notes';
 
-export const isWritingTypeTag = (value: unknown): value is WritingTypeTag =>
-  typeof value === 'string' && WRITING_TYPES.some((type) => type.tag === value);
+export const isWritingType = (value: unknown): value is WritingType =>
+  typeof value === 'string' && WRITING_TYPES.some((type) => type.type === value);
 
-export const writingGroupForTag = (value: unknown): WritingGroup | null =>
-  WRITING_TYPES.find((type) => type.tag === value)?.group ?? null;
+export const writingGroupForType = (value: unknown): WritingGroup | null =>
+  WRITING_TYPES.find((type) => type.type === value)?.group ?? null;
 
 export const isTerrainFilter = (value: unknown): value is TerrainFilter => {
   if (!value || typeof value !== 'object' || !('mode' in value)) return false;
@@ -144,6 +143,8 @@ export const terrainFilterFromState = (value: unknown): TerrainFilter | null => 
   if (legacy.mode === 'untagged') return ALL_TERRAIN_FILTER;
   if (legacy.mode !== 'tag') return null;
 
-  const group = writingGroupForTag(legacy.tag === 'essays' ? 'posts' : legacy.tag);
+  const group = ['essays', 'projects', 'posts'].includes(String(legacy.tag))
+    ? 'posts'
+    : ['hunches', 'questions', 'notes'].includes(String(legacy.tag)) ? 'notes' : null;
   return group ? { mode: 'group', group } : ALL_TERRAIN_FILTER;
 };

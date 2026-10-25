@@ -1,6 +1,5 @@
 ---
-tags:
-  - questions
+type: note
 slug: do-i-want-to-do-a-phd
 title: Do I want to do a PhD?
 lastmod: 2026-06-26

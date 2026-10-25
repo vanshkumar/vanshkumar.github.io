@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: children-use-age-as-a-proxy-for-status
 title: "Children use age as a proxy for status"
 lastmod: 2026-02-28

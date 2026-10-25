@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: take-a-stand
 title: "Take a stand"
 lastmod: 2026-02-28

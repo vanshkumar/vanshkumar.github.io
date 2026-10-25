@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: public-schools-dont-enforce-a-specific-educational-culture
 title: "Public schools don't enforce a specific educational culture"
 lastmod: 2026-03-02

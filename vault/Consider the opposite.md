@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: consider-the-opposite
 title: "Consider the opposite"
 lastmod: 2026-02-28

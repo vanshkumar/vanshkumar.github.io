@@ -3,8 +3,7 @@ slug: do-nothing
 title: Do nothing
 date: 2026-10-16
 lastmod: 2026-10-17
-tags:
-  - hunches
+type: note
 ---
 
 The couple months after quitting my job, I was spending a ton of time wandering around NYC parks, processing the big changes of both leaving my job & that my wife was unexpectedly pregnant (more on those changes here: [[10.1.2024]])

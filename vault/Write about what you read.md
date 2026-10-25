@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: write-about-what-you-read
 title: "Write about what you read"
 lastmod: 2025-11-30

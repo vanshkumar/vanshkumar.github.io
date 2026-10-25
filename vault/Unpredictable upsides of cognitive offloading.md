@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: unpredictable-upsides-of-cognitive-offloading
 title: "Unpredictable upsides of cognitive offloading"
 lastmod: 2026-03-17

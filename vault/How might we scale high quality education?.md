@@ -1,6 +1,5 @@
 ---
-tags:
-  - questions
+type: note
 slug: how-might-we-scale-high-quality-education
 title: How might we scale high quality education?
 date: 2026-06-18

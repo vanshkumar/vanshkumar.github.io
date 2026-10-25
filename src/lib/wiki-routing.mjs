@@ -62,7 +62,7 @@ export const urlForEntry = (collection, slug, data = {}) => {
     return slug === 'home' ? '/' : `/${slug}`;
   }
   if (collection === 'terrain') {
-    return canonicalWritingPathFrom(slug, data.tags);
+    return canonicalWritingPathFrom(slug, data.type);
   }
   if (collection === 'shelf') {
     return `/shelf/${slug}`;

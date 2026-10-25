@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: doing-excellent-work-takes-many-iterations
 title: "Doing excellent work takes many iterations"
 lastmod: 2025-11-17

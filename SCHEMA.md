@@ -6,16 +6,16 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
 ## Collections
 
 - **terrain** → root-level `vault/*.md` → canonical `/posts/<slug>` or `/notes/<slug>`
-  - `slug?` `title?` `description?` `date?` `lastmod?` `tags?[]` `draft?` `coverImage?`
+  - `type` (`post` or `note`) `slug?` `title?` `description?` `date?` `lastmod?` `tags?[]` `draft?` `coverImage?`
     `aliases?[]` `comic?` (`assetDir`, `pageCount`, `width`, `height`)
-  - Root-level Markdown is public by default. Posts (`projects` or `posts`) may set
+  - Root-level Markdown is public by default. Posts (`type: post`) may set
     `draft: true` to stay out of the generated site, including detail/redirect routes, archives,
     RSS, wiki lookup, and backlinks. Remove `draft` or set `draft: false` to publish on the next
     deployment. Use a YAML boolean, not a quoted string; `draft: true` on a Note fails sync
     because this first version supports Posts only. A Terrain slug must be one flat path segment.
-  - Every entry must have at least one Post tag (`projects` or `posts`) or one Note tag
-    (`hunches` or `questions`), and may not combine tags from both groups. Multiple tags within
-    one group and unrelated topic tags remain valid. The Astro build fails on an invalid split.
+  - Every entry must declare `type: post` or `type: note`. Optional `tags` are topic metadata
+    only; the former `projects`, `posts`, `hunches`, and `questions` classification tags are retired.
+    Change `type` to move an entry between Posts and Notes without changing its slug.
 - **logs** → `vault/logs/<project>/` → `/posts/<project>/logs/<slug>`
   - `date` (required) `lastmod?` `parent` (required or inferred from folder) `day?` `title?`
     `aliases?[]`
@@ -73,7 +73,7 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
   - `reading-stats.md` owns stats labels through `readingStats`. The page keeps
     data and controls without introductory or methodology prose. The Shelf route
     slug `stats` is reserved for this page.
-  - `terrain.md` owns the legacy archive hero and section labels through `terrain`.
+  - `terrain.md` owns the legacy archive hero and Posts/Notes section labels through `terrain`.
   - `site.md` owns shared visitor-facing copy through `site`, including the site
     name, description, footer, content and writing labels, comic-reader controls,
     redirect messages, RSS metadata, and `subscription` embed URL/title. The Substack signup
@@ -127,7 +127,7 @@ are not part of the root Terrain collection.
 - Wikilinks resolve by Terrain slug, title-derived slug, alias, current collection path, or a
   compatibility prefix. For example, `[[foo]]`, `[[posts/foo]]`, `[[questions/foo]]`, and
   `[[notes/foo]]` all resolve directly to the entry's canonical Posts/Notes URL.
-- Tag-qualified targets such as `[[posts/foo]]` resolve to the entry; `essays` remains a legacy
-  wikilink prefix, and `/terrain/essays/<slug>` redirects remain for entries tagged `posts`.
+- Tag-qualified targets such as `[[posts/foo]]` resolve to the entry; `projects`, `hunches`, `questions`, and `essays` remain legacy
+  wikilink prefixes. Retired `/terrain/<tag>/<slug>` routes redirect to the canonical writing URL.
 - Poems, logs, Shelf entries, and special pages participate in lookup and backlinks while preserving
   their own canonical URLs.

@@ -1,6 +1,5 @@
 ---
-tags:
-  - questions
+type: note
 slug: what-might-a-more-physical-tactile-computing-experience-look-like-for-kids
 title: What might a more physical & tactile computing experience look like for kids?
 lastmod: 2026-08-13

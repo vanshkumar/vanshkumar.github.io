@@ -1,6 +1,5 @@
 ---
-tags:
-  - questions
+type: note
 slug: what-projects-make-sense-to-work-on-if-you-believe-agi-is-coming-in-5-years
 title: What projects make sense to work on if you believe AGI is coming in <5 years?
 date: 2026-06-21

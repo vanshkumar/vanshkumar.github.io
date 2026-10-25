@@ -30,7 +30,8 @@ const itemFor = (key: CollectionKey): WeatherItem => {
     vaultPath,
     date: '2026-07-01',
     lastmod: '2026-07-17',
-    tags: key === 'terrain' ? ['questions'] : [],
+    type: key === 'terrain' ? 'note' : null,
+    tags: [],
     draft: false,
     rating: key === 'shelf' ? 5 : null,
     coverImage: key === 'shelf' ? '/assets/shelf/book.webp' : null,
@@ -66,7 +67,7 @@ const renderSurface = (
 
 describe('sandboxed WeatherPage rendering', () => {
   it('identifies draft cards visibly and in their accessible name while retaining activity color', () => {
-    const draft = { ...itemFor('terrain'), title: 'Unfinished Post', tags: ['posts'], draft: true };
+    const draft = { ...itemFor('terrain'), title: 'Unfinished Post', type: 'post' as const, draft: true };
     const html = renderSurface('terrain', { mode: 'group', group: 'posts' }, [draft]);
     expect(html).toContain('tone-electric is-draft');
     expect(html).toContain('class="weather-card-draft">Draft · </span>');

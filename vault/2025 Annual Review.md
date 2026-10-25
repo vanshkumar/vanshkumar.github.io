@@ -1,8 +1,7 @@
 ---
 title: 2025 Annual Review
 slug: 2025-annual-review
-tags:
-  - posts
+type: post
 date: 2025-12-17
 lastmod: 2026-01-04
 exclude_modified_update: true

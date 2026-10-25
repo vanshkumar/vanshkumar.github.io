@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: metacognition-may-be-the-most-important-skill
 title: Metacognition may be the most important skill
 lastmod: 2026-07-03

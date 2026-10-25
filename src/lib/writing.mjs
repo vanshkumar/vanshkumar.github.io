@@ -1,42 +1,30 @@
-export const POST_TAGS = Object.freeze(['projects', 'posts']);
-export const NOTE_TAGS = Object.freeze(['hunches', 'questions']);
+export const WRITING_TYPES = Object.freeze(['post', 'note']);
 
-const normalizedTags = (tags) =>
-  Array.isArray(tags)
-    ? tags.map((tag) => String(tag).trim().toLowerCase()).filter(Boolean)
-    : [];
-
-export const writingClassificationIssue = (tags) => {
-  const values = normalizedTags(tags);
-  const hasPostTag = values.some((tag) => POST_TAGS.includes(tag));
-  const hasNoteTag = values.some((tag) => NOTE_TAGS.includes(tag));
-
-  if (hasPostTag && hasNoteTag) {
-    return 'has tags from both the Post group (projects/posts) and Note group (hunches/questions)';
+export const classifyWritingType = (type, identifier = 'Writing entry') => {
+  if (!WRITING_TYPES.includes(type)) {
+    throw new Error(`${identifier} must have type: post or type: note.`);
   }
-  if (!hasPostTag && !hasNoteTag) {
-    return 'must have at least one Post tag (projects/posts) or Note tag (hunches/questions)';
-  }
-  return null;
-};
-
-export const classifyWritingTags = (tags, identifier = 'Writing entry') => {
-  const issue = writingClassificationIssue(tags);
-  if (issue) throw new Error(`${identifier} ${issue}.`);
-  const values = normalizedTags(tags);
-  return values.some((tag) => POST_TAGS.includes(tag)) ? 'post' : 'note';
+  return type;
 };
 
 export const classifyWritingEntry = (entry) =>
-  classifyWritingTags(entry?.data?.tags, `terrain/${entry?.slug ?? 'unknown'}`);
+  classifyWritingType(entry?.data?.type, `terrain/${entry?.slug ?? 'unknown'}`);
+
+// Keep formerly published tag-qualified URLs working after retiring subtype tags.
+export const writingRedirectTags = (data) => [
+  ...(data.tags ?? []),
+  ...(classifyWritingType(data.type) === 'post'
+    ? ['posts', 'projects', 'essays']
+    : ['notes', 'hunches', 'questions'])
+];
 
 export const isDraftPost = (data, identifier = 'Writing entry') => {
   if (data.draft !== undefined && typeof data.draft !== 'boolean') {
     throw new Error(`${identifier}: draft must be true or false (a YAML boolean).`);
   }
   if (data.draft !== true) return false;
-  if (classifyWritingTags(data.tags, identifier) !== 'post') {
-    throw new Error(`${identifier}: draft is currently supported only for Posts (projects/posts).`);
+  if (classifyWritingType(data.type, identifier) !== 'post') {
+    throw new Error(`${identifier}: draft is currently supported only for Posts.`);
   }
   return true;
 };
@@ -44,8 +32,8 @@ export const isDraftPost = (data, identifier = 'Writing entry') => {
 export const canonicalWritingPath = (entry) =>
   `/${classifyWritingEntry(entry) === 'post' ? 'posts' : 'notes'}/${entry.slug}`;
 
-export const canonicalWritingPathFrom = (slug, tags) =>
-  `/${classifyWritingTags(tags, `terrain/${slug}`) === 'post' ? 'posts' : 'notes'}/${slug}`;
+export const canonicalWritingPathFrom = (slug, type) =>
+  `/${classifyWritingType(type, `terrain/${slug}`) === 'post' ? 'posts' : 'notes'}/${slug}`;
 
 export const canonicalLogPath = (parentSlug, logSlug) =>
   `/posts/${parentSlug}/logs/${logSlug.split('/').filter(Boolean).pop()}`;

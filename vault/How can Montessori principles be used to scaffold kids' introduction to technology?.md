@@ -1,6 +1,5 @@
 ---
-tags:
-  - questions
+type: note
 slug: how-can-montessori-principles-be-used-to-scaffold-kids-introduction-to-technology
 title: How can Montessori principles be used to scaffold kids' introduction to technology?
 lastmod: 2026-06-27

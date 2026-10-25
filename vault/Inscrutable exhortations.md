@@ -1,6 +1,5 @@
 ---
-tags:
-  - posts
+type: post
 slug: inscrutable-exhortations
 title: Inscrutable exhortations
 description: a useful mandate

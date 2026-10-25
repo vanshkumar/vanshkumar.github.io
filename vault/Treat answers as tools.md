@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: treat-answers-as-tools
 title: "Treat answers as tools"
 lastmod: 2026-02-28

@@ -1,6 +1,5 @@
 ---
-tags:
-  - projects
+type: post
 slug: partition-summer
 title: Partition Summer
 description: a comic memoir of the 1947 Partition of India, as seen through my grandfather’s childhood memories

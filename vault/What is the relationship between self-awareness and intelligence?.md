@@ -3,8 +3,7 @@ slug: what-is-the-relationship-between-self-awareness-and-intelligence
 title: What is the relationship between self-awareness and intelligence?
 date: 2026-09-12
 lastmod: 2026-09-26
-tags:
-  - questions
+type: note
 ---
 Lots of thoughts on this recently... brain dump time.
 

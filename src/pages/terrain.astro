@@ -25,11 +25,6 @@ const isAccentOnlyHero = !heroTitle && heroAccent;
 
 const terrainEntries = await getCollection('terrain');
 const writing = partitionWriting(terrainEntries);
-const hasTag = (entry, tag) =>
-  (entry.data.tags ?? []).some((value) => value.toLowerCase() === tag);
-const projects = writing.posts;
-const questions = writing.notes.filter((entry) => hasTag(entry, 'questions'));
-const hunches = writing.notes.filter((entry) => hasTag(entry, 'hunches'));
 
 const displayTitle = (entry) => entry.data.title ?? titleFromSlug(entry.slug);
 const stripMarkdown = (value) =>
@@ -91,9 +86,8 @@ const toCard = (entry) => {
   };
 };
 
-const projectCards = projects.map(toCard).sort(sortByUpdated);
-const questionCards = questions.map(toCard).sort(sortByUpdated);
-const hunchCards = hunches.map(toCard).sort(sortByUpdated);
+const postCards = writing.posts.map(toCard).sort(sortByUpdated);
+const noteCards = writing.notes.map(toCard).sort(sortByUpdated);
 ---
 
 <BaseLayout title={pageTitle} description={entry.data.description} robots="noindex,follow" canonicalPath="/terrain">
@@ -116,14 +110,14 @@ const hunchCards = hunches.map(toCard).sort(sortByUpdated);
 
   <section class="terrain-map" id="projects">
     <div class="terrain-map-header">
-      <h2>{terrainCopy.projectsTitle}</h2>
+      <h2>{terrainCopy.postsTitle}</h2>
     </div>
 
-    {projectCards.length === 0 ? (
-      <p class="meta">{terrainCopy.noProjectsMessage}</p>
+    {postCards.length === 0 ? (
+      <p class="meta">{terrainCopy.noPostsMessage}</p>
     ) : (
       <div class="terrain-card-grid">
-        {projectCards.map((card) => (
+        {postCards.map((card) => (
           <article class="terrain-card" key={card.key}>
             {card.dateLabel ? (
               <div class="terrain-card-meta">
@@ -155,44 +149,18 @@ const hunchCards = hunches.map(toCard).sort(sortByUpdated);
     )}
   </section>
 
-  <section class="terrain-map" id="questions">
+  <section class="terrain-map" id="notes">
+    <span id="questions" aria-hidden="true"></span>
+    <span id="hunches" aria-hidden="true"></span>
     <div class="terrain-map-header">
-      <h2>{terrainCopy.questionsTitle}</h2>
+      <h2>{terrainCopy.notesTitle}</h2>
     </div>
 
-    {questionCards.length === 0 ? (
-      <p class="meta">{terrainCopy.noQuestionsMessage}</p>
+    {noteCards.length === 0 ? (
+      <p class="meta">{terrainCopy.noNotesMessage}</p>
     ) : (
       <div class="terrain-card-grid">
-        {questionCards.map((card) => (
-          <article class="terrain-card terrain-card-question" key={card.key}>
-            <h3 class="terrain-card-title">
-              <a href={card.href}>{card.title}</a>
-            </h3>
-
-            <div class="terrain-card-footer">
-              <span>
-                {card.lastUpdatedLabel
-                  ? formatCopy(terrainCopy.updatedTemplate, { date: card.lastUpdatedLabel })
-                  : ''}
-              </span>
-            </div>
-          </article>
-        ))}
-      </div>
-    )}
-  </section>
-
-  <section class="terrain-map" id="hunches">
-    <div class="terrain-map-header">
-      <h2>{terrainCopy.hunchesTitle}</h2>
-    </div>
-
-    {hunchCards.length === 0 ? (
-      <p class="meta">{terrainCopy.noHunchesMessage}</p>
-    ) : (
-      <div class="terrain-card-grid">
-        {hunchCards.map((card) => (
+        {noteCards.map((card) => (
           <article class="terrain-card terrain-card-question" key={card.key}>
             <h3 class="terrain-card-title">
               <a href={card.href}>{card.title}</a>

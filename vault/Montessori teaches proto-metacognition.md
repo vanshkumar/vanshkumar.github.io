@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: montessori-teaches-proto-metacognition
 title: Montessori teaches proto-metacognition
 date: 2026-07-03

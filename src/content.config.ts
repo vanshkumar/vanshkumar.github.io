@@ -1,5 +1,4 @@
 import { defineCollection, z } from 'astro:content';
-import { writingClassificationIssue } from './lib/writing.mjs';
 import { readingRecordSchema } from './lib/reading-record.mjs';
 
 const optionalText = z.string().optional().nullable();
@@ -105,12 +104,10 @@ const shelfCopy = z.object({
 });
 
 const terrainCopy = z.object({
-  projectsTitle: z.string(),
-  noProjectsMessage: z.string(),
-  questionsTitle: z.string(),
-  noQuestionsMessage: z.string(),
-  hunchesTitle: z.string(),
-  noHunchesMessage: z.string(),
+  postsTitle: z.string(),
+  noPostsMessage: z.string(),
+  notesTitle: z.string(),
+  noNotesMessage: z.string(),
   updatedTemplate: z.string()
 });
 
@@ -134,7 +131,8 @@ const terrain = defineCollection({
     description: optionalText,
     date: z.coerce.date().optional(),
     lastmod: z.coerce.date().optional(),
-    tags: z.array(z.string()),
+    type: z.enum(['post', 'note']),
+    tags: z.array(z.string()).optional(),
     draft: z.boolean().optional(),
     coverImage: z.string().optional(),
     aliases: z.array(z.string()).optional(),
@@ -146,15 +144,6 @@ const terrain = defineCollection({
         height: z.number().int().positive()
       })
       .optional()
-  }).superRefine((entry, ctx) => {
-    const issue = writingClassificationIssue(entry.tags);
-    if (issue) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        path: ['tags'],
-        message: `Terrain entry ${issue}.`
-      });
-    }
   })
 });
 

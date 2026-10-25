@@ -1,6 +1,5 @@
 ---
-tags:
-  - projects
+type: post
 slug: how-do-we-learn-dec-2025-aliveline
 title: How Do We Learn Dec 2025 Aliveline
 description: doing computational neuroscience research in a month, from scratch

@@ -1,6 +1,5 @@
 ---
-tags:
-  - questions
+type: note
 slug: how-do-you-avoid-a-microschool-being-indistinguishable-from-a-private-school
 title: "How do you avoid a microschool being indistinguishable from a private school?"
 lastmod: 2026-06-09

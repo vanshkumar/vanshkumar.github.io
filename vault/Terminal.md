@@ -1,6 +1,5 @@
 ---
-tags:
-  - posts
+type: post
 slug: terminal
 title: Terminal
 description: do it for the love of the game

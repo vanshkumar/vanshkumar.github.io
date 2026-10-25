@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: develop-short-feedback-loops-with-reality
 title: "Develop short feedback loops with reality"
 lastmod: 2025-10-23

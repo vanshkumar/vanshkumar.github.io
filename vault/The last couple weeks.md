@@ -1,6 +1,5 @@
 ---
-tags:
-  - posts
+type: post
 slug: the-last-couple-weeks
 title: The last couple weeks
 description: two unemployed people walk into a bar

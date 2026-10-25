@@ -3,8 +3,7 @@ slug: return-it-to-nature
 title: "Return it to Nature"
 date: 2026-09-20
 lastmod: 2026-09-20
-tags:
-  - hunches
+type: note
 ---
 https://luminousdharma.org/returning-to-nature-advanced-dharma-practice/
 

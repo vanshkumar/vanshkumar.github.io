@@ -16,7 +16,8 @@ import {
   type TerrainFilter,
   type WeatherCollectionData,
   type WeatherItem,
-  writingGroupForTag
+  isWritingType,
+  writingGroupForType
 } from './weatherTypes';
 
 const IMAGE_EXTENSIONS = new Set(['avif', 'gif', 'jpeg', 'jpg', 'png', 'webp']);
@@ -81,6 +82,7 @@ export class WeatherDataService {
       const lastmod = dateToIsoDate(frontmatter.lastmod ?? frontmatter.lastMod);
       const cover = this.resolveCover(frontmatter.coverImage);
       const tags = tagsValue(frontmatter.tags);
+      const type = isWritingType(frontmatter.type) ? frontmatter.type : null;
 
       return {
         file,
@@ -89,9 +91,10 @@ export class WeatherDataService {
         vaultPath: file.path,
         date: dateToIsoDate(frontmatter.date),
         lastmod,
+        type,
         tags,
         draft: collectionKey === 'terrain' && frontmatter.draft === true &&
-          tags.some((tag) => writingGroupForTag(tag.toLowerCase()) === 'posts'),
+          type === 'post',
         rating: frontmatter.rating ?? null,
         coverImage: stringValue(frontmatter.coverImage),
         coverUrl: cover?.url ?? null,
@@ -103,7 +106,7 @@ export class WeatherDataService {
       collectionKey !== 'terrain' || filter.mode === 'all'
         ? allItems
         : allItems.filter((item) =>
-            item.tags.some((tag) => writingGroupForTag(tag.toLowerCase()) === filter.group)
+            writingGroupForType(item.type) === filter.group
           );
 
     return {
@@ -118,17 +121,17 @@ export class WeatherDataService {
     collectionKey,
     title,
     rating,
-    tag,
+    type,
     now = new Date()
   }: {
     collectionKey: CollectionKey;
     title: unknown;
     rating?: unknown;
-    tag?: unknown;
+    type?: unknown;
     now?: Date;
   }): Promise<TFile> {
     const config = COLLECTION_CONFIGS[collectionKey];
-    const draft = createNoteDraft({ collectionKey, title, rating, tag, now });
+    const draft = createNoteDraft({ collectionKey, title, rating, type, now });
 
     if (this.app.vault.getAbstractFileByPath(draft.vaultPath)) {
       throw new WeatherCreateError(`A ${config.itemLabel} with that title already exists`);

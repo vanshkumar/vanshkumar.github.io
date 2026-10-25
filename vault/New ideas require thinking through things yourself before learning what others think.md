@@ -1,6 +1,5 @@
 ---
-tags:
-  - hunches
+type: note
 slug: new-ideas-require-thinking-through-things-yourself-before-learning-what-others-think
 title: "New ideas require thinking through things yourself before learning what others think"
 lastmod: 2026-04-11

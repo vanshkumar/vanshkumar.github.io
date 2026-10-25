@@ -17,7 +17,7 @@ export class CreateNoteModal extends Modal {
     app: App,
     private readonly collectionKey: CollectionKey,
     private readonly writingGroup: WritingGroup | undefined,
-    private readonly submitNote: (title: string, rating?: string, tag?: string) => Promise<void>
+    private readonly submitNote: (title: string, rating?: string, type?: string) => Promise<void>
   ) {
     super(app);
   }
@@ -41,20 +41,12 @@ export class CreateNoteModal extends Modal {
         });
       });
 
-    if (this.collectionKey === 'terrain') {
-      const writingTypes = this.writingGroup
-        ? WRITING_TYPES.filter((type) => type.group === this.writingGroup)
-        : WRITING_TYPES;
-      const label = this.writingGroup
-        ? `${this.writingGroup === 'posts' ? 'Post' : 'Note'} type`
-        : 'Writing type';
-
+    if (this.collectionKey === 'terrain' && !this.writingGroup) {
       new Setting(this.contentEl)
-        .setName(label)
-        .setDesc('Required by the site publishing model')
+        .setName('Writing type')
         .addDropdown((dropdown) => {
-          dropdown.addOption('', 'Choose a type');
-          writingTypes.forEach((type) => dropdown.addOption(type.tag, type.label));
+          dropdown.addOption('', 'Choose Post or Note');
+          WRITING_TYPES.forEach((type) => dropdown.addOption(type.type, type.label));
           this.writingTypeInput = dropdown;
         });
     }
@@ -97,7 +89,9 @@ export class CreateNoteModal extends Modal {
       await this.submitNote(
         this.titleInput?.getValue() ?? '',
         this.ratingInput?.getValue(),
-        this.writingTypeInput?.getValue()
+        this.writingGroup
+          ? WRITING_TYPES.find((type) => type.group === this.writingGroup)?.type
+          : this.writingTypeInput?.getValue()
       );
       this.close();
     } catch (error) {

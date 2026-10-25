@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-10-25] — Missing manually created Weather entries**
+- Observation: The manually created Neuroscience of human social instincts file had dates but no `type`, so Weather showed it in All but excluded it from Posts and Notes. Adding `type: post` made the data service include it in Posts without changing its body or dates.
+- Action: For a root file missing from a Weather group, inspect its `type` first. Files created outside Weather need that field explicitly; the filename does not determine membership.
+- Confidence: high
+
 **[2026-10-24] — Removing a finished book from Currently reading**
 - Observation: Zhuangzi's completion was already recorded in `vault/reading-log/zhuangzi-basic-writings.md`, while its separate, notes-free `vault/shelf/Zhuangzi.md` still placed it in Currently reading. Shelf status only supports `reading` and `recommended`.
 - Action: For removal-only requests involving a Shelf entry without notes, remove that Shelf entry and preserve its independent reading-log record; finishing a book does not by itself authorize adding it to Recommendations.
@@ -470,8 +475,8 @@
 - Confidence: high
 
 **[2026-10-24] — Long Content brainstorming**
-- Observation: The Long Content note explicitly distinguishes improvement caused by elapsed time from long project duration or delayed payoff. Its October additions connect the microschool plans with a preference for sustained relationships with mentees beyond individual projects; the Now page identifies how a mind develops as the thread across the user's interests.
-- Action: Ground related creative suggestions in those existing interests and explain what elapsed years contribute. Do not present a regularly revised note or an accumulating archive as meeting the criterion without identifying that mechanism.
+- Observation: The user clarified that Long Content should improve with little ongoing effort from them; recurring interviews and expanding archives mostly fail because they require continued additions. They are interested in mechanisms such as biological growth, self-replication, and stories that people voluntarily spread. The note connects long horizons with sustained mentoring relationships and microschool plans.
+- Action: Identify what supplies continuing energy or effort independently of the author, what retains the gains, and why the result improves rather than merely persists or spreads. Do not offer author-maintained collections as satisfying this request. Treat self-replication as a candidate mechanism, not a sufficient condition for improvement.
 - Confidence: high
 
 **[2026-10-21] — Average-length summary label**

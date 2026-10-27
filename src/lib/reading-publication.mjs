@@ -13,15 +13,15 @@ export function formatPublicationYear(year, { approximate = false } = {}) {
 
 // Adjacent historical years 1 BCE and 1 CE are one year apart, not two.
 const yearValue = year => year < 0 ? year + 1 : year;
-const tickSteps = [1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000, 5000];
+const tickSteps = [1, 2, 5, 10, 25, 50, 100, 200, 250, 500, 1000, 2000, 5000];
 function yearSegment(years, bottom, top, singleTick = false) {
   const low = Math.min(...years), high = Math.max(...years);
   if (singleTick && low === high) {
     return { min: low, max: high, position: () => (bottom + top) / 2,
       ticks: [{ label: formatPublicationYear(low), position: (bottom + top) / 2 }] };
   }
-  const intervals = Math.max(1, Math.round((top - bottom) / 16));
-  const step = tickSteps.find(n => n >= (high - low) / Math.min(5, intervals)) ?? 5000;
+  const intervals = Math.max(1, Math.round((top - bottom) / 10));
+  const step = tickSteps.find(n => n >= (high - low) / Math.min(8, intervals)) ?? 5000;
   let min = Math.floor(low / step) * step;
   let max = Math.max(min + step, Math.ceil(high / step) * step);
   if (min === 0) min = 1;
@@ -54,9 +54,10 @@ function publicationScale(years) {
     const lower = ordered.slice(0, split), upper = ordered.slice(split);
     const lowerSpan = yearValue(lower.at(-1)) - yearValue(lower[0]);
     const upperSpan = yearValue(upper.at(-1)) - yearValue(upper[0]);
-    const bottom = Math.max(20, Math.min(65, 90 * lowerSpan / (lowerSpan + upperSpan || 1)));
-    segments = [yearSegment(lower, 0, bottom, true), yearSegment(upper, bottom + 10, 100, true)];
-    yearBreak = { bottom, top: bottom + 10, from: segments[0].max, to: segments[1].min };
+    // A lone ancient date needs only a compact row beneath the break.
+    const bottom = lower.length === 1 ? 10 : Math.max(20, Math.min(65, 94 * lowerSpan / (lowerSpan + upperSpan || 1)));
+    segments = [yearSegment(lower, 0, bottom, true), yearSegment(upper, bottom + 6, 100, true)];
+    yearBreak = { bottom, top: bottom + 6, from: segments[0].max, to: segments[1].min };
   } else {
     segments = [yearSegment(ordered, 0, 100)];
   }

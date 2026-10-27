@@ -103,4 +103,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
+        id: pages
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+
+      # A transient OIDC token timeout can occur after the build has succeeded.
+      - name: Wait before retrying deployment
+        if: steps.pages.outcome == 'failure'
+        run: sleep 20
+
+      - name: Retry GitHub Pages deployment
+        if: steps.pages.outcome == 'failure'
         uses: actions/deploy-pages@v5

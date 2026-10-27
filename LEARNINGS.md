@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-10-27] — Pages identity-token timeout recovery**
+- Observation: Deploy Pages run 40517000681 passed every build/test step but failed requesting its OIDC identity token with a request timeout. The action suggested missing `id-token: write` even though the workflow already declared it. Retrying only the deploy job succeeded for the same commit and artifact.
+- Action: Keep one automatic retry of the Pages publishing step after a 20-second delay, reusing the successful build artifact. The second attempt must fail the job if unsuccessful. Inspect the underlying request error before changing permissions, then confirm the live page.
+- Confidence: high
+
 **[2026-10-27] — Weather reuses open note tabs**
 - Observation: Weather's shared card-opening handler always requested a new tab. Obsidian's Markdown leaf state retains the full vault-relative file path even for deferred background tabs; revealing the matching leaf avoids reopening the file and preserves its view state.
 - Action: Keep card and newly created note navigation routed through `vault-weather/src/lib/openWeatherFile.ts`; match the full path through `getViewState()` and reveal an existing leaf before falling back to a new tab. Rebuild/install the plugin and reload it in Obsidian after source changes.
@@ -492,6 +497,11 @@
 **[2026-10-27] — Publication chart labels**
 - Observation: The user finds the visible “Axis break” label unattractive and the positive-year “CE” suffix redundant.
 - Action: Show the break using its diagonal marks only, retain its accessible description, and label positive publication years without an era suffix while preserving BCE and approximate dates.
+- Confidence: high
+
+**[2026-10-27] — Publication chart space allocation**
+- Observation: The user wants a taller publication chart with 25-year modern guides; the lone c. 300 BCE book and break previously consumed 30% of the plot.
+- Action: Use a 420px desktop / 380px mobile plot with up to eight year intervals. Reserve 10% for a single ancient date and 6% for the break, leaving 84% for modern books; retain 25-year guides for the current year and all-time ranges.
 - Confidence: high
 
 **[2026-10-25] — Posts and Notes without subtype tags**

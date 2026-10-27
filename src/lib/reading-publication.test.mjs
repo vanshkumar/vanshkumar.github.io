@@ -18,7 +18,9 @@ test('a dominant empty historical gap is marked and modern years retain space', 
   const gap = chart.yearBreak;
   assert.ok(gap && gap.from < gap.to);
   assert.ok(chart.yearTicks.some(tick => tick.label === '300 BCE'));
-  assert.ok(chart.yearTicks.some(tick => tick.label === '1900'));
+  assert.deepEqual(chart.yearTicks.filter(tick => !tick.label.endsWith('BCE')).map(tick => tick.label),
+    ['1900','1925','1950','1975','2000','2025']);
+  assert.ok(gap.top <= 20, 'the ancient row and break leave at least 80% for modern books');
   assert.ok(chart.points[0].y < gap.bottom);
   assert.ok(chart.points.slice(1).every(point => point.y > gap.top));
   assert.ok(chart.points[2].y - chart.points[1].y > 50);
@@ -73,6 +75,9 @@ test('publication layout handles empty, single-book, and all-time selections', (
   const single=publicationLayout([event('2026-04-01',2020)],{year:'2026'});
   assert.ok(single.yearTicks.length>=2);
   const all=publicationLayout([event('2021-01-01',1873),event('2026-10-11',2025)],{year:'all'});
+  const allWithAncient=publicationLayout([event('2026-10-24',-300),event('2021-01-01',1873),event('2026-10-11',2025)],{year:'all'});
+  assert.deepEqual(allWithAncient.yearTicks.filter(tick=>!tick.label.endsWith('BCE')).map(tick=>tick.label),
+    ['1850','1875','1900','1925','1950','1975','2000','2025']);
   assert.deepEqual(all.dateTicks.map(tick=>tick.label),['2021','2022','2023','2024','2025','2026']);
   assert.equal(all.points[0].x,0);
   const early=publicationLayout([event('0099-12-31',1)],{year:'0099'});

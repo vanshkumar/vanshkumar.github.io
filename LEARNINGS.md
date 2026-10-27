@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-10-27] — Weather reuses open note tabs**
+- Observation: Weather's shared card-opening handler always requested a new tab. Obsidian's Markdown leaf state retains the full vault-relative file path even for deferred background tabs; revealing the matching leaf avoids reopening the file and preserves its view state.
+- Action: Keep card and newly created note navigation routed through `vault-weather/src/lib/openWeatherFile.ts`; match the full path through `getViewState()` and reveal an existing leaf before falling back to a new tab. Rebuild/install the plugin and reload it in Obsidian after source changes.
+- Confidence: high
+
 **[2026-10-26] — Kit subscription migration assessment**
 - Observation: The user is considering Kit for site subscribers. The homepage and Post signup share `src/components/SubscribeEmbed.astro`; the existing RSS feed includes Posts, Notes, and Poems with descriptions and links rather than full bodies. Kit's current Free plan supports 10,000 subscribers and manual broadcasts, but native RSS campaigns require a paid plan; Recommendations can be disabled (https://help.kit.com/en/articles/16627071-the-kit-free-plan).
 - Action: If migration is chosen, replace the shared signup and its vault-backed configuration. Treat automatic delivery as a separate decision, and define the intended content selection before connecting the mixed RSS feed. Recheck Kit's plan terms before implementation.

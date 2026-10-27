@@ -38,6 +38,9 @@ Obsidian.
 
 ## Behavior
 
+Clicking a card focuses an existing Obsidian tab for that file, including background tabs restored
+with the workspace. If the file is not open, Weather opens it in a new tab.
+
 Activity comes only from each note's `lastmod` or `lastMod` frontmatter. Updates from the last 30
 days receive a quadratic recency discount, and visual levels are assigned relative to other notes
 within the active Writing view, Poems surface, or Shelf surface.

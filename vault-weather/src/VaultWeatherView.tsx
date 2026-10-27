@@ -2,6 +2,7 @@ import { ItemView, type TFile, type ViewStateResult, type WorkspaceLeaf } from '
 import { createRoot, type Root } from 'react-dom/client';
 import { VaultWeatherApp } from './App';
 import { CreateNoteModal } from './CreateNoteModal';
+import { openWeatherFile } from './lib/openWeatherFile';
 import { WeatherDataService } from './lib/weatherData';
 import {
   ALL_TERRAIN_FILTER,
@@ -105,6 +106,6 @@ export class VaultWeatherView extends ItemView {
   }
 
   private async openFile(file: TFile): Promise<void> {
-    await this.app.workspace.getLeaf('tab').openFile(file);
+    await openWeatherFile(this.app.workspace, file);
   }
 }

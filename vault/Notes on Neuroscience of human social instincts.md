@@ -1,9 +1,9 @@
 ---
 slug: notes-on-neuroscience-of-human-social-instincts
-title: "Notes on Neuroscience of human social instincts"
+title: Notes on Neuroscience of human social instincts
 type: post
 date: 2026-10-25
-lastmod: 2026-10-25
+lastmod: 2026-10-26
 ---
 ![[neuro_of_social_instincts_a_sketch.pdf]]
 
@@ -34,5 +34,18 @@ Notes/summary:
 	- Short-term predictor learns that picking up a fork with food in front of you -> feel good
 	- Long-term predictor uses a TD-style algo to learn that getting in your car -> feel good
 - **Recap**: predictors learn to associate cortical world model concepts with physiological state over various time delays, with ground truth provided by the Steering subsystem
-- How do we ensure that these predictors learn useful world model<>physiological state associations?
-	- Steering subsystem uses "**involuntary attention**" to force your cortex to think about what you are seeing/hearing/sensing (instead of eg daydreaming), increasing the chance that useful cortical world model concepts are active when forming associations
+- How do we ensure that predictors learn useful world model<>physiological state associations?
+	- Steering subsystem uses "**involuntary attention**" to force your cortex to think about what you are seeing/hearing/sensing (instead of eg daydreaming), so that likely relevant cortical world model concepts are active for forming associations
+- With everything so far you get the following:
+	- Steering subsystem – see another person -> activate social attention reflex
+	- When you see another person, Steering subsystem also triggers involuntary attention to force you to think about that person
+	- Predictor learns to associate thinking about person[^1] -> social attention reflex
+	- Defer-to-predictor mode means that the predictor can itself trigger the reflex – purely thinking about that person triggers the social attention reflex
+- Another way to see this picture:
+	- Predictor is constantly trying to predict what Steering subsystem will do
+	- After some initial learning period (how long?), Steering subsystem starts defaulting to defer-to-predictor mode, relying on the learned predictor rather than its own innate heuristics
+	- Sometimes, the Steering subsystem injects ground truth when the predictor is wrong for long enough (what are the rules here?), and the predictor updates
+- 
+
+
+[^1]: more precisely, learn to associate "cortical world model concepts that are active when you saw that person" with the social attention reflex

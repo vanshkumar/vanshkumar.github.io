@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-10-26] — Kit subscription migration assessment**
+- Observation: The user is considering Kit for site subscribers. The homepage and Post signup share `src/components/SubscribeEmbed.astro`; the existing RSS feed includes Posts, Notes, and Poems with descriptions and links rather than full bodies. Kit's current Free plan supports 10,000 subscribers and manual broadcasts, but native RSS campaigns require a paid plan; Recommendations can be disabled (https://help.kit.com/en/articles/16627071-the-kit-free-plan).
+- Action: If migration is chosen, replace the shared signup and its vault-backed configuration. Treat automatic delivery as a separate decision, and define the intended content selection before connecting the mixed RSS feed. Recheck Kit's plan terms before implementation.
+- Confidence: high
+
 **[2026-10-25] — Embedded PDF reader layout**
 - Observation: The wiki-link plugin emits PDF iframes with no height and `toolbar=0`, producing a 150px strip with a native border. The in-app browser showed the PDF blank even at its direct URL, while Safari rendered the same file correctly.
 - Action: Keep PDF embeds in the shared `remarkPdfEmbeds` figure renderer with responsive height, native controls, and vault-backed open/download labels. Split mixed Markdown paragraphs around PDF figures and preserve image-caption figures. Use a native browser to verify PDF rendering when the in-app browser is blank.

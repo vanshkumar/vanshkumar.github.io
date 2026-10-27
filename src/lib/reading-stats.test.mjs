@@ -63,7 +63,7 @@ test('approximate BCE books appear in the chart, accessible labels, and dates ta
  assert.ok(html.includes('data-publication-year>c. 300 BCE</span>'));
  assert.ok(html.includes('<td>c. 300 BCE</td>'));
  assert.ok(html.includes('class="publication-break" role="note"'));
- assert.ok(html.includes('Year axis skips from 300 BCE to 2000 CE'));
+ assert.ok(html.includes('Year axis skips from 300 BCE to 2000'));
  const modern=renderStats(events,{year:'2024',month:'01'},c);
  assert.ok(!modern.includes('class="publication-break"'));
 });

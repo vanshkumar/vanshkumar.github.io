@@ -166,7 +166,7 @@
 .publication-year-grid > span { position: absolute; width: 36px; right: calc(100% + 8px); transform: translateY(-50%); text-align: right; color: #697160; font: 11px/1 system-ui,sans-serif; }
 .publication-has-bce .publication-plot { margin-left: 72px; }
 .publication-has-bce .publication-year-grid > span { width: 64px; white-space: nowrap; }
-.publication-break { position: absolute; inset-inline: 0; z-index: 2; display: grid; place-items: center; background: var(--bg); color: #697160; pointer-events: none; font: 10px/1 system-ui,sans-serif; letter-spacing: .04em; }
+.publication-break { position: absolute; inset-inline: 0; z-index: 2; background: var(--bg); pointer-events: none; }
 .publication-break::before,.publication-break::after { content: ''; position: absolute; top: calc(50% - 3px); width: 13px; height: 6px; border-block: 1px solid #78866e; transform: skewY(-25deg); }
 .publication-break::before { left: -6px; }
 .publication-break::after { right: -6px; }

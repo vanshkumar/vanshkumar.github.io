@@ -6,19 +6,19 @@ const utcDate = (year, month = 1, date = 1) => {
 };
 const monthLabel = new Intl.DateTimeFormat('en-US', {month: 'short', timeZone: 'UTC'});
 
-export function formatPublicationYear(year, { approximate = false, includeEra = false } = {}) {
-  const label = year < 0 ? `${Math.abs(year)} BCE` : `${year}${includeEra ? ' CE' : ''}`;
+export function formatPublicationYear(year, { approximate = false } = {}) {
+  const label = year < 0 ? `${Math.abs(year)} BCE` : String(year);
   return `${approximate ? 'c. ' : ''}${label}`;
 }
 
 // Adjacent historical years 1 BCE and 1 CE are one year apart, not two.
 const yearValue = year => year < 0 ? year + 1 : year;
 const tickSteps = [1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000, 5000];
-function yearSegment(years, bottom, top, includeEra, singleTick = false) {
+function yearSegment(years, bottom, top, singleTick = false) {
   const low = Math.min(...years), high = Math.max(...years);
   if (singleTick && low === high) {
     return { min: low, max: high, position: () => (bottom + top) / 2,
-      ticks: [{ label: formatPublicationYear(low, { includeEra }), position: (bottom + top) / 2 }] };
+      ticks: [{ label: formatPublicationYear(low), position: (bottom + top) / 2 }] };
   }
   const intervals = Math.max(1, Math.round((top - bottom) / 16));
   const step = tickSteps.find(n => n >= (high - low) / Math.min(5, intervals)) ?? 5000;
@@ -36,13 +36,12 @@ function yearSegment(years, bottom, top, includeEra, singleTick = false) {
   if (min === 1 && !tickYears.includes(1)) tickYears.unshift(1);
   if (max === -1 && !tickYears.includes(-1)) tickYears.push(-1);
   return { min, max, position, ticks: tickYears.map(year => ({
-    label: formatPublicationYear(year, { includeEra }), position: position(year)
+    label: formatPublicationYear(year), position: position(year)
   })) };
 }
 
 function publicationScale(years) {
   const ordered = [...new Set(years)].sort((a, b) => a - b);
-  const includeEra = ordered[0] < 0;
   let split = 0, gap = 0;
   for (let i = 1; i < ordered.length; i++) {
     const distance = yearValue(ordered[i]) - yearValue(ordered[i - 1]);
@@ -56,13 +55,13 @@ function publicationScale(years) {
     const lowerSpan = yearValue(lower.at(-1)) - yearValue(lower[0]);
     const upperSpan = yearValue(upper.at(-1)) - yearValue(upper[0]);
     const bottom = Math.max(20, Math.min(65, 90 * lowerSpan / (lowerSpan + upperSpan || 1)));
-    segments = [yearSegment(lower, 0, bottom, includeEra, true), yearSegment(upper, bottom + 10, 100, includeEra, true)];
+    segments = [yearSegment(lower, 0, bottom, true), yearSegment(upper, bottom + 10, 100, true)];
     yearBreak = { bottom, top: bottom + 10, from: segments[0].max, to: segments[1].min };
   } else {
-    segments = [yearSegment(ordered, 0, 100, includeEra)];
+    segments = [yearSegment(ordered, 0, 100)];
   }
   return {
-    hasBCE: includeEra,
+    hasBCE: ordered[0] < 0,
     yearBreak,
     yearTicks: segments.flatMap(segment => segment.ticks),
     yearBands: segments.flatMap(segment => segment.ticks.slice(0, -1).map((tick, i) => ({

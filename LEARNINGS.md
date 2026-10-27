@@ -489,6 +489,11 @@
 
 ## Patterns and Preferences
 
+**[2026-10-27] — Publication chart labels**
+- Observation: The user finds the visible “Axis break” label unattractive and the positive-year “CE” suffix redundant.
+- Action: Show the break using its diagonal marks only, retain its accessible description, and label positive publication years without an era suffix while preserving BCE and approximate dates.
+- Confidence: high
+
 **[2026-10-25] — Posts and Notes without subtype tags**
 - Observation: The user removed the Project/Post and Hunch/Question distinctions. Root writing now uses `type: post` or `type: note`; topic tags such as `fiction` remain independent. Migrating metadata preserves canonical URLs, while retired tag-qualified URLs require explicit redirects.
 - Action: Use `type` for routing, archive membership, drafts, and log-parent validation. Do not restore subtype tags or separate Hunch/Question sections; retain legacy URL and wikilink compatibility. This supersedes the earlier tag-group classification rules.

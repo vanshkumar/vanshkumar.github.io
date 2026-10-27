@@ -37,7 +37,6 @@ readingStats:
   newAuthors: New authors
   publication: Publication year
   publicationChartLabel: Publication year by completion date
-  publicationAxisBreak: Axis break
   publicationAxisBreakTemplate: "Year axis skips from {from} to {to}"
   publicationYear: Published
   finished: Finished

@@ -7,7 +7,7 @@ const event = (finished, publicationYear) => ({finished, book: {publicationYear}
 test('publication labels distinguish approximate dates and historical eras', () => {
   assert.equal(formatPublicationYear(-300, { approximate: true }), 'c. 300 BCE');
   assert.equal(formatPublicationYear(-1), '1 BCE');
-  assert.equal(formatPublicationYear(1, { includeEra: true }), '1 CE');
+  assert.equal(formatPublicationYear(1), '1');
   assert.equal(formatPublicationYear(180, { approximate: true }), 'c. 180');
   assert.equal(formatPublicationYear(2025), '2025');
 });
@@ -18,7 +18,7 @@ test('a dominant empty historical gap is marked and modern years retain space', 
   const gap = chart.yearBreak;
   assert.ok(gap && gap.from < gap.to);
   assert.ok(chart.yearTicks.some(tick => tick.label === '300 BCE'));
-  assert.ok(chart.yearTicks.some(tick => tick.label === '1900 CE'));
+  assert.ok(chart.yearTicks.some(tick => tick.label === '1900'));
   assert.ok(chart.points[0].y < gap.bottom);
   assert.ok(chart.points.slice(1).every(point => point.y > gap.top));
   assert.ok(chart.points[2].y - chart.points[1].y > 50);

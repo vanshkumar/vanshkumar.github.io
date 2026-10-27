@@ -66,7 +66,7 @@ function scatter(events,selection,c) {
       ${layout.dateTicks.map(tick=>`<span class="publication-date-grid" style="left:${tick.position}%" aria-hidden="true"><span>${e(tick.label)}</span></span>`).join('')}
       ${layout.yearTicks.map(tick=>`<span class="publication-year-grid" style="bottom:${tick.position}%" aria-hidden="true"><span>${e(tick.label)}</span></span>`).join('')}
       <span class="publication-guide publication-guide-x" aria-hidden="true"></span><span class="publication-guide publication-guide-y" aria-hidden="true"></span>
-      ${layout.yearBreak?`<div class="publication-break" role="note" aria-label="${e(copy(c.publicationAxisBreakTemplate,{from:formatPublicationYear(layout.yearBreak.from,{includeEra:true}),to:formatPublicationYear(layout.yearBreak.to,{includeEra:true})}))}" style="bottom:${layout.yearBreak.bottom}%;height:${layout.yearBreak.top-layout.yearBreak.bottom}%"><span aria-hidden="true">${e(c.publicationAxisBreak)}</span></div>`:''}
+      ${layout.yearBreak?`<div class="publication-break" role="note" aria-label="${e(copy(c.publicationAxisBreakTemplate,{from:formatPublicationYear(layout.yearBreak.from),to:formatPublicationYear(layout.yearBreak.to)}))}" style="bottom:${layout.yearBreak.bottom}%;height:${layout.yearBreak.top-layout.yearBreak.bottom}%"></div>`:''}
       ${layout.points.map(point=>{
         const active=point===selected;
         const label=`${point.event.book.title}, ${c.publicationYear} ${yearLabel(point.event)}, ${c.finished} ${formatReadingDate(point.event.finished)}`;

@@ -49,6 +49,24 @@ test('empty periods produce stable empty summaries',()=>{
  assert.equal(stats.count,0);assert.equal(stats.averagePages,null);
  assert.equal(stats.timeline.length,12);assert.deepEqual(stats.scatter,[]);
 });
+
+test('approximate BCE books appear in the chart, accessible labels, and dates table', async()=>{
+ const fs=await import('node:fs/promises');const {default:matter}=await import('gray-matter');
+ const c=matter(await fs.readFile(new URL('../../vault/pages/reading-stats.md',import.meta.url),'utf8')).data.readingStats;
+ const events=statsEvents([
+  book('Recent book','2024-01-01',{publicationYear:2000}),
+  book('Ancient book','2024-02-01',{publicationYear:-300,publicationYearApproximate:true})
+ ]);
+ assert.equal(readingStats(events,{year:'2024'}).scatter.length,2);
+ const html=renderStats(events,{year:'2024'},c);
+ assert.ok(html.includes('Published c. 300 BCE'));
+ assert.ok(html.includes('data-publication-year>c. 300 BCE</span>'));
+ assert.ok(html.includes('<td>c. 300 BCE</td>'));
+ assert.ok(html.includes('class="publication-break" role="note"'));
+ assert.ok(html.includes('Year axis skips from 300 BCE to 2000 CE'));
+ const modern=renderStats(events,{year:'2024',month:'01'},c);
+ assert.ok(!modern.includes('class="publication-break"'));
+});
 test('rendered titles and chart labels cannot inject HTML',async()=>{
  const fs=await import('node:fs/promises');const {default:matter}=await import('gray-matter');
  const c=matter(await fs.readFile(new URL('../../vault/pages/reading-stats.md',import.meta.url),'utf8')).data.readingStats;

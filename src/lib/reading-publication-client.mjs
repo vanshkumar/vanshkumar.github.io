@@ -1,4 +1,5 @@
 import { formatReadingDate } from './reading-log.mjs';
+import { formatPublicationYear } from './reading-publication.mjs';
 
 export function bindPublicationChart(root, events) {
   const books = new Map(events.map(event => [event.id, event]));
@@ -15,7 +16,7 @@ export function bindPublicationChart(root, events) {
     }
     chart.style.setProperty('--selected-x', point.style.left);
     chart.style.setProperty('--selected-y', point.style.bottom);
-    chart.querySelector('[data-publication-year]').textContent = event.book.publicationYear;
+    chart.querySelector('[data-publication-year]').textContent = formatPublicationYear(event.book.publicationYear, { approximate: event.book.publicationYearApproximate });
     chart.querySelector('[data-publication-title]').textContent = event.book.title;
     chart.querySelector('[data-publication-authors]').textContent = event.book.authors.join(', ');
     const finished = chart.querySelector('[data-publication-finished]');

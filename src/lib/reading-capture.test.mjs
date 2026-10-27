@@ -66,6 +66,22 @@ test('new capture rejects incomplete records, retired fields, invalid/future dat
   }
 });
 
+test('approximate BCE publication metadata survives capture and content sync without allowing year zero', t => {
+  const root = fixture(t);
+  const input = candidate({ publicationYear: -300, publicationYearApproximate: true });
+  const result = logFinishedBook(input, options(root, true));
+  assert.equal(result.status, 'written');
+  syncContent(root);
+  const generated = matter(fs.readFileSync(path.join(root, 'src', 'content', 'reading-log', result.target), 'utf8'));
+  const record = readingRecordSchema.parse(generated.data);
+  assert.equal(record.publicationYear, -300);
+  assert.equal(record.publicationYearApproximate, true);
+  for (const publicationYear of [0, -10000, 10000, -300.5]) {
+    assert.equal(readingRecordSchema.safeParse({ ...record, publicationYear }).success, false);
+  }
+  assert.equal(readingRecordSchema.safeParse({ ...record, publicationYearApproximate: 'true' }).success, false);
+});
+
 test('unknown print page counts remain absent and duplicate submissions do not rewrite', t => {
   const root = fixture(t);
   const input = candidate();

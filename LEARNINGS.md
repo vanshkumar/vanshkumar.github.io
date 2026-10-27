@@ -7,6 +7,11 @@
 - Action: Keep card and newly created note navigation routed through `vault-weather/src/lib/openWeatherFile.ts`; match the full path through `getViewState()` and reveal an existing leaf before falling back to a new tab. Rebuild/install the plugin and reload it in Obsidian after source changes.
 - Confidence: high
 
+**[2026-10-27] — Ancient-work publication-year coverage**
+- Observation: Zhuangzi now uses `publicationYear: -300` with `publicationYearApproximate: true`, displaying c. 300 BCE. A continuous scale crowded modern books into about 4% of the chart, so a marked break now compresses the largest empty gap when it is at least 500 years and exceeds 65% of the selected span. Desktop, 390px, and 320px checks preserve readable labels and details; modern-only filters remove the break.
+- Action: Keep BCE years negative and nonzero, preserve the approximation flag through capture/sync, and use the shared formatter for details, accessibility labels, and tables. Keep one-year spacing across 1 BCE/1 CE, exclude the empty interval from shaded bands, and stack mobile details so the longer date label fits. Use the ancient composition estimate documented in the record, not a translation or reprint year.
+- Confidence: high
+
 **[2026-10-26] — Kit subscription migration assessment**
 - Observation: The user is considering Kit for site subscribers. The homepage and Post signup share `src/components/SubscribeEmbed.astro`; the existing RSS feed includes Posts, Notes, and Poems with descriptions and links rather than full bodies. Kit's current Free plan supports 10,000 subscribers and manual broadcasts, but native RSS campaigns require a paid plan; Recommendations can be disabled (https://help.kit.com/en/articles/16627071-the-kit-free-plan).
 - Action: If migration is chosen, replace the shared signup and its vault-backed configuration. Treat automatic delivery as a separate decision, and define the intended content selection before connecting the mixed RSS feed. Recheck Kit's plan terms before implementation.

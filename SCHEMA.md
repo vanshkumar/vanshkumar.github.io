@@ -34,10 +34,13 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
 - **reading-log** → `vault/reading-log/` → inline on `/shelf#reading-log`, aggregated at `/shelf/stats`
   - `title`, nonempty `authors[]`, `finished?`, `status?`, `isbn?`, `amazonAsin?`,
     `contributors?`, `dateAdded?`, `owned?`, `shelfSlug?`, `pageCount?`, `bookType?`,
-    `genres?[]`, `moods?[]`, `pace?`, `publicationYear?`, `metadataSources?[]`
+    `genres?[]`, `moods?[]`, `pace?`, `publicationYear?`, `publicationYearApproximate?`, `metadataSources?[]`
   - ISBN and positive integer `pageCount` describe a reference edition, not
     necessarily the edition read. `publicationYear` is the original publication
-    year (1–9999), not an edition date. `bookType` is `fiction` or `nonfiction`;
+    year (-9999–9999, excluding zero), not an edition date. Negative years represent BCE
+    (`-300` is 300 BCE); positive years represent CE. Set `publicationYearApproximate: true`
+    for an estimated date displayed with `c.`, and explain the estimate in the body.
+    `bookType` is `fiction` or `nonfiction`;
     `pace` is `slow`, `medium`, or `fast`.
   - Each metadata source has `url`, exact calendar date `retrieved`, and optional
     `fields[]` naming the metadata it supports. Labels are locally owned after import.

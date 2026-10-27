@@ -30,7 +30,11 @@ export const readingRecordSchema = z.object({
   genres: z.array(z.string().min(1)).optional(),
   moods: z.array(z.string().min(1)).optional(),
   pace: z.enum(['slow', 'medium', 'fast']).optional(),
-  publicationYear: z.number().int().min(1).max(9999).optional(),
+  // Negative years denote BCE; the historical calendar has no year zero.
+  publicationYear: z.number().int().min(-9999).max(9999).refine(year => year !== 0, {
+    message: 'Use a negative year for BCE or a positive year for CE; there is no year zero'
+  }).optional(),
+  publicationYearApproximate: z.boolean().optional(),
   metadataSources: z.array(metadataSourceSchema).optional(),
   dateAdded: readingDateSchema.optional(),
   owned: z.boolean().optional(),

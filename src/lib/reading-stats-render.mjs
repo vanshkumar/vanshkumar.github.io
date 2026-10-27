@@ -1,6 +1,6 @@
 import { amazonBookUrl, formatReadingDate } from './reading-log.mjs';
 import { readingStats, compareYears, todayInNewYork } from './reading-stats.mjs';
-import { publicationLayout } from './reading-publication.mjs';
+import { publicationLayout, formatPublicationYear } from './reading-publication.mjs';
 import { trendLayout } from './reading-trends.mjs';
 
 export const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -56,28 +56,30 @@ function scatter(events,selection,c) {
   const layout=publicationLayout(events,selection);
   if (!layout) return `<p>${e(c.noData)}</p>`;
   const selected=layout.points.at(-1);
+  const yearLabel=event=>formatPublicationYear(event.book.publicationYear,{approximate:event.book.publicationYearApproximate});
   const type=event=>['fiction','nonfiction'].includes(event.book.bookType)?event.book.bookType:'unknown';
   const types=['fiction','nonfiction','unknown'].filter(key=>events.some(event=>type(event)===key));
-  return `<figure class="publication-chart" data-publication-chart aria-label="${e(c.publicationChartLabel)}" style="--selected-x:${selected.x}%;--selected-y:${selected.y}%">
+  return `<figure class="publication-chart${layout.hasBCE?' publication-has-bce':''}" data-publication-chart aria-label="${e(c.publicationChartLabel)}" style="--selected-x:${selected.x}%;--selected-y:${selected.y}%">
     <figcaption class="publication-heading"><span>${e(c.publicationYear)}</span><span class="publication-legend">${types.map(key=>`<span><i class="publication-symbol publication-${key}" aria-hidden="true"></i>${e(c[key])}</span>`).join('')}</span></figcaption>
     <div class="publication-plot" role="group" aria-label="${e(c.publicationChartLabel)}">
-      ${layout.yearTicks.slice(0,-1).map((tick,i)=>`<span class="publication-band" style="bottom:${tick.position}%;height:${layout.yearTicks[i+1].position-tick.position}%;opacity:${i%2?0:1}" aria-hidden="true"></span>`).join('')}
+      ${layout.yearBands.map(band=>`<span class="publication-band" style="bottom:${band.bottom}%;height:${band.height}%;opacity:${band.shaded?1:0}" aria-hidden="true"></span>`).join('')}
       ${layout.dateTicks.map(tick=>`<span class="publication-date-grid" style="left:${tick.position}%" aria-hidden="true"><span>${e(tick.label)}</span></span>`).join('')}
       ${layout.yearTicks.map(tick=>`<span class="publication-year-grid" style="bottom:${tick.position}%" aria-hidden="true"><span>${e(tick.label)}</span></span>`).join('')}
       <span class="publication-guide publication-guide-x" aria-hidden="true"></span><span class="publication-guide publication-guide-y" aria-hidden="true"></span>
+      ${layout.yearBreak?`<div class="publication-break" role="note" aria-label="${e(copy(c.publicationAxisBreakTemplate,{from:formatPublicationYear(layout.yearBreak.from,{includeEra:true}),to:formatPublicationYear(layout.yearBreak.to,{includeEra:true})}))}" style="bottom:${layout.yearBreak.bottom}%;height:${layout.yearBreak.top-layout.yearBreak.bottom}%"><span aria-hidden="true">${e(c.publicationAxisBreak)}</span></div>`:''}
       ${layout.points.map(point=>{
         const active=point===selected;
-        const label=`${point.event.book.title}, ${c.publicationYear} ${point.event.book.publicationYear}, ${c.finished} ${formatReadingDate(point.event.finished)}`;
+        const label=`${point.event.book.title}, ${c.publicationYear} ${yearLabel(point.event)}, ${c.finished} ${formatReadingDate(point.event.finished)}`;
         return `<button type="button" class="publication-point publication-${type(point.event)}${active?' is-selected':''}" data-book-id="${e(point.event.id)}" style="left:${point.x}%;bottom:${point.y}%" tabindex="${active?0:-1}" aria-pressed="${active}" aria-label="${e(label)}"><span class="publication-symbol" aria-hidden="true"></span></button>`;
       }).join('')}
     </div>
     <div class="publication-axis-label">${e(c.finished)}</div>
     <div class="publication-detail">
-      <span class="publication-detail-year" data-publication-year>${selected.event.book.publicationYear}</span>
+      <span class="publication-detail-year" data-publication-year>${e(yearLabel(selected.event))}</span>
       <div class="publication-detail-book"><strong data-publication-title>${e(selected.event.book.title)}</strong><span data-publication-authors>${e(selected.event.book.authors.join(', '))}</span></div>
       <div class="publication-detail-date"><span>${e(c.finished)}</span><time data-publication-finished datetime="${e(selected.event.finished)}">${e(formatReadingDate(selected.event.finished))}</time></div>
     </div>
-  </figure><details class="stats-table-details"><summary>${e(c.publicationTable)}</summary><div class="stats-table-wrap"><table><thead><tr><th>${e(c.titleLabel)}</th><th>${e(c.publicationYear)}</th><th>${e(c.finished)}</th></tr></thead><tbody>${events.map(event=>`<tr><th>${bookLink(event,c)}</th><td>${event.book.publicationYear}</td><td>${e(formatReadingDate(event.finished))}</td></tr>`).join('')}</tbody></table></div></details>`;
+  </figure><details class="stats-table-details"><summary>${e(c.publicationTable)}</summary><div class="stats-table-wrap"><table><thead><tr><th>${e(c.titleLabel)}</th><th>${e(c.publicationYear)}</th><th>${e(c.finished)}</th></tr></thead><tbody>${events.map(event=>`<tr><th>${bookLink(event,c)}</th><td>${e(yearLabel(event))}</td><td>${e(formatReadingDate(event.finished))}</td></tr>`).join('')}</tbody></table></div></details>`;
 }
 export function renderStats(events,selection,c,today=todayInNewYork()) {
   const s=readingStats(events,selection);

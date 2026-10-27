@@ -6,19 +6,76 @@ const utcDate = (year, month = 1, date = 1) => {
 };
 const monthLabel = new Intl.DateTimeFormat('en-US', {month: 'short', timeZone: 'UTC'});
 
+export function formatPublicationYear(year, { approximate = false, includeEra = false } = {}) {
+  const label = year < 0 ? `${Math.abs(year)} BCE` : `${year}${includeEra ? ' CE' : ''}`;
+  return `${approximate ? 'c. ' : ''}${label}`;
+}
+
+// Adjacent historical years 1 BCE and 1 CE are one year apart, not two.
+const yearValue = year => year < 0 ? year + 1 : year;
+const tickSteps = [1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000, 5000];
+function yearSegment(years, bottom, top, includeEra, singleTick = false) {
+  const low = Math.min(...years), high = Math.max(...years);
+  if (singleTick && low === high) {
+    return { min: low, max: high, position: () => (bottom + top) / 2,
+      ticks: [{ label: formatPublicationYear(low, { includeEra }), position: (bottom + top) / 2 }] };
+  }
+  const intervals = Math.max(1, Math.round((top - bottom) / 16));
+  const step = tickSteps.find(n => n >= (high - low) / Math.min(5, intervals)) ?? 5000;
+  let min = Math.floor(low / step) * step;
+  let max = Math.max(min + step, Math.ceil(high / step) * step);
+  if (min === 0) min = 1;
+  if (max === 0) max = -1;
+  // A single 1 BCE point would otherwise have equal bounds after removing zero.
+  if (min === max) min -= step;
+  const position = year => bottom + (top - bottom) * (yearValue(year) - yearValue(min)) / (yearValue(max) - yearValue(min));
+  const tickYears = [];
+  for (let year = Math.ceil(min / step) * step; year <= max; year += step) {
+    if (year !== 0) tickYears.push(year);
+  }
+  if (min === 1 && !tickYears.includes(1)) tickYears.unshift(1);
+  if (max === -1 && !tickYears.includes(-1)) tickYears.push(-1);
+  return { min, max, position, ticks: tickYears.map(year => ({
+    label: formatPublicationYear(year, { includeEra }), position: position(year)
+  })) };
+}
+
+function publicationScale(years) {
+  const ordered = [...new Set(years)].sort((a, b) => a - b);
+  const includeEra = ordered[0] < 0;
+  let split = 0, gap = 0;
+  for (let i = 1; i < ordered.length; i++) {
+    const distance = yearValue(ordered[i]) - yearValue(ordered[i - 1]);
+    if (distance > gap) { gap = distance; split = i; }
+  }
+  // Compress only a dominant, unoccupied gap. Filtered modern-only charts stay linear.
+  const shouldBreak = gap >= 500 && gap > .65 * (yearValue(ordered.at(-1)) - yearValue(ordered[0]));
+  let segments, yearBreak = null;
+  if (shouldBreak) {
+    const lower = ordered.slice(0, split), upper = ordered.slice(split);
+    const lowerSpan = yearValue(lower.at(-1)) - yearValue(lower[0]);
+    const upperSpan = yearValue(upper.at(-1)) - yearValue(upper[0]);
+    const bottom = Math.max(20, Math.min(65, 90 * lowerSpan / (lowerSpan + upperSpan || 1)));
+    segments = [yearSegment(lower, 0, bottom, includeEra, true), yearSegment(upper, bottom + 10, 100, includeEra, true)];
+    yearBreak = { bottom, top: bottom + 10, from: segments[0].max, to: segments[1].min };
+  } else {
+    segments = [yearSegment(ordered, 0, 100, includeEra)];
+  }
+  return {
+    hasBCE: includeEra,
+    yearBreak,
+    yearTicks: segments.flatMap(segment => segment.ticks),
+    yearBands: segments.flatMap(segment => segment.ticks.slice(0, -1).map((tick, i) => ({
+      bottom: tick.position, height: segment.ticks[i + 1].position - tick.position, shaded: i % 2 === 0
+    }))),
+    position: year => segments[yearBreak && year > yearBreak.from ? 1 : 0].position(year)
+  };
+}
+
 // Coordinates are percentages so labels and book targets keep their size on phones.
 export function publicationLayout(events, selection = {}) {
   if (!events.length) return null;
-  const years = events.map(event => event.book.publicationYear);
-  const low = Math.min(...years), high = Math.max(...years);
-  const step = [1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000].find(n => n >= (high-low)/5) ?? 2000;
-  const minYear = Math.floor(low/step)*step;
-  const maxYear = Math.max(minYear+step, Math.ceil(high/step)*step);
-  const yearPosition = year => 100*(year-minYear)/(maxYear-minYear);
-  const yearTicks = Array.from({length: Math.round((maxYear-minYear)/step)+1}, (_,i) => {
-    const year = minYear+i*step;
-    return {label: String(year), position: yearPosition(year)};
-  });
+  const scale = publicationScale(events.map(event => event.book.publicationYear));
 
   const dates = events.map(event => Date.parse(event.finished));
   const firstYear = selection.year && selection.year !== 'all' ? +selection.year : new Date(Math.min(...dates)).getUTCFullYear();
@@ -39,8 +96,8 @@ export function publicationLayout(events, selection = {}) {
   }
   const datePosition = value => 100*(value-start)/(end-start);
   return {
-    yearTicks,
+    yearTicks: scale.yearTicks, yearBands: scale.yearBands, yearBreak: scale.yearBreak, hasBCE: scale.hasBCE,
     dateTicks: dateTicks.map(tick => ({...tick, position: datePosition(tick.value)})),
-    points: events.map(event => ({event, x: datePosition(Date.parse(event.finished)), y: yearPosition(event.book.publicationYear)})),
+    points: events.map(event => ({event, x: datePosition(Date.parse(event.finished)), y: scale.position(event.book.publicationYear)})),
   };
 }

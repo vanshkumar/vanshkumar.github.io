@@ -3,7 +3,7 @@ type: note
 slug: what-is-the-future-of-the-university
 title: What is the future of the university?
 date: 2026-07-05
-lastmod: 2026-10-25
+lastmod: 2026-10-27
 ---
 Status: extremely early, collecting thoughts as they come up
 
@@ -16,4 +16,4 @@ Rough notes:
 - For some reason "return to classical education" doesn't feel right to me... worth digging into why
 - At least the first two posts operate under the assumption that AI progress stays roughly where it is now (ie we don't get AGI). Curious if that's a good assumption to make in this context or overindexed on the present
 - And even more than that, I get the sense there is an implicit assumption that the shape of "how to succeed in the real world" stays roughly the same. Which seems hard to believe in a real AGI scenario
-- I don't see elite extremely expensive universities going away anytime soon, regardless of AI. The status signaling aspect is massive and may even grow
+- I don't see elite extremely expensive universities going away anytime soon, regardless of AI. The status signaling aspect is massive and may even grow. A stratification of elite private universities continuing to get more and more expensive, public universities getting cheaper (?), and middle-of-the-pack universities' business model dying away seems possible. Though this feels like something someone could have predicted 10 years ago.

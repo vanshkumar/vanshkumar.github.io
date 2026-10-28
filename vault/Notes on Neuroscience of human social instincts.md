@@ -4,6 +4,7 @@ title: Notes on Neuroscience of human social instincts
 type: post
 date: 2026-10-25
 lastmod: 2026-10-26
+description: studying a possible framework for the brain
 ---
 ![[neuro_of_social_instincts_a_sketch.pdf]]
 

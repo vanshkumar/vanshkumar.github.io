@@ -2,7 +2,7 @@
 slug: media-fast-2027
 title: Media fast 2027
 date: 2026-10-15
-lastmod: 2026-10-23
+lastmod: 2026-10-28
 type: post
 description: a random experiment
 ---
@@ -30,6 +30,7 @@ Starting 10/16/26:
 - No books, with a couple small exceptions
 	- What we're reading in my book clubs (Anna Karenina, The Unconsoled)
 	- Dune 6 (because I want to finish the series before I forget all the context)
+	- Zhuangzi/Tao te ching (in the middle of these and they're short + fit the wibe)
 - No movies/shows/netflix/youtube
 - No social media
 - No podcasts
@@ -45,3 +46,5 @@ What do I think I might do with the extra time? Possibly writing more on here, p
 10/19: so far I have been playing a lot of video games with my brother, as we are in Northern Virginia for a month. We also have been traveling (the flight, drive to Massanutten) so there hasn't been a ton of time. I have noticed that my desire to seek out things to read has increased – when I check my email, I feel a stronger urge to open various substacks I am subscribed to, when normally I'm fine ignoring them. I have been more consistent about morning journaling, though I do always wonder if I'm doing more harm than good by ruminating on feelings in the journal. Sometimes it's useful for releasing things that come up when I'm triggered (which happens more frequently as I'm in Nova / around my parents), but it can be counterproductive too. Better to stare at the ceiling at times.
 
 10/22: it's only been a week but this whole thing is feeling a little bit troll. I feel that I am mostly using my time as I was before? Perhaps I am writing a bit more on here & just generally futzing with personal site more. I do find myself wanting to read books. I really hate not being able to read books lmao, there are so many ideas I want to read & explore & respond to with my writing but I'm unable to at the moment. Still, this might be a useful constraint to get into a better writing habit. Let's stick with this for at least a month and see what happens.
+
+10/28: still feeling somewhat troll, the most valuable part of this so far has been no adult content/masturbation. I've only been reading the prescribed books and playing some video games with my brother. I would say the main area I've been deviating from the spirit of this so far is in reading online articles here and there. It hasn't been tooo much but yesterday I did read a bunch. Chatting with & reading LLM output has also gone up since starting this. Hm.

@@ -3,11 +3,11 @@ title: Unoffice hours
 date: 2026-10-28
 lastmod: 2026-10-28
 ---
-I like meeting people and following interesting conversations—about books, education, parenting, things we’re making, or whatever’s on your mind. You don’t need a polished idea or a particular agenda.
+I like meeting people & having interesting conversations about books, education, parenting, development, tennis, or really anything. You don’t need a polished idea or a particular agenda.
 
 Anyone is welcome. These are informal, 45-minute conversations.
 
-[Find a time to chat](https://calendly.com/vanshkumar95/let-s-chat).
+[Book a time to chat](https://calendly.com/vanshkumar95/let-s-chat).
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Home
-lastmod: 2026-09-27
+lastmod: 2026-10-28
 home:
   comic:
     src: /assets/Pasted image 20260203101338.png
@@ -46,4 +46,4 @@ Here you can find:
 	- [notes](/notes)
 	- [poems](/poems)
 
-Email me at [vanshkumar95@gmail.com](mailto:vanshkumar95@gmail.com) to chat.
+Email me at [vanshkumar95@gmail.com](mailto:vanshkumar95@gmail.com) to chat, or book some [unoffice hours](/unoffice-hours).

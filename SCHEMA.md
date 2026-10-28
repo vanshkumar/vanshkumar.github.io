@@ -67,7 +67,8 @@ Source of truth is the Obsidian vault in `vault/`. Build sync copies public cont
     Markdown directory. `home.selected.title` and `home.selected.slugs` control the selected
     posts heading and ordered list; every selected slug must resolve to a Post. Draft selections
     are omitted during sync without changing the authored list, and return when published.
-  - `about.md` and `now.md` own their respective page prose.
+  - `about.md`, `now.md`, and `unoffice-hours.md` own their respective page prose.
+    The Unoffice hours page also owns its Calendly booking and webring links.
   - `posts.md`, `notes.md`, `poems.md`, and `shelf.md` own archive titles and optional archive
     introductions. Shelf section headings and surrounding prose live directly in the
     `shelf.md` Markdown body around `<!-- shelf-currently-reading -->` and

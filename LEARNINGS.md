@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-10-28] — Unoffice Hours integration**
+- Observation: The user approved `/unoffice-hours`, linked from the homepage email invitation, with booking at `https://calendly.com/vanshkumar95/let-s-chat`; Calendly displays a 45-minute event. The ring requires a published page before submission in `sites.js`. This site's external-link plugin adds `noreferrer`; the ring's `functions.js` supports an explicit `referrer` parameter and compares the resulting full URL with its registry.
+- Action: Keep the invitation, booking link, and ring navigation in `vault/pages/unoffice-hours.md`, rendered by the matching Astro route. Preserve the exact registered page URL without `https://` as the encoded `referrer` on Previous/Next, including any future trailing-slash change. Keep scheduling through the plain Calendly link and update the stated duration if that event changes.
+- Confidence: high
+
 **[2026-10-27] — Pages identity-token timeout recovery**
 - Observation: Deploy Pages run 40517000681 passed every build/test step but failed requesting its OIDC identity token with a request timeout. The action suggested missing `id-token: write` even though the workflow already declared it. Retrying only the deploy job succeeded for the same commit and artifact.
 - Action: Keep one automatic retry of the Pages publishing step after a 20-second delay, reusing the successful build artifact. The second attempt must fail the job if unsuccessful. Inspect the underlying request error before changing permissions, then confirm the live page.

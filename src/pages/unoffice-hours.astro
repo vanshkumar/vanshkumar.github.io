@@ -1,0 +1,24 @@
+---
+import { getEntry } from 'astro:content';
+import ContentLayout from '../layouts/ContentLayout.astro';
+import { getBacklinksForEntry } from '../lib/wiki';
+import { titleFromSlug } from '../lib/content';
+
+const entry = await getEntry('pages', 'unoffice-hours');
+if (!entry) {
+  throw new Error('Missing content entry: pages/unoffice-hours');
+}
+const { Content } = await entry.render();
+const backlinks = await getBacklinksForEntry('pages', entry.slug);
+const title = entry.data.title ?? titleFromSlug(entry.slug);
+---
+
+<ContentLayout
+  title={title}
+  description={entry.data.description}
+  lastUpdated={entry.data.lastmod}
+  backlinks={backlinks}
+  showHeaderDivider={false}
+>
+  <Content />
+</ContentLayout>

@@ -2,7 +2,7 @@
 slug: media-fast-2027
 title: Media fast 2027
 date: 2026-10-15
-lastmod: 2026-10-28
+lastmod: 2026-10-29
 type: post
 description: a random experiment
 ---
@@ -48,3 +48,5 @@ What do I think I might do with the extra time? Possibly writing more on here, p
 10/22: it's only been a week but this whole thing is feeling a little bit troll. I feel that I am mostly using my time as I was before? Perhaps I am writing a bit more on here & just generally futzing with personal site more. I do find myself wanting to read books. I really hate not being able to read books lmao, there are so many ideas I want to read & explore & respond to with my writing but I'm unable to at the moment. Still, this might be a useful constraint to get into a better writing habit. Let's stick with this for at least a month and see what happens.
 
 10/28: still feeling somewhat troll, the most valuable part of this so far has been no adult content/masturbation. I've only been reading the prescribed books and playing some video games with my brother. I would say the main area I've been deviating from the spirit of this so far is in reading online articles here and there. It hasn't been tooo much but yesterday I did read a bunch. Chatting with & reading LLM output has also gone up since starting this. Hm.
+
+10/29: ended up breaking the fast yesterday :( Still planning to keep going at least until mid-Nov, it's just one day. Kind of debating about relaxing the rule of no books tbh. But I'll give it a week or two and then decide.

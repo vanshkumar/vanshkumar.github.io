@@ -2,6 +2,16 @@
 
 ## What Has Worked
 
+**[2026-10-29] — Published writing word count**
+- Observation: The published corpus includes substantial project-log prose alongside Posts, Notes, poems, Shelf notes, and page bodies. Blindsight's citation definitions mostly support excluded quotations, and the Montessori effectiveness note also contains inline quoted research excerpts. Reading-log record bodies hold provenance that is not rendered on the site.
+- Action: For a quote-free writing total, count each published Markdown body once, exclude draft Posts and their logs, remove both quote blocks and inline quotations, and count footnotes only when referenced by retained prose. Exclude reading-log provenance, private vault folders, frontmatter, code, and embedded-media text; read committed content when uncommitted writing is present.
+- Confidence: high
+
+**[2026-10-29] — Site-derived community profile copy**
+- Observation: The old Pathless bio said “Quit my job last October,” while `vault/pages/now.md` dates the departure to late 2024 and centers the question of how a mind develops. On October 29 the user supplied an exact replacement bio with family and interests first, a separate Alphabet departure paragraph, and “More at vanshkumar.net.” The microschool remains a future plan.
+- Action: Ground external profile suggestions in About and Now, preserving explicit dates and the distinction between current activities and future plans. For this update, preserve the user's exact bio and paragraph breaks and patch only the bio; no headline change was requested. The prepared Pathless preview still requires the user's browser approval before publication.
+- Confidence: high
+
 **[2026-10-28] — Unoffice Hours integration**
 - Observation: The user approved `/unoffice-hours`, linked from the homepage email invitation, with booking at `https://calendly.com/vanshkumar95/let-s-chat`; Calendly displays a 45-minute event. The ring requires a published page before submission in `sites.js`. This site's external-link plugin adds `noreferrer`; the ring's `functions.js` supports an explicit `referrer` parameter and compares the resulting full URL with its registry.
 - Action: Keep the invitation, booking link, and ring navigation in `vault/pages/unoffice-hours.md`, rendered by the matching Astro route. Preserve the exact registered page URL without `https://` as the encoded `referrer` on Previous/Next, including any future trailing-slash change. Keep scheduling through the plain Calendly link and update the stated duration if that event changes.

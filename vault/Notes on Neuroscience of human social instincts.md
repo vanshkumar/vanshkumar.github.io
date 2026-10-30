@@ -3,7 +3,7 @@ slug: notes-on-neuroscience-of-human-social-instincts
 title: Notes on Neuroscience of human social instincts
 type: post
 date: 2026-10-25
-lastmod: 2026-10-26
+lastmod: 2026-10-29
 description: studying a possible framework for the brain
 ---
 ![[neuro_of_social_instincts_a_sketch.pdf]]
@@ -46,6 +46,7 @@ Notes/summary:
 	- Predictor is constantly trying to predict what Steering subsystem will do
 	- After some initial learning period (how long?), Steering subsystem starts defaulting to defer-to-predictor mode, relying on the learned predictor rather than its own innate heuristics
 	- Sometimes, the Steering subsystem injects ground truth when the predictor is wrong for long enough (what are the rules here?), and the predictor updates
+	- ..no the above is wrong, hm
 - 
 
 

@@ -41,7 +41,7 @@ Obsidian.
 Clicking a card focuses an existing Obsidian tab for that file, including background tabs restored
 with the workspace. If the file is not open, Weather opens it in a new tab.
 
-Activity comes only from each note's `lastmod` or `lastMod` frontmatter. Updates from the last 30
+Card activity comes only from each note's `lastmod` or `lastMod` frontmatter. Updates from the last 30
 days receive a quadratic recency discount, and visual levels are assigned relative to other notes
 within the active Writing view, Poems surface, or Shelf surface.
 
@@ -64,3 +64,18 @@ restored with the view. Saved legacy Untagged and tag filters migrate to the clo
 
 The plugin source is tracked here. Installed artifacts under the vault's `.obsidian` directory and
 the local `dist/` directory are ignored by the parent repository.
+
+## Words touched
+
+Above the cards, Weather shows today's words touched, an added/edited/removed breakdown, and
+the homepage's green year calendar. It reuses the site's counting and public-path allowlist
+(including draft writing), so private folders are excluded. Git must be available on desktop.
+
+Committed history is cached until HEAD or the local date changes. Saved tracked changes (staged
+and unstaged) are compared with HEAD, and untracked Markdown is included as additions. The view
+updates on vault events, activation, and once a minute. No commits or files are written by the tracker.
+
+All outstanding saved changes are attributed to today; edits carried overnight can move to the
+next day until committed. Repeated rewrites between commits count only their resulting diff,
+not every intermediate edit. This is an approximate writing signal, not a keystroke/session log.
+The homepage retains its existing committed-only behavior and date convention.

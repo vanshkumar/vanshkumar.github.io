@@ -404,3 +404,20 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+.vault-weather-view .word-activity { margin: 0 0 1.75rem; min-width: 0; }
+.vault-weather-view .word-activity-total { margin: 0; font-size: 1.15rem; }
+.vault-weather-view .word-activity-total strong { font-size: 1.75rem; font-variant-numeric: tabular-nums; }
+.vault-weather-view .word-activity-breakdown { margin: .3rem 0 .8rem; color: var(--text-muted); font-size: .85rem; }
+.vault-weather-view .word-activity-scroll { overflow-x: auto; padding: 4px 2px 8px; }
+.vault-weather-view .word-activity-calendar { display: flex; gap: 3px; width: max-content; }
+.vault-weather-view .word-activity-week { display: grid; grid-template-rows: 20px repeat(7, 11px); gap: 3px; }
+.vault-weather-view .word-activity-month { font-size: 10px; width: 11px; overflow: visible; white-space: nowrap; color: var(--text-muted); }
+.vault-weather-view .word-activity-cell { width: 11px; height: 11px; border-radius: 2px; background: var(--background-modifier-border); }
+.vault-weather-view .word-activity-cell.level-1 { background: #dce6d9; }
+.vault-weather-view .word-activity-cell.level-2 { background: #b6c9b0; }
+.vault-weather-view .word-activity-cell.level-3 { background: #789572; }
+.vault-weather-view .word-activity-cell.level-4 { background: #315c39; }
+.vault-weather-view .word-activity-cell.future { visibility: hidden; }
+.vault-weather-view .word-activity-cell:focus-visible { outline: 2px solid var(--text-normal); outline-offset: 1px; }
+.vault-weather-view .word-activity-caption, .vault-weather-view .word-activity-status { margin: .4rem 0 0; font-size: .75rem; color: var(--text-muted); }

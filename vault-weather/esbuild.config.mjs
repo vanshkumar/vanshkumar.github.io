@@ -20,7 +20,7 @@ const copyPluginAssets = async () => {
 const buildOptions = {
   entryPoints: [path.join(appRoot, 'src', 'main.ts')],
   bundle: true,
-  external: ['obsidian', 'electron', '@codemirror/*', '@lezer/*'],
+  external: ['node:*', 'obsidian', 'electron', '@codemirror/*', '@lezer/*'],
   format: 'cjs',
   target: 'es2018',
   platform: 'browser',

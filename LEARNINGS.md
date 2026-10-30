@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-10-30] — Weather words-touched experiment**
+- Observation: During the media fast, the user wants editing and revision to feel worthwhile alongside new writing. Weather now shares the homepage's word-diff parser, calendar, and public-path allowlist, with saved HEAD diffs and untracked Markdown added to today's local count.
+- Action: Keep the total and equal-weight added/edited/removed breakdown above Weather cards. Cache committed history by HEAD/date; include staged and unstaged changes once, and describe outstanding edits as today's estimate rather than a session log. Preserve the homepage's committed-only behavior and private-folder exclusions.
+- Confidence: high
+
 **[2026-10-29] — Published writing word count**
 - Observation: The published corpus includes substantial project-log prose alongside Posts, Notes, poems, Shelf notes, and page bodies. Blindsight's citation definitions mostly support excluded quotations, and the Montessori effectiveness note also contains inline quoted research excerpts. Reading-log record bodies hold provenance that is not rendered on the site.
 - Action: For a quote-free writing total, count each published Markdown body once, exclude draft Posts and their logs, remove both quote blocks and inline quotations, and count footnotes only when referenced by retained prose. Exclude reading-log provenance, private vault folders, frontmatter, code, and embedded-media text; read committed content when uncommitted writing is present.

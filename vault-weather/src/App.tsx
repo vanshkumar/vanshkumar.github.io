@@ -1,3 +1,5 @@
+import { WordActivity } from './WordActivity';
+import type { ReactNode } from 'react';
 import { useEffect, useMemo, useState } from 'react';
 import { Plus } from 'lucide-react';
 import type { TFile } from 'obsidian';
@@ -79,6 +81,7 @@ interface VaultWeatherAppProps {
 }
 
 interface WeatherPageProps {
+  wordActivity?: ReactNode;
   collectionKey: CollectionKey;
   terrainFilter: TerrainFilter;
   data: WeatherCollectionData | null;
@@ -90,6 +93,7 @@ interface WeatherPageProps {
 }
 
 export function WeatherPage({
+  wordActivity,
   collectionKey,
   terrainFilter,
   data,
@@ -153,6 +157,8 @@ export function WeatherPage({
           </button>
         </div>
       </header>
+
+      {wordActivity}
 
       {collectionKey === 'terrain' ? (
         <nav className="writing-filter-tabs" aria-label="Writing views">
@@ -239,6 +245,7 @@ export function VaultWeatherApp({
 
   return (
     <WeatherPage
+      wordActivity={<WordActivity service={service} refreshToken={refreshToken} />}
       collectionKey={collectionKey}
       terrainFilter={terrainFilter}
       data={data}

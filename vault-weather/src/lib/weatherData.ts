@@ -1,3 +1,4 @@
+import { WordActivityService } from './wordActivity';
 import type { App, FrontMatterCache, TAbstractFile, TFile } from 'obsidian';
 import {
   assignActivityLevels,
@@ -41,7 +42,15 @@ const tagsValue = (value: unknown): string[] => {
 };
 
 export class WeatherDataService {
+  private words: WordActivityService | null = null;
   constructor(private readonly app: App) {}
+
+  async wordActivity() {
+    const adapter = this.app.vault.adapter as typeof this.app.vault.adapter & { getBasePath?: () => string };
+    if (!adapter.getBasePath) throw new Error('Writing activity requires a local desktop vault');
+    this.words ??= new WordActivityService(adapter.getBasePath());
+    return this.words.load();
+  }
 
   private directMarkdownFiles(collectionKey: CollectionKey): TFile[] {
     const folder = COLLECTION_CONFIGS[collectionKey].folder;

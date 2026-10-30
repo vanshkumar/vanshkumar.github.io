@@ -1,6 +1,6 @@
 ---
 slug: life-as-a-trend-following-strategy
-title: "Life as a trend following strategy"
+title: Life as a trend following strategy
 date: 2026-10-30
 lastmod: 2026-10-30
 type: note

@@ -1,8 +1,9 @@
 ---
 type: note
 slug: treat-answers-as-tools
-title: "Treat answers as tools"
-lastmod: 2026-02-28
+title: Treat answers as tools
+lastmod: 2026-10-30
+date: 2026-07-21
 ---
 An open attentional approach to questions is akin to an unhurried curiosity. It means not rushing to find _the_ answer to an interesting question; counteracting the default mode where [[People are extremely ready to generate beliefs about the world]].
 

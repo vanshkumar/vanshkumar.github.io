@@ -10,8 +10,7 @@ Answers (perhaps hypotheses is a better word) are still important, but they are 
 
 Leaving the original question unsettled and making sure you [[Build systems to revisit ideas]] allows the question to continue to be generative over time.
 
-In the history of computation, the question of "how can machines augment human memory?" has been wildly generative
-- Examples from augment long term memory essay
+In the history of computation, the question of "how can machines augment human memory?" has been wildly generative ([source](https://augmentingcognition.com/ltm.html))
 
 This has a similar flavor to [[Ambitious goals are useful as they illuminate a path that maximizes learning and enjoyment, not as ends in themselves]]
 

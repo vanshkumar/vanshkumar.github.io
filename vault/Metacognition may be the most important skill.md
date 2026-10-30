@@ -2,7 +2,7 @@
 type: note
 slug: metacognition-may-be-the-most-important-skill
 title: Metacognition may be the most important skill
-lastmod: 2026-07-03
+lastmod: 2026-10-30
 date: 2026-05-27
 ---
 Metacognition is the ability to step outside of your thinking process to observe, reflect, question, and improve it.

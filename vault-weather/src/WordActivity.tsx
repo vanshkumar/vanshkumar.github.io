@@ -1,10 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import type { ActivityCalendar } from '../../src/lib/word-activity-core.mjs';
 import type { WeatherDataService } from './lib/weatherData';
 
 const number = (value: number) => value.toLocaleString('en-US');
 
 export function WordActivity({ service, refreshToken }: { service: WeatherDataService; refreshToken: number }) {
+  const labelId = useId();
   const [calendar, setCalendar] = useState<ActivityCalendar | null>(null);
   const [error, setError] = useState(false);
   const scroll = useRef<HTMLDivElement>(null);
@@ -25,21 +26,25 @@ export function WordActivity({ service, refreshToken }: { service: WeatherDataSe
   if (!calendar) return <p className="word-activity-status">Loading writing activity…</p>;
   const today = calendar.weeks.flatMap(week => week.days).find(day => day.date === calendar.endDate)!;
   return (
-    <section className="word-activity" aria-label="Writing activity">
-      <p className="word-activity-total"><strong>{number(today.touched)}</strong> words touched today</p>
-      <p className="word-activity-breakdown">{number(today.added)} added · {number(today.edited)} edited · {number(today.removed)} removed</p>
-      <div className="word-activity-scroll" ref={scroll} tabIndex={0} role="region" aria-label="Writing activity over the past year">
+    <section className="word-activity" aria-labelledby={`${labelId}-heading`}>
+      <span id={`${labelId}-heading`} className="sr-only">Writing activity</span>
+      <p className="word-activity-total">
+        <strong>{number(today.touched)}</strong>
+        <span>words touched today</span>
+      </p>
+      <div className="word-activity-scroll" ref={scroll} tabIndex={0} role="region" aria-labelledby={`${labelId}-calendar`}>
+        <span id={`${labelId}-calendar`} className="sr-only">Writing activity over the past year</span>
         <div className="word-activity-calendar">
           {calendar.weeks.map((week, index) => <div className="word-activity-week" key={index}>
             <span className="word-activity-month">{week.monthLabel}</span>
             {week.days.map(day => <span key={day.date} className={`word-activity-cell level-${day.level}${day.future ? ' future' : ''}`}
-              tabIndex={day.future ? undefined : 0} role={day.future ? undefined : 'img'}
-              aria-label={day.future ? undefined : `${day.label}: ${number(day.touched)} words touched; ${number(day.added)} added, ${number(day.edited)} edited, ${number(day.removed)} removed`}
-              title={day.future ? undefined : `${day.label}: ${number(day.touched)} words touched`} />)}
+              role={day.future ? undefined : 'img'}
+              aria-labelledby={day.future ? undefined : `${labelId}-${day.date}`}>
+              {!day.future && <span id={`${labelId}-${day.date}`} className="sr-only">{day.label}: {number(day.touched)} words touched</span>}
+            </span>)}
           </div>)}
         </div>
       </div>
-      <p className="word-activity-caption">Includes saved changes since the last commit.</p>
     </section>
   );
 }

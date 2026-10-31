@@ -3,7 +3,7 @@ slug: notes-on-neuroscience-of-human-social-instincts
 title: Notes on Neuroscience of human social instincts
 type: post
 date: 2026-10-25
-lastmod: 2026-10-29
+lastmod: 2026-10-31
 description: studying a possible framework for the brain
 ---
 ![[neuro_of_social_instincts_a_sketch.pdf]]
@@ -44,9 +44,10 @@ Notes/summary:
 	- Defer-to-predictor mode means that the predictor can itself trigger the reflex – purely thinking about that person triggers the social attention reflex
 - Another way to see this picture:
 	- Predictor is constantly trying to predict what Steering subsystem will do
-	- After some initial learning period (how long?), Steering subsystem starts defaulting to defer-to-predictor mode, relying on the learned predictor rather than its own innate heuristics
-	- Sometimes, the Steering subsystem injects ground truth when the predictor is wrong for long enough (what are the rules here?), and the predictor updates
-	- ..no the above is wrong, hm
+	- Default setting is defer-to-predictor mode
+	- Early on, the predictor is wrong often so the Steering subsystem issues "overrides" / injects ground truth which both do the right thing & send it supervisory signals so it can improve
+	- Later, the predictor is good at predicting what the Steering subsystem is going to do & overrides are relatively rare
+	- Over time, using a TD learning style algo, the predictor learns to predict causal chains of cues/context that would result in Steering subsystem overrides (eg going to this room means I see a spider which always scares me, so I get scared thinking about going to the room)
 - 
 
 

@@ -2,6 +2,16 @@
 
 ## What Has Worked
 
+**[2026-10-31] — Unoffice Hours publication verification**
+- Observation: Webring PR #28 merged on October 28 at 16:14:09 UTC. The live `https://unofficehours.com/sites.js` includes Vansh Kumar and reports modification four seconds later; a fresh browser renders his entry last, directly before Join. The upstream repo exposes no Actions runs or merge-commit checks despite the live update.
+- Action: For missing-listing reports, inspect the live registry and rendered directory before inferring that an upstream release is needed; distinguish a confirmed live entry from a suspected stale browser copy.
+- Confidence: high
+
+**[2026-10-31] — Weather residual hover behavior**
+- Observation: The user still saw grid hover activity after native title tooltips were removed; the tracker retained aria-label attributes that may invoke Obsidian tooltip behavior.
+- Action: Use aria-labelledby with hidden text throughout the tracker and disable pointer events on the static calendar, leaving its scroll container interactive. Verify in Obsidian before claiming the live hover behavior is resolved.
+- Confidence: medium
+
 **[2026-10-30] — Weather words-touched experiment**
 - Observation: During the media fast, the user wants editing and revision to feel worthwhile alongside new writing. Weather now shares the homepage's word-diff parser, calendar, and public-path allowlist, with saved HEAD diffs and untracked Markdown added to today's local count.
 - Action: Keep the total and equal-weight added/edited/removed breakdown above Weather cards. Cache committed history by HEAD/date; include staged and unstaged changes once, and describe outstanding edits as today's estimate rather than a session log. Preserve the homepage's committed-only behavior and private-folder exclusions.
@@ -513,6 +523,16 @@
 - Confidence: high
 
 ## Patterns and Preferences
+
+**[2026-10-31] — Weather daily total placement**
+- Observation: After trying the total on the right, the user switched back to the number on the left and requested a right-aligned calendar and more prominent number. The centered label and dark green card color remain.
+- Action: Keep the total first, centered above its label, with a 7rem/800-weight number in --vw-activity-high. Align the calendar to the far right and let it scroll within the remaining width in narrow panes.
+- Confidence: high
+
+**[2026-10-31] — Minimal Weather writing tracker**
+- Observation: The user wants only today's words-touched total and calendar in Weather; the saved-changes caption, added/edited/removed breakdown, and hover activity are unwanted.
+- Action: Keep Weather's calendar static without tooltips or individual cell tab stops, retain accessible daily totals, and omit the breakdown and caption. This supersedes the initial Weather breakdown preference; saved-change counting stays enabled.
+- Confidence: high
 
 **[2026-10-27] — Publication chart labels**
 - Observation: The user finds the visible “Axis break” label unattractive and the positive-year “CE” suffix redundant.

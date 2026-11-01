@@ -1,10 +1,10 @@
 ---
 slug: montessori-school-tour-notes
-title: "Montessori school tour notes"
+title: Montessori school tour notes
 date: 2026-04-17
 lastmod: 2026-04-17
 type: post
-exclude_modified_update: false
+exclude_modified_update: true
 ---
 
 Got a tour of a local AMI-certified Montessori school (ages 2.5-6) and got to chat with the director. Posting my rough notes I brain dumped afterwards, organized loosely by topic

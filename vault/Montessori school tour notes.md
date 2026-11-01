@@ -28,3 +28,5 @@ Lessons/materials:
 - lessons are introduced as turns - teacher shows how to do it, then leaves and kid does it themselves (so it doesn’t feel like policing/watching to make sure they do it right)
 - if a kid tried their best and still left a mess that's fine, teachers make sure to clean it up later when they're not looking (so it's not "i tried my best and it wasn't enough for you")
 - kids naturally find ways to rest when they need it – listen to music, sit at a table, go outside
+
+Suggestion from the director: every time our son needs something from us, do it & then ask "how can I allow him to do it himself the next time"

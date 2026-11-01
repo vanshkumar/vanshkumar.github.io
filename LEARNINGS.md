@@ -524,6 +524,11 @@
 
 ## Patterns and Preferences
 
+**[2026-10-31] — Writing belief-audit attribution**
+- Observation: The current writing corpus lives at the vault root and in `vault/writing inbox/`, with no `vault/writing/` directory. Several notes preserve earlier positions inline: `Unpredictable upsides of cognitive offloading` labels its restrictive LLM rules as previous thinking, `Why am I interested in alt-ed?` separates earlier rough notes, and the annual review interleaves imported prompts with authored answers. October's Long Content and Media fast notes also qualify the older account of commitment.
+- Action: For future audits of the author's beliefs, distinguish current endorsed prose from superseded sections, quotations, generated suggestions, and template prompts; check later related notes before treating an older statement as a current commitment.
+- Confidence: high
+
 **[2026-10-31] — Weather daily total placement**
 - Observation: After trying the total on the right, the user switched back to the number on the left and requested a right-aligned calendar and more prominent number. The centered label and dark green card color remain.
 - Action: Keep the total first, centered above its label, with a 7rem/800-weight number in --vw-activity-high. Align the calendar to the far right and let it scroll within the remaining width in narrow panes.

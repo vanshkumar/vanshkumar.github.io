@@ -3,7 +3,7 @@ slug: notes-on-neuroscience-of-human-social-instincts
 title: Notes on Neuroscience of human social instincts
 type: post
 date: 2026-10-25
-lastmod: 2026-10-31
+lastmod: 2026-11-01
 description: studying a possible framework for the brain
 ---
 ![[neuro_of_social_instincts_a_sketch.pdf]]
@@ -28,12 +28,11 @@ Notes/summary:
 	- Output = estimate of the target Steering subsystem signal
 	- Ground truth = output of Steering subsystem (eg physiological arousal)
 - Short-term predictors learn to associate cortical world model concepts with active physiological states – every time I go into this particular room I see a spider, so just going into the room triggers the same response before even seeing the spider
-- Short-term predictors have a "defer-to-predictor" mode where the output of the predictor can itself trigger the Steering subsystem reaction
-	- This seems like a misnomer to me, at least in the example provided in the article? When you're just thinking about a person, the Steering subsystem isn't getting visual input of that person, so only the inputs of the learned short-term predictor are active. It's not really deferring to the predictor, it's just that only the short-term predictor is active
+- Steering subsystem has a "defer-to-predictor" mode where the output of the predictor itself determines the Steering subsystem output
 - A TD learning style algorithm can convert a short-term predictor into a long-term predictor – the predictor can learn to activate the relevant Steering subsystem physiological state at the first cue of a causal chain. Ex:
 	- You always only get in your car to go to a restaurant to eat, which feels good
 	- Short-term predictor learns that picking up a fork with food in front of you -> feel good
-	- Long-term predictor uses a TD-style algo to learn that getting in your car -> feel good
+	- Long-term predictor uses a TD-style algo to learn that getting in your car -> feel good[^2]
 - **Recap**: predictors learn to associate cortical world model concepts with physiological state over various time delays, with ground truth provided by the Steering subsystem
 - How do we ensure that predictors learn useful world model<>physiological state associations?
 	- Steering subsystem uses "**involuntary attention**" to force your cortex to think about what you are seeing/hearing/sensing (instead of eg daydreaming), so that likely relevant cortical world model concepts are active for forming associations
@@ -44,11 +43,15 @@ Notes/summary:
 	- Defer-to-predictor mode means that the predictor can itself trigger the reflex – purely thinking about that person triggers the social attention reflex
 - Another way to see this picture:
 	- Predictor is constantly trying to predict what Steering subsystem will do
-	- Default setting is defer-to-predictor mode
-	- Early on, the predictor is wrong often so the Steering subsystem issues "overrides" / injects ground truth which both do the right thing & send it supervisory signals so it can improve
-	- Later, the predictor is good at predicting what the Steering subsystem is going to do & overrides are relatively rare
-	- Over time, using a TD learning style algo, the predictor learns to predict causal chains of cues/context that would result in Steering subsystem overrides (eg going to this room means I see a spider which always scares me, so I get scared thinking about going to the room)
+	- Default setting is defer-to-predictor mode[^3]
+	- Early on, the predictor is wrong often, but the Steering subsystem issues "overrides" / injects ground truth based on its inputs, which both does the right thing & sends the predictor supervisory signals so it can improve
+	- Later, the predictor is better at predicting what the Steering subsystem is going to do, and overrides become smaller in magnitude + cancel out in expectation
+	- Over time, using a TD learning style algo, the predictor learns to predict chains of cues/context that would result in Steering subsystem overrides (eg going to this room means I see a spider which always scares me, so I get scared thinking about going to the room)
 - 
 
 
 [^1]: more precisely, learn to associate "cortical world model concepts that are active when you saw that person" with the social attention reflex
+
+[^2]: notably Byrnes doesn't think this requires the standard many trial, step-by-step backup in TD learning; instead, latent variables in context that are active 
+
+[^3]: it's really a weighted average rather than an all-or-nothing switch

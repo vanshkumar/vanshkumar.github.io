@@ -5,6 +5,7 @@ date: 2026-04-17
 lastmod: 2026-04-17
 type: post
 exclude_modified_update: true
+description: visiting IMA
 ---
 
 Got a tour of a local AMI-certified Montessori school (ages 2.5-6) and got to chat with the director. Posting my rough notes I brain dumped afterwards, organized loosely by topic

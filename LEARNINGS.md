@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-11-03] — Word Garden final month label**
+- Observation: A month starting in the last calendar column extends beyond the right edge when its label is left-aligned, clipping November in the scroll container.
+- Action: Right-align the final week's month label within its column so it stays inside the calendar without changing cell spacing or horizontal scrolling.
+- Confidence: high
+
 **[2026-10-31] — Unoffice Hours publication verification**
 - Observation: Webring PR #28 merged on October 28 at 16:14:09 UTC. The live `https://unofficehours.com/sites.js` includes Vansh Kumar and reports modification four seconds later; a fresh browser renders his entry last, directly before Join. The upstream repo exposes no Actions runs or merge-commit checks despite the live update.
 - Action: For missing-listing reports, inspect the live registry and rendered directory before inferring that an upstream release is needed; distinguish a confirmed live entry from a suspected stale browser copy.

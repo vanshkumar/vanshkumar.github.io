@@ -3,7 +3,7 @@ slug: notes-on-neuroscience-of-human-social-instincts
 title: Notes on Neuroscience of human social instincts
 type: post
 date: 2026-10-25
-lastmod: 2026-11-01
+lastmod: 2026-11-04
 description: studying a possible framework for the brain
 ---
 ![[neuro_of_social_instincts_a_sketch.pdf]]
@@ -35,13 +35,17 @@ Notes/summary:
 	- Long-term predictor uses a TD-style algo to learn that getting in your car -> feel good[^2]
 - **Recap**: predictors learn to associate cortical world model concepts with physiological state over various time delays, with ground truth provided by the Steering subsystem
 - How do we ensure that predictors learn useful world model<>physiological state associations?
-	- Steering subsystem uses "**involuntary attention**" to force your cortex to think about what you are seeing/hearing/sensing (instead of eg daydreaming), so that likely relevant cortical world model concepts are active for forming associations
+	- Problem: innate arousal reflex is triggered because you saw a spider, but you're daydreaming about what you had for lunch. The predictor will learn to associate cortical world model concepts about what you ate with arousal
+		- Solution – Steering subsystem uses "**involuntary attention**" to force your cortex to think about what you are seeing/hearing/sensing when its innate reflex is triggered, so that likely relevant cortical world model concepts are active for forming associations
+	- Problem: you're reading a book where you're feeling empathetic rage for the protagonist, but your Steering subsystem is not signaling arousal. The predictor will learn to associate cortical world model concepts about the book, rage, etc, with lack-of-arousal
+		- Solution – Steering subsystem **modulates learning rate** so that the predictor only updates when the Steering subsystem is *actually* feeling arousal
 - With everything so far you get the following:
 	- Steering subsystem – see another person -> activate social attention reflex
 	- When you see another person, Steering subsystem also triggers involuntary attention to force you to think about that person
 	- Predictor learns to associate thinking about person[^1] -> social attention reflex
 	- Defer-to-predictor mode means that the predictor can itself trigger the reflex – purely thinking about that person triggers the social attention reflex
-- Another way to see this picture:
+		- This solves the symbol grounding problem
+- A little more detail on the predictor:
 	- Predictor is constantly trying to predict what Steering subsystem will do
 	- Default setting is defer-to-predictor mode[^3]
 	- Early on, the predictor is wrong often, but the Steering subsystem issues "overrides" / injects ground truth based on its inputs, which both does the right thing & sends the predictor supervisory signals so it can improve

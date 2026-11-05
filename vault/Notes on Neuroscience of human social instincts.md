@@ -3,7 +3,7 @@ slug: notes-on-neuroscience-of-human-social-instincts
 title: Notes on Neuroscience of human social instincts
 type: post
 date: 2026-10-25
-lastmod: 2026-11-04
+lastmod: 2026-11-05
 description: studying a possible framework for the brain
 ---
 ![[neuro_of_social_instincts_a_sketch.pdf]]
@@ -37,8 +37,8 @@ Notes/summary:
 - How do we ensure that predictors learn useful world model<>physiological state associations?
 	- Problem: innate arousal reflex is triggered because you saw a spider, but you're daydreaming about what you had for lunch. The predictor will learn to associate cortical world model concepts about what you ate with arousal
 		- Solution – Steering subsystem uses "**involuntary attention**" to force your cortex to think about what you are seeing/hearing/sensing when its innate reflex is triggered, so that likely relevant cortical world model concepts are active for forming associations
-	- Problem: you're reading a book where you're feeling empathetic rage for the protagonist, but your Steering subsystem is not signaling arousal. The predictor will learn to associate cortical world model concepts about the book, rage, etc, with lack-of-arousal
-		- Solution – Steering subsystem **modulates learning rate** so that the predictor only updates when the Steering subsystem is *actually* feeling arousal
+	- Problem: you're reading a book where you're feeling empathetic simulated rage for the protagonist, but your Steering subsystem is not signaling arousal. The predictor will learn to associate cortical world model concepts about the book, rage, etc, with lack-of-arousal
+		- Solution – Steering subsystem **modulates learning rate** so that predictor only updates when you're actually paying attention to your own interoceptive rage
 - With everything so far you get the following:
 	- Steering subsystem – see another person -> activate social attention reflex
 	- When you see another person, Steering subsystem also triggers involuntary attention to force you to think about that person

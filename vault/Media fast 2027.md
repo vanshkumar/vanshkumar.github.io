@@ -2,7 +2,7 @@
 slug: media-fast-2027
 title: Media fast 2027
 date: 2026-10-15
-lastmod: 2026-10-30
+lastmod: 2026-11-05
 type: post
 description: a random experiment
 ---
@@ -30,7 +30,7 @@ Starting 10/16/26:
 - No books, with a couple small exceptions
 	- What we're reading in my book clubs (Anna Karenina, The Unconsoled)
 	- Dune 6 (because I want to finish the series before I forget all the context)
-	- Zhuangzi/Tao te ching (in the middle of these and they're short + fit the wibe)
+	- Zhuangzi (almost done + it fits the wibe)
 - No movies/shows/netflix/youtube
 - No social media
 - No podcasts
@@ -52,3 +52,5 @@ What do I think I might do with the extra time? Possibly writing more on here, p
 10/29: ended up breaking the fast yesterday :( Still planning to keep going at least until mid-Nov, it's just one day. Kind of debating about relaxing the rule of no books tbh. But I'll give it a week or two and then decide.
 
 10/30: noticing that I only feel like writing is "worth it" when I have some new idea to add to my corpus or to an existing ongoing note/post. I don't get as much of a sense of satisfaction from rewriting old stuff to be clearer, linking notes together, etc. Closer to the editing process. I have a "words touched" number I track on the front page of my site which does count editing as well as additions. I have started looking at it more frequently during this media fast, perhaps this might be a good number to try making more front and center & see what happens during the rest of this fast.
+
+11/5: there were 2-3 days last week where I broke the fast to varying degrees, but I got back onto it after that. Writing consistency has been mixed, but I'm generally enjoying myself. I also started the AoA Connection Course this week (finally), so there's a lot going on in the body. Interesting times.

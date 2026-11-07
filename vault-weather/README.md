@@ -69,7 +69,8 @@ the local `dist/` directory are ignored by the parent repository.
 
 Above the cards, Weather shows today's words touched and the homepage's green year calendar,
 without hover tooltips, a breakdown, or explanatory caption. It reuses the site's counting and public-path allowlist
-(including draft writing), so private folders are excluded. Git must be available on desktop.
+(including draft writing), so private folders are excluded. Only Markdown body changes count;
+YAML frontmatter, Git headers, and commit messages do not. Git must be available on desktop.
 
 Committed history is cached until HEAD or the local date changes. Saved tracked changes (staged
 and unstaged) are compared with HEAD, and untracked Markdown is included as additions. The view

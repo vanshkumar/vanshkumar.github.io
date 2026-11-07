@@ -14,18 +14,21 @@ __WORD_GARDEN_COMMIT__2026-08-18T10:00:00-07:00
 diff --git a/vault/pages/about.md b/vault/pages/about.md
 --- a/vault/pages/about.md
 +++ b/vault/pages/about.md
+@@ -1,10 +1,10 @@
 -old small phrase
 +new small phrase with growth
 ~
 diff --git a/vault/pages/now.md b/vault/pages/now.md
 --- a/vault/pages/now.md
 +++ b/vault/pages/now.md
+@@ -1,10 +1,10 @@
 -three words leave
 ~
 __WORD_GARDEN_COMMIT__2026-08-18T18:00:00-07:00
 diff --git a/vault/notes/example.md b/vault/notes/example.md
 --- /dev/null
 +++ b/vault/notes/example.md
+@@ -1,10 +1,10 @@
 +two words
 ~
 `);
@@ -48,6 +51,7 @@ rename to vault/notes/new.md
 diff --git a/vault/pages/about.md b/vault/pages/about.md
 --- a/vault/pages/about.md
 +++ b/vault/pages/about.md
+@@ -1,10 +1,10 @@
 -2026-08-18
 +2026-08-19
 -https://example.com/old-page
@@ -105,4 +109,55 @@ test('keeps public history allowlisted and rejects shallow clones', () => {
     /fetch-depth: 0/
   );
   assert.doesNotThrow(() => assertCompleteGitHistory(() => 'false\n'));
+});
+
+test('counts body edits but not frontmatter or commit messages in real Git history', async () => {
+  const { mkdtempSync, mkdirSync, writeFileSync, rmSync } = await import('node:fs');
+  const { tmpdir } = await import('node:os');
+  const { join } = await import('node:path');
+  const { execFileSync } = await import('node:child_process');
+  const { getWordActivity } = await import('./word-activity.mjs');
+  const { countMarkdownWords } = await import('./word-activity-core.mjs');
+  const root = mkdtempSync(join(tmpdir(), 'site-word-activity-'));
+  let date = '2026-11-06T12:00:00-05:00';
+  const git = (args) => execFileSync('git', args, {
+    cwd: root, encoding: 'utf8', env: { ...process.env, GIT_AUTHOR_DATE: date, GIT_COMMITTER_DATE: date }
+  });
+  const activity = () => getWordActivity({ today: '2026-11-07', runGit: git });
+  const commit = (message) => { git(['add', '.']); git(['commit', '-m', message]); };
+  const note = join(root, 'vault/note.md');
+  const body = 'clear words here\n\n---\n\nmore prose below\n';
+  const metadata = (title) => `---\ntitle: ${title}\ndescription: |\n${'  long metadata text\n'.repeat(40)}type: note\nexclude_modified_update: false\n---\n`;
+  try {
+    mkdirSync(join(root, 'vault'));
+    git(['init', '-q']);
+    git(['config', 'user.name', 'Test']); git(['config', 'user.email', 'test@example.com']);
+    writeFileSync(note, metadata('Original title') + body);
+    commit('A long commit message must never contribute any writing activity');
+    assert.equal(activity().totals.touched, 6);
+    assert.equal(countMarkdownWords(metadata('New note') + body), 6);
+    assert.equal(countMarkdownWords('---\ntitle: Only metadata\n---\n'), 0);
+    date = '2026-11-07T12:00:00-05:00';
+    writeFileSync(note, metadata('Updated title').replace('false', 'true') + body);
+    commit('Metadata only\n\n+ These words are not a diff\n- These are not deleted prose either');
+    git(['commit', '--allow-empty', '-m', 'An empty commit also contributes nothing']);
+    const today = activity().weeks.flatMap(week => week.days).find(day => day.date === '2026-11-07');
+    assert.equal(today.touched, 0);
+    assert.equal(activity().totals.touched, 6);
+    // Removing and adding a header must not count it as deleted or new writing.
+    writeFileSync(note, body); commit('Remove metadata');
+    assert.equal(activity().totals.touched, 6);
+    writeFileSync(note, metadata('Restored title') + body); commit('Restore metadata');
+    assert.equal(activity().totals.touched, 6);
+    // A long unchanged header must still be excluded when the body changes.
+    writeFileSync(note, metadata('Changed again') + body.replace('clear', 'better'));
+    commit('Revise prose and metadata');
+    assert.equal(activity().totals.edited, 1);
+    assert.equal(activity().totals.touched, 7);
+    // File deletion counts body words only.
+    rmSync(note); commit('Delete the note');
+    assert.equal(activity().totals.removed, 6);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
 });

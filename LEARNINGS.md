@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-11-07] — Writing activity metadata inflation**
+- Observation: Both trackers already omit commit messages, but the shared word-diff parser counted YAML frontmatter. The metadata-only backup 5b8a4f6 added six false words touched through title quote normalization and removal of exclude_modified_update; the preceding new-note commit included 17 metadata words.
+- Action: Keep full-file context in shared WORD_DIFF_ARGS and count changed body fragments only after each side's frontmatter closes. Apply the same body filter to untracked notes; regression-test metadata-only edits, long headers, header insertion/removal, commit messages, and saved-to-committed parity in real Git fixtures.
+- Confidence: high
+
 **[2026-11-03] — Word Garden final month label**
 - Observation: A month starting in the last calendar column extends beyond the right edge when its label is left-aligned, clipping November in the scroll container.
 - Action: Right-align the final week's month label within its column so it stays inside the calendar without changing cell spacing or horizontal scrolling.

@@ -68,36 +68,75 @@ export const getActivityLevel = (touched) => {
   return 4;
 };
 
+// Full-file context lets the parser recognize the entire frontmatter block,
+// even when an edit is deep inside a long YAML value or far into the body.
+export const WORD_DIFF_ARGS = [
+  '--find-renames=90%', '--word-diff=porcelain', '--unified=2147483647',
+  '--no-ext-diff', '--no-textconv', '--no-color'
+];
+
+const createBodyCounter = () => {
+  let section = 'start';
+  let parts = [];
+  let total = 0;
+  const finishLine = () => {
+    if (!parts.length) return;
+    const line = parts.map(part => part.text).join('').replace(/^\uFEFF/, '').trimEnd();
+    if (section === 'start') {
+      section = line === '---' ? 'frontmatter' : 'body';
+    } else if (section === 'frontmatter' && /^(---|\.\.\.)$/.test(line)) {
+      section = 'body';
+      parts = [];
+      return;
+    }
+    if (section === 'body') {
+      total += parts.reduce((sum, part) => sum + (part.changed ? countWords(part.text) : 0), 0);
+    }
+    parts = [];
+  };
+  return {
+    append(text, changed) { parts.push({ text, changed }); },
+    finishLine,
+    count() { finishLine(); return total; }
+  };
+};
+
+export const countMarkdownWords = (text) => {
+  const counter = createBodyCounter();
+  for (const line of text.split('\n')) {
+    counter.append(line, true);
+    counter.finishLine();
+  }
+  return counter.count();
+};
+
 /**
- * Parse one `git log -p --word-diff=porcelain` stream into daily activity.
- * Pairing additions and removals per file/commit makes replacements count once
- * as edits instead of once as an addition and again as a removal.
+ * Parse full-context `git log -p --word-diff=porcelain` output. Only changed
+ * body text inside hunks counts; Git headers and YAML frontmatter do not.
+ * Pair replacements per file/commit so an edit counts once.
  */
 export const parseWordDiffLog = (output) => {
   const activity = new Map();
   let currentDate = null;
   let fileStarted = false;
-  let rawAdded = 0;
-  let rawRemoved = 0;
+  let inHunk = false;
+  let before = createBodyCounter();
+  let after = createBodyCounter();
 
   const finishFile = () => {
     if (!currentDate || !fileStarted) return;
-
+    const rawAdded = after.count();
+    const rawRemoved = before.count();
     const edited = Math.min(rawAdded, rawRemoved);
     const day = activity.get(currentDate) ?? {
-      date: currentDate,
-      added: 0,
-      edited: 0,
-      removed: 0
+      date: currentDate, added: 0, edited: 0, removed: 0
     };
     day.added += rawAdded - edited;
     day.edited += edited;
     day.removed += rawRemoved - edited;
     activity.set(currentDate, day);
-
     fileStarted = false;
-    rawAdded = 0;
-    rawRemoved = 0;
+    inHunk = false;
   };
 
   for (const line of output.split('\n')) {
@@ -106,22 +145,31 @@ export const parseWordDiffLog = (output) => {
       currentDate = line.slice(COMMIT_MARKER.length, COMMIT_MARKER.length + 10);
       continue;
     }
-
     if (line.startsWith('diff --git ')) {
       finishFile();
       fileStarted = true;
+      before = createBodyCounter();
+      after = createBodyCounter();
       continue;
     }
-
     if (!fileStarted) continue;
-
-    if (line.startsWith('+') && !line.startsWith('+++')) {
-      rawAdded += countWords(line.slice(1));
-    } else if (line.startsWith('-') && !line.startsWith('---')) {
-      rawRemoved += countWords(line.slice(1));
+    if (line.startsWith('@@ ')) {
+      inHunk = true;
+      continue;
+    }
+    if (!inHunk) continue;
+    if (line === '~') {
+      before.finishLine();
+      after.finishLine();
+    } else if (line.startsWith('+')) {
+      after.append(line.slice(1), true);
+    } else if (line.startsWith('-')) {
+      before.append(line.slice(1), true);
+    } else if (line.startsWith(' ')) {
+      before.append(line.slice(1), false);
+      after.append(line.slice(1), false);
     }
   }
-
   finishFile();
   return activity;
 };

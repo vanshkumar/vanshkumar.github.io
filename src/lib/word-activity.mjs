@@ -2,7 +2,7 @@ import { execFileSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { buildCalendar, parseWordDiffLog, PUBLIC_MARKDOWN_PATHS } from './word-activity-core.mjs';
+import { buildCalendar, parseWordDiffLog, PUBLIC_MARKDOWN_PATHS, WORD_DIFF_ARGS } from './word-activity-core.mjs';
 export { buildCalendar, parseWordDiffLog, getActivityLevel, PUBLIC_MARKDOWN_PATHS } from './word-activity-core.mjs';
 const COMMIT_MARKER = '__WORD_GARDEN_COMMIT__';
 const dateFromUtc = (date) => date.toISOString().slice(0, 10);
@@ -56,10 +56,7 @@ export const getWordActivity = ({
     '--root',
     '--format=' + COMMIT_MARKER + '%aI',
     '-p',
-    '--find-renames=90%',
-    '--word-diff=porcelain',
-    '--no-ext-diff',
-    '--no-color',
+    ...WORD_DIFF_ARGS,
     '--',
     ...PUBLIC_MARKDOWN_PATHS
   ]);

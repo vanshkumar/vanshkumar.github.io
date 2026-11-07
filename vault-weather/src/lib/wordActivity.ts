@@ -2,7 +2,7 @@ import { execFile } from 'node:child_process';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { promisify } from 'node:util';
-import { buildCalendar, countWords, parseWordDiffLog, PUBLIC_MARKDOWN_PATHS, type WordCounts } from '../../../src/lib/word-activity-core.mjs';
+import { buildCalendar, countMarkdownWords, WORD_DIFF_ARGS, parseWordDiffLog, PUBLIC_MARKDOWN_PATHS, type WordCounts } from '../../../src/lib/word-activity-core.mjs';
 
 const exec = promisify(execFile);
 const marker = '__WORD_GARDEN_COMMIT__';
@@ -14,7 +14,7 @@ export function combineActivity(history: Map<string, WordCounts>, diff: string, 
   const saved = parseWordDiffLog(`${marker}${today}\n${diff}`).get(today) ?? { added: 0, edited: 0, removed: 0 };
   const committed = activity.get(today) ?? { added: 0, edited: 0, removed: 0 };
   activity.set(today, {
-    added: committed.added + saved.added + newFiles.reduce((total, text) => total + countWords(text), 0),
+    added: committed.added + saved.added + newFiles.reduce((total, text) => total + countMarkdownWords(text), 0),
     edited: committed.edited + saved.edited,
     removed: committed.removed + saved.removed
   });
@@ -38,11 +38,11 @@ export class WordActivityService {
     if (this.cache?.key !== key) {
       const calendarStart = buildCalendar(new Map(), { today }).startDate;
       const start = new Date(Date.parse(`${calendarStart}T00:00:00Z`) - 86400000).toISOString().slice(0, 10);
-      const log = await this.git(['log', head, `--since=${start}T00:00:00`, '--no-merges', '--root', `--format=${marker}%aI`, '-p', '--find-renames=90%', '--word-diff=porcelain', '--no-ext-diff', '--no-color', '--', ...PUBLIC_MARKDOWN_PATHS], root);
+      const log = await this.git(['log', head, `--since=${start}T00:00:00`, '--no-merges', '--root', `--format=${marker}%aI`, '-p', ...WORD_DIFF_ARGS, '--', ...PUBLIC_MARKDOWN_PATHS], root);
       this.cache = { key, history: parseWordDiffLog(log) };
     }
     const history = this.cache.history;
-    const diff = await this.git(['diff', head, '--find-renames=90%', '--word-diff=porcelain', '--no-ext-diff', '--no-color', '--', ...PUBLIC_MARKDOWN_PATHS], root);
+    const diff = await this.git(['diff', head, ...WORD_DIFF_ARGS, '--', ...PUBLIC_MARKDOWN_PATHS], root);
     const untracked = await this.git(['ls-files', '--others', '--exclude-standard', '-z', '--', ...PUBLIC_MARKDOWN_PATHS], root);
     const newFiles = await Promise.all(untracked.split('\0').filter(Boolean).map(file => readFile(path.join(root, file), 'utf8')));
     return combineActivity(history, diff, newFiles, today);

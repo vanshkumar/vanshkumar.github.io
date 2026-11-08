@@ -1,9 +1,10 @@
 ---
 slug: what-is-money
 title: What is money?
-date: 2026-11-07
-lastmod: 2026-11-07
+date: 2026-09-07
+lastmod: 2026-09-07
 type: note
+exclude_modified_update: false
 ---
 
 - A tool for making the world more like what you want

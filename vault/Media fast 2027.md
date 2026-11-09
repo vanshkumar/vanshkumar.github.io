@@ -54,3 +54,5 @@ What do I think I might do with the extra time? Possibly writing more on here, p
 10/30: noticing that I only feel like writing is "worth it" when I have some new idea to add to my corpus or to an existing ongoing note/post. I don't get as much of a sense of satisfaction from rewriting old stuff to be clearer, linking notes together, etc. Closer to the editing process. I have a "words touched" number I track on the front page of my site which does count editing as well as additions. I have started looking at it more frequently during this media fast, perhaps this might be a good number to try making more front and center & see what happens during the rest of this fast.
 
 11/5: there were 2-3 days last week where I broke the fast to varying degrees, but I got back onto it after that. Writing consistency has been mixed, but I'm generally enjoying myself. I also started the AoA Connection Course this week (finally), so there's a lot going on in the body. Interesting times.
+
+11/9: noticing myself reading more tennis content as a way to just *read* more.

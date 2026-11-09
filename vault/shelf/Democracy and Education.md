@@ -1,10 +1,11 @@
 ---
 title: Democracy and Education
-date: 2026-11-08
-lastmod: 2026-11-09
+date: 2025-11-10
+lastmod: 2025-11-10
 status: recommended
 author: John Dewey
 coverImage: /assets/shelf/democracy-and-education.jpg
+exclude_modified_update: true
 ---
 
 I agreed with quite a lot in this book. It’s pretty dry and extremely wordy; it takes like halfway through to really get going because he defines every term he uses (eg “interest”). But overall I can see why this is considered such an influential book, his arguments are logically well-constructed & make sense for a democratic society. It definitely needs to be run through an LLM to be made less annoying to read tho.

@@ -544,6 +544,11 @@
 
 ## Patterns and Preferences
 
+**[2026-11-09] — Dewey notes draft without new prose**
+- Observation: For the first Democracy and Education notes draft, the user wants only words already present in the club document and an honest assessment of whether the existing personal writing is sufficient. The source supports a short assessment and annotated highlights; extended personal commentary would require new writing.
+- Action: Organize existing text verbatim, use the three authored takeaways as headings, preserve quotation/comment boundaries, and verify every text segment against the source. The user approved adding the draft to the Shelf entry on November 9; preserve its wording and do not invent transitions, reactions, or thematic explanations.
+- Confidence: high
+
 **[2026-10-31] — Writing belief-audit attribution**
 - Observation: The current writing corpus lives at the vault root and in `vault/writing inbox/`, with no `vault/writing/` directory. Several notes preserve earlier positions inline: `Unpredictable upsides of cognitive offloading` labels its restrictive LLM rules as previous thinking, `Why am I interested in alt-ed?` separates earlier rough notes, and the annual review interleaves imported prompts with authored answers. October's Long Content and Media fast notes also qualify the older account of commitment.
 - Action: For future audits of the author's beliefs, distinguish current endorsed prose from superseded sections, quotations, generated suggestions, and template prompts; check later related notes before treating an older statement as a current commitment.

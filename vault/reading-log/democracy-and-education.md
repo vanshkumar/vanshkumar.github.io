@@ -4,6 +4,7 @@ authors:
   - John Dewey
 finished: '2025-10-30'
 status: read
+shelfSlug: democracy-and-education
 isbn: "9780684836317"
 dateAdded: '2025-10-30'
 owned: false

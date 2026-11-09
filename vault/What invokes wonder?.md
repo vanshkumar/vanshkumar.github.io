@@ -1,6 +1,6 @@
 ---
 slug: what-invokes-wonder
-title: "What invokes wonder?"
+title: What invokes wonder?
 date: 2026-11-08
 lastmod: 2026-11-08
 type: note

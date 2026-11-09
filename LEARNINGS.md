@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-11-08] — Dewey anti-book-club source notes**
+- Observation: The Democracy and Education club export contains about 18,000 text words and 191 location-marked highlights, with Vansh's assessment in the opening table and personal annotations after some locations. Existing vault notes already develop its ideas about goals, tested knowledge, rediscovery, and socially formed minds. The export also embeds a large base64 cover image.
+- Action: For a future Shelf conversion, distinguish Dewey quotations from Vansh's annotations and template prompts, retain location references and authored emphasis, and consider linking those existing notes. Strip embedded image data when inspecting the text. The discussion alone does not settle selection, rewriting, or publication.
+- Confidence: high
+
 **[2026-11-08] — Democracy and Education Shelf cover**
 - Observation: The existing reading-log record identifies ISBN 9780684836317; its matching Free Press cover is available from Simon & Schuster at `https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9780684836317/democracy-and-education-9780684836317_lg.jpg`.
 - Action: Use this publisher source when refreshing `vault/assets/shelf/democracy-and-education.jpg`.
@@ -890,6 +895,11 @@
 - Confidence: high
 
 ## What Has Failed
+
+**[2026-11-09] — Weather overnight saved edits**
+- Observation: Weather showed four words touched on November 9 with no new commits: Media fast's uncommitted edit was last saved November 8 at 06:26 EST. Adding “East of Eden” counts three additions, while the adjacent change from “Unconsoled)” to “Unconsoled,” counts as one edit under Git's whitespace word diff. The separate title-quote normalization correctly counts zero.
+- Action: Diagnose small unexpected totals against per-file saved diffs and modification times. A precise daily tracker needs a persisted day boundary baseline rather than assigning every HEAD diff to today; punctuation-only word replacements also need normalization if they should count zero.
+- Confidence: high
 
 **[2026-09-27] — Substack background blending**
 - Observation: The user's browser still displayed a white Substack rectangle with `mix-blend-mode: multiply`. The live `/embed?transparent=true` response sets `embedTransparent` to true, adds the `transparent` embed class, and removes the main container's `use-theme-bg` class.

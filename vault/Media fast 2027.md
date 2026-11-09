@@ -2,7 +2,7 @@
 slug: media-fast-2027
 title: Media fast 2027
 date: 2026-10-15
-lastmod: 2026-11-05
+lastmod: 2026-11-08
 type: post
 description: a random experiment
 ---
@@ -28,7 +28,7 @@ I feel some resistance thinking about giving up books, but also I feel that I ha
 
 Starting 10/16/26:
 - No books, with a couple small exceptions
-	- What we're reading in my book clubs (Anna Karenina, The Unconsoled)
+	- What we're reading in my book clubs (Anna Karenina, The Unconsoled, East of Eden)
 	- Dune 6 (because I want to finish the series before I forget all the context)
 	- Zhuangzi (almost done + it fits the wibe)
 - No movies/shows/netflix/youtube

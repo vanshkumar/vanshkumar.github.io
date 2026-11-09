@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-11-08] — Democracy and Education Shelf cover**
+- Observation: The existing reading-log record identifies ISBN 9780684836317; its matching Free Press cover is available from Simon & Schuster at `https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9780684836317/democracy-and-education-9780684836317_lg.jpg`.
+- Action: Use this publisher source when refreshing `vault/assets/shelf/democracy-and-education.jpg`.
+- Confidence: high
+
 **[2026-11-07] — Writing activity metadata inflation**
 - Observation: Both trackers already omit commit messages, but the shared word-diff parser counted YAML frontmatter. The metadata-only backup 5b8a4f6 added six false words touched through title quote normalization and removal of exclude_modified_update; the preceding new-note commit included 17 metadata words.
 - Action: Keep full-file context in shared WORD_DIFF_ARGS and count changed body fragments only after each side's frontmatter closes. Apply the same body filter to untracked notes; regression-test metadata-only edits, long headers, header insertion/removal, commit messages, and saved-to-committed parity in real Git fixtures.

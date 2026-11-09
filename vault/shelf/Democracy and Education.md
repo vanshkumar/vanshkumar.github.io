@@ -11,23 +11,19 @@ I agreed with quite a lot in this book. It’s pretty dry and extremely wordy; i
 
 Kids in democratic societies should learn by working on real meaningful projects with others that help their community. School should therefore be a mini community that interacts closely with the real world.
 
+More loose thoughts:
 - Tracing the history of the philosophy of education with the Greeks, Romans, Rousseau, Hegel, etc helped me understand how we got to where we are today
-
 - Agree with not splitting out different subjects from each other & pretty much all the dualisms he debunks (self vs world, mind vs subject, emotion vs intellectual, etc)
-
 - Agree with doing real projects in school & keeping them as closely aligned with the real world as possible
-
----
-
 - There is an implication of a social responsibility/burden on everyone just for existing, which I have mixed feelings about
-
 - No practical solutions ventured for how to implement his philosophical points
-
 - Occasionally lightly contradictory/unclear (though not for key points)
 
 ---
 
 ## Education \= growth, which never has a fixed endpoint; goals are valuable to direct present activity, not as rigid ends
+
+In other words, [[Ambitious goals are useful as they illuminate a path that maximizes learning and enjoyment, not as ends in themselves]]
 
 > Since growth is the characteristic of life, education is all one with growing; it has no end beyond itself. **The criterion of the value of school education is the extent in which it creates a desire for continued growth and supplies means for making the desire effective in fact.**
 

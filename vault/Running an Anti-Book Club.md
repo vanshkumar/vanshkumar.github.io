@@ -1,8 +1,8 @@
 ---
 slug: running-an-anti-book-club
-title: "Running an Anti-Book Club"
+title: Running an Anti-Book Club
 date: 2026-10-16
-lastmod: 2026-10-16
+lastmod: 2026-11-09
 draft: true
 type: post
 ---

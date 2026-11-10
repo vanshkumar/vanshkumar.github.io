@@ -1,8 +1,8 @@
 ---
 type: note
 slug: what-do-i-want-to-see-in-the-world
-title: "What do I want to see in the world?"
-lastmod: 2026-06-09
+title: What do I want to see in the world?
+lastmod: 2026-11-10
 date: 2026-05-27
 ---
 Based on:

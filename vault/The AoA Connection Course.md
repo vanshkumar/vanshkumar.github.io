@@ -4,6 +4,7 @@ title: The AoA Connection Course
 date: 2026-11-14
 lastmod: 2026-11-14
 type: post
+description: third time's the charm
 ---
 I have attempted to take the AoA Connection Course twice before. The first time in 2024, I forget exactly what happened, but there was a change in my schedule or something. I deferred my enrollment. The second in 2025, I did the first session and then had some anxiety/a feeling of oddness in my system so I decided to drop out and defer it again. Finally on my third go around I am completing the course. I'm glad I am!
 

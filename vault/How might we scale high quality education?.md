@@ -3,7 +3,7 @@ type: note
 slug: how-might-we-scale-high-quality-education
 title: How might we scale high quality education?
 date: 2026-06-18
-lastmod: 2026-06-28
+lastmod: 2026-11-14
 ---
 [[What makes for a high quality education?]] My answer so far is a positive context and personalization. Both of these require trust, goodwill, and love between students/teachers. That means scaling high quality education is likely bottlenecked on scaling human love[^1]. How might you do that?
 

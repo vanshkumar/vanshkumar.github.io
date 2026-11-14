@@ -11,6 +11,8 @@ I'm not quite sure what prompted me to follow through with the course now. Part 
 
 The AoA course has been more of that. I recall seeing someone describe it as an "emotional gym," which is extremely apt. Sharing vulnerable aspects of your life with a stranger and feeling into your body while doing it, intentionally triggering each other to practice responding differently, stating your agenda in conversations, it's been a lot of fun. I still have one session of the course left, but I see how it can be life-changing. I certainly am motivated to keep practicing & become more emotionally fluid over time, especially with loved ones rather than just with strangers.
 
+Taking the majority of the course while we were visiting my family in Nova made it exceptionally clear how much emotional work there is for me to do. During charged conversations with my mom and others, it was very difficult to keep the points from the course in mind. I bottled multiple opportunities to stay in VIEW and have deeper connection. Oh well, we keep truckin.
+
 One of the biggest takeaways from the course has been how important it is to do this work with other people. My default approach ([[Self-reliance is likely holding me back]]) is to try to figure things out myself, which has been useful for learning the AoA content over the last couple years, but the practice has to be with others. It's annoying to think about how much more progress I could have made if I had done this course or coaching sooner.
 
 Other more tactical techniques from the course:

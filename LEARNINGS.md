@@ -12,6 +12,11 @@
 - Action: Use this publisher source when refreshing `vault/assets/shelf/the-discovery-of-the-child.jpg`.
 - Confidence: high
 
+**[2026-11-12] — Reading log chat recovery**
+- Observation: The dedicated Reading log chat remained accessible in signed-in Safari at `https://chatgpt.com/local/01a15fc5-fa0f-70ee-a9b2-6f07adc5c0f2`, including October 24 and October 30 captures, while desktop chat tools could not connect to its `durable` host or find it in local history. Its saved cloud environment still listed as ready. After restart, the cloud host later connected and the original chat could be read and opened in Codex. Moving it to `chats` succeeded and the user confirmed it was visible in the sidebar, but pinning still failed with `Failed to update sidebar thread membership` / `thread access denied` in the app log. The web chat menus offered no pin option.
+- Action: Check this original web link before replacing a missing Reading log chat; an unavailable cloud host in desktop tools does not establish that the chat was deleted. Once the host connects, retry opening the original chat. Distinguish saved environment availability, chat access, and sidebar membership; verify sidebar restoration separately before claiming it succeeded.
+- Confidence: high
+
 **[2026-11-08] — Dewey anti-book-club source notes**
 - Observation: The Democracy and Education club export contains about 18,000 text words and 191 location-marked highlights, with Vansh's assessment in the opening table and personal annotations after some locations. Existing vault notes already develop its ideas about goals, tested knowledge, rediscovery, and socially formed minds. The export also embeds a large base64 cover image.
 - Action: For a future Shelf conversion, distinguish Dewey quotations from Vansh's annotations and template prompts, retain location references and authored emphasis, and consider linking those existing notes. Strip embedded image data when inspecting the text. The discussion alone does not settle selection, rewriting, or publication.
@@ -910,6 +915,11 @@
 - Confidence: high
 
 ## What Has Failed
+
+**[2026-11-12] — Reading log cloud pin authorization**
+- Observation: Pinning Reading log fails manually as well as through tools in desktop version 26.1106.51428 (26605). Read-only inspection of the installed thread-section service shows its pin lookup forces `threadAccess: "shared"` for the `durable` host; normal chat reads succeed, while that lookup returns -32003 before saving the pin. This is the leading client-side explanation, not a verified server-side root cause.
+- Action: Keep using the restored original chat. Treat pinning as an app issue to report with the version and failing lookup, rather than changing repository permissions or chat sharing; a product fix should preserve the chat's actual authorized access mode.
+- Confidence: medium
 
 **[2026-11-09] — Weather overnight saved edits**
 - Observation: Weather showed four words touched on November 9 with no new commits: Media fast's uncommitted edit was last saved November 8 at 06:26 EST. Adding “East of Eden” counts three additions, while the adjacent change from “Unconsoled)” to “Unconsoled,” counts as one edit under Git's whitespace word diff. The separate title-quote normalization correctly counts zero.

@@ -2,7 +2,7 @@
 slug: media-fast-2027
 title: Media fast 2027
 date: 2026-10-15
-lastmod: 2026-11-09
+lastmod: 2026-11-13
 type: post
 description: a random experiment
 ---
@@ -55,4 +55,6 @@ What do I think I might do with the extra time? Possibly writing more on here, p
 
 11/5: there were 2-3 days last week where I broke the fast to varying degrees, but I got back onto it after that. Writing consistency has been mixed, but I'm generally enjoying myself. I also started the AoA Connection Course this week (finally), so there's a lot going on in the body. Interesting times.
 
-11/9: noticing myself reading more tennis content as a way to just *read* more.
+11/9: noticing myself reading more tennis content as a way just to *read* more.
+
+11/13: looking back, the first ~2 weeks I stuck to the fast and then the 2 weeks after that it was much more off and on. There are around 6 weeks left in the year. I am going to stick to this media fast for the remainder of the year.

@@ -5,7 +5,7 @@ date: 2026-09-20
 lastmod: 2026-09-21
 type: note
 ---
-I consider myself a very self-reliant person. I developed my current level of self-reliance around 14 years old, I suspect as a mechanism to avoid feeling my utterly helpless position[^1] in the face of family trauma[^2]. I had the classic role reversal of trying to take care of my parents, etc.
+I consider myself a very self-reliant person. I developed my current level of self-reliance around 16 years old, I suspect as a mechanism to avoid feeling my utterly helpless position[^1] in the face of family trauma[^2]. I had the classic role reversal of trying to take care of my parents, etc.
 
 I am grateful for my self-reliance. It made me much more resourceful, empathetic, and independently capable than I otherwise likely would have been. Living on the other side of the country, I had a generally great experience in college. I intentionally decided to become much more social and ended up making amazing lifelong friends. I graduated on time with a double major in applied math & CS, started an elementary school volunteer tutoring program, and was able to be there for many friends as they went through tough times. I also made the conscious decision to tell a few close friends about my family situation as even then I felt I was bad at asking for help. I'm surprised by and proud of that decision, but still consider myself fairly bad at reaching out for help, owning my wants, and expressing when I'm hurt.
 

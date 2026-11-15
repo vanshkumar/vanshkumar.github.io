@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-11-15] — Momo Shelf cover**
+- Observation: The Shelf cover for Michael Ende's Momo uses the Puffin edition (ISBN 9780140317534), available from Penguin at `https://cdn.penguin.co.uk/dam-assets/books/9780140317534/9780140317534-jacket-large.jpg`.
+- Action: Use this publisher source when refreshing `vault/assets/shelf/momo.jpg`.
+- Confidence: high
+
 **[2026-11-12] — East of Eden Shelf cover**
 - Observation: The Shelf cover for John Steinbeck's East of Eden uses the Penguin Classics edition (ISBN 9780140186390), available from Penguin Random House at `https://images2.penguinrandomhouse.com/cover/9780140186390`.
 - Action: Use this publisher source when refreshing `vault/assets/shelf/east-of-eden.jpg`.

@@ -15,4 +15,4 @@ I want my kids to relate well to their emotions, welcoming and accepting them al
 - Grief
 - Joy
 
-This is part of why I took [[The AoA Connection Course]], and why I am noting things like [[Self-reliance is likely holding me back]].
+This is part of why I took [[The AoA Connection Course]], and why I am noting things like [[Self-reliance could be holding me back]].

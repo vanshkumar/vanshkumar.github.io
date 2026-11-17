@@ -2,7 +2,7 @@
 slug: the-aoa-connection-course
 title: The AoA Connection Course
 date: 2026-11-14
-lastmod: 2026-11-16
+lastmod: 2026-11-17
 type: post
 description: third time's the charm
 ---
@@ -18,13 +18,19 @@ At the same time, taking this course did help me notice how much progress I have
 
 ---
 
-One of the biggest takeaways from the course has been how important it is to do this work with other people. My default approach ([[Self-reliance is likely holding me back]]) is to try to figure things out myself, which has been useful for learning the AoA content over the last couple years, but the practice has to be with others. It's annoying to think about how much more progress I could have made if I had done this course or coaching sooner.
+One of the biggest takeaways from the course has been how important it is to do this work with other people. My default approach ([[Self-reliance could be holding me back]]) is to try to figure things out myself, which has been useful for learning the AoA content over the last couple years, but the practice has to be with others. It's annoying to think about how much more progress I could have made if I had done this course or coaching sooner.
 
 More tactical techniques from the course:
 - Ask how/what questions, they are much more open-ended
 	- Feel the wonder in your body in conversations & ask from that place ([[Wonder as guiding principle]])
-- State your agenda in conversations ("I'm trying to fix you right now and I'm sorry")
+- State your agenda ("I'm trying to fix you right now and I'm sorry") and own your wants ("I want you to like me")
 	- This is extremely scary to even think about doing with loved ones!! To start, just ask "what's my agenda?" and notice it
 - Keep some awareness in your body (I like soles of my feet) in conversations, it keeps you grounded and able to be with your own emotions while still being with others
 - When triggered, settle your nervous system & ask how/what questions from a place of deep self-acceptance
-- What's your scary truth right now? Say it
+- What's your vulnerable scary truth right now? Say it
+
+---
+
+Log as I work on integrating into my life in the long-term
+
+11/17: since doing the course, I've felt more desire to use my phone/laptop in the mornings, when historically I haven't had that. Clearly it's stirred something up inside of me & there are feelings to feel. Exciting!

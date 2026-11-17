@@ -2,6 +2,16 @@
 
 ## What Has Worked
 
+**[2026-11-17] — Weather title after a filename rename**
+- Observation: Obsidian renamed the Self-reliance file and updated its incoming wikilinks, but retained the old frontmatter title. Weather and the site prefer that title over the filename, and normalization only fills missing titles.
+- Action: When a note rename is intended to change its displayed title, update its frontmatter title too; preserve the existing slug so its public URL stays stable. Check the live Weather card after the metadata refresh.
+- Confidence: high
+
+**[2026-11-17] — Weather rename counting**
+- Observation: An unstaged note rename leaves the destination untracked, so separate HEAD-diff and untracked-file counts treated the 474-word Self-reliance note as both deleted and added. Comparing all saved public files together reduced today's count from 952 to 6 actual body-word changes.
+- Action: Build Weather's saved diff with an isolated temporary Git index and object store so rename detection sees untracked destinations. Keep the real index, repository objects, and notes unchanged; regression-test unstaged, partially staged, and staged renames plus edits and saved-to-committed parity.
+- Confidence: high
+
 **[2026-11-15] — Momo Shelf cover**
 - Observation: The Shelf cover for Michael Ende's Momo uses the Puffin edition (ISBN 9780140317534), available from Penguin at `https://cdn.penguin.co.uk/dam-assets/books/9780140317534/9780140317534-jacket-large.jpg`.
 - Action: Use this publisher source when refreshing `vault/assets/shelf/momo.jpg`.

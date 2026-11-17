@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it } from 'vitest';
-import { mkdtemp, mkdir, rm, writeFile } from 'node:fs/promises';
+import { mkdtemp, mkdir, readFile, readdir, rename, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
@@ -9,6 +9,47 @@ const roots: string[] = [];
 afterEach(async () => { await Promise.all(roots.splice(0).map(root => rm(root, { recursive: true, force: true }))); });
 
 describe('saved writing activity', () => {
+  it.each(['unstaged', 'destination staged', 'deletion staged', 'staged'])('counts only body edits across a note rename (%s)', async (staging) => {
+    const root = await mkdtemp(path.join(tmpdir(), 'weather-rename-'));
+    roots.push(root);
+    const git = (...args: string[]) => execFileSync('git', args, { cwd: root, encoding: 'utf8', env: { ...process.env, GIT_AUTHOR_DATE: '2026-11-17T12:00:00-08:00', GIT_COMMITTER_DATE: '2026-11-17T12:00:00-08:00' } });
+    await mkdir(path.join(root, 'vault'));
+    git('init', '-q'); git('config', 'user.name', 'Test'); git('config', 'user.email', 'test@example.com');
+    const oldPath = 'vault/An earlier title.md';
+    const newPath = 'vault/A different title é.md';
+    const body = 'clear words here\n'.repeat(40);
+    const original = `---\ntitle: Earlier title\nslug: stable-url\ntype: note\n---\n${body}`;
+    await writeFile(path.join(root, oldPath), original);
+    git('add', '.'); git('commit', '-m', 'initial');
+    const service = new WordActivityService(path.join(root, 'vault'));
+    const now = new Date(2026, 10, 17, 12);
+    const baseline = (await service.load(now)).totals;
+    await rename(path.join(root, oldPath), path.join(root, newPath));
+    await writeFile(path.join(root, newPath), original.replace('Earlier title', 'Different title'));
+    if (staging === 'destination staged') git('add', newPath);
+    if (staging === 'deletion staged') git('add', '-u');
+    if (staging === 'staged') git('add', '-A');
+    const index = await readFile(path.join(root, '.git/index'));
+    const objects = await readdir(path.join(root, '.git/objects'), { recursive: true });
+    const head = git('rev-parse', 'HEAD');
+    expect((await service.load(now)).totals).toEqual(baseline);
+    const revised = original.replace('Earlier title', 'Different title').replace('clear', 'better');
+    await writeFile(path.join(root, newPath), revised);
+    const saved = await service.load(now);
+    expect(saved.totals).toEqual({ ...baseline, edited: 1, touched: baseline.touched + 1 });
+    expect(await readFile(path.join(root, '.git/index'))).toEqual(index);
+    expect(await readdir(path.join(root, '.git/objects'), { recursive: true })).toEqual(objects);
+    expect(git('rev-parse', 'HEAD')).toBe(head);
+    expect(await readFile(path.join(root, newPath), 'utf8')).toBe(revised);
+    git('add', '-A'); git('commit', '-m', 'rename and revise');
+    expect((await service.load(now)).totals).toEqual(saved.totals);
+    // A copy is new writing when the source still exists; a real deletion still counts.
+    await writeFile(path.join(root, 'vault/copy.md'), revised);
+    expect((await service.load(now)).totals.added).toBe(saved.totals.added + 120);
+    await rm(path.join(root, 'vault/copy.md'));
+    await rm(path.join(root, newPath));
+    expect((await service.load(now)).totals.removed).toBe(120);
+  });
   it('includes staged, unstaged and new prose once, excludes private files, and remains stable after committing', async () => {
     const root = await mkdtemp(path.join(tmpdir(), 'weather-words-'));
     roots.push(root);

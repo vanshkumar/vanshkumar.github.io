@@ -72,9 +72,11 @@ without hover tooltips, a breakdown, or explanatory caption. It reuses the site'
 (including draft writing), so private folders are excluded. Only Markdown body changes count;
 YAML frontmatter, Git headers, and commit messages do not. Git must be available on desktop.
 
-Committed history is cached until HEAD or the local date changes. Saved tracked changes (staged
-and unstaged) are compared with HEAD, and untracked Markdown is included as additions. The view
-updates on vault events, activation, and once a minute. No commits or files are written by the tracker.
+Committed history is cached until HEAD or the local date changes. All saved public Markdown
+(staged, unstaged, and untracked) is compared with HEAD together, so Git can recognize a renamed
+note instead of counting its entire body as both deleted and added. The comparison uses a temporary
+index and object store, which are removed after each refresh; the vault, real Git index, and repository
+objects stay unchanged. The view updates on vault events, activation, and once a minute.
 
 All outstanding saved changes are attributed to today; edits carried overnight can move to the
 next day until committed. Repeated rewrites between commits count only their resulting diff,

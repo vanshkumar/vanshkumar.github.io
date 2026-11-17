@@ -10,7 +10,7 @@ I have attempted to take the [AoA Connection Course](https://www.artofaccomplish
 
 I'm not quite sure what prompted me to follow through with the course now. Part of it was a feeling that it will get harder and harder to find time to do it as we have more kids. Part of it was that I believe that [[Being with a wider range of your own emotions improves your parenting]], and I want to be a better parent. Another big part was a series of 3 coaching sessions I had with [Drew Smith](https://www.unfoldi.ng/coaching) (who was offering free sessions through the [Pathless Community](https://community.pathlesspath.com/)), which I was apprehensive about but ended up enjoying a lot. I have listened to a bunch of the AoA podcasts and tried some of their techniques on my own, but the coaching sessions were the first time I put them into practice with another person. It was *so* different. Much more vulnerable and enjoyable.
 
-The AoA course has been more of that. I recall seeing someone describe it as an "emotional gym," which is extremely apt. Sharing vulnerable aspects of your life with a stranger and feeling into your body while doing it, intentionally triggering each other to practice responding differently, stating your agenda in conversations, it's been a lot of fun. I still have one session of the course left, but I see how it can be life-changing. I certainly am motivated to keep practicing & become more emotionally fluid over time, especially with loved ones rather than just with strangers.
+The AoA course has been more of that. I recall seeing someone describe it as an "emotional gym," which is extremely apt. It involves both feeling emotions and experimenting with relating to them in different ways in a safe space. Things like sharing vulnerable aspects of your life with a stranger and feeling into your body while doing it, intentionally triggering each other to practice responding differently, stating your agenda in conversations, externalizing the voice in your head. It's been emotional, tear-inducing, tiring, raw, and a lot of fun. I am motivated to keep practicing & become more emotionally fluid over time, especially with loved ones rather than just with strangers.
 
 Taking the majority of the course while we were visiting my family in Nova made it exceptionally clear how much emotional work there is for me to do. During charged conversations with my mom and others, it was very difficult to keep the points from the course in mind. I bottled multiple opportunities to stay in VIEW and have deeper connection.
 
@@ -31,6 +31,6 @@ More tactical techniques from the course:
 
 ---
 
-Log as I work on integrating into my life in the long-term
+**Log, as I work on integrating VIEW into my life**
 
 11/17: since doing the course, I've felt more desire to use my phone/laptop in the mornings, when historically I haven't had that. Clearly it's stirred something up inside of me & there are feelings to feel. Exciting!

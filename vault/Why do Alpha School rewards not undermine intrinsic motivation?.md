@@ -1,7 +1,7 @@
 ---
 slug: why-do-alpha-school-rewards-not-undermine-intrinsic-motivation
 title: Why do Alpha School rewards not undermine intrinsic motivation?
-lastmod: 2026-07-22
+lastmod: 2026-11-18
 date: 2026-05-27
 type: note
 ---
@@ -11,7 +11,7 @@ Separately, is intrinsic motivation for formal academics valuable? Lmao. I suppo
 
 But the core question here is that [[If you already like doing something, receiving external rewards decreases intrinsic motivation]]. Why does Alpha not seem to suffer from this, assuming the premise is true?
 
-My hypothesis is that it is because they are very personalized rewards chosen by guides who know the kids well and the rewards are based on competence/mastery. Plus there is no comparison to others because each child is going at their own pace (less sure about this given).
+My hypothesis is that it is because they are very personalized rewards chosen by guides who know the kids well and the rewards are based on competence/mastery. Plus there is no comparison to others because each child is going at their own pace (less sure about this given the kids *must* talk to each other about their academics, and if not their academics I'm sure there are comparisons in their afternoon life skills projects & workshops).
 
 Another way to say this – if extrinsic rewards are given to you by someone who you love and you know they love you & want the best for you. It's believable to me that that doesn't undermine motivation (or at least not nearly as much). Is this tested in the literature or is it all lab studies by random third party researchers? I don't recall seeing this when I previously [looked into it](https://vanshkumar.substack.com/p/virtue-should-stay-its-own-reward)
 

@@ -11,4 +11,6 @@ But thinking about it further, the feeling I enjoy is actually closer to _astoni
 
 While doing [[The AoA Connection Course]], they describe the difference between wonder and curiosity as awe & not needing an answer. Living in the question rather than searching specifically for an answer. The feeling of awe is familiar to me, but not looking for an answer feels strange.
 
-I wonder what it would be like to fully accept wonder as a navigational principle in my life? [[What invokes wonder?]]
+I wonder what it would be like to fully accept wonder as a navigational principle in my life?
+
+[[What invokes wonder?]]

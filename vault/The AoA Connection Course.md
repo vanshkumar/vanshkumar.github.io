@@ -2,7 +2,7 @@
 slug: the-aoa-connection-course
 title: The AoA Connection Course
 date: 2026-11-14
-lastmod: 2026-11-17
+lastmod: 2026-11-18
 type: post
 description: third time's the charm
 ---
@@ -31,6 +31,6 @@ More tactical techniques from the course:
 
 ---
 
-**Log, as I work on integrating VIEW into my life**
+**Notes, as I work on integrating VIEW into my life**
 
 11/17: since doing the course, I've felt more desire to use my phone/laptop in the mornings, when historically I haven't had that. Clearly it's stirred something up inside of me & there are feelings to feel. Exciting!

@@ -3,7 +3,7 @@ slug: notes-on-neuroscience-of-human-social-instincts
 title: Notes on Neuroscience of human social instincts
 type: post
 date: 2026-10-25
-lastmod: 2026-11-05
+lastmod: 2026-11-18
 description: studying a possible framework for the brain
 ---
 ![[neuro_of_social_instincts_a_sketch.pdf]]
@@ -39,13 +39,18 @@ Notes/summary:
 		- Solution – Steering subsystem uses "**involuntary attention**" to force your cortex to think about what you are seeing/hearing/sensing when its innate reflex is triggered, so that likely relevant cortical world model concepts are active for forming associations
 	- Problem: you're reading a book where you're feeling empathetic simulated rage for the protagonist, but your Steering subsystem is not signaling arousal. The predictor will learn to associate cortical world model concepts about the book, rage, etc, with lack-of-arousal
 		- Solution – Steering subsystem **modulates learning rate** so that predictor only updates when you're actually paying attention to your own interoceptive rage
-- With everything so far you get the following:
-	- Steering subsystem – see another person -> activate social attention reflex
-	- When you see another person, Steering subsystem also triggers involuntary attention to force you to think about that person
-	- Predictor learns to associate thinking about person[^1] -> social attention reflex
+- A specific kind of predictor is an **interoceptive concept finder**, which learns to associate active cortical world model concepts related to your own interoceptive input with Steering subsystem outputs like physiological arousal
+	- I don't quite get this.. aren't interoceptive inputs (hunger, thirst, heat, etc) *outputs* of the Steering subsystem already?
+- With everything so far you get **transient empathetic simulation**:
+	- When you see another person, Steering subsystem triggers the social attention reflex:
+		- Involuntary attention to force you to think about that person
+		- Involuntary **lack** of attention towards your own interoceptive inputs
+	- Only interoceptive models active now are those that are somehow associated with the other person
+	- Now we can query the interoceptive concept finder predictor
+	- Learning rate modulated so that the predictor only updates when the social attention reflex is active, so predictor learns to associate thinking about person[^1] -> social attention reflex
 	- Defer-to-predictor mode means that the predictor can itself trigger the reflex – purely thinking about that person triggers the social attention reflex
 		- This solves the symbol grounding problem
-- A little more detail on the predictor:
+- More detail on the predictor:
 	- Predictor is constantly trying to predict what Steering subsystem will do
 	- Default setting is defer-to-predictor mode[^3]
 	- Early on, the predictor is wrong often, but the Steering subsystem issues "overrides" / injects ground truth based on its inputs, which both does the right thing & sends the predictor supervisory signals so it can improve

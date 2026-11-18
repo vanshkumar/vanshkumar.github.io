@@ -45,11 +45,9 @@ Notes/summary:
 	- When you see another person, Steering subsystem triggers the social attention reflex:
 		- Involuntary attention to force you to think about that person
 		- Involuntary **lack** of attention towards your own interoceptive inputs
-	- Only interoceptive models active now are those that are somehow associated with the other person
-	- Now we can query the interoceptive concept finder predictor
-	- Learning rate modulated so that the predictor only updates when the social attention reflex is active, so predictor learns to associate thinking about person[^1] -> social attention reflex
-	- Defer-to-predictor mode means that the predictor can itself trigger the reflex – purely thinking about that person triggers the social attention reflex
-		- This solves the symbol grounding problem
+	- The only interoceptive models active now are those that are somehow associated with the other person
+	- Now we can query the "interoceptive concept finder" predictor and see what physiological state it associates with the cortical world model concepts currently active
+	- The readout of this is essentially how we feel about the person[^1]
 - More detail on the predictor:
 	- Predictor is constantly trying to predict what Steering subsystem will do
 	- Default setting is defer-to-predictor mode[^3]
@@ -59,7 +57,7 @@ Notes/summary:
 - 
 
 
-[^1]: more precisely, learn to associate "cortical world model concepts that are active when you saw that person" with the social attention reflex
+[^1]: more precisely, "cortical world model concepts that are somehow active/associated with that person"
 
 [^2]: notably Byrnes doesn't think this requires the standard many trial, step-by-step backup in TD learning; instead, latent variables in context that are active 
 

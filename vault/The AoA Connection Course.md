@@ -2,7 +2,7 @@
 slug: the-aoa-connection-course
 title: The AoA Connection Course
 date: 2026-11-14
-lastmod: 2026-11-18
+lastmod: 2026-11-19
 type: post
 description: third time's the charm
 ---
@@ -36,3 +36,5 @@ More tactical techniques from the course:
 11/17: since doing the course, I've felt more desire to use my phone/laptop in the mornings, when historically I haven't had that. Clearly it's stirred something up inside of me & there are feelings to feel. Exciting!
 
 11/18: attended a free AoA community workshop (Embracing Intensity) today, which hit much harder as I just finished the Connection course. The workshop was around feeling fear and excitement, and was very enjoyable. I viscerally felt scared and buzzingly excited throughout the group exercises. I also noticed how much I suppress my excitement and passion. The debrief bubbled up a question for me: "**what would my life look like if I let myself feel as much excitement as I clearly do in every moment?**"
+
+11/19: laid down for some do nothing practice in the morning, with a desire to give love to the small headache I had, and within 10m could feel so much love inside me for the world that it brought me almost to tears. Resisted that feeling for a little bit because it was too intense, but eventually kept trying to welcome it, and started thinking about Ramsters + Kathy. Felt buzzing in my whole body & started to lose a sense of where my body ended & intense pleasure. Still could sense a bit of me resisting it, and kept trying to welcome it more and more. Stopped at that point because Ramsters woke up. I resist joy so much wow. All this in only 20-30m of laying there, wild!! Reminded me of the time 6 or 7 months ago where I similarly felt like I was getting intensely hot, feeling insane pleasure, and maybe reaching Jhana (at least as Jhourney describes it), but stopped because it was too much.

@@ -34,3 +34,5 @@ More tactical techniques from the course:
 **Notes, as I work on integrating VIEW into my life**
 
 11/17: since doing the course, I've felt more desire to use my phone/laptop in the mornings, when historically I haven't had that. Clearly it's stirred something up inside of me & there are feelings to feel. Exciting!
+
+11/18: attended a free AoA community workshop (Embracing Intensity) today, which hit much harder as I just finished the Connection course. The workshop was around feeling fear and excitement, and was very enjoyable. I viscerally felt scared and buzzingly excited throughout the group exercises. I also noticed how much I suppress my excitement and passion. The debrief bubbled up a question for me: "**what would my life look like if I let myself feel as much excitement as I clearly do in every moment?**"

@@ -2,7 +2,7 @@
 slug: self-reliance-is-likely-holding-me-back
 title: Self-reliance could be holding me back
 date: 2026-09-20
-lastmod: 2026-11-16
+lastmod: 2026-11-20
 type: note
 ---
 I consider myself a very self-reliant person. I developed my current level of self-reliance around 16 years old, I suspect as a mechanism to avoid feeling my utterly helpless position[^1] in the face of family trauma[^2]. I had the classic role reversal of trying to take care of my parents, etc.
@@ -13,18 +13,23 @@ I am content with the current state of my life. In many ways, it's incredible. B
 
 Our greatest strengths and greatest weaknesses are typically entangled with each other, so this makes sense.
 
-So I want to change my default stance. How do I do that?
+~~So I want to change my default stance. How do I do that?~~
 
-I am going to [[Always do what feels right]]. Concretely, when I notice entanglement in a self-reliant pattern, I am going to [[Return it to Nature]]. That will necessarily involve feeling the helplessness, fear, and whatever else may be at the root of this stance. Let's see how it goes for the next month. I am also taking [[The AoA Connection Course]] (finally) in October.
+~~I am going to [[Always do what feels right]]. Concretely, when I notice entanglement in a self-reliant pattern, I am going to [[Return it to Nature]]. That will necessarily involve feeling the helplessness, fear, and whatever else may be at the root of this stance. Let's see how it goes for the next month. I am also taking [[The AoA Connection Course]] (finally) in October.~~
 
-What are some of the self-reliant patterns to notice? From [this AoA podcast](https://www.artofaccomplishment.com/podcast/how-self-reliance-convinces-you-that-you-cant-rely-on-anyone?utm_source=podcast&utm_campaignLoveandObligation=):
-- Difficulty asking for what you want
-- Hard time identifying your needs
-- Issues with authority
-- Feeling like it's your job to take care of other people
-- Hard time expressing when you're hurt
+~~What are some of the self-reliant patterns to notice? From [this AoA podcast](https://www.artofaccomplishment.com/podcast/how-self-reliance-convinces-you-that-you-cant-rely-on-anyone?utm_source=podcast&utm_campaignLoveandObligation=):~~
+~~- Difficulty asking for what you want~~
+~~- Hard time identifying your needs~~
+~~- Issues with authority~~
+~~- Feeling like it's your job to take care of other people~~
+~~- Hard time expressing when you're hurt~~
+
+On later reflection, I realized the above is coming from a very self-reliant place of wanting to fix & improve myself. Admitting that I don't know to fix this myself & feeling the helplessness of that might be more direct...
 
 
 
-[^1]: I tried out an LLM chat a while back on this topic with the following prompt: "You are the most experienced IFS / imaginal dialogue coach in the world. I will discuss things with you and I want you to help me trace emotions through dialogue to their root." I felt the utter helplessness and sobbed. Progress.
+
+
+[^1]: I tried out an LLM chat a while back on this topic with the following prompt: "You are the most experienced IFS / imaginal dialogue coach in the world. I will discuss things with you and I want you to help me trace emotions through dialogue to their root." I felt the utter helplessness and sobbed. But looking back, I see that I approached my younger self from a place of wanting to help him (which is natural & normal), and I see now that succeeding to some level may have actually reinforced my sense of self-reliance. How can I be OK being helpless in front of others?
+
 [^2]: If we haven't talked about this before and you want to hear more, reach out.

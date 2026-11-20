@@ -1,5 +1,5 @@
 ---
-slug: self-reliance-is-likely-holding-me-back
+slug: z -holding-me-back
 title: Self-reliance could be holding me back
 date: 2026-09-20
 lastmod: 2026-11-20
@@ -24,7 +24,7 @@ Our greatest strengths and greatest weaknesses are typically entangled with each
 ~~- Feeling like it's your job to take care of other people~~
 ~~- Hard time expressing when you're hurt~~
 
-On later reflection, I realized the above is coming from a very self-reliant place of wanting to fix & improve myself. Admitting that I don't know to fix this myself & feeling the helplessness of that might be more direct...
+On later reflection, I realized the above is coming from a very self-reliant place of wanting to fix & improve myself. Admitting that I don't know to fix this myself & feeling the helplessness of that might be more direct..
 
 
 

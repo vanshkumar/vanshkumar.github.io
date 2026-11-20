@@ -1,5 +1,5 @@
 ---
-slug: z -holding-me-back
+slug: self-reliance-could-be-holding-me-back
 title: Self-reliance could be holding me back
 date: 2026-09-20
 lastmod: 2026-11-20

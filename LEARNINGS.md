@@ -580,6 +580,12 @@
 
 ## Patterns and Preferences
 
+**[2026-11-21] — Backhand guide visual preference**
+- Observation: The user rejected the first backhand reader as too text-heavy and asked for a visual version with minimal text.
+- Action: Keep this guide's default view centered on stroke sketches and selectable cue diagrams; leave the full research and source inventory inside an optional disclosure.
+- Confidence: high
+
+
 **[2026-11-09] — Dewey notes draft without new prose**
 - Observation: For the first Democracy and Education notes draft, the user wants only words already present in the club document and an honest assessment of whether the existing personal writing is sufficient. The source supports a short assessment and annotated highlights; extended personal commentary would require new writing.
 - Action: Organize existing text verbatim, use the three authored takeaways as headings, preserve quotation/comment boundaries, and verify every text segment against the source. The user approved adding the draft to the Shelf entry on November 9; preserve its wording and do not invent transitions, reactions, or thematic explanations.

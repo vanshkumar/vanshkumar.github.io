@@ -1,12 +1,12 @@
 ---
 title: About
-lastmod: 2026-11-09
+lastmod: 2026-11-21
 date: 2026-05-27
 ---
 ## This site
 is a living workspace for my projects and writing.
 
-My goal with my writing is to **discover what I think** and **connect with people** ([email me!](mailto:vanshkumar95@gmail.com)). Everything on this site should be thought of as a perpetual draft, with all mistakes mine.
+My goal with my writing is to **discover what I think** and **connect with people** ([email me!](mailto:vanshkumar95@gmail.com)). Everything on this site should be thought of as a perpetual draft, with all mistakes mine. Any advice is intended for myself only.
 
 ## I
 am Vansh Kumar and the one who sculpts the terrain of this site. I live in Pasadena, CA.

@@ -1,6 +1,6 @@
 ---
 slug: intelligence-is-often-not-the-bottleneck
-title: "Intelligence is often not the bottleneck"
+title: Intelligence is often not the bottleneck
 date: 2026-11-21
 lastmod: 2026-11-21
 type: note

@@ -2,6 +2,12 @@
 
 ## What Has Worked
 
+**[2026-11-21] — Tennis backhand research reader**
+- Observation: `/tennis-trainer/backhand-cues/` is a self-contained reader copied through Astro from `public/tennis-trainer/backhand-cues/index.html`. Its canonical research and Pandoc-based generator live in the `tennis-trainer` repository, under `docs/references/two-handed-backhand-clarke.md` and `scripts/build_backhand_reader.py`.
+- Action: Regenerate the reader in that repository before refreshing this public copy; retain the shared Google Analytics tag. The existing Pages workflow publishes this static route without an extra app-build step.
+- Confidence: high
+
+
 **[2026-11-17] — Weather title after a filename rename**
 - Observation: Obsidian renamed the Self-reliance file and updated its incoming wikilinks, but retained the old frontmatter title. Weather and the site prefer that title over the filename, and normalization only fills missing titles.
 - Action: When a note rename is intended to change its displayed title, update its frontmatter title too; preserve the existing slug so its public URL stays stable. Check the live Weather card after the metadata refresh.

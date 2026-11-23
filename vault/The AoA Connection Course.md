@@ -2,7 +2,7 @@
 slug: the-aoa-connection-course
 title: The AoA Connection Course
 date: 2026-11-14
-lastmod: 2026-11-20
+lastmod: 2026-11-21
 type: post
 description: third time's the charm
 ---

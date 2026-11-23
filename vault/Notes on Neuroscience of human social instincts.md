@@ -3,7 +3,7 @@ slug: notes-on-neuroscience-of-human-social-instincts
 title: Notes on Neuroscience of human social instincts
 type: post
 date: 2026-10-25
-lastmod: 2026-11-19
+lastmod: 2026-11-23
 description: studying a possible framework for the brain
 ---
 ![[neuro_of_social_instincts_a_sketch.pdf]]
@@ -62,7 +62,7 @@ More details on the predictor itself:
 
 Other thoughts/notes/questions:
 - A testable prediction (I think?) from this framework is that the interoceptive concept finder must first be trained on yourself before it can be queried successfully to simulate others' feelings. You have to be able to associate some cortical world model concept X with rage to be able to then associate person Y -> X -> rage. So the test would be – can someone who can't recognize rage in themselves tell if someone else is feeling rage?
-	- Extremely broadly speaking it does seem like kids first learn about themselves and then about others
+	- Extremely broadly speaking it does seem like kids first learn to have their own sense of self and only then about others
 	- How would one even test this?
 - A key part of this framework is that the ground truth for all these social instincts is ultimately some innate response
 - What social instincts are active in young children vs older children? How does this change over time? It clearly does

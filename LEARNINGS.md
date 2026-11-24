@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-11-23] — Media fast restoration**
+- Observation: The November 23 vault backup `bb875bb` deleted `vault/Media fast 2027.md`; its parent retains the complete entry through November 13, classified as a Post despite being referred to conversationally as a note.
+- Action: Preserve its `media-fast-2027` slug, `type: post`, and original date fields when restoring it; the recovered file matches the pre-deletion version exactly.
+- Confidence: high
+
 **[2026-11-21] — Tennis backhand research reader**
 - Observation: `/tennis-trainer/backhand-cues/` is a self-contained reader copied through Astro from `public/tennis-trainer/backhand-cues/index.html`. Its canonical research and Pandoc-based generator live in the `tennis-trainer` repository, under `docs/references/two-handed-backhand-clarke.md` and `scripts/build_backhand_reader.py`.
 - Action: Regenerate the reader in that repository before refreshing this public copy; retain the shared Google Analytics tag. The existing Pages workflow publishes this static route without an extra app-build step.

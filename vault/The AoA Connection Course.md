@@ -2,7 +2,7 @@
 slug: the-aoa-connection-course
 title: The AoA Connection Course
 date: 2026-11-14
-lastmod: 2026-11-21
+lastmod: 2026-11-24
 type: post
 description: third time's the charm
 ---
@@ -42,3 +42,5 @@ More tactical techniques from the course:
 11/20: the Q&A and rapid coaching with Joe Hudson, the last bit of the course, was yesterday. It was a lot of fun, but afterwards I was left with the question of "how come I didn't even consider asking to be coached by Joe in the session?" I did a VIEW conversation with myself on the topic and quickly got into not feeling helplessness & made some updates to [[Self-reliance could be holding me back]]. I also went into the family stuff from that note and had a shock realization about something in there, which led to me feeling a lot of both grief and anger. They were intense and I felt them for like 15m each before stopping. The anger especially feels kind of endless, which is scary... But talking about it with Kathy was helpful.
 
 11/21: went into another question about my life where I feel I haven't been making any progress despite having the same conversation with myself dozens of times over the last two years. Laid down for do nothing meditation & quickly went into a myriad of emotions – sadness, pleasure, and hard to tell what else. I noticed the voice in my head narrating which emotions were which, which I found a little distracting, so I thanked it for noting everything down & asked it to continue watching but not say anything for a few minutes, which worked to get me purely into bodily sensation for a little bit. Very interesting, a fun technique I"ll experiment further with.
+
+11/24: trying out the first post-course integration experiment the AoA folks posted – what is the most vulnerable thing you can say to yourself? What came up was "I'm terrified that I am weak and helpless." Asked a couple how/what Qs to myself, felt into the fear, and shook it off. Quickly felt it transform into buzzing/excitement, so had to get up & move around. Cool to viscerally feel how related excitement & fear really are.

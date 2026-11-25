@@ -2,7 +2,7 @@
 slug: the-aoa-connection-course
 title: The AoA Connection Course
 date: 2026-11-14
-lastmod: 2026-11-24
+lastmod: 2026-11-25
 type: post
 description: third time's the charm
 ---
@@ -44,3 +44,12 @@ More tactical techniques from the course:
 11/21: went into another question about my life where I feel I haven't been making any progress despite having the same conversation with myself dozens of times over the last two years. Laid down for do nothing meditation & quickly went into a myriad of emotions – sadness, pleasure, and hard to tell what else. I noticed the voice in my head narrating which emotions were which, which I found a little distracting, so I thanked it for noting everything down & asked it to continue watching but not say anything for a few minutes, which worked to get me purely into bodily sensation for a little bit. Very interesting, a fun technique I"ll experiment further with.
 
 11/24: trying out the first post-course integration experiment the AoA folks posted – what is the most vulnerable thing you can say to yourself? What came up was "I'm terrified that I am weak and helpless." Asked a couple how/what Qs to myself, felt into the fear, and shook it off. Quickly felt it transform into buzzing/excitement, so had to get up & move around. Cool to viscerally feel how related excitement & fear really are.
+
+11/25: tried out an experiment in an email from AoA:
+![[Screenshot 2026-11-25 at 3.30.28 PM.png]]
+
+Head: I'm Vansh, I'm 31, husband and father. I am semi-retired and a stay-at-home dad. I am fascinated by learning, development, & how people grow and change.
+
+Heart: I'm Vansh. I have lots of love for myself, my family, and the world. I am sensitive & am figuring out how to express that love without getting hurt. I am scared.
+
+Gut: I'm Vansh. I'm bursting with excitement & fear. I'm ready to take a big risk and feel fully alive. (I suspect just having drank coffee may have something to do with this one haha)

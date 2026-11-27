@@ -7,5 +7,5 @@ type: post
 description: local learning rules
 ---
 
-Notes on [this preprint](https://www.biorxiv.org/content/10.64898/2026.11.18.767638v1). I chatted/worked a bit with the first author early in 2026 on the code underlying some of the simulations in this paper.
+Notes on [this preprint](https://www.biorxiv.org/content/10.64898/2026.11.18.767638v1). I chatted/worked a bit with the first author early in 2026 on the code underlying the simulations in this paper.
 

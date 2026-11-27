@@ -5,8 +5,6 @@ import { fileURLToPath } from 'node:url';
 import { buildCalendar, parseWordDiffLog, PUBLIC_MARKDOWN_PATHS, WORD_DIFF_ARGS } from './word-activity-core.mjs';
 export { buildCalendar, parseWordDiffLog, getActivityLevel, PUBLIC_MARKDOWN_PATHS } from './word-activity-core.mjs';
 const COMMIT_MARKER = '__WORD_GARDEN_COMMIT__';
-const dateFromUtc = (date) => date.toISOString().slice(0, 10);
-const addDays = (date, amount) => new Date(Date.parse(date + 'T00:00:00Z') + amount * 86400000);
 const localDateInLosAngeles = (now = new Date()) => {
   const parts = new Intl.DateTimeFormat('en-US', {
     timeZone: 'America/Los_Angeles',
@@ -47,11 +45,11 @@ export const getWordActivity = ({
 } = {}) => {
   assertCompleteGitHistory(runGit);
 
-  const emptyCalendar = buildCalendar(new Map(), { today });
-  const historyStart = dateFromUtc(addDays(emptyCalendar.startDate, -1));
+  // A restoration in the visible year may undo a deletion before that year.
+  // Match lifetimes against all public history, then trim with buildCalendar.
   const output = runGit([
     'log',
-    `--since=${historyStart}T00:00:00`,
+    '--topo-order',
     '--no-merges',
     '--root',
     '--format=' + COMMIT_MARKER + '%aI',

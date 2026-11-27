@@ -9,6 +9,39 @@ const roots: string[] = [];
 afterEach(async () => { await Promise.all(roots.splice(0).map(root => rm(root, { recursive: true, force: true }))); });
 
 describe('saved writing activity', () => {
+  it.each(['unstaged', 'staged'])('recognizes a saved exact restoration before and after committing (%s)', async (staging) => {
+    const root = await mkdtemp(path.join(tmpdir(), 'weather-restore-'));
+    roots.push(root);
+    let date = '2026-11-01T12:00:00-08:00';
+    const git = (...args: string[]) => execFileSync('git', args, { cwd: root, encoding: 'utf8', env: { ...process.env, GIT_AUTHOR_DATE: date, GIT_COMMITTER_DATE: date } });
+    await mkdir(path.join(root, 'vault'));
+    git('init', '-q'); git('config', 'user.name', 'Test'); git('config', 'user.email', 'test@example.com');
+    const name = 'vault/A restored note é.md';
+    const note = path.join(root, name);
+    const original = '---\ntitle: Original\ntype: note\n---\nthree original words\n';
+    await writeFile(note, original);
+    git('add', '.'); git('commit', '-qm', 'initial');
+    date = '2026-11-02T12:00:00-08:00';
+    await rm(note);
+    git('add', '-A'); git('commit', '-qm', 'delete');
+    const service = new WordActivityService(path.join(root, 'vault'));
+    const now = new Date(2026, 10, 3, 12);
+    expect((await service.load(now)).totals.touched).toBe(6);
+    await writeFile(note, original);
+    if (staging === 'staged') git('add', name);
+    const saved = await service.load(now);
+    expect(saved.totals).toEqual({ added: 3, edited: 0, removed: 0, touched: 3 });
+    expect(saved.weeks.flatMap(week => week.days).find(day => day.date === '2026-11-02')?.touched).toBe(0);
+    // Canceling the saved restoration must not leave the cached deletion suppressed.
+    await rm(note);
+    expect((await service.load(now)).totals.touched).toBe(6);
+    await writeFile(note, original);
+    date = '2026-11-03T12:00:00-08:00';
+    git('add', '-A'); git('commit', '-qm', 'restore');
+    expect((await service.load(now)).totals).toEqual(saved.totals);
+    await writeFile(note, original.replace('original words', 'better words'));
+    expect((await service.load(now)).totals).toEqual({ added: 3, edited: 1, removed: 0, touched: 4 });
+  });
   it.each(['unstaged', 'destination staged', 'deletion staged', 'staged'])('counts only body edits across a note rename (%s)', async (staging) => {
     const root = await mkdtemp(path.join(tmpdir(), 'weather-rename-'));
     roots.push(root);

@@ -2,6 +2,16 @@
 
 ## What Has Worked
 
+**[2026-11-26] — Weather reload verification**
+- Observation: Obsidian 1.14.4 initially retained the old 1,876-word November 23 count after the updated Weather bundle was installed. After reloading the plugin and the app interface through View → Force Reload, the live calendar reported 8 words. The local Obsidian CLI is disabled.
+- Action: Verify an affected historical day's accessible calendar label after installing Weather changes; if toggling the plugin leaves a stale view, use the app's reload command and allow the interface to finish loading.
+- Confidence: high
+
+**[2026-11-26] — Writing activity after exact restoration**
+- Observation: Deleting and exactly restoring Media fast in separate November 23 backups counted its 934 body words twice, inflating that day's total from 8 to 1,876. Both trackers use the shared word-diff parser.
+- Action: Match same-path deletion/restoration pairs by full Git blob identity in topological history order before aggregating daily counts. Preserve ordinary edits and unmatched deletions; include saved Weather changes in the same matching pass without mutating cached history, and scan beyond the visible calendar for older deletions.
+- Confidence: high
+
 **[2026-11-23] — Media fast restoration**
 - Observation: The November 23 vault backup `bb875bb` deleted `vault/Media fast 2027.md`; its parent retains the complete entry through November 13, classified as a Post despite being referred to conversationally as a note.
 - Action: Preserve its `media-fast-2027` slug, `type: post`, and original date fields when restoring it; the recovered file matches the pre-deletion version exactly.

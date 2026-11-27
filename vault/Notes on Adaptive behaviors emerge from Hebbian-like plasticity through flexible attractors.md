@@ -1,6 +1,6 @@
 ---
 slug: notes-on-adaptive-behaviors-emerge-from-hebbian-like-plasticity-through-flexible-attractors
-title: "Notes on Adaptive behaviors emerge from Hebbian-like plasticity through flexible attractors"
+title: Notes on Adaptive behaviors emerge from Hebbian-like plasticity through flexible attractors
 date: 2026-11-26
 lastmod: 2026-11-26
 type: post

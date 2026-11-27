@@ -72,6 +72,12 @@ without hover tooltips, a breakdown, or explanatory caption. It reuses the site'
 (including draft writing), so private folders are excluded. Only Markdown body changes count;
 YAML frontmatter, Git headers, and commit messages do not. Git must be available on desktop.
 
+An exact deletion and later restoration of the same file counts as zero for both operations.
+Matching uses the original path and complete Git blob identity across public history, including
+deletions before the visible calendar. Ordinary edits, permanent deletions, copies to other paths,
+and recreations with different contents still count. Saved restorations use the same rule before
+and after committing, and retrospectively remove the earlier deletion's count.
+
 Committed history is cached until HEAD or the local date changes. All saved public Markdown
 (staged, unstaged, and untracked) is compared with HEAD together, so Git can recognize a renamed
 note instead of counting its entire body as both deleted and added. The comparison uses a temporary

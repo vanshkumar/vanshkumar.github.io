@@ -1,12 +1,93 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { execFileSync } from 'node:child_process';
 import {
   PUBLIC_MARKDOWN_PATHS,
   assertCompleteGitHistory,
   buildCalendar,
   getActivityLevel,
+  getWordActivity,
   parseWordDiffLog
 } from './word-activity.mjs';
+
+const historyFixture = (t) => {
+  const root = mkdtempSync(join(tmpdir(), 'site-word-lifetimes-'));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  let date = '2026-11-01';
+  const git = (args) => execFileSync('git', args, {
+    cwd: root, encoding: 'utf8',
+    env: { ...process.env, GIT_AUTHOR_DATE: `${date}T12:00:00-08:00`, GIT_COMMITTER_DATE: `${date}T12:00:00-08:00` }
+  });
+  mkdirSync(join(root, 'vault'));
+  git(['init', '-q']);
+  git(['config', 'user.name', 'Test']);
+  git(['config', 'user.email', 'test@example.com']);
+  return {
+    write: (name, text) => writeFileSync(join(root, 'vault', name), text),
+    remove: (name) => rmSync(join(root, 'vault', name)),
+    commit(day) { date = day; git(['add', '-A']); git(['commit', '-qm', 'writing']); },
+    calendar: () => getWordActivity({ today: '2026-11-07', runGit: git })
+  };
+};
+
+test('ignores exact restorations across days but preserves neighboring edits and repeated lifetimes', (t) => {
+  const fixture = historyFixture(t);
+  const name = 'A note é "quoted".md';
+  const original = '---\ntitle: Original\ntype: note\n---\nthree original words\n';
+  fixture.write(name, original);
+  fixture.write('other.md', 'another thought\n');
+  fixture.commit('2026-11-01');
+  fixture.remove(name);
+  fixture.write('other.md', 'another idea\n');
+  fixture.commit('2026-11-02');
+  assert.equal(fixture.calendar().totals.removed, 3);
+  fixture.write(name, original);
+  fixture.commit('2026-11-03');
+  let days = fixture.calendar().weeks.flatMap(week => week.days);
+  assert.equal(days.find(day => day.date === '2026-11-02').touched, 1);
+  assert.equal(days.find(day => day.date === '2026-11-03').touched, 0);
+  assert.deepEqual(fixture.calendar().totals, { added: 5, edited: 1, removed: 0, touched: 6 });
+  fixture.write(name, original.replace('original words', 'revised words'));
+  fixture.commit('2026-11-04');
+  fixture.remove(name);
+  fixture.commit('2026-11-05');
+  fixture.write(name, original.replace('original words', 'revised words'));
+  fixture.commit('2026-11-06');
+  assert.deepEqual(fixture.calendar().totals, { added: 5, edited: 2, removed: 0, touched: 7 });
+  fixture.remove(name);
+  fixture.commit('2026-11-07');
+  assert.equal(fixture.calendar().totals.removed, 3);
+});
+
+test('counts different-path copies and different-content recreations without matching older lifetimes', (t) => {
+  const fixture = historyFixture(t);
+  fixture.write('note.md', 'old words\n');
+  fixture.commit('2026-11-01');
+  fixture.remove('note.md');
+  fixture.commit('2026-11-02');
+  fixture.write('copy.md', 'old words\n');
+  fixture.write('note.md', 'different words\n');
+  fixture.commit('2026-11-03');
+  fixture.remove('note.md');
+  fixture.commit('2026-11-04');
+  fixture.write('note.md', 'old words\n');
+  fixture.commit('2026-11-05');
+  assert.deepEqual(fixture.calendar().totals, { added: 8, edited: 0, removed: 4, touched: 12 });
+});
+
+test('matches a restoration whose deletion predates the visible calendar', (t) => {
+  const fixture = historyFixture(t);
+  fixture.write('note.md', 'old words\n');
+  fixture.commit('2024-11-01');
+  fixture.remove('note.md');
+  fixture.commit('2024-11-02');
+  fixture.write('note.md', 'old words\n');
+  fixture.commit('2026-11-07');
+  assert.equal(fixture.calendar().totals.touched, 0);
+});
 
 test('pairs additions and removals as edits per file and day', () => {
   const activity = parseWordDiffLog(`

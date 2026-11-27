@@ -58,3 +58,5 @@ What do I think I might do with the extra time? Possibly writing more on here, p
 11/9: noticing myself reading more tennis content as a way just to *read* more.
 
 11/13: looking back, the first ~2 weeks I stuck to the fast and then the 2 weeks after that it was much more off and on. There are around 6 weeks left in the year. I am going to stick to this media fast for the remainder of the year.
+
+11/26: my writing frequency + amount has been up since starting this media fast, so it's been a success in that respect. Possibly simply not using twitter/substack accounts for that.

@@ -2,7 +2,7 @@
 slug: the-aoa-connection-course
 title: The AoA Connection Course
 date: 2026-11-14
-lastmod: 2026-11-25
+lastmod: 2026-11-27
 type: post
 description: third time's the charm
 ---
@@ -53,3 +53,7 @@ Head: I'm Vansh, I'm 31, husband and father. I am semi-retired and a stay-at-hom
 Heart: I'm Vansh. I have lots of love for myself, my family, and the world. I am sensitive & am figuring out how to express that love without getting hurt. I am scared.
 
 Gut: I'm Vansh. I'm bursting with excitement & fear. I'm ready to take a big risk and feel fully alive. (I suspect just having drank coffee may have something to do with this one haha)
+
+11/26: what would be a vulnerable truth to say to myself? I don't WANT to be grounded/chill, I WANT to feel my intense emotions, my passion, all of it
+
+11/27: new AoA post-course integration experiment – what would be a vulnerable truth to share with others in your life? Ask yourself what would change in your life if everyone knew that truth. What comes to mind is telling loved ones about my low-level depression/mild suicidal thoughts in college. What would change is that they might see me as much more emotional than I present as? Not sure. Felt a lot of anger this morning, triggered by a particular story, so went out to the car & released it for a few minutes. Felt good. Notably I kinda forgot the initial triggering story as I was releasing the anger, which was a little surprising. Then I sensed there was more to feel & put on a song that I find very intense to listen to, and cried a bit. An emotional morning.

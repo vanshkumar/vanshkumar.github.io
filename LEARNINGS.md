@@ -2,6 +2,11 @@
 
 ## What Has Worked
 
+**[2026-11-26] — Conditional publication of a reading-log and Shelf update**
+- Observation: Momo’s capture added `vault/reading-log/momo.md` and removed the notes-free `vault/shelf/Momo.md`. The GitHub connector accepted the Shelf deletion with `sha: null`, and its resulting tree SHA matched the staged local tree exactly.
+- Action: For an explicitly requested notes-free Shelf removal paired with a capture, pass the deletion and the new reading-log blob in the same connector tree request. Compare the returned SHA with `git write-tree` before updating `main` with the expected head.
+- Confidence: high
+
 **[2026-11-26] — Weather reload verification**
 - Observation: Obsidian 1.14.4 initially retained the old 1,876-word November 23 count after the updated Weather bundle was installed. After reloading the plugin and the app interface through View → Force Reload, the live calendar reported 8 words. The local Obsidian CLI is disabled.
 - Action: Verify an affected historical day's accessible calendar label after installing Weather changes; if toggling the plugin leaves a stale view, use the app's reload command and allow the interface to finish loading.

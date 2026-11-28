@@ -2,7 +2,7 @@
 slug: media-fast-2027
 title: Media fast 2027
 date: 2026-10-15
-lastmod: 2026-11-26
+lastmod: 2026-11-27
 type: post
 description: a random experiment
 ---
@@ -60,3 +60,5 @@ What do I think I might do with the extra time? Possibly writing more on here, p
 11/13: looking back, the first ~2 weeks I stuck to the fast and then the 2 weeks after that it was much more off and on. There are around 6 weeks left in the year. I am going to stick to this media fast for the remainder of the year.
 
 11/26: my writing frequency + amount has been up since starting this media fast, so it's been a success in that respect. Possibly simply not using twitter/substack accounts for that.
+
+11/27: I think I will drop the ban on books, as I've still been reading book club books anyway, and keep the other parts of the media fast. I'm still playing video games with my bro sometimes, and I was listening to podcasts as part of the homework for [[The AoA Connection Course]], but otherwise have been pretty good about sticking to the fast lately.
